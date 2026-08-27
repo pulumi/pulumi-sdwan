@@ -67,12 +67,8 @@ type LookupRegionListPolicyObjectResult struct {
 }
 
 func LookupRegionListPolicyObjectOutput(ctx *pulumi.Context, args LookupRegionListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupRegionListPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupRegionListPolicyObjectResultOutput, error) {
-			args := v.(LookupRegionListPolicyObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getRegionListPolicyObject:getRegionListPolicyObject", args, LookupRegionListPolicyObjectResultOutput{}, options).(LookupRegionListPolicyObjectResultOutput), nil
-		}).(LookupRegionListPolicyObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getRegionListPolicyObject:getRegionListPolicyObject", args, LookupRegionListPolicyObjectResultOutput{}, options).(LookupRegionListPolicyObjectResultOutput)
 }
 
 // A collection of arguments for invoking getRegionListPolicyObject.

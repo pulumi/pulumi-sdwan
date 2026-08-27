@@ -131,12 +131,8 @@ type LookupServiceRoutingOspfFeatureResult struct {
 }
 
 func LookupServiceRoutingOspfFeatureOutput(ctx *pulumi.Context, args LookupServiceRoutingOspfFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceRoutingOspfFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceRoutingOspfFeatureResultOutput, error) {
-			args := v.(LookupServiceRoutingOspfFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getServiceRoutingOspfFeature:getServiceRoutingOspfFeature", args, LookupServiceRoutingOspfFeatureResultOutput{}, options).(LookupServiceRoutingOspfFeatureResultOutput), nil
-		}).(LookupServiceRoutingOspfFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getServiceRoutingOspfFeature:getServiceRoutingOspfFeature", args, LookupServiceRoutingOspfFeatureResultOutput{}, options).(LookupServiceRoutingOspfFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getServiceRoutingOspfFeature.

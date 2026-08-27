@@ -71,12 +71,8 @@ type LookupTopologyGroupResult struct {
 }
 
 func LookupTopologyGroupOutput(ctx *pulumi.Context, args LookupTopologyGroupOutputArgs, opts ...pulumi.InvokeOption) LookupTopologyGroupResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTopologyGroupResultOutput, error) {
-			args := v.(LookupTopologyGroupArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTopologyGroup:getTopologyGroup", args, LookupTopologyGroupResultOutput{}, options).(LookupTopologyGroupResultOutput), nil
-		}).(LookupTopologyGroupResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTopologyGroup:getTopologyGroup", args, LookupTopologyGroupResultOutput{}, options).(LookupTopologyGroupResultOutput)
 }
 
 // A collection of arguments for invoking getTopologyGroup.

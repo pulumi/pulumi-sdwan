@@ -78,12 +78,8 @@ type LookupSystemIpv4DeviceAccessFeatureResult struct {
 }
 
 func LookupSystemIpv4DeviceAccessFeatureOutput(ctx *pulumi.Context, args LookupSystemIpv4DeviceAccessFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemIpv4DeviceAccessFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSystemIpv4DeviceAccessFeatureResultOutput, error) {
-			args := v.(LookupSystemIpv4DeviceAccessFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSystemIpv4DeviceAccessFeature:getSystemIpv4DeviceAccessFeature", args, LookupSystemIpv4DeviceAccessFeatureResultOutput{}, options).(LookupSystemIpv4DeviceAccessFeatureResultOutput), nil
-		}).(LookupSystemIpv4DeviceAccessFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSystemIpv4DeviceAccessFeature:getSystemIpv4DeviceAccessFeature", args, LookupSystemIpv4DeviceAccessFeatureResultOutput{}, options).(LookupSystemIpv4DeviceAccessFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getSystemIpv4DeviceAccessFeature.

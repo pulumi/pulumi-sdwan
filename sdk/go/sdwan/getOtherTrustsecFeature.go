@@ -130,12 +130,8 @@ type LookupOtherTrustsecFeatureResult struct {
 }
 
 func LookupOtherTrustsecFeatureOutput(ctx *pulumi.Context, args LookupOtherTrustsecFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupOtherTrustsecFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupOtherTrustsecFeatureResultOutput, error) {
-			args := v.(LookupOtherTrustsecFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getOtherTrustsecFeature:getOtherTrustsecFeature", args, LookupOtherTrustsecFeatureResultOutput{}, options).(LookupOtherTrustsecFeatureResultOutput), nil
-		}).(LookupOtherTrustsecFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getOtherTrustsecFeature:getOtherTrustsecFeature", args, LookupOtherTrustsecFeatureResultOutput{}, options).(LookupOtherTrustsecFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getOtherTrustsecFeature.

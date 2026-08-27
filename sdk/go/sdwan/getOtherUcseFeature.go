@@ -100,12 +100,8 @@ type LookupOtherUcseFeatureResult struct {
 }
 
 func LookupOtherUcseFeatureOutput(ctx *pulumi.Context, args LookupOtherUcseFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupOtherUcseFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupOtherUcseFeatureResultOutput, error) {
-			args := v.(LookupOtherUcseFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getOtherUcseFeature:getOtherUcseFeature", args, LookupOtherUcseFeatureResultOutput{}, options).(LookupOtherUcseFeatureResultOutput), nil
-		}).(LookupOtherUcseFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getOtherUcseFeature:getOtherUcseFeature", args, LookupOtherUcseFeatureResultOutput{}, options).(LookupOtherUcseFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getOtherUcseFeature.

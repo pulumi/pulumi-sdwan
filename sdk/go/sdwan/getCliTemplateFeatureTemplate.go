@@ -75,12 +75,8 @@ type LookupCliTemplateFeatureTemplateResult struct {
 }
 
 func LookupCliTemplateFeatureTemplateOutput(ctx *pulumi.Context, args LookupCliTemplateFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCliTemplateFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCliTemplateFeatureTemplateResultOutput, error) {
-			args := v.(LookupCliTemplateFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCliTemplateFeatureTemplate:getCliTemplateFeatureTemplate", args, LookupCliTemplateFeatureTemplateResultOutput{}, options).(LookupCliTemplateFeatureTemplateResultOutput), nil
-		}).(LookupCliTemplateFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCliTemplateFeatureTemplate:getCliTemplateFeatureTemplate", args, LookupCliTemplateFeatureTemplateResultOutput{}, options).(LookupCliTemplateFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCliTemplateFeatureTemplate.

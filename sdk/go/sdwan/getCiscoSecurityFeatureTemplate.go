@@ -101,12 +101,8 @@ type LookupCiscoSecurityFeatureTemplateResult struct {
 }
 
 func LookupCiscoSecurityFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoSecurityFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoSecurityFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCiscoSecurityFeatureTemplateResultOutput, error) {
-			args := v.(LookupCiscoSecurityFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCiscoSecurityFeatureTemplate:getCiscoSecurityFeatureTemplate", args, LookupCiscoSecurityFeatureTemplateResultOutput{}, options).(LookupCiscoSecurityFeatureTemplateResultOutput), nil
-		}).(LookupCiscoSecurityFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCiscoSecurityFeatureTemplate:getCiscoSecurityFeatureTemplate", args, LookupCiscoSecurityFeatureTemplateResultOutput{}, options).(LookupCiscoSecurityFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCiscoSecurityFeatureTemplate.

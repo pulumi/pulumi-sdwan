@@ -121,12 +121,8 @@ type LookupCedgePimFeatureTemplateResult struct {
 }
 
 func LookupCedgePimFeatureTemplateOutput(ctx *pulumi.Context, args LookupCedgePimFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCedgePimFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCedgePimFeatureTemplateResultOutput, error) {
-			args := v.(LookupCedgePimFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCedgePimFeatureTemplate:getCedgePimFeatureTemplate", args, LookupCedgePimFeatureTemplateResultOutput{}, options).(LookupCedgePimFeatureTemplateResultOutput), nil
-		}).(LookupCedgePimFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCedgePimFeatureTemplate:getCedgePimFeatureTemplate", args, LookupCedgePimFeatureTemplateResultOutput{}, options).(LookupCedgePimFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCedgePimFeatureTemplate.

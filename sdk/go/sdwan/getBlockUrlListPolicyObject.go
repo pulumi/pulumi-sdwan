@@ -67,12 +67,8 @@ type LookupBlockUrlListPolicyObjectResult struct {
 }
 
 func LookupBlockUrlListPolicyObjectOutput(ctx *pulumi.Context, args LookupBlockUrlListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupBlockUrlListPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupBlockUrlListPolicyObjectResultOutput, error) {
-			args := v.(LookupBlockUrlListPolicyObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getBlockUrlListPolicyObject:getBlockUrlListPolicyObject", args, LookupBlockUrlListPolicyObjectResultOutput{}, options).(LookupBlockUrlListPolicyObjectResultOutput), nil
-		}).(LookupBlockUrlListPolicyObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getBlockUrlListPolicyObject:getBlockUrlListPolicyObject", args, LookupBlockUrlListPolicyObjectResultOutput{}, options).(LookupBlockUrlListPolicyObjectResultOutput)
 }
 
 // A collection of arguments for invoking getBlockUrlListPolicyObject.

@@ -65,12 +65,8 @@ type LookupPolicyObjectFeatureProfileResult struct {
 }
 
 func LookupPolicyObjectFeatureProfileOutput(ctx *pulumi.Context, args LookupPolicyObjectFeatureProfileOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectFeatureProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectFeatureProfileResultOutput, error) {
-			args := v.(LookupPolicyObjectFeatureProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", args, LookupPolicyObjectFeatureProfileResultOutput{}, options).(LookupPolicyObjectFeatureProfileResultOutput), nil
-		}).(LookupPolicyObjectFeatureProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", args, LookupPolicyObjectFeatureProfileResultOutput{}, options).(LookupPolicyObjectFeatureProfileResultOutput)
 }
 
 // A collection of arguments for invoking getPolicyObjectFeatureProfile.

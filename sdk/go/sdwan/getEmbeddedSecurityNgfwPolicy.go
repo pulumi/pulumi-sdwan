@@ -76,12 +76,8 @@ type LookupEmbeddedSecurityNgfwPolicyResult struct {
 }
 
 func LookupEmbeddedSecurityNgfwPolicyOutput(ctx *pulumi.Context, args LookupEmbeddedSecurityNgfwPolicyOutputArgs, opts ...pulumi.InvokeOption) LookupEmbeddedSecurityNgfwPolicyResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupEmbeddedSecurityNgfwPolicyResultOutput, error) {
-			args := v.(LookupEmbeddedSecurityNgfwPolicyArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getEmbeddedSecurityNgfwPolicy:getEmbeddedSecurityNgfwPolicy", args, LookupEmbeddedSecurityNgfwPolicyResultOutput{}, options).(LookupEmbeddedSecurityNgfwPolicyResultOutput), nil
-		}).(LookupEmbeddedSecurityNgfwPolicyResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getEmbeddedSecurityNgfwPolicy:getEmbeddedSecurityNgfwPolicy", args, LookupEmbeddedSecurityNgfwPolicyResultOutput{}, options).(LookupEmbeddedSecurityNgfwPolicyResultOutput)
 }
 
 // A collection of arguments for invoking getEmbeddedSecurityNgfwPolicy.

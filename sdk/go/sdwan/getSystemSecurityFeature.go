@@ -98,12 +98,8 @@ type LookupSystemSecurityFeatureResult struct {
 }
 
 func LookupSystemSecurityFeatureOutput(ctx *pulumi.Context, args LookupSystemSecurityFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemSecurityFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSystemSecurityFeatureResultOutput, error) {
-			args := v.(LookupSystemSecurityFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSystemSecurityFeature:getSystemSecurityFeature", args, LookupSystemSecurityFeatureResultOutput{}, options).(LookupSystemSecurityFeatureResultOutput), nil
-		}).(LookupSystemSecurityFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSystemSecurityFeature:getSystemSecurityFeature", args, LookupSystemSecurityFeatureResultOutput{}, options).(LookupSystemSecurityFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getSystemSecurityFeature.

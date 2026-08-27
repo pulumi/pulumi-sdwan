@@ -117,12 +117,8 @@ type LookupCiscoSigCredentialsFeatureTemplateResult struct {
 }
 
 func LookupCiscoSigCredentialsFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoSigCredentialsFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoSigCredentialsFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCiscoSigCredentialsFeatureTemplateResultOutput, error) {
-			args := v.(LookupCiscoSigCredentialsFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCiscoSigCredentialsFeatureTemplate:getCiscoSigCredentialsFeatureTemplate", args, LookupCiscoSigCredentialsFeatureTemplateResultOutput{}, options).(LookupCiscoSigCredentialsFeatureTemplateResultOutput), nil
-		}).(LookupCiscoSigCredentialsFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCiscoSigCredentialsFeatureTemplate:getCiscoSigCredentialsFeatureTemplate", args, LookupCiscoSigCredentialsFeatureTemplateResultOutput{}, options).(LookupCiscoSigCredentialsFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCiscoSigCredentialsFeatureTemplate.

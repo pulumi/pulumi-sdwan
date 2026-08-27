@@ -92,12 +92,8 @@ type LookupUrlFilteringPolicyDefinitionResult struct {
 }
 
 func LookupUrlFilteringPolicyDefinitionOutput(ctx *pulumi.Context, args LookupUrlFilteringPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupUrlFilteringPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupUrlFilteringPolicyDefinitionResultOutput, error) {
-			args := v.(LookupUrlFilteringPolicyDefinitionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getUrlFilteringPolicyDefinition:getUrlFilteringPolicyDefinition", args, LookupUrlFilteringPolicyDefinitionResultOutput{}, options).(LookupUrlFilteringPolicyDefinitionResultOutput), nil
-		}).(LookupUrlFilteringPolicyDefinitionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getUrlFilteringPolicyDefinition:getUrlFilteringPolicyDefinition", args, LookupUrlFilteringPolicyDefinitionResultOutput{}, options).(LookupUrlFilteringPolicyDefinitionResultOutput)
 }
 
 // A collection of arguments for invoking getUrlFilteringPolicyDefinition.

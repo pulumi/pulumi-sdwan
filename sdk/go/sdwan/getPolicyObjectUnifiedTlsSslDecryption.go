@@ -91,12 +91,8 @@ type LookupPolicyObjectUnifiedTlsSslDecryptionResult struct {
 }
 
 func LookupPolicyObjectUnifiedTlsSslDecryptionOutput(ctx *pulumi.Context, args LookupPolicyObjectUnifiedTlsSslDecryptionOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectUnifiedTlsSslDecryptionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectUnifiedTlsSslDecryptionResultOutput, error) {
-			args := v.(LookupPolicyObjectUnifiedTlsSslDecryptionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getPolicyObjectUnifiedTlsSslDecryption:getPolicyObjectUnifiedTlsSslDecryption", args, LookupPolicyObjectUnifiedTlsSslDecryptionResultOutput{}, options).(LookupPolicyObjectUnifiedTlsSslDecryptionResultOutput), nil
-		}).(LookupPolicyObjectUnifiedTlsSslDecryptionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getPolicyObjectUnifiedTlsSslDecryption:getPolicyObjectUnifiedTlsSslDecryption", args, LookupPolicyObjectUnifiedTlsSslDecryptionResultOutput{}, options).(LookupPolicyObjectUnifiedTlsSslDecryptionResultOutput)
 }
 
 // A collection of arguments for invoking getPolicyObjectUnifiedTlsSslDecryption.

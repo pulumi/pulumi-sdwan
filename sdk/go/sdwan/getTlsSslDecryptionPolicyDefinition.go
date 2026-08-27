@@ -101,12 +101,8 @@ type LookupTlsSslDecryptionPolicyDefinitionResult struct {
 }
 
 func LookupTlsSslDecryptionPolicyDefinitionOutput(ctx *pulumi.Context, args LookupTlsSslDecryptionPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupTlsSslDecryptionPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTlsSslDecryptionPolicyDefinitionResultOutput, error) {
-			args := v.(LookupTlsSslDecryptionPolicyDefinitionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTlsSslDecryptionPolicyDefinition:getTlsSslDecryptionPolicyDefinition", args, LookupTlsSslDecryptionPolicyDefinitionResultOutput{}, options).(LookupTlsSslDecryptionPolicyDefinitionResultOutput), nil
-		}).(LookupTlsSslDecryptionPolicyDefinitionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTlsSslDecryptionPolicyDefinition:getTlsSslDecryptionPolicyDefinition", args, LookupTlsSslDecryptionPolicyDefinitionResultOutput{}, options).(LookupTlsSslDecryptionPolicyDefinitionResultOutput)
 }
 
 // A collection of arguments for invoking getTlsSslDecryptionPolicyDefinition.

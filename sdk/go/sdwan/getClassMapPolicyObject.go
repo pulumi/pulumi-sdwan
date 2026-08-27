@@ -67,12 +67,8 @@ type LookupClassMapPolicyObjectResult struct {
 }
 
 func LookupClassMapPolicyObjectOutput(ctx *pulumi.Context, args LookupClassMapPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupClassMapPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupClassMapPolicyObjectResultOutput, error) {
-			args := v.(LookupClassMapPolicyObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getClassMapPolicyObject:getClassMapPolicyObject", args, LookupClassMapPolicyObjectResultOutput{}, options).(LookupClassMapPolicyObjectResultOutput), nil
-		}).(LookupClassMapPolicyObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getClassMapPolicyObject:getClassMapPolicyObject", args, LookupClassMapPolicyObjectResultOutput{}, options).(LookupClassMapPolicyObjectResultOutput)
 }
 
 // A collection of arguments for invoking getClassMapPolicyObject.

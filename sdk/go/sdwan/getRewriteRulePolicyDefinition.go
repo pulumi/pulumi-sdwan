@@ -71,12 +71,8 @@ type LookupRewriteRulePolicyDefinitionResult struct {
 }
 
 func LookupRewriteRulePolicyDefinitionOutput(ctx *pulumi.Context, args LookupRewriteRulePolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupRewriteRulePolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupRewriteRulePolicyDefinitionResultOutput, error) {
-			args := v.(LookupRewriteRulePolicyDefinitionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getRewriteRulePolicyDefinition:getRewriteRulePolicyDefinition", args, LookupRewriteRulePolicyDefinitionResultOutput{}, options).(LookupRewriteRulePolicyDefinitionResultOutput), nil
-		}).(LookupRewriteRulePolicyDefinitionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getRewriteRulePolicyDefinition:getRewriteRulePolicyDefinition", args, LookupRewriteRulePolicyDefinitionResultOutput{}, options).(LookupRewriteRulePolicyDefinitionResultOutput)
 }
 
 // A collection of arguments for invoking getRewriteRulePolicyDefinition.

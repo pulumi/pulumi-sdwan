@@ -75,12 +75,8 @@ type LookupPolicyObjectSecurityFqdnListResult struct {
 }
 
 func LookupPolicyObjectSecurityFqdnListOutput(ctx *pulumi.Context, args LookupPolicyObjectSecurityFqdnListOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectSecurityFqdnListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectSecurityFqdnListResultOutput, error) {
-			args := v.(LookupPolicyObjectSecurityFqdnListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getPolicyObjectSecurityFqdnList:getPolicyObjectSecurityFqdnList", args, LookupPolicyObjectSecurityFqdnListResultOutput{}, options).(LookupPolicyObjectSecurityFqdnListResultOutput), nil
-		}).(LookupPolicyObjectSecurityFqdnListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getPolicyObjectSecurityFqdnList:getPolicyObjectSecurityFqdnList", args, LookupPolicyObjectSecurityFqdnListResultOutput{}, options).(LookupPolicyObjectSecurityFqdnListResultOutput)
 }
 
 // A collection of arguments for invoking getPolicyObjectSecurityFqdnList.

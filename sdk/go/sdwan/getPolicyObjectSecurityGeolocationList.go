@@ -76,12 +76,8 @@ type LookupPolicyObjectSecurityGeolocationListResult struct {
 }
 
 func LookupPolicyObjectSecurityGeolocationListOutput(ctx *pulumi.Context, args LookupPolicyObjectSecurityGeolocationListOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectSecurityGeolocationListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectSecurityGeolocationListResultOutput, error) {
-			args := v.(LookupPolicyObjectSecurityGeolocationListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getPolicyObjectSecurityGeolocationList:getPolicyObjectSecurityGeolocationList", args, LookupPolicyObjectSecurityGeolocationListResultOutput{}, options).(LookupPolicyObjectSecurityGeolocationListResultOutput), nil
-		}).(LookupPolicyObjectSecurityGeolocationListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getPolicyObjectSecurityGeolocationList:getPolicyObjectSecurityGeolocationList", args, LookupPolicyObjectSecurityGeolocationListResultOutput{}, options).(LookupPolicyObjectSecurityGeolocationListResultOutput)
 }
 
 // A collection of arguments for invoking getPolicyObjectSecurityGeolocationList.

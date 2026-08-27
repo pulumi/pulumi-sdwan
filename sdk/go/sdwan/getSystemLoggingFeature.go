@@ -92,12 +92,8 @@ type LookupSystemLoggingFeatureResult struct {
 }
 
 func LookupSystemLoggingFeatureOutput(ctx *pulumi.Context, args LookupSystemLoggingFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemLoggingFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSystemLoggingFeatureResultOutput, error) {
-			args := v.(LookupSystemLoggingFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSystemLoggingFeature:getSystemLoggingFeature", args, LookupSystemLoggingFeatureResultOutput{}, options).(LookupSystemLoggingFeatureResultOutput), nil
-		}).(LookupSystemLoggingFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSystemLoggingFeature:getSystemLoggingFeature", args, LookupSystemLoggingFeatureResultOutput{}, options).(LookupSystemLoggingFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getSystemLoggingFeature.

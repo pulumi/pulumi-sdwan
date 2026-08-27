@@ -84,12 +84,8 @@ type LookupIntrusionPreventionPolicyDefinitionResult struct {
 }
 
 func LookupIntrusionPreventionPolicyDefinitionOutput(ctx *pulumi.Context, args LookupIntrusionPreventionPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupIntrusionPreventionPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupIntrusionPreventionPolicyDefinitionResultOutput, error) {
-			args := v.(LookupIntrusionPreventionPolicyDefinitionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getIntrusionPreventionPolicyDefinition:getIntrusionPreventionPolicyDefinition", args, LookupIntrusionPreventionPolicyDefinitionResultOutput{}, options).(LookupIntrusionPreventionPolicyDefinitionResultOutput), nil
-		}).(LookupIntrusionPreventionPolicyDefinitionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getIntrusionPreventionPolicyDefinition:getIntrusionPreventionPolicyDefinition", args, LookupIntrusionPreventionPolicyDefinitionResultOutput{}, options).(LookupIntrusionPreventionPolicyDefinitionResultOutput)
 }
 
 // A collection of arguments for invoking getIntrusionPreventionPolicyDefinition.

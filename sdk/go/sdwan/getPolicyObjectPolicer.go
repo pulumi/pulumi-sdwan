@@ -76,12 +76,8 @@ type LookupPolicyObjectPolicerResult struct {
 }
 
 func LookupPolicyObjectPolicerOutput(ctx *pulumi.Context, args LookupPolicyObjectPolicerOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectPolicerResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectPolicerResultOutput, error) {
-			args := v.(LookupPolicyObjectPolicerArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getPolicyObjectPolicer:getPolicyObjectPolicer", args, LookupPolicyObjectPolicerResultOutput{}, options).(LookupPolicyObjectPolicerResultOutput), nil
-		}).(LookupPolicyObjectPolicerResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getPolicyObjectPolicer:getPolicyObjectPolicer", args, LookupPolicyObjectPolicerResultOutput{}, options).(LookupPolicyObjectPolicerResultOutput)
 }
 
 // A collection of arguments for invoking getPolicyObjectPolicer.

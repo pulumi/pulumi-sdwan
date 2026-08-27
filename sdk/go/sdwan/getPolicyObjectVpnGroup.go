@@ -76,12 +76,8 @@ type LookupPolicyObjectVpnGroupResult struct {
 }
 
 func LookupPolicyObjectVpnGroupOutput(ctx *pulumi.Context, args LookupPolicyObjectVpnGroupOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectVpnGroupResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectVpnGroupResultOutput, error) {
-			args := v.(LookupPolicyObjectVpnGroupArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getPolicyObjectVpnGroup:getPolicyObjectVpnGroup", args, LookupPolicyObjectVpnGroupResultOutput{}, options).(LookupPolicyObjectVpnGroupResultOutput), nil
-		}).(LookupPolicyObjectVpnGroupResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getPolicyObjectVpnGroup:getPolicyObjectVpnGroup", args, LookupPolicyObjectVpnGroupResultOutput{}, options).(LookupPolicyObjectVpnGroupResultOutput)
 }
 
 // A collection of arguments for invoking getPolicyObjectVpnGroup.

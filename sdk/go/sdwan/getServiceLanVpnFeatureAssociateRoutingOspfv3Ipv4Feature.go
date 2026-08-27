@@ -75,12 +75,8 @@ type LookupServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult struct {
 }
 
 func LookupServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureOutput(ctx *pulumi.Context, args LookupServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResultOutput, error) {
-			args := v.(LookupServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature", args, LookupServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResultOutput{}, options).(LookupServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResultOutput), nil
-		}).(LookupServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature", args, LookupServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResultOutput{}, options).(LookupServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResultOutput)
 }
 
 // A collection of arguments for invoking getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature.

@@ -65,12 +65,8 @@ type LookupTopologyFeatureProfileResult struct {
 }
 
 func LookupTopologyFeatureProfileOutput(ctx *pulumi.Context, args LookupTopologyFeatureProfileOutputArgs, opts ...pulumi.InvokeOption) LookupTopologyFeatureProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTopologyFeatureProfileResultOutput, error) {
-			args := v.(LookupTopologyFeatureProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTopologyFeatureProfile:getTopologyFeatureProfile", args, LookupTopologyFeatureProfileResultOutput{}, options).(LookupTopologyFeatureProfileResultOutput), nil
-		}).(LookupTopologyFeatureProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTopologyFeatureProfile:getTopologyFeatureProfile", args, LookupTopologyFeatureProfileResultOutput{}, options).(LookupTopologyFeatureProfileResultOutput)
 }
 
 // A collection of arguments for invoking getTopologyFeatureProfile.

@@ -78,12 +78,8 @@ type LookupServiceIpv6AclFeatureResult struct {
 }
 
 func LookupServiceIpv6AclFeatureOutput(ctx *pulumi.Context, args LookupServiceIpv6AclFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceIpv6AclFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceIpv6AclFeatureResultOutput, error) {
-			args := v.(LookupServiceIpv6AclFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getServiceIpv6AclFeature:getServiceIpv6AclFeature", args, LookupServiceIpv6AclFeatureResultOutput{}, options).(LookupServiceIpv6AclFeatureResultOutput), nil
-		}).(LookupServiceIpv6AclFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getServiceIpv6AclFeature:getServiceIpv6AclFeature", args, LookupServiceIpv6AclFeatureResultOutput{}, options).(LookupServiceIpv6AclFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getServiceIpv6AclFeature.

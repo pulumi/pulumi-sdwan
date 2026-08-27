@@ -124,12 +124,8 @@ type LookupServiceMulticastFeatureResult struct {
 }
 
 func LookupServiceMulticastFeatureOutput(ctx *pulumi.Context, args LookupServiceMulticastFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceMulticastFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceMulticastFeatureResultOutput, error) {
-			args := v.(LookupServiceMulticastFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getServiceMulticastFeature:getServiceMulticastFeature", args, LookupServiceMulticastFeatureResultOutput{}, options).(LookupServiceMulticastFeatureResultOutput), nil
-		}).(LookupServiceMulticastFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getServiceMulticastFeature:getServiceMulticastFeature", args, LookupServiceMulticastFeatureResultOutput{}, options).(LookupServiceMulticastFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getServiceMulticastFeature.

@@ -81,12 +81,8 @@ type LookupNetworkHierarchyCflowdResult struct {
 }
 
 func LookupNetworkHierarchyCflowdOutput(ctx *pulumi.Context, args LookupNetworkHierarchyCflowdOutputArgs, opts ...pulumi.InvokeOption) LookupNetworkHierarchyCflowdResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupNetworkHierarchyCflowdResultOutput, error) {
-			args := v.(LookupNetworkHierarchyCflowdArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getNetworkHierarchyCflowd:getNetworkHierarchyCflowd", args, LookupNetworkHierarchyCflowdResultOutput{}, options).(LookupNetworkHierarchyCflowdResultOutput), nil
-		}).(LookupNetworkHierarchyCflowdResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getNetworkHierarchyCflowd:getNetworkHierarchyCflowd", args, LookupNetworkHierarchyCflowdResultOutput{}, options).(LookupNetworkHierarchyCflowdResultOutput)
 }
 
 // A collection of arguments for invoking getNetworkHierarchyCflowd.

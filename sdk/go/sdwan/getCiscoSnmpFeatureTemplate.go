@@ -95,12 +95,8 @@ type LookupCiscoSnmpFeatureTemplateResult struct {
 }
 
 func LookupCiscoSnmpFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoSnmpFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoSnmpFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCiscoSnmpFeatureTemplateResultOutput, error) {
-			args := v.(LookupCiscoSnmpFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCiscoSnmpFeatureTemplate:getCiscoSnmpFeatureTemplate", args, LookupCiscoSnmpFeatureTemplateResultOutput{}, options).(LookupCiscoSnmpFeatureTemplateResultOutput), nil
-		}).(LookupCiscoSnmpFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCiscoSnmpFeatureTemplate:getCiscoSnmpFeatureTemplate", args, LookupCiscoSnmpFeatureTemplateResultOutput{}, options).(LookupCiscoSnmpFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCiscoSnmpFeatureTemplate.

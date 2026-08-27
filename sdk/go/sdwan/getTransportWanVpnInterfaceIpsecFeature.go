@@ -211,12 +211,8 @@ type LookupTransportWanVpnInterfaceIpsecFeatureResult struct {
 }
 
 func LookupTransportWanVpnInterfaceIpsecFeatureOutput(ctx *pulumi.Context, args LookupTransportWanVpnInterfaceIpsecFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportWanVpnInterfaceIpsecFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTransportWanVpnInterfaceIpsecFeatureResultOutput, error) {
-			args := v.(LookupTransportWanVpnInterfaceIpsecFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTransportWanVpnInterfaceIpsecFeature:getTransportWanVpnInterfaceIpsecFeature", args, LookupTransportWanVpnInterfaceIpsecFeatureResultOutput{}, options).(LookupTransportWanVpnInterfaceIpsecFeatureResultOutput), nil
-		}).(LookupTransportWanVpnInterfaceIpsecFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTransportWanVpnInterfaceIpsecFeature:getTransportWanVpnInterfaceIpsecFeature", args, LookupTransportWanVpnInterfaceIpsecFeatureResultOutput{}, options).(LookupTransportWanVpnInterfaceIpsecFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getTransportWanVpnInterfaceIpsecFeature.

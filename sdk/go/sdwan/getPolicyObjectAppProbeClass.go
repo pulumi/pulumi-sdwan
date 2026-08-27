@@ -76,12 +76,8 @@ type LookupPolicyObjectAppProbeClassResult struct {
 }
 
 func LookupPolicyObjectAppProbeClassOutput(ctx *pulumi.Context, args LookupPolicyObjectAppProbeClassOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectAppProbeClassResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectAppProbeClassResultOutput, error) {
-			args := v.(LookupPolicyObjectAppProbeClassArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getPolicyObjectAppProbeClass:getPolicyObjectAppProbeClass", args, LookupPolicyObjectAppProbeClassResultOutput{}, options).(LookupPolicyObjectAppProbeClassResultOutput), nil
-		}).(LookupPolicyObjectAppProbeClassResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getPolicyObjectAppProbeClass:getPolicyObjectAppProbeClass", args, LookupPolicyObjectAppProbeClassResultOutput{}, options).(LookupPolicyObjectAppProbeClassResultOutput)
 }
 
 // A collection of arguments for invoking getPolicyObjectAppProbeClass.

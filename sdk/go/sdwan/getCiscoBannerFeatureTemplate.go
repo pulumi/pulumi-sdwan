@@ -81,12 +81,8 @@ type LookupCiscoBannerFeatureTemplateResult struct {
 }
 
 func LookupCiscoBannerFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoBannerFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoBannerFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCiscoBannerFeatureTemplateResultOutput, error) {
-			args := v.(LookupCiscoBannerFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCiscoBannerFeatureTemplate:getCiscoBannerFeatureTemplate", args, LookupCiscoBannerFeatureTemplateResultOutput{}, options).(LookupCiscoBannerFeatureTemplateResultOutput), nil
-		}).(LookupCiscoBannerFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCiscoBannerFeatureTemplate:getCiscoBannerFeatureTemplate", args, LookupCiscoBannerFeatureTemplateResultOutput{}, options).(LookupCiscoBannerFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCiscoBannerFeatureTemplate.

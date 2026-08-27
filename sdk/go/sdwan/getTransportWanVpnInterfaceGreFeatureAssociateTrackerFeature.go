@@ -80,12 +80,8 @@ type LookupTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResult struc
 }
 
 func LookupTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureOutput(ctx *pulumi.Context, args LookupTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResultOutput, error) {
-			args := v.(LookupTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature", args, LookupTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResultOutput{}, options).(LookupTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResultOutput), nil
-		}).(LookupTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature", args, LookupTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResultOutput{}, options).(LookupTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature.

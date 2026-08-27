@@ -89,12 +89,8 @@ type LookupLocalizedPolicyResult struct {
 }
 
 func LookupLocalizedPolicyOutput(ctx *pulumi.Context, args LookupLocalizedPolicyOutputArgs, opts ...pulumi.InvokeOption) LookupLocalizedPolicyResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupLocalizedPolicyResultOutput, error) {
-			args := v.(LookupLocalizedPolicyArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getLocalizedPolicy:getLocalizedPolicy", args, LookupLocalizedPolicyResultOutput{}, options).(LookupLocalizedPolicyResultOutput), nil
-		}).(LookupLocalizedPolicyResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getLocalizedPolicy:getLocalizedPolicy", args, LookupLocalizedPolicyResultOutput{}, options).(LookupLocalizedPolicyResultOutput)
 }
 
 // A collection of arguments for invoking getLocalizedPolicy.

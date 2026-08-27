@@ -67,12 +67,8 @@ type LookupAsPathListPolicyObjectResult struct {
 }
 
 func LookupAsPathListPolicyObjectOutput(ctx *pulumi.Context, args LookupAsPathListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupAsPathListPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAsPathListPolicyObjectResultOutput, error) {
-			args := v.(LookupAsPathListPolicyObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getAsPathListPolicyObject:getAsPathListPolicyObject", args, LookupAsPathListPolicyObjectResultOutput{}, options).(LookupAsPathListPolicyObjectResultOutput), nil
-		}).(LookupAsPathListPolicyObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getAsPathListPolicyObject:getAsPathListPolicyObject", args, LookupAsPathListPolicyObjectResultOutput{}, options).(LookupAsPathListPolicyObjectResultOutput)
 }
 
 // A collection of arguments for invoking getAsPathListPolicyObject.

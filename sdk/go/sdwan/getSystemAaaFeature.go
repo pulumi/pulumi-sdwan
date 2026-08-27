@@ -108,12 +108,8 @@ type LookupSystemAaaFeatureResult struct {
 }
 
 func LookupSystemAaaFeatureOutput(ctx *pulumi.Context, args LookupSystemAaaFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemAaaFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSystemAaaFeatureResultOutput, error) {
-			args := v.(LookupSystemAaaFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSystemAaaFeature:getSystemAaaFeature", args, LookupSystemAaaFeatureResultOutput{}, options).(LookupSystemAaaFeatureResultOutput), nil
-		}).(LookupSystemAaaFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSystemAaaFeature:getSystemAaaFeature", args, LookupSystemAaaFeatureResultOutput{}, options).(LookupSystemAaaFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getSystemAaaFeature.

@@ -174,12 +174,8 @@ type LookupTransportRoutingBgpFeatureResult struct {
 }
 
 func LookupTransportRoutingBgpFeatureOutput(ctx *pulumi.Context, args LookupTransportRoutingBgpFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportRoutingBgpFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTransportRoutingBgpFeatureResultOutput, error) {
-			args := v.(LookupTransportRoutingBgpFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTransportRoutingBgpFeature:getTransportRoutingBgpFeature", args, LookupTransportRoutingBgpFeatureResultOutput{}, options).(LookupTransportRoutingBgpFeatureResultOutput), nil
-		}).(LookupTransportRoutingBgpFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTransportRoutingBgpFeature:getTransportRoutingBgpFeature", args, LookupTransportRoutingBgpFeatureResultOutput{}, options).(LookupTransportRoutingBgpFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getTransportRoutingBgpFeature.

@@ -80,12 +80,8 @@ type LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult st
 }
 
 func LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutput(ctx *pulumi.Context, args LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput, error) {
-			args := v.(LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature", args, LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput{}, options).(LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput), nil
-		}).(LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature", args, LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput{}, options).(LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature.

@@ -65,12 +65,8 @@ type LookupOtherFeatureProfileResult struct {
 }
 
 func LookupOtherFeatureProfileOutput(ctx *pulumi.Context, args LookupOtherFeatureProfileOutputArgs, opts ...pulumi.InvokeOption) LookupOtherFeatureProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupOtherFeatureProfileResultOutput, error) {
-			args := v.(LookupOtherFeatureProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getOtherFeatureProfile:getOtherFeatureProfile", args, LookupOtherFeatureProfileResultOutput{}, options).(LookupOtherFeatureProfileResultOutput), nil
-		}).(LookupOtherFeatureProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getOtherFeatureProfile:getOtherFeatureProfile", args, LookupOtherFeatureProfileResultOutput{}, options).(LookupOtherFeatureProfileResultOutput)
 }
 
 // A collection of arguments for invoking getOtherFeatureProfile.

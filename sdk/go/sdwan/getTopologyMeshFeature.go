@@ -74,12 +74,8 @@ type LookupTopologyMeshFeatureResult struct {
 }
 
 func LookupTopologyMeshFeatureOutput(ctx *pulumi.Context, args LookupTopologyMeshFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTopologyMeshFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTopologyMeshFeatureResultOutput, error) {
-			args := v.(LookupTopologyMeshFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTopologyMeshFeature:getTopologyMeshFeature", args, LookupTopologyMeshFeatureResultOutput{}, options).(LookupTopologyMeshFeatureResultOutput), nil
-		}).(LookupTopologyMeshFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTopologyMeshFeature:getTopologyMeshFeature", args, LookupTopologyMeshFeatureResultOutput{}, options).(LookupTopologyMeshFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getTopologyMeshFeature.

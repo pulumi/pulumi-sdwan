@@ -78,12 +78,8 @@ type LookupApplicationPriorityQosPolicyResult struct {
 }
 
 func LookupApplicationPriorityQosPolicyOutput(ctx *pulumi.Context, args LookupApplicationPriorityQosPolicyOutputArgs, opts ...pulumi.InvokeOption) LookupApplicationPriorityQosPolicyResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplicationPriorityQosPolicyResultOutput, error) {
-			args := v.(LookupApplicationPriorityQosPolicyArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getApplicationPriorityQosPolicy:getApplicationPriorityQosPolicy", args, LookupApplicationPriorityQosPolicyResultOutput{}, options).(LookupApplicationPriorityQosPolicyResultOutput), nil
-		}).(LookupApplicationPriorityQosPolicyResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getApplicationPriorityQosPolicy:getApplicationPriorityQosPolicy", args, LookupApplicationPriorityQosPolicyResultOutput{}, options).(LookupApplicationPriorityQosPolicyResultOutput)
 }
 
 // A collection of arguments for invoking getApplicationPriorityQosPolicy.

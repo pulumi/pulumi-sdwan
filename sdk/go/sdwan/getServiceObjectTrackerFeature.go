@@ -96,12 +96,8 @@ type LookupServiceObjectTrackerFeatureResult struct {
 }
 
 func LookupServiceObjectTrackerFeatureOutput(ctx *pulumi.Context, args LookupServiceObjectTrackerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceObjectTrackerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceObjectTrackerFeatureResultOutput, error) {
-			args := v.(LookupServiceObjectTrackerFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getServiceObjectTrackerFeature:getServiceObjectTrackerFeature", args, LookupServiceObjectTrackerFeatureResultOutput{}, options).(LookupServiceObjectTrackerFeatureResultOutput), nil
-		}).(LookupServiceObjectTrackerFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getServiceObjectTrackerFeature:getServiceObjectTrackerFeature", args, LookupServiceObjectTrackerFeatureResultOutput{}, options).(LookupServiceObjectTrackerFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getServiceObjectTrackerFeature.

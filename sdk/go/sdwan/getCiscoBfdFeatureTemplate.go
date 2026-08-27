@@ -87,12 +87,8 @@ type LookupCiscoBfdFeatureTemplateResult struct {
 }
 
 func LookupCiscoBfdFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoBfdFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoBfdFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCiscoBfdFeatureTemplateResultOutput, error) {
-			args := v.(LookupCiscoBfdFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCiscoBfdFeatureTemplate:getCiscoBfdFeatureTemplate", args, LookupCiscoBfdFeatureTemplateResultOutput{}, options).(LookupCiscoBfdFeatureTemplateResultOutput), nil
-		}).(LookupCiscoBfdFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCiscoBfdFeatureTemplate:getCiscoBfdFeatureTemplate", args, LookupCiscoBfdFeatureTemplateResultOutput{}, options).(LookupCiscoBfdFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCiscoBfdFeatureTemplate.

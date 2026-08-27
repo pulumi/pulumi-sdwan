@@ -76,12 +76,8 @@ type LookupPolicyObjectStandardCommunityListResult struct {
 }
 
 func LookupPolicyObjectStandardCommunityListOutput(ctx *pulumi.Context, args LookupPolicyObjectStandardCommunityListOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectStandardCommunityListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectStandardCommunityListResultOutput, error) {
-			args := v.(LookupPolicyObjectStandardCommunityListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getPolicyObjectStandardCommunityList:getPolicyObjectStandardCommunityList", args, LookupPolicyObjectStandardCommunityListResultOutput{}, options).(LookupPolicyObjectStandardCommunityListResultOutput), nil
-		}).(LookupPolicyObjectStandardCommunityListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getPolicyObjectStandardCommunityList:getPolicyObjectStandardCommunityList", args, LookupPolicyObjectStandardCommunityListResultOutput{}, options).(LookupPolicyObjectStandardCommunityListResultOutput)
 }
 
 // A collection of arguments for invoking getPolicyObjectStandardCommunityList.

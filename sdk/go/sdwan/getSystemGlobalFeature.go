@@ -182,12 +182,8 @@ type LookupSystemGlobalFeatureResult struct {
 }
 
 func LookupSystemGlobalFeatureOutput(ctx *pulumi.Context, args LookupSystemGlobalFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemGlobalFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSystemGlobalFeatureResultOutput, error) {
-			args := v.(LookupSystemGlobalFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSystemGlobalFeature:getSystemGlobalFeature", args, LookupSystemGlobalFeatureResultOutput{}, options).(LookupSystemGlobalFeatureResultOutput), nil
-		}).(LookupSystemGlobalFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSystemGlobalFeature:getSystemGlobalFeature", args, LookupSystemGlobalFeatureResultOutput{}, options).(LookupSystemGlobalFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getSystemGlobalFeature.

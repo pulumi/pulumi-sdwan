@@ -118,12 +118,8 @@ type LookupServiceDhcpServerFeatureResult struct {
 }
 
 func LookupServiceDhcpServerFeatureOutput(ctx *pulumi.Context, args LookupServiceDhcpServerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceDhcpServerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceDhcpServerFeatureResultOutput, error) {
-			args := v.(LookupServiceDhcpServerFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getServiceDhcpServerFeature:getServiceDhcpServerFeature", args, LookupServiceDhcpServerFeatureResultOutput{}, options).(LookupServiceDhcpServerFeatureResultOutput), nil
-		}).(LookupServiceDhcpServerFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getServiceDhcpServerFeature:getServiceDhcpServerFeature", args, LookupServiceDhcpServerFeatureResultOutput{}, options).(LookupServiceDhcpServerFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getServiceDhcpServerFeature.

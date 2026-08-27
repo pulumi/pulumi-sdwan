@@ -102,12 +102,8 @@ type LookupSystemMrfFeatureResult struct {
 }
 
 func LookupSystemMrfFeatureOutput(ctx *pulumi.Context, args LookupSystemMrfFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemMrfFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSystemMrfFeatureResultOutput, error) {
-			args := v.(LookupSystemMrfFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSystemMrfFeature:getSystemMrfFeature", args, LookupSystemMrfFeatureResultOutput{}, options).(LookupSystemMrfFeatureResultOutput), nil
-		}).(LookupSystemMrfFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSystemMrfFeature:getSystemMrfFeature", args, LookupSystemMrfFeatureResultOutput{}, options).(LookupSystemMrfFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getSystemMrfFeature.

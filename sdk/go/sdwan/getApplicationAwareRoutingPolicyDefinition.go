@@ -77,12 +77,8 @@ type LookupApplicationAwareRoutingPolicyDefinitionResult struct {
 }
 
 func LookupApplicationAwareRoutingPolicyDefinitionOutput(ctx *pulumi.Context, args LookupApplicationAwareRoutingPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupApplicationAwareRoutingPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplicationAwareRoutingPolicyDefinitionResultOutput, error) {
-			args := v.(LookupApplicationAwareRoutingPolicyDefinitionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getApplicationAwareRoutingPolicyDefinition:getApplicationAwareRoutingPolicyDefinition", args, LookupApplicationAwareRoutingPolicyDefinitionResultOutput{}, options).(LookupApplicationAwareRoutingPolicyDefinitionResultOutput), nil
-		}).(LookupApplicationAwareRoutingPolicyDefinitionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getApplicationAwareRoutingPolicyDefinition:getApplicationAwareRoutingPolicyDefinition", args, LookupApplicationAwareRoutingPolicyDefinitionResultOutput{}, options).(LookupApplicationAwareRoutingPolicyDefinitionResultOutput)
 }
 
 // A collection of arguments for invoking getApplicationAwareRoutingPolicyDefinition.

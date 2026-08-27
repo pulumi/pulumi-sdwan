@@ -84,12 +84,8 @@ type LookupTransportIpv6TrackerGroupFeatureResult struct {
 }
 
 func LookupTransportIpv6TrackerGroupFeatureOutput(ctx *pulumi.Context, args LookupTransportIpv6TrackerGroupFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportIpv6TrackerGroupFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTransportIpv6TrackerGroupFeatureResultOutput, error) {
-			args := v.(LookupTransportIpv6TrackerGroupFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTransportIpv6TrackerGroupFeature:getTransportIpv6TrackerGroupFeature", args, LookupTransportIpv6TrackerGroupFeatureResultOutput{}, options).(LookupTransportIpv6TrackerGroupFeatureResultOutput), nil
-		}).(LookupTransportIpv6TrackerGroupFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTransportIpv6TrackerGroupFeature:getTransportIpv6TrackerGroupFeature", args, LookupTransportIpv6TrackerGroupFeatureResultOutput{}, options).(LookupTransportIpv6TrackerGroupFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getTransportIpv6TrackerGroupFeature.

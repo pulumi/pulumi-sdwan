@@ -86,12 +86,8 @@ type LookupSystemPerformanceMonitoringFeatureResult struct {
 }
 
 func LookupSystemPerformanceMonitoringFeatureOutput(ctx *pulumi.Context, args LookupSystemPerformanceMonitoringFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemPerformanceMonitoringFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSystemPerformanceMonitoringFeatureResultOutput, error) {
-			args := v.(LookupSystemPerformanceMonitoringFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSystemPerformanceMonitoringFeature:getSystemPerformanceMonitoringFeature", args, LookupSystemPerformanceMonitoringFeatureResultOutput{}, options).(LookupSystemPerformanceMonitoringFeatureResultOutput), nil
-		}).(LookupSystemPerformanceMonitoringFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSystemPerformanceMonitoringFeature:getSystemPerformanceMonitoringFeature", args, LookupSystemPerformanceMonitoringFeatureResultOutput{}, options).(LookupSystemPerformanceMonitoringFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getSystemPerformanceMonitoringFeature.

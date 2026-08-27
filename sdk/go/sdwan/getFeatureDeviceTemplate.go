@@ -81,12 +81,8 @@ type LookupFeatureDeviceTemplateResult struct {
 }
 
 func LookupFeatureDeviceTemplateOutput(ctx *pulumi.Context, args LookupFeatureDeviceTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupFeatureDeviceTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupFeatureDeviceTemplateResultOutput, error) {
-			args := v.(LookupFeatureDeviceTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getFeatureDeviceTemplate:getFeatureDeviceTemplate", args, LookupFeatureDeviceTemplateResultOutput{}, options).(LookupFeatureDeviceTemplateResultOutput), nil
-		}).(LookupFeatureDeviceTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getFeatureDeviceTemplate:getFeatureDeviceTemplate", args, LookupFeatureDeviceTemplateResultOutput{}, options).(LookupFeatureDeviceTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getFeatureDeviceTemplate.

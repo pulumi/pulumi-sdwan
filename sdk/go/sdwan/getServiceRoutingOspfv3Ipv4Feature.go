@@ -143,12 +143,8 @@ type LookupServiceRoutingOspfv3Ipv4FeatureResult struct {
 }
 
 func LookupServiceRoutingOspfv3Ipv4FeatureOutput(ctx *pulumi.Context, args LookupServiceRoutingOspfv3Ipv4FeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceRoutingOspfv3Ipv4FeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceRoutingOspfv3Ipv4FeatureResultOutput, error) {
-			args := v.(LookupServiceRoutingOspfv3Ipv4FeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getServiceRoutingOspfv3Ipv4Feature:getServiceRoutingOspfv3Ipv4Feature", args, LookupServiceRoutingOspfv3Ipv4FeatureResultOutput{}, options).(LookupServiceRoutingOspfv3Ipv4FeatureResultOutput), nil
-		}).(LookupServiceRoutingOspfv3Ipv4FeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getServiceRoutingOspfv3Ipv4Feature:getServiceRoutingOspfv3Ipv4Feature", args, LookupServiceRoutingOspfv3Ipv4FeatureResultOutput{}, options).(LookupServiceRoutingOspfv3Ipv4FeatureResultOutput)
 }
 
 // A collection of arguments for invoking getServiceRoutingOspfv3Ipv4Feature.

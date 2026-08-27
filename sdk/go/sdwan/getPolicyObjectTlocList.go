@@ -76,12 +76,8 @@ type LookupPolicyObjectTlocListResult struct {
 }
 
 func LookupPolicyObjectTlocListOutput(ctx *pulumi.Context, args LookupPolicyObjectTlocListOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectTlocListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectTlocListResultOutput, error) {
-			args := v.(LookupPolicyObjectTlocListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getPolicyObjectTlocList:getPolicyObjectTlocList", args, LookupPolicyObjectTlocListResultOutput{}, options).(LookupPolicyObjectTlocListResultOutput), nil
-		}).(LookupPolicyObjectTlocListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getPolicyObjectTlocList:getPolicyObjectTlocList", args, LookupPolicyObjectTlocListResultOutput{}, options).(LookupPolicyObjectTlocListResultOutput)
 }
 
 // A collection of arguments for invoking getPolicyObjectTlocList.

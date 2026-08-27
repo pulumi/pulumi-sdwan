@@ -76,12 +76,8 @@ type LookupOtherThousandeyesFeatureResult struct {
 }
 
 func LookupOtherThousandeyesFeatureOutput(ctx *pulumi.Context, args LookupOtherThousandeyesFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupOtherThousandeyesFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupOtherThousandeyesFeatureResultOutput, error) {
-			args := v.(LookupOtherThousandeyesFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getOtherThousandeyesFeature:getOtherThousandeyesFeature", args, LookupOtherThousandeyesFeatureResultOutput{}, options).(LookupOtherThousandeyesFeatureResultOutput), nil
-		}).(LookupOtherThousandeyesFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getOtherThousandeyesFeature:getOtherThousandeyesFeature", args, LookupOtherThousandeyesFeatureResultOutput{}, options).(LookupOtherThousandeyesFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getOtherThousandeyesFeature.

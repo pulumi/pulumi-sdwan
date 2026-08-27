@@ -82,12 +82,8 @@ type LookupSlaClassPolicyObjectResult struct {
 }
 
 func LookupSlaClassPolicyObjectOutput(ctx *pulumi.Context, args LookupSlaClassPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupSlaClassPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSlaClassPolicyObjectResultOutput, error) {
-			args := v.(LookupSlaClassPolicyObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSlaClassPolicyObject:getSlaClassPolicyObject", args, LookupSlaClassPolicyObjectResultOutput{}, options).(LookupSlaClassPolicyObjectResultOutput), nil
-		}).(LookupSlaClassPolicyObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSlaClassPolicyObject:getSlaClassPolicyObject", args, LookupSlaClassPolicyObjectResultOutput{}, options).(LookupSlaClassPolicyObjectResultOutput)
 }
 
 // A collection of arguments for invoking getSlaClassPolicyObject.

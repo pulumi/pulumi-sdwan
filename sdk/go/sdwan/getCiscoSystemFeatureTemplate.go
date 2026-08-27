@@ -215,12 +215,8 @@ type LookupCiscoSystemFeatureTemplateResult struct {
 }
 
 func LookupCiscoSystemFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoSystemFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoSystemFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCiscoSystemFeatureTemplateResultOutput, error) {
-			args := v.(LookupCiscoSystemFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCiscoSystemFeatureTemplate:getCiscoSystemFeatureTemplate", args, LookupCiscoSystemFeatureTemplateResultOutput{}, options).(LookupCiscoSystemFeatureTemplateResultOutput), nil
-		}).(LookupCiscoSystemFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCiscoSystemFeatureTemplate:getCiscoSystemFeatureTemplate", args, LookupCiscoSystemFeatureTemplateResultOutput{}, options).(LookupCiscoSystemFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCiscoSystemFeatureTemplate.

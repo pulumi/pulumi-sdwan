@@ -341,12 +341,8 @@ type LookupVpnInterfaceMultilinkFeatureTemplateResult struct {
 }
 
 func LookupVpnInterfaceMultilinkFeatureTemplateOutput(ctx *pulumi.Context, args LookupVpnInterfaceMultilinkFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupVpnInterfaceMultilinkFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupVpnInterfaceMultilinkFeatureTemplateResultOutput, error) {
-			args := v.(LookupVpnInterfaceMultilinkFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getVpnInterfaceMultilinkFeatureTemplate:getVpnInterfaceMultilinkFeatureTemplate", args, LookupVpnInterfaceMultilinkFeatureTemplateResultOutput{}, options).(LookupVpnInterfaceMultilinkFeatureTemplateResultOutput), nil
-		}).(LookupVpnInterfaceMultilinkFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getVpnInterfaceMultilinkFeatureTemplate:getVpnInterfaceMultilinkFeatureTemplate", args, LookupVpnInterfaceMultilinkFeatureTemplateResultOutput{}, options).(LookupVpnInterfaceMultilinkFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getVpnInterfaceMultilinkFeatureTemplate.

@@ -73,12 +73,8 @@ type LookupIpv6DeviceAclPolicyDefinitionResult struct {
 }
 
 func LookupIpv6DeviceAclPolicyDefinitionOutput(ctx *pulumi.Context, args LookupIpv6DeviceAclPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupIpv6DeviceAclPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupIpv6DeviceAclPolicyDefinitionResultOutput, error) {
-			args := v.(LookupIpv6DeviceAclPolicyDefinitionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getIpv6DeviceAclPolicyDefinition:getIpv6DeviceAclPolicyDefinition", args, LookupIpv6DeviceAclPolicyDefinitionResultOutput{}, options).(LookupIpv6DeviceAclPolicyDefinitionResultOutput), nil
-		}).(LookupIpv6DeviceAclPolicyDefinitionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getIpv6DeviceAclPolicyDefinition:getIpv6DeviceAclPolicyDefinition", args, LookupIpv6DeviceAclPolicyDefinitionResultOutput{}, options).(LookupIpv6DeviceAclPolicyDefinitionResultOutput)
 }
 
 // A collection of arguments for invoking getIpv6DeviceAclPolicyDefinition.

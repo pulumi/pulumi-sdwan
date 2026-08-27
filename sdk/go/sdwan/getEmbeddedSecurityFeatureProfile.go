@@ -65,12 +65,8 @@ type LookupEmbeddedSecurityFeatureProfileResult struct {
 }
 
 func LookupEmbeddedSecurityFeatureProfileOutput(ctx *pulumi.Context, args LookupEmbeddedSecurityFeatureProfileOutputArgs, opts ...pulumi.InvokeOption) LookupEmbeddedSecurityFeatureProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupEmbeddedSecurityFeatureProfileResultOutput, error) {
-			args := v.(LookupEmbeddedSecurityFeatureProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getEmbeddedSecurityFeatureProfile:getEmbeddedSecurityFeatureProfile", args, LookupEmbeddedSecurityFeatureProfileResultOutput{}, options).(LookupEmbeddedSecurityFeatureProfileResultOutput), nil
-		}).(LookupEmbeddedSecurityFeatureProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getEmbeddedSecurityFeatureProfile:getEmbeddedSecurityFeatureProfile", args, LookupEmbeddedSecurityFeatureProfileResultOutput{}, options).(LookupEmbeddedSecurityFeatureProfileResultOutput)
 }
 
 // A collection of arguments for invoking getEmbeddedSecurityFeatureProfile.

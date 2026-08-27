@@ -92,12 +92,8 @@ type LookupSseCiscoFeatureResult struct {
 }
 
 func LookupSseCiscoFeatureOutput(ctx *pulumi.Context, args LookupSseCiscoFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSseCiscoFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSseCiscoFeatureResultOutput, error) {
-			args := v.(LookupSseCiscoFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSseCiscoFeature:getSseCiscoFeature", args, LookupSseCiscoFeatureResultOutput{}, options).(LookupSseCiscoFeatureResultOutput), nil
-		}).(LookupSseCiscoFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSseCiscoFeature:getSseCiscoFeature", args, LookupSseCiscoFeatureResultOutput{}, options).(LookupSseCiscoFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getSseCiscoFeature.

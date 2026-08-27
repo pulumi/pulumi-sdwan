@@ -107,12 +107,8 @@ type LookupServiceRoutingEigrpFeatureResult struct {
 }
 
 func LookupServiceRoutingEigrpFeatureOutput(ctx *pulumi.Context, args LookupServiceRoutingEigrpFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceRoutingEigrpFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceRoutingEigrpFeatureResultOutput, error) {
-			args := v.(LookupServiceRoutingEigrpFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getServiceRoutingEigrpFeature:getServiceRoutingEigrpFeature", args, LookupServiceRoutingEigrpFeatureResultOutput{}, options).(LookupServiceRoutingEigrpFeatureResultOutput), nil
-		}).(LookupServiceRoutingEigrpFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getServiceRoutingEigrpFeature:getServiceRoutingEigrpFeature", args, LookupServiceRoutingEigrpFeatureResultOutput{}, options).(LookupServiceRoutingEigrpFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getServiceRoutingEigrpFeature.

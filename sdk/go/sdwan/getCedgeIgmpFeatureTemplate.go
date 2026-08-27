@@ -75,12 +75,8 @@ type LookupCedgeIgmpFeatureTemplateResult struct {
 }
 
 func LookupCedgeIgmpFeatureTemplateOutput(ctx *pulumi.Context, args LookupCedgeIgmpFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCedgeIgmpFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCedgeIgmpFeatureTemplateResultOutput, error) {
-			args := v.(LookupCedgeIgmpFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCedgeIgmpFeatureTemplate:getCedgeIgmpFeatureTemplate", args, LookupCedgeIgmpFeatureTemplateResultOutput{}, options).(LookupCedgeIgmpFeatureTemplateResultOutput), nil
-		}).(LookupCedgeIgmpFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCedgeIgmpFeatureTemplate:getCedgeIgmpFeatureTemplate", args, LookupCedgeIgmpFeatureTemplateResultOutput{}, options).(LookupCedgeIgmpFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCedgeIgmpFeatureTemplate.

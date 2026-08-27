@@ -73,12 +73,8 @@ type LookupCliDeviceTemplateResult struct {
 }
 
 func LookupCliDeviceTemplateOutput(ctx *pulumi.Context, args LookupCliDeviceTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCliDeviceTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCliDeviceTemplateResultOutput, error) {
-			args := v.(LookupCliDeviceTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCliDeviceTemplate:getCliDeviceTemplate", args, LookupCliDeviceTemplateResultOutput{}, options).(LookupCliDeviceTemplateResultOutput), nil
-		}).(LookupCliDeviceTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCliDeviceTemplate:getCliDeviceTemplate", args, LookupCliDeviceTemplateResultOutput{}, options).(LookupCliDeviceTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCliDeviceTemplate.

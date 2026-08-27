@@ -89,12 +89,8 @@ type LookupDnsSecurityPolicyResult struct {
 }
 
 func LookupDnsSecurityPolicyOutput(ctx *pulumi.Context, args LookupDnsSecurityPolicyOutputArgs, opts ...pulumi.InvokeOption) LookupDnsSecurityPolicyResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDnsSecurityPolicyResultOutput, error) {
-			args := v.(LookupDnsSecurityPolicyArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getDnsSecurityPolicy:getDnsSecurityPolicy", args, LookupDnsSecurityPolicyResultOutput{}, options).(LookupDnsSecurityPolicyResultOutput), nil
-		}).(LookupDnsSecurityPolicyResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getDnsSecurityPolicy:getDnsSecurityPolicy", args, LookupDnsSecurityPolicyResultOutput{}, options).(LookupDnsSecurityPolicyResultOutput)
 }
 
 // A collection of arguments for invoking getDnsSecurityPolicy.

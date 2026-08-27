@@ -288,12 +288,8 @@ type LookupServiceLanVpnInterfaceEthernetFeatureResult struct {
 }
 
 func LookupServiceLanVpnInterfaceEthernetFeatureOutput(ctx *pulumi.Context, args LookupServiceLanVpnInterfaceEthernetFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceLanVpnInterfaceEthernetFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceLanVpnInterfaceEthernetFeatureResultOutput, error) {
-			args := v.(LookupServiceLanVpnInterfaceEthernetFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getServiceLanVpnInterfaceEthernetFeature:getServiceLanVpnInterfaceEthernetFeature", args, LookupServiceLanVpnInterfaceEthernetFeatureResultOutput{}, options).(LookupServiceLanVpnInterfaceEthernetFeatureResultOutput), nil
-		}).(LookupServiceLanVpnInterfaceEthernetFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getServiceLanVpnInterfaceEthernetFeature:getServiceLanVpnInterfaceEthernetFeature", args, LookupServiceLanVpnInterfaceEthernetFeatureResultOutput{}, options).(LookupServiceLanVpnInterfaceEthernetFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getServiceLanVpnInterfaceEthernetFeature.

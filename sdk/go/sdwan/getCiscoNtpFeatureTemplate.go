@@ -93,12 +93,8 @@ type LookupCiscoNtpFeatureTemplateResult struct {
 }
 
 func LookupCiscoNtpFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoNtpFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoNtpFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCiscoNtpFeatureTemplateResultOutput, error) {
-			args := v.(LookupCiscoNtpFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCiscoNtpFeatureTemplate:getCiscoNtpFeatureTemplate", args, LookupCiscoNtpFeatureTemplateResultOutput{}, options).(LookupCiscoNtpFeatureTemplateResultOutput), nil
-		}).(LookupCiscoNtpFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCiscoNtpFeatureTemplate:getCiscoNtpFeatureTemplate", args, LookupCiscoNtpFeatureTemplateResultOutput{}, options).(LookupCiscoNtpFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCiscoNtpFeatureTemplate.

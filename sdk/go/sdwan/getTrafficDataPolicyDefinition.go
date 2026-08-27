@@ -73,12 +73,8 @@ type LookupTrafficDataPolicyDefinitionResult struct {
 }
 
 func LookupTrafficDataPolicyDefinitionOutput(ctx *pulumi.Context, args LookupTrafficDataPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupTrafficDataPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTrafficDataPolicyDefinitionResultOutput, error) {
-			args := v.(LookupTrafficDataPolicyDefinitionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTrafficDataPolicyDefinition:getTrafficDataPolicyDefinition", args, LookupTrafficDataPolicyDefinitionResultOutput{}, options).(LookupTrafficDataPolicyDefinitionResultOutput), nil
-		}).(LookupTrafficDataPolicyDefinitionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTrafficDataPolicyDefinition:getTrafficDataPolicyDefinition", args, LookupTrafficDataPolicyDefinitionResultOutput{}, options).(LookupTrafficDataPolicyDefinitionResultOutput)
 }
 
 // A collection of arguments for invoking getTrafficDataPolicyDefinition.

@@ -67,12 +67,8 @@ type LookupZoneListPolicyObjectResult struct {
 }
 
 func LookupZoneListPolicyObjectOutput(ctx *pulumi.Context, args LookupZoneListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupZoneListPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupZoneListPolicyObjectResultOutput, error) {
-			args := v.(LookupZoneListPolicyObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getZoneListPolicyObject:getZoneListPolicyObject", args, LookupZoneListPolicyObjectResultOutput{}, options).(LookupZoneListPolicyObjectResultOutput), nil
-		}).(LookupZoneListPolicyObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getZoneListPolicyObject:getZoneListPolicyObject", args, LookupZoneListPolicyObjectResultOutput{}, options).(LookupZoneListPolicyObjectResultOutput)
 }
 
 // A collection of arguments for invoking getZoneListPolicyObject.
