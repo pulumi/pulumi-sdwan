@@ -75,12 +75,8 @@ type LookupCiscoThousandeyesFeatureTemplateResult struct {
 }
 
 func LookupCiscoThousandeyesFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoThousandeyesFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoThousandeyesFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCiscoThousandeyesFeatureTemplateResultOutput, error) {
-			args := v.(LookupCiscoThousandeyesFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCiscoThousandeyesFeatureTemplate:getCiscoThousandeyesFeatureTemplate", args, LookupCiscoThousandeyesFeatureTemplateResultOutput{}, options).(LookupCiscoThousandeyesFeatureTemplateResultOutput), nil
-		}).(LookupCiscoThousandeyesFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCiscoThousandeyesFeatureTemplate:getCiscoThousandeyesFeatureTemplate", args, LookupCiscoThousandeyesFeatureTemplateResultOutput{}, options).(LookupCiscoThousandeyesFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCiscoThousandeyesFeatureTemplate.

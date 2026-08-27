@@ -101,12 +101,8 @@ type LookupCellularCedgeProfileFeatureTemplateResult struct {
 }
 
 func LookupCellularCedgeProfileFeatureTemplateOutput(ctx *pulumi.Context, args LookupCellularCedgeProfileFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCellularCedgeProfileFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCellularCedgeProfileFeatureTemplateResultOutput, error) {
-			args := v.(LookupCellularCedgeProfileFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCellularCedgeProfileFeatureTemplate:getCellularCedgeProfileFeatureTemplate", args, LookupCellularCedgeProfileFeatureTemplateResultOutput{}, options).(LookupCellularCedgeProfileFeatureTemplateResultOutput), nil
-		}).(LookupCellularCedgeProfileFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCellularCedgeProfileFeatureTemplate:getCellularCedgeProfileFeatureTemplate", args, LookupCellularCedgeProfileFeatureTemplateResultOutput{}, options).(LookupCellularCedgeProfileFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCellularCedgeProfileFeatureTemplate.

@@ -96,12 +96,8 @@ type LookupSystemSnmpFeatureResult struct {
 }
 
 func LookupSystemSnmpFeatureOutput(ctx *pulumi.Context, args LookupSystemSnmpFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemSnmpFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSystemSnmpFeatureResultOutput, error) {
-			args := v.(LookupSystemSnmpFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSystemSnmpFeature:getSystemSnmpFeature", args, LookupSystemSnmpFeatureResultOutput{}, options).(LookupSystemSnmpFeatureResultOutput), nil
-		}).(LookupSystemSnmpFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSystemSnmpFeature:getSystemSnmpFeature", args, LookupSystemSnmpFeatureResultOutput{}, options).(LookupSystemSnmpFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getSystemSnmpFeature.

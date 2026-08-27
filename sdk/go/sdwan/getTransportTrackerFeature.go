@@ -112,12 +112,8 @@ type LookupTransportTrackerFeatureResult struct {
 }
 
 func LookupTransportTrackerFeatureOutput(ctx *pulumi.Context, args LookupTransportTrackerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportTrackerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTransportTrackerFeatureResultOutput, error) {
-			args := v.(LookupTransportTrackerFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTransportTrackerFeature:getTransportTrackerFeature", args, LookupTransportTrackerFeatureResultOutput{}, options).(LookupTransportTrackerFeatureResultOutput), nil
-		}).(LookupTransportTrackerFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTransportTrackerFeature:getTransportTrackerFeature", args, LookupTransportTrackerFeatureResultOutput{}, options).(LookupTransportTrackerFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getTransportTrackerFeature.

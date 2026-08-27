@@ -65,12 +65,8 @@ type LookupSigSecurityFeatureProfileResult struct {
 }
 
 func LookupSigSecurityFeatureProfileOutput(ctx *pulumi.Context, args LookupSigSecurityFeatureProfileOutputArgs, opts ...pulumi.InvokeOption) LookupSigSecurityFeatureProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSigSecurityFeatureProfileResultOutput, error) {
-			args := v.(LookupSigSecurityFeatureProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSigSecurityFeatureProfile:getSigSecurityFeatureProfile", args, LookupSigSecurityFeatureProfileResultOutput{}, options).(LookupSigSecurityFeatureProfileResultOutput), nil
-		}).(LookupSigSecurityFeatureProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSigSecurityFeatureProfile:getSigSecurityFeatureProfile", args, LookupSigSecurityFeatureProfileResultOutput{}, options).(LookupSigSecurityFeatureProfileResultOutput)
 }
 
 // A collection of arguments for invoking getSigSecurityFeatureProfile.

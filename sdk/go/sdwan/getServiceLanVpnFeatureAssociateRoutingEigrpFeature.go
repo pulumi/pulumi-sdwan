@@ -75,12 +75,8 @@ type LookupServiceLanVpnFeatureAssociateRoutingEigrpFeatureResult struct {
 }
 
 func LookupServiceLanVpnFeatureAssociateRoutingEigrpFeatureOutput(ctx *pulumi.Context, args LookupServiceLanVpnFeatureAssociateRoutingEigrpFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceLanVpnFeatureAssociateRoutingEigrpFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceLanVpnFeatureAssociateRoutingEigrpFeatureResultOutput, error) {
-			args := v.(LookupServiceLanVpnFeatureAssociateRoutingEigrpFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getServiceLanVpnFeatureAssociateRoutingEigrpFeature:getServiceLanVpnFeatureAssociateRoutingEigrpFeature", args, LookupServiceLanVpnFeatureAssociateRoutingEigrpFeatureResultOutput{}, options).(LookupServiceLanVpnFeatureAssociateRoutingEigrpFeatureResultOutput), nil
-		}).(LookupServiceLanVpnFeatureAssociateRoutingEigrpFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getServiceLanVpnFeatureAssociateRoutingEigrpFeature:getServiceLanVpnFeatureAssociateRoutingEigrpFeature", args, LookupServiceLanVpnFeatureAssociateRoutingEigrpFeatureResultOutput{}, options).(LookupServiceLanVpnFeatureAssociateRoutingEigrpFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getServiceLanVpnFeatureAssociateRoutingEigrpFeature.

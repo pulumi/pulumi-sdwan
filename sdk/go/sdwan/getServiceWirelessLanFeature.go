@@ -110,12 +110,8 @@ type LookupServiceWirelessLanFeatureResult struct {
 }
 
 func LookupServiceWirelessLanFeatureOutput(ctx *pulumi.Context, args LookupServiceWirelessLanFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceWirelessLanFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceWirelessLanFeatureResultOutput, error) {
-			args := v.(LookupServiceWirelessLanFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getServiceWirelessLanFeature:getServiceWirelessLanFeature", args, LookupServiceWirelessLanFeatureResultOutput{}, options).(LookupServiceWirelessLanFeatureResultOutput), nil
-		}).(LookupServiceWirelessLanFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getServiceWirelessLanFeature:getServiceWirelessLanFeature", args, LookupServiceWirelessLanFeatureResultOutput{}, options).(LookupServiceWirelessLanFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getServiceWirelessLanFeature.

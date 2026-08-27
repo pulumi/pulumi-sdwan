@@ -117,12 +117,8 @@ type LookupCellularProfileFeatureTemplateResult struct {
 }
 
 func LookupCellularProfileFeatureTemplateOutput(ctx *pulumi.Context, args LookupCellularProfileFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCellularProfileFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCellularProfileFeatureTemplateResultOutput, error) {
-			args := v.(LookupCellularProfileFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCellularProfileFeatureTemplate:getCellularProfileFeatureTemplate", args, LookupCellularProfileFeatureTemplateResultOutput{}, options).(LookupCellularProfileFeatureTemplateResultOutput), nil
-		}).(LookupCellularProfileFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCellularProfileFeatureTemplate:getCellularProfileFeatureTemplate", args, LookupCellularProfileFeatureTemplateResultOutput{}, options).(LookupCellularProfileFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCellularProfileFeatureTemplate.

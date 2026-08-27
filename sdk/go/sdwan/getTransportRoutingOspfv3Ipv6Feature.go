@@ -143,12 +143,8 @@ type LookupTransportRoutingOspfv3Ipv6FeatureResult struct {
 }
 
 func LookupTransportRoutingOspfv3Ipv6FeatureOutput(ctx *pulumi.Context, args LookupTransportRoutingOspfv3Ipv6FeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportRoutingOspfv3Ipv6FeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTransportRoutingOspfv3Ipv6FeatureResultOutput, error) {
-			args := v.(LookupTransportRoutingOspfv3Ipv6FeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTransportRoutingOspfv3Ipv6Feature:getTransportRoutingOspfv3Ipv6Feature", args, LookupTransportRoutingOspfv3Ipv6FeatureResultOutput{}, options).(LookupTransportRoutingOspfv3Ipv6FeatureResultOutput), nil
-		}).(LookupTransportRoutingOspfv3Ipv6FeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTransportRoutingOspfv3Ipv6Feature:getTransportRoutingOspfv3Ipv6Feature", args, LookupTransportRoutingOspfv3Ipv6FeatureResultOutput{}, options).(LookupTransportRoutingOspfv3Ipv6FeatureResultOutput)
 }
 
 // A collection of arguments for invoking getTransportRoutingOspfv3Ipv6Feature.

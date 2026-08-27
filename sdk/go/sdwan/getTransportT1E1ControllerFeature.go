@@ -82,12 +82,8 @@ type LookupTransportT1E1ControllerFeatureResult struct {
 }
 
 func LookupTransportT1E1ControllerFeatureOutput(ctx *pulumi.Context, args LookupTransportT1E1ControllerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportT1E1ControllerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTransportT1E1ControllerFeatureResultOutput, error) {
-			args := v.(LookupTransportT1E1ControllerFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTransportT1E1ControllerFeature:getTransportT1E1ControllerFeature", args, LookupTransportT1E1ControllerFeatureResultOutput{}, options).(LookupTransportT1E1ControllerFeatureResultOutput), nil
-		}).(LookupTransportT1E1ControllerFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTransportT1E1ControllerFeature:getTransportT1E1ControllerFeature", args, LookupTransportT1E1ControllerFeatureResultOutput{}, options).(LookupTransportT1E1ControllerFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getTransportT1E1ControllerFeature.

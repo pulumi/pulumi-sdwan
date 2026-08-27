@@ -147,12 +147,8 @@ type LookupVpnInterfaceSviFeatureTemplateResult struct {
 }
 
 func LookupVpnInterfaceSviFeatureTemplateOutput(ctx *pulumi.Context, args LookupVpnInterfaceSviFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupVpnInterfaceSviFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupVpnInterfaceSviFeatureTemplateResultOutput, error) {
-			args := v.(LookupVpnInterfaceSviFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getVpnInterfaceSviFeatureTemplate:getVpnInterfaceSviFeatureTemplate", args, LookupVpnInterfaceSviFeatureTemplateResultOutput{}, options).(LookupVpnInterfaceSviFeatureTemplateResultOutput), nil
-		}).(LookupVpnInterfaceSviFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getVpnInterfaceSviFeatureTemplate:getVpnInterfaceSviFeatureTemplate", args, LookupVpnInterfaceSviFeatureTemplateResultOutput{}, options).(LookupVpnInterfaceSviFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getVpnInterfaceSviFeatureTemplate.

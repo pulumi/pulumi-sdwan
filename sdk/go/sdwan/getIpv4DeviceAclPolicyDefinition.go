@@ -73,12 +73,8 @@ type LookupIpv4DeviceAclPolicyDefinitionResult struct {
 }
 
 func LookupIpv4DeviceAclPolicyDefinitionOutput(ctx *pulumi.Context, args LookupIpv4DeviceAclPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupIpv4DeviceAclPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupIpv4DeviceAclPolicyDefinitionResultOutput, error) {
-			args := v.(LookupIpv4DeviceAclPolicyDefinitionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getIpv4DeviceAclPolicyDefinition:getIpv4DeviceAclPolicyDefinition", args, LookupIpv4DeviceAclPolicyDefinitionResultOutput{}, options).(LookupIpv4DeviceAclPolicyDefinitionResultOutput), nil
-		}).(LookupIpv4DeviceAclPolicyDefinitionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getIpv4DeviceAclPolicyDefinition:getIpv4DeviceAclPolicyDefinition", args, LookupIpv4DeviceAclPolicyDefinitionResultOutput{}, options).(LookupIpv4DeviceAclPolicyDefinitionResultOutput)
 }
 
 // A collection of arguments for invoking getIpv4DeviceAclPolicyDefinition.

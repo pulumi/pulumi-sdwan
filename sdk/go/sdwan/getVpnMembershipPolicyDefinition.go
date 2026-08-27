@@ -71,12 +71,8 @@ type LookupVpnMembershipPolicyDefinitionResult struct {
 }
 
 func LookupVpnMembershipPolicyDefinitionOutput(ctx *pulumi.Context, args LookupVpnMembershipPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupVpnMembershipPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupVpnMembershipPolicyDefinitionResultOutput, error) {
-			args := v.(LookupVpnMembershipPolicyDefinitionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getVpnMembershipPolicyDefinition:getVpnMembershipPolicyDefinition", args, LookupVpnMembershipPolicyDefinitionResultOutput{}, options).(LookupVpnMembershipPolicyDefinitionResultOutput), nil
-		}).(LookupVpnMembershipPolicyDefinitionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getVpnMembershipPolicyDefinition:getVpnMembershipPolicyDefinition", args, LookupVpnMembershipPolicyDefinitionResultOutput{}, options).(LookupVpnMembershipPolicyDefinitionResultOutput)
 }
 
 // A collection of arguments for invoking getVpnMembershipPolicyDefinition.

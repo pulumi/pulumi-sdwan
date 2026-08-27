@@ -77,12 +77,8 @@ type LookupConfigurationGroupResult struct {
 }
 
 func LookupConfigurationGroupOutput(ctx *pulumi.Context, args LookupConfigurationGroupOutputArgs, opts ...pulumi.InvokeOption) LookupConfigurationGroupResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupConfigurationGroupResultOutput, error) {
-			args := v.(LookupConfigurationGroupArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getConfigurationGroup:getConfigurationGroup", args, LookupConfigurationGroupResultOutput{}, options).(LookupConfigurationGroupResultOutput), nil
-		}).(LookupConfigurationGroupResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getConfigurationGroup:getConfigurationGroup", args, LookupConfigurationGroupResultOutput{}, options).(LookupConfigurationGroupResultOutput)
 }
 
 // A collection of arguments for invoking getConfigurationGroup.

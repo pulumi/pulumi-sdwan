@@ -95,12 +95,8 @@ type LookupCellularControllerFeatureTemplateResult struct {
 }
 
 func LookupCellularControllerFeatureTemplateOutput(ctx *pulumi.Context, args LookupCellularControllerFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCellularControllerFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCellularControllerFeatureTemplateResultOutput, error) {
-			args := v.(LookupCellularControllerFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCellularControllerFeatureTemplate:getCellularControllerFeatureTemplate", args, LookupCellularControllerFeatureTemplateResultOutput{}, options).(LookupCellularControllerFeatureTemplateResultOutput), nil
-		}).(LookupCellularControllerFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCellularControllerFeatureTemplate:getCellularControllerFeatureTemplate", args, LookupCellularControllerFeatureTemplateResultOutput{}, options).(LookupCellularControllerFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCellularControllerFeatureTemplate.

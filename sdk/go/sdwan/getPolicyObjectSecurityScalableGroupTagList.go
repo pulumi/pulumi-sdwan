@@ -75,12 +75,8 @@ type LookupPolicyObjectSecurityScalableGroupTagListResult struct {
 }
 
 func LookupPolicyObjectSecurityScalableGroupTagListOutput(ctx *pulumi.Context, args LookupPolicyObjectSecurityScalableGroupTagListOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectSecurityScalableGroupTagListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectSecurityScalableGroupTagListResultOutput, error) {
-			args := v.(LookupPolicyObjectSecurityScalableGroupTagListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getPolicyObjectSecurityScalableGroupTagList:getPolicyObjectSecurityScalableGroupTagList", args, LookupPolicyObjectSecurityScalableGroupTagListResultOutput{}, options).(LookupPolicyObjectSecurityScalableGroupTagListResultOutput), nil
-		}).(LookupPolicyObjectSecurityScalableGroupTagListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getPolicyObjectSecurityScalableGroupTagList:getPolicyObjectSecurityScalableGroupTagList", args, LookupPolicyObjectSecurityScalableGroupTagListResultOutput{}, options).(LookupPolicyObjectSecurityScalableGroupTagListResultOutput)
 }
 
 // A collection of arguments for invoking getPolicyObjectSecurityScalableGroupTagList.

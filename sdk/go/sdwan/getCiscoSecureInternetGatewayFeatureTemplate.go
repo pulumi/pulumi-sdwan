@@ -85,12 +85,8 @@ type LookupCiscoSecureInternetGatewayFeatureTemplateResult struct {
 }
 
 func LookupCiscoSecureInternetGatewayFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoSecureInternetGatewayFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoSecureInternetGatewayFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCiscoSecureInternetGatewayFeatureTemplateResultOutput, error) {
-			args := v.(LookupCiscoSecureInternetGatewayFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCiscoSecureInternetGatewayFeatureTemplate:getCiscoSecureInternetGatewayFeatureTemplate", args, LookupCiscoSecureInternetGatewayFeatureTemplateResultOutput{}, options).(LookupCiscoSecureInternetGatewayFeatureTemplateResultOutput), nil
-		}).(LookupCiscoSecureInternetGatewayFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCiscoSecureInternetGatewayFeatureTemplate:getCiscoSecureInternetGatewayFeatureTemplate", args, LookupCiscoSecureInternetGatewayFeatureTemplateResultOutput{}, options).(LookupCiscoSecureInternetGatewayFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCiscoSecureInternetGatewayFeatureTemplate.

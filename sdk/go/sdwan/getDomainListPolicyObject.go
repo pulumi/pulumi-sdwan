@@ -67,12 +67,8 @@ type LookupDomainListPolicyObjectResult struct {
 }
 
 func LookupDomainListPolicyObjectOutput(ctx *pulumi.Context, args LookupDomainListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupDomainListPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDomainListPolicyObjectResultOutput, error) {
-			args := v.(LookupDomainListPolicyObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getDomainListPolicyObject:getDomainListPolicyObject", args, LookupDomainListPolicyObjectResultOutput{}, options).(LookupDomainListPolicyObjectResultOutput), nil
-		}).(LookupDomainListPolicyObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getDomainListPolicyObject:getDomainListPolicyObject", args, LookupDomainListPolicyObjectResultOutput{}, options).(LookupDomainListPolicyObjectResultOutput)
 }
 
 // A collection of arguments for invoking getDomainListPolicyObject.

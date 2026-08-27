@@ -67,12 +67,8 @@ type LookupDataFqdnPrefixListPolicyObjectResult struct {
 }
 
 func LookupDataFqdnPrefixListPolicyObjectOutput(ctx *pulumi.Context, args LookupDataFqdnPrefixListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupDataFqdnPrefixListPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDataFqdnPrefixListPolicyObjectResultOutput, error) {
-			args := v.(LookupDataFqdnPrefixListPolicyObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getDataFqdnPrefixListPolicyObject:getDataFqdnPrefixListPolicyObject", args, LookupDataFqdnPrefixListPolicyObjectResultOutput{}, options).(LookupDataFqdnPrefixListPolicyObjectResultOutput), nil
-		}).(LookupDataFqdnPrefixListPolicyObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getDataFqdnPrefixListPolicyObject:getDataFqdnPrefixListPolicyObject", args, LookupDataFqdnPrefixListPolicyObjectResultOutput{}, options).(LookupDataFqdnPrefixListPolicyObjectResultOutput)
 }
 
 // A collection of arguments for invoking getDataFqdnPrefixListPolicyObject.

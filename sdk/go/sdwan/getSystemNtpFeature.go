@@ -94,12 +94,8 @@ type LookupSystemNtpFeatureResult struct {
 }
 
 func LookupSystemNtpFeatureOutput(ctx *pulumi.Context, args LookupSystemNtpFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemNtpFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSystemNtpFeatureResultOutput, error) {
-			args := v.(LookupSystemNtpFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSystemNtpFeature:getSystemNtpFeature", args, LookupSystemNtpFeatureResultOutput{}, options).(LookupSystemNtpFeatureResultOutput), nil
-		}).(LookupSystemNtpFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSystemNtpFeature:getSystemNtpFeature", args, LookupSystemNtpFeatureResultOutput{}, options).(LookupSystemNtpFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getSystemNtpFeature.

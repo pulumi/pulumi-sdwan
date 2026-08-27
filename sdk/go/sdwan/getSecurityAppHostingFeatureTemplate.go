@@ -75,12 +75,8 @@ type LookupSecurityAppHostingFeatureTemplateResult struct {
 }
 
 func LookupSecurityAppHostingFeatureTemplateOutput(ctx *pulumi.Context, args LookupSecurityAppHostingFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupSecurityAppHostingFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSecurityAppHostingFeatureTemplateResultOutput, error) {
-			args := v.(LookupSecurityAppHostingFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSecurityAppHostingFeatureTemplate:getSecurityAppHostingFeatureTemplate", args, LookupSecurityAppHostingFeatureTemplateResultOutput{}, options).(LookupSecurityAppHostingFeatureTemplateResultOutput), nil
-		}).(LookupSecurityAppHostingFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSecurityAppHostingFeatureTemplate:getSecurityAppHostingFeatureTemplate", args, LookupSecurityAppHostingFeatureTemplateResultOutput{}, options).(LookupSecurityAppHostingFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getSecurityAppHostingFeatureTemplate.

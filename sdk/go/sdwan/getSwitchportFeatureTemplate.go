@@ -87,12 +87,8 @@ type LookupSwitchportFeatureTemplateResult struct {
 }
 
 func LookupSwitchportFeatureTemplateOutput(ctx *pulumi.Context, args LookupSwitchportFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchportFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSwitchportFeatureTemplateResultOutput, error) {
-			args := v.(LookupSwitchportFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSwitchportFeatureTemplate:getSwitchportFeatureTemplate", args, LookupSwitchportFeatureTemplateResultOutput{}, options).(LookupSwitchportFeatureTemplateResultOutput), nil
-		}).(LookupSwitchportFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSwitchportFeatureTemplate:getSwitchportFeatureTemplate", args, LookupSwitchportFeatureTemplateResultOutput{}, options).(LookupSwitchportFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchportFeatureTemplate.

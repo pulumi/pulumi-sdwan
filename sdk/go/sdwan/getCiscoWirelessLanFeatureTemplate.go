@@ -107,12 +107,8 @@ type LookupCiscoWirelessLanFeatureTemplateResult struct {
 }
 
 func LookupCiscoWirelessLanFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoWirelessLanFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoWirelessLanFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCiscoWirelessLanFeatureTemplateResultOutput, error) {
-			args := v.(LookupCiscoWirelessLanFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCiscoWirelessLanFeatureTemplate:getCiscoWirelessLanFeatureTemplate", args, LookupCiscoWirelessLanFeatureTemplateResultOutput{}, options).(LookupCiscoWirelessLanFeatureTemplateResultOutput), nil
-		}).(LookupCiscoWirelessLanFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCiscoWirelessLanFeatureTemplate:getCiscoWirelessLanFeatureTemplate", args, LookupCiscoWirelessLanFeatureTemplateResultOutput{}, options).(LookupCiscoWirelessLanFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCiscoWirelessLanFeatureTemplate.

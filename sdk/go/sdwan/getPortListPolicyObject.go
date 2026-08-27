@@ -67,12 +67,8 @@ type LookupPortListPolicyObjectResult struct {
 }
 
 func LookupPortListPolicyObjectOutput(ctx *pulumi.Context, args LookupPortListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupPortListPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupPortListPolicyObjectResultOutput, error) {
-			args := v.(LookupPortListPolicyObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getPortListPolicyObject:getPortListPolicyObject", args, LookupPortListPolicyObjectResultOutput{}, options).(LookupPortListPolicyObjectResultOutput), nil
-		}).(LookupPortListPolicyObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getPortListPolicyObject:getPortListPolicyObject", args, LookupPortListPolicyObjectResultOutput{}, options).(LookupPortListPolicyObjectResultOutput)
 }
 
 // A collection of arguments for invoking getPortListPolicyObject.

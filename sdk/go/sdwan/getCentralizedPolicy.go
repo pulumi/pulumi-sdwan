@@ -69,12 +69,8 @@ type LookupCentralizedPolicyResult struct {
 }
 
 func LookupCentralizedPolicyOutput(ctx *pulumi.Context, args LookupCentralizedPolicyOutputArgs, opts ...pulumi.InvokeOption) LookupCentralizedPolicyResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCentralizedPolicyResultOutput, error) {
-			args := v.(LookupCentralizedPolicyArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCentralizedPolicy:getCentralizedPolicy", args, LookupCentralizedPolicyResultOutput{}, options).(LookupCentralizedPolicyResultOutput), nil
-		}).(LookupCentralizedPolicyResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCentralizedPolicy:getCentralizedPolicy", args, LookupCentralizedPolicyResultOutput{}, options).(LookupCentralizedPolicyResultOutput)
 }
 
 // A collection of arguments for invoking getCentralizedPolicy.

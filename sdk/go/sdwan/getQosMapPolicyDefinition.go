@@ -71,12 +71,8 @@ type LookupQosMapPolicyDefinitionResult struct {
 }
 
 func LookupQosMapPolicyDefinitionOutput(ctx *pulumi.Context, args LookupQosMapPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupQosMapPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupQosMapPolicyDefinitionResultOutput, error) {
-			args := v.(LookupQosMapPolicyDefinitionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getQosMapPolicyDefinition:getQosMapPolicyDefinition", args, LookupQosMapPolicyDefinitionResultOutput{}, options).(LookupQosMapPolicyDefinitionResultOutput), nil
-		}).(LookupQosMapPolicyDefinitionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getQosMapPolicyDefinition:getQosMapPolicyDefinition", args, LookupQosMapPolicyDefinitionResultOutput{}, options).(LookupQosMapPolicyDefinitionResultOutput)
 }
 
 // A collection of arguments for invoking getQosMapPolicyDefinition.

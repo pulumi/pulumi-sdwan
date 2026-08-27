@@ -67,12 +67,8 @@ type LookupIpsSignatureListPolicyObjectResult struct {
 }
 
 func LookupIpsSignatureListPolicyObjectOutput(ctx *pulumi.Context, args LookupIpsSignatureListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupIpsSignatureListPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupIpsSignatureListPolicyObjectResultOutput, error) {
-			args := v.(LookupIpsSignatureListPolicyObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getIpsSignatureListPolicyObject:getIpsSignatureListPolicyObject", args, LookupIpsSignatureListPolicyObjectResultOutput{}, options).(LookupIpsSignatureListPolicyObjectResultOutput), nil
-		}).(LookupIpsSignatureListPolicyObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getIpsSignatureListPolicyObject:getIpsSignatureListPolicyObject", args, LookupIpsSignatureListPolicyObjectResultOutput{}, options).(LookupIpsSignatureListPolicyObjectResultOutput)
 }
 
 // A collection of arguments for invoking getIpsSignatureListPolicyObject.

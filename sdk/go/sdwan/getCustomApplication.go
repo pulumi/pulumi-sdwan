@@ -77,12 +77,8 @@ type LookupCustomApplicationResult struct {
 }
 
 func LookupCustomApplicationOutput(ctx *pulumi.Context, args LookupCustomApplicationOutputArgs, opts ...pulumi.InvokeOption) LookupCustomApplicationResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCustomApplicationResultOutput, error) {
-			args := v.(LookupCustomApplicationArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCustomApplication:getCustomApplication", args, LookupCustomApplicationResultOutput{}, options).(LookupCustomApplicationResultOutput), nil
-		}).(LookupCustomApplicationResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCustomApplication:getCustomApplication", args, LookupCustomApplicationResultOutput{}, options).(LookupCustomApplicationResultOutput)
 }
 
 // A collection of arguments for invoking getCustomApplication.

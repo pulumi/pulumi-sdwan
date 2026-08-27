@@ -73,12 +73,8 @@ type LookupZoneBasedFirewallPolicyDefinitionResult struct {
 }
 
 func LookupZoneBasedFirewallPolicyDefinitionOutput(ctx *pulumi.Context, args LookupZoneBasedFirewallPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupZoneBasedFirewallPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupZoneBasedFirewallPolicyDefinitionResultOutput, error) {
-			args := v.(LookupZoneBasedFirewallPolicyDefinitionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getZoneBasedFirewallPolicyDefinition:getZoneBasedFirewallPolicyDefinition", args, LookupZoneBasedFirewallPolicyDefinitionResultOutput{}, options).(LookupZoneBasedFirewallPolicyDefinitionResultOutput), nil
-		}).(LookupZoneBasedFirewallPolicyDefinitionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getZoneBasedFirewallPolicyDefinition:getZoneBasedFirewallPolicyDefinition", args, LookupZoneBasedFirewallPolicyDefinitionResultOutput{}, options).(LookupZoneBasedFirewallPolicyDefinitionResultOutput)
 }
 
 // A collection of arguments for invoking getZoneBasedFirewallPolicyDefinition.

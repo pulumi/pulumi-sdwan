@@ -109,12 +109,8 @@ type LookupCiscoDhcpServerFeatureTemplateResult struct {
 }
 
 func LookupCiscoDhcpServerFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoDhcpServerFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoDhcpServerFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCiscoDhcpServerFeatureTemplateResultOutput, error) {
-			args := v.(LookupCiscoDhcpServerFeatureTemplateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCiscoDhcpServerFeatureTemplate:getCiscoDhcpServerFeatureTemplate", args, LookupCiscoDhcpServerFeatureTemplateResultOutput{}, options).(LookupCiscoDhcpServerFeatureTemplateResultOutput), nil
-		}).(LookupCiscoDhcpServerFeatureTemplateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCiscoDhcpServerFeatureTemplate:getCiscoDhcpServerFeatureTemplate", args, LookupCiscoDhcpServerFeatureTemplateResultOutput{}, options).(LookupCiscoDhcpServerFeatureTemplateResultOutput)
 }
 
 // A collection of arguments for invoking getCiscoDhcpServerFeatureTemplate.

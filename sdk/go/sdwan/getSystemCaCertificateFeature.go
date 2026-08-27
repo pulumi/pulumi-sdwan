@@ -76,12 +76,8 @@ type LookupSystemCaCertificateFeatureResult struct {
 }
 
 func LookupSystemCaCertificateFeatureOutput(ctx *pulumi.Context, args LookupSystemCaCertificateFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemCaCertificateFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSystemCaCertificateFeatureResultOutput, error) {
-			args := v.(LookupSystemCaCertificateFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSystemCaCertificateFeature:getSystemCaCertificateFeature", args, LookupSystemCaCertificateFeatureResultOutput{}, options).(LookupSystemCaCertificateFeatureResultOutput), nil
-		}).(LookupSystemCaCertificateFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSystemCaCertificateFeature:getSystemCaCertificateFeature", args, LookupSystemCaCertificateFeatureResultOutput{}, options).(LookupSystemCaCertificateFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getSystemCaCertificateFeature.

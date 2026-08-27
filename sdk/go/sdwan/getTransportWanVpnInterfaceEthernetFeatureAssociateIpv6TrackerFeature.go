@@ -80,12 +80,8 @@ type LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureRes
 }
 
 func LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureOutput(ctx *pulumi.Context, args LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput, error) {
-			args := v.(LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature:getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature", args, LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput{}, options).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput), nil
-		}).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature:getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature", args, LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput{}, options).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature.

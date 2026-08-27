@@ -69,12 +69,8 @@ type LookupRuleSetPolicyDefinitionResult struct {
 }
 
 func LookupRuleSetPolicyDefinitionOutput(ctx *pulumi.Context, args LookupRuleSetPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupRuleSetPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupRuleSetPolicyDefinitionResultOutput, error) {
-			args := v.(LookupRuleSetPolicyDefinitionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getRuleSetPolicyDefinition:getRuleSetPolicyDefinition", args, LookupRuleSetPolicyDefinitionResultOutput{}, options).(LookupRuleSetPolicyDefinitionResultOutput), nil
-		}).(LookupRuleSetPolicyDefinitionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getRuleSetPolicyDefinition:getRuleSetPolicyDefinition", args, LookupRuleSetPolicyDefinitionResultOutput{}, options).(LookupRuleSetPolicyDefinitionResultOutput)
 }
 
 // A collection of arguments for invoking getRuleSetPolicyDefinition.

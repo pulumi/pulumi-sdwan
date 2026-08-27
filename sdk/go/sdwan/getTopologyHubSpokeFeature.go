@@ -76,12 +76,8 @@ type LookupTopologyHubSpokeFeatureResult struct {
 }
 
 func LookupTopologyHubSpokeFeatureOutput(ctx *pulumi.Context, args LookupTopologyHubSpokeFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTopologyHubSpokeFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTopologyHubSpokeFeatureResultOutput, error) {
-			args := v.(LookupTopologyHubSpokeFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTopologyHubSpokeFeature:getTopologyHubSpokeFeature", args, LookupTopologyHubSpokeFeatureResultOutput{}, options).(LookupTopologyHubSpokeFeatureResultOutput), nil
-		}).(LookupTopologyHubSpokeFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTopologyHubSpokeFeature:getTopologyHubSpokeFeature", args, LookupTopologyHubSpokeFeatureResultOutput{}, options).(LookupTopologyHubSpokeFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getTopologyHubSpokeFeature.

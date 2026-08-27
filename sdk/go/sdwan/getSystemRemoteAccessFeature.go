@@ -145,12 +145,8 @@ type LookupSystemRemoteAccessFeatureResult struct {
 }
 
 func LookupSystemRemoteAccessFeatureOutput(ctx *pulumi.Context, args LookupSystemRemoteAccessFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemRemoteAccessFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSystemRemoteAccessFeatureResultOutput, error) {
-			args := v.(LookupSystemRemoteAccessFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSystemRemoteAccessFeature:getSystemRemoteAccessFeature", args, LookupSystemRemoteAccessFeatureResultOutput{}, options).(LookupSystemRemoteAccessFeatureResultOutput), nil
-		}).(LookupSystemRemoteAccessFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSystemRemoteAccessFeature:getSystemRemoteAccessFeature", args, LookupSystemRemoteAccessFeatureResultOutput{}, options).(LookupSystemRemoteAccessFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getSystemRemoteAccessFeature.

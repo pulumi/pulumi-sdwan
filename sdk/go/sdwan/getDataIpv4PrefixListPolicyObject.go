@@ -67,12 +67,8 @@ type LookupDataIpv4PrefixListPolicyObjectResult struct {
 }
 
 func LookupDataIpv4PrefixListPolicyObjectOutput(ctx *pulumi.Context, args LookupDataIpv4PrefixListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupDataIpv4PrefixListPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDataIpv4PrefixListPolicyObjectResultOutput, error) {
-			args := v.(LookupDataIpv4PrefixListPolicyObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getDataIpv4PrefixListPolicyObject:getDataIpv4PrefixListPolicyObject", args, LookupDataIpv4PrefixListPolicyObjectResultOutput{}, options).(LookupDataIpv4PrefixListPolicyObjectResultOutput), nil
-		}).(LookupDataIpv4PrefixListPolicyObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getDataIpv4PrefixListPolicyObject:getDataIpv4PrefixListPolicyObject", args, LookupDataIpv4PrefixListPolicyObjectResultOutput{}, options).(LookupDataIpv4PrefixListPolicyObjectResultOutput)
 }
 
 // A collection of arguments for invoking getDataIpv4PrefixListPolicyObject.

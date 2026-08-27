@@ -93,12 +93,8 @@ type LookupObjectGroupPolicyDefinitionResult struct {
 }
 
 func LookupObjectGroupPolicyDefinitionOutput(ctx *pulumi.Context, args LookupObjectGroupPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupObjectGroupPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupObjectGroupPolicyDefinitionResultOutput, error) {
-			args := v.(LookupObjectGroupPolicyDefinitionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getObjectGroupPolicyDefinition:getObjectGroupPolicyDefinition", args, LookupObjectGroupPolicyDefinitionResultOutput{}, options).(LookupObjectGroupPolicyDefinitionResultOutput), nil
-		}).(LookupObjectGroupPolicyDefinitionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getObjectGroupPolicyDefinition:getObjectGroupPolicyDefinition", args, LookupObjectGroupPolicyDefinitionResultOutput{}, options).(LookupObjectGroupPolicyDefinitionResultOutput)
 }
 
 // A collection of arguments for invoking getObjectGroupPolicyDefinition.

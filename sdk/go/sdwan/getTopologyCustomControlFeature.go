@@ -83,12 +83,8 @@ type LookupTopologyCustomControlFeatureResult struct {
 }
 
 func LookupTopologyCustomControlFeatureOutput(ctx *pulumi.Context, args LookupTopologyCustomControlFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTopologyCustomControlFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTopologyCustomControlFeatureResultOutput, error) {
-			args := v.(LookupTopologyCustomControlFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTopologyCustomControlFeature:getTopologyCustomControlFeature", args, LookupTopologyCustomControlFeatureResultOutput{}, options).(LookupTopologyCustomControlFeatureResultOutput), nil
-		}).(LookupTopologyCustomControlFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTopologyCustomControlFeature:getTopologyCustomControlFeature", args, LookupTopologyCustomControlFeatureResultOutput{}, options).(LookupTopologyCustomControlFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getTopologyCustomControlFeature.

@@ -171,12 +171,8 @@ type LookupSseZscalerFeatureResult struct {
 }
 
 func LookupSseZscalerFeatureOutput(ctx *pulumi.Context, args LookupSseZscalerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSseZscalerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSseZscalerFeatureResultOutput, error) {
-			args := v.(LookupSseZscalerFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getSseZscalerFeature:getSseZscalerFeature", args, LookupSseZscalerFeatureResultOutput{}, options).(LookupSseZscalerFeatureResultOutput), nil
-		}).(LookupSseZscalerFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getSseZscalerFeature:getSseZscalerFeature", args, LookupSseZscalerFeatureResultOutput{}, options).(LookupSseZscalerFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getSseZscalerFeature.

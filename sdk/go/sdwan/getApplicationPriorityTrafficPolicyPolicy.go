@@ -77,12 +77,8 @@ type LookupApplicationPriorityTrafficPolicyPolicyResult struct {
 }
 
 func LookupApplicationPriorityTrafficPolicyPolicyOutput(ctx *pulumi.Context, args LookupApplicationPriorityTrafficPolicyPolicyOutputArgs, opts ...pulumi.InvokeOption) LookupApplicationPriorityTrafficPolicyPolicyResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplicationPriorityTrafficPolicyPolicyResultOutput, error) {
-			args := v.(LookupApplicationPriorityTrafficPolicyPolicyArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getApplicationPriorityTrafficPolicyPolicy:getApplicationPriorityTrafficPolicyPolicy", args, LookupApplicationPriorityTrafficPolicyPolicyResultOutput{}, options).(LookupApplicationPriorityTrafficPolicyPolicyResultOutput), nil
-		}).(LookupApplicationPriorityTrafficPolicyPolicyResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getApplicationPriorityTrafficPolicyPolicy:getApplicationPriorityTrafficPolicyPolicy", args, LookupApplicationPriorityTrafficPolicyPolicyResultOutput{}, options).(LookupApplicationPriorityTrafficPolicyPolicyResultOutput)
 }
 
 // A collection of arguments for invoking getApplicationPriorityTrafficPolicyPolicy.

@@ -223,12 +223,8 @@ type LookupServiceLanVpnInterfaceGreFeatureResult struct {
 }
 
 func LookupServiceLanVpnInterfaceGreFeatureOutput(ctx *pulumi.Context, args LookupServiceLanVpnInterfaceGreFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceLanVpnInterfaceGreFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceLanVpnInterfaceGreFeatureResultOutput, error) {
-			args := v.(LookupServiceLanVpnInterfaceGreFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getServiceLanVpnInterfaceGreFeature:getServiceLanVpnInterfaceGreFeature", args, LookupServiceLanVpnInterfaceGreFeatureResultOutput{}, options).(LookupServiceLanVpnInterfaceGreFeatureResultOutput), nil
-		}).(LookupServiceLanVpnInterfaceGreFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getServiceLanVpnInterfaceGreFeature:getServiceLanVpnInterfaceGreFeature", args, LookupServiceLanVpnInterfaceGreFeatureResultOutput{}, options).(LookupServiceLanVpnInterfaceGreFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getServiceLanVpnInterfaceGreFeature.

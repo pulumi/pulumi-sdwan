@@ -67,12 +67,8 @@ type LookupNetworkHierarchySecurityLoggingResult struct {
 }
 
 func LookupNetworkHierarchySecurityLoggingOutput(ctx *pulumi.Context, args LookupNetworkHierarchySecurityLoggingOutputArgs, opts ...pulumi.InvokeOption) LookupNetworkHierarchySecurityLoggingResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupNetworkHierarchySecurityLoggingResultOutput, error) {
-			args := v.(LookupNetworkHierarchySecurityLoggingArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getNetworkHierarchySecurityLogging:getNetworkHierarchySecurityLogging", args, LookupNetworkHierarchySecurityLoggingResultOutput{}, options).(LookupNetworkHierarchySecurityLoggingResultOutput), nil
-		}).(LookupNetworkHierarchySecurityLoggingResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getNetworkHierarchySecurityLogging:getNetworkHierarchySecurityLogging", args, LookupNetworkHierarchySecurityLoggingResultOutput{}, options).(LookupNetworkHierarchySecurityLoggingResultOutput)
 }
 
 // A collection of arguments for invoking getNetworkHierarchySecurityLogging.

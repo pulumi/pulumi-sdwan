@@ -77,12 +77,8 @@ type LookupPreferredColorGroupPolicyObjectResult struct {
 }
 
 func LookupPreferredColorGroupPolicyObjectOutput(ctx *pulumi.Context, args LookupPreferredColorGroupPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupPreferredColorGroupPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupPreferredColorGroupPolicyObjectResultOutput, error) {
-			args := v.(LookupPreferredColorGroupPolicyObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getPreferredColorGroupPolicyObject:getPreferredColorGroupPolicyObject", args, LookupPreferredColorGroupPolicyObjectResultOutput{}, options).(LookupPreferredColorGroupPolicyObjectResultOutput), nil
-		}).(LookupPreferredColorGroupPolicyObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getPreferredColorGroupPolicyObject:getPreferredColorGroupPolicyObject", args, LookupPreferredColorGroupPolicyObjectResultOutput{}, options).(LookupPreferredColorGroupPolicyObjectResultOutput)
 }
 
 // A collection of arguments for invoking getPreferredColorGroupPolicyObject.

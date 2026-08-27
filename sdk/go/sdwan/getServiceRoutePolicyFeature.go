@@ -78,12 +78,8 @@ type LookupServiceRoutePolicyFeatureResult struct {
 }
 
 func LookupServiceRoutePolicyFeatureOutput(ctx *pulumi.Context, args LookupServiceRoutePolicyFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceRoutePolicyFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceRoutePolicyFeatureResultOutput, error) {
-			args := v.(LookupServiceRoutePolicyFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getServiceRoutePolicyFeature:getServiceRoutePolicyFeature", args, LookupServiceRoutePolicyFeatureResultOutput{}, options).(LookupServiceRoutePolicyFeatureResultOutput), nil
-		}).(LookupServiceRoutePolicyFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getServiceRoutePolicyFeature:getServiceRoutePolicyFeature", args, LookupServiceRoutePolicyFeatureResultOutput{}, options).(LookupServiceRoutePolicyFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getServiceRoutePolicyFeature.

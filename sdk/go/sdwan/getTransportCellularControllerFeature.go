@@ -94,12 +94,8 @@ type LookupTransportCellularControllerFeatureResult struct {
 }
 
 func LookupTransportCellularControllerFeatureOutput(ctx *pulumi.Context, args LookupTransportCellularControllerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportCellularControllerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTransportCellularControllerFeatureResultOutput, error) {
-			args := v.(LookupTransportCellularControllerFeatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getTransportCellularControllerFeature:getTransportCellularControllerFeature", args, LookupTransportCellularControllerFeatureResultOutput{}, options).(LookupTransportCellularControllerFeatureResultOutput), nil
-		}).(LookupTransportCellularControllerFeatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getTransportCellularControllerFeature:getTransportCellularControllerFeature", args, LookupTransportCellularControllerFeatureResultOutput{}, options).(LookupTransportCellularControllerFeatureResultOutput)
 }
 
 // A collection of arguments for invoking getTransportCellularControllerFeature.

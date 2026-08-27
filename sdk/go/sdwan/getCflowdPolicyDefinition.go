@@ -85,12 +85,8 @@ type LookupCflowdPolicyDefinitionResult struct {
 }
 
 func LookupCflowdPolicyDefinitionOutput(ctx *pulumi.Context, args LookupCflowdPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupCflowdPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCflowdPolicyDefinitionResultOutput, error) {
-			args := v.(LookupCflowdPolicyDefinitionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getCflowdPolicyDefinition:getCflowdPolicyDefinition", args, LookupCflowdPolicyDefinitionResultOutput{}, options).(LookupCflowdPolicyDefinitionResultOutput), nil
-		}).(LookupCflowdPolicyDefinitionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCflowdPolicyDefinition:getCflowdPolicyDefinition", args, LookupCflowdPolicyDefinitionResultOutput{}, options).(LookupCflowdPolicyDefinitionResultOutput)
 }
 
 // A collection of arguments for invoking getCflowdPolicyDefinition.

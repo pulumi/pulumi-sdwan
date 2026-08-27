@@ -85,10 +85,8 @@ type LookupCloudProviderSettingsResult struct {
 }
 
 func LookupCloudProviderSettingsOutput(ctx *pulumi.Context, opts ...pulumi.InvokeOption) LookupCloudProviderSettingsResultOutput {
-	return pulumi.ToOutput(0).ApplyT(func(int) (LookupCloudProviderSettingsResultOutput, error) {
-		options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-		return ctx.InvokeOutput("sdwan:index/getCloudProviderSettings:getCloudProviderSettings", nil, LookupCloudProviderSettingsResultOutput{}, options).(LookupCloudProviderSettingsResultOutput), nil
-	}).(LookupCloudProviderSettingsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getCloudProviderSettings:getCloudProviderSettings", nil, LookupCloudProviderSettingsResultOutput{}, options).(LookupCloudProviderSettingsResultOutput)
 }
 
 // A collection of values returned by getCloudProviderSettings.

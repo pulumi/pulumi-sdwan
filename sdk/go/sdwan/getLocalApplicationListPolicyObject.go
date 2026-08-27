@@ -67,12 +67,8 @@ type LookupLocalApplicationListPolicyObjectResult struct {
 }
 
 func LookupLocalApplicationListPolicyObjectOutput(ctx *pulumi.Context, args LookupLocalApplicationListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupLocalApplicationListPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupLocalApplicationListPolicyObjectResultOutput, error) {
-			args := v.(LookupLocalApplicationListPolicyObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("sdwan:index/getLocalApplicationListPolicyObject:getLocalApplicationListPolicyObject", args, LookupLocalApplicationListPolicyObjectResultOutput{}, options).(LookupLocalApplicationListPolicyObjectResultOutput), nil
-		}).(LookupLocalApplicationListPolicyObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("sdwan:index/getLocalApplicationListPolicyObject:getLocalApplicationListPolicyObject", args, LookupLocalApplicationListPolicyObjectResultOutput{}, options).(LookupLocalApplicationListPolicyObjectResultOutput)
 }
 
 // A collection of arguments for invoking getLocalApplicationListPolicyObject.
