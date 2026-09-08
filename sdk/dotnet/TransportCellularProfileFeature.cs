@@ -28,7 +28,7 @@ namespace Pulumi.Sdwan
     ///         Name = "Example",
     ///         Description = "My Example",
     ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
-    ///         ProfileId = 1,
+    ///         ProfileId = 2,
     ///         AccessPointName = "apn1",
     ///         RequiresAuthentication = true,
     ///         AuthenticationType = "pap",
@@ -36,6 +36,8 @@ namespace Pulumi.Sdwan
     ///         ProfilePassword = "example123!",
     ///         PacketDataNetworkType = "ipv4",
     ///         NoOverwrite = false,
+    ///         SliceType = 2,
+    ///         SliceDifferentiator = 20,
     ///     });
     /// 
     /// });
@@ -166,6 +168,31 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("requiresAuthentication")]
         public Output<bool?> RequiresAuthentication { get; private set; } = null!;
+
+        /// <summary>
+        /// S-NSSAI slice differentiator, Attribute conditional on `SliceType` being set and SD-WAN Manager version `20.18.1` or higher
+        ///   - Range: `0`-`16777214`
+        /// </summary>
+        [Output("sliceDifferentiator")]
+        public Output<int?> SliceDifferentiator { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `SliceType` being set and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("sliceDifferentiatorVariable")]
+        public Output<string?> SliceDifferentiatorVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("sliceType")]
+        public Output<int?> SliceType { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("sliceTypeVariable")]
+        public Output<string?> SliceTypeVariable { get; private set; } = null!;
 
         /// <summary>
         /// The version of the Feature
@@ -332,6 +359,31 @@ namespace Pulumi.Sdwan
         [Input("requiresAuthentication")]
         public Input<bool>? RequiresAuthentication { get; set; }
 
+        /// <summary>
+        /// S-NSSAI slice differentiator, Attribute conditional on `SliceType` being set and SD-WAN Manager version `20.18.1` or higher
+        ///   - Range: `0`-`16777214`
+        /// </summary>
+        [Input("sliceDifferentiator")]
+        public Input<int>? SliceDifferentiator { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `SliceType` being set and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("sliceDifferentiatorVariable")]
+        public Input<string>? SliceDifferentiatorVariable { get; set; }
+
+        /// <summary>
+        /// S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("sliceType")]
+        public Input<int>? SliceType { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("sliceTypeVariable")]
+        public Input<string>? SliceTypeVariable { get; set; }
+
         public TransportCellularProfileFeatureArgs()
         {
         }
@@ -452,6 +504,31 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("requiresAuthentication")]
         public Input<bool>? RequiresAuthentication { get; set; }
+
+        /// <summary>
+        /// S-NSSAI slice differentiator, Attribute conditional on `SliceType` being set and SD-WAN Manager version `20.18.1` or higher
+        ///   - Range: `0`-`16777214`
+        /// </summary>
+        [Input("sliceDifferentiator")]
+        public Input<int>? SliceDifferentiator { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `SliceType` being set and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("sliceDifferentiatorVariable")]
+        public Input<string>? SliceDifferentiatorVariable { get; set; }
+
+        /// <summary>
+        /// S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("sliceType")]
+        public Input<int>? SliceType { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("sliceTypeVariable")]
+        public Input<string>? SliceTypeVariable { get; set; }
 
         /// <summary>
         /// The version of the Feature

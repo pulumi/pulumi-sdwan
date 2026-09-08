@@ -221,6 +221,22 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly bool RequiresAuthentication;
         /// <summary>
+        /// S-NSSAI slice differentiator
+        /// </summary>
+        public readonly int SliceDifferentiator;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string SliceDifferentiatorVariable;
+        /// <summary>
+        /// S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT)
+        /// </summary>
+        public readonly int SliceType;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string SliceTypeVariable;
+        /// <summary>
         /// The version of the Feature
         /// </summary>
         public readonly int Version;
@@ -265,6 +281,14 @@ namespace Pulumi.Sdwan
 
             bool requiresAuthentication,
 
+            int sliceDifferentiator,
+
+            string sliceDifferentiatorVariable,
+
+            int sliceType,
+
+            string sliceTypeVariable,
+
             int version)
         {
             AccessPointName = accessPointName;
@@ -286,6 +310,10 @@ namespace Pulumi.Sdwan
             ProfileUsername = profileUsername;
             ProfileUsernameVariable = profileUsernameVariable;
             RequiresAuthentication = requiresAuthentication;
+            SliceDifferentiator = sliceDifferentiator;
+            SliceDifferentiatorVariable = sliceDifferentiatorVariable;
+            SliceType = sliceType;
+            SliceTypeVariable = sliceTypeVariable;
             Version = version;
         }
     }

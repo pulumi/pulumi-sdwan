@@ -277,8 +277,7 @@ type ServiceLanVpnFeature struct {
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
 	// VPN
-	//   - Range: `1`-`65527`
-	//   - Default value: `0`
+	//   - Ranges: `1`-`511`, `513`-`65527`
 	Vpn pulumi.IntPtrOutput `pulumi:"vpn"`
 	// Variable name
 	VpnVariable pulumi.StringPtrOutput `pulumi:"vpnVariable"`
@@ -396,8 +395,7 @@ type serviceLanVpnFeatureState struct {
 	// The version of the Feature
 	Version *int `pulumi:"version"`
 	// VPN
-	//   - Range: `1`-`65527`
-	//   - Default value: `0`
+	//   - Ranges: `1`-`511`, `513`-`65527`
 	Vpn *int `pulumi:"vpn"`
 	// Variable name
 	VpnVariable *string `pulumi:"vpnVariable"`
@@ -483,8 +481,7 @@ type ServiceLanVpnFeatureState struct {
 	// The version of the Feature
 	Version pulumi.IntPtrInput
 	// VPN
-	//   - Range: `1`-`65527`
-	//   - Default value: `0`
+	//   - Ranges: `1`-`511`, `513`-`65527`
 	Vpn pulumi.IntPtrInput
 	// Variable name
 	VpnVariable pulumi.StringPtrInput
@@ -572,8 +569,7 @@ type serviceLanVpnFeatureArgs struct {
 	// Static NAT Rules
 	StaticNats []ServiceLanVpnFeatureStaticNat `pulumi:"staticNats"`
 	// VPN
-	//   - Range: `1`-`65527`
-	//   - Default value: `0`
+	//   - Ranges: `1`-`511`, `513`-`65527`
 	Vpn *int `pulumi:"vpn"`
 	// Variable name
 	VpnVariable *string `pulumi:"vpnVariable"`
@@ -658,8 +654,7 @@ type ServiceLanVpnFeatureArgs struct {
 	// Static NAT Rules
 	StaticNats ServiceLanVpnFeatureStaticNatArrayInput
 	// VPN
-	//   - Range: `1`-`65527`
-	//   - Default value: `0`
+	//   - Ranges: `1`-`511`, `513`-`65527`
 	Vpn pulumi.IntPtrInput
 	// Variable name
 	VpnVariable pulumi.StringPtrInput
@@ -975,8 +970,7 @@ func (o ServiceLanVpnFeatureOutput) Version() pulumi.IntOutput {
 }
 
 // VPN
-//   - Range: `1`-`65527`
-//   - Default value: `0`
+//   - Ranges: `1`-`511`, `513`-`65527`
 func (o ServiceLanVpnFeatureOutput) Vpn() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnFeature) pulumi.IntPtrOutput { return v.Vpn }).(pulumi.IntPtrOutput)
 }

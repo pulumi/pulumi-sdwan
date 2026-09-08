@@ -129,9 +129,10 @@ import javax.annotation.Nullable;
  *                 .ipAddress("1.2.3.4")
  *                 .macAddress("00-B0-D0-63-C2-26")
  *                 .build())
- *             .trustsecEnableSgtPropogation(false)
+ *             .trustsecEnableSgtPropogation(true)
  *             .trustsecPropogate(true)
  *             .trustsecSecurityGroupTag(123)
+ *             .trustsecTrusted(true)
  *             .trustsecEnableEnforcedPropogation(false)
  *             .trustsecEnforcedSecurityGroupTag(1234)
  *             .duplex("full")
@@ -1758,6 +1759,22 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
      */
     public Output<Optional<String>> trustsecSecurityGroupTagVariable() {
         return Codegen.optional(this.trustsecSecurityGroupTagVariable);
+    }
+    /**
+     * Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsecSecurityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsecSecurityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+     *   - Default value: `true`
+     * 
+     */
+    @Export(name="trustsecTrusted", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> trustsecTrusted;
+
+    /**
+     * @return Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsecSecurityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsecSecurityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+     *   - Default value: `true`
+     * 
+     */
+    public Output<Optional<Boolean>> trustsecTrusted() {
+        return Codegen.optional(this.trustsecTrusted);
     }
     /**
      * The version of the Feature

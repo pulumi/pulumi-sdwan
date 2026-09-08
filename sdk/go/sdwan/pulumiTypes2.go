@@ -13,6 +13,602 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetTransportManagementVpnInterfaceEthernetFeatureArpEntry struct {
+	// IPV4 Address
+	IpAddress string `pulumi:"ipAddress"`
+	// Variable name
+	IpAddressVariable string `pulumi:"ipAddressVariable"`
+	// MAC Address
+	MacAddress string `pulumi:"macAddress"`
+	// Variable name
+	MacAddressVariable string `pulumi:"macAddressVariable"`
+}
+
+// GetTransportManagementVpnInterfaceEthernetFeatureArpEntryInput is an input type that accepts GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArgs and GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput values.
+// You can construct a concrete instance of `GetTransportManagementVpnInterfaceEthernetFeatureArpEntryInput` via:
+//
+//	GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArgs{...}
+type GetTransportManagementVpnInterfaceEthernetFeatureArpEntryInput interface {
+	pulumi.Input
+
+	ToGetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput() GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput
+	ToGetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutputWithContext(context.Context) GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput
+}
+
+type GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArgs struct {
+	// IPV4 Address
+	IpAddress pulumi.StringInput `pulumi:"ipAddress"`
+	// Variable name
+	IpAddressVariable pulumi.StringInput `pulumi:"ipAddressVariable"`
+	// MAC Address
+	MacAddress pulumi.StringInput `pulumi:"macAddress"`
+	// Variable name
+	MacAddressVariable pulumi.StringInput `pulumi:"macAddressVariable"`
+}
+
+func (GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportManagementVpnInterfaceEthernetFeatureArpEntry)(nil)).Elem()
+}
+
+func (i GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArgs) ToGetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput() GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput {
+	return i.ToGetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutputWithContext(context.Background())
+}
+
+func (i GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArgs) ToGetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutputWithContext(ctx context.Context) GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput)
+}
+
+// GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayInput is an input type that accepts GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArray and GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput values.
+// You can construct a concrete instance of `GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayInput` via:
+//
+//	GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArray{ GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArgs{...} }
+type GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput() GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput
+	ToGetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutputWithContext(context.Context) GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput
+}
+
+type GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArray []GetTransportManagementVpnInterfaceEthernetFeatureArpEntryInput
+
+func (GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportManagementVpnInterfaceEthernetFeatureArpEntry)(nil)).Elem()
+}
+
+func (i GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArray) ToGetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput() GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput {
+	return i.ToGetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArray) ToGetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutputWithContext(ctx context.Context) GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput)
+}
+
+type GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput struct{ *pulumi.OutputState }
+
+func (GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportManagementVpnInterfaceEthernetFeatureArpEntry)(nil)).Elem()
+}
+
+func (o GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput) ToGetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput() GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput {
+	return o
+}
+
+func (o GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput) ToGetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutputWithContext(ctx context.Context) GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput {
+	return o
+}
+
+// IPV4 Address
+func (o GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput) IpAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportManagementVpnInterfaceEthernetFeatureArpEntry) string { return v.IpAddress }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput) IpAddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportManagementVpnInterfaceEthernetFeatureArpEntry) string { return v.IpAddressVariable }).(pulumi.StringOutput)
+}
+
+// MAC Address
+func (o GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput) MacAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportManagementVpnInterfaceEthernetFeatureArpEntry) string { return v.MacAddress }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput) MacAddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportManagementVpnInterfaceEthernetFeatureArpEntry) string { return v.MacAddressVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportManagementVpnInterfaceEthernetFeatureArpEntry)(nil)).Elem()
+}
+
+func (o GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput) ToGetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput() GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput {
+	return o
+}
+
+func (o GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput) ToGetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutputWithContext(ctx context.Context) GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput {
+	return o
+}
+
+func (o GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput) Index(i pulumi.IntInput) GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportManagementVpnInterfaceEthernetFeatureArpEntry {
+		return vs[0].([]GetTransportManagementVpnInterfaceEthernetFeatureArpEntry)[vs[1].(int)]
+	}).(GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput)
+}
+
+type GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress struct {
+	// IpV4 Address
+	Address string `pulumi:"address"`
+	// Variable name
+	AddressVariable string `pulumi:"addressVariable"`
+	// Subnet Mask
+	SubnetMask string `pulumi:"subnetMask"`
+	// Variable name
+	SubnetMaskVariable string `pulumi:"subnetMaskVariable"`
+}
+
+// GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput is an input type that accepts GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs and GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput values.
+// You can construct a concrete instance of `GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput` via:
+//
+//	GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs{...}
+type GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput interface {
+	pulumi.Input
+
+	ToGetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput() GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput
+	ToGetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutputWithContext(context.Context) GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput
+}
+
+type GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs struct {
+	// IpV4 Address
+	Address pulumi.StringInput `pulumi:"address"`
+	// Variable name
+	AddressVariable pulumi.StringInput `pulumi:"addressVariable"`
+	// Subnet Mask
+	SubnetMask pulumi.StringInput `pulumi:"subnetMask"`
+	// Variable name
+	SubnetMaskVariable pulumi.StringInput `pulumi:"subnetMaskVariable"`
+}
+
+func (GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress)(nil)).Elem()
+}
+
+func (i GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs) ToGetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput() GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
+	return i.ToGetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutputWithContext(context.Background())
+}
+
+func (i GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs) ToGetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutputWithContext(ctx context.Context) GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput)
+}
+
+// GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput is an input type that accepts GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray and GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput values.
+// You can construct a concrete instance of `GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput` via:
+//
+//	GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray{ GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs{...} }
+type GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput() GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput
+	ToGetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutputWithContext(context.Context) GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput
+}
+
+type GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray []GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput
+
+func (GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress)(nil)).Elem()
+}
+
+func (i GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray) ToGetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput() GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
+	return i.ToGetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray) ToGetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutputWithContext(ctx context.Context) GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput)
+}
+
+type GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput struct{ *pulumi.OutputState }
+
+func (GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress)(nil)).Elem()
+}
+
+func (o GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) ToGetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput() GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
+	return o
+}
+
+func (o GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) ToGetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutputWithContext(ctx context.Context) GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
+	return o
+}
+
+// IpV4 Address
+func (o GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) Address() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress) string { return v.Address }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) AddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress) string {
+		return v.AddressVariable
+	}).(pulumi.StringOutput)
+}
+
+// Subnet Mask
+func (o GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) SubnetMask() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress) string {
+		return v.SubnetMask
+	}).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) SubnetMaskVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress) string {
+		return v.SubnetMaskVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress)(nil)).Elem()
+}
+
+func (o GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput) ToGetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput() GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
+	return o
+}
+
+func (o GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput) ToGetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutputWithContext(ctx context.Context) GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
+	return o
+}
+
+func (o GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput) Index(i pulumi.IntInput) GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
+		return vs[0].([]GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress)[vs[1].(int)]
+	}).(GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput)
+}
+
+type GetTransportRoutePolicyFeatureSequence struct {
+	// Define list of actions
+	Actions []GetTransportRoutePolicyFeatureSequenceAction `pulumi:"actions"`
+	// Base Action
+	BaseAction string `pulumi:"baseAction"`
+	// Sequence Id
+	Id int `pulumi:"id"`
+	// Define match conditions
+	MatchEntries []GetTransportRoutePolicyFeatureSequenceMatchEntry `pulumi:"matchEntries"`
+	// Sequence Name
+	Name string `pulumi:"name"`
+	// protocol such as IPV4, IPV6, or BOTH
+	Protocol string `pulumi:"protocol"`
+}
+
+// GetTransportRoutePolicyFeatureSequenceInput is an input type that accepts GetTransportRoutePolicyFeatureSequenceArgs and GetTransportRoutePolicyFeatureSequenceOutput values.
+// You can construct a concrete instance of `GetTransportRoutePolicyFeatureSequenceInput` via:
+//
+//	GetTransportRoutePolicyFeatureSequenceArgs{...}
+type GetTransportRoutePolicyFeatureSequenceInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutePolicyFeatureSequenceOutput() GetTransportRoutePolicyFeatureSequenceOutput
+	ToGetTransportRoutePolicyFeatureSequenceOutputWithContext(context.Context) GetTransportRoutePolicyFeatureSequenceOutput
+}
+
+type GetTransportRoutePolicyFeatureSequenceArgs struct {
+	// Define list of actions
+	Actions GetTransportRoutePolicyFeatureSequenceActionArrayInput `pulumi:"actions"`
+	// Base Action
+	BaseAction pulumi.StringInput `pulumi:"baseAction"`
+	// Sequence Id
+	Id pulumi.IntInput `pulumi:"id"`
+	// Define match conditions
+	MatchEntries GetTransportRoutePolicyFeatureSequenceMatchEntryArrayInput `pulumi:"matchEntries"`
+	// Sequence Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// protocol such as IPV4, IPV6, or BOTH
+	Protocol pulumi.StringInput `pulumi:"protocol"`
+}
+
+func (GetTransportRoutePolicyFeatureSequenceArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutePolicyFeatureSequence)(nil)).Elem()
+}
+
+func (i GetTransportRoutePolicyFeatureSequenceArgs) ToGetTransportRoutePolicyFeatureSequenceOutput() GetTransportRoutePolicyFeatureSequenceOutput {
+	return i.ToGetTransportRoutePolicyFeatureSequenceOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutePolicyFeatureSequenceArgs) ToGetTransportRoutePolicyFeatureSequenceOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutePolicyFeatureSequenceOutput)
+}
+
+// GetTransportRoutePolicyFeatureSequenceArrayInput is an input type that accepts GetTransportRoutePolicyFeatureSequenceArray and GetTransportRoutePolicyFeatureSequenceArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutePolicyFeatureSequenceArrayInput` via:
+//
+//	GetTransportRoutePolicyFeatureSequenceArray{ GetTransportRoutePolicyFeatureSequenceArgs{...} }
+type GetTransportRoutePolicyFeatureSequenceArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutePolicyFeatureSequenceArrayOutput() GetTransportRoutePolicyFeatureSequenceArrayOutput
+	ToGetTransportRoutePolicyFeatureSequenceArrayOutputWithContext(context.Context) GetTransportRoutePolicyFeatureSequenceArrayOutput
+}
+
+type GetTransportRoutePolicyFeatureSequenceArray []GetTransportRoutePolicyFeatureSequenceInput
+
+func (GetTransportRoutePolicyFeatureSequenceArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutePolicyFeatureSequence)(nil)).Elem()
+}
+
+func (i GetTransportRoutePolicyFeatureSequenceArray) ToGetTransportRoutePolicyFeatureSequenceArrayOutput() GetTransportRoutePolicyFeatureSequenceArrayOutput {
+	return i.ToGetTransportRoutePolicyFeatureSequenceArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutePolicyFeatureSequenceArray) ToGetTransportRoutePolicyFeatureSequenceArrayOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutePolicyFeatureSequenceArrayOutput)
+}
+
+type GetTransportRoutePolicyFeatureSequenceOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutePolicyFeatureSequenceOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutePolicyFeatureSequence)(nil)).Elem()
+}
+
+func (o GetTransportRoutePolicyFeatureSequenceOutput) ToGetTransportRoutePolicyFeatureSequenceOutput() GetTransportRoutePolicyFeatureSequenceOutput {
+	return o
+}
+
+func (o GetTransportRoutePolicyFeatureSequenceOutput) ToGetTransportRoutePolicyFeatureSequenceOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceOutput {
+	return o
+}
+
+// Define list of actions
+func (o GetTransportRoutePolicyFeatureSequenceOutput) Actions() GetTransportRoutePolicyFeatureSequenceActionArrayOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequence) []GetTransportRoutePolicyFeatureSequenceAction {
+		return v.Actions
+	}).(GetTransportRoutePolicyFeatureSequenceActionArrayOutput)
+}
+
+// Base Action
+func (o GetTransportRoutePolicyFeatureSequenceOutput) BaseAction() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequence) string { return v.BaseAction }).(pulumi.StringOutput)
+}
+
+// Sequence Id
+func (o GetTransportRoutePolicyFeatureSequenceOutput) Id() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequence) int { return v.Id }).(pulumi.IntOutput)
+}
+
+// Define match conditions
+func (o GetTransportRoutePolicyFeatureSequenceOutput) MatchEntries() GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequence) []GetTransportRoutePolicyFeatureSequenceMatchEntry {
+		return v.MatchEntries
+	}).(GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput)
+}
+
+// Sequence Name
+func (o GetTransportRoutePolicyFeatureSequenceOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequence) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// protocol such as IPV4, IPV6, or BOTH
+func (o GetTransportRoutePolicyFeatureSequenceOutput) Protocol() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequence) string { return v.Protocol }).(pulumi.StringOutput)
+}
+
+type GetTransportRoutePolicyFeatureSequenceArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutePolicyFeatureSequenceArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutePolicyFeatureSequence)(nil)).Elem()
+}
+
+func (o GetTransportRoutePolicyFeatureSequenceArrayOutput) ToGetTransportRoutePolicyFeatureSequenceArrayOutput() GetTransportRoutePolicyFeatureSequenceArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutePolicyFeatureSequenceArrayOutput) ToGetTransportRoutePolicyFeatureSequenceArrayOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutePolicyFeatureSequenceArrayOutput) Index(i pulumi.IntInput) GetTransportRoutePolicyFeatureSequenceOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutePolicyFeatureSequence {
+		return vs[0].([]GetTransportRoutePolicyFeatureSequence)[vs[1].(int)]
+	}).(GetTransportRoutePolicyFeatureSequenceOutput)
+}
+
+type GetTransportRoutePolicyFeatureSequenceAction struct {
+	AsPathPrepends    []string `pulumi:"asPathPrepends"`
+	Communities       []string `pulumi:"communities"`
+	CommunityAdditive bool     `pulumi:"communityAdditive"`
+	// Variable name
+	CommunityVariable string `pulumi:"communityVariable"`
+	// Set Ipv4 Next Hop
+	Ipv4NextHop string `pulumi:"ipv4NextHop"`
+	// Set Ipv6 Next Hop
+	Ipv6NextHop string `pulumi:"ipv6NextHop"`
+	// Set Local Preference
+	LocalPreference int `pulumi:"localPreference"`
+	// Set Metric
+	Metric int `pulumi:"metric"`
+	// Set Metric Type
+	MetricType string `pulumi:"metricType"`
+	// Set OMP Tag
+	OmpTag int `pulumi:"ompTag"`
+	// Set Origin
+	Origin string `pulumi:"origin"`
+	// Set OSPF Tag
+	OspfTag int `pulumi:"ospfTag"`
+	// Set Weight
+	Weight int `pulumi:"weight"`
+}
+
+// GetTransportRoutePolicyFeatureSequenceActionInput is an input type that accepts GetTransportRoutePolicyFeatureSequenceActionArgs and GetTransportRoutePolicyFeatureSequenceActionOutput values.
+// You can construct a concrete instance of `GetTransportRoutePolicyFeatureSequenceActionInput` via:
+//
+//	GetTransportRoutePolicyFeatureSequenceActionArgs{...}
+type GetTransportRoutePolicyFeatureSequenceActionInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutePolicyFeatureSequenceActionOutput() GetTransportRoutePolicyFeatureSequenceActionOutput
+	ToGetTransportRoutePolicyFeatureSequenceActionOutputWithContext(context.Context) GetTransportRoutePolicyFeatureSequenceActionOutput
+}
+
+type GetTransportRoutePolicyFeatureSequenceActionArgs struct {
+	AsPathPrepends    pulumi.StringArrayInput `pulumi:"asPathPrepends"`
+	Communities       pulumi.StringArrayInput `pulumi:"communities"`
+	CommunityAdditive pulumi.BoolInput        `pulumi:"communityAdditive"`
+	// Variable name
+	CommunityVariable pulumi.StringInput `pulumi:"communityVariable"`
+	// Set Ipv4 Next Hop
+	Ipv4NextHop pulumi.StringInput `pulumi:"ipv4NextHop"`
+	// Set Ipv6 Next Hop
+	Ipv6NextHop pulumi.StringInput `pulumi:"ipv6NextHop"`
+	// Set Local Preference
+	LocalPreference pulumi.IntInput `pulumi:"localPreference"`
+	// Set Metric
+	Metric pulumi.IntInput `pulumi:"metric"`
+	// Set Metric Type
+	MetricType pulumi.StringInput `pulumi:"metricType"`
+	// Set OMP Tag
+	OmpTag pulumi.IntInput `pulumi:"ompTag"`
+	// Set Origin
+	Origin pulumi.StringInput `pulumi:"origin"`
+	// Set OSPF Tag
+	OspfTag pulumi.IntInput `pulumi:"ospfTag"`
+	// Set Weight
+	Weight pulumi.IntInput `pulumi:"weight"`
+}
+
+func (GetTransportRoutePolicyFeatureSequenceActionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceAction)(nil)).Elem()
+}
+
+func (i GetTransportRoutePolicyFeatureSequenceActionArgs) ToGetTransportRoutePolicyFeatureSequenceActionOutput() GetTransportRoutePolicyFeatureSequenceActionOutput {
+	return i.ToGetTransportRoutePolicyFeatureSequenceActionOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutePolicyFeatureSequenceActionArgs) ToGetTransportRoutePolicyFeatureSequenceActionOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceActionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutePolicyFeatureSequenceActionOutput)
+}
+
+// GetTransportRoutePolicyFeatureSequenceActionArrayInput is an input type that accepts GetTransportRoutePolicyFeatureSequenceActionArray and GetTransportRoutePolicyFeatureSequenceActionArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutePolicyFeatureSequenceActionArrayInput` via:
+//
+//	GetTransportRoutePolicyFeatureSequenceActionArray{ GetTransportRoutePolicyFeatureSequenceActionArgs{...} }
+type GetTransportRoutePolicyFeatureSequenceActionArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutePolicyFeatureSequenceActionArrayOutput() GetTransportRoutePolicyFeatureSequenceActionArrayOutput
+	ToGetTransportRoutePolicyFeatureSequenceActionArrayOutputWithContext(context.Context) GetTransportRoutePolicyFeatureSequenceActionArrayOutput
+}
+
+type GetTransportRoutePolicyFeatureSequenceActionArray []GetTransportRoutePolicyFeatureSequenceActionInput
+
+func (GetTransportRoutePolicyFeatureSequenceActionArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutePolicyFeatureSequenceAction)(nil)).Elem()
+}
+
+func (i GetTransportRoutePolicyFeatureSequenceActionArray) ToGetTransportRoutePolicyFeatureSequenceActionArrayOutput() GetTransportRoutePolicyFeatureSequenceActionArrayOutput {
+	return i.ToGetTransportRoutePolicyFeatureSequenceActionArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutePolicyFeatureSequenceActionArray) ToGetTransportRoutePolicyFeatureSequenceActionArrayOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceActionArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutePolicyFeatureSequenceActionArrayOutput)
+}
+
+type GetTransportRoutePolicyFeatureSequenceActionOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutePolicyFeatureSequenceActionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceAction)(nil)).Elem()
+}
+
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) ToGetTransportRoutePolicyFeatureSequenceActionOutput() GetTransportRoutePolicyFeatureSequenceActionOutput {
+	return o
+}
+
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) ToGetTransportRoutePolicyFeatureSequenceActionOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceActionOutput {
+	return o
+}
+
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) AsPathPrepends() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceAction) []string { return v.AsPathPrepends }).(pulumi.StringArrayOutput)
+}
+
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) Communities() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceAction) []string { return v.Communities }).(pulumi.StringArrayOutput)
+}
+
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) CommunityAdditive() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceAction) bool { return v.CommunityAdditive }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) CommunityVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceAction) string { return v.CommunityVariable }).(pulumi.StringOutput)
+}
+
+// Set Ipv4 Next Hop
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) Ipv4NextHop() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceAction) string { return v.Ipv4NextHop }).(pulumi.StringOutput)
+}
+
+// Set Ipv6 Next Hop
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) Ipv6NextHop() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceAction) string { return v.Ipv6NextHop }).(pulumi.StringOutput)
+}
+
+// Set Local Preference
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) LocalPreference() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceAction) int { return v.LocalPreference }).(pulumi.IntOutput)
+}
+
+// Set Metric
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) Metric() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceAction) int { return v.Metric }).(pulumi.IntOutput)
+}
+
+// Set Metric Type
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) MetricType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceAction) string { return v.MetricType }).(pulumi.StringOutput)
+}
+
+// Set OMP Tag
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) OmpTag() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceAction) int { return v.OmpTag }).(pulumi.IntOutput)
+}
+
+// Set Origin
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) Origin() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceAction) string { return v.Origin }).(pulumi.StringOutput)
+}
+
+// Set OSPF Tag
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) OspfTag() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceAction) int { return v.OspfTag }).(pulumi.IntOutput)
+}
+
+// Set Weight
+func (o GetTransportRoutePolicyFeatureSequenceActionOutput) Weight() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceAction) int { return v.Weight }).(pulumi.IntOutput)
+}
+
+type GetTransportRoutePolicyFeatureSequenceActionArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutePolicyFeatureSequenceActionArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutePolicyFeatureSequenceAction)(nil)).Elem()
+}
+
+func (o GetTransportRoutePolicyFeatureSequenceActionArrayOutput) ToGetTransportRoutePolicyFeatureSequenceActionArrayOutput() GetTransportRoutePolicyFeatureSequenceActionArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutePolicyFeatureSequenceActionArrayOutput) ToGetTransportRoutePolicyFeatureSequenceActionArrayOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceActionArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutePolicyFeatureSequenceActionArrayOutput) Index(i pulumi.IntInput) GetTransportRoutePolicyFeatureSequenceActionOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutePolicyFeatureSequenceAction {
+		return vs[0].([]GetTransportRoutePolicyFeatureSequenceAction)[vs[1].(int)]
+	}).(GetTransportRoutePolicyFeatureSequenceActionOutput)
+}
+
 type GetTransportRoutePolicyFeatureSequenceMatchEntry struct {
 	AsPathListId string `pulumi:"asPathListId"`
 	// BGP Local Preference
@@ -300,10 +896,12 @@ type GetTransportRoutingBgpFeatureIpv4AggregateAddress struct {
 	AsSetPath bool `pulumi:"asSetPath"`
 	// Variable name
 	AsSetPathVariable string `pulumi:"asSetPathVariable"`
-	NetworkAddress    string `pulumi:"networkAddress"`
+	// IP Address
+	NetworkAddress string `pulumi:"networkAddress"`
 	// Variable name
 	NetworkAddressVariable string `pulumi:"networkAddressVariable"`
-	SubnetMask             string `pulumi:"subnetMask"`
+	// Subnet Mask
+	SubnetMask string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable string `pulumi:"subnetMaskVariable"`
 	// Filter out more specific routes from updates
@@ -328,10 +926,12 @@ type GetTransportRoutingBgpFeatureIpv4AggregateAddressArgs struct {
 	AsSetPath pulumi.BoolInput `pulumi:"asSetPath"`
 	// Variable name
 	AsSetPathVariable pulumi.StringInput `pulumi:"asSetPathVariable"`
-	NetworkAddress    pulumi.StringInput `pulumi:"networkAddress"`
+	// IP Address
+	NetworkAddress pulumi.StringInput `pulumi:"networkAddress"`
 	// Variable name
 	NetworkAddressVariable pulumi.StringInput `pulumi:"networkAddressVariable"`
-	SubnetMask             pulumi.StringInput `pulumi:"subnetMask"`
+	// Subnet Mask
+	SubnetMask pulumi.StringInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringInput `pulumi:"subnetMaskVariable"`
 	// Filter out more specific routes from updates
@@ -401,6 +1001,7 @@ func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) AsSetPathVariab
 	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4AggregateAddress) string { return v.AsSetPathVariable }).(pulumi.StringOutput)
 }
 
+// IP Address
 func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) NetworkAddress() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4AggregateAddress) string { return v.NetworkAddress }).(pulumi.StringOutput)
 }
@@ -410,6 +1011,7 @@ func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) NetworkAddressV
 	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4AggregateAddress) string { return v.NetworkAddressVariable }).(pulumi.StringOutput)
 }
 
+// Subnet Mask
 func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) SubnetMask() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4AggregateAddress) string { return v.SubnetMask }).(pulumi.StringOutput)
 }
@@ -1110,10 +1712,12 @@ func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput) Index
 }
 
 type GetTransportRoutingBgpFeatureIpv4Network struct {
+	// IP Address
 	NetworkAddress string `pulumi:"networkAddress"`
 	// Variable name
 	NetworkAddressVariable string `pulumi:"networkAddressVariable"`
-	SubnetMask             string `pulumi:"subnetMask"`
+	// Subnet Mask
+	SubnetMask string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable string `pulumi:"subnetMaskVariable"`
 }
@@ -1130,10 +1734,12 @@ type GetTransportRoutingBgpFeatureIpv4NetworkInput interface {
 }
 
 type GetTransportRoutingBgpFeatureIpv4NetworkArgs struct {
+	// IP Address
 	NetworkAddress pulumi.StringInput `pulumi:"networkAddress"`
 	// Variable name
 	NetworkAddressVariable pulumi.StringInput `pulumi:"networkAddressVariable"`
-	SubnetMask             pulumi.StringInput `pulumi:"subnetMask"`
+	// Subnet Mask
+	SubnetMask pulumi.StringInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringInput `pulumi:"subnetMaskVariable"`
 }
@@ -1189,6 +1795,7 @@ func (o GetTransportRoutingBgpFeatureIpv4NetworkOutput) ToGetTransportRoutingBgp
 	return o
 }
 
+// IP Address
 func (o GetTransportRoutingBgpFeatureIpv4NetworkOutput) NetworkAddress() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Network) string { return v.NetworkAddress }).(pulumi.StringOutput)
 }
@@ -1198,6 +1805,7 @@ func (o GetTransportRoutingBgpFeatureIpv4NetworkOutput) NetworkAddressVariable()
 	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Network) string { return v.NetworkAddressVariable }).(pulumi.StringOutput)
 }
 
+// Subnet Mask
 func (o GetTransportRoutingBgpFeatureIpv4NetworkOutput) SubnetMask() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Network) string { return v.SubnetMask }).(pulumi.StringOutput)
 }
@@ -16476,6 +17084,14 @@ func (o GetZoneListPolicyObjectEntryArrayOutput) Index(i pulumi.IntInput) GetZon
 }
 
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportManagementVpnInterfaceEthernetFeatureArpEntryInput)(nil)).Elem(), GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayInput)(nil)).Elem(), GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput)(nil)).Elem(), GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput)(nil)).Elem(), GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceInput)(nil)).Elem(), GetTransportRoutePolicyFeatureSequenceArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceArrayInput)(nil)).Elem(), GetTransportRoutePolicyFeatureSequenceArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceActionInput)(nil)).Elem(), GetTransportRoutePolicyFeatureSequenceActionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceActionArrayInput)(nil)).Elem(), GetTransportRoutePolicyFeatureSequenceActionArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceMatchEntryInput)(nil)).Elem(), GetTransportRoutePolicyFeatureSequenceMatchEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceMatchEntryArrayInput)(nil)).Elem(), GetTransportRoutePolicyFeatureSequenceMatchEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListInput)(nil)).Elem(), GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs{})
@@ -16692,6 +17308,14 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArrayInput)(nil)).Elem(), GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneListPolicyObjectEntryInput)(nil)).Elem(), GetZoneListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneListPolicyObjectEntryArrayInput)(nil)).Elem(), GetZoneListPolicyObjectEntryArray{})
+	pulumi.RegisterOutputType(GetTransportManagementVpnInterfaceEthernetFeatureArpEntryOutput{})
+	pulumi.RegisterOutputType(GetTransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput{})
+	pulumi.RegisterOutputType(GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutePolicyFeatureSequenceOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutePolicyFeatureSequenceArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutePolicyFeatureSequenceActionOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutePolicyFeatureSequenceActionArrayOutput{})
 	pulumi.RegisterOutputType(GetTransportRoutePolicyFeatureSequenceMatchEntryOutput{})
 	pulumi.RegisterOutputType(GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput{})
 	pulumi.RegisterOutputType(GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput{})

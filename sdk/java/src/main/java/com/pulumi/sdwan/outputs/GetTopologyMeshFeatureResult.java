@@ -23,6 +23,11 @@ public final class GetTopologyMeshFeatureResult {
      */
     private String featureProfileId;
     /**
+     * @return Network hierarchy UUIDs
+     * 
+     */
+    private List<String> hierarchyUuids;
+    /**
      * @return The id of the Feature
      * 
      */
@@ -32,7 +37,15 @@ public final class GetTopologyMeshFeatureResult {
      * 
      */
     private String name;
+    /**
+     * @return Site list
+     * 
+     */
     private List<String> sites;
+    /**
+     * @return Target VPN list
+     * 
+     */
     private List<String> targetVpns;
     /**
      * @return The version of the Feature
@@ -56,6 +69,13 @@ public final class GetTopologyMeshFeatureResult {
         return this.featureProfileId;
     }
     /**
+     * @return Network hierarchy UUIDs
+     * 
+     */
+    public List<String> hierarchyUuids() {
+        return this.hierarchyUuids;
+    }
+    /**
      * @return The id of the Feature
      * 
      */
@@ -69,9 +89,17 @@ public final class GetTopologyMeshFeatureResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return Site list
+     * 
+     */
     public List<String> sites() {
         return this.sites;
     }
+    /**
+     * @return Target VPN list
+     * 
+     */
     public List<String> targetVpns() {
         return this.targetVpns;
     }
@@ -94,6 +122,7 @@ public final class GetTopologyMeshFeatureResult {
     public static final class Builder {
         private String description;
         private String featureProfileId;
+        private List<String> hierarchyUuids;
         private String id;
         private String name;
         private List<String> sites;
@@ -104,6 +133,7 @@ public final class GetTopologyMeshFeatureResult {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
     	      this.featureProfileId = defaults.featureProfileId;
+    	      this.hierarchyUuids = defaults.hierarchyUuids;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.sites = defaults.sites;
@@ -126,6 +156,17 @@ public final class GetTopologyMeshFeatureResult {
             }
             this.featureProfileId = featureProfileId;
             return this;
+        }
+        @CustomType.Setter
+        public Builder hierarchyUuids(List<String> hierarchyUuids) {
+            if (hierarchyUuids == null) {
+              throw new MissingRequiredPropertyException("GetTopologyMeshFeatureResult", "hierarchyUuids");
+            }
+            this.hierarchyUuids = hierarchyUuids;
+            return this;
+        }
+        public Builder hierarchyUuids(String... hierarchyUuids) {
+            return hierarchyUuids(List.of(hierarchyUuids));
         }
         @CustomType.Setter
         public Builder id(String id) {
@@ -177,6 +218,7 @@ public final class GetTopologyMeshFeatureResult {
             final var _resultValue = new GetTopologyMeshFeatureResult();
             _resultValue.description = description;
             _resultValue.featureProfileId = featureProfileId;
+            _resultValue.hierarchyUuids = hierarchyUuids;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.sites = sites;

@@ -13,24 +13,52 @@ import java.util.Objects;
 @CustomType
 public final class GetTopologyHubSpokeFeatureSpoke {
     /**
-     * @return Hub Sites
+     * @return Hub site preferences
      * 
      */
     private List<GetTopologyHubSpokeFeatureSpokeHubSite> hubSites;
+    /**
+     * @return Spoke name
+     * 
+     */
     private String name;
+    /**
+     * @return Spoke network hierarchy UUIDs
+     * 
+     */
+    private List<String> spokeHierarchyUuids;
+    /**
+     * @return Spoke site list
+     * 
+     */
     private List<String> spokeSites;
 
     private GetTopologyHubSpokeFeatureSpoke() {}
     /**
-     * @return Hub Sites
+     * @return Hub site preferences
      * 
      */
     public List<GetTopologyHubSpokeFeatureSpokeHubSite> hubSites() {
         return this.hubSites;
     }
+    /**
+     * @return Spoke name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Spoke network hierarchy UUIDs
+     * 
+     */
+    public List<String> spokeHierarchyUuids() {
+        return this.spokeHierarchyUuids;
+    }
+    /**
+     * @return Spoke site list
+     * 
+     */
     public List<String> spokeSites() {
         return this.spokeSites;
     }
@@ -46,12 +74,14 @@ public final class GetTopologyHubSpokeFeatureSpoke {
     public static final class Builder {
         private List<GetTopologyHubSpokeFeatureSpokeHubSite> hubSites;
         private String name;
+        private List<String> spokeHierarchyUuids;
         private List<String> spokeSites;
         public Builder() {}
         public Builder(GetTopologyHubSpokeFeatureSpoke defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.hubSites = defaults.hubSites;
     	      this.name = defaults.name;
+    	      this.spokeHierarchyUuids = defaults.spokeHierarchyUuids;
     	      this.spokeSites = defaults.spokeSites;
         }
 
@@ -75,6 +105,17 @@ public final class GetTopologyHubSpokeFeatureSpoke {
             return this;
         }
         @CustomType.Setter
+        public Builder spokeHierarchyUuids(List<String> spokeHierarchyUuids) {
+            if (spokeHierarchyUuids == null) {
+              throw new MissingRequiredPropertyException("GetTopologyHubSpokeFeatureSpoke", "spokeHierarchyUuids");
+            }
+            this.spokeHierarchyUuids = spokeHierarchyUuids;
+            return this;
+        }
+        public Builder spokeHierarchyUuids(String... spokeHierarchyUuids) {
+            return spokeHierarchyUuids(List.of(spokeHierarchyUuids));
+        }
+        @CustomType.Setter
         public Builder spokeSites(List<String> spokeSites) {
             if (spokeSites == null) {
               throw new MissingRequiredPropertyException("GetTopologyHubSpokeFeatureSpoke", "spokeSites");
@@ -89,6 +130,7 @@ public final class GetTopologyHubSpokeFeatureSpoke {
             final var _resultValue = new GetTopologyHubSpokeFeatureSpoke();
             _resultValue.hubSites = hubSites;
             _resultValue.name = name;
+            _resultValue.spokeHierarchyUuids = spokeHierarchyUuids;
             _resultValue.spokeSites = spokeSites;
             return _resultValue;
         }

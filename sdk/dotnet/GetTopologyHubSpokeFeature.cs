@@ -148,11 +148,21 @@ namespace Pulumi.Sdwan
         /// The name of the Feature
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Selected hub network hierarchy UUIDs
+        /// </summary>
+        public readonly ImmutableArray<string> SelectedHierarchyHubs;
+        /// <summary>
+        /// Selected hub sites
+        /// </summary>
         public readonly ImmutableArray<string> SelectedHubs;
         /// <summary>
-        /// Spokes
+        /// Spoke configurations
         /// </summary>
         public readonly ImmutableArray<Outputs.GetTopologyHubSpokeFeatureSpokeResult> Spokes;
+        /// <summary>
+        /// Target VPN list
+        /// </summary>
         public readonly ImmutableArray<string> TargetVpns;
         /// <summary>
         /// The version of the Feature
@@ -169,6 +179,8 @@ namespace Pulumi.Sdwan
 
             string name,
 
+            ImmutableArray<string> selectedHierarchyHubs,
+
             ImmutableArray<string> selectedHubs,
 
             ImmutableArray<Outputs.GetTopologyHubSpokeFeatureSpokeResult> spokes,
@@ -181,6 +193,7 @@ namespace Pulumi.Sdwan
             FeatureProfileId = featureProfileId;
             Id = id;
             Name = name;
+            SelectedHierarchyHubs = selectedHierarchyHubs;
             SelectedHubs = selectedHubs;
             Spokes = spokes;
             TargetVpns = targetVpns;

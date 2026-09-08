@@ -14,6 +14,14 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class ServiceMulticastFeatureAutoRpAnnounce
     {
         /// <summary>
+        /// Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public readonly string? AccessListId;
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public readonly string? AccessListIdVariable;
+        /// <summary>
         /// Set RP Announce Interface Name
         /// </summary>
         public readonly string? InterfaceName;
@@ -21,6 +29,15 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string? InterfaceNameVariable;
+        /// <summary>
+        /// Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        ///   - Range: `1`-`16383`
+        /// </summary>
+        public readonly int? Interval;
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public readonly string? IntervalVariable;
         /// <summary>
         /// Set RP Announce Scope
         ///   - Range: `1`-`255`
@@ -33,16 +50,28 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private ServiceMulticastFeatureAutoRpAnnounce(
+            string? accessListId,
+
+            string? accessListIdVariable,
+
             string? interfaceName,
 
             string? interfaceNameVariable,
+
+            int? interval,
+
+            string? intervalVariable,
 
             int? scope,
 
             string? scopeVariable)
         {
+            AccessListId = accessListId;
+            AccessListIdVariable = accessListIdVariable;
             InterfaceName = interfaceName;
             InterfaceNameVariable = interfaceNameVariable;
+            Interval = interval;
+            IntervalVariable = intervalVariable;
             Scope = scope;
             ScopeVariable = scopeVariable;
         }

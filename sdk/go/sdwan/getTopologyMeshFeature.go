@@ -63,11 +63,15 @@ type LookupTopologyMeshFeatureResult struct {
 	Description string `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
+	// Network hierarchy UUIDs
+	HierarchyUuids []string `pulumi:"hierarchyUuids"`
 	// The id of the Feature
 	Id string `pulumi:"id"`
 	// The name of the Feature
-	Name       string   `pulumi:"name"`
-	Sites      []string `pulumi:"sites"`
+	Name string `pulumi:"name"`
+	// Site list
+	Sites []string `pulumi:"sites"`
+	// Target VPN list
 	TargetVpns []string `pulumi:"targetVpns"`
 	// The version of the Feature
 	Version int `pulumi:"version"`
@@ -115,6 +119,11 @@ func (o LookupTopologyMeshFeatureResultOutput) FeatureProfileId() pulumi.StringO
 	return o.ApplyT(func(v LookupTopologyMeshFeatureResult) string { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
+// Network hierarchy UUIDs
+func (o LookupTopologyMeshFeatureResultOutput) HierarchyUuids() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v LookupTopologyMeshFeatureResult) []string { return v.HierarchyUuids }).(pulumi.StringArrayOutput)
+}
+
 // The id of the Feature
 func (o LookupTopologyMeshFeatureResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTopologyMeshFeatureResult) string { return v.Id }).(pulumi.StringOutput)
@@ -125,10 +134,12 @@ func (o LookupTopologyMeshFeatureResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTopologyMeshFeatureResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Site list
 func (o LookupTopologyMeshFeatureResultOutput) Sites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupTopologyMeshFeatureResult) []string { return v.Sites }).(pulumi.StringArrayOutput)
 }
 
+// Target VPN list
 func (o LookupTopologyMeshFeatureResultOutput) TargetVpns() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupTopologyMeshFeatureResult) []string { return v.TargetVpns }).(pulumi.StringArrayOutput)
 }

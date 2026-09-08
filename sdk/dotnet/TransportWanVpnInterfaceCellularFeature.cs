@@ -770,6 +770,18 @@ namespace Pulumi.Sdwan
         public Output<string?> TunnelInterfaceColor { get; private set; } = null!;
 
         /// <summary>
+        /// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("tunnelInterfaceColorDescription")]
+        public Output<string?> TunnelInterfaceColorDescription { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("tunnelInterfaceColorDescriptionVariable")]
+        public Output<string?> TunnelInterfaceColorDescriptionVariable { get; private set; } = null!;
+
+        /// <summary>
         /// Restrict this TLOC behavior
         ///   - Default value: `False`
         /// </summary>
@@ -805,6 +817,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("tunnelInterfaceExcludeControllerGroupLists")]
         public Output<ImmutableArray<int>> TunnelInterfaceExcludeControllerGroupLists { get; private set; } = null!;
+
+        /// <summary>
+        /// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("tunnelInterfaceFullPortHop")]
+        public Output<bool?> TunnelInterfaceFullPortHop { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("tunnelInterfaceFullPortHopVariable")]
+        public Output<string?> TunnelInterfaceFullPortHopVariable { get; private set; } = null!;
 
         /// <summary>
         /// List of groups
@@ -914,7 +939,7 @@ namespace Pulumi.Sdwan
         public Output<string?> TunnelInterfaceNetworkBroadcastVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
         ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfacePortHop")]
@@ -1687,6 +1712,18 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceColor { get; set; }
 
         /// <summary>
+        /// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceColorDescription")]
+        public Input<string>? TunnelInterfaceColorDescription { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceColorDescriptionVariable")]
+        public Input<string>? TunnelInterfaceColorDescriptionVariable { get; set; }
+
+        /// <summary>
         /// Restrict this TLOC behavior
         ///   - Default value: `False`
         /// </summary>
@@ -1734,6 +1771,19 @@ namespace Pulumi.Sdwan
             get => _tunnelInterfaceExcludeControllerGroupLists ?? (_tunnelInterfaceExcludeControllerGroupLists = new InputList<int>());
             set => _tunnelInterfaceExcludeControllerGroupLists = value;
         }
+
+        /// <summary>
+        /// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("tunnelInterfaceFullPortHop")]
+        public Input<bool>? TunnelInterfaceFullPortHop { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceFullPortHopVariable")]
+        public Input<string>? TunnelInterfaceFullPortHopVariable { get; set; }
 
         /// <summary>
         /// List of groups
@@ -1843,7 +1893,7 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceNetworkBroadcastVariable { get; set; }
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
         ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfacePortHop")]
@@ -2572,6 +2622,18 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceColor { get; set; }
 
         /// <summary>
+        /// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceColorDescription")]
+        public Input<string>? TunnelInterfaceColorDescription { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceColorDescriptionVariable")]
+        public Input<string>? TunnelInterfaceColorDescriptionVariable { get; set; }
+
+        /// <summary>
         /// Restrict this TLOC behavior
         ///   - Default value: `False`
         /// </summary>
@@ -2619,6 +2681,19 @@ namespace Pulumi.Sdwan
             get => _tunnelInterfaceExcludeControllerGroupLists ?? (_tunnelInterfaceExcludeControllerGroupLists = new InputList<int>());
             set => _tunnelInterfaceExcludeControllerGroupLists = value;
         }
+
+        /// <summary>
+        /// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("tunnelInterfaceFullPortHop")]
+        public Input<bool>? TunnelInterfaceFullPortHop { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceFullPortHopVariable")]
+        public Input<string>? TunnelInterfaceFullPortHopVariable { get; set; }
 
         /// <summary>
         /// List of groups
@@ -2728,7 +2803,7 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceNetworkBroadcastVariable { get; set; }
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
         ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfacePortHop")]

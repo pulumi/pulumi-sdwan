@@ -123,12 +123,16 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
                  tunnel_interface_clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_restrict: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_color_restrict_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs']]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnel_interface_full_port_hop_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_groups: pulumi.Input[Optional[_builtins.int]] = None,
                  tunnel_interface_groups_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
@@ -303,6 +307,8 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
         :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC
                  - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
                  - Default value: `mpls`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description: , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name
@@ -310,6 +316,9 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs']]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list.
+        :param pulumi.Input[_builtins.bool] tunnel_interface_full_port_hop: Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_full_port_hop_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups
                  - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name
@@ -337,7 +346,7 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
         :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name
         :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes
@@ -556,6 +565,10 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
             pulumi.set(__self__, "tunnel_interface_clear_dont_fragment_variable", tunnel_interface_clear_dont_fragment_variable)
         if tunnel_interface_color is not None:
             pulumi.set(__self__, "tunnel_interface_color", tunnel_interface_color)
+        if tunnel_interface_color_description is not None:
+            pulumi.set(__self__, "tunnel_interface_color_description", tunnel_interface_color_description)
+        if tunnel_interface_color_description_variable is not None:
+            pulumi.set(__self__, "tunnel_interface_color_description_variable", tunnel_interface_color_description_variable)
         if tunnel_interface_color_restrict is not None:
             pulumi.set(__self__, "tunnel_interface_color_restrict", tunnel_interface_color_restrict)
         if tunnel_interface_color_restrict_variable is not None:
@@ -568,6 +581,10 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
             pulumi.set(__self__, "tunnel_interface_exclude_controller_group_list_variable", tunnel_interface_exclude_controller_group_list_variable)
         if tunnel_interface_exclude_controller_group_lists is not None:
             pulumi.set(__self__, "tunnel_interface_exclude_controller_group_lists", tunnel_interface_exclude_controller_group_lists)
+        if tunnel_interface_full_port_hop is not None:
+            pulumi.set(__self__, "tunnel_interface_full_port_hop", tunnel_interface_full_port_hop)
+        if tunnel_interface_full_port_hop_variable is not None:
+            pulumi.set(__self__, "tunnel_interface_full_port_hop_variable", tunnel_interface_full_port_hop_variable)
         if tunnel_interface_groups is not None:
             pulumi.set(__self__, "tunnel_interface_groups", tunnel_interface_groups)
         if tunnel_interface_groups_variable is not None:
@@ -1877,6 +1894,30 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
         pulumi.set(self, "tunnel_interface_color", value)
 
     @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceColorDescription")
+    def tunnel_interface_color_description(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_color_description")
+
+    @tunnel_interface_color_description.setter
+    def tunnel_interface_color_description(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_interface_color_description", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceColorDescriptionVariable")
+    def tunnel_interface_color_description_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_color_description_variable")
+
+    @tunnel_interface_color_description_variable.setter
+    def tunnel_interface_color_description_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_interface_color_description_variable", value)
+
+    @_builtins.property
     @pulumi.getter(name="tunnelInterfaceColorRestrict")
     def tunnel_interface_color_restrict(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
@@ -1948,6 +1989,31 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
     @tunnel_interface_exclude_controller_group_lists.setter
     def tunnel_interface_exclude_controller_group_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "tunnel_interface_exclude_controller_group_lists", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceFullPortHop")
+    def tunnel_interface_full_port_hop(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+          - Default value: `false`
+        """
+        return pulumi.get(self, "tunnel_interface_full_port_hop")
+
+    @tunnel_interface_full_port_hop.setter
+    def tunnel_interface_full_port_hop(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "tunnel_interface_full_port_hop", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceFullPortHopVariable")
+    def tunnel_interface_full_port_hop_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_full_port_hop_variable")
+
+    @tunnel_interface_full_port_hop_variable.setter
+    def tunnel_interface_full_port_hop_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_interface_full_port_hop_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelInterfaceGroups")
@@ -2156,7 +2222,7 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
     @pulumi.getter(name="tunnelInterfacePortHop")
     def tunnel_interface_port_hop(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
-        Disallow port hopping on the tunnel interface
+        The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
           - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop")
@@ -2384,12 +2450,16 @@ class _TransportWanVpnInterfaceCellularFeatureState:
                  tunnel_interface_clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_restrict: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_color_restrict_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs']]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnel_interface_full_port_hop_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_groups: pulumi.Input[Optional[_builtins.int]] = None,
                  tunnel_interface_groups_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
@@ -2565,6 +2635,8 @@ class _TransportWanVpnInterfaceCellularFeatureState:
         :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC
                  - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
                  - Default value: `mpls`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description: , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name
@@ -2572,6 +2644,9 @@ class _TransportWanVpnInterfaceCellularFeatureState:
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs']]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list.
+        :param pulumi.Input[_builtins.bool] tunnel_interface_full_port_hop: Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_full_port_hop_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups
                  - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name
@@ -2599,7 +2674,7 @@ class _TransportWanVpnInterfaceCellularFeatureState:
         :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name
         :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes
@@ -2821,6 +2896,10 @@ class _TransportWanVpnInterfaceCellularFeatureState:
             pulumi.set(__self__, "tunnel_interface_clear_dont_fragment_variable", tunnel_interface_clear_dont_fragment_variable)
         if tunnel_interface_color is not None:
             pulumi.set(__self__, "tunnel_interface_color", tunnel_interface_color)
+        if tunnel_interface_color_description is not None:
+            pulumi.set(__self__, "tunnel_interface_color_description", tunnel_interface_color_description)
+        if tunnel_interface_color_description_variable is not None:
+            pulumi.set(__self__, "tunnel_interface_color_description_variable", tunnel_interface_color_description_variable)
         if tunnel_interface_color_restrict is not None:
             pulumi.set(__self__, "tunnel_interface_color_restrict", tunnel_interface_color_restrict)
         if tunnel_interface_color_restrict_variable is not None:
@@ -2833,6 +2912,10 @@ class _TransportWanVpnInterfaceCellularFeatureState:
             pulumi.set(__self__, "tunnel_interface_exclude_controller_group_list_variable", tunnel_interface_exclude_controller_group_list_variable)
         if tunnel_interface_exclude_controller_group_lists is not None:
             pulumi.set(__self__, "tunnel_interface_exclude_controller_group_lists", tunnel_interface_exclude_controller_group_lists)
+        if tunnel_interface_full_port_hop is not None:
+            pulumi.set(__self__, "tunnel_interface_full_port_hop", tunnel_interface_full_port_hop)
+        if tunnel_interface_full_port_hop_variable is not None:
+            pulumi.set(__self__, "tunnel_interface_full_port_hop_variable", tunnel_interface_full_port_hop_variable)
         if tunnel_interface_groups is not None:
             pulumi.set(__self__, "tunnel_interface_groups", tunnel_interface_groups)
         if tunnel_interface_groups_variable is not None:
@@ -4144,6 +4227,30 @@ class _TransportWanVpnInterfaceCellularFeatureState:
         pulumi.set(self, "tunnel_interface_color", value)
 
     @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceColorDescription")
+    def tunnel_interface_color_description(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_color_description")
+
+    @tunnel_interface_color_description.setter
+    def tunnel_interface_color_description(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_interface_color_description", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceColorDescriptionVariable")
+    def tunnel_interface_color_description_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_color_description_variable")
+
+    @tunnel_interface_color_description_variable.setter
+    def tunnel_interface_color_description_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_interface_color_description_variable", value)
+
+    @_builtins.property
     @pulumi.getter(name="tunnelInterfaceColorRestrict")
     def tunnel_interface_color_restrict(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
@@ -4215,6 +4322,31 @@ class _TransportWanVpnInterfaceCellularFeatureState:
     @tunnel_interface_exclude_controller_group_lists.setter
     def tunnel_interface_exclude_controller_group_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "tunnel_interface_exclude_controller_group_lists", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceFullPortHop")
+    def tunnel_interface_full_port_hop(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+          - Default value: `false`
+        """
+        return pulumi.get(self, "tunnel_interface_full_port_hop")
+
+    @tunnel_interface_full_port_hop.setter
+    def tunnel_interface_full_port_hop(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "tunnel_interface_full_port_hop", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceFullPortHopVariable")
+    def tunnel_interface_full_port_hop_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_full_port_hop_variable")
+
+    @tunnel_interface_full_port_hop_variable.setter
+    def tunnel_interface_full_port_hop_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_interface_full_port_hop_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelInterfaceGroups")
@@ -4423,7 +4555,7 @@ class _TransportWanVpnInterfaceCellularFeatureState:
     @pulumi.getter(name="tunnelInterfacePortHop")
     def tunnel_interface_port_hop(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
-        Disallow port hopping on the tunnel interface
+        The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
           - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop")
@@ -4666,12 +4798,16 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  tunnel_interface_clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_restrict: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_color_restrict_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnel_interface_full_port_hop_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_groups: pulumi.Input[Optional[_builtins.int]] = None,
                  tunnel_interface_groups_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
@@ -4939,6 +5075,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC
                  - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
                  - Default value: `mpls`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description: , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name
@@ -4946,6 +5084,9 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list.
+        :param pulumi.Input[_builtins.bool] tunnel_interface_full_port_hop: Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_full_port_hop_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups
                  - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name
@@ -4973,7 +5114,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name
         :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes
@@ -5206,12 +5347,16 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  tunnel_interface_clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_restrict: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_color_restrict_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnel_interface_full_port_hop_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_groups: pulumi.Input[Optional[_builtins.int]] = None,
                  tunnel_interface_groups_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
@@ -5353,12 +5498,16 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             __props__.__dict__["tunnel_interface_clear_dont_fragment"] = tunnel_interface_clear_dont_fragment
             __props__.__dict__["tunnel_interface_clear_dont_fragment_variable"] = tunnel_interface_clear_dont_fragment_variable
             __props__.__dict__["tunnel_interface_color"] = tunnel_interface_color
+            __props__.__dict__["tunnel_interface_color_description"] = tunnel_interface_color_description
+            __props__.__dict__["tunnel_interface_color_description_variable"] = tunnel_interface_color_description_variable
             __props__.__dict__["tunnel_interface_color_restrict"] = tunnel_interface_color_restrict
             __props__.__dict__["tunnel_interface_color_restrict_variable"] = tunnel_interface_color_restrict_variable
             __props__.__dict__["tunnel_interface_color_variable"] = tunnel_interface_color_variable
             __props__.__dict__["tunnel_interface_encapsulations"] = tunnel_interface_encapsulations
             __props__.__dict__["tunnel_interface_exclude_controller_group_list_variable"] = tunnel_interface_exclude_controller_group_list_variable
             __props__.__dict__["tunnel_interface_exclude_controller_group_lists"] = tunnel_interface_exclude_controller_group_lists
+            __props__.__dict__["tunnel_interface_full_port_hop"] = tunnel_interface_full_port_hop
+            __props__.__dict__["tunnel_interface_full_port_hop_variable"] = tunnel_interface_full_port_hop_variable
             __props__.__dict__["tunnel_interface_groups"] = tunnel_interface_groups
             __props__.__dict__["tunnel_interface_groups_variable"] = tunnel_interface_groups_variable
             __props__.__dict__["tunnel_interface_hello_interval"] = tunnel_interface_hello_interval
@@ -5498,12 +5647,16 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             tunnel_interface_clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
             tunnel_interface_clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_color: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_interface_color_description: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_interface_color_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_color_restrict: pulumi.Input[Optional[_builtins.bool]] = None,
             tunnel_interface_color_restrict_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict']]]]] = None,
             tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+            tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
+            tunnel_interface_full_port_hop_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_groups: pulumi.Input[Optional[_builtins.int]] = None,
             tunnel_interface_groups_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
@@ -5683,6 +5836,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC
                  - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
                  - Default value: `mpls`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description: , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name
@@ -5690,6 +5845,9 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list.
+        :param pulumi.Input[_builtins.bool] tunnel_interface_full_port_hop: Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_full_port_hop_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups
                  - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name
@@ -5717,7 +5875,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name
         :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes
@@ -5841,12 +5999,16 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         __props__.__dict__["tunnel_interface_clear_dont_fragment"] = tunnel_interface_clear_dont_fragment
         __props__.__dict__["tunnel_interface_clear_dont_fragment_variable"] = tunnel_interface_clear_dont_fragment_variable
         __props__.__dict__["tunnel_interface_color"] = tunnel_interface_color
+        __props__.__dict__["tunnel_interface_color_description"] = tunnel_interface_color_description
+        __props__.__dict__["tunnel_interface_color_description_variable"] = tunnel_interface_color_description_variable
         __props__.__dict__["tunnel_interface_color_restrict"] = tunnel_interface_color_restrict
         __props__.__dict__["tunnel_interface_color_restrict_variable"] = tunnel_interface_color_restrict_variable
         __props__.__dict__["tunnel_interface_color_variable"] = tunnel_interface_color_variable
         __props__.__dict__["tunnel_interface_encapsulations"] = tunnel_interface_encapsulations
         __props__.__dict__["tunnel_interface_exclude_controller_group_list_variable"] = tunnel_interface_exclude_controller_group_list_variable
         __props__.__dict__["tunnel_interface_exclude_controller_group_lists"] = tunnel_interface_exclude_controller_group_lists
+        __props__.__dict__["tunnel_interface_full_port_hop"] = tunnel_interface_full_port_hop
+        __props__.__dict__["tunnel_interface_full_port_hop_variable"] = tunnel_interface_full_port_hop_variable
         __props__.__dict__["tunnel_interface_groups"] = tunnel_interface_groups
         __props__.__dict__["tunnel_interface_groups_variable"] = tunnel_interface_groups_variable
         __props__.__dict__["tunnel_interface_hello_interval"] = tunnel_interface_hello_interval
@@ -6724,6 +6886,22 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         return pulumi.get(self, "tunnel_interface_color")
 
     @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceColorDescription")
+    def tunnel_interface_color_description(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_color_description")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceColorDescriptionVariable")
+    def tunnel_interface_color_description_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_color_description_variable")
+
+    @_builtins.property
     @pulumi.getter(name="tunnelInterfaceColorRestrict")
     def tunnel_interface_color_restrict(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
@@ -6771,6 +6949,23 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         Exclude the following controller groups defined in this list.
         """
         return pulumi.get(self, "tunnel_interface_exclude_controller_group_lists")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceFullPortHop")
+    def tunnel_interface_full_port_hop(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+          - Default value: `false`
+        """
+        return pulumi.get(self, "tunnel_interface_full_port_hop")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceFullPortHopVariable")
+    def tunnel_interface_full_port_hop_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_full_port_hop_variable")
 
     @_builtins.property
     @pulumi.getter(name="tunnelInterfaceGroups")
@@ -6915,7 +7110,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfacePortHop")
     def tunnel_interface_port_hop(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Disallow port hopping on the tunnel interface
+        The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
           - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop")

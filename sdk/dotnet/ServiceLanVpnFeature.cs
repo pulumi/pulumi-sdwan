@@ -459,8 +459,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// VPN
-        ///   - Range: `1`-`65527`
-        ///   - Default value: `0`
+        ///   - Ranges: `1`-`511`, `513`-`65527`
         /// </summary>
         [Output("vpn")]
         public Output<int?> Vpn { get; private set; } = null!;
@@ -862,8 +861,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// VPN
-        ///   - Range: `1`-`65527`
-        ///   - Default value: `0`
+        ///   - Ranges: `1`-`511`, `513`-`65527`
         /// </summary>
         [Input("vpn")]
         public Input<int>? Vpn { get; set; }
@@ -1233,8 +1231,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// VPN
-        ///   - Range: `1`-`65527`
-        ///   - Default value: `0`
+        ///   - Ranges: `1`-`511`, `513`-`65527`
         /// </summary>
         [Input("vpn")]
         public Input<int>? Vpn { get; set; }

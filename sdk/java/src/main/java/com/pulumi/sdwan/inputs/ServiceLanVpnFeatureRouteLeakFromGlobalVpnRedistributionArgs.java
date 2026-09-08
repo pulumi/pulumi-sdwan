@@ -17,7 +17,7 @@ public final class ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgs 
 
     /**
      * Protocol to restributed leaked routes
-     *   - Choices: `bgp`, `ospf`
+     *   - Choices: `bgp`, `ospf`, `eigrp`
      * 
      */
     @Import(name="protocol")
@@ -25,7 +25,7 @@ public final class ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgs 
 
     /**
      * @return Protocol to restributed leaked routes
-     *   - Choices: `bgp`, `ospf`
+     *   - Choices: `bgp`, `ospf`, `eigrp`
      * 
      */
     public Optional<Output<String>> protocol() {
@@ -82,7 +82,7 @@ public final class ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgs 
 
         /**
          * @param protocol Protocol to restributed leaked routes
-         *   - Choices: `bgp`, `ospf`
+         *   - Choices: `bgp`, `ospf`, `eigrp`
          * 
          * @return builder
          * 
@@ -94,7 +94,7 @@ public final class ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgs 
 
         /**
          * @param protocol Protocol to restributed leaked routes
-         *   - Choices: `bgp`, `ospf`
+         *   - Choices: `bgp`, `ospf`, `eigrp`
          * 
          * @return builder
          * 

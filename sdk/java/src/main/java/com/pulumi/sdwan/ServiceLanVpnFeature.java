@@ -735,8 +735,7 @@ public class ServiceLanVpnFeature extends com.pulumi.resources.CustomResource {
     }
     /**
      * VPN
-     *   - Range: `1`-`65527`
-     *   - Default value: `0`
+     *   - Ranges: `1`-`511`, `513`-`65527`
      * 
      */
     @Export(name="vpn", refs={Integer.class}, tree="[0]")
@@ -744,8 +743,7 @@ public class ServiceLanVpnFeature extends com.pulumi.resources.CustomResource {
 
     /**
      * @return VPN
-     *   - Range: `1`-`65527`
-     *   - Default value: `0`
+     *   - Ranges: `1`-`511`, `513`-`65527`
      * 
      */
     public Output<Optional<Integer>> vpn() {

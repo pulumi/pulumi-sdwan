@@ -44,6 +44,11 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
                  duplex: pulumi.Input[Optional[_builtins.str]] = None,
                  duplex_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_dhcpv6: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_enforced_propagation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_ha_interlink_interface: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_sgt_propagation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforced_security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 enforced_security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  gre_tunnel_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  gre_tunnel_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  icmp_redirect_disable: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -136,6 +141,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
                  port_channel_static_qos_aggregate: pulumi.Input[Optional[_builtins.bool]] = None,
                  port_channel_static_qos_aggregate_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_subinterface: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate: pulumi.Input[Optional[_builtins.bool]] = None,
                  qos_adaptive: pulumi.Input[Optional[_builtins.bool]] = None,
                  qos_adaptive_bandwidth_downstream: pulumi.Input[Optional[_builtins.bool]] = None,
                  qos_adaptive_bandwidth_upstream: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -155,6 +161,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
                  qos_adaptive_period_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  qos_shaping_rate: pulumi.Input[Optional[_builtins.int]] = None,
                  qos_shaping_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  service_provider: pulumi.Input[Optional[_builtins.str]] = None,
                  service_provider_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -169,6 +177,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
                  tloc_extension_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trusted: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_bandwidth_percent: pulumi.Input[Optional[_builtins.int]] = None,
                  tunnel_bandwidth_percent_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -209,6 +218,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
                  tunnel_interface_clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_restrict: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_color_restrict_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -217,6 +228,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
                  tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs']]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnel_interface_full_port_hop_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_gre_tunnel_destination_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_gre_tunnel_destination_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_groups: pulumi.Input[Optional[_builtins.int]] = None,
@@ -278,6 +291,14 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
                  - Choices: `full`, `half`, `auto`
         :param pulumi.Input[_builtins.str] duplex_variable: Variable name, Attribute conditional on `port_channel_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6, Attribute conditional on `ipv6_address_type` equal to `dynamic` or `ipv6_address_type_variable` being set
+        :param pulumi.Input[_builtins.bool] enable_enforced_propagation: Enable/Disable SGT Enforcement on an interface, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.bool] enable_ha_interlink_interface: HA Interlink interface on/off, Attribute conditional on `port_channel_member_interface` not equal to `true`
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_sgt_propagation: Indicates that the interface is trustworthy for CTS, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] enforced_security_group_tag: SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.str] enforced_security_group_tag_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] gre_tunnel_source_ip: GRE tunnel source IP, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] gre_tunnel_source_ip_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -412,6 +433,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_static_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_subinterface: , Attribute conditional on `port_channel_interface` equal to `true`
+        :param pulumi.Input[_builtins.bool] propagate: Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `true`
         :param pulumi.Input[_builtins.bool] qos_adaptive: Adaptive QoS, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] qos_adaptive_bandwidth_downstream: Shaping Rate Downstream
@@ -443,6 +466,9 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[_builtins.int] qos_shaping_rate: Shaping Rate (Kbps)
                  - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_shaping_rate_variable: Variable name
+        :param pulumi.Input[_builtins.int] security_group_tag: SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.str] security_group_tag_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] service_provider: Service Provider Name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] service_provider_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] shutdown: - Default value: `true`
@@ -459,6 +485,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[_builtins.str] tloc_extension_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.bool] trusted: Indicates that the interface is trustworthy for CTS., Attribute conditional on (`security_group_tag` being set and `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`security_group_tag_variable` being set and `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+                 - Default value: `true`
         :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
                  - Range: `1`-`100`
                  - Default value: `50`
@@ -522,6 +550,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC, Attribute conditional on `tunnel_interface` equal to `true`
                  - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
                  - Default value: `mpls`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description: Set color description for TLOC, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
@@ -532,6 +562,9 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs']]] tunnel_interface_encapsulations: Encapsulation for TLOC, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_full_port_hop: Enable port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_full_port_hop_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip: GRE tunnel destination IP, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups, Attribute conditional on `tunnel_interface` equal to `true`
@@ -561,7 +594,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[_builtins.bool] tunnel_interface_set_sdwan_tunnel_mtu_to_max: Set current tunnel mtu to 9k, Attribute conditional on `tunnel_interface` equal to `true`
@@ -627,6 +660,16 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
             pulumi.set(__self__, "duplex_variable", duplex_variable)
         if enable_dhcpv6 is not None:
             pulumi.set(__self__, "enable_dhcpv6", enable_dhcpv6)
+        if enable_enforced_propagation is not None:
+            pulumi.set(__self__, "enable_enforced_propagation", enable_enforced_propagation)
+        if enable_ha_interlink_interface is not None:
+            pulumi.set(__self__, "enable_ha_interlink_interface", enable_ha_interlink_interface)
+        if enable_sgt_propagation is not None:
+            pulumi.set(__self__, "enable_sgt_propagation", enable_sgt_propagation)
+        if enforced_security_group_tag is not None:
+            pulumi.set(__self__, "enforced_security_group_tag", enforced_security_group_tag)
+        if enforced_security_group_tag_variable is not None:
+            pulumi.set(__self__, "enforced_security_group_tag_variable", enforced_security_group_tag_variable)
         if gre_tunnel_source_ip is not None:
             pulumi.set(__self__, "gre_tunnel_source_ip", gre_tunnel_source_ip)
         if gre_tunnel_source_ip_variable is not None:
@@ -811,6 +854,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
             pulumi.set(__self__, "port_channel_static_qos_aggregate_variable", port_channel_static_qos_aggregate_variable)
         if port_channel_subinterface is not None:
             pulumi.set(__self__, "port_channel_subinterface", port_channel_subinterface)
+        if propagate is not None:
+            pulumi.set(__self__, "propagate", propagate)
         if qos_adaptive is not None:
             pulumi.set(__self__, "qos_adaptive", qos_adaptive)
         if qos_adaptive_bandwidth_downstream is not None:
@@ -849,6 +894,10 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
             pulumi.set(__self__, "qos_shaping_rate", qos_shaping_rate)
         if qos_shaping_rate_variable is not None:
             pulumi.set(__self__, "qos_shaping_rate_variable", qos_shaping_rate_variable)
+        if security_group_tag is not None:
+            pulumi.set(__self__, "security_group_tag", security_group_tag)
+        if security_group_tag_variable is not None:
+            pulumi.set(__self__, "security_group_tag_variable", security_group_tag_variable)
         if service_provider is not None:
             pulumi.set(__self__, "service_provider", service_provider)
         if service_provider_variable is not None:
@@ -877,6 +926,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
             pulumi.set(__self__, "tracker", tracker)
         if tracker_variable is not None:
             pulumi.set(__self__, "tracker_variable", tracker_variable)
+        if trusted is not None:
+            pulumi.set(__self__, "trusted", trusted)
         if tunnel_bandwidth_percent is not None:
             pulumi.set(__self__, "tunnel_bandwidth_percent", tunnel_bandwidth_percent)
         if tunnel_bandwidth_percent_variable is not None:
@@ -957,6 +1008,10 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
             pulumi.set(__self__, "tunnel_interface_clear_dont_fragment_variable", tunnel_interface_clear_dont_fragment_variable)
         if tunnel_interface_color is not None:
             pulumi.set(__self__, "tunnel_interface_color", tunnel_interface_color)
+        if tunnel_interface_color_description is not None:
+            pulumi.set(__self__, "tunnel_interface_color_description", tunnel_interface_color_description)
+        if tunnel_interface_color_description_variable is not None:
+            pulumi.set(__self__, "tunnel_interface_color_description_variable", tunnel_interface_color_description_variable)
         if tunnel_interface_color_restrict is not None:
             pulumi.set(__self__, "tunnel_interface_color_restrict", tunnel_interface_color_restrict)
         if tunnel_interface_color_restrict_variable is not None:
@@ -973,6 +1028,10 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
             pulumi.set(__self__, "tunnel_interface_exclude_controller_group_list_variable", tunnel_interface_exclude_controller_group_list_variable)
         if tunnel_interface_exclude_controller_group_lists is not None:
             pulumi.set(__self__, "tunnel_interface_exclude_controller_group_lists", tunnel_interface_exclude_controller_group_lists)
+        if tunnel_interface_full_port_hop is not None:
+            pulumi.set(__self__, "tunnel_interface_full_port_hop", tunnel_interface_full_port_hop)
+        if tunnel_interface_full_port_hop_variable is not None:
+            pulumi.set(__self__, "tunnel_interface_full_port_hop_variable", tunnel_interface_full_port_hop_variable)
         if tunnel_interface_gre_tunnel_destination_ip is not None:
             pulumi.set(__self__, "tunnel_interface_gre_tunnel_destination_ip", tunnel_interface_gre_tunnel_destination_ip)
         if tunnel_interface_gre_tunnel_destination_ip_variable is not None:
@@ -1308,6 +1367,69 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @enable_dhcpv6.setter
     def enable_dhcpv6(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_dhcpv6", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enableEnforcedPropagation")
+    def enable_enforced_propagation(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable/Disable SGT Enforcement on an interface, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "enable_enforced_propagation")
+
+    @enable_enforced_propagation.setter
+    def enable_enforced_propagation(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "enable_enforced_propagation", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enableHaInterlinkInterface")
+    def enable_ha_interlink_interface(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        HA Interlink interface on/off, Attribute conditional on `port_channel_member_interface` not equal to `true`
+          - Default value: `false`
+        """
+        return pulumi.get(self, "enable_ha_interlink_interface")
+
+    @enable_ha_interlink_interface.setter
+    def enable_ha_interlink_interface(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "enable_ha_interlink_interface", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enableSgtPropagation")
+    def enable_sgt_propagation(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Indicates that the interface is trustworthy for CTS, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Default value: `false`
+        """
+        return pulumi.get(self, "enable_sgt_propagation")
+
+    @enable_sgt_propagation.setter
+    def enable_sgt_propagation(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "enable_sgt_propagation", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enforcedSecurityGroupTag")
+    def enforced_security_group_tag(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Range: `2`-`65519`
+        """
+        return pulumi.get(self, "enforced_security_group_tag")
+
+    @enforced_security_group_tag.setter
+    def enforced_security_group_tag(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "enforced_security_group_tag", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enforcedSecurityGroupTagVariable")
+    def enforced_security_group_tag_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "enforced_security_group_tag_variable")
+
+    @enforced_security_group_tag_variable.setter
+    def enforced_security_group_tag_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "enforced_security_group_tag_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="greTunnelSourceIp")
@@ -2452,6 +2574,19 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         pulumi.set(self, "port_channel_subinterface", value)
 
     @_builtins.property
+    @pulumi.getter
+    def propagate(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Default value: `true`
+        """
+        return pulumi.get(self, "propagate")
+
+    @propagate.setter
+    def propagate(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "propagate", value)
+
+    @_builtins.property
     @pulumi.getter(name="qosAdaptive")
     def qos_adaptive(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
@@ -2692,6 +2827,31 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         pulumi.set(self, "qos_shaping_rate_variable", value)
 
     @_builtins.property
+    @pulumi.getter(name="securityGroupTag")
+    def security_group_tag(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Range: `2`-`65519`
+        """
+        return pulumi.get(self, "security_group_tag")
+
+    @security_group_tag.setter
+    def security_group_tag(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "security_group_tag", value)
+
+    @_builtins.property
+    @pulumi.getter(name="securityGroupTagVariable")
+    def security_group_tag_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "security_group_tag_variable")
+
+    @security_group_tag_variable.setter
+    def security_group_tag_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "security_group_tag_variable", value)
+
+    @_builtins.property
     @pulumi.getter(name="serviceProvider")
     def service_provider(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
@@ -2860,6 +3020,19 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @tracker_variable.setter
     def tracker_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def trusted(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Indicates that the interface is trustworthy for CTS., Attribute conditional on (`security_group_tag` being set and `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`security_group_tag_variable` being set and `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+          - Default value: `true`
+        """
+        return pulumi.get(self, "trusted")
+
+    @trusted.setter
+    def trusted(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "trusted", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelBandwidthPercent")
@@ -3365,6 +3538,30 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         pulumi.set(self, "tunnel_interface_color", value)
 
     @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceColorDescription")
+    def tunnel_interface_color_description(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set color description for TLOC, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_color_description")
+
+    @tunnel_interface_color_description.setter
+    def tunnel_interface_color_description(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_interface_color_description", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceColorDescriptionVariable")
+    def tunnel_interface_color_description_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_color_description_variable")
+
+    @tunnel_interface_color_description_variable.setter
+    def tunnel_interface_color_description_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_interface_color_description_variable", value)
+
+    @_builtins.property
     @pulumi.getter(name="tunnelInterfaceColorRestrict")
     def tunnel_interface_color_restrict(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
@@ -3461,6 +3658,31 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @tunnel_interface_exclude_controller_group_lists.setter
     def tunnel_interface_exclude_controller_group_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "tunnel_interface_exclude_controller_group_lists", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceFullPortHop")
+    def tunnel_interface_full_port_hop(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Default value: `false`
+        """
+        return pulumi.get(self, "tunnel_interface_full_port_hop")
+
+    @tunnel_interface_full_port_hop.setter
+    def tunnel_interface_full_port_hop(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "tunnel_interface_full_port_hop", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceFullPortHopVariable")
+    def tunnel_interface_full_port_hop_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_full_port_hop_variable")
+
+    @tunnel_interface_full_port_hop_variable.setter
+    def tunnel_interface_full_port_hop_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_interface_full_port_hop_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelInterfaceGreTunnelDestinationIp")
@@ -3693,7 +3915,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfacePortHop")
     def tunnel_interface_port_hop(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
-        Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true`
+        The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnel_interface` equal to `true`
           - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop")
@@ -3889,6 +4111,11 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
                  duplex: pulumi.Input[Optional[_builtins.str]] = None,
                  duplex_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_dhcpv6: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_enforced_propagation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_ha_interlink_interface: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_sgt_propagation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforced_security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 enforced_security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  gre_tunnel_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  gre_tunnel_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -3982,6 +4209,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
                  port_channel_static_qos_aggregate: pulumi.Input[Optional[_builtins.bool]] = None,
                  port_channel_static_qos_aggregate_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_subinterface: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate: pulumi.Input[Optional[_builtins.bool]] = None,
                  qos_adaptive: pulumi.Input[Optional[_builtins.bool]] = None,
                  qos_adaptive_bandwidth_downstream: pulumi.Input[Optional[_builtins.bool]] = None,
                  qos_adaptive_bandwidth_upstream: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -4001,6 +4229,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
                  qos_adaptive_period_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  qos_shaping_rate: pulumi.Input[Optional[_builtins.int]] = None,
                  qos_shaping_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  service_provider: pulumi.Input[Optional[_builtins.str]] = None,
                  service_provider_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -4016,6 +4246,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
                  tracker: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 trusted: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_bandwidth_percent: pulumi.Input[Optional[_builtins.int]] = None,
                  tunnel_bandwidth_percent_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -4056,6 +4287,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
                  tunnel_interface_clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_restrict: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_color_restrict_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -4064,6 +4297,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
                  tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs']]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnel_interface_full_port_hop_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_gre_tunnel_destination_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_gre_tunnel_destination_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_groups: pulumi.Input[Optional[_builtins.int]] = None,
@@ -4124,6 +4359,14 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
                  - Choices: `full`, `half`, `auto`
         :param pulumi.Input[_builtins.str] duplex_variable: Variable name, Attribute conditional on `port_channel_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6, Attribute conditional on `ipv6_address_type` equal to `dynamic` or `ipv6_address_type_variable` being set
+        :param pulumi.Input[_builtins.bool] enable_enforced_propagation: Enable/Disable SGT Enforcement on an interface, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.bool] enable_ha_interlink_interface: HA Interlink interface on/off, Attribute conditional on `port_channel_member_interface` not equal to `true`
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_sgt_propagation: Indicates that the interface is trustworthy for CTS, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] enforced_security_group_tag: SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.str] enforced_security_group_tag_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] gre_tunnel_source_ip: GRE tunnel source IP, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] gre_tunnel_source_ip_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -4259,6 +4502,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_static_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_subinterface: , Attribute conditional on `port_channel_interface` equal to `true`
+        :param pulumi.Input[_builtins.bool] propagate: Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `true`
         :param pulumi.Input[_builtins.bool] qos_adaptive: Adaptive QoS, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] qos_adaptive_bandwidth_downstream: Shaping Rate Downstream
@@ -4290,6 +4535,9 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.int] qos_shaping_rate: Shaping Rate (Kbps)
                  - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_shaping_rate_variable: Variable name
+        :param pulumi.Input[_builtins.int] security_group_tag: SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.str] security_group_tag_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] service_provider: Service Provider Name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] service_provider_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] shutdown: - Default value: `true`
@@ -4307,6 +4555,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
+        :param pulumi.Input[_builtins.bool] trusted: Indicates that the interface is trustworthy for CTS., Attribute conditional on (`security_group_tag` being set and `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`security_group_tag_variable` being set and `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+                 - Default value: `true`
         :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
                  - Range: `1`-`100`
                  - Default value: `50`
@@ -4370,6 +4620,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC, Attribute conditional on `tunnel_interface` equal to `true`
                  - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
                  - Default value: `mpls`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description: Set color description for TLOC, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
@@ -4380,6 +4632,9 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs']]] tunnel_interface_encapsulations: Encapsulation for TLOC, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_full_port_hop: Enable port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_full_port_hop_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip: GRE tunnel destination IP, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups, Attribute conditional on `tunnel_interface` equal to `true`
@@ -4409,7 +4664,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[_builtins.bool] tunnel_interface_set_sdwan_tunnel_mtu_to_max: Set current tunnel mtu to 9k, Attribute conditional on `tunnel_interface` equal to `true`
@@ -4474,6 +4729,16 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
             pulumi.set(__self__, "duplex_variable", duplex_variable)
         if enable_dhcpv6 is not None:
             pulumi.set(__self__, "enable_dhcpv6", enable_dhcpv6)
+        if enable_enforced_propagation is not None:
+            pulumi.set(__self__, "enable_enforced_propagation", enable_enforced_propagation)
+        if enable_ha_interlink_interface is not None:
+            pulumi.set(__self__, "enable_ha_interlink_interface", enable_ha_interlink_interface)
+        if enable_sgt_propagation is not None:
+            pulumi.set(__self__, "enable_sgt_propagation", enable_sgt_propagation)
+        if enforced_security_group_tag is not None:
+            pulumi.set(__self__, "enforced_security_group_tag", enforced_security_group_tag)
+        if enforced_security_group_tag_variable is not None:
+            pulumi.set(__self__, "enforced_security_group_tag_variable", enforced_security_group_tag_variable)
         if feature_profile_id is not None:
             pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if gre_tunnel_source_ip is not None:
@@ -4660,6 +4925,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
             pulumi.set(__self__, "port_channel_static_qos_aggregate_variable", port_channel_static_qos_aggregate_variable)
         if port_channel_subinterface is not None:
             pulumi.set(__self__, "port_channel_subinterface", port_channel_subinterface)
+        if propagate is not None:
+            pulumi.set(__self__, "propagate", propagate)
         if qos_adaptive is not None:
             pulumi.set(__self__, "qos_adaptive", qos_adaptive)
         if qos_adaptive_bandwidth_downstream is not None:
@@ -4698,6 +4965,10 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
             pulumi.set(__self__, "qos_shaping_rate", qos_shaping_rate)
         if qos_shaping_rate_variable is not None:
             pulumi.set(__self__, "qos_shaping_rate_variable", qos_shaping_rate_variable)
+        if security_group_tag is not None:
+            pulumi.set(__self__, "security_group_tag", security_group_tag)
+        if security_group_tag_variable is not None:
+            pulumi.set(__self__, "security_group_tag_variable", security_group_tag_variable)
         if service_provider is not None:
             pulumi.set(__self__, "service_provider", service_provider)
         if service_provider_variable is not None:
@@ -4728,6 +4999,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
             pulumi.set(__self__, "tracker_variable", tracker_variable)
         if transport_wan_vpn_feature_id is not None:
             pulumi.set(__self__, "transport_wan_vpn_feature_id", transport_wan_vpn_feature_id)
+        if trusted is not None:
+            pulumi.set(__self__, "trusted", trusted)
         if tunnel_bandwidth_percent is not None:
             pulumi.set(__self__, "tunnel_bandwidth_percent", tunnel_bandwidth_percent)
         if tunnel_bandwidth_percent_variable is not None:
@@ -4808,6 +5081,10 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
             pulumi.set(__self__, "tunnel_interface_clear_dont_fragment_variable", tunnel_interface_clear_dont_fragment_variable)
         if tunnel_interface_color is not None:
             pulumi.set(__self__, "tunnel_interface_color", tunnel_interface_color)
+        if tunnel_interface_color_description is not None:
+            pulumi.set(__self__, "tunnel_interface_color_description", tunnel_interface_color_description)
+        if tunnel_interface_color_description_variable is not None:
+            pulumi.set(__self__, "tunnel_interface_color_description_variable", tunnel_interface_color_description_variable)
         if tunnel_interface_color_restrict is not None:
             pulumi.set(__self__, "tunnel_interface_color_restrict", tunnel_interface_color_restrict)
         if tunnel_interface_color_restrict_variable is not None:
@@ -4824,6 +5101,10 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
             pulumi.set(__self__, "tunnel_interface_exclude_controller_group_list_variable", tunnel_interface_exclude_controller_group_list_variable)
         if tunnel_interface_exclude_controller_group_lists is not None:
             pulumi.set(__self__, "tunnel_interface_exclude_controller_group_lists", tunnel_interface_exclude_controller_group_lists)
+        if tunnel_interface_full_port_hop is not None:
+            pulumi.set(__self__, "tunnel_interface_full_port_hop", tunnel_interface_full_port_hop)
+        if tunnel_interface_full_port_hop_variable is not None:
+            pulumi.set(__self__, "tunnel_interface_full_port_hop_variable", tunnel_interface_full_port_hop_variable)
         if tunnel_interface_gre_tunnel_destination_ip is not None:
             pulumi.set(__self__, "tunnel_interface_gre_tunnel_destination_ip", tunnel_interface_gre_tunnel_destination_ip)
         if tunnel_interface_gre_tunnel_destination_ip_variable is not None:
@@ -5137,6 +5418,69 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @enable_dhcpv6.setter
     def enable_dhcpv6(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_dhcpv6", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enableEnforcedPropagation")
+    def enable_enforced_propagation(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable/Disable SGT Enforcement on an interface, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "enable_enforced_propagation")
+
+    @enable_enforced_propagation.setter
+    def enable_enforced_propagation(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "enable_enforced_propagation", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enableHaInterlinkInterface")
+    def enable_ha_interlink_interface(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        HA Interlink interface on/off, Attribute conditional on `port_channel_member_interface` not equal to `true`
+          - Default value: `false`
+        """
+        return pulumi.get(self, "enable_ha_interlink_interface")
+
+    @enable_ha_interlink_interface.setter
+    def enable_ha_interlink_interface(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "enable_ha_interlink_interface", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enableSgtPropagation")
+    def enable_sgt_propagation(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Indicates that the interface is trustworthy for CTS, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Default value: `false`
+        """
+        return pulumi.get(self, "enable_sgt_propagation")
+
+    @enable_sgt_propagation.setter
+    def enable_sgt_propagation(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "enable_sgt_propagation", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enforcedSecurityGroupTag")
+    def enforced_security_group_tag(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Range: `2`-`65519`
+        """
+        return pulumi.get(self, "enforced_security_group_tag")
+
+    @enforced_security_group_tag.setter
+    def enforced_security_group_tag(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "enforced_security_group_tag", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enforcedSecurityGroupTagVariable")
+    def enforced_security_group_tag_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "enforced_security_group_tag_variable")
+
+    @enforced_security_group_tag_variable.setter
+    def enforced_security_group_tag_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "enforced_security_group_tag_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
@@ -6293,6 +6637,19 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         pulumi.set(self, "port_channel_subinterface", value)
 
     @_builtins.property
+    @pulumi.getter
+    def propagate(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Default value: `true`
+        """
+        return pulumi.get(self, "propagate")
+
+    @propagate.setter
+    def propagate(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "propagate", value)
+
+    @_builtins.property
     @pulumi.getter(name="qosAdaptive")
     def qos_adaptive(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
@@ -6533,6 +6890,31 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         pulumi.set(self, "qos_shaping_rate_variable", value)
 
     @_builtins.property
+    @pulumi.getter(name="securityGroupTag")
+    def security_group_tag(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Range: `2`-`65519`
+        """
+        return pulumi.get(self, "security_group_tag")
+
+    @security_group_tag.setter
+    def security_group_tag(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "security_group_tag", value)
+
+    @_builtins.property
+    @pulumi.getter(name="securityGroupTagVariable")
+    def security_group_tag_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "security_group_tag_variable")
+
+    @security_group_tag_variable.setter
+    def security_group_tag_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "security_group_tag_variable", value)
+
+    @_builtins.property
     @pulumi.getter(name="serviceProvider")
     def service_provider(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
@@ -6713,6 +7095,19 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @transport_wan_vpn_feature_id.setter
     def transport_wan_vpn_feature_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "transport_wan_vpn_feature_id", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def trusted(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Indicates that the interface is trustworthy for CTS., Attribute conditional on (`security_group_tag` being set and `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`security_group_tag_variable` being set and `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+          - Default value: `true`
+        """
+        return pulumi.get(self, "trusted")
+
+    @trusted.setter
+    def trusted(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "trusted", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelBandwidthPercent")
@@ -7218,6 +7613,30 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         pulumi.set(self, "tunnel_interface_color", value)
 
     @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceColorDescription")
+    def tunnel_interface_color_description(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set color description for TLOC, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_color_description")
+
+    @tunnel_interface_color_description.setter
+    def tunnel_interface_color_description(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_interface_color_description", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceColorDescriptionVariable")
+    def tunnel_interface_color_description_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_color_description_variable")
+
+    @tunnel_interface_color_description_variable.setter
+    def tunnel_interface_color_description_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_interface_color_description_variable", value)
+
+    @_builtins.property
     @pulumi.getter(name="tunnelInterfaceColorRestrict")
     def tunnel_interface_color_restrict(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
@@ -7314,6 +7733,31 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @tunnel_interface_exclude_controller_group_lists.setter
     def tunnel_interface_exclude_controller_group_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "tunnel_interface_exclude_controller_group_lists", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceFullPortHop")
+    def tunnel_interface_full_port_hop(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Default value: `false`
+        """
+        return pulumi.get(self, "tunnel_interface_full_port_hop")
+
+    @tunnel_interface_full_port_hop.setter
+    def tunnel_interface_full_port_hop(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "tunnel_interface_full_port_hop", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceFullPortHopVariable")
+    def tunnel_interface_full_port_hop_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_full_port_hop_variable")
+
+    @tunnel_interface_full_port_hop_variable.setter
+    def tunnel_interface_full_port_hop_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_interface_full_port_hop_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelInterfaceGreTunnelDestinationIp")
@@ -7546,7 +7990,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfacePortHop")
     def tunnel_interface_port_hop(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
-        Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true`
+        The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnel_interface` equal to `true`
           - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop")
@@ -7757,6 +8201,11 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  duplex: pulumi.Input[Optional[_builtins.str]] = None,
                  duplex_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_dhcpv6: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_enforced_propagation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_ha_interlink_interface: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_sgt_propagation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforced_security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 enforced_security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  gre_tunnel_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  gre_tunnel_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -7850,6 +8299,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  port_channel_static_qos_aggregate: pulumi.Input[Optional[_builtins.bool]] = None,
                  port_channel_static_qos_aggregate_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_subinterface: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate: pulumi.Input[Optional[_builtins.bool]] = None,
                  qos_adaptive: pulumi.Input[Optional[_builtins.bool]] = None,
                  qos_adaptive_bandwidth_downstream: pulumi.Input[Optional[_builtins.bool]] = None,
                  qos_adaptive_bandwidth_upstream: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -7869,6 +8319,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  qos_adaptive_period_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  qos_shaping_rate: pulumi.Input[Optional[_builtins.int]] = None,
                  qos_shaping_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  service_provider: pulumi.Input[Optional[_builtins.str]] = None,
                  service_provider_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -7884,6 +8336,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  tracker: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 trusted: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_bandwidth_percent: pulumi.Input[Optional[_builtins.int]] = None,
                  tunnel_bandwidth_percent_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -7924,6 +8377,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  tunnel_interface_clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_restrict: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_color_restrict_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -7932,6 +8387,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnel_interface_full_port_hop_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_gre_tunnel_destination_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_gre_tunnel_destination_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_groups: pulumi.Input[Optional[_builtins.int]] = None,
@@ -7999,6 +8456,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             bandwidth_upstream=21474836,
             bandwidth_downstream=21474836,
             auto_detect_bandwidth=False,
+            enable_ha_interlink_interface=False,
             tunnel_interface=True,
             per_tunnel_qos=True,
             tunnel_qos_mode="hub",
@@ -8093,6 +8551,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                 "ip_address": "1.2.3.4",
                 "mac_address": "00-B0-D0-63-C2-26",
             }],
+            enforced_security_group_tag=200,
             icmp_redirect_disable=True,
             duplex="full",
             mac_address="00-B0-D0-63-C2-26",
@@ -8148,6 +8607,14 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Choices: `full`, `half`, `auto`
         :param pulumi.Input[_builtins.str] duplex_variable: Variable name, Attribute conditional on `port_channel_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6, Attribute conditional on `ipv6_address_type` equal to `dynamic` or `ipv6_address_type_variable` being set
+        :param pulumi.Input[_builtins.bool] enable_enforced_propagation: Enable/Disable SGT Enforcement on an interface, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.bool] enable_ha_interlink_interface: HA Interlink interface on/off, Attribute conditional on `port_channel_member_interface` not equal to `true`
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_sgt_propagation: Indicates that the interface is trustworthy for CTS, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] enforced_security_group_tag: SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.str] enforced_security_group_tag_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] gre_tunnel_source_ip: GRE tunnel source IP, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] gre_tunnel_source_ip_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -8283,6 +8750,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_static_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_subinterface: , Attribute conditional on `port_channel_interface` equal to `true`
+        :param pulumi.Input[_builtins.bool] propagate: Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `true`
         :param pulumi.Input[_builtins.bool] qos_adaptive: Adaptive QoS, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] qos_adaptive_bandwidth_downstream: Shaping Rate Downstream
@@ -8314,6 +8783,9 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] qos_shaping_rate: Shaping Rate (Kbps)
                  - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_shaping_rate_variable: Variable name
+        :param pulumi.Input[_builtins.int] security_group_tag: SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.str] security_group_tag_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] service_provider: Service Provider Name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] service_provider_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] shutdown: - Default value: `true`
@@ -8331,6 +8803,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
+        :param pulumi.Input[_builtins.bool] trusted: Indicates that the interface is trustworthy for CTS., Attribute conditional on (`security_group_tag` being set and `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`security_group_tag_variable` being set and `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+                 - Default value: `true`
         :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
                  - Range: `1`-`100`
                  - Default value: `50`
@@ -8394,6 +8868,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC, Attribute conditional on `tunnel_interface` equal to `true`
                  - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
                  - Default value: `mpls`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description: Set color description for TLOC, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
@@ -8404,6 +8880,9 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_full_port_hop: Enable port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_full_port_hop_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip: GRE tunnel destination IP, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups, Attribute conditional on `tunnel_interface` equal to `true`
@@ -8433,7 +8912,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[_builtins.bool] tunnel_interface_set_sdwan_tunnel_mtu_to_max: Set current tunnel mtu to 9k, Attribute conditional on `tunnel_interface` equal to `true`
@@ -8495,6 +8974,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             bandwidth_upstream=21474836,
             bandwidth_downstream=21474836,
             auto_detect_bandwidth=False,
+            enable_ha_interlink_interface=False,
             tunnel_interface=True,
             per_tunnel_qos=True,
             tunnel_qos_mode="hub",
@@ -8589,6 +9069,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                 "ip_address": "1.2.3.4",
                 "mac_address": "00-B0-D0-63-C2-26",
             }],
+            enforced_security_group_tag=200,
             icmp_redirect_disable=True,
             duplex="full",
             mac_address="00-B0-D0-63-C2-26",
@@ -8654,6 +9135,11 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  duplex: pulumi.Input[Optional[_builtins.str]] = None,
                  duplex_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_dhcpv6: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_enforced_propagation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_ha_interlink_interface: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_sgt_propagation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforced_security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 enforced_security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  gre_tunnel_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  gre_tunnel_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -8747,6 +9233,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  port_channel_static_qos_aggregate: pulumi.Input[Optional[_builtins.bool]] = None,
                  port_channel_static_qos_aggregate_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_subinterface: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate: pulumi.Input[Optional[_builtins.bool]] = None,
                  qos_adaptive: pulumi.Input[Optional[_builtins.bool]] = None,
                  qos_adaptive_bandwidth_downstream: pulumi.Input[Optional[_builtins.bool]] = None,
                  qos_adaptive_bandwidth_upstream: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -8766,6 +9253,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  qos_adaptive_period_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  qos_shaping_rate: pulumi.Input[Optional[_builtins.int]] = None,
                  qos_shaping_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  service_provider: pulumi.Input[Optional[_builtins.str]] = None,
                  service_provider_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -8781,6 +9270,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  tracker: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 trusted: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_bandwidth_percent: pulumi.Input[Optional[_builtins.int]] = None,
                  tunnel_bandwidth_percent_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -8821,6 +9311,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  tunnel_interface_clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface_color_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_restrict: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_color_restrict_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -8829,6 +9321,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnel_interface_full_port_hop_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_gre_tunnel_destination_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_gre_tunnel_destination_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_groups: pulumi.Input[Optional[_builtins.int]] = None,
@@ -8891,6 +9385,11 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             __props__.__dict__["duplex"] = duplex
             __props__.__dict__["duplex_variable"] = duplex_variable
             __props__.__dict__["enable_dhcpv6"] = enable_dhcpv6
+            __props__.__dict__["enable_enforced_propagation"] = enable_enforced_propagation
+            __props__.__dict__["enable_ha_interlink_interface"] = enable_ha_interlink_interface
+            __props__.__dict__["enable_sgt_propagation"] = enable_sgt_propagation
+            __props__.__dict__["enforced_security_group_tag"] = enforced_security_group_tag
+            __props__.__dict__["enforced_security_group_tag_variable"] = enforced_security_group_tag_variable
             if feature_profile_id is None and not opts.urn:
                 raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
@@ -8986,6 +9485,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             __props__.__dict__["port_channel_static_qos_aggregate"] = port_channel_static_qos_aggregate
             __props__.__dict__["port_channel_static_qos_aggregate_variable"] = port_channel_static_qos_aggregate_variable
             __props__.__dict__["port_channel_subinterface"] = port_channel_subinterface
+            __props__.__dict__["propagate"] = propagate
             __props__.__dict__["qos_adaptive"] = qos_adaptive
             __props__.__dict__["qos_adaptive_bandwidth_downstream"] = qos_adaptive_bandwidth_downstream
             __props__.__dict__["qos_adaptive_bandwidth_upstream"] = qos_adaptive_bandwidth_upstream
@@ -9005,6 +9505,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             __props__.__dict__["qos_adaptive_period_variable"] = qos_adaptive_period_variable
             __props__.__dict__["qos_shaping_rate"] = qos_shaping_rate
             __props__.__dict__["qos_shaping_rate_variable"] = qos_shaping_rate_variable
+            __props__.__dict__["security_group_tag"] = security_group_tag
+            __props__.__dict__["security_group_tag_variable"] = security_group_tag_variable
             __props__.__dict__["service_provider"] = service_provider
             __props__.__dict__["service_provider_variable"] = service_provider_variable
             __props__.__dict__["shutdown"] = shutdown
@@ -9022,6 +9524,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             if transport_wan_vpn_feature_id is None and not opts.urn:
                 raise TypeError("Missing required property 'transport_wan_vpn_feature_id'")
             __props__.__dict__["transport_wan_vpn_feature_id"] = transport_wan_vpn_feature_id
+            __props__.__dict__["trusted"] = trusted
             __props__.__dict__["tunnel_bandwidth_percent"] = tunnel_bandwidth_percent
             __props__.__dict__["tunnel_bandwidth_percent_variable"] = tunnel_bandwidth_percent_variable
             __props__.__dict__["tunnel_interface"] = tunnel_interface
@@ -9062,6 +9565,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             __props__.__dict__["tunnel_interface_clear_dont_fragment"] = tunnel_interface_clear_dont_fragment
             __props__.__dict__["tunnel_interface_clear_dont_fragment_variable"] = tunnel_interface_clear_dont_fragment_variable
             __props__.__dict__["tunnel_interface_color"] = tunnel_interface_color
+            __props__.__dict__["tunnel_interface_color_description"] = tunnel_interface_color_description
+            __props__.__dict__["tunnel_interface_color_description_variable"] = tunnel_interface_color_description_variable
             __props__.__dict__["tunnel_interface_color_restrict"] = tunnel_interface_color_restrict
             __props__.__dict__["tunnel_interface_color_restrict_variable"] = tunnel_interface_color_restrict_variable
             __props__.__dict__["tunnel_interface_color_variable"] = tunnel_interface_color_variable
@@ -9070,6 +9575,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             __props__.__dict__["tunnel_interface_encapsulations"] = tunnel_interface_encapsulations
             __props__.__dict__["tunnel_interface_exclude_controller_group_list_variable"] = tunnel_interface_exclude_controller_group_list_variable
             __props__.__dict__["tunnel_interface_exclude_controller_group_lists"] = tunnel_interface_exclude_controller_group_lists
+            __props__.__dict__["tunnel_interface_full_port_hop"] = tunnel_interface_full_port_hop
+            __props__.__dict__["tunnel_interface_full_port_hop_variable"] = tunnel_interface_full_port_hop_variable
             __props__.__dict__["tunnel_interface_gre_tunnel_destination_ip"] = tunnel_interface_gre_tunnel_destination_ip
             __props__.__dict__["tunnel_interface_gre_tunnel_destination_ip_variable"] = tunnel_interface_gre_tunnel_destination_ip_variable
             __props__.__dict__["tunnel_interface_groups"] = tunnel_interface_groups
@@ -9134,6 +9641,11 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             duplex: pulumi.Input[Optional[_builtins.str]] = None,
             duplex_variable: pulumi.Input[Optional[_builtins.str]] = None,
             enable_dhcpv6: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_enforced_propagation: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_ha_interlink_interface: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_sgt_propagation: pulumi.Input[Optional[_builtins.bool]] = None,
+            enforced_security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
+            enforced_security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             gre_tunnel_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
             gre_tunnel_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -9227,6 +9739,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             port_channel_static_qos_aggregate: pulumi.Input[Optional[_builtins.bool]] = None,
             port_channel_static_qos_aggregate_variable: pulumi.Input[Optional[_builtins.str]] = None,
             port_channel_subinterface: pulumi.Input[Optional[_builtins.bool]] = None,
+            propagate: pulumi.Input[Optional[_builtins.bool]] = None,
             qos_adaptive: pulumi.Input[Optional[_builtins.bool]] = None,
             qos_adaptive_bandwidth_downstream: pulumi.Input[Optional[_builtins.bool]] = None,
             qos_adaptive_bandwidth_upstream: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -9246,6 +9759,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             qos_adaptive_period_variable: pulumi.Input[Optional[_builtins.str]] = None,
             qos_shaping_rate: pulumi.Input[Optional[_builtins.int]] = None,
             qos_shaping_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
+            security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
             service_provider: pulumi.Input[Optional[_builtins.str]] = None,
             service_provider_variable: pulumi.Input[Optional[_builtins.str]] = None,
             shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -9261,6 +9776,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             tracker: pulumi.Input[Optional[_builtins.str]] = None,
             tracker_variable: pulumi.Input[Optional[_builtins.str]] = None,
             transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+            trusted: pulumi.Input[Optional[_builtins.bool]] = None,
             tunnel_bandwidth_percent: pulumi.Input[Optional[_builtins.int]] = None,
             tunnel_bandwidth_percent_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -9301,6 +9817,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             tunnel_interface_clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
             tunnel_interface_clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_color: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_interface_color_description: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_interface_color_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_color_restrict: pulumi.Input[Optional[_builtins.bool]] = None,
             tunnel_interface_color_restrict_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -9309,6 +9827,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict']]]]] = None,
             tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+            tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
+            tunnel_interface_full_port_hop_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_gre_tunnel_destination_ip: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_gre_tunnel_destination_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_groups: pulumi.Input[Optional[_builtins.int]] = None,
@@ -9373,6 +9893,14 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Choices: `full`, `half`, `auto`
         :param pulumi.Input[_builtins.str] duplex_variable: Variable name, Attribute conditional on `port_channel_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6, Attribute conditional on `ipv6_address_type` equal to `dynamic` or `ipv6_address_type_variable` being set
+        :param pulumi.Input[_builtins.bool] enable_enforced_propagation: Enable/Disable SGT Enforcement on an interface, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.bool] enable_ha_interlink_interface: HA Interlink interface on/off, Attribute conditional on `port_channel_member_interface` not equal to `true`
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_sgt_propagation: Indicates that the interface is trustworthy for CTS, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] enforced_security_group_tag: SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.str] enforced_security_group_tag_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] gre_tunnel_source_ip: GRE tunnel source IP, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] gre_tunnel_source_ip_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -9508,6 +10036,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_static_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_subinterface: , Attribute conditional on `port_channel_interface` equal to `true`
+        :param pulumi.Input[_builtins.bool] propagate: Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `true`
         :param pulumi.Input[_builtins.bool] qos_adaptive: Adaptive QoS, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] qos_adaptive_bandwidth_downstream: Shaping Rate Downstream
@@ -9539,6 +10069,9 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] qos_shaping_rate: Shaping Rate (Kbps)
                  - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_shaping_rate_variable: Variable name
+        :param pulumi.Input[_builtins.int] security_group_tag: SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.str] security_group_tag_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] service_provider: Service Provider Name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] service_provider_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] shutdown: - Default value: `true`
@@ -9556,6 +10089,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
+        :param pulumi.Input[_builtins.bool] trusted: Indicates that the interface is trustworthy for CTS., Attribute conditional on (`security_group_tag` being set and `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`security_group_tag_variable` being set and `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+                 - Default value: `true`
         :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
                  - Range: `1`-`100`
                  - Default value: `50`
@@ -9619,6 +10154,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC, Attribute conditional on `tunnel_interface` equal to `true`
                  - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
                  - Default value: `mpls`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description: Set color description for TLOC, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_description_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
@@ -9629,6 +10166,9 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_full_port_hop: Enable port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_full_port_hop_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip: GRE tunnel destination IP, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups, Attribute conditional on `tunnel_interface` equal to `true`
@@ -9658,7 +10198,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[_builtins.bool] tunnel_interface_set_sdwan_tunnel_mtu_to_max: Set current tunnel mtu to 9k, Attribute conditional on `tunnel_interface` equal to `true`
@@ -9706,6 +10246,11 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         __props__.__dict__["duplex"] = duplex
         __props__.__dict__["duplex_variable"] = duplex_variable
         __props__.__dict__["enable_dhcpv6"] = enable_dhcpv6
+        __props__.__dict__["enable_enforced_propagation"] = enable_enforced_propagation
+        __props__.__dict__["enable_ha_interlink_interface"] = enable_ha_interlink_interface
+        __props__.__dict__["enable_sgt_propagation"] = enable_sgt_propagation
+        __props__.__dict__["enforced_security_group_tag"] = enforced_security_group_tag
+        __props__.__dict__["enforced_security_group_tag_variable"] = enforced_security_group_tag_variable
         __props__.__dict__["feature_profile_id"] = feature_profile_id
         __props__.__dict__["gre_tunnel_source_ip"] = gre_tunnel_source_ip
         __props__.__dict__["gre_tunnel_source_ip_variable"] = gre_tunnel_source_ip_variable
@@ -9799,6 +10344,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         __props__.__dict__["port_channel_static_qos_aggregate"] = port_channel_static_qos_aggregate
         __props__.__dict__["port_channel_static_qos_aggregate_variable"] = port_channel_static_qos_aggregate_variable
         __props__.__dict__["port_channel_subinterface"] = port_channel_subinterface
+        __props__.__dict__["propagate"] = propagate
         __props__.__dict__["qos_adaptive"] = qos_adaptive
         __props__.__dict__["qos_adaptive_bandwidth_downstream"] = qos_adaptive_bandwidth_downstream
         __props__.__dict__["qos_adaptive_bandwidth_upstream"] = qos_adaptive_bandwidth_upstream
@@ -9818,6 +10364,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         __props__.__dict__["qos_adaptive_period_variable"] = qos_adaptive_period_variable
         __props__.__dict__["qos_shaping_rate"] = qos_shaping_rate
         __props__.__dict__["qos_shaping_rate_variable"] = qos_shaping_rate_variable
+        __props__.__dict__["security_group_tag"] = security_group_tag
+        __props__.__dict__["security_group_tag_variable"] = security_group_tag_variable
         __props__.__dict__["service_provider"] = service_provider
         __props__.__dict__["service_provider_variable"] = service_provider_variable
         __props__.__dict__["shutdown"] = shutdown
@@ -9833,6 +10381,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         __props__.__dict__["tracker"] = tracker
         __props__.__dict__["tracker_variable"] = tracker_variable
         __props__.__dict__["transport_wan_vpn_feature_id"] = transport_wan_vpn_feature_id
+        __props__.__dict__["trusted"] = trusted
         __props__.__dict__["tunnel_bandwidth_percent"] = tunnel_bandwidth_percent
         __props__.__dict__["tunnel_bandwidth_percent_variable"] = tunnel_bandwidth_percent_variable
         __props__.__dict__["tunnel_interface"] = tunnel_interface
@@ -9873,6 +10422,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         __props__.__dict__["tunnel_interface_clear_dont_fragment"] = tunnel_interface_clear_dont_fragment
         __props__.__dict__["tunnel_interface_clear_dont_fragment_variable"] = tunnel_interface_clear_dont_fragment_variable
         __props__.__dict__["tunnel_interface_color"] = tunnel_interface_color
+        __props__.__dict__["tunnel_interface_color_description"] = tunnel_interface_color_description
+        __props__.__dict__["tunnel_interface_color_description_variable"] = tunnel_interface_color_description_variable
         __props__.__dict__["tunnel_interface_color_restrict"] = tunnel_interface_color_restrict
         __props__.__dict__["tunnel_interface_color_restrict_variable"] = tunnel_interface_color_restrict_variable
         __props__.__dict__["tunnel_interface_color_variable"] = tunnel_interface_color_variable
@@ -9881,6 +10432,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         __props__.__dict__["tunnel_interface_encapsulations"] = tunnel_interface_encapsulations
         __props__.__dict__["tunnel_interface_exclude_controller_group_list_variable"] = tunnel_interface_exclude_controller_group_list_variable
         __props__.__dict__["tunnel_interface_exclude_controller_group_lists"] = tunnel_interface_exclude_controller_group_lists
+        __props__.__dict__["tunnel_interface_full_port_hop"] = tunnel_interface_full_port_hop
+        __props__.__dict__["tunnel_interface_full_port_hop_variable"] = tunnel_interface_full_port_hop_variable
         __props__.__dict__["tunnel_interface_gre_tunnel_destination_ip"] = tunnel_interface_gre_tunnel_destination_ip
         __props__.__dict__["tunnel_interface_gre_tunnel_destination_ip_variable"] = tunnel_interface_gre_tunnel_destination_ip_variable
         __props__.__dict__["tunnel_interface_groups"] = tunnel_interface_groups
@@ -10078,6 +10631,49 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         Enable DHCPv6, Attribute conditional on `ipv6_address_type` equal to `dynamic` or `ipv6_address_type_variable` being set
         """
         return pulumi.get(self, "enable_dhcpv6")
+
+    @_builtins.property
+    @pulumi.getter(name="enableEnforcedPropagation")
+    def enable_enforced_propagation(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Enable/Disable SGT Enforcement on an interface, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "enable_enforced_propagation")
+
+    @_builtins.property
+    @pulumi.getter(name="enableHaInterlinkInterface")
+    def enable_ha_interlink_interface(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        HA Interlink interface on/off, Attribute conditional on `port_channel_member_interface` not equal to `true`
+          - Default value: `false`
+        """
+        return pulumi.get(self, "enable_ha_interlink_interface")
+
+    @_builtins.property
+    @pulumi.getter(name="enableSgtPropagation")
+    def enable_sgt_propagation(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Indicates that the interface is trustworthy for CTS, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Default value: `false`
+        """
+        return pulumi.get(self, "enable_sgt_propagation")
+
+    @_builtins.property
+    @pulumi.getter(name="enforcedSecurityGroupTag")
+    def enforced_security_group_tag(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Range: `2`-`65519`
+        """
+        return pulumi.get(self, "enforced_security_group_tag")
+
+    @_builtins.property
+    @pulumi.getter(name="enforcedSecurityGroupTagVariable")
+    def enforced_security_group_tag_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "enforced_security_group_tag_variable")
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
@@ -10862,6 +11458,15 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         return pulumi.get(self, "port_channel_subinterface")
 
     @_builtins.property
+    @pulumi.getter
+    def propagate(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Default value: `true`
+        """
+        return pulumi.get(self, "propagate")
+
+    @_builtins.property
     @pulumi.getter(name="qosAdaptive")
     def qos_adaptive(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
@@ -11026,6 +11631,23 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         return pulumi.get(self, "qos_shaping_rate_variable")
 
     @_builtins.property
+    @pulumi.getter(name="securityGroupTag")
+    def security_group_tag(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Range: `2`-`65519`
+        """
+        return pulumi.get(self, "security_group_tag")
+
+    @_builtins.property
+    @pulumi.getter(name="securityGroupTagVariable")
+    def security_group_tag_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "security_group_tag_variable")
+
+    @_builtins.property
     @pulumi.getter(name="serviceProvider")
     def service_provider(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
@@ -11146,6 +11768,15 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         Transport WAN VPN Feature ID
         """
         return pulumi.get(self, "transport_wan_vpn_feature_id")
+
+    @_builtins.property
+    @pulumi.getter
+    def trusted(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Indicates that the interface is trustworthy for CTS., Attribute conditional on (`security_group_tag` being set and `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`security_group_tag_variable` being set and `port_channel_member_interface` not equal to `true` and `enable_sgt_propagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+          - Default value: `true`
+        """
+        return pulumi.get(self, "trusted")
 
     @_builtins.property
     @pulumi.getter(name="tunnelBandwidthPercent")
@@ -11491,6 +12122,22 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         return pulumi.get(self, "tunnel_interface_color")
 
     @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceColorDescription")
+    def tunnel_interface_color_description(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Set color description for TLOC, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_color_description")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceColorDescriptionVariable")
+    def tunnel_interface_color_description_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_color_description_variable")
+
+    @_builtins.property
     @pulumi.getter(name="tunnelInterfaceColorRestrict")
     def tunnel_interface_color_restrict(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
@@ -11555,6 +12202,23 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_exclude_controller_group_lists")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceFullPortHop")
+    def tunnel_interface_full_port_hop(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Enable port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+          - Default value: `false`
+        """
+        return pulumi.get(self, "tunnel_interface_full_port_hop")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceFullPortHopVariable")
+    def tunnel_interface_full_port_hop_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_interface_full_port_hop_variable")
 
     @_builtins.property
     @pulumi.getter(name="tunnelInterfaceGreTunnelDestinationIp")
@@ -11715,7 +12379,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfacePortHop")
     def tunnel_interface_port_hop(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true`
+        The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnel_interface` equal to `true`
           - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop")

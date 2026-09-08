@@ -188,7 +188,7 @@ public final class ServiceSwitchportFeatureInterface {
     private @Nullable String shutdownVariable;
     /**
      * @return Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
      * 
      */
     private @Nullable String speed;
@@ -481,7 +481,7 @@ public final class ServiceSwitchportFeatureInterface {
     }
     /**
      * @return Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
      * 
      */
     public Optional<String> speed() {

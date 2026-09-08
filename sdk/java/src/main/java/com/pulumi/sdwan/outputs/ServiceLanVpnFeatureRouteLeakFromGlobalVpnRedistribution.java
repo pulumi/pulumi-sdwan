@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistribution {
     /**
      * @return Protocol to restributed leaked routes
-     *   - Choices: `bgp`, `ospf`
+     *   - Choices: `bgp`, `ospf`, `eigrp`
      * 
      */
     private @Nullable String protocol;
@@ -27,7 +27,7 @@ public final class ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistribution {
     private ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistribution() {}
     /**
      * @return Protocol to restributed leaked routes
-     *   - Choices: `bgp`, `ospf`
+     *   - Choices: `bgp`, `ospf`, `eigrp`
      * 
      */
     public Optional<String> protocol() {

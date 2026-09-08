@@ -527,6 +527,10 @@ __all__ = [
     'ServiceDhcpServerFeatureOptionCodeArgsDict',
     'ServiceDhcpServerFeatureStaticLeaseArgs',
     'ServiceDhcpServerFeatureStaticLeaseArgsDict',
+    'ServiceDualRouterHaFeatureRedundancyGroupArgs',
+    'ServiceDualRouterHaFeatureRedundancyGroupArgsDict',
+    'ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgs',
+    'ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgsDict',
     'ServiceIpv4AclFeatureSequenceArgs',
     'ServiceIpv4AclFeatureSequenceArgsDict',
     'ServiceIpv4AclFeatureSequenceActionArgs',
@@ -41808,6 +41812,81 @@ class ServiceDhcpServerFeatureStaticLeaseArgs:
         pulumi.set(self, "mac_address_variable", value)
 
 
+class ServiceDualRouterHaFeatureRedundancyGroupArgsDict(TypedDict):
+    group_id: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    - Range: `1`-`2`
+    """
+    tag_name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    vpn_ids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgsDict']]]]]
+
+@pulumi.input_type
+class ServiceDualRouterHaFeatureRedundancyGroupArgs:
+    def __init__(__self__, *,
+                 group_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 tag_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_ids: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgs']]]] = None):
+        """
+        :param pulumi.Input[_builtins.int] group_id: - Range: `1`-`2`
+        """
+        if group_id is not None:
+            pulumi.set(__self__, "group_id", group_id)
+        if tag_name is not None:
+            pulumi.set(__self__, "tag_name", tag_name)
+        if vpn_ids is not None:
+            pulumi.set(__self__, "vpn_ids", vpn_ids)
+
+    @_builtins.property
+    @pulumi.getter(name="groupId")
+    def group_id(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        - Range: `1`-`2`
+        """
+        return pulumi.get(self, "group_id")
+
+    @group_id.setter
+    def group_id(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "group_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tagName")
+    def tag_name(self) -> pulumi.Input[Optional[_builtins.str]]:
+        return pulumi.get(self, "tag_name")
+
+    @tag_name.setter
+    def tag_name(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tag_name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="vpnIds")
+    def vpn_ids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgs']]]]:
+        return pulumi.get(self, "vpn_ids")
+
+    @vpn_ids.setter
+    def vpn_ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgs']]]]):
+        pulumi.set(self, "vpn_ids", value)
+
+
+class ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgsDict(TypedDict):
+    vpn_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+
+@pulumi.input_type
+class ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgs:
+    def __init__(__self__, *,
+                 vpn_id: pulumi.Input[Optional[_builtins.str]] = None):
+        if vpn_id is not None:
+            pulumi.set(__self__, "vpn_id", vpn_id)
+
+    @_builtins.property
+    @pulumi.getter(name="vpnId")
+    def vpn_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        return pulumi.get(self, "vpn_id")
+
+    @vpn_id.setter
+    def vpn_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "vpn_id", value)
+
+
 class ServiceIpv4AclFeatureSequenceArgsDict(TypedDict):
     actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceActionArgsDict']]]]]
     """
@@ -41968,6 +42047,7 @@ class ServiceIpv4AclFeatureSequenceActionArgsDict(TypedDict):
     accept_set_service_chain_vpn: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+      - Ranges: `1`-`511`, `513`-`65531`
     """
     accept_set_service_chain_vpn_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -42014,6 +42094,7 @@ class ServiceIpv4AclFeatureSequenceActionArgs:
                  - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
         :param pulumi.Input[_builtins.str] accept_set_service_chain_name_variable: Variable name
         :param pulumi.Input[_builtins.int] accept_set_service_chain_vpn: Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+                 - Ranges: `1`-`511`, `513`-`65531`
         :param pulumi.Input[_builtins.str] accept_set_service_chain_vpn_variable: Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
         :param pulumi.Input[_builtins.str] drop_counter_name: Counter Name
         :param pulumi.Input[_builtins.bool] drop_log: Enable Log
@@ -42171,6 +42252,7 @@ class ServiceIpv4AclFeatureSequenceActionArgs:
     def accept_set_service_chain_vpn(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+          - Ranges: `1`-`511`, `513`-`65531`
         """
         return pulumi.get(self, "accept_set_service_chain_vpn")
 
@@ -42687,6 +42769,7 @@ class ServiceIpv6AclFeatureSequenceActionArgsDict(TypedDict):
     accept_set_service_chain_vpn: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+      - Ranges: `1`-`511`, `513`-`65531`
     """
     accept_set_service_chain_vpn_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -42736,6 +42819,7 @@ class ServiceIpv6AclFeatureSequenceActionArgs:
                  - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
         :param pulumi.Input[_builtins.str] accept_set_service_chain_name_variable: Variable name
         :param pulumi.Input[_builtins.int] accept_set_service_chain_vpn: Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+                 - Ranges: `1`-`511`, `513`-`65531`
         :param pulumi.Input[_builtins.str] accept_set_service_chain_vpn_variable: Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
         :param pulumi.Input[_builtins.int] accept_traffic_class: set traffic class number
                  - Range: `0`-`63`
@@ -42882,6 +42966,7 @@ class ServiceIpv6AclFeatureSequenceActionArgs:
     def accept_set_service_chain_vpn(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+          - Ranges: `1`-`511`, `513`-`65531`
         """
         return pulumi.get(self, "accept_set_service_chain_vpn")
 
@@ -43327,7 +43412,7 @@ class ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgsDict(TypedDict):
     """
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
-    - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+    - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -43352,7 +43437,7 @@ class ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgs:
                  - Choices: `core-and-access`, `core`, `access`
                  - Default value: `core-and-access`
         :param pulumi.Input[_builtins.str] region_variable: Variable name
-        :param pulumi.Input[_builtins.str] subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         """
         if aggregate_only is not None:
@@ -43434,7 +43519,7 @@ class ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgs:
     @pulumi.getter(name="subnetMask")
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -43721,7 +43806,7 @@ class ServiceLanVpnFeatureGreRouteArgsDict(TypedDict):
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subnet Mask
-      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -43748,7 +43833,7 @@ class ServiceLanVpnFeatureGreRouteArgs:
         :param pulumi.Input[_builtins.str] network_address: IP Address
         :param pulumi.Input[_builtins.str] network_address_variable: Variable name
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.int] vpn: Service
         """
@@ -43820,7 +43905,7 @@ class ServiceLanVpnFeatureGreRouteArgs:
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -43962,7 +44047,7 @@ class ServiceLanVpnFeatureIpsecRouteArgsDict(TypedDict):
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subnet Mask
-      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -43984,7 +44069,7 @@ class ServiceLanVpnFeatureIpsecRouteArgs:
         :param pulumi.Input[_builtins.str] network_address: IP Address
         :param pulumi.Input[_builtins.str] network_address_variable: Variable name
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         """
         if interface_variable is not None:
@@ -44053,7 +44138,7 @@ class ServiceLanVpnFeatureIpsecRouteArgs:
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -44218,7 +44303,7 @@ class ServiceLanVpnFeatureIpv4StaticRouteArgsDict(TypedDict):
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subnet Mask
-      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -44259,7 +44344,7 @@ class ServiceLanVpnFeatureIpv4StaticRouteArgs:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv4StaticRouteNextHopArgs']]] next_hops: IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
         :param pulumi.Input[_builtins.bool] null0: IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.bool] vpn: IPv4 Route Gateway VPN, Attribute conditional on `gateway` equal to `vpn`
         """
@@ -44417,7 +44502,7 @@ class ServiceLanVpnFeatureIpv4StaticRouteArgs:
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -46111,7 +46196,7 @@ class ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgsDict(TypedDict
     protocol: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Protocol to restributed leaked routes
-      - Choices: `bgp`, `ospf`
+      - Choices: `bgp`, `ospf`, `eigrp`
     """
     protocol_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -46127,7 +46212,7 @@ class ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgs:
                  redistribution_policy_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] protocol: Protocol to restributed leaked routes
-                 - Choices: `bgp`, `ospf`
+                 - Choices: `bgp`, `ospf`, `eigrp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
         """
         if protocol is not None:
@@ -46142,7 +46227,7 @@ class ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgs:
     def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Protocol to restributed leaked routes
-          - Choices: `bgp`, `ospf`
+          - Choices: `bgp`, `ospf`, `eigrp`
         """
         return pulumi.get(self, "protocol")
 
@@ -46181,7 +46266,7 @@ class ServiceLanVpnFeatureRouteLeakFromOtherServiceArgsDict(TypedDict):
     route_protocol: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Leak Route of particular protocol from Source Service VPN
-      - Choices: `static`, `connected`, `bgp`, `ospf`
+      - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
     """
     route_protocol_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -46209,7 +46294,7 @@ class ServiceLanVpnFeatureRouteLeakFromOtherServiceArgs:
         """
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgs']]] redistributions: Redistribute Route to specific Protocol on Current Service VPN
         :param pulumi.Input[_builtins.str] route_protocol: Leak Route of particular protocol from Source Service VPN
-                 - Choices: `static`, `connected`, `bgp`, `ospf`
+                 - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
         :param pulumi.Input[_builtins.str] route_protocol_variable: Variable name
         :param pulumi.Input[_builtins.int] source_vpn: Source Service VPN from where route are to be leaked
                  - Range: `1`-`65530`
@@ -46254,7 +46339,7 @@ class ServiceLanVpnFeatureRouteLeakFromOtherServiceArgs:
     def route_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Leak Route of particular protocol from Source Service VPN
-          - Choices: `static`, `connected`, `bgp`, `ospf`
+          - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
         """
         return pulumi.get(self, "route_protocol")
 
@@ -46304,7 +46389,7 @@ class ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgsDict(TypedD
     protocol: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Protocol to restributed leaked routes
-      - Choices: `bgp`, `ospf`
+      - Choices: `bgp`, `ospf`, `eigrp`
     """
     protocol_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -46320,7 +46405,7 @@ class ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgs:
                  redistribution_policy_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] protocol: Protocol to restributed leaked routes
-                 - Choices: `bgp`, `ospf`
+                 - Choices: `bgp`, `ospf`, `eigrp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
         """
         if protocol is not None:
@@ -46335,7 +46420,7 @@ class ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgs:
     def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Protocol to restributed leaked routes
-          - Choices: `bgp`, `ospf`
+          - Choices: `bgp`, `ospf`, `eigrp`
         """
         return pulumi.get(self, "protocol")
 
@@ -46374,7 +46459,7 @@ class ServiceLanVpnFeatureRouteLeakToGlobalVpnArgsDict(TypedDict):
     route_protocol: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Leak Routes of particular protocol from Service to Global VPN
-      - Choices: `static`, `connected`, `bgp`, `ospf`
+      - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
     """
     route_protocol_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -46391,7 +46476,7 @@ class ServiceLanVpnFeatureRouteLeakToGlobalVpnArgs:
         """
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistributionArgs']]] redistributions: Redistribute Routes to specific Protocol on Global VPN
         :param pulumi.Input[_builtins.str] route_protocol: Leak Routes of particular protocol from Service to Global VPN
-                 - Choices: `static`, `connected`, `bgp`, `ospf`
+                 - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
         :param pulumi.Input[_builtins.str] route_protocol_variable: Variable name
         """
         if redistributions is not None:
@@ -46429,7 +46514,7 @@ class ServiceLanVpnFeatureRouteLeakToGlobalVpnArgs:
     def route_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Leak Routes of particular protocol from Service to Global VPN
-          - Choices: `static`, `connected`, `bgp`, `ospf`
+          - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
         """
         return pulumi.get(self, "route_protocol")
 
@@ -46680,7 +46765,7 @@ class ServiceLanVpnFeatureServiceRouteArgsDict(TypedDict):
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subnet Mask
-      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -46713,7 +46798,7 @@ class ServiceLanVpnFeatureServiceRouteArgs:
         :param pulumi.Input[_builtins.str] sse_instance: SSE Instance name
         :param pulumi.Input[_builtins.str] sse_instance_variable: Variable name
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.int] vpn: Service
         """
@@ -46815,7 +46900,7 @@ class ServiceLanVpnFeatureServiceRouteArgs:
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -48932,7 +49017,7 @@ class ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgsDict(TypedDict):
     ipv4_subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subnet Mask
-      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     ipv4_subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -48950,7 +49035,7 @@ class ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs:
         :param pulumi.Input[_builtins.str] address: IpV4 Address
         :param pulumi.Input[_builtins.str] address_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         """
         if address is not None:
@@ -48991,7 +49076,7 @@ class ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs:
     def ipv4_subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -50135,6 +50220,14 @@ class ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgs:
 
 
 class ServiceMulticastFeatureAutoRpAnnounceArgsDict(TypedDict):
+    access_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+    """
+    access_list_id_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+    """
     interface_name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Set RP Announce Interface Name
@@ -50142,6 +50235,15 @@ class ServiceMulticastFeatureAutoRpAnnounceArgsDict(TypedDict):
     interface_name_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Variable name
+    """
+    interval: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+      - Range: `1`-`16383`
+    """
+    interval_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
     """
     scope: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
@@ -50156,25 +50258,66 @@ class ServiceMulticastFeatureAutoRpAnnounceArgsDict(TypedDict):
 @pulumi.input_type
 class ServiceMulticastFeatureAutoRpAnnounceArgs:
     def __init__(__self__, *,
+                 access_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 access_list_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  interface_name: pulumi.Input[Optional[_builtins.str]] = None,
                  interface_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  scope: pulumi.Input[Optional[_builtins.int]] = None,
                  scope_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
+        :param pulumi.Input[_builtins.str] access_list_id: Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] access_list_id_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] interface_name: Set RP Announce Interface Name
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
+        :param pulumi.Input[_builtins.int] interval: Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+                 - Range: `1`-`16383`
+        :param pulumi.Input[_builtins.str] interval_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.int] scope: Set RP Announce Scope
                  - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] scope_variable: Variable name
         """
+        if access_list_id is not None:
+            pulumi.set(__self__, "access_list_id", access_list_id)
+        if access_list_id_variable is not None:
+            pulumi.set(__self__, "access_list_id_variable", access_list_id_variable)
         if interface_name is not None:
             pulumi.set(__self__, "interface_name", interface_name)
         if interface_name_variable is not None:
             pulumi.set(__self__, "interface_name_variable", interface_name_variable)
+        if interval is not None:
+            pulumi.set(__self__, "interval", interval)
+        if interval_variable is not None:
+            pulumi.set(__self__, "interval_variable", interval_variable)
         if scope is not None:
             pulumi.set(__self__, "scope", scope)
         if scope_variable is not None:
             pulumi.set(__self__, "scope_variable", scope_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="accessListId")
+    def access_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "access_list_id")
+
+    @access_list_id.setter
+    def access_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "access_list_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="accessListIdVariable")
+    def access_list_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "access_list_id_variable")
+
+    @access_list_id_variable.setter
+    def access_list_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "access_list_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceName")
@@ -50199,6 +50342,31 @@ class ServiceMulticastFeatureAutoRpAnnounceArgs:
     @interface_name_variable.setter
     def interface_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_name_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def interval(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+          - Range: `1`-`16383`
+        """
+        return pulumi.get(self, "interval")
+
+    @interval.setter
+    def interval(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "interval", value)
+
+    @_builtins.property
+    @pulumi.getter(name="intervalVariable")
+    def interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "interval_variable")
+
+    @interval_variable.setter
+    def interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "interval_variable", value)
 
     @_builtins.property
     @pulumi.getter
@@ -52234,13 +52402,17 @@ class ServiceRoutingBgpFeatureIpv4AggregateAddressArgsDict(TypedDict):
     Variable name
     """
     network_address: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IP Address
+    """
     network_address_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Variable name
     """
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
-    - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+    Subnet Mask
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -52271,8 +52443,10 @@ class ServiceRoutingBgpFeatureIpv4AggregateAddressArgs:
         :param pulumi.Input[_builtins.bool] as_set_path: Set AS set path information
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] as_set_path_variable: Variable name
+        :param pulumi.Input[_builtins.str] network_address: IP Address
         :param pulumi.Input[_builtins.str] network_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.bool] summary_only: Filter out more specific routes from updates
                  - Default value: `false`
@@ -52323,6 +52497,9 @@ class ServiceRoutingBgpFeatureIpv4AggregateAddressArgs:
     @_builtins.property
     @pulumi.getter(name="networkAddress")
     def network_address(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IP Address
+        """
         return pulumi.get(self, "network_address")
 
     @network_address.setter
@@ -52345,7 +52522,8 @@ class ServiceRoutingBgpFeatureIpv4AggregateAddressArgs:
     @pulumi.getter(name="subnetMask")
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -53492,13 +53670,17 @@ class ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
 
 class ServiceRoutingBgpFeatureIpv4NetworkArgsDict(TypedDict):
     network_address: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IP Address
+    """
     network_address_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Variable name
     """
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
-    - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+    Subnet Mask
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -53513,8 +53695,10 @@ class ServiceRoutingBgpFeatureIpv4NetworkArgs:
                  subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
                  subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
+        :param pulumi.Input[_builtins.str] network_address: IP Address
         :param pulumi.Input[_builtins.str] network_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         """
         if network_address is not None:
@@ -53529,6 +53713,9 @@ class ServiceRoutingBgpFeatureIpv4NetworkArgs:
     @_builtins.property
     @pulumi.getter(name="networkAddress")
     def network_address(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IP Address
+        """
         return pulumi.get(self, "network_address")
 
     @network_address.setter
@@ -53551,7 +53738,8 @@ class ServiceRoutingBgpFeatureIpv4NetworkArgs:
     @pulumi.getter(name="subnetMask")
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -55308,13 +55496,17 @@ class ServiceRoutingEigrpFeatureInterfaceArgs:
 
 class ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgsDict(TypedDict):
     address: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IP Address
+    """
     address_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Variable name
     """
     mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
-    - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+    Subnet Mask
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -55329,8 +55521,10 @@ class ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgs:
                  mask: pulumi.Input[Optional[_builtins.str]] = None,
                  mask_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
+        :param pulumi.Input[_builtins.str] address: IP Address
         :param pulumi.Input[_builtins.str] address_variable: Variable name
-        :param pulumi.Input[_builtins.str] mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] mask_variable: Variable name
         """
         if address is not None:
@@ -55345,6 +55539,9 @@ class ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgs:
     @_builtins.property
     @pulumi.getter
     def address(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IP Address
+        """
         return pulumi.get(self, "address")
 
     @address.setter
@@ -55367,7 +55564,8 @@ class ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgs:
     @pulumi.getter
     def mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "mask")
 
@@ -55482,13 +55680,17 @@ class ServiceRoutingEigrpFeatureMd5KeyArgs:
 
 class ServiceRoutingEigrpFeatureNetworkArgsDict(TypedDict):
     ip_address: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IP Address
+    """
     ip_address_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Variable name
     """
     mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
-    - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+    Subnet Mask
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -55503,8 +55705,10 @@ class ServiceRoutingEigrpFeatureNetworkArgs:
                  mask: pulumi.Input[Optional[_builtins.str]] = None,
                  mask_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
+        :param pulumi.Input[_builtins.str] ip_address: IP Address
         :param pulumi.Input[_builtins.str] ip_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] mask_variable: Variable name
         """
         if ip_address is not None:
@@ -55519,6 +55723,9 @@ class ServiceRoutingEigrpFeatureNetworkArgs:
     @_builtins.property
     @pulumi.getter(name="ipAddress")
     def ip_address(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IP Address
+        """
         return pulumi.get(self, "ip_address")
 
     @ip_address.setter
@@ -55541,7 +55748,8 @@ class ServiceRoutingEigrpFeatureNetworkArgs:
     @pulumi.getter
     def mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "mask")
 
@@ -56306,7 +56514,7 @@ class ServiceRoutingOspfFeatureAreaRangeArgsDict(TypedDict):
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subnet Mask
-      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -56334,7 +56542,7 @@ class ServiceRoutingOspfFeatureAreaRangeArgs:
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] no_advertise_variable: Variable name
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         """
         if cost is not None:
@@ -56433,7 +56641,7 @@ class ServiceRoutingOspfFeatureAreaRangeArgs:
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -57323,7 +57531,7 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgsDict(TypedDict):
     """
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
-    - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+    - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -57349,7 +57557,7 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgs:
         :param pulumi.Input[_builtins.bool] no_advertise: Do not advertise this range
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] no_advertise_variable: Variable name
-        :param pulumi.Input[_builtins.str] subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         """
         if cost is not None:
@@ -57444,7 +57652,7 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgs:
     @pulumi.getter(name="subnetMask")
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -58621,7 +58829,7 @@ class ServiceSwitchportFeatureInterfaceArgsDict(TypedDict):
     speed: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Set interface speed
-      - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+      - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
     """
     speed_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -58755,7 +58963,7 @@ class ServiceSwitchportFeatureInterfaceArgs:
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] speed: Set interface speed
-                 - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+                 - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name
         :param pulumi.Input[_builtins.int] switchport_access_vlan: Set VLAN identifier associated with bridging domain
                  - Range: `1`-`4094`
@@ -59256,7 +59464,7 @@ class ServiceSwitchportFeatureInterfaceArgs:
     def speed(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set interface speed
-          - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+          - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
         """
         return pulumi.get(self, "speed")
 
@@ -59604,7 +59812,7 @@ class ServiceWirelessLanFeatureSsidArgsDict(TypedDict):
     security_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Select security type
-      - Choices: `enterprise`, `personal`, `open`
+      - Choices: `personal`, `open`, `enterprise`
     """
     ssid_name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -59669,7 +59877,7 @@ class ServiceWirelessLanFeatureSsidArgs:
         :param pulumi.Input[_builtins.str] radius_server_secret: Set RADIUS server shared secret, Attribute conditional on `security_type` equal to `enterprise`
         :param pulumi.Input[_builtins.str] radius_server_secret_variable: Variable name, Attribute conditional on `security_type` equal to `enterprise`
         :param pulumi.Input[_builtins.str] security_type: Select security type
-                 - Choices: `enterprise`, `personal`, `open`
+                 - Choices: `personal`, `open`, `enterprise`
         :param pulumi.Input[_builtins.str] ssid_name: Configure wlan SSID
         :param pulumi.Input[_builtins.int] vlan_id: Set VLAN ID
                  - Range: `1`-`4094`
@@ -59921,7 +60129,7 @@ class ServiceWirelessLanFeatureSsidArgs:
     def security_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Select security type
-          - Choices: `enterprise`, `personal`, `open`
+          - Choices: `personal`, `open`, `enterprise`
         """
         return pulumi.get(self, "security_type")
 
@@ -70530,6 +70738,10 @@ class TopologyCustomControlFeatureSequenceMatchEntryArgsDict(TypedDict):
     Group ID
       - Range: `0`-`4294967295`
     """
+    hierarchy_uuids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
+    """
+    Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+    """
     ipv6_prefix_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     IPv6 prefix list ID
@@ -70606,6 +70818,7 @@ class TopologyCustomControlFeatureSequenceMatchEntryArgs:
                  domain_id: pulumi.Input[Optional[_builtins.int]] = None,
                  expanded_community_list_id: pulumi.Input[Optional[_builtins.str]] = None,
                  group_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  ipv6_prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
                  match_regions: pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceMatchEntryMatchRegionArgs']]]] = None,
                  omp_tag: pulumi.Input[Optional[_builtins.int]] = None,
@@ -70631,6 +70844,7 @@ class TopologyCustomControlFeatureSequenceMatchEntryArgs:
         :param pulumi.Input[_builtins.str] expanded_community_list_id: Expanded community list ID
         :param pulumi.Input[_builtins.int] group_id: Group ID
                  - Range: `0`-`4294967295`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hierarchy_uuids: Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] ipv6_prefix_list_id: IPv6 prefix list ID
         :param pulumi.Input[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceMatchEntryMatchRegionArgs']]] match_regions: Match regions list
         :param pulumi.Input[_builtins.int] omp_tag: OMP tag
@@ -70665,6 +70879,8 @@ class TopologyCustomControlFeatureSequenceMatchEntryArgs:
             pulumi.set(__self__, "expanded_community_list_id", expanded_community_list_id)
         if group_id is not None:
             pulumi.set(__self__, "group_id", group_id)
+        if hierarchy_uuids is not None:
+            pulumi.set(__self__, "hierarchy_uuids", hierarchy_uuids)
         if ipv6_prefix_list_id is not None:
             pulumi.set(__self__, "ipv6_prefix_list_id", ipv6_prefix_list_id)
         if match_regions is not None:
@@ -70770,6 +70986,18 @@ class TopologyCustomControlFeatureSequenceMatchEntryArgs:
     @group_id.setter
     def group_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "group_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="hierarchyUuids")
+    def hierarchy_uuids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "hierarchy_uuids")
+
+    @hierarchy_uuids.setter
+    def hierarchy_uuids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "hierarchy_uuids", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6PrefixListId")
@@ -71108,24 +71336,40 @@ class TopologyCustomControlFeatureTargetOutboundRegionArgs:
 class TopologyHubSpokeFeatureSpokeArgsDict(TypedDict):
     hub_sites: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeHubSiteArgsDict']]]]]
     """
-    Hub Sites
+    Hub site preferences
     """
     name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Spoke name
+    """
+    spoke_hierarchy_uuids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
+    """
+    Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+    """
     spoke_sites: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
+    """
+    Spoke site list
+    """
 
 @pulumi.input_type
 class TopologyHubSpokeFeatureSpokeArgs:
     def __init__(__self__, *,
                  hub_sites: pulumi.Input[Optional[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeHubSiteArgs']]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
+                 spoke_hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  spoke_sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
-        :param pulumi.Input[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeHubSiteArgs']]] hub_sites: Hub Sites
+        :param pulumi.Input[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeHubSiteArgs']]] hub_sites: Hub site preferences
+        :param pulumi.Input[_builtins.str] name: Spoke name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spoke_hierarchy_uuids: Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spoke_sites: Spoke site list
         """
         if hub_sites is not None:
             pulumi.set(__self__, "hub_sites", hub_sites)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if spoke_hierarchy_uuids is not None:
+            pulumi.set(__self__, "spoke_hierarchy_uuids", spoke_hierarchy_uuids)
         if spoke_sites is not None:
             pulumi.set(__self__, "spoke_sites", spoke_sites)
 
@@ -71133,7 +71377,7 @@ class TopologyHubSpokeFeatureSpokeArgs:
     @pulumi.getter(name="hubSites")
     def hub_sites(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeHubSiteArgs']]]]:
         """
-        Hub Sites
+        Hub site preferences
         """
         return pulumi.get(self, "hub_sites")
 
@@ -71144,6 +71388,9 @@ class TopologyHubSpokeFeatureSpokeArgs:
     @_builtins.property
     @pulumi.getter
     def name(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Spoke name
+        """
         return pulumi.get(self, "name")
 
     @name.setter
@@ -71151,8 +71398,23 @@ class TopologyHubSpokeFeatureSpokeArgs:
         pulumi.set(self, "name", value)
 
     @_builtins.property
+    @pulumi.getter(name="spokeHierarchyUuids")
+    def spoke_hierarchy_uuids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "spoke_hierarchy_uuids")
+
+    @spoke_hierarchy_uuids.setter
+    def spoke_hierarchy_uuids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "spoke_hierarchy_uuids", value)
+
+    @_builtins.property
     @pulumi.getter(name="spokeSites")
     def spoke_sites(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Spoke site list
+        """
         return pulumi.get(self, "spoke_sites")
 
     @spoke_sites.setter
@@ -71161,36 +71423,56 @@ class TopologyHubSpokeFeatureSpokeArgs:
 
 
 class TopologyHubSpokeFeatureSpokeHubSiteArgsDict(TypedDict):
+    hub_hierarchy_uuids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
+    """
+    Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+    """
     preference: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
-    preference
+    Hub preference value
       - Range: `1`-`255`
     """
     sites: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
-    sites
+    Hub sites
     """
 
 @pulumi.input_type
 class TopologyHubSpokeFeatureSpokeHubSiteArgs:
     def __init__(__self__, *,
+                 hub_hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  preference: pulumi.Input[Optional[_builtins.int]] = None,
                  sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
-        :param pulumi.Input[_builtins.int] preference: preference
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hub_hierarchy_uuids: Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.int] preference: Hub preference value
                  - Range: `1`-`255`
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sites: sites
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sites: Hub sites
         """
+        if hub_hierarchy_uuids is not None:
+            pulumi.set(__self__, "hub_hierarchy_uuids", hub_hierarchy_uuids)
         if preference is not None:
             pulumi.set(__self__, "preference", preference)
         if sites is not None:
             pulumi.set(__self__, "sites", sites)
 
     @_builtins.property
+    @pulumi.getter(name="hubHierarchyUuids")
+    def hub_hierarchy_uuids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "hub_hierarchy_uuids")
+
+    @hub_hierarchy_uuids.setter
+    def hub_hierarchy_uuids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "hub_hierarchy_uuids", value)
+
+    @_builtins.property
     @pulumi.getter
     def preference(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
-        preference
+        Hub preference value
           - Range: `1`-`255`
         """
         return pulumi.get(self, "preference")
@@ -71203,7 +71485,7 @@ class TopologyHubSpokeFeatureSpokeHubSiteArgs:
     @pulumi.getter
     def sites(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        sites
+        Hub sites
         """
         return pulumi.get(self, "sites")
 
@@ -73071,6 +73353,7 @@ class TransportIpv4AclFeatureSequenceActionArgsDict(TypedDict):
     accept_set_service_chain_vpn: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+      - Ranges: `1`-`511`, `513`-`65531`
     """
     accept_set_service_chain_vpn_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -73117,6 +73400,7 @@ class TransportIpv4AclFeatureSequenceActionArgs:
                  - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
         :param pulumi.Input[_builtins.str] accept_set_service_chain_name_variable: Variable name
         :param pulumi.Input[_builtins.int] accept_set_service_chain_vpn: Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+                 - Ranges: `1`-`511`, `513`-`65531`
         :param pulumi.Input[_builtins.str] accept_set_service_chain_vpn_variable: Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
         :param pulumi.Input[_builtins.str] drop_counter_name: Counter Name
         :param pulumi.Input[_builtins.bool] drop_log: Enable Log
@@ -73274,6 +73558,7 @@ class TransportIpv4AclFeatureSequenceActionArgs:
     def accept_set_service_chain_vpn(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+          - Ranges: `1`-`511`, `513`-`65531`
         """
         return pulumi.get(self, "accept_set_service_chain_vpn")
 
@@ -73790,6 +74075,7 @@ class TransportIpv6AclFeatureSequenceActionArgsDict(TypedDict):
     accept_set_service_chain_vpn: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+      - Ranges: `1`-`511`, `513`-`65531`
     """
     accept_set_service_chain_vpn_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -73839,6 +74125,7 @@ class TransportIpv6AclFeatureSequenceActionArgs:
                  - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
         :param pulumi.Input[_builtins.str] accept_set_service_chain_name_variable: Variable name
         :param pulumi.Input[_builtins.int] accept_set_service_chain_vpn: Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+                 - Ranges: `1`-`511`, `513`-`65531`
         :param pulumi.Input[_builtins.str] accept_set_service_chain_vpn_variable: Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
         :param pulumi.Input[_builtins.int] accept_traffic_class: set traffic class number
                  - Range: `0`-`63`
@@ -73985,6 +74272,7 @@ class TransportIpv6AclFeatureSequenceActionArgs:
     def accept_set_service_chain_vpn(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+          - Ranges: `1`-`511`, `513`-`65531`
         """
         return pulumi.get(self, "accept_set_service_chain_vpn")
 
@@ -74374,7 +74662,7 @@ class TransportManagementVpnFeatureIpv4StaticRouteArgsDict(TypedDict):
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subnet Mask
-      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -74404,7 +74692,7 @@ class TransportManagementVpnFeatureIpv4StaticRouteArgs:
         :param pulumi.Input[_builtins.str] network_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv4StaticRouteNextHopArgs']]] next_hops: IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         """
         if administrative_distance is not None:
@@ -74505,7 +74793,7 @@ class TransportManagementVpnFeatureIpv4StaticRouteArgs:
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -75827,13 +76115,17 @@ class TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict(TypedDict):
     Variable name
     """
     network_address: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IP Address
+    """
     network_address_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Variable name
     """
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
-    - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+    Subnet Mask
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -75864,8 +76156,10 @@ class TransportRoutingBgpFeatureIpv4AggregateAddressArgs:
         :param pulumi.Input[_builtins.bool] as_set_path: Set AS set path information
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] as_set_path_variable: Variable name
+        :param pulumi.Input[_builtins.str] network_address: IP Address
         :param pulumi.Input[_builtins.str] network_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.bool] summary_only: Filter out more specific routes from updates
                  - Default value: `false`
@@ -75916,6 +76210,9 @@ class TransportRoutingBgpFeatureIpv4AggregateAddressArgs:
     @_builtins.property
     @pulumi.getter(name="networkAddress")
     def network_address(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IP Address
+        """
         return pulumi.get(self, "network_address")
 
     @network_address.setter
@@ -75938,7 +76235,8 @@ class TransportRoutingBgpFeatureIpv4AggregateAddressArgs:
     @pulumi.getter(name="subnetMask")
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -77108,13 +77406,17 @@ class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
 
 class TransportRoutingBgpFeatureIpv4NetworkArgsDict(TypedDict):
     network_address: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IP Address
+    """
     network_address_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Variable name
     """
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
-    - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+    Subnet Mask
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -77129,8 +77431,10 @@ class TransportRoutingBgpFeatureIpv4NetworkArgs:
                  subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
                  subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
+        :param pulumi.Input[_builtins.str] network_address: IP Address
         :param pulumi.Input[_builtins.str] network_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         """
         if network_address is not None:
@@ -77145,6 +77449,9 @@ class TransportRoutingBgpFeatureIpv4NetworkArgs:
     @_builtins.property
     @pulumi.getter(name="networkAddress")
     def network_address(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IP Address
+        """
         return pulumi.get(self, "network_address")
 
     @network_address.setter
@@ -77167,7 +77474,8 @@ class TransportRoutingBgpFeatureIpv4NetworkArgs:
     @pulumi.getter(name="subnetMask")
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -79452,7 +79760,7 @@ class TransportRoutingOspfFeatureAreaRangeArgsDict(TypedDict):
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subnet Mask
-      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -79480,7 +79788,7 @@ class TransportRoutingOspfFeatureAreaRangeArgs:
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] no_advertise_variable: Variable name
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         """
         if cost is not None:
@@ -79579,7 +79887,7 @@ class TransportRoutingOspfFeatureAreaRangeArgs:
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -80426,7 +80734,7 @@ class TransportRoutingOspfv3Ipv4FeatureAreaRangeArgsDict(TypedDict):
     """
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
-    - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+    - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -80452,7 +80760,7 @@ class TransportRoutingOspfv3Ipv4FeatureAreaRangeArgs:
         :param pulumi.Input[_builtins.bool] no_advertise: Do not advertise this range
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] no_advertise_variable: Variable name
-        :param pulumi.Input[_builtins.str] subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         """
         if cost is not None:
@@ -80547,7 +80855,7 @@ class TransportRoutingOspfv3Ipv4FeatureAreaRangeArgs:
     @pulumi.getter(name="subnetMask")
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -82185,7 +82493,7 @@ class TransportWanVpnFeatureIpv4StaticRouteArgsDict(TypedDict):
     subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subnet Mask
-      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -82215,7 +82523,7 @@ class TransportWanVpnFeatureIpv4StaticRouteArgs:
         :param pulumi.Input[_builtins.str] network_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv4StaticRouteNextHopArgs']]] next_hops: IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         """
         if administrative_distance is not None:
@@ -82316,7 +82624,7 @@ class TransportWanVpnFeatureIpv4StaticRouteArgs:
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 

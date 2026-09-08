@@ -45,9 +45,19 @@ public final class GetTopologyCustomControlFeatureResult {
      * 
      */
     private List<GetTopologyCustomControlFeatureSequence> sequences;
+    /**
+     * @return Inbound network hierarchy UUIDs
+     * 
+     */
+    private List<String> targetInboundHierarchyUuids;
     private List<GetTopologyCustomControlFeatureTargetInboundRegion> targetInboundRegions;
     private List<String> targetInboundSites;
     private String targetLevel;
+    /**
+     * @return Outbound network hierarchy UUIDs
+     * 
+     */
+    private List<String> targetOutboundHierarchyUuids;
     private List<GetTopologyCustomControlFeatureTargetOutboundRegion> targetOutboundRegions;
     private List<String> targetOutboundSites;
     private String targetRole;
@@ -101,6 +111,13 @@ public final class GetTopologyCustomControlFeatureResult {
     public List<GetTopologyCustomControlFeatureSequence> sequences() {
         return this.sequences;
     }
+    /**
+     * @return Inbound network hierarchy UUIDs
+     * 
+     */
+    public List<String> targetInboundHierarchyUuids() {
+        return this.targetInboundHierarchyUuids;
+    }
     public List<GetTopologyCustomControlFeatureTargetInboundRegion> targetInboundRegions() {
         return this.targetInboundRegions;
     }
@@ -109,6 +126,13 @@ public final class GetTopologyCustomControlFeatureResult {
     }
     public String targetLevel() {
         return this.targetLevel;
+    }
+    /**
+     * @return Outbound network hierarchy UUIDs
+     * 
+     */
+    public List<String> targetOutboundHierarchyUuids() {
+        return this.targetOutboundHierarchyUuids;
     }
     public List<GetTopologyCustomControlFeatureTargetOutboundRegion> targetOutboundRegions() {
         return this.targetOutboundRegions;
@@ -145,9 +169,11 @@ public final class GetTopologyCustomControlFeatureResult {
         private String id;
         private String name;
         private List<GetTopologyCustomControlFeatureSequence> sequences;
+        private List<String> targetInboundHierarchyUuids;
         private List<GetTopologyCustomControlFeatureTargetInboundRegion> targetInboundRegions;
         private List<String> targetInboundSites;
         private String targetLevel;
+        private List<String> targetOutboundHierarchyUuids;
         private List<GetTopologyCustomControlFeatureTargetOutboundRegion> targetOutboundRegions;
         private List<String> targetOutboundSites;
         private String targetRole;
@@ -162,9 +188,11 @@ public final class GetTopologyCustomControlFeatureResult {
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.sequences = defaults.sequences;
+    	      this.targetInboundHierarchyUuids = defaults.targetInboundHierarchyUuids;
     	      this.targetInboundRegions = defaults.targetInboundRegions;
     	      this.targetInboundSites = defaults.targetInboundSites;
     	      this.targetLevel = defaults.targetLevel;
+    	      this.targetOutboundHierarchyUuids = defaults.targetOutboundHierarchyUuids;
     	      this.targetOutboundRegions = defaults.targetOutboundRegions;
     	      this.targetOutboundSites = defaults.targetOutboundSites;
     	      this.targetRole = defaults.targetRole;
@@ -224,6 +252,17 @@ public final class GetTopologyCustomControlFeatureResult {
             return sequences(List.of(sequences));
         }
         @CustomType.Setter
+        public Builder targetInboundHierarchyUuids(List<String> targetInboundHierarchyUuids) {
+            if (targetInboundHierarchyUuids == null) {
+              throw new MissingRequiredPropertyException("GetTopologyCustomControlFeatureResult", "targetInboundHierarchyUuids");
+            }
+            this.targetInboundHierarchyUuids = targetInboundHierarchyUuids;
+            return this;
+        }
+        public Builder targetInboundHierarchyUuids(String... targetInboundHierarchyUuids) {
+            return targetInboundHierarchyUuids(List.of(targetInboundHierarchyUuids));
+        }
+        @CustomType.Setter
         public Builder targetInboundRegions(List<GetTopologyCustomControlFeatureTargetInboundRegion> targetInboundRegions) {
             if (targetInboundRegions == null) {
               throw new MissingRequiredPropertyException("GetTopologyCustomControlFeatureResult", "targetInboundRegions");
@@ -252,6 +291,17 @@ public final class GetTopologyCustomControlFeatureResult {
             }
             this.targetLevel = targetLevel;
             return this;
+        }
+        @CustomType.Setter
+        public Builder targetOutboundHierarchyUuids(List<String> targetOutboundHierarchyUuids) {
+            if (targetOutboundHierarchyUuids == null) {
+              throw new MissingRequiredPropertyException("GetTopologyCustomControlFeatureResult", "targetOutboundHierarchyUuids");
+            }
+            this.targetOutboundHierarchyUuids = targetOutboundHierarchyUuids;
+            return this;
+        }
+        public Builder targetOutboundHierarchyUuids(String... targetOutboundHierarchyUuids) {
+            return targetOutboundHierarchyUuids(List.of(targetOutboundHierarchyUuids));
         }
         @CustomType.Setter
         public Builder targetOutboundRegions(List<GetTopologyCustomControlFeatureTargetOutboundRegion> targetOutboundRegions) {
@@ -310,9 +360,11 @@ public final class GetTopologyCustomControlFeatureResult {
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.sequences = sequences;
+            _resultValue.targetInboundHierarchyUuids = targetInboundHierarchyUuids;
             _resultValue.targetInboundRegions = targetInboundRegions;
             _resultValue.targetInboundSites = targetInboundSites;
             _resultValue.targetLevel = targetLevel;
+            _resultValue.targetOutboundHierarchyUuids = targetOutboundHierarchyUuids;
             _resultValue.targetOutboundRegions = targetOutboundRegions;
             _resultValue.targetOutboundSites = targetOutboundSites;
             _resultValue.targetRole = targetRole;

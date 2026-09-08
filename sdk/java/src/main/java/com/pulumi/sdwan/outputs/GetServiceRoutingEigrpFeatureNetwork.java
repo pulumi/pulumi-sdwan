@@ -10,12 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetServiceRoutingEigrpFeatureNetwork {
+    /**
+     * @return IP Address
+     * 
+     */
     private String ipAddress;
     /**
      * @return Variable name
      * 
      */
     private String ipAddressVariable;
+    /**
+     * @return Subnet Mask
+     * 
+     */
     private String mask;
     /**
      * @return Variable name
@@ -24,6 +32,10 @@ public final class GetServiceRoutingEigrpFeatureNetwork {
     private String maskVariable;
 
     private GetServiceRoutingEigrpFeatureNetwork() {}
+    /**
+     * @return IP Address
+     * 
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
@@ -34,6 +46,10 @@ public final class GetServiceRoutingEigrpFeatureNetwork {
     public String ipAddressVariable() {
         return this.ipAddressVariable;
     }
+    /**
+     * @return Subnet Mask
+     * 
+     */
     public String mask() {
         return this.mask;
     }

@@ -27,7 +27,7 @@ class GetTransportWanVpnInterfaceT1E1SerialFeatureResult:
     """
     A collection of values returned by getTransportWanVpnInterfaceT1E1SerialFeature.
     """
-    def __init__(__self__, acl_ipv4_egress_feature_id=None, acl_ipv4_ingress_feature_id=None, acl_ipv6_egress_feature_id=None, acl_ipv6_ingress_feature_id=None, bandwidth=None, bandwidth_downstream=None, bandwidth_downstream_variable=None, bandwidth_variable=None, clock_rate=None, clock_rate_variable=None, description=None, encapsulation=None, encapsulation_variable=None, feature_profile_id=None, id=None, interface_name=None, interface_name_variable=None, ip_mtu=None, ip_mtu_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv6_address=None, ipv6_address_variable=None, mrf_core_region_type=None, mrf_enable_core_region=None, mtu=None, mtu_variable=None, name=None, per_tunnel_qos=None, per_tunnel_qos_aggregator=None, per_tunnel_qos_aggregator_variable=None, per_tunnel_qos_variable=None, qos_shaping_rate=None, qos_shaping_rate_variable=None, shutdown=None, shutdown_variable=None, tcp_mss=None, tcp_mss_variable=None, tloc_extension=None, tloc_extension_variable=None, transport_wan_vpn_feature_id=None, tunnel_interface=None, tunnel_interface_allow_all=None, tunnel_interface_allow_all_variable=None, tunnel_interface_allow_bfd=None, tunnel_interface_allow_bfd_variable=None, tunnel_interface_allow_bgp=None, tunnel_interface_allow_bgp_variable=None, tunnel_interface_allow_dhcp=None, tunnel_interface_allow_dhcp_variable=None, tunnel_interface_allow_dns=None, tunnel_interface_allow_dns_variable=None, tunnel_interface_allow_https=None, tunnel_interface_allow_https_variable=None, tunnel_interface_allow_icmp=None, tunnel_interface_allow_icmp_variable=None, tunnel_interface_allow_netconf=None, tunnel_interface_allow_netconf_variable=None, tunnel_interface_allow_ntp=None, tunnel_interface_allow_ntp_variable=None, tunnel_interface_allow_ospf=None, tunnel_interface_allow_ospf_variable=None, tunnel_interface_allow_snmp=None, tunnel_interface_allow_snmp_variable=None, tunnel_interface_allow_ssh=None, tunnel_interface_allow_ssh_variable=None, tunnel_interface_allow_stun=None, tunnel_interface_allow_stun_variable=None, tunnel_interface_bind_loopback_tunnel=None, tunnel_interface_bind_loopback_tunnel_variable=None, tunnel_interface_border=None, tunnel_interface_border_variable=None, tunnel_interface_carrier=None, tunnel_interface_carrier_variable=None, tunnel_interface_clear_dont_fragment=None, tunnel_interface_clear_dont_fragment_variable=None, tunnel_interface_clear_network_broadcast=None, tunnel_interface_clear_network_broadcast_variable=None, tunnel_interface_color=None, tunnel_interface_color_variable=None, tunnel_interface_encapsulations=None, tunnel_interface_exclude_controller_group_list_variable=None, tunnel_interface_exclude_controller_group_lists=None, tunnel_interface_groups=None, tunnel_interface_groups_variable=None, tunnel_interface_hello_interval=None, tunnel_interface_hello_interval_variable=None, tunnel_interface_hello_tolerance=None, tunnel_interface_hello_tolerance_variable=None, tunnel_interface_last_resort_circuit=None, tunnel_interface_last_resort_circuit_variable=None, tunnel_interface_low_bandwidth_link=None, tunnel_interface_low_bandwidth_link_variable=None, tunnel_interface_max_control_connections=None, tunnel_interface_max_control_connections_variable=None, tunnel_interface_nat_refresh_interval=None, tunnel_interface_nat_refresh_interval_variable=None, tunnel_interface_port_hop=None, tunnel_interface_port_hop_variable=None, tunnel_interface_restrict=None, tunnel_interface_restrict_variable=None, tunnel_interface_tunnel_tcp_mss=None, tunnel_interface_tunnel_tcp_mss_variable=None, tunnel_interface_vbond_as_stun_server=None, tunnel_interface_vbond_as_stun_server_variable=None, tunnel_interface_vmanage_connection_preference=None, tunnel_interface_vmanage_connection_preference_variable=None, tunnel_qos_mode=None, tunnel_qos_mode_variable=None, version=None):
+    def __init__(__self__, acl_ipv4_egress_feature_id=None, acl_ipv4_ingress_feature_id=None, acl_ipv6_egress_feature_id=None, acl_ipv6_ingress_feature_id=None, bandwidth=None, bandwidth_downstream=None, bandwidth_downstream_variable=None, bandwidth_variable=None, clock_rate=None, clock_rate_variable=None, description=None, encapsulation=None, encapsulation_variable=None, feature_profile_id=None, id=None, interface_name=None, interface_name_variable=None, ip_mtu=None, ip_mtu_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv6_address=None, ipv6_address_variable=None, mrf_core_region_type=None, mrf_enable_core_region=None, mtu=None, mtu_variable=None, name=None, per_tunnel_qos=None, per_tunnel_qos_aggregator=None, per_tunnel_qos_aggregator_variable=None, per_tunnel_qos_variable=None, qos_shaping_rate=None, qos_shaping_rate_variable=None, shutdown=None, shutdown_variable=None, tcp_mss=None, tcp_mss_variable=None, tloc_extension=None, tloc_extension_variable=None, transport_wan_vpn_feature_id=None, tunnel_interface=None, tunnel_interface_allow_all=None, tunnel_interface_allow_all_variable=None, tunnel_interface_allow_bfd=None, tunnel_interface_allow_bfd_variable=None, tunnel_interface_allow_bgp=None, tunnel_interface_allow_bgp_variable=None, tunnel_interface_allow_dhcp=None, tunnel_interface_allow_dhcp_variable=None, tunnel_interface_allow_dns=None, tunnel_interface_allow_dns_variable=None, tunnel_interface_allow_https=None, tunnel_interface_allow_https_variable=None, tunnel_interface_allow_icmp=None, tunnel_interface_allow_icmp_variable=None, tunnel_interface_allow_netconf=None, tunnel_interface_allow_netconf_variable=None, tunnel_interface_allow_ntp=None, tunnel_interface_allow_ntp_variable=None, tunnel_interface_allow_ospf=None, tunnel_interface_allow_ospf_variable=None, tunnel_interface_allow_snmp=None, tunnel_interface_allow_snmp_variable=None, tunnel_interface_allow_ssh=None, tunnel_interface_allow_ssh_variable=None, tunnel_interface_allow_stun=None, tunnel_interface_allow_stun_variable=None, tunnel_interface_bind_loopback_tunnel=None, tunnel_interface_bind_loopback_tunnel_variable=None, tunnel_interface_border=None, tunnel_interface_border_variable=None, tunnel_interface_carrier=None, tunnel_interface_carrier_variable=None, tunnel_interface_clear_dont_fragment=None, tunnel_interface_clear_dont_fragment_variable=None, tunnel_interface_clear_network_broadcast=None, tunnel_interface_clear_network_broadcast_variable=None, tunnel_interface_color=None, tunnel_interface_color_description=None, tunnel_interface_color_description_variable=None, tunnel_interface_color_variable=None, tunnel_interface_encapsulations=None, tunnel_interface_exclude_controller_group_list_variable=None, tunnel_interface_exclude_controller_group_lists=None, tunnel_interface_full_port_hop=None, tunnel_interface_full_port_hop_variable=None, tunnel_interface_groups=None, tunnel_interface_groups_variable=None, tunnel_interface_hello_interval=None, tunnel_interface_hello_interval_variable=None, tunnel_interface_hello_tolerance=None, tunnel_interface_hello_tolerance_variable=None, tunnel_interface_last_resort_circuit=None, tunnel_interface_last_resort_circuit_variable=None, tunnel_interface_low_bandwidth_link=None, tunnel_interface_low_bandwidth_link_variable=None, tunnel_interface_max_control_connections=None, tunnel_interface_max_control_connections_variable=None, tunnel_interface_nat_refresh_interval=None, tunnel_interface_nat_refresh_interval_variable=None, tunnel_interface_port_hop=None, tunnel_interface_port_hop_variable=None, tunnel_interface_restrict=None, tunnel_interface_restrict_variable=None, tunnel_interface_tunnel_tcp_mss=None, tunnel_interface_tunnel_tcp_mss_variable=None, tunnel_interface_vbond_as_stun_server=None, tunnel_interface_vbond_as_stun_server_variable=None, tunnel_interface_vmanage_connection_preference=None, tunnel_interface_vmanage_connection_preference_variable=None, tunnel_qos_mode=None, tunnel_qos_mode_variable=None, version=None):
         if acl_ipv4_egress_feature_id and not isinstance(acl_ipv4_egress_feature_id, str):
             raise TypeError("Expected argument 'acl_ipv4_egress_feature_id' to be a str")
         pulumi.set(__self__, "acl_ipv4_egress_feature_id", acl_ipv4_egress_feature_id)
@@ -271,6 +271,12 @@ class GetTransportWanVpnInterfaceT1E1SerialFeatureResult:
         if tunnel_interface_color and not isinstance(tunnel_interface_color, str):
             raise TypeError("Expected argument 'tunnel_interface_color' to be a str")
         pulumi.set(__self__, "tunnel_interface_color", tunnel_interface_color)
+        if tunnel_interface_color_description and not isinstance(tunnel_interface_color_description, str):
+            raise TypeError("Expected argument 'tunnel_interface_color_description' to be a str")
+        pulumi.set(__self__, "tunnel_interface_color_description", tunnel_interface_color_description)
+        if tunnel_interface_color_description_variable and not isinstance(tunnel_interface_color_description_variable, str):
+            raise TypeError("Expected argument 'tunnel_interface_color_description_variable' to be a str")
+        pulumi.set(__self__, "tunnel_interface_color_description_variable", tunnel_interface_color_description_variable)
         if tunnel_interface_color_variable and not isinstance(tunnel_interface_color_variable, str):
             raise TypeError("Expected argument 'tunnel_interface_color_variable' to be a str")
         pulumi.set(__self__, "tunnel_interface_color_variable", tunnel_interface_color_variable)
@@ -283,6 +289,12 @@ class GetTransportWanVpnInterfaceT1E1SerialFeatureResult:
         if tunnel_interface_exclude_controller_group_lists and not isinstance(tunnel_interface_exclude_controller_group_lists, list):
             raise TypeError("Expected argument 'tunnel_interface_exclude_controller_group_lists' to be a list")
         pulumi.set(__self__, "tunnel_interface_exclude_controller_group_lists", tunnel_interface_exclude_controller_group_lists)
+        if tunnel_interface_full_port_hop and not isinstance(tunnel_interface_full_port_hop, bool):
+            raise TypeError("Expected argument 'tunnel_interface_full_port_hop' to be a bool")
+        pulumi.set(__self__, "tunnel_interface_full_port_hop", tunnel_interface_full_port_hop)
+        if tunnel_interface_full_port_hop_variable and not isinstance(tunnel_interface_full_port_hop_variable, str):
+            raise TypeError("Expected argument 'tunnel_interface_full_port_hop_variable' to be a str")
+        pulumi.set(__self__, "tunnel_interface_full_port_hop_variable", tunnel_interface_full_port_hop_variable)
         if tunnel_interface_groups and not isinstance(tunnel_interface_groups, int):
             raise TypeError("Expected argument 'tunnel_interface_groups' to be a int")
         pulumi.set(__self__, "tunnel_interface_groups", tunnel_interface_groups)
@@ -996,6 +1008,19 @@ class GetTransportWanVpnInterfaceT1E1SerialFeatureResult:
         return pulumi.get(self, "tunnel_interface_color")
 
     @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceColorDescription")
+    def tunnel_interface_color_description(self) -> _builtins.str:
+        return pulumi.get(self, "tunnel_interface_color_description")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceColorDescriptionVariable")
+    def tunnel_interface_color_description_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_interface_color_description_variable")
+
+    @_builtins.property
     @pulumi.getter(name="tunnelInterfaceColorVariable")
     def tunnel_interface_color_variable(self) -> _builtins.str:
         """
@@ -1026,6 +1051,22 @@ class GetTransportWanVpnInterfaceT1E1SerialFeatureResult:
         Exclude the following controller groups defined in this list
         """
         return pulumi.get(self, "tunnel_interface_exclude_controller_group_lists")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceFullPortHop")
+    def tunnel_interface_full_port_hop(self) -> _builtins.bool:
+        """
+        Enable port hopping on the tunnel interface
+        """
+        return pulumi.get(self, "tunnel_interface_full_port_hop")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceFullPortHopVariable")
+    def tunnel_interface_full_port_hop_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_interface_full_port_hop_variable")
 
     @_builtins.property
     @pulumi.getter(name="tunnelInterfaceGroups")
@@ -1143,7 +1184,7 @@ class GetTransportWanVpnInterfaceT1E1SerialFeatureResult:
     @pulumi.getter(name="tunnelInterfacePortHop")
     def tunnel_interface_port_hop(self) -> _builtins.bool:
         """
-        Disallow port hopping on the tunnel interface
+        The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
         """
         return pulumi.get(self, "tunnel_interface_port_hop")
 
@@ -1331,10 +1372,14 @@ class AwaitableGetTransportWanVpnInterfaceT1E1SerialFeatureResult(GetTransportWa
             tunnel_interface_clear_network_broadcast=self.tunnel_interface_clear_network_broadcast,
             tunnel_interface_clear_network_broadcast_variable=self.tunnel_interface_clear_network_broadcast_variable,
             tunnel_interface_color=self.tunnel_interface_color,
+            tunnel_interface_color_description=self.tunnel_interface_color_description,
+            tunnel_interface_color_description_variable=self.tunnel_interface_color_description_variable,
             tunnel_interface_color_variable=self.tunnel_interface_color_variable,
             tunnel_interface_encapsulations=self.tunnel_interface_encapsulations,
             tunnel_interface_exclude_controller_group_list_variable=self.tunnel_interface_exclude_controller_group_list_variable,
             tunnel_interface_exclude_controller_group_lists=self.tunnel_interface_exclude_controller_group_lists,
+            tunnel_interface_full_port_hop=self.tunnel_interface_full_port_hop,
+            tunnel_interface_full_port_hop_variable=self.tunnel_interface_full_port_hop_variable,
             tunnel_interface_groups=self.tunnel_interface_groups,
             tunnel_interface_groups_variable=self.tunnel_interface_groups_variable,
             tunnel_interface_hello_interval=self.tunnel_interface_hello_interval,
@@ -1479,10 +1524,14 @@ def get_transport_wan_vpn_interface_t1_e1_serial_feature(feature_profile_id: Opt
         tunnel_interface_clear_network_broadcast=pulumi.get(__ret__, 'tunnel_interface_clear_network_broadcast'),
         tunnel_interface_clear_network_broadcast_variable=pulumi.get(__ret__, 'tunnel_interface_clear_network_broadcast_variable'),
         tunnel_interface_color=pulumi.get(__ret__, 'tunnel_interface_color'),
+        tunnel_interface_color_description=pulumi.get(__ret__, 'tunnel_interface_color_description'),
+        tunnel_interface_color_description_variable=pulumi.get(__ret__, 'tunnel_interface_color_description_variable'),
         tunnel_interface_color_variable=pulumi.get(__ret__, 'tunnel_interface_color_variable'),
         tunnel_interface_encapsulations=pulumi.get(__ret__, 'tunnel_interface_encapsulations'),
         tunnel_interface_exclude_controller_group_list_variable=pulumi.get(__ret__, 'tunnel_interface_exclude_controller_group_list_variable'),
         tunnel_interface_exclude_controller_group_lists=pulumi.get(__ret__, 'tunnel_interface_exclude_controller_group_lists'),
+        tunnel_interface_full_port_hop=pulumi.get(__ret__, 'tunnel_interface_full_port_hop'),
+        tunnel_interface_full_port_hop_variable=pulumi.get(__ret__, 'tunnel_interface_full_port_hop_variable'),
         tunnel_interface_groups=pulumi.get(__ret__, 'tunnel_interface_groups'),
         tunnel_interface_groups_variable=pulumi.get(__ret__, 'tunnel_interface_groups_variable'),
         tunnel_interface_hello_interval=pulumi.get(__ret__, 'tunnel_interface_hello_interval'),
@@ -1624,10 +1673,14 @@ def get_transport_wan_vpn_interface_t1_e1_serial_feature_output(feature_profile_
         tunnel_interface_clear_network_broadcast=pulumi.get(__response__, 'tunnel_interface_clear_network_broadcast'),
         tunnel_interface_clear_network_broadcast_variable=pulumi.get(__response__, 'tunnel_interface_clear_network_broadcast_variable'),
         tunnel_interface_color=pulumi.get(__response__, 'tunnel_interface_color'),
+        tunnel_interface_color_description=pulumi.get(__response__, 'tunnel_interface_color_description'),
+        tunnel_interface_color_description_variable=pulumi.get(__response__, 'tunnel_interface_color_description_variable'),
         tunnel_interface_color_variable=pulumi.get(__response__, 'tunnel_interface_color_variable'),
         tunnel_interface_encapsulations=pulumi.get(__response__, 'tunnel_interface_encapsulations'),
         tunnel_interface_exclude_controller_group_list_variable=pulumi.get(__response__, 'tunnel_interface_exclude_controller_group_list_variable'),
         tunnel_interface_exclude_controller_group_lists=pulumi.get(__response__, 'tunnel_interface_exclude_controller_group_lists'),
+        tunnel_interface_full_port_hop=pulumi.get(__response__, 'tunnel_interface_full_port_hop'),
+        tunnel_interface_full_port_hop_variable=pulumi.get(__response__, 'tunnel_interface_full_port_hop_variable'),
         tunnel_interface_groups=pulumi.get(__response__, 'tunnel_interface_groups'),
         tunnel_interface_groups_variable=pulumi.get(__response__, 'tunnel_interface_groups_variable'),
         tunnel_interface_hello_interval=pulumi.get(__response__, 'tunnel_interface_hello_interval'),

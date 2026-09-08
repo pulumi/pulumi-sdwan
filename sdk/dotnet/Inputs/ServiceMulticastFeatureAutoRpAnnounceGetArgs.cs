@@ -13,6 +13,18 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class ServiceMulticastFeatureAutoRpAnnounceGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("accessListId")]
+        public Input<string>? AccessListId { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("accessListIdVariable")]
+        public Input<string>? AccessListIdVariable { get; set; }
+
+        /// <summary>
         /// Set RP Announce Interface Name
         /// </summary>
         [Input("interfaceName")]
@@ -23,6 +35,19 @@ namespace Pulumi.Sdwan.Inputs
         /// </summary>
         [Input("interfaceNameVariable")]
         public Input<string>? InterfaceNameVariable { get; set; }
+
+        /// <summary>
+        /// Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        ///   - Range: `1`-`16383`
+        /// </summary>
+        [Input("interval")]
+        public Input<int>? Interval { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("intervalVariable")]
+        public Input<string>? IntervalVariable { get; set; }
 
         /// <summary>
         /// Set RP Announce Scope

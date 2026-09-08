@@ -141,6 +141,10 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string FeatureProfileId;
         /// <summary>
+        /// Network hierarchy UUIDs
+        /// </summary>
+        public readonly ImmutableArray<string> HierarchyUuids;
+        /// <summary>
         /// The id of the Feature
         /// </summary>
         public readonly string Id;
@@ -148,7 +152,13 @@ namespace Pulumi.Sdwan
         /// The name of the Feature
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Site list
+        /// </summary>
         public readonly ImmutableArray<string> Sites;
+        /// <summary>
+        /// Target VPN list
+        /// </summary>
         public readonly ImmutableArray<string> TargetVpns;
         /// <summary>
         /// The version of the Feature
@@ -160,6 +170,8 @@ namespace Pulumi.Sdwan
             string description,
 
             string featureProfileId,
+
+            ImmutableArray<string> hierarchyUuids,
 
             string id,
 
@@ -173,6 +185,7 @@ namespace Pulumi.Sdwan
         {
             Description = description;
             FeatureProfileId = featureProfileId;
+            HierarchyUuids = hierarchyUuids;
             Id = id;
             Name = name;
             Sites = sites;

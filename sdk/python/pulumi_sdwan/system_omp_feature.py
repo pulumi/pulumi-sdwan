@@ -157,6 +157,7 @@ class SystemOmpFeatureArgs:
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
         :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds)
+                 - Ranges: `0`-`0`, `3`-`65535`
                  - Default value: `300`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
         :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally
@@ -877,6 +878,7 @@ class SystemOmpFeatureArgs:
     def holdtime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Hold Time (seconds)
+          - Ranges: `0`-`0`, `3`-`65535`
           - Default value: `300`
         """
         return pulumi.get(self, "holdtime")
@@ -1278,6 +1280,7 @@ class _SystemOmpFeatureState:
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
         :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds)
+                 - Ranges: `0`-`0`, `3`-`65535`
                  - Default value: `300`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
         :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally
@@ -2002,6 +2005,7 @@ class _SystemOmpFeatureState:
     def holdtime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Hold Time (seconds)
+          - Ranges: `0`-`0`, `3`-`65535`
           - Default value: `300`
         """
         return pulumi.get(self, "holdtime")
@@ -2475,6 +2479,7 @@ class SystemOmpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
         :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds)
+                 - Ranges: `0`-`0`, `3`-`65535`
                  - Default value: `300`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
         :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally
@@ -2881,6 +2886,7 @@ class SystemOmpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
         :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds)
+                 - Ranges: `0`-`0`, `3`-`65535`
                  - Default value: `300`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
         :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally
@@ -3368,6 +3374,7 @@ class SystemOmpFeature(pulumi.CustomResource):
     def holdtime(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
         Hold Time (seconds)
+          - Ranges: `0`-`0`, `3`-`65535`
           - Default value: `300`
         """
         return pulumi.get(self, "holdtime")

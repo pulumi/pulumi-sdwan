@@ -42,7 +42,7 @@ public final class ServiceLanVpnFeatureRouteLeakFromOtherServiceArgs extends com
 
     /**
      * Leak Route of particular protocol from Source Service VPN
-     *   - Choices: `static`, `connected`, `bgp`, `ospf`
+     *   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
      * 
      */
     @Import(name="routeProtocol")
@@ -50,7 +50,7 @@ public final class ServiceLanVpnFeatureRouteLeakFromOtherServiceArgs extends com
 
     /**
      * @return Leak Route of particular protocol from Source Service VPN
-     *   - Choices: `static`, `connected`, `bgp`, `ospf`
+     *   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
      * 
      */
     public Optional<Output<String>> routeProtocol() {
@@ -175,7 +175,7 @@ public final class ServiceLanVpnFeatureRouteLeakFromOtherServiceArgs extends com
 
         /**
          * @param routeProtocol Leak Route of particular protocol from Source Service VPN
-         *   - Choices: `static`, `connected`, `bgp`, `ospf`
+         *   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
          * 
          * @return builder
          * 
@@ -187,7 +187,7 @@ public final class ServiceLanVpnFeatureRouteLeakFromOtherServiceArgs extends com
 
         /**
          * @param routeProtocol Leak Route of particular protocol from Source Service VPN
-         *   - Choices: `static`, `connected`, `bgp`, `ospf`
+         *   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
          * 
          * @return builder
          * 

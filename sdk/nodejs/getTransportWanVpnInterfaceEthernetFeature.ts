@@ -131,6 +131,26 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     readonly enableDhcpv6: boolean;
     /**
+     * Enable/Disable SGT Enforcement on an interface
+     */
+    readonly enableEnforcedPropagation: boolean;
+    /**
+     * HA Interlink interface on/off
+     */
+    readonly enableHaInterlinkInterface: boolean;
+    /**
+     * Indicates that the interface is trustworthy for CTS
+     */
+    readonly enableSgtPropagation: boolean;
+    /**
+     * SGT value between 2 and 65519
+     */
+    readonly enforcedSecurityGroupTag: number;
+    /**
+     * Variable name
+     */
+    readonly enforcedSecurityGroupTagVariable: string;
+    /**
      * Feature Profile ID
      */
     readonly featureProfileId: string;
@@ -498,6 +518,10 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
     readonly portChannelStaticQosAggregateVariable: string;
     readonly portChannelSubinterface: boolean;
     /**
+     * Enables the interface for CTS SGT authorization and forwarding
+     */
+    readonly propagate: boolean;
+    /**
      * Adaptive QoS
      */
     readonly qosAdaptive: boolean;
@@ -574,6 +598,14 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     readonly qosShapingRateVariable: string;
     /**
+     * SGT value between 2 and 65519
+     */
+    readonly securityGroupTag: number;
+    /**
+     * Variable name
+     */
+    readonly securityGroupTagVariable: string;
+    /**
      * Service Provider Name
      */
     readonly serviceProvider: string;
@@ -630,6 +662,10 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      * Transport WAN VPN Feature ID
      */
     readonly transportWanVpnFeatureId: string;
+    /**
+     * Indicates that the interface is trustworthy for CTS.
+     */
+    readonly trusted: boolean;
     /**
      * Tunnels Bandwidth Percent
      */
@@ -791,6 +827,14 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     readonly tunnelInterfaceColor: string;
     /**
+     * Set color description for TLOC
+     */
+    readonly tunnelInterfaceColorDescription: string;
+    /**
+     * Variable name
+     */
+    readonly tunnelInterfaceColorDescriptionVariable: string;
+    /**
      * Restrict this TLOC behavior
      */
     readonly tunnelInterfaceColorRestrict: boolean;
@@ -822,6 +866,14 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      * Exclude the following controller groups defined in this list.
      */
     readonly tunnelInterfaceExcludeControllerGroupLists: number[];
+    /**
+     * Enable port hopping on the tunnel interface
+     */
+    readonly tunnelInterfaceFullPortHop: boolean;
+    /**
+     * Variable name
+     */
+    readonly tunnelInterfaceFullPortHopVariable: string;
     /**
      * GRE tunnel destination IP
      */
@@ -895,7 +947,7 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     readonly tunnelInterfaceNetworkBroadcastVariable: string;
     /**
-     * Disallow port hopping on the tunnel interface
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
      */
     readonly tunnelInterfacePortHop: boolean;
     /**

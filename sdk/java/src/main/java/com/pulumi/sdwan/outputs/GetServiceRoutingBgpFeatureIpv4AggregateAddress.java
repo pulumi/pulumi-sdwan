@@ -21,12 +21,20 @@ public final class GetServiceRoutingBgpFeatureIpv4AggregateAddress {
      * 
      */
     private String asSetPathVariable;
+    /**
+     * @return IP Address
+     * 
+     */
     private String networkAddress;
     /**
      * @return Variable name
      * 
      */
     private String networkAddressVariable;
+    /**
+     * @return Subnet Mask
+     * 
+     */
     private String subnetMask;
     /**
      * @return Variable name
@@ -59,6 +67,10 @@ public final class GetServiceRoutingBgpFeatureIpv4AggregateAddress {
     public String asSetPathVariable() {
         return this.asSetPathVariable;
     }
+    /**
+     * @return IP Address
+     * 
+     */
     public String networkAddress() {
         return this.networkAddress;
     }
@@ -69,6 +81,10 @@ public final class GetServiceRoutingBgpFeatureIpv4AggregateAddress {
     public String networkAddressVariable() {
         return this.networkAddressVariable;
     }
+    /**
+     * @return Subnet Mask
+     * 
+     */
     public String subnetMask() {
         return this.subnetMask;
     }

@@ -581,6 +581,10 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string TrustsecSecurityGroupTagVariable;
         /// <summary>
+        /// Indicates that the interface is trustworthy for CTS.
+        /// </summary>
+        public readonly bool TrustsecTrusted;
+        /// <summary>
         /// The version of the Feature
         /// </summary>
         public readonly int Version;
@@ -819,6 +823,8 @@ namespace Pulumi.Sdwan
 
             string trustsecSecurityGroupTagVariable,
 
+            bool trustsecTrusted,
+
             int version,
 
             string xconnect,
@@ -937,6 +943,7 @@ namespace Pulumi.Sdwan
             TrustsecPropogate = trustsecPropogate;
             TrustsecSecurityGroupTag = trustsecSecurityGroupTag;
             TrustsecSecurityGroupTagVariable = trustsecSecurityGroupTagVariable;
+            TrustsecTrusted = trustsecTrusted;
             Version = version;
             Xconnect = xconnect;
             XconnectVariable = xconnectVariable;

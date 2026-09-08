@@ -21,12 +21,12 @@ import * as utilities from "./utilities";
  *     description: "My Example",
  *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
  *     targetVpns: ["service_lan_vpn1"],
- *     selectedHubs: ["SITE_100"],
+ *     selectedHierarchyHubs: ["acb2ea53-4a95-4970-a1ab-9bac15edb961"],
  *     spokes: [{
  *         name: "spoke1",
- *         spokeSites: ["SITE_200"],
+ *         spokeHierarchyUuids: ["acb2ea53-4a95-4970-a1ab-9bac15edb961"],
  *         hubSites: [{
- *             sites: ["SITE_100"],
+ *             hubHierarchyUuids: ["acb2ea53-4a95-4970-a1ab-9bac15edb961"],
  *             preference: 1,
  *         }],
  *     }],
@@ -83,11 +83,21 @@ export class TopologyHubSpokeFeature extends pulumi.CustomResource {
      * The name of the Feature
      */
     declare public readonly name: pulumi.Output<string>;
-    declare public readonly selectedHubs: pulumi.Output<string[]>;
     /**
-     * Spokes
+     * Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    declare public readonly selectedHierarchyHubs: pulumi.Output<string[] | undefined>;
+    /**
+     * Selected hub sites
+     */
+    declare public readonly selectedHubs: pulumi.Output<string[] | undefined>;
+    /**
+     * Spoke configurations
      */
     declare public readonly spokes: pulumi.Output<outputs.TopologyHubSpokeFeatureSpoke[]>;
+    /**
+     * Target VPN list
+     */
     declare public readonly targetVpns: pulumi.Output<string[]>;
     /**
      * The version of the Feature
@@ -110,6 +120,7 @@ export class TopologyHubSpokeFeature extends pulumi.CustomResource {
             resourceInputs["description"] = state?.description;
             resourceInputs["featureProfileId"] = state?.featureProfileId;
             resourceInputs["name"] = state?.name;
+            resourceInputs["selectedHierarchyHubs"] = state?.selectedHierarchyHubs;
             resourceInputs["selectedHubs"] = state?.selectedHubs;
             resourceInputs["spokes"] = state?.spokes;
             resourceInputs["targetVpns"] = state?.targetVpns;
@@ -118,9 +129,6 @@ export class TopologyHubSpokeFeature extends pulumi.CustomResource {
             const args = argsOrState as TopologyHubSpokeFeatureArgs | undefined;
             if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
-            }
-            if (args?.selectedHubs === undefined && !opts.urn) {
-                throw new Error("Missing required property 'selectedHubs'");
             }
             if (args?.spokes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'spokes'");
@@ -131,6 +139,7 @@ export class TopologyHubSpokeFeature extends pulumi.CustomResource {
             resourceInputs["description"] = args?.description;
             resourceInputs["featureProfileId"] = args?.featureProfileId;
             resourceInputs["name"] = args?.name;
+            resourceInputs["selectedHierarchyHubs"] = args?.selectedHierarchyHubs;
             resourceInputs["selectedHubs"] = args?.selectedHubs;
             resourceInputs["spokes"] = args?.spokes;
             resourceInputs["targetVpns"] = args?.targetVpns;
@@ -157,11 +166,21 @@ export interface TopologyHubSpokeFeatureState {
      * The name of the Feature
      */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    selectedHierarchyHubs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Selected hub sites
+     */
     selectedHubs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * Spokes
+     * Spoke configurations
      */
     spokes?: pulumi.Input<pulumi.Input<inputs.TopologyHubSpokeFeatureSpoke>[] | undefined>;
+    /**
+     * Target VPN list
+     */
     targetVpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The version of the Feature
@@ -185,10 +204,20 @@ export interface TopologyHubSpokeFeatureArgs {
      * The name of the Feature
      */
     name?: pulumi.Input<string | undefined>;
-    selectedHubs: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Spokes
+     * Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    selectedHierarchyHubs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Selected hub sites
+     */
+    selectedHubs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Spoke configurations
      */
     spokes: pulumi.Input<pulumi.Input<inputs.TopologyHubSpokeFeatureSpoke>[]>;
+    /**
+     * Target VPN list
+     */
     targetVpns: pulumi.Input<pulumi.Input<string>[]>;
 }

@@ -204,6 +204,7 @@ type SystemOmpFeature struct {
 	// Variable name
 	GracefulRestartVariable pulumi.StringPtrOutput `pulumi:"gracefulRestartVariable"`
 	// Hold Time (seconds)
+	//   - Ranges: `0`-`0`, `3`-`65535`
 	//   - Default value: `300`
 	Holdtime pulumi.IntPtrOutput `pulumi:"holdtime"`
 	// Variable name
@@ -407,6 +408,7 @@ type systemOmpFeatureState struct {
 	// Variable name
 	GracefulRestartVariable *string `pulumi:"gracefulRestartVariable"`
 	// Hold Time (seconds)
+	//   - Ranges: `0`-`0`, `3`-`65535`
 	//   - Default value: `300`
 	Holdtime *int `pulumi:"holdtime"`
 	// Variable name
@@ -578,6 +580,7 @@ type SystemOmpFeatureState struct {
 	// Variable name
 	GracefulRestartVariable pulumi.StringPtrInput
 	// Hold Time (seconds)
+	//   - Ranges: `0`-`0`, `3`-`65535`
 	//   - Default value: `300`
 	Holdtime pulumi.IntPtrInput
 	// Variable name
@@ -753,6 +756,7 @@ type systemOmpFeatureArgs struct {
 	// Variable name
 	GracefulRestartVariable *string `pulumi:"gracefulRestartVariable"`
 	// Hold Time (seconds)
+	//   - Ranges: `0`-`0`, `3`-`65535`
 	//   - Default value: `300`
 	Holdtime *int `pulumi:"holdtime"`
 	// Variable name
@@ -923,6 +927,7 @@ type SystemOmpFeatureArgs struct {
 	// Variable name
 	GracefulRestartVariable pulumi.StringPtrInput
 	// Hold Time (seconds)
+	//   - Ranges: `0`-`0`, `3`-`65535`
 	//   - Default value: `300`
 	Holdtime pulumi.IntPtrInput
 	// Variable name
@@ -1310,6 +1315,7 @@ func (o SystemOmpFeatureOutput) GracefulRestartVariable() pulumi.StringPtrOutput
 }
 
 // Hold Time (seconds)
+//   - Ranges: `0`-`0`, `3`-`65535`
 //   - Default value: `300`
 func (o SystemOmpFeatureOutput) Holdtime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.IntPtrOutput { return v.Holdtime }).(pulumi.IntPtrOutput)

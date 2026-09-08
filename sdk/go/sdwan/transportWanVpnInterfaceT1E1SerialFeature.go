@@ -157,7 +157,7 @@ type TransportWanVpnInterfaceT1E1SerialFeature struct {
 	Ipv4Address   pulumi.StringPtrOutput `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrOutput `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"ipv4SubnetMaskVariable"`
@@ -308,6 +308,10 @@ type TransportWanVpnInterfaceT1E1SerialFeature struct {
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `default`
 	TunnelInterfaceColor pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColor"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescription pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColorDescription"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescriptionVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColorDescriptionVariable"`
 	// Variable name
 	TunnelInterfaceColorVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColorVariable"`
 	// Encapsulation for TLOC
@@ -316,6 +320,11 @@ type TransportWanVpnInterfaceT1E1SerialFeature struct {
 	TunnelInterfaceExcludeControllerGroupListVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceExcludeControllerGroupListVariable"`
 	// Exclude the following controller groups defined in this list
 	TunnelInterfaceExcludeControllerGroupLists pulumi.IntArrayOutput `pulumi:"tunnelInterfaceExcludeControllerGroupLists"`
+	// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Default value: `false`
+	TunnelInterfaceFullPortHop pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceFullPortHop"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceFullPortHopVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceFullPortHopVariable"`
 	// List of groups
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups pulumi.IntPtrOutput `pulumi:"tunnelInterfaceGroups"`
@@ -354,7 +363,7 @@ type TransportWanVpnInterfaceT1E1SerialFeature struct {
 	TunnelInterfaceNatRefreshInterval pulumi.IntPtrOutput `pulumi:"tunnelInterfaceNatRefreshInterval"`
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceNatRefreshIntervalVariable"`
-	// Disallow port hopping on the tunnel interface
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
 	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrOutput `pulumi:"tunnelInterfacePortHop"`
 	// Variable name
@@ -466,7 +475,7 @@ type transportWanVpnInterfaceT1E1SerialFeatureState struct {
 	Ipv4Address   *string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
@@ -617,6 +626,10 @@ type transportWanVpnInterfaceT1E1SerialFeatureState struct {
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `default`
 	TunnelInterfaceColor *string `pulumi:"tunnelInterfaceColor"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescription *string `pulumi:"tunnelInterfaceColorDescription"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescriptionVariable *string `pulumi:"tunnelInterfaceColorDescriptionVariable"`
 	// Variable name
 	TunnelInterfaceColorVariable *string `pulumi:"tunnelInterfaceColorVariable"`
 	// Encapsulation for TLOC
@@ -625,6 +638,11 @@ type transportWanVpnInterfaceT1E1SerialFeatureState struct {
 	TunnelInterfaceExcludeControllerGroupListVariable *string `pulumi:"tunnelInterfaceExcludeControllerGroupListVariable"`
 	// Exclude the following controller groups defined in this list
 	TunnelInterfaceExcludeControllerGroupLists []int `pulumi:"tunnelInterfaceExcludeControllerGroupLists"`
+	// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Default value: `false`
+	TunnelInterfaceFullPortHop *bool `pulumi:"tunnelInterfaceFullPortHop"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceFullPortHopVariable *string `pulumi:"tunnelInterfaceFullPortHopVariable"`
 	// List of groups
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups *int `pulumi:"tunnelInterfaceGroups"`
@@ -663,7 +681,7 @@ type transportWanVpnInterfaceT1E1SerialFeatureState struct {
 	TunnelInterfaceNatRefreshInterval *int `pulumi:"tunnelInterfaceNatRefreshInterval"`
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable *string `pulumi:"tunnelInterfaceNatRefreshIntervalVariable"`
-	// Disallow port hopping on the tunnel interface
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
 	//   - Default value: `true`
 	TunnelInterfacePortHop *bool `pulumi:"tunnelInterfacePortHop"`
 	// Variable name
@@ -740,7 +758,7 @@ type TransportWanVpnInterfaceT1E1SerialFeatureState struct {
 	Ipv4Address   pulumi.StringPtrInput
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
@@ -891,6 +909,10 @@ type TransportWanVpnInterfaceT1E1SerialFeatureState struct {
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `default`
 	TunnelInterfaceColor pulumi.StringPtrInput
+	// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescription pulumi.StringPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescriptionVariable pulumi.StringPtrInput
 	// Variable name
 	TunnelInterfaceColorVariable pulumi.StringPtrInput
 	// Encapsulation for TLOC
@@ -899,6 +921,11 @@ type TransportWanVpnInterfaceT1E1SerialFeatureState struct {
 	TunnelInterfaceExcludeControllerGroupListVariable pulumi.StringPtrInput
 	// Exclude the following controller groups defined in this list
 	TunnelInterfaceExcludeControllerGroupLists pulumi.IntArrayInput
+	// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Default value: `false`
+	TunnelInterfaceFullPortHop pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceFullPortHopVariable pulumi.StringPtrInput
 	// List of groups
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups pulumi.IntPtrInput
@@ -937,7 +964,7 @@ type TransportWanVpnInterfaceT1E1SerialFeatureState struct {
 	TunnelInterfaceNatRefreshInterval pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable pulumi.StringPtrInput
-	// Disallow port hopping on the tunnel interface
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
 	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrInput
 	// Variable name
@@ -1018,7 +1045,7 @@ type transportWanVpnInterfaceT1E1SerialFeatureArgs struct {
 	Ipv4Address   *string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
@@ -1169,6 +1196,10 @@ type transportWanVpnInterfaceT1E1SerialFeatureArgs struct {
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `default`
 	TunnelInterfaceColor *string `pulumi:"tunnelInterfaceColor"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescription *string `pulumi:"tunnelInterfaceColorDescription"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescriptionVariable *string `pulumi:"tunnelInterfaceColorDescriptionVariable"`
 	// Variable name
 	TunnelInterfaceColorVariable *string `pulumi:"tunnelInterfaceColorVariable"`
 	// Encapsulation for TLOC
@@ -1177,6 +1208,11 @@ type transportWanVpnInterfaceT1E1SerialFeatureArgs struct {
 	TunnelInterfaceExcludeControllerGroupListVariable *string `pulumi:"tunnelInterfaceExcludeControllerGroupListVariable"`
 	// Exclude the following controller groups defined in this list
 	TunnelInterfaceExcludeControllerGroupLists []int `pulumi:"tunnelInterfaceExcludeControllerGroupLists"`
+	// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Default value: `false`
+	TunnelInterfaceFullPortHop *bool `pulumi:"tunnelInterfaceFullPortHop"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceFullPortHopVariable *string `pulumi:"tunnelInterfaceFullPortHopVariable"`
 	// List of groups
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups *int `pulumi:"tunnelInterfaceGroups"`
@@ -1215,7 +1251,7 @@ type transportWanVpnInterfaceT1E1SerialFeatureArgs struct {
 	TunnelInterfaceNatRefreshInterval *int `pulumi:"tunnelInterfaceNatRefreshInterval"`
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable *string `pulumi:"tunnelInterfaceNatRefreshIntervalVariable"`
-	// Disallow port hopping on the tunnel interface
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
 	//   - Default value: `true`
 	TunnelInterfacePortHop *bool `pulumi:"tunnelInterfacePortHop"`
 	// Variable name
@@ -1291,7 +1327,7 @@ type TransportWanVpnInterfaceT1E1SerialFeatureArgs struct {
 	Ipv4Address   pulumi.StringPtrInput
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
@@ -1442,6 +1478,10 @@ type TransportWanVpnInterfaceT1E1SerialFeatureArgs struct {
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `default`
 	TunnelInterfaceColor pulumi.StringPtrInput
+	// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescription pulumi.StringPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescriptionVariable pulumi.StringPtrInput
 	// Variable name
 	TunnelInterfaceColorVariable pulumi.StringPtrInput
 	// Encapsulation for TLOC
@@ -1450,6 +1490,11 @@ type TransportWanVpnInterfaceT1E1SerialFeatureArgs struct {
 	TunnelInterfaceExcludeControllerGroupListVariable pulumi.StringPtrInput
 	// Exclude the following controller groups defined in this list
 	TunnelInterfaceExcludeControllerGroupLists pulumi.IntArrayInput
+	// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Default value: `false`
+	TunnelInterfaceFullPortHop pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceFullPortHopVariable pulumi.StringPtrInput
 	// List of groups
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups pulumi.IntPtrInput
@@ -1488,7 +1533,7 @@ type TransportWanVpnInterfaceT1E1SerialFeatureArgs struct {
 	TunnelInterfaceNatRefreshInterval pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable pulumi.StringPtrInput
-	// Disallow port hopping on the tunnel interface
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
 	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrInput
 	// Variable name
@@ -1725,7 +1770,7 @@ func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) Ipv4AddressVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) Ipv4SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceT1E1SerialFeature) pulumi.StringPtrOutput { return v.Ipv4SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -2146,6 +2191,20 @@ func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) TunnelInterfaceColor() 
 	}).(pulumi.StringPtrOutput)
 }
 
+// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) TunnelInterfaceColorDescription() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceT1E1SerialFeature) pulumi.StringPtrOutput {
+		return v.TunnelInterfaceColorDescription
+	}).(pulumi.StringPtrOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) TunnelInterfaceColorDescriptionVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceT1E1SerialFeature) pulumi.StringPtrOutput {
+		return v.TunnelInterfaceColorDescriptionVariable
+	}).(pulumi.StringPtrOutput)
+}
+
 // Variable name
 func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) TunnelInterfaceColorVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceT1E1SerialFeature) pulumi.StringPtrOutput {
@@ -2172,6 +2231,21 @@ func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) TunnelInterfaceExcludeC
 	return o.ApplyT(func(v *TransportWanVpnInterfaceT1E1SerialFeature) pulumi.IntArrayOutput {
 		return v.TunnelInterfaceExcludeControllerGroupLists
 	}).(pulumi.IntArrayOutput)
+}
+
+// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+//   - Default value: `false`
+func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) TunnelInterfaceFullPortHop() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceT1E1SerialFeature) pulumi.BoolPtrOutput {
+		return v.TunnelInterfaceFullPortHop
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) TunnelInterfaceFullPortHopVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceT1E1SerialFeature) pulumi.StringPtrOutput {
+		return v.TunnelInterfaceFullPortHopVariable
+	}).(pulumi.StringPtrOutput)
 }
 
 // List of groups
@@ -2280,7 +2354,7 @@ func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) TunnelInterfaceNatRefre
 	}).(pulumi.StringPtrOutput)
 }
 
-// Disallow port hopping on the tunnel interface
+// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
 //   - Default value: `true`
 func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) TunnelInterfacePortHop() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceT1E1SerialFeature) pulumi.BoolPtrOutput {

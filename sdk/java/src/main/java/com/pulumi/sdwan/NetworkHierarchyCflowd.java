@@ -146,74 +146,66 @@ public class NetworkHierarchyCflowd extends com.pulumi.resources.CustomResource 
     /**
      * Active flow timeout in seconds
      *   - Range: `30`-`3600`
-     *   - Default value: `600`
      * 
      */
     @Export(name="flowActiveTimeout", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> flowActiveTimeout;
+    private Output<Integer> flowActiveTimeout;
 
     /**
      * @return Active flow timeout in seconds
      *   - Range: `30`-`3600`
-     *   - Default value: `600`
      * 
      */
-    public Output<Optional<Integer>> flowActiveTimeout() {
-        return Codegen.optional(this.flowActiveTimeout);
+    public Output<Integer> flowActiveTimeout() {
+        return this.flowActiveTimeout;
     }
     /**
      * Inactive flow timeout in seconds
      *   - Range: `1`-`3600`
-     *   - Default value: `60`
      * 
      */
     @Export(name="flowInactiveTimeout", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> flowInactiveTimeout;
+    private Output<Integer> flowInactiveTimeout;
 
     /**
      * @return Inactive flow timeout in seconds
      *   - Range: `1`-`3600`
-     *   - Default value: `60`
      * 
      */
-    public Output<Optional<Integer>> flowInactiveTimeout() {
-        return Codegen.optional(this.flowInactiveTimeout);
+    public Output<Integer> flowInactiveTimeout() {
+        return this.flowInactiveTimeout;
     }
     /**
      * Flow refresh time in seconds
      *   - Range: `60`-`86400`
-     *   - Default value: `600`
      * 
      */
     @Export(name="flowRefreshTime", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> flowRefreshTime;
+    private Output<Integer> flowRefreshTime;
 
     /**
      * @return Flow refresh time in seconds
      *   - Range: `60`-`86400`
-     *   - Default value: `600`
      * 
      */
-    public Output<Optional<Integer>> flowRefreshTime() {
-        return Codegen.optional(this.flowRefreshTime);
+    public Output<Integer> flowRefreshTime() {
+        return this.flowRefreshTime;
     }
     /**
      * Flow sampling interval
      *   - Range: `1`-`65536`
-     *   - Default value: `1`
      * 
      */
     @Export(name="flowSamplingInterval", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> flowSamplingInterval;
+    private Output<Integer> flowSamplingInterval;
 
     /**
      * @return Flow sampling interval
      *   - Range: `1`-`65536`
-     *   - Default value: `1`
      * 
      */
-    public Output<Optional<Integer>> flowSamplingInterval() {
-        return Codegen.optional(this.flowSamplingInterval);
+    public Output<Integer> flowSamplingInterval() {
+        return this.flowSamplingInterval;
     }
     /**
      * The UUID of the Global network hierarchy node. This is automatically fetched from the SD-WAN Manager.
@@ -232,20 +224,18 @@ public class NetworkHierarchyCflowd extends com.pulumi.resources.CustomResource 
     /**
      * FNF Protocol
      *   - Choices: `ipv4`, `ipv6`, `both`
-     *   - Default value: `ipv4`
      * 
      */
     @Export(name="protocol", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> protocol;
+    private Output<String> protocol;
 
     /**
      * @return FNF Protocol
      *   - Choices: `ipv4`, `ipv6`, `both`
-     *   - Default value: `ipv4`
      * 
      */
-    public Output<Optional<String>> protocol() {
-        return Codegen.optional(this.protocol);
+    public Output<String> protocol() {
+        return this.protocol;
     }
 
     /**
@@ -260,7 +250,7 @@ public class NetworkHierarchyCflowd extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public NetworkHierarchyCflowd(java.lang.String name, @Nullable NetworkHierarchyCflowdArgs args) {
+    public NetworkHierarchyCflowd(java.lang.String name, NetworkHierarchyCflowdArgs args) {
         this(name, args, null);
     }
     /**
@@ -269,7 +259,7 @@ public class NetworkHierarchyCflowd extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public NetworkHierarchyCflowd(java.lang.String name, @Nullable NetworkHierarchyCflowdArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public NetworkHierarchyCflowd(java.lang.String name, NetworkHierarchyCflowdArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("sdwan:index/networkHierarchyCflowd:NetworkHierarchyCflowd", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -277,7 +267,7 @@ public class NetworkHierarchyCflowd extends com.pulumi.resources.CustomResource 
         super("sdwan:index/networkHierarchyCflowd:NetworkHierarchyCflowd", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static NetworkHierarchyCflowdArgs makeArgs(@Nullable NetworkHierarchyCflowdArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static NetworkHierarchyCflowdArgs makeArgs(NetworkHierarchyCflowdArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

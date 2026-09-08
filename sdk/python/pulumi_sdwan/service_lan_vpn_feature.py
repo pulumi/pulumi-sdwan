@@ -103,8 +103,7 @@ class ServiceLanVpnFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatSubnetArgs']]] static_nat_subnets: Static NAT Subnet Rules
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatArgs']]] static_nats: Static NAT Rules
         :param pulumi.Input[_builtins.int] vpn: VPN
-                 - Range: `1`-`65527`
-                 - Default value: `0`
+                 - Ranges: `1`-`511`, `513`-`65527`
         :param pulumi.Input[_builtins.str] vpn_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -650,8 +649,7 @@ class ServiceLanVpnFeatureArgs:
     def vpn(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         VPN
-          - Range: `1`-`65527`
-          - Default value: `0`
+          - Ranges: `1`-`511`, `513`-`65527`
         """
         return pulumi.get(self, "vpn")
 
@@ -759,8 +757,7 @@ class _ServiceLanVpnFeatureState:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatArgs']]] static_nats: Static NAT Rules
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         :param pulumi.Input[_builtins.int] vpn: VPN
-                 - Range: `1`-`65527`
-                 - Default value: `0`
+                 - Ranges: `1`-`511`, `513`-`65527`
         :param pulumi.Input[_builtins.str] vpn_variable: Variable name
         """
         if advertise_omp_ipv4s is not None:
@@ -1321,8 +1318,7 @@ class _ServiceLanVpnFeatureState:
     def vpn(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         VPN
-          - Range: `1`-`65527`
-          - Default value: `0`
+          - Ranges: `1`-`511`, `513`-`65527`
         """
         return pulumi.get(self, "vpn")
 
@@ -1557,8 +1553,7 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatSubnetArgs', 'ServiceLanVpnFeatureStaticNatSubnetArgsDict']]]] static_nat_subnets: Static NAT Subnet Rules
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatArgs', 'ServiceLanVpnFeatureStaticNatArgsDict']]]] static_nats: Static NAT Rules
         :param pulumi.Input[_builtins.int] vpn: VPN
-                 - Range: `1`-`65527`
-                 - Default value: `0`
+                 - Ranges: `1`-`511`, `513`-`65527`
         :param pulumi.Input[_builtins.str] vpn_variable: Variable name
         """
         ...
@@ -1900,8 +1895,7 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatArgs', 'ServiceLanVpnFeatureStaticNatArgsDict']]]] static_nats: Static NAT Rules
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         :param pulumi.Input[_builtins.int] vpn: VPN
-                 - Range: `1`-`65527`
-                 - Default value: `0`
+                 - Ranges: `1`-`511`, `513`-`65527`
         :param pulumi.Input[_builtins.str] vpn_variable: Variable name
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -2265,8 +2259,7 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
     def vpn(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
         VPN
-          - Range: `1`-`65527`
-          - Default value: `0`
+          - Ranges: `1`-`511`, `513`-`65527`
         """
         return pulumi.get(self, "vpn")
 

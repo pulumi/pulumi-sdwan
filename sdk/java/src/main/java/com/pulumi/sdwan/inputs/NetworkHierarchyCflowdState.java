@@ -88,7 +88,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
     /**
      * Active flow timeout in seconds
      *   - Range: `30`-`3600`
-     *   - Default value: `600`
      * 
      */
     @Import(name="flowActiveTimeout")
@@ -97,7 +96,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
     /**
      * @return Active flow timeout in seconds
      *   - Range: `30`-`3600`
-     *   - Default value: `600`
      * 
      */
     public Optional<Output<Integer>> flowActiveTimeout() {
@@ -107,7 +105,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
     /**
      * Inactive flow timeout in seconds
      *   - Range: `1`-`3600`
-     *   - Default value: `60`
      * 
      */
     @Import(name="flowInactiveTimeout")
@@ -116,7 +113,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
     /**
      * @return Inactive flow timeout in seconds
      *   - Range: `1`-`3600`
-     *   - Default value: `60`
      * 
      */
     public Optional<Output<Integer>> flowInactiveTimeout() {
@@ -126,7 +122,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
     /**
      * Flow refresh time in seconds
      *   - Range: `60`-`86400`
-     *   - Default value: `600`
      * 
      */
     @Import(name="flowRefreshTime")
@@ -135,7 +130,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
     /**
      * @return Flow refresh time in seconds
      *   - Range: `60`-`86400`
-     *   - Default value: `600`
      * 
      */
     public Optional<Output<Integer>> flowRefreshTime() {
@@ -145,7 +139,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
     /**
      * Flow sampling interval
      *   - Range: `1`-`65536`
-     *   - Default value: `1`
      * 
      */
     @Import(name="flowSamplingInterval")
@@ -154,7 +147,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
     /**
      * @return Flow sampling interval
      *   - Range: `1`-`65536`
-     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> flowSamplingInterval() {
@@ -179,7 +171,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
     /**
      * FNF Protocol
      *   - Choices: `ipv4`, `ipv6`, `both`
-     *   - Default value: `ipv4`
      * 
      */
     @Import(name="protocol")
@@ -188,7 +179,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
     /**
      * @return FNF Protocol
      *   - Choices: `ipv4`, `ipv6`, `both`
-     *   - Default value: `ipv4`
      * 
      */
     public Optional<Output<String>> protocol() {
@@ -331,7 +321,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
         /**
          * @param flowActiveTimeout Active flow timeout in seconds
          *   - Range: `30`-`3600`
-         *   - Default value: `600`
          * 
          * @return builder
          * 
@@ -344,7 +333,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
         /**
          * @param flowActiveTimeout Active flow timeout in seconds
          *   - Range: `30`-`3600`
-         *   - Default value: `600`
          * 
          * @return builder
          * 
@@ -356,7 +344,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
         /**
          * @param flowInactiveTimeout Inactive flow timeout in seconds
          *   - Range: `1`-`3600`
-         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -369,7 +356,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
         /**
          * @param flowInactiveTimeout Inactive flow timeout in seconds
          *   - Range: `1`-`3600`
-         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -381,7 +367,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
         /**
          * @param flowRefreshTime Flow refresh time in seconds
          *   - Range: `60`-`86400`
-         *   - Default value: `600`
          * 
          * @return builder
          * 
@@ -394,7 +379,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
         /**
          * @param flowRefreshTime Flow refresh time in seconds
          *   - Range: `60`-`86400`
-         *   - Default value: `600`
          * 
          * @return builder
          * 
@@ -406,7 +390,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
         /**
          * @param flowSamplingInterval Flow sampling interval
          *   - Range: `1`-`65536`
-         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -419,7 +402,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
         /**
          * @param flowSamplingInterval Flow sampling interval
          *   - Range: `1`-`65536`
-         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -452,7 +434,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
         /**
          * @param protocol FNF Protocol
          *   - Choices: `ipv4`, `ipv6`, `both`
-         *   - Default value: `ipv4`
          * 
          * @return builder
          * 
@@ -465,7 +446,6 @@ public final class NetworkHierarchyCflowdState extends com.pulumi.resources.Reso
         /**
          * @param protocol FNF Protocol
          *   - Choices: `ipv4`, `ipv6`, `both`
-         *   - Default value: `ipv4`
          * 
          * @return builder
          * 

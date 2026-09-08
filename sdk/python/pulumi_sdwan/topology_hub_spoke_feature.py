@@ -22,27 +22,34 @@ __all__ = ['TopologyHubSpokeFeatureArgs', 'TopologyHubSpokeFeature']
 class TopologyHubSpokeFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 selected_hubs: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  spokes: pulumi.Input[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeArgs']]],
                  target_vpns: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 name: pulumi.Input[Optional[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 selected_hierarchy_hubs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 selected_hubs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a TopologyHubSpokeFeature resource.
 
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeArgs']]] spokes: Spokes
+        :param pulumi.Input[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeArgs']]] spokes: Spoke configurations
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: Target VPN list
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] name: The name of the Feature
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] selected_hierarchy_hubs: Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] selected_hubs: Selected hub sites
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
-        pulumi.set(__self__, "selected_hubs", selected_hubs)
         pulumi.set(__self__, "spokes", spokes)
         pulumi.set(__self__, "target_vpns", target_vpns)
         if description is not None:
             pulumi.set(__self__, "description", description)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if selected_hierarchy_hubs is not None:
+            pulumi.set(__self__, "selected_hierarchy_hubs", selected_hierarchy_hubs)
+        if selected_hubs is not None:
+            pulumi.set(__self__, "selected_hubs", selected_hubs)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
@@ -57,19 +64,10 @@ class TopologyHubSpokeFeatureArgs:
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
-    @pulumi.getter(name="selectedHubs")
-    def selected_hubs(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
-        return pulumi.get(self, "selected_hubs")
-
-    @selected_hubs.setter
-    def selected_hubs(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
-        pulumi.set(self, "selected_hubs", value)
-
-    @_builtins.property
     @pulumi.getter
     def spokes(self) -> pulumi.Input[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeArgs']]]:
         """
-        Spokes
+        Spoke configurations
         """
         return pulumi.get(self, "spokes")
 
@@ -80,6 +78,9 @@ class TopologyHubSpokeFeatureArgs:
     @_builtins.property
     @pulumi.getter(name="targetVpns")
     def target_vpns(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
+        """
+        Target VPN list
+        """
         return pulumi.get(self, "target_vpns")
 
     @target_vpns.setter
@@ -110,6 +111,30 @@ class TopologyHubSpokeFeatureArgs:
     def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
+    @_builtins.property
+    @pulumi.getter(name="selectedHierarchyHubs")
+    def selected_hierarchy_hubs(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "selected_hierarchy_hubs")
+
+    @selected_hierarchy_hubs.setter
+    def selected_hierarchy_hubs(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "selected_hierarchy_hubs", value)
+
+    @_builtins.property
+    @pulumi.getter(name="selectedHubs")
+    def selected_hubs(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Selected hub sites
+        """
+        return pulumi.get(self, "selected_hubs")
+
+    @selected_hubs.setter
+    def selected_hubs(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "selected_hubs", value)
+
 
 @pulumi.input_type
 class _TopologyHubSpokeFeatureState:
@@ -117,6 +142,7 @@ class _TopologyHubSpokeFeatureState:
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
+                 selected_hierarchy_hubs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  selected_hubs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  spokes: pulumi.Input[Optional[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeArgs']]]] = None,
                  target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -127,7 +153,10 @@ class _TopologyHubSpokeFeatureState:
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeArgs']]] spokes: Spokes
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] selected_hierarchy_hubs: Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] selected_hubs: Selected hub sites
+        :param pulumi.Input[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeArgs']]] spokes: Spoke configurations
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: Target VPN list
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         if description is not None:
@@ -136,6 +165,8 @@ class _TopologyHubSpokeFeatureState:
             pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if selected_hierarchy_hubs is not None:
+            pulumi.set(__self__, "selected_hierarchy_hubs", selected_hierarchy_hubs)
         if selected_hubs is not None:
             pulumi.set(__self__, "selected_hubs", selected_hubs)
         if spokes is not None:
@@ -182,8 +213,23 @@ class _TopologyHubSpokeFeatureState:
         pulumi.set(self, "name", value)
 
     @_builtins.property
+    @pulumi.getter(name="selectedHierarchyHubs")
+    def selected_hierarchy_hubs(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "selected_hierarchy_hubs")
+
+    @selected_hierarchy_hubs.setter
+    def selected_hierarchy_hubs(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "selected_hierarchy_hubs", value)
+
+    @_builtins.property
     @pulumi.getter(name="selectedHubs")
     def selected_hubs(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Selected hub sites
+        """
         return pulumi.get(self, "selected_hubs")
 
     @selected_hubs.setter
@@ -194,7 +240,7 @@ class _TopologyHubSpokeFeatureState:
     @pulumi.getter
     def spokes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeArgs']]]]:
         """
-        Spokes
+        Spoke configurations
         """
         return pulumi.get(self, "spokes")
 
@@ -205,6 +251,9 @@ class _TopologyHubSpokeFeatureState:
     @_builtins.property
     @pulumi.getter(name="targetVpns")
     def target_vpns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Target VPN list
+        """
         return pulumi.get(self, "target_vpns")
 
     @target_vpns.setter
@@ -233,6 +282,7 @@ class TopologyHubSpokeFeature(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
+                 selected_hierarchy_hubs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  selected_hubs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  spokes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyHubSpokeFeatureSpokeArgs', 'TopologyHubSpokeFeatureSpokeArgsDict']]]]] = None,
                  target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -252,12 +302,12 @@ class TopologyHubSpokeFeature(pulumi.CustomResource):
             description="My Example",
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
             target_vpns=["service_lan_vpn1"],
-            selected_hubs=["SITE_100"],
+            selected_hierarchy_hubs=["acb2ea53-4a95-4970-a1ab-9bac15edb961"],
             spokes=[{
                 "name": "spoke1",
-                "spoke_sites": ["SITE_200"],
+                "spoke_hierarchy_uuids": ["acb2ea53-4a95-4970-a1ab-9bac15edb961"],
                 "hub_sites": [{
-                    "sites": ["SITE_100"],
+                    "hub_hierarchy_uuids": ["acb2ea53-4a95-4970-a1ab-9bac15edb961"],
                     "preference": 1,
                 }],
             }])
@@ -279,7 +329,10 @@ class TopologyHubSpokeFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyHubSpokeFeatureSpokeArgs', 'TopologyHubSpokeFeatureSpokeArgsDict']]]] spokes: Spokes
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] selected_hierarchy_hubs: Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] selected_hubs: Selected hub sites
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyHubSpokeFeatureSpokeArgs', 'TopologyHubSpokeFeatureSpokeArgsDict']]]] spokes: Spoke configurations
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: Target VPN list
         """
         ...
     @overload
@@ -302,12 +355,12 @@ class TopologyHubSpokeFeature(pulumi.CustomResource):
             description="My Example",
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
             target_vpns=["service_lan_vpn1"],
-            selected_hubs=["SITE_100"],
+            selected_hierarchy_hubs=["acb2ea53-4a95-4970-a1ab-9bac15edb961"],
             spokes=[{
                 "name": "spoke1",
-                "spoke_sites": ["SITE_200"],
+                "spoke_hierarchy_uuids": ["acb2ea53-4a95-4970-a1ab-9bac15edb961"],
                 "hub_sites": [{
-                    "sites": ["SITE_100"],
+                    "hub_hierarchy_uuids": ["acb2ea53-4a95-4970-a1ab-9bac15edb961"],
                     "preference": 1,
                 }],
             }])
@@ -342,6 +395,7 @@ class TopologyHubSpokeFeature(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
+                 selected_hierarchy_hubs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  selected_hubs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  spokes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyHubSpokeFeatureSpokeArgs', 'TopologyHubSpokeFeatureSpokeArgsDict']]]]] = None,
                  target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -359,8 +413,7 @@ class TopologyHubSpokeFeature(pulumi.CustomResource):
                 raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["name"] = name
-            if selected_hubs is None and not opts.urn:
-                raise TypeError("Missing required property 'selected_hubs'")
+            __props__.__dict__["selected_hierarchy_hubs"] = selected_hierarchy_hubs
             __props__.__dict__["selected_hubs"] = selected_hubs
             if spokes is None and not opts.urn:
                 raise TypeError("Missing required property 'spokes'")
@@ -382,6 +435,7 @@ class TopologyHubSpokeFeature(pulumi.CustomResource):
             description: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
+            selected_hierarchy_hubs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             selected_hubs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             spokes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyHubSpokeFeatureSpokeArgs', 'TopologyHubSpokeFeatureSpokeArgsDict']]]]] = None,
             target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -396,7 +450,10 @@ class TopologyHubSpokeFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyHubSpokeFeatureSpokeArgs', 'TopologyHubSpokeFeatureSpokeArgsDict']]]] spokes: Spokes
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] selected_hierarchy_hubs: Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] selected_hubs: Selected hub sites
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyHubSpokeFeatureSpokeArgs', 'TopologyHubSpokeFeatureSpokeArgsDict']]]] spokes: Spoke configurations
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: Target VPN list
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -406,6 +463,7 @@ class TopologyHubSpokeFeature(pulumi.CustomResource):
         __props__.__dict__["description"] = description
         __props__.__dict__["feature_profile_id"] = feature_profile_id
         __props__.__dict__["name"] = name
+        __props__.__dict__["selected_hierarchy_hubs"] = selected_hierarchy_hubs
         __props__.__dict__["selected_hubs"] = selected_hubs
         __props__.__dict__["spokes"] = spokes
         __props__.__dict__["target_vpns"] = target_vpns
@@ -437,21 +495,35 @@ class TopologyHubSpokeFeature(pulumi.CustomResource):
         return pulumi.get(self, "name")
 
     @_builtins.property
+    @pulumi.getter(name="selectedHierarchyHubs")
+    def selected_hierarchy_hubs(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+        """
+        Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "selected_hierarchy_hubs")
+
+    @_builtins.property
     @pulumi.getter(name="selectedHubs")
-    def selected_hubs(self) -> pulumi.Output[Sequence[_builtins.str]]:
+    def selected_hubs(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+        """
+        Selected hub sites
+        """
         return pulumi.get(self, "selected_hubs")
 
     @_builtins.property
     @pulumi.getter
     def spokes(self) -> pulumi.Output[Sequence['outputs.TopologyHubSpokeFeatureSpoke']]:
         """
-        Spokes
+        Spoke configurations
         """
         return pulumi.get(self, "spokes")
 
     @_builtins.property
     @pulumi.getter(name="targetVpns")
     def target_vpns(self) -> pulumi.Output[Sequence[_builtins.str]]:
+        """
+        Target VPN list
+        """
         return pulumi.get(self, "target_vpns")
 
     @_builtins.property

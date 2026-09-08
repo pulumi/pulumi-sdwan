@@ -99,6 +99,14 @@ type LookupTransportCellularProfileFeatureResult struct {
 	ProfileUsernameVariable string `pulumi:"profileUsernameVariable"`
 	// Require authentication type
 	RequiresAuthentication bool `pulumi:"requiresAuthentication"`
+	// S-NSSAI slice differentiator
+	SliceDifferentiator int `pulumi:"sliceDifferentiator"`
+	// Variable name
+	SliceDifferentiatorVariable string `pulumi:"sliceDifferentiatorVariable"`
+	// S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT)
+	SliceType int `pulumi:"sliceType"`
+	// Variable name
+	SliceTypeVariable string `pulumi:"sliceTypeVariable"`
 	// The version of the Feature
 	Version int `pulumi:"version"`
 }
@@ -230,6 +238,26 @@ func (o LookupTransportCellularProfileFeatureResultOutput) ProfileUsernameVariab
 // Require authentication type
 func (o LookupTransportCellularProfileFeatureResultOutput) RequiresAuthentication() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) bool { return v.RequiresAuthentication }).(pulumi.BoolOutput)
+}
+
+// S-NSSAI slice differentiator
+func (o LookupTransportCellularProfileFeatureResultOutput) SliceDifferentiator() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) int { return v.SliceDifferentiator }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o LookupTransportCellularProfileFeatureResultOutput) SliceDifferentiatorVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) string { return v.SliceDifferentiatorVariable }).(pulumi.StringOutput)
+}
+
+// S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT)
+func (o LookupTransportCellularProfileFeatureResultOutput) SliceType() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) int { return v.SliceType }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o LookupTransportCellularProfileFeatureResultOutput) SliceTypeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) string { return v.SliceTypeVariable }).(pulumi.StringOutput)
 }
 
 // The version of the Feature

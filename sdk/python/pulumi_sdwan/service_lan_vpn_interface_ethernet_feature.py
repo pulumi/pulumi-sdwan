@@ -132,6 +132,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
                  trustsec_propogate: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_trusted: pulumi.Input[Optional[_builtins.bool]] = None,
                  xconnect: pulumi.Input[Optional[_builtins.str]] = None,
                  xconnect_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
@@ -285,6 +286,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[_builtins.int] trustsec_security_group_tag: SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] trustsec_security_group_tag_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.bool] trustsec_trusted: Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsec_security_group_tag` being set and `port_channel_member_interface` not equal to `true` and `trustsec_enable_sgt_propogation` equal to `true` and `trustsec_propogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsec_security_group_tag_variable` being set and `port_channel_member_interface` not equal to `true` and `trustsec_enable_sgt_propogation` equal to `true` and `trustsec_propogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] xconnect: Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] xconnect_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
@@ -508,6 +511,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
             pulumi.set(__self__, "trustsec_security_group_tag", trustsec_security_group_tag)
         if trustsec_security_group_tag_variable is not None:
             pulumi.set(__self__, "trustsec_security_group_tag_variable", trustsec_security_group_tag_variable)
+        if trustsec_trusted is not None:
+            pulumi.set(__self__, "trustsec_trusted", trustsec_trusted)
         if xconnect is not None:
             pulumi.set(__self__, "xconnect", xconnect)
         if xconnect_variable is not None:
@@ -1871,6 +1876,19 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
         pulumi.set(self, "trustsec_security_group_tag_variable", value)
 
     @_builtins.property
+    @pulumi.getter(name="trustsecTrusted")
+    def trustsec_trusted(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsec_security_group_tag` being set and `port_channel_member_interface` not equal to `true` and `trustsec_enable_sgt_propogation` equal to `true` and `trustsec_propogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsec_security_group_tag_variable` being set and `port_channel_member_interface` not equal to `true` and `trustsec_enable_sgt_propogation` equal to `true` and `trustsec_propogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+          - Default value: `true`
+        """
+        return pulumi.get(self, "trustsec_trusted")
+
+    @trustsec_trusted.setter
+    def trustsec_trusted(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "trustsec_trusted", value)
+
+    @_builtins.property
     @pulumi.getter
     def xconnect(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
@@ -2009,6 +2027,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
                  trustsec_propogate: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_trusted: pulumi.Input[Optional[_builtins.bool]] = None,
                  version: pulumi.Input[Optional[_builtins.int]] = None,
                  xconnect: pulumi.Input[Optional[_builtins.str]] = None,
                  xconnect_variable: pulumi.Input[Optional[_builtins.str]] = None):
@@ -2163,6 +2182,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.int] trustsec_security_group_tag: SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] trustsec_security_group_tag_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.bool] trustsec_trusted: Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsec_security_group_tag` being set and `port_channel_member_interface` not equal to `true` and `trustsec_enable_sgt_propogation` equal to `true` and `trustsec_propogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsec_security_group_tag_variable` being set and `port_channel_member_interface` not equal to `true` and `trustsec_enable_sgt_propogation` equal to `true` and `trustsec_propogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+                 - Default value: `true`
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         :param pulumi.Input[_builtins.str] xconnect: Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] xconnect_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -2389,6 +2410,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
             pulumi.set(__self__, "trustsec_security_group_tag", trustsec_security_group_tag)
         if trustsec_security_group_tag_variable is not None:
             pulumi.set(__self__, "trustsec_security_group_tag_variable", trustsec_security_group_tag_variable)
+        if trustsec_trusted is not None:
+            pulumi.set(__self__, "trustsec_trusted", trustsec_trusted)
         if version is not None:
             pulumi.set(__self__, "version", version)
         if xconnect is not None:
@@ -3754,6 +3777,19 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
         pulumi.set(self, "trustsec_security_group_tag_variable", value)
 
     @_builtins.property
+    @pulumi.getter(name="trustsecTrusted")
+    def trustsec_trusted(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsec_security_group_tag` being set and `port_channel_member_interface` not equal to `true` and `trustsec_enable_sgt_propogation` equal to `true` and `trustsec_propogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsec_security_group_tag_variable` being set and `port_channel_member_interface` not equal to `true` and `trustsec_enable_sgt_propogation` equal to `true` and `trustsec_propogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+          - Default value: `true`
+        """
+        return pulumi.get(self, "trustsec_trusted")
+
+    @trustsec_trusted.setter
+    def trustsec_trusted(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "trustsec_trusted", value)
+
+    @_builtins.property
     @pulumi.getter
     def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
@@ -3907,6 +3943,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  trustsec_propogate: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_trusted: pulumi.Input[Optional[_builtins.bool]] = None,
                  xconnect: pulumi.Input[Optional[_builtins.str]] = None,
                  xconnect_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -3986,9 +4023,10 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                 "ip_address": "1.2.3.4",
                 "mac_address": "00-B0-D0-63-C2-26",
             }],
-            trustsec_enable_sgt_propogation=False,
+            trustsec_enable_sgt_propogation=True,
             trustsec_propogate=True,
             trustsec_security_group_tag=123,
+            trustsec_trusted=True,
             trustsec_enable_enforced_propogation=False,
             trustsec_enforced_security_group_tag=1234,
             duplex="full",
@@ -4167,6 +4205,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] trustsec_security_group_tag: SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] trustsec_security_group_tag_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.bool] trustsec_trusted: Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsec_security_group_tag` being set and `port_channel_member_interface` not equal to `true` and `trustsec_enable_sgt_propogation` equal to `true` and `trustsec_propogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsec_security_group_tag_variable` being set and `port_channel_member_interface` not equal to `true` and `trustsec_enable_sgt_propogation` equal to `true` and `trustsec_propogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] xconnect: Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] xconnect_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
@@ -4252,9 +4292,10 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                 "ip_address": "1.2.3.4",
                 "mac_address": "00-B0-D0-63-C2-26",
             }],
-            trustsec_enable_sgt_propogation=False,
+            trustsec_enable_sgt_propogation=True,
             trustsec_propogate=True,
             trustsec_security_group_tag=123,
+            trustsec_trusted=True,
             trustsec_enable_enforced_propogation=False,
             trustsec_enforced_security_group_tag=1234,
             duplex="full",
@@ -4409,6 +4450,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  trustsec_propogate: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_trusted: pulumi.Input[Optional[_builtins.bool]] = None,
                  xconnect: pulumi.Input[Optional[_builtins.str]] = None,
                  xconnect_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -4535,6 +4577,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             __props__.__dict__["trustsec_propogate"] = trustsec_propogate
             __props__.__dict__["trustsec_security_group_tag"] = trustsec_security_group_tag
             __props__.__dict__["trustsec_security_group_tag_variable"] = trustsec_security_group_tag_variable
+            __props__.__dict__["trustsec_trusted"] = trustsec_trusted
             __props__.__dict__["xconnect"] = xconnect
             __props__.__dict__["xconnect_variable"] = xconnect_variable
             __props__.__dict__["version"] = None
@@ -4659,6 +4702,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             trustsec_propogate: pulumi.Input[Optional[_builtins.bool]] = None,
             trustsec_security_group_tag: pulumi.Input[Optional[_builtins.int]] = None,
             trustsec_security_group_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_trusted: pulumi.Input[Optional[_builtins.bool]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None,
             xconnect: pulumi.Input[Optional[_builtins.str]] = None,
             xconnect_variable: pulumi.Input[Optional[_builtins.str]] = None) -> 'ServiceLanVpnInterfaceEthernetFeature':
@@ -4817,6 +4861,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] trustsec_security_group_tag: SGT value between 2 and 65519, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] trustsec_security_group_tag_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.bool] trustsec_trusted: Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsec_security_group_tag` being set and `port_channel_member_interface` not equal to `true` and `trustsec_enable_sgt_propogation` equal to `true` and `trustsec_propogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsec_security_group_tag_variable` being set and `port_channel_member_interface` not equal to `true` and `trustsec_enable_sgt_propogation` equal to `true` and `trustsec_propogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+                 - Default value: `true`
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         :param pulumi.Input[_builtins.str] xconnect: Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] xconnect_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -4936,6 +4982,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         __props__.__dict__["trustsec_propogate"] = trustsec_propogate
         __props__.__dict__["trustsec_security_group_tag"] = trustsec_security_group_tag
         __props__.__dict__["trustsec_security_group_tag_variable"] = trustsec_security_group_tag_variable
+        __props__.__dict__["trustsec_trusted"] = trustsec_trusted
         __props__.__dict__["version"] = version
         __props__.__dict__["xconnect"] = xconnect
         __props__.__dict__["xconnect_variable"] = xconnect_variable
@@ -5853,6 +5900,15 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "trustsec_security_group_tag_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecTrusted")
+    def trustsec_trusted(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsec_security_group_tag` being set and `port_channel_member_interface` not equal to `true` and `trustsec_enable_sgt_propogation` equal to `true` and `trustsec_propogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsec_security_group_tag_variable` being set and `port_channel_member_interface` not equal to `true` and `trustsec_enable_sgt_propogation` equal to `true` and `trustsec_propogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+          - Default value: `true`
+        """
+        return pulumi.get(self, "trustsec_trusted")
 
     @_builtins.property
     @pulumi.getter

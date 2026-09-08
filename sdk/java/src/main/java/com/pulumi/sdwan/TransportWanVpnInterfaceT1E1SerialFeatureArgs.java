@@ -293,14 +293,14 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Import(name="ipv4SubnetMask")
     private @Nullable Output<String> ipv4SubnetMask;
 
     /**
-     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMask() {
@@ -1255,6 +1255,36 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="tunnelInterfaceColorDescription")
+    private @Nullable Output<String> tunnelInterfaceColorDescription;
+
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> tunnelInterfaceColorDescription() {
+        return Optional.ofNullable(this.tunnelInterfaceColorDescription);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="tunnelInterfaceColorDescriptionVariable")
+    private @Nullable Output<String> tunnelInterfaceColorDescriptionVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> tunnelInterfaceColorDescriptionVariable() {
+        return Optional.ofNullable(this.tunnelInterfaceColorDescriptionVariable);
+    }
+
+    /**
      * Variable name
      * 
      */
@@ -1312,6 +1342,38 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
      */
     public Optional<Output<List<Integer>>> tunnelInterfaceExcludeControllerGroupLists() {
         return Optional.ofNullable(this.tunnelInterfaceExcludeControllerGroupLists);
+    }
+
+    /**
+     * Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="tunnelInterfaceFullPortHop")
+    private @Nullable Output<Boolean> tunnelInterfaceFullPortHop;
+
+    /**
+     * @return Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> tunnelInterfaceFullPortHop() {
+        return Optional.ofNullable(this.tunnelInterfaceFullPortHop);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="tunnelInterfaceFullPortHopVariable")
+    private @Nullable Output<String> tunnelInterfaceFullPortHopVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> tunnelInterfaceFullPortHopVariable() {
+        return Optional.ofNullable(this.tunnelInterfaceFullPortHopVariable);
     }
 
     /**
@@ -1545,7 +1607,7 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Disallow port hopping on the tunnel interface
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
      *   - Default value: `true`
      * 
      */
@@ -1553,7 +1615,7 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     private @Nullable Output<Boolean> tunnelInterfacePortHop;
 
     /**
-     * @return Disallow port hopping on the tunnel interface
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
      *   - Default value: `true`
      * 
      */
@@ -1821,10 +1883,14 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         this.tunnelInterfaceClearNetworkBroadcast = $.tunnelInterfaceClearNetworkBroadcast;
         this.tunnelInterfaceClearNetworkBroadcastVariable = $.tunnelInterfaceClearNetworkBroadcastVariable;
         this.tunnelInterfaceColor = $.tunnelInterfaceColor;
+        this.tunnelInterfaceColorDescription = $.tunnelInterfaceColorDescription;
+        this.tunnelInterfaceColorDescriptionVariable = $.tunnelInterfaceColorDescriptionVariable;
         this.tunnelInterfaceColorVariable = $.tunnelInterfaceColorVariable;
         this.tunnelInterfaceEncapsulations = $.tunnelInterfaceEncapsulations;
         this.tunnelInterfaceExcludeControllerGroupListVariable = $.tunnelInterfaceExcludeControllerGroupListVariable;
         this.tunnelInterfaceExcludeControllerGroupLists = $.tunnelInterfaceExcludeControllerGroupLists;
+        this.tunnelInterfaceFullPortHop = $.tunnelInterfaceFullPortHop;
+        this.tunnelInterfaceFullPortHopVariable = $.tunnelInterfaceFullPortHopVariable;
         this.tunnelInterfaceGroups = $.tunnelInterfaceGroups;
         this.tunnelInterfaceGroupsVariable = $.tunnelInterfaceGroupsVariable;
         this.tunnelInterfaceHelloInterval = $.tunnelInterfaceHelloInterval;
@@ -2244,7 +2310,7 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -2255,7 +2321,7 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -3566,6 +3632,48 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
+         * @param tunnelInterfaceColorDescription , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceColorDescription(@Nullable Output<String> tunnelInterfaceColorDescription) {
+            $.tunnelInterfaceColorDescription = tunnelInterfaceColorDescription;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceColorDescription , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceColorDescription(String tunnelInterfaceColorDescription) {
+            return tunnelInterfaceColorDescription(Output.of(tunnelInterfaceColorDescription));
+        }
+
+        /**
+         * @param tunnelInterfaceColorDescriptionVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceColorDescriptionVariable(@Nullable Output<String> tunnelInterfaceColorDescriptionVariable) {
+            $.tunnelInterfaceColorDescriptionVariable = tunnelInterfaceColorDescriptionVariable;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceColorDescriptionVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceColorDescriptionVariable(String tunnelInterfaceColorDescriptionVariable) {
+            return tunnelInterfaceColorDescriptionVariable(Output.of(tunnelInterfaceColorDescriptionVariable));
+        }
+
+        /**
          * @param tunnelInterfaceColorVariable Variable name
          * 
          * @return builder
@@ -3667,6 +3775,50 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
          */
         public Builder tunnelInterfaceExcludeControllerGroupLists(Integer... tunnelInterfaceExcludeControllerGroupLists) {
             return tunnelInterfaceExcludeControllerGroupLists(List.of(tunnelInterfaceExcludeControllerGroupLists));
+        }
+
+        /**
+         * @param tunnelInterfaceFullPortHop Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceFullPortHop(@Nullable Output<Boolean> tunnelInterfaceFullPortHop) {
+            $.tunnelInterfaceFullPortHop = tunnelInterfaceFullPortHop;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceFullPortHop Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceFullPortHop(Boolean tunnelInterfaceFullPortHop) {
+            return tunnelInterfaceFullPortHop(Output.of(tunnelInterfaceFullPortHop));
+        }
+
+        /**
+         * @param tunnelInterfaceFullPortHopVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceFullPortHopVariable(@Nullable Output<String> tunnelInterfaceFullPortHopVariable) {
+            $.tunnelInterfaceFullPortHopVariable = tunnelInterfaceFullPortHopVariable;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceFullPortHopVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceFullPortHopVariable(String tunnelInterfaceFullPortHopVariable) {
+            return tunnelInterfaceFullPortHopVariable(Output.of(tunnelInterfaceFullPortHopVariable));
         }
 
         /**
@@ -3984,7 +4136,7 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface
+         * @param tunnelInterfacePortHop The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
          *   - Default value: `true`
          * 
          * @return builder
@@ -3996,7 +4148,7 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface
+         * @param tunnelInterfacePortHop The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
          *   - Default value: `true`
          * 
          * @return builder

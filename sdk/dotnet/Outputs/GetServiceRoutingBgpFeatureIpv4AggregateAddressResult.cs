@@ -21,11 +21,17 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string AsSetPathVariable;
+        /// <summary>
+        /// IP Address
+        /// </summary>
         public readonly string NetworkAddress;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string NetworkAddressVariable;
+        /// <summary>
+        /// Subnet Mask
+        /// </summary>
         public readonly string SubnetMask;
         /// <summary>
         /// Variable name

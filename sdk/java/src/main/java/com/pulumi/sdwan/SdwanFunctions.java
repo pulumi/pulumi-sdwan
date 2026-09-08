@@ -294,6 +294,8 @@ import com.pulumi.sdwan.inputs.GetSecurityPolicyArgs;
 import com.pulumi.sdwan.inputs.GetSecurityPolicyPlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeatureArgs;
 import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeaturePlainArgs;
+import com.pulumi.sdwan.inputs.GetServiceDualRouterHaFeatureArgs;
+import com.pulumi.sdwan.inputs.GetServiceDualRouterHaFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceFeatureProfileArgs;
 import com.pulumi.sdwan.inputs.GetServiceFeatureProfilePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceIpv4AclFeatureArgs;
@@ -671,6 +673,7 @@ import com.pulumi.sdwan.outputs.GetRuleSetPolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetSecurityAppHostingFeatureTemplateResult;
 import com.pulumi.sdwan.outputs.GetSecurityPolicyResult;
 import com.pulumi.sdwan.outputs.GetServiceDhcpServerFeatureResult;
+import com.pulumi.sdwan.outputs.GetServiceDualRouterHaFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceFeatureProfileResult;
 import com.pulumi.sdwan.outputs.GetServiceIpv4AclFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceIpv6AclFeatureResult;
@@ -32497,6 +32500,211 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetServiceDhcpServerFeatureResult> getServiceDhcpServerFeaturePlain(GetServiceDhcpServerFeaturePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getServiceDhcpServerFeature:getServiceDhcpServerFeature", TypeShape.of(GetServiceDhcpServerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service Dual Router HA Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceDualRouterHaFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceDualRouterHaFeature(GetServiceDualRouterHaFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceDualRouterHaFeatureResult> getServiceDualRouterHaFeature(GetServiceDualRouterHaFeatureArgs args) {
+        return getServiceDualRouterHaFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service Dual Router HA Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceDualRouterHaFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceDualRouterHaFeature(GetServiceDualRouterHaFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetServiceDualRouterHaFeatureResult> getServiceDualRouterHaFeaturePlain(GetServiceDualRouterHaFeaturePlainArgs args) {
+        return getServiceDualRouterHaFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service Dual Router HA Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceDualRouterHaFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceDualRouterHaFeature(GetServiceDualRouterHaFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceDualRouterHaFeatureResult> getServiceDualRouterHaFeature(GetServiceDualRouterHaFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getServiceDualRouterHaFeature:getServiceDualRouterHaFeature", TypeShape.of(GetServiceDualRouterHaFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service Dual Router HA Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceDualRouterHaFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceDualRouterHaFeature(GetServiceDualRouterHaFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceDualRouterHaFeatureResult> getServiceDualRouterHaFeature(GetServiceDualRouterHaFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getServiceDualRouterHaFeature:getServiceDualRouterHaFeature", TypeShape.of(GetServiceDualRouterHaFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service Dual Router HA Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceDualRouterHaFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceDualRouterHaFeature(GetServiceDualRouterHaFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetServiceDualRouterHaFeatureResult> getServiceDualRouterHaFeaturePlain(GetServiceDualRouterHaFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getServiceDualRouterHaFeature:getServiceDualRouterHaFeature", TypeShape.of(GetServiceDualRouterHaFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Service Feature Profile .

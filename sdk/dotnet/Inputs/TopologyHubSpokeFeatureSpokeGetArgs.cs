@@ -16,7 +16,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.TopologyHubSpokeFeatureSpokeHubSiteGetArgs>? _hubSites;
 
         /// <summary>
-        /// Hub Sites
+        /// Hub site preferences
         /// </summary>
         public InputList<Inputs.TopologyHubSpokeFeatureSpokeHubSiteGetArgs> HubSites
         {
@@ -24,11 +24,30 @@ namespace Pulumi.Sdwan.Inputs
             set => _hubSites = value;
         }
 
+        /// <summary>
+        /// Spoke name
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        [Input("spokeHierarchyUuids")]
+        private InputList<string>? _spokeHierarchyUuids;
+
+        /// <summary>
+        /// Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public InputList<string> SpokeHierarchyUuids
+        {
+            get => _spokeHierarchyUuids ?? (_spokeHierarchyUuids = new InputList<string>());
+            set => _spokeHierarchyUuids = value;
+        }
+
         [Input("spokeSites")]
         private InputList<string>? _spokeSites;
+
+        /// <summary>
+        /// Spoke site list
+        /// </summary>
         public InputList<string> SpokeSites
         {
             get => _spokeSites ?? (_spokeSites = new InputList<string>());

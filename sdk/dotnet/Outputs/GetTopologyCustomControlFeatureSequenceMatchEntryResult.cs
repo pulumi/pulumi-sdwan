@@ -38,6 +38,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int GroupId;
         /// <summary>
+        /// Network hierarchy UUIDs for matching
+        /// </summary>
+        public readonly ImmutableArray<string> HierarchyUuids;
+        /// <summary>
         /// IPv6 prefix list ID
         /// </summary>
         public readonly string Ipv6PrefixListId;
@@ -112,6 +116,8 @@ namespace Pulumi.Sdwan.Outputs
 
             int groupId,
 
+            ImmutableArray<string> hierarchyUuids,
+
             string ipv6PrefixListId,
 
             ImmutableArray<Outputs.GetTopologyCustomControlFeatureSequenceMatchEntryMatchRegionResult> matchRegions,
@@ -148,6 +154,7 @@ namespace Pulumi.Sdwan.Outputs
             DomainId = domainId;
             ExpandedCommunityListId = expandedCommunityListId;
             GroupId = groupId;
+            HierarchyUuids = hierarchyUuids;
             Ipv6PrefixListId = ipv6PrefixListId;
             MatchRegions = matchRegions;
             OmpTag = ompTag;

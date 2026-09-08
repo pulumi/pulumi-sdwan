@@ -63,31 +63,62 @@ public final class TopologyHubSpokeFeatureState extends com.pulumi.resources.Res
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="selectedHierarchyHubs")
+    private @Nullable Output<List<String>> selectedHierarchyHubs;
+
+    /**
+     * @return Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<List<String>>> selectedHierarchyHubs() {
+        return Optional.ofNullable(this.selectedHierarchyHubs);
+    }
+
+    /**
+     * Selected hub sites
+     * 
+     */
     @Import(name="selectedHubs")
     private @Nullable Output<List<String>> selectedHubs;
 
+    /**
+     * @return Selected hub sites
+     * 
+     */
     public Optional<Output<List<String>>> selectedHubs() {
         return Optional.ofNullable(this.selectedHubs);
     }
 
     /**
-     * Spokes
+     * Spoke configurations
      * 
      */
     @Import(name="spokes")
     private @Nullable Output<List<TopologyHubSpokeFeatureSpokeArgs>> spokes;
 
     /**
-     * @return Spokes
+     * @return Spoke configurations
      * 
      */
     public Optional<Output<List<TopologyHubSpokeFeatureSpokeArgs>>> spokes() {
         return Optional.ofNullable(this.spokes);
     }
 
+    /**
+     * Target VPN list
+     * 
+     */
     @Import(name="targetVpns")
     private @Nullable Output<List<String>> targetVpns;
 
+    /**
+     * @return Target VPN list
+     * 
+     */
     public Optional<Output<List<String>>> targetVpns() {
         return Optional.ofNullable(this.targetVpns);
     }
@@ -113,6 +144,7 @@ public final class TopologyHubSpokeFeatureState extends com.pulumi.resources.Res
         this.description = $.description;
         this.featureProfileId = $.featureProfileId;
         this.name = $.name;
+        this.selectedHierarchyHubs = $.selectedHierarchyHubs;
         this.selectedHubs = $.selectedHubs;
         this.spokes = $.spokes;
         this.targetVpns = $.targetVpns;
@@ -200,21 +232,70 @@ public final class TopologyHubSpokeFeatureState extends com.pulumi.resources.Res
             return name(Output.of(name));
         }
 
+        /**
+         * @param selectedHierarchyHubs Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder selectedHierarchyHubs(@Nullable Output<List<String>> selectedHierarchyHubs) {
+            $.selectedHierarchyHubs = selectedHierarchyHubs;
+            return this;
+        }
+
+        /**
+         * @param selectedHierarchyHubs Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder selectedHierarchyHubs(List<String> selectedHierarchyHubs) {
+            return selectedHierarchyHubs(Output.of(selectedHierarchyHubs));
+        }
+
+        /**
+         * @param selectedHierarchyHubs Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder selectedHierarchyHubs(String... selectedHierarchyHubs) {
+            return selectedHierarchyHubs(List.of(selectedHierarchyHubs));
+        }
+
+        /**
+         * @param selectedHubs Selected hub sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedHubs(@Nullable Output<List<String>> selectedHubs) {
             $.selectedHubs = selectedHubs;
             return this;
         }
 
+        /**
+         * @param selectedHubs Selected hub sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedHubs(List<String> selectedHubs) {
             return selectedHubs(Output.of(selectedHubs));
         }
 
+        /**
+         * @param selectedHubs Selected hub sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedHubs(String... selectedHubs) {
             return selectedHubs(List.of(selectedHubs));
         }
 
         /**
-         * @param spokes Spokes
+         * @param spokes Spoke configurations
          * 
          * @return builder
          * 
@@ -225,7 +306,7 @@ public final class TopologyHubSpokeFeatureState extends com.pulumi.resources.Res
         }
 
         /**
-         * @param spokes Spokes
+         * @param spokes Spoke configurations
          * 
          * @return builder
          * 
@@ -235,7 +316,7 @@ public final class TopologyHubSpokeFeatureState extends com.pulumi.resources.Res
         }
 
         /**
-         * @param spokes Spokes
+         * @param spokes Spoke configurations
          * 
          * @return builder
          * 
@@ -244,15 +325,33 @@ public final class TopologyHubSpokeFeatureState extends com.pulumi.resources.Res
             return spokes(List.of(spokes));
         }
 
+        /**
+         * @param targetVpns Target VPN list
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVpns(@Nullable Output<List<String>> targetVpns) {
             $.targetVpns = targetVpns;
             return this;
         }
 
+        /**
+         * @param targetVpns Target VPN list
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVpns(List<String> targetVpns) {
             return targetVpns(Output.of(targetVpns));
         }
 
+        /**
+         * @param targetVpns Target VPN list
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVpns(String... targetVpns) {
             return targetVpns(List.of(targetVpns));
         }

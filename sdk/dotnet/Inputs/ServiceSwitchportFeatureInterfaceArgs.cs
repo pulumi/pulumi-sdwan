@@ -219,7 +219,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set interface speed
-        ///   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+        ///   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
         /// </summary>
         [Input("speed")]
         public Input<string>? Speed { get; set; }

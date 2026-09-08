@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -79,35 +80,45 @@ type NetworkHierarchyCflowd struct {
 	Collectors NetworkHierarchyCflowdCollectorArrayOutput `pulumi:"collectors"`
 	// Active flow timeout in seconds
 	//   - Range: `30`-`3600`
-	//   - Default value: `600`
-	FlowActiveTimeout pulumi.IntPtrOutput `pulumi:"flowActiveTimeout"`
+	FlowActiveTimeout pulumi.IntOutput `pulumi:"flowActiveTimeout"`
 	// Inactive flow timeout in seconds
 	//   - Range: `1`-`3600`
-	//   - Default value: `60`
-	FlowInactiveTimeout pulumi.IntPtrOutput `pulumi:"flowInactiveTimeout"`
+	FlowInactiveTimeout pulumi.IntOutput `pulumi:"flowInactiveTimeout"`
 	// Flow refresh time in seconds
 	//   - Range: `60`-`86400`
-	//   - Default value: `600`
-	FlowRefreshTime pulumi.IntPtrOutput `pulumi:"flowRefreshTime"`
+	FlowRefreshTime pulumi.IntOutput `pulumi:"flowRefreshTime"`
 	// Flow sampling interval
 	//   - Range: `1`-`65536`
-	//   - Default value: `1`
-	FlowSamplingInterval pulumi.IntPtrOutput `pulumi:"flowSamplingInterval"`
+	FlowSamplingInterval pulumi.IntOutput `pulumi:"flowSamplingInterval"`
 	// The UUID of the Global network hierarchy node. This is automatically fetched from the SD-WAN Manager.
 	NodeId pulumi.StringOutput `pulumi:"nodeId"`
 	// FNF Protocol
 	//   - Choices: `ipv4`, `ipv6`, `both`
-	//   - Default value: `ipv4`
-	Protocol pulumi.StringPtrOutput `pulumi:"protocol"`
+	Protocol pulumi.StringOutput `pulumi:"protocol"`
 }
 
 // NewNetworkHierarchyCflowd registers a new resource with the given unique name, arguments, and options.
 func NewNetworkHierarchyCflowd(ctx *pulumi.Context,
 	name string, args *NetworkHierarchyCflowdArgs, opts ...pulumi.ResourceOption) (*NetworkHierarchyCflowd, error) {
 	if args == nil {
-		args = &NetworkHierarchyCflowdArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FlowActiveTimeout == nil {
+		return nil, errors.New("invalid value for required argument 'FlowActiveTimeout'")
+	}
+	if args.FlowInactiveTimeout == nil {
+		return nil, errors.New("invalid value for required argument 'FlowInactiveTimeout'")
+	}
+	if args.FlowRefreshTime == nil {
+		return nil, errors.New("invalid value for required argument 'FlowRefreshTime'")
+	}
+	if args.FlowSamplingInterval == nil {
+		return nil, errors.New("invalid value for required argument 'FlowSamplingInterval'")
+	}
+	if args.Protocol == nil {
+		return nil, errors.New("invalid value for required argument 'Protocol'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource NetworkHierarchyCflowd
 	err := ctx.RegisterResource("sdwan:index/networkHierarchyCflowd:NetworkHierarchyCflowd", name, args, &resource, opts...)
@@ -144,25 +155,20 @@ type networkHierarchyCflowdState struct {
 	Collectors []NetworkHierarchyCflowdCollector `pulumi:"collectors"`
 	// Active flow timeout in seconds
 	//   - Range: `30`-`3600`
-	//   - Default value: `600`
 	FlowActiveTimeout *int `pulumi:"flowActiveTimeout"`
 	// Inactive flow timeout in seconds
 	//   - Range: `1`-`3600`
-	//   - Default value: `60`
 	FlowInactiveTimeout *int `pulumi:"flowInactiveTimeout"`
 	// Flow refresh time in seconds
 	//   - Range: `60`-`86400`
-	//   - Default value: `600`
 	FlowRefreshTime *int `pulumi:"flowRefreshTime"`
 	// Flow sampling interval
 	//   - Range: `1`-`65536`
-	//   - Default value: `1`
 	FlowSamplingInterval *int `pulumi:"flowSamplingInterval"`
 	// The UUID of the Global network hierarchy node. This is automatically fetched from the SD-WAN Manager.
 	NodeId *string `pulumi:"nodeId"`
 	// FNF Protocol
 	//   - Choices: `ipv4`, `ipv6`, `both`
-	//   - Default value: `ipv4`
 	Protocol *string `pulumi:"protocol"`
 }
 
@@ -180,25 +186,20 @@ type NetworkHierarchyCflowdState struct {
 	Collectors NetworkHierarchyCflowdCollectorArrayInput
 	// Active flow timeout in seconds
 	//   - Range: `30`-`3600`
-	//   - Default value: `600`
 	FlowActiveTimeout pulumi.IntPtrInput
 	// Inactive flow timeout in seconds
 	//   - Range: `1`-`3600`
-	//   - Default value: `60`
 	FlowInactiveTimeout pulumi.IntPtrInput
 	// Flow refresh time in seconds
 	//   - Range: `60`-`86400`
-	//   - Default value: `600`
 	FlowRefreshTime pulumi.IntPtrInput
 	// Flow sampling interval
 	//   - Range: `1`-`65536`
-	//   - Default value: `1`
 	FlowSamplingInterval pulumi.IntPtrInput
 	// The UUID of the Global network hierarchy node. This is automatically fetched from the SD-WAN Manager.
 	NodeId pulumi.StringPtrInput
 	// FNF Protocol
 	//   - Choices: `ipv4`, `ipv6`, `both`
-	//   - Default value: `ipv4`
 	Protocol pulumi.StringPtrInput
 }
 
@@ -220,24 +221,19 @@ type networkHierarchyCflowdArgs struct {
 	Collectors []NetworkHierarchyCflowdCollector `pulumi:"collectors"`
 	// Active flow timeout in seconds
 	//   - Range: `30`-`3600`
-	//   - Default value: `600`
-	FlowActiveTimeout *int `pulumi:"flowActiveTimeout"`
+	FlowActiveTimeout int `pulumi:"flowActiveTimeout"`
 	// Inactive flow timeout in seconds
 	//   - Range: `1`-`3600`
-	//   - Default value: `60`
-	FlowInactiveTimeout *int `pulumi:"flowInactiveTimeout"`
+	FlowInactiveTimeout int `pulumi:"flowInactiveTimeout"`
 	// Flow refresh time in seconds
 	//   - Range: `60`-`86400`
-	//   - Default value: `600`
-	FlowRefreshTime *int `pulumi:"flowRefreshTime"`
+	FlowRefreshTime int `pulumi:"flowRefreshTime"`
 	// Flow sampling interval
 	//   - Range: `1`-`65536`
-	//   - Default value: `1`
-	FlowSamplingInterval *int `pulumi:"flowSamplingInterval"`
+	FlowSamplingInterval int `pulumi:"flowSamplingInterval"`
 	// FNF Protocol
 	//   - Choices: `ipv4`, `ipv6`, `both`
-	//   - Default value: `ipv4`
-	Protocol *string `pulumi:"protocol"`
+	Protocol string `pulumi:"protocol"`
 }
 
 // The set of arguments for constructing a NetworkHierarchyCflowd resource.
@@ -255,24 +251,19 @@ type NetworkHierarchyCflowdArgs struct {
 	Collectors NetworkHierarchyCflowdCollectorArrayInput
 	// Active flow timeout in seconds
 	//   - Range: `30`-`3600`
-	//   - Default value: `600`
-	FlowActiveTimeout pulumi.IntPtrInput
+	FlowActiveTimeout pulumi.IntInput
 	// Inactive flow timeout in seconds
 	//   - Range: `1`-`3600`
-	//   - Default value: `60`
-	FlowInactiveTimeout pulumi.IntPtrInput
+	FlowInactiveTimeout pulumi.IntInput
 	// Flow refresh time in seconds
 	//   - Range: `60`-`86400`
-	//   - Default value: `600`
-	FlowRefreshTime pulumi.IntPtrInput
+	FlowRefreshTime pulumi.IntInput
 	// Flow sampling interval
 	//   - Range: `1`-`65536`
-	//   - Default value: `1`
-	FlowSamplingInterval pulumi.IntPtrInput
+	FlowSamplingInterval pulumi.IntInput
 	// FNF Protocol
 	//   - Choices: `ipv4`, `ipv6`, `both`
-	//   - Default value: `ipv4`
-	Protocol pulumi.StringPtrInput
+	Protocol pulumi.StringInput
 }
 
 func (NetworkHierarchyCflowdArgs) ElementType() reflect.Type {
@@ -387,30 +378,26 @@ func (o NetworkHierarchyCflowdOutput) Collectors() NetworkHierarchyCflowdCollect
 
 // Active flow timeout in seconds
 //   - Range: `30`-`3600`
-//   - Default value: `600`
-func (o NetworkHierarchyCflowdOutput) FlowActiveTimeout() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *NetworkHierarchyCflowd) pulumi.IntPtrOutput { return v.FlowActiveTimeout }).(pulumi.IntPtrOutput)
+func (o NetworkHierarchyCflowdOutput) FlowActiveTimeout() pulumi.IntOutput {
+	return o.ApplyT(func(v *NetworkHierarchyCflowd) pulumi.IntOutput { return v.FlowActiveTimeout }).(pulumi.IntOutput)
 }
 
 // Inactive flow timeout in seconds
 //   - Range: `1`-`3600`
-//   - Default value: `60`
-func (o NetworkHierarchyCflowdOutput) FlowInactiveTimeout() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *NetworkHierarchyCflowd) pulumi.IntPtrOutput { return v.FlowInactiveTimeout }).(pulumi.IntPtrOutput)
+func (o NetworkHierarchyCflowdOutput) FlowInactiveTimeout() pulumi.IntOutput {
+	return o.ApplyT(func(v *NetworkHierarchyCflowd) pulumi.IntOutput { return v.FlowInactiveTimeout }).(pulumi.IntOutput)
 }
 
 // Flow refresh time in seconds
 //   - Range: `60`-`86400`
-//   - Default value: `600`
-func (o NetworkHierarchyCflowdOutput) FlowRefreshTime() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *NetworkHierarchyCflowd) pulumi.IntPtrOutput { return v.FlowRefreshTime }).(pulumi.IntPtrOutput)
+func (o NetworkHierarchyCflowdOutput) FlowRefreshTime() pulumi.IntOutput {
+	return o.ApplyT(func(v *NetworkHierarchyCflowd) pulumi.IntOutput { return v.FlowRefreshTime }).(pulumi.IntOutput)
 }
 
 // Flow sampling interval
 //   - Range: `1`-`65536`
-//   - Default value: `1`
-func (o NetworkHierarchyCflowdOutput) FlowSamplingInterval() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *NetworkHierarchyCflowd) pulumi.IntPtrOutput { return v.FlowSamplingInterval }).(pulumi.IntPtrOutput)
+func (o NetworkHierarchyCflowdOutput) FlowSamplingInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v *NetworkHierarchyCflowd) pulumi.IntOutput { return v.FlowSamplingInterval }).(pulumi.IntOutput)
 }
 
 // The UUID of the Global network hierarchy node. This is automatically fetched from the SD-WAN Manager.
@@ -420,9 +407,8 @@ func (o NetworkHierarchyCflowdOutput) NodeId() pulumi.StringOutput {
 
 // FNF Protocol
 //   - Choices: `ipv4`, `ipv6`, `both`
-//   - Default value: `ipv4`
-func (o NetworkHierarchyCflowdOutput) Protocol() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *NetworkHierarchyCflowd) pulumi.StringPtrOutput { return v.Protocol }).(pulumi.StringPtrOutput)
+func (o NetworkHierarchyCflowdOutput) Protocol() pulumi.StringOutput {
+	return o.ApplyT(func(v *NetworkHierarchyCflowd) pulumi.StringOutput { return v.Protocol }).(pulumi.StringOutput)
 }
 
 type NetworkHierarchyCflowdArrayOutput struct{ *pulumi.OutputState }

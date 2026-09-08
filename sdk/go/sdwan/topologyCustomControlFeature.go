@@ -35,11 +35,11 @@ import (
 //				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
 //				DefaultAction:    pulumi.String("reject"),
 //				TargetLevel:      pulumi.String("SITE"),
-//				TargetInboundSites: pulumi.StringArray{
-//					pulumi.String("SITE_100"),
+//				TargetInboundHierarchyUuids: pulumi.StringArray{
+//					pulumi.String("acb2ea53-4a95-4970-a1ab-9bac15edb961"),
 //				},
-//				TargetOutboundSites: pulumi.StringArray{
-//					pulumi.String("SITE_200"),
+//				TargetOutboundHierarchyUuids: pulumi.StringArray{
+//					pulumi.String("acb2ea53-4a95-4970-a1ab-9bac15edb961"),
 //				},
 //				Sequences: sdwan.TopologyCustomControlFeatureSequenceArray{
 //					&sdwan.TopologyCustomControlFeatureSequenceArgs{
@@ -50,9 +50,12 @@ import (
 //						IpType:     pulumi.String("ipv4"),
 //						MatchEntries: sdwan.TopologyCustomControlFeatureSequenceMatchEntryArray{
 //							&sdwan.TopologyCustomControlFeatureSequenceMatchEntryArgs{
-//								OmpTag:            pulumi.Int(100),
-//								Origin:            pulumi.String("connected"),
-//								Originator:        pulumi.String("1.2.3.4"),
+//								OmpTag:     pulumi.Int(100),
+//								Origin:     pulumi.String("connected"),
+//								Originator: pulumi.String("1.2.3.4"),
+//								HierarchyUuids: pulumi.StringArray{
+//									pulumi.String("c446d770-2ac0-4e2c-9a64-345d562a4ac7"),
+//								},
 //								TlocIp:            pulumi.String("1.2.3.4"),
 //								TlocColor:         pulumi.String("bronze"),
 //								TlocEncapsulation: pulumi.String("ipsec"),
@@ -103,15 +106,19 @@ type TopologyCustomControlFeature struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Sequence list
 	Sequences TopologyCustomControlFeatureSequenceArrayOutput `pulumi:"sequences"`
+	// Inbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetInboundSites` not being set and `targetOutboundSites` not being set
+	TargetInboundHierarchyUuids pulumi.StringArrayOutput `pulumi:"targetInboundHierarchyUuids"`
 	// , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
 	TargetInboundRegions TopologyCustomControlFeatureTargetInboundRegionArrayOutput `pulumi:"targetInboundRegions"`
-	// , Attribute conditional on `targetLevel` equal to `SITE`
+	// , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
 	TargetInboundSites pulumi.StringArrayOutput `pulumi:"targetInboundSites"`
 	// - Choices: `SITE`, `REGION`, `SUB_REGION`
 	TargetLevel pulumi.StringOutput `pulumi:"targetLevel"`
+	// Outbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetOutboundSites` not being set and `targetInboundSites` not being set
+	TargetOutboundHierarchyUuids pulumi.StringArrayOutput `pulumi:"targetOutboundHierarchyUuids"`
 	// , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
 	TargetOutboundRegions TopologyCustomControlFeatureTargetOutboundRegionArrayOutput `pulumi:"targetOutboundRegions"`
-	// , Attribute conditional on `targetLevel` equal to `SITE`
+	// , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
 	TargetOutboundSites pulumi.StringArrayOutput `pulumi:"targetOutboundSites"`
 	// - Choices: `edge-router`, `border-router`
 	TargetRole pulumi.StringPtrOutput   `pulumi:"targetRole"`
@@ -170,15 +177,19 @@ type topologyCustomControlFeatureState struct {
 	Name *string `pulumi:"name"`
 	// Sequence list
 	Sequences []TopologyCustomControlFeatureSequence `pulumi:"sequences"`
+	// Inbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetInboundSites` not being set and `targetOutboundSites` not being set
+	TargetInboundHierarchyUuids []string `pulumi:"targetInboundHierarchyUuids"`
 	// , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
 	TargetInboundRegions []TopologyCustomControlFeatureTargetInboundRegion `pulumi:"targetInboundRegions"`
-	// , Attribute conditional on `targetLevel` equal to `SITE`
+	// , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
 	TargetInboundSites []string `pulumi:"targetInboundSites"`
 	// - Choices: `SITE`, `REGION`, `SUB_REGION`
 	TargetLevel *string `pulumi:"targetLevel"`
+	// Outbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetOutboundSites` not being set and `targetInboundSites` not being set
+	TargetOutboundHierarchyUuids []string `pulumi:"targetOutboundHierarchyUuids"`
 	// , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
 	TargetOutboundRegions []TopologyCustomControlFeatureTargetOutboundRegion `pulumi:"targetOutboundRegions"`
-	// , Attribute conditional on `targetLevel` equal to `SITE`
+	// , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
 	TargetOutboundSites []string `pulumi:"targetOutboundSites"`
 	// - Choices: `edge-router`, `border-router`
 	TargetRole *string  `pulumi:"targetRole"`
@@ -199,15 +210,19 @@ type TopologyCustomControlFeatureState struct {
 	Name pulumi.StringPtrInput
 	// Sequence list
 	Sequences TopologyCustomControlFeatureSequenceArrayInput
+	// Inbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetInboundSites` not being set and `targetOutboundSites` not being set
+	TargetInboundHierarchyUuids pulumi.StringArrayInput
 	// , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
 	TargetInboundRegions TopologyCustomControlFeatureTargetInboundRegionArrayInput
-	// , Attribute conditional on `targetLevel` equal to `SITE`
+	// , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
 	TargetInboundSites pulumi.StringArrayInput
 	// - Choices: `SITE`, `REGION`, `SUB_REGION`
 	TargetLevel pulumi.StringPtrInput
+	// Outbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetOutboundSites` not being set and `targetInboundSites` not being set
+	TargetOutboundHierarchyUuids pulumi.StringArrayInput
 	// , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
 	TargetOutboundRegions TopologyCustomControlFeatureTargetOutboundRegionArrayInput
-	// , Attribute conditional on `targetLevel` equal to `SITE`
+	// , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
 	TargetOutboundSites pulumi.StringArrayInput
 	// - Choices: `edge-router`, `border-router`
 	TargetRole pulumi.StringPtrInput
@@ -232,15 +247,19 @@ type topologyCustomControlFeatureArgs struct {
 	Name *string `pulumi:"name"`
 	// Sequence list
 	Sequences []TopologyCustomControlFeatureSequence `pulumi:"sequences"`
+	// Inbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetInboundSites` not being set and `targetOutboundSites` not being set
+	TargetInboundHierarchyUuids []string `pulumi:"targetInboundHierarchyUuids"`
 	// , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
 	TargetInboundRegions []TopologyCustomControlFeatureTargetInboundRegion `pulumi:"targetInboundRegions"`
-	// , Attribute conditional on `targetLevel` equal to `SITE`
+	// , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
 	TargetInboundSites []string `pulumi:"targetInboundSites"`
 	// - Choices: `SITE`, `REGION`, `SUB_REGION`
 	TargetLevel string `pulumi:"targetLevel"`
+	// Outbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetOutboundSites` not being set and `targetInboundSites` not being set
+	TargetOutboundHierarchyUuids []string `pulumi:"targetOutboundHierarchyUuids"`
 	// , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
 	TargetOutboundRegions []TopologyCustomControlFeatureTargetOutboundRegion `pulumi:"targetOutboundRegions"`
-	// , Attribute conditional on `targetLevel` equal to `SITE`
+	// , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
 	TargetOutboundSites []string `pulumi:"targetOutboundSites"`
 	// - Choices: `edge-router`, `border-router`
 	TargetRole *string  `pulumi:"targetRole"`
@@ -260,15 +279,19 @@ type TopologyCustomControlFeatureArgs struct {
 	Name pulumi.StringPtrInput
 	// Sequence list
 	Sequences TopologyCustomControlFeatureSequenceArrayInput
+	// Inbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetInboundSites` not being set and `targetOutboundSites` not being set
+	TargetInboundHierarchyUuids pulumi.StringArrayInput
 	// , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
 	TargetInboundRegions TopologyCustomControlFeatureTargetInboundRegionArrayInput
-	// , Attribute conditional on `targetLevel` equal to `SITE`
+	// , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
 	TargetInboundSites pulumi.StringArrayInput
 	// - Choices: `SITE`, `REGION`, `SUB_REGION`
 	TargetLevel pulumi.StringInput
+	// Outbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetOutboundSites` not being set and `targetInboundSites` not being set
+	TargetOutboundHierarchyUuids pulumi.StringArrayInput
 	// , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
 	TargetOutboundRegions TopologyCustomControlFeatureTargetOutboundRegionArrayInput
-	// , Attribute conditional on `targetLevel` equal to `SITE`
+	// , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
 	TargetOutboundSites pulumi.StringArrayInput
 	// - Choices: `edge-router`, `border-router`
 	TargetRole pulumi.StringPtrInput
@@ -390,6 +413,11 @@ func (o TopologyCustomControlFeatureOutput) Sequences() TopologyCustomControlFea
 	}).(TopologyCustomControlFeatureSequenceArrayOutput)
 }
 
+// Inbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetInboundSites` not being set and `targetOutboundSites` not being set
+func (o TopologyCustomControlFeatureOutput) TargetInboundHierarchyUuids() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *TopologyCustomControlFeature) pulumi.StringArrayOutput { return v.TargetInboundHierarchyUuids }).(pulumi.StringArrayOutput)
+}
+
 // , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
 func (o TopologyCustomControlFeatureOutput) TargetInboundRegions() TopologyCustomControlFeatureTargetInboundRegionArrayOutput {
 	return o.ApplyT(func(v *TopologyCustomControlFeature) TopologyCustomControlFeatureTargetInboundRegionArrayOutput {
@@ -397,7 +425,7 @@ func (o TopologyCustomControlFeatureOutput) TargetInboundRegions() TopologyCusto
 	}).(TopologyCustomControlFeatureTargetInboundRegionArrayOutput)
 }
 
-// , Attribute conditional on `targetLevel` equal to `SITE`
+// , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
 func (o TopologyCustomControlFeatureOutput) TargetInboundSites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *TopologyCustomControlFeature) pulumi.StringArrayOutput { return v.TargetInboundSites }).(pulumi.StringArrayOutput)
 }
@@ -407,6 +435,11 @@ func (o TopologyCustomControlFeatureOutput) TargetLevel() pulumi.StringOutput {
 	return o.ApplyT(func(v *TopologyCustomControlFeature) pulumi.StringOutput { return v.TargetLevel }).(pulumi.StringOutput)
 }
 
+// Outbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetOutboundSites` not being set and `targetInboundSites` not being set
+func (o TopologyCustomControlFeatureOutput) TargetOutboundHierarchyUuids() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *TopologyCustomControlFeature) pulumi.StringArrayOutput { return v.TargetOutboundHierarchyUuids }).(pulumi.StringArrayOutput)
+}
+
 // , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
 func (o TopologyCustomControlFeatureOutput) TargetOutboundRegions() TopologyCustomControlFeatureTargetOutboundRegionArrayOutput {
 	return o.ApplyT(func(v *TopologyCustomControlFeature) TopologyCustomControlFeatureTargetOutboundRegionArrayOutput {
@@ -414,7 +447,7 @@ func (o TopologyCustomControlFeatureOutput) TargetOutboundRegions() TopologyCust
 	}).(TopologyCustomControlFeatureTargetOutboundRegionArrayOutput)
 }
 
-// , Attribute conditional on `targetLevel` equal to `SITE`
+// , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
 func (o TopologyCustomControlFeatureOutput) TargetOutboundSites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *TopologyCustomControlFeature) pulumi.StringArrayOutput { return v.TargetOutboundSites }).(pulumi.StringArrayOutput)
 }

@@ -54,6 +54,10 @@ export interface GetTopologyMeshFeatureResult {
      */
     readonly featureProfileId: string;
     /**
+     * Network hierarchy UUIDs
+     */
+    readonly hierarchyUuids: string[];
+    /**
      * The id of the Feature
      */
     readonly id: string;
@@ -61,7 +65,13 @@ export interface GetTopologyMeshFeatureResult {
      * The name of the Feature
      */
     readonly name: string;
+    /**
+     * Site list
+     */
     readonly sites: string[];
+    /**
+     * Target VPN list
+     */
     readonly targetVpns: string[];
     /**
      * The version of the Feature

@@ -48,6 +48,21 @@ public final class TopologyMeshFeatureArgs extends com.pulumi.resources.Resource
     }
 
     /**
+     * Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="hierarchyUuids")
+    private @Nullable Output<List<String>> hierarchyUuids;
+
+    /**
+     * @return Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<List<String>>> hierarchyUuids() {
+        return Optional.ofNullable(this.hierarchyUuids);
+    }
+
+    /**
      * The name of the Feature
      * 
      */
@@ -62,16 +77,32 @@ public final class TopologyMeshFeatureArgs extends com.pulumi.resources.Resource
         return Optional.ofNullable(this.name);
     }
 
-    @Import(name="sites", required=true)
-    private Output<List<String>> sites;
+    /**
+     * Site list
+     * 
+     */
+    @Import(name="sites")
+    private @Nullable Output<List<String>> sites;
 
-    public Output<List<String>> sites() {
-        return this.sites;
+    /**
+     * @return Site list
+     * 
+     */
+    public Optional<Output<List<String>>> sites() {
+        return Optional.ofNullable(this.sites);
     }
 
+    /**
+     * Target VPN list
+     * 
+     */
     @Import(name="targetVpns", required=true)
     private Output<List<String>> targetVpns;
 
+    /**
+     * @return Target VPN list
+     * 
+     */
     public Output<List<String>> targetVpns() {
         return this.targetVpns;
     }
@@ -81,6 +112,7 @@ public final class TopologyMeshFeatureArgs extends com.pulumi.resources.Resource
     private TopologyMeshFeatureArgs(TopologyMeshFeatureArgs $) {
         this.description = $.description;
         this.featureProfileId = $.featureProfileId;
+        this.hierarchyUuids = $.hierarchyUuids;
         this.name = $.name;
         this.sites = $.sites;
         this.targetVpns = $.targetVpns;
@@ -147,6 +179,37 @@ public final class TopologyMeshFeatureArgs extends com.pulumi.resources.Resource
         }
 
         /**
+         * @param hierarchyUuids Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hierarchyUuids(@Nullable Output<List<String>> hierarchyUuids) {
+            $.hierarchyUuids = hierarchyUuids;
+            return this;
+        }
+
+        /**
+         * @param hierarchyUuids Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hierarchyUuids(List<String> hierarchyUuids) {
+            return hierarchyUuids(Output.of(hierarchyUuids));
+        }
+
+        /**
+         * @param hierarchyUuids Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hierarchyUuids(String... hierarchyUuids) {
+            return hierarchyUuids(List.of(hierarchyUuids));
+        }
+
+        /**
          * @param name The name of the Feature
          * 
          * @return builder
@@ -167,28 +230,64 @@ public final class TopologyMeshFeatureArgs extends com.pulumi.resources.Resource
             return name(Output.of(name));
         }
 
-        public Builder sites(Output<List<String>> sites) {
+        /**
+         * @param sites Site list
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sites(@Nullable Output<List<String>> sites) {
             $.sites = sites;
             return this;
         }
 
+        /**
+         * @param sites Site list
+         * 
+         * @return builder
+         * 
+         */
         public Builder sites(List<String> sites) {
             return sites(Output.of(sites));
         }
 
+        /**
+         * @param sites Site list
+         * 
+         * @return builder
+         * 
+         */
         public Builder sites(String... sites) {
             return sites(List.of(sites));
         }
 
+        /**
+         * @param targetVpns Target VPN list
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVpns(Output<List<String>> targetVpns) {
             $.targetVpns = targetVpns;
             return this;
         }
 
+        /**
+         * @param targetVpns Target VPN list
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVpns(List<String> targetVpns) {
             return targetVpns(Output.of(targetVpns));
         }
 
+        /**
+         * @param targetVpns Target VPN list
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVpns(String... targetVpns) {
             return targetVpns(List.of(targetVpns));
         }
@@ -196,9 +295,6 @@ public final class TopologyMeshFeatureArgs extends com.pulumi.resources.Resource
         public TopologyMeshFeatureArgs build() {
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("TopologyMeshFeatureArgs", "featureProfileId");
-            }
-            if ($.sites == null) {
-                throw new MissingRequiredPropertyException("TopologyMeshFeatureArgs", "sites");
             }
             if ($.targetVpns == null) {
                 throw new MissingRequiredPropertyException("TopologyMeshFeatureArgs", "targetVpns");

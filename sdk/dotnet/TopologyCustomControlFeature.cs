@@ -30,13 +30,13 @@ namespace Pulumi.Sdwan
     ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
     ///         DefaultAction = "reject",
     ///         TargetLevel = "SITE",
-    ///         TargetInboundSites = new[]
+    ///         TargetInboundHierarchyUuids = new[]
     ///         {
-    ///             "SITE_100",
+    ///             "acb2ea53-4a95-4970-a1ab-9bac15edb961",
     ///         },
-    ///         TargetOutboundSites = new[]
+    ///         TargetOutboundHierarchyUuids = new[]
     ///         {
-    ///             "SITE_200",
+    ///             "acb2ea53-4a95-4970-a1ab-9bac15edb961",
     ///         },
     ///         Sequences = new[]
     ///         {
@@ -54,6 +54,10 @@ namespace Pulumi.Sdwan
     ///                         OmpTag = 100,
     ///                         Origin = "connected",
     ///                         Originator = "1.2.3.4",
+    ///                         HierarchyUuids = new[]
+    ///                         {
+    ///                             "c446d770-2ac0-4e2c-9a64-345d562a4ac7",
+    ///                         },
     ///                         TlocIp = "1.2.3.4",
     ///                         TlocColor = "bronze",
     ///                         TlocEncapsulation = "ipsec",
@@ -125,13 +129,19 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.TopologyCustomControlFeatureSequence>> Sequences { get; private set; } = null!;
 
         /// <summary>
+        /// Inbound network hierarchy UUIDs, Attribute conditional on `TargetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `TargetInboundSites` not being set and `TargetOutboundSites` not being set
+        /// </summary>
+        [Output("targetInboundHierarchyUuids")]
+        public Output<ImmutableArray<string>> TargetInboundHierarchyUuids { get; private set; } = null!;
+
+        /// <summary>
         /// , Attribute conditional on `TargetLevel` equal to `REGION` or `TargetLevel` equal to `SUB_REGION`
         /// </summary>
         [Output("targetInboundRegions")]
         public Output<ImmutableArray<Outputs.TopologyCustomControlFeatureTargetInboundRegion>> TargetInboundRegions { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `SITE`
+        /// , Attribute conditional on `TargetLevel` equal to `SITE` and `TargetInboundHierarchyUuids` not being set and `TargetOutboundHierarchyUuids` not being set
         /// </summary>
         [Output("targetInboundSites")]
         public Output<ImmutableArray<string>> TargetInboundSites { get; private set; } = null!;
@@ -143,13 +153,19 @@ namespace Pulumi.Sdwan
         public Output<string> TargetLevel { get; private set; } = null!;
 
         /// <summary>
+        /// Outbound network hierarchy UUIDs, Attribute conditional on `TargetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `TargetOutboundSites` not being set and `TargetInboundSites` not being set
+        /// </summary>
+        [Output("targetOutboundHierarchyUuids")]
+        public Output<ImmutableArray<string>> TargetOutboundHierarchyUuids { get; private set; } = null!;
+
+        /// <summary>
         /// , Attribute conditional on `TargetLevel` equal to `REGION` or `TargetLevel` equal to `SUB_REGION`
         /// </summary>
         [Output("targetOutboundRegions")]
         public Output<ImmutableArray<Outputs.TopologyCustomControlFeatureTargetOutboundRegion>> TargetOutboundRegions { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `SITE`
+        /// , Attribute conditional on `TargetLevel` equal to `SITE` and `TargetOutboundHierarchyUuids` not being set and `TargetInboundHierarchyUuids` not being set
         /// </summary>
         [Output("targetOutboundSites")]
         public Output<ImmutableArray<string>> TargetOutboundSites { get; private set; } = null!;
@@ -252,6 +268,18 @@ namespace Pulumi.Sdwan
             set => _sequences = value;
         }
 
+        [Input("targetInboundHierarchyUuids")]
+        private InputList<string>? _targetInboundHierarchyUuids;
+
+        /// <summary>
+        /// Inbound network hierarchy UUIDs, Attribute conditional on `TargetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `TargetInboundSites` not being set and `TargetOutboundSites` not being set
+        /// </summary>
+        public InputList<string> TargetInboundHierarchyUuids
+        {
+            get => _targetInboundHierarchyUuids ?? (_targetInboundHierarchyUuids = new InputList<string>());
+            set => _targetInboundHierarchyUuids = value;
+        }
+
         [Input("targetInboundRegions")]
         private InputList<Inputs.TopologyCustomControlFeatureTargetInboundRegionArgs>? _targetInboundRegions;
 
@@ -268,7 +296,7 @@ namespace Pulumi.Sdwan
         private InputList<string>? _targetInboundSites;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `SITE`
+        /// , Attribute conditional on `TargetLevel` equal to `SITE` and `TargetInboundHierarchyUuids` not being set and `TargetOutboundHierarchyUuids` not being set
         /// </summary>
         public InputList<string> TargetInboundSites
         {
@@ -281,6 +309,18 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("targetLevel", required: true)]
         public Input<string> TargetLevel { get; set; } = null!;
+
+        [Input("targetOutboundHierarchyUuids")]
+        private InputList<string>? _targetOutboundHierarchyUuids;
+
+        /// <summary>
+        /// Outbound network hierarchy UUIDs, Attribute conditional on `TargetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `TargetOutboundSites` not being set and `TargetInboundSites` not being set
+        /// </summary>
+        public InputList<string> TargetOutboundHierarchyUuids
+        {
+            get => _targetOutboundHierarchyUuids ?? (_targetOutboundHierarchyUuids = new InputList<string>());
+            set => _targetOutboundHierarchyUuids = value;
+        }
 
         [Input("targetOutboundRegions")]
         private InputList<Inputs.TopologyCustomControlFeatureTargetOutboundRegionArgs>? _targetOutboundRegions;
@@ -298,7 +338,7 @@ namespace Pulumi.Sdwan
         private InputList<string>? _targetOutboundSites;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `SITE`
+        /// , Attribute conditional on `TargetLevel` equal to `SITE` and `TargetOutboundHierarchyUuids` not being set and `TargetInboundHierarchyUuids` not being set
         /// </summary>
         public InputList<string> TargetOutboundSites
         {
@@ -365,6 +405,18 @@ namespace Pulumi.Sdwan
             set => _sequences = value;
         }
 
+        [Input("targetInboundHierarchyUuids")]
+        private InputList<string>? _targetInboundHierarchyUuids;
+
+        /// <summary>
+        /// Inbound network hierarchy UUIDs, Attribute conditional on `TargetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `TargetInboundSites` not being set and `TargetOutboundSites` not being set
+        /// </summary>
+        public InputList<string> TargetInboundHierarchyUuids
+        {
+            get => _targetInboundHierarchyUuids ?? (_targetInboundHierarchyUuids = new InputList<string>());
+            set => _targetInboundHierarchyUuids = value;
+        }
+
         [Input("targetInboundRegions")]
         private InputList<Inputs.TopologyCustomControlFeatureTargetInboundRegionGetArgs>? _targetInboundRegions;
 
@@ -381,7 +433,7 @@ namespace Pulumi.Sdwan
         private InputList<string>? _targetInboundSites;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `SITE`
+        /// , Attribute conditional on `TargetLevel` equal to `SITE` and `TargetInboundHierarchyUuids` not being set and `TargetOutboundHierarchyUuids` not being set
         /// </summary>
         public InputList<string> TargetInboundSites
         {
@@ -394,6 +446,18 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("targetLevel")]
         public Input<string>? TargetLevel { get; set; }
+
+        [Input("targetOutboundHierarchyUuids")]
+        private InputList<string>? _targetOutboundHierarchyUuids;
+
+        /// <summary>
+        /// Outbound network hierarchy UUIDs, Attribute conditional on `TargetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `TargetOutboundSites` not being set and `TargetInboundSites` not being set
+        /// </summary>
+        public InputList<string> TargetOutboundHierarchyUuids
+        {
+            get => _targetOutboundHierarchyUuids ?? (_targetOutboundHierarchyUuids = new InputList<string>());
+            set => _targetOutboundHierarchyUuids = value;
+        }
 
         [Input("targetOutboundRegions")]
         private InputList<Inputs.TopologyCustomControlFeatureTargetOutboundRegionGetArgs>? _targetOutboundRegions;
@@ -411,7 +475,7 @@ namespace Pulumi.Sdwan
         private InputList<string>? _targetOutboundSites;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `SITE`
+        /// , Attribute conditional on `TargetLevel` equal to `SITE` and `TargetOutboundHierarchyUuids` not being set and `TargetInboundHierarchyUuids` not being set
         /// </summary>
         public InputList<string> TargetOutboundSites
         {

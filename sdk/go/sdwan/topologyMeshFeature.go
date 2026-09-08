@@ -36,8 +36,8 @@ import (
 //				TargetVpns: pulumi.StringArray{
 //					pulumi.String("service_lan_vpn1"),
 //				},
-//				Sites: pulumi.StringArray{
-//					pulumi.String("SITE_100"),
+//				HierarchyUuids: pulumi.StringArray{
+//					pulumi.String("acb2ea53-4a95-4970-a1ab-9bac15edb961"),
 //				},
 //			})
 //			if err != nil {
@@ -65,9 +65,13 @@ type TopologyMeshFeature struct {
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
+	// Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	HierarchyUuids pulumi.StringArrayOutput `pulumi:"hierarchyUuids"`
 	// The name of the Feature
-	Name       pulumi.StringOutput      `pulumi:"name"`
-	Sites      pulumi.StringArrayOutput `pulumi:"sites"`
+	Name pulumi.StringOutput `pulumi:"name"`
+	// Site list
+	Sites pulumi.StringArrayOutput `pulumi:"sites"`
+	// Target VPN list
 	TargetVpns pulumi.StringArrayOutput `pulumi:"targetVpns"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
@@ -82,9 +86,6 @@ func NewTopologyMeshFeature(ctx *pulumi.Context,
 
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
-	}
-	if args.Sites == nil {
-		return nil, errors.New("invalid value for required argument 'Sites'")
 	}
 	if args.TargetVpns == nil {
 		return nil, errors.New("invalid value for required argument 'TargetVpns'")
@@ -116,9 +117,13 @@ type topologyMeshFeatureState struct {
 	Description *string `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
+	// Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	HierarchyUuids []string `pulumi:"hierarchyUuids"`
 	// The name of the Feature
-	Name       *string  `pulumi:"name"`
-	Sites      []string `pulumi:"sites"`
+	Name *string `pulumi:"name"`
+	// Site list
+	Sites []string `pulumi:"sites"`
+	// Target VPN list
 	TargetVpns []string `pulumi:"targetVpns"`
 	// The version of the Feature
 	Version *int `pulumi:"version"`
@@ -129,9 +134,13 @@ type TopologyMeshFeatureState struct {
 	Description pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
+	// Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	HierarchyUuids pulumi.StringArrayInput
 	// The name of the Feature
-	Name       pulumi.StringPtrInput
-	Sites      pulumi.StringArrayInput
+	Name pulumi.StringPtrInput
+	// Site list
+	Sites pulumi.StringArrayInput
+	// Target VPN list
 	TargetVpns pulumi.StringArrayInput
 	// The version of the Feature
 	Version pulumi.IntPtrInput
@@ -146,9 +155,13 @@ type topologyMeshFeatureArgs struct {
 	Description *string `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
+	// Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	HierarchyUuids []string `pulumi:"hierarchyUuids"`
 	// The name of the Feature
-	Name       *string  `pulumi:"name"`
-	Sites      []string `pulumi:"sites"`
+	Name *string `pulumi:"name"`
+	// Site list
+	Sites []string `pulumi:"sites"`
+	// Target VPN list
 	TargetVpns []string `pulumi:"targetVpns"`
 }
 
@@ -158,9 +171,13 @@ type TopologyMeshFeatureArgs struct {
 	Description pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
+	// Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	HierarchyUuids pulumi.StringArrayInput
 	// The name of the Feature
-	Name       pulumi.StringPtrInput
-	Sites      pulumi.StringArrayInput
+	Name pulumi.StringPtrInput
+	// Site list
+	Sites pulumi.StringArrayInput
+	// Target VPN list
 	TargetVpns pulumi.StringArrayInput
 }
 
@@ -261,15 +278,22 @@ func (o TopologyMeshFeatureOutput) FeatureProfileId() pulumi.StringOutput {
 	return o.ApplyT(func(v *TopologyMeshFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
+// Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o TopologyMeshFeatureOutput) HierarchyUuids() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *TopologyMeshFeature) pulumi.StringArrayOutput { return v.HierarchyUuids }).(pulumi.StringArrayOutput)
+}
+
 // The name of the Feature
 func (o TopologyMeshFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *TopologyMeshFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
+// Site list
 func (o TopologyMeshFeatureOutput) Sites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *TopologyMeshFeature) pulumi.StringArrayOutput { return v.Sites }).(pulumi.StringArrayOutput)
 }
 
+// Target VPN list
 func (o TopologyMeshFeatureOutput) TargetVpns() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *TopologyMeshFeature) pulumi.StringArrayOutput { return v.TargetVpns }).(pulumi.StringArrayOutput)
 }

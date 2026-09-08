@@ -10,12 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTransportRoutingBgpFeatureIpv4Network {
+    /**
+     * @return IP Address
+     * 
+     */
     private String networkAddress;
     /**
      * @return Variable name
      * 
      */
     private String networkAddressVariable;
+    /**
+     * @return Subnet Mask
+     * 
+     */
     private String subnetMask;
     /**
      * @return Variable name
@@ -24,6 +32,10 @@ public final class GetTransportRoutingBgpFeatureIpv4Network {
     private String subnetMaskVariable;
 
     private GetTransportRoutingBgpFeatureIpv4Network() {}
+    /**
+     * @return IP Address
+     * 
+     */
     public String networkAddress() {
         return this.networkAddress;
     }
@@ -34,6 +46,10 @@ public final class GetTransportRoutingBgpFeatureIpv4Network {
     public String networkAddressVariable() {
         return this.networkAddressVariable;
     }
+    /**
+     * @return Subnet Mask
+     * 
+     */
     public String subnetMask() {
         return this.subnetMask;
     }

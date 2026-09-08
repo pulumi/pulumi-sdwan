@@ -36,7 +36,11 @@ class TransportCellularProfileFeatureArgs:
                  profile_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_username: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 requires_authentication: pulumi.Input[Optional[_builtins.bool]] = None):
+                 requires_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 slice_differentiator: pulumi.Input[Optional[_builtins.int]] = None,
+                 slice_differentiator_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 slice_type: pulumi.Input[Optional[_builtins.int]] = None,
+                 slice_type_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a TransportCellularProfileFeature resource.
 
@@ -63,6 +67,11 @@ class TransportCellularProfileFeatureArgs:
         :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.bool] requires_authentication: Require authentication type
                  - Default value: `false`
+        :param pulumi.Input[_builtins.int] slice_differentiator: S-NSSAI slice differentiator, Attribute conditional on `slice_type` being set and SD-WAN Manager version `20.18.1` or higher
+                 - Range: `0`-`16777214`
+        :param pulumi.Input[_builtins.str] slice_differentiator_variable: Variable name, Attribute conditional on `slice_type` being set and SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.int] slice_type: S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] slice_type_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if access_point_name is not None:
@@ -99,6 +108,14 @@ class TransportCellularProfileFeatureArgs:
             pulumi.set(__self__, "profile_username_variable", profile_username_variable)
         if requires_authentication is not None:
             pulumi.set(__self__, "requires_authentication", requires_authentication)
+        if slice_differentiator is not None:
+            pulumi.set(__self__, "slice_differentiator", slice_differentiator)
+        if slice_differentiator_variable is not None:
+            pulumi.set(__self__, "slice_differentiator_variable", slice_differentiator_variable)
+        if slice_type is not None:
+            pulumi.set(__self__, "slice_type", slice_type)
+        if slice_type_variable is not None:
+            pulumi.set(__self__, "slice_type_variable", slice_type_variable)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
@@ -321,6 +338,55 @@ class TransportCellularProfileFeatureArgs:
     def requires_authentication(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "requires_authentication", value)
 
+    @_builtins.property
+    @pulumi.getter(name="sliceDifferentiator")
+    def slice_differentiator(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        S-NSSAI slice differentiator, Attribute conditional on `slice_type` being set and SD-WAN Manager version `20.18.1` or higher
+          - Range: `0`-`16777214`
+        """
+        return pulumi.get(self, "slice_differentiator")
+
+    @slice_differentiator.setter
+    def slice_differentiator(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "slice_differentiator", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sliceDifferentiatorVariable")
+    def slice_differentiator_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `slice_type` being set and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "slice_differentiator_variable")
+
+    @slice_differentiator_variable.setter
+    def slice_differentiator_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "slice_differentiator_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sliceType")
+    def slice_type(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "slice_type")
+
+    @slice_type.setter
+    def slice_type(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "slice_type", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sliceTypeVariable")
+    def slice_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "slice_type_variable")
+
+    @slice_type_variable.setter
+    def slice_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "slice_type_variable", value)
+
 
 @pulumi.input_type
 class _TransportCellularProfileFeatureState:
@@ -343,6 +409,10 @@ class _TransportCellularProfileFeatureState:
                  profile_username: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  requires_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 slice_differentiator: pulumi.Input[Optional[_builtins.int]] = None,
+                 slice_differentiator_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 slice_type: pulumi.Input[Optional[_builtins.int]] = None,
+                 slice_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TransportCellularProfileFeature resources.
@@ -370,6 +440,11 @@ class _TransportCellularProfileFeatureState:
         :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.bool] requires_authentication: Require authentication type
                  - Default value: `false`
+        :param pulumi.Input[_builtins.int] slice_differentiator: S-NSSAI slice differentiator, Attribute conditional on `slice_type` being set and SD-WAN Manager version `20.18.1` or higher
+                 - Range: `0`-`16777214`
+        :param pulumi.Input[_builtins.str] slice_differentiator_variable: Variable name, Attribute conditional on `slice_type` being set and SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.int] slice_type: S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] slice_type_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         if access_point_name is not None:
@@ -408,6 +483,14 @@ class _TransportCellularProfileFeatureState:
             pulumi.set(__self__, "profile_username_variable", profile_username_variable)
         if requires_authentication is not None:
             pulumi.set(__self__, "requires_authentication", requires_authentication)
+        if slice_differentiator is not None:
+            pulumi.set(__self__, "slice_differentiator", slice_differentiator)
+        if slice_differentiator_variable is not None:
+            pulumi.set(__self__, "slice_differentiator_variable", slice_differentiator_variable)
+        if slice_type is not None:
+            pulumi.set(__self__, "slice_type", slice_type)
+        if slice_type_variable is not None:
+            pulumi.set(__self__, "slice_type_variable", slice_type_variable)
         if version is not None:
             pulumi.set(__self__, "version", version)
 
@@ -633,6 +716,55 @@ class _TransportCellularProfileFeatureState:
         pulumi.set(self, "requires_authentication", value)
 
     @_builtins.property
+    @pulumi.getter(name="sliceDifferentiator")
+    def slice_differentiator(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        S-NSSAI slice differentiator, Attribute conditional on `slice_type` being set and SD-WAN Manager version `20.18.1` or higher
+          - Range: `0`-`16777214`
+        """
+        return pulumi.get(self, "slice_differentiator")
+
+    @slice_differentiator.setter
+    def slice_differentiator(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "slice_differentiator", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sliceDifferentiatorVariable")
+    def slice_differentiator_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `slice_type` being set and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "slice_differentiator_variable")
+
+    @slice_differentiator_variable.setter
+    def slice_differentiator_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "slice_differentiator_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sliceType")
+    def slice_type(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "slice_type")
+
+    @slice_type.setter
+    def slice_type(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "slice_type", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sliceTypeVariable")
+    def slice_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "slice_type_variable")
+
+    @slice_type_variable.setter
+    def slice_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "slice_type_variable", value)
+
+    @_builtins.property
     @pulumi.getter
     def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
@@ -669,6 +801,10 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
                  profile_username: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  requires_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 slice_differentiator: pulumi.Input[Optional[_builtins.int]] = None,
+                 slice_differentiator_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 slice_type: pulumi.Input[Optional[_builtins.int]] = None,
+                 slice_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Transport Cellular Profile Feature.
@@ -684,14 +820,16 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
             name="Example",
             description="My Example",
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
-            profile_id=1,
+            profile_id=2,
             access_point_name="apn1",
             requires_authentication=True,
             authentication_type="pap",
             profile_username="example",
             profile_password="example123!",
             packet_data_network_type="ipv4",
-            no_overwrite=False)
+            no_overwrite=False,
+            slice_type=2,
+            slice_differentiator=20)
         ```
 
         ## Import
@@ -730,6 +868,11 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.bool] requires_authentication: Require authentication type
                  - Default value: `false`
+        :param pulumi.Input[_builtins.int] slice_differentiator: S-NSSAI slice differentiator, Attribute conditional on `slice_type` being set and SD-WAN Manager version `20.18.1` or higher
+                 - Range: `0`-`16777214`
+        :param pulumi.Input[_builtins.str] slice_differentiator_variable: Variable name, Attribute conditional on `slice_type` being set and SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.int] slice_type: S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] slice_type_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         """
         ...
     @overload
@@ -751,14 +894,16 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
             name="Example",
             description="My Example",
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
-            profile_id=1,
+            profile_id=2,
             access_point_name="apn1",
             requires_authentication=True,
             authentication_type="pap",
             profile_username="example",
             profile_password="example123!",
             packet_data_network_type="ipv4",
-            no_overwrite=False)
+            no_overwrite=False,
+            slice_type=2,
+            slice_differentiator=20)
         ```
 
         ## Import
@@ -805,6 +950,10 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
                  profile_username: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  requires_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 slice_differentiator: pulumi.Input[Optional[_builtins.int]] = None,
+                 slice_differentiator_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 slice_type: pulumi.Input[Optional[_builtins.int]] = None,
+                 slice_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -834,6 +983,10 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
             __props__.__dict__["profile_username"] = profile_username
             __props__.__dict__["profile_username_variable"] = profile_username_variable
             __props__.__dict__["requires_authentication"] = requires_authentication
+            __props__.__dict__["slice_differentiator"] = slice_differentiator
+            __props__.__dict__["slice_differentiator_variable"] = slice_differentiator_variable
+            __props__.__dict__["slice_type"] = slice_type
+            __props__.__dict__["slice_type_variable"] = slice_type_variable
             __props__.__dict__["version"] = None
         super(TransportCellularProfileFeature, __self__).__init__(
             'sdwan:index/transportCellularProfileFeature:TransportCellularProfileFeature',
@@ -863,6 +1016,10 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
             profile_username: pulumi.Input[Optional[_builtins.str]] = None,
             profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
             requires_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+            slice_differentiator: pulumi.Input[Optional[_builtins.int]] = None,
+            slice_differentiator_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            slice_type: pulumi.Input[Optional[_builtins.int]] = None,
+            slice_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'TransportCellularProfileFeature':
         """
         Get an existing TransportCellularProfileFeature resource's state with the given name, id, and optional extra
@@ -894,6 +1051,11 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.bool] requires_authentication: Require authentication type
                  - Default value: `false`
+        :param pulumi.Input[_builtins.int] slice_differentiator: S-NSSAI slice differentiator, Attribute conditional on `slice_type` being set and SD-WAN Manager version `20.18.1` or higher
+                 - Range: `0`-`16777214`
+        :param pulumi.Input[_builtins.str] slice_differentiator_variable: Variable name, Attribute conditional on `slice_type` being set and SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.int] slice_type: S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] slice_type_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -918,6 +1080,10 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         __props__.__dict__["profile_username"] = profile_username
         __props__.__dict__["profile_username_variable"] = profile_username_variable
         __props__.__dict__["requires_authentication"] = requires_authentication
+        __props__.__dict__["slice_differentiator"] = slice_differentiator
+        __props__.__dict__["slice_differentiator_variable"] = slice_differentiator_variable
+        __props__.__dict__["slice_type"] = slice_type
+        __props__.__dict__["slice_type_variable"] = slice_type_variable
         __props__.__dict__["version"] = version
         return TransportCellularProfileFeature(resource_name, opts=opts, __props__=__props__)
 
@@ -1069,6 +1235,39 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
           - Default value: `false`
         """
         return pulumi.get(self, "requires_authentication")
+
+    @_builtins.property
+    @pulumi.getter(name="sliceDifferentiator")
+    def slice_differentiator(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        S-NSSAI slice differentiator, Attribute conditional on `slice_type` being set and SD-WAN Manager version `20.18.1` or higher
+          - Range: `0`-`16777214`
+        """
+        return pulumi.get(self, "slice_differentiator")
+
+    @_builtins.property
+    @pulumi.getter(name="sliceDifferentiatorVariable")
+    def slice_differentiator_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `slice_type` being set and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "slice_differentiator_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="sliceType")
+    def slice_type(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "slice_type")
+
+    @_builtins.property
+    @pulumi.getter(name="sliceTypeVariable")
+    def slice_type_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "slice_type_variable")
 
     @_builtins.property
     @pulumi.getter

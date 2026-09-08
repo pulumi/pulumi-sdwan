@@ -381,14 +381,14 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.ipv4AddressVariable);
     }
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Export(name="ipv4SubnetMask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMask;
 
     /**
-     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Output<Optional<String>> ipv4SubnetMask() {
@@ -1283,6 +1283,34 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceColor);
     }
     /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="tunnelInterfaceColorDescription", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> tunnelInterfaceColorDescription;
+
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> tunnelInterfaceColorDescription() {
+        return Codegen.optional(this.tunnelInterfaceColorDescription);
+    }
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="tunnelInterfaceColorDescriptionVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> tunnelInterfaceColorDescriptionVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> tunnelInterfaceColorDescriptionVariable() {
+        return Codegen.optional(this.tunnelInterfaceColorDescriptionVariable);
+    }
+    /**
      * Variable name
      * 
      */
@@ -1337,6 +1365,36 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
      */
     public Output<Optional<List<Integer>>> tunnelInterfaceExcludeControllerGroupLists() {
         return Codegen.optional(this.tunnelInterfaceExcludeControllerGroupLists);
+    }
+    /**
+     * Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="tunnelInterfaceFullPortHop", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> tunnelInterfaceFullPortHop;
+
+    /**
+     * @return Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> tunnelInterfaceFullPortHop() {
+        return Codegen.optional(this.tunnelInterfaceFullPortHop);
+    }
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="tunnelInterfaceFullPortHopVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> tunnelInterfaceFullPortHopVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> tunnelInterfaceFullPortHopVariable() {
+        return Codegen.optional(this.tunnelInterfaceFullPortHopVariable);
     }
     /**
      * List of groups
@@ -1555,7 +1613,7 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceNatRefreshIntervalVariable);
     }
     /**
-     * Disallow port hopping on the tunnel interface
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
      *   - Default value: `true`
      * 
      */
@@ -1563,7 +1621,7 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
     private Output</* @Nullable */ Boolean> tunnelInterfacePortHop;
 
     /**
-     * @return Disallow port hopping on the tunnel interface
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
      *   - Default value: `true`
      * 
      */

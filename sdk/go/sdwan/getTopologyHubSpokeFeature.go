@@ -66,11 +66,15 @@ type LookupTopologyHubSpokeFeatureResult struct {
 	// The id of the Feature
 	Id string `pulumi:"id"`
 	// The name of the Feature
-	Name         string   `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// Selected hub network hierarchy UUIDs
+	SelectedHierarchyHubs []string `pulumi:"selectedHierarchyHubs"`
+	// Selected hub sites
 	SelectedHubs []string `pulumi:"selectedHubs"`
-	// Spokes
-	Spokes     []GetTopologyHubSpokeFeatureSpoke `pulumi:"spokes"`
-	TargetVpns []string                          `pulumi:"targetVpns"`
+	// Spoke configurations
+	Spokes []GetTopologyHubSpokeFeatureSpoke `pulumi:"spokes"`
+	// Target VPN list
+	TargetVpns []string `pulumi:"targetVpns"`
 	// The version of the Feature
 	Version int `pulumi:"version"`
 }
@@ -127,15 +131,22 @@ func (o LookupTopologyHubSpokeFeatureResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTopologyHubSpokeFeatureResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Selected hub network hierarchy UUIDs
+func (o LookupTopologyHubSpokeFeatureResultOutput) SelectedHierarchyHubs() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v LookupTopologyHubSpokeFeatureResult) []string { return v.SelectedHierarchyHubs }).(pulumi.StringArrayOutput)
+}
+
+// Selected hub sites
 func (o LookupTopologyHubSpokeFeatureResultOutput) SelectedHubs() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupTopologyHubSpokeFeatureResult) []string { return v.SelectedHubs }).(pulumi.StringArrayOutput)
 }
 
-// Spokes
+// Spoke configurations
 func (o LookupTopologyHubSpokeFeatureResultOutput) Spokes() GetTopologyHubSpokeFeatureSpokeArrayOutput {
 	return o.ApplyT(func(v LookupTopologyHubSpokeFeatureResult) []GetTopologyHubSpokeFeatureSpoke { return v.Spokes }).(GetTopologyHubSpokeFeatureSpokeArrayOutput)
 }
 
+// Target VPN list
 func (o LookupTopologyHubSpokeFeatureResultOutput) TargetVpns() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupTopologyHubSpokeFeatureResult) []string { return v.TargetVpns }).(pulumi.StringArrayOutput)
 }

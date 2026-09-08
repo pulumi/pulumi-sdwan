@@ -14,20 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TopologyHubSpokeFeatureSpokeHubSite {
     /**
-     * @return preference
+     * @return Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    private @Nullable List<String> hubHierarchyUuids;
+    /**
+     * @return Hub preference value
      *   - Range: `1`-`255`
      * 
      */
     private @Nullable Integer preference;
     /**
-     * @return sites
+     * @return Hub sites
      * 
      */
     private @Nullable List<String> sites;
 
     private TopologyHubSpokeFeatureSpokeHubSite() {}
     /**
-     * @return preference
+     * @return Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public List<String> hubHierarchyUuids() {
+        return this.hubHierarchyUuids == null ? List.of() : this.hubHierarchyUuids;
+    }
+    /**
+     * @return Hub preference value
      *   - Range: `1`-`255`
      * 
      */
@@ -35,7 +47,7 @@ public final class TopologyHubSpokeFeatureSpokeHubSite {
         return Optional.ofNullable(this.preference);
     }
     /**
-     * @return sites
+     * @return Hub sites
      * 
      */
     public List<String> sites() {
@@ -51,15 +63,26 @@ public final class TopologyHubSpokeFeatureSpokeHubSite {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable List<String> hubHierarchyUuids;
         private @Nullable Integer preference;
         private @Nullable List<String> sites;
         public Builder() {}
         public Builder(TopologyHubSpokeFeatureSpokeHubSite defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.hubHierarchyUuids = defaults.hubHierarchyUuids;
     	      this.preference = defaults.preference;
     	      this.sites = defaults.sites;
         }
 
+        @CustomType.Setter
+        public Builder hubHierarchyUuids(@Nullable List<String> hubHierarchyUuids) {
+
+            this.hubHierarchyUuids = hubHierarchyUuids;
+            return this;
+        }
+        public Builder hubHierarchyUuids(String... hubHierarchyUuids) {
+            return hubHierarchyUuids(List.of(hubHierarchyUuids));
+        }
         @CustomType.Setter
         public Builder preference(@Nullable Integer preference) {
 
@@ -77,6 +100,7 @@ public final class TopologyHubSpokeFeatureSpokeHubSite {
         }
         public TopologyHubSpokeFeatureSpokeHubSite build() {
             final var _resultValue = new TopologyHubSpokeFeatureSpokeHubSite();
+            _resultValue.hubHierarchyUuids = hubHierarchyUuids;
             _resultValue.preference = preference;
             _resultValue.sites = sites;
             return _resultValue;

@@ -71,9 +71,17 @@ export interface GetTopologyCustomControlFeatureResult {
      * Sequence list
      */
     readonly sequences: outputs.GetTopologyCustomControlFeatureSequence[];
+    /**
+     * Inbound network hierarchy UUIDs
+     */
+    readonly targetInboundHierarchyUuids: string[];
     readonly targetInboundRegions: outputs.GetTopologyCustomControlFeatureTargetInboundRegion[];
     readonly targetInboundSites: string[];
     readonly targetLevel: string;
+    /**
+     * Outbound network hierarchy UUIDs
+     */
+    readonly targetOutboundHierarchyUuids: string[];
     readonly targetOutboundRegions: outputs.GetTopologyCustomControlFeatureTargetOutboundRegion[];
     readonly targetOutboundSites: string[];
     readonly targetRole: string;

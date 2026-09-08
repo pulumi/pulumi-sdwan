@@ -14442,6 +14442,16 @@ export interface GetServiceDhcpServerFeatureStaticLease {
     macAddressVariable: string;
 }
 
+export interface GetServiceDualRouterHaFeatureRedundancyGroup {
+    groupId: number;
+    tagName: string;
+    vpnIds: outputs.GetServiceDualRouterHaFeatureRedundancyGroupVpnId[];
+}
+
+export interface GetServiceDualRouterHaFeatureRedundancyGroupVpnId {
+    vpnId: string;
+}
+
 export interface GetServiceIpv4AclFeatureSequence {
     /**
      * Define list of actions
@@ -16062,6 +16072,14 @@ export interface GetServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddress {
 
 export interface GetServiceMulticastFeatureAutoRpAnnounce {
     /**
+     * Set IP Access List for PIM RP Announce
+     */
+    accessListId: string;
+    /**
+     * Variable name
+     */
+    accessListIdVariable: string;
+    /**
      * Set RP Announce Interface Name
      */
     interfaceName: string;
@@ -16069,6 +16087,14 @@ export interface GetServiceMulticastFeatureAutoRpAnnounce {
      * Variable name
      */
     interfaceNameVariable: string;
+    /**
+     * Set RP Announce interval
+     */
+    interval: number;
+    /**
+     * Variable name
+     */
+    intervalVariable: string;
     /**
      * Set RP Announce Scope
      */
@@ -16463,11 +16489,17 @@ export interface GetServiceRoutingBgpFeatureIpv4AggregateAddress {
      * Variable name
      */
     asSetPathVariable: string;
+    /**
+     * IP Address
+     */
     networkAddress: string;
     /**
      * Variable name
      */
     networkAddressVariable: string;
+    /**
+     * Subnet Mask
+     */
     subnetMask: string;
     /**
      * Variable name
@@ -16688,11 +16720,17 @@ export interface GetServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
 }
 
 export interface GetServiceRoutingBgpFeatureIpv4Network {
+    /**
+     * IP Address
+     */
     networkAddress: string;
     /**
      * Variable name
      */
     networkAddressVariable: string;
+    /**
+     * Subnet Mask
+     */
     subnetMask: string;
     /**
      * Variable name
@@ -17030,11 +17068,17 @@ export interface GetServiceRoutingEigrpFeatureInterface {
 }
 
 export interface GetServiceRoutingEigrpFeatureInterfaceSummaryAddress {
+    /**
+     * IP Address
+     */
     address: string;
     /**
      * Variable name
      */
     addressVariable: string;
+    /**
+     * Subnet Mask
+     */
     mask: string;
     /**
      * Variable name
@@ -17062,11 +17106,17 @@ export interface GetServiceRoutingEigrpFeatureMd5Key {
 }
 
 export interface GetServiceRoutingEigrpFeatureNetwork {
+    /**
+     * IP Address
+     */
     ipAddress: string;
     /**
      * Variable name
      */
     ipAddressVariable: string;
+    /**
+     * Subnet Mask
+     */
     mask: string;
     /**
      * Variable name
@@ -19944,6 +19994,10 @@ export interface GetTopologyCustomControlFeatureSequenceMatchEntry {
      */
     groupId: number;
     /**
+     * Network hierarchy UUIDs for matching
+     */
+    hierarchyUuids: string[];
+    /**
      * IPv6 prefix list ID
      */
     ipv6PrefixListId: string;
@@ -20040,20 +20094,34 @@ export interface GetTopologyCustomControlFeatureTargetOutboundRegion {
 
 export interface GetTopologyHubSpokeFeatureSpoke {
     /**
-     * Hub Sites
+     * Hub site preferences
      */
     hubSites: outputs.GetTopologyHubSpokeFeatureSpokeHubSite[];
+    /**
+     * Spoke name
+     */
     name: string;
+    /**
+     * Spoke network hierarchy UUIDs
+     */
+    spokeHierarchyUuids: string[];
+    /**
+     * Spoke site list
+     */
     spokeSites: string[];
 }
 
 export interface GetTopologyHubSpokeFeatureSpokeHubSite {
     /**
-     * preference
+     * Hub network hierarchy UUIDs
+     */
+    hubHierarchyUuids: string[];
+    /**
+     * Hub preference value
      */
     preference: number;
     /**
-     * sites
+     * Hub sites
      */
     sites: string[];
 }
@@ -20944,11 +21012,17 @@ export interface GetTransportRoutingBgpFeatureIpv4AggregateAddress {
      * Variable name
      */
     asSetPathVariable: string;
+    /**
+     * IP Address
+     */
     networkAddress: string;
     /**
      * Variable name
      */
     networkAddressVariable: string;
+    /**
+     * Subnet Mask
+     */
     subnetMask: string;
     /**
      * Variable name
@@ -21173,11 +21247,17 @@ export interface GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily {
 }
 
 export interface GetTransportRoutingBgpFeatureIpv4Network {
+    /**
+     * IP Address
+     */
     networkAddress: string;
     /**
      * Variable name
      */
     networkAddressVariable: string;
+    /**
+     * Subnet Mask
+     */
     subnetMask: string;
     /**
      * Variable name
@@ -26088,6 +26168,19 @@ export interface ServiceDhcpServerFeatureStaticLease {
     macAddressVariable?: string;
 }
 
+export interface ServiceDualRouterHaFeatureRedundancyGroup {
+    /**
+     * - Range: `1`-`2`
+     */
+    groupId?: number;
+    tagName?: string;
+    vpnIds?: outputs.ServiceDualRouterHaFeatureRedundancyGroupVpnId[];
+}
+
+export interface ServiceDualRouterHaFeatureRedundancyGroupVpnId {
+    vpnId?: string;
+}
+
 export interface ServiceIpv4AclFeatureSequence {
     /**
      * Define list of actions
@@ -26155,6 +26248,7 @@ export interface ServiceIpv4AclFeatureSequenceAction {
     acceptSetServiceChainNameVariable?: string;
     /**
      * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Ranges: `1`-`511`, `513`-`65531`
      */
     acceptSetServiceChainVpn?: number;
     /**
@@ -26298,6 +26392,7 @@ export interface ServiceIpv6AclFeatureSequenceAction {
     acceptSetServiceChainNameVariable?: string;
     /**
      * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Ranges: `1`-`511`, `513`-`65531`
      */
     acceptSetServiceChainVpn?: number;
     /**
@@ -26416,7 +26511,7 @@ export interface ServiceLanVpnFeatureAdvertiseOmpIpv4Prefix {
      */
     regionVariable?: string;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -26496,7 +26591,7 @@ export interface ServiceLanVpnFeatureGreRoute {
     networkAddressVariable?: string;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -26547,7 +26642,7 @@ export interface ServiceLanVpnFeatureIpsecRoute {
     networkAddressVariable?: string;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -26623,7 +26718,7 @@ export interface ServiceLanVpnFeatureIpv4StaticRoute {
     null0?: boolean;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -26984,7 +27079,7 @@ export interface ServiceLanVpnFeatureRouteLeakFromGlobalVpn {
 export interface ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistribution {
     /**
      * Protocol to restributed leaked routes
-     *   - Choices: `bgp`, `ospf`
+     *   - Choices: `bgp`, `ospf`, `eigrp`
      */
     protocol?: string;
     /**
@@ -27002,7 +27097,7 @@ export interface ServiceLanVpnFeatureRouteLeakFromOtherService {
     routePolicyId?: string;
     /**
      * Leak Route of particular protocol from Source Service VPN
-     *   - Choices: `static`, `connected`, `bgp`, `ospf`
+     *   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
      */
     routeProtocol?: string;
     /**
@@ -27023,7 +27118,7 @@ export interface ServiceLanVpnFeatureRouteLeakFromOtherService {
 export interface ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistribution {
     /**
      * Protocol to restributed leaked routes
-     *   - Choices: `bgp`, `ospf`
+     *   - Choices: `bgp`, `ospf`, `eigrp`
      */
     protocol?: string;
     /**
@@ -27041,7 +27136,7 @@ export interface ServiceLanVpnFeatureRouteLeakToGlobalVpn {
     routePolicyId?: string;
     /**
      * Leak Routes of particular protocol from Service to Global VPN
-     *   - Choices: `static`, `connected`, `bgp`, `ospf`
+     *   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
      */
     routeProtocol?: string;
     /**
@@ -27121,7 +27216,7 @@ export interface ServiceLanVpnFeatureServiceRoute {
     sseInstanceVariable?: string;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -27585,7 +27680,7 @@ export interface ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddress {
     addressVariable?: string;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: string;
     /**
@@ -27836,6 +27931,14 @@ export interface ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddress {
 
 export interface ServiceMulticastFeatureAutoRpAnnounce {
     /**
+     * Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    accessListId?: string;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    accessListIdVariable?: string;
+    /**
      * Set RP Announce Interface Name
      */
     interfaceName?: string;
@@ -27843,6 +27946,15 @@ export interface ServiceMulticastFeatureAutoRpAnnounce {
      * Variable name
      */
     interfaceNameVariable?: string;
+    /**
+     * Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `1`-`16383`
+     */
+    interval?: number;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    intervalVariable?: string;
     /**
      * Set RP Announce Scope
      *   - Range: `1`-`255`
@@ -28275,13 +28387,17 @@ export interface ServiceRoutingBgpFeatureIpv4AggregateAddress {
      * Variable name
      */
     asSetPathVariable?: string;
+    /**
+     * IP Address
+     */
     networkAddress?: string;
     /**
      * Variable name
      */
     networkAddressVariable?: string;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -28529,13 +28645,17 @@ export interface ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
 }
 
 export interface ServiceRoutingBgpFeatureIpv4Network {
+    /**
+     * IP Address
+     */
     networkAddress?: string;
     /**
      * Variable name
      */
     networkAddressVariable?: string;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -28907,13 +29027,17 @@ export interface ServiceRoutingEigrpFeatureInterface {
 }
 
 export interface ServiceRoutingEigrpFeatureInterfaceSummaryAddress {
+    /**
+     * IP Address
+     */
     address?: string;
     /**
      * Variable name
      */
     addressVariable?: string;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     mask?: string;
     /**
@@ -28943,13 +29067,17 @@ export interface ServiceRoutingEigrpFeatureMd5Key {
 }
 
 export interface ServiceRoutingEigrpFeatureNetwork {
+    /**
+     * IP Address
+     */
     ipAddress?: string;
     /**
      * Variable name
      */
     ipAddressVariable?: string;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     mask?: string;
     /**
@@ -29139,7 +29267,7 @@ export interface ServiceRoutingOspfFeatureAreaRange {
     noAdvertiseVariable?: string;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -29352,7 +29480,7 @@ export interface ServiceRoutingOspfv3Ipv4FeatureAreaRange {
      */
     noAdvertiseVariable?: string;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -29718,7 +29846,7 @@ export interface ServiceSwitchportFeatureInterface {
     shutdownVariable?: string;
     /**
      * Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
      */
     speed?: string;
     /**
@@ -29869,7 +29997,7 @@ export interface ServiceWirelessLanFeatureSsid {
     radiusServerSecretVariable?: string;
     /**
      * Select security type
-     *   - Choices: `enterprise`, `personal`, `open`
+     *   - Choices: `personal`, `open`, `enterprise`
      */
     securityType?: string;
     /**
@@ -32150,6 +32278,10 @@ export interface TopologyCustomControlFeatureSequenceMatchEntry {
      */
     groupId?: number;
     /**
+     * Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    hierarchyUuids?: string[];
+    /**
      * IPv6 prefix list ID
      */
     ipv6PrefixListId?: string;
@@ -32252,21 +32384,35 @@ export interface TopologyCustomControlFeatureTargetOutboundRegion {
 
 export interface TopologyHubSpokeFeatureSpoke {
     /**
-     * Hub Sites
+     * Hub site preferences
      */
     hubSites?: outputs.TopologyHubSpokeFeatureSpokeHubSite[];
+    /**
+     * Spoke name
+     */
     name?: string;
+    /**
+     * Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    spokeHierarchyUuids?: string[];
+    /**
+     * Spoke site list
+     */
     spokeSites?: string[];
 }
 
 export interface TopologyHubSpokeFeatureSpokeHubSite {
     /**
-     * preference
+     * Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    hubHierarchyUuids?: string[];
+    /**
+     * Hub preference value
      *   - Range: `1`-`255`
      */
     preference?: number;
     /**
-     * sites
+     * Hub sites
      */
     sites?: string[];
 }
@@ -32696,6 +32842,7 @@ export interface TransportIpv4AclFeatureSequenceAction {
     acceptSetServiceChainNameVariable?: string;
     /**
      * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Ranges: `1`-`511`, `513`-`65531`
      */
     acceptSetServiceChainVpn?: number;
     /**
@@ -32839,6 +32986,7 @@ export interface TransportIpv6AclFeatureSequenceAction {
     acceptSetServiceChainNameVariable?: string;
     /**
      * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Ranges: `1`-`511`, `513`-`65531`
      */
     acceptSetServiceChainVpn?: number;
     /**
@@ -32953,7 +33101,7 @@ export interface TransportManagementVpnFeatureIpv4StaticRoute {
     nextHops?: outputs.TransportManagementVpnFeatureIpv4StaticRouteNextHop[];
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -33236,13 +33384,17 @@ export interface TransportRoutingBgpFeatureIpv4AggregateAddress {
      * Variable name
      */
     asSetPathVariable?: string;
+    /**
+     * IP Address
+     */
     networkAddress?: string;
     /**
      * Variable name
      */
     networkAddressVariable?: string;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -33495,13 +33647,17 @@ export interface TransportRoutingBgpFeatureIpv4NeighborAddressFamily {
 }
 
 export interface TransportRoutingBgpFeatureIpv4Network {
+    /**
+     * IP Address
+     */
     networkAddress?: string;
     /**
      * Variable name
      */
     networkAddressVariable?: string;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -34009,7 +34165,7 @@ export interface TransportRoutingOspfFeatureAreaRange {
     noAdvertiseVariable?: string;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -34213,7 +34369,7 @@ export interface TransportRoutingOspfv3Ipv4FeatureAreaRange {
      */
     noAdvertiseVariable?: string;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -34588,7 +34744,7 @@ export interface TransportWanVpnFeatureIpv4StaticRoute {
     nextHops?: outputs.TransportWanVpnFeatureIpv4StaticRouteNextHop[];
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**

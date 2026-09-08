@@ -48,6 +48,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? AcceptSetServiceChainNameVariable;
         /// <summary>
         /// Set Service Chain VPN, Attribute conditional on `AcceptSetServiceChainName` being set or `AcceptSetServiceChainNameVariable` being set
+        ///   - Ranges: `1`-`511`, `513`-`65531`
         /// </summary>
         public readonly int? AcceptSetServiceChainVpn;
         /// <summary>

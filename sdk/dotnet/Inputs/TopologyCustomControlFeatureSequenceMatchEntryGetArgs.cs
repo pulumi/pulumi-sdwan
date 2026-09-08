@@ -51,6 +51,18 @@ namespace Pulumi.Sdwan.Inputs
         [Input("groupId")]
         public Input<int>? GroupId { get; set; }
 
+        [Input("hierarchyUuids")]
+        private InputList<string>? _hierarchyUuids;
+
+        /// <summary>
+        /// Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public InputList<string> HierarchyUuids
+        {
+            get => _hierarchyUuids ?? (_hierarchyUuids = new InputList<string>());
+            set => _hierarchyUuids = value;
+        }
+
         /// <summary>
         /// IPv6 prefix list ID
         /// </summary>

@@ -55,6 +55,7 @@ public final class TransportIpv6AclFeatureSequenceAction {
     private @Nullable String acceptSetServiceChainNameVariable;
     /**
      * @return Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Ranges: `1`-`511`, `513`-`65531`
      * 
      */
     private @Nullable Integer acceptSetServiceChainVpn;
@@ -142,6 +143,7 @@ public final class TransportIpv6AclFeatureSequenceAction {
     }
     /**
      * @return Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Ranges: `1`-`511`, `513`-`65531`
      * 
      */
     public Optional<Integer> acceptSetServiceChainVpn() {

@@ -329,6 +329,87 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
+     * Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="enableEnforcedPropagation")
+    private @Nullable Output<Boolean> enableEnforcedPropagation;
+
+    /**
+     * @return Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<Boolean>> enableEnforcedPropagation() {
+        return Optional.ofNullable(this.enableEnforcedPropagation);
+    }
+
+    /**
+     * HA Interlink interface on/off, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="enableHaInterlinkInterface")
+    private @Nullable Output<Boolean> enableHaInterlinkInterface;
+
+    /**
+     * @return HA Interlink interface on/off, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> enableHaInterlinkInterface() {
+        return Optional.ofNullable(this.enableHaInterlinkInterface);
+    }
+
+    /**
+     * Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="enableSgtPropagation")
+    private @Nullable Output<Boolean> enableSgtPropagation;
+
+    /**
+     * @return Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> enableSgtPropagation() {
+        return Optional.ofNullable(this.enableSgtPropagation);
+    }
+
+    /**
+     * SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `2`-`65519`
+     * 
+     */
+    @Import(name="enforcedSecurityGroupTag")
+    private @Nullable Output<Integer> enforcedSecurityGroupTag;
+
+    /**
+     * @return SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `2`-`65519`
+     * 
+     */
+    public Optional<Output<Integer>> enforcedSecurityGroupTag() {
+        return Optional.ofNullable(this.enforcedSecurityGroupTag);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="enforcedSecurityGroupTagVariable")
+    private @Nullable Output<String> enforcedSecurityGroupTagVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> enforcedSecurityGroupTagVariable() {
+        return Optional.ofNullable(this.enforcedSecurityGroupTagVariable);
+    }
+
+    /**
      * Feature Profile ID
      * 
      */
@@ -1796,6 +1877,23 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
+     * Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `true`
+     * 
+     */
+    @Import(name="propagate")
+    private @Nullable Output<Boolean> propagate;
+
+    /**
+     * @return Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `true`
+     * 
+     */
+    public Optional<Output<Boolean>> propagate() {
+        return Optional.ofNullable(this.propagate);
+    }
+
+    /**
      * Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
@@ -2105,6 +2203,38 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
+     * SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `2`-`65519`
+     * 
+     */
+    @Import(name="securityGroupTag")
+    private @Nullable Output<Integer> securityGroupTag;
+
+    /**
+     * @return SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `2`-`65519`
+     * 
+     */
+    public Optional<Output<Integer>> securityGroupTag() {
+        return Optional.ofNullable(this.securityGroupTag);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="securityGroupTagVariable")
+    private @Nullable Output<String> securityGroupTagVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> securityGroupTagVariable() {
+        return Optional.ofNullable(this.securityGroupTagVariable);
+    }
+
+    /**
      * Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
@@ -2331,6 +2461,23 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
      */
     public Output<String> transportWanVpnFeatureId() {
         return this.transportWanVpnFeatureId;
+    }
+
+    /**
+     * Indicates that the interface is trustworthy for CTS., Attribute conditional on (`securityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`securityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+     *   - Default value: `true`
+     * 
+     */
+    @Import(name="trusted")
+    private @Nullable Output<Boolean> trusted;
+
+    /**
+     * @return Indicates that the interface is trustworthy for CTS., Attribute conditional on (`securityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`securityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+     *   - Default value: `true`
+     * 
+     */
+    public Optional<Output<Boolean>> trusted() {
+        return Optional.ofNullable(this.trusted);
     }
 
     /**
@@ -2980,6 +3127,36 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
+     * Set color description for TLOC, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="tunnelInterfaceColorDescription")
+    private @Nullable Output<String> tunnelInterfaceColorDescription;
+
+    /**
+     * @return Set color description for TLOC, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> tunnelInterfaceColorDescription() {
+        return Optional.ofNullable(this.tunnelInterfaceColorDescription);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="tunnelInterfaceColorDescriptionVariable")
+    private @Nullable Output<String> tunnelInterfaceColorDescriptionVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> tunnelInterfaceColorDescriptionVariable() {
+        return Optional.ofNullable(this.tunnelInterfaceColorDescriptionVariable);
+    }
+
+    /**
      * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
@@ -3101,6 +3278,38 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
      */
     public Optional<Output<List<Integer>>> tunnelInterfaceExcludeControllerGroupLists() {
         return Optional.ofNullable(this.tunnelInterfaceExcludeControllerGroupLists);
+    }
+
+    /**
+     * Enable port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="tunnelInterfaceFullPortHop")
+    private @Nullable Output<Boolean> tunnelInterfaceFullPortHop;
+
+    /**
+     * @return Enable port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> tunnelInterfaceFullPortHop() {
+        return Optional.ofNullable(this.tunnelInterfaceFullPortHop);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="tunnelInterfaceFullPortHopVariable")
+    private @Nullable Output<String> tunnelInterfaceFullPortHopVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> tunnelInterfaceFullPortHopVariable() {
+        return Optional.ofNullable(this.tunnelInterfaceFullPortHopVariable);
     }
 
     /**
@@ -3396,7 +3605,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -3404,7 +3613,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfacePortHop;
 
     /**
-     * @return Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -3643,6 +3852,11 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         this.duplex = $.duplex;
         this.duplexVariable = $.duplexVariable;
         this.enableDhcpv6 = $.enableDhcpv6;
+        this.enableEnforcedPropagation = $.enableEnforcedPropagation;
+        this.enableHaInterlinkInterface = $.enableHaInterlinkInterface;
+        this.enableSgtPropagation = $.enableSgtPropagation;
+        this.enforcedSecurityGroupTag = $.enforcedSecurityGroupTag;
+        this.enforcedSecurityGroupTagVariable = $.enforcedSecurityGroupTagVariable;
         this.featureProfileId = $.featureProfileId;
         this.greTunnelSourceIp = $.greTunnelSourceIp;
         this.greTunnelSourceIpVariable = $.greTunnelSourceIpVariable;
@@ -3736,6 +3950,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         this.portChannelStaticQosAggregate = $.portChannelStaticQosAggregate;
         this.portChannelStaticQosAggregateVariable = $.portChannelStaticQosAggregateVariable;
         this.portChannelSubinterface = $.portChannelSubinterface;
+        this.propagate = $.propagate;
         this.qosAdaptive = $.qosAdaptive;
         this.qosAdaptiveBandwidthDownstream = $.qosAdaptiveBandwidthDownstream;
         this.qosAdaptiveBandwidthUpstream = $.qosAdaptiveBandwidthUpstream;
@@ -3755,6 +3970,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         this.qosAdaptivePeriodVariable = $.qosAdaptivePeriodVariable;
         this.qosShapingRate = $.qosShapingRate;
         this.qosShapingRateVariable = $.qosShapingRateVariable;
+        this.securityGroupTag = $.securityGroupTag;
+        this.securityGroupTagVariable = $.securityGroupTagVariable;
         this.serviceProvider = $.serviceProvider;
         this.serviceProviderVariable = $.serviceProviderVariable;
         this.shutdown = $.shutdown;
@@ -3770,6 +3987,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         this.tracker = $.tracker;
         this.trackerVariable = $.trackerVariable;
         this.transportWanVpnFeatureId = $.transportWanVpnFeatureId;
+        this.trusted = $.trusted;
         this.tunnelBandwidthPercent = $.tunnelBandwidthPercent;
         this.tunnelBandwidthPercentVariable = $.tunnelBandwidthPercentVariable;
         this.tunnelInterface = $.tunnelInterface;
@@ -3810,6 +4028,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         this.tunnelInterfaceClearDontFragment = $.tunnelInterfaceClearDontFragment;
         this.tunnelInterfaceClearDontFragmentVariable = $.tunnelInterfaceClearDontFragmentVariable;
         this.tunnelInterfaceColor = $.tunnelInterfaceColor;
+        this.tunnelInterfaceColorDescription = $.tunnelInterfaceColorDescription;
+        this.tunnelInterfaceColorDescriptionVariable = $.tunnelInterfaceColorDescriptionVariable;
         this.tunnelInterfaceColorRestrict = $.tunnelInterfaceColorRestrict;
         this.tunnelInterfaceColorRestrictVariable = $.tunnelInterfaceColorRestrictVariable;
         this.tunnelInterfaceColorVariable = $.tunnelInterfaceColorVariable;
@@ -3818,6 +4038,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         this.tunnelInterfaceEncapsulations = $.tunnelInterfaceEncapsulations;
         this.tunnelInterfaceExcludeControllerGroupListVariable = $.tunnelInterfaceExcludeControllerGroupListVariable;
         this.tunnelInterfaceExcludeControllerGroupLists = $.tunnelInterfaceExcludeControllerGroupLists;
+        this.tunnelInterfaceFullPortHop = $.tunnelInterfaceFullPortHop;
+        this.tunnelInterfaceFullPortHopVariable = $.tunnelInterfaceFullPortHopVariable;
         this.tunnelInterfaceGreTunnelDestinationIp = $.tunnelInterfaceGreTunnelDestinationIp;
         this.tunnelInterfaceGreTunnelDestinationIpVariable = $.tunnelInterfaceGreTunnelDestinationIpVariable;
         this.tunnelInterfaceGroups = $.tunnelInterfaceGroups;
@@ -4285,6 +4507,117 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
          */
         public Builder enableDhcpv6(Boolean enableDhcpv6) {
             return enableDhcpv6(Output.of(enableDhcpv6));
+        }
+
+        /**
+         * @param enableEnforcedPropagation Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableEnforcedPropagation(@Nullable Output<Boolean> enableEnforcedPropagation) {
+            $.enableEnforcedPropagation = enableEnforcedPropagation;
+            return this;
+        }
+
+        /**
+         * @param enableEnforcedPropagation Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableEnforcedPropagation(Boolean enableEnforcedPropagation) {
+            return enableEnforcedPropagation(Output.of(enableEnforcedPropagation));
+        }
+
+        /**
+         * @param enableHaInterlinkInterface HA Interlink interface on/off, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableHaInterlinkInterface(@Nullable Output<Boolean> enableHaInterlinkInterface) {
+            $.enableHaInterlinkInterface = enableHaInterlinkInterface;
+            return this;
+        }
+
+        /**
+         * @param enableHaInterlinkInterface HA Interlink interface on/off, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableHaInterlinkInterface(Boolean enableHaInterlinkInterface) {
+            return enableHaInterlinkInterface(Output.of(enableHaInterlinkInterface));
+        }
+
+        /**
+         * @param enableSgtPropagation Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableSgtPropagation(@Nullable Output<Boolean> enableSgtPropagation) {
+            $.enableSgtPropagation = enableSgtPropagation;
+            return this;
+        }
+
+        /**
+         * @param enableSgtPropagation Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableSgtPropagation(Boolean enableSgtPropagation) {
+            return enableSgtPropagation(Output.of(enableSgtPropagation));
+        }
+
+        /**
+         * @param enforcedSecurityGroupTag SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         *   - Range: `2`-`65519`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enforcedSecurityGroupTag(@Nullable Output<Integer> enforcedSecurityGroupTag) {
+            $.enforcedSecurityGroupTag = enforcedSecurityGroupTag;
+            return this;
+        }
+
+        /**
+         * @param enforcedSecurityGroupTag SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         *   - Range: `2`-`65519`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enforcedSecurityGroupTag(Integer enforcedSecurityGroupTag) {
+            return enforcedSecurityGroupTag(Output.of(enforcedSecurityGroupTag));
+        }
+
+        /**
+         * @param enforcedSecurityGroupTagVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enforcedSecurityGroupTagVariable(@Nullable Output<String> enforcedSecurityGroupTagVariable) {
+            $.enforcedSecurityGroupTagVariable = enforcedSecurityGroupTagVariable;
+            return this;
+        }
+
+        /**
+         * @param enforcedSecurityGroupTagVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enforcedSecurityGroupTagVariable(String enforcedSecurityGroupTagVariable) {
+            return enforcedSecurityGroupTagVariable(Output.of(enforcedSecurityGroupTagVariable));
         }
 
         /**
@@ -6395,6 +6728,29 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
+         * @param propagate Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         *   - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder propagate(@Nullable Output<Boolean> propagate) {
+            $.propagate = propagate;
+            return this;
+        }
+
+        /**
+         * @param propagate Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         *   - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder propagate(Boolean propagate) {
+            return propagate(Output.of(propagate));
+        }
+
+        /**
          * @param qosAdaptive Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
@@ -6818,6 +7174,50 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
+         * @param securityGroupTag SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         *   - Range: `2`-`65519`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityGroupTag(@Nullable Output<Integer> securityGroupTag) {
+            $.securityGroupTag = securityGroupTag;
+            return this;
+        }
+
+        /**
+         * @param securityGroupTag SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         *   - Range: `2`-`65519`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityGroupTag(Integer securityGroupTag) {
+            return securityGroupTag(Output.of(securityGroupTag));
+        }
+
+        /**
+         * @param securityGroupTagVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityGroupTagVariable(@Nullable Output<String> securityGroupTagVariable) {
+            $.securityGroupTagVariable = securityGroupTagVariable;
+            return this;
+        }
+
+        /**
+         * @param securityGroupTagVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityGroupTagVariable(String securityGroupTagVariable) {
+            return securityGroupTagVariable(Output.of(securityGroupTagVariable));
+        }
+
+        /**
          * @param serviceProvider Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
@@ -7154,6 +7554,29 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
          */
         public Builder transportWanVpnFeatureId(String transportWanVpnFeatureId) {
             return transportWanVpnFeatureId(Output.of(transportWanVpnFeatureId));
+        }
+
+        /**
+         * @param trusted Indicates that the interface is trustworthy for CTS., Attribute conditional on (`securityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`securityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+         *   - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trusted(@Nullable Output<Boolean> trusted) {
+            $.trusted = trusted;
+            return this;
+        }
+
+        /**
+         * @param trusted Indicates that the interface is trustworthy for CTS., Attribute conditional on (`securityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`securityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+         *   - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trusted(Boolean trusted) {
+            return trusted(Output.of(trusted));
         }
 
         /**
@@ -8043,6 +8466,48 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
+         * @param tunnelInterfaceColorDescription Set color description for TLOC, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceColorDescription(@Nullable Output<String> tunnelInterfaceColorDescription) {
+            $.tunnelInterfaceColorDescription = tunnelInterfaceColorDescription;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceColorDescription Set color description for TLOC, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceColorDescription(String tunnelInterfaceColorDescription) {
+            return tunnelInterfaceColorDescription(Output.of(tunnelInterfaceColorDescription));
+        }
+
+        /**
+         * @param tunnelInterfaceColorDescriptionVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceColorDescriptionVariable(@Nullable Output<String> tunnelInterfaceColorDescriptionVariable) {
+            $.tunnelInterfaceColorDescriptionVariable = tunnelInterfaceColorDescriptionVariable;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceColorDescriptionVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceColorDescriptionVariable(String tunnelInterfaceColorDescriptionVariable) {
+            return tunnelInterfaceColorDescriptionVariable(Output.of(tunnelInterfaceColorDescriptionVariable));
+        }
+
+        /**
          * @param tunnelInterfaceColorRestrict Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
@@ -8232,6 +8697,50 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
          */
         public Builder tunnelInterfaceExcludeControllerGroupLists(Integer... tunnelInterfaceExcludeControllerGroupLists) {
             return tunnelInterfaceExcludeControllerGroupLists(List.of(tunnelInterfaceExcludeControllerGroupLists));
+        }
+
+        /**
+         * @param tunnelInterfaceFullPortHop Enable port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceFullPortHop(@Nullable Output<Boolean> tunnelInterfaceFullPortHop) {
+            $.tunnelInterfaceFullPortHop = tunnelInterfaceFullPortHop;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceFullPortHop Enable port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceFullPortHop(Boolean tunnelInterfaceFullPortHop) {
+            return tunnelInterfaceFullPortHop(Output.of(tunnelInterfaceFullPortHop));
+        }
+
+        /**
+         * @param tunnelInterfaceFullPortHopVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceFullPortHopVariable(@Nullable Output<String> tunnelInterfaceFullPortHopVariable) {
+            $.tunnelInterfaceFullPortHopVariable = tunnelInterfaceFullPortHopVariable;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceFullPortHopVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceFullPortHopVariable(String tunnelInterfaceFullPortHopVariable) {
+            return tunnelInterfaceFullPortHopVariable(Output.of(tunnelInterfaceFullPortHopVariable));
         }
 
         /**
@@ -8635,7 +9144,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
+         * @param tunnelInterfacePortHop The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -8647,7 +9156,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
+         * @param tunnelInterfacePortHop The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `true`
          * 
          * @return builder

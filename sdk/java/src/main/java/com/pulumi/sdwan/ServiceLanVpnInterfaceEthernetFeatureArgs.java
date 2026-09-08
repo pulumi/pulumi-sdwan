@@ -1733,6 +1733,23 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
+     * Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsecSecurityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsecSecurityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+     *   - Default value: `true`
+     * 
+     */
+    @Import(name="trustsecTrusted")
+    private @Nullable Output<Boolean> trustsecTrusted;
+
+    /**
+     * @return Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsecSecurityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsecSecurityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+     *   - Default value: `true`
+     * 
+     */
+    public Optional<Output<Boolean>> trustsecTrusted() {
+        return Optional.ofNullable(this.trustsecTrusted);
+    }
+
+    /**
      * Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
@@ -1876,6 +1893,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         this.trustsecPropogate = $.trustsecPropogate;
         this.trustsecSecurityGroupTag = $.trustsecSecurityGroupTag;
         this.trustsecSecurityGroupTagVariable = $.trustsecSecurityGroupTagVariable;
+        this.trustsecTrusted = $.trustsecTrusted;
         this.xconnect = $.xconnect;
         this.xconnectVariable = $.xconnectVariable;
     }
@@ -4351,6 +4369,29 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
          */
         public Builder trustsecSecurityGroupTagVariable(String trustsecSecurityGroupTagVariable) {
             return trustsecSecurityGroupTagVariable(Output.of(trustsecSecurityGroupTagVariable));
+        }
+
+        /**
+         * @param trustsecTrusted Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsecSecurityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsecSecurityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+         *   - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecTrusted(@Nullable Output<Boolean> trustsecTrusted) {
+            $.trustsecTrusted = trustsecTrusted;
+            return this;
+        }
+
+        /**
+         * @param trustsecTrusted Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsecSecurityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsecSecurityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+         *   - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecTrusted(Boolean trustsecTrusted) {
+            return trustsecTrusted(Output.of(trustsecTrusted));
         }
 
         /**

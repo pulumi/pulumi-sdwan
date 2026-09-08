@@ -12,6 +12,16 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceMulticastFeatureAutoRpAnnounce {
     /**
+     * @return Set IP Access List for PIM RP Announce
+     * 
+     */
+    private String accessListId;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String accessListIdVariable;
+    /**
      * @return Set RP Announce Interface Name
      * 
      */
@@ -21,6 +31,16 @@ public final class GetServiceMulticastFeatureAutoRpAnnounce {
      * 
      */
     private String interfaceNameVariable;
+    /**
+     * @return Set RP Announce interval
+     * 
+     */
+    private Integer interval;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String intervalVariable;
     /**
      * @return Set RP Announce Scope
      * 
@@ -34,6 +54,20 @@ public final class GetServiceMulticastFeatureAutoRpAnnounce {
 
     private GetServiceMulticastFeatureAutoRpAnnounce() {}
     /**
+     * @return Set IP Access List for PIM RP Announce
+     * 
+     */
+    public String accessListId() {
+        return this.accessListId;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String accessListIdVariable() {
+        return this.accessListIdVariable;
+    }
+    /**
      * @return Set RP Announce Interface Name
      * 
      */
@@ -46,6 +80,20 @@ public final class GetServiceMulticastFeatureAutoRpAnnounce {
      */
     public String interfaceNameVariable() {
         return this.interfaceNameVariable;
+    }
+    /**
+     * @return Set RP Announce interval
+     * 
+     */
+    public Integer interval() {
+        return this.interval;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String intervalVariable() {
+        return this.intervalVariable;
     }
     /**
      * @return Set RP Announce Scope
@@ -71,19 +119,43 @@ public final class GetServiceMulticastFeatureAutoRpAnnounce {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String accessListId;
+        private String accessListIdVariable;
         private String interfaceName;
         private String interfaceNameVariable;
+        private Integer interval;
+        private String intervalVariable;
         private Integer scope;
         private String scopeVariable;
         public Builder() {}
         public Builder(GetServiceMulticastFeatureAutoRpAnnounce defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.accessListId = defaults.accessListId;
+    	      this.accessListIdVariable = defaults.accessListIdVariable;
     	      this.interfaceName = defaults.interfaceName;
     	      this.interfaceNameVariable = defaults.interfaceNameVariable;
+    	      this.interval = defaults.interval;
+    	      this.intervalVariable = defaults.intervalVariable;
     	      this.scope = defaults.scope;
     	      this.scopeVariable = defaults.scopeVariable;
         }
 
+        @CustomType.Setter
+        public Builder accessListId(String accessListId) {
+            if (accessListId == null) {
+              throw new MissingRequiredPropertyException("GetServiceMulticastFeatureAutoRpAnnounce", "accessListId");
+            }
+            this.accessListId = accessListId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder accessListIdVariable(String accessListIdVariable) {
+            if (accessListIdVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceMulticastFeatureAutoRpAnnounce", "accessListIdVariable");
+            }
+            this.accessListIdVariable = accessListIdVariable;
+            return this;
+        }
         @CustomType.Setter
         public Builder interfaceName(String interfaceName) {
             if (interfaceName == null) {
@@ -98,6 +170,22 @@ public final class GetServiceMulticastFeatureAutoRpAnnounce {
               throw new MissingRequiredPropertyException("GetServiceMulticastFeatureAutoRpAnnounce", "interfaceNameVariable");
             }
             this.interfaceNameVariable = interfaceNameVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder interval(Integer interval) {
+            if (interval == null) {
+              throw new MissingRequiredPropertyException("GetServiceMulticastFeatureAutoRpAnnounce", "interval");
+            }
+            this.interval = interval;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder intervalVariable(String intervalVariable) {
+            if (intervalVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceMulticastFeatureAutoRpAnnounce", "intervalVariable");
+            }
+            this.intervalVariable = intervalVariable;
             return this;
         }
         @CustomType.Setter
@@ -118,8 +206,12 @@ public final class GetServiceMulticastFeatureAutoRpAnnounce {
         }
         public GetServiceMulticastFeatureAutoRpAnnounce build() {
             final var _resultValue = new GetServiceMulticastFeatureAutoRpAnnounce();
+            _resultValue.accessListId = accessListId;
+            _resultValue.accessListIdVariable = accessListIdVariable;
             _resultValue.interfaceName = interfaceName;
             _resultValue.interfaceNameVariable = interfaceNameVariable;
+            _resultValue.interval = interval;
+            _resultValue.intervalVariable = intervalVariable;
             _resultValue.scope = scope;
             _resultValue.scopeVariable = scopeVariable;
             return _resultValue;

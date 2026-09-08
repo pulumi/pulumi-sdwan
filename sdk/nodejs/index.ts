@@ -1075,6 +1075,11 @@ export const getServiceDhcpServerFeature: typeof import("./getServiceDhcpServerF
 export const getServiceDhcpServerFeatureOutput: typeof import("./getServiceDhcpServerFeature").getServiceDhcpServerFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getServiceDhcpServerFeature","getServiceDhcpServerFeatureOutput"], () => require("./getServiceDhcpServerFeature"));
 
+export { GetServiceDualRouterHaFeatureArgs, GetServiceDualRouterHaFeatureResult, GetServiceDualRouterHaFeatureOutputArgs } from "./getServiceDualRouterHaFeature";
+export const getServiceDualRouterHaFeature: typeof import("./getServiceDualRouterHaFeature").getServiceDualRouterHaFeature = null as any;
+export const getServiceDualRouterHaFeatureOutput: typeof import("./getServiceDualRouterHaFeature").getServiceDualRouterHaFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceDualRouterHaFeature","getServiceDualRouterHaFeatureOutput"], () => require("./getServiceDualRouterHaFeature"));
+
 export { GetServiceFeatureProfileArgs, GetServiceFeatureProfileResult, GetServiceFeatureProfileOutputArgs } from "./getServiceFeatureProfile";
 export const getServiceFeatureProfile: typeof import("./getServiceFeatureProfile").getServiceFeatureProfile = null as any;
 export const getServiceFeatureProfileOutput: typeof import("./getServiceFeatureProfile").getServiceFeatureProfileOutput = null as any;
@@ -2033,6 +2038,11 @@ export type ServiceDhcpServerFeature = import("./serviceDhcpServerFeature").Serv
 export const ServiceDhcpServerFeature: typeof import("./serviceDhcpServerFeature").ServiceDhcpServerFeature = null as any;
 utilities.lazyLoad(exports, ["ServiceDhcpServerFeature"], () => require("./serviceDhcpServerFeature"));
 
+export { ServiceDualRouterHaFeatureArgs, ServiceDualRouterHaFeatureState } from "./serviceDualRouterHaFeature";
+export type ServiceDualRouterHaFeature = import("./serviceDualRouterHaFeature").ServiceDualRouterHaFeature;
+export const ServiceDualRouterHaFeature: typeof import("./serviceDualRouterHaFeature").ServiceDualRouterHaFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceDualRouterHaFeature"], () => require("./serviceDualRouterHaFeature"));
+
 export { ServiceFeatureProfileArgs, ServiceFeatureProfileState } from "./serviceFeatureProfile";
 export type ServiceFeatureProfile = import("./serviceFeatureProfile").ServiceFeatureProfile;
 export const ServiceFeatureProfile: typeof import("./serviceFeatureProfile").ServiceFeatureProfile = null as any;
@@ -2920,6 +2930,8 @@ const _module = {
                 return new SecurityPolicy(name, <any>undefined, { urn })
             case "sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature":
                 return new ServiceDhcpServerFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceDualRouterHaFeature:ServiceDualRouterHaFeature":
+                return new ServiceDualRouterHaFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceFeatureProfile:ServiceFeatureProfile":
                 return new ServiceFeatureProfile(name, <any>undefined, { urn })
             case "sdwan:index/serviceIpv4AclFeature:ServiceIpv4AclFeature":
@@ -3303,6 +3315,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/ruleSetPolicyDefinition", 
 pulumi.runtime.registerResourceModule("sdwan", "index/securityAppHostingFeatureTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/securityPolicy", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceDhcpServerFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceDualRouterHaFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceIpv4AclFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceIpv6AclFeature", _module)

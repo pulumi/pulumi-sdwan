@@ -279,6 +279,8 @@ type LookupServiceLanVpnInterfaceEthernetFeatureResult struct {
 	TrustsecSecurityGroupTag int `pulumi:"trustsecSecurityGroupTag"`
 	// Variable name
 	TrustsecSecurityGroupTagVariable string `pulumi:"trustsecSecurityGroupTagVariable"`
+	// Indicates that the interface is trustworthy for CTS.
+	TrustsecTrusted bool `pulumi:"trustsecTrusted"`
 	// The version of the Feature
 	Version int `pulumi:"version"`
 	// Extend remote TLOC over a GRE tunnel to a local LAN interface
@@ -926,6 +928,11 @@ func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) TrustsecSecurit
 	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string {
 		return v.TrustsecSecurityGroupTagVariable
 	}).(pulumi.StringOutput)
+}
+
+// Indicates that the interface is trustworthy for CTS.
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) TrustsecTrusted() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) bool { return v.TrustsecTrusted }).(pulumi.BoolOutput)
 }
 
 // The version of the Feature

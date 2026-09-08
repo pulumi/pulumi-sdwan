@@ -525,7 +525,7 @@ public final class ServiceSwitchportFeatureInterfaceArgs extends com.pulumi.reso
 
     /**
      * Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
      * 
      */
     @Import(name="speed")
@@ -533,7 +533,7 @@ public final class ServiceSwitchportFeatureInterfaceArgs extends com.pulumi.reso
 
     /**
      * @return Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
      * 
      */
     public Optional<Output<String>> speed() {
@@ -1446,7 +1446,7 @@ public final class ServiceSwitchportFeatureInterfaceArgs extends com.pulumi.reso
 
         /**
          * @param speed Set interface speed
-         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+         *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
          * 
          * @return builder
          * 
@@ -1458,7 +1458,7 @@ public final class ServiceSwitchportFeatureInterfaceArgs extends com.pulumi.reso
 
         /**
          * @param speed Set interface speed
-         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+         *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
          * 
          * @return builder
          * 

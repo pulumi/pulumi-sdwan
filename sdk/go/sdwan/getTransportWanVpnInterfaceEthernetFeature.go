@@ -102,6 +102,16 @@ type LookupTransportWanVpnInterfaceEthernetFeatureResult struct {
 	DuplexVariable string `pulumi:"duplexVariable"`
 	// Enable DHCPv6
 	EnableDhcpv6 bool `pulumi:"enableDhcpv6"`
+	// Enable/Disable SGT Enforcement on an interface
+	EnableEnforcedPropagation bool `pulumi:"enableEnforcedPropagation"`
+	// HA Interlink interface on/off
+	EnableHaInterlinkInterface bool `pulumi:"enableHaInterlinkInterface"`
+	// Indicates that the interface is trustworthy for CTS
+	EnableSgtPropagation bool `pulumi:"enableSgtPropagation"`
+	// SGT value between 2 and 65519
+	EnforcedSecurityGroupTag int `pulumi:"enforcedSecurityGroupTag"`
+	// Variable name
+	EnforcedSecurityGroupTagVariable string `pulumi:"enforcedSecurityGroupTagVariable"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// GRE tunnel source IP
@@ -287,6 +297,8 @@ type LookupTransportWanVpnInterfaceEthernetFeatureResult struct {
 	// Variable name
 	PortChannelStaticQosAggregateVariable string `pulumi:"portChannelStaticQosAggregateVariable"`
 	PortChannelSubinterface               bool   `pulumi:"portChannelSubinterface"`
+	// Enables the interface for CTS SGT authorization and forwarding
+	Propagate bool `pulumi:"propagate"`
 	// Adaptive QoS
 	QosAdaptive bool `pulumi:"qosAdaptive"`
 	// Shaping Rate Downstream
@@ -325,6 +337,10 @@ type LookupTransportWanVpnInterfaceEthernetFeatureResult struct {
 	QosShapingRate int `pulumi:"qosShapingRate"`
 	// Variable name
 	QosShapingRateVariable string `pulumi:"qosShapingRateVariable"`
+	// SGT value between 2 and 65519
+	SecurityGroupTag int `pulumi:"securityGroupTag"`
+	// Variable name
+	SecurityGroupTagVariable string `pulumi:"securityGroupTagVariable"`
 	// Service Provider Name
 	ServiceProvider string `pulumi:"serviceProvider"`
 	// Variable name
@@ -354,6 +370,8 @@ type LookupTransportWanVpnInterfaceEthernetFeatureResult struct {
 	TrackerVariable string `pulumi:"trackerVariable"`
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId string `pulumi:"transportWanVpnFeatureId"`
+	// Indicates that the interface is trustworthy for CTS.
+	Trusted bool `pulumi:"trusted"`
 	// Tunnels Bandwidth Percent
 	TunnelBandwidthPercent int `pulumi:"tunnelBandwidthPercent"`
 	// Variable name
@@ -434,6 +452,10 @@ type LookupTransportWanVpnInterfaceEthernetFeatureResult struct {
 	TunnelInterfaceClearDontFragmentVariable string `pulumi:"tunnelInterfaceClearDontFragmentVariable"`
 	// Set color for TLOC
 	TunnelInterfaceColor string `pulumi:"tunnelInterfaceColor"`
+	// Set color description for TLOC
+	TunnelInterfaceColorDescription string `pulumi:"tunnelInterfaceColorDescription"`
+	// Variable name
+	TunnelInterfaceColorDescriptionVariable string `pulumi:"tunnelInterfaceColorDescriptionVariable"`
 	// Restrict this TLOC behavior
 	TunnelInterfaceColorRestrict bool `pulumi:"tunnelInterfaceColorRestrict"`
 	// Variable name
@@ -450,6 +472,10 @@ type LookupTransportWanVpnInterfaceEthernetFeatureResult struct {
 	TunnelInterfaceExcludeControllerGroupListVariable string `pulumi:"tunnelInterfaceExcludeControllerGroupListVariable"`
 	// Exclude the following controller groups defined in this list.
 	TunnelInterfaceExcludeControllerGroupLists []int `pulumi:"tunnelInterfaceExcludeControllerGroupLists"`
+	// Enable port hopping on the tunnel interface
+	TunnelInterfaceFullPortHop bool `pulumi:"tunnelInterfaceFullPortHop"`
+	// Variable name
+	TunnelInterfaceFullPortHopVariable string `pulumi:"tunnelInterfaceFullPortHopVariable"`
 	// GRE tunnel destination IP
 	TunnelInterfaceGreTunnelDestinationIp string `pulumi:"tunnelInterfaceGreTunnelDestinationIp"`
 	// Variable name
@@ -486,7 +512,7 @@ type LookupTransportWanVpnInterfaceEthernetFeatureResult struct {
 	TunnelInterfaceNetworkBroadcast bool `pulumi:"tunnelInterfaceNetworkBroadcast"`
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable string `pulumi:"tunnelInterfaceNetworkBroadcastVariable"`
-	// Disallow port hopping on the tunnel interface
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
 	TunnelInterfacePortHop bool `pulumi:"tunnelInterfacePortHop"`
 	// Variable name
 	TunnelInterfacePortHopVariable string `pulumi:"tunnelInterfacePortHopVariable"`
@@ -659,6 +685,33 @@ func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) DuplexVariabl
 // Enable DHCPv6
 func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) EnableDhcpv6() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) bool { return v.EnableDhcpv6 }).(pulumi.BoolOutput)
+}
+
+// Enable/Disable SGT Enforcement on an interface
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) EnableEnforcedPropagation() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) bool { return v.EnableEnforcedPropagation }).(pulumi.BoolOutput)
+}
+
+// HA Interlink interface on/off
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) EnableHaInterlinkInterface() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) bool { return v.EnableHaInterlinkInterface }).(pulumi.BoolOutput)
+}
+
+// Indicates that the interface is trustworthy for CTS
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) EnableSgtPropagation() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) bool { return v.EnableSgtPropagation }).(pulumi.BoolOutput)
+}
+
+// SGT value between 2 and 65519
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) EnforcedSecurityGroupTag() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) int { return v.EnforcedSecurityGroupTag }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) EnforcedSecurityGroupTagVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string {
+		return v.EnforcedSecurityGroupTagVariable
+	}).(pulumi.StringOutput)
 }
 
 // Feature Profile ID
@@ -1172,6 +1225,11 @@ func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) PortChannelSu
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) bool { return v.PortChannelSubinterface }).(pulumi.BoolOutput)
 }
 
+// Enables the interface for CTS SGT authorization and forwarding
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) Propagate() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) bool { return v.Propagate }).(pulumi.BoolOutput)
+}
+
 // Adaptive QoS
 func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) QosAdaptive() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) bool { return v.QosAdaptive }).(pulumi.BoolOutput)
@@ -1283,6 +1341,16 @@ func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) QosShapingRat
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string { return v.QosShapingRateVariable }).(pulumi.StringOutput)
 }
 
+// SGT value between 2 and 65519
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) SecurityGroupTag() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) int { return v.SecurityGroupTag }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) SecurityGroupTagVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string { return v.SecurityGroupTagVariable }).(pulumi.StringOutput)
+}
+
 // Service Provider Name
 func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) ServiceProvider() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string { return v.ServiceProvider }).(pulumi.StringOutput)
@@ -1359,6 +1427,11 @@ func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) TrackerVariab
 // Transport WAN VPN Feature ID
 func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) TransportWanVpnFeatureId() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string { return v.TransportWanVpnFeatureId }).(pulumi.StringOutput)
+}
+
+// Indicates that the interface is trustworthy for CTS.
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) Trusted() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) bool { return v.Trusted }).(pulumi.BoolOutput)
 }
 
 // Tunnels Bandwidth Percent
@@ -1605,6 +1678,20 @@ func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) TunnelInterfa
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string { return v.TunnelInterfaceColor }).(pulumi.StringOutput)
 }
 
+// Set color description for TLOC
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) TunnelInterfaceColorDescription() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string {
+		return v.TunnelInterfaceColorDescription
+	}).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) TunnelInterfaceColorDescriptionVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string {
+		return v.TunnelInterfaceColorDescriptionVariable
+	}).(pulumi.StringOutput)
+}
+
 // Restrict this TLOC behavior
 func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) TunnelInterfaceColorRestrict() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) bool {
@@ -1659,6 +1746,18 @@ func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) TunnelInterfa
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) []int {
 		return v.TunnelInterfaceExcludeControllerGroupLists
 	}).(pulumi.IntArrayOutput)
+}
+
+// Enable port hopping on the tunnel interface
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) TunnelInterfaceFullPortHop() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) bool { return v.TunnelInterfaceFullPortHop }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) TunnelInterfaceFullPortHopVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string {
+		return v.TunnelInterfaceFullPortHopVariable
+	}).(pulumi.StringOutput)
 }
 
 // GRE tunnel destination IP
@@ -1783,7 +1882,7 @@ func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) TunnelInterfa
 	}).(pulumi.StringOutput)
 }
 
-// Disallow port hopping on the tunnel interface
+// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
 func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) TunnelInterfacePortHop() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) bool { return v.TunnelInterfacePortHop }).(pulumi.BoolOutput)
 }

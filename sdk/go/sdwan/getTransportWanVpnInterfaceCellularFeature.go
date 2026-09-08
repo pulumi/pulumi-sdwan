@@ -261,7 +261,10 @@ type LookupTransportWanVpnInterfaceCellularFeatureResult struct {
 	// Variable name
 	TunnelInterfaceClearDontFragmentVariable string `pulumi:"tunnelInterfaceClearDontFragmentVariable"`
 	// Set color for TLOC
-	TunnelInterfaceColor string `pulumi:"tunnelInterfaceColor"`
+	TunnelInterfaceColor            string `pulumi:"tunnelInterfaceColor"`
+	TunnelInterfaceColorDescription string `pulumi:"tunnelInterfaceColorDescription"`
+	// Variable name
+	TunnelInterfaceColorDescriptionVariable string `pulumi:"tunnelInterfaceColorDescriptionVariable"`
 	// Restrict this TLOC behavior
 	TunnelInterfaceColorRestrict bool `pulumi:"tunnelInterfaceColorRestrict"`
 	// Variable name
@@ -274,6 +277,10 @@ type LookupTransportWanVpnInterfaceCellularFeatureResult struct {
 	TunnelInterfaceExcludeControllerGroupListVariable string `pulumi:"tunnelInterfaceExcludeControllerGroupListVariable"`
 	// Exclude the following controller groups defined in this list.
 	TunnelInterfaceExcludeControllerGroupLists []int `pulumi:"tunnelInterfaceExcludeControllerGroupLists"`
+	// Enable port hopping on the tunnel interface
+	TunnelInterfaceFullPortHop bool `pulumi:"tunnelInterfaceFullPortHop"`
+	// Variable name
+	TunnelInterfaceFullPortHopVariable string `pulumi:"tunnelInterfaceFullPortHopVariable"`
 	// List of groups
 	TunnelInterfaceGroups int `pulumi:"tunnelInterfaceGroups"`
 	// Variable name
@@ -306,7 +313,7 @@ type LookupTransportWanVpnInterfaceCellularFeatureResult struct {
 	TunnelInterfaceNetworkBroadcast bool `pulumi:"tunnelInterfaceNetworkBroadcast"`
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable string `pulumi:"tunnelInterfaceNetworkBroadcastVariable"`
-	// Disallow port hopping on the tunnel interface
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
 	TunnelInterfacePortHop bool `pulumi:"tunnelInterfacePortHop"`
 	// Variable name
 	TunnelInterfacePortHopVariable string `pulumi:"tunnelInterfacePortHopVariable"`
@@ -935,6 +942,19 @@ func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) TunnelInterfa
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) string { return v.TunnelInterfaceColor }).(pulumi.StringOutput)
 }
 
+func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) TunnelInterfaceColorDescription() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) string {
+		return v.TunnelInterfaceColorDescription
+	}).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) TunnelInterfaceColorDescriptionVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) string {
+		return v.TunnelInterfaceColorDescriptionVariable
+	}).(pulumi.StringOutput)
+}
+
 // Restrict this TLOC behavior
 func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) TunnelInterfaceColorRestrict() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) bool {
@@ -975,6 +995,18 @@ func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) TunnelInterfa
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) []int {
 		return v.TunnelInterfaceExcludeControllerGroupLists
 	}).(pulumi.IntArrayOutput)
+}
+
+// Enable port hopping on the tunnel interface
+func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) TunnelInterfaceFullPortHop() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) bool { return v.TunnelInterfaceFullPortHop }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) TunnelInterfaceFullPortHopVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) string {
+		return v.TunnelInterfaceFullPortHopVariable
+	}).(pulumi.StringOutput)
 }
 
 // List of groups
@@ -1085,7 +1117,7 @@ func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) TunnelInterfa
 	}).(pulumi.StringOutput)
 }
 
-// Disallow port hopping on the tunnel interface
+// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
 func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) TunnelInterfacePortHop() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) bool { return v.TunnelInterfacePortHop }).(pulumi.BoolOutput)
 }

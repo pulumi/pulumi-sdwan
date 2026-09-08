@@ -26,7 +26,7 @@ class GetTransportCellularProfileFeatureResult:
     """
     A collection of values returned by getTransportCellularProfileFeature.
     """
-    def __init__(__self__, access_point_name=None, access_point_name_variable=None, authentication_type=None, authentication_type_variable=None, description=None, feature_profile_id=None, id=None, name=None, no_overwrite=None, no_overwrite_variable=None, packet_data_network_type=None, packet_data_network_type_variable=None, profile_id=None, profile_id_variable=None, profile_password=None, profile_password_variable=None, profile_username=None, profile_username_variable=None, requires_authentication=None, version=None):
+    def __init__(__self__, access_point_name=None, access_point_name_variable=None, authentication_type=None, authentication_type_variable=None, description=None, feature_profile_id=None, id=None, name=None, no_overwrite=None, no_overwrite_variable=None, packet_data_network_type=None, packet_data_network_type_variable=None, profile_id=None, profile_id_variable=None, profile_password=None, profile_password_variable=None, profile_username=None, profile_username_variable=None, requires_authentication=None, slice_differentiator=None, slice_differentiator_variable=None, slice_type=None, slice_type_variable=None, version=None):
         if access_point_name and not isinstance(access_point_name, str):
             raise TypeError("Expected argument 'access_point_name' to be a str")
         pulumi.set(__self__, "access_point_name", access_point_name)
@@ -84,6 +84,18 @@ class GetTransportCellularProfileFeatureResult:
         if requires_authentication and not isinstance(requires_authentication, bool):
             raise TypeError("Expected argument 'requires_authentication' to be a bool")
         pulumi.set(__self__, "requires_authentication", requires_authentication)
+        if slice_differentiator and not isinstance(slice_differentiator, int):
+            raise TypeError("Expected argument 'slice_differentiator' to be a int")
+        pulumi.set(__self__, "slice_differentiator", slice_differentiator)
+        if slice_differentiator_variable and not isinstance(slice_differentiator_variable, str):
+            raise TypeError("Expected argument 'slice_differentiator_variable' to be a str")
+        pulumi.set(__self__, "slice_differentiator_variable", slice_differentiator_variable)
+        if slice_type and not isinstance(slice_type, int):
+            raise TypeError("Expected argument 'slice_type' to be a int")
+        pulumi.set(__self__, "slice_type", slice_type)
+        if slice_type_variable and not isinstance(slice_type_variable, str):
+            raise TypeError("Expected argument 'slice_type_variable' to be a str")
+        pulumi.set(__self__, "slice_type_variable", slice_type_variable)
         if version and not isinstance(version, int):
             raise TypeError("Expected argument 'version' to be a int")
         pulumi.set(__self__, "version", version)
@@ -241,6 +253,38 @@ class GetTransportCellularProfileFeatureResult:
         return pulumi.get(self, "requires_authentication")
 
     @_builtins.property
+    @pulumi.getter(name="sliceDifferentiator")
+    def slice_differentiator(self) -> _builtins.int:
+        """
+        S-NSSAI slice differentiator
+        """
+        return pulumi.get(self, "slice_differentiator")
+
+    @_builtins.property
+    @pulumi.getter(name="sliceDifferentiatorVariable")
+    def slice_differentiator_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "slice_differentiator_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="sliceType")
+    def slice_type(self) -> _builtins.int:
+        """
+        S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT)
+        """
+        return pulumi.get(self, "slice_type")
+
+    @_builtins.property
+    @pulumi.getter(name="sliceTypeVariable")
+    def slice_type_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "slice_type_variable")
+
+    @_builtins.property
     @pulumi.getter
     def version(self) -> _builtins.int:
         """
@@ -274,6 +318,10 @@ class AwaitableGetTransportCellularProfileFeatureResult(GetTransportCellularProf
             profile_username=self.profile_username,
             profile_username_variable=self.profile_username_variable,
             requires_authentication=self.requires_authentication,
+            slice_differentiator=self.slice_differentiator,
+            slice_differentiator_variable=self.slice_differentiator_variable,
+            slice_type=self.slice_type,
+            slice_type_variable=self.slice_type_variable,
             version=self.version)
 
 
@@ -326,6 +374,10 @@ def get_transport_cellular_profile_feature(feature_profile_id: Optional[_builtin
         profile_username=pulumi.get(__ret__, 'profile_username'),
         profile_username_variable=pulumi.get(__ret__, 'profile_username_variable'),
         requires_authentication=pulumi.get(__ret__, 'requires_authentication'),
+        slice_differentiator=pulumi.get(__ret__, 'slice_differentiator'),
+        slice_differentiator_variable=pulumi.get(__ret__, 'slice_differentiator_variable'),
+        slice_type=pulumi.get(__ret__, 'slice_type'),
+        slice_type_variable=pulumi.get(__ret__, 'slice_type_variable'),
         version=pulumi.get(__ret__, 'version'))
 def get_transport_cellular_profile_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                   id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
@@ -375,4 +427,8 @@ def get_transport_cellular_profile_feature_output(feature_profile_id: pulumi.Inp
         profile_username=pulumi.get(__response__, 'profile_username'),
         profile_username_variable=pulumi.get(__response__, 'profile_username_variable'),
         requires_authentication=pulumi.get(__response__, 'requires_authentication'),
+        slice_differentiator=pulumi.get(__response__, 'slice_differentiator'),
+        slice_differentiator_variable=pulumi.get(__response__, 'slice_differentiator_variable'),
+        slice_type=pulumi.get(__response__, 'slice_type'),
+        slice_type_variable=pulumi.get(__response__, 'slice_type_variable'),
         version=pulumi.get(__response__, 'version')))

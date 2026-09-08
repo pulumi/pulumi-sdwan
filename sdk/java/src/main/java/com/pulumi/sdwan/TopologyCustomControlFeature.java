@@ -57,8 +57,8 @@ import javax.annotation.Nullable;
  *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .defaultAction("reject")
  *             .targetLevel("SITE")
- *             .targetInboundSites("SITE_100")
- *             .targetOutboundSites("SITE_200")
+ *             .targetInboundHierarchyUuids("acb2ea53-4a95-4970-a1ab-9bac15edb961")
+ *             .targetOutboundHierarchyUuids("acb2ea53-4a95-4970-a1ab-9bac15edb961")
  *             .sequences(TopologyCustomControlFeatureSequenceArgs.builder()
  *                 .id(1)
  *                 .name("Rule1")
@@ -69,6 +69,7 @@ import javax.annotation.Nullable;
  *                     .ompTag(100)
  *                     .origin("connected")
  *                     .originator("1.2.3.4")
+ *                     .hierarchyUuids("c446d770-2ac0-4e2c-9a64-345d562a4ac7")
  *                     .tlocIp("1.2.3.4")
  *                     .tlocColor("bronze")
  *                     .tlocEncapsulation("ipsec")
@@ -173,6 +174,20 @@ public class TopologyCustomControlFeature extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.sequences);
     }
     /**
+     * Inbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetInboundSites` not being set and `targetOutboundSites` not being set
+     * 
+     */
+    @Export(name="targetInboundHierarchyUuids", refs={List.class,String.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<String>> targetInboundHierarchyUuids;
+
+    /**
+     * @return Inbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetInboundSites` not being set and `targetOutboundSites` not being set
+     * 
+     */
+    public Output<Optional<List<String>>> targetInboundHierarchyUuids() {
+        return Codegen.optional(this.targetInboundHierarchyUuids);
+    }
+    /**
      * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      * 
      */
@@ -187,14 +202,14 @@ public class TopologyCustomControlFeature extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.targetInboundRegions);
     }
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE`
+     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
      * 
      */
     @Export(name="targetInboundSites", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> targetInboundSites;
 
     /**
-     * @return , Attribute conditional on `targetLevel` equal to `SITE`
+     * @return , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
      * 
      */
     public Output<Optional<List<String>>> targetInboundSites() {
@@ -215,6 +230,20 @@ public class TopologyCustomControlFeature extends com.pulumi.resources.CustomRes
         return this.targetLevel;
     }
     /**
+     * Outbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetOutboundSites` not being set and `targetInboundSites` not being set
+     * 
+     */
+    @Export(name="targetOutboundHierarchyUuids", refs={List.class,String.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<String>> targetOutboundHierarchyUuids;
+
+    /**
+     * @return Outbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetOutboundSites` not being set and `targetInboundSites` not being set
+     * 
+     */
+    public Output<Optional<List<String>>> targetOutboundHierarchyUuids() {
+        return Codegen.optional(this.targetOutboundHierarchyUuids);
+    }
+    /**
      * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      * 
      */
@@ -229,14 +258,14 @@ public class TopologyCustomControlFeature extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.targetOutboundRegions);
     }
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE`
+     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
      * 
      */
     @Export(name="targetOutboundSites", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> targetOutboundSites;
 
     /**
-     * @return , Attribute conditional on `targetLevel` equal to `SITE`
+     * @return , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
      * 
      */
     public Output<Optional<List<String>>> targetOutboundSites() {

@@ -26,13 +26,16 @@ class GetTopologyMeshFeatureResult:
     """
     A collection of values returned by getTopologyMeshFeature.
     """
-    def __init__(__self__, description=None, feature_profile_id=None, id=None, name=None, sites=None, target_vpns=None, version=None):
+    def __init__(__self__, description=None, feature_profile_id=None, hierarchy_uuids=None, id=None, name=None, sites=None, target_vpns=None, version=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
         if feature_profile_id and not isinstance(feature_profile_id, str):
             raise TypeError("Expected argument 'feature_profile_id' to be a str")
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        if hierarchy_uuids and not isinstance(hierarchy_uuids, list):
+            raise TypeError("Expected argument 'hierarchy_uuids' to be a list")
+        pulumi.set(__self__, "hierarchy_uuids", hierarchy_uuids)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -66,6 +69,14 @@ class GetTopologyMeshFeatureResult:
         return pulumi.get(self, "feature_profile_id")
 
     @_builtins.property
+    @pulumi.getter(name="hierarchyUuids")
+    def hierarchy_uuids(self) -> Sequence[_builtins.str]:
+        """
+        Network hierarchy UUIDs
+        """
+        return pulumi.get(self, "hierarchy_uuids")
+
+    @_builtins.property
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
@@ -84,11 +95,17 @@ class GetTopologyMeshFeatureResult:
     @_builtins.property
     @pulumi.getter
     def sites(self) -> Sequence[_builtins.str]:
+        """
+        Site list
+        """
         return pulumi.get(self, "sites")
 
     @_builtins.property
     @pulumi.getter(name="targetVpns")
     def target_vpns(self) -> Sequence[_builtins.str]:
+        """
+        Target VPN list
+        """
         return pulumi.get(self, "target_vpns")
 
     @_builtins.property
@@ -108,6 +125,7 @@ class AwaitableGetTopologyMeshFeatureResult(GetTopologyMeshFeatureResult):
         return GetTopologyMeshFeatureResult(
             description=self.description,
             feature_profile_id=self.feature_profile_id,
+            hierarchy_uuids=self.hierarchy_uuids,
             id=self.id,
             name=self.name,
             sites=self.sites,
@@ -144,6 +162,7 @@ def get_topology_mesh_feature(feature_profile_id: Optional[_builtins.str] = None
     return AwaitableGetTopologyMeshFeatureResult(
         description=pulumi.get(__ret__, 'description'),
         feature_profile_id=pulumi.get(__ret__, 'feature_profile_id'),
+        hierarchy_uuids=pulumi.get(__ret__, 'hierarchy_uuids'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         sites=pulumi.get(__ret__, 'sites'),
@@ -177,6 +196,7 @@ def get_topology_mesh_feature_output(feature_profile_id: pulumi.Input[Optional[_
     return __ret__.apply(lambda __response__: GetTopologyMeshFeatureResult(
         description=pulumi.get(__response__, 'description'),
         feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        hierarchy_uuids=pulumi.get(__response__, 'hierarchy_uuids'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         sites=pulumi.get(__response__, 'sites'),

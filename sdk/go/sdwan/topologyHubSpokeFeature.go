@@ -36,19 +36,19 @@ import (
 //				TargetVpns: pulumi.StringArray{
 //					pulumi.String("service_lan_vpn1"),
 //				},
-//				SelectedHubs: pulumi.StringArray{
-//					pulumi.String("SITE_100"),
+//				SelectedHierarchyHubs: pulumi.StringArray{
+//					pulumi.String("acb2ea53-4a95-4970-a1ab-9bac15edb961"),
 //				},
 //				Spokes: sdwan.TopologyHubSpokeFeatureSpokeArray{
 //					&sdwan.TopologyHubSpokeFeatureSpokeArgs{
 //						Name: pulumi.String("spoke1"),
-//						SpokeSites: pulumi.StringArray{
-//							pulumi.String("SITE_200"),
+//						SpokeHierarchyUuids: pulumi.StringArray{
+//							pulumi.String("acb2ea53-4a95-4970-a1ab-9bac15edb961"),
 //						},
 //						HubSites: sdwan.TopologyHubSpokeFeatureSpokeHubSiteArray{
 //							&sdwan.TopologyHubSpokeFeatureSpokeHubSiteArgs{
-//								Sites: pulumi.StringArray{
-//									pulumi.String("SITE_100"),
+//								HubHierarchyUuids: pulumi.StringArray{
+//									pulumi.String("acb2ea53-4a95-4970-a1ab-9bac15edb961"),
 //								},
 //								Preference: pulumi.Int(1),
 //							},
@@ -82,11 +82,15 @@ type TopologyHubSpokeFeature struct {
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// The name of the Feature
-	Name         pulumi.StringOutput      `pulumi:"name"`
+	Name pulumi.StringOutput `pulumi:"name"`
+	// Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SelectedHierarchyHubs pulumi.StringArrayOutput `pulumi:"selectedHierarchyHubs"`
+	// Selected hub sites
 	SelectedHubs pulumi.StringArrayOutput `pulumi:"selectedHubs"`
-	// Spokes
-	Spokes     TopologyHubSpokeFeatureSpokeArrayOutput `pulumi:"spokes"`
-	TargetVpns pulumi.StringArrayOutput                `pulumi:"targetVpns"`
+	// Spoke configurations
+	Spokes TopologyHubSpokeFeatureSpokeArrayOutput `pulumi:"spokes"`
+	// Target VPN list
+	TargetVpns pulumi.StringArrayOutput `pulumi:"targetVpns"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
 }
@@ -100,9 +104,6 @@ func NewTopologyHubSpokeFeature(ctx *pulumi.Context,
 
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
-	}
-	if args.SelectedHubs == nil {
-		return nil, errors.New("invalid value for required argument 'SelectedHubs'")
 	}
 	if args.Spokes == nil {
 		return nil, errors.New("invalid value for required argument 'Spokes'")
@@ -138,11 +139,15 @@ type topologyHubSpokeFeatureState struct {
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
 	// The name of the Feature
-	Name         *string  `pulumi:"name"`
+	Name *string `pulumi:"name"`
+	// Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SelectedHierarchyHubs []string `pulumi:"selectedHierarchyHubs"`
+	// Selected hub sites
 	SelectedHubs []string `pulumi:"selectedHubs"`
-	// Spokes
-	Spokes     []TopologyHubSpokeFeatureSpoke `pulumi:"spokes"`
-	TargetVpns []string                       `pulumi:"targetVpns"`
+	// Spoke configurations
+	Spokes []TopologyHubSpokeFeatureSpoke `pulumi:"spokes"`
+	// Target VPN list
+	TargetVpns []string `pulumi:"targetVpns"`
 	// The version of the Feature
 	Version *int `pulumi:"version"`
 }
@@ -153,10 +158,14 @@ type TopologyHubSpokeFeatureState struct {
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
 	// The name of the Feature
-	Name         pulumi.StringPtrInput
+	Name pulumi.StringPtrInput
+	// Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SelectedHierarchyHubs pulumi.StringArrayInput
+	// Selected hub sites
 	SelectedHubs pulumi.StringArrayInput
-	// Spokes
-	Spokes     TopologyHubSpokeFeatureSpokeArrayInput
+	// Spoke configurations
+	Spokes TopologyHubSpokeFeatureSpokeArrayInput
+	// Target VPN list
 	TargetVpns pulumi.StringArrayInput
 	// The version of the Feature
 	Version pulumi.IntPtrInput
@@ -172,11 +181,15 @@ type topologyHubSpokeFeatureArgs struct {
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The name of the Feature
-	Name         *string  `pulumi:"name"`
+	Name *string `pulumi:"name"`
+	// Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SelectedHierarchyHubs []string `pulumi:"selectedHierarchyHubs"`
+	// Selected hub sites
 	SelectedHubs []string `pulumi:"selectedHubs"`
-	// Spokes
-	Spokes     []TopologyHubSpokeFeatureSpoke `pulumi:"spokes"`
-	TargetVpns []string                       `pulumi:"targetVpns"`
+	// Spoke configurations
+	Spokes []TopologyHubSpokeFeatureSpoke `pulumi:"spokes"`
+	// Target VPN list
+	TargetVpns []string `pulumi:"targetVpns"`
 }
 
 // The set of arguments for constructing a TopologyHubSpokeFeature resource.
@@ -186,10 +199,14 @@ type TopologyHubSpokeFeatureArgs struct {
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
 	// The name of the Feature
-	Name         pulumi.StringPtrInput
+	Name pulumi.StringPtrInput
+	// Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SelectedHierarchyHubs pulumi.StringArrayInput
+	// Selected hub sites
 	SelectedHubs pulumi.StringArrayInput
-	// Spokes
-	Spokes     TopologyHubSpokeFeatureSpokeArrayInput
+	// Spoke configurations
+	Spokes TopologyHubSpokeFeatureSpokeArrayInput
+	// Target VPN list
 	TargetVpns pulumi.StringArrayInput
 }
 
@@ -295,15 +312,22 @@ func (o TopologyHubSpokeFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *TopologyHubSpokeFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
+// Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o TopologyHubSpokeFeatureOutput) SelectedHierarchyHubs() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *TopologyHubSpokeFeature) pulumi.StringArrayOutput { return v.SelectedHierarchyHubs }).(pulumi.StringArrayOutput)
+}
+
+// Selected hub sites
 func (o TopologyHubSpokeFeatureOutput) SelectedHubs() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *TopologyHubSpokeFeature) pulumi.StringArrayOutput { return v.SelectedHubs }).(pulumi.StringArrayOutput)
 }
 
-// Spokes
+// Spoke configurations
 func (o TopologyHubSpokeFeatureOutput) Spokes() TopologyHubSpokeFeatureSpokeArrayOutput {
 	return o.ApplyT(func(v *TopologyHubSpokeFeature) TopologyHubSpokeFeatureSpokeArrayOutput { return v.Spokes }).(TopologyHubSpokeFeatureSpokeArrayOutput)
 }
 
+// Target VPN list
 func (o TopologyHubSpokeFeatureOutput) TargetVpns() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *TopologyHubSpokeFeature) pulumi.StringArrayOutput { return v.TargetVpns }).(pulumi.StringArrayOutput)
 }

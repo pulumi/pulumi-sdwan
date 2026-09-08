@@ -27,7 +27,7 @@ class GetTopologyCustomControlFeatureResult:
     """
     A collection of values returned by getTopologyCustomControlFeature.
     """
-    def __init__(__self__, default_action=None, description=None, feature_profile_id=None, id=None, name=None, sequences=None, target_inbound_regions=None, target_inbound_sites=None, target_level=None, target_outbound_regions=None, target_outbound_sites=None, target_role=None, target_vpns=None, version=None):
+    def __init__(__self__, default_action=None, description=None, feature_profile_id=None, id=None, name=None, sequences=None, target_inbound_hierarchy_uuids=None, target_inbound_regions=None, target_inbound_sites=None, target_level=None, target_outbound_hierarchy_uuids=None, target_outbound_regions=None, target_outbound_sites=None, target_role=None, target_vpns=None, version=None):
         if default_action and not isinstance(default_action, str):
             raise TypeError("Expected argument 'default_action' to be a str")
         pulumi.set(__self__, "default_action", default_action)
@@ -46,6 +46,9 @@ class GetTopologyCustomControlFeatureResult:
         if sequences and not isinstance(sequences, list):
             raise TypeError("Expected argument 'sequences' to be a list")
         pulumi.set(__self__, "sequences", sequences)
+        if target_inbound_hierarchy_uuids and not isinstance(target_inbound_hierarchy_uuids, list):
+            raise TypeError("Expected argument 'target_inbound_hierarchy_uuids' to be a list")
+        pulumi.set(__self__, "target_inbound_hierarchy_uuids", target_inbound_hierarchy_uuids)
         if target_inbound_regions and not isinstance(target_inbound_regions, list):
             raise TypeError("Expected argument 'target_inbound_regions' to be a list")
         pulumi.set(__self__, "target_inbound_regions", target_inbound_regions)
@@ -55,6 +58,9 @@ class GetTopologyCustomControlFeatureResult:
         if target_level and not isinstance(target_level, str):
             raise TypeError("Expected argument 'target_level' to be a str")
         pulumi.set(__self__, "target_level", target_level)
+        if target_outbound_hierarchy_uuids and not isinstance(target_outbound_hierarchy_uuids, list):
+            raise TypeError("Expected argument 'target_outbound_hierarchy_uuids' to be a list")
+        pulumi.set(__self__, "target_outbound_hierarchy_uuids", target_outbound_hierarchy_uuids)
         if target_outbound_regions and not isinstance(target_outbound_regions, list):
             raise TypeError("Expected argument 'target_outbound_regions' to be a list")
         pulumi.set(__self__, "target_outbound_regions", target_outbound_regions)
@@ -120,6 +126,14 @@ class GetTopologyCustomControlFeatureResult:
         return pulumi.get(self, "sequences")
 
     @_builtins.property
+    @pulumi.getter(name="targetInboundHierarchyUuids")
+    def target_inbound_hierarchy_uuids(self) -> Sequence[_builtins.str]:
+        """
+        Inbound network hierarchy UUIDs
+        """
+        return pulumi.get(self, "target_inbound_hierarchy_uuids")
+
+    @_builtins.property
     @pulumi.getter(name="targetInboundRegions")
     def target_inbound_regions(self) -> Sequence['outputs.GetTopologyCustomControlFeatureTargetInboundRegionResult']:
         return pulumi.get(self, "target_inbound_regions")
@@ -133,6 +147,14 @@ class GetTopologyCustomControlFeatureResult:
     @pulumi.getter(name="targetLevel")
     def target_level(self) -> _builtins.str:
         return pulumi.get(self, "target_level")
+
+    @_builtins.property
+    @pulumi.getter(name="targetOutboundHierarchyUuids")
+    def target_outbound_hierarchy_uuids(self) -> Sequence[_builtins.str]:
+        """
+        Outbound network hierarchy UUIDs
+        """
+        return pulumi.get(self, "target_outbound_hierarchy_uuids")
 
     @_builtins.property
     @pulumi.getter(name="targetOutboundRegions")
@@ -175,9 +197,11 @@ class AwaitableGetTopologyCustomControlFeatureResult(GetTopologyCustomControlFea
             id=self.id,
             name=self.name,
             sequences=self.sequences,
+            target_inbound_hierarchy_uuids=self.target_inbound_hierarchy_uuids,
             target_inbound_regions=self.target_inbound_regions,
             target_inbound_sites=self.target_inbound_sites,
             target_level=self.target_level,
+            target_outbound_hierarchy_uuids=self.target_outbound_hierarchy_uuids,
             target_outbound_regions=self.target_outbound_regions,
             target_outbound_sites=self.target_outbound_sites,
             target_role=self.target_role,
@@ -218,9 +242,11 @@ def get_topology_custom_control_feature(feature_profile_id: Optional[_builtins.s
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         sequences=pulumi.get(__ret__, 'sequences'),
+        target_inbound_hierarchy_uuids=pulumi.get(__ret__, 'target_inbound_hierarchy_uuids'),
         target_inbound_regions=pulumi.get(__ret__, 'target_inbound_regions'),
         target_inbound_sites=pulumi.get(__ret__, 'target_inbound_sites'),
         target_level=pulumi.get(__ret__, 'target_level'),
+        target_outbound_hierarchy_uuids=pulumi.get(__ret__, 'target_outbound_hierarchy_uuids'),
         target_outbound_regions=pulumi.get(__ret__, 'target_outbound_regions'),
         target_outbound_sites=pulumi.get(__ret__, 'target_outbound_sites'),
         target_role=pulumi.get(__ret__, 'target_role'),
@@ -258,9 +284,11 @@ def get_topology_custom_control_feature_output(feature_profile_id: pulumi.Input[
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         sequences=pulumi.get(__response__, 'sequences'),
+        target_inbound_hierarchy_uuids=pulumi.get(__response__, 'target_inbound_hierarchy_uuids'),
         target_inbound_regions=pulumi.get(__response__, 'target_inbound_regions'),
         target_inbound_sites=pulumi.get(__response__, 'target_inbound_sites'),
         target_level=pulumi.get(__response__, 'target_level'),
+        target_outbound_hierarchy_uuids=pulumi.get(__response__, 'target_outbound_hierarchy_uuids'),
         target_outbound_regions=pulumi.get(__response__, 'target_outbound_regions'),
         target_outbound_sites=pulumi.get(__response__, 'target_outbound_sites'),
         target_role=pulumi.get(__response__, 'target_role'),

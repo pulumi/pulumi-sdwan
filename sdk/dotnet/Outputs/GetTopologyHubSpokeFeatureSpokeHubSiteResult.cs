@@ -14,20 +14,27 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class GetTopologyHubSpokeFeatureSpokeHubSiteResult
     {
         /// <summary>
-        /// preference
+        /// Hub network hierarchy UUIDs
+        /// </summary>
+        public readonly ImmutableArray<string> HubHierarchyUuids;
+        /// <summary>
+        /// Hub preference value
         /// </summary>
         public readonly int Preference;
         /// <summary>
-        /// sites
+        /// Hub sites
         /// </summary>
         public readonly ImmutableArray<string> Sites;
 
         [OutputConstructor]
         private GetTopologyHubSpokeFeatureSpokeHubSiteResult(
+            ImmutableArray<string> hubHierarchyUuids,
+
             int preference,
 
             ImmutableArray<string> sites)
         {
+            HubHierarchyUuids = hubHierarchyUuids;
             Preference = preference;
             Sites = sites;
         }

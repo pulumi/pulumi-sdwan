@@ -1618,6 +1618,34 @@ public class TransportWanVpnInterfaceCellularFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceColor);
     }
     /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="tunnelInterfaceColorDescription", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> tunnelInterfaceColorDescription;
+
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> tunnelInterfaceColorDescription() {
+        return Codegen.optional(this.tunnelInterfaceColorDescription);
+    }
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="tunnelInterfaceColorDescriptionVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> tunnelInterfaceColorDescriptionVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> tunnelInterfaceColorDescriptionVariable() {
+        return Codegen.optional(this.tunnelInterfaceColorDescriptionVariable);
+    }
+    /**
      * Restrict this TLOC behavior
      *   - Default value: `false`
      * 
@@ -1702,6 +1730,36 @@ public class TransportWanVpnInterfaceCellularFeature extends com.pulumi.resource
      */
     public Output<Optional<List<Integer>>> tunnelInterfaceExcludeControllerGroupLists() {
         return Codegen.optional(this.tunnelInterfaceExcludeControllerGroupLists);
+    }
+    /**
+     * Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="tunnelInterfaceFullPortHop", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> tunnelInterfaceFullPortHop;
+
+    /**
+     * @return Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> tunnelInterfaceFullPortHop() {
+        return Codegen.optional(this.tunnelInterfaceFullPortHop);
+    }
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="tunnelInterfaceFullPortHopVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> tunnelInterfaceFullPortHopVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> tunnelInterfaceFullPortHopVariable() {
+        return Codegen.optional(this.tunnelInterfaceFullPortHopVariable);
     }
     /**
      * List of groups
@@ -1950,7 +2008,7 @@ public class TransportWanVpnInterfaceCellularFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceNetworkBroadcastVariable);
     }
     /**
-     * Disallow port hopping on the tunnel interface
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
      *   - Default value: `true`
      * 
      */
@@ -1958,7 +2016,7 @@ public class TransportWanVpnInterfaceCellularFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfacePortHop;
 
     /**
-     * @return Disallow port hopping on the tunnel interface
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
      *   - Default value: `true`
      * 
      */
