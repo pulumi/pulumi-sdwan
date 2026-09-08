@@ -548,6 +548,11 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
      */
     private String trustsecSecurityGroupTagVariable;
     /**
+     * @return Indicates that the interface is trustworthy for CTS.
+     * 
+     */
+    private Boolean trustsecTrusted;
+    /**
      * @return The version of the Feature
      * 
      */
@@ -1313,6 +1318,13 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
         return this.trustsecSecurityGroupTagVariable;
     }
     /**
+     * @return Indicates that the interface is trustworthy for CTS.
+     * 
+     */
+    public Boolean trustsecTrusted() {
+        return this.trustsecTrusted;
+    }
+    /**
      * @return The version of the Feature
      * 
      */
@@ -1455,6 +1467,7 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
         private Boolean trustsecPropogate;
         private Integer trustsecSecurityGroupTag;
         private String trustsecSecurityGroupTagVariable;
+        private Boolean trustsecTrusted;
         private Integer version;
         private String xconnect;
         private String xconnectVariable;
@@ -1573,6 +1586,7 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
     	      this.trustsecPropogate = defaults.trustsecPropogate;
     	      this.trustsecSecurityGroupTag = defaults.trustsecSecurityGroupTag;
     	      this.trustsecSecurityGroupTagVariable = defaults.trustsecSecurityGroupTagVariable;
+    	      this.trustsecTrusted = defaults.trustsecTrusted;
     	      this.version = defaults.version;
     	      this.xconnect = defaults.xconnect;
     	      this.xconnectVariable = defaults.xconnectVariable;
@@ -2508,6 +2522,14 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder trustsecTrusted(Boolean trustsecTrusted) {
+            if (trustsecTrusted == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "trustsecTrusted");
+            }
+            this.trustsecTrusted = trustsecTrusted;
+            return this;
+        }
+        @CustomType.Setter
         public Builder version(Integer version) {
             if (version == null) {
               throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "version");
@@ -2645,6 +2667,7 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
             _resultValue.trustsecPropogate = trustsecPropogate;
             _resultValue.trustsecSecurityGroupTag = trustsecSecurityGroupTag;
             _resultValue.trustsecSecurityGroupTagVariable = trustsecSecurityGroupTagVariable;
+            _resultValue.trustsecTrusted = trustsecTrusted;
             _resultValue.version = version;
             _resultValue.xconnect = xconnect;
             _resultValue.xconnectVariable = xconnectVariable;

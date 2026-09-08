@@ -89,6 +89,7 @@ import javax.annotation.Nullable;
  *             .bandwidthUpstream(21474836)
  *             .bandwidthDownstream(21474836)
  *             .autoDetectBandwidth(false)
+ *             .enableHaInterlinkInterface(false)
  *             .tunnelInterface(true)
  *             .perTunnelQos(true)
  *             .tunnelQosMode("hub")
@@ -183,6 +184,7 @@ import javax.annotation.Nullable;
  *                 .ipAddress("1.2.3.4")
  *                 .macAddress("00-B0-D0-63-C2-26")
  *                 .build())
+ *             .enforcedSecurityGroupTag(200)
  *             .icmpRedirectDisable(true)
  *             .duplex("full")
  *             .macAddress("00-B0-D0-63-C2-26")
@@ -494,6 +496,82 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
      */
     public Output<Optional<Boolean>> enableDhcpv6() {
         return Codegen.optional(this.enableDhcpv6);
+    }
+    /**
+     * Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="enableEnforcedPropagation", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> enableEnforcedPropagation;
+
+    /**
+     * @return Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<Boolean>> enableEnforcedPropagation() {
+        return Codegen.optional(this.enableEnforcedPropagation);
+    }
+    /**
+     * HA Interlink interface on/off, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="enableHaInterlinkInterface", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> enableHaInterlinkInterface;
+
+    /**
+     * @return HA Interlink interface on/off, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> enableHaInterlinkInterface() {
+        return Codegen.optional(this.enableHaInterlinkInterface);
+    }
+    /**
+     * Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="enableSgtPropagation", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> enableSgtPropagation;
+
+    /**
+     * @return Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> enableSgtPropagation() {
+        return Codegen.optional(this.enableSgtPropagation);
+    }
+    /**
+     * SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `2`-`65519`
+     * 
+     */
+    @Export(name="enforcedSecurityGroupTag", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> enforcedSecurityGroupTag;
+
+    /**
+     * @return SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `2`-`65519`
+     * 
+     */
+    public Output<Optional<Integer>> enforcedSecurityGroupTag() {
+        return Codegen.optional(this.enforcedSecurityGroupTag);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="enforcedSecurityGroupTagVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> enforcedSecurityGroupTagVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> enforcedSecurityGroupTagVariable() {
+        return Codegen.optional(this.enforcedSecurityGroupTagVariable);
     }
     /**
      * Feature Profile ID
@@ -1870,6 +1948,22 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.portChannelSubinterface);
     }
     /**
+     * Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `true`
+     * 
+     */
+    @Export(name="propagate", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> propagate;
+
+    /**
+     * @return Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `true`
+     * 
+     */
+    public Output<Optional<Boolean>> propagate() {
+        return Codegen.optional(this.propagate);
+    }
+    /**
      * Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
@@ -2160,6 +2254,36 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.qosShapingRateVariable);
     }
     /**
+     * SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `2`-`65519`
+     * 
+     */
+    @Export(name="securityGroupTag", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> securityGroupTag;
+
+    /**
+     * @return SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `2`-`65519`
+     * 
+     */
+    public Output<Optional<Integer>> securityGroupTag() {
+        return Codegen.optional(this.securityGroupTag);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="securityGroupTagVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> securityGroupTagVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> securityGroupTagVariable() {
+        return Codegen.optional(this.securityGroupTagVariable);
+    }
+    /**
      * Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
@@ -2372,6 +2496,22 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
      */
     public Output<String> transportWanVpnFeatureId() {
         return this.transportWanVpnFeatureId;
+    }
+    /**
+     * Indicates that the interface is trustworthy for CTS., Attribute conditional on (`securityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`securityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+     *   - Default value: `true`
+     * 
+     */
+    @Export(name="trusted", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> trusted;
+
+    /**
+     * @return Indicates that the interface is trustworthy for CTS., Attribute conditional on (`securityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`securityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+     *   - Default value: `true`
+     * 
+     */
+    public Output<Optional<Boolean>> trusted() {
+        return Codegen.optional(this.trusted);
     }
     /**
      * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
@@ -2980,6 +3120,34 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceColor);
     }
     /**
+     * Set color description for TLOC, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="tunnelInterfaceColorDescription", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> tunnelInterfaceColorDescription;
+
+    /**
+     * @return Set color description for TLOC, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> tunnelInterfaceColorDescription() {
+        return Codegen.optional(this.tunnelInterfaceColorDescription);
+    }
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="tunnelInterfaceColorDescriptionVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> tunnelInterfaceColorDescriptionVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> tunnelInterfaceColorDescriptionVariable() {
+        return Codegen.optional(this.tunnelInterfaceColorDescriptionVariable);
+    }
+    /**
      * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
@@ -3094,6 +3262,36 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
      */
     public Output<Optional<List<Integer>>> tunnelInterfaceExcludeControllerGroupLists() {
         return Codegen.optional(this.tunnelInterfaceExcludeControllerGroupLists);
+    }
+    /**
+     * Enable port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="tunnelInterfaceFullPortHop", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> tunnelInterfaceFullPortHop;
+
+    /**
+     * @return Enable port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> tunnelInterfaceFullPortHop() {
+        return Codegen.optional(this.tunnelInterfaceFullPortHop);
+    }
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="tunnelInterfaceFullPortHopVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> tunnelInterfaceFullPortHopVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> tunnelInterfaceFullPortHopVariable() {
+        return Codegen.optional(this.tunnelInterfaceFullPortHopVariable);
     }
     /**
      * GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
@@ -3370,7 +3568,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceNetworkBroadcastVariable);
     }
     /**
-     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -3378,7 +3576,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfacePortHop;
 
     /**
-     * @return Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `true`
      * 
      */

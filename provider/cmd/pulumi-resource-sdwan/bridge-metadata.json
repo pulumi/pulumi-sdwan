@@ -2192,6 +2192,21 @@
                     }
                 }
             },
+            "sdwan_service_dual_router_ha_feature": {
+                "current": "sdwan:index/serviceDualRouterHaFeature:ServiceDualRouterHaFeature",
+                "fields": {
+                    "redundancy_groups": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "vpn_ids": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
             "sdwan_service_feature_profile": {
                 "current": "sdwan:index/serviceFeatureProfile:ServiceFeatureProfile"
             },
@@ -3266,6 +3281,9 @@
                                     "maxItemsOne": false,
                                     "elem": {
                                         "fields": {
+                                            "hierarchy_uuids": {
+                                                "maxItemsOne": false
+                                            },
                                             "match_regions": {
                                                 "maxItemsOne": false,
                                                 "elem": {
@@ -3288,6 +3306,9 @@
                             }
                         }
                     },
+                    "target_inbound_hierarchy_uuids": {
+                        "maxItemsOne": false
+                    },
                     "target_inbound_regions": {
                         "maxItemsOne": false,
                         "elem": {
@@ -3299,6 +3320,9 @@
                         }
                     },
                     "target_inbound_sites": {
+                        "maxItemsOne": false
+                    },
+                    "target_outbound_hierarchy_uuids": {
                         "maxItemsOne": false
                     },
                     "target_outbound_regions": {
@@ -3336,6 +3360,9 @@
             "sdwan_topology_hub_spoke_feature": {
                 "current": "sdwan:index/topologyHubSpokeFeature:TopologyHubSpokeFeature",
                 "fields": {
+                    "selected_hierarchy_hubs": {
+                        "maxItemsOne": false
+                    },
                     "selected_hubs": {
                         "maxItemsOne": false
                     },
@@ -3347,11 +3374,17 @@
                                     "maxItemsOne": false,
                                     "elem": {
                                         "fields": {
+                                            "hub_hierarchy_uuids": {
+                                                "maxItemsOne": false
+                                            },
                                             "sites": {
                                                 "maxItemsOne": false
                                             }
                                         }
                                     }
+                                },
+                                "spoke_hierarchy_uuids": {
+                                    "maxItemsOne": false
                                 },
                                 "spoke_sites": {
                                     "maxItemsOne": false
@@ -3367,6 +3400,9 @@
             "sdwan_topology_mesh_feature": {
                 "current": "sdwan:index/topologyMeshFeature:TopologyMeshFeature",
                 "fields": {
+                    "hierarchy_uuids": {
+                        "maxItemsOne": false
+                    },
                     "sites": {
                         "maxItemsOne": false
                     },
@@ -6446,6 +6482,21 @@
                     }
                 }
             },
+            "sdwan_service_dual_router_ha_feature": {
+                "current": "sdwan:index/getServiceDualRouterHaFeature:getServiceDualRouterHaFeature",
+                "fields": {
+                    "redundancy_groups": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "vpn_ids": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
             "sdwan_service_feature_profile": {
                 "current": "sdwan:index/getServiceFeatureProfile:getServiceFeatureProfile"
             },
@@ -7520,6 +7571,9 @@
                                     "maxItemsOne": false,
                                     "elem": {
                                         "fields": {
+                                            "hierarchy_uuids": {
+                                                "maxItemsOne": false
+                                            },
                                             "match_regions": {
                                                 "maxItemsOne": false,
                                                 "elem": {
@@ -7542,6 +7596,9 @@
                             }
                         }
                     },
+                    "target_inbound_hierarchy_uuids": {
+                        "maxItemsOne": false
+                    },
                     "target_inbound_regions": {
                         "maxItemsOne": false,
                         "elem": {
@@ -7553,6 +7610,9 @@
                         }
                     },
                     "target_inbound_sites": {
+                        "maxItemsOne": false
+                    },
+                    "target_outbound_hierarchy_uuids": {
                         "maxItemsOne": false
                     },
                     "target_outbound_regions": {
@@ -7590,6 +7650,9 @@
             "sdwan_topology_hub_spoke_feature": {
                 "current": "sdwan:index/getTopologyHubSpokeFeature:getTopologyHubSpokeFeature",
                 "fields": {
+                    "selected_hierarchy_hubs": {
+                        "maxItemsOne": false
+                    },
                     "selected_hubs": {
                         "maxItemsOne": false
                     },
@@ -7601,11 +7664,17 @@
                                     "maxItemsOne": false,
                                     "elem": {
                                         "fields": {
+                                            "hub_hierarchy_uuids": {
+                                                "maxItemsOne": false
+                                            },
                                             "sites": {
                                                 "maxItemsOne": false
                                             }
                                         }
                                     }
+                                },
+                                "spoke_hierarchy_uuids": {
+                                    "maxItemsOne": false
                                 },
                                 "spoke_sites": {
                                     "maxItemsOne": false
@@ -7621,6 +7690,9 @@
             "sdwan_topology_mesh_feature": {
                 "current": "sdwan:index/getTopologyMeshFeature:getTopologyMeshFeature",
                 "fields": {
+                    "hierarchy_uuids": {
+                        "maxItemsOne": false
+                    },
                     "sites": {
                         "maxItemsOne": false
                     },
@@ -8689,6 +8761,7 @@
             "sdwan_security_app_hosting_feature_template": {},
             "sdwan_security_policy": {},
             "sdwan_service_dhcp_server_feature": {},
+            "sdwan_service_dual_router_ha_feature": {},
             "sdwan_service_feature_profile": {},
             "sdwan_service_ipv4_acl_feature": {},
             "sdwan_service_ipv6_acl_feature": {},

@@ -115,6 +115,31 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private Boolean enableDhcpv6;
     /**
+     * @return Enable/Disable SGT Enforcement on an interface
+     * 
+     */
+    private Boolean enableEnforcedPropagation;
+    /**
+     * @return HA Interlink interface on/off
+     * 
+     */
+    private Boolean enableHaInterlinkInterface;
+    /**
+     * @return Indicates that the interface is trustworthy for CTS
+     * 
+     */
+    private Boolean enableSgtPropagation;
+    /**
+     * @return SGT value between 2 and 65519
+     * 
+     */
+    private Integer enforcedSecurityGroupTag;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String enforcedSecurityGroupTagVariable;
+    /**
      * @return Feature Profile ID
      * 
      */
@@ -573,6 +598,11 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     private String portChannelStaticQosAggregateVariable;
     private Boolean portChannelSubinterface;
     /**
+     * @return Enables the interface for CTS SGT authorization and forwarding
+     * 
+     */
+    private Boolean propagate;
+    /**
      * @return Adaptive QoS
      * 
      */
@@ -668,6 +698,16 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private String qosShapingRateVariable;
     /**
+     * @return SGT value between 2 and 65519
+     * 
+     */
+    private Integer securityGroupTag;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String securityGroupTagVariable;
+    /**
      * @return Service Provider Name
      * 
      */
@@ -738,6 +778,11 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      * 
      */
     private String transportWanVpnFeatureId;
+    /**
+     * @return Indicates that the interface is trustworthy for CTS.
+     * 
+     */
+    private Boolean trusted;
     /**
      * @return Tunnels Bandwidth Percent
      * 
@@ -939,6 +984,16 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private String tunnelInterfaceColor;
     /**
+     * @return Set color description for TLOC
+     * 
+     */
+    private String tunnelInterfaceColorDescription;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String tunnelInterfaceColorDescriptionVariable;
+    /**
      * @return Restrict this TLOC behavior
      * 
      */
@@ -978,6 +1033,16 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      * 
      */
     private List<Integer> tunnelInterfaceExcludeControllerGroupLists;
+    /**
+     * @return Enable port hopping on the tunnel interface
+     * 
+     */
+    private Boolean tunnelInterfaceFullPortHop;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String tunnelInterfaceFullPortHopVariable;
     /**
      * @return GRE tunnel destination IP
      * 
@@ -1069,7 +1134,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private String tunnelInterfaceNetworkBroadcastVariable;
     /**
-     * @return Disallow port hopping on the tunnel interface
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
      * 
      */
     private Boolean tunnelInterfacePortHop;
@@ -1275,6 +1340,41 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     public Boolean enableDhcpv6() {
         return this.enableDhcpv6;
+    }
+    /**
+     * @return Enable/Disable SGT Enforcement on an interface
+     * 
+     */
+    public Boolean enableEnforcedPropagation() {
+        return this.enableEnforcedPropagation;
+    }
+    /**
+     * @return HA Interlink interface on/off
+     * 
+     */
+    public Boolean enableHaInterlinkInterface() {
+        return this.enableHaInterlinkInterface;
+    }
+    /**
+     * @return Indicates that the interface is trustworthy for CTS
+     * 
+     */
+    public Boolean enableSgtPropagation() {
+        return this.enableSgtPropagation;
+    }
+    /**
+     * @return SGT value between 2 and 65519
+     * 
+     */
+    public Integer enforcedSecurityGroupTag() {
+        return this.enforcedSecurityGroupTag;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String enforcedSecurityGroupTagVariable() {
+        return this.enforcedSecurityGroupTagVariable;
     }
     /**
      * @return Feature Profile ID
@@ -1923,6 +2023,13 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.portChannelSubinterface;
     }
     /**
+     * @return Enables the interface for CTS SGT authorization and forwarding
+     * 
+     */
+    public Boolean propagate() {
+        return this.propagate;
+    }
+    /**
      * @return Adaptive QoS
      * 
      */
@@ -2056,6 +2163,20 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.qosShapingRateVariable;
     }
     /**
+     * @return SGT value between 2 and 65519
+     * 
+     */
+    public Integer securityGroupTag() {
+        return this.securityGroupTag;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String securityGroupTagVariable() {
+        return this.securityGroupTagVariable;
+    }
+    /**
      * @return Service Provider Name
      * 
      */
@@ -2155,6 +2276,13 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     public String transportWanVpnFeatureId() {
         return this.transportWanVpnFeatureId;
+    }
+    /**
+     * @return Indicates that the interface is trustworthy for CTS.
+     * 
+     */
+    public Boolean trusted() {
+        return this.trusted;
     }
     /**
      * @return Tunnels Bandwidth Percent
@@ -2437,6 +2565,20 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.tunnelInterfaceColor;
     }
     /**
+     * @return Set color description for TLOC
+     * 
+     */
+    public String tunnelInterfaceColorDescription() {
+        return this.tunnelInterfaceColorDescription;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String tunnelInterfaceColorDescriptionVariable() {
+        return this.tunnelInterfaceColorDescriptionVariable;
+    }
+    /**
      * @return Restrict this TLOC behavior
      * 
      */
@@ -2491,6 +2633,20 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     public List<Integer> tunnelInterfaceExcludeControllerGroupLists() {
         return this.tunnelInterfaceExcludeControllerGroupLists;
+    }
+    /**
+     * @return Enable port hopping on the tunnel interface
+     * 
+     */
+    public Boolean tunnelInterfaceFullPortHop() {
+        return this.tunnelInterfaceFullPortHop;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String tunnelInterfaceFullPortHopVariable() {
+        return this.tunnelInterfaceFullPortHopVariable;
     }
     /**
      * @return GRE tunnel destination IP
@@ -2619,7 +2775,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.tunnelInterfaceNetworkBroadcastVariable;
     }
     /**
-     * @return Disallow port hopping on the tunnel interface
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
      * 
      */
     public Boolean tunnelInterfacePortHop() {
@@ -2754,6 +2910,11 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         private String duplex;
         private String duplexVariable;
         private Boolean enableDhcpv6;
+        private Boolean enableEnforcedPropagation;
+        private Boolean enableHaInterlinkInterface;
+        private Boolean enableSgtPropagation;
+        private Integer enforcedSecurityGroupTag;
+        private String enforcedSecurityGroupTagVariable;
         private String featureProfileId;
         private String greTunnelSourceIp;
         private String greTunnelSourceIpVariable;
@@ -2848,6 +3009,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         private Boolean portChannelStaticQosAggregate;
         private String portChannelStaticQosAggregateVariable;
         private Boolean portChannelSubinterface;
+        private Boolean propagate;
         private Boolean qosAdaptive;
         private Boolean qosAdaptiveBandwidthDownstream;
         private Boolean qosAdaptiveBandwidthUpstream;
@@ -2867,6 +3029,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         private String qosAdaptivePeriodVariable;
         private Integer qosShapingRate;
         private String qosShapingRateVariable;
+        private Integer securityGroupTag;
+        private String securityGroupTagVariable;
         private String serviceProvider;
         private String serviceProviderVariable;
         private Boolean shutdown;
@@ -2882,6 +3046,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         private String tracker;
         private String trackerVariable;
         private String transportWanVpnFeatureId;
+        private Boolean trusted;
         private Integer tunnelBandwidthPercent;
         private String tunnelBandwidthPercentVariable;
         private Boolean tunnelInterface;
@@ -2922,6 +3087,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         private Boolean tunnelInterfaceClearDontFragment;
         private String tunnelInterfaceClearDontFragmentVariable;
         private String tunnelInterfaceColor;
+        private String tunnelInterfaceColorDescription;
+        private String tunnelInterfaceColorDescriptionVariable;
         private Boolean tunnelInterfaceColorRestrict;
         private String tunnelInterfaceColorRestrictVariable;
         private String tunnelInterfaceColorVariable;
@@ -2930,6 +3097,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         private List<GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation> tunnelInterfaceEncapsulations;
         private String tunnelInterfaceExcludeControllerGroupListVariable;
         private List<Integer> tunnelInterfaceExcludeControllerGroupLists;
+        private Boolean tunnelInterfaceFullPortHop;
+        private String tunnelInterfaceFullPortHopVariable;
         private String tunnelInterfaceGreTunnelDestinationIp;
         private String tunnelInterfaceGreTunnelDestinationIpVariable;
         private Integer tunnelInterfaceGroups;
@@ -2987,6 +3156,11 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     	      this.duplex = defaults.duplex;
     	      this.duplexVariable = defaults.duplexVariable;
     	      this.enableDhcpv6 = defaults.enableDhcpv6;
+    	      this.enableEnforcedPropagation = defaults.enableEnforcedPropagation;
+    	      this.enableHaInterlinkInterface = defaults.enableHaInterlinkInterface;
+    	      this.enableSgtPropagation = defaults.enableSgtPropagation;
+    	      this.enforcedSecurityGroupTag = defaults.enforcedSecurityGroupTag;
+    	      this.enforcedSecurityGroupTagVariable = defaults.enforcedSecurityGroupTagVariable;
     	      this.featureProfileId = defaults.featureProfileId;
     	      this.greTunnelSourceIp = defaults.greTunnelSourceIp;
     	      this.greTunnelSourceIpVariable = defaults.greTunnelSourceIpVariable;
@@ -3081,6 +3255,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     	      this.portChannelStaticQosAggregate = defaults.portChannelStaticQosAggregate;
     	      this.portChannelStaticQosAggregateVariable = defaults.portChannelStaticQosAggregateVariable;
     	      this.portChannelSubinterface = defaults.portChannelSubinterface;
+    	      this.propagate = defaults.propagate;
     	      this.qosAdaptive = defaults.qosAdaptive;
     	      this.qosAdaptiveBandwidthDownstream = defaults.qosAdaptiveBandwidthDownstream;
     	      this.qosAdaptiveBandwidthUpstream = defaults.qosAdaptiveBandwidthUpstream;
@@ -3100,6 +3275,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     	      this.qosAdaptivePeriodVariable = defaults.qosAdaptivePeriodVariable;
     	      this.qosShapingRate = defaults.qosShapingRate;
     	      this.qosShapingRateVariable = defaults.qosShapingRateVariable;
+    	      this.securityGroupTag = defaults.securityGroupTag;
+    	      this.securityGroupTagVariable = defaults.securityGroupTagVariable;
     	      this.serviceProvider = defaults.serviceProvider;
     	      this.serviceProviderVariable = defaults.serviceProviderVariable;
     	      this.shutdown = defaults.shutdown;
@@ -3115,6 +3292,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     	      this.tracker = defaults.tracker;
     	      this.trackerVariable = defaults.trackerVariable;
     	      this.transportWanVpnFeatureId = defaults.transportWanVpnFeatureId;
+    	      this.trusted = defaults.trusted;
     	      this.tunnelBandwidthPercent = defaults.tunnelBandwidthPercent;
     	      this.tunnelBandwidthPercentVariable = defaults.tunnelBandwidthPercentVariable;
     	      this.tunnelInterface = defaults.tunnelInterface;
@@ -3155,6 +3333,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     	      this.tunnelInterfaceClearDontFragment = defaults.tunnelInterfaceClearDontFragment;
     	      this.tunnelInterfaceClearDontFragmentVariable = defaults.tunnelInterfaceClearDontFragmentVariable;
     	      this.tunnelInterfaceColor = defaults.tunnelInterfaceColor;
+    	      this.tunnelInterfaceColorDescription = defaults.tunnelInterfaceColorDescription;
+    	      this.tunnelInterfaceColorDescriptionVariable = defaults.tunnelInterfaceColorDescriptionVariable;
     	      this.tunnelInterfaceColorRestrict = defaults.tunnelInterfaceColorRestrict;
     	      this.tunnelInterfaceColorRestrictVariable = defaults.tunnelInterfaceColorRestrictVariable;
     	      this.tunnelInterfaceColorVariable = defaults.tunnelInterfaceColorVariable;
@@ -3163,6 +3343,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     	      this.tunnelInterfaceEncapsulations = defaults.tunnelInterfaceEncapsulations;
     	      this.tunnelInterfaceExcludeControllerGroupListVariable = defaults.tunnelInterfaceExcludeControllerGroupListVariable;
     	      this.tunnelInterfaceExcludeControllerGroupLists = defaults.tunnelInterfaceExcludeControllerGroupLists;
+    	      this.tunnelInterfaceFullPortHop = defaults.tunnelInterfaceFullPortHop;
+    	      this.tunnelInterfaceFullPortHopVariable = defaults.tunnelInterfaceFullPortHopVariable;
     	      this.tunnelInterfaceGreTunnelDestinationIp = defaults.tunnelInterfaceGreTunnelDestinationIp;
     	      this.tunnelInterfaceGreTunnelDestinationIpVariable = defaults.tunnelInterfaceGreTunnelDestinationIpVariable;
     	      this.tunnelInterfaceGroups = defaults.tunnelInterfaceGroups;
@@ -3367,6 +3549,46 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "enableDhcpv6");
             }
             this.enableDhcpv6 = enableDhcpv6;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enableEnforcedPropagation(Boolean enableEnforcedPropagation) {
+            if (enableEnforcedPropagation == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "enableEnforcedPropagation");
+            }
+            this.enableEnforcedPropagation = enableEnforcedPropagation;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enableHaInterlinkInterface(Boolean enableHaInterlinkInterface) {
+            if (enableHaInterlinkInterface == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "enableHaInterlinkInterface");
+            }
+            this.enableHaInterlinkInterface = enableHaInterlinkInterface;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enableSgtPropagation(Boolean enableSgtPropagation) {
+            if (enableSgtPropagation == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "enableSgtPropagation");
+            }
+            this.enableSgtPropagation = enableSgtPropagation;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enforcedSecurityGroupTag(Integer enforcedSecurityGroupTag) {
+            if (enforcedSecurityGroupTag == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "enforcedSecurityGroupTag");
+            }
+            this.enforcedSecurityGroupTag = enforcedSecurityGroupTag;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enforcedSecurityGroupTagVariable(String enforcedSecurityGroupTagVariable) {
+            if (enforcedSecurityGroupTagVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "enforcedSecurityGroupTagVariable");
+            }
+            this.enforcedSecurityGroupTagVariable = enforcedSecurityGroupTagVariable;
             return this;
         }
         @CustomType.Setter
@@ -4149,6 +4371,14 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder propagate(Boolean propagate) {
+            if (propagate == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "propagate");
+            }
+            this.propagate = propagate;
+            return this;
+        }
+        @CustomType.Setter
         public Builder qosAdaptive(Boolean qosAdaptive) {
             if (qosAdaptive == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "qosAdaptive");
@@ -4301,6 +4531,22 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder securityGroupTag(Integer securityGroupTag) {
+            if (securityGroupTag == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "securityGroupTag");
+            }
+            this.securityGroupTag = securityGroupTag;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder securityGroupTagVariable(String securityGroupTagVariable) {
+            if (securityGroupTagVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "securityGroupTagVariable");
+            }
+            this.securityGroupTagVariable = securityGroupTagVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder serviceProvider(String serviceProvider) {
             if (serviceProvider == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "serviceProvider");
@@ -4424,6 +4670,14 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "transportWanVpnFeatureId");
             }
             this.transportWanVpnFeatureId = transportWanVpnFeatureId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder trusted(Boolean trusted) {
+            if (trusted == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "trusted");
+            }
+            this.trusted = trusted;
             return this;
         }
         @CustomType.Setter
@@ -4747,6 +5001,22 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder tunnelInterfaceColorDescription(String tunnelInterfaceColorDescription) {
+            if (tunnelInterfaceColorDescription == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "tunnelInterfaceColorDescription");
+            }
+            this.tunnelInterfaceColorDescription = tunnelInterfaceColorDescription;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelInterfaceColorDescriptionVariable(String tunnelInterfaceColorDescriptionVariable) {
+            if (tunnelInterfaceColorDescriptionVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "tunnelInterfaceColorDescriptionVariable");
+            }
+            this.tunnelInterfaceColorDescriptionVariable = tunnelInterfaceColorDescriptionVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tunnelInterfaceColorRestrict(Boolean tunnelInterfaceColorRestrict) {
             if (tunnelInterfaceColorRestrict == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "tunnelInterfaceColorRestrict");
@@ -4815,6 +5085,22 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         }
         public Builder tunnelInterfaceExcludeControllerGroupLists(Integer... tunnelInterfaceExcludeControllerGroupLists) {
             return tunnelInterfaceExcludeControllerGroupLists(List.of(tunnelInterfaceExcludeControllerGroupLists));
+        }
+        @CustomType.Setter
+        public Builder tunnelInterfaceFullPortHop(Boolean tunnelInterfaceFullPortHop) {
+            if (tunnelInterfaceFullPortHop == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "tunnelInterfaceFullPortHop");
+            }
+            this.tunnelInterfaceFullPortHop = tunnelInterfaceFullPortHop;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelInterfaceFullPortHopVariable(String tunnelInterfaceFullPortHopVariable) {
+            if (tunnelInterfaceFullPortHopVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "tunnelInterfaceFullPortHopVariable");
+            }
+            this.tunnelInterfaceFullPortHopVariable = tunnelInterfaceFullPortHopVariable;
+            return this;
         }
         @CustomType.Setter
         public Builder tunnelInterfaceGreTunnelDestinationIp(String tunnelInterfaceGreTunnelDestinationIp) {
@@ -5103,6 +5389,11 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             _resultValue.duplex = duplex;
             _resultValue.duplexVariable = duplexVariable;
             _resultValue.enableDhcpv6 = enableDhcpv6;
+            _resultValue.enableEnforcedPropagation = enableEnforcedPropagation;
+            _resultValue.enableHaInterlinkInterface = enableHaInterlinkInterface;
+            _resultValue.enableSgtPropagation = enableSgtPropagation;
+            _resultValue.enforcedSecurityGroupTag = enforcedSecurityGroupTag;
+            _resultValue.enforcedSecurityGroupTagVariable = enforcedSecurityGroupTagVariable;
             _resultValue.featureProfileId = featureProfileId;
             _resultValue.greTunnelSourceIp = greTunnelSourceIp;
             _resultValue.greTunnelSourceIpVariable = greTunnelSourceIpVariable;
@@ -5197,6 +5488,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             _resultValue.portChannelStaticQosAggregate = portChannelStaticQosAggregate;
             _resultValue.portChannelStaticQosAggregateVariable = portChannelStaticQosAggregateVariable;
             _resultValue.portChannelSubinterface = portChannelSubinterface;
+            _resultValue.propagate = propagate;
             _resultValue.qosAdaptive = qosAdaptive;
             _resultValue.qosAdaptiveBandwidthDownstream = qosAdaptiveBandwidthDownstream;
             _resultValue.qosAdaptiveBandwidthUpstream = qosAdaptiveBandwidthUpstream;
@@ -5216,6 +5508,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             _resultValue.qosAdaptivePeriodVariable = qosAdaptivePeriodVariable;
             _resultValue.qosShapingRate = qosShapingRate;
             _resultValue.qosShapingRateVariable = qosShapingRateVariable;
+            _resultValue.securityGroupTag = securityGroupTag;
+            _resultValue.securityGroupTagVariable = securityGroupTagVariable;
             _resultValue.serviceProvider = serviceProvider;
             _resultValue.serviceProviderVariable = serviceProviderVariable;
             _resultValue.shutdown = shutdown;
@@ -5231,6 +5525,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             _resultValue.tracker = tracker;
             _resultValue.trackerVariable = trackerVariable;
             _resultValue.transportWanVpnFeatureId = transportWanVpnFeatureId;
+            _resultValue.trusted = trusted;
             _resultValue.tunnelBandwidthPercent = tunnelBandwidthPercent;
             _resultValue.tunnelBandwidthPercentVariable = tunnelBandwidthPercentVariable;
             _resultValue.tunnelInterface = tunnelInterface;
@@ -5271,6 +5566,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             _resultValue.tunnelInterfaceClearDontFragment = tunnelInterfaceClearDontFragment;
             _resultValue.tunnelInterfaceClearDontFragmentVariable = tunnelInterfaceClearDontFragmentVariable;
             _resultValue.tunnelInterfaceColor = tunnelInterfaceColor;
+            _resultValue.tunnelInterfaceColorDescription = tunnelInterfaceColorDescription;
+            _resultValue.tunnelInterfaceColorDescriptionVariable = tunnelInterfaceColorDescriptionVariable;
             _resultValue.tunnelInterfaceColorRestrict = tunnelInterfaceColorRestrict;
             _resultValue.tunnelInterfaceColorRestrictVariable = tunnelInterfaceColorRestrictVariable;
             _resultValue.tunnelInterfaceColorVariable = tunnelInterfaceColorVariable;
@@ -5279,6 +5576,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             _resultValue.tunnelInterfaceEncapsulations = tunnelInterfaceEncapsulations;
             _resultValue.tunnelInterfaceExcludeControllerGroupListVariable = tunnelInterfaceExcludeControllerGroupListVariable;
             _resultValue.tunnelInterfaceExcludeControllerGroupLists = tunnelInterfaceExcludeControllerGroupLists;
+            _resultValue.tunnelInterfaceFullPortHop = tunnelInterfaceFullPortHop;
+            _resultValue.tunnelInterfaceFullPortHopVariable = tunnelInterfaceFullPortHopVariable;
             _resultValue.tunnelInterfaceGreTunnelDestinationIp = tunnelInterfaceGreTunnelDestinationIp;
             _resultValue.tunnelInterfaceGreTunnelDestinationIpVariable = tunnelInterfaceGreTunnelDestinationIpVariable;
             _resultValue.tunnelInterfaceGroups = tunnelInterfaceGroups;

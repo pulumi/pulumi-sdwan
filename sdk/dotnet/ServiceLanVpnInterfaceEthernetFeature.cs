@@ -125,9 +125,10 @@ namespace Pulumi.Sdwan
     ///                 MacAddress = "00-B0-D0-63-C2-26",
     ///             },
     ///         },
-    ///         TrustsecEnableSgtPropogation = false,
+    ///         TrustsecEnableSgtPropogation = true,
     ///         TrustsecPropogate = true,
     ///         TrustsecSecurityGroupTag = 123,
+    ///         TrustsecTrusted = true,
     ///         TrustsecEnableEnforcedPropogation = false,
     ///         TrustsecEnforcedSecurityGroupTag = 1234,
     ///         Duplex = "full",
@@ -851,6 +852,13 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("trustsecSecurityGroupTagVariable")]
         public Output<string?> TrustsecSecurityGroupTagVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Indicates that the interface is trustworthy for CTS., Attribute conditional on (`TrustsecSecurityGroupTag` being set and `PortChannelMemberInterface` not equal to `True` and `TrustsecEnableSgtPropogation` equal to `True` and `TrustsecPropogate` equal to `True` and SD-WAN Manager version `20.18.1` or higher) or (`TrustsecSecurityGroupTagVariable` being set and `PortChannelMemberInterface` not equal to `True` and `TrustsecEnableSgtPropogation` equal to `True` and `TrustsecPropogate` equal to `True` and SD-WAN Manager version `20.18.1` or higher)
+        ///   - Default value: `True`
+        /// </summary>
+        [Output("trustsecTrusted")]
+        public Output<bool?> TrustsecTrusted { get; private set; } = null!;
 
         /// <summary>
         /// The version of the Feature
@@ -1674,6 +1682,13 @@ namespace Pulumi.Sdwan
         public Input<string>? TrustsecSecurityGroupTagVariable { get; set; }
 
         /// <summary>
+        /// Indicates that the interface is trustworthy for CTS., Attribute conditional on (`TrustsecSecurityGroupTag` being set and `PortChannelMemberInterface` not equal to `True` and `TrustsecEnableSgtPropogation` equal to `True` and `TrustsecPropogate` equal to `True` and SD-WAN Manager version `20.18.1` or higher) or (`TrustsecSecurityGroupTagVariable` being set and `PortChannelMemberInterface` not equal to `True` and `TrustsecEnableSgtPropogation` equal to `True` and `TrustsecPropogate` equal to `True` and SD-WAN Manager version `20.18.1` or higher)
+        ///   - Default value: `True`
+        /// </summary>
+        [Input("trustsecTrusted")]
+        public Input<bool>? TrustsecTrusted { get; set; }
+
+        /// <summary>
         /// Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("xconnect")]
@@ -2449,6 +2464,13 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("trustsecSecurityGroupTagVariable")]
         public Input<string>? TrustsecSecurityGroupTagVariable { get; set; }
+
+        /// <summary>
+        /// Indicates that the interface is trustworthy for CTS., Attribute conditional on (`TrustsecSecurityGroupTag` being set and `PortChannelMemberInterface` not equal to `True` and `TrustsecEnableSgtPropogation` equal to `True` and `TrustsecPropogate` equal to `True` and SD-WAN Manager version `20.18.1` or higher) or (`TrustsecSecurityGroupTagVariable` being set and `PortChannelMemberInterface` not equal to `True` and `TrustsecEnableSgtPropogation` equal to `True` and `TrustsecPropogate` equal to `True` and SD-WAN Manager version `20.18.1` or higher)
+        ///   - Default value: `True`
+        /// </summary>
+        [Input("trustsecTrusted")]
+        public Input<bool>? TrustsecTrusted { get; set; }
 
         /// <summary>
         /// The version of the Feature

@@ -29,7 +29,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Leak Routes of particular protocol from Service to Global VPN
-        ///   - Choices: `Static`, `Connected`, `Bgp`, `Ospf`
+        ///   - Choices: `Static`, `Connected`, `Bgp`, `Ospf`, `Eigrp`
         /// </summary>
         [Input("routeProtocol")]
         public Input<string>? RouteProtocol { get; set; }

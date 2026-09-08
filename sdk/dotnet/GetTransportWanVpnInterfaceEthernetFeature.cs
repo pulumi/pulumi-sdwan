@@ -232,6 +232,26 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly bool EnableDhcpv6;
         /// <summary>
+        /// Enable/Disable SGT Enforcement on an interface
+        /// </summary>
+        public readonly bool EnableEnforcedPropagation;
+        /// <summary>
+        /// HA Interlink interface on/off
+        /// </summary>
+        public readonly bool EnableHaInterlinkInterface;
+        /// <summary>
+        /// Indicates that the interface is trustworthy for CTS
+        /// </summary>
+        public readonly bool EnableSgtPropagation;
+        /// <summary>
+        /// SGT value between 2 and 65519
+        /// </summary>
+        public readonly int EnforcedSecurityGroupTag;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string EnforcedSecurityGroupTagVariable;
+        /// <summary>
         /// Feature Profile ID
         /// </summary>
         public readonly string FeatureProfileId;
@@ -599,6 +619,10 @@ namespace Pulumi.Sdwan
         public readonly string PortChannelStaticQosAggregateVariable;
         public readonly bool PortChannelSubinterface;
         /// <summary>
+        /// Enables the interface for CTS SGT authorization and forwarding
+        /// </summary>
+        public readonly bool Propagate;
+        /// <summary>
         /// Adaptive QoS
         /// </summary>
         public readonly bool QosAdaptive;
@@ -675,6 +699,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string QosShapingRateVariable;
         /// <summary>
+        /// SGT value between 2 and 65519
+        /// </summary>
+        public readonly int SecurityGroupTag;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string SecurityGroupTagVariable;
+        /// <summary>
         /// Service Provider Name
         /// </summary>
         public readonly string ServiceProvider;
@@ -731,6 +763,10 @@ namespace Pulumi.Sdwan
         /// Transport WAN VPN Feature ID
         /// </summary>
         public readonly string TransportWanVpnFeatureId;
+        /// <summary>
+        /// Indicates that the interface is trustworthy for CTS.
+        /// </summary>
+        public readonly bool Trusted;
         /// <summary>
         /// Tunnels Bandwidth Percent
         /// </summary>
@@ -892,6 +928,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string TunnelInterfaceColor;
         /// <summary>
+        /// Set color description for TLOC
+        /// </summary>
+        public readonly string TunnelInterfaceColorDescription;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string TunnelInterfaceColorDescriptionVariable;
+        /// <summary>
         /// Restrict this TLOC behavior
         /// </summary>
         public readonly bool TunnelInterfaceColorRestrict;
@@ -923,6 +967,14 @@ namespace Pulumi.Sdwan
         /// Exclude the following controller groups defined in this list.
         /// </summary>
         public readonly ImmutableArray<int> TunnelInterfaceExcludeControllerGroupLists;
+        /// <summary>
+        /// Enable port hopping on the tunnel interface
+        /// </summary>
+        public readonly bool TunnelInterfaceFullPortHop;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string TunnelInterfaceFullPortHopVariable;
         /// <summary>
         /// GRE tunnel destination IP
         /// </summary>
@@ -996,7 +1048,7 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string TunnelInterfaceNetworkBroadcastVariable;
         /// <summary>
-        /// Disallow port hopping on the tunnel interface
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
         /// </summary>
         public readonly bool TunnelInterfacePortHop;
         /// <summary>
@@ -1099,6 +1151,16 @@ namespace Pulumi.Sdwan
             string duplexVariable,
 
             bool enableDhcpv6,
+
+            bool enableEnforcedPropagation,
+
+            bool enableHaInterlinkInterface,
+
+            bool enableSgtPropagation,
+
+            int enforcedSecurityGroupTag,
+
+            string enforcedSecurityGroupTagVariable,
 
             string featureProfileId,
 
@@ -1288,6 +1350,8 @@ namespace Pulumi.Sdwan
 
             bool portChannelSubinterface,
 
+            bool propagate,
+
             bool qosAdaptive,
 
             bool qosAdaptiveBandwidthDownstream,
@@ -1326,6 +1390,10 @@ namespace Pulumi.Sdwan
 
             string qosShapingRateVariable,
 
+            int securityGroupTag,
+
+            string securityGroupTagVariable,
+
             string serviceProvider,
 
             string serviceProviderVariable,
@@ -1355,6 +1423,8 @@ namespace Pulumi.Sdwan
             string trackerVariable,
 
             string transportWanVpnFeatureId,
+
+            bool trusted,
 
             int tunnelBandwidthPercent,
 
@@ -1436,6 +1506,10 @@ namespace Pulumi.Sdwan
 
             string tunnelInterfaceColor,
 
+            string tunnelInterfaceColorDescription,
+
+            string tunnelInterfaceColorDescriptionVariable,
+
             bool tunnelInterfaceColorRestrict,
 
             string tunnelInterfaceColorRestrictVariable,
@@ -1451,6 +1525,10 @@ namespace Pulumi.Sdwan
             string tunnelInterfaceExcludeControllerGroupListVariable,
 
             ImmutableArray<int> tunnelInterfaceExcludeControllerGroupLists,
+
+            bool tunnelInterfaceFullPortHop,
+
+            string tunnelInterfaceFullPortHopVariable,
 
             string tunnelInterfaceGreTunnelDestinationIp,
 
@@ -1539,6 +1617,11 @@ namespace Pulumi.Sdwan
             Duplex = duplex;
             DuplexVariable = duplexVariable;
             EnableDhcpv6 = enableDhcpv6;
+            EnableEnforcedPropagation = enableEnforcedPropagation;
+            EnableHaInterlinkInterface = enableHaInterlinkInterface;
+            EnableSgtPropagation = enableSgtPropagation;
+            EnforcedSecurityGroupTag = enforcedSecurityGroupTag;
+            EnforcedSecurityGroupTagVariable = enforcedSecurityGroupTagVariable;
             FeatureProfileId = featureProfileId;
             GreTunnelSourceIp = greTunnelSourceIp;
             GreTunnelSourceIpVariable = greTunnelSourceIpVariable;
@@ -1633,6 +1716,7 @@ namespace Pulumi.Sdwan
             PortChannelStaticQosAggregate = portChannelStaticQosAggregate;
             PortChannelStaticQosAggregateVariable = portChannelStaticQosAggregateVariable;
             PortChannelSubinterface = portChannelSubinterface;
+            Propagate = propagate;
             QosAdaptive = qosAdaptive;
             QosAdaptiveBandwidthDownstream = qosAdaptiveBandwidthDownstream;
             QosAdaptiveBandwidthUpstream = qosAdaptiveBandwidthUpstream;
@@ -1652,6 +1736,8 @@ namespace Pulumi.Sdwan
             QosAdaptivePeriodVariable = qosAdaptivePeriodVariable;
             QosShapingRate = qosShapingRate;
             QosShapingRateVariable = qosShapingRateVariable;
+            SecurityGroupTag = securityGroupTag;
+            SecurityGroupTagVariable = securityGroupTagVariable;
             ServiceProvider = serviceProvider;
             ServiceProviderVariable = serviceProviderVariable;
             Shutdown = shutdown;
@@ -1667,6 +1753,7 @@ namespace Pulumi.Sdwan
             Tracker = tracker;
             TrackerVariable = trackerVariable;
             TransportWanVpnFeatureId = transportWanVpnFeatureId;
+            Trusted = trusted;
             TunnelBandwidthPercent = tunnelBandwidthPercent;
             TunnelBandwidthPercentVariable = tunnelBandwidthPercentVariable;
             TunnelInterface = tunnelInterface;
@@ -1707,6 +1794,8 @@ namespace Pulumi.Sdwan
             TunnelInterfaceClearDontFragment = tunnelInterfaceClearDontFragment;
             TunnelInterfaceClearDontFragmentVariable = tunnelInterfaceClearDontFragmentVariable;
             TunnelInterfaceColor = tunnelInterfaceColor;
+            TunnelInterfaceColorDescription = tunnelInterfaceColorDescription;
+            TunnelInterfaceColorDescriptionVariable = tunnelInterfaceColorDescriptionVariable;
             TunnelInterfaceColorRestrict = tunnelInterfaceColorRestrict;
             TunnelInterfaceColorRestrictVariable = tunnelInterfaceColorRestrictVariable;
             TunnelInterfaceColorVariable = tunnelInterfaceColorVariable;
@@ -1715,6 +1804,8 @@ namespace Pulumi.Sdwan
             TunnelInterfaceEncapsulations = tunnelInterfaceEncapsulations;
             TunnelInterfaceExcludeControllerGroupListVariable = tunnelInterfaceExcludeControllerGroupListVariable;
             TunnelInterfaceExcludeControllerGroupLists = tunnelInterfaceExcludeControllerGroupLists;
+            TunnelInterfaceFullPortHop = tunnelInterfaceFullPortHop;
+            TunnelInterfaceFullPortHopVariable = tunnelInterfaceFullPortHopVariable;
             TunnelInterfaceGreTunnelDestinationIp = tunnelInterfaceGreTunnelDestinationIp;
             TunnelInterfaceGreTunnelDestinationIpVariable = tunnelInterfaceGreTunnelDestinationIpVariable;
             TunnelInterfaceGroups = tunnelInterfaceGroups;

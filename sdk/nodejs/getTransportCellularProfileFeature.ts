@@ -127,6 +127,22 @@ export interface GetTransportCellularProfileFeatureResult {
      */
     readonly requiresAuthentication: boolean;
     /**
+     * S-NSSAI slice differentiator
+     */
+    readonly sliceDifferentiator: number;
+    /**
+     * Variable name
+     */
+    readonly sliceDifferentiatorVariable: string;
+    /**
+     * S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT)
+     */
+    readonly sliceType: number;
+    /**
+     * Variable name
+     */
+    readonly sliceTypeVariable: string;
+    /**
      * The version of the Feature
      */
     readonly version: number;

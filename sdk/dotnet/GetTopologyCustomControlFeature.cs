@@ -156,9 +156,17 @@ namespace Pulumi.Sdwan
         /// Sequence list
         /// </summary>
         public readonly ImmutableArray<Outputs.GetTopologyCustomControlFeatureSequenceResult> Sequences;
+        /// <summary>
+        /// Inbound network hierarchy UUIDs
+        /// </summary>
+        public readonly ImmutableArray<string> TargetInboundHierarchyUuids;
         public readonly ImmutableArray<Outputs.GetTopologyCustomControlFeatureTargetInboundRegionResult> TargetInboundRegions;
         public readonly ImmutableArray<string> TargetInboundSites;
         public readonly string TargetLevel;
+        /// <summary>
+        /// Outbound network hierarchy UUIDs
+        /// </summary>
+        public readonly ImmutableArray<string> TargetOutboundHierarchyUuids;
         public readonly ImmutableArray<Outputs.GetTopologyCustomControlFeatureTargetOutboundRegionResult> TargetOutboundRegions;
         public readonly ImmutableArray<string> TargetOutboundSites;
         public readonly string TargetRole;
@@ -182,11 +190,15 @@ namespace Pulumi.Sdwan
 
             ImmutableArray<Outputs.GetTopologyCustomControlFeatureSequenceResult> sequences,
 
+            ImmutableArray<string> targetInboundHierarchyUuids,
+
             ImmutableArray<Outputs.GetTopologyCustomControlFeatureTargetInboundRegionResult> targetInboundRegions,
 
             ImmutableArray<string> targetInboundSites,
 
             string targetLevel,
+
+            ImmutableArray<string> targetOutboundHierarchyUuids,
 
             ImmutableArray<Outputs.GetTopologyCustomControlFeatureTargetOutboundRegionResult> targetOutboundRegions,
 
@@ -204,9 +216,11 @@ namespace Pulumi.Sdwan
             Id = id;
             Name = name;
             Sequences = sequences;
+            TargetInboundHierarchyUuids = targetInboundHierarchyUuids;
             TargetInboundRegions = targetInboundRegions;
             TargetInboundSites = targetInboundSites;
             TargetLevel = targetLevel;
+            TargetOutboundHierarchyUuids = targetOutboundHierarchyUuids;
             TargetOutboundRegions = targetOutboundRegions;
             TargetOutboundSites = targetOutboundSites;
             TargetRole = targetRole;

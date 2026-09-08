@@ -23,10 +23,13 @@ All resources and functions have been tested with the following releases.
 
 |    Platform     | Version |
 |-----------------|---------|
-| Catalyst SD-WAN | 20.09   |
+| Catalyst SD-WAN | 20.12   |
 | Catalyst SD-WAN | 20.15   |
+| Catalyst SD-WAN | 20.18   |
 
 **Please note**: We no longer support or test UX 2.0 resources against 20.12.
+
+**Please note**: 20.18 support is being rolled out incrementally. Every resource that works on 20.15 is also being tested against a 20.18 lab, but not every UX 2.0 resource has been updated with the full set of 20.18 attributes yet - see the changelog for which resources have been bumped to the 20.18 release.
 ## Example Usage
 ### Username/Password Authentication
 

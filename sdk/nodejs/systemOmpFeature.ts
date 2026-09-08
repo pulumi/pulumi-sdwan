@@ -293,6 +293,7 @@ export class SystemOmpFeature extends pulumi.CustomResource {
     declare public readonly gracefulRestartVariable: pulumi.Output<string | undefined>;
     /**
      * Hold Time (seconds)
+     *   - Ranges: `0`-`0`, `3`-`65535`
      *   - Default value: `300`
      */
     declare public readonly holdtime: pulumi.Output<number | undefined>;
@@ -754,6 +755,7 @@ export interface SystemOmpFeatureState {
     gracefulRestartVariable?: pulumi.Input<string | undefined>;
     /**
      * Hold Time (seconds)
+     *   - Ranges: `0`-`0`, `3`-`65535`
      *   - Default value: `300`
      */
     holdtime?: pulumi.Input<number | undefined>;
@@ -1060,6 +1062,7 @@ export interface SystemOmpFeatureArgs {
     gracefulRestartVariable?: pulumi.Input<string | undefined>;
     /**
      * Hold Time (seconds)
+     *   - Ranges: `0`-`0`, `3`-`65535`
      *   - Default value: `300`
      */
     holdtime?: pulumi.Input<number | undefined>;

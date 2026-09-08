@@ -222,7 +222,7 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4AddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("ipv4SubnetMask")]
         public Output<string?> Ipv4SubnetMask { get; private set; } = null!;
@@ -613,6 +613,18 @@ namespace Pulumi.Sdwan
         public Output<string?> TunnelInterfaceColor { get; private set; } = null!;
 
         /// <summary>
+        /// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("tunnelInterfaceColorDescription")]
+        public Output<string?> TunnelInterfaceColorDescription { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("tunnelInterfaceColorDescriptionVariable")]
+        public Output<string?> TunnelInterfaceColorDescriptionVariable { get; private set; } = null!;
+
+        /// <summary>
         /// Variable name
         /// </summary>
         [Output("tunnelInterfaceColorVariable")]
@@ -635,6 +647,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("tunnelInterfaceExcludeControllerGroupLists")]
         public Output<ImmutableArray<int>> TunnelInterfaceExcludeControllerGroupLists { get; private set; } = null!;
+
+        /// <summary>
+        /// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("tunnelInterfaceFullPortHop")]
+        public Output<bool?> TunnelInterfaceFullPortHop { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("tunnelInterfaceFullPortHopVariable")]
+        public Output<string?> TunnelInterfaceFullPortHopVariable { get; private set; } = null!;
 
         /// <summary>
         /// List of groups
@@ -731,7 +756,7 @@ namespace Pulumi.Sdwan
         public Output<string?> TunnelInterfaceNatRefreshIntervalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
         ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfacePortHop")]
@@ -973,7 +998,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
@@ -1364,6 +1389,18 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceColor { get; set; }
 
         /// <summary>
+        /// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceColorDescription")]
+        public Input<string>? TunnelInterfaceColorDescription { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceColorDescriptionVariable")]
+        public Input<string>? TunnelInterfaceColorDescriptionVariable { get; set; }
+
+        /// <summary>
         /// Variable name
         /// </summary>
         [Input("tunnelInterfaceColorVariable")]
@@ -1398,6 +1435,19 @@ namespace Pulumi.Sdwan
             get => _tunnelInterfaceExcludeControllerGroupLists ?? (_tunnelInterfaceExcludeControllerGroupLists = new InputList<int>());
             set => _tunnelInterfaceExcludeControllerGroupLists = value;
         }
+
+        /// <summary>
+        /// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("tunnelInterfaceFullPortHop")]
+        public Input<bool>? TunnelInterfaceFullPortHop { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceFullPortHopVariable")]
+        public Input<string>? TunnelInterfaceFullPortHopVariable { get; set; }
 
         /// <summary>
         /// List of groups
@@ -1494,7 +1544,7 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceNatRefreshIntervalVariable { get; set; }
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
         ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfacePortHop")]
@@ -1692,7 +1742,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
@@ -2083,6 +2133,18 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceColor { get; set; }
 
         /// <summary>
+        /// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceColorDescription")]
+        public Input<string>? TunnelInterfaceColorDescription { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceColorDescriptionVariable")]
+        public Input<string>? TunnelInterfaceColorDescriptionVariable { get; set; }
+
+        /// <summary>
         /// Variable name
         /// </summary>
         [Input("tunnelInterfaceColorVariable")]
@@ -2117,6 +2179,19 @@ namespace Pulumi.Sdwan
             get => _tunnelInterfaceExcludeControllerGroupLists ?? (_tunnelInterfaceExcludeControllerGroupLists = new InputList<int>());
             set => _tunnelInterfaceExcludeControllerGroupLists = value;
         }
+
+        /// <summary>
+        /// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("tunnelInterfaceFullPortHop")]
+        public Input<bool>? TunnelInterfaceFullPortHop { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceFullPortHopVariable")]
+        public Input<string>? TunnelInterfaceFullPortHopVariable { get; set; }
 
         /// <summary>
         /// List of groups
@@ -2213,7 +2288,7 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceNatRefreshIntervalVariable { get; set; }
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
         ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfacePortHop")]

@@ -731,6 +731,7 @@ public final class SystemOmpFeatureArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Hold Time (seconds)
+     *   - Ranges: `0`-`0`, `3`-`65535`
      *   - Default value: `300`
      * 
      */
@@ -739,6 +740,7 @@ public final class SystemOmpFeatureArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * @return Hold Time (seconds)
+     *   - Ranges: `0`-`0`, `3`-`65535`
      *   - Default value: `300`
      * 
      */
@@ -2130,6 +2132,7 @@ public final class SystemOmpFeatureArgs extends com.pulumi.resources.ResourceArg
 
         /**
          * @param holdtime Hold Time (seconds)
+         *   - Ranges: `0`-`0`, `3`-`65535`
          *   - Default value: `300`
          * 
          * @return builder
@@ -2142,6 +2145,7 @@ public final class SystemOmpFeatureArgs extends com.pulumi.resources.ResourceArg
 
         /**
          * @param holdtime Hold Time (seconds)
+         *   - Ranges: `0`-`0`, `3`-`65535`
          *   - Default value: `300`
          * 
          * @return builder

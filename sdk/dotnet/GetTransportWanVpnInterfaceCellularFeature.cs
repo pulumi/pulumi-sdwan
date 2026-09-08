@@ -547,6 +547,11 @@ namespace Pulumi.Sdwan
         /// Set color for TLOC
         /// </summary>
         public readonly string TunnelInterfaceColor;
+        public readonly string TunnelInterfaceColorDescription;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string TunnelInterfaceColorDescriptionVariable;
         /// <summary>
         /// Restrict this TLOC behavior
         /// </summary>
@@ -571,6 +576,14 @@ namespace Pulumi.Sdwan
         /// Exclude the following controller groups defined in this list.
         /// </summary>
         public readonly ImmutableArray<int> TunnelInterfaceExcludeControllerGroupLists;
+        /// <summary>
+        /// Enable port hopping on the tunnel interface
+        /// </summary>
+        public readonly bool TunnelInterfaceFullPortHop;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string TunnelInterfaceFullPortHopVariable;
         /// <summary>
         /// List of groups
         /// </summary>
@@ -636,7 +649,7 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string TunnelInterfaceNetworkBroadcastVariable;
         /// <summary>
-        /// Disallow port hopping on the tunnel interface
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
         /// </summary>
         public readonly bool TunnelInterfacePortHop;
         /// <summary>
@@ -888,6 +901,10 @@ namespace Pulumi.Sdwan
 
             string tunnelInterfaceColor,
 
+            string tunnelInterfaceColorDescription,
+
+            string tunnelInterfaceColorDescriptionVariable,
+
             bool tunnelInterfaceColorRestrict,
 
             string tunnelInterfaceColorRestrictVariable,
@@ -899,6 +916,10 @@ namespace Pulumi.Sdwan
             string tunnelInterfaceExcludeControllerGroupListVariable,
 
             ImmutableArray<int> tunnelInterfaceExcludeControllerGroupLists,
+
+            bool tunnelInterfaceFullPortHop,
+
+            string tunnelInterfaceFullPortHopVariable,
 
             int tunnelInterfaceGroups,
 
@@ -1057,12 +1078,16 @@ namespace Pulumi.Sdwan
             TunnelInterfaceClearDontFragment = tunnelInterfaceClearDontFragment;
             TunnelInterfaceClearDontFragmentVariable = tunnelInterfaceClearDontFragmentVariable;
             TunnelInterfaceColor = tunnelInterfaceColor;
+            TunnelInterfaceColorDescription = tunnelInterfaceColorDescription;
+            TunnelInterfaceColorDescriptionVariable = tunnelInterfaceColorDescriptionVariable;
             TunnelInterfaceColorRestrict = tunnelInterfaceColorRestrict;
             TunnelInterfaceColorRestrictVariable = tunnelInterfaceColorRestrictVariable;
             TunnelInterfaceColorVariable = tunnelInterfaceColorVariable;
             TunnelInterfaceEncapsulations = tunnelInterfaceEncapsulations;
             TunnelInterfaceExcludeControllerGroupListVariable = tunnelInterfaceExcludeControllerGroupListVariable;
             TunnelInterfaceExcludeControllerGroupLists = tunnelInterfaceExcludeControllerGroupLists;
+            TunnelInterfaceFullPortHop = tunnelInterfaceFullPortHop;
+            TunnelInterfaceFullPortHopVariable = tunnelInterfaceFullPortHopVariable;
             TunnelInterfaceGroups = tunnelInterfaceGroups;
             TunnelInterfaceGroupsVariable = tunnelInterfaceGroupsVariable;
             TunnelInterfaceHelloInterval = tunnelInterfaceHelloInterval;

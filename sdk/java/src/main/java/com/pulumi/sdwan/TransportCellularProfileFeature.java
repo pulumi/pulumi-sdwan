@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
  *             .name("Example")
  *             .description("My Example")
  *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
- *             .profileId(1)
+ *             .profileId(2)
  *             .accessPointName("apn1")
  *             .requiresAuthentication(true)
  *             .authenticationType("pap")
@@ -56,6 +56,8 @@ import javax.annotation.Nullable;
  *             .profilePassword("example123!")
  *             .packetDataNetworkType("ipv4")
  *             .noOverwrite(false)
+ *             .sliceType(2)
+ *             .sliceDifferentiator(20)
  *             .build());
  * 
  *     }
@@ -337,6 +339,64 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
      */
     public Output<Optional<Boolean>> requiresAuthentication() {
         return Codegen.optional(this.requiresAuthentication);
+    }
+    /**
+     * S-NSSAI slice differentiator, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `0`-`16777214`
+     * 
+     */
+    @Export(name="sliceDifferentiator", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> sliceDifferentiator;
+
+    /**
+     * @return S-NSSAI slice differentiator, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `0`-`16777214`
+     * 
+     */
+    public Output<Optional<Integer>> sliceDifferentiator() {
+        return Codegen.optional(this.sliceDifferentiator);
+    }
+    /**
+     * Variable name, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="sliceDifferentiatorVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> sliceDifferentiatorVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> sliceDifferentiatorVariable() {
+        return Codegen.optional(this.sliceDifferentiatorVariable);
+    }
+    /**
+     * S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="sliceType", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> sliceType;
+
+    /**
+     * @return S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<Integer>> sliceType() {
+        return Codegen.optional(this.sliceType);
+    }
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="sliceTypeVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> sliceTypeVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> sliceTypeVariable() {
+        return Codegen.optional(this.sliceTypeVariable);
     }
     /**
      * The version of the Feature

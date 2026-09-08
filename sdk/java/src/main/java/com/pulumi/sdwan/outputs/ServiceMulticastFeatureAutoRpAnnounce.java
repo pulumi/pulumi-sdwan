@@ -13,6 +13,16 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceMulticastFeatureAutoRpAnnounce {
     /**
+     * @return Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    private @Nullable String accessListId;
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    private @Nullable String accessListIdVariable;
+    /**
      * @return Set RP Announce Interface Name
      * 
      */
@@ -22,6 +32,17 @@ public final class ServiceMulticastFeatureAutoRpAnnounce {
      * 
      */
     private @Nullable String interfaceNameVariable;
+    /**
+     * @return Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `1`-`16383`
+     * 
+     */
+    private @Nullable Integer interval;
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    private @Nullable String intervalVariable;
     /**
      * @return Set RP Announce Scope
      *   - Range: `1`-`255`
@@ -36,6 +57,20 @@ public final class ServiceMulticastFeatureAutoRpAnnounce {
 
     private ServiceMulticastFeatureAutoRpAnnounce() {}
     /**
+     * @return Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<String> accessListId() {
+        return Optional.ofNullable(this.accessListId);
+    }
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<String> accessListIdVariable() {
+        return Optional.ofNullable(this.accessListIdVariable);
+    }
+    /**
      * @return Set RP Announce Interface Name
      * 
      */
@@ -48,6 +83,21 @@ public final class ServiceMulticastFeatureAutoRpAnnounce {
      */
     public Optional<String> interfaceNameVariable() {
         return Optional.ofNullable(this.interfaceNameVariable);
+    }
+    /**
+     * @return Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `1`-`16383`
+     * 
+     */
+    public Optional<Integer> interval() {
+        return Optional.ofNullable(this.interval);
+    }
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<String> intervalVariable() {
+        return Optional.ofNullable(this.intervalVariable);
     }
     /**
      * @return Set RP Announce Scope
@@ -74,19 +124,39 @@ public final class ServiceMulticastFeatureAutoRpAnnounce {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable String accessListId;
+        private @Nullable String accessListIdVariable;
         private @Nullable String interfaceName;
         private @Nullable String interfaceNameVariable;
+        private @Nullable Integer interval;
+        private @Nullable String intervalVariable;
         private @Nullable Integer scope;
         private @Nullable String scopeVariable;
         public Builder() {}
         public Builder(ServiceMulticastFeatureAutoRpAnnounce defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.accessListId = defaults.accessListId;
+    	      this.accessListIdVariable = defaults.accessListIdVariable;
     	      this.interfaceName = defaults.interfaceName;
     	      this.interfaceNameVariable = defaults.interfaceNameVariable;
+    	      this.interval = defaults.interval;
+    	      this.intervalVariable = defaults.intervalVariable;
     	      this.scope = defaults.scope;
     	      this.scopeVariable = defaults.scopeVariable;
         }
 
+        @CustomType.Setter
+        public Builder accessListId(@Nullable String accessListId) {
+
+            this.accessListId = accessListId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder accessListIdVariable(@Nullable String accessListIdVariable) {
+
+            this.accessListIdVariable = accessListIdVariable;
+            return this;
+        }
         @CustomType.Setter
         public Builder interfaceName(@Nullable String interfaceName) {
 
@@ -97,6 +167,18 @@ public final class ServiceMulticastFeatureAutoRpAnnounce {
         public Builder interfaceNameVariable(@Nullable String interfaceNameVariable) {
 
             this.interfaceNameVariable = interfaceNameVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder interval(@Nullable Integer interval) {
+
+            this.interval = interval;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder intervalVariable(@Nullable String intervalVariable) {
+
+            this.intervalVariable = intervalVariable;
             return this;
         }
         @CustomType.Setter
@@ -113,8 +195,12 @@ public final class ServiceMulticastFeatureAutoRpAnnounce {
         }
         public ServiceMulticastFeatureAutoRpAnnounce build() {
             final var _resultValue = new ServiceMulticastFeatureAutoRpAnnounce();
+            _resultValue.accessListId = accessListId;
+            _resultValue.accessListIdVariable = accessListIdVariable;
             _resultValue.interfaceName = interfaceName;
             _resultValue.interfaceNameVariable = interfaceNameVariable;
+            _resultValue.interval = interval;
+            _resultValue.intervalVariable = intervalVariable;
             _resultValue.scope = scope;
             _resultValue.scopeVariable = scopeVariable;
             return _resultValue;

@@ -48,6 +48,11 @@ public final class TopologyCustomControlFeatureSequenceMatchEntry {
      */
     private @Nullable Integer groupId;
     /**
+     * @return Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    private @Nullable List<String> hierarchyUuids;
+    /**
      * @return IPv6 prefix list ID
      * 
      */
@@ -176,6 +181,13 @@ public final class TopologyCustomControlFeatureSequenceMatchEntry {
         return Optional.ofNullable(this.groupId);
     }
     /**
+     * @return Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public List<String> hierarchyUuids() {
+        return this.hierarchyUuids == null ? List.of() : this.hierarchyUuids;
+    }
+    /**
      * @return IPv6 prefix list ID
      * 
      */
@@ -302,6 +314,7 @@ public final class TopologyCustomControlFeatureSequenceMatchEntry {
         private @Nullable Integer domainId;
         private @Nullable String expandedCommunityListId;
         private @Nullable Integer groupId;
+        private @Nullable List<String> hierarchyUuids;
         private @Nullable String ipv6PrefixListId;
         private @Nullable List<TopologyCustomControlFeatureSequenceMatchEntryMatchRegion> matchRegions;
         private @Nullable Integer ompTag;
@@ -326,6 +339,7 @@ public final class TopologyCustomControlFeatureSequenceMatchEntry {
     	      this.domainId = defaults.domainId;
     	      this.expandedCommunityListId = defaults.expandedCommunityListId;
     	      this.groupId = defaults.groupId;
+    	      this.hierarchyUuids = defaults.hierarchyUuids;
     	      this.ipv6PrefixListId = defaults.ipv6PrefixListId;
     	      this.matchRegions = defaults.matchRegions;
     	      this.ompTag = defaults.ompTag;
@@ -378,6 +392,15 @@ public final class TopologyCustomControlFeatureSequenceMatchEntry {
 
             this.groupId = groupId;
             return this;
+        }
+        @CustomType.Setter
+        public Builder hierarchyUuids(@Nullable List<String> hierarchyUuids) {
+
+            this.hierarchyUuids = hierarchyUuids;
+            return this;
+        }
+        public Builder hierarchyUuids(String... hierarchyUuids) {
+            return hierarchyUuids(List.of(hierarchyUuids));
         }
         @CustomType.Setter
         public Builder ipv6PrefixListId(@Nullable String ipv6PrefixListId) {
@@ -486,6 +509,7 @@ public final class TopologyCustomControlFeatureSequenceMatchEntry {
             _resultValue.domainId = domainId;
             _resultValue.expandedCommunityListId = expandedCommunityListId;
             _resultValue.groupId = groupId;
+            _resultValue.hierarchyUuids = hierarchyUuids;
             _resultValue.ipv6PrefixListId = ipv6PrefixListId;
             _resultValue.matchRegions = matchRegions;
             _resultValue.ompTag = ompTag;

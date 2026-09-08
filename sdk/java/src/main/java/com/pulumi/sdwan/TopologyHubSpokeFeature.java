@@ -52,12 +52,12 @@ import javax.annotation.Nullable;
  *             .description("My Example")
  *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .targetVpns("service_lan_vpn1")
- *             .selectedHubs("SITE_100")
+ *             .selectedHierarchyHubs("acb2ea53-4a95-4970-a1ab-9bac15edb961")
  *             .spokes(TopologyHubSpokeFeatureSpokeArgs.builder()
  *                 .name("spoke1")
- *                 .spokeSites("SITE_200")
+ *                 .spokeHierarchyUuids("acb2ea53-4a95-4970-a1ab-9bac15edb961")
  *                 .hubSites(TopologyHubSpokeFeatureSpokeHubSiteArgs.builder()
- *                     .sites("SITE_100")
+ *                     .hubHierarchyUuids("acb2ea53-4a95-4970-a1ab-9bac15edb961")
  *                     .preference(1)
  *                     .build())
  *                 .build())
@@ -123,29 +123,59 @@ public class TopologyHubSpokeFeature extends com.pulumi.resources.CustomResource
     public Output<String> name() {
         return this.name;
     }
-    @Export(name="selectedHubs", refs={List.class,String.class}, tree="[0,1]")
-    private Output<List<String>> selectedHubs;
+    /**
+     * Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="selectedHierarchyHubs", refs={List.class,String.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<String>> selectedHierarchyHubs;
 
-    public Output<List<String>> selectedHubs() {
-        return this.selectedHubs;
+    /**
+     * @return Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<List<String>>> selectedHierarchyHubs() {
+        return Codegen.optional(this.selectedHierarchyHubs);
     }
     /**
-     * Spokes
+     * Selected hub sites
+     * 
+     */
+    @Export(name="selectedHubs", refs={List.class,String.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<String>> selectedHubs;
+
+    /**
+     * @return Selected hub sites
+     * 
+     */
+    public Output<Optional<List<String>>> selectedHubs() {
+        return Codegen.optional(this.selectedHubs);
+    }
+    /**
+     * Spoke configurations
      * 
      */
     @Export(name="spokes", refs={List.class,TopologyHubSpokeFeatureSpoke.class}, tree="[0,1]")
     private Output<List<TopologyHubSpokeFeatureSpoke>> spokes;
 
     /**
-     * @return Spokes
+     * @return Spoke configurations
      * 
      */
     public Output<List<TopologyHubSpokeFeatureSpoke>> spokes() {
         return this.spokes;
     }
+    /**
+     * Target VPN list
+     * 
+     */
     @Export(name="targetVpns", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> targetVpns;
 
+    /**
+     * @return Target VPN list
+     * 
+     */
     public Output<List<String>> targetVpns() {
         return this.targetVpns;
     }

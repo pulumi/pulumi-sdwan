@@ -113,9 +113,10 @@ import (
 //						MacAddress: pulumi.String("00-B0-D0-63-C2-26"),
 //					},
 //				},
-//				TrustsecEnableSgtPropogation:      pulumi.Bool(false),
+//				TrustsecEnableSgtPropogation:      pulumi.Bool(true),
 //				TrustsecPropogate:                 pulumi.Bool(true),
 //				TrustsecSecurityGroupTag:          pulumi.Int(123),
+//				TrustsecTrusted:                   pulumi.Bool(true),
 //				TrustsecEnableEnforcedPropogation: pulumi.Bool(false),
 //				TrustsecEnforcedSecurityGroupTag:  pulumi.Int(1234),
 //				Duplex:                            pulumi.String("full"),
@@ -412,6 +413,9 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	TrustsecSecurityGroupTag pulumi.IntPtrOutput `pulumi:"trustsecSecurityGroupTag"`
 	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TrustsecSecurityGroupTagVariable pulumi.StringPtrOutput `pulumi:"trustsecSecurityGroupTagVariable"`
+	// Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsecSecurityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsecSecurityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+	//   - Default value: `true`
+	TrustsecTrusted pulumi.BoolPtrOutput `pulumi:"trustsecTrusted"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
 	// Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
@@ -715,6 +719,9 @@ type serviceLanVpnInterfaceEthernetFeatureState struct {
 	TrustsecSecurityGroupTag *int `pulumi:"trustsecSecurityGroupTag"`
 	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TrustsecSecurityGroupTagVariable *string `pulumi:"trustsecSecurityGroupTagVariable"`
+	// Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsecSecurityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsecSecurityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+	//   - Default value: `true`
+	TrustsecTrusted *bool `pulumi:"trustsecTrusted"`
 	// The version of the Feature
 	Version *int `pulumi:"version"`
 	// Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
@@ -983,6 +990,9 @@ type ServiceLanVpnInterfaceEthernetFeatureState struct {
 	TrustsecSecurityGroupTag pulumi.IntPtrInput
 	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TrustsecSecurityGroupTagVariable pulumi.StringPtrInput
+	// Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsecSecurityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsecSecurityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+	//   - Default value: `true`
+	TrustsecTrusted pulumi.BoolPtrInput
 	// The version of the Feature
 	Version pulumi.IntPtrInput
 	// Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
@@ -1255,6 +1265,9 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	TrustsecSecurityGroupTag *int `pulumi:"trustsecSecurityGroupTag"`
 	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TrustsecSecurityGroupTagVariable *string `pulumi:"trustsecSecurityGroupTagVariable"`
+	// Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsecSecurityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsecSecurityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+	//   - Default value: `true`
+	TrustsecTrusted *bool `pulumi:"trustsecTrusted"`
 	// Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Xconnect *string `pulumi:"xconnect"`
 	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
@@ -1522,6 +1535,9 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	TrustsecSecurityGroupTag pulumi.IntPtrInput
 	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TrustsecSecurityGroupTagVariable pulumi.StringPtrInput
+	// Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsecSecurityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsecSecurityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+	//   - Default value: `true`
+	TrustsecTrusted pulumi.BoolPtrInput
 	// Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Xconnect pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
@@ -2295,6 +2311,12 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) TrustsecSecurityGroupTagVar
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TrustsecSecurityGroupTagVariable
 	}).(pulumi.StringPtrOutput)
+}
+
+// Indicates that the interface is trustworthy for CTS., Attribute conditional on (`trustsecSecurityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`trustsecSecurityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `trustsecEnableSgtPropogation` equal to `true` and `trustsecPropogate` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+//   - Default value: `true`
+func (o ServiceLanVpnInterfaceEthernetFeatureOutput) TrustsecTrusted() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.TrustsecTrusted }).(pulumi.BoolPtrOutput)
 }
 
 // The version of the Feature

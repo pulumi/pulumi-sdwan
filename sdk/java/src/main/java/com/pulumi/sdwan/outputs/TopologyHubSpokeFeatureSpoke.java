@@ -14,24 +14,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TopologyHubSpokeFeatureSpoke {
     /**
-     * @return Hub Sites
+     * @return Hub site preferences
      * 
      */
     private @Nullable List<TopologyHubSpokeFeatureSpokeHubSite> hubSites;
+    /**
+     * @return Spoke name
+     * 
+     */
     private @Nullable String name;
+    /**
+     * @return Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    private @Nullable List<String> spokeHierarchyUuids;
+    /**
+     * @return Spoke site list
+     * 
+     */
     private @Nullable List<String> spokeSites;
 
     private TopologyHubSpokeFeatureSpoke() {}
     /**
-     * @return Hub Sites
+     * @return Hub site preferences
      * 
      */
     public List<TopologyHubSpokeFeatureSpokeHubSite> hubSites() {
         return this.hubSites == null ? List.of() : this.hubSites;
     }
+    /**
+     * @return Spoke name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
+    /**
+     * @return Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public List<String> spokeHierarchyUuids() {
+        return this.spokeHierarchyUuids == null ? List.of() : this.spokeHierarchyUuids;
+    }
+    /**
+     * @return Spoke site list
+     * 
+     */
     public List<String> spokeSites() {
         return this.spokeSites == null ? List.of() : this.spokeSites;
     }
@@ -47,12 +75,14 @@ public final class TopologyHubSpokeFeatureSpoke {
     public static final class Builder {
         private @Nullable List<TopologyHubSpokeFeatureSpokeHubSite> hubSites;
         private @Nullable String name;
+        private @Nullable List<String> spokeHierarchyUuids;
         private @Nullable List<String> spokeSites;
         public Builder() {}
         public Builder(TopologyHubSpokeFeatureSpoke defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.hubSites = defaults.hubSites;
     	      this.name = defaults.name;
+    	      this.spokeHierarchyUuids = defaults.spokeHierarchyUuids;
     	      this.spokeSites = defaults.spokeSites;
         }
 
@@ -72,6 +102,15 @@ public final class TopologyHubSpokeFeatureSpoke {
             return this;
         }
         @CustomType.Setter
+        public Builder spokeHierarchyUuids(@Nullable List<String> spokeHierarchyUuids) {
+
+            this.spokeHierarchyUuids = spokeHierarchyUuids;
+            return this;
+        }
+        public Builder spokeHierarchyUuids(String... spokeHierarchyUuids) {
+            return spokeHierarchyUuids(List.of(spokeHierarchyUuids));
+        }
+        @CustomType.Setter
         public Builder spokeSites(@Nullable List<String> spokeSites) {
 
             this.spokeSites = spokeSites;
@@ -84,6 +123,7 @@ public final class TopologyHubSpokeFeatureSpoke {
             final var _resultValue = new TopologyHubSpokeFeatureSpoke();
             _resultValue.hubSites = hubSites;
             _resultValue.name = name;
+            _resultValue.spokeHierarchyUuids = spokeHierarchyUuids;
             _resultValue.spokeSites = spokeSites;
             return _resultValue;
         }

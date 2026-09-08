@@ -90,34 +90,30 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Active flow timeout in seconds
         ///   - Range: `30`-`3600`
-        ///   - Default value: `600`
         /// </summary>
         [Output("flowActiveTimeout")]
-        public Output<int?> FlowActiveTimeout { get; private set; } = null!;
+        public Output<int> FlowActiveTimeout { get; private set; } = null!;
 
         /// <summary>
         /// Inactive flow timeout in seconds
         ///   - Range: `1`-`3600`
-        ///   - Default value: `60`
         /// </summary>
         [Output("flowInactiveTimeout")]
-        public Output<int?> FlowInactiveTimeout { get; private set; } = null!;
+        public Output<int> FlowInactiveTimeout { get; private set; } = null!;
 
         /// <summary>
         /// Flow refresh time in seconds
         ///   - Range: `60`-`86400`
-        ///   - Default value: `600`
         /// </summary>
         [Output("flowRefreshTime")]
-        public Output<int?> FlowRefreshTime { get; private set; } = null!;
+        public Output<int> FlowRefreshTime { get; private set; } = null!;
 
         /// <summary>
         /// Flow sampling interval
         ///   - Range: `1`-`65536`
-        ///   - Default value: `1`
         /// </summary>
         [Output("flowSamplingInterval")]
-        public Output<int?> FlowSamplingInterval { get; private set; } = null!;
+        public Output<int> FlowSamplingInterval { get; private set; } = null!;
 
         /// <summary>
         /// The UUID of the Global network hierarchy node. This is automatically fetched from the SD-WAN Manager.
@@ -128,10 +124,9 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// FNF Protocol
         ///   - Choices: `Ipv4`, `Ipv6`, `Both`
-        ///   - Default value: `Ipv4`
         /// </summary>
         [Output("protocol")]
-        public Output<string?> Protocol { get; private set; } = null!;
+        public Output<string> Protocol { get; private set; } = null!;
 
 
         /// <summary>
@@ -141,7 +136,7 @@ namespace Pulumi.Sdwan
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public NetworkHierarchyCflowd(string name, NetworkHierarchyCflowdArgs? args = null, CustomResourceOptions? options = null)
+        public NetworkHierarchyCflowd(string name, NetworkHierarchyCflowdArgs args, CustomResourceOptions? options = null)
             : base("sdwan:index/networkHierarchyCflowd:NetworkHierarchyCflowd", name, args ?? new NetworkHierarchyCflowdArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -215,42 +210,37 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Active flow timeout in seconds
         ///   - Range: `30`-`3600`
-        ///   - Default value: `600`
         /// </summary>
-        [Input("flowActiveTimeout")]
-        public Input<int>? FlowActiveTimeout { get; set; }
+        [Input("flowActiveTimeout", required: true)]
+        public Input<int> FlowActiveTimeout { get; set; } = null!;
 
         /// <summary>
         /// Inactive flow timeout in seconds
         ///   - Range: `1`-`3600`
-        ///   - Default value: `60`
         /// </summary>
-        [Input("flowInactiveTimeout")]
-        public Input<int>? FlowInactiveTimeout { get; set; }
+        [Input("flowInactiveTimeout", required: true)]
+        public Input<int> FlowInactiveTimeout { get; set; } = null!;
 
         /// <summary>
         /// Flow refresh time in seconds
         ///   - Range: `60`-`86400`
-        ///   - Default value: `600`
         /// </summary>
-        [Input("flowRefreshTime")]
-        public Input<int>? FlowRefreshTime { get; set; }
+        [Input("flowRefreshTime", required: true)]
+        public Input<int> FlowRefreshTime { get; set; } = null!;
 
         /// <summary>
         /// Flow sampling interval
         ///   - Range: `1`-`65536`
-        ///   - Default value: `1`
         /// </summary>
-        [Input("flowSamplingInterval")]
-        public Input<int>? FlowSamplingInterval { get; set; }
+        [Input("flowSamplingInterval", required: true)]
+        public Input<int> FlowSamplingInterval { get; set; } = null!;
 
         /// <summary>
         /// FNF Protocol
         ///   - Choices: `Ipv4`, `Ipv6`, `Both`
-        ///   - Default value: `Ipv4`
         /// </summary>
-        [Input("protocol")]
-        public Input<string>? Protocol { get; set; }
+        [Input("protocol", required: true)]
+        public Input<string> Protocol { get; set; } = null!;
 
         public NetworkHierarchyCflowdArgs()
         {
@@ -296,7 +286,6 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Active flow timeout in seconds
         ///   - Range: `30`-`3600`
-        ///   - Default value: `600`
         /// </summary>
         [Input("flowActiveTimeout")]
         public Input<int>? FlowActiveTimeout { get; set; }
@@ -304,7 +293,6 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Inactive flow timeout in seconds
         ///   - Range: `1`-`3600`
-        ///   - Default value: `60`
         /// </summary>
         [Input("flowInactiveTimeout")]
         public Input<int>? FlowInactiveTimeout { get; set; }
@@ -312,7 +300,6 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Flow refresh time in seconds
         ///   - Range: `60`-`86400`
-        ///   - Default value: `600`
         /// </summary>
         [Input("flowRefreshTime")]
         public Input<int>? FlowRefreshTime { get; set; }
@@ -320,7 +307,6 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Flow sampling interval
         ///   - Range: `1`-`65536`
-        ///   - Default value: `1`
         /// </summary>
         [Input("flowSamplingInterval")]
         public Input<int>? FlowSamplingInterval { get; set; }
@@ -334,7 +320,6 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// FNF Protocol
         ///   - Choices: `Ipv4`, `Ipv6`, `Both`
-        ///   - Default value: `Ipv4`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }

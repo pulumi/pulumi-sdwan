@@ -12,8 +12,20 @@ namespace Pulumi.Sdwan.Inputs
 
     public sealed class TopologyHubSpokeFeatureSpokeHubSiteArgs : global::Pulumi.ResourceArgs
     {
+        [Input("hubHierarchyUuids")]
+        private InputList<string>? _hubHierarchyUuids;
+
         /// <summary>
-        /// preference
+        /// Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public InputList<string> HubHierarchyUuids
+        {
+            get => _hubHierarchyUuids ?? (_hubHierarchyUuids = new InputList<string>());
+            set => _hubHierarchyUuids = value;
+        }
+
+        /// <summary>
+        /// Hub preference value
         ///   - Range: `1`-`255`
         /// </summary>
         [Input("preference")]
@@ -23,7 +35,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<string>? _sites;
 
         /// <summary>
-        /// sites
+        /// Hub sites
         /// </summary>
         public InputList<string> Sites
         {

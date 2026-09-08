@@ -18,30 +18,61 @@ public final class TopologyHubSpokeFeatureSpokeArgs extends com.pulumi.resources
     public static final TopologyHubSpokeFeatureSpokeArgs Empty = new TopologyHubSpokeFeatureSpokeArgs();
 
     /**
-     * Hub Sites
+     * Hub site preferences
      * 
      */
     @Import(name="hubSites")
     private @Nullable Output<List<TopologyHubSpokeFeatureSpokeHubSiteArgs>> hubSites;
 
     /**
-     * @return Hub Sites
+     * @return Hub site preferences
      * 
      */
     public Optional<Output<List<TopologyHubSpokeFeatureSpokeHubSiteArgs>>> hubSites() {
         return Optional.ofNullable(this.hubSites);
     }
 
+    /**
+     * Spoke name
+     * 
+     */
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Spoke name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="spokeHierarchyUuids")
+    private @Nullable Output<List<String>> spokeHierarchyUuids;
+
+    /**
+     * @return Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<List<String>>> spokeHierarchyUuids() {
+        return Optional.ofNullable(this.spokeHierarchyUuids);
+    }
+
+    /**
+     * Spoke site list
+     * 
+     */
     @Import(name="spokeSites")
     private @Nullable Output<List<String>> spokeSites;
 
+    /**
+     * @return Spoke site list
+     * 
+     */
     public Optional<Output<List<String>>> spokeSites() {
         return Optional.ofNullable(this.spokeSites);
     }
@@ -51,6 +82,7 @@ public final class TopologyHubSpokeFeatureSpokeArgs extends com.pulumi.resources
     private TopologyHubSpokeFeatureSpokeArgs(TopologyHubSpokeFeatureSpokeArgs $) {
         this.hubSites = $.hubSites;
         this.name = $.name;
+        this.spokeHierarchyUuids = $.spokeHierarchyUuids;
         this.spokeSites = $.spokeSites;
     }
 
@@ -73,7 +105,7 @@ public final class TopologyHubSpokeFeatureSpokeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param hubSites Hub Sites
+         * @param hubSites Hub site preferences
          * 
          * @return builder
          * 
@@ -84,7 +116,7 @@ public final class TopologyHubSpokeFeatureSpokeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param hubSites Hub Sites
+         * @param hubSites Hub site preferences
          * 
          * @return builder
          * 
@@ -94,7 +126,7 @@ public final class TopologyHubSpokeFeatureSpokeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param hubSites Hub Sites
+         * @param hubSites Hub site preferences
          * 
          * @return builder
          * 
@@ -103,24 +135,85 @@ public final class TopologyHubSpokeFeatureSpokeArgs extends com.pulumi.resources
             return hubSites(List.of(hubSites));
         }
 
+        /**
+         * @param name Spoke name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Spoke name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param spokeHierarchyUuids Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder spokeHierarchyUuids(@Nullable Output<List<String>> spokeHierarchyUuids) {
+            $.spokeHierarchyUuids = spokeHierarchyUuids;
+            return this;
+        }
+
+        /**
+         * @param spokeHierarchyUuids Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder spokeHierarchyUuids(List<String> spokeHierarchyUuids) {
+            return spokeHierarchyUuids(Output.of(spokeHierarchyUuids));
+        }
+
+        /**
+         * @param spokeHierarchyUuids Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder spokeHierarchyUuids(String... spokeHierarchyUuids) {
+            return spokeHierarchyUuids(List.of(spokeHierarchyUuids));
+        }
+
+        /**
+         * @param spokeSites Spoke site list
+         * 
+         * @return builder
+         * 
+         */
         public Builder spokeSites(@Nullable Output<List<String>> spokeSites) {
             $.spokeSites = spokeSites;
             return this;
         }
 
+        /**
+         * @param spokeSites Spoke site list
+         * 
+         * @return builder
+         * 
+         */
         public Builder spokeSites(List<String> spokeSites) {
             return spokeSites(Output.of(spokeSites));
         }
 
+        /**
+         * @param spokeSites Spoke site list
+         * 
+         * @return builder
+         * 
+         */
         public Builder spokeSites(String... spokeSites) {
             return spokeSites(List.of(spokeSites));
         }

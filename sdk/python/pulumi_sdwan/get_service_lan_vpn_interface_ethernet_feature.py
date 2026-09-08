@@ -27,7 +27,7 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
     """
     A collection of values returned by getServiceLanVpnInterfaceEthernetFeature.
     """
-    def __init__(__self__, acl_ipv4_egress_policy_id=None, acl_ipv4_ingress_policy_id=None, acl_ipv6_egress_policy_id=None, acl_ipv6_ingress_policy_id=None, acl_shaping_rate=None, acl_shaping_rate_variable=None, arp_timeout=None, arp_timeout_variable=None, arps=None, autonegotiate=None, autonegotiate_variable=None, description=None, duplex=None, duplex_variable=None, enable_dhcpv6=None, feature_profile_id=None, icmp_redirect_disable=None, icmp_redirect_disable_variable=None, id=None, interface_description=None, interface_description_variable=None, interface_mtu=None, interface_mtu_variable=None, interface_name=None, interface_name_variable=None, ip_directed_broadcast=None, ip_directed_broadcast_variable=None, ip_mtu=None, ip_mtu_variable=None, ipv4_address=None, ipv4_address_type=None, ipv4_address_type_variable=None, ipv4_address_variable=None, ipv4_dhcp_distance=None, ipv4_dhcp_distance_variable=None, ipv4_dhcp_helper_variable=None, ipv4_dhcp_helpers=None, ipv4_nat=None, ipv4_nat_loopback=None, ipv4_nat_loopback_variable=None, ipv4_nat_overload=None, ipv4_nat_overload_variable=None, ipv4_nat_prefix_length=None, ipv4_nat_prefix_length_variable=None, ipv4_nat_range_end=None, ipv4_nat_range_end_variable=None, ipv4_nat_range_start=None, ipv4_nat_range_start_variable=None, ipv4_nat_tcp_timeout=None, ipv4_nat_tcp_timeout_variable=None, ipv4_nat_udp_timeout=None, ipv4_nat_udp_timeout_variable=None, ipv4_secondary_addresses=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv4_vrrps=None, ipv6_address=None, ipv6_address_type=None, ipv6_address_type_variable=None, ipv6_address_variable=None, ipv6_dhcp_helpers=None, ipv6_dhcp_secondary_addresses=None, ipv6_nat=None, ipv6_secondary_addresses=None, ipv6_vrrps=None, load_interval=None, load_interval_variable=None, mac_address=None, mac_address_variable=None, media_type=None, media_type_variable=None, name=None, nat64=None, port_channel_interface=None, port_channel_lacp_fast_switchover=None, port_channel_lacp_fast_switchover_variable=None, port_channel_lacp_load_balance=None, port_channel_lacp_load_balance_variable=None, port_channel_lacp_max_bundle=None, port_channel_lacp_max_bundle_variable=None, port_channel_lacp_member_links=None, port_channel_lacp_min_bundle=None, port_channel_lacp_min_bundle_variable=None, port_channel_lacp_qos_aggregate=None, port_channel_lacp_qos_aggregate_variable=None, port_channel_member_interface=None, port_channel_mode=None, port_channel_static_load_balance=None, port_channel_static_load_balance_variable=None, port_channel_static_member_links=None, port_channel_static_qos_aggregate=None, port_channel_static_qos_aggregate_variable=None, port_channel_subinterface=None, port_channel_subinterface_primary_interface_name=None, port_channel_subinterface_primary_interface_name_variable=None, port_channel_subinterface_secondary_interface_name=None, port_channel_subinterface_secondary_interface_name_variable=None, service_lan_vpn_feature_id=None, shutdown=None, shutdown_variable=None, speed=None, speed_variable=None, static_nats=None, tcp_mss=None, tcp_mss_variable=None, trustsec_enable_enforced_propogation=None, trustsec_enable_sgt_propogation=None, trustsec_enforced_security_group_tag=None, trustsec_enforced_security_group_tag_variable=None, trustsec_propogate=None, trustsec_security_group_tag=None, trustsec_security_group_tag_variable=None, version=None, xconnect=None, xconnect_variable=None):
+    def __init__(__self__, acl_ipv4_egress_policy_id=None, acl_ipv4_ingress_policy_id=None, acl_ipv6_egress_policy_id=None, acl_ipv6_ingress_policy_id=None, acl_shaping_rate=None, acl_shaping_rate_variable=None, arp_timeout=None, arp_timeout_variable=None, arps=None, autonegotiate=None, autonegotiate_variable=None, description=None, duplex=None, duplex_variable=None, enable_dhcpv6=None, feature_profile_id=None, icmp_redirect_disable=None, icmp_redirect_disable_variable=None, id=None, interface_description=None, interface_description_variable=None, interface_mtu=None, interface_mtu_variable=None, interface_name=None, interface_name_variable=None, ip_directed_broadcast=None, ip_directed_broadcast_variable=None, ip_mtu=None, ip_mtu_variable=None, ipv4_address=None, ipv4_address_type=None, ipv4_address_type_variable=None, ipv4_address_variable=None, ipv4_dhcp_distance=None, ipv4_dhcp_distance_variable=None, ipv4_dhcp_helper_variable=None, ipv4_dhcp_helpers=None, ipv4_nat=None, ipv4_nat_loopback=None, ipv4_nat_loopback_variable=None, ipv4_nat_overload=None, ipv4_nat_overload_variable=None, ipv4_nat_prefix_length=None, ipv4_nat_prefix_length_variable=None, ipv4_nat_range_end=None, ipv4_nat_range_end_variable=None, ipv4_nat_range_start=None, ipv4_nat_range_start_variable=None, ipv4_nat_tcp_timeout=None, ipv4_nat_tcp_timeout_variable=None, ipv4_nat_udp_timeout=None, ipv4_nat_udp_timeout_variable=None, ipv4_secondary_addresses=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv4_vrrps=None, ipv6_address=None, ipv6_address_type=None, ipv6_address_type_variable=None, ipv6_address_variable=None, ipv6_dhcp_helpers=None, ipv6_dhcp_secondary_addresses=None, ipv6_nat=None, ipv6_secondary_addresses=None, ipv6_vrrps=None, load_interval=None, load_interval_variable=None, mac_address=None, mac_address_variable=None, media_type=None, media_type_variable=None, name=None, nat64=None, port_channel_interface=None, port_channel_lacp_fast_switchover=None, port_channel_lacp_fast_switchover_variable=None, port_channel_lacp_load_balance=None, port_channel_lacp_load_balance_variable=None, port_channel_lacp_max_bundle=None, port_channel_lacp_max_bundle_variable=None, port_channel_lacp_member_links=None, port_channel_lacp_min_bundle=None, port_channel_lacp_min_bundle_variable=None, port_channel_lacp_qos_aggregate=None, port_channel_lacp_qos_aggregate_variable=None, port_channel_member_interface=None, port_channel_mode=None, port_channel_static_load_balance=None, port_channel_static_load_balance_variable=None, port_channel_static_member_links=None, port_channel_static_qos_aggregate=None, port_channel_static_qos_aggregate_variable=None, port_channel_subinterface=None, port_channel_subinterface_primary_interface_name=None, port_channel_subinterface_primary_interface_name_variable=None, port_channel_subinterface_secondary_interface_name=None, port_channel_subinterface_secondary_interface_name_variable=None, service_lan_vpn_feature_id=None, shutdown=None, shutdown_variable=None, speed=None, speed_variable=None, static_nats=None, tcp_mss=None, tcp_mss_variable=None, trustsec_enable_enforced_propogation=None, trustsec_enable_sgt_propogation=None, trustsec_enforced_security_group_tag=None, trustsec_enforced_security_group_tag_variable=None, trustsec_propogate=None, trustsec_security_group_tag=None, trustsec_security_group_tag_variable=None, trustsec_trusted=None, version=None, xconnect=None, xconnect_variable=None):
         if acl_ipv4_egress_policy_id and not isinstance(acl_ipv4_egress_policy_id, str):
             raise TypeError("Expected argument 'acl_ipv4_egress_policy_id' to be a str")
         pulumi.set(__self__, "acl_ipv4_egress_policy_id", acl_ipv4_egress_policy_id)
@@ -364,6 +364,9 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
         if trustsec_security_group_tag_variable and not isinstance(trustsec_security_group_tag_variable, str):
             raise TypeError("Expected argument 'trustsec_security_group_tag_variable' to be a str")
         pulumi.set(__self__, "trustsec_security_group_tag_variable", trustsec_security_group_tag_variable)
+        if trustsec_trusted and not isinstance(trustsec_trusted, bool):
+            raise TypeError("Expected argument 'trustsec_trusted' to be a bool")
+        pulumi.set(__self__, "trustsec_trusted", trustsec_trusted)
         if version and not isinstance(version, int):
             raise TypeError("Expected argument 'version' to be a int")
         pulumi.set(__self__, "version", version)
@@ -1244,6 +1247,14 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
         return pulumi.get(self, "trustsec_security_group_tag_variable")
 
     @_builtins.property
+    @pulumi.getter(name="trustsecTrusted")
+    def trustsec_trusted(self) -> _builtins.bool:
+        """
+        Indicates that the interface is trustworthy for CTS.
+        """
+        return pulumi.get(self, "trustsec_trusted")
+
+    @_builtins.property
     @pulumi.getter
     def version(self) -> _builtins.int:
         """
@@ -1386,6 +1397,7 @@ class AwaitableGetServiceLanVpnInterfaceEthernetFeatureResult(GetServiceLanVpnIn
             trustsec_propogate=self.trustsec_propogate,
             trustsec_security_group_tag=self.trustsec_security_group_tag,
             trustsec_security_group_tag_variable=self.trustsec_security_group_tag_variable,
+            trustsec_trusted=self.trustsec_trusted,
             version=self.version,
             xconnect=self.xconnect,
             xconnect_variable=self.xconnect_variable)
@@ -1537,6 +1549,7 @@ def get_service_lan_vpn_interface_ethernet_feature(feature_profile_id: Optional[
         trustsec_propogate=pulumi.get(__ret__, 'trustsec_propogate'),
         trustsec_security_group_tag=pulumi.get(__ret__, 'trustsec_security_group_tag'),
         trustsec_security_group_tag_variable=pulumi.get(__ret__, 'trustsec_security_group_tag_variable'),
+        trustsec_trusted=pulumi.get(__ret__, 'trustsec_trusted'),
         version=pulumi.get(__ret__, 'version'),
         xconnect=pulumi.get(__ret__, 'xconnect'),
         xconnect_variable=pulumi.get(__ret__, 'xconnect_variable'))
@@ -1685,6 +1698,7 @@ def get_service_lan_vpn_interface_ethernet_feature_output(feature_profile_id: pu
         trustsec_propogate=pulumi.get(__response__, 'trustsec_propogate'),
         trustsec_security_group_tag=pulumi.get(__response__, 'trustsec_security_group_tag'),
         trustsec_security_group_tag_variable=pulumi.get(__response__, 'trustsec_security_group_tag_variable'),
+        trustsec_trusted=pulumi.get(__response__, 'trustsec_trusted'),
         version=pulumi.get(__response__, 'version'),
         xconnect=pulumi.get(__response__, 'xconnect'),
         xconnect_variable=pulumi.get(__response__, 'xconnect_variable')))

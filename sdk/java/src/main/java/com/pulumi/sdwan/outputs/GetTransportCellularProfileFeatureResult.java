@@ -108,6 +108,26 @@ public final class GetTransportCellularProfileFeatureResult {
      */
     private Boolean requiresAuthentication;
     /**
+     * @return S-NSSAI slice differentiator
+     * 
+     */
+    private Integer sliceDifferentiator;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String sliceDifferentiatorVariable;
+    /**
+     * @return S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT)
+     * 
+     */
+    private Integer sliceType;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String sliceTypeVariable;
+    /**
      * @return The version of the Feature
      * 
      */
@@ -248,6 +268,34 @@ public final class GetTransportCellularProfileFeatureResult {
         return this.requiresAuthentication;
     }
     /**
+     * @return S-NSSAI slice differentiator
+     * 
+     */
+    public Integer sliceDifferentiator() {
+        return this.sliceDifferentiator;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String sliceDifferentiatorVariable() {
+        return this.sliceDifferentiatorVariable;
+    }
+    /**
+     * @return S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT)
+     * 
+     */
+    public Integer sliceType() {
+        return this.sliceType;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String sliceTypeVariable() {
+        return this.sliceTypeVariable;
+    }
+    /**
      * @return The version of the Feature
      * 
      */
@@ -283,6 +331,10 @@ public final class GetTransportCellularProfileFeatureResult {
         private String profileUsername;
         private String profileUsernameVariable;
         private Boolean requiresAuthentication;
+        private Integer sliceDifferentiator;
+        private String sliceDifferentiatorVariable;
+        private Integer sliceType;
+        private String sliceTypeVariable;
         private Integer version;
         public Builder() {}
         public Builder(GetTransportCellularProfileFeatureResult defaults) {
@@ -306,6 +358,10 @@ public final class GetTransportCellularProfileFeatureResult {
     	      this.profileUsername = defaults.profileUsername;
     	      this.profileUsernameVariable = defaults.profileUsernameVariable;
     	      this.requiresAuthentication = defaults.requiresAuthentication;
+    	      this.sliceDifferentiator = defaults.sliceDifferentiator;
+    	      this.sliceDifferentiatorVariable = defaults.sliceDifferentiatorVariable;
+    	      this.sliceType = defaults.sliceType;
+    	      this.sliceTypeVariable = defaults.sliceTypeVariable;
     	      this.version = defaults.version;
         }
 
@@ -462,6 +518,38 @@ public final class GetTransportCellularProfileFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder sliceDifferentiator(Integer sliceDifferentiator) {
+            if (sliceDifferentiator == null) {
+              throw new MissingRequiredPropertyException("GetTransportCellularProfileFeatureResult", "sliceDifferentiator");
+            }
+            this.sliceDifferentiator = sliceDifferentiator;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder sliceDifferentiatorVariable(String sliceDifferentiatorVariable) {
+            if (sliceDifferentiatorVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportCellularProfileFeatureResult", "sliceDifferentiatorVariable");
+            }
+            this.sliceDifferentiatorVariable = sliceDifferentiatorVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder sliceType(Integer sliceType) {
+            if (sliceType == null) {
+              throw new MissingRequiredPropertyException("GetTransportCellularProfileFeatureResult", "sliceType");
+            }
+            this.sliceType = sliceType;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder sliceTypeVariable(String sliceTypeVariable) {
+            if (sliceTypeVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportCellularProfileFeatureResult", "sliceTypeVariable");
+            }
+            this.sliceTypeVariable = sliceTypeVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder version(Integer version) {
             if (version == null) {
               throw new MissingRequiredPropertyException("GetTransportCellularProfileFeatureResult", "version");
@@ -490,6 +578,10 @@ public final class GetTransportCellularProfileFeatureResult {
             _resultValue.profileUsername = profileUsername;
             _resultValue.profileUsernameVariable = profileUsernameVariable;
             _resultValue.requiresAuthentication = requiresAuthentication;
+            _resultValue.sliceDifferentiator = sliceDifferentiator;
+            _resultValue.sliceDifferentiatorVariable = sliceDifferentiatorVariable;
+            _resultValue.sliceType = sliceType;
+            _resultValue.sliceTypeVariable = sliceTypeVariable;
             _resultValue.version = version;
             return _resultValue;
         }

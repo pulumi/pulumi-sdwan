@@ -93,27 +93,23 @@ export class NetworkHierarchyCflowd extends pulumi.CustomResource {
     /**
      * Active flow timeout in seconds
      *   - Range: `30`-`3600`
-     *   - Default value: `600`
      */
-    declare public readonly flowActiveTimeout: pulumi.Output<number | undefined>;
+    declare public readonly flowActiveTimeout: pulumi.Output<number>;
     /**
      * Inactive flow timeout in seconds
      *   - Range: `1`-`3600`
-     *   - Default value: `60`
      */
-    declare public readonly flowInactiveTimeout: pulumi.Output<number | undefined>;
+    declare public readonly flowInactiveTimeout: pulumi.Output<number>;
     /**
      * Flow refresh time in seconds
      *   - Range: `60`-`86400`
-     *   - Default value: `600`
      */
-    declare public readonly flowRefreshTime: pulumi.Output<number | undefined>;
+    declare public readonly flowRefreshTime: pulumi.Output<number>;
     /**
      * Flow sampling interval
      *   - Range: `1`-`65536`
-     *   - Default value: `1`
      */
-    declare public readonly flowSamplingInterval: pulumi.Output<number | undefined>;
+    declare public readonly flowSamplingInterval: pulumi.Output<number>;
     /**
      * The UUID of the Global network hierarchy node. This is automatically fetched from the SD-WAN Manager.
      */
@@ -121,9 +117,8 @@ export class NetworkHierarchyCflowd extends pulumi.CustomResource {
     /**
      * FNF Protocol
      *   - Choices: `ipv4`, `ipv6`, `both`
-     *   - Default value: `ipv4`
      */
-    declare public readonly protocol: pulumi.Output<string | undefined>;
+    declare public readonly protocol: pulumi.Output<string>;
 
     /**
      * Create a NetworkHierarchyCflowd resource with the given unique name, arguments, and options.
@@ -132,7 +127,7 @@ export class NetworkHierarchyCflowd extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: NetworkHierarchyCflowdArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: NetworkHierarchyCflowdArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: NetworkHierarchyCflowdArgs | NetworkHierarchyCflowdState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -150,6 +145,21 @@ export class NetworkHierarchyCflowd extends pulumi.CustomResource {
             resourceInputs["protocol"] = state?.protocol;
         } else {
             const args = argsOrState as NetworkHierarchyCflowdArgs | undefined;
+            if (args?.flowActiveTimeout === undefined && !opts.urn) {
+                throw new Error("Missing required property 'flowActiveTimeout'");
+            }
+            if (args?.flowInactiveTimeout === undefined && !opts.urn) {
+                throw new Error("Missing required property 'flowInactiveTimeout'");
+            }
+            if (args?.flowRefreshTime === undefined && !opts.urn) {
+                throw new Error("Missing required property 'flowRefreshTime'");
+            }
+            if (args?.flowSamplingInterval === undefined && !opts.urn) {
+                throw new Error("Missing required property 'flowSamplingInterval'");
+            }
+            if (args?.protocol === undefined && !opts.urn) {
+                throw new Error("Missing required property 'protocol'");
+            }
             resourceInputs["collectDscpOutput"] = args?.collectDscpOutput;
             resourceInputs["collectTlocLoopback"] = args?.collectTlocLoopback;
             resourceInputs["collectTos"] = args?.collectTos;
@@ -192,25 +202,21 @@ export interface NetworkHierarchyCflowdState {
     /**
      * Active flow timeout in seconds
      *   - Range: `30`-`3600`
-     *   - Default value: `600`
      */
     flowActiveTimeout?: pulumi.Input<number | undefined>;
     /**
      * Inactive flow timeout in seconds
      *   - Range: `1`-`3600`
-     *   - Default value: `60`
      */
     flowInactiveTimeout?: pulumi.Input<number | undefined>;
     /**
      * Flow refresh time in seconds
      *   - Range: `60`-`86400`
-     *   - Default value: `600`
      */
     flowRefreshTime?: pulumi.Input<number | undefined>;
     /**
      * Flow sampling interval
      *   - Range: `1`-`65536`
-     *   - Default value: `1`
      */
     flowSamplingInterval?: pulumi.Input<number | undefined>;
     /**
@@ -220,7 +226,6 @@ export interface NetworkHierarchyCflowdState {
     /**
      * FNF Protocol
      *   - Choices: `ipv4`, `ipv6`, `both`
-     *   - Default value: `ipv4`
      */
     protocol?: pulumi.Input<string | undefined>;
 }
@@ -251,31 +256,26 @@ export interface NetworkHierarchyCflowdArgs {
     /**
      * Active flow timeout in seconds
      *   - Range: `30`-`3600`
-     *   - Default value: `600`
      */
-    flowActiveTimeout?: pulumi.Input<number | undefined>;
+    flowActiveTimeout: pulumi.Input<number>;
     /**
      * Inactive flow timeout in seconds
      *   - Range: `1`-`3600`
-     *   - Default value: `60`
      */
-    flowInactiveTimeout?: pulumi.Input<number | undefined>;
+    flowInactiveTimeout: pulumi.Input<number>;
     /**
      * Flow refresh time in seconds
      *   - Range: `60`-`86400`
-     *   - Default value: `600`
      */
-    flowRefreshTime?: pulumi.Input<number | undefined>;
+    flowRefreshTime: pulumi.Input<number>;
     /**
      * Flow sampling interval
      *   - Range: `1`-`65536`
-     *   - Default value: `1`
      */
-    flowSamplingInterval?: pulumi.Input<number | undefined>;
+    flowSamplingInterval: pulumi.Input<number>;
     /**
      * FNF Protocol
      *   - Choices: `ipv4`, `ipv6`, `both`
-     *   - Default value: `ipv4`
      */
-    protocol?: pulumi.Input<string | undefined>;
+    protocol: pulumi.Input<string>;
 }

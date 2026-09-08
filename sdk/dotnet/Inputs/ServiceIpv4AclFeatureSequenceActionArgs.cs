@@ -72,6 +72,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set Service Chain VPN, Attribute conditional on `AcceptSetServiceChainName` being set or `AcceptSetServiceChainNameVariable` being set
+        ///   - Ranges: `1`-`511`, `513`-`65531`
         /// </summary>
         [Input("acceptSetServiceChainVpn")]
         public Input<int>? AcceptSetServiceChainVpn { get; set; }

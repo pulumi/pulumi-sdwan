@@ -310,8 +310,7 @@ export class ServiceLanVpnFeature extends pulumi.CustomResource {
     declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
      * VPN
-     *   - Range: `1`-`65527`
-     *   - Default value: `0`
+     *   - Ranges: `1`-`511`, `513`-`65527`
      */
     declare public readonly vpn: pulumi.Output<number | undefined>;
     /**
@@ -581,8 +580,7 @@ export interface ServiceLanVpnFeatureState {
     version?: pulumi.Input<number | undefined>;
     /**
      * VPN
-     *   - Range: `1`-`65527`
-     *   - Default value: `0`
+     *   - Ranges: `1`-`511`, `513`-`65527`
      */
     vpn?: pulumi.Input<number | undefined>;
     /**
@@ -741,8 +739,7 @@ export interface ServiceLanVpnFeatureArgs {
     staticNats?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureStaticNat>[] | undefined>;
     /**
      * VPN
-     *   - Range: `1`-`65527`
-     *   - Default value: `0`
+     *   - Ranges: `1`-`511`, `513`-`65527`
      */
     vpn?: pulumi.Input<number | undefined>;
     /**

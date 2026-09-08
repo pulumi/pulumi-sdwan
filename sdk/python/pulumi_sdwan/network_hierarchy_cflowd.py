@@ -21,18 +21,28 @@ __all__ = ['NetworkHierarchyCflowdArgs', 'NetworkHierarchyCflowd']
 @pulumi.input_type
 class NetworkHierarchyCflowdArgs:
     def __init__(__self__, *,
+                 flow_active_timeout: pulumi.Input[_builtins.int],
+                 flow_inactive_timeout: pulumi.Input[_builtins.int],
+                 flow_refresh_time: pulumi.Input[_builtins.int],
+                 flow_sampling_interval: pulumi.Input[_builtins.int],
+                 protocol: pulumi.Input[_builtins.str],
                  collect_dscp_output: pulumi.Input[Optional[_builtins.bool]] = None,
                  collect_tloc_loopback: pulumi.Input[Optional[_builtins.bool]] = None,
                  collect_tos: pulumi.Input[Optional[_builtins.bool]] = None,
-                 collectors: pulumi.Input[Optional[Sequence[pulumi.Input['NetworkHierarchyCflowdCollectorArgs']]]] = None,
-                 flow_active_timeout: pulumi.Input[Optional[_builtins.int]] = None,
-                 flow_inactive_timeout: pulumi.Input[Optional[_builtins.int]] = None,
-                 flow_refresh_time: pulumi.Input[Optional[_builtins.int]] = None,
-                 flow_sampling_interval: pulumi.Input[Optional[_builtins.int]] = None,
-                 protocol: pulumi.Input[Optional[_builtins.str]] = None):
+                 collectors: pulumi.Input[Optional[Sequence[pulumi.Input['NetworkHierarchyCflowdCollectorArgs']]]] = None):
         """
         The set of arguments for constructing a NetworkHierarchyCflowd resource.
 
+        :param pulumi.Input[_builtins.int] flow_active_timeout: Active flow timeout in seconds
+                 - Range: `30`-`3600`
+        :param pulumi.Input[_builtins.int] flow_inactive_timeout: Inactive flow timeout in seconds
+                 - Range: `1`-`3600`
+        :param pulumi.Input[_builtins.int] flow_refresh_time: Flow refresh time in seconds
+                 - Range: `60`-`86400`
+        :param pulumi.Input[_builtins.int] flow_sampling_interval: Flow sampling interval
+                 - Range: `1`-`65536`
+        :param pulumi.Input[_builtins.str] protocol: FNF Protocol
+                 - Choices: `ipv4`, `ipv6`, `both`
         :param pulumi.Input[_builtins.bool] collect_dscp_output: Collect remarked DSCP
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] collect_tloc_loopback: Collect SDWAN TLOC loopback interface name instead of physical
@@ -40,22 +50,12 @@ class NetworkHierarchyCflowdArgs:
         :param pulumi.Input[_builtins.bool] collect_tos: Collect TOS record field
                  - Default value: `false`
         :param pulumi.Input[Sequence[pulumi.Input['NetworkHierarchyCflowdCollectorArgs']]] collectors: List of collectors
-        :param pulumi.Input[_builtins.int] flow_active_timeout: Active flow timeout in seconds
-                 - Range: `30`-`3600`
-                 - Default value: `600`
-        :param pulumi.Input[_builtins.int] flow_inactive_timeout: Inactive flow timeout in seconds
-                 - Range: `1`-`3600`
-                 - Default value: `60`
-        :param pulumi.Input[_builtins.int] flow_refresh_time: Flow refresh time in seconds
-                 - Range: `60`-`86400`
-                 - Default value: `600`
-        :param pulumi.Input[_builtins.int] flow_sampling_interval: Flow sampling interval
-                 - Range: `1`-`65536`
-                 - Default value: `1`
-        :param pulumi.Input[_builtins.str] protocol: FNF Protocol
-                 - Choices: `ipv4`, `ipv6`, `both`
-                 - Default value: `ipv4`
         """
+        pulumi.set(__self__, "flow_active_timeout", flow_active_timeout)
+        pulumi.set(__self__, "flow_inactive_timeout", flow_inactive_timeout)
+        pulumi.set(__self__, "flow_refresh_time", flow_refresh_time)
+        pulumi.set(__self__, "flow_sampling_interval", flow_sampling_interval)
+        pulumi.set(__self__, "protocol", protocol)
         if collect_dscp_output is not None:
             pulumi.set(__self__, "collect_dscp_output", collect_dscp_output)
         if collect_tloc_loopback is not None:
@@ -64,16 +64,71 @@ class NetworkHierarchyCflowdArgs:
             pulumi.set(__self__, "collect_tos", collect_tos)
         if collectors is not None:
             pulumi.set(__self__, "collectors", collectors)
-        if flow_active_timeout is not None:
-            pulumi.set(__self__, "flow_active_timeout", flow_active_timeout)
-        if flow_inactive_timeout is not None:
-            pulumi.set(__self__, "flow_inactive_timeout", flow_inactive_timeout)
-        if flow_refresh_time is not None:
-            pulumi.set(__self__, "flow_refresh_time", flow_refresh_time)
-        if flow_sampling_interval is not None:
-            pulumi.set(__self__, "flow_sampling_interval", flow_sampling_interval)
-        if protocol is not None:
-            pulumi.set(__self__, "protocol", protocol)
+
+    @_builtins.property
+    @pulumi.getter(name="flowActiveTimeout")
+    def flow_active_timeout(self) -> pulumi.Input[_builtins.int]:
+        """
+        Active flow timeout in seconds
+          - Range: `30`-`3600`
+        """
+        return pulumi.get(self, "flow_active_timeout")
+
+    @flow_active_timeout.setter
+    def flow_active_timeout(self, value: pulumi.Input[_builtins.int]):
+        pulumi.set(self, "flow_active_timeout", value)
+
+    @_builtins.property
+    @pulumi.getter(name="flowInactiveTimeout")
+    def flow_inactive_timeout(self) -> pulumi.Input[_builtins.int]:
+        """
+        Inactive flow timeout in seconds
+          - Range: `1`-`3600`
+        """
+        return pulumi.get(self, "flow_inactive_timeout")
+
+    @flow_inactive_timeout.setter
+    def flow_inactive_timeout(self, value: pulumi.Input[_builtins.int]):
+        pulumi.set(self, "flow_inactive_timeout", value)
+
+    @_builtins.property
+    @pulumi.getter(name="flowRefreshTime")
+    def flow_refresh_time(self) -> pulumi.Input[_builtins.int]:
+        """
+        Flow refresh time in seconds
+          - Range: `60`-`86400`
+        """
+        return pulumi.get(self, "flow_refresh_time")
+
+    @flow_refresh_time.setter
+    def flow_refresh_time(self, value: pulumi.Input[_builtins.int]):
+        pulumi.set(self, "flow_refresh_time", value)
+
+    @_builtins.property
+    @pulumi.getter(name="flowSamplingInterval")
+    def flow_sampling_interval(self) -> pulumi.Input[_builtins.int]:
+        """
+        Flow sampling interval
+          - Range: `1`-`65536`
+        """
+        return pulumi.get(self, "flow_sampling_interval")
+
+    @flow_sampling_interval.setter
+    def flow_sampling_interval(self, value: pulumi.Input[_builtins.int]):
+        pulumi.set(self, "flow_sampling_interval", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def protocol(self) -> pulumi.Input[_builtins.str]:
+        """
+        FNF Protocol
+          - Choices: `ipv4`, `ipv6`, `both`
+        """
+        return pulumi.get(self, "protocol")
+
+    @protocol.setter
+    def protocol(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="collectDscpOutput")
@@ -126,76 +181,6 @@ class NetworkHierarchyCflowdArgs:
     def collectors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['NetworkHierarchyCflowdCollectorArgs']]]]):
         pulumi.set(self, "collectors", value)
 
-    @_builtins.property
-    @pulumi.getter(name="flowActiveTimeout")
-    def flow_active_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
-        """
-        Active flow timeout in seconds
-          - Range: `30`-`3600`
-          - Default value: `600`
-        """
-        return pulumi.get(self, "flow_active_timeout")
-
-    @flow_active_timeout.setter
-    def flow_active_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
-        pulumi.set(self, "flow_active_timeout", value)
-
-    @_builtins.property
-    @pulumi.getter(name="flowInactiveTimeout")
-    def flow_inactive_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
-        """
-        Inactive flow timeout in seconds
-          - Range: `1`-`3600`
-          - Default value: `60`
-        """
-        return pulumi.get(self, "flow_inactive_timeout")
-
-    @flow_inactive_timeout.setter
-    def flow_inactive_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
-        pulumi.set(self, "flow_inactive_timeout", value)
-
-    @_builtins.property
-    @pulumi.getter(name="flowRefreshTime")
-    def flow_refresh_time(self) -> pulumi.Input[Optional[_builtins.int]]:
-        """
-        Flow refresh time in seconds
-          - Range: `60`-`86400`
-          - Default value: `600`
-        """
-        return pulumi.get(self, "flow_refresh_time")
-
-    @flow_refresh_time.setter
-    def flow_refresh_time(self, value: pulumi.Input[Optional[_builtins.int]]):
-        pulumi.set(self, "flow_refresh_time", value)
-
-    @_builtins.property
-    @pulumi.getter(name="flowSamplingInterval")
-    def flow_sampling_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
-        """
-        Flow sampling interval
-          - Range: `1`-`65536`
-          - Default value: `1`
-        """
-        return pulumi.get(self, "flow_sampling_interval")
-
-    @flow_sampling_interval.setter
-    def flow_sampling_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
-        pulumi.set(self, "flow_sampling_interval", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
-        """
-        FNF Protocol
-          - Choices: `ipv4`, `ipv6`, `both`
-          - Default value: `ipv4`
-        """
-        return pulumi.get(self, "protocol")
-
-    @protocol.setter
-    def protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
-        pulumi.set(self, "protocol", value)
-
 
 @pulumi.input_type
 class _NetworkHierarchyCflowdState:
@@ -222,20 +207,15 @@ class _NetworkHierarchyCflowdState:
         :param pulumi.Input[Sequence[pulumi.Input['NetworkHierarchyCflowdCollectorArgs']]] collectors: List of collectors
         :param pulumi.Input[_builtins.int] flow_active_timeout: Active flow timeout in seconds
                  - Range: `30`-`3600`
-                 - Default value: `600`
         :param pulumi.Input[_builtins.int] flow_inactive_timeout: Inactive flow timeout in seconds
                  - Range: `1`-`3600`
-                 - Default value: `60`
         :param pulumi.Input[_builtins.int] flow_refresh_time: Flow refresh time in seconds
                  - Range: `60`-`86400`
-                 - Default value: `600`
         :param pulumi.Input[_builtins.int] flow_sampling_interval: Flow sampling interval
                  - Range: `1`-`65536`
-                 - Default value: `1`
         :param pulumi.Input[_builtins.str] node_id: The UUID of the Global network hierarchy node. This is automatically fetched from the SD-WAN Manager.
         :param pulumi.Input[_builtins.str] protocol: FNF Protocol
                  - Choices: `ipv4`, `ipv6`, `both`
-                 - Default value: `ipv4`
         """
         if collect_dscp_output is not None:
             pulumi.set(__self__, "collect_dscp_output", collect_dscp_output)
@@ -315,7 +295,6 @@ class _NetworkHierarchyCflowdState:
         """
         Active flow timeout in seconds
           - Range: `30`-`3600`
-          - Default value: `600`
         """
         return pulumi.get(self, "flow_active_timeout")
 
@@ -329,7 +308,6 @@ class _NetworkHierarchyCflowdState:
         """
         Inactive flow timeout in seconds
           - Range: `1`-`3600`
-          - Default value: `60`
         """
         return pulumi.get(self, "flow_inactive_timeout")
 
@@ -343,7 +321,6 @@ class _NetworkHierarchyCflowdState:
         """
         Flow refresh time in seconds
           - Range: `60`-`86400`
-          - Default value: `600`
         """
         return pulumi.get(self, "flow_refresh_time")
 
@@ -357,7 +334,6 @@ class _NetworkHierarchyCflowdState:
         """
         Flow sampling interval
           - Range: `1`-`65536`
-          - Default value: `1`
         """
         return pulumi.get(self, "flow_sampling_interval")
 
@@ -383,7 +359,6 @@ class _NetworkHierarchyCflowdState:
         """
         FNF Protocol
           - Choices: `ipv4`, `ipv6`, `both`
-          - Default value: `ipv4`
         """
         return pulumi.get(self, "protocol")
 
@@ -456,25 +431,20 @@ class NetworkHierarchyCflowd(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['NetworkHierarchyCflowdCollectorArgs', 'NetworkHierarchyCflowdCollectorArgsDict']]]] collectors: List of collectors
         :param pulumi.Input[_builtins.int] flow_active_timeout: Active flow timeout in seconds
                  - Range: `30`-`3600`
-                 - Default value: `600`
         :param pulumi.Input[_builtins.int] flow_inactive_timeout: Inactive flow timeout in seconds
                  - Range: `1`-`3600`
-                 - Default value: `60`
         :param pulumi.Input[_builtins.int] flow_refresh_time: Flow refresh time in seconds
                  - Range: `60`-`86400`
-                 - Default value: `600`
         :param pulumi.Input[_builtins.int] flow_sampling_interval: Flow sampling interval
                  - Range: `1`-`65536`
-                 - Default value: `1`
         :param pulumi.Input[_builtins.str] protocol: FNF Protocol
                  - Choices: `ipv4`, `ipv6`, `both`
-                 - Default value: `ipv4`
         """
         ...
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[NetworkHierarchyCflowdArgs] = None,
+                 args: NetworkHierarchyCflowdArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage Network Hierarchy Cflowd settings.
@@ -550,10 +520,20 @@ class NetworkHierarchyCflowd(pulumi.CustomResource):
             __props__.__dict__["collect_tloc_loopback"] = collect_tloc_loopback
             __props__.__dict__["collect_tos"] = collect_tos
             __props__.__dict__["collectors"] = collectors
+            if flow_active_timeout is None and not opts.urn:
+                raise TypeError("Missing required property 'flow_active_timeout'")
             __props__.__dict__["flow_active_timeout"] = flow_active_timeout
+            if flow_inactive_timeout is None and not opts.urn:
+                raise TypeError("Missing required property 'flow_inactive_timeout'")
             __props__.__dict__["flow_inactive_timeout"] = flow_inactive_timeout
+            if flow_refresh_time is None and not opts.urn:
+                raise TypeError("Missing required property 'flow_refresh_time'")
             __props__.__dict__["flow_refresh_time"] = flow_refresh_time
+            if flow_sampling_interval is None and not opts.urn:
+                raise TypeError("Missing required property 'flow_sampling_interval'")
             __props__.__dict__["flow_sampling_interval"] = flow_sampling_interval
+            if protocol is None and not opts.urn:
+                raise TypeError("Missing required property 'protocol'")
             __props__.__dict__["protocol"] = protocol
             __props__.__dict__["node_id"] = None
         super(NetworkHierarchyCflowd, __self__).__init__(
@@ -592,20 +572,15 @@ class NetworkHierarchyCflowd(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['NetworkHierarchyCflowdCollectorArgs', 'NetworkHierarchyCflowdCollectorArgsDict']]]] collectors: List of collectors
         :param pulumi.Input[_builtins.int] flow_active_timeout: Active flow timeout in seconds
                  - Range: `30`-`3600`
-                 - Default value: `600`
         :param pulumi.Input[_builtins.int] flow_inactive_timeout: Inactive flow timeout in seconds
                  - Range: `1`-`3600`
-                 - Default value: `60`
         :param pulumi.Input[_builtins.int] flow_refresh_time: Flow refresh time in seconds
                  - Range: `60`-`86400`
-                 - Default value: `600`
         :param pulumi.Input[_builtins.int] flow_sampling_interval: Flow sampling interval
                  - Range: `1`-`65536`
-                 - Default value: `1`
         :param pulumi.Input[_builtins.str] node_id: The UUID of the Global network hierarchy node. This is automatically fetched from the SD-WAN Manager.
         :param pulumi.Input[_builtins.str] protocol: FNF Protocol
                  - Choices: `ipv4`, `ipv6`, `both`
-                 - Default value: `ipv4`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -660,41 +635,37 @@ class NetworkHierarchyCflowd(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="flowActiveTimeout")
-    def flow_active_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
+    def flow_active_timeout(self) -> pulumi.Output[_builtins.int]:
         """
         Active flow timeout in seconds
           - Range: `30`-`3600`
-          - Default value: `600`
         """
         return pulumi.get(self, "flow_active_timeout")
 
     @_builtins.property
     @pulumi.getter(name="flowInactiveTimeout")
-    def flow_inactive_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
+    def flow_inactive_timeout(self) -> pulumi.Output[_builtins.int]:
         """
         Inactive flow timeout in seconds
           - Range: `1`-`3600`
-          - Default value: `60`
         """
         return pulumi.get(self, "flow_inactive_timeout")
 
     @_builtins.property
     @pulumi.getter(name="flowRefreshTime")
-    def flow_refresh_time(self) -> pulumi.Output[Optional[_builtins.int]]:
+    def flow_refresh_time(self) -> pulumi.Output[_builtins.int]:
         """
         Flow refresh time in seconds
           - Range: `60`-`86400`
-          - Default value: `600`
         """
         return pulumi.get(self, "flow_refresh_time")
 
     @_builtins.property
     @pulumi.getter(name="flowSamplingInterval")
-    def flow_sampling_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
+    def flow_sampling_interval(self) -> pulumi.Output[_builtins.int]:
         """
         Flow sampling interval
           - Range: `1`-`65536`
-          - Default value: `1`
         """
         return pulumi.get(self, "flow_sampling_interval")
 
@@ -708,11 +679,10 @@ class NetworkHierarchyCflowd(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def protocol(self) -> pulumi.Output[_builtins.str]:
         """
         FNF Protocol
           - Choices: `ipv4`, `ipv6`, `both`
-          - Default value: `ipv4`
         """
         return pulumi.get(self, "protocol")
 

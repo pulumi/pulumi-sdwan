@@ -32,26 +32,26 @@ namespace Pulumi.Sdwan
     ///         {
     ///             "service_lan_vpn1",
     ///         },
-    ///         SelectedHubs = new[]
+    ///         SelectedHierarchyHubs = new[]
     ///         {
-    ///             "SITE_100",
+    ///             "acb2ea53-4a95-4970-a1ab-9bac15edb961",
     ///         },
     ///         Spokes = new[]
     ///         {
     ///             new Sdwan.Inputs.TopologyHubSpokeFeatureSpokeArgs
     ///             {
     ///                 Name = "spoke1",
-    ///                 SpokeSites = new[]
+    ///                 SpokeHierarchyUuids = new[]
     ///                 {
-    ///                     "SITE_200",
+    ///                     "acb2ea53-4a95-4970-a1ab-9bac15edb961",
     ///                 },
     ///                 HubSites = new[]
     ///                 {
     ///                     new Sdwan.Inputs.TopologyHubSpokeFeatureSpokeHubSiteArgs
     ///                     {
-    ///                         Sites = new[]
+    ///                         HubHierarchyUuids = new[]
     ///                         {
-    ///                             "SITE_100",
+    ///                             "acb2ea53-4a95-4970-a1ab-9bac15edb961",
     ///                         },
     ///                         Preference = 1,
     ///                     },
@@ -94,15 +94,27 @@ namespace Pulumi.Sdwan
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
+        /// <summary>
+        /// Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("selectedHierarchyHubs")]
+        public Output<ImmutableArray<string>> SelectedHierarchyHubs { get; private set; } = null!;
+
+        /// <summary>
+        /// Selected hub sites
+        /// </summary>
         [Output("selectedHubs")]
         public Output<ImmutableArray<string>> SelectedHubs { get; private set; } = null!;
 
         /// <summary>
-        /// Spokes
+        /// Spoke configurations
         /// </summary>
         [Output("spokes")]
         public Output<ImmutableArray<Outputs.TopologyHubSpokeFeatureSpoke>> Spokes { get; private set; } = null!;
 
+        /// <summary>
+        /// Target VPN list
+        /// </summary>
         [Output("targetVpns")]
         public Output<ImmutableArray<string>> TargetVpns { get; private set; } = null!;
 
@@ -176,8 +188,24 @@ namespace Pulumi.Sdwan
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        [Input("selectedHubs", required: true)]
+        [Input("selectedHierarchyHubs")]
+        private InputList<string>? _selectedHierarchyHubs;
+
+        /// <summary>
+        /// Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public InputList<string> SelectedHierarchyHubs
+        {
+            get => _selectedHierarchyHubs ?? (_selectedHierarchyHubs = new InputList<string>());
+            set => _selectedHierarchyHubs = value;
+        }
+
+        [Input("selectedHubs")]
         private InputList<string>? _selectedHubs;
+
+        /// <summary>
+        /// Selected hub sites
+        /// </summary>
         public InputList<string> SelectedHubs
         {
             get => _selectedHubs ?? (_selectedHubs = new InputList<string>());
@@ -188,7 +216,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TopologyHubSpokeFeatureSpokeArgs>? _spokes;
 
         /// <summary>
-        /// Spokes
+        /// Spoke configurations
         /// </summary>
         public InputList<Inputs.TopologyHubSpokeFeatureSpokeArgs> Spokes
         {
@@ -198,6 +226,10 @@ namespace Pulumi.Sdwan
 
         [Input("targetVpns", required: true)]
         private InputList<string>? _targetVpns;
+
+        /// <summary>
+        /// Target VPN list
+        /// </summary>
         public InputList<string> TargetVpns
         {
             get => _targetVpns ?? (_targetVpns = new InputList<string>());
@@ -230,8 +262,24 @@ namespace Pulumi.Sdwan
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        [Input("selectedHierarchyHubs")]
+        private InputList<string>? _selectedHierarchyHubs;
+
+        /// <summary>
+        /// Selected hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public InputList<string> SelectedHierarchyHubs
+        {
+            get => _selectedHierarchyHubs ?? (_selectedHierarchyHubs = new InputList<string>());
+            set => _selectedHierarchyHubs = value;
+        }
+
         [Input("selectedHubs")]
         private InputList<string>? _selectedHubs;
+
+        /// <summary>
+        /// Selected hub sites
+        /// </summary>
         public InputList<string> SelectedHubs
         {
             get => _selectedHubs ?? (_selectedHubs = new InputList<string>());
@@ -242,7 +290,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TopologyHubSpokeFeatureSpokeGetArgs>? _spokes;
 
         /// <summary>
-        /// Spokes
+        /// Spoke configurations
         /// </summary>
         public InputList<Inputs.TopologyHubSpokeFeatureSpokeGetArgs> Spokes
         {
@@ -252,6 +300,10 @@ namespace Pulumi.Sdwan
 
         [Input("targetVpns")]
         private InputList<string>? _targetVpns;
+
+        /// <summary>
+        /// Target VPN list
+        /// </summary>
         public InputList<string> TargetVpns
         {
             get => _targetVpns ?? (_targetVpns = new InputList<string>());

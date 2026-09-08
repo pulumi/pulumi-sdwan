@@ -33,7 +33,7 @@ import (
 //				Name:                   pulumi.String("Example"),
 //				Description:            pulumi.String("My Example"),
 //				FeatureProfileId:       pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
-//				ProfileId:              pulumi.Int(1),
+//				ProfileId:              pulumi.Int(2),
 //				AccessPointName:        pulumi.String("apn1"),
 //				RequiresAuthentication: pulumi.Bool(true),
 //				AuthenticationType:     pulumi.String("pap"),
@@ -41,6 +41,8 @@ import (
 //				ProfilePassword:        pulumi.String("example123!"),
 //				PacketDataNetworkType:  pulumi.String("ipv4"),
 //				NoOverwrite:            pulumi.Bool(false),
+//				SliceType:              pulumi.Int(2),
+//				SliceDifferentiator:    pulumi.Int(20),
 //			})
 //			if err != nil {
 //				return err
@@ -104,6 +106,15 @@ type TransportCellularProfileFeature struct {
 	// Require authentication type
 	//   - Default value: `false`
 	RequiresAuthentication pulumi.BoolPtrOutput `pulumi:"requiresAuthentication"`
+	// S-NSSAI slice differentiator, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+	//   - Range: `0`-`16777214`
+	SliceDifferentiator pulumi.IntPtrOutput `pulumi:"sliceDifferentiator"`
+	// Variable name, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+	SliceDifferentiatorVariable pulumi.StringPtrOutput `pulumi:"sliceDifferentiatorVariable"`
+	// S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SliceType pulumi.IntPtrOutput `pulumi:"sliceType"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SliceTypeVariable pulumi.StringPtrOutput `pulumi:"sliceTypeVariable"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
 }
@@ -182,6 +193,15 @@ type transportCellularProfileFeatureState struct {
 	// Require authentication type
 	//   - Default value: `false`
 	RequiresAuthentication *bool `pulumi:"requiresAuthentication"`
+	// S-NSSAI slice differentiator, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+	//   - Range: `0`-`16777214`
+	SliceDifferentiator *int `pulumi:"sliceDifferentiator"`
+	// Variable name, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+	SliceDifferentiatorVariable *string `pulumi:"sliceDifferentiatorVariable"`
+	// S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SliceType *int `pulumi:"sliceType"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SliceTypeVariable *string `pulumi:"sliceTypeVariable"`
 	// The version of the Feature
 	Version *int `pulumi:"version"`
 }
@@ -228,6 +248,15 @@ type TransportCellularProfileFeatureState struct {
 	// Require authentication type
 	//   - Default value: `false`
 	RequiresAuthentication pulumi.BoolPtrInput
+	// S-NSSAI slice differentiator, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+	//   - Range: `0`-`16777214`
+	SliceDifferentiator pulumi.IntPtrInput
+	// Variable name, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+	SliceDifferentiatorVariable pulumi.StringPtrInput
+	// S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SliceType pulumi.IntPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SliceTypeVariable pulumi.StringPtrInput
 	// The version of the Feature
 	Version pulumi.IntPtrInput
 }
@@ -278,6 +307,15 @@ type transportCellularProfileFeatureArgs struct {
 	// Require authentication type
 	//   - Default value: `false`
 	RequiresAuthentication *bool `pulumi:"requiresAuthentication"`
+	// S-NSSAI slice differentiator, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+	//   - Range: `0`-`16777214`
+	SliceDifferentiator *int `pulumi:"sliceDifferentiator"`
+	// Variable name, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+	SliceDifferentiatorVariable *string `pulumi:"sliceDifferentiatorVariable"`
+	// S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SliceType *int `pulumi:"sliceType"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SliceTypeVariable *string `pulumi:"sliceTypeVariable"`
 }
 
 // The set of arguments for constructing a TransportCellularProfileFeature resource.
@@ -323,6 +361,15 @@ type TransportCellularProfileFeatureArgs struct {
 	// Require authentication type
 	//   - Default value: `false`
 	RequiresAuthentication pulumi.BoolPtrInput
+	// S-NSSAI slice differentiator, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+	//   - Range: `0`-`16777214`
+	SliceDifferentiator pulumi.IntPtrInput
+	// Variable name, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+	SliceDifferentiatorVariable pulumi.StringPtrInput
+	// S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SliceType pulumi.IntPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SliceTypeVariable pulumi.StringPtrInput
 }
 
 func (TransportCellularProfileFeatureArgs) ElementType() reflect.Type {
@@ -507,6 +554,27 @@ func (o TransportCellularProfileFeatureOutput) ProfileUsernameVariable() pulumi.
 //   - Default value: `false`
 func (o TransportCellularProfileFeatureOutput) RequiresAuthentication() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.BoolPtrOutput { return v.RequiresAuthentication }).(pulumi.BoolPtrOutput)
+}
+
+// S-NSSAI slice differentiator, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+//   - Range: `0`-`16777214`
+func (o TransportCellularProfileFeatureOutput) SliceDifferentiator() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.IntPtrOutput { return v.SliceDifferentiator }).(pulumi.IntPtrOutput)
+}
+
+// Variable name, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+func (o TransportCellularProfileFeatureOutput) SliceDifferentiatorVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.SliceDifferentiatorVariable }).(pulumi.StringPtrOutput)
+}
+
+// S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o TransportCellularProfileFeatureOutput) SliceType() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.IntPtrOutput { return v.SliceType }).(pulumi.IntPtrOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o TransportCellularProfileFeatureOutput) SliceTypeVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.SliceTypeVariable }).(pulumi.StringPtrOutput)
 }
 
 // The version of the Feature

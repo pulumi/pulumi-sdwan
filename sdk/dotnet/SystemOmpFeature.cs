@@ -374,6 +374,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Hold Time (seconds)
+        ///   - Ranges: `0`-`0`, `3`-`65535`
         ///   - Default value: `300`
         /// </summary>
         [Output("holdtime")]
@@ -852,6 +853,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Hold Time (seconds)
+        ///   - Ranges: `0`-`0`, `3`-`65535`
         ///   - Default value: `300`
         /// </summary>
         [Input("holdtime")]
@@ -1298,6 +1300,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Hold Time (seconds)
+        ///   - Ranges: `0`-`0`, `3`-`65535`
         ///   - Default value: `300`
         /// </summary>
         [Input("holdtime")]

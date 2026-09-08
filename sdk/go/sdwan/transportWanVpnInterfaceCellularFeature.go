@@ -376,6 +376,10 @@ type TransportWanVpnInterfaceCellularFeature struct {
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `mpls`
 	TunnelInterfaceColor pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColor"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescription pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColorDescription"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescriptionVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColorDescriptionVariable"`
 	// Restrict this TLOC behavior
 	//   - Default value: `false`
 	TunnelInterfaceColorRestrict pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceColorRestrict"`
@@ -389,6 +393,11 @@ type TransportWanVpnInterfaceCellularFeature struct {
 	TunnelInterfaceExcludeControllerGroupListVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceExcludeControllerGroupListVariable"`
 	// Exclude the following controller groups defined in this list.
 	TunnelInterfaceExcludeControllerGroupLists pulumi.IntArrayOutput `pulumi:"tunnelInterfaceExcludeControllerGroupLists"`
+	// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Default value: `false`
+	TunnelInterfaceFullPortHop pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceFullPortHop"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceFullPortHopVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceFullPortHopVariable"`
 	// List of groups
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups pulumi.IntPtrOutput `pulumi:"tunnelInterfaceGroups"`
@@ -432,7 +441,7 @@ type TransportWanVpnInterfaceCellularFeature struct {
 	TunnelInterfaceNetworkBroadcast pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceNetworkBroadcast"`
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceNetworkBroadcastVariable"`
-	// Disallow port hopping on the tunnel interface
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
 	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrOutput `pulumi:"tunnelInterfacePortHop"`
 	// Variable name
@@ -745,6 +754,10 @@ type transportWanVpnInterfaceCellularFeatureState struct {
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `mpls`
 	TunnelInterfaceColor *string `pulumi:"tunnelInterfaceColor"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescription *string `pulumi:"tunnelInterfaceColorDescription"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescriptionVariable *string `pulumi:"tunnelInterfaceColorDescriptionVariable"`
 	// Restrict this TLOC behavior
 	//   - Default value: `false`
 	TunnelInterfaceColorRestrict *bool `pulumi:"tunnelInterfaceColorRestrict"`
@@ -758,6 +771,11 @@ type transportWanVpnInterfaceCellularFeatureState struct {
 	TunnelInterfaceExcludeControllerGroupListVariable *string `pulumi:"tunnelInterfaceExcludeControllerGroupListVariable"`
 	// Exclude the following controller groups defined in this list.
 	TunnelInterfaceExcludeControllerGroupLists []int `pulumi:"tunnelInterfaceExcludeControllerGroupLists"`
+	// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Default value: `false`
+	TunnelInterfaceFullPortHop *bool `pulumi:"tunnelInterfaceFullPortHop"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceFullPortHopVariable *string `pulumi:"tunnelInterfaceFullPortHopVariable"`
 	// List of groups
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups *int `pulumi:"tunnelInterfaceGroups"`
@@ -801,7 +819,7 @@ type transportWanVpnInterfaceCellularFeatureState struct {
 	TunnelInterfaceNetworkBroadcast *bool `pulumi:"tunnelInterfaceNetworkBroadcast"`
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable *string `pulumi:"tunnelInterfaceNetworkBroadcastVariable"`
-	// Disallow port hopping on the tunnel interface
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
 	//   - Default value: `true`
 	TunnelInterfacePortHop *bool `pulumi:"tunnelInterfacePortHop"`
 	// Variable name
@@ -1079,6 +1097,10 @@ type TransportWanVpnInterfaceCellularFeatureState struct {
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `mpls`
 	TunnelInterfaceColor pulumi.StringPtrInput
+	// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescription pulumi.StringPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescriptionVariable pulumi.StringPtrInput
 	// Restrict this TLOC behavior
 	//   - Default value: `false`
 	TunnelInterfaceColorRestrict pulumi.BoolPtrInput
@@ -1092,6 +1114,11 @@ type TransportWanVpnInterfaceCellularFeatureState struct {
 	TunnelInterfaceExcludeControllerGroupListVariable pulumi.StringPtrInput
 	// Exclude the following controller groups defined in this list.
 	TunnelInterfaceExcludeControllerGroupLists pulumi.IntArrayInput
+	// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Default value: `false`
+	TunnelInterfaceFullPortHop pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceFullPortHopVariable pulumi.StringPtrInput
 	// List of groups
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups pulumi.IntPtrInput
@@ -1135,7 +1162,7 @@ type TransportWanVpnInterfaceCellularFeatureState struct {
 	TunnelInterfaceNetworkBroadcast pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable pulumi.StringPtrInput
-	// Disallow port hopping on the tunnel interface
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
 	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrInput
 	// Variable name
@@ -1417,6 +1444,10 @@ type transportWanVpnInterfaceCellularFeatureArgs struct {
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `mpls`
 	TunnelInterfaceColor *string `pulumi:"tunnelInterfaceColor"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescription *string `pulumi:"tunnelInterfaceColorDescription"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescriptionVariable *string `pulumi:"tunnelInterfaceColorDescriptionVariable"`
 	// Restrict this TLOC behavior
 	//   - Default value: `false`
 	TunnelInterfaceColorRestrict *bool `pulumi:"tunnelInterfaceColorRestrict"`
@@ -1430,6 +1461,11 @@ type transportWanVpnInterfaceCellularFeatureArgs struct {
 	TunnelInterfaceExcludeControllerGroupListVariable *string `pulumi:"tunnelInterfaceExcludeControllerGroupListVariable"`
 	// Exclude the following controller groups defined in this list.
 	TunnelInterfaceExcludeControllerGroupLists []int `pulumi:"tunnelInterfaceExcludeControllerGroupLists"`
+	// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Default value: `false`
+	TunnelInterfaceFullPortHop *bool `pulumi:"tunnelInterfaceFullPortHop"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceFullPortHopVariable *string `pulumi:"tunnelInterfaceFullPortHopVariable"`
 	// List of groups
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups *int `pulumi:"tunnelInterfaceGroups"`
@@ -1473,7 +1509,7 @@ type transportWanVpnInterfaceCellularFeatureArgs struct {
 	TunnelInterfaceNetworkBroadcast *bool `pulumi:"tunnelInterfaceNetworkBroadcast"`
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable *string `pulumi:"tunnelInterfaceNetworkBroadcastVariable"`
-	// Disallow port hopping on the tunnel interface
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
 	//   - Default value: `true`
 	TunnelInterfacePortHop *bool `pulumi:"tunnelInterfacePortHop"`
 	// Variable name
@@ -1750,6 +1786,10 @@ type TransportWanVpnInterfaceCellularFeatureArgs struct {
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `mpls`
 	TunnelInterfaceColor pulumi.StringPtrInput
+	// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescription pulumi.StringPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceColorDescriptionVariable pulumi.StringPtrInput
 	// Restrict this TLOC behavior
 	//   - Default value: `false`
 	TunnelInterfaceColorRestrict pulumi.BoolPtrInput
@@ -1763,6 +1803,11 @@ type TransportWanVpnInterfaceCellularFeatureArgs struct {
 	TunnelInterfaceExcludeControllerGroupListVariable pulumi.StringPtrInput
 	// Exclude the following controller groups defined in this list.
 	TunnelInterfaceExcludeControllerGroupLists pulumi.IntArrayInput
+	// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Default value: `false`
+	TunnelInterfaceFullPortHop pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelInterfaceFullPortHopVariable pulumi.StringPtrInput
 	// List of groups
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups pulumi.IntPtrInput
@@ -1806,7 +1851,7 @@ type TransportWanVpnInterfaceCellularFeatureArgs struct {
 	TunnelInterfaceNetworkBroadcast pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable pulumi.StringPtrInput
-	// Disallow port hopping on the tunnel interface
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
 	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrInput
 	// Variable name
@@ -2600,6 +2645,20 @@ func (o TransportWanVpnInterfaceCellularFeatureOutput) TunnelInterfaceColor() pu
 	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeature) pulumi.StringPtrOutput { return v.TunnelInterfaceColor }).(pulumi.StringPtrOutput)
 }
 
+// , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o TransportWanVpnInterfaceCellularFeatureOutput) TunnelInterfaceColorDescription() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeature) pulumi.StringPtrOutput {
+		return v.TunnelInterfaceColorDescription
+	}).(pulumi.StringPtrOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o TransportWanVpnInterfaceCellularFeatureOutput) TunnelInterfaceColorDescriptionVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeature) pulumi.StringPtrOutput {
+		return v.TunnelInterfaceColorDescriptionVariable
+	}).(pulumi.StringPtrOutput)
+}
+
 // Restrict this TLOC behavior
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceCellularFeatureOutput) TunnelInterfaceColorRestrict() pulumi.BoolPtrOutput {
@@ -2641,6 +2700,21 @@ func (o TransportWanVpnInterfaceCellularFeatureOutput) TunnelInterfaceExcludeCon
 	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeature) pulumi.IntArrayOutput {
 		return v.TunnelInterfaceExcludeControllerGroupLists
 	}).(pulumi.IntArrayOutput)
+}
+
+// Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+//   - Default value: `false`
+func (o TransportWanVpnInterfaceCellularFeatureOutput) TunnelInterfaceFullPortHop() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeature) pulumi.BoolPtrOutput {
+		return v.TunnelInterfaceFullPortHop
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o TransportWanVpnInterfaceCellularFeatureOutput) TunnelInterfaceFullPortHopVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeature) pulumi.StringPtrOutput {
+		return v.TunnelInterfaceFullPortHopVariable
+	}).(pulumi.StringPtrOutput)
 }
 
 // List of groups
@@ -2764,7 +2838,7 @@ func (o TransportWanVpnInterfaceCellularFeatureOutput) TunnelInterfaceNetworkBro
 	}).(pulumi.StringPtrOutput)
 }
 
-// Disallow port hopping on the tunnel interface
+// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
 //   - Default value: `true`
 func (o TransportWanVpnInterfaceCellularFeatureOutput) TunnelInterfacePortHop() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeature) pulumi.BoolPtrOutput { return v.TunnelInterfacePortHop }).(pulumi.BoolPtrOutput)

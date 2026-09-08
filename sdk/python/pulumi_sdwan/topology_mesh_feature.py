@@ -20,24 +20,31 @@ __all__ = ['TopologyMeshFeatureArgs', 'TopologyMeshFeature']
 class TopologyMeshFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 sites: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  target_vpns: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 name: pulumi.Input[Optional[_builtins.str]] = None):
+                 hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a TopologyMeshFeature resource.
 
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: Target VPN list
         :param pulumi.Input[_builtins.str] description: The description of the Feature
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hierarchy_uuids: Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] name: The name of the Feature
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sites: Site list
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
-        pulumi.set(__self__, "sites", sites)
         pulumi.set(__self__, "target_vpns", target_vpns)
         if description is not None:
             pulumi.set(__self__, "description", description)
+        if hierarchy_uuids is not None:
+            pulumi.set(__self__, "hierarchy_uuids", hierarchy_uuids)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if sites is not None:
+            pulumi.set(__self__, "sites", sites)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
@@ -52,17 +59,11 @@ class TopologyMeshFeatureArgs:
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
-    @pulumi.getter
-    def sites(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
-        return pulumi.get(self, "sites")
-
-    @sites.setter
-    def sites(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
-        pulumi.set(self, "sites", value)
-
-    @_builtins.property
     @pulumi.getter(name="targetVpns")
     def target_vpns(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
+        """
+        Target VPN list
+        """
         return pulumi.get(self, "target_vpns")
 
     @target_vpns.setter
@@ -82,6 +83,18 @@ class TopologyMeshFeatureArgs:
         pulumi.set(self, "description", value)
 
     @_builtins.property
+    @pulumi.getter(name="hierarchyUuids")
+    def hierarchy_uuids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "hierarchy_uuids")
+
+    @hierarchy_uuids.setter
+    def hierarchy_uuids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "hierarchy_uuids", value)
+
+    @_builtins.property
     @pulumi.getter
     def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
@@ -93,12 +106,25 @@ class TopologyMeshFeatureArgs:
     def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
+    @_builtins.property
+    @pulumi.getter
+    def sites(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Site list
+        """
+        return pulumi.get(self, "sites")
+
+    @sites.setter
+    def sites(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "sites", value)
+
 
 @pulumi.input_type
 class _TopologyMeshFeatureState:
     def __init__(__self__, *,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -108,13 +134,18 @@ class _TopologyMeshFeatureState:
 
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hierarchy_uuids: Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] name: The name of the Feature
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sites: Site list
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: Target VPN list
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
         if feature_profile_id is not None:
             pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        if hierarchy_uuids is not None:
+            pulumi.set(__self__, "hierarchy_uuids", hierarchy_uuids)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if sites is not None:
@@ -149,6 +180,18 @@ class _TopologyMeshFeatureState:
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
+    @pulumi.getter(name="hierarchyUuids")
+    def hierarchy_uuids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "hierarchy_uuids")
+
+    @hierarchy_uuids.setter
+    def hierarchy_uuids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "hierarchy_uuids", value)
+
+    @_builtins.property
     @pulumi.getter
     def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
@@ -163,6 +206,9 @@ class _TopologyMeshFeatureState:
     @_builtins.property
     @pulumi.getter
     def sites(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Site list
+        """
         return pulumi.get(self, "sites")
 
     @sites.setter
@@ -172,6 +218,9 @@ class _TopologyMeshFeatureState:
     @_builtins.property
     @pulumi.getter(name="targetVpns")
     def target_vpns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Target VPN list
+        """
         return pulumi.get(self, "target_vpns")
 
     @target_vpns.setter
@@ -199,6 +248,7 @@ class TopologyMeshFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -218,7 +268,7 @@ class TopologyMeshFeature(pulumi.CustomResource):
             description="My Example",
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
             target_vpns=["service_lan_vpn1"],
-            sites=["SITE_100"])
+            hierarchy_uuids=["acb2ea53-4a95-4970-a1ab-9bac15edb961"])
         ```
 
         ## Import
@@ -236,7 +286,10 @@ class TopologyMeshFeature(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hierarchy_uuids: Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] name: The name of the Feature
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sites: Site list
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: Target VPN list
         """
         ...
     @overload
@@ -259,7 +312,7 @@ class TopologyMeshFeature(pulumi.CustomResource):
             description="My Example",
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
             target_vpns=["service_lan_vpn1"],
-            sites=["SITE_100"])
+            hierarchy_uuids=["acb2ea53-4a95-4970-a1ab-9bac15edb961"])
         ```
 
         ## Import
@@ -290,6 +343,7 @@ class TopologyMeshFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -306,9 +360,8 @@ class TopologyMeshFeature(pulumi.CustomResource):
             if feature_profile_id is None and not opts.urn:
                 raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
+            __props__.__dict__["hierarchy_uuids"] = hierarchy_uuids
             __props__.__dict__["name"] = name
-            if sites is None and not opts.urn:
-                raise TypeError("Missing required property 'sites'")
             __props__.__dict__["sites"] = sites
             if target_vpns is None and not opts.urn:
                 raise TypeError("Missing required property 'target_vpns'")
@@ -326,6 +379,7 @@ class TopologyMeshFeature(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -339,7 +393,10 @@ class TopologyMeshFeature(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hierarchy_uuids: Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] name: The name of the Feature
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sites: Site list
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: Target VPN list
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -348,6 +405,7 @@ class TopologyMeshFeature(pulumi.CustomResource):
 
         __props__.__dict__["description"] = description
         __props__.__dict__["feature_profile_id"] = feature_profile_id
+        __props__.__dict__["hierarchy_uuids"] = hierarchy_uuids
         __props__.__dict__["name"] = name
         __props__.__dict__["sites"] = sites
         __props__.__dict__["target_vpns"] = target_vpns
@@ -371,6 +429,14 @@ class TopologyMeshFeature(pulumi.CustomResource):
         return pulumi.get(self, "feature_profile_id")
 
     @_builtins.property
+    @pulumi.getter(name="hierarchyUuids")
+    def hierarchy_uuids(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+        """
+        Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "hierarchy_uuids")
+
+    @_builtins.property
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
@@ -380,12 +446,18 @@ class TopologyMeshFeature(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def sites(self) -> pulumi.Output[Sequence[_builtins.str]]:
+    def sites(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+        """
+        Site list
+        """
         return pulumi.get(self, "sites")
 
     @_builtins.property
     @pulumi.getter(name="targetVpns")
     def target_vpns(self) -> pulumi.Output[Sequence[_builtins.str]]:
+        """
+        Target VPN list
+        """
         return pulumi.get(self, "target_vpns")
 
     @_builtins.property

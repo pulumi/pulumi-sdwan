@@ -22,8 +22,8 @@ import * as utilities from "./utilities";
  *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
  *     defaultAction: "reject",
  *     targetLevel: "SITE",
- *     targetInboundSites: ["SITE_100"],
- *     targetOutboundSites: ["SITE_200"],
+ *     targetInboundHierarchyUuids: ["acb2ea53-4a95-4970-a1ab-9bac15edb961"],
+ *     targetOutboundHierarchyUuids: ["acb2ea53-4a95-4970-a1ab-9bac15edb961"],
  *     sequences: [{
  *         id: 1,
  *         name: "Rule1",
@@ -34,6 +34,7 @@ import * as utilities from "./utilities";
  *             ompTag: 100,
  *             origin: "connected",
  *             originator: "1.2.3.4",
+ *             hierarchyUuids: ["c446d770-2ac0-4e2c-9a64-345d562a4ac7"],
  *             tlocIp: "1.2.3.4",
  *             tlocColor: "bronze",
  *             tlocEncapsulation: "ipsec",
@@ -108,11 +109,15 @@ export class TopologyCustomControlFeature extends pulumi.CustomResource {
      */
     declare public readonly sequences: pulumi.Output<outputs.TopologyCustomControlFeatureSequence[] | undefined>;
     /**
+     * Inbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetInboundSites` not being set and `targetOutboundSites` not being set
+     */
+    declare public readonly targetInboundHierarchyUuids: pulumi.Output<string[] | undefined>;
+    /**
      * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      */
     declare public readonly targetInboundRegions: pulumi.Output<outputs.TopologyCustomControlFeatureTargetInboundRegion[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE`
+     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
      */
     declare public readonly targetInboundSites: pulumi.Output<string[] | undefined>;
     /**
@@ -120,11 +125,15 @@ export class TopologyCustomControlFeature extends pulumi.CustomResource {
      */
     declare public readonly targetLevel: pulumi.Output<string>;
     /**
+     * Outbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetOutboundSites` not being set and `targetInboundSites` not being set
+     */
+    declare public readonly targetOutboundHierarchyUuids: pulumi.Output<string[] | undefined>;
+    /**
      * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      */
     declare public readonly targetOutboundRegions: pulumi.Output<outputs.TopologyCustomControlFeatureTargetOutboundRegion[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE`
+     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
      */
     declare public readonly targetOutboundSites: pulumi.Output<string[] | undefined>;
     /**
@@ -155,9 +164,11 @@ export class TopologyCustomControlFeature extends pulumi.CustomResource {
             resourceInputs["featureProfileId"] = state?.featureProfileId;
             resourceInputs["name"] = state?.name;
             resourceInputs["sequences"] = state?.sequences;
+            resourceInputs["targetInboundHierarchyUuids"] = state?.targetInboundHierarchyUuids;
             resourceInputs["targetInboundRegions"] = state?.targetInboundRegions;
             resourceInputs["targetInboundSites"] = state?.targetInboundSites;
             resourceInputs["targetLevel"] = state?.targetLevel;
+            resourceInputs["targetOutboundHierarchyUuids"] = state?.targetOutboundHierarchyUuids;
             resourceInputs["targetOutboundRegions"] = state?.targetOutboundRegions;
             resourceInputs["targetOutboundSites"] = state?.targetOutboundSites;
             resourceInputs["targetRole"] = state?.targetRole;
@@ -179,9 +190,11 @@ export class TopologyCustomControlFeature extends pulumi.CustomResource {
             resourceInputs["featureProfileId"] = args?.featureProfileId;
             resourceInputs["name"] = args?.name;
             resourceInputs["sequences"] = args?.sequences;
+            resourceInputs["targetInboundHierarchyUuids"] = args?.targetInboundHierarchyUuids;
             resourceInputs["targetInboundRegions"] = args?.targetInboundRegions;
             resourceInputs["targetInboundSites"] = args?.targetInboundSites;
             resourceInputs["targetLevel"] = args?.targetLevel;
+            resourceInputs["targetOutboundHierarchyUuids"] = args?.targetOutboundHierarchyUuids;
             resourceInputs["targetOutboundRegions"] = args?.targetOutboundRegions;
             resourceInputs["targetOutboundSites"] = args?.targetOutboundSites;
             resourceInputs["targetRole"] = args?.targetRole;
@@ -219,11 +232,15 @@ export interface TopologyCustomControlFeatureState {
      */
     sequences?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureSequence>[] | undefined>;
     /**
+     * Inbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetInboundSites` not being set and `targetOutboundSites` not being set
+     */
+    targetInboundHierarchyUuids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
      * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      */
     targetInboundRegions?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureTargetInboundRegion>[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE`
+     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
      */
     targetInboundSites?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
@@ -231,11 +248,15 @@ export interface TopologyCustomControlFeatureState {
      */
     targetLevel?: pulumi.Input<string | undefined>;
     /**
+     * Outbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetOutboundSites` not being set and `targetInboundSites` not being set
+     */
+    targetOutboundHierarchyUuids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
      * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      */
     targetOutboundRegions?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureTargetOutboundRegion>[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE`
+     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
      */
     targetOutboundSites?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
@@ -275,11 +296,15 @@ export interface TopologyCustomControlFeatureArgs {
      */
     sequences?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureSequence>[] | undefined>;
     /**
+     * Inbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetInboundSites` not being set and `targetOutboundSites` not being set
+     */
+    targetInboundHierarchyUuids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
      * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      */
     targetInboundRegions?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureTargetInboundRegion>[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE`
+     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
      */
     targetInboundSites?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
@@ -287,11 +312,15 @@ export interface TopologyCustomControlFeatureArgs {
      */
     targetLevel: pulumi.Input<string>;
     /**
+     * Outbound network hierarchy UUIDs, Attribute conditional on `targetLevel` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `targetOutboundSites` not being set and `targetInboundSites` not being set
+     */
+    targetOutboundHierarchyUuids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
      * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      */
     targetOutboundRegions?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureTargetOutboundRegion>[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE`
+     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
      */
     targetOutboundSites?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**

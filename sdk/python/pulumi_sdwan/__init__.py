@@ -220,6 +220,7 @@ from .get_rule_set_policy_definition import *
 from .get_security_app_hosting_feature_template import *
 from .get_security_policy import *
 from .get_service_dhcp_server_feature import *
+from .get_service_dual_router_ha_feature import *
 from .get_service_feature_profile import *
 from .get_service_ipv4_acl_feature import *
 from .get_service_ipv6_acl_feature import *
@@ -412,6 +413,7 @@ from .rule_set_policy_definition import *
 from .security_app_hosting_feature_template import *
 from .security_policy import *
 from .service_dhcp_server_feature import *
+from .service_dual_router_ha_feature import *
 from .service_feature_profile import *
 from .service_ipv4_acl_feature import *
 from .service_ipv6_acl_feature import *
@@ -1692,6 +1694,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature": "ServiceDhcpServerFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/serviceDualRouterHaFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/serviceDualRouterHaFeature:ServiceDualRouterHaFeature": "ServiceDualRouterHaFeature"
   }
  },
  {

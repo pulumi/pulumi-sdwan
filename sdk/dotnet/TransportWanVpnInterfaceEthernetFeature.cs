@@ -55,6 +55,7 @@ namespace Pulumi.Sdwan
     ///         BandwidthUpstream = 21474836,
     ///         BandwidthDownstream = 21474836,
     ///         AutoDetectBandwidth = false,
+    ///         EnableHaInterlinkInterface = false,
     ///         TunnelInterface = true,
     ///         PerTunnelQos = true,
     ///         TunnelQosMode = "hub",
@@ -180,6 +181,7 @@ namespace Pulumi.Sdwan
     ///                 MacAddress = "00-B0-D0-63-C2-26",
     ///             },
     ///         },
+    ///         EnforcedSecurityGroupTag = 200,
     ///         IcmpRedirectDisable = true,
     ///         Duplex = "full",
     ///         MacAddress = "00-B0-D0-63-C2-26",
@@ -334,6 +336,39 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("enableDhcpv6")]
         public Output<bool?> EnableDhcpv6 { get; private set; } = null!;
+
+        /// <summary>
+        /// Enable/Disable SGT Enforcement on an interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("enableEnforcedPropagation")]
+        public Output<bool?> EnableEnforcedPropagation { get; private set; } = null!;
+
+        /// <summary>
+        /// HA Interlink interface on/off, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("enableHaInterlinkInterface")]
+        public Output<bool?> EnableHaInterlinkInterface { get; private set; } = null!;
+
+        /// <summary>
+        /// Indicates that the interface is trustworthy for CTS, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("enableSgtPropagation")]
+        public Output<bool?> EnableSgtPropagation { get; private set; } = null!;
+
+        /// <summary>
+        /// SGT value between 2 and 65519, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Range: `2`-`65519`
+        /// </summary>
+        [Output("enforcedSecurityGroupTag")]
+        public Output<int?> EnforcedSecurityGroupTag { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("enforcedSecurityGroupTagVariable")]
+        public Output<string?> EnforcedSecurityGroupTagVariable { get; private set; } = null!;
 
         /// <summary>
         /// Feature Profile ID
@@ -932,6 +967,13 @@ namespace Pulumi.Sdwan
         public Output<bool?> PortChannelSubinterface { get; private set; } = null!;
 
         /// <summary>
+        /// Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `True`
+        /// </summary>
+        [Output("propagate")]
+        public Output<bool?> Propagate { get; private set; } = null!;
+
+        /// <summary>
         /// Adaptive QoS, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
@@ -1058,6 +1100,19 @@ namespace Pulumi.Sdwan
         public Output<string?> QosShapingRateVariable { get; private set; } = null!;
 
         /// <summary>
+        /// SGT value between 2 and 65519, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Range: `2`-`65519`
+        /// </summary>
+        [Output("securityGroupTag")]
+        public Output<int?> SecurityGroupTag { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("securityGroupTagVariable")]
+        public Output<string?> SecurityGroupTagVariable { get; private set; } = null!;
+
+        /// <summary>
         /// Service Provider Name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("serviceProvider")]
@@ -1148,6 +1203,13 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("transportWanVpnFeatureId")]
         public Output<string> TransportWanVpnFeatureId { get; private set; } = null!;
+
+        /// <summary>
+        /// Indicates that the interface is trustworthy for CTS., Attribute conditional on (`SecurityGroupTag` being set and `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher) or (`SecurityGroupTagVariable` being set and `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher)
+        ///   - Default value: `True`
+        /// </summary>
+        [Output("trusted")]
+        public Output<bool?> Trusted { get; private set; } = null!;
 
         /// <summary>
         /// Tunnels Bandwidth Percent, Attribute conditional on `TunnelInterface` equal to `True` and `TunnelQosMode` equal to `Hub`
@@ -1413,6 +1475,18 @@ namespace Pulumi.Sdwan
         public Output<string?> TunnelInterfaceColor { get; private set; } = null!;
 
         /// <summary>
+        /// Set color description for TLOC, Attribute conditional on `TunnelInterface` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("tunnelInterfaceColorDescription")]
+        public Output<string?> TunnelInterfaceColorDescription { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `TunnelInterface` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("tunnelInterfaceColorDescriptionVariable")]
+        public Output<string?> TunnelInterfaceColorDescriptionVariable { get; private set; } = null!;
+
+        /// <summary>
         /// Restrict this TLOC behavior, Attribute conditional on `TunnelInterface` equal to `True`
         ///   - Default value: `False`
         /// </summary>
@@ -1461,6 +1535,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("tunnelInterfaceExcludeControllerGroupLists")]
         public Output<ImmutableArray<int>> TunnelInterfaceExcludeControllerGroupLists { get; private set; } = null!;
+
+        /// <summary>
+        /// Enable port hopping on the tunnel interface, Attribute conditional on `TunnelInterface` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("tunnelInterfaceFullPortHop")]
+        public Output<bool?> TunnelInterfaceFullPortHop { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `TunnelInterface` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("tunnelInterfaceFullPortHopVariable")]
+        public Output<string?> TunnelInterfaceFullPortHopVariable { get; private set; } = null!;
 
         /// <summary>
         /// GRE tunnel destination IP, Attribute conditional on `TunnelInterface` equal to `True`
@@ -1582,7 +1669,7 @@ namespace Pulumi.Sdwan
         public Output<string?> TunnelInterfaceNetworkBroadcastVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface, Attribute conditional on `TunnelInterface` equal to `True`
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `TunnelInterface` equal to `True`
         ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfacePortHop")]
@@ -1850,6 +1937,39 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("enableDhcpv6")]
         public Input<bool>? EnableDhcpv6 { get; set; }
+
+        /// <summary>
+        /// Enable/Disable SGT Enforcement on an interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("enableEnforcedPropagation")]
+        public Input<bool>? EnableEnforcedPropagation { get; set; }
+
+        /// <summary>
+        /// HA Interlink interface on/off, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("enableHaInterlinkInterface")]
+        public Input<bool>? EnableHaInterlinkInterface { get; set; }
+
+        /// <summary>
+        /// Indicates that the interface is trustworthy for CTS, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("enableSgtPropagation")]
+        public Input<bool>? EnableSgtPropagation { get; set; }
+
+        /// <summary>
+        /// SGT value between 2 and 65519, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Range: `2`-`65519`
+        /// </summary>
+        [Input("enforcedSecurityGroupTag")]
+        public Input<int>? EnforcedSecurityGroupTag { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("enforcedSecurityGroupTagVariable")]
+        public Input<string>? EnforcedSecurityGroupTagVariable { get; set; }
 
         /// <summary>
         /// Feature Profile ID
@@ -2502,6 +2622,13 @@ namespace Pulumi.Sdwan
         public Input<bool>? PortChannelSubinterface { get; set; }
 
         /// <summary>
+        /// Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `True`
+        /// </summary>
+        [Input("propagate")]
+        public Input<bool>? Propagate { get; set; }
+
+        /// <summary>
         /// Adaptive QoS, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
@@ -2628,6 +2755,19 @@ namespace Pulumi.Sdwan
         public Input<string>? QosShapingRateVariable { get; set; }
 
         /// <summary>
+        /// SGT value between 2 and 65519, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Range: `2`-`65519`
+        /// </summary>
+        [Input("securityGroupTag")]
+        public Input<int>? SecurityGroupTag { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("securityGroupTagVariable")]
+        public Input<string>? SecurityGroupTagVariable { get; set; }
+
+        /// <summary>
         /// Service Provider Name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("serviceProvider")]
@@ -2730,6 +2870,13 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("transportWanVpnFeatureId", required: true)]
         public Input<string> TransportWanVpnFeatureId { get; set; } = null!;
+
+        /// <summary>
+        /// Indicates that the interface is trustworthy for CTS., Attribute conditional on (`SecurityGroupTag` being set and `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher) or (`SecurityGroupTagVariable` being set and `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher)
+        ///   - Default value: `True`
+        /// </summary>
+        [Input("trusted")]
+        public Input<bool>? Trusted { get; set; }
 
         /// <summary>
         /// Tunnels Bandwidth Percent, Attribute conditional on `TunnelInterface` equal to `True` and `TunnelQosMode` equal to `Hub`
@@ -2995,6 +3142,18 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceColor { get; set; }
 
         /// <summary>
+        /// Set color description for TLOC, Attribute conditional on `TunnelInterface` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceColorDescription")]
+        public Input<string>? TunnelInterfaceColorDescription { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `TunnelInterface` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceColorDescriptionVariable")]
+        public Input<string>? TunnelInterfaceColorDescriptionVariable { get; set; }
+
+        /// <summary>
         /// Restrict this TLOC behavior, Attribute conditional on `TunnelInterface` equal to `True`
         ///   - Default value: `False`
         /// </summary>
@@ -3055,6 +3214,19 @@ namespace Pulumi.Sdwan
             get => _tunnelInterfaceExcludeControllerGroupLists ?? (_tunnelInterfaceExcludeControllerGroupLists = new InputList<int>());
             set => _tunnelInterfaceExcludeControllerGroupLists = value;
         }
+
+        /// <summary>
+        /// Enable port hopping on the tunnel interface, Attribute conditional on `TunnelInterface` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("tunnelInterfaceFullPortHop")]
+        public Input<bool>? TunnelInterfaceFullPortHop { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `TunnelInterface` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceFullPortHopVariable")]
+        public Input<string>? TunnelInterfaceFullPortHopVariable { get; set; }
 
         /// <summary>
         /// GRE tunnel destination IP, Attribute conditional on `TunnelInterface` equal to `True`
@@ -3176,7 +3348,7 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceNetworkBroadcastVariable { get; set; }
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface, Attribute conditional on `TunnelInterface` equal to `True`
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `TunnelInterface` equal to `True`
         ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfacePortHop")]
@@ -3400,6 +3572,39 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("enableDhcpv6")]
         public Input<bool>? EnableDhcpv6 { get; set; }
+
+        /// <summary>
+        /// Enable/Disable SGT Enforcement on an interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("enableEnforcedPropagation")]
+        public Input<bool>? EnableEnforcedPropagation { get; set; }
+
+        /// <summary>
+        /// HA Interlink interface on/off, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("enableHaInterlinkInterface")]
+        public Input<bool>? EnableHaInterlinkInterface { get; set; }
+
+        /// <summary>
+        /// Indicates that the interface is trustworthy for CTS, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("enableSgtPropagation")]
+        public Input<bool>? EnableSgtPropagation { get; set; }
+
+        /// <summary>
+        /// SGT value between 2 and 65519, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Range: `2`-`65519`
+        /// </summary>
+        [Input("enforcedSecurityGroupTag")]
+        public Input<int>? EnforcedSecurityGroupTag { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("enforcedSecurityGroupTagVariable")]
+        public Input<string>? EnforcedSecurityGroupTagVariable { get; set; }
 
         /// <summary>
         /// Feature Profile ID
@@ -4052,6 +4257,13 @@ namespace Pulumi.Sdwan
         public Input<bool>? PortChannelSubinterface { get; set; }
 
         /// <summary>
+        /// Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `True`
+        /// </summary>
+        [Input("propagate")]
+        public Input<bool>? Propagate { get; set; }
+
+        /// <summary>
         /// Adaptive QoS, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
@@ -4178,6 +4390,19 @@ namespace Pulumi.Sdwan
         public Input<string>? QosShapingRateVariable { get; set; }
 
         /// <summary>
+        /// SGT value between 2 and 65519, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Range: `2`-`65519`
+        /// </summary>
+        [Input("securityGroupTag")]
+        public Input<int>? SecurityGroupTag { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("securityGroupTagVariable")]
+        public Input<string>? SecurityGroupTagVariable { get; set; }
+
+        /// <summary>
         /// Service Provider Name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("serviceProvider")]
@@ -4280,6 +4505,13 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("transportWanVpnFeatureId")]
         public Input<string>? TransportWanVpnFeatureId { get; set; }
+
+        /// <summary>
+        /// Indicates that the interface is trustworthy for CTS., Attribute conditional on (`SecurityGroupTag` being set and `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher) or (`SecurityGroupTagVariable` being set and `PortChannelMemberInterface` not equal to `True` and `EnableSgtPropagation` equal to `True` and SD-WAN Manager version `20.18.1` or higher)
+        ///   - Default value: `True`
+        /// </summary>
+        [Input("trusted")]
+        public Input<bool>? Trusted { get; set; }
 
         /// <summary>
         /// Tunnels Bandwidth Percent, Attribute conditional on `TunnelInterface` equal to `True` and `TunnelQosMode` equal to `Hub`
@@ -4545,6 +4777,18 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceColor { get; set; }
 
         /// <summary>
+        /// Set color description for TLOC, Attribute conditional on `TunnelInterface` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceColorDescription")]
+        public Input<string>? TunnelInterfaceColorDescription { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `TunnelInterface` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceColorDescriptionVariable")]
+        public Input<string>? TunnelInterfaceColorDescriptionVariable { get; set; }
+
+        /// <summary>
         /// Restrict this TLOC behavior, Attribute conditional on `TunnelInterface` equal to `True`
         ///   - Default value: `False`
         /// </summary>
@@ -4605,6 +4849,19 @@ namespace Pulumi.Sdwan
             get => _tunnelInterfaceExcludeControllerGroupLists ?? (_tunnelInterfaceExcludeControllerGroupLists = new InputList<int>());
             set => _tunnelInterfaceExcludeControllerGroupLists = value;
         }
+
+        /// <summary>
+        /// Enable port hopping on the tunnel interface, Attribute conditional on `TunnelInterface` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("tunnelInterfaceFullPortHop")]
+        public Input<bool>? TunnelInterfaceFullPortHop { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `TunnelInterface` equal to `True` and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("tunnelInterfaceFullPortHopVariable")]
+        public Input<string>? TunnelInterfaceFullPortHopVariable { get; set; }
 
         /// <summary>
         /// GRE tunnel destination IP, Attribute conditional on `TunnelInterface` equal to `True`
@@ -4726,7 +4983,7 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceNetworkBroadcastVariable { get; set; }
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface, Attribute conditional on `TunnelInterface` equal to `True`
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `TunnelInterface` equal to `True`
         ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfacePortHop")]

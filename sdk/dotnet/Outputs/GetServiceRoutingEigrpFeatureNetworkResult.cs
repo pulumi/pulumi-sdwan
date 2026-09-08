@@ -13,11 +13,17 @@ namespace Pulumi.Sdwan.Outputs
     [OutputType]
     public sealed class GetServiceRoutingEigrpFeatureNetworkResult
     {
+        /// <summary>
+        /// IP Address
+        /// </summary>
         public readonly string IpAddress;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string IpAddressVariable;
+        /// <summary>
+        /// Subnet Mask
+        /// </summary>
         public readonly string Mask;
         /// <summary>
         /// Variable name

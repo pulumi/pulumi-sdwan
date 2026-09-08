@@ -607,8 +607,7 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
 
     /**
      * VPN
-     *   - Range: `1`-`65527`
-     *   - Default value: `0`
+     *   - Ranges: `1`-`511`, `513`-`65527`
      * 
      */
     @Import(name="vpn")
@@ -616,8 +615,7 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
 
     /**
      * @return VPN
-     *   - Range: `1`-`65527`
-     *   - Default value: `0`
+     *   - Ranges: `1`-`511`, `513`-`65527`
      * 
      */
     public Optional<Output<Integer>> vpn() {
@@ -1672,8 +1670,7 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
 
         /**
          * @param vpn VPN
-         *   - Range: `1`-`65527`
-         *   - Default value: `0`
+         *   - Ranges: `1`-`511`, `513`-`65527`
          * 
          * @return builder
          * 
@@ -1685,8 +1682,7 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
 
         /**
          * @param vpn VPN
-         *   - Range: `1`-`65527`
-         *   - Default value: `0`
+         *   - Ranges: `1`-`511`, `513`-`65527`
          * 
          * @return builder
          * 

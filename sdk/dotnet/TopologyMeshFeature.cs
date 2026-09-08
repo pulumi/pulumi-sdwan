@@ -32,9 +32,9 @@ namespace Pulumi.Sdwan
     ///         {
     ///             "service_lan_vpn1",
     ///         },
-    ///         Sites = new[]
+    ///         HierarchyUuids = new[]
     ///         {
-    ///             "SITE_100",
+    ///             "acb2ea53-4a95-4970-a1ab-9bac15edb961",
     ///         },
     ///     });
     /// 
@@ -67,14 +67,26 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
+        /// Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("hierarchyUuids")]
+        public Output<ImmutableArray<string>> HierarchyUuids { get; private set; } = null!;
+
+        /// <summary>
         /// The name of the Feature
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
+        /// <summary>
+        /// Site list
+        /// </summary>
         [Output("sites")]
         public Output<ImmutableArray<string>> Sites { get; private set; } = null!;
 
+        /// <summary>
+        /// Target VPN list
+        /// </summary>
         [Output("targetVpns")]
         public Output<ImmutableArray<string>> TargetVpns { get; private set; } = null!;
 
@@ -142,14 +154,30 @@ namespace Pulumi.Sdwan
         [Input("featureProfileId", required: true)]
         public Input<string> FeatureProfileId { get; set; } = null!;
 
+        [Input("hierarchyUuids")]
+        private InputList<string>? _hierarchyUuids;
+
+        /// <summary>
+        /// Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public InputList<string> HierarchyUuids
+        {
+            get => _hierarchyUuids ?? (_hierarchyUuids = new InputList<string>());
+            set => _hierarchyUuids = value;
+        }
+
         /// <summary>
         /// The name of the Feature
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        [Input("sites", required: true)]
+        [Input("sites")]
         private InputList<string>? _sites;
+
+        /// <summary>
+        /// Site list
+        /// </summary>
         public InputList<string> Sites
         {
             get => _sites ?? (_sites = new InputList<string>());
@@ -158,6 +186,10 @@ namespace Pulumi.Sdwan
 
         [Input("targetVpns", required: true)]
         private InputList<string>? _targetVpns;
+
+        /// <summary>
+        /// Target VPN list
+        /// </summary>
         public InputList<string> TargetVpns
         {
             get => _targetVpns ?? (_targetVpns = new InputList<string>());
@@ -184,6 +216,18 @@ namespace Pulumi.Sdwan
         [Input("featureProfileId")]
         public Input<string>? FeatureProfileId { get; set; }
 
+        [Input("hierarchyUuids")]
+        private InputList<string>? _hierarchyUuids;
+
+        /// <summary>
+        /// Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public InputList<string> HierarchyUuids
+        {
+            get => _hierarchyUuids ?? (_hierarchyUuids = new InputList<string>());
+            set => _hierarchyUuids = value;
+        }
+
         /// <summary>
         /// The name of the Feature
         /// </summary>
@@ -192,6 +236,10 @@ namespace Pulumi.Sdwan
 
         [Input("sites")]
         private InputList<string>? _sites;
+
+        /// <summary>
+        /// Site list
+        /// </summary>
         public InputList<string> Sites
         {
             get => _sites ?? (_sites = new InputList<string>());
@@ -200,6 +248,10 @@ namespace Pulumi.Sdwan
 
         [Input("targetVpns")]
         private InputList<string>? _targetVpns;
+
+        /// <summary>
+        /// Target VPN list
+        /// </summary>
         public InputList<string> TargetVpns
         {
             get => _targetVpns ?? (_targetVpns = new InputList<string>());

@@ -395,6 +395,12 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      * 
      */
     private String tunnelInterfaceColor;
+    private String tunnelInterfaceColorDescription;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String tunnelInterfaceColorDescriptionVariable;
     /**
      * @return Variable name
      * 
@@ -415,6 +421,16 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      * 
      */
     private List<Integer> tunnelInterfaceExcludeControllerGroupLists;
+    /**
+     * @return Enable port hopping on the tunnel interface
+     * 
+     */
+    private Boolean tunnelInterfaceFullPortHop;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String tunnelInterfaceFullPortHopVariable;
     /**
      * @return List of groups
      * 
@@ -486,7 +502,7 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      */
     private String tunnelInterfaceNatRefreshIntervalVariable;
     /**
-     * @return Disallow port hopping on the tunnel interface
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
      * 
      */
     private Boolean tunnelInterfacePortHop;
@@ -1095,6 +1111,16 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
     public String tunnelInterfaceColor() {
         return this.tunnelInterfaceColor;
     }
+    public String tunnelInterfaceColorDescription() {
+        return this.tunnelInterfaceColorDescription;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String tunnelInterfaceColorDescriptionVariable() {
+        return this.tunnelInterfaceColorDescriptionVariable;
+    }
     /**
      * @return Variable name
      * 
@@ -1122,6 +1148,20 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      */
     public List<Integer> tunnelInterfaceExcludeControllerGroupLists() {
         return this.tunnelInterfaceExcludeControllerGroupLists;
+    }
+    /**
+     * @return Enable port hopping on the tunnel interface
+     * 
+     */
+    public Boolean tunnelInterfaceFullPortHop() {
+        return this.tunnelInterfaceFullPortHop;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String tunnelInterfaceFullPortHopVariable() {
+        return this.tunnelInterfaceFullPortHopVariable;
     }
     /**
      * @return List of groups
@@ -1222,7 +1262,7 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
         return this.tunnelInterfaceNatRefreshIntervalVariable;
     }
     /**
-     * @return Disallow port hopping on the tunnel interface
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
      * 
      */
     public Boolean tunnelInterfacePortHop() {
@@ -1403,10 +1443,14 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
         private Boolean tunnelInterfaceClearNetworkBroadcast;
         private String tunnelInterfaceClearNetworkBroadcastVariable;
         private String tunnelInterfaceColor;
+        private String tunnelInterfaceColorDescription;
+        private String tunnelInterfaceColorDescriptionVariable;
         private String tunnelInterfaceColorVariable;
         private List<GetTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation> tunnelInterfaceEncapsulations;
         private String tunnelInterfaceExcludeControllerGroupListVariable;
         private List<Integer> tunnelInterfaceExcludeControllerGroupLists;
+        private Boolean tunnelInterfaceFullPortHop;
+        private String tunnelInterfaceFullPortHopVariable;
         private Integer tunnelInterfaceGroups;
         private String tunnelInterfaceGroupsVariable;
         private Integer tunnelInterfaceHelloInterval;
@@ -1518,10 +1562,14 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
     	      this.tunnelInterfaceClearNetworkBroadcast = defaults.tunnelInterfaceClearNetworkBroadcast;
     	      this.tunnelInterfaceClearNetworkBroadcastVariable = defaults.tunnelInterfaceClearNetworkBroadcastVariable;
     	      this.tunnelInterfaceColor = defaults.tunnelInterfaceColor;
+    	      this.tunnelInterfaceColorDescription = defaults.tunnelInterfaceColorDescription;
+    	      this.tunnelInterfaceColorDescriptionVariable = defaults.tunnelInterfaceColorDescriptionVariable;
     	      this.tunnelInterfaceColorVariable = defaults.tunnelInterfaceColorVariable;
     	      this.tunnelInterfaceEncapsulations = defaults.tunnelInterfaceEncapsulations;
     	      this.tunnelInterfaceExcludeControllerGroupListVariable = defaults.tunnelInterfaceExcludeControllerGroupListVariable;
     	      this.tunnelInterfaceExcludeControllerGroupLists = defaults.tunnelInterfaceExcludeControllerGroupLists;
+    	      this.tunnelInterfaceFullPortHop = defaults.tunnelInterfaceFullPortHop;
+    	      this.tunnelInterfaceFullPortHopVariable = defaults.tunnelInterfaceFullPortHopVariable;
     	      this.tunnelInterfaceGroups = defaults.tunnelInterfaceGroups;
     	      this.tunnelInterfaceGroupsVariable = defaults.tunnelInterfaceGroupsVariable;
     	      this.tunnelInterfaceHelloInterval = defaults.tunnelInterfaceHelloInterval;
@@ -2200,6 +2248,22 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder tunnelInterfaceColorDescription(String tunnelInterfaceColorDescription) {
+            if (tunnelInterfaceColorDescription == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeatureResult", "tunnelInterfaceColorDescription");
+            }
+            this.tunnelInterfaceColorDescription = tunnelInterfaceColorDescription;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelInterfaceColorDescriptionVariable(String tunnelInterfaceColorDescriptionVariable) {
+            if (tunnelInterfaceColorDescriptionVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeatureResult", "tunnelInterfaceColorDescriptionVariable");
+            }
+            this.tunnelInterfaceColorDescriptionVariable = tunnelInterfaceColorDescriptionVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tunnelInterfaceColorVariable(String tunnelInterfaceColorVariable) {
             if (tunnelInterfaceColorVariable == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeatureResult", "tunnelInterfaceColorVariable");
@@ -2236,6 +2300,22 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
         }
         public Builder tunnelInterfaceExcludeControllerGroupLists(Integer... tunnelInterfaceExcludeControllerGroupLists) {
             return tunnelInterfaceExcludeControllerGroupLists(List.of(tunnelInterfaceExcludeControllerGroupLists));
+        }
+        @CustomType.Setter
+        public Builder tunnelInterfaceFullPortHop(Boolean tunnelInterfaceFullPortHop) {
+            if (tunnelInterfaceFullPortHop == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeatureResult", "tunnelInterfaceFullPortHop");
+            }
+            this.tunnelInterfaceFullPortHop = tunnelInterfaceFullPortHop;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelInterfaceFullPortHopVariable(String tunnelInterfaceFullPortHopVariable) {
+            if (tunnelInterfaceFullPortHopVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeatureResult", "tunnelInterfaceFullPortHopVariable");
+            }
+            this.tunnelInterfaceFullPortHopVariable = tunnelInterfaceFullPortHopVariable;
+            return this;
         }
         @CustomType.Setter
         public Builder tunnelInterfaceGroups(Integer tunnelInterfaceGroups) {
@@ -2536,10 +2616,14 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
             _resultValue.tunnelInterfaceClearNetworkBroadcast = tunnelInterfaceClearNetworkBroadcast;
             _resultValue.tunnelInterfaceClearNetworkBroadcastVariable = tunnelInterfaceClearNetworkBroadcastVariable;
             _resultValue.tunnelInterfaceColor = tunnelInterfaceColor;
+            _resultValue.tunnelInterfaceColorDescription = tunnelInterfaceColorDescription;
+            _resultValue.tunnelInterfaceColorDescriptionVariable = tunnelInterfaceColorDescriptionVariable;
             _resultValue.tunnelInterfaceColorVariable = tunnelInterfaceColorVariable;
             _resultValue.tunnelInterfaceEncapsulations = tunnelInterfaceEncapsulations;
             _resultValue.tunnelInterfaceExcludeControllerGroupListVariable = tunnelInterfaceExcludeControllerGroupListVariable;
             _resultValue.tunnelInterfaceExcludeControllerGroupLists = tunnelInterfaceExcludeControllerGroupLists;
+            _resultValue.tunnelInterfaceFullPortHop = tunnelInterfaceFullPortHop;
+            _resultValue.tunnelInterfaceFullPortHopVariable = tunnelInterfaceFullPortHopVariable;
             _resultValue.tunnelInterfaceGroups = tunnelInterfaceGroups;
             _resultValue.tunnelInterfaceGroupsVariable = tunnelInterfaceGroupsVariable;
             _resultValue.tunnelInterfaceHelloInterval = tunnelInterfaceHelloInterval;

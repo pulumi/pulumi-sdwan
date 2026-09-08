@@ -40,6 +40,7 @@ import * as utilities from "./utilities";
  *     bandwidthUpstream: 21474836,
  *     bandwidthDownstream: 21474836,
  *     autoDetectBandwidth: false,
+ *     enableHaInterlinkInterface: false,
  *     tunnelInterface: true,
  *     perTunnelQos: true,
  *     tunnelQosMode: "hub",
@@ -134,6 +135,7 @@ import * as utilities from "./utilities";
  *         ipAddress: "1.2.3.4",
  *         macAddress: "00-B0-D0-63-C2-26",
  *     }],
+ *     enforcedSecurityGroupTag: 200,
  *     icmpRedirectDisable: true,
  *     duplex: "full",
  *     macAddress: "00-B0-D0-63-C2-26",
@@ -270,6 +272,29 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
      * Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      */
     declare public readonly enableDhcpv6: pulumi.Output<boolean | undefined>;
+    /**
+     * Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    declare public readonly enableEnforcedPropagation: pulumi.Output<boolean | undefined>;
+    /**
+     * HA Interlink interface on/off, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     */
+    declare public readonly enableHaInterlinkInterface: pulumi.Output<boolean | undefined>;
+    /**
+     * Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     */
+    declare public readonly enableSgtPropagation: pulumi.Output<boolean | undefined>;
+    /**
+     * SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `2`-`65519`
+     */
+    declare public readonly enforcedSecurityGroupTag: pulumi.Output<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    declare public readonly enforcedSecurityGroupTagVariable: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -681,6 +706,11 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
      */
     declare public readonly portChannelSubinterface: pulumi.Output<boolean | undefined>;
     /**
+     * Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `true`
+     */
+    declare public readonly propagate: pulumi.Output<boolean | undefined>;
+    /**
      * Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      */
@@ -769,6 +799,15 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
      */
     declare public readonly qosShapingRateVariable: pulumi.Output<string | undefined>;
     /**
+     * SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `2`-`65519`
+     */
+    declare public readonly securityGroupTag: pulumi.Output<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    declare public readonly securityGroupTagVariable: pulumi.Output<string | undefined>;
+    /**
      * Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     declare public readonly serviceProvider: pulumi.Output<string | undefined>;
@@ -830,6 +869,11 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
      * Transport WAN VPN Feature ID
      */
     declare public readonly transportWanVpnFeatureId: pulumi.Output<string>;
+    /**
+     * Indicates that the interface is trustworthy for CTS., Attribute conditional on (`securityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`securityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+     *   - Default value: `true`
+     */
+    declare public readonly trusted: pulumi.Output<boolean | undefined>;
     /**
      * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      *   - Range: `1`-`100`
@@ -1014,6 +1058,14 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
      */
     declare public readonly tunnelInterfaceColor: pulumi.Output<string | undefined>;
     /**
+     * Set color description for TLOC, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    declare public readonly tunnelInterfaceColorDescription: pulumi.Output<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    declare public readonly tunnelInterfaceColorDescriptionVariable: pulumi.Output<string | undefined>;
+    /**
      * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      */
@@ -1047,6 +1099,15 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
      * Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
      */
     declare public readonly tunnelInterfaceExcludeControllerGroupLists: pulumi.Output<number[] | undefined>;
+    /**
+     * Enable port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     */
+    declare public readonly tunnelInterfaceFullPortHop: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    declare public readonly tunnelInterfaceFullPortHopVariable: pulumi.Output<string | undefined>;
     /**
      * GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
      */
@@ -1131,7 +1192,7 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
      */
     declare public readonly tunnelInterfaceNetworkBroadcastVariable: pulumi.Output<string | undefined>;
     /**
-     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `true`
      */
     declare public readonly tunnelInterfacePortHop: pulumi.Output<boolean | undefined>;
@@ -1232,6 +1293,11 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             resourceInputs["duplex"] = state?.duplex;
             resourceInputs["duplexVariable"] = state?.duplexVariable;
             resourceInputs["enableDhcpv6"] = state?.enableDhcpv6;
+            resourceInputs["enableEnforcedPropagation"] = state?.enableEnforcedPropagation;
+            resourceInputs["enableHaInterlinkInterface"] = state?.enableHaInterlinkInterface;
+            resourceInputs["enableSgtPropagation"] = state?.enableSgtPropagation;
+            resourceInputs["enforcedSecurityGroupTag"] = state?.enforcedSecurityGroupTag;
+            resourceInputs["enforcedSecurityGroupTagVariable"] = state?.enforcedSecurityGroupTagVariable;
             resourceInputs["featureProfileId"] = state?.featureProfileId;
             resourceInputs["greTunnelSourceIp"] = state?.greTunnelSourceIp;
             resourceInputs["greTunnelSourceIpVariable"] = state?.greTunnelSourceIpVariable;
@@ -1325,6 +1391,7 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             resourceInputs["portChannelStaticQosAggregate"] = state?.portChannelStaticQosAggregate;
             resourceInputs["portChannelStaticQosAggregateVariable"] = state?.portChannelStaticQosAggregateVariable;
             resourceInputs["portChannelSubinterface"] = state?.portChannelSubinterface;
+            resourceInputs["propagate"] = state?.propagate;
             resourceInputs["qosAdaptive"] = state?.qosAdaptive;
             resourceInputs["qosAdaptiveBandwidthDownstream"] = state?.qosAdaptiveBandwidthDownstream;
             resourceInputs["qosAdaptiveBandwidthUpstream"] = state?.qosAdaptiveBandwidthUpstream;
@@ -1344,6 +1411,8 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             resourceInputs["qosAdaptivePeriodVariable"] = state?.qosAdaptivePeriodVariable;
             resourceInputs["qosShapingRate"] = state?.qosShapingRate;
             resourceInputs["qosShapingRateVariable"] = state?.qosShapingRateVariable;
+            resourceInputs["securityGroupTag"] = state?.securityGroupTag;
+            resourceInputs["securityGroupTagVariable"] = state?.securityGroupTagVariable;
             resourceInputs["serviceProvider"] = state?.serviceProvider;
             resourceInputs["serviceProviderVariable"] = state?.serviceProviderVariable;
             resourceInputs["shutdown"] = state?.shutdown;
@@ -1359,6 +1428,7 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             resourceInputs["tracker"] = state?.tracker;
             resourceInputs["trackerVariable"] = state?.trackerVariable;
             resourceInputs["transportWanVpnFeatureId"] = state?.transportWanVpnFeatureId;
+            resourceInputs["trusted"] = state?.trusted;
             resourceInputs["tunnelBandwidthPercent"] = state?.tunnelBandwidthPercent;
             resourceInputs["tunnelBandwidthPercentVariable"] = state?.tunnelBandwidthPercentVariable;
             resourceInputs["tunnelInterface"] = state?.tunnelInterface;
@@ -1399,6 +1469,8 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             resourceInputs["tunnelInterfaceClearDontFragment"] = state?.tunnelInterfaceClearDontFragment;
             resourceInputs["tunnelInterfaceClearDontFragmentVariable"] = state?.tunnelInterfaceClearDontFragmentVariable;
             resourceInputs["tunnelInterfaceColor"] = state?.tunnelInterfaceColor;
+            resourceInputs["tunnelInterfaceColorDescription"] = state?.tunnelInterfaceColorDescription;
+            resourceInputs["tunnelInterfaceColorDescriptionVariable"] = state?.tunnelInterfaceColorDescriptionVariable;
             resourceInputs["tunnelInterfaceColorRestrict"] = state?.tunnelInterfaceColorRestrict;
             resourceInputs["tunnelInterfaceColorRestrictVariable"] = state?.tunnelInterfaceColorRestrictVariable;
             resourceInputs["tunnelInterfaceColorVariable"] = state?.tunnelInterfaceColorVariable;
@@ -1407,6 +1479,8 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             resourceInputs["tunnelInterfaceEncapsulations"] = state?.tunnelInterfaceEncapsulations;
             resourceInputs["tunnelInterfaceExcludeControllerGroupListVariable"] = state?.tunnelInterfaceExcludeControllerGroupListVariable;
             resourceInputs["tunnelInterfaceExcludeControllerGroupLists"] = state?.tunnelInterfaceExcludeControllerGroupLists;
+            resourceInputs["tunnelInterfaceFullPortHop"] = state?.tunnelInterfaceFullPortHop;
+            resourceInputs["tunnelInterfaceFullPortHopVariable"] = state?.tunnelInterfaceFullPortHopVariable;
             resourceInputs["tunnelInterfaceGreTunnelDestinationIp"] = state?.tunnelInterfaceGreTunnelDestinationIp;
             resourceInputs["tunnelInterfaceGreTunnelDestinationIpVariable"] = state?.tunnelInterfaceGreTunnelDestinationIpVariable;
             resourceInputs["tunnelInterfaceGroups"] = state?.tunnelInterfaceGroups;
@@ -1469,6 +1543,11 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             resourceInputs["duplex"] = args?.duplex;
             resourceInputs["duplexVariable"] = args?.duplexVariable;
             resourceInputs["enableDhcpv6"] = args?.enableDhcpv6;
+            resourceInputs["enableEnforcedPropagation"] = args?.enableEnforcedPropagation;
+            resourceInputs["enableHaInterlinkInterface"] = args?.enableHaInterlinkInterface;
+            resourceInputs["enableSgtPropagation"] = args?.enableSgtPropagation;
+            resourceInputs["enforcedSecurityGroupTag"] = args?.enforcedSecurityGroupTag;
+            resourceInputs["enforcedSecurityGroupTagVariable"] = args?.enforcedSecurityGroupTagVariable;
             resourceInputs["featureProfileId"] = args?.featureProfileId;
             resourceInputs["greTunnelSourceIp"] = args?.greTunnelSourceIp;
             resourceInputs["greTunnelSourceIpVariable"] = args?.greTunnelSourceIpVariable;
@@ -1562,6 +1641,7 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             resourceInputs["portChannelStaticQosAggregate"] = args?.portChannelStaticQosAggregate;
             resourceInputs["portChannelStaticQosAggregateVariable"] = args?.portChannelStaticQosAggregateVariable;
             resourceInputs["portChannelSubinterface"] = args?.portChannelSubinterface;
+            resourceInputs["propagate"] = args?.propagate;
             resourceInputs["qosAdaptive"] = args?.qosAdaptive;
             resourceInputs["qosAdaptiveBandwidthDownstream"] = args?.qosAdaptiveBandwidthDownstream;
             resourceInputs["qosAdaptiveBandwidthUpstream"] = args?.qosAdaptiveBandwidthUpstream;
@@ -1581,6 +1661,8 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             resourceInputs["qosAdaptivePeriodVariable"] = args?.qosAdaptivePeriodVariable;
             resourceInputs["qosShapingRate"] = args?.qosShapingRate;
             resourceInputs["qosShapingRateVariable"] = args?.qosShapingRateVariable;
+            resourceInputs["securityGroupTag"] = args?.securityGroupTag;
+            resourceInputs["securityGroupTagVariable"] = args?.securityGroupTagVariable;
             resourceInputs["serviceProvider"] = args?.serviceProvider;
             resourceInputs["serviceProviderVariable"] = args?.serviceProviderVariable;
             resourceInputs["shutdown"] = args?.shutdown;
@@ -1596,6 +1678,7 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             resourceInputs["tracker"] = args?.tracker;
             resourceInputs["trackerVariable"] = args?.trackerVariable;
             resourceInputs["transportWanVpnFeatureId"] = args?.transportWanVpnFeatureId;
+            resourceInputs["trusted"] = args?.trusted;
             resourceInputs["tunnelBandwidthPercent"] = args?.tunnelBandwidthPercent;
             resourceInputs["tunnelBandwidthPercentVariable"] = args?.tunnelBandwidthPercentVariable;
             resourceInputs["tunnelInterface"] = args?.tunnelInterface;
@@ -1636,6 +1719,8 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             resourceInputs["tunnelInterfaceClearDontFragment"] = args?.tunnelInterfaceClearDontFragment;
             resourceInputs["tunnelInterfaceClearDontFragmentVariable"] = args?.tunnelInterfaceClearDontFragmentVariable;
             resourceInputs["tunnelInterfaceColor"] = args?.tunnelInterfaceColor;
+            resourceInputs["tunnelInterfaceColorDescription"] = args?.tunnelInterfaceColorDescription;
+            resourceInputs["tunnelInterfaceColorDescriptionVariable"] = args?.tunnelInterfaceColorDescriptionVariable;
             resourceInputs["tunnelInterfaceColorRestrict"] = args?.tunnelInterfaceColorRestrict;
             resourceInputs["tunnelInterfaceColorRestrictVariable"] = args?.tunnelInterfaceColorRestrictVariable;
             resourceInputs["tunnelInterfaceColorVariable"] = args?.tunnelInterfaceColorVariable;
@@ -1644,6 +1729,8 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             resourceInputs["tunnelInterfaceEncapsulations"] = args?.tunnelInterfaceEncapsulations;
             resourceInputs["tunnelInterfaceExcludeControllerGroupListVariable"] = args?.tunnelInterfaceExcludeControllerGroupListVariable;
             resourceInputs["tunnelInterfaceExcludeControllerGroupLists"] = args?.tunnelInterfaceExcludeControllerGroupLists;
+            resourceInputs["tunnelInterfaceFullPortHop"] = args?.tunnelInterfaceFullPortHop;
+            resourceInputs["tunnelInterfaceFullPortHopVariable"] = args?.tunnelInterfaceFullPortHopVariable;
             resourceInputs["tunnelInterfaceGreTunnelDestinationIp"] = args?.tunnelInterfaceGreTunnelDestinationIp;
             resourceInputs["tunnelInterfaceGreTunnelDestinationIpVariable"] = args?.tunnelInterfaceGreTunnelDestinationIpVariable;
             resourceInputs["tunnelInterfaceGroups"] = args?.tunnelInterfaceGroups;
@@ -1766,6 +1853,29 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      * Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      */
     enableDhcpv6?: pulumi.Input<boolean | undefined>;
+    /**
+     * Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    enableEnforcedPropagation?: pulumi.Input<boolean | undefined>;
+    /**
+     * HA Interlink interface on/off, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     */
+    enableHaInterlinkInterface?: pulumi.Input<boolean | undefined>;
+    /**
+     * Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     */
+    enableSgtPropagation?: pulumi.Input<boolean | undefined>;
+    /**
+     * SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `2`-`65519`
+     */
+    enforcedSecurityGroupTag?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    enforcedSecurityGroupTagVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -2177,6 +2287,11 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     portChannelSubinterface?: pulumi.Input<boolean | undefined>;
     /**
+     * Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `true`
+     */
+    propagate?: pulumi.Input<boolean | undefined>;
+    /**
      * Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      */
@@ -2265,6 +2380,15 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     qosShapingRateVariable?: pulumi.Input<string | undefined>;
     /**
+     * SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `2`-`65519`
+     */
+    securityGroupTag?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    securityGroupTagVariable?: pulumi.Input<string | undefined>;
+    /**
      * Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     serviceProvider?: pulumi.Input<string | undefined>;
@@ -2326,6 +2450,11 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      * Transport WAN VPN Feature ID
      */
     transportWanVpnFeatureId?: pulumi.Input<string | undefined>;
+    /**
+     * Indicates that the interface is trustworthy for CTS., Attribute conditional on (`securityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`securityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+     *   - Default value: `true`
+     */
+    trusted?: pulumi.Input<boolean | undefined>;
     /**
      * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      *   - Range: `1`-`100`
@@ -2510,6 +2639,14 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceColor?: pulumi.Input<string | undefined>;
     /**
+     * Set color description for TLOC, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    tunnelInterfaceColorDescription?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    tunnelInterfaceColorDescriptionVariable?: pulumi.Input<string | undefined>;
+    /**
      * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      */
@@ -2543,6 +2680,15 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      * Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
      */
     tunnelInterfaceExcludeControllerGroupLists?: pulumi.Input<pulumi.Input<number>[] | undefined>;
+    /**
+     * Enable port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     */
+    tunnelInterfaceFullPortHop?: pulumi.Input<boolean | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    tunnelInterfaceFullPortHopVariable?: pulumi.Input<string | undefined>;
     /**
      * GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
      */
@@ -2627,7 +2773,7 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceNetworkBroadcastVariable?: pulumi.Input<string | undefined>;
     /**
-     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `true`
      */
     tunnelInterfacePortHop?: pulumi.Input<boolean | undefined>;
@@ -2778,6 +2924,29 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      * Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      */
     enableDhcpv6?: pulumi.Input<boolean | undefined>;
+    /**
+     * Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    enableEnforcedPropagation?: pulumi.Input<boolean | undefined>;
+    /**
+     * HA Interlink interface on/off, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     */
+    enableHaInterlinkInterface?: pulumi.Input<boolean | undefined>;
+    /**
+     * Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     */
+    enableSgtPropagation?: pulumi.Input<boolean | undefined>;
+    /**
+     * SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `2`-`65519`
+     */
+    enforcedSecurityGroupTag?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    enforcedSecurityGroupTagVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -3189,6 +3358,11 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     portChannelSubinterface?: pulumi.Input<boolean | undefined>;
     /**
+     * Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `true`
+     */
+    propagate?: pulumi.Input<boolean | undefined>;
+    /**
      * Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      */
@@ -3277,6 +3451,15 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     qosShapingRateVariable?: pulumi.Input<string | undefined>;
     /**
+     * SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `2`-`65519`
+     */
+    securityGroupTag?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    securityGroupTagVariable?: pulumi.Input<string | undefined>;
+    /**
      * Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     serviceProvider?: pulumi.Input<string | undefined>;
@@ -3338,6 +3521,11 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      * Transport WAN VPN Feature ID
      */
     transportWanVpnFeatureId: pulumi.Input<string>;
+    /**
+     * Indicates that the interface is trustworthy for CTS., Attribute conditional on (`securityGroupTag` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher) or (`securityGroupTagVariable` being set and `portChannelMemberInterface` not equal to `true` and `enableSgtPropagation` equal to `true` and SD-WAN Manager version `20.18.1` or higher)
+     *   - Default value: `true`
+     */
+    trusted?: pulumi.Input<boolean | undefined>;
     /**
      * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      *   - Range: `1`-`100`
@@ -3522,6 +3710,14 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceColor?: pulumi.Input<string | undefined>;
     /**
+     * Set color description for TLOC, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    tunnelInterfaceColorDescription?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    tunnelInterfaceColorDescriptionVariable?: pulumi.Input<string | undefined>;
+    /**
      * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      */
@@ -3555,6 +3751,15 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      * Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
      */
     tunnelInterfaceExcludeControllerGroupLists?: pulumi.Input<pulumi.Input<number>[] | undefined>;
+    /**
+     * Enable port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     */
+    tunnelInterfaceFullPortHop?: pulumi.Input<boolean | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
+     */
+    tunnelInterfaceFullPortHopVariable?: pulumi.Input<string | undefined>;
     /**
      * GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
      */
@@ -3639,7 +3844,7 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceNetworkBroadcastVariable?: pulumi.Input<string | undefined>;
     /**
-     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `true`
      */
     tunnelInterfacePortHop?: pulumi.Input<boolean | undefined>;

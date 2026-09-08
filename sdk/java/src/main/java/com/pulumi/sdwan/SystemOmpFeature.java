@@ -768,6 +768,7 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
     }
     /**
      * Hold Time (seconds)
+     *   - Ranges: `0`-`0`, `3`-`65535`
      *   - Default value: `300`
      * 
      */
@@ -776,6 +777,7 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Hold Time (seconds)
+     *   - Ranges: `0`-`0`, `3`-`65535`
      *   - Default value: `300`
      * 
      */

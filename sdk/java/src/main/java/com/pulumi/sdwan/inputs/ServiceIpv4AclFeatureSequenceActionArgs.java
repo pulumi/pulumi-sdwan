@@ -161,6 +161,7 @@ public final class ServiceIpv4AclFeatureSequenceActionArgs extends com.pulumi.re
 
     /**
      * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Ranges: `1`-`511`, `513`-`65531`
      * 
      */
     @Import(name="acceptSetServiceChainVpn")
@@ -168,6 +169,7 @@ public final class ServiceIpv4AclFeatureSequenceActionArgs extends com.pulumi.re
 
     /**
      * @return Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Ranges: `1`-`511`, `513`-`65531`
      * 
      */
     public Optional<Output<Integer>> acceptSetServiceChainVpn() {
@@ -454,6 +456,7 @@ public final class ServiceIpv4AclFeatureSequenceActionArgs extends com.pulumi.re
 
         /**
          * @param acceptSetServiceChainVpn Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+         *   - Ranges: `1`-`511`, `513`-`65531`
          * 
          * @return builder
          * 
@@ -465,6 +468,7 @@ public final class ServiceIpv4AclFeatureSequenceActionArgs extends com.pulumi.re
 
         /**
          * @param acceptSetServiceChainVpn Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+         *   - Ranges: `1`-`511`, `513`-`65531`
          * 
          * @return builder
          * 

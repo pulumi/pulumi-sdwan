@@ -298,6 +298,68 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
     }
 
     /**
+     * S-NSSAI slice differentiator, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `0`-`16777214`
+     * 
+     */
+    @Import(name="sliceDifferentiator")
+    private @Nullable Output<Integer> sliceDifferentiator;
+
+    /**
+     * @return S-NSSAI slice differentiator, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `0`-`16777214`
+     * 
+     */
+    public Optional<Output<Integer>> sliceDifferentiator() {
+        return Optional.ofNullable(this.sliceDifferentiator);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="sliceDifferentiatorVariable")
+    private @Nullable Output<String> sliceDifferentiatorVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> sliceDifferentiatorVariable() {
+        return Optional.ofNullable(this.sliceDifferentiatorVariable);
+    }
+
+    /**
+     * S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="sliceType")
+    private @Nullable Output<Integer> sliceType;
+
+    /**
+     * @return S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<Integer>> sliceType() {
+        return Optional.ofNullable(this.sliceType);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="sliceTypeVariable")
+    private @Nullable Output<String> sliceTypeVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> sliceTypeVariable() {
+        return Optional.ofNullable(this.sliceTypeVariable);
+    }
+
+    /**
      * The version of the Feature
      * 
      */
@@ -333,6 +395,10 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
         this.profileUsername = $.profileUsername;
         this.profileUsernameVariable = $.profileUsernameVariable;
         this.requiresAuthentication = $.requiresAuthentication;
+        this.sliceDifferentiator = $.sliceDifferentiator;
+        this.sliceDifferentiatorVariable = $.sliceDifferentiatorVariable;
+        this.sliceType = $.sliceType;
+        this.sliceTypeVariable = $.sliceTypeVariable;
         this.version = $.version;
     }
 
@@ -740,6 +806,92 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
          */
         public Builder requiresAuthentication(Boolean requiresAuthentication) {
             return requiresAuthentication(Output.of(requiresAuthentication));
+        }
+
+        /**
+         * @param sliceDifferentiator S-NSSAI slice differentiator, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+         *   - Range: `0`-`16777214`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sliceDifferentiator(@Nullable Output<Integer> sliceDifferentiator) {
+            $.sliceDifferentiator = sliceDifferentiator;
+            return this;
+        }
+
+        /**
+         * @param sliceDifferentiator S-NSSAI slice differentiator, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+         *   - Range: `0`-`16777214`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sliceDifferentiator(Integer sliceDifferentiator) {
+            return sliceDifferentiator(Output.of(sliceDifferentiator));
+        }
+
+        /**
+         * @param sliceDifferentiatorVariable Variable name, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sliceDifferentiatorVariable(@Nullable Output<String> sliceDifferentiatorVariable) {
+            $.sliceDifferentiatorVariable = sliceDifferentiatorVariable;
+            return this;
+        }
+
+        /**
+         * @param sliceDifferentiatorVariable Variable name, Attribute conditional on `sliceType` being set and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sliceDifferentiatorVariable(String sliceDifferentiatorVariable) {
+            return sliceDifferentiatorVariable(Output.of(sliceDifferentiatorVariable));
+        }
+
+        /**
+         * @param sliceType S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sliceType(@Nullable Output<Integer> sliceType) {
+            $.sliceType = sliceType;
+            return this;
+        }
+
+        /**
+         * @param sliceType S-NSSAI slice type number: 1(eMBB), 2(URLLC), 3(MioT), Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sliceType(Integer sliceType) {
+            return sliceType(Output.of(sliceType));
+        }
+
+        /**
+         * @param sliceTypeVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sliceTypeVariable(@Nullable Output<String> sliceTypeVariable) {
+            $.sliceTypeVariable = sliceTypeVariable;
+            return this;
+        }
+
+        /**
+         * @param sliceTypeVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sliceTypeVariable(String sliceTypeVariable) {
+            return sliceTypeVariable(Output.of(sliceTypeVariable));
         }
 
         /**

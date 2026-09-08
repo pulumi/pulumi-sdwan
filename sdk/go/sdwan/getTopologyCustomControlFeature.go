@@ -70,14 +70,18 @@ type LookupTopologyCustomControlFeatureResult struct {
 	// The name of the Feature
 	Name string `pulumi:"name"`
 	// Sequence list
-	Sequences             []GetTopologyCustomControlFeatureSequence             `pulumi:"sequences"`
-	TargetInboundRegions  []GetTopologyCustomControlFeatureTargetInboundRegion  `pulumi:"targetInboundRegions"`
-	TargetInboundSites    []string                                              `pulumi:"targetInboundSites"`
-	TargetLevel           string                                                `pulumi:"targetLevel"`
-	TargetOutboundRegions []GetTopologyCustomControlFeatureTargetOutboundRegion `pulumi:"targetOutboundRegions"`
-	TargetOutboundSites   []string                                              `pulumi:"targetOutboundSites"`
-	TargetRole            string                                                `pulumi:"targetRole"`
-	TargetVpns            []string                                              `pulumi:"targetVpns"`
+	Sequences []GetTopologyCustomControlFeatureSequence `pulumi:"sequences"`
+	// Inbound network hierarchy UUIDs
+	TargetInboundHierarchyUuids []string                                             `pulumi:"targetInboundHierarchyUuids"`
+	TargetInboundRegions        []GetTopologyCustomControlFeatureTargetInboundRegion `pulumi:"targetInboundRegions"`
+	TargetInboundSites          []string                                             `pulumi:"targetInboundSites"`
+	TargetLevel                 string                                               `pulumi:"targetLevel"`
+	// Outbound network hierarchy UUIDs
+	TargetOutboundHierarchyUuids []string                                              `pulumi:"targetOutboundHierarchyUuids"`
+	TargetOutboundRegions        []GetTopologyCustomControlFeatureTargetOutboundRegion `pulumi:"targetOutboundRegions"`
+	TargetOutboundSites          []string                                              `pulumi:"targetOutboundSites"`
+	TargetRole                   string                                                `pulumi:"targetRole"`
+	TargetVpns                   []string                                              `pulumi:"targetVpns"`
 	// The version of the Feature
 	Version int `pulumi:"version"`
 }
@@ -146,6 +150,11 @@ func (o LookupTopologyCustomControlFeatureResultOutput) Sequences() GetTopologyC
 	}).(GetTopologyCustomControlFeatureSequenceArrayOutput)
 }
 
+// Inbound network hierarchy UUIDs
+func (o LookupTopologyCustomControlFeatureResultOutput) TargetInboundHierarchyUuids() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v LookupTopologyCustomControlFeatureResult) []string { return v.TargetInboundHierarchyUuids }).(pulumi.StringArrayOutput)
+}
+
 func (o LookupTopologyCustomControlFeatureResultOutput) TargetInboundRegions() GetTopologyCustomControlFeatureTargetInboundRegionArrayOutput {
 	return o.ApplyT(func(v LookupTopologyCustomControlFeatureResult) []GetTopologyCustomControlFeatureTargetInboundRegion {
 		return v.TargetInboundRegions
@@ -158,6 +167,11 @@ func (o LookupTopologyCustomControlFeatureResultOutput) TargetInboundSites() pul
 
 func (o LookupTopologyCustomControlFeatureResultOutput) TargetLevel() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTopologyCustomControlFeatureResult) string { return v.TargetLevel }).(pulumi.StringOutput)
+}
+
+// Outbound network hierarchy UUIDs
+func (o LookupTopologyCustomControlFeatureResultOutput) TargetOutboundHierarchyUuids() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v LookupTopologyCustomControlFeatureResult) []string { return v.TargetOutboundHierarchyUuids }).(pulumi.StringArrayOutput)
 }
 
 func (o LookupTopologyCustomControlFeatureResultOutput) TargetOutboundRegions() GetTopologyCustomControlFeatureTargetOutboundRegionArrayOutput {

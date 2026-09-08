@@ -5,6 +5,7 @@ package com.pulumi.sdwan;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.inputs.NetworkHierarchyCflowdCollectorArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -88,96 +89,86 @@ public final class NetworkHierarchyCflowdArgs extends com.pulumi.resources.Resou
     /**
      * Active flow timeout in seconds
      *   - Range: `30`-`3600`
-     *   - Default value: `600`
      * 
      */
-    @Import(name="flowActiveTimeout")
-    private @Nullable Output<Integer> flowActiveTimeout;
+    @Import(name="flowActiveTimeout", required=true)
+    private Output<Integer> flowActiveTimeout;
 
     /**
      * @return Active flow timeout in seconds
      *   - Range: `30`-`3600`
-     *   - Default value: `600`
      * 
      */
-    public Optional<Output<Integer>> flowActiveTimeout() {
-        return Optional.ofNullable(this.flowActiveTimeout);
+    public Output<Integer> flowActiveTimeout() {
+        return this.flowActiveTimeout;
     }
 
     /**
      * Inactive flow timeout in seconds
      *   - Range: `1`-`3600`
-     *   - Default value: `60`
      * 
      */
-    @Import(name="flowInactiveTimeout")
-    private @Nullable Output<Integer> flowInactiveTimeout;
+    @Import(name="flowInactiveTimeout", required=true)
+    private Output<Integer> flowInactiveTimeout;
 
     /**
      * @return Inactive flow timeout in seconds
      *   - Range: `1`-`3600`
-     *   - Default value: `60`
      * 
      */
-    public Optional<Output<Integer>> flowInactiveTimeout() {
-        return Optional.ofNullable(this.flowInactiveTimeout);
+    public Output<Integer> flowInactiveTimeout() {
+        return this.flowInactiveTimeout;
     }
 
     /**
      * Flow refresh time in seconds
      *   - Range: `60`-`86400`
-     *   - Default value: `600`
      * 
      */
-    @Import(name="flowRefreshTime")
-    private @Nullable Output<Integer> flowRefreshTime;
+    @Import(name="flowRefreshTime", required=true)
+    private Output<Integer> flowRefreshTime;
 
     /**
      * @return Flow refresh time in seconds
      *   - Range: `60`-`86400`
-     *   - Default value: `600`
      * 
      */
-    public Optional<Output<Integer>> flowRefreshTime() {
-        return Optional.ofNullable(this.flowRefreshTime);
+    public Output<Integer> flowRefreshTime() {
+        return this.flowRefreshTime;
     }
 
     /**
      * Flow sampling interval
      *   - Range: `1`-`65536`
-     *   - Default value: `1`
      * 
      */
-    @Import(name="flowSamplingInterval")
-    private @Nullable Output<Integer> flowSamplingInterval;
+    @Import(name="flowSamplingInterval", required=true)
+    private Output<Integer> flowSamplingInterval;
 
     /**
      * @return Flow sampling interval
      *   - Range: `1`-`65536`
-     *   - Default value: `1`
      * 
      */
-    public Optional<Output<Integer>> flowSamplingInterval() {
-        return Optional.ofNullable(this.flowSamplingInterval);
+    public Output<Integer> flowSamplingInterval() {
+        return this.flowSamplingInterval;
     }
 
     /**
      * FNF Protocol
      *   - Choices: `ipv4`, `ipv6`, `both`
-     *   - Default value: `ipv4`
      * 
      */
-    @Import(name="protocol")
-    private @Nullable Output<String> protocol;
+    @Import(name="protocol", required=true)
+    private Output<String> protocol;
 
     /**
      * @return FNF Protocol
      *   - Choices: `ipv4`, `ipv6`, `both`
-     *   - Default value: `ipv4`
      * 
      */
-    public Optional<Output<String>> protocol() {
-        return Optional.ofNullable(this.protocol);
+    public Output<String> protocol() {
+        return this.protocol;
     }
 
     private NetworkHierarchyCflowdArgs() {}
@@ -315,12 +306,11 @@ public final class NetworkHierarchyCflowdArgs extends com.pulumi.resources.Resou
         /**
          * @param flowActiveTimeout Active flow timeout in seconds
          *   - Range: `30`-`3600`
-         *   - Default value: `600`
          * 
          * @return builder
          * 
          */
-        public Builder flowActiveTimeout(@Nullable Output<Integer> flowActiveTimeout) {
+        public Builder flowActiveTimeout(Output<Integer> flowActiveTimeout) {
             $.flowActiveTimeout = flowActiveTimeout;
             return this;
         }
@@ -328,7 +318,6 @@ public final class NetworkHierarchyCflowdArgs extends com.pulumi.resources.Resou
         /**
          * @param flowActiveTimeout Active flow timeout in seconds
          *   - Range: `30`-`3600`
-         *   - Default value: `600`
          * 
          * @return builder
          * 
@@ -340,12 +329,11 @@ public final class NetworkHierarchyCflowdArgs extends com.pulumi.resources.Resou
         /**
          * @param flowInactiveTimeout Inactive flow timeout in seconds
          *   - Range: `1`-`3600`
-         *   - Default value: `60`
          * 
          * @return builder
          * 
          */
-        public Builder flowInactiveTimeout(@Nullable Output<Integer> flowInactiveTimeout) {
+        public Builder flowInactiveTimeout(Output<Integer> flowInactiveTimeout) {
             $.flowInactiveTimeout = flowInactiveTimeout;
             return this;
         }
@@ -353,7 +341,6 @@ public final class NetworkHierarchyCflowdArgs extends com.pulumi.resources.Resou
         /**
          * @param flowInactiveTimeout Inactive flow timeout in seconds
          *   - Range: `1`-`3600`
-         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -365,12 +352,11 @@ public final class NetworkHierarchyCflowdArgs extends com.pulumi.resources.Resou
         /**
          * @param flowRefreshTime Flow refresh time in seconds
          *   - Range: `60`-`86400`
-         *   - Default value: `600`
          * 
          * @return builder
          * 
          */
-        public Builder flowRefreshTime(@Nullable Output<Integer> flowRefreshTime) {
+        public Builder flowRefreshTime(Output<Integer> flowRefreshTime) {
             $.flowRefreshTime = flowRefreshTime;
             return this;
         }
@@ -378,7 +364,6 @@ public final class NetworkHierarchyCflowdArgs extends com.pulumi.resources.Resou
         /**
          * @param flowRefreshTime Flow refresh time in seconds
          *   - Range: `60`-`86400`
-         *   - Default value: `600`
          * 
          * @return builder
          * 
@@ -390,12 +375,11 @@ public final class NetworkHierarchyCflowdArgs extends com.pulumi.resources.Resou
         /**
          * @param flowSamplingInterval Flow sampling interval
          *   - Range: `1`-`65536`
-         *   - Default value: `1`
          * 
          * @return builder
          * 
          */
-        public Builder flowSamplingInterval(@Nullable Output<Integer> flowSamplingInterval) {
+        public Builder flowSamplingInterval(Output<Integer> flowSamplingInterval) {
             $.flowSamplingInterval = flowSamplingInterval;
             return this;
         }
@@ -403,7 +387,6 @@ public final class NetworkHierarchyCflowdArgs extends com.pulumi.resources.Resou
         /**
          * @param flowSamplingInterval Flow sampling interval
          *   - Range: `1`-`65536`
-         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -415,12 +398,11 @@ public final class NetworkHierarchyCflowdArgs extends com.pulumi.resources.Resou
         /**
          * @param protocol FNF Protocol
          *   - Choices: `ipv4`, `ipv6`, `both`
-         *   - Default value: `ipv4`
          * 
          * @return builder
          * 
          */
-        public Builder protocol(@Nullable Output<String> protocol) {
+        public Builder protocol(Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
@@ -428,7 +410,6 @@ public final class NetworkHierarchyCflowdArgs extends com.pulumi.resources.Resou
         /**
          * @param protocol FNF Protocol
          *   - Choices: `ipv4`, `ipv6`, `both`
-         *   - Default value: `ipv4`
          * 
          * @return builder
          * 
@@ -438,6 +419,21 @@ public final class NetworkHierarchyCflowdArgs extends com.pulumi.resources.Resou
         }
 
         public NetworkHierarchyCflowdArgs build() {
+            if ($.flowActiveTimeout == null) {
+                throw new MissingRequiredPropertyException("NetworkHierarchyCflowdArgs", "flowActiveTimeout");
+            }
+            if ($.flowInactiveTimeout == null) {
+                throw new MissingRequiredPropertyException("NetworkHierarchyCflowdArgs", "flowInactiveTimeout");
+            }
+            if ($.flowRefreshTime == null) {
+                throw new MissingRequiredPropertyException("NetworkHierarchyCflowdArgs", "flowRefreshTime");
+            }
+            if ($.flowSamplingInterval == null) {
+                throw new MissingRequiredPropertyException("NetworkHierarchyCflowdArgs", "flowSamplingInterval");
+            }
+            if ($.protocol == null) {
+                throw new MissingRequiredPropertyException("NetworkHierarchyCflowdArgs", "protocol");
+            }
             return $;
         }
     }

@@ -498,6 +498,12 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      * 
      */
     private String tunnelInterfaceColor;
+    private String tunnelInterfaceColorDescription;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String tunnelInterfaceColorDescriptionVariable;
     /**
      * @return Restrict this TLOC behavior
      * 
@@ -528,6 +534,16 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      * 
      */
     private List<Integer> tunnelInterfaceExcludeControllerGroupLists;
+    /**
+     * @return Enable port hopping on the tunnel interface
+     * 
+     */
+    private Boolean tunnelInterfaceFullPortHop;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String tunnelInterfaceFullPortHopVariable;
     /**
      * @return List of groups
      * 
@@ -609,7 +625,7 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      */
     private String tunnelInterfaceNetworkBroadcastVariable;
     /**
-     * @return Disallow port hopping on the tunnel interface
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
      * 
      */
     private Boolean tunnelInterfacePortHop;
@@ -1354,6 +1370,16 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
     public String tunnelInterfaceColor() {
         return this.tunnelInterfaceColor;
     }
+    public String tunnelInterfaceColorDescription() {
+        return this.tunnelInterfaceColorDescription;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String tunnelInterfaceColorDescriptionVariable() {
+        return this.tunnelInterfaceColorDescriptionVariable;
+    }
     /**
      * @return Restrict this TLOC behavior
      * 
@@ -1395,6 +1421,20 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      */
     public List<Integer> tunnelInterfaceExcludeControllerGroupLists() {
         return this.tunnelInterfaceExcludeControllerGroupLists;
+    }
+    /**
+     * @return Enable port hopping on the tunnel interface
+     * 
+     */
+    public Boolean tunnelInterfaceFullPortHop() {
+        return this.tunnelInterfaceFullPortHop;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String tunnelInterfaceFullPortHopVariable() {
+        return this.tunnelInterfaceFullPortHopVariable;
     }
     /**
      * @return List of groups
@@ -1509,7 +1549,7 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         return this.tunnelInterfaceNetworkBroadcastVariable;
     }
     /**
-     * @return Disallow port hopping on the tunnel interface
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
      * 
      */
     public Boolean tunnelInterfacePortHop() {
@@ -1698,12 +1738,16 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         private Boolean tunnelInterfaceClearDontFragment;
         private String tunnelInterfaceClearDontFragmentVariable;
         private String tunnelInterfaceColor;
+        private String tunnelInterfaceColorDescription;
+        private String tunnelInterfaceColorDescriptionVariable;
         private Boolean tunnelInterfaceColorRestrict;
         private String tunnelInterfaceColorRestrictVariable;
         private String tunnelInterfaceColorVariable;
         private List<GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation> tunnelInterfaceEncapsulations;
         private String tunnelInterfaceExcludeControllerGroupListVariable;
         private List<Integer> tunnelInterfaceExcludeControllerGroupLists;
+        private Boolean tunnelInterfaceFullPortHop;
+        private String tunnelInterfaceFullPortHopVariable;
         private Integer tunnelInterfaceGroups;
         private String tunnelInterfaceGroupsVariable;
         private Integer tunnelInterfaceHelloInterval;
@@ -1837,12 +1881,16 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
     	      this.tunnelInterfaceClearDontFragment = defaults.tunnelInterfaceClearDontFragment;
     	      this.tunnelInterfaceClearDontFragmentVariable = defaults.tunnelInterfaceClearDontFragmentVariable;
     	      this.tunnelInterfaceColor = defaults.tunnelInterfaceColor;
+    	      this.tunnelInterfaceColorDescription = defaults.tunnelInterfaceColorDescription;
+    	      this.tunnelInterfaceColorDescriptionVariable = defaults.tunnelInterfaceColorDescriptionVariable;
     	      this.tunnelInterfaceColorRestrict = defaults.tunnelInterfaceColorRestrict;
     	      this.tunnelInterfaceColorRestrictVariable = defaults.tunnelInterfaceColorRestrictVariable;
     	      this.tunnelInterfaceColorVariable = defaults.tunnelInterfaceColorVariable;
     	      this.tunnelInterfaceEncapsulations = defaults.tunnelInterfaceEncapsulations;
     	      this.tunnelInterfaceExcludeControllerGroupListVariable = defaults.tunnelInterfaceExcludeControllerGroupListVariable;
     	      this.tunnelInterfaceExcludeControllerGroupLists = defaults.tunnelInterfaceExcludeControllerGroupLists;
+    	      this.tunnelInterfaceFullPortHop = defaults.tunnelInterfaceFullPortHop;
+    	      this.tunnelInterfaceFullPortHopVariable = defaults.tunnelInterfaceFullPortHopVariable;
     	      this.tunnelInterfaceGroups = defaults.tunnelInterfaceGroups;
     	      this.tunnelInterfaceGroupsVariable = defaults.tunnelInterfaceGroupsVariable;
     	      this.tunnelInterfaceHelloInterval = defaults.tunnelInterfaceHelloInterval;
@@ -2703,6 +2751,22 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder tunnelInterfaceColorDescription(String tunnelInterfaceColorDescription) {
+            if (tunnelInterfaceColorDescription == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "tunnelInterfaceColorDescription");
+            }
+            this.tunnelInterfaceColorDescription = tunnelInterfaceColorDescription;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelInterfaceColorDescriptionVariable(String tunnelInterfaceColorDescriptionVariable) {
+            if (tunnelInterfaceColorDescriptionVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "tunnelInterfaceColorDescriptionVariable");
+            }
+            this.tunnelInterfaceColorDescriptionVariable = tunnelInterfaceColorDescriptionVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tunnelInterfaceColorRestrict(Boolean tunnelInterfaceColorRestrict) {
             if (tunnelInterfaceColorRestrict == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "tunnelInterfaceColorRestrict");
@@ -2755,6 +2819,22 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         }
         public Builder tunnelInterfaceExcludeControllerGroupLists(Integer... tunnelInterfaceExcludeControllerGroupLists) {
             return tunnelInterfaceExcludeControllerGroupLists(List.of(tunnelInterfaceExcludeControllerGroupLists));
+        }
+        @CustomType.Setter
+        public Builder tunnelInterfaceFullPortHop(Boolean tunnelInterfaceFullPortHop) {
+            if (tunnelInterfaceFullPortHop == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "tunnelInterfaceFullPortHop");
+            }
+            this.tunnelInterfaceFullPortHop = tunnelInterfaceFullPortHop;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelInterfaceFullPortHopVariable(String tunnelInterfaceFullPortHopVariable) {
+            if (tunnelInterfaceFullPortHopVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "tunnelInterfaceFullPortHopVariable");
+            }
+            this.tunnelInterfaceFullPortHopVariable = tunnelInterfaceFullPortHopVariable;
+            return this;
         }
         @CustomType.Setter
         public Builder tunnelInterfaceGroups(Integer tunnelInterfaceGroups) {
@@ -3077,12 +3157,16 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
             _resultValue.tunnelInterfaceClearDontFragment = tunnelInterfaceClearDontFragment;
             _resultValue.tunnelInterfaceClearDontFragmentVariable = tunnelInterfaceClearDontFragmentVariable;
             _resultValue.tunnelInterfaceColor = tunnelInterfaceColor;
+            _resultValue.tunnelInterfaceColorDescription = tunnelInterfaceColorDescription;
+            _resultValue.tunnelInterfaceColorDescriptionVariable = tunnelInterfaceColorDescriptionVariable;
             _resultValue.tunnelInterfaceColorRestrict = tunnelInterfaceColorRestrict;
             _resultValue.tunnelInterfaceColorRestrictVariable = tunnelInterfaceColorRestrictVariable;
             _resultValue.tunnelInterfaceColorVariable = tunnelInterfaceColorVariable;
             _resultValue.tunnelInterfaceEncapsulations = tunnelInterfaceEncapsulations;
             _resultValue.tunnelInterfaceExcludeControllerGroupListVariable = tunnelInterfaceExcludeControllerGroupListVariable;
             _resultValue.tunnelInterfaceExcludeControllerGroupLists = tunnelInterfaceExcludeControllerGroupLists;
+            _resultValue.tunnelInterfaceFullPortHop = tunnelInterfaceFullPortHop;
+            _resultValue.tunnelInterfaceFullPortHopVariable = tunnelInterfaceFullPortHopVariable;
             _resultValue.tunnelInterfaceGroups = tunnelInterfaceGroups;
             _resultValue.tunnelInterfaceGroupsVariable = tunnelInterfaceGroupsVariable;
             _resultValue.tunnelInterfaceHelloInterval = tunnelInterfaceHelloInterval;

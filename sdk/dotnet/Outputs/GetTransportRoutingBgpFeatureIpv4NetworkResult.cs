@@ -13,11 +13,17 @@ namespace Pulumi.Sdwan.Outputs
     [OutputType]
     public sealed class GetTransportRoutingBgpFeatureIpv4NetworkResult
     {
+        /// <summary>
+        /// IP Address
+        /// </summary>
         public readonly string NetworkAddress;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string NetworkAddressVariable;
+        /// <summary>
+        /// Subnet Mask
+        /// </summary>
         public readonly string SubnetMask;
         /// <summary>
         /// Variable name

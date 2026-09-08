@@ -364,6 +364,11 @@ export interface GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      * Set color for TLOC
      */
     readonly tunnelInterfaceColor: string;
+    readonly tunnelInterfaceColorDescription: string;
+    /**
+     * Variable name
+     */
+    readonly tunnelInterfaceColorDescriptionVariable: string;
     /**
      * Variable name
      */
@@ -380,6 +385,14 @@ export interface GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      * Exclude the following controller groups defined in this list
      */
     readonly tunnelInterfaceExcludeControllerGroupLists: number[];
+    /**
+     * Enable port hopping on the tunnel interface
+     */
+    readonly tunnelInterfaceFullPortHop: boolean;
+    /**
+     * Variable name
+     */
+    readonly tunnelInterfaceFullPortHopVariable: string;
     /**
      * List of groups
      */
@@ -437,7 +450,7 @@ export interface GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      */
     readonly tunnelInterfaceNatRefreshIntervalVariable: string;
     /**
-     * Disallow port hopping on the tunnel interface
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead.
      */
     readonly tunnelInterfacePortHop: boolean;
     /**

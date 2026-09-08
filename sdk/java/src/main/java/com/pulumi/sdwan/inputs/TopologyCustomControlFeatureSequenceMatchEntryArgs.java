@@ -115,6 +115,21 @@ public final class TopologyCustomControlFeatureSequenceMatchEntryArgs extends co
     }
 
     /**
+     * Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="hierarchyUuids")
+    private @Nullable Output<List<String>> hierarchyUuids;
+
+    /**
+     * @return Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<List<String>>> hierarchyUuids() {
+        return Optional.ofNullable(this.hierarchyUuids);
+    }
+
+    /**
      * IPv6 prefix list ID
      * 
      */
@@ -360,6 +375,7 @@ public final class TopologyCustomControlFeatureSequenceMatchEntryArgs extends co
         this.domainId = $.domainId;
         this.expandedCommunityListId = $.expandedCommunityListId;
         this.groupId = $.groupId;
+        this.hierarchyUuids = $.hierarchyUuids;
         this.ipv6PrefixListId = $.ipv6PrefixListId;
         this.matchRegions = $.matchRegions;
         this.ompTag = $.ompTag;
@@ -525,6 +541,37 @@ public final class TopologyCustomControlFeatureSequenceMatchEntryArgs extends co
          */
         public Builder groupId(Integer groupId) {
             return groupId(Output.of(groupId));
+        }
+
+        /**
+         * @param hierarchyUuids Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hierarchyUuids(@Nullable Output<List<String>> hierarchyUuids) {
+            $.hierarchyUuids = hierarchyUuids;
+            return this;
+        }
+
+        /**
+         * @param hierarchyUuids Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hierarchyUuids(List<String> hierarchyUuids) {
+            return hierarchyUuids(Output.of(hierarchyUuids));
+        }
+
+        /**
+         * @param hierarchyUuids Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hierarchyUuids(String... hierarchyUuids) {
+            return hierarchyUuids(List.of(hierarchyUuids));
         }
 
         /**

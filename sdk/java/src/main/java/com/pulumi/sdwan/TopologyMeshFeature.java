@@ -49,7 +49,7 @@ import javax.annotation.Nullable;
  *             .description("My Example")
  *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .targetVpns("service_lan_vpn1")
- *             .sites("SITE_100")
+ *             .hierarchyUuids("acb2ea53-4a95-4970-a1ab-9bac15edb961")
  *             .build());
  * 
  *     }
@@ -99,6 +99,20 @@ public class TopologyMeshFeature extends com.pulumi.resources.CustomResource {
         return this.featureProfileId;
     }
     /**
+     * Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="hierarchyUuids", refs={List.class,String.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<String>> hierarchyUuids;
+
+    /**
+     * @return Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<List<String>>> hierarchyUuids() {
+        return Codegen.optional(this.hierarchyUuids);
+    }
+    /**
      * The name of the Feature
      * 
      */
@@ -112,15 +126,31 @@ public class TopologyMeshFeature extends com.pulumi.resources.CustomResource {
     public Output<String> name() {
         return this.name;
     }
+    /**
+     * Site list
+     * 
+     */
     @Export(name="sites", refs={List.class,String.class}, tree="[0,1]")
-    private Output<List<String>> sites;
+    private Output</* @Nullable */ List<String>> sites;
 
-    public Output<List<String>> sites() {
-        return this.sites;
+    /**
+     * @return Site list
+     * 
+     */
+    public Output<Optional<List<String>>> sites() {
+        return Codegen.optional(this.sites);
     }
+    /**
+     * Target VPN list
+     * 
+     */
     @Export(name="targetVpns", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> targetVpns;
 
+    /**
+     * @return Target VPN list
+     * 
+     */
     public Output<List<String>> targetVpns() {
         return this.targetVpns;
     }

@@ -14,21 +14,28 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class TopologyHubSpokeFeatureSpokeHubSite
     {
         /// <summary>
-        /// preference
+        /// Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public readonly ImmutableArray<string> HubHierarchyUuids;
+        /// <summary>
+        /// Hub preference value
         ///   - Range: `1`-`255`
         /// </summary>
         public readonly int? Preference;
         /// <summary>
-        /// sites
+        /// Hub sites
         /// </summary>
         public readonly ImmutableArray<string> Sites;
 
         [OutputConstructor]
         private TopologyHubSpokeFeatureSpokeHubSite(
+            ImmutableArray<string> hubHierarchyUuids,
+
             int? preference,
 
             ImmutableArray<string> sites)
         {
+            HubHierarchyUuids = hubHierarchyUuids;
             Preference = preference;
             Sites = sites;
         }

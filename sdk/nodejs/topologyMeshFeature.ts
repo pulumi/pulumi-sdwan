@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  *     description: "My Example",
  *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
  *     targetVpns: ["service_lan_vpn1"],
- *     sites: ["SITE_100"],
+ *     hierarchyUuids: ["acb2ea53-4a95-4970-a1ab-9bac15edb961"],
  * });
  * ```
  *
@@ -70,10 +70,20 @@ export class TopologyMeshFeature extends pulumi.CustomResource {
      */
     declare public readonly featureProfileId: pulumi.Output<string>;
     /**
+     * Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    declare public readonly hierarchyUuids: pulumi.Output<string[] | undefined>;
+    /**
      * The name of the Feature
      */
     declare public readonly name: pulumi.Output<string>;
-    declare public readonly sites: pulumi.Output<string[]>;
+    /**
+     * Site list
+     */
+    declare public readonly sites: pulumi.Output<string[] | undefined>;
+    /**
+     * Target VPN list
+     */
     declare public readonly targetVpns: pulumi.Output<string[]>;
     /**
      * The version of the Feature
@@ -95,6 +105,7 @@ export class TopologyMeshFeature extends pulumi.CustomResource {
             const state = argsOrState as TopologyMeshFeatureState | undefined;
             resourceInputs["description"] = state?.description;
             resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["hierarchyUuids"] = state?.hierarchyUuids;
             resourceInputs["name"] = state?.name;
             resourceInputs["sites"] = state?.sites;
             resourceInputs["targetVpns"] = state?.targetVpns;
@@ -104,14 +115,12 @@ export class TopologyMeshFeature extends pulumi.CustomResource {
             if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if (args?.sites === undefined && !opts.urn) {
-                throw new Error("Missing required property 'sites'");
-            }
             if (args?.targetVpns === undefined && !opts.urn) {
                 throw new Error("Missing required property 'targetVpns'");
             }
             resourceInputs["description"] = args?.description;
             resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["hierarchyUuids"] = args?.hierarchyUuids;
             resourceInputs["name"] = args?.name;
             resourceInputs["sites"] = args?.sites;
             resourceInputs["targetVpns"] = args?.targetVpns;
@@ -135,10 +144,20 @@ export interface TopologyMeshFeatureState {
      */
     featureProfileId?: pulumi.Input<string | undefined>;
     /**
+     * Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    hierarchyUuids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
      * The name of the Feature
      */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * Site list
+     */
     sites?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Target VPN list
+     */
     targetVpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The version of the Feature
@@ -159,9 +178,19 @@ export interface TopologyMeshFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
+     * Network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    hierarchyUuids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
      * The name of the Feature
      */
     name?: pulumi.Input<string | undefined>;
-    sites: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Site list
+     */
+    sites?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Target VPN list
+     */
     targetVpns: pulumi.Input<pulumi.Input<string>[]>;
 }

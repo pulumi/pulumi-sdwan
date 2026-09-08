@@ -309,6 +309,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &SecurityPolicy{}
 	case "sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature":
 		r = &ServiceDhcpServerFeature{}
+	case "sdwan:index/serviceDualRouterHaFeature:ServiceDualRouterHaFeature":
+		r = &ServiceDualRouterHaFeature{}
 	case "sdwan:index/serviceFeatureProfile:ServiceFeatureProfile":
 		r = &ServiceFeatureProfile{}
 	case "sdwan:index/serviceIpv4AclFeature:ServiceIpv4AclFeature":
@@ -1292,6 +1294,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/serviceDhcpServerFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/serviceDualRouterHaFeature",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

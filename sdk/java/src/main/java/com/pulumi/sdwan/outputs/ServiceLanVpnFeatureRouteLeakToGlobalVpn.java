@@ -21,7 +21,7 @@ public final class ServiceLanVpnFeatureRouteLeakToGlobalVpn {
     private @Nullable String routePolicyId;
     /**
      * @return Leak Routes of particular protocol from Service to Global VPN
-     *   - Choices: `static`, `connected`, `bgp`, `ospf`
+     *   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
      * 
      */
     private @Nullable String routeProtocol;
@@ -44,7 +44,7 @@ public final class ServiceLanVpnFeatureRouteLeakToGlobalVpn {
     }
     /**
      * @return Leak Routes of particular protocol from Service to Global VPN
-     *   - Choices: `static`, `connected`, `bgp`, `ospf`
+     *   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
      * 
      */
     public Optional<String> routeProtocol() {

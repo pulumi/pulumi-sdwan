@@ -41,6 +41,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? GroupId;
         /// <summary>
+        /// Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public readonly ImmutableArray<string> HierarchyUuids;
+        /// <summary>
         /// IPv6 prefix list ID
         /// </summary>
         public readonly string? Ipv6PrefixListId;
@@ -121,6 +125,8 @@ namespace Pulumi.Sdwan.Outputs
 
             int? groupId,
 
+            ImmutableArray<string> hierarchyUuids,
+
             string? ipv6PrefixListId,
 
             ImmutableArray<Outputs.TopologyCustomControlFeatureSequenceMatchEntryMatchRegion> matchRegions,
@@ -157,6 +163,7 @@ namespace Pulumi.Sdwan.Outputs
             DomainId = domainId;
             ExpandedCommunityListId = expandedCommunityListId;
             GroupId = groupId;
+            HierarchyUuids = hierarchyUuids;
             Ipv6PrefixListId = ipv6PrefixListId;
             MatchRegions = matchRegions;
             OmpTag = ompTag;

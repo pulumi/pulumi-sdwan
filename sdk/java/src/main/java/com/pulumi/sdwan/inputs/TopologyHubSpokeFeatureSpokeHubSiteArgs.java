@@ -18,7 +18,22 @@ public final class TopologyHubSpokeFeatureSpokeHubSiteArgs extends com.pulumi.re
     public static final TopologyHubSpokeFeatureSpokeHubSiteArgs Empty = new TopologyHubSpokeFeatureSpokeHubSiteArgs();
 
     /**
-     * preference
+     * Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="hubHierarchyUuids")
+    private @Nullable Output<List<String>> hubHierarchyUuids;
+
+    /**
+     * @return Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<List<String>>> hubHierarchyUuids() {
+        return Optional.ofNullable(this.hubHierarchyUuids);
+    }
+
+    /**
+     * Hub preference value
      *   - Range: `1`-`255`
      * 
      */
@@ -26,7 +41,7 @@ public final class TopologyHubSpokeFeatureSpokeHubSiteArgs extends com.pulumi.re
     private @Nullable Output<Integer> preference;
 
     /**
-     * @return preference
+     * @return Hub preference value
      *   - Range: `1`-`255`
      * 
      */
@@ -35,14 +50,14 @@ public final class TopologyHubSpokeFeatureSpokeHubSiteArgs extends com.pulumi.re
     }
 
     /**
-     * sites
+     * Hub sites
      * 
      */
     @Import(name="sites")
     private @Nullable Output<List<String>> sites;
 
     /**
-     * @return sites
+     * @return Hub sites
      * 
      */
     public Optional<Output<List<String>>> sites() {
@@ -52,6 +67,7 @@ public final class TopologyHubSpokeFeatureSpokeHubSiteArgs extends com.pulumi.re
     private TopologyHubSpokeFeatureSpokeHubSiteArgs() {}
 
     private TopologyHubSpokeFeatureSpokeHubSiteArgs(TopologyHubSpokeFeatureSpokeHubSiteArgs $) {
+        this.hubHierarchyUuids = $.hubHierarchyUuids;
         this.preference = $.preference;
         this.sites = $.sites;
     }
@@ -75,7 +91,38 @@ public final class TopologyHubSpokeFeatureSpokeHubSiteArgs extends com.pulumi.re
         }
 
         /**
-         * @param preference preference
+         * @param hubHierarchyUuids Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hubHierarchyUuids(@Nullable Output<List<String>> hubHierarchyUuids) {
+            $.hubHierarchyUuids = hubHierarchyUuids;
+            return this;
+        }
+
+        /**
+         * @param hubHierarchyUuids Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hubHierarchyUuids(List<String> hubHierarchyUuids) {
+            return hubHierarchyUuids(Output.of(hubHierarchyUuids));
+        }
+
+        /**
+         * @param hubHierarchyUuids Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hubHierarchyUuids(String... hubHierarchyUuids) {
+            return hubHierarchyUuids(List.of(hubHierarchyUuids));
+        }
+
+        /**
+         * @param preference Hub preference value
          *   - Range: `1`-`255`
          * 
          * @return builder
@@ -87,7 +134,7 @@ public final class TopologyHubSpokeFeatureSpokeHubSiteArgs extends com.pulumi.re
         }
 
         /**
-         * @param preference preference
+         * @param preference Hub preference value
          *   - Range: `1`-`255`
          * 
          * @return builder
@@ -98,7 +145,7 @@ public final class TopologyHubSpokeFeatureSpokeHubSiteArgs extends com.pulumi.re
         }
 
         /**
-         * @param sites sites
+         * @param sites Hub sites
          * 
          * @return builder
          * 
@@ -109,7 +156,7 @@ public final class TopologyHubSpokeFeatureSpokeHubSiteArgs extends com.pulumi.re
         }
 
         /**
-         * @param sites sites
+         * @param sites Hub sites
          * 
          * @return builder
          * 
@@ -119,7 +166,7 @@ public final class TopologyHubSpokeFeatureSpokeHubSiteArgs extends com.pulumi.re
         }
 
         /**
-         * @param sites sites
+         * @param sites Hub sites
          * 
          * @return builder
          * 

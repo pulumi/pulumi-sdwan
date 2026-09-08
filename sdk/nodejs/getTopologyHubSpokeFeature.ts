@@ -63,11 +63,21 @@ export interface GetTopologyHubSpokeFeatureResult {
      * The name of the Feature
      */
     readonly name: string;
+    /**
+     * Selected hub network hierarchy UUIDs
+     */
+    readonly selectedHierarchyHubs: string[];
+    /**
+     * Selected hub sites
+     */
     readonly selectedHubs: string[];
     /**
-     * Spokes
+     * Spoke configurations
      */
     readonly spokes: outputs.GetTopologyHubSpokeFeatureSpoke[];
+    /**
+     * Target VPN list
+     */
     readonly targetVpns: string[];
     /**
      * The version of the Feature

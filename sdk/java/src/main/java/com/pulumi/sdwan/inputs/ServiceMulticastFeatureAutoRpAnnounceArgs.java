@@ -17,6 +17,36 @@ public final class ServiceMulticastFeatureAutoRpAnnounceArgs extends com.pulumi.
     public static final ServiceMulticastFeatureAutoRpAnnounceArgs Empty = new ServiceMulticastFeatureAutoRpAnnounceArgs();
 
     /**
+     * Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="accessListId")
+    private @Nullable Output<String> accessListId;
+
+    /**
+     * @return Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> accessListId() {
+        return Optional.ofNullable(this.accessListId);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="accessListIdVariable")
+    private @Nullable Output<String> accessListIdVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> accessListIdVariable() {
+        return Optional.ofNullable(this.accessListIdVariable);
+    }
+
+    /**
      * Set RP Announce Interface Name
      * 
      */
@@ -44,6 +74,38 @@ public final class ServiceMulticastFeatureAutoRpAnnounceArgs extends com.pulumi.
      */
     public Optional<Output<String>> interfaceNameVariable() {
         return Optional.ofNullable(this.interfaceNameVariable);
+    }
+
+    /**
+     * Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `1`-`16383`
+     * 
+     */
+    @Import(name="interval")
+    private @Nullable Output<Integer> interval;
+
+    /**
+     * @return Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Range: `1`-`16383`
+     * 
+     */
+    public Optional<Output<Integer>> interval() {
+        return Optional.ofNullable(this.interval);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="intervalVariable")
+    private @Nullable Output<String> intervalVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> intervalVariable() {
+        return Optional.ofNullable(this.intervalVariable);
     }
 
     /**
@@ -81,8 +143,12 @@ public final class ServiceMulticastFeatureAutoRpAnnounceArgs extends com.pulumi.
     private ServiceMulticastFeatureAutoRpAnnounceArgs() {}
 
     private ServiceMulticastFeatureAutoRpAnnounceArgs(ServiceMulticastFeatureAutoRpAnnounceArgs $) {
+        this.accessListId = $.accessListId;
+        this.accessListIdVariable = $.accessListIdVariable;
         this.interfaceName = $.interfaceName;
         this.interfaceNameVariable = $.interfaceNameVariable;
+        this.interval = $.interval;
+        this.intervalVariable = $.intervalVariable;
         this.scope = $.scope;
         this.scopeVariable = $.scopeVariable;
     }
@@ -103,6 +169,48 @@ public final class ServiceMulticastFeatureAutoRpAnnounceArgs extends com.pulumi.
 
         public Builder(ServiceMulticastFeatureAutoRpAnnounceArgs defaults) {
             $ = new ServiceMulticastFeatureAutoRpAnnounceArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param accessListId Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessListId(@Nullable Output<String> accessListId) {
+            $.accessListId = accessListId;
+            return this;
+        }
+
+        /**
+         * @param accessListId Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessListId(String accessListId) {
+            return accessListId(Output.of(accessListId));
+        }
+
+        /**
+         * @param accessListIdVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessListIdVariable(@Nullable Output<String> accessListIdVariable) {
+            $.accessListIdVariable = accessListIdVariable;
+            return this;
+        }
+
+        /**
+         * @param accessListIdVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessListIdVariable(String accessListIdVariable) {
+            return accessListIdVariable(Output.of(accessListIdVariable));
         }
 
         /**
@@ -145,6 +253,50 @@ public final class ServiceMulticastFeatureAutoRpAnnounceArgs extends com.pulumi.
          */
         public Builder interfaceNameVariable(String interfaceNameVariable) {
             return interfaceNameVariable(Output.of(interfaceNameVariable));
+        }
+
+        /**
+         * @param interval Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         *   - Range: `1`-`16383`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder interval(@Nullable Output<Integer> interval) {
+            $.interval = interval;
+            return this;
+        }
+
+        /**
+         * @param interval Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         *   - Range: `1`-`16383`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder interval(Integer interval) {
+            return interval(Output.of(interval));
+        }
+
+        /**
+         * @param intervalVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder intervalVariable(@Nullable Output<String> intervalVariable) {
+            $.intervalVariable = intervalVariable;
+            return this;
+        }
+
+        /**
+         * @param intervalVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder intervalVariable(String intervalVariable) {
+            return intervalVariable(Output.of(intervalVariable));
         }
 
         /**

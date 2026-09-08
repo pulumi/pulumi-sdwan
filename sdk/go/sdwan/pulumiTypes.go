@@ -41299,6 +41299,211 @@ func (o ServiceDhcpServerFeatureStaticLeaseArrayOutput) Index(i pulumi.IntInput)
 	}).(ServiceDhcpServerFeatureStaticLeaseOutput)
 }
 
+type ServiceDualRouterHaFeatureRedundancyGroup struct {
+	// - Range: `1`-`2`
+	GroupId *int                                             `pulumi:"groupId"`
+	TagName *string                                          `pulumi:"tagName"`
+	VpnIds  []ServiceDualRouterHaFeatureRedundancyGroupVpnId `pulumi:"vpnIds"`
+}
+
+// ServiceDualRouterHaFeatureRedundancyGroupInput is an input type that accepts ServiceDualRouterHaFeatureRedundancyGroupArgs and ServiceDualRouterHaFeatureRedundancyGroupOutput values.
+// You can construct a concrete instance of `ServiceDualRouterHaFeatureRedundancyGroupInput` via:
+//
+//	ServiceDualRouterHaFeatureRedundancyGroupArgs{...}
+type ServiceDualRouterHaFeatureRedundancyGroupInput interface {
+	pulumi.Input
+
+	ToServiceDualRouterHaFeatureRedundancyGroupOutput() ServiceDualRouterHaFeatureRedundancyGroupOutput
+	ToServiceDualRouterHaFeatureRedundancyGroupOutputWithContext(context.Context) ServiceDualRouterHaFeatureRedundancyGroupOutput
+}
+
+type ServiceDualRouterHaFeatureRedundancyGroupArgs struct {
+	// - Range: `1`-`2`
+	GroupId pulumi.IntPtrInput                                       `pulumi:"groupId"`
+	TagName pulumi.StringPtrInput                                    `pulumi:"tagName"`
+	VpnIds  ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayInput `pulumi:"vpnIds"`
+}
+
+func (ServiceDualRouterHaFeatureRedundancyGroupArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceDualRouterHaFeatureRedundancyGroup)(nil)).Elem()
+}
+
+func (i ServiceDualRouterHaFeatureRedundancyGroupArgs) ToServiceDualRouterHaFeatureRedundancyGroupOutput() ServiceDualRouterHaFeatureRedundancyGroupOutput {
+	return i.ToServiceDualRouterHaFeatureRedundancyGroupOutputWithContext(context.Background())
+}
+
+func (i ServiceDualRouterHaFeatureRedundancyGroupArgs) ToServiceDualRouterHaFeatureRedundancyGroupOutputWithContext(ctx context.Context) ServiceDualRouterHaFeatureRedundancyGroupOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceDualRouterHaFeatureRedundancyGroupOutput)
+}
+
+// ServiceDualRouterHaFeatureRedundancyGroupArrayInput is an input type that accepts ServiceDualRouterHaFeatureRedundancyGroupArray and ServiceDualRouterHaFeatureRedundancyGroupArrayOutput values.
+// You can construct a concrete instance of `ServiceDualRouterHaFeatureRedundancyGroupArrayInput` via:
+//
+//	ServiceDualRouterHaFeatureRedundancyGroupArray{ ServiceDualRouterHaFeatureRedundancyGroupArgs{...} }
+type ServiceDualRouterHaFeatureRedundancyGroupArrayInput interface {
+	pulumi.Input
+
+	ToServiceDualRouterHaFeatureRedundancyGroupArrayOutput() ServiceDualRouterHaFeatureRedundancyGroupArrayOutput
+	ToServiceDualRouterHaFeatureRedundancyGroupArrayOutputWithContext(context.Context) ServiceDualRouterHaFeatureRedundancyGroupArrayOutput
+}
+
+type ServiceDualRouterHaFeatureRedundancyGroupArray []ServiceDualRouterHaFeatureRedundancyGroupInput
+
+func (ServiceDualRouterHaFeatureRedundancyGroupArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceDualRouterHaFeatureRedundancyGroup)(nil)).Elem()
+}
+
+func (i ServiceDualRouterHaFeatureRedundancyGroupArray) ToServiceDualRouterHaFeatureRedundancyGroupArrayOutput() ServiceDualRouterHaFeatureRedundancyGroupArrayOutput {
+	return i.ToServiceDualRouterHaFeatureRedundancyGroupArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceDualRouterHaFeatureRedundancyGroupArray) ToServiceDualRouterHaFeatureRedundancyGroupArrayOutputWithContext(ctx context.Context) ServiceDualRouterHaFeatureRedundancyGroupArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceDualRouterHaFeatureRedundancyGroupArrayOutput)
+}
+
+type ServiceDualRouterHaFeatureRedundancyGroupOutput struct{ *pulumi.OutputState }
+
+func (ServiceDualRouterHaFeatureRedundancyGroupOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceDualRouterHaFeatureRedundancyGroup)(nil)).Elem()
+}
+
+func (o ServiceDualRouterHaFeatureRedundancyGroupOutput) ToServiceDualRouterHaFeatureRedundancyGroupOutput() ServiceDualRouterHaFeatureRedundancyGroupOutput {
+	return o
+}
+
+func (o ServiceDualRouterHaFeatureRedundancyGroupOutput) ToServiceDualRouterHaFeatureRedundancyGroupOutputWithContext(ctx context.Context) ServiceDualRouterHaFeatureRedundancyGroupOutput {
+	return o
+}
+
+// - Range: `1`-`2`
+func (o ServiceDualRouterHaFeatureRedundancyGroupOutput) GroupId() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ServiceDualRouterHaFeatureRedundancyGroup) *int { return v.GroupId }).(pulumi.IntPtrOutput)
+}
+
+func (o ServiceDualRouterHaFeatureRedundancyGroupOutput) TagName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceDualRouterHaFeatureRedundancyGroup) *string { return v.TagName }).(pulumi.StringPtrOutput)
+}
+
+func (o ServiceDualRouterHaFeatureRedundancyGroupOutput) VpnIds() ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput {
+	return o.ApplyT(func(v ServiceDualRouterHaFeatureRedundancyGroup) []ServiceDualRouterHaFeatureRedundancyGroupVpnId {
+		return v.VpnIds
+	}).(ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput)
+}
+
+type ServiceDualRouterHaFeatureRedundancyGroupArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceDualRouterHaFeatureRedundancyGroupArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceDualRouterHaFeatureRedundancyGroup)(nil)).Elem()
+}
+
+func (o ServiceDualRouterHaFeatureRedundancyGroupArrayOutput) ToServiceDualRouterHaFeatureRedundancyGroupArrayOutput() ServiceDualRouterHaFeatureRedundancyGroupArrayOutput {
+	return o
+}
+
+func (o ServiceDualRouterHaFeatureRedundancyGroupArrayOutput) ToServiceDualRouterHaFeatureRedundancyGroupArrayOutputWithContext(ctx context.Context) ServiceDualRouterHaFeatureRedundancyGroupArrayOutput {
+	return o
+}
+
+func (o ServiceDualRouterHaFeatureRedundancyGroupArrayOutput) Index(i pulumi.IntInput) ServiceDualRouterHaFeatureRedundancyGroupOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceDualRouterHaFeatureRedundancyGroup {
+		return vs[0].([]ServiceDualRouterHaFeatureRedundancyGroup)[vs[1].(int)]
+	}).(ServiceDualRouterHaFeatureRedundancyGroupOutput)
+}
+
+type ServiceDualRouterHaFeatureRedundancyGroupVpnId struct {
+	VpnId *string `pulumi:"vpnId"`
+}
+
+// ServiceDualRouterHaFeatureRedundancyGroupVpnIdInput is an input type that accepts ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgs and ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput values.
+// You can construct a concrete instance of `ServiceDualRouterHaFeatureRedundancyGroupVpnIdInput` via:
+//
+//	ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgs{...}
+type ServiceDualRouterHaFeatureRedundancyGroupVpnIdInput interface {
+	pulumi.Input
+
+	ToServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput() ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput
+	ToServiceDualRouterHaFeatureRedundancyGroupVpnIdOutputWithContext(context.Context) ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput
+}
+
+type ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgs struct {
+	VpnId pulumi.StringPtrInput `pulumi:"vpnId"`
+}
+
+func (ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceDualRouterHaFeatureRedundancyGroupVpnId)(nil)).Elem()
+}
+
+func (i ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgs) ToServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput() ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput {
+	return i.ToServiceDualRouterHaFeatureRedundancyGroupVpnIdOutputWithContext(context.Background())
+}
+
+func (i ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgs) ToServiceDualRouterHaFeatureRedundancyGroupVpnIdOutputWithContext(ctx context.Context) ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput)
+}
+
+// ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayInput is an input type that accepts ServiceDualRouterHaFeatureRedundancyGroupVpnIdArray and ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput values.
+// You can construct a concrete instance of `ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayInput` via:
+//
+//	ServiceDualRouterHaFeatureRedundancyGroupVpnIdArray{ ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgs{...} }
+type ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayInput interface {
+	pulumi.Input
+
+	ToServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput() ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput
+	ToServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutputWithContext(context.Context) ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput
+}
+
+type ServiceDualRouterHaFeatureRedundancyGroupVpnIdArray []ServiceDualRouterHaFeatureRedundancyGroupVpnIdInput
+
+func (ServiceDualRouterHaFeatureRedundancyGroupVpnIdArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceDualRouterHaFeatureRedundancyGroupVpnId)(nil)).Elem()
+}
+
+func (i ServiceDualRouterHaFeatureRedundancyGroupVpnIdArray) ToServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput() ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput {
+	return i.ToServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceDualRouterHaFeatureRedundancyGroupVpnIdArray) ToServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutputWithContext(ctx context.Context) ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput)
+}
+
+type ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput struct{ *pulumi.OutputState }
+
+func (ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceDualRouterHaFeatureRedundancyGroupVpnId)(nil)).Elem()
+}
+
+func (o ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput) ToServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput() ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput {
+	return o
+}
+
+func (o ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput) ToServiceDualRouterHaFeatureRedundancyGroupVpnIdOutputWithContext(ctx context.Context) ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput {
+	return o
+}
+
+func (o ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput) VpnId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceDualRouterHaFeatureRedundancyGroupVpnId) *string { return v.VpnId }).(pulumi.StringPtrOutput)
+}
+
+type ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceDualRouterHaFeatureRedundancyGroupVpnId)(nil)).Elem()
+}
+
+func (o ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput) ToServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput() ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput {
+	return o
+}
+
+func (o ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput) ToServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutputWithContext(ctx context.Context) ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput {
+	return o
+}
+
+func (o ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput) Index(i pulumi.IntInput) ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceDualRouterHaFeatureRedundancyGroupVpnId {
+		return vs[0].([]ServiceDualRouterHaFeatureRedundancyGroupVpnId)[vs[1].(int)]
+	}).(ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput)
+}
+
 type ServiceIpv4AclFeatureSequence struct {
 	// Define list of actions
 	Actions []ServiceIpv4AclFeatureSequenceAction `pulumi:"actions"`
@@ -41465,6 +41670,7 @@ type ServiceIpv4AclFeatureSequenceAction struct {
 	// Variable name
 	AcceptSetServiceChainNameVariable *string `pulumi:"acceptSetServiceChainNameVariable"`
 	// Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+	//   - Ranges: `1`-`511`, `513`-`65531`
 	AcceptSetServiceChainVpn *int `pulumi:"acceptSetServiceChainVpn"`
 	// Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
 	AcceptSetServiceChainVpnVariable *string `pulumi:"acceptSetServiceChainVpnVariable"`
@@ -41510,6 +41716,7 @@ type ServiceIpv4AclFeatureSequenceActionArgs struct {
 	// Variable name
 	AcceptSetServiceChainNameVariable pulumi.StringPtrInput `pulumi:"acceptSetServiceChainNameVariable"`
 	// Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+	//   - Ranges: `1`-`511`, `513`-`65531`
 	AcceptSetServiceChainVpn pulumi.IntPtrInput `pulumi:"acceptSetServiceChainVpn"`
 	// Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
 	AcceptSetServiceChainVpnVariable pulumi.StringPtrInput `pulumi:"acceptSetServiceChainVpnVariable"`
@@ -41624,6 +41831,7 @@ func (o ServiceIpv4AclFeatureSequenceActionOutput) AcceptSetServiceChainNameVari
 }
 
 // Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+//   - Ranges: `1`-`511`, `513`-`65531`
 func (o ServiceIpv4AclFeatureSequenceActionOutput) AcceptSetServiceChainVpn() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v ServiceIpv4AclFeatureSequenceAction) *int { return v.AcceptSetServiceChainVpn }).(pulumi.IntPtrOutput)
 }
@@ -42227,6 +42435,7 @@ type ServiceIpv6AclFeatureSequenceAction struct {
 	// Variable name
 	AcceptSetServiceChainNameVariable *string `pulumi:"acceptSetServiceChainNameVariable"`
 	// Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+	//   - Ranges: `1`-`511`, `513`-`65531`
 	AcceptSetServiceChainVpn *int `pulumi:"acceptSetServiceChainVpn"`
 	// Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
 	AcceptSetServiceChainVpnVariable *string `pulumi:"acceptSetServiceChainVpnVariable"`
@@ -42272,6 +42481,7 @@ type ServiceIpv6AclFeatureSequenceActionArgs struct {
 	// Variable name
 	AcceptSetServiceChainNameVariable pulumi.StringPtrInput `pulumi:"acceptSetServiceChainNameVariable"`
 	// Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+	//   - Ranges: `1`-`511`, `513`-`65531`
 	AcceptSetServiceChainVpn pulumi.IntPtrInput `pulumi:"acceptSetServiceChainVpn"`
 	// Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
 	AcceptSetServiceChainVpnVariable pulumi.StringPtrInput `pulumi:"acceptSetServiceChainVpnVariable"`
@@ -42383,6 +42593,7 @@ func (o ServiceIpv6AclFeatureSequenceActionOutput) AcceptSetServiceChainNameVari
 }
 
 // Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+//   - Ranges: `1`-`511`, `513`-`65531`
 func (o ServiceIpv6AclFeatureSequenceActionOutput) AcceptSetServiceChainVpn() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v ServiceIpv6AclFeatureSequenceAction) *int { return v.AcceptSetServiceChainVpn }).(pulumi.IntPtrOutput)
 }
@@ -42953,7 +43164,7 @@ type ServiceLanVpnFeatureAdvertiseOmpIpv4Prefix struct {
 	Region *string `pulumi:"region"`
 	// Variable name
 	RegionVariable *string `pulumi:"regionVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -42983,7 +43194,7 @@ type ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgs struct {
 	Region pulumi.StringPtrInput `pulumi:"region"`
 	// Variable name
 	RegionVariable pulumi.StringPtrInput `pulumi:"regionVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -43067,7 +43278,7 @@ func (o ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixOutput) RegionVariable() pulum
 	return o.ApplyT(func(v ServiceLanVpnFeatureAdvertiseOmpIpv4Prefix) *string { return v.RegionVariable }).(pulumi.StringPtrOutput)
 }
 
-// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceLanVpnFeatureAdvertiseOmpIpv4Prefix) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -43396,7 +43607,7 @@ type ServiceLanVpnFeatureGreRoute struct {
 	// Variable name
 	NetworkAddressVariable *string `pulumi:"networkAddressVariable"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -43425,7 +43636,7 @@ type ServiceLanVpnFeatureGreRouteArgs struct {
 	// Variable name
 	NetworkAddressVariable pulumi.StringPtrInput `pulumi:"networkAddressVariable"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -43505,7 +43716,7 @@ func (o ServiceLanVpnFeatureGreRouteOutput) NetworkAddressVariable() pulumi.Stri
 }
 
 // Subnet Mask
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceLanVpnFeatureGreRouteOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceLanVpnFeatureGreRoute) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -43674,7 +43885,7 @@ type ServiceLanVpnFeatureIpsecRoute struct {
 	// Variable name
 	NetworkAddressVariable *string `pulumi:"networkAddressVariable"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -43701,7 +43912,7 @@ type ServiceLanVpnFeatureIpsecRouteArgs struct {
 	// Variable name
 	NetworkAddressVariable pulumi.StringPtrInput `pulumi:"networkAddressVariable"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -43779,7 +43990,7 @@ func (o ServiceLanVpnFeatureIpsecRouteOutput) NetworkAddressVariable() pulumi.St
 }
 
 // Subnet Mask
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceLanVpnFeatureIpsecRouteOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceLanVpnFeatureIpsecRoute) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -44045,7 +44256,7 @@ type ServiceLanVpnFeatureIpv4StaticRoute struct {
 	// IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
 	Null0 *bool `pulumi:"null0"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -44088,7 +44299,7 @@ type ServiceLanVpnFeatureIpv4StaticRouteArgs struct {
 	// IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
 	Null0 pulumi.BoolPtrInput `pulumi:"null0"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -44206,7 +44417,7 @@ func (o ServiceLanVpnFeatureIpv4StaticRouteOutput) Null0() pulumi.BoolPtrOutput 
 }
 
 // Subnet Mask
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceLanVpnFeatureIpv4StaticRouteOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceLanVpnFeatureIpv4StaticRoute) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -46226,7 +46437,7 @@ func (o ServiceLanVpnFeatureRouteLeakFromGlobalVpnArrayOutput) Index(i pulumi.In
 
 type ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistribution struct {
 	// Protocol to restributed leaked routes
-	//   - Choices: `bgp`, `ospf`
+	//   - Choices: `bgp`, `ospf`, `eigrp`
 	Protocol *string `pulumi:"protocol"`
 	// Variable name
 	ProtocolVariable       *string `pulumi:"protocolVariable"`
@@ -46246,7 +46457,7 @@ type ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionInput interface {
 
 type ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgs struct {
 	// Protocol to restributed leaked routes
-	//   - Choices: `bgp`, `ospf`
+	//   - Choices: `bgp`, `ospf`, `eigrp`
 	Protocol pulumi.StringPtrInput `pulumi:"protocol"`
 	// Variable name
 	ProtocolVariable       pulumi.StringPtrInput `pulumi:"protocolVariable"`
@@ -46305,7 +46516,7 @@ func (o ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionOutput) ToServic
 }
 
 // Protocol to restributed leaked routes
-//   - Choices: `bgp`, `ospf`
+//   - Choices: `bgp`, `ospf`, `eigrp`
 func (o ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionOutput) Protocol() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistribution) *string { return v.Protocol }).(pulumi.StringPtrOutput)
 }
@@ -46346,7 +46557,7 @@ type ServiceLanVpnFeatureRouteLeakFromOtherService struct {
 	Redistributions []ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistribution `pulumi:"redistributions"`
 	RoutePolicyId   *string                                                       `pulumi:"routePolicyId"`
 	// Leak Route of particular protocol from Source Service VPN
-	//   - Choices: `static`, `connected`, `bgp`, `ospf`
+	//   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
 	RouteProtocol *string `pulumi:"routeProtocol"`
 	// Variable name
 	RouteProtocolVariable *string `pulumi:"routeProtocolVariable"`
@@ -46373,7 +46584,7 @@ type ServiceLanVpnFeatureRouteLeakFromOtherServiceArgs struct {
 	Redistributions ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArrayInput `pulumi:"redistributions"`
 	RoutePolicyId   pulumi.StringPtrInput                                                 `pulumi:"routePolicyId"`
 	// Leak Route of particular protocol from Source Service VPN
-	//   - Choices: `static`, `connected`, `bgp`, `ospf`
+	//   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
 	RouteProtocol pulumi.StringPtrInput `pulumi:"routeProtocol"`
 	// Variable name
 	RouteProtocolVariable pulumi.StringPtrInput `pulumi:"routeProtocolVariable"`
@@ -46447,7 +46658,7 @@ func (o ServiceLanVpnFeatureRouteLeakFromOtherServiceOutput) RoutePolicyId() pul
 }
 
 // Leak Route of particular protocol from Source Service VPN
-//   - Choices: `static`, `connected`, `bgp`, `ospf`
+//   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
 func (o ServiceLanVpnFeatureRouteLeakFromOtherServiceOutput) RouteProtocol() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceLanVpnFeatureRouteLeakFromOtherService) *string { return v.RouteProtocol }).(pulumi.StringPtrOutput)
 }
@@ -46490,7 +46701,7 @@ func (o ServiceLanVpnFeatureRouteLeakFromOtherServiceArrayOutput) Index(i pulumi
 
 type ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistribution struct {
 	// Protocol to restributed leaked routes
-	//   - Choices: `bgp`, `ospf`
+	//   - Choices: `bgp`, `ospf`, `eigrp`
 	Protocol *string `pulumi:"protocol"`
 	// Variable name
 	ProtocolVariable       *string `pulumi:"protocolVariable"`
@@ -46510,7 +46721,7 @@ type ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionInput interface 
 
 type ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgs struct {
 	// Protocol to restributed leaked routes
-	//   - Choices: `bgp`, `ospf`
+	//   - Choices: `bgp`, `ospf`, `eigrp`
 	Protocol pulumi.StringPtrInput `pulumi:"protocol"`
 	// Variable name
 	ProtocolVariable       pulumi.StringPtrInput `pulumi:"protocolVariable"`
@@ -46569,7 +46780,7 @@ func (o ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionOutput) ToSer
 }
 
 // Protocol to restributed leaked routes
-//   - Choices: `bgp`, `ospf`
+//   - Choices: `bgp`, `ospf`, `eigrp`
 func (o ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionOutput) Protocol() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistribution) *string { return v.Protocol }).(pulumi.StringPtrOutput)
 }
@@ -46610,7 +46821,7 @@ type ServiceLanVpnFeatureRouteLeakToGlobalVpn struct {
 	Redistributions []ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistribution `pulumi:"redistributions"`
 	RoutePolicyId   *string                                                  `pulumi:"routePolicyId"`
 	// Leak Routes of particular protocol from Service to Global VPN
-	//   - Choices: `static`, `connected`, `bgp`, `ospf`
+	//   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
 	RouteProtocol *string `pulumi:"routeProtocol"`
 	// Variable name
 	RouteProtocolVariable *string `pulumi:"routeProtocolVariable"`
@@ -46632,7 +46843,7 @@ type ServiceLanVpnFeatureRouteLeakToGlobalVpnArgs struct {
 	Redistributions ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistributionArrayInput `pulumi:"redistributions"`
 	RoutePolicyId   pulumi.StringPtrInput                                            `pulumi:"routePolicyId"`
 	// Leak Routes of particular protocol from Service to Global VPN
-	//   - Choices: `static`, `connected`, `bgp`, `ospf`
+	//   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
 	RouteProtocol pulumi.StringPtrInput `pulumi:"routeProtocol"`
 	// Variable name
 	RouteProtocolVariable pulumi.StringPtrInput `pulumi:"routeProtocolVariable"`
@@ -46701,7 +46912,7 @@ func (o ServiceLanVpnFeatureRouteLeakToGlobalVpnOutput) RoutePolicyId() pulumi.S
 }
 
 // Leak Routes of particular protocol from Service to Global VPN
-//   - Choices: `static`, `connected`, `bgp`, `ospf`
+//   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
 func (o ServiceLanVpnFeatureRouteLeakToGlobalVpnOutput) RouteProtocol() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceLanVpnFeatureRouteLeakToGlobalVpn) *string { return v.RouteProtocol }).(pulumi.StringPtrOutput)
 }
@@ -47012,7 +47223,7 @@ type ServiceLanVpnFeatureServiceRoute struct {
 	// Variable name
 	SseInstanceVariable *string `pulumi:"sseInstanceVariable"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -47047,7 +47258,7 @@ type ServiceLanVpnFeatureServiceRouteArgs struct {
 	// Variable name
 	SseInstanceVariable pulumi.StringPtrInput `pulumi:"sseInstanceVariable"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -47139,7 +47350,7 @@ func (o ServiceLanVpnFeatureServiceRouteOutput) SseInstanceVariable() pulumi.Str
 }
 
 // Subnet Mask
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceLanVpnFeatureServiceRouteOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceLanVpnFeatureServiceRoute) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -49541,7 +49752,7 @@ type ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddress struct {
 	// Variable name
 	AddressVariable *string `pulumi:"addressVariable"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
@@ -49564,7 +49775,7 @@ type ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs struct {
 	// Variable name
 	AddressVariable pulumi.StringPtrInput `pulumi:"addressVariable"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput `pulumi:"ipv4SubnetMaskVariable"`
@@ -49632,7 +49843,7 @@ func (o ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressOutput) AddressVaria
 }
 
 // Subnet Mask
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressOutput) Ipv4SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddress) *string { return v.Ipv4SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -50881,10 +51092,19 @@ func (o ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArrayOutput) Ind
 }
 
 type ServiceMulticastFeatureAutoRpAnnounce struct {
+	// Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	AccessListId *string `pulumi:"accessListId"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	AccessListIdVariable *string `pulumi:"accessListIdVariable"`
 	// Set RP Announce Interface Name
 	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
+	// Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Range: `1`-`16383`
+	Interval *int `pulumi:"interval"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	IntervalVariable *string `pulumi:"intervalVariable"`
 	// Set RP Announce Scope
 	//   - Range: `1`-`255`
 	Scope *int `pulumi:"scope"`
@@ -50904,10 +51124,19 @@ type ServiceMulticastFeatureAutoRpAnnounceInput interface {
 }
 
 type ServiceMulticastFeatureAutoRpAnnounceArgs struct {
+	// Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	AccessListId pulumi.StringPtrInput `pulumi:"accessListId"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	AccessListIdVariable pulumi.StringPtrInput `pulumi:"accessListIdVariable"`
 	// Set RP Announce Interface Name
 	InterfaceName pulumi.StringPtrInput `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput `pulumi:"interfaceNameVariable"`
+	// Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Range: `1`-`16383`
+	Interval pulumi.IntPtrInput `pulumi:"interval"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	IntervalVariable pulumi.StringPtrInput `pulumi:"intervalVariable"`
 	// Set RP Announce Scope
 	//   - Range: `1`-`255`
 	Scope pulumi.IntPtrInput `pulumi:"scope"`
@@ -50966,6 +51195,16 @@ func (o ServiceMulticastFeatureAutoRpAnnounceOutput) ToServiceMulticastFeatureAu
 	return o
 }
 
+// Set IP Access List for PIM RP Announce, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o ServiceMulticastFeatureAutoRpAnnounceOutput) AccessListId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceMulticastFeatureAutoRpAnnounce) *string { return v.AccessListId }).(pulumi.StringPtrOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o ServiceMulticastFeatureAutoRpAnnounceOutput) AccessListIdVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceMulticastFeatureAutoRpAnnounce) *string { return v.AccessListIdVariable }).(pulumi.StringPtrOutput)
+}
+
 // Set RP Announce Interface Name
 func (o ServiceMulticastFeatureAutoRpAnnounceOutput) InterfaceName() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceMulticastFeatureAutoRpAnnounce) *string { return v.InterfaceName }).(pulumi.StringPtrOutput)
@@ -50974,6 +51213,17 @@ func (o ServiceMulticastFeatureAutoRpAnnounceOutput) InterfaceName() pulumi.Stri
 // Variable name
 func (o ServiceMulticastFeatureAutoRpAnnounceOutput) InterfaceNameVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceMulticastFeatureAutoRpAnnounce) *string { return v.InterfaceNameVariable }).(pulumi.StringPtrOutput)
+}
+
+// Set RP Announce interval, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+//   - Range: `1`-`16383`
+func (o ServiceMulticastFeatureAutoRpAnnounceOutput) Interval() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ServiceMulticastFeatureAutoRpAnnounce) *int { return v.Interval }).(pulumi.IntPtrOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o ServiceMulticastFeatureAutoRpAnnounceOutput) IntervalVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceMulticastFeatureAutoRpAnnounce) *string { return v.IntervalVariable }).(pulumi.StringPtrOutput)
 }
 
 // Set RP Announce Scope
@@ -53151,10 +53401,12 @@ type ServiceRoutingBgpFeatureIpv4AggregateAddress struct {
 	AsSetPath *bool `pulumi:"asSetPath"`
 	// Variable name
 	AsSetPathVariable *string `pulumi:"asSetPathVariable"`
-	NetworkAddress    *string `pulumi:"networkAddress"`
+	// IP Address
+	NetworkAddress *string `pulumi:"networkAddress"`
 	// Variable name
 	NetworkAddressVariable *string `pulumi:"networkAddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -53182,10 +53434,12 @@ type ServiceRoutingBgpFeatureIpv4AggregateAddressArgs struct {
 	AsSetPath pulumi.BoolPtrInput `pulumi:"asSetPath"`
 	// Variable name
 	AsSetPathVariable pulumi.StringPtrInput `pulumi:"asSetPathVariable"`
-	NetworkAddress    pulumi.StringPtrInput `pulumi:"networkAddress"`
+	// IP Address
+	NetworkAddress pulumi.StringPtrInput `pulumi:"networkAddress"`
 	// Variable name
 	NetworkAddressVariable pulumi.StringPtrInput `pulumi:"networkAddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -53258,6 +53512,7 @@ func (o ServiceRoutingBgpFeatureIpv4AggregateAddressOutput) AsSetPathVariable() 
 	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv4AggregateAddress) *string { return v.AsSetPathVariable }).(pulumi.StringPtrOutput)
 }
 
+// IP Address
 func (o ServiceRoutingBgpFeatureIpv4AggregateAddressOutput) NetworkAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv4AggregateAddress) *string { return v.NetworkAddress }).(pulumi.StringPtrOutput)
 }
@@ -53267,7 +53522,8 @@ func (o ServiceRoutingBgpFeatureIpv4AggregateAddressOutput) NetworkAddressVariab
 	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv4AggregateAddress) *string { return v.NetworkAddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// Subnet Mask
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceRoutingBgpFeatureIpv4AggregateAddressOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv4AggregateAddress) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -54029,10 +54285,12 @@ func (o ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput) Index(i pu
 }
 
 type ServiceRoutingBgpFeatureIpv4Network struct {
+	// IP Address
 	NetworkAddress *string `pulumi:"networkAddress"`
 	// Variable name
 	NetworkAddressVariable *string `pulumi:"networkAddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -54050,10 +54308,12 @@ type ServiceRoutingBgpFeatureIpv4NetworkInput interface {
 }
 
 type ServiceRoutingBgpFeatureIpv4NetworkArgs struct {
+	// IP Address
 	NetworkAddress pulumi.StringPtrInput `pulumi:"networkAddress"`
 	// Variable name
 	NetworkAddressVariable pulumi.StringPtrInput `pulumi:"networkAddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -54110,6 +54370,7 @@ func (o ServiceRoutingBgpFeatureIpv4NetworkOutput) ToServiceRoutingBgpFeatureIpv
 	return o
 }
 
+// IP Address
 func (o ServiceRoutingBgpFeatureIpv4NetworkOutput) NetworkAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv4Network) *string { return v.NetworkAddress }).(pulumi.StringPtrOutput)
 }
@@ -54119,7 +54380,8 @@ func (o ServiceRoutingBgpFeatureIpv4NetworkOutput) NetworkAddressVariable() pulu
 	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv4Network) *string { return v.NetworkAddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// Subnet Mask
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceRoutingBgpFeatureIpv4NetworkOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv4Network) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -55591,10 +55853,12 @@ func (o ServiceRoutingEigrpFeatureInterfaceArrayOutput) Index(i pulumi.IntInput)
 }
 
 type ServiceRoutingEigrpFeatureInterfaceSummaryAddress struct {
+	// IP Address
 	Address *string `pulumi:"address"`
 	// Variable name
 	AddressVariable *string `pulumi:"addressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Mask *string `pulumi:"mask"`
 	// Variable name
 	MaskVariable *string `pulumi:"maskVariable"`
@@ -55612,10 +55876,12 @@ type ServiceRoutingEigrpFeatureInterfaceSummaryAddressInput interface {
 }
 
 type ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgs struct {
+	// IP Address
 	Address pulumi.StringPtrInput `pulumi:"address"`
 	// Variable name
 	AddressVariable pulumi.StringPtrInput `pulumi:"addressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Mask pulumi.StringPtrInput `pulumi:"mask"`
 	// Variable name
 	MaskVariable pulumi.StringPtrInput `pulumi:"maskVariable"`
@@ -55672,6 +55938,7 @@ func (o ServiceRoutingEigrpFeatureInterfaceSummaryAddressOutput) ToServiceRoutin
 	return o
 }
 
+// IP Address
 func (o ServiceRoutingEigrpFeatureInterfaceSummaryAddressOutput) Address() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingEigrpFeatureInterfaceSummaryAddress) *string { return v.Address }).(pulumi.StringPtrOutput)
 }
@@ -55681,7 +55948,8 @@ func (o ServiceRoutingEigrpFeatureInterfaceSummaryAddressOutput) AddressVariable
 	return o.ApplyT(func(v ServiceRoutingEigrpFeatureInterfaceSummaryAddress) *string { return v.AddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// Subnet Mask
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceRoutingEigrpFeatureInterfaceSummaryAddressOutput) Mask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingEigrpFeatureInterfaceSummaryAddress) *string { return v.Mask }).(pulumi.StringPtrOutput)
 }
@@ -55839,10 +56107,12 @@ func (o ServiceRoutingEigrpFeatureMd5KeyArrayOutput) Index(i pulumi.IntInput) Se
 }
 
 type ServiceRoutingEigrpFeatureNetwork struct {
+	// IP Address
 	IpAddress *string `pulumi:"ipAddress"`
 	// Variable name
 	IpAddressVariable *string `pulumi:"ipAddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Mask *string `pulumi:"mask"`
 	// Variable name
 	MaskVariable *string `pulumi:"maskVariable"`
@@ -55860,10 +56130,12 @@ type ServiceRoutingEigrpFeatureNetworkInput interface {
 }
 
 type ServiceRoutingEigrpFeatureNetworkArgs struct {
+	// IP Address
 	IpAddress pulumi.StringPtrInput `pulumi:"ipAddress"`
 	// Variable name
 	IpAddressVariable pulumi.StringPtrInput `pulumi:"ipAddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Mask pulumi.StringPtrInput `pulumi:"mask"`
 	// Variable name
 	MaskVariable pulumi.StringPtrInput `pulumi:"maskVariable"`
@@ -55920,6 +56192,7 @@ func (o ServiceRoutingEigrpFeatureNetworkOutput) ToServiceRoutingEigrpFeatureNet
 	return o
 }
 
+// IP Address
 func (o ServiceRoutingEigrpFeatureNetworkOutput) IpAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingEigrpFeatureNetwork) *string { return v.IpAddress }).(pulumi.StringPtrOutput)
 }
@@ -55929,7 +56202,8 @@ func (o ServiceRoutingEigrpFeatureNetworkOutput) IpAddressVariable() pulumi.Stri
 	return o.ApplyT(func(v ServiceRoutingEigrpFeatureNetwork) *string { return v.IpAddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// Subnet Mask
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceRoutingEigrpFeatureNetworkOutput) Mask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingEigrpFeatureNetwork) *string { return v.Mask }).(pulumi.StringPtrOutput)
 }
@@ -56578,7 +56852,7 @@ type ServiceRoutingOspfFeatureAreaRange struct {
 	// Variable name
 	NoAdvertiseVariable *string `pulumi:"noAdvertiseVariable"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -56611,7 +56885,7 @@ type ServiceRoutingOspfFeatureAreaRangeArgs struct {
 	// Variable name
 	NoAdvertiseVariable pulumi.StringPtrInput `pulumi:"noAdvertiseVariable"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -56701,7 +56975,7 @@ func (o ServiceRoutingOspfFeatureAreaRangeOutput) NoAdvertiseVariable() pulumi.S
 }
 
 // Subnet Mask
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceRoutingOspfFeatureAreaRangeOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingOspfFeatureAreaRange) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -57494,7 +57768,7 @@ type ServiceRoutingOspfv3Ipv4FeatureAreaRange struct {
 	NoAdvertise *bool `pulumi:"noAdvertise"`
 	// Variable name
 	NoAdvertiseVariable *string `pulumi:"noAdvertiseVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -57525,7 +57799,7 @@ type ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgs struct {
 	NoAdvertise pulumi.BoolPtrInput `pulumi:"noAdvertise"`
 	// Variable name
 	NoAdvertiseVariable pulumi.StringPtrInput `pulumi:"noAdvertiseVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -57613,7 +57887,7 @@ func (o ServiceRoutingOspfv3Ipv4FeatureAreaRangeOutput) NoAdvertiseVariable() pu
 	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv4FeatureAreaRange) *string { return v.NoAdvertiseVariable }).(pulumi.StringPtrOutput)
 }
 
-// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceRoutingOspfv3Ipv4FeatureAreaRangeOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv4FeatureAreaRange) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -58634,7 +58908,7 @@ type ServiceSwitchportFeatureInterface struct {
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
 	// Set interface speed
-	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+	//   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
 	Speed *string `pulumi:"speed"`
 	// Variable name
 	SpeedVariable *string `pulumi:"speedVariable"`
@@ -58749,7 +59023,7 @@ type ServiceSwitchportFeatureInterfaceArgs struct {
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput `pulumi:"shutdownVariable"`
 	// Set interface speed
-	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+	//   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
 	Speed pulumi.StringPtrInput `pulumi:"speed"`
 	// Variable name
 	SpeedVariable pulumi.StringPtrInput `pulumi:"speedVariable"`
@@ -58999,7 +59273,7 @@ func (o ServiceSwitchportFeatureInterfaceOutput) ShutdownVariable() pulumi.Strin
 }
 
 // Set interface speed
-//   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+//   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
 func (o ServiceSwitchportFeatureInterfaceOutput) Speed() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceSwitchportFeatureInterface) *string { return v.Speed }).(pulumi.StringPtrOutput)
 }
@@ -59353,7 +59627,7 @@ type ServiceWirelessLanFeatureSsid struct {
 	// Variable name, Attribute conditional on `securityType` equal to `enterprise`
 	RadiusServerSecretVariable *string `pulumi:"radiusServerSecretVariable"`
 	// Select security type
-	//   - Choices: `enterprise`, `personal`, `open`
+	//   - Choices: `personal`, `open`, `enterprise`
 	SecurityType *string `pulumi:"securityType"`
 	// Configure wlan SSID
 	SsidName *string `pulumi:"ssidName"`
@@ -59417,7 +59691,7 @@ type ServiceWirelessLanFeatureSsidArgs struct {
 	// Variable name, Attribute conditional on `securityType` equal to `enterprise`
 	RadiusServerSecretVariable pulumi.StringPtrInput `pulumi:"radiusServerSecretVariable"`
 	// Select security type
-	//   - Choices: `enterprise`, `personal`, `open`
+	//   - Choices: `personal`, `open`, `enterprise`
 	SecurityType pulumi.StringPtrInput `pulumi:"securityType"`
 	// Configure wlan SSID
 	SsidName pulumi.StringPtrInput `pulumi:"ssidName"`
@@ -59568,7 +59842,7 @@ func (o ServiceWirelessLanFeatureSsidOutput) RadiusServerSecretVariable() pulumi
 }
 
 // Select security type
-//   - Choices: `enterprise`, `personal`, `open`
+//   - Choices: `personal`, `open`, `enterprise`
 func (o ServiceWirelessLanFeatureSsidOutput) SecurityType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceWirelessLanFeatureSsid) *string { return v.SecurityType }).(pulumi.StringPtrOutput)
 }
@@ -68624,6 +68898,8 @@ type TopologyCustomControlFeatureSequenceMatchEntry struct {
 	// Group ID
 	//   - Range: `0`-`4294967295`
 	GroupId *int `pulumi:"groupId"`
+	// Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	HierarchyUuids []string `pulumi:"hierarchyUuids"`
 	// IPv6 prefix list ID
 	Ipv6PrefixListId *string `pulumi:"ipv6PrefixListId"`
 	// Match regions list
@@ -68689,6 +68965,8 @@ type TopologyCustomControlFeatureSequenceMatchEntryArgs struct {
 	// Group ID
 	//   - Range: `0`-`4294967295`
 	GroupId pulumi.IntPtrInput `pulumi:"groupId"`
+	// Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	HierarchyUuids pulumi.StringArrayInput `pulumi:"hierarchyUuids"`
 	// IPv6 prefix list ID
 	Ipv6PrefixListId pulumi.StringPtrInput `pulumi:"ipv6PrefixListId"`
 	// Match regions list
@@ -68809,6 +69087,11 @@ func (o TopologyCustomControlFeatureSequenceMatchEntryOutput) ExpandedCommunityL
 //   - Range: `0`-`4294967295`
 func (o TopologyCustomControlFeatureSequenceMatchEntryOutput) GroupId() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v TopologyCustomControlFeatureSequenceMatchEntry) *int { return v.GroupId }).(pulumi.IntPtrOutput)
+}
+
+// Network hierarchy UUIDs for matching, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o TopologyCustomControlFeatureSequenceMatchEntryOutput) HierarchyUuids() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v TopologyCustomControlFeatureSequenceMatchEntry) []string { return v.HierarchyUuids }).(pulumi.StringArrayOutput)
 }
 
 // IPv6 prefix list ID
@@ -69233,10 +69516,14 @@ func (o TopologyCustomControlFeatureTargetOutboundRegionArrayOutput) Index(i pul
 }
 
 type TopologyHubSpokeFeatureSpoke struct {
-	// Hub Sites
-	HubSites   []TopologyHubSpokeFeatureSpokeHubSite `pulumi:"hubSites"`
-	Name       *string                               `pulumi:"name"`
-	SpokeSites []string                              `pulumi:"spokeSites"`
+	// Hub site preferences
+	HubSites []TopologyHubSpokeFeatureSpokeHubSite `pulumi:"hubSites"`
+	// Spoke name
+	Name *string `pulumi:"name"`
+	// Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SpokeHierarchyUuids []string `pulumi:"spokeHierarchyUuids"`
+	// Spoke site list
+	SpokeSites []string `pulumi:"spokeSites"`
 }
 
 // TopologyHubSpokeFeatureSpokeInput is an input type that accepts TopologyHubSpokeFeatureSpokeArgs and TopologyHubSpokeFeatureSpokeOutput values.
@@ -69251,10 +69538,14 @@ type TopologyHubSpokeFeatureSpokeInput interface {
 }
 
 type TopologyHubSpokeFeatureSpokeArgs struct {
-	// Hub Sites
-	HubSites   TopologyHubSpokeFeatureSpokeHubSiteArrayInput `pulumi:"hubSites"`
-	Name       pulumi.StringPtrInput                         `pulumi:"name"`
-	SpokeSites pulumi.StringArrayInput                       `pulumi:"spokeSites"`
+	// Hub site preferences
+	HubSites TopologyHubSpokeFeatureSpokeHubSiteArrayInput `pulumi:"hubSites"`
+	// Spoke name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SpokeHierarchyUuids pulumi.StringArrayInput `pulumi:"spokeHierarchyUuids"`
+	// Spoke site list
+	SpokeSites pulumi.StringArrayInput `pulumi:"spokeSites"`
 }
 
 func (TopologyHubSpokeFeatureSpokeArgs) ElementType() reflect.Type {
@@ -69308,15 +69599,22 @@ func (o TopologyHubSpokeFeatureSpokeOutput) ToTopologyHubSpokeFeatureSpokeOutput
 	return o
 }
 
-// Hub Sites
+// Hub site preferences
 func (o TopologyHubSpokeFeatureSpokeOutput) HubSites() TopologyHubSpokeFeatureSpokeHubSiteArrayOutput {
 	return o.ApplyT(func(v TopologyHubSpokeFeatureSpoke) []TopologyHubSpokeFeatureSpokeHubSite { return v.HubSites }).(TopologyHubSpokeFeatureSpokeHubSiteArrayOutput)
 }
 
+// Spoke name
 func (o TopologyHubSpokeFeatureSpokeOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TopologyHubSpokeFeatureSpoke) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
+// Spoke network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o TopologyHubSpokeFeatureSpokeOutput) SpokeHierarchyUuids() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v TopologyHubSpokeFeatureSpoke) []string { return v.SpokeHierarchyUuids }).(pulumi.StringArrayOutput)
+}
+
+// Spoke site list
 func (o TopologyHubSpokeFeatureSpokeOutput) SpokeSites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v TopologyHubSpokeFeatureSpoke) []string { return v.SpokeSites }).(pulumi.StringArrayOutput)
 }
@@ -69342,10 +69640,12 @@ func (o TopologyHubSpokeFeatureSpokeArrayOutput) Index(i pulumi.IntInput) Topolo
 }
 
 type TopologyHubSpokeFeatureSpokeHubSite struct {
-	// preference
+	// Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	HubHierarchyUuids []string `pulumi:"hubHierarchyUuids"`
+	// Hub preference value
 	//   - Range: `1`-`255`
 	Preference *int `pulumi:"preference"`
-	// sites
+	// Hub sites
 	Sites []string `pulumi:"sites"`
 }
 
@@ -69361,10 +69661,12 @@ type TopologyHubSpokeFeatureSpokeHubSiteInput interface {
 }
 
 type TopologyHubSpokeFeatureSpokeHubSiteArgs struct {
-	// preference
+	// Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	HubHierarchyUuids pulumi.StringArrayInput `pulumi:"hubHierarchyUuids"`
+	// Hub preference value
 	//   - Range: `1`-`255`
 	Preference pulumi.IntPtrInput `pulumi:"preference"`
-	// sites
+	// Hub sites
 	Sites pulumi.StringArrayInput `pulumi:"sites"`
 }
 
@@ -69419,13 +69721,18 @@ func (o TopologyHubSpokeFeatureSpokeHubSiteOutput) ToTopologyHubSpokeFeatureSpok
 	return o
 }
 
-// preference
+// Hub network hierarchy UUIDs, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o TopologyHubSpokeFeatureSpokeHubSiteOutput) HubHierarchyUuids() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v TopologyHubSpokeFeatureSpokeHubSite) []string { return v.HubHierarchyUuids }).(pulumi.StringArrayOutput)
+}
+
+// Hub preference value
 //   - Range: `1`-`255`
 func (o TopologyHubSpokeFeatureSpokeHubSiteOutput) Preference() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v TopologyHubSpokeFeatureSpokeHubSite) *int { return v.Preference }).(pulumi.IntPtrOutput)
 }
 
-// sites
+// Hub sites
 func (o TopologyHubSpokeFeatureSpokeHubSiteOutput) Sites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v TopologyHubSpokeFeatureSpokeHubSite) []string { return v.Sites }).(pulumi.StringArrayOutput)
 }
@@ -70874,6 +71181,7 @@ type TransportIpv4AclFeatureSequenceAction struct {
 	// Variable name
 	AcceptSetServiceChainNameVariable *string `pulumi:"acceptSetServiceChainNameVariable"`
 	// Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+	//   - Ranges: `1`-`511`, `513`-`65531`
 	AcceptSetServiceChainVpn *int `pulumi:"acceptSetServiceChainVpn"`
 	// Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
 	AcceptSetServiceChainVpnVariable *string `pulumi:"acceptSetServiceChainVpnVariable"`
@@ -70919,6 +71227,7 @@ type TransportIpv4AclFeatureSequenceActionArgs struct {
 	// Variable name
 	AcceptSetServiceChainNameVariable pulumi.StringPtrInput `pulumi:"acceptSetServiceChainNameVariable"`
 	// Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+	//   - Ranges: `1`-`511`, `513`-`65531`
 	AcceptSetServiceChainVpn pulumi.IntPtrInput `pulumi:"acceptSetServiceChainVpn"`
 	// Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
 	AcceptSetServiceChainVpnVariable pulumi.StringPtrInput `pulumi:"acceptSetServiceChainVpnVariable"`
@@ -71033,6 +71342,7 @@ func (o TransportIpv4AclFeatureSequenceActionOutput) AcceptSetServiceChainNameVa
 }
 
 // Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+//   - Ranges: `1`-`511`, `513`-`65531`
 func (o TransportIpv4AclFeatureSequenceActionOutput) AcceptSetServiceChainVpn() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v TransportIpv4AclFeatureSequenceAction) *int { return v.AcceptSetServiceChainVpn }).(pulumi.IntPtrOutput)
 }
@@ -71638,6 +71948,7 @@ type TransportIpv6AclFeatureSequenceAction struct {
 	// Variable name
 	AcceptSetServiceChainNameVariable *string `pulumi:"acceptSetServiceChainNameVariable"`
 	// Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+	//   - Ranges: `1`-`511`, `513`-`65531`
 	AcceptSetServiceChainVpn *int `pulumi:"acceptSetServiceChainVpn"`
 	// Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
 	AcceptSetServiceChainVpnVariable *string `pulumi:"acceptSetServiceChainVpnVariable"`
@@ -71683,6 +71994,7 @@ type TransportIpv6AclFeatureSequenceActionArgs struct {
 	// Variable name
 	AcceptSetServiceChainNameVariable pulumi.StringPtrInput `pulumi:"acceptSetServiceChainNameVariable"`
 	// Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+	//   - Ranges: `1`-`511`, `513`-`65531`
 	AcceptSetServiceChainVpn pulumi.IntPtrInput `pulumi:"acceptSetServiceChainVpn"`
 	// Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
 	AcceptSetServiceChainVpnVariable pulumi.StringPtrInput `pulumi:"acceptSetServiceChainVpnVariable"`
@@ -71794,6 +72106,7 @@ func (o TransportIpv6AclFeatureSequenceActionOutput) AcceptSetServiceChainNameVa
 }
 
 // Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+//   - Ranges: `1`-`511`, `513`-`65531`
 func (o TransportIpv6AclFeatureSequenceActionOutput) AcceptSetServiceChainVpn() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v TransportIpv6AclFeatureSequenceAction) *int { return v.AcceptSetServiceChainVpn }).(pulumi.IntPtrOutput)
 }
@@ -72337,7 +72650,7 @@ type TransportManagementVpnFeatureIpv4StaticRoute struct {
 	// IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
 	NextHops []TransportManagementVpnFeatureIpv4StaticRouteNextHop `pulumi:"nextHops"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -72372,7 +72685,7 @@ type TransportManagementVpnFeatureIpv4StaticRouteArgs struct {
 	// IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
 	NextHops TransportManagementVpnFeatureIpv4StaticRouteNextHopArrayInput `pulumi:"nextHops"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -72466,7 +72779,7 @@ func (o TransportManagementVpnFeatureIpv4StaticRouteOutput) NextHops() Transport
 }
 
 // Subnet Mask
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o TransportManagementVpnFeatureIpv4StaticRouteOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportManagementVpnFeatureIpv4StaticRoute) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -73982,10 +74295,12 @@ type TransportRoutingBgpFeatureIpv4AggregateAddress struct {
 	AsSetPath *bool `pulumi:"asSetPath"`
 	// Variable name
 	AsSetPathVariable *string `pulumi:"asSetPathVariable"`
-	NetworkAddress    *string `pulumi:"networkAddress"`
+	// IP Address
+	NetworkAddress *string `pulumi:"networkAddress"`
 	// Variable name
 	NetworkAddressVariable *string `pulumi:"networkAddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -74013,10 +74328,12 @@ type TransportRoutingBgpFeatureIpv4AggregateAddressArgs struct {
 	AsSetPath pulumi.BoolPtrInput `pulumi:"asSetPath"`
 	// Variable name
 	AsSetPathVariable pulumi.StringPtrInput `pulumi:"asSetPathVariable"`
-	NetworkAddress    pulumi.StringPtrInput `pulumi:"networkAddress"`
+	// IP Address
+	NetworkAddress pulumi.StringPtrInput `pulumi:"networkAddress"`
 	// Variable name
 	NetworkAddressVariable pulumi.StringPtrInput `pulumi:"networkAddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -74089,6 +74406,7 @@ func (o TransportRoutingBgpFeatureIpv4AggregateAddressOutput) AsSetPathVariable(
 	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv4AggregateAddress) *string { return v.AsSetPathVariable }).(pulumi.StringPtrOutput)
 }
 
+// IP Address
 func (o TransportRoutingBgpFeatureIpv4AggregateAddressOutput) NetworkAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv4AggregateAddress) *string { return v.NetworkAddress }).(pulumi.StringPtrOutput)
 }
@@ -74098,7 +74416,8 @@ func (o TransportRoutingBgpFeatureIpv4AggregateAddressOutput) NetworkAddressVari
 	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv4AggregateAddress) *string { return v.NetworkAddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// Subnet Mask
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o TransportRoutingBgpFeatureIpv4AggregateAddressOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv4AggregateAddress) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -74872,10 +75191,12 @@ func (o TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput) Index(i 
 }
 
 type TransportRoutingBgpFeatureIpv4Network struct {
+	// IP Address
 	NetworkAddress *string `pulumi:"networkAddress"`
 	// Variable name
 	NetworkAddressVariable *string `pulumi:"networkAddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -74893,10 +75214,12 @@ type TransportRoutingBgpFeatureIpv4NetworkInput interface {
 }
 
 type TransportRoutingBgpFeatureIpv4NetworkArgs struct {
+	// IP Address
 	NetworkAddress pulumi.StringPtrInput `pulumi:"networkAddress"`
 	// Variable name
 	NetworkAddressVariable pulumi.StringPtrInput `pulumi:"networkAddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -74953,6 +75276,7 @@ func (o TransportRoutingBgpFeatureIpv4NetworkOutput) ToTransportRoutingBgpFeatur
 	return o
 }
 
+// IP Address
 func (o TransportRoutingBgpFeatureIpv4NetworkOutput) NetworkAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv4Network) *string { return v.NetworkAddress }).(pulumi.StringPtrOutput)
 }
@@ -74962,7 +75286,8 @@ func (o TransportRoutingBgpFeatureIpv4NetworkOutput) NetworkAddressVariable() pu
 	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv4Network) *string { return v.NetworkAddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// Subnet Mask
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o TransportRoutingBgpFeatureIpv4NetworkOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv4Network) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -76865,7 +77190,7 @@ type TransportRoutingOspfFeatureAreaRange struct {
 	// Variable name
 	NoAdvertiseVariable *string `pulumi:"noAdvertiseVariable"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -76898,7 +77223,7 @@ type TransportRoutingOspfFeatureAreaRangeArgs struct {
 	// Variable name
 	NoAdvertiseVariable pulumi.StringPtrInput `pulumi:"noAdvertiseVariable"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -76988,7 +77313,7 @@ func (o TransportRoutingOspfFeatureAreaRangeOutput) NoAdvertiseVariable() pulumi
 }
 
 // Subnet Mask
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o TransportRoutingOspfFeatureAreaRangeOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingOspfFeatureAreaRange) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -77760,7 +78085,7 @@ type TransportRoutingOspfv3Ipv4FeatureAreaRange struct {
 	NoAdvertise *bool `pulumi:"noAdvertise"`
 	// Variable name
 	NoAdvertiseVariable *string `pulumi:"noAdvertiseVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -77791,7 +78116,7 @@ type TransportRoutingOspfv3Ipv4FeatureAreaRangeArgs struct {
 	NoAdvertise pulumi.BoolPtrInput `pulumi:"noAdvertise"`
 	// Variable name
 	NoAdvertiseVariable pulumi.StringPtrInput `pulumi:"noAdvertiseVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -77879,7 +78204,7 @@ func (o TransportRoutingOspfv3Ipv4FeatureAreaRangeOutput) NoAdvertiseVariable() 
 	return o.ApplyT(func(v TransportRoutingOspfv3Ipv4FeatureAreaRange) *string { return v.NoAdvertiseVariable }).(pulumi.StringPtrOutput)
 }
 
-// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o TransportRoutingOspfv3Ipv4FeatureAreaRangeOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingOspfv3Ipv4FeatureAreaRange) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -79372,7 +79697,7 @@ type TransportWanVpnFeatureIpv4StaticRoute struct {
 	// IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
 	NextHops []TransportWanVpnFeatureIpv4StaticRouteNextHop `pulumi:"nextHops"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -79407,7 +79732,7 @@ type TransportWanVpnFeatureIpv4StaticRouteArgs struct {
 	// IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
 	NextHops TransportWanVpnFeatureIpv4StaticRouteNextHopArrayInput `pulumi:"nextHops"`
 	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
@@ -79501,7 +79826,7 @@ func (o TransportWanVpnFeatureIpv4StaticRouteOutput) NextHops() TransportWanVpnF
 }
 
 // Subnet Mask
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o TransportWanVpnFeatureIpv4StaticRouteOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportWanVpnFeatureIpv4StaticRoute) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -82647,260 +82972,6 @@ func (o UrlFilteringPolicyDefinitionLoggingArrayOutput) Index(i pulumi.IntInput)
 	}).(UrlFilteringPolicyDefinitionLoggingOutput)
 }
 
-type VpnInterfaceCellularFeatureTemplateIpv4AccessList struct {
-	// Name of access list
-	AclName *string `pulumi:"aclName"`
-	// Variable name
-	AclNameVariable *string `pulumi:"aclNameVariable"`
-	// Direction
-	//   - Choices: `in`, `out`
-	Direction *string `pulumi:"direction"`
-	// Indicates if list item is considered optional.
-	Optional *bool `pulumi:"optional"`
-}
-
-// VpnInterfaceCellularFeatureTemplateIpv4AccessListInput is an input type that accepts VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs and VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput values.
-// You can construct a concrete instance of `VpnInterfaceCellularFeatureTemplateIpv4AccessListInput` via:
-//
-//	VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs{...}
-type VpnInterfaceCellularFeatureTemplateIpv4AccessListInput interface {
-	pulumi.Input
-
-	ToVpnInterfaceCellularFeatureTemplateIpv4AccessListOutput() VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput
-	ToVpnInterfaceCellularFeatureTemplateIpv4AccessListOutputWithContext(context.Context) VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput
-}
-
-type VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs struct {
-	// Name of access list
-	AclName pulumi.StringPtrInput `pulumi:"aclName"`
-	// Variable name
-	AclNameVariable pulumi.StringPtrInput `pulumi:"aclNameVariable"`
-	// Direction
-	//   - Choices: `in`, `out`
-	Direction pulumi.StringPtrInput `pulumi:"direction"`
-	// Indicates if list item is considered optional.
-	Optional pulumi.BoolPtrInput `pulumi:"optional"`
-}
-
-func (VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateIpv4AccessList)(nil)).Elem()
-}
-
-func (i VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs) ToVpnInterfaceCellularFeatureTemplateIpv4AccessListOutput() VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput {
-	return i.ToVpnInterfaceCellularFeatureTemplateIpv4AccessListOutputWithContext(context.Background())
-}
-
-func (i VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs) ToVpnInterfaceCellularFeatureTemplateIpv4AccessListOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput)
-}
-
-// VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayInput is an input type that accepts VpnInterfaceCellularFeatureTemplateIpv4AccessListArray and VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput values.
-// You can construct a concrete instance of `VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayInput` via:
-//
-//	VpnInterfaceCellularFeatureTemplateIpv4AccessListArray{ VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs{...} }
-type VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayInput interface {
-	pulumi.Input
-
-	ToVpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput() VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput
-	ToVpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutputWithContext(context.Context) VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput
-}
-
-type VpnInterfaceCellularFeatureTemplateIpv4AccessListArray []VpnInterfaceCellularFeatureTemplateIpv4AccessListInput
-
-func (VpnInterfaceCellularFeatureTemplateIpv4AccessListArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]VpnInterfaceCellularFeatureTemplateIpv4AccessList)(nil)).Elem()
-}
-
-func (i VpnInterfaceCellularFeatureTemplateIpv4AccessListArray) ToVpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput() VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput {
-	return i.ToVpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutputWithContext(context.Background())
-}
-
-func (i VpnInterfaceCellularFeatureTemplateIpv4AccessListArray) ToVpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput)
-}
-
-type VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput struct{ *pulumi.OutputState }
-
-func (VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateIpv4AccessList)(nil)).Elem()
-}
-
-func (o VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput) ToVpnInterfaceCellularFeatureTemplateIpv4AccessListOutput() VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput {
-	return o
-}
-
-func (o VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput) ToVpnInterfaceCellularFeatureTemplateIpv4AccessListOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput {
-	return o
-}
-
-// Name of access list
-func (o VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput) AclName() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateIpv4AccessList) *string { return v.AclName }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput) AclNameVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateIpv4AccessList) *string { return v.AclNameVariable }).(pulumi.StringPtrOutput)
-}
-
-// Direction
-//   - Choices: `in`, `out`
-func (o VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput) Direction() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateIpv4AccessList) *string { return v.Direction }).(pulumi.StringPtrOutput)
-}
-
-// Indicates if list item is considered optional.
-func (o VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput) Optional() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateIpv4AccessList) *bool { return v.Optional }).(pulumi.BoolPtrOutput)
-}
-
-type VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput struct{ *pulumi.OutputState }
-
-func (VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]VpnInterfaceCellularFeatureTemplateIpv4AccessList)(nil)).Elem()
-}
-
-func (o VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput) ToVpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput() VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput {
-	return o
-}
-
-func (o VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput) ToVpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput {
-	return o
-}
-
-func (o VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput) Index(i pulumi.IntInput) VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) VpnInterfaceCellularFeatureTemplateIpv4AccessList {
-		return vs[0].([]VpnInterfaceCellularFeatureTemplateIpv4AccessList)[vs[1].(int)]
-	}).(VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput)
-}
-
-type VpnInterfaceCellularFeatureTemplateIpv6AccessList struct {
-	// Name of access list
-	AclName *string `pulumi:"aclName"`
-	// Variable name
-	AclNameVariable *string `pulumi:"aclNameVariable"`
-	// Direction
-	//   - Choices: `in`, `out`
-	Direction *string `pulumi:"direction"`
-	// Indicates if list item is considered optional.
-	Optional *bool `pulumi:"optional"`
-}
-
-// VpnInterfaceCellularFeatureTemplateIpv6AccessListInput is an input type that accepts VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs and VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput values.
-// You can construct a concrete instance of `VpnInterfaceCellularFeatureTemplateIpv6AccessListInput` via:
-//
-//	VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs{...}
-type VpnInterfaceCellularFeatureTemplateIpv6AccessListInput interface {
-	pulumi.Input
-
-	ToVpnInterfaceCellularFeatureTemplateIpv6AccessListOutput() VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput
-	ToVpnInterfaceCellularFeatureTemplateIpv6AccessListOutputWithContext(context.Context) VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput
-}
-
-type VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs struct {
-	// Name of access list
-	AclName pulumi.StringPtrInput `pulumi:"aclName"`
-	// Variable name
-	AclNameVariable pulumi.StringPtrInput `pulumi:"aclNameVariable"`
-	// Direction
-	//   - Choices: `in`, `out`
-	Direction pulumi.StringPtrInput `pulumi:"direction"`
-	// Indicates if list item is considered optional.
-	Optional pulumi.BoolPtrInput `pulumi:"optional"`
-}
-
-func (VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateIpv6AccessList)(nil)).Elem()
-}
-
-func (i VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs) ToVpnInterfaceCellularFeatureTemplateIpv6AccessListOutput() VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput {
-	return i.ToVpnInterfaceCellularFeatureTemplateIpv6AccessListOutputWithContext(context.Background())
-}
-
-func (i VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs) ToVpnInterfaceCellularFeatureTemplateIpv6AccessListOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput)
-}
-
-// VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayInput is an input type that accepts VpnInterfaceCellularFeatureTemplateIpv6AccessListArray and VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput values.
-// You can construct a concrete instance of `VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayInput` via:
-//
-//	VpnInterfaceCellularFeatureTemplateIpv6AccessListArray{ VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs{...} }
-type VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayInput interface {
-	pulumi.Input
-
-	ToVpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput() VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput
-	ToVpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutputWithContext(context.Context) VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput
-}
-
-type VpnInterfaceCellularFeatureTemplateIpv6AccessListArray []VpnInterfaceCellularFeatureTemplateIpv6AccessListInput
-
-func (VpnInterfaceCellularFeatureTemplateIpv6AccessListArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]VpnInterfaceCellularFeatureTemplateIpv6AccessList)(nil)).Elem()
-}
-
-func (i VpnInterfaceCellularFeatureTemplateIpv6AccessListArray) ToVpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput() VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput {
-	return i.ToVpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutputWithContext(context.Background())
-}
-
-func (i VpnInterfaceCellularFeatureTemplateIpv6AccessListArray) ToVpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput)
-}
-
-type VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput struct{ *pulumi.OutputState }
-
-func (VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateIpv6AccessList)(nil)).Elem()
-}
-
-func (o VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput) ToVpnInterfaceCellularFeatureTemplateIpv6AccessListOutput() VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput {
-	return o
-}
-
-func (o VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput) ToVpnInterfaceCellularFeatureTemplateIpv6AccessListOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput {
-	return o
-}
-
-// Name of access list
-func (o VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput) AclName() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateIpv6AccessList) *string { return v.AclName }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput) AclNameVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateIpv6AccessList) *string { return v.AclNameVariable }).(pulumi.StringPtrOutput)
-}
-
-// Direction
-//   - Choices: `in`, `out`
-func (o VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput) Direction() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateIpv6AccessList) *string { return v.Direction }).(pulumi.StringPtrOutput)
-}
-
-// Indicates if list item is considered optional.
-func (o VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput) Optional() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateIpv6AccessList) *bool { return v.Optional }).(pulumi.BoolPtrOutput)
-}
-
-type VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput struct{ *pulumi.OutputState }
-
-func (VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]VpnInterfaceCellularFeatureTemplateIpv6AccessList)(nil)).Elem()
-}
-
-func (o VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput) ToVpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput() VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput {
-	return o
-}
-
-func (o VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput) ToVpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput {
-	return o
-}
-
-func (o VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput) Index(i pulumi.IntInput) VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) VpnInterfaceCellularFeatureTemplateIpv6AccessList {
-		return vs[0].([]VpnInterfaceCellularFeatureTemplateIpv6AccessList)[vs[1].(int)]
-	}).(VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput)
-}
-
 func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*AllowUrlListPolicyObjectEntryInput)(nil)).Elem(), AllowUrlListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AllowUrlListPolicyObjectEntryArrayInput)(nil)).Elem(), AllowUrlListPolicyObjectEntryArray{})
@@ -83414,6 +83485,10 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceDhcpServerFeatureOptionCodeArrayInput)(nil)).Elem(), ServiceDhcpServerFeatureOptionCodeArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceDhcpServerFeatureStaticLeaseInput)(nil)).Elem(), ServiceDhcpServerFeatureStaticLeaseArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceDhcpServerFeatureStaticLeaseArrayInput)(nil)).Elem(), ServiceDhcpServerFeatureStaticLeaseArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceDualRouterHaFeatureRedundancyGroupInput)(nil)).Elem(), ServiceDualRouterHaFeatureRedundancyGroupArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceDualRouterHaFeatureRedundancyGroupArrayInput)(nil)).Elem(), ServiceDualRouterHaFeatureRedundancyGroupArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceDualRouterHaFeatureRedundancyGroupVpnIdInput)(nil)).Elem(), ServiceDualRouterHaFeatureRedundancyGroupVpnIdArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayInput)(nil)).Elem(), ServiceDualRouterHaFeatureRedundancyGroupVpnIdArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceIpv4AclFeatureSequenceInput)(nil)).Elem(), ServiceIpv4AclFeatureSequenceArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceIpv4AclFeatureSequenceArrayInput)(nil)).Elem(), ServiceIpv4AclFeatureSequenceArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceIpv4AclFeatureSequenceActionInput)(nil)).Elem(), ServiceIpv4AclFeatureSequenceActionArgs{})
@@ -83898,10 +83973,6 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayInput)(nil)).Elem(), TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*UrlFilteringPolicyDefinitionLoggingInput)(nil)).Elem(), UrlFilteringPolicyDefinitionLoggingArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*UrlFilteringPolicyDefinitionLoggingArrayInput)(nil)).Elem(), UrlFilteringPolicyDefinitionLoggingArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateIpv4AccessListInput)(nil)).Elem(), VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayInput)(nil)).Elem(), VpnInterfaceCellularFeatureTemplateIpv4AccessListArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateIpv6AccessListInput)(nil)).Elem(), VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayInput)(nil)).Elem(), VpnInterfaceCellularFeatureTemplateIpv6AccessListArray{})
 	pulumi.RegisterOutputType(AllowUrlListPolicyObjectEntryOutput{})
 	pulumi.RegisterOutputType(AllowUrlListPolicyObjectEntryArrayOutput{})
 	pulumi.RegisterOutputType(AppProbeClassPolicyObjectMappingOutput{})
@@ -84414,6 +84485,10 @@ func init() {
 	pulumi.RegisterOutputType(ServiceDhcpServerFeatureOptionCodeArrayOutput{})
 	pulumi.RegisterOutputType(ServiceDhcpServerFeatureStaticLeaseOutput{})
 	pulumi.RegisterOutputType(ServiceDhcpServerFeatureStaticLeaseArrayOutput{})
+	pulumi.RegisterOutputType(ServiceDualRouterHaFeatureRedundancyGroupOutput{})
+	pulumi.RegisterOutputType(ServiceDualRouterHaFeatureRedundancyGroupArrayOutput{})
+	pulumi.RegisterOutputType(ServiceDualRouterHaFeatureRedundancyGroupVpnIdOutput{})
+	pulumi.RegisterOutputType(ServiceDualRouterHaFeatureRedundancyGroupVpnIdArrayOutput{})
 	pulumi.RegisterOutputType(ServiceIpv4AclFeatureSequenceOutput{})
 	pulumi.RegisterOutputType(ServiceIpv4AclFeatureSequenceArrayOutput{})
 	pulumi.RegisterOutputType(ServiceIpv4AclFeatureSequenceActionOutput{})
@@ -84898,8 +84973,4 @@ func init() {
 	pulumi.RegisterOutputType(TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput{})
 	pulumi.RegisterOutputType(UrlFilteringPolicyDefinitionLoggingOutput{})
 	pulumi.RegisterOutputType(UrlFilteringPolicyDefinitionLoggingArrayOutput{})
-	pulumi.RegisterOutputType(VpnInterfaceCellularFeatureTemplateIpv4AccessListOutput{})
-	pulumi.RegisterOutputType(VpnInterfaceCellularFeatureTemplateIpv4AccessListArrayOutput{})
-	pulumi.RegisterOutputType(VpnInterfaceCellularFeatureTemplateIpv6AccessListOutput{})
-	pulumi.RegisterOutputType(VpnInterfaceCellularFeatureTemplateIpv6AccessListArrayOutput{})
 }

@@ -275,7 +275,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
 
     /**
      * Select security type
-     *   - Choices: `enterprise`, `personal`, `open`
+     *   - Choices: `personal`, `open`, `enterprise`
      * 
      */
     @Import(name="securityType")
@@ -283,7 +283,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
 
     /**
      * @return Select security type
-     *   - Choices: `enterprise`, `personal`, `open`
+     *   - Choices: `personal`, `open`, `enterprise`
      * 
      */
     public Optional<Output<String>> securityType() {
@@ -734,7 +734,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
 
         /**
          * @param securityType Select security type
-         *   - Choices: `enterprise`, `personal`, `open`
+         *   - Choices: `personal`, `open`, `enterprise`
          * 
          * @return builder
          * 
@@ -746,7 +746,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
 
         /**
          * @param securityType Select security type
-         *   - Choices: `enterprise`, `personal`, `open`
+         *   - Choices: `personal`, `open`, `enterprise`
          * 
          * @return builder
          * 

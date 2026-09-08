@@ -27,7 +27,7 @@ class GetTopologyHubSpokeFeatureResult:
     """
     A collection of values returned by getTopologyHubSpokeFeature.
     """
-    def __init__(__self__, description=None, feature_profile_id=None, id=None, name=None, selected_hubs=None, spokes=None, target_vpns=None, version=None):
+    def __init__(__self__, description=None, feature_profile_id=None, id=None, name=None, selected_hierarchy_hubs=None, selected_hubs=None, spokes=None, target_vpns=None, version=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
@@ -40,6 +40,9 @@ class GetTopologyHubSpokeFeatureResult:
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
+        if selected_hierarchy_hubs and not isinstance(selected_hierarchy_hubs, list):
+            raise TypeError("Expected argument 'selected_hierarchy_hubs' to be a list")
+        pulumi.set(__self__, "selected_hierarchy_hubs", selected_hierarchy_hubs)
         if selected_hubs and not isinstance(selected_hubs, list):
             raise TypeError("Expected argument 'selected_hubs' to be a list")
         pulumi.set(__self__, "selected_hubs", selected_hubs)
@@ -86,21 +89,35 @@ class GetTopologyHubSpokeFeatureResult:
         return pulumi.get(self, "name")
 
     @_builtins.property
+    @pulumi.getter(name="selectedHierarchyHubs")
+    def selected_hierarchy_hubs(self) -> Sequence[_builtins.str]:
+        """
+        Selected hub network hierarchy UUIDs
+        """
+        return pulumi.get(self, "selected_hierarchy_hubs")
+
+    @_builtins.property
     @pulumi.getter(name="selectedHubs")
     def selected_hubs(self) -> Sequence[_builtins.str]:
+        """
+        Selected hub sites
+        """
         return pulumi.get(self, "selected_hubs")
 
     @_builtins.property
     @pulumi.getter
     def spokes(self) -> Sequence['outputs.GetTopologyHubSpokeFeatureSpokeResult']:
         """
-        Spokes
+        Spoke configurations
         """
         return pulumi.get(self, "spokes")
 
     @_builtins.property
     @pulumi.getter(name="targetVpns")
     def target_vpns(self) -> Sequence[_builtins.str]:
+        """
+        Target VPN list
+        """
         return pulumi.get(self, "target_vpns")
 
     @_builtins.property
@@ -122,6 +139,7 @@ class AwaitableGetTopologyHubSpokeFeatureResult(GetTopologyHubSpokeFeatureResult
             feature_profile_id=self.feature_profile_id,
             id=self.id,
             name=self.name,
+            selected_hierarchy_hubs=self.selected_hierarchy_hubs,
             selected_hubs=self.selected_hubs,
             spokes=self.spokes,
             target_vpns=self.target_vpns,
@@ -159,6 +177,7 @@ def get_topology_hub_spoke_feature(feature_profile_id: Optional[_builtins.str] =
         feature_profile_id=pulumi.get(__ret__, 'feature_profile_id'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
+        selected_hierarchy_hubs=pulumi.get(__ret__, 'selected_hierarchy_hubs'),
         selected_hubs=pulumi.get(__ret__, 'selected_hubs'),
         spokes=pulumi.get(__ret__, 'spokes'),
         target_vpns=pulumi.get(__ret__, 'target_vpns'),
@@ -193,6 +212,7 @@ def get_topology_hub_spoke_feature_output(feature_profile_id: pulumi.Input[Optio
         feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
+        selected_hierarchy_hubs=pulumi.get(__response__, 'selected_hierarchy_hubs'),
         selected_hubs=pulumi.get(__response__, 'selected_hubs'),
         spokes=pulumi.get(__response__, 'spokes'),
         target_vpns=pulumi.get(__response__, 'target_vpns'),

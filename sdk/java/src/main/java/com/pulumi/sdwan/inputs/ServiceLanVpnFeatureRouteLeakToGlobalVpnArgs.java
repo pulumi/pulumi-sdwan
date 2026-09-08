@@ -41,7 +41,7 @@ public final class ServiceLanVpnFeatureRouteLeakToGlobalVpnArgs extends com.pulu
 
     /**
      * Leak Routes of particular protocol from Service to Global VPN
-     *   - Choices: `static`, `connected`, `bgp`, `ospf`
+     *   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
      * 
      */
     @Import(name="routeProtocol")
@@ -49,7 +49,7 @@ public final class ServiceLanVpnFeatureRouteLeakToGlobalVpnArgs extends com.pulu
 
     /**
      * @return Leak Routes of particular protocol from Service to Global VPN
-     *   - Choices: `static`, `connected`, `bgp`, `ospf`
+     *   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
      * 
      */
     public Optional<Output<String>> routeProtocol() {
@@ -140,7 +140,7 @@ public final class ServiceLanVpnFeatureRouteLeakToGlobalVpnArgs extends com.pulu
 
         /**
          * @param routeProtocol Leak Routes of particular protocol from Service to Global VPN
-         *   - Choices: `static`, `connected`, `bgp`, `ospf`
+         *   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
          * 
          * @return builder
          * 
@@ -152,7 +152,7 @@ public final class ServiceLanVpnFeatureRouteLeakToGlobalVpnArgs extends com.pulu
 
         /**
          * @param routeProtocol Leak Routes of particular protocol from Service to Global VPN
-         *   - Choices: `static`, `connected`, `bgp`, `ospf`
+         *   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
          * 
          * @return builder
          * 

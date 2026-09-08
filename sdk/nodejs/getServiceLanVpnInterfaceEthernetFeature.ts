@@ -480,6 +480,10 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureResult {
      */
     readonly trustsecSecurityGroupTagVariable: string;
     /**
+     * Indicates that the interface is trustworthy for CTS.
+     */
+    readonly trustsecTrusted: boolean;
+    /**
      * The version of the Feature
      */
     readonly version: number;

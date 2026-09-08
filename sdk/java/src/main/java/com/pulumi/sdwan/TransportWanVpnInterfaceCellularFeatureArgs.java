@@ -1602,6 +1602,36 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
     }
 
     /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="tunnelInterfaceColorDescription")
+    private @Nullable Output<String> tunnelInterfaceColorDescription;
+
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> tunnelInterfaceColorDescription() {
+        return Optional.ofNullable(this.tunnelInterfaceColorDescription);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="tunnelInterfaceColorDescriptionVariable")
+    private @Nullable Output<String> tunnelInterfaceColorDescriptionVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> tunnelInterfaceColorDescriptionVariable() {
+        return Optional.ofNullable(this.tunnelInterfaceColorDescriptionVariable);
+    }
+
+    /**
      * Restrict this TLOC behavior
      *   - Default value: `false`
      * 
@@ -1691,6 +1721,38 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
      */
     public Optional<Output<List<Integer>>> tunnelInterfaceExcludeControllerGroupLists() {
         return Optional.ofNullable(this.tunnelInterfaceExcludeControllerGroupLists);
+    }
+
+    /**
+     * Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="tunnelInterfaceFullPortHop")
+    private @Nullable Output<Boolean> tunnelInterfaceFullPortHop;
+
+    /**
+     * @return Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> tunnelInterfaceFullPortHop() {
+        return Optional.ofNullable(this.tunnelInterfaceFullPortHop);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="tunnelInterfaceFullPortHopVariable")
+    private @Nullable Output<String> tunnelInterfaceFullPortHopVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> tunnelInterfaceFullPortHopVariable() {
+        return Optional.ofNullable(this.tunnelInterfaceFullPortHopVariable);
     }
 
     /**
@@ -1956,7 +2018,7 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
     }
 
     /**
-     * Disallow port hopping on the tunnel interface
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
      *   - Default value: `true`
      * 
      */
@@ -1964,7 +2026,7 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfacePortHop;
 
     /**
-     * @return Disallow port hopping on the tunnel interface
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
      *   - Default value: `true`
      * 
      */
@@ -2222,12 +2284,16 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
         this.tunnelInterfaceClearDontFragment = $.tunnelInterfaceClearDontFragment;
         this.tunnelInterfaceClearDontFragmentVariable = $.tunnelInterfaceClearDontFragmentVariable;
         this.tunnelInterfaceColor = $.tunnelInterfaceColor;
+        this.tunnelInterfaceColorDescription = $.tunnelInterfaceColorDescription;
+        this.tunnelInterfaceColorDescriptionVariable = $.tunnelInterfaceColorDescriptionVariable;
         this.tunnelInterfaceColorRestrict = $.tunnelInterfaceColorRestrict;
         this.tunnelInterfaceColorRestrictVariable = $.tunnelInterfaceColorRestrictVariable;
         this.tunnelInterfaceColorVariable = $.tunnelInterfaceColorVariable;
         this.tunnelInterfaceEncapsulations = $.tunnelInterfaceEncapsulations;
         this.tunnelInterfaceExcludeControllerGroupListVariable = $.tunnelInterfaceExcludeControllerGroupListVariable;
         this.tunnelInterfaceExcludeControllerGroupLists = $.tunnelInterfaceExcludeControllerGroupLists;
+        this.tunnelInterfaceFullPortHop = $.tunnelInterfaceFullPortHop;
+        this.tunnelInterfaceFullPortHopVariable = $.tunnelInterfaceFullPortHopVariable;
         this.tunnelInterfaceGroups = $.tunnelInterfaceGroups;
         this.tunnelInterfaceGroupsVariable = $.tunnelInterfaceGroupsVariable;
         this.tunnelInterfaceHelloInterval = $.tunnelInterfaceHelloInterval;
@@ -4463,6 +4529,48 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
         }
 
         /**
+         * @param tunnelInterfaceColorDescription , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceColorDescription(@Nullable Output<String> tunnelInterfaceColorDescription) {
+            $.tunnelInterfaceColorDescription = tunnelInterfaceColorDescription;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceColorDescription , Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceColorDescription(String tunnelInterfaceColorDescription) {
+            return tunnelInterfaceColorDescription(Output.of(tunnelInterfaceColorDescription));
+        }
+
+        /**
+         * @param tunnelInterfaceColorDescriptionVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceColorDescriptionVariable(@Nullable Output<String> tunnelInterfaceColorDescriptionVariable) {
+            $.tunnelInterfaceColorDescriptionVariable = tunnelInterfaceColorDescriptionVariable;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceColorDescriptionVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceColorDescriptionVariable(String tunnelInterfaceColorDescriptionVariable) {
+            return tunnelInterfaceColorDescriptionVariable(Output.of(tunnelInterfaceColorDescriptionVariable));
+        }
+
+        /**
          * @param tunnelInterfaceColorRestrict Restrict this TLOC behavior
          *   - Default value: `false`
          * 
@@ -4608,6 +4716,50 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
          */
         public Builder tunnelInterfaceExcludeControllerGroupLists(Integer... tunnelInterfaceExcludeControllerGroupLists) {
             return tunnelInterfaceExcludeControllerGroupLists(List.of(tunnelInterfaceExcludeControllerGroupLists));
+        }
+
+        /**
+         * @param tunnelInterfaceFullPortHop Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceFullPortHop(@Nullable Output<Boolean> tunnelInterfaceFullPortHop) {
+            $.tunnelInterfaceFullPortHop = tunnelInterfaceFullPortHop;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceFullPortHop Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceFullPortHop(Boolean tunnelInterfaceFullPortHop) {
+            return tunnelInterfaceFullPortHop(Output.of(tunnelInterfaceFullPortHop));
+        }
+
+        /**
+         * @param tunnelInterfaceFullPortHopVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceFullPortHopVariable(@Nullable Output<String> tunnelInterfaceFullPortHopVariable) {
+            $.tunnelInterfaceFullPortHopVariable = tunnelInterfaceFullPortHopVariable;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceFullPortHopVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceFullPortHopVariable(String tunnelInterfaceFullPortHopVariable) {
+            return tunnelInterfaceFullPortHopVariable(Output.of(tunnelInterfaceFullPortHopVariable));
         }
 
         /**
@@ -4969,7 +5121,7 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface
+         * @param tunnelInterfacePortHop The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
          *   - Default value: `true`
          * 
          * @return builder
@@ -4981,7 +5133,7 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface
+         * @param tunnelInterfacePortHop The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead
          *   - Default value: `true`
          * 
          * @return builder

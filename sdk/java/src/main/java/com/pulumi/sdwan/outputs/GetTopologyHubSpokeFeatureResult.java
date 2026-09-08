@@ -33,12 +33,25 @@ public final class GetTopologyHubSpokeFeatureResult {
      * 
      */
     private String name;
+    /**
+     * @return Selected hub network hierarchy UUIDs
+     * 
+     */
+    private List<String> selectedHierarchyHubs;
+    /**
+     * @return Selected hub sites
+     * 
+     */
     private List<String> selectedHubs;
     /**
-     * @return Spokes
+     * @return Spoke configurations
      * 
      */
     private List<GetTopologyHubSpokeFeatureSpoke> spokes;
+    /**
+     * @return Target VPN list
+     * 
+     */
     private List<String> targetVpns;
     /**
      * @return The version of the Feature
@@ -75,16 +88,31 @@ public final class GetTopologyHubSpokeFeatureResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return Selected hub network hierarchy UUIDs
+     * 
+     */
+    public List<String> selectedHierarchyHubs() {
+        return this.selectedHierarchyHubs;
+    }
+    /**
+     * @return Selected hub sites
+     * 
+     */
     public List<String> selectedHubs() {
         return this.selectedHubs;
     }
     /**
-     * @return Spokes
+     * @return Spoke configurations
      * 
      */
     public List<GetTopologyHubSpokeFeatureSpoke> spokes() {
         return this.spokes;
     }
+    /**
+     * @return Target VPN list
+     * 
+     */
     public List<String> targetVpns() {
         return this.targetVpns;
     }
@@ -109,6 +137,7 @@ public final class GetTopologyHubSpokeFeatureResult {
         private String featureProfileId;
         private String id;
         private String name;
+        private List<String> selectedHierarchyHubs;
         private List<String> selectedHubs;
         private List<GetTopologyHubSpokeFeatureSpoke> spokes;
         private List<String> targetVpns;
@@ -120,6 +149,7 @@ public final class GetTopologyHubSpokeFeatureResult {
     	      this.featureProfileId = defaults.featureProfileId;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.selectedHierarchyHubs = defaults.selectedHierarchyHubs;
     	      this.selectedHubs = defaults.selectedHubs;
     	      this.spokes = defaults.spokes;
     	      this.targetVpns = defaults.targetVpns;
@@ -157,6 +187,17 @@ public final class GetTopologyHubSpokeFeatureResult {
             }
             this.name = name;
             return this;
+        }
+        @CustomType.Setter
+        public Builder selectedHierarchyHubs(List<String> selectedHierarchyHubs) {
+            if (selectedHierarchyHubs == null) {
+              throw new MissingRequiredPropertyException("GetTopologyHubSpokeFeatureResult", "selectedHierarchyHubs");
+            }
+            this.selectedHierarchyHubs = selectedHierarchyHubs;
+            return this;
+        }
+        public Builder selectedHierarchyHubs(String... selectedHierarchyHubs) {
+            return selectedHierarchyHubs(List.of(selectedHierarchyHubs));
         }
         @CustomType.Setter
         public Builder selectedHubs(List<String> selectedHubs) {
@@ -205,6 +246,7 @@ public final class GetTopologyHubSpokeFeatureResult {
             _resultValue.featureProfileId = featureProfileId;
             _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.selectedHierarchyHubs = selectedHierarchyHubs;
             _resultValue.selectedHubs = selectedHubs;
             _resultValue.spokes = spokes;
             _resultValue.targetVpns = targetVpns;
