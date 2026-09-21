@@ -208,7 +208,7 @@ class RoutePolicyDefinition(pulumi.CustomResource):
                  default_action: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict', 'outputs.RoutePolicyDefinitionSequence']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Route Policy Definition .
@@ -255,7 +255,7 @@ class RoutePolicyDefinition(pulumi.CustomResource):
                  - Choices: `accept`, `reject`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict']]]] sequences: List of ACL sequences
+        :param pulumi.Input[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict', 'outputs.RoutePolicyDefinitionSequence']]]] sequences: List of ACL sequences
         """
         ...
     @overload
@@ -320,7 +320,7 @@ class RoutePolicyDefinition(pulumi.CustomResource):
                  default_action: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict', 'outputs.RoutePolicyDefinitionSequence']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -351,7 +351,7 @@ class RoutePolicyDefinition(pulumi.CustomResource):
             default_action: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict']]]]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict', 'outputs.RoutePolicyDefinitionSequence']]]]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'RoutePolicyDefinition':
         """
@@ -365,7 +365,7 @@ class RoutePolicyDefinition(pulumi.CustomResource):
                  - Choices: `accept`, `reject`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict']]]] sequences: List of ACL sequences
+        :param pulumi.Input[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict', 'outputs.RoutePolicyDefinitionSequence']]]] sequences: List of ACL sequences
         :param pulumi.Input[_builtins.str] type: Type
         :param pulumi.Input[_builtins.int] version: The version of the object
         """

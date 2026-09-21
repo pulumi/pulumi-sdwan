@@ -503,13 +503,13 @@ class TopologyCustomControlFeature(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureSequenceArgs', 'TopologyCustomControlFeatureSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureSequenceArgs', 'TopologyCustomControlFeatureSequenceArgsDict', 'outputs.TopologyCustomControlFeatureSequence']]]]] = None,
                  target_inbound_hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 target_inbound_regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetInboundRegionArgs', 'TopologyCustomControlFeatureTargetInboundRegionArgsDict']]]]] = None,
+                 target_inbound_regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetInboundRegionArgs', 'TopologyCustomControlFeatureTargetInboundRegionArgsDict', 'outputs.TopologyCustomControlFeatureTargetInboundRegion']]]]] = None,
                  target_inbound_sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  target_level: pulumi.Input[Optional[_builtins.str]] = None,
                  target_outbound_hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 target_outbound_regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetOutboundRegionArgs', 'TopologyCustomControlFeatureTargetOutboundRegionArgsDict']]]]] = None,
+                 target_outbound_regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetOutboundRegionArgs', 'TopologyCustomControlFeatureTargetOutboundRegionArgsDict', 'outputs.TopologyCustomControlFeatureTargetOutboundRegion']]]]] = None,
                  target_outbound_sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  target_role: pulumi.Input[Optional[_builtins.str]] = None,
                  target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -574,13 +574,13 @@ class TopologyCustomControlFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureSequenceArgs', 'TopologyCustomControlFeatureSequenceArgsDict']]]] sequences: Sequence list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureSequenceArgs', 'TopologyCustomControlFeatureSequenceArgsDict', 'outputs.TopologyCustomControlFeatureSequence']]]] sequences: Sequence list
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_inbound_hierarchy_uuids: Inbound network hierarchy UUIDs, Attribute conditional on `target_level` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `target_inbound_sites` not being set and `target_outbound_sites` not being set
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetInboundRegionArgs', 'TopologyCustomControlFeatureTargetInboundRegionArgsDict']]]] target_inbound_regions: , Attribute conditional on `target_level` equal to `REGION` or `target_level` equal to `SUB_REGION`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetInboundRegionArgs', 'TopologyCustomControlFeatureTargetInboundRegionArgsDict', 'outputs.TopologyCustomControlFeatureTargetInboundRegion']]]] target_inbound_regions: , Attribute conditional on `target_level` equal to `REGION` or `target_level` equal to `SUB_REGION`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_inbound_sites: , Attribute conditional on `target_level` equal to `SITE` and `target_inbound_hierarchy_uuids` not being set and `target_outbound_hierarchy_uuids` not being set
         :param pulumi.Input[_builtins.str] target_level: - Choices: `SITE`, `REGION`, `SUB_REGION`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_outbound_hierarchy_uuids: Outbound network hierarchy UUIDs, Attribute conditional on `target_level` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `target_outbound_sites` not being set and `target_inbound_sites` not being set
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetOutboundRegionArgs', 'TopologyCustomControlFeatureTargetOutboundRegionArgsDict']]]] target_outbound_regions: , Attribute conditional on `target_level` equal to `REGION` or `target_level` equal to `SUB_REGION`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetOutboundRegionArgs', 'TopologyCustomControlFeatureTargetOutboundRegionArgsDict', 'outputs.TopologyCustomControlFeatureTargetOutboundRegion']]]] target_outbound_regions: , Attribute conditional on `target_level` equal to `REGION` or `target_level` equal to `SUB_REGION`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_outbound_sites: , Attribute conditional on `target_level` equal to `SITE` and `target_outbound_hierarchy_uuids` not being set and `target_inbound_hierarchy_uuids` not being set
         :param pulumi.Input[_builtins.str] target_role: - Choices: `edge-router`, `border-router`
         """
@@ -662,13 +662,13 @@ class TopologyCustomControlFeature(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureSequenceArgs', 'TopologyCustomControlFeatureSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureSequenceArgs', 'TopologyCustomControlFeatureSequenceArgsDict', 'outputs.TopologyCustomControlFeatureSequence']]]]] = None,
                  target_inbound_hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 target_inbound_regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetInboundRegionArgs', 'TopologyCustomControlFeatureTargetInboundRegionArgsDict']]]]] = None,
+                 target_inbound_regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetInboundRegionArgs', 'TopologyCustomControlFeatureTargetInboundRegionArgsDict', 'outputs.TopologyCustomControlFeatureTargetInboundRegion']]]]] = None,
                  target_inbound_sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  target_level: pulumi.Input[Optional[_builtins.str]] = None,
                  target_outbound_hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 target_outbound_regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetOutboundRegionArgs', 'TopologyCustomControlFeatureTargetOutboundRegionArgsDict']]]]] = None,
+                 target_outbound_regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetOutboundRegionArgs', 'TopologyCustomControlFeatureTargetOutboundRegionArgsDict', 'outputs.TopologyCustomControlFeatureTargetOutboundRegion']]]]] = None,
                  target_outbound_sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  target_role: pulumi.Input[Optional[_builtins.str]] = None,
                  target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -716,13 +716,13 @@ class TopologyCustomControlFeature(pulumi.CustomResource):
             description: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureSequenceArgs', 'TopologyCustomControlFeatureSequenceArgsDict']]]]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureSequenceArgs', 'TopologyCustomControlFeatureSequenceArgsDict', 'outputs.TopologyCustomControlFeatureSequence']]]]] = None,
             target_inbound_hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            target_inbound_regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetInboundRegionArgs', 'TopologyCustomControlFeatureTargetInboundRegionArgsDict']]]]] = None,
+            target_inbound_regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetInboundRegionArgs', 'TopologyCustomControlFeatureTargetInboundRegionArgsDict', 'outputs.TopologyCustomControlFeatureTargetInboundRegion']]]]] = None,
             target_inbound_sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             target_level: pulumi.Input[Optional[_builtins.str]] = None,
             target_outbound_hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            target_outbound_regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetOutboundRegionArgs', 'TopologyCustomControlFeatureTargetOutboundRegionArgsDict']]]]] = None,
+            target_outbound_regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetOutboundRegionArgs', 'TopologyCustomControlFeatureTargetOutboundRegionArgsDict', 'outputs.TopologyCustomControlFeatureTargetOutboundRegion']]]]] = None,
             target_outbound_sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             target_role: pulumi.Input[Optional[_builtins.str]] = None,
             target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -739,13 +739,13 @@ class TopologyCustomControlFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureSequenceArgs', 'TopologyCustomControlFeatureSequenceArgsDict']]]] sequences: Sequence list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureSequenceArgs', 'TopologyCustomControlFeatureSequenceArgsDict', 'outputs.TopologyCustomControlFeatureSequence']]]] sequences: Sequence list
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_inbound_hierarchy_uuids: Inbound network hierarchy UUIDs, Attribute conditional on `target_level` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `target_inbound_sites` not being set and `target_outbound_sites` not being set
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetInboundRegionArgs', 'TopologyCustomControlFeatureTargetInboundRegionArgsDict']]]] target_inbound_regions: , Attribute conditional on `target_level` equal to `REGION` or `target_level` equal to `SUB_REGION`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetInboundRegionArgs', 'TopologyCustomControlFeatureTargetInboundRegionArgsDict', 'outputs.TopologyCustomControlFeatureTargetInboundRegion']]]] target_inbound_regions: , Attribute conditional on `target_level` equal to `REGION` or `target_level` equal to `SUB_REGION`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_inbound_sites: , Attribute conditional on `target_level` equal to `SITE` and `target_inbound_hierarchy_uuids` not being set and `target_outbound_hierarchy_uuids` not being set
         :param pulumi.Input[_builtins.str] target_level: - Choices: `SITE`, `REGION`, `SUB_REGION`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_outbound_hierarchy_uuids: Outbound network hierarchy UUIDs, Attribute conditional on `target_level` equal to `SITE` and SD-WAN Manager version `20.18.1` or higher and `target_outbound_sites` not being set and `target_inbound_sites` not being set
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetOutboundRegionArgs', 'TopologyCustomControlFeatureTargetOutboundRegionArgsDict']]]] target_outbound_regions: , Attribute conditional on `target_level` equal to `REGION` or `target_level` equal to `SUB_REGION`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetOutboundRegionArgs', 'TopologyCustomControlFeatureTargetOutboundRegionArgsDict', 'outputs.TopologyCustomControlFeatureTargetOutboundRegion']]]] target_outbound_regions: , Attribute conditional on `target_level` equal to `REGION` or `target_level` equal to `SUB_REGION`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_outbound_sites: , Attribute conditional on `target_level` equal to `SITE` and `target_outbound_hierarchy_uuids` not being set and `target_inbound_hierarchy_uuids` not being set
         :param pulumi.Input[_builtins.str] target_role: - Choices: `edge-router`, `border-router`
         :param pulumi.Input[_builtins.int] version: The version of the Feature

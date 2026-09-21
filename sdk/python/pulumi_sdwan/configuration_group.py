@@ -305,12 +305,12 @@ class ConfigurationGroup(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict', 'outputs.ConfigurationGroupDevice']]]]] = None,
                  feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  solution: pulumi.Input[Optional[_builtins.str]] = None,
-                 topology_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
+                 topology_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict', 'outputs.ConfigurationGroupTopologyDevice']]]]] = None,
                  topology_site_devices: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
@@ -349,13 +349,13 @@ class ConfigurationGroup(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]] devices: List of devices
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict', 'outputs.ConfigurationGroupDevice']]]] devices: List of devices
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_versions: List of all associated feature versions
         :param pulumi.Input[_builtins.str] name: The name of the configuration group
         :param pulumi.Input[_builtins.str] solution: Type of solution
                  - Choices: `mobility`, `sdwan`, `nfvirtual`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]] topology_devices: List of topology device types
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict', 'outputs.ConfigurationGroupTopologyDevice']]]] topology_devices: List of topology device types
         :param pulumi.Input[_builtins.int] topology_site_devices: Number of devices per site
                  - Range: `1`-`20`
         """
@@ -414,12 +414,12 @@ class ConfigurationGroup(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict', 'outputs.ConfigurationGroupDevice']]]]] = None,
                  feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  solution: pulumi.Input[Optional[_builtins.str]] = None,
-                 topology_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
+                 topology_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict', 'outputs.ConfigurationGroupTopologyDevice']]]]] = None,
                  topology_site_devices: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -453,12 +453,12 @@ class ConfigurationGroup(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
-            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]]] = None,
+            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict', 'outputs.ConfigurationGroupDevice']]]]] = None,
             feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             solution: pulumi.Input[Optional[_builtins.str]] = None,
-            topology_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
+            topology_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict', 'outputs.ConfigurationGroupTopologyDevice']]]]] = None,
             topology_site_devices: pulumi.Input[Optional[_builtins.int]] = None) -> 'ConfigurationGroup':
         """
         Get an existing ConfigurationGroup resource's state with the given name, id, and optional extra
@@ -468,13 +468,13 @@ class ConfigurationGroup(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]] devices: List of devices
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict', 'outputs.ConfigurationGroupDevice']]]] devices: List of devices
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_versions: List of all associated feature versions
         :param pulumi.Input[_builtins.str] name: The name of the configuration group
         :param pulumi.Input[_builtins.str] solution: Type of solution
                  - Choices: `mobility`, `sdwan`, `nfvirtual`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]] topology_devices: List of topology device types
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict', 'outputs.ConfigurationGroupTopologyDevice']]]] topology_devices: List of topology device types
         :param pulumi.Input[_builtins.int] topology_site_devices: Number of devices per site
                  - Range: `1`-`20`
         """

@@ -221,7 +221,7 @@ class PolicyObjectAsPathList(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  as_path_list_id: pulumi.Input[Optional[_builtins.int]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectAsPathListEntryArgs', 'PolicyObjectAsPathListEntryArgsDict']]]]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectAsPathListEntryArgs', 'PolicyObjectAsPathListEntryArgsDict', 'outputs.PolicyObjectAsPathListEntry']]]]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -261,7 +261,7 @@ class PolicyObjectAsPathList(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] as_path_list_id: As path List Number
                  - Range: `1`-`500`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
-        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectAsPathListEntryArgs', 'PolicyObjectAsPathListEntryArgsDict']]]] entries: AS Path List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectAsPathListEntryArgs', 'PolicyObjectAsPathListEntryArgsDict', 'outputs.PolicyObjectAsPathListEntry']]]] entries: AS Path List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         """
@@ -319,7 +319,7 @@ class PolicyObjectAsPathList(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  as_path_list_id: pulumi.Input[Optional[_builtins.int]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectAsPathListEntryArgs', 'PolicyObjectAsPathListEntryArgsDict']]]]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectAsPathListEntryArgs', 'PolicyObjectAsPathListEntryArgsDict', 'outputs.PolicyObjectAsPathListEntry']]]]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -355,7 +355,7 @@ class PolicyObjectAsPathList(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             as_path_list_id: pulumi.Input[Optional[_builtins.int]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
-            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectAsPathListEntryArgs', 'PolicyObjectAsPathListEntryArgsDict']]]]] = None,
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectAsPathListEntryArgs', 'PolicyObjectAsPathListEntryArgsDict', 'outputs.PolicyObjectAsPathListEntry']]]]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'PolicyObjectAsPathList':
@@ -369,7 +369,7 @@ class PolicyObjectAsPathList(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] as_path_list_id: As path List Number
                  - Range: `1`-`500`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
-        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectAsPathListEntryArgs', 'PolicyObjectAsPathListEntryArgsDict']]]] entries: AS Path List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectAsPathListEntryArgs', 'PolicyObjectAsPathListEntryArgsDict', 'outputs.PolicyObjectAsPathListEntry']]]] entries: AS Path List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         :param pulumi.Input[_builtins.int] version: The version of the Policy_object

@@ -4158,10 +4158,10 @@ class VpnInterfaceT1E1SerialFeatureTemplate(pulumi.CustomResource):
                  interface_downstream_bandwidth_capacity_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ip_mtu: pulumi.Input[Optional[_builtins.int]] = None,
                  ip_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgsDict']]]]] = None,
+                 ipv4_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessList']]]]] = None,
                  ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
+                 ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessList']]]]] = None,
                  ipv6_address: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -4225,7 +4225,7 @@ class VpnInterfaceT1E1SerialFeatureTemplate(pulumi.CustomResource):
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_control_connections: pulumi.Input[Optional[_builtins.int]] = None,
                  tunnel_interface_control_connections_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulation']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
                  tunnel_interface_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
@@ -4388,10 +4388,10 @@ class VpnInterfaceT1E1SerialFeatureTemplate(pulumi.CustomResource):
                  - Range: `68`-`2000`
                  - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgsDict']]]] ipv4_access_lists: Apply ACL
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessList']]]] ipv4_access_lists: Apply ACL
         :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgsDict']]]] ipv6_access_lists: Apply IPv6 access list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessList']]]] ipv6_access_lists: Apply IPv6 access list
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
@@ -4483,7 +4483,7 @@ class VpnInterfaceT1E1SerialFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] tunnel_interface_control_connections: Set the maximum number of control connections for this TLOC
                  - Range: `0`-`8`
         :param pulumi.Input[_builtins.str] tunnel_interface_control_connections_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulation']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_groups: List of groups
@@ -4669,10 +4669,10 @@ class VpnInterfaceT1E1SerialFeatureTemplate(pulumi.CustomResource):
                  interface_downstream_bandwidth_capacity_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ip_mtu: pulumi.Input[Optional[_builtins.int]] = None,
                  ip_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgsDict']]]]] = None,
+                 ipv4_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessList']]]]] = None,
                  ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
+                 ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessList']]]]] = None,
                  ipv6_address: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -4736,7 +4736,7 @@ class VpnInterfaceT1E1SerialFeatureTemplate(pulumi.CustomResource):
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_control_connections: pulumi.Input[Optional[_builtins.int]] = None,
                  tunnel_interface_control_connections_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulation']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
                  tunnel_interface_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
@@ -4934,10 +4934,10 @@ class VpnInterfaceT1E1SerialFeatureTemplate(pulumi.CustomResource):
             interface_downstream_bandwidth_capacity_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ip_mtu: pulumi.Input[Optional[_builtins.int]] = None,
             ip_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv4_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgsDict']]]]] = None,
+            ipv4_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessList']]]]] = None,
             ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
             ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
+            ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessList']]]]] = None,
             ipv6_address: pulumi.Input[Optional[_builtins.str]] = None,
             ipv6_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -5002,7 +5002,7 @@ class VpnInterfaceT1E1SerialFeatureTemplate(pulumi.CustomResource):
             tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_control_connections: pulumi.Input[Optional[_builtins.int]] = None,
             tunnel_interface_control_connections_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+            tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulation']]]]] = None,
             tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
             tunnel_interface_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
@@ -5075,10 +5075,10 @@ class VpnInterfaceT1E1SerialFeatureTemplate(pulumi.CustomResource):
                  - Range: `68`-`2000`
                  - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgsDict']]]] ipv4_access_lists: Apply ACL
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessList']]]] ipv4_access_lists: Apply ACL
         :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgsDict']]]] ipv6_access_lists: Apply IPv6 access list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessList']]]] ipv6_access_lists: Apply IPv6 access list
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
@@ -5171,7 +5171,7 @@ class VpnInterfaceT1E1SerialFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] tunnel_interface_control_connections: Set the maximum number of control connections for this TLOC
                  - Range: `0`-`8`
         :param pulumi.Input[_builtins.str] tunnel_interface_control_connections_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulation']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_groups: List of groups

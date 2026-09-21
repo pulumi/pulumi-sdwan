@@ -656,8 +656,8 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
                  extended_ar_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict']]]]] = None,
-                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict']]]]] = None,
+                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict', 'outputs.CiscoSecurityFeatureTemplateKeychain']]]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict', 'outputs.CiscoSecurityFeatureTemplateKey']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
                  pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -736,8 +736,8 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] extended_ar_window_variable: Variable name
         :param pulumi.Input[_builtins.str] integrity_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] integrity_types: Set the authentication type for DTLS connections
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict']]]] keychains: Configure a Keychain
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict']]]] keys: Configure a Key
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict', 'outputs.CiscoSecurityFeatureTemplateKeychain']]]] keychains: Configure a Keychain
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict', 'outputs.CiscoSecurityFeatureTemplateKey']]]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.bool] pairwise_keying: Enable or disable IPsec pairwise-keying
                  - Default value: `false`
@@ -837,8 +837,8 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
                  extended_ar_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict']]]]] = None,
-                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict']]]]] = None,
+                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict', 'outputs.CiscoSecurityFeatureTemplateKeychain']]]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict', 'outputs.CiscoSecurityFeatureTemplateKey']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
                  pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -896,8 +896,8 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
             extended_ar_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
             integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
             integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict']]]]] = None,
-            keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict']]]]] = None,
+            keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict', 'outputs.CiscoSecurityFeatureTemplateKeychain']]]]] = None,
+            keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict', 'outputs.CiscoSecurityFeatureTemplateKey']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
             pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -925,8 +925,8 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] extended_ar_window_variable: Variable name
         :param pulumi.Input[_builtins.str] integrity_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] integrity_types: Set the authentication type for DTLS connections
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict']]]] keychains: Configure a Keychain
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict']]]] keys: Configure a Key
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict', 'outputs.CiscoSecurityFeatureTemplateKeychain']]]] keychains: Configure a Keychain
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict', 'outputs.CiscoSecurityFeatureTemplateKey']]]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.bool] pairwise_keying: Enable or disable IPsec pairwise-keying
                  - Default value: `false`

@@ -413,7 +413,7 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  active_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
-                 collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]]] = None,
+                 collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict', 'outputs.CflowdPolicyDefinitionCollector']]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  flow_refresh: pulumi.Input[Optional[_builtins.int]] = None,
                  inactive_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
@@ -467,7 +467,7 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] active_flow_timeout: Active flow timeout in seconds
                  - Range: `30`-`3600`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]] collectors: List of collectors
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict', 'outputs.CflowdPolicyDefinitionCollector']]]] collectors: List of collectors
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.int] flow_refresh: Flow refresh in seconds
                  - Range: `60`-`86400`
@@ -543,7 +543,7 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  active_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
-                 collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]]] = None,
+                 collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict', 'outputs.CflowdPolicyDefinitionCollector']]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  flow_refresh: pulumi.Input[Optional[_builtins.int]] = None,
                  inactive_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
@@ -588,7 +588,7 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             active_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
-            collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]]] = None,
+            collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict', 'outputs.CflowdPolicyDefinitionCollector']]]]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             flow_refresh: pulumi.Input[Optional[_builtins.int]] = None,
             inactive_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
@@ -608,7 +608,7 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] active_flow_timeout: Active flow timeout in seconds
                  - Range: `30`-`3600`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]] collectors: List of collectors
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict', 'outputs.CflowdPolicyDefinitionCollector']]]] collectors: List of collectors
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.int] flow_refresh: Flow refresh in seconds
                  - Range: `60`-`86400`

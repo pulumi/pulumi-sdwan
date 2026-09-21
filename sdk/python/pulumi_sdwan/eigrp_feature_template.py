@@ -744,7 +744,7 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address_families: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
+                 address_families: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict', 'outputs.EigrpFeatureTemplateAddressFamily']]]]] = None,
                  as_number: pulumi.Input[Optional[_builtins.int]] = None,
                  as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
@@ -759,8 +759,8 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
                  hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  hold_time: pulumi.Input[Optional[_builtins.int]] = None,
                  hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict']]]]] = None,
-                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict']]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict', 'outputs.EigrpFeatureTemplateInterface']]]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict', 'outputs.EigrpFeatureTemplateKey']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  route_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
                  route_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -816,7 +816,7 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict']]]] address_families: Set EIGRP address family
+        :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict', 'outputs.EigrpFeatureTemplateAddressFamily']]]] address_families: Set EIGRP address family
         :param pulumi.Input[_builtins.int] as_number: Set autonomous system ID <1..65535>
                  - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
@@ -839,8 +839,8 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
                  - Range: `0`-`65535`
                  - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict']]]] interfaces: Configure IPv4 Static Routes
-        :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict']]]] keys: Set keychain name
+        :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict', 'outputs.EigrpFeatureTemplateInterface']]]] interfaces: Configure IPv4 Static Routes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict', 'outputs.EigrpFeatureTemplateKey']]]] keys: Set keychain name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] route_policy_name: Configure policy to apply to prefixes received from EIGRP neighbor
         :param pulumi.Input[_builtins.str] route_policy_name_variable: Variable name
@@ -915,7 +915,7 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address_families: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
+                 address_families: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict', 'outputs.EigrpFeatureTemplateAddressFamily']]]]] = None,
                  as_number: pulumi.Input[Optional[_builtins.int]] = None,
                  as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
@@ -930,8 +930,8 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
                  hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  hold_time: pulumi.Input[Optional[_builtins.int]] = None,
                  hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict']]]]] = None,
-                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict']]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict', 'outputs.EigrpFeatureTemplateInterface']]]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict', 'outputs.EigrpFeatureTemplateKey']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  route_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
                  route_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -980,7 +980,7 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            address_families: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
+            address_families: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict', 'outputs.EigrpFeatureTemplateAddressFamily']]]]] = None,
             as_number: pulumi.Input[Optional[_builtins.int]] = None,
             as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
             authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
@@ -995,8 +995,8 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
             hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
             hold_time: pulumi.Input[Optional[_builtins.int]] = None,
             hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict']]]]] = None,
-            keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict']]]]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict', 'outputs.EigrpFeatureTemplateInterface']]]]] = None,
+            keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict', 'outputs.EigrpFeatureTemplateKey']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             route_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
             route_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1009,7 +1009,7 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict']]]] address_families: Set EIGRP address family
+        :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict', 'outputs.EigrpFeatureTemplateAddressFamily']]]] address_families: Set EIGRP address family
         :param pulumi.Input[_builtins.int] as_number: Set autonomous system ID <1..65535>
                  - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
@@ -1032,8 +1032,8 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
                  - Range: `0`-`65535`
                  - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict']]]] interfaces: Configure IPv4 Static Routes
-        :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict']]]] keys: Set keychain name
+        :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict', 'outputs.EigrpFeatureTemplateInterface']]]] interfaces: Configure IPv4 Static Routes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict', 'outputs.EigrpFeatureTemplateKey']]]] keys: Set keychain name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] route_policy_name: Configure policy to apply to prefixes received from EIGRP neighbor
         :param pulumi.Input[_builtins.str] route_policy_name_variable: Variable name

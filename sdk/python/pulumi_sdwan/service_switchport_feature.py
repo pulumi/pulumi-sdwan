@@ -293,9 +293,9 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
                  age_out_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict']]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict', 'outputs.ServiceSwitchportFeatureInterface']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 static_mac_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict']]]]] = None,
+                 static_mac_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict', 'outputs.ServiceSwitchportFeatureStaticMacAddress']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Service Switchport Feature.
@@ -362,9 +362,9 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] age_out_time_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict']]]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict', 'outputs.ServiceSwitchportFeatureInterface']]]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict']]]] static_mac_addresses: Add static MAC address entries for interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict', 'outputs.ServiceSwitchportFeatureStaticMacAddress']]]] static_mac_addresses: Add static MAC address entries for interface
         """
         ...
     @overload
@@ -448,9 +448,9 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
                  age_out_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict']]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict', 'outputs.ServiceSwitchportFeatureInterface']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 static_mac_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict']]]]] = None,
+                 static_mac_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict', 'outputs.ServiceSwitchportFeatureStaticMacAddress']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -484,9 +484,9 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
             age_out_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict']]]]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict', 'outputs.ServiceSwitchportFeatureInterface']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            static_mac_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict']]]]] = None,
+            static_mac_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict', 'outputs.ServiceSwitchportFeatureStaticMacAddress']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceSwitchportFeature':
         """
         Get an existing ServiceSwitchportFeature resource's state with the given name, id, and optional extra
@@ -501,9 +501,9 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] age_out_time_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict']]]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict', 'outputs.ServiceSwitchportFeatureInterface']]]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict']]]] static_mac_addresses: Add static MAC address entries for interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict', 'outputs.ServiceSwitchportFeatureStaticMacAddress']]]] static_mac_addresses: Add static MAC address entries for interface
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

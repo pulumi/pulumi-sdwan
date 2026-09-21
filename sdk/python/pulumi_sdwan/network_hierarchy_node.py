@@ -368,7 +368,7 @@ class NetworkHierarchyNode(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address: pulumi.Input[Optional[Union['NetworkHierarchyNodeAddressArgs', 'NetworkHierarchyNodeAddressArgsDict']]] = None,
+                 address: pulumi.Input[Optional[Union['NetworkHierarchyNodeAddressArgs', 'NetworkHierarchyNodeAddressArgsDict', 'outputs.NetworkHierarchyNodeAddress']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  is_secondary: pulumi.Input[Optional[_builtins.bool]] = None,
                  latitude: pulumi.Input[Optional[_builtins.float]] = None,
@@ -406,7 +406,7 @@ class NetworkHierarchyNode(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['NetworkHierarchyNodeAddressArgs', 'NetworkHierarchyNodeAddressArgsDict']] address: The address of the site (only for site type nodes)
+        :param pulumi.Input[Union['NetworkHierarchyNodeAddressArgs', 'NetworkHierarchyNodeAddressArgsDict', 'outputs.NetworkHierarchyNodeAddress']] address: The address of the site (only for site type nodes)
         :param pulumi.Input[_builtins.str] description: The description of the node
         :param pulumi.Input[_builtins.bool] is_secondary: Whether this is a secondary region (only for region type nodes)
         :param pulumi.Input[_builtins.float] latitude: The GPS latitude of the site (only for site type nodes). Required when `location` is set to a real location. Supported on SD-WAN Manager 20.18 and later.
@@ -465,7 +465,7 @@ class NetworkHierarchyNode(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address: pulumi.Input[Optional[Union['NetworkHierarchyNodeAddressArgs', 'NetworkHierarchyNodeAddressArgsDict']]] = None,
+                 address: pulumi.Input[Optional[Union['NetworkHierarchyNodeAddressArgs', 'NetworkHierarchyNodeAddressArgsDict', 'outputs.NetworkHierarchyNodeAddress']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  is_secondary: pulumi.Input[Optional[_builtins.bool]] = None,
                  latitude: pulumi.Input[Optional[_builtins.float]] = None,
@@ -508,7 +508,7 @@ class NetworkHierarchyNode(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            address: pulumi.Input[Optional[Union['NetworkHierarchyNodeAddressArgs', 'NetworkHierarchyNodeAddressArgsDict']]] = None,
+            address: pulumi.Input[Optional[Union['NetworkHierarchyNodeAddressArgs', 'NetworkHierarchyNodeAddressArgsDict', 'outputs.NetworkHierarchyNodeAddress']]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             is_secondary: pulumi.Input[Optional[_builtins.bool]] = None,
             latitude: pulumi.Input[Optional[_builtins.float]] = None,
@@ -525,7 +525,7 @@ class NetworkHierarchyNode(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['NetworkHierarchyNodeAddressArgs', 'NetworkHierarchyNodeAddressArgsDict']] address: The address of the site (only for site type nodes)
+        :param pulumi.Input[Union['NetworkHierarchyNodeAddressArgs', 'NetworkHierarchyNodeAddressArgsDict', 'outputs.NetworkHierarchyNodeAddress']] address: The address of the site (only for site type nodes)
         :param pulumi.Input[_builtins.str] description: The description of the node
         :param pulumi.Input[_builtins.bool] is_secondary: Whether this is a secondary region (only for region type nodes)
         :param pulumi.Input[_builtins.float] latitude: The GPS latitude of the site (only for site type nodes). Required when `location` is set to a real location. Supported on SD-WAN Manager 20.18 and later.

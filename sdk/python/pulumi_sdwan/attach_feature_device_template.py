@@ -137,7 +137,7 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  attach_feature_device_template_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict', 'outputs.AttachFeatureDeviceTemplateDevice']]]]] = None,
                  version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
@@ -176,7 +176,7 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] attach_feature_device_template_id: The ID of the device template
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]] devices: Devices
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict', 'outputs.AttachFeatureDeviceTemplateDevice']]]] devices: Devices
         :param pulumi.Input[_builtins.int] version: The version of the device template
         """
         ...
@@ -234,7 +234,7 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  attach_feature_device_template_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict', 'outputs.AttachFeatureDeviceTemplateDevice']]]]] = None,
                  version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -263,7 +263,7 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             attach_feature_device_template_id: pulumi.Input[Optional[_builtins.str]] = None,
-            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]]] = None,
+            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict', 'outputs.AttachFeatureDeviceTemplateDevice']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'AttachFeatureDeviceTemplate':
         """
         Get an existing AttachFeatureDeviceTemplate resource's state with the given name, id, and optional extra
@@ -273,7 +273,7 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] attach_feature_device_template_id: The ID of the device template
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]] devices: Devices
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict', 'outputs.AttachFeatureDeviceTemplateDevice']]]] devices: Devices
         :param pulumi.Input[_builtins.int] version: The version of the device template
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

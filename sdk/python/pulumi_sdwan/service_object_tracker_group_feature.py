@@ -332,7 +332,7 @@ class ServiceObjectTrackerGroupFeature(pulumi.CustomResource):
                  object_tracker_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  reachable: pulumi.Input[Optional[_builtins.str]] = None,
                  reachable_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 tracker_elements: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceObjectTrackerGroupFeatureTrackerElementArgs', 'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict']]]]] = None,
+                 tracker_elements: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceObjectTrackerGroupFeatureTrackerElementArgs', 'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict', 'outputs.ServiceObjectTrackerGroupFeatureTrackerElement']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Service Object Tracker Group Feature.
@@ -378,7 +378,7 @@ class ServiceObjectTrackerGroupFeature(pulumi.CustomResource):
                  - Choices: `and`, `or`
                  - Default value: `or`
         :param pulumi.Input[_builtins.str] reachable_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceObjectTrackerGroupFeatureTrackerElementArgs', 'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict']]]] tracker_elements: Group Tracks ID Refs
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceObjectTrackerGroupFeatureTrackerElementArgs', 'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict', 'outputs.ServiceObjectTrackerGroupFeatureTrackerElement']]]] tracker_elements: Group Tracks ID Refs
         """
         ...
     @overload
@@ -440,7 +440,7 @@ class ServiceObjectTrackerGroupFeature(pulumi.CustomResource):
                  object_tracker_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  reachable: pulumi.Input[Optional[_builtins.str]] = None,
                  reachable_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 tracker_elements: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceObjectTrackerGroupFeatureTrackerElementArgs', 'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict']]]]] = None,
+                 tracker_elements: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceObjectTrackerGroupFeatureTrackerElementArgs', 'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict', 'outputs.ServiceObjectTrackerGroupFeatureTrackerElement']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -478,7 +478,7 @@ class ServiceObjectTrackerGroupFeature(pulumi.CustomResource):
             object_tracker_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
             reachable: pulumi.Input[Optional[_builtins.str]] = None,
             reachable_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            tracker_elements: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceObjectTrackerGroupFeatureTrackerElementArgs', 'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict']]]]] = None,
+            tracker_elements: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceObjectTrackerGroupFeatureTrackerElementArgs', 'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict', 'outputs.ServiceObjectTrackerGroupFeatureTrackerElement']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceObjectTrackerGroupFeature':
         """
         Get an existing ServiceObjectTrackerGroupFeature resource's state with the given name, id, and optional extra
@@ -497,7 +497,7 @@ class ServiceObjectTrackerGroupFeature(pulumi.CustomResource):
                  - Choices: `and`, `or`
                  - Default value: `or`
         :param pulumi.Input[_builtins.str] reachable_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceObjectTrackerGroupFeatureTrackerElementArgs', 'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict']]]] tracker_elements: Group Tracks ID Refs
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceObjectTrackerGroupFeatureTrackerElementArgs', 'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict', 'outputs.ServiceObjectTrackerGroupFeatureTrackerElement']]]] tracker_elements: Group Tracks ID Refs
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

@@ -273,7 +273,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
                  default_action_sla_class_list_version: pulumi.Input[Optional[_builtins.int]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict', 'outputs.ApplicationAwareRoutingPolicyDefinitionSequence']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Application Aware Routing Policy Definition .
@@ -319,7 +319,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] default_action_sla_class_list_version: SLA class list version
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]] sequences: List of sequences
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict', 'outputs.ApplicationAwareRoutingPolicyDefinitionSequence']]]] sequences: List of sequences
         """
         ...
     @overload
@@ -383,7 +383,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
                  default_action_sla_class_list_version: pulumi.Input[Optional[_builtins.int]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict', 'outputs.ApplicationAwareRoutingPolicyDefinitionSequence']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -420,7 +420,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
             default_action_sla_class_list_version: pulumi.Input[Optional[_builtins.int]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict', 'outputs.ApplicationAwareRoutingPolicyDefinitionSequence']]]]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ApplicationAwareRoutingPolicyDefinition':
         """
@@ -436,7 +436,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] default_action_sla_class_list_version: SLA class list version
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]] sequences: List of sequences
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict', 'outputs.ApplicationAwareRoutingPolicyDefinitionSequence']]]] sequences: List of sequences
         :param pulumi.Input[_builtins.str] type: Type
         :param pulumi.Input[_builtins.int] version: The version of the object
         """

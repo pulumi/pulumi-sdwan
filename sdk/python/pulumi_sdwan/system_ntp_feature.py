@@ -481,13 +481,13 @@ class SystemNtpFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict']]]]] = None,
+                 authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict', 'outputs.SystemNtpFeatureAuthenticationKey']]]]] = None,
                  authoritative_ntp_server: pulumi.Input[Optional[_builtins.bool]] = None,
                  authoritative_ntp_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict']]]]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict', 'outputs.SystemNtpFeatureServer']]]]] = None,
                  source_interface: pulumi.Input[Optional[_builtins.str]] = None,
                  source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  stratum: pulumi.Input[Optional[_builtins.int]] = None,
@@ -542,14 +542,14 @@ class SystemNtpFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict']]]] authentication_keys: Set MD5 authentication key
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict', 'outputs.SystemNtpFeatureAuthenticationKey']]]] authentication_keys: Set MD5 authentication key
         :param pulumi.Input[_builtins.bool] authoritative_ntp_server: Enable device as NTP Leader
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] authoritative_ntp_server_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict']]]] servers: Configure NTP servers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict', 'outputs.SystemNtpFeatureServer']]]] servers: Configure NTP servers
         :param pulumi.Input[_builtins.str] source_interface: Enable device as NTP Leader
         :param pulumi.Input[_builtins.str] source_interface_variable: Variable name
         :param pulumi.Input[_builtins.int] stratum: Enable device as NTP Leader
@@ -624,13 +624,13 @@ class SystemNtpFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict']]]]] = None,
+                 authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict', 'outputs.SystemNtpFeatureAuthenticationKey']]]]] = None,
                  authoritative_ntp_server: pulumi.Input[Optional[_builtins.bool]] = None,
                  authoritative_ntp_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict']]]]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict', 'outputs.SystemNtpFeatureServer']]]]] = None,
                  source_interface: pulumi.Input[Optional[_builtins.str]] = None,
                  source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  stratum: pulumi.Input[Optional[_builtins.int]] = None,
@@ -672,13 +672,13 @@ class SystemNtpFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict']]]]] = None,
+            authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict', 'outputs.SystemNtpFeatureAuthenticationKey']]]]] = None,
             authoritative_ntp_server: pulumi.Input[Optional[_builtins.bool]] = None,
             authoritative_ntp_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict']]]]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict', 'outputs.SystemNtpFeatureServer']]]]] = None,
             source_interface: pulumi.Input[Optional[_builtins.str]] = None,
             source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
             stratum: pulumi.Input[Optional[_builtins.int]] = None,
@@ -693,14 +693,14 @@ class SystemNtpFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict']]]] authentication_keys: Set MD5 authentication key
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict', 'outputs.SystemNtpFeatureAuthenticationKey']]]] authentication_keys: Set MD5 authentication key
         :param pulumi.Input[_builtins.bool] authoritative_ntp_server: Enable device as NTP Leader
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] authoritative_ntp_server_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict']]]] servers: Configure NTP servers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict', 'outputs.SystemNtpFeatureServer']]]] servers: Configure NTP servers
         :param pulumi.Input[_builtins.str] source_interface: Enable device as NTP Leader
         :param pulumi.Input[_builtins.str] source_interface_variable: Variable name
         :param pulumi.Input[_builtins.int] stratum: Enable device as NTP Leader

@@ -122,8 +122,8 @@ class NetworkHierarchySecurityLogging(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 high_speed_loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingHighSpeedLoggingArgs', 'NetworkHierarchySecurityLoggingHighSpeedLoggingArgsDict']]]]] = None,
-                 utd_syslogs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingUtdSyslogArgs', 'NetworkHierarchySecurityLoggingUtdSyslogArgsDict']]]]] = None,
+                 high_speed_loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingHighSpeedLoggingArgs', 'NetworkHierarchySecurityLoggingHighSpeedLoggingArgsDict', 'outputs.NetworkHierarchySecurityLoggingHighSpeedLogging']]]]] = None,
+                 utd_syslogs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingUtdSyslogArgs', 'NetworkHierarchySecurityLoggingUtdSyslogArgsDict', 'outputs.NetworkHierarchySecurityLoggingUtdSyslog']]]]] = None,
                  __props__=None):
         """
         This resource can manage Network Hierarchy Security Logging settings.
@@ -157,8 +157,8 @@ class NetworkHierarchySecurityLogging(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingHighSpeedLoggingArgs', 'NetworkHierarchySecurityLoggingHighSpeedLoggingArgsDict']]]] high_speed_loggings: High speed logging configuration (max 4 entries)
-        :param pulumi.Input[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingUtdSyslogArgs', 'NetworkHierarchySecurityLoggingUtdSyslogArgsDict']]]] utd_syslogs: UTD syslog configuration (max 1 entry)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingHighSpeedLoggingArgs', 'NetworkHierarchySecurityLoggingHighSpeedLoggingArgsDict', 'outputs.NetworkHierarchySecurityLoggingHighSpeedLogging']]]] high_speed_loggings: High speed logging configuration (max 4 entries)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingUtdSyslogArgs', 'NetworkHierarchySecurityLoggingUtdSyslogArgsDict', 'outputs.NetworkHierarchySecurityLoggingUtdSyslog']]]] utd_syslogs: UTD syslog configuration (max 1 entry)
         """
         ...
     @overload
@@ -211,8 +211,8 @@ class NetworkHierarchySecurityLogging(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 high_speed_loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingHighSpeedLoggingArgs', 'NetworkHierarchySecurityLoggingHighSpeedLoggingArgsDict']]]]] = None,
-                 utd_syslogs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingUtdSyslogArgs', 'NetworkHierarchySecurityLoggingUtdSyslogArgsDict']]]]] = None,
+                 high_speed_loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingHighSpeedLoggingArgs', 'NetworkHierarchySecurityLoggingHighSpeedLoggingArgsDict', 'outputs.NetworkHierarchySecurityLoggingHighSpeedLogging']]]]] = None,
+                 utd_syslogs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingUtdSyslogArgs', 'NetworkHierarchySecurityLoggingUtdSyslogArgsDict', 'outputs.NetworkHierarchySecurityLoggingUtdSyslog']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -235,9 +235,9 @@ class NetworkHierarchySecurityLogging(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            high_speed_loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingHighSpeedLoggingArgs', 'NetworkHierarchySecurityLoggingHighSpeedLoggingArgsDict']]]]] = None,
+            high_speed_loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingHighSpeedLoggingArgs', 'NetworkHierarchySecurityLoggingHighSpeedLoggingArgsDict', 'outputs.NetworkHierarchySecurityLoggingHighSpeedLogging']]]]] = None,
             node_id: pulumi.Input[Optional[_builtins.str]] = None,
-            utd_syslogs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingUtdSyslogArgs', 'NetworkHierarchySecurityLoggingUtdSyslogArgsDict']]]]] = None) -> 'NetworkHierarchySecurityLogging':
+            utd_syslogs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingUtdSyslogArgs', 'NetworkHierarchySecurityLoggingUtdSyslogArgsDict', 'outputs.NetworkHierarchySecurityLoggingUtdSyslog']]]]] = None) -> 'NetworkHierarchySecurityLogging':
         """
         Get an existing NetworkHierarchySecurityLogging resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -245,9 +245,9 @@ class NetworkHierarchySecurityLogging(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingHighSpeedLoggingArgs', 'NetworkHierarchySecurityLoggingHighSpeedLoggingArgsDict']]]] high_speed_loggings: High speed logging configuration (max 4 entries)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingHighSpeedLoggingArgs', 'NetworkHierarchySecurityLoggingHighSpeedLoggingArgsDict', 'outputs.NetworkHierarchySecurityLoggingHighSpeedLogging']]]] high_speed_loggings: High speed logging configuration (max 4 entries)
         :param pulumi.Input[_builtins.str] node_id: The UUID of the Global network hierarchy node. This is automatically fetched from the SD-WAN Manager.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingUtdSyslogArgs', 'NetworkHierarchySecurityLoggingUtdSyslogArgsDict']]]] utd_syslogs: UTD syslog configuration (max 1 entry)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingUtdSyslogArgs', 'NetworkHierarchySecurityLoggingUtdSyslogArgsDict', 'outputs.NetworkHierarchySecurityLoggingUtdSyslog']]]] utd_syslogs: UTD syslog configuration (max 1 entry)
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

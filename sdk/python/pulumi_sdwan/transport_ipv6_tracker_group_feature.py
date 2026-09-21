@@ -325,7 +325,7 @@ class TransportIpv6TrackerGroupFeature(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_boolean: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_boolean_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 tracker_elements: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportIpv6TrackerGroupFeatureTrackerElementArgs', 'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict']]]]] = None,
+                 tracker_elements: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportIpv6TrackerGroupFeatureTrackerElementArgs', 'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict', 'outputs.TransportIpv6TrackerGroupFeatureTrackerElement']]]]] = None,
                  tracker_name: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -370,7 +370,7 @@ class TransportIpv6TrackerGroupFeature(pulumi.CustomResource):
                  - Choices: `and`, `or`
                  - Default value: `or`
         :param pulumi.Input[_builtins.str] tracker_boolean_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportIpv6TrackerGroupFeatureTrackerElementArgs', 'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict']]]] tracker_elements: trackers ref list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportIpv6TrackerGroupFeatureTrackerElementArgs', 'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict', 'outputs.TransportIpv6TrackerGroupFeatureTrackerElement']]]] tracker_elements: trackers ref list
         :param pulumi.Input[_builtins.str] tracker_name: Tracker Name
         :param pulumi.Input[_builtins.str] tracker_name_variable: Variable name
         """
@@ -432,7 +432,7 @@ class TransportIpv6TrackerGroupFeature(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_boolean: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_boolean_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 tracker_elements: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportIpv6TrackerGroupFeatureTrackerElementArgs', 'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict']]]]] = None,
+                 tracker_elements: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportIpv6TrackerGroupFeatureTrackerElementArgs', 'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict', 'outputs.TransportIpv6TrackerGroupFeatureTrackerElement']]]]] = None,
                  tracker_name: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -472,7 +472,7 @@ class TransportIpv6TrackerGroupFeature(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             tracker_boolean: pulumi.Input[Optional[_builtins.str]] = None,
             tracker_boolean_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            tracker_elements: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportIpv6TrackerGroupFeatureTrackerElementArgs', 'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict']]]]] = None,
+            tracker_elements: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportIpv6TrackerGroupFeatureTrackerElementArgs', 'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict', 'outputs.TransportIpv6TrackerGroupFeatureTrackerElement']]]]] = None,
             tracker_name: pulumi.Input[Optional[_builtins.str]] = None,
             tracker_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'TransportIpv6TrackerGroupFeature':
@@ -490,7 +490,7 @@ class TransportIpv6TrackerGroupFeature(pulumi.CustomResource):
                  - Choices: `and`, `or`
                  - Default value: `or`
         :param pulumi.Input[_builtins.str] tracker_boolean_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportIpv6TrackerGroupFeatureTrackerElementArgs', 'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict']]]] tracker_elements: trackers ref list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportIpv6TrackerGroupFeatureTrackerElementArgs', 'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict', 'outputs.TransportIpv6TrackerGroupFeatureTrackerElement']]]] tracker_elements: trackers ref list
         :param pulumi.Input[_builtins.str] tracker_name: Tracker Name
         :param pulumi.Input[_builtins.str] tracker_name_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature

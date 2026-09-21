@@ -8186,7 +8186,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  acl_ipv6_ingress_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                  arp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  arp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureArpArgs', 'TransportWanVpnInterfaceEthernetFeatureArpArgsDict']]]]] = None,
+                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureArpArgs', 'TransportWanVpnInterfaceEthernetFeatureArpArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureArp']]]]] = None,
                  auto_detect_bandwidth: pulumi.Input[Optional[_builtins.bool]] = None,
                  auto_detect_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  autonegotiate: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -8231,15 +8231,15 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  ipv4_dhcp_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_dhcp_helper_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_dhcp_helpers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ipv4_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict']]]]] = None,
+                 ipv4_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress']]]]] = None,
                  ipv4_subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_address: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_address_type: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_address_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_dhcp_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict']]]]] = None,
-                 ipv6_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict']]]]] = None,
+                 ipv6_dhcp_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress']]]]] = None,
+                 ipv6_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress']]]]] = None,
                  load_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  load_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  mac_address: pulumi.Input[Optional[_builtins.str]] = None,
@@ -8254,8 +8254,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  nat64: pulumi.Input[Optional[_builtins.bool]] = None,
                  nat66: pulumi.Input[Optional[_builtins.bool]] = None,
                  nat_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
-                 nat_ipv4_loopbacks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgsDict']]]]] = None,
-                 nat_ipv4_pools: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgsDict']]]]] = None,
+                 nat_ipv4_loopbacks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback']]]]] = None,
+                 nat_ipv4_pools: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool']]]]] = None,
                  nat_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  nat_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
                  nat_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -8276,7 +8276,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  nat_type: pulumi.Input[Optional[_builtins.str]] = None,
                  nat_udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  nat_udp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 new_static_nats: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs', 'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict']]]]] = None,
+                 new_static_nats: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs', 'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNat']]]]] = None,
                  per_tunnel_qos: pulumi.Input[Optional[_builtins.bool]] = None,
                  per_tunnel_qos_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_interface: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -8286,7 +8286,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  port_channel_lacp_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_lacp_max_bundle: pulumi.Input[Optional[_builtins.int]] = None,
                  port_channel_lacp_max_bundle_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 port_channel_lacp_member_links: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgsDict']]]]] = None,
+                 port_channel_lacp_member_links: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink']]]]] = None,
                  port_channel_lacp_min_bundle: pulumi.Input[Optional[_builtins.int]] = None,
                  port_channel_lacp_min_bundle_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_lacp_qos_aggregate: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -8295,7 +8295,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  port_channel_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_static_load_balance: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_static_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 port_channel_static_member_links: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgsDict']]]]] = None,
+                 port_channel_static_member_links: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink']]]]] = None,
                  port_channel_static_qos_aggregate: pulumi.Input[Optional[_builtins.bool]] = None,
                  port_channel_static_qos_aggregate_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_subinterface: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -8327,8 +8327,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  speed: pulumi.Input[Optional[_builtins.str]] = None,
                  speed_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 static_nat66s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args', 'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict']]]]] = None,
-                 static_port_forwards: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs', 'TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgsDict']]]]] = None,
+                 static_nat66s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args', 'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66']]]]] = None,
+                 static_port_forwards: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs', 'TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureStaticPortForward']]]]] = None,
                  tcp_mss: pulumi.Input[Optional[_builtins.int]] = None,
                  tcp_mss_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tloc_extension: pulumi.Input[Optional[_builtins.str]] = None,
@@ -8384,7 +8384,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_cts_sgt_propagation: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_cts_sgt_propagation_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
                  tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -8587,7 +8587,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Range: `0`-`2147483`
                  - Default value: `1200`
         :param pulumi.Input[_builtins.str] arp_timeout_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureArpArgs', 'TransportWanVpnInterfaceEthernetFeatureArpArgsDict']]]] arps: Configure ARP entries, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureArpArgs', 'TransportWanVpnInterfaceEthernetFeatureArpArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureArp']]]] arps: Configure ARP entries, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] auto_detect_bandwidth: Interface auto detect bandwidth, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] auto_detect_bandwidth_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -8647,7 +8647,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ipv4_dhcp_distance_variable: Variable name, Attribute conditional on `ipv4_address_type` equal to `dynamic` or `ipv4_address_type_variable` being set
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helper_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `port_channel_member_interface` not equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
                  - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
@@ -8656,8 +8656,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Choices: `dynamic`, `static`
         :param pulumi.Input[_builtins.str] ipv6_address_type_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name, Attribute conditional on `ipv6_address_type` equal to `static` or `ipv6_address_type_variable` being set
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict']]]] ipv6_dhcp_secondary_addresses: secondary IPv6 addresses, Attribute conditional on `ipv6_address_type` equal to `dynamic` or `ipv6_address_type_variable` being set
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict']]]] ipv6_secondary_addresses: Static secondary IPv6 addresses, Attribute conditional on `ipv6_address_type` equal to `static` or `ipv6_address_type_variable` being set
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress']]]] ipv6_dhcp_secondary_addresses: secondary IPv6 addresses, Attribute conditional on `ipv6_address_type` equal to `dynamic` or `ipv6_address_type_variable` being set
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress']]]] ipv6_secondary_addresses: Static secondary IPv6 addresses, Attribute conditional on `ipv6_address_type` equal to `static` or `ipv6_address_type_variable` being set
         :param pulumi.Input[_builtins.int] load_interval: Interval for interface load calculation
                  - Range: `30`-`600`
                  - Default value: `30`
@@ -8684,8 +8684,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] nat_ipv4: enable Network Address Translation on this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgsDict']]]] nat_ipv4_loopbacks: NAT Multiple Loopback, Attribute conditional on `nat_ipv4` equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgsDict']]]] nat_ipv4_pools: NAT Multiple Pool, Attribute conditional on `nat_ipv4` equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback']]]] nat_ipv4_loopbacks: NAT Multiple Loopback, Attribute conditional on `nat_ipv4` equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool']]]] nat_ipv4_pools: NAT Multiple Pool, Attribute conditional on `nat_ipv4` equal to `true`
         :param pulumi.Input[_builtins.str] nat_ipv4_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] nat_ipv6: enable Network Address Translation ipv6 on this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
@@ -8716,7 +8716,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Range: `1`-`8947`
                  - Default value: `1`
         :param pulumi.Input[_builtins.str] nat_udp_timeout_variable: Variable name, Attribute conditional on `nat_ipv4` equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs', 'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict']]]] new_static_nats: static NAT, Attribute conditional on `nat_ipv4` equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs', 'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNat']]]] new_static_nats: static NAT, Attribute conditional on `nat_ipv4` equal to `true`
         :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] per_tunnel_qos_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
@@ -8731,7 +8731,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] port_channel_lacp_max_bundle: Set LACP max bundle, Attribute conditional on `port_channel_mode` equal to `lacp`
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] port_channel_lacp_max_bundle_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgsDict']]]] port_channel_lacp_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `lacp`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink']]]] port_channel_lacp_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.int] port_channel_lacp_min_bundle: Set LACP min bundle, Attribute conditional on `port_channel_mode` equal to `lacp`
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] port_channel_lacp_min_bundle_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
@@ -8745,7 +8745,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] port_channel_static_load_balance: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
                  - Choices: `flow`, `vlan`
         :param pulumi.Input[_builtins.str] port_channel_static_load_balance_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgsDict']]]] port_channel_static_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `static`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink']]]] port_channel_static_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_static_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_static_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
@@ -8793,8 +8793,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] speed: Set interface speed, Attribute conditional on `port_channel_interface` not equal to `true`
                  - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name, Attribute conditional on `port_channel_interface` not equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args', 'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict']]]] static_nat66s: static NAT66, Attribute conditional on `nat_ipv6` equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs', 'TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgsDict']]]] static_port_forwards: Configure Port Forward entries, Attribute conditional on `nat_ipv4` equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args', 'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66']]]] static_nat66s: static NAT66, Attribute conditional on `nat_ipv6` equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs', 'TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureStaticPortForward']]]] static_port_forwards: Configure Port Forward entries, Attribute conditional on `nat_ipv4` equal to `true`
         :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -8877,7 +8877,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] tunnel_interface_cts_sgt_propagation: CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_cts_sgt_propagation_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation']]]] tunnel_interface_encapsulations: Encapsulation for TLOC, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[_builtins.bool] tunnel_interface_full_port_hop: Enable port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher
@@ -9120,7 +9120,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  acl_ipv6_ingress_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                  arp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  arp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureArpArgs', 'TransportWanVpnInterfaceEthernetFeatureArpArgsDict']]]]] = None,
+                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureArpArgs', 'TransportWanVpnInterfaceEthernetFeatureArpArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureArp']]]]] = None,
                  auto_detect_bandwidth: pulumi.Input[Optional[_builtins.bool]] = None,
                  auto_detect_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  autonegotiate: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -9165,15 +9165,15 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  ipv4_dhcp_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_dhcp_helper_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_dhcp_helpers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ipv4_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict']]]]] = None,
+                 ipv4_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress']]]]] = None,
                  ipv4_subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_address: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_address_type: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_address_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_dhcp_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict']]]]] = None,
-                 ipv6_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict']]]]] = None,
+                 ipv6_dhcp_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress']]]]] = None,
+                 ipv6_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress']]]]] = None,
                  load_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  load_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  mac_address: pulumi.Input[Optional[_builtins.str]] = None,
@@ -9188,8 +9188,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  nat64: pulumi.Input[Optional[_builtins.bool]] = None,
                  nat66: pulumi.Input[Optional[_builtins.bool]] = None,
                  nat_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
-                 nat_ipv4_loopbacks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgsDict']]]]] = None,
-                 nat_ipv4_pools: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgsDict']]]]] = None,
+                 nat_ipv4_loopbacks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback']]]]] = None,
+                 nat_ipv4_pools: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool']]]]] = None,
                  nat_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  nat_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
                  nat_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -9210,7 +9210,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  nat_type: pulumi.Input[Optional[_builtins.str]] = None,
                  nat_udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  nat_udp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 new_static_nats: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs', 'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict']]]]] = None,
+                 new_static_nats: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs', 'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNat']]]]] = None,
                  per_tunnel_qos: pulumi.Input[Optional[_builtins.bool]] = None,
                  per_tunnel_qos_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_interface: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -9220,7 +9220,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  port_channel_lacp_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_lacp_max_bundle: pulumi.Input[Optional[_builtins.int]] = None,
                  port_channel_lacp_max_bundle_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 port_channel_lacp_member_links: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgsDict']]]]] = None,
+                 port_channel_lacp_member_links: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink']]]]] = None,
                  port_channel_lacp_min_bundle: pulumi.Input[Optional[_builtins.int]] = None,
                  port_channel_lacp_min_bundle_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_lacp_qos_aggregate: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -9229,7 +9229,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  port_channel_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_static_load_balance: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_static_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 port_channel_static_member_links: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgsDict']]]]] = None,
+                 port_channel_static_member_links: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink']]]]] = None,
                  port_channel_static_qos_aggregate: pulumi.Input[Optional[_builtins.bool]] = None,
                  port_channel_static_qos_aggregate_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  port_channel_subinterface: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -9261,8 +9261,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  speed: pulumi.Input[Optional[_builtins.str]] = None,
                  speed_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 static_nat66s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args', 'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict']]]]] = None,
-                 static_port_forwards: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs', 'TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgsDict']]]]] = None,
+                 static_nat66s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args', 'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66']]]]] = None,
+                 static_port_forwards: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs', 'TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureStaticPortForward']]]]] = None,
                  tcp_mss: pulumi.Input[Optional[_builtins.int]] = None,
                  tcp_mss_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tloc_extension: pulumi.Input[Optional[_builtins.str]] = None,
@@ -9318,7 +9318,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_cts_sgt_propagation: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_cts_sgt_propagation_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
                  tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -9626,7 +9626,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             acl_ipv6_ingress_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
             arp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
             arp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureArpArgs', 'TransportWanVpnInterfaceEthernetFeatureArpArgsDict']]]]] = None,
+            arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureArpArgs', 'TransportWanVpnInterfaceEthernetFeatureArpArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureArp']]]]] = None,
             auto_detect_bandwidth: pulumi.Input[Optional[_builtins.bool]] = None,
             auto_detect_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
             autonegotiate: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -9671,15 +9671,15 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             ipv4_dhcp_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ipv4_dhcp_helper_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ipv4_dhcp_helpers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            ipv4_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict']]]]] = None,
+            ipv4_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress']]]]] = None,
             ipv4_subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
             ipv4_subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ipv6_address: pulumi.Input[Optional[_builtins.str]] = None,
             ipv6_address_type: pulumi.Input[Optional[_builtins.str]] = None,
             ipv6_address_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ipv6_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv6_dhcp_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict']]]]] = None,
-            ipv6_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict']]]]] = None,
+            ipv6_dhcp_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress']]]]] = None,
+            ipv6_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress']]]]] = None,
             load_interval: pulumi.Input[Optional[_builtins.int]] = None,
             load_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
             mac_address: pulumi.Input[Optional[_builtins.str]] = None,
@@ -9694,8 +9694,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             nat64: pulumi.Input[Optional[_builtins.bool]] = None,
             nat66: pulumi.Input[Optional[_builtins.bool]] = None,
             nat_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
-            nat_ipv4_loopbacks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgsDict']]]]] = None,
-            nat_ipv4_pools: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgsDict']]]]] = None,
+            nat_ipv4_loopbacks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback']]]]] = None,
+            nat_ipv4_pools: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool']]]]] = None,
             nat_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
             nat_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
             nat_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -9716,7 +9716,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             nat_type: pulumi.Input[Optional[_builtins.str]] = None,
             nat_udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
             nat_udp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            new_static_nats: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs', 'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict']]]]] = None,
+            new_static_nats: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs', 'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNat']]]]] = None,
             per_tunnel_qos: pulumi.Input[Optional[_builtins.bool]] = None,
             per_tunnel_qos_variable: pulumi.Input[Optional[_builtins.str]] = None,
             port_channel_interface: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -9726,7 +9726,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             port_channel_lacp_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
             port_channel_lacp_max_bundle: pulumi.Input[Optional[_builtins.int]] = None,
             port_channel_lacp_max_bundle_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            port_channel_lacp_member_links: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgsDict']]]]] = None,
+            port_channel_lacp_member_links: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink']]]]] = None,
             port_channel_lacp_min_bundle: pulumi.Input[Optional[_builtins.int]] = None,
             port_channel_lacp_min_bundle_variable: pulumi.Input[Optional[_builtins.str]] = None,
             port_channel_lacp_qos_aggregate: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -9735,7 +9735,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             port_channel_mode: pulumi.Input[Optional[_builtins.str]] = None,
             port_channel_static_load_balance: pulumi.Input[Optional[_builtins.str]] = None,
             port_channel_static_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            port_channel_static_member_links: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgsDict']]]]] = None,
+            port_channel_static_member_links: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink']]]]] = None,
             port_channel_static_qos_aggregate: pulumi.Input[Optional[_builtins.bool]] = None,
             port_channel_static_qos_aggregate_variable: pulumi.Input[Optional[_builtins.str]] = None,
             port_channel_subinterface: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -9767,8 +9767,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
             speed: pulumi.Input[Optional[_builtins.str]] = None,
             speed_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            static_nat66s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args', 'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict']]]]] = None,
-            static_port_forwards: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs', 'TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgsDict']]]]] = None,
+            static_nat66s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args', 'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66']]]]] = None,
+            static_port_forwards: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs', 'TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureStaticPortForward']]]]] = None,
             tcp_mss: pulumi.Input[Optional[_builtins.int]] = None,
             tcp_mss_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tloc_extension: pulumi.Input[Optional[_builtins.str]] = None,
@@ -9824,7 +9824,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_cts_sgt_propagation: pulumi.Input[Optional[_builtins.bool]] = None,
             tunnel_interface_cts_sgt_propagation_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+            tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation']]]]] = None,
             tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
             tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -9873,7 +9873,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Range: `0`-`2147483`
                  - Default value: `1200`
         :param pulumi.Input[_builtins.str] arp_timeout_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureArpArgs', 'TransportWanVpnInterfaceEthernetFeatureArpArgsDict']]]] arps: Configure ARP entries, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureArpArgs', 'TransportWanVpnInterfaceEthernetFeatureArpArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureArp']]]] arps: Configure ARP entries, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] auto_detect_bandwidth: Interface auto detect bandwidth, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] auto_detect_bandwidth_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -9933,7 +9933,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ipv4_dhcp_distance_variable: Variable name, Attribute conditional on `ipv4_address_type` equal to `dynamic` or `ipv4_address_type_variable` being set
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helper_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `port_channel_member_interface` not equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
                  - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
@@ -9942,8 +9942,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Choices: `dynamic`, `static`
         :param pulumi.Input[_builtins.str] ipv6_address_type_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name, Attribute conditional on `ipv6_address_type` equal to `static` or `ipv6_address_type_variable` being set
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict']]]] ipv6_dhcp_secondary_addresses: secondary IPv6 addresses, Attribute conditional on `ipv6_address_type` equal to `dynamic` or `ipv6_address_type_variable` being set
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict']]]] ipv6_secondary_addresses: Static secondary IPv6 addresses, Attribute conditional on `ipv6_address_type` equal to `static` or `ipv6_address_type_variable` being set
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress']]]] ipv6_dhcp_secondary_addresses: secondary IPv6 addresses, Attribute conditional on `ipv6_address_type` equal to `dynamic` or `ipv6_address_type_variable` being set
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs', 'TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress']]]] ipv6_secondary_addresses: Static secondary IPv6 addresses, Attribute conditional on `ipv6_address_type` equal to `static` or `ipv6_address_type_variable` being set
         :param pulumi.Input[_builtins.int] load_interval: Interval for interface load calculation
                  - Range: `30`-`600`
                  - Default value: `30`
@@ -9970,8 +9970,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] nat_ipv4: enable Network Address Translation on this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgsDict']]]] nat_ipv4_loopbacks: NAT Multiple Loopback, Attribute conditional on `nat_ipv4` equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgsDict']]]] nat_ipv4_pools: NAT Multiple Pool, Attribute conditional on `nat_ipv4` equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback']]]] nat_ipv4_loopbacks: NAT Multiple Loopback, Attribute conditional on `nat_ipv4` equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs', 'TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool']]]] nat_ipv4_pools: NAT Multiple Pool, Attribute conditional on `nat_ipv4` equal to `true`
         :param pulumi.Input[_builtins.str] nat_ipv4_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] nat_ipv6: enable Network Address Translation ipv6 on this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
@@ -10002,7 +10002,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Range: `1`-`8947`
                  - Default value: `1`
         :param pulumi.Input[_builtins.str] nat_udp_timeout_variable: Variable name, Attribute conditional on `nat_ipv4` equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs', 'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict']]]] new_static_nats: static NAT, Attribute conditional on `nat_ipv4` equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs', 'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNat']]]] new_static_nats: static NAT, Attribute conditional on `nat_ipv4` equal to `true`
         :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] per_tunnel_qos_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
@@ -10017,7 +10017,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] port_channel_lacp_max_bundle: Set LACP max bundle, Attribute conditional on `port_channel_mode` equal to `lacp`
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] port_channel_lacp_max_bundle_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgsDict']]]] port_channel_lacp_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `lacp`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink']]]] port_channel_lacp_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.int] port_channel_lacp_min_bundle: Set LACP min bundle, Attribute conditional on `port_channel_mode` equal to `lacp`
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] port_channel_lacp_min_bundle_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
@@ -10031,7 +10031,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] port_channel_static_load_balance: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
                  - Choices: `flow`, `vlan`
         :param pulumi.Input[_builtins.str] port_channel_static_load_balance_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgsDict']]]] port_channel_static_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `static`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink']]]] port_channel_static_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_static_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_static_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
@@ -10079,8 +10079,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] speed: Set interface speed, Attribute conditional on `port_channel_interface` not equal to `true`
                  - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name, Attribute conditional on `port_channel_interface` not equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args', 'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict']]]] static_nat66s: static NAT66, Attribute conditional on `nat_ipv6` equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs', 'TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgsDict']]]] static_port_forwards: Configure Port Forward entries, Attribute conditional on `nat_ipv4` equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args', 'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66']]]] static_nat66s: static NAT66, Attribute conditional on `nat_ipv6` equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs', 'TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureStaticPortForward']]]] static_port_forwards: Configure Port Forward entries, Attribute conditional on `nat_ipv4` equal to `true`
         :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -10163,7 +10163,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] tunnel_interface_cts_sgt_propagation: CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_cts_sgt_propagation_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict', 'outputs.TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation']]]] tunnel_interface_encapsulations: Encapsulation for TLOC, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` equal to `true`
         :param pulumi.Input[_builtins.bool] tunnel_interface_full_port_hop: Enable port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` equal to `true` and SD-WAN Manager version `20.18.1` or higher

@@ -1149,7 +1149,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureAreaArgs', 'ServiceRoutingOspfFeatureAreaArgsDict']]]]] = None,
+                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureAreaArgs', 'ServiceRoutingOspfFeatureAreaArgsDict', 'outputs.ServiceRoutingOspfFeatureArea']]]]] = None,
                  default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
                  default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
                  default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1166,7 +1166,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
                  distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRedistributeArgs', 'ServiceRoutingOspfFeatureRedistributeArgsDict']]]]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRedistributeArgs', 'ServiceRoutingOspfFeatureRedistributeArgsDict', 'outputs.ServiceRoutingOspfFeatureRedistribute']]]]] = None,
                  reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
                  reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1174,7 +1174,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
                  route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
                  router_id: pulumi.Input[Optional[_builtins.str]] = None,
                  router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRouterLsaArgs', 'ServiceRoutingOspfFeatureRouterLsaArgsDict']]]]] = None,
+                 router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRouterLsaArgs', 'ServiceRoutingOspfFeatureRouterLsaArgsDict', 'outputs.ServiceRoutingOspfFeatureRouterLsa']]]]] = None,
                  spf_calculation_delay: pulumi.Input[Optional[_builtins.int]] = None,
                  spf_calculation_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  spf_initial_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
@@ -1257,7 +1257,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureAreaArgs', 'ServiceRoutingOspfFeatureAreaArgsDict']]]] areas: Configure OSPF area
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureAreaArgs', 'ServiceRoutingOspfFeatureAreaArgsDict', 'outputs.ServiceRoutingOspfFeatureArea']]]] areas: Configure OSPF area
         :param pulumi.Input[_builtins.bool] default_information_originate: Distribute default external route into OSPF
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] default_information_originate_always: Always advertise default route
@@ -1284,7 +1284,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] distance_intra_area_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRedistributeArgs', 'ServiceRoutingOspfFeatureRedistributeArgsDict']]]] redistributes: Redistribute routes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRedistributeArgs', 'ServiceRoutingOspfFeatureRedistributeArgsDict', 'outputs.ServiceRoutingOspfFeatureRedistribute']]]] redistributes: Redistribute routes
         :param pulumi.Input[_builtins.int] reference_bandwidth: Set reference bandwidth method to assign OSPF cost
                  - Range: `1`-`4294967`
                  - Default value: `100`
@@ -1294,7 +1294,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] rfc1583_compatible_variable: Variable name
         :param pulumi.Input[_builtins.str] router_id: Set OSPF router ID to override system IP address
         :param pulumi.Input[_builtins.str] router_id_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRouterLsaArgs', 'ServiceRoutingOspfFeatureRouterLsaArgsDict']]]] router_lsas: Advertise own router LSA with infinite distance
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRouterLsaArgs', 'ServiceRoutingOspfFeatureRouterLsaArgsDict', 'outputs.ServiceRoutingOspfFeatureRouterLsa']]]] router_lsas: Advertise own router LSA with infinite distance
         :param pulumi.Input[_builtins.int] spf_calculation_delay: Set delay from first change received until performing SPF calculation
                  - Range: `1`-`600000`
                  - Default value: `200`
@@ -1402,7 +1402,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureAreaArgs', 'ServiceRoutingOspfFeatureAreaArgsDict']]]]] = None,
+                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureAreaArgs', 'ServiceRoutingOspfFeatureAreaArgsDict', 'outputs.ServiceRoutingOspfFeatureArea']]]]] = None,
                  default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
                  default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
                  default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1419,7 +1419,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
                  distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRedistributeArgs', 'ServiceRoutingOspfFeatureRedistributeArgsDict']]]]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRedistributeArgs', 'ServiceRoutingOspfFeatureRedistributeArgsDict', 'outputs.ServiceRoutingOspfFeatureRedistribute']]]]] = None,
                  reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
                  reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1427,7 +1427,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
                  route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
                  router_id: pulumi.Input[Optional[_builtins.str]] = None,
                  router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRouterLsaArgs', 'ServiceRoutingOspfFeatureRouterLsaArgsDict']]]]] = None,
+                 router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRouterLsaArgs', 'ServiceRoutingOspfFeatureRouterLsaArgsDict', 'outputs.ServiceRoutingOspfFeatureRouterLsa']]]]] = None,
                  spf_calculation_delay: pulumi.Input[Optional[_builtins.int]] = None,
                  spf_calculation_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  spf_initial_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
@@ -1488,7 +1488,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureAreaArgs', 'ServiceRoutingOspfFeatureAreaArgsDict']]]]] = None,
+            areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureAreaArgs', 'ServiceRoutingOspfFeatureAreaArgsDict', 'outputs.ServiceRoutingOspfFeatureArea']]]]] = None,
             default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
             default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
             default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1505,7 +1505,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
             distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRedistributeArgs', 'ServiceRoutingOspfFeatureRedistributeArgsDict']]]]] = None,
+            redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRedistributeArgs', 'ServiceRoutingOspfFeatureRedistributeArgsDict', 'outputs.ServiceRoutingOspfFeatureRedistribute']]]]] = None,
             reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
             reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
             rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1513,7 +1513,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
             route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
             router_id: pulumi.Input[Optional[_builtins.str]] = None,
             router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRouterLsaArgs', 'ServiceRoutingOspfFeatureRouterLsaArgsDict']]]]] = None,
+            router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRouterLsaArgs', 'ServiceRoutingOspfFeatureRouterLsaArgsDict', 'outputs.ServiceRoutingOspfFeatureRouterLsa']]]]] = None,
             spf_calculation_delay: pulumi.Input[Optional[_builtins.int]] = None,
             spf_calculation_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
             spf_initial_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
@@ -1528,7 +1528,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureAreaArgs', 'ServiceRoutingOspfFeatureAreaArgsDict']]]] areas: Configure OSPF area
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureAreaArgs', 'ServiceRoutingOspfFeatureAreaArgsDict', 'outputs.ServiceRoutingOspfFeatureArea']]]] areas: Configure OSPF area
         :param pulumi.Input[_builtins.bool] default_information_originate: Distribute default external route into OSPF
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] default_information_originate_always: Always advertise default route
@@ -1555,7 +1555,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] distance_intra_area_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRedistributeArgs', 'ServiceRoutingOspfFeatureRedistributeArgsDict']]]] redistributes: Redistribute routes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRedistributeArgs', 'ServiceRoutingOspfFeatureRedistributeArgsDict', 'outputs.ServiceRoutingOspfFeatureRedistribute']]]] redistributes: Redistribute routes
         :param pulumi.Input[_builtins.int] reference_bandwidth: Set reference bandwidth method to assign OSPF cost
                  - Range: `1`-`4294967`
                  - Default value: `100`
@@ -1565,7 +1565,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] rfc1583_compatible_variable: Variable name
         :param pulumi.Input[_builtins.str] router_id: Set OSPF router ID to override system IP address
         :param pulumi.Input[_builtins.str] router_id_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRouterLsaArgs', 'ServiceRoutingOspfFeatureRouterLsaArgsDict']]]] router_lsas: Advertise own router LSA with infinite distance
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRouterLsaArgs', 'ServiceRoutingOspfFeatureRouterLsaArgsDict', 'outputs.ServiceRoutingOspfFeatureRouterLsa']]]] router_lsas: Advertise own router LSA with infinite distance
         :param pulumi.Input[_builtins.int] spf_calculation_delay: Set delay from first change received until performing SPF calculation
                  - Range: `1`-`600000`
                  - Default value: `200`

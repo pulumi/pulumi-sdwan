@@ -484,14 +484,14 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
                  device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  disk_logging: pulumi.Input[Optional[_builtins.bool]] = None,
                  disk_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict']]]]] = None,
-                 ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict']]]]] = None,
+                 ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict', 'outputs.CiscoLoggingFeatureTemplateIpv4Server']]]]] = None,
+                 ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict', 'outputs.CiscoLoggingFeatureTemplateIpv6Server']]]]] = None,
                  log_rotations: pulumi.Input[Optional[_builtins.int]] = None,
                  log_rotations_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  max_size: pulumi.Input[Optional[_builtins.int]] = None,
                  max_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict']]]]] = None,
+                 tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict', 'outputs.CiscoLoggingFeatureTemplateTlsProfile']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco Logging feature template.
@@ -553,8 +553,8 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] disk_logging: Enable logging to local disk
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] disk_logging_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict']]]] ipv4_servers: Enable logging to remote server
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict']]]] ipv6_servers: Enable logging to remote IPv6 server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict', 'outputs.CiscoLoggingFeatureTemplateIpv4Server']]]] ipv4_servers: Enable logging to remote server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict', 'outputs.CiscoLoggingFeatureTemplateIpv6Server']]]] ipv6_servers: Enable logging to remote IPv6 server
         :param pulumi.Input[_builtins.int] log_rotations: Set number of syslog files to create before discarding oldest files
                  - Range: `1`-`10`
                  - Default value: `10`
@@ -564,7 +564,7 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
                  - Default value: `10`
         :param pulumi.Input[_builtins.str] max_size_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict']]]] tls_profiles: Configure a TLS profile
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict', 'outputs.CiscoLoggingFeatureTemplateTlsProfile']]]] tls_profiles: Configure a TLS profile
         """
         ...
     @overload
@@ -643,14 +643,14 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
                  device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  disk_logging: pulumi.Input[Optional[_builtins.bool]] = None,
                  disk_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict']]]]] = None,
-                 ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict']]]]] = None,
+                 ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict', 'outputs.CiscoLoggingFeatureTemplateIpv4Server']]]]] = None,
+                 ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict', 'outputs.CiscoLoggingFeatureTemplateIpv6Server']]]]] = None,
                  log_rotations: pulumi.Input[Optional[_builtins.int]] = None,
                  log_rotations_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  max_size: pulumi.Input[Optional[_builtins.int]] = None,
                  max_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict']]]]] = None,
+                 tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict', 'outputs.CiscoLoggingFeatureTemplateTlsProfile']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -692,15 +692,15 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
             device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             disk_logging: pulumi.Input[Optional[_builtins.bool]] = None,
             disk_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict']]]]] = None,
-            ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict']]]]] = None,
+            ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict', 'outputs.CiscoLoggingFeatureTemplateIpv4Server']]]]] = None,
+            ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict', 'outputs.CiscoLoggingFeatureTemplateIpv6Server']]]]] = None,
             log_rotations: pulumi.Input[Optional[_builtins.int]] = None,
             log_rotations_variable: pulumi.Input[Optional[_builtins.str]] = None,
             max_size: pulumi.Input[Optional[_builtins.int]] = None,
             max_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             template_type: pulumi.Input[Optional[_builtins.str]] = None,
-            tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict']]]]] = None,
+            tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict', 'outputs.CiscoLoggingFeatureTemplateTlsProfile']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoLoggingFeatureTemplate':
         """
         Get an existing CiscoLoggingFeatureTemplate resource's state with the given name, id, and optional extra
@@ -715,8 +715,8 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] disk_logging: Enable logging to local disk
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] disk_logging_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict']]]] ipv4_servers: Enable logging to remote server
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict']]]] ipv6_servers: Enable logging to remote IPv6 server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict', 'outputs.CiscoLoggingFeatureTemplateIpv4Server']]]] ipv4_servers: Enable logging to remote server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict', 'outputs.CiscoLoggingFeatureTemplateIpv6Server']]]] ipv6_servers: Enable logging to remote IPv6 server
         :param pulumi.Input[_builtins.int] log_rotations: Set number of syslog files to create before discarding oldest files
                  - Range: `1`-`10`
                  - Default value: `10`
@@ -727,7 +727,7 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] max_size_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] template_type: The template type
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict']]]] tls_profiles: Configure a TLS profile
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict', 'outputs.CiscoLoggingFeatureTemplateTlsProfile']]]] tls_profiles: Configure a TLS profile
         :param pulumi.Input[_builtins.int] version: The version of the feature template
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

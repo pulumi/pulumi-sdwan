@@ -1877,25 +1877,25 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
                  hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  internal_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
                  internal_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict']]]]] = None,
+                 ipv4_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4AggregateAddress']]]]] = None,
                  ipv4_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
                  ipv4_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NeighborArgs', 'TransportRoutingBgpFeatureIpv4NeighborArgsDict']]]]] = None,
-                 ipv4_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NetworkArgs', 'TransportRoutingBgpFeatureIpv4NetworkArgsDict']]]]] = None,
+                 ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NeighborArgs', 'TransportRoutingBgpFeatureIpv4NeighborArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Neighbor']]]]] = None,
+                 ipv4_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NetworkArgs', 'TransportRoutingBgpFeatureIpv4NetworkArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Network']]]]] = None,
                  ipv4_originate: pulumi.Input[Optional[_builtins.bool]] = None,
                  ipv4_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4RedistributeArgs', 'TransportRoutingBgpFeatureIpv4RedistributeArgsDict']]]]] = None,
+                 ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4RedistributeArgs', 'TransportRoutingBgpFeatureIpv4RedistributeArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Redistribute']]]]] = None,
                  ipv4_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
                  ipv4_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict']]]]] = None,
+                 ipv6_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6AggregateAddress']]]]] = None,
                  ipv6_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
                  ipv6_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NeighborArgs', 'TransportRoutingBgpFeatureIpv6NeighborArgsDict']]]]] = None,
-                 ipv6_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NetworkArgs', 'TransportRoutingBgpFeatureIpv6NetworkArgsDict']]]]] = None,
+                 ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NeighborArgs', 'TransportRoutingBgpFeatureIpv6NeighborArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Neighbor']]]]] = None,
+                 ipv6_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NetworkArgs', 'TransportRoutingBgpFeatureIpv6NetworkArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Network']]]]] = None,
                  ipv6_originate: pulumi.Input[Optional[_builtins.bool]] = None,
                  ipv6_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6RedistributeArgs', 'TransportRoutingBgpFeatureIpv6RedistributeArgsDict']]]]] = None,
+                 ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6RedistributeArgs', 'TransportRoutingBgpFeatureIpv6RedistributeArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Redistribute']]]]] = None,
                  ipv6_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
                  ipv6_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1905,7 +1905,7 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
                  local_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  missing_med_as_worst: pulumi.Input[Optional[_builtins.bool]] = None,
                  missing_med_as_worst_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 mpls_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureMplsInterfaceArgs', 'TransportRoutingBgpFeatureMplsInterfaceArgsDict']]]]] = None,
+                 mpls_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureMplsInterfaceArgs', 'TransportRoutingBgpFeatureMplsInterfaceArgsDict', 'outputs.TransportRoutingBgpFeatureMplsInterface']]]]] = None,
                  multipath_relax: pulumi.Input[Optional[_builtins.bool]] = None,
                  multipath_relax_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2061,29 +2061,29 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
                  - Range: `1`-`255`
                  - Default value: `200`
         :param pulumi.Input[_builtins.str] internal_routes_distance_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict']]]] ipv4_aggregate_addresses: Aggregate prefixes in specific range
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4AggregateAddress']]]] ipv4_aggregate_addresses: Aggregate prefixes in specific range
         :param pulumi.Input[_builtins.int] ipv4_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing
                  - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv4_eibgp_maximum_paths_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NeighborArgs', 'TransportRoutingBgpFeatureIpv4NeighborArgsDict']]]] ipv4_neighbors: Set BGP IPv4 neighbors
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NetworkArgs', 'TransportRoutingBgpFeatureIpv4NetworkArgsDict']]]] ipv4_networks: Configure the networks for BGP to advertise
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NeighborArgs', 'TransportRoutingBgpFeatureIpv4NeighborArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Neighbor']]]] ipv4_neighbors: Set BGP IPv4 neighbors
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NetworkArgs', 'TransportRoutingBgpFeatureIpv4NetworkArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Network']]]] ipv4_networks: Configure the networks for BGP to advertise
         :param pulumi.Input[_builtins.bool] ipv4_originate: BGP Default Information Originate
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_originate_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4RedistributeArgs', 'TransportRoutingBgpFeatureIpv4RedistributeArgsDict']]]] ipv4_redistributes: Redistribute routes into BGP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4RedistributeArgs', 'TransportRoutingBgpFeatureIpv4RedistributeArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Redistribute']]]] ipv4_redistributes: Redistribute routes into BGP
         :param pulumi.Input[_builtins.bool] ipv4_table_map_filter: Table map filtered or not
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_table_map_filter_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict']]]] ipv6_aggregate_addresses: IPv6 Aggregate prefixes in specific range
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6AggregateAddress']]]] ipv6_aggregate_addresses: IPv6 Aggregate prefixes in specific range
         :param pulumi.Input[_builtins.int] ipv6_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing
                  - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv6_eibgp_maximum_paths_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NeighborArgs', 'TransportRoutingBgpFeatureIpv6NeighborArgsDict']]]] ipv6_neighbors: Set BGP IPv6 neighbors
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NetworkArgs', 'TransportRoutingBgpFeatureIpv6NetworkArgsDict']]]] ipv6_networks: Configure the networks for BGP to advertise
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NeighborArgs', 'TransportRoutingBgpFeatureIpv6NeighborArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Neighbor']]]] ipv6_neighbors: Set BGP IPv6 neighbors
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NetworkArgs', 'TransportRoutingBgpFeatureIpv6NetworkArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Network']]]] ipv6_networks: Configure the networks for BGP to advertise
         :param pulumi.Input[_builtins.bool] ipv6_originate: BGP Default Information Originate
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_originate_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6RedistributeArgs', 'TransportRoutingBgpFeatureIpv6RedistributeArgsDict']]]] ipv6_redistributes: Redistribute routes into BGP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6RedistributeArgs', 'TransportRoutingBgpFeatureIpv6RedistributeArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Redistribute']]]] ipv6_redistributes: Redistribute routes into BGP
         :param pulumi.Input[_builtins.bool] ipv6_table_map_filter: Table map filtered or not
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_table_map_filter_variable: Variable name
@@ -2098,7 +2098,7 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] missing_med_as_worst: If path has no MED, consider it to be worst path when selecting active BGP paths
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] missing_med_as_worst_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureMplsInterfaceArgs', 'TransportRoutingBgpFeatureMplsInterfaceArgsDict']]]] mpls_interfaces: MPLS BGP Interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureMplsInterfaceArgs', 'TransportRoutingBgpFeatureMplsInterfaceArgsDict', 'outputs.TransportRoutingBgpFeatureMplsInterface']]]] mpls_interfaces: MPLS BGP Interface
         :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] multipath_relax_variable: Variable name
@@ -2267,25 +2267,25 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
                  hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  internal_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
                  internal_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict']]]]] = None,
+                 ipv4_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4AggregateAddress']]]]] = None,
                  ipv4_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
                  ipv4_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NeighborArgs', 'TransportRoutingBgpFeatureIpv4NeighborArgsDict']]]]] = None,
-                 ipv4_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NetworkArgs', 'TransportRoutingBgpFeatureIpv4NetworkArgsDict']]]]] = None,
+                 ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NeighborArgs', 'TransportRoutingBgpFeatureIpv4NeighborArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Neighbor']]]]] = None,
+                 ipv4_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NetworkArgs', 'TransportRoutingBgpFeatureIpv4NetworkArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Network']]]]] = None,
                  ipv4_originate: pulumi.Input[Optional[_builtins.bool]] = None,
                  ipv4_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4RedistributeArgs', 'TransportRoutingBgpFeatureIpv4RedistributeArgsDict']]]]] = None,
+                 ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4RedistributeArgs', 'TransportRoutingBgpFeatureIpv4RedistributeArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Redistribute']]]]] = None,
                  ipv4_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
                  ipv4_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict']]]]] = None,
+                 ipv6_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6AggregateAddress']]]]] = None,
                  ipv6_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
                  ipv6_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NeighborArgs', 'TransportRoutingBgpFeatureIpv6NeighborArgsDict']]]]] = None,
-                 ipv6_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NetworkArgs', 'TransportRoutingBgpFeatureIpv6NetworkArgsDict']]]]] = None,
+                 ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NeighborArgs', 'TransportRoutingBgpFeatureIpv6NeighborArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Neighbor']]]]] = None,
+                 ipv6_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NetworkArgs', 'TransportRoutingBgpFeatureIpv6NetworkArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Network']]]]] = None,
                  ipv6_originate: pulumi.Input[Optional[_builtins.bool]] = None,
                  ipv6_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6RedistributeArgs', 'TransportRoutingBgpFeatureIpv6RedistributeArgsDict']]]]] = None,
+                 ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6RedistributeArgs', 'TransportRoutingBgpFeatureIpv6RedistributeArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Redistribute']]]]] = None,
                  ipv6_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
                  ipv6_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2295,7 +2295,7 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
                  local_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  missing_med_as_worst: pulumi.Input[Optional[_builtins.bool]] = None,
                  missing_med_as_worst_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 mpls_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureMplsInterfaceArgs', 'TransportRoutingBgpFeatureMplsInterfaceArgsDict']]]]] = None,
+                 mpls_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureMplsInterfaceArgs', 'TransportRoutingBgpFeatureMplsInterfaceArgsDict', 'outputs.TransportRoutingBgpFeatureMplsInterface']]]]] = None,
                  multipath_relax: pulumi.Input[Optional[_builtins.bool]] = None,
                  multipath_relax_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2397,25 +2397,25 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
             hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
             internal_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
             internal_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv4_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict']]]]] = None,
+            ipv4_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4AggregateAddress']]]]] = None,
             ipv4_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
             ipv4_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NeighborArgs', 'TransportRoutingBgpFeatureIpv4NeighborArgsDict']]]]] = None,
-            ipv4_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NetworkArgs', 'TransportRoutingBgpFeatureIpv4NetworkArgsDict']]]]] = None,
+            ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NeighborArgs', 'TransportRoutingBgpFeatureIpv4NeighborArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Neighbor']]]]] = None,
+            ipv4_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NetworkArgs', 'TransportRoutingBgpFeatureIpv4NetworkArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Network']]]]] = None,
             ipv4_originate: pulumi.Input[Optional[_builtins.bool]] = None,
             ipv4_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4RedistributeArgs', 'TransportRoutingBgpFeatureIpv4RedistributeArgsDict']]]]] = None,
+            ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4RedistributeArgs', 'TransportRoutingBgpFeatureIpv4RedistributeArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Redistribute']]]]] = None,
             ipv4_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
             ipv4_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ipv4_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv6_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict']]]]] = None,
+            ipv6_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6AggregateAddress']]]]] = None,
             ipv6_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
             ipv6_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NeighborArgs', 'TransportRoutingBgpFeatureIpv6NeighborArgsDict']]]]] = None,
-            ipv6_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NetworkArgs', 'TransportRoutingBgpFeatureIpv6NetworkArgsDict']]]]] = None,
+            ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NeighborArgs', 'TransportRoutingBgpFeatureIpv6NeighborArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Neighbor']]]]] = None,
+            ipv6_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NetworkArgs', 'TransportRoutingBgpFeatureIpv6NetworkArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Network']]]]] = None,
             ipv6_originate: pulumi.Input[Optional[_builtins.bool]] = None,
             ipv6_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6RedistributeArgs', 'TransportRoutingBgpFeatureIpv6RedistributeArgsDict']]]]] = None,
+            ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6RedistributeArgs', 'TransportRoutingBgpFeatureIpv6RedistributeArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Redistribute']]]]] = None,
             ipv6_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
             ipv6_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ipv6_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2425,7 +2425,7 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
             local_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
             missing_med_as_worst: pulumi.Input[Optional[_builtins.bool]] = None,
             missing_med_as_worst_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            mpls_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureMplsInterfaceArgs', 'TransportRoutingBgpFeatureMplsInterfaceArgsDict']]]]] = None,
+            mpls_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureMplsInterfaceArgs', 'TransportRoutingBgpFeatureMplsInterfaceArgsDict', 'outputs.TransportRoutingBgpFeatureMplsInterface']]]]] = None,
             multipath_relax: pulumi.Input[Optional[_builtins.bool]] = None,
             multipath_relax_variable: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2468,29 +2468,29 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
                  - Range: `1`-`255`
                  - Default value: `200`
         :param pulumi.Input[_builtins.str] internal_routes_distance_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict']]]] ipv4_aggregate_addresses: Aggregate prefixes in specific range
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4AggregateAddress']]]] ipv4_aggregate_addresses: Aggregate prefixes in specific range
         :param pulumi.Input[_builtins.int] ipv4_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing
                  - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv4_eibgp_maximum_paths_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NeighborArgs', 'TransportRoutingBgpFeatureIpv4NeighborArgsDict']]]] ipv4_neighbors: Set BGP IPv4 neighbors
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NetworkArgs', 'TransportRoutingBgpFeatureIpv4NetworkArgsDict']]]] ipv4_networks: Configure the networks for BGP to advertise
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NeighborArgs', 'TransportRoutingBgpFeatureIpv4NeighborArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Neighbor']]]] ipv4_neighbors: Set BGP IPv4 neighbors
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NetworkArgs', 'TransportRoutingBgpFeatureIpv4NetworkArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Network']]]] ipv4_networks: Configure the networks for BGP to advertise
         :param pulumi.Input[_builtins.bool] ipv4_originate: BGP Default Information Originate
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_originate_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4RedistributeArgs', 'TransportRoutingBgpFeatureIpv4RedistributeArgsDict']]]] ipv4_redistributes: Redistribute routes into BGP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4RedistributeArgs', 'TransportRoutingBgpFeatureIpv4RedistributeArgsDict', 'outputs.TransportRoutingBgpFeatureIpv4Redistribute']]]] ipv4_redistributes: Redistribute routes into BGP
         :param pulumi.Input[_builtins.bool] ipv4_table_map_filter: Table map filtered or not
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_table_map_filter_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict']]]] ipv6_aggregate_addresses: IPv6 Aggregate prefixes in specific range
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6AggregateAddress']]]] ipv6_aggregate_addresses: IPv6 Aggregate prefixes in specific range
         :param pulumi.Input[_builtins.int] ipv6_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing
                  - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv6_eibgp_maximum_paths_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NeighborArgs', 'TransportRoutingBgpFeatureIpv6NeighborArgsDict']]]] ipv6_neighbors: Set BGP IPv6 neighbors
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NetworkArgs', 'TransportRoutingBgpFeatureIpv6NetworkArgsDict']]]] ipv6_networks: Configure the networks for BGP to advertise
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NeighborArgs', 'TransportRoutingBgpFeatureIpv6NeighborArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Neighbor']]]] ipv6_neighbors: Set BGP IPv6 neighbors
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NetworkArgs', 'TransportRoutingBgpFeatureIpv6NetworkArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Network']]]] ipv6_networks: Configure the networks for BGP to advertise
         :param pulumi.Input[_builtins.bool] ipv6_originate: BGP Default Information Originate
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_originate_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6RedistributeArgs', 'TransportRoutingBgpFeatureIpv6RedistributeArgsDict']]]] ipv6_redistributes: Redistribute routes into BGP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6RedistributeArgs', 'TransportRoutingBgpFeatureIpv6RedistributeArgsDict', 'outputs.TransportRoutingBgpFeatureIpv6Redistribute']]]] ipv6_redistributes: Redistribute routes into BGP
         :param pulumi.Input[_builtins.bool] ipv6_table_map_filter: Table map filtered or not
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_table_map_filter_variable: Variable name
@@ -2505,7 +2505,7 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] missing_med_as_worst: If path has no MED, consider it to be worst path when selecting active BGP paths
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] missing_med_as_worst_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureMplsInterfaceArgs', 'TransportRoutingBgpFeatureMplsInterfaceArgsDict']]]] mpls_interfaces: MPLS BGP Interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureMplsInterfaceArgs', 'TransportRoutingBgpFeatureMplsInterfaceArgsDict', 'outputs.TransportRoutingBgpFeatureMplsInterface']]]] mpls_interfaces: MPLS BGP Interface
         :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] multipath_relax_variable: Variable name

@@ -170,7 +170,7 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]]] = None,
+                 qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict', 'outputs.QosMapPolicyDefinitionQosScheduler']]]]] = None,
                  __props__=None):
         """
         This resource can manage a QoS Map Policy Definition .
@@ -208,7 +208,7 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]] qos_schedulers: List of QoS schedulers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict', 'outputs.QosMapPolicyDefinitionQosScheduler']]]] qos_schedulers: List of QoS schedulers
         """
         ...
     @overload
@@ -265,7 +265,7 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]]] = None,
+                 qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict', 'outputs.QosMapPolicyDefinitionQosScheduler']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -296,7 +296,7 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]]] = None,
+            qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict', 'outputs.QosMapPolicyDefinitionQosScheduler']]]]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'QosMapPolicyDefinition':
         """
@@ -308,7 +308,7 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]] qos_schedulers: List of QoS schedulers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict', 'outputs.QosMapPolicyDefinitionQosScheduler']]]] qos_schedulers: List of QoS schedulers
         :param pulumi.Input[_builtins.str] type: Type
         :param pulumi.Input[_builtins.int] version: The version of the object
         """

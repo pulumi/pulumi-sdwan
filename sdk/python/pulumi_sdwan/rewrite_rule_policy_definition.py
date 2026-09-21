@@ -170,7 +170,7 @@ class RewriteRulePolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RewriteRulePolicyDefinitionRuleArgs', 'RewriteRulePolicyDefinitionRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RewriteRulePolicyDefinitionRuleArgs', 'RewriteRulePolicyDefinitionRuleArgsDict', 'outputs.RewriteRulePolicyDefinitionRule']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Rewrite Rule Policy Definition .
@@ -205,7 +205,7 @@ class RewriteRulePolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['RewriteRulePolicyDefinitionRuleArgs', 'RewriteRulePolicyDefinitionRuleArgsDict']]]] rules: List of rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['RewriteRulePolicyDefinitionRuleArgs', 'RewriteRulePolicyDefinitionRuleArgsDict', 'outputs.RewriteRulePolicyDefinitionRule']]]] rules: List of rules
         """
         ...
     @overload
@@ -259,7 +259,7 @@ class RewriteRulePolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RewriteRulePolicyDefinitionRuleArgs', 'RewriteRulePolicyDefinitionRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RewriteRulePolicyDefinitionRuleArgs', 'RewriteRulePolicyDefinitionRuleArgsDict', 'outputs.RewriteRulePolicyDefinitionRule']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -290,7 +290,7 @@ class RewriteRulePolicyDefinition(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RewriteRulePolicyDefinitionRuleArgs', 'RewriteRulePolicyDefinitionRuleArgsDict']]]]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RewriteRulePolicyDefinitionRuleArgs', 'RewriteRulePolicyDefinitionRuleArgsDict', 'outputs.RewriteRulePolicyDefinitionRule']]]]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'RewriteRulePolicyDefinition':
         """
@@ -302,7 +302,7 @@ class RewriteRulePolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['RewriteRulePolicyDefinitionRuleArgs', 'RewriteRulePolicyDefinitionRuleArgsDict']]]] rules: List of rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['RewriteRulePolicyDefinitionRuleArgs', 'RewriteRulePolicyDefinitionRuleArgsDict', 'outputs.RewriteRulePolicyDefinitionRule']]]] rules: List of rules
         :param pulumi.Input[_builtins.str] type: Type
         :param pulumi.Input[_builtins.int] version: The version of the object
         """

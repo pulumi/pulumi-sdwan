@@ -224,7 +224,7 @@ class ServiceDualRouterHaFeature(pulumi.CustomResource):
                  enable_optimize_paths: pulumi.Input[Optional[_builtins.bool]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 redundancy_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDualRouterHaFeatureRedundancyGroupArgs', 'ServiceDualRouterHaFeatureRedundancyGroupArgsDict']]]]] = None,
+                 redundancy_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDualRouterHaFeatureRedundancyGroupArgs', 'ServiceDualRouterHaFeatureRedundancyGroupArgsDict', 'outputs.ServiceDualRouterHaFeatureRedundancyGroup']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Service Dual Router HA Feature.
@@ -268,7 +268,7 @@ class ServiceDualRouterHaFeature(pulumi.CustomResource):
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDualRouterHaFeatureRedundancyGroupArgs', 'ServiceDualRouterHaFeatureRedundancyGroupArgsDict']]]] redundancy_groups: Service VPN Id List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDualRouterHaFeatureRedundancyGroupArgs', 'ServiceDualRouterHaFeatureRedundancyGroupArgsDict', 'outputs.ServiceDualRouterHaFeatureRedundancyGroup']]]] redundancy_groups: Service VPN Id List
         """
         ...
     @overload
@@ -330,7 +330,7 @@ class ServiceDualRouterHaFeature(pulumi.CustomResource):
                  enable_optimize_paths: pulumi.Input[Optional[_builtins.bool]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 redundancy_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDualRouterHaFeatureRedundancyGroupArgs', 'ServiceDualRouterHaFeatureRedundancyGroupArgsDict']]]]] = None,
+                 redundancy_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDualRouterHaFeatureRedundancyGroupArgs', 'ServiceDualRouterHaFeatureRedundancyGroupArgsDict', 'outputs.ServiceDualRouterHaFeatureRedundancyGroup']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -364,7 +364,7 @@ class ServiceDualRouterHaFeature(pulumi.CustomResource):
             enable_optimize_paths: pulumi.Input[Optional[_builtins.bool]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            redundancy_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDualRouterHaFeatureRedundancyGroupArgs', 'ServiceDualRouterHaFeatureRedundancyGroupArgsDict']]]]] = None,
+            redundancy_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDualRouterHaFeatureRedundancyGroupArgs', 'ServiceDualRouterHaFeatureRedundancyGroupArgsDict', 'outputs.ServiceDualRouterHaFeatureRedundancyGroup']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceDualRouterHaFeature':
         """
         Get an existing ServiceDualRouterHaFeature resource's state with the given name, id, and optional extra
@@ -378,7 +378,7 @@ class ServiceDualRouterHaFeature(pulumi.CustomResource):
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDualRouterHaFeatureRedundancyGroupArgs', 'ServiceDualRouterHaFeatureRedundancyGroupArgsDict']]]] redundancy_groups: Service VPN Id List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDualRouterHaFeatureRedundancyGroupArgs', 'ServiceDualRouterHaFeatureRedundancyGroupArgsDict', 'outputs.ServiceDualRouterHaFeatureRedundancyGroup']]]] redundancy_groups: Service VPN Id List
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

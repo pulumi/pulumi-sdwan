@@ -714,24 +714,24 @@ class SystemAaaFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  accounting_group: pulumi.Input[Optional[_builtins.bool]] = None,
                  accounting_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict']]]]] = None,
+                 accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict', 'outputs.SystemAaaFeatureAccountingRule']]]]] = None,
                  authentication_group: pulumi.Input[Optional[_builtins.bool]] = None,
                  authentication_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
                  authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
                  authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict']]]]] = None,
+                 authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict', 'outputs.SystemAaaFeatureAuthorizationRule']]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]]] = None,
+                 radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict', 'outputs.SystemAaaFeatureRadiusGroup']]]]] = None,
                  server_auth_orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]]] = None,
+                 tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict', 'outputs.SystemAaaFeatureTacacsGroup']]]]] = None,
                  trustsec_cts_auth_list: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_cts_auth_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_radius_group: pulumi.Input[Optional[_builtins.str]] = None,
-                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict', 'outputs.SystemAaaFeatureUser']]]]] = None,
                  __props__=None):
         """
         This resource can manage a System AAA Feature.
@@ -824,7 +824,7 @@ class SystemAaaFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] accounting_group: Accounting configurations parameters
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] accounting_group_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict']]]] accounting_rules: Configure the accounting rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict', 'outputs.SystemAaaFeatureAccountingRule']]]] accounting_rules: Configure the accounting rules
         :param pulumi.Input[_builtins.bool] authentication_group: Authentication configurations parameters
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] authentication_group_variable: Variable name
@@ -834,17 +834,17 @@ class SystemAaaFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_console_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict']]]] authorization_rules: Configure the Authorization Rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict', 'outputs.SystemAaaFeatureAuthorizationRule']]]] authorization_rules: Configure the Authorization Rules
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]] radius_groups: Configure the Radius serverGroup
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict', 'outputs.SystemAaaFeatureRadiusGroup']]]] radius_groups: Configure the Radius serverGroup
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] server_auth_orders: ServerGroups priority order
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]] tacacs_groups: Configure the TACACS serverGroup
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict', 'outputs.SystemAaaFeatureTacacsGroup']]]] tacacs_groups: Configure the TACACS serverGroup
         :param pulumi.Input[_builtins.str] trustsec_cts_auth_list: CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] trustsec_cts_auth_list_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] trustsec_radius_group: RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]] users: Create local login account
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict', 'outputs.SystemAaaFeatureUser']]]] users: Create local login account
         """
         ...
     @overload
@@ -955,24 +955,24 @@ class SystemAaaFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  accounting_group: pulumi.Input[Optional[_builtins.bool]] = None,
                  accounting_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict']]]]] = None,
+                 accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict', 'outputs.SystemAaaFeatureAccountingRule']]]]] = None,
                  authentication_group: pulumi.Input[Optional[_builtins.bool]] = None,
                  authentication_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
                  authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
                  authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict']]]]] = None,
+                 authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict', 'outputs.SystemAaaFeatureAuthorizationRule']]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]]] = None,
+                 radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict', 'outputs.SystemAaaFeatureRadiusGroup']]]]] = None,
                  server_auth_orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]]] = None,
+                 tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict', 'outputs.SystemAaaFeatureTacacsGroup']]]]] = None,
                  trustsec_cts_auth_list: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_cts_auth_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_radius_group: pulumi.Input[Optional[_builtins.str]] = None,
-                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict', 'outputs.SystemAaaFeatureUser']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1019,24 +1019,24 @@ class SystemAaaFeature(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             accounting_group: pulumi.Input[Optional[_builtins.bool]] = None,
             accounting_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict']]]]] = None,
+            accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict', 'outputs.SystemAaaFeatureAccountingRule']]]]] = None,
             authentication_group: pulumi.Input[Optional[_builtins.bool]] = None,
             authentication_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
             authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
             authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
             authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
             authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict']]]]] = None,
+            authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict', 'outputs.SystemAaaFeatureAuthorizationRule']]]]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]]] = None,
+            radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict', 'outputs.SystemAaaFeatureRadiusGroup']]]]] = None,
             server_auth_orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]]] = None,
+            tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict', 'outputs.SystemAaaFeatureTacacsGroup']]]]] = None,
             trustsec_cts_auth_list: pulumi.Input[Optional[_builtins.str]] = None,
             trustsec_cts_auth_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
             trustsec_radius_group: pulumi.Input[Optional[_builtins.str]] = None,
-            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]]] = None,
+            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict', 'outputs.SystemAaaFeatureUser']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SystemAaaFeature':
         """
         Get an existing SystemAaaFeature resource's state with the given name, id, and optional extra
@@ -1048,7 +1048,7 @@ class SystemAaaFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] accounting_group: Accounting configurations parameters
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] accounting_group_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict']]]] accounting_rules: Configure the accounting rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict', 'outputs.SystemAaaFeatureAccountingRule']]]] accounting_rules: Configure the accounting rules
         :param pulumi.Input[_builtins.bool] authentication_group: Authentication configurations parameters
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] authentication_group_variable: Variable name
@@ -1058,17 +1058,17 @@ class SystemAaaFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_console_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict']]]] authorization_rules: Configure the Authorization Rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict', 'outputs.SystemAaaFeatureAuthorizationRule']]]] authorization_rules: Configure the Authorization Rules
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]] radius_groups: Configure the Radius serverGroup
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict', 'outputs.SystemAaaFeatureRadiusGroup']]]] radius_groups: Configure the Radius serverGroup
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] server_auth_orders: ServerGroups priority order
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]] tacacs_groups: Configure the TACACS serverGroup
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict', 'outputs.SystemAaaFeatureTacacsGroup']]]] tacacs_groups: Configure the TACACS serverGroup
         :param pulumi.Input[_builtins.str] trustsec_cts_auth_list: CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] trustsec_cts_auth_list_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.str] trustsec_radius_group: RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]] users: Create local login account
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict', 'outputs.SystemAaaFeatureUser']]]] users: Create local login account
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

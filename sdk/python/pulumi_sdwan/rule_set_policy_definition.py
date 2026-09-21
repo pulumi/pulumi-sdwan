@@ -154,7 +154,7 @@ class RuleSetPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RuleSetPolicyDefinitionRuleArgs', 'RuleSetPolicyDefinitionRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RuleSetPolicyDefinitionRuleArgs', 'RuleSetPolicyDefinitionRuleArgsDict', 'outputs.RuleSetPolicyDefinitionRule']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Rule Set Policy Definition .
@@ -196,7 +196,7 @@ class RuleSetPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['RuleSetPolicyDefinitionRuleArgs', 'RuleSetPolicyDefinitionRuleArgsDict']]]] rules: List of rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['RuleSetPolicyDefinitionRuleArgs', 'RuleSetPolicyDefinitionRuleArgsDict', 'outputs.RuleSetPolicyDefinitionRule']]]] rules: List of rules
         """
         ...
     @overload
@@ -257,7 +257,7 @@ class RuleSetPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RuleSetPolicyDefinitionRuleArgs', 'RuleSetPolicyDefinitionRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RuleSetPolicyDefinitionRuleArgs', 'RuleSetPolicyDefinitionRuleArgsDict', 'outputs.RuleSetPolicyDefinitionRule']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -287,7 +287,7 @@ class RuleSetPolicyDefinition(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RuleSetPolicyDefinitionRuleArgs', 'RuleSetPolicyDefinitionRuleArgsDict']]]]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RuleSetPolicyDefinitionRuleArgs', 'RuleSetPolicyDefinitionRuleArgsDict', 'outputs.RuleSetPolicyDefinitionRule']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'RuleSetPolicyDefinition':
         """
         Get an existing RuleSetPolicyDefinition resource's state with the given name, id, and optional extra
@@ -298,7 +298,7 @@ class RuleSetPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['RuleSetPolicyDefinitionRuleArgs', 'RuleSetPolicyDefinitionRuleArgsDict']]]] rules: List of rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['RuleSetPolicyDefinitionRuleArgs', 'RuleSetPolicyDefinitionRuleArgsDict', 'outputs.RuleSetPolicyDefinitionRule']]]] rules: List of rules
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

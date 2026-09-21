@@ -237,7 +237,7 @@ class PolicyGroup(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict']]]]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict', 'outputs.PolicyGroupDevice']]]]] = None,
                  feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  policy_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -275,7 +275,7 @@ class PolicyGroup(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict']]]] devices: List of devices
+        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict', 'outputs.PolicyGroupDevice']]]] devices: List of devices
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
         :param pulumi.Input[_builtins.str] name: The name of the policy group
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] policy_versions: List of all associated policy versions
@@ -333,7 +333,7 @@ class PolicyGroup(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict']]]]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict', 'outputs.PolicyGroupDevice']]]]] = None,
                  feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  policy_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -368,7 +368,7 @@ class PolicyGroup(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
-            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict']]]]] = None,
+            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict', 'outputs.PolicyGroupDevice']]]]] = None,
             feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             policy_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -381,7 +381,7 @@ class PolicyGroup(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict']]]] devices: List of devices
+        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict', 'outputs.PolicyGroupDevice']]]] devices: List of devices
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
         :param pulumi.Input[_builtins.str] name: The name of the policy group
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] policy_versions: List of all associated policy versions

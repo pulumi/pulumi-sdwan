@@ -1349,7 +1349,7 @@ class TransportRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict']]]]] = None,
+                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict', 'outputs.TransportRoutingOspfv3Ipv4FeatureArea']]]]] = None,
                  default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
                  default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
                  default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1370,7 +1370,7 @@ class TransportRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
                  filter: pulumi.Input[Optional[_builtins.bool]] = None,
                  filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict']]]]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict', 'outputs.TransportRoutingOspfv3Ipv4FeatureRedistribute']]]]] = None,
                  reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
                  reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1458,7 +1458,7 @@ class TransportRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict']]]] areas: Configure OSPFv3 IPv4 area
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict', 'outputs.TransportRoutingOspfv3Ipv4FeatureArea']]]] areas: Configure OSPFv3 IPv4 area
         :param pulumi.Input[_builtins.bool] default_information_originate: Distribute default external route into OSPF disabled
         :param pulumi.Input[_builtins.bool] default_information_originate_always: Always advertise default route
         :param pulumi.Input[_builtins.str] default_information_originate_always_variable: Variable name
@@ -1490,7 +1490,7 @@ class TransportRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] filter_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict']]]] redistributes: Redistribute routes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict', 'outputs.TransportRoutingOspfv3Ipv4FeatureRedistribute']]]] redistributes: Redistribute routes
         :param pulumi.Input[_builtins.int] reference_bandwidth: Set reference bandwidth method to assign OSPF cost
                  - Range: `1`-`4294967`
                  - Default value: `100`
@@ -1606,7 +1606,7 @@ class TransportRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict']]]]] = None,
+                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict', 'outputs.TransportRoutingOspfv3Ipv4FeatureArea']]]]] = None,
                  default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
                  default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
                  default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1627,7 +1627,7 @@ class TransportRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
                  filter: pulumi.Input[Optional[_builtins.bool]] = None,
                  filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict']]]]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict', 'outputs.TransportRoutingOspfv3Ipv4FeatureRedistribute']]]]] = None,
                  reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
                  reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1704,7 +1704,7 @@ class TransportRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict']]]]] = None,
+            areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict', 'outputs.TransportRoutingOspfv3Ipv4FeatureArea']]]]] = None,
             default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
             default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
             default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1725,7 +1725,7 @@ class TransportRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
             filter: pulumi.Input[Optional[_builtins.bool]] = None,
             filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict']]]]] = None,
+            redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict', 'outputs.TransportRoutingOspfv3Ipv4FeatureRedistribute']]]]] = None,
             reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
             reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
             rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1750,7 +1750,7 @@ class TransportRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict']]]] areas: Configure OSPFv3 IPv4 area
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict', 'outputs.TransportRoutingOspfv3Ipv4FeatureArea']]]] areas: Configure OSPFv3 IPv4 area
         :param pulumi.Input[_builtins.bool] default_information_originate: Distribute default external route into OSPF disabled
         :param pulumi.Input[_builtins.bool] default_information_originate_always: Always advertise default route
         :param pulumi.Input[_builtins.str] default_information_originate_always_variable: Variable name
@@ -1782,7 +1782,7 @@ class TransportRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] filter_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict']]]] redistributes: Redistribute routes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict', 'outputs.TransportRoutingOspfv3Ipv4FeatureRedistribute']]]] redistributes: Redistribute routes
         :param pulumi.Input[_builtins.int] reference_bandwidth: Set reference bandwidth method to assign OSPF cost
                  - Range: `1`-`4294967`
                  - Default value: `100`

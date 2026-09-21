@@ -229,7 +229,7 @@ class ServiceIpv4AclFeature(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict', 'outputs.ServiceIpv4AclFeatureSequence']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Service IPv4 ACL Feature.
@@ -286,7 +286,7 @@ class ServiceIpv4AclFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict']]]] sequences: Access Control List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict', 'outputs.ServiceIpv4AclFeatureSequence']]]] sequences: Access Control List
         """
         ...
     @overload
@@ -360,7 +360,7 @@ class ServiceIpv4AclFeature(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict', 'outputs.ServiceIpv4AclFeatureSequence']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -392,7 +392,7 @@ class ServiceIpv4AclFeature(pulumi.CustomResource):
             description: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict']]]]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict', 'outputs.ServiceIpv4AclFeatureSequence']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceIpv4AclFeature':
         """
         Get an existing ServiceIpv4AclFeature resource's state with the given name, id, and optional extra
@@ -407,7 +407,7 @@ class ServiceIpv4AclFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict']]]] sequences: Access Control List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict', 'outputs.ServiceIpv4AclFeatureSequence']]]] sequences: Access Control List
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

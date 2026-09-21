@@ -207,7 +207,7 @@ class SecurityAppHostingFeatureTemplate(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 virtual_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityAppHostingFeatureTemplateVirtualApplicationArgs', 'SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict']]]]] = None,
+                 virtual_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityAppHostingFeatureTemplateVirtualApplicationArgs', 'SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict', 'outputs.SecurityAppHostingFeatureTemplateVirtualApplication']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Security App Hosting feature template.
@@ -251,7 +251,7 @@ class SecurityAppHostingFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
                  - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityAppHostingFeatureTemplateVirtualApplicationArgs', 'SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict']]]] virtual_applications: Virtual application Instance
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityAppHostingFeatureTemplateVirtualApplicationArgs', 'SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict', 'outputs.SecurityAppHostingFeatureTemplateVirtualApplication']]]] virtual_applications: Virtual application Instance
         """
         ...
     @overload
@@ -313,7 +313,7 @@ class SecurityAppHostingFeatureTemplate(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 virtual_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityAppHostingFeatureTemplateVirtualApplicationArgs', 'SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict']]]]] = None,
+                 virtual_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityAppHostingFeatureTemplateVirtualApplicationArgs', 'SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict', 'outputs.SecurityAppHostingFeatureTemplateVirtualApplication']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -348,7 +348,7 @@ class SecurityAppHostingFeatureTemplate(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             template_type: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None,
-            virtual_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityAppHostingFeatureTemplateVirtualApplicationArgs', 'SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict']]]]] = None) -> 'SecurityAppHostingFeatureTemplate':
+            virtual_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityAppHostingFeatureTemplateVirtualApplicationArgs', 'SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict', 'outputs.SecurityAppHostingFeatureTemplateVirtualApplication']]]]] = None) -> 'SecurityAppHostingFeatureTemplate':
         """
         Get an existing SecurityAppHostingFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -362,7 +362,7 @@ class SecurityAppHostingFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityAppHostingFeatureTemplateVirtualApplicationArgs', 'SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict']]]] virtual_applications: Virtual application Instance
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityAppHostingFeatureTemplateVirtualApplicationArgs', 'SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict', 'outputs.SecurityAppHostingFeatureTemplateVirtualApplication']]]] virtual_applications: Virtual application Instance
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

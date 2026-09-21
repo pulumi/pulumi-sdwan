@@ -4700,7 +4700,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  acl_ipv4_ingress_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                  acl_ipv6_egress_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                  acl_ipv6_ingress_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureArpArgs', 'TransportWanVpnInterfaceCellularFeatureArpArgsDict']]]]] = None,
+                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureArpArgs', 'TransportWanVpnInterfaceCellularFeatureArpArgsDict', 'outputs.TransportWanVpnInterfaceCellularFeatureArp']]]]] = None,
                  bandwidth_downstream: pulumi.Input[Optional[_builtins.int]] = None,
                  bandwidth_downstream_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  bandwidth_upstream: pulumi.Input[Optional[_builtins.int]] = None,
@@ -4803,7 +4803,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  tunnel_interface_color_restrict: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_color_restrict_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict', 'outputs.TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
                  tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -4930,7 +4930,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureArpArgs', 'TransportWanVpnInterfaceCellularFeatureArpArgsDict']]]] arps: Configure ARP entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureArpArgs', 'TransportWanVpnInterfaceCellularFeatureArpArgsDict', 'outputs.TransportWanVpnInterfaceCellularFeatureArp']]]] arps: Configure ARP entries
         :param pulumi.Input[_builtins.int] bandwidth_downstream: Interface downstream bandwidth capacity, in kbps
                  - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] bandwidth_downstream_variable: Variable name
@@ -5081,7 +5081,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_interface_color_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict', 'outputs.TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list.
         :param pulumi.Input[_builtins.bool] tunnel_interface_full_port_hop: Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
@@ -5249,7 +5249,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  acl_ipv4_ingress_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                  acl_ipv6_egress_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                  acl_ipv6_ingress_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureArpArgs', 'TransportWanVpnInterfaceCellularFeatureArpArgsDict']]]]] = None,
+                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureArpArgs', 'TransportWanVpnInterfaceCellularFeatureArpArgsDict', 'outputs.TransportWanVpnInterfaceCellularFeatureArp']]]]] = None,
                  bandwidth_downstream: pulumi.Input[Optional[_builtins.int]] = None,
                  bandwidth_downstream_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  bandwidth_upstream: pulumi.Input[Optional[_builtins.int]] = None,
@@ -5352,7 +5352,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  tunnel_interface_color_restrict: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_color_restrict_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict', 'outputs.TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
                  tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -5549,7 +5549,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             acl_ipv4_ingress_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
             acl_ipv6_egress_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
             acl_ipv6_ingress_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
-            arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureArpArgs', 'TransportWanVpnInterfaceCellularFeatureArpArgsDict']]]]] = None,
+            arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureArpArgs', 'TransportWanVpnInterfaceCellularFeatureArpArgsDict', 'outputs.TransportWanVpnInterfaceCellularFeatureArp']]]]] = None,
             bandwidth_downstream: pulumi.Input[Optional[_builtins.int]] = None,
             bandwidth_downstream_variable: pulumi.Input[Optional[_builtins.str]] = None,
             bandwidth_upstream: pulumi.Input[Optional[_builtins.int]] = None,
@@ -5652,7 +5652,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             tunnel_interface_color_restrict: pulumi.Input[Optional[_builtins.bool]] = None,
             tunnel_interface_color_restrict_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+            tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict', 'outputs.TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation']]]]] = None,
             tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
             tunnel_interface_full_port_hop: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -5691,7 +5691,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureArpArgs', 'TransportWanVpnInterfaceCellularFeatureArpArgsDict']]]] arps: Configure ARP entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureArpArgs', 'TransportWanVpnInterfaceCellularFeatureArpArgsDict', 'outputs.TransportWanVpnInterfaceCellularFeatureArp']]]] arps: Configure ARP entries
         :param pulumi.Input[_builtins.int] bandwidth_downstream: Interface downstream bandwidth capacity, in kbps
                  - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] bandwidth_downstream_variable: Variable name
@@ -5842,7 +5842,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_interface_color_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict', 'outputs.TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list.
         :param pulumi.Input[_builtins.bool] tunnel_interface_full_port_hop: Enable port hopping on the tunnel interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher

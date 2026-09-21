@@ -275,7 +275,7 @@ class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
                  direction: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationPriorityTrafficPolicyPolicySequenceArgs', 'ApplicationPriorityTrafficPolicyPolicySequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationPriorityTrafficPolicyPolicySequenceArgs', 'ApplicationPriorityTrafficPolicyPolicySequenceArgsDict', 'outputs.ApplicationPriorityTrafficPolicyPolicySequence']]]]] = None,
                  vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
@@ -329,7 +329,7 @@ class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] direction: - Choices: `service`, `tunnel`, `all`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityTrafficPolicyPolicySequenceArgs', 'ApplicationPriorityTrafficPolicyPolicySequenceArgsDict']]]] sequences: Traffic policy sequence list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityTrafficPolicyPolicySequenceArgs', 'ApplicationPriorityTrafficPolicyPolicySequenceArgsDict', 'outputs.ApplicationPriorityTrafficPolicyPolicySequence']]]] sequences: Traffic policy sequence list
         """
         ...
     @overload
@@ -401,7 +401,7 @@ class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
                  direction: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationPriorityTrafficPolicyPolicySequenceArgs', 'ApplicationPriorityTrafficPolicyPolicySequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationPriorityTrafficPolicyPolicySequenceArgs', 'ApplicationPriorityTrafficPolicyPolicySequenceArgsDict', 'outputs.ApplicationPriorityTrafficPolicyPolicySequence']]]]] = None,
                  vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -443,7 +443,7 @@ class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
             direction: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationPriorityTrafficPolicyPolicySequenceArgs', 'ApplicationPriorityTrafficPolicyPolicySequenceArgsDict']]]]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationPriorityTrafficPolicyPolicySequenceArgs', 'ApplicationPriorityTrafficPolicyPolicySequenceArgsDict', 'outputs.ApplicationPriorityTrafficPolicyPolicySequence']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None,
             vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'ApplicationPriorityTrafficPolicyPolicy':
         """
@@ -458,7 +458,7 @@ class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] direction: - Choices: `service`, `tunnel`, `all`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityTrafficPolicyPolicySequenceArgs', 'ApplicationPriorityTrafficPolicyPolicySequenceArgsDict']]]] sequences: Traffic policy sequence list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityTrafficPolicyPolicySequenceArgs', 'ApplicationPriorityTrafficPolicyPolicySequenceArgsDict', 'outputs.ApplicationPriorityTrafficPolicyPolicySequence']]]] sequences: Traffic policy sequence list
         :param pulumi.Input[_builtins.int] version: The version of the Policy
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

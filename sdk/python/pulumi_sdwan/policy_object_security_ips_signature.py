@@ -185,7 +185,7 @@ class PolicyObjectSecurityIpsSignature(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityIpsSignatureEntryArgs', 'PolicyObjectSecurityIpsSignatureEntryArgsDict']]]]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityIpsSignatureEntryArgs', 'PolicyObjectSecurityIpsSignatureEntryArgsDict', 'outputs.PolicyObjectSecurityIpsSignatureEntry']]]]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -223,7 +223,7 @@ class PolicyObjectSecurityIpsSignature(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
-        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectSecurityIpsSignatureEntryArgs', 'PolicyObjectSecurityIpsSignatureEntryArgsDict']]]] entries: Ips Signature
+        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectSecurityIpsSignatureEntryArgs', 'PolicyObjectSecurityIpsSignatureEntryArgsDict', 'outputs.PolicyObjectSecurityIpsSignatureEntry']]]] entries: Ips Signature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         """
@@ -280,7 +280,7 @@ class PolicyObjectSecurityIpsSignature(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityIpsSignatureEntryArgs', 'PolicyObjectSecurityIpsSignatureEntryArgsDict']]]]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityIpsSignatureEntryArgs', 'PolicyObjectSecurityIpsSignatureEntryArgsDict', 'outputs.PolicyObjectSecurityIpsSignatureEntry']]]]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -312,7 +312,7 @@ class PolicyObjectSecurityIpsSignature(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
-            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityIpsSignatureEntryArgs', 'PolicyObjectSecurityIpsSignatureEntryArgsDict']]]]] = None,
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityIpsSignatureEntryArgs', 'PolicyObjectSecurityIpsSignatureEntryArgsDict', 'outputs.PolicyObjectSecurityIpsSignatureEntry']]]]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'PolicyObjectSecurityIpsSignature':
@@ -324,7 +324,7 @@ class PolicyObjectSecurityIpsSignature(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
-        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectSecurityIpsSignatureEntryArgs', 'PolicyObjectSecurityIpsSignatureEntryArgsDict']]]] entries: Ips Signature
+        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectSecurityIpsSignatureEntryArgs', 'PolicyObjectSecurityIpsSignatureEntryArgsDict', 'outputs.PolicyObjectSecurityIpsSignatureEntry']]]] entries: Ips Signature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         :param pulumi.Input[_builtins.int] version: The version of the Policy_object

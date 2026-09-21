@@ -575,8 +575,8 @@ class SystemSecurityFeature(pulumi.CustomResource):
                  integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  ipsec_pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
                  ipsec_pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict']]]]] = None,
-                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]]] = None,
+                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict', 'outputs.SystemSecurityFeatureKeychain']]]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict', 'outputs.SystemSecurityFeatureKey']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  rekey: pulumi.Input[Optional[_builtins.int]] = None,
                  rekey_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -650,8 +650,8 @@ class SystemSecurityFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] ipsec_pairwise_keying: Enable or disable IPsec pairwise-keying
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ipsec_pairwise_keying_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict']]]] keychains: Configure a Keychain
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]] keys: Configure a Key
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict', 'outputs.SystemSecurityFeatureKeychain']]]] keychains: Configure a Keychain
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict', 'outputs.SystemSecurityFeatureKey']]]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.int] rekey: Set how often to change the AES key for DTLS connections
                  - Range: `10`-`63113904`
@@ -741,8 +741,8 @@ class SystemSecurityFeature(pulumi.CustomResource):
                  integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  ipsec_pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
                  ipsec_pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict']]]]] = None,
-                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]]] = None,
+                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict', 'outputs.SystemSecurityFeatureKeychain']]]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict', 'outputs.SystemSecurityFeatureKey']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  rekey: pulumi.Input[Optional[_builtins.int]] = None,
                  rekey_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -793,8 +793,8 @@ class SystemSecurityFeature(pulumi.CustomResource):
             integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             ipsec_pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
             ipsec_pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict']]]]] = None,
-            keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]]] = None,
+            keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict', 'outputs.SystemSecurityFeatureKeychain']]]]] = None,
+            keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict', 'outputs.SystemSecurityFeatureKey']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             rekey: pulumi.Input[Optional[_builtins.int]] = None,
             rekey_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -821,8 +821,8 @@ class SystemSecurityFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] ipsec_pairwise_keying: Enable or disable IPsec pairwise-keying
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ipsec_pairwise_keying_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict']]]] keychains: Configure a Keychain
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]] keys: Configure a Key
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict', 'outputs.SystemSecurityFeatureKeychain']]]] keychains: Configure a Keychain
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict', 'outputs.SystemSecurityFeatureKey']]]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.int] rekey: Set how often to change the AES key for DTLS connections
                  - Range: `10`-`63113904`

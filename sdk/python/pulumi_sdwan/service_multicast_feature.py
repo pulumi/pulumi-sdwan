@@ -980,26 +980,26 @@ class ServiceMulticastFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 auto_rp_announces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpAnnounceArgs', 'ServiceMulticastFeatureAutoRpAnnounceArgsDict']]]]] = None,
-                 auto_rp_discoveries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpDiscoveryArgs', 'ServiceMulticastFeatureAutoRpDiscoveryArgsDict']]]]] = None,
+                 auto_rp_announces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpAnnounceArgs', 'ServiceMulticastFeatureAutoRpAnnounceArgsDict', 'outputs.ServiceMulticastFeatureAutoRpAnnounce']]]]] = None,
+                 auto_rp_discoveries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpDiscoveryArgs', 'ServiceMulticastFeatureAutoRpDiscoveryArgsDict', 'outputs.ServiceMulticastFeatureAutoRpDiscovery']]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_auto_rp: pulumi.Input[Optional[_builtins.bool]] = None,
                  enable_auto_rp_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 igmp_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureIgmpInterfaceArgs', 'ServiceMulticastFeatureIgmpInterfaceArgsDict']]]]] = None,
+                 igmp_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureIgmpInterfaceArgs', 'ServiceMulticastFeatureIgmpInterfaceArgsDict', 'outputs.ServiceMulticastFeatureIgmpInterface']]]]] = None,
                  local_replicator: pulumi.Input[Optional[_builtins.bool]] = None,
                  local_replicator_threshold: pulumi.Input[Optional[_builtins.int]] = None,
                  local_replicator_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  local_replicator_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  msdp_connection_retry_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  msdp_connection_retry_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 msdp_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureMsdpGroupArgs', 'ServiceMulticastFeatureMsdpGroupArgsDict']]]]] = None,
+                 msdp_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureMsdpGroupArgs', 'ServiceMulticastFeatureMsdpGroupArgsDict', 'outputs.ServiceMulticastFeatureMsdpGroup']]]]] = None,
                  msdp_originator_id: pulumi.Input[Optional[_builtins.str]] = None,
                  msdp_originator_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 pim_bsr_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrCandidateArgs', 'ServiceMulticastFeaturePimBsrCandidateArgsDict']]]]] = None,
-                 pim_bsr_rp_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrRpCandidateArgs', 'ServiceMulticastFeaturePimBsrRpCandidateArgsDict']]]]] = None,
-                 pim_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimInterfaceArgs', 'ServiceMulticastFeaturePimInterfaceArgsDict']]]]] = None,
+                 pim_bsr_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrCandidateArgs', 'ServiceMulticastFeaturePimBsrCandidateArgsDict', 'outputs.ServiceMulticastFeaturePimBsrCandidate']]]]] = None,
+                 pim_bsr_rp_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrRpCandidateArgs', 'ServiceMulticastFeaturePimBsrRpCandidateArgsDict', 'outputs.ServiceMulticastFeaturePimBsrRpCandidate']]]]] = None,
+                 pim_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimInterfaceArgs', 'ServiceMulticastFeaturePimInterfaceArgsDict', 'outputs.ServiceMulticastFeaturePimInterface']]]]] = None,
                  pim_source_specific_multicast_access_list: pulumi.Input[Optional[_builtins.str]] = None,
                  pim_source_specific_multicast_access_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  pim_source_specific_multicast_enable: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1007,7 +1007,7 @@ class ServiceMulticastFeature(pulumi.CustomResource):
                  pim_spt_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  spt_only: pulumi.Input[Optional[_builtins.bool]] = None,
                  spt_only_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 static_rp_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureStaticRpAddressArgs', 'ServiceMulticastFeatureStaticRpAddressArgsDict']]]]] = None,
+                 static_rp_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureStaticRpAddressArgs', 'ServiceMulticastFeatureStaticRpAddressArgsDict', 'outputs.ServiceMulticastFeatureStaticRpAddress']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Service Multicast Feature.
@@ -1090,14 +1090,14 @@ class ServiceMulticastFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpAnnounceArgs', 'ServiceMulticastFeatureAutoRpAnnounceArgsDict']]]] auto_rp_announces: Enable or disable RP Announce
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpDiscoveryArgs', 'ServiceMulticastFeatureAutoRpDiscoveryArgsDict']]]] auto_rp_discoveries: Enable or disable RP Discovery
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpAnnounceArgs', 'ServiceMulticastFeatureAutoRpAnnounceArgsDict', 'outputs.ServiceMulticastFeatureAutoRpAnnounce']]]] auto_rp_announces: Enable or disable RP Announce
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpDiscoveryArgs', 'ServiceMulticastFeatureAutoRpDiscoveryArgsDict', 'outputs.ServiceMulticastFeatureAutoRpDiscovery']]]] auto_rp_discoveries: Enable or disable RP Discovery
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.bool] enable_auto_rp: Enable or disable auto-RP
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_auto_rp_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureIgmpInterfaceArgs', 'ServiceMulticastFeatureIgmpInterfaceArgsDict']]]] igmp_interfaces: Set IGMP interface parameters
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureIgmpInterfaceArgs', 'ServiceMulticastFeatureIgmpInterfaceArgsDict', 'outputs.ServiceMulticastFeatureIgmpInterface']]]] igmp_interfaces: Set IGMP interface parameters
         :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device
                  - Default value: `false`
         :param pulumi.Input[_builtins.int] local_replicator_threshold: Set number of joins per group the router supports
@@ -1107,13 +1107,13 @@ class ServiceMulticastFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] msdp_connection_retry_interval: Set MSDP refresh timer
                  - Range: `1`-`60`
         :param pulumi.Input[_builtins.str] msdp_connection_retry_interval_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureMsdpGroupArgs', 'ServiceMulticastFeatureMsdpGroupArgsDict']]]] msdp_groups: multicast MSDP peer
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureMsdpGroupArgs', 'ServiceMulticastFeatureMsdpGroupArgsDict', 'outputs.ServiceMulticastFeatureMsdpGroup']]]] msdp_groups: multicast MSDP peer
         :param pulumi.Input[_builtins.str] msdp_originator_id: Set MSDP originator ID
         :param pulumi.Input[_builtins.str] msdp_originator_id_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrCandidateArgs', 'ServiceMulticastFeaturePimBsrCandidateArgsDict']]]] pim_bsr_candidates: bsr candidate Attributes
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrRpCandidateArgs', 'ServiceMulticastFeaturePimBsrRpCandidateArgsDict']]]] pim_bsr_rp_candidates: Set RP Discovery Scope
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimInterfaceArgs', 'ServiceMulticastFeaturePimInterfaceArgsDict']]]] pim_interfaces: Set PIM interface parameters
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrCandidateArgs', 'ServiceMulticastFeaturePimBsrCandidateArgsDict', 'outputs.ServiceMulticastFeaturePimBsrCandidate']]]] pim_bsr_candidates: bsr candidate Attributes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrRpCandidateArgs', 'ServiceMulticastFeaturePimBsrRpCandidateArgsDict', 'outputs.ServiceMulticastFeaturePimBsrRpCandidate']]]] pim_bsr_rp_candidates: Set RP Discovery Scope
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimInterfaceArgs', 'ServiceMulticastFeaturePimInterfaceArgsDict', 'outputs.ServiceMulticastFeaturePimInterface']]]] pim_interfaces: Set PIM interface parameters
         :param pulumi.Input[_builtins.str] pim_source_specific_multicast_access_list: Set Access List for PIM SSM
         :param pulumi.Input[_builtins.str] pim_source_specific_multicast_access_list_variable: Variable name
         :param pulumi.Input[_builtins.bool] pim_source_specific_multicast_enable: turn SSM on/off
@@ -1124,7 +1124,7 @@ class ServiceMulticastFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] spt_only_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureStaticRpAddressArgs', 'ServiceMulticastFeatureStaticRpAddressArgsDict']]]] static_rp_addresses: Set Static RP Address(es)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureStaticRpAddressArgs', 'ServiceMulticastFeatureStaticRpAddressArgsDict', 'outputs.ServiceMulticastFeatureStaticRpAddress']]]] static_rp_addresses: Set Static RP Address(es)
         """
         ...
     @overload
@@ -1226,26 +1226,26 @@ class ServiceMulticastFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 auto_rp_announces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpAnnounceArgs', 'ServiceMulticastFeatureAutoRpAnnounceArgsDict']]]]] = None,
-                 auto_rp_discoveries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpDiscoveryArgs', 'ServiceMulticastFeatureAutoRpDiscoveryArgsDict']]]]] = None,
+                 auto_rp_announces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpAnnounceArgs', 'ServiceMulticastFeatureAutoRpAnnounceArgsDict', 'outputs.ServiceMulticastFeatureAutoRpAnnounce']]]]] = None,
+                 auto_rp_discoveries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpDiscoveryArgs', 'ServiceMulticastFeatureAutoRpDiscoveryArgsDict', 'outputs.ServiceMulticastFeatureAutoRpDiscovery']]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_auto_rp: pulumi.Input[Optional[_builtins.bool]] = None,
                  enable_auto_rp_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 igmp_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureIgmpInterfaceArgs', 'ServiceMulticastFeatureIgmpInterfaceArgsDict']]]]] = None,
+                 igmp_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureIgmpInterfaceArgs', 'ServiceMulticastFeatureIgmpInterfaceArgsDict', 'outputs.ServiceMulticastFeatureIgmpInterface']]]]] = None,
                  local_replicator: pulumi.Input[Optional[_builtins.bool]] = None,
                  local_replicator_threshold: pulumi.Input[Optional[_builtins.int]] = None,
                  local_replicator_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  local_replicator_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  msdp_connection_retry_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  msdp_connection_retry_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 msdp_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureMsdpGroupArgs', 'ServiceMulticastFeatureMsdpGroupArgsDict']]]]] = None,
+                 msdp_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureMsdpGroupArgs', 'ServiceMulticastFeatureMsdpGroupArgsDict', 'outputs.ServiceMulticastFeatureMsdpGroup']]]]] = None,
                  msdp_originator_id: pulumi.Input[Optional[_builtins.str]] = None,
                  msdp_originator_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 pim_bsr_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrCandidateArgs', 'ServiceMulticastFeaturePimBsrCandidateArgsDict']]]]] = None,
-                 pim_bsr_rp_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrRpCandidateArgs', 'ServiceMulticastFeaturePimBsrRpCandidateArgsDict']]]]] = None,
-                 pim_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimInterfaceArgs', 'ServiceMulticastFeaturePimInterfaceArgsDict']]]]] = None,
+                 pim_bsr_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrCandidateArgs', 'ServiceMulticastFeaturePimBsrCandidateArgsDict', 'outputs.ServiceMulticastFeaturePimBsrCandidate']]]]] = None,
+                 pim_bsr_rp_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrRpCandidateArgs', 'ServiceMulticastFeaturePimBsrRpCandidateArgsDict', 'outputs.ServiceMulticastFeaturePimBsrRpCandidate']]]]] = None,
+                 pim_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimInterfaceArgs', 'ServiceMulticastFeaturePimInterfaceArgsDict', 'outputs.ServiceMulticastFeaturePimInterface']]]]] = None,
                  pim_source_specific_multicast_access_list: pulumi.Input[Optional[_builtins.str]] = None,
                  pim_source_specific_multicast_access_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  pim_source_specific_multicast_enable: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1253,7 +1253,7 @@ class ServiceMulticastFeature(pulumi.CustomResource):
                  pim_spt_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  spt_only: pulumi.Input[Optional[_builtins.bool]] = None,
                  spt_only_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 static_rp_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureStaticRpAddressArgs', 'ServiceMulticastFeatureStaticRpAddressArgsDict']]]]] = None,
+                 static_rp_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureStaticRpAddressArgs', 'ServiceMulticastFeatureStaticRpAddressArgsDict', 'outputs.ServiceMulticastFeatureStaticRpAddress']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1306,26 +1306,26 @@ class ServiceMulticastFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            auto_rp_announces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpAnnounceArgs', 'ServiceMulticastFeatureAutoRpAnnounceArgsDict']]]]] = None,
-            auto_rp_discoveries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpDiscoveryArgs', 'ServiceMulticastFeatureAutoRpDiscoveryArgsDict']]]]] = None,
+            auto_rp_announces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpAnnounceArgs', 'ServiceMulticastFeatureAutoRpAnnounceArgsDict', 'outputs.ServiceMulticastFeatureAutoRpAnnounce']]]]] = None,
+            auto_rp_discoveries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpDiscoveryArgs', 'ServiceMulticastFeatureAutoRpDiscoveryArgsDict', 'outputs.ServiceMulticastFeatureAutoRpDiscovery']]]]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             enable_auto_rp: pulumi.Input[Optional[_builtins.bool]] = None,
             enable_auto_rp_variable: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-            igmp_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureIgmpInterfaceArgs', 'ServiceMulticastFeatureIgmpInterfaceArgsDict']]]]] = None,
+            igmp_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureIgmpInterfaceArgs', 'ServiceMulticastFeatureIgmpInterfaceArgsDict', 'outputs.ServiceMulticastFeatureIgmpInterface']]]]] = None,
             local_replicator: pulumi.Input[Optional[_builtins.bool]] = None,
             local_replicator_threshold: pulumi.Input[Optional[_builtins.int]] = None,
             local_replicator_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
             local_replicator_variable: pulumi.Input[Optional[_builtins.str]] = None,
             msdp_connection_retry_interval: pulumi.Input[Optional[_builtins.int]] = None,
             msdp_connection_retry_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            msdp_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureMsdpGroupArgs', 'ServiceMulticastFeatureMsdpGroupArgsDict']]]]] = None,
+            msdp_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureMsdpGroupArgs', 'ServiceMulticastFeatureMsdpGroupArgsDict', 'outputs.ServiceMulticastFeatureMsdpGroup']]]]] = None,
             msdp_originator_id: pulumi.Input[Optional[_builtins.str]] = None,
             msdp_originator_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            pim_bsr_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrCandidateArgs', 'ServiceMulticastFeaturePimBsrCandidateArgsDict']]]]] = None,
-            pim_bsr_rp_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrRpCandidateArgs', 'ServiceMulticastFeaturePimBsrRpCandidateArgsDict']]]]] = None,
-            pim_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimInterfaceArgs', 'ServiceMulticastFeaturePimInterfaceArgsDict']]]]] = None,
+            pim_bsr_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrCandidateArgs', 'ServiceMulticastFeaturePimBsrCandidateArgsDict', 'outputs.ServiceMulticastFeaturePimBsrCandidate']]]]] = None,
+            pim_bsr_rp_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrRpCandidateArgs', 'ServiceMulticastFeaturePimBsrRpCandidateArgsDict', 'outputs.ServiceMulticastFeaturePimBsrRpCandidate']]]]] = None,
+            pim_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimInterfaceArgs', 'ServiceMulticastFeaturePimInterfaceArgsDict', 'outputs.ServiceMulticastFeaturePimInterface']]]]] = None,
             pim_source_specific_multicast_access_list: pulumi.Input[Optional[_builtins.str]] = None,
             pim_source_specific_multicast_access_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
             pim_source_specific_multicast_enable: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1333,7 +1333,7 @@ class ServiceMulticastFeature(pulumi.CustomResource):
             pim_spt_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
             spt_only: pulumi.Input[Optional[_builtins.bool]] = None,
             spt_only_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            static_rp_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureStaticRpAddressArgs', 'ServiceMulticastFeatureStaticRpAddressArgsDict']]]]] = None,
+            static_rp_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceMulticastFeatureStaticRpAddressArgs', 'ServiceMulticastFeatureStaticRpAddressArgsDict', 'outputs.ServiceMulticastFeatureStaticRpAddress']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceMulticastFeature':
         """
         Get an existing ServiceMulticastFeature resource's state with the given name, id, and optional extra
@@ -1342,14 +1342,14 @@ class ServiceMulticastFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpAnnounceArgs', 'ServiceMulticastFeatureAutoRpAnnounceArgsDict']]]] auto_rp_announces: Enable or disable RP Announce
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpDiscoveryArgs', 'ServiceMulticastFeatureAutoRpDiscoveryArgsDict']]]] auto_rp_discoveries: Enable or disable RP Discovery
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpAnnounceArgs', 'ServiceMulticastFeatureAutoRpAnnounceArgsDict', 'outputs.ServiceMulticastFeatureAutoRpAnnounce']]]] auto_rp_announces: Enable or disable RP Announce
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpDiscoveryArgs', 'ServiceMulticastFeatureAutoRpDiscoveryArgsDict', 'outputs.ServiceMulticastFeatureAutoRpDiscovery']]]] auto_rp_discoveries: Enable or disable RP Discovery
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.bool] enable_auto_rp: Enable or disable auto-RP
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_auto_rp_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureIgmpInterfaceArgs', 'ServiceMulticastFeatureIgmpInterfaceArgsDict']]]] igmp_interfaces: Set IGMP interface parameters
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureIgmpInterfaceArgs', 'ServiceMulticastFeatureIgmpInterfaceArgsDict', 'outputs.ServiceMulticastFeatureIgmpInterface']]]] igmp_interfaces: Set IGMP interface parameters
         :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device
                  - Default value: `false`
         :param pulumi.Input[_builtins.int] local_replicator_threshold: Set number of joins per group the router supports
@@ -1359,13 +1359,13 @@ class ServiceMulticastFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] msdp_connection_retry_interval: Set MSDP refresh timer
                  - Range: `1`-`60`
         :param pulumi.Input[_builtins.str] msdp_connection_retry_interval_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureMsdpGroupArgs', 'ServiceMulticastFeatureMsdpGroupArgsDict']]]] msdp_groups: multicast MSDP peer
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureMsdpGroupArgs', 'ServiceMulticastFeatureMsdpGroupArgsDict', 'outputs.ServiceMulticastFeatureMsdpGroup']]]] msdp_groups: multicast MSDP peer
         :param pulumi.Input[_builtins.str] msdp_originator_id: Set MSDP originator ID
         :param pulumi.Input[_builtins.str] msdp_originator_id_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrCandidateArgs', 'ServiceMulticastFeaturePimBsrCandidateArgsDict']]]] pim_bsr_candidates: bsr candidate Attributes
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrRpCandidateArgs', 'ServiceMulticastFeaturePimBsrRpCandidateArgsDict']]]] pim_bsr_rp_candidates: Set RP Discovery Scope
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimInterfaceArgs', 'ServiceMulticastFeaturePimInterfaceArgsDict']]]] pim_interfaces: Set PIM interface parameters
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrCandidateArgs', 'ServiceMulticastFeaturePimBsrCandidateArgsDict', 'outputs.ServiceMulticastFeaturePimBsrCandidate']]]] pim_bsr_candidates: bsr candidate Attributes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimBsrRpCandidateArgs', 'ServiceMulticastFeaturePimBsrRpCandidateArgsDict', 'outputs.ServiceMulticastFeaturePimBsrRpCandidate']]]] pim_bsr_rp_candidates: Set RP Discovery Scope
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeaturePimInterfaceArgs', 'ServiceMulticastFeaturePimInterfaceArgsDict', 'outputs.ServiceMulticastFeaturePimInterface']]]] pim_interfaces: Set PIM interface parameters
         :param pulumi.Input[_builtins.str] pim_source_specific_multicast_access_list: Set Access List for PIM SSM
         :param pulumi.Input[_builtins.str] pim_source_specific_multicast_access_list_variable: Variable name
         :param pulumi.Input[_builtins.bool] pim_source_specific_multicast_enable: turn SSM on/off
@@ -1376,7 +1376,7 @@ class ServiceMulticastFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] spt_only_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureStaticRpAddressArgs', 'ServiceMulticastFeatureStaticRpAddressArgsDict']]]] static_rp_addresses: Set Static RP Address(es)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureStaticRpAddressArgs', 'ServiceMulticastFeatureStaticRpAddressArgsDict', 'outputs.ServiceMulticastFeatureStaticRpAddress']]]] static_rp_addresses: Set Static RP Address(es)
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
