@@ -4708,7 +4708,7 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateAccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateAccessListArgsDict']]]]] = None,
+                 access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateAccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateAccessListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateAccessList']]]]] = None,
                  autonegotiate: pulumi.Input[Optional[_builtins.bool]] = None,
                  autonegotiate_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  bandwidth_downstream: pulumi.Input[Optional[_builtins.int]] = None,
@@ -4739,14 +4739,14 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
                  ip_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
+                 ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateIpv6AccessList']]]]] = None,
                  ipv6_address: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  multilink_group_number: pulumi.Input[Optional[_builtins.int]] = None,
                  multilink_group_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 multilink_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs', 'VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgsDict']]]]] = None,
+                 multilink_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs', 'VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateMultilinkInterface']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 nim_interface_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs', 'VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgsDict']]]]] = None,
+                 nim_interface_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs', 'VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateNimInterfaceList']]]]] = None,
                  pap_password: pulumi.Input[Optional[_builtins.bool]] = None,
                  pap_ppp_auth_password: pulumi.Input[Optional[_builtins.str]] = None,
                  pap_ppp_auth_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -4814,7 +4814,7 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_control_connections: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_control_connections_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulation']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
                  tunnel_interface_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
@@ -4977,7 +4977,7 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateAccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateAccessListArgsDict']]]] access_lists: Apply ACL
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateAccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateAccessListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateAccessList']]]] access_lists: Apply ACL
         :param pulumi.Input[_builtins.bool] autonegotiate: Link autonegotiation
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] autonegotiate_variable: Variable name
@@ -5021,15 +5021,15 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgsDict']]]] ipv6_access_lists: Apply IPv6 access list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateIpv6AccessList']]]] ipv6_access_lists: Apply IPv6 access list
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
         :param pulumi.Input[_builtins.int] multilink_group_number: MultiLink Group Number
                  - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] multilink_group_number_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs', 'VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgsDict']]]] multilink_interfaces: Controller tx-ex List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs', 'VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateMultilinkInterface']]]] multilink_interfaces: Controller tx-ex List
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs', 'VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgsDict']]]] nim_interface_lists: Nim Interface List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs', 'VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateNimInterfaceList']]]] nim_interface_lists: Nim Interface List
         :param pulumi.Input[_builtins.bool] pap_password: PAP outbound Password
         :param pulumi.Input[_builtins.str] pap_ppp_auth_password: Specify ppp authentication Password
         :param pulumi.Input[_builtins.str] pap_ppp_auth_password_variable: Variable name
@@ -5130,7 +5130,7 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] tunnel_interface_control_connections: Allow Control Connection
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_control_connections_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulation']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_groups: List of groups
@@ -5328,7 +5328,7 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateAccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateAccessListArgsDict']]]]] = None,
+                 access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateAccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateAccessListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateAccessList']]]]] = None,
                  autonegotiate: pulumi.Input[Optional[_builtins.bool]] = None,
                  autonegotiate_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  bandwidth_downstream: pulumi.Input[Optional[_builtins.int]] = None,
@@ -5359,14 +5359,14 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
                  ip_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
+                 ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateIpv6AccessList']]]]] = None,
                  ipv6_address: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  multilink_group_number: pulumi.Input[Optional[_builtins.int]] = None,
                  multilink_group_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 multilink_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs', 'VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgsDict']]]]] = None,
+                 multilink_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs', 'VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateMultilinkInterface']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 nim_interface_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs', 'VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgsDict']]]]] = None,
+                 nim_interface_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs', 'VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateNimInterfaceList']]]]] = None,
                  pap_password: pulumi.Input[Optional[_builtins.bool]] = None,
                  pap_ppp_auth_password: pulumi.Input[Optional[_builtins.str]] = None,
                  pap_ppp_auth_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -5434,7 +5434,7 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_control_connections: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_control_connections_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulation']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
                  tunnel_interface_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
@@ -5627,7 +5627,7 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateAccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateAccessListArgsDict']]]]] = None,
+            access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateAccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateAccessListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateAccessList']]]]] = None,
             autonegotiate: pulumi.Input[Optional[_builtins.bool]] = None,
             autonegotiate_variable: pulumi.Input[Optional[_builtins.str]] = None,
             bandwidth_downstream: pulumi.Input[Optional[_builtins.int]] = None,
@@ -5658,14 +5658,14 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
             ip_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
             ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
+            ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateIpv6AccessList']]]]] = None,
             ipv6_address: pulumi.Input[Optional[_builtins.str]] = None,
             ipv6_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
             multilink_group_number: pulumi.Input[Optional[_builtins.int]] = None,
             multilink_group_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            multilink_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs', 'VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgsDict']]]]] = None,
+            multilink_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs', 'VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateMultilinkInterface']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            nim_interface_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs', 'VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgsDict']]]]] = None,
+            nim_interface_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs', 'VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateNimInterfaceList']]]]] = None,
             pap_password: pulumi.Input[Optional[_builtins.bool]] = None,
             pap_ppp_auth_password: pulumi.Input[Optional[_builtins.str]] = None,
             pap_ppp_auth_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -5734,7 +5734,7 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
             tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_control_connections: pulumi.Input[Optional[_builtins.bool]] = None,
             tunnel_interface_control_connections_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+            tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulation']]]]] = None,
             tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
             tunnel_interface_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
@@ -5773,7 +5773,7 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateAccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateAccessListArgsDict']]]] access_lists: Apply ACL
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateAccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateAccessListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateAccessList']]]] access_lists: Apply ACL
         :param pulumi.Input[_builtins.bool] autonegotiate: Link autonegotiation
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] autonegotiate_variable: Variable name
@@ -5817,15 +5817,15 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgsDict']]]] ipv6_access_lists: Apply IPv6 access list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateIpv6AccessList']]]] ipv6_access_lists: Apply IPv6 access list
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
         :param pulumi.Input[_builtins.int] multilink_group_number: MultiLink Group Number
                  - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] multilink_group_number_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs', 'VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgsDict']]]] multilink_interfaces: Controller tx-ex List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs', 'VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateMultilinkInterface']]]] multilink_interfaces: Controller tx-ex List
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs', 'VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgsDict']]]] nim_interface_lists: Nim Interface List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs', 'VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateNimInterfaceList']]]] nim_interface_lists: Nim Interface List
         :param pulumi.Input[_builtins.bool] pap_password: PAP outbound Password
         :param pulumi.Input[_builtins.str] pap_ppp_auth_password: Specify ppp authentication Password
         :param pulumi.Input[_builtins.str] pap_ppp_auth_password_variable: Variable name
@@ -5927,7 +5927,7 @@ class VpnInterfaceMultilinkFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] tunnel_interface_control_connections: Allow Control Connection
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_control_connections_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulation']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_groups: List of groups

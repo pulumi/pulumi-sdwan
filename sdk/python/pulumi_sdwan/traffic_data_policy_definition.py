@@ -207,7 +207,7 @@ class TrafficDataPolicyDefinition(pulumi.CustomResource):
                  default_action: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficDataPolicyDefinitionSequenceArgs', 'TrafficDataPolicyDefinitionSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficDataPolicyDefinitionSequenceArgs', 'TrafficDataPolicyDefinitionSequenceArgsDict', 'outputs.TrafficDataPolicyDefinitionSequence']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Traffic Data Policy Definition .
@@ -254,7 +254,7 @@ class TrafficDataPolicyDefinition(pulumi.CustomResource):
                  - Choices: `accept`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TrafficDataPolicyDefinitionSequenceArgs', 'TrafficDataPolicyDefinitionSequenceArgsDict']]]] sequences: List of sequences
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TrafficDataPolicyDefinitionSequenceArgs', 'TrafficDataPolicyDefinitionSequenceArgsDict', 'outputs.TrafficDataPolicyDefinitionSequence']]]] sequences: List of sequences
         """
         ...
     @overload
@@ -319,7 +319,7 @@ class TrafficDataPolicyDefinition(pulumi.CustomResource):
                  default_action: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficDataPolicyDefinitionSequenceArgs', 'TrafficDataPolicyDefinitionSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficDataPolicyDefinitionSequenceArgs', 'TrafficDataPolicyDefinitionSequenceArgsDict', 'outputs.TrafficDataPolicyDefinitionSequence']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -352,7 +352,7 @@ class TrafficDataPolicyDefinition(pulumi.CustomResource):
             default_action: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficDataPolicyDefinitionSequenceArgs', 'TrafficDataPolicyDefinitionSequenceArgsDict']]]]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficDataPolicyDefinitionSequenceArgs', 'TrafficDataPolicyDefinitionSequenceArgsDict', 'outputs.TrafficDataPolicyDefinitionSequence']]]]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'TrafficDataPolicyDefinition':
         """
@@ -366,7 +366,7 @@ class TrafficDataPolicyDefinition(pulumi.CustomResource):
                  - Choices: `accept`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TrafficDataPolicyDefinitionSequenceArgs', 'TrafficDataPolicyDefinitionSequenceArgsDict']]]] sequences: List of sequences
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TrafficDataPolicyDefinitionSequenceArgs', 'TrafficDataPolicyDefinitionSequenceArgsDict', 'outputs.TrafficDataPolicyDefinitionSequence']]]] sequences: List of sequences
         :param pulumi.Input[_builtins.str] type: Type
         :param pulumi.Input[_builtins.int] version: The version of the object
         """

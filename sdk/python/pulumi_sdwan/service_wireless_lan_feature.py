@@ -761,7 +761,7 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  password_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict']]]]] = None,
+                 ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict', 'outputs.ServiceWirelessLanFeatureSsid']]]]] = None,
                  username: pulumi.Input[Optional[_builtins.str]] = None,
                  username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -832,7 +832,7 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] password: Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
         :param pulumi.Input[_builtins.str] password_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict']]]] ssids: Configure Wi-Fi SSID profile
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict', 'outputs.ServiceWirelessLanFeatureSsid']]]] ssids: Configure Wi-Fi SSID profile
         :param pulumi.Input[_builtins.str] username: Set management username
         :param pulumi.Input[_builtins.str] username_variable: Variable name
         """
@@ -918,7 +918,7 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  password_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict']]]]] = None,
+                 ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict', 'outputs.ServiceWirelessLanFeatureSsid']]]]] = None,
                  username: pulumi.Input[Optional[_builtins.str]] = None,
                  username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -986,7 +986,7 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             password: pulumi.Input[Optional[_builtins.str]] = None,
             password_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict']]]]] = None,
+            ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict', 'outputs.ServiceWirelessLanFeatureSsid']]]]] = None,
             username: pulumi.Input[Optional[_builtins.str]] = None,
             username_variable: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceWirelessLanFeature':
@@ -1019,7 +1019,7 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] password: Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
         :param pulumi.Input[_builtins.str] password_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict']]]] ssids: Configure Wi-Fi SSID profile
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict', 'outputs.ServiceWirelessLanFeatureSsid']]]] ssids: Configure Wi-Fi SSID profile
         :param pulumi.Input[_builtins.str] username: Set management username
         :param pulumi.Input[_builtins.str] username_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature

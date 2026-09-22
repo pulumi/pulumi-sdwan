@@ -730,11 +730,11 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
                  hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  hold_time: pulumi.Input[Optional[_builtins.int]] = None,
                  hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]]] = None,
-                 md5_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict', 'outputs.ServiceRoutingEigrpFeatureInterface']]]]] = None,
+                 md5_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict', 'outputs.ServiceRoutingEigrpFeatureMd5Key']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict']]]]] = None,
-                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict']]]]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict', 'outputs.ServiceRoutingEigrpFeatureNetwork']]]]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict', 'outputs.ServiceRoutingEigrpFeatureRedistribute']]]]] = None,
                  route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -808,11 +808,11 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
                  - Range: `0`-`65535`
                  - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]] interfaces: Configure IPv4 Static Routes
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` equal to `md5`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict', 'outputs.ServiceRoutingEigrpFeatureInterface']]]] interfaces: Configure IPv4 Static Routes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict', 'outputs.ServiceRoutingEigrpFeatureMd5Key']]]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` equal to `md5`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict']]]] networks: Configure the networks for EIGRP to advertise
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict']]]] redistributes: Redistribute routes into EIGRP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict', 'outputs.ServiceRoutingEigrpFeatureNetwork']]]] networks: Configure the networks for EIGRP to advertise
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict', 'outputs.ServiceRoutingEigrpFeatureRedistribute']]]] redistributes: Redistribute routes into EIGRP
         """
         ...
     @overload
@@ -897,11 +897,11 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
                  hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  hold_time: pulumi.Input[Optional[_builtins.int]] = None,
                  hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]]] = None,
-                 md5_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict', 'outputs.ServiceRoutingEigrpFeatureInterface']]]]] = None,
+                 md5_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict', 'outputs.ServiceRoutingEigrpFeatureMd5Key']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict']]]]] = None,
-                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict']]]]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict', 'outputs.ServiceRoutingEigrpFeatureNetwork']]]]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict', 'outputs.ServiceRoutingEigrpFeatureRedistribute']]]]] = None,
                  route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -961,11 +961,11 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
             hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
             hold_time: pulumi.Input[Optional[_builtins.int]] = None,
             hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]]] = None,
-            md5_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict', 'outputs.ServiceRoutingEigrpFeatureInterface']]]]] = None,
+            md5_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict', 'outputs.ServiceRoutingEigrpFeatureMd5Key']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict']]]]] = None,
-            redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict']]]]] = None,
+            networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict', 'outputs.ServiceRoutingEigrpFeatureNetwork']]]]] = None,
+            redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict', 'outputs.ServiceRoutingEigrpFeatureRedistribute']]]]] = None,
             route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceRoutingEigrpFeature':
         """
@@ -996,11 +996,11 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
                  - Range: `0`-`65535`
                  - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]] interfaces: Configure IPv4 Static Routes
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` equal to `md5`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict', 'outputs.ServiceRoutingEigrpFeatureInterface']]]] interfaces: Configure IPv4 Static Routes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict', 'outputs.ServiceRoutingEigrpFeatureMd5Key']]]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` equal to `md5`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict']]]] networks: Configure the networks for EIGRP to advertise
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict']]]] redistributes: Redistribute routes into EIGRP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict', 'outputs.ServiceRoutingEigrpFeatureNetwork']]]] networks: Configure the networks for EIGRP to advertise
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict', 'outputs.ServiceRoutingEigrpFeatureRedistribute']]]] redistributes: Redistribute routes into EIGRP
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

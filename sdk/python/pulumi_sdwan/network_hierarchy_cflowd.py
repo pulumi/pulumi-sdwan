@@ -376,7 +376,7 @@ class NetworkHierarchyCflowd(pulumi.CustomResource):
                  collect_dscp_output: pulumi.Input[Optional[_builtins.bool]] = None,
                  collect_tloc_loopback: pulumi.Input[Optional[_builtins.bool]] = None,
                  collect_tos: pulumi.Input[Optional[_builtins.bool]] = None,
-                 collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchyCflowdCollectorArgs', 'NetworkHierarchyCflowdCollectorArgsDict']]]]] = None,
+                 collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchyCflowdCollectorArgs', 'NetworkHierarchyCflowdCollectorArgsDict', 'outputs.NetworkHierarchyCflowdCollector']]]]] = None,
                  flow_active_timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  flow_inactive_timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  flow_refresh_time: pulumi.Input[Optional[_builtins.int]] = None,
@@ -428,7 +428,7 @@ class NetworkHierarchyCflowd(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] collect_tos: Collect TOS record field
                  - Default value: `false`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['NetworkHierarchyCflowdCollectorArgs', 'NetworkHierarchyCflowdCollectorArgsDict']]]] collectors: List of collectors
+        :param pulumi.Input[Sequence[pulumi.Input[Union['NetworkHierarchyCflowdCollectorArgs', 'NetworkHierarchyCflowdCollectorArgsDict', 'outputs.NetworkHierarchyCflowdCollector']]]] collectors: List of collectors
         :param pulumi.Input[_builtins.int] flow_active_timeout: Active flow timeout in seconds
                  - Range: `30`-`3600`
         :param pulumi.Input[_builtins.int] flow_inactive_timeout: Inactive flow timeout in seconds
@@ -501,7 +501,7 @@ class NetworkHierarchyCflowd(pulumi.CustomResource):
                  collect_dscp_output: pulumi.Input[Optional[_builtins.bool]] = None,
                  collect_tloc_loopback: pulumi.Input[Optional[_builtins.bool]] = None,
                  collect_tos: pulumi.Input[Optional[_builtins.bool]] = None,
-                 collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchyCflowdCollectorArgs', 'NetworkHierarchyCflowdCollectorArgsDict']]]]] = None,
+                 collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchyCflowdCollectorArgs', 'NetworkHierarchyCflowdCollectorArgsDict', 'outputs.NetworkHierarchyCflowdCollector']]]]] = None,
                  flow_active_timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  flow_inactive_timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  flow_refresh_time: pulumi.Input[Optional[_builtins.int]] = None,
@@ -549,7 +549,7 @@ class NetworkHierarchyCflowd(pulumi.CustomResource):
             collect_dscp_output: pulumi.Input[Optional[_builtins.bool]] = None,
             collect_tloc_loopback: pulumi.Input[Optional[_builtins.bool]] = None,
             collect_tos: pulumi.Input[Optional[_builtins.bool]] = None,
-            collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchyCflowdCollectorArgs', 'NetworkHierarchyCflowdCollectorArgsDict']]]]] = None,
+            collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchyCflowdCollectorArgs', 'NetworkHierarchyCflowdCollectorArgsDict', 'outputs.NetworkHierarchyCflowdCollector']]]]] = None,
             flow_active_timeout: pulumi.Input[Optional[_builtins.int]] = None,
             flow_inactive_timeout: pulumi.Input[Optional[_builtins.int]] = None,
             flow_refresh_time: pulumi.Input[Optional[_builtins.int]] = None,
@@ -569,7 +569,7 @@ class NetworkHierarchyCflowd(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] collect_tos: Collect TOS record field
                  - Default value: `false`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['NetworkHierarchyCflowdCollectorArgs', 'NetworkHierarchyCflowdCollectorArgsDict']]]] collectors: List of collectors
+        :param pulumi.Input[Sequence[pulumi.Input[Union['NetworkHierarchyCflowdCollectorArgs', 'NetworkHierarchyCflowdCollectorArgsDict', 'outputs.NetworkHierarchyCflowdCollector']]]] collectors: List of collectors
         :param pulumi.Input[_builtins.int] flow_active_timeout: Active flow timeout in seconds
                  - Range: `30`-`3600`
         :param pulumi.Input[_builtins.int] flow_inactive_timeout: Inactive flow timeout in seconds

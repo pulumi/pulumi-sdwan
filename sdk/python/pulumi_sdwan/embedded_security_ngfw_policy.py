@@ -212,7 +212,7 @@ class EmbeddedSecurityNgfwPolicy(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EmbeddedSecurityNgfwPolicySequenceArgs', 'EmbeddedSecurityNgfwPolicySequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EmbeddedSecurityNgfwPolicySequenceArgs', 'EmbeddedSecurityNgfwPolicySequenceArgsDict', 'outputs.EmbeddedSecurityNgfwPolicySequence']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Embedded Security NGFW Policy.
@@ -330,7 +330,7 @@ class EmbeddedSecurityNgfwPolicy(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EmbeddedSecurityNgfwPolicySequenceArgs', 'EmbeddedSecurityNgfwPolicySequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EmbeddedSecurityNgfwPolicySequenceArgs', 'EmbeddedSecurityNgfwPolicySequenceArgsDict', 'outputs.EmbeddedSecurityNgfwPolicySequence']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -364,7 +364,7 @@ class EmbeddedSecurityNgfwPolicy(pulumi.CustomResource):
             description: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EmbeddedSecurityNgfwPolicySequenceArgs', 'EmbeddedSecurityNgfwPolicySequenceArgsDict']]]]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EmbeddedSecurityNgfwPolicySequenceArgs', 'EmbeddedSecurityNgfwPolicySequenceArgsDict', 'outputs.EmbeddedSecurityNgfwPolicySequence']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'EmbeddedSecurityNgfwPolicy':
         """
         Get an existing EmbeddedSecurityNgfwPolicy resource's state with the given name, id, and optional extra

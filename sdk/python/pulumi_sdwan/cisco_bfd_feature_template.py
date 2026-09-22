@@ -420,7 +420,7 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 colors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict']]]]] = None,
+                 colors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict', 'outputs.CiscoBfdFeatureTemplateColor']]]]] = None,
                  default_dscp: pulumi.Input[Optional[_builtins.int]] = None,
                  default_dscp_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
@@ -468,7 +468,7 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict']]]] colors: Set color that identifies the WAN transport tunnel
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict', 'outputs.CiscoBfdFeatureTemplateColor']]]] colors: Set color that identifies the WAN transport tunnel
         :param pulumi.Input[_builtins.int] default_dscp: Set default DSCP value for BFD packets
                  - Range: `0`-`63`
                  - Default value: `48`
@@ -542,7 +542,7 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 colors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict']]]]] = None,
+                 colors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict', 'outputs.CiscoBfdFeatureTemplateColor']]]]] = None,
                  default_dscp: pulumi.Input[Optional[_builtins.int]] = None,
                  default_dscp_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
@@ -587,7 +587,7 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            colors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict']]]]] = None,
+            colors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict', 'outputs.CiscoBfdFeatureTemplateColor']]]]] = None,
             default_dscp: pulumi.Input[Optional[_builtins.int]] = None,
             default_dscp_variable: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
@@ -606,7 +606,7 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict']]]] colors: Set color that identifies the WAN transport tunnel
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict', 'outputs.CiscoBfdFeatureTemplateColor']]]] colors: Set color that identifies the WAN transport tunnel
         :param pulumi.Input[_builtins.int] default_dscp: Set default DSCP value for BFD packets
                  - Range: `0`-`63`
                  - Default value: `48`

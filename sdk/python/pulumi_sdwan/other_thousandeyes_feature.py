@@ -188,7 +188,7 @@ class OtherThousandeyesFeature(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 virtual_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherThousandeyesFeatureVirtualApplicationArgs', 'OtherThousandeyesFeatureVirtualApplicationArgsDict']]]]] = None,
+                 virtual_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherThousandeyesFeatureVirtualApplicationArgs', 'OtherThousandeyesFeatureVirtualApplicationArgsDict', 'outputs.OtherThousandeyesFeatureVirtualApplication']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Other ThousandEyes Feature.
@@ -234,7 +234,7 @@ class OtherThousandeyesFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['OtherThousandeyesFeatureVirtualApplicationArgs', 'OtherThousandeyesFeatureVirtualApplicationArgsDict']]]] virtual_applications: Virtual application Instance
+        :param pulumi.Input[Sequence[pulumi.Input[Union['OtherThousandeyesFeatureVirtualApplicationArgs', 'OtherThousandeyesFeatureVirtualApplicationArgsDict', 'outputs.OtherThousandeyesFeatureVirtualApplication']]]] virtual_applications: Virtual application Instance
         """
         ...
     @overload
@@ -299,7 +299,7 @@ class OtherThousandeyesFeature(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 virtual_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherThousandeyesFeatureVirtualApplicationArgs', 'OtherThousandeyesFeatureVirtualApplicationArgsDict']]]]] = None,
+                 virtual_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherThousandeyesFeatureVirtualApplicationArgs', 'OtherThousandeyesFeatureVirtualApplicationArgsDict', 'outputs.OtherThousandeyesFeatureVirtualApplication']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -330,7 +330,7 @@ class OtherThousandeyesFeature(pulumi.CustomResource):
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None,
-            virtual_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherThousandeyesFeatureVirtualApplicationArgs', 'OtherThousandeyesFeatureVirtualApplicationArgsDict']]]]] = None) -> 'OtherThousandeyesFeature':
+            virtual_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherThousandeyesFeatureVirtualApplicationArgs', 'OtherThousandeyesFeatureVirtualApplicationArgsDict', 'outputs.OtherThousandeyesFeatureVirtualApplication']]]]] = None) -> 'OtherThousandeyesFeature':
         """
         Get an existing OtherThousandeyesFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -342,7 +342,7 @@ class OtherThousandeyesFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.int] version: The version of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['OtherThousandeyesFeatureVirtualApplicationArgs', 'OtherThousandeyesFeatureVirtualApplicationArgsDict']]]] virtual_applications: Virtual application Instance
+        :param pulumi.Input[Sequence[pulumi.Input[Union['OtherThousandeyesFeatureVirtualApplicationArgs', 'OtherThousandeyesFeatureVirtualApplicationArgsDict', 'outputs.OtherThousandeyesFeatureVirtualApplication']]]] virtual_applications: Virtual application Instance
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

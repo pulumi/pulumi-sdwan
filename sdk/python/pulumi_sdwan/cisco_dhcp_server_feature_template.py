@@ -777,8 +777,8 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
                  lease_time: pulumi.Input[Optional[_builtins.int]] = None,
                  lease_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict']]]]] = None,
-                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict']]]]] = None,
+                 options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict', 'outputs.CiscoDhcpServerFeatureTemplateOption']]]]] = None,
+                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict', 'outputs.CiscoDhcpServerFeatureTemplateStaticLease']]]]] = None,
                  tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tftp_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -850,8 +850,8 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
                  - Default value: `86400`
         :param pulumi.Input[_builtins.str] lease_time_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict']]]] options: Configure Options Code
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict']]]] static_leases: Configure static IP addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict', 'outputs.CiscoDhcpServerFeatureTemplateOption']]]] options: Configure Options Code
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict', 'outputs.CiscoDhcpServerFeatureTemplateStaticLease']]]] static_leases: Configure static IP addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tftp_servers: Configure TFTP server IP addresses
         :param pulumi.Input[_builtins.str] tftp_servers_variable: Variable name
         """
@@ -938,8 +938,8 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
                  lease_time: pulumi.Input[Optional[_builtins.int]] = None,
                  lease_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict']]]]] = None,
-                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict']]]]] = None,
+                 options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict', 'outputs.CiscoDhcpServerFeatureTemplateOption']]]]] = None,
+                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict', 'outputs.CiscoDhcpServerFeatureTemplateStaticLease']]]]] = None,
                  tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tftp_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -1005,8 +1005,8 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
             lease_time: pulumi.Input[Optional[_builtins.int]] = None,
             lease_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict']]]]] = None,
-            static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict']]]]] = None,
+            options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict', 'outputs.CiscoDhcpServerFeatureTemplateOption']]]]] = None,
+            static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict', 'outputs.CiscoDhcpServerFeatureTemplateStaticLease']]]]] = None,
             template_type: pulumi.Input[Optional[_builtins.str]] = None,
             tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tftp_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1039,8 +1039,8 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
                  - Default value: `86400`
         :param pulumi.Input[_builtins.str] lease_time_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict']]]] options: Configure Options Code
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict']]]] static_leases: Configure static IP addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict', 'outputs.CiscoDhcpServerFeatureTemplateOption']]]] options: Configure Options Code
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict', 'outputs.CiscoDhcpServerFeatureTemplateStaticLease']]]] static_leases: Configure static IP addresses
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tftp_servers: Configure TFTP server IP addresses
         :param pulumi.Input[_builtins.str] tftp_servers_variable: Variable name

@@ -177,7 +177,7 @@ class PolicyObjectSecurityZone(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityZoneEntryArgs', 'PolicyObjectSecurityZoneEntryArgsDict']]]]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityZoneEntryArgs', 'PolicyObjectSecurityZoneEntryArgsDict', 'outputs.PolicyObjectSecurityZoneEntry']]]]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -269,7 +269,7 @@ class PolicyObjectSecurityZone(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityZoneEntryArgs', 'PolicyObjectSecurityZoneEntryArgsDict']]]]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityZoneEntryArgs', 'PolicyObjectSecurityZoneEntryArgsDict', 'outputs.PolicyObjectSecurityZoneEntry']]]]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -301,7 +301,7 @@ class PolicyObjectSecurityZone(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
-            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityZoneEntryArgs', 'PolicyObjectSecurityZoneEntryArgsDict']]]]] = None,
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityZoneEntryArgs', 'PolicyObjectSecurityZoneEntryArgsDict', 'outputs.PolicyObjectSecurityZoneEntry']]]]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'PolicyObjectSecurityZone':

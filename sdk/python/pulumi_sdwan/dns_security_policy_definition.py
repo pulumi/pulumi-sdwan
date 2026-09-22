@@ -448,7 +448,7 @@ class DnsSecurityPolicyDefinition(pulumi.CustomResource):
                  local_domain_bypass_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  match_all_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict']]]]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict', 'outputs.DnsSecurityPolicyDefinitionTargetVpn']]]]] = None,
                  umbrella_dns_default: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
@@ -492,7 +492,7 @@ class DnsSecurityPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] local_domain_bypass_enabled: Should the local domain bypass list be enabled
         :param pulumi.Input[_builtins.bool] match_all_vpn: Should use match all VPN
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict']]]] target_vpns: Only relevant when `match_all_vpn` is `false`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict', 'outputs.DnsSecurityPolicyDefinitionTargetVpn']]]] target_vpns: Only relevant when `match_all_vpn` is `false`
         :param pulumi.Input[_builtins.bool] umbrella_dns_default: Should use umbrella as DNS Server
         """
         ...
@@ -555,7 +555,7 @@ class DnsSecurityPolicyDefinition(pulumi.CustomResource):
                  local_domain_bypass_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  match_all_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict']]]]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict', 'outputs.DnsSecurityPolicyDefinitionTargetVpn']]]]] = None,
                  umbrella_dns_default: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -607,7 +607,7 @@ class DnsSecurityPolicyDefinition(pulumi.CustomResource):
             local_domain_bypass_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             match_all_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict']]]]] = None,
+            target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict', 'outputs.DnsSecurityPolicyDefinitionTargetVpn']]]]] = None,
             umbrella_dns_default: pulumi.Input[Optional[_builtins.bool]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'DnsSecurityPolicyDefinition':
         """
@@ -627,7 +627,7 @@ class DnsSecurityPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] local_domain_bypass_enabled: Should the local domain bypass list be enabled
         :param pulumi.Input[_builtins.bool] match_all_vpn: Should use match all VPN
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict']]]] target_vpns: Only relevant when `match_all_vpn` is `false`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict', 'outputs.DnsSecurityPolicyDefinitionTargetVpn']]]] target_vpns: Only relevant when `match_all_vpn` is `false`
         :param pulumi.Input[_builtins.bool] umbrella_dns_default: Should use umbrella as DNS Server
         :param pulumi.Input[_builtins.int] version: The version of the object
         """

@@ -2611,7 +2611,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
                  geo_fencing_range: pulumi.Input[Optional[_builtins.int]] = None,
                  geo_fencing_range_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  geo_fencing_sms: pulumi.Input[Optional[_builtins.bool]] = None,
-                 geo_fencing_sms_phone_numbers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict']]]]] = None,
+                 geo_fencing_sms_phone_numbers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict', 'outputs.CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumber']]]]] = None,
                  hostname: pulumi.Input[Optional[_builtins.str]] = None,
                  hostname_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
@@ -2628,7 +2628,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
                  multi_tenant: pulumi.Input[Optional[_builtins.bool]] = None,
                  multi_tenant_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 object_trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict']]]]] = None,
+                 object_trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict', 'outputs.CiscoSystemFeatureTemplateObjectTracker']]]]] = None,
                  on_demand_tunnel: pulumi.Input[Optional[_builtins.bool]] = None,
                  on_demand_tunnel_idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  on_demand_tunnel_idle_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2659,7 +2659,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
                  track_interface_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  track_transport: pulumi.Input[Optional[_builtins.bool]] = None,
                  track_transport_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict']]]]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict', 'outputs.CiscoSystemFeatureTemplateTracker']]]]] = None,
                  transport_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
                  transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -2774,7 +2774,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] geo_fencing_range_variable: Variable name
         :param pulumi.Input[_builtins.bool] geo_fencing_sms: Enable Geo fencing
                  - Default value: `false`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict']]]] geo_fencing_sms_phone_numbers: Set device’s geo fencing SMS phone number
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict', 'outputs.CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumber']]]] geo_fencing_sms_phone_numbers: Set device’s geo fencing SMS phone number
         :param pulumi.Input[_builtins.str] hostname: Set the hostname
         :param pulumi.Input[_builtins.str] hostname_variable: Variable name
         :param pulumi.Input[_builtins.int] idle_timeout: Idle CLI timeout in minutes
@@ -2797,7 +2797,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] multi_tenant_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict']]]] object_trackers: Object Track configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict', 'outputs.CiscoSystemFeatureTemplateObjectTracker']]]] object_trackers: Object Track configuration
         :param pulumi.Input[_builtins.bool] on_demand_tunnel: Enable or disable On-demand Tunnel
                  - Default value: `false`
         :param pulumi.Input[_builtins.int] on_demand_tunnel_idle_timeout: Idle CLI timeout in minutes
@@ -2844,7 +2844,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] track_transport: Configure tracking of transport
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] track_transport_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict']]]] trackers: Tracker configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict', 'outputs.CiscoSystemFeatureTemplateTracker']]]] trackers: Tracker configuration
         :param pulumi.Input[_builtins.bool] transport_gateway: Enable transport gateway
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] transport_gateway_variable: Variable name
@@ -2965,7 +2965,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
                  geo_fencing_range: pulumi.Input[Optional[_builtins.int]] = None,
                  geo_fencing_range_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  geo_fencing_sms: pulumi.Input[Optional[_builtins.bool]] = None,
-                 geo_fencing_sms_phone_numbers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict']]]]] = None,
+                 geo_fencing_sms_phone_numbers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict', 'outputs.CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumber']]]]] = None,
                  hostname: pulumi.Input[Optional[_builtins.str]] = None,
                  hostname_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
@@ -2982,7 +2982,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
                  multi_tenant: pulumi.Input[Optional[_builtins.bool]] = None,
                  multi_tenant_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 object_trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict']]]]] = None,
+                 object_trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict', 'outputs.CiscoSystemFeatureTemplateObjectTracker']]]]] = None,
                  on_demand_tunnel: pulumi.Input[Optional[_builtins.bool]] = None,
                  on_demand_tunnel_idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  on_demand_tunnel_idle_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -3013,7 +3013,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
                  track_interface_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  track_transport: pulumi.Input[Optional[_builtins.bool]] = None,
                  track_transport_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict']]]]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict', 'outputs.CiscoSystemFeatureTemplateTracker']]]]] = None,
                  transport_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
                  transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -3138,7 +3138,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
             geo_fencing_range: pulumi.Input[Optional[_builtins.int]] = None,
             geo_fencing_range_variable: pulumi.Input[Optional[_builtins.str]] = None,
             geo_fencing_sms: pulumi.Input[Optional[_builtins.bool]] = None,
-            geo_fencing_sms_phone_numbers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict']]]]] = None,
+            geo_fencing_sms_phone_numbers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict', 'outputs.CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumber']]]]] = None,
             hostname: pulumi.Input[Optional[_builtins.str]] = None,
             hostname_variable: pulumi.Input[Optional[_builtins.str]] = None,
             idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
@@ -3155,7 +3155,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
             multi_tenant: pulumi.Input[Optional[_builtins.bool]] = None,
             multi_tenant_variable: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            object_trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict']]]]] = None,
+            object_trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict', 'outputs.CiscoSystemFeatureTemplateObjectTracker']]]]] = None,
             on_demand_tunnel: pulumi.Input[Optional[_builtins.bool]] = None,
             on_demand_tunnel_idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
             on_demand_tunnel_idle_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -3187,7 +3187,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
             track_interface_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
             track_transport: pulumi.Input[Optional[_builtins.bool]] = None,
             track_transport_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict']]]]] = None,
+            trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict', 'outputs.CiscoSystemFeatureTemplateTracker']]]]] = None,
             transport_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
             transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoSystemFeatureTemplate':
@@ -3235,7 +3235,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] geo_fencing_range_variable: Variable name
         :param pulumi.Input[_builtins.bool] geo_fencing_sms: Enable Geo fencing
                  - Default value: `false`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict']]]] geo_fencing_sms_phone_numbers: Set device’s geo fencing SMS phone number
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict', 'outputs.CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumber']]]] geo_fencing_sms_phone_numbers: Set device’s geo fencing SMS phone number
         :param pulumi.Input[_builtins.str] hostname: Set the hostname
         :param pulumi.Input[_builtins.str] hostname_variable: Variable name
         :param pulumi.Input[_builtins.int] idle_timeout: Idle CLI timeout in minutes
@@ -3258,7 +3258,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] multi_tenant_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict']]]] object_trackers: Object Track configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict', 'outputs.CiscoSystemFeatureTemplateObjectTracker']]]] object_trackers: Object Track configuration
         :param pulumi.Input[_builtins.bool] on_demand_tunnel: Enable or disable On-demand Tunnel
                  - Default value: `false`
         :param pulumi.Input[_builtins.int] on_demand_tunnel_idle_timeout: Idle CLI timeout in minutes
@@ -3306,7 +3306,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] track_transport: Configure tracking of transport
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] track_transport_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict']]]] trackers: Tracker configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict', 'outputs.CiscoSystemFeatureTemplateTracker']]]] trackers: Tracker configuration
         :param pulumi.Input[_builtins.bool] transport_gateway: Enable transport gateway
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] transport_gateway_variable: Variable name

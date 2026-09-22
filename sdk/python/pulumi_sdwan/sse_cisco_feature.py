@@ -453,14 +453,14 @@ class SseCiscoFeature(pulumi.CustomResource):
                  context_sharing_for_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 interface_pairs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfacePairArgs', 'SseCiscoFeatureInterfacePairArgsDict']]]]] = None,
-                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfaceArgs', 'SseCiscoFeatureInterfaceArgsDict']]]]] = None,
+                 interface_pairs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfacePairArgs', 'SseCiscoFeatureInterfacePairArgsDict', 'outputs.SseCiscoFeatureInterfacePair']]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfaceArgs', 'SseCiscoFeatureInterfaceArgsDict', 'outputs.SseCiscoFeatureInterface']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  region: pulumi.Input[Optional[_builtins.str]] = None,
                  region_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureTrackerArgs', 'SseCiscoFeatureTrackerArgsDict']]]]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureTrackerArgs', 'SseCiscoFeatureTrackerArgsDict', 'outputs.SseCiscoFeatureTracker']]]]] = None,
                  __props__=None):
         """
         This resource can manage a SSE Cisco Feature.
@@ -521,15 +521,15 @@ class SseCiscoFeature(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfacePairArgs', 'SseCiscoFeatureInterfacePairArgsDict']]]] interface_pairs: Interface Pair for active and backup
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfaceArgs', 'SseCiscoFeatureInterfaceArgsDict']]]] interfaces: Interface name: IPsec when present
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfacePairArgs', 'SseCiscoFeatureInterfacePairArgsDict', 'outputs.SseCiscoFeatureInterfacePair']]]] interface_pairs: Interface Pair for active and backup
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfaceArgs', 'SseCiscoFeatureInterfaceArgsDict', 'outputs.SseCiscoFeatureInterface']]]] interfaces: Interface name: IPsec when present
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] region: Region for Primary and Secondary Datacenter
                  - Default value: `auto`
         :param pulumi.Input[_builtins.str] region_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_source_ip: Source IP address for Tracker
         :param pulumi.Input[_builtins.str] tracker_source_ip_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SseCiscoFeatureTrackerArgs', 'SseCiscoFeatureTrackerArgsDict']]]] trackers: Tracker configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SseCiscoFeatureTrackerArgs', 'SseCiscoFeatureTrackerArgsDict', 'outputs.SseCiscoFeatureTracker']]]] trackers: Tracker configuration
         """
         ...
     @overload
@@ -607,14 +607,14 @@ class SseCiscoFeature(pulumi.CustomResource):
                  context_sharing_for_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 interface_pairs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfacePairArgs', 'SseCiscoFeatureInterfacePairArgsDict']]]]] = None,
-                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfaceArgs', 'SseCiscoFeatureInterfaceArgsDict']]]]] = None,
+                 interface_pairs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfacePairArgs', 'SseCiscoFeatureInterfacePairArgsDict', 'outputs.SseCiscoFeatureInterfacePair']]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfaceArgs', 'SseCiscoFeatureInterfaceArgsDict', 'outputs.SseCiscoFeatureInterface']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  region: pulumi.Input[Optional[_builtins.str]] = None,
                  region_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureTrackerArgs', 'SseCiscoFeatureTrackerArgsDict']]]]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureTrackerArgs', 'SseCiscoFeatureTrackerArgsDict', 'outputs.SseCiscoFeatureTracker']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -661,14 +661,14 @@ class SseCiscoFeature(pulumi.CustomResource):
             context_sharing_for_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-            interface_pairs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfacePairArgs', 'SseCiscoFeatureInterfacePairArgsDict']]]]] = None,
-            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfaceArgs', 'SseCiscoFeatureInterfaceArgsDict']]]]] = None,
+            interface_pairs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfacePairArgs', 'SseCiscoFeatureInterfacePairArgsDict', 'outputs.SseCiscoFeatureInterfacePair']]]]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfaceArgs', 'SseCiscoFeatureInterfaceArgsDict', 'outputs.SseCiscoFeatureInterface']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             region: pulumi.Input[Optional[_builtins.str]] = None,
             region_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tracker_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
             tracker_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureTrackerArgs', 'SseCiscoFeatureTrackerArgsDict']]]]] = None,
+            trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureTrackerArgs', 'SseCiscoFeatureTrackerArgsDict', 'outputs.SseCiscoFeatureTracker']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SseCiscoFeature':
         """
         Get an existing SseCiscoFeature resource's state with the given name, id, and optional extra
@@ -683,15 +683,15 @@ class SseCiscoFeature(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfacePairArgs', 'SseCiscoFeatureInterfacePairArgsDict']]]] interface_pairs: Interface Pair for active and backup
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfaceArgs', 'SseCiscoFeatureInterfaceArgsDict']]]] interfaces: Interface name: IPsec when present
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfacePairArgs', 'SseCiscoFeatureInterfacePairArgsDict', 'outputs.SseCiscoFeatureInterfacePair']]]] interface_pairs: Interface Pair for active and backup
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfaceArgs', 'SseCiscoFeatureInterfaceArgsDict', 'outputs.SseCiscoFeatureInterface']]]] interfaces: Interface name: IPsec when present
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] region: Region for Primary and Secondary Datacenter
                  - Default value: `auto`
         :param pulumi.Input[_builtins.str] region_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_source_ip: Source IP address for Tracker
         :param pulumi.Input[_builtins.str] tracker_source_ip_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SseCiscoFeatureTrackerArgs', 'SseCiscoFeatureTrackerArgsDict']]]] trackers: Tracker configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SseCiscoFeatureTrackerArgs', 'SseCiscoFeatureTrackerArgsDict', 'outputs.SseCiscoFeatureTracker']]]] trackers: Tracker configuration
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

@@ -284,7 +284,7 @@ class TransportT1E1ControllerFeature(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict']]]]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict', 'outputs.TransportT1E1ControllerFeatureEntry']]]]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  slot: pulumi.Input[Optional[_builtins.str]] = None,
@@ -337,7 +337,7 @@ class TransportT1E1ControllerFeature(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict']]]] entries: Controller tx-ex List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict', 'outputs.TransportT1E1ControllerFeatureEntry']]]] entries: Controller tx-ex List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] slot: Slot number
@@ -410,7 +410,7 @@ class TransportT1E1ControllerFeature(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict']]]]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict', 'outputs.TransportT1E1ControllerFeatureEntry']]]]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  slot: pulumi.Input[Optional[_builtins.str]] = None,
@@ -450,7 +450,7 @@ class TransportT1E1ControllerFeature(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
-            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict']]]]] = None,
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict', 'outputs.TransportT1E1ControllerFeatureEntry']]]]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             slot: pulumi.Input[Optional[_builtins.str]] = None,
@@ -465,7 +465,7 @@ class TransportT1E1ControllerFeature(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict']]]] entries: Controller tx-ex List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict', 'outputs.TransportT1E1ControllerFeatureEntry']]]] entries: Controller tx-ex List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] slot: Slot number

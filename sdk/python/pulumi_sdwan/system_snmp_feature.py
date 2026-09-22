@@ -509,20 +509,20 @@ class SystemSnmpFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 communities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureCommunityArgs', 'SystemSnmpFeatureCommunityArgsDict']]]]] = None,
+                 communities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureCommunityArgs', 'SystemSnmpFeatureCommunityArgsDict', 'outputs.SystemSnmpFeatureCommunity']]]]] = None,
                  contact_person: pulumi.Input[Optional[_builtins.str]] = None,
                  contact_person_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureGroupArgs', 'SystemSnmpFeatureGroupArgsDict']]]]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureGroupArgs', 'SystemSnmpFeatureGroupArgsDict', 'outputs.SystemSnmpFeatureGroup']]]]] = None,
                  location_of_device: pulumi.Input[Optional[_builtins.str]] = None,
                  location_of_device_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
                  shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 trap_target_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureTrapTargetServerArgs', 'SystemSnmpFeatureTrapTargetServerArgsDict']]]]] = None,
-                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureUserArgs', 'SystemSnmpFeatureUserArgsDict']]]]] = None,
-                 views: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureViewArgs', 'SystemSnmpFeatureViewArgsDict']]]]] = None,
+                 trap_target_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureTrapTargetServerArgs', 'SystemSnmpFeatureTrapTargetServerArgsDict', 'outputs.SystemSnmpFeatureTrapTargetServer']]]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureUserArgs', 'SystemSnmpFeatureUserArgsDict', 'outputs.SystemSnmpFeatureUser']]]]] = None,
+                 views: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureViewArgs', 'SystemSnmpFeatureViewArgsDict', 'outputs.SystemSnmpFeatureView']]]]] = None,
                  __props__=None):
         """
         This resource can manage a System SNMP Feature.
@@ -590,21 +590,21 @@ class SystemSnmpFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureCommunityArgs', 'SystemSnmpFeatureCommunityArgsDict']]]] communities: Configure SNMP community
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureCommunityArgs', 'SystemSnmpFeatureCommunityArgsDict', 'outputs.SystemSnmpFeatureCommunity']]]] communities: Configure SNMP community
         :param pulumi.Input[_builtins.str] contact_person: Set the contact for this managed node
         :param pulumi.Input[_builtins.str] contact_person_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureGroupArgs', 'SystemSnmpFeatureGroupArgsDict']]]] groups: Configure an SNMP group
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureGroupArgs', 'SystemSnmpFeatureGroupArgsDict', 'outputs.SystemSnmpFeatureGroup']]]] groups: Configure an SNMP group
         :param pulumi.Input[_builtins.str] location_of_device: Set the physical location of this managed node
         :param pulumi.Input[_builtins.str] location_of_device_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureTrapTargetServerArgs', 'SystemSnmpFeatureTrapTargetServerArgsDict']]]] trap_target_servers: Configure SNMP server to receive SNMP traps
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureUserArgs', 'SystemSnmpFeatureUserArgsDict']]]] users: Configure an SNMP user
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureViewArgs', 'SystemSnmpFeatureViewArgsDict']]]] views: Configure a view record
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureTrapTargetServerArgs', 'SystemSnmpFeatureTrapTargetServerArgsDict', 'outputs.SystemSnmpFeatureTrapTargetServer']]]] trap_target_servers: Configure SNMP server to receive SNMP traps
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureUserArgs', 'SystemSnmpFeatureUserArgsDict', 'outputs.SystemSnmpFeatureUser']]]] users: Configure an SNMP user
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureViewArgs', 'SystemSnmpFeatureViewArgsDict', 'outputs.SystemSnmpFeatureView']]]] views: Configure a view record
         """
         ...
     @overload
@@ -691,20 +691,20 @@ class SystemSnmpFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 communities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureCommunityArgs', 'SystemSnmpFeatureCommunityArgsDict']]]]] = None,
+                 communities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureCommunityArgs', 'SystemSnmpFeatureCommunityArgsDict', 'outputs.SystemSnmpFeatureCommunity']]]]] = None,
                  contact_person: pulumi.Input[Optional[_builtins.str]] = None,
                  contact_person_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureGroupArgs', 'SystemSnmpFeatureGroupArgsDict']]]]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureGroupArgs', 'SystemSnmpFeatureGroupArgsDict', 'outputs.SystemSnmpFeatureGroup']]]]] = None,
                  location_of_device: pulumi.Input[Optional[_builtins.str]] = None,
                  location_of_device_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
                  shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 trap_target_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureTrapTargetServerArgs', 'SystemSnmpFeatureTrapTargetServerArgsDict']]]]] = None,
-                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureUserArgs', 'SystemSnmpFeatureUserArgsDict']]]]] = None,
-                 views: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureViewArgs', 'SystemSnmpFeatureViewArgsDict']]]]] = None,
+                 trap_target_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureTrapTargetServerArgs', 'SystemSnmpFeatureTrapTargetServerArgsDict', 'outputs.SystemSnmpFeatureTrapTargetServer']]]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureUserArgs', 'SystemSnmpFeatureUserArgsDict', 'outputs.SystemSnmpFeatureUser']]]]] = None,
+                 views: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureViewArgs', 'SystemSnmpFeatureViewArgsDict', 'outputs.SystemSnmpFeatureView']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -741,21 +741,21 @@ class SystemSnmpFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            communities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureCommunityArgs', 'SystemSnmpFeatureCommunityArgsDict']]]]] = None,
+            communities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureCommunityArgs', 'SystemSnmpFeatureCommunityArgsDict', 'outputs.SystemSnmpFeatureCommunity']]]]] = None,
             contact_person: pulumi.Input[Optional[_builtins.str]] = None,
             contact_person_variable: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-            groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureGroupArgs', 'SystemSnmpFeatureGroupArgsDict']]]]] = None,
+            groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureGroupArgs', 'SystemSnmpFeatureGroupArgsDict', 'outputs.SystemSnmpFeatureGroup']]]]] = None,
             location_of_device: pulumi.Input[Optional[_builtins.str]] = None,
             location_of_device_variable: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
             shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            trap_target_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureTrapTargetServerArgs', 'SystemSnmpFeatureTrapTargetServerArgsDict']]]]] = None,
-            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureUserArgs', 'SystemSnmpFeatureUserArgsDict']]]]] = None,
+            trap_target_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureTrapTargetServerArgs', 'SystemSnmpFeatureTrapTargetServerArgsDict', 'outputs.SystemSnmpFeatureTrapTargetServer']]]]] = None,
+            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureUserArgs', 'SystemSnmpFeatureUserArgsDict', 'outputs.SystemSnmpFeatureUser']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None,
-            views: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureViewArgs', 'SystemSnmpFeatureViewArgsDict']]]]] = None) -> 'SystemSnmpFeature':
+            views: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSnmpFeatureViewArgs', 'SystemSnmpFeatureViewArgsDict', 'outputs.SystemSnmpFeatureView']]]]] = None) -> 'SystemSnmpFeature':
         """
         Get an existing SystemSnmpFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -763,22 +763,22 @@ class SystemSnmpFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureCommunityArgs', 'SystemSnmpFeatureCommunityArgsDict']]]] communities: Configure SNMP community
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureCommunityArgs', 'SystemSnmpFeatureCommunityArgsDict', 'outputs.SystemSnmpFeatureCommunity']]]] communities: Configure SNMP community
         :param pulumi.Input[_builtins.str] contact_person: Set the contact for this managed node
         :param pulumi.Input[_builtins.str] contact_person_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureGroupArgs', 'SystemSnmpFeatureGroupArgsDict']]]] groups: Configure an SNMP group
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureGroupArgs', 'SystemSnmpFeatureGroupArgsDict', 'outputs.SystemSnmpFeatureGroup']]]] groups: Configure an SNMP group
         :param pulumi.Input[_builtins.str] location_of_device: Set the physical location of this managed node
         :param pulumi.Input[_builtins.str] location_of_device_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureTrapTargetServerArgs', 'SystemSnmpFeatureTrapTargetServerArgsDict']]]] trap_target_servers: Configure SNMP server to receive SNMP traps
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureUserArgs', 'SystemSnmpFeatureUserArgsDict']]]] users: Configure an SNMP user
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureTrapTargetServerArgs', 'SystemSnmpFeatureTrapTargetServerArgsDict', 'outputs.SystemSnmpFeatureTrapTargetServer']]]] trap_target_servers: Configure SNMP server to receive SNMP traps
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureUserArgs', 'SystemSnmpFeatureUserArgsDict', 'outputs.SystemSnmpFeatureUser']]]] users: Configure an SNMP user
         :param pulumi.Input[_builtins.int] version: The version of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureViewArgs', 'SystemSnmpFeatureViewArgsDict']]]] views: Configure a view record
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureViewArgs', 'SystemSnmpFeatureViewArgsDict', 'outputs.SystemSnmpFeatureView']]]] views: Configure a view record
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

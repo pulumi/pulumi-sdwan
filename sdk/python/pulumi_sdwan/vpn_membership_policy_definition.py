@@ -170,7 +170,7 @@ class VpnMembershipPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sites: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict']]]]] = None,
+                 sites: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict', 'outputs.VpnMembershipPolicyDefinitionSite']]]]] = None,
                  __props__=None):
         """
         This resource can manage a VPN Membership Policy Definition .
@@ -203,7 +203,7 @@ class VpnMembershipPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict']]]] sites: List of sites
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict', 'outputs.VpnMembershipPolicyDefinitionSite']]]] sites: List of sites
         """
         ...
     @overload
@@ -255,7 +255,7 @@ class VpnMembershipPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sites: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict']]]]] = None,
+                 sites: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict', 'outputs.VpnMembershipPolicyDefinitionSite']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -286,7 +286,7 @@ class VpnMembershipPolicyDefinition(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            sites: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict']]]]] = None,
+            sites: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict', 'outputs.VpnMembershipPolicyDefinitionSite']]]]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'VpnMembershipPolicyDefinition':
         """
@@ -298,7 +298,7 @@ class VpnMembershipPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict']]]] sites: List of sites
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict', 'outputs.VpnMembershipPolicyDefinitionSite']]]] sites: List of sites
         :param pulumi.Input[_builtins.str] type: Type
         :param pulumi.Input[_builtins.int] version: The version of the object
         """

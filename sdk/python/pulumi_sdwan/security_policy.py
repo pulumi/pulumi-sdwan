@@ -765,16 +765,16 @@ class SecurityPolicy(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  audit_trail: pulumi.Input[Optional[_builtins.str]] = None,
-                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]]] = None,
+                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict', 'outputs.SecurityPolicyDefinition']]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  direct_internet_applications: pulumi.Input[Optional[_builtins.str]] = None,
                  failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
-                 high_speed_logging_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyHighSpeedLoggingEntryArgs', 'SecurityPolicyHighSpeedLoggingEntryArgsDict']]]]] = None,
+                 high_speed_logging_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyHighSpeedLoggingEntryArgs', 'SecurityPolicyHighSpeedLoggingEntryArgsDict', 'outputs.SecurityPolicyHighSpeedLoggingEntry']]]]] = None,
                  high_speed_logging_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  high_speed_logging_server_port: pulumi.Input[Optional[_builtins.str]] = None,
                  high_speed_logging_vpn: pulumi.Input[Optional[_builtins.str]] = None,
                  imcp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
-                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict']]]]] = None,
+                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict', 'outputs.SecurityPolicyLogging']]]]] = None,
                  match_statistics_per_filter: pulumi.Input[Optional[_builtins.str]] = None,
                  max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
                  max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
@@ -824,13 +824,13 @@ class SecurityPolicy(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] audit_trail: Audit trail
                  - Choices: `on`, `off`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]] definitions: List of policy definitions
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict', 'outputs.SecurityPolicyDefinition']]]] definitions: List of policy definitions
         :param pulumi.Input[_builtins.str] description: The description of the security policy
         :param pulumi.Input[_builtins.str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0
                  - Choices: `allow`, `deny`
         :param pulumi.Input[_builtins.str] failure_mode: Failure mode
                  - Choices: `open`, `close`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyHighSpeedLoggingEntryArgs', 'SecurityPolicyHighSpeedLoggingEntryArgsDict']]]] high_speed_logging_entries: High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyHighSpeedLoggingEntryArgs', 'SecurityPolicyHighSpeedLoggingEntryArgsDict', 'outputs.SecurityPolicyHighSpeedLoggingEntry']]]] high_speed_logging_entries: High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
         :param pulumi.Input[_builtins.str] high_speed_logging_server_ip: High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
         :param pulumi.Input[_builtins.str] high_speed_logging_server_port: High Speed Logging Port, Attribute conditional on `mode` equal to `security`
         :param pulumi.Input[_builtins.str] high_speed_logging_vpn: High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
@@ -910,16 +910,16 @@ class SecurityPolicy(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  audit_trail: pulumi.Input[Optional[_builtins.str]] = None,
-                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]]] = None,
+                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict', 'outputs.SecurityPolicyDefinition']]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  direct_internet_applications: pulumi.Input[Optional[_builtins.str]] = None,
                  failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
-                 high_speed_logging_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyHighSpeedLoggingEntryArgs', 'SecurityPolicyHighSpeedLoggingEntryArgsDict']]]]] = None,
+                 high_speed_logging_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyHighSpeedLoggingEntryArgs', 'SecurityPolicyHighSpeedLoggingEntryArgsDict', 'outputs.SecurityPolicyHighSpeedLoggingEntry']]]]] = None,
                  high_speed_logging_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  high_speed_logging_server_port: pulumi.Input[Optional[_builtins.str]] = None,
                  high_speed_logging_vpn: pulumi.Input[Optional[_builtins.str]] = None,
                  imcp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
-                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict']]]]] = None,
+                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict', 'outputs.SecurityPolicyLogging']]]]] = None,
                  match_statistics_per_filter: pulumi.Input[Optional[_builtins.str]] = None,
                  max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
                  max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
@@ -976,16 +976,16 @@ class SecurityPolicy(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             audit_trail: pulumi.Input[Optional[_builtins.str]] = None,
-            definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]]] = None,
+            definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict', 'outputs.SecurityPolicyDefinition']]]]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             direct_internet_applications: pulumi.Input[Optional[_builtins.str]] = None,
             failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
-            high_speed_logging_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyHighSpeedLoggingEntryArgs', 'SecurityPolicyHighSpeedLoggingEntryArgsDict']]]]] = None,
+            high_speed_logging_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyHighSpeedLoggingEntryArgs', 'SecurityPolicyHighSpeedLoggingEntryArgsDict', 'outputs.SecurityPolicyHighSpeedLoggingEntry']]]]] = None,
             high_speed_logging_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
             high_speed_logging_server_port: pulumi.Input[Optional[_builtins.str]] = None,
             high_speed_logging_vpn: pulumi.Input[Optional[_builtins.str]] = None,
             imcp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
-            loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict']]]]] = None,
+            loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict', 'outputs.SecurityPolicyLogging']]]]] = None,
             match_statistics_per_filter: pulumi.Input[Optional[_builtins.str]] = None,
             max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
             max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1006,13 +1006,13 @@ class SecurityPolicy(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] audit_trail: Audit trail
                  - Choices: `on`, `off`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]] definitions: List of policy definitions
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict', 'outputs.SecurityPolicyDefinition']]]] definitions: List of policy definitions
         :param pulumi.Input[_builtins.str] description: The description of the security policy
         :param pulumi.Input[_builtins.str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0
                  - Choices: `allow`, `deny`
         :param pulumi.Input[_builtins.str] failure_mode: Failure mode
                  - Choices: `open`, `close`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyHighSpeedLoggingEntryArgs', 'SecurityPolicyHighSpeedLoggingEntryArgsDict']]]] high_speed_logging_entries: High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyHighSpeedLoggingEntryArgs', 'SecurityPolicyHighSpeedLoggingEntryArgsDict', 'outputs.SecurityPolicyHighSpeedLoggingEntry']]]] high_speed_logging_entries: High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
         :param pulumi.Input[_builtins.str] high_speed_logging_server_ip: High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
         :param pulumi.Input[_builtins.str] high_speed_logging_server_port: High Speed Logging Port, Attribute conditional on `mode` equal to `security`
         :param pulumi.Input[_builtins.str] high_speed_logging_vpn: High Speed Logging VPN, Attribute conditional on `mode` equal to `security`

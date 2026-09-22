@@ -301,7 +301,7 @@ class CustomApplication(pulumi.CustomResource):
                  application_family: pulumi.Input[Optional[_builtins.str]] = None,
                  application_group: pulumi.Input[Optional[_builtins.str]] = None,
                  business_relevance: pulumi.Input[Optional[_builtins.str]] = None,
-                 l3l4s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict']]]]] = None,
+                 l3l4s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict', 'outputs.CustomApplicationL3l4']]]]] = None,
                  server_names: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  traffic_class: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -347,7 +347,7 @@ class CustomApplication(pulumi.CustomResource):
                  - Choices: `adp-group`, `amazon-group`, `aol-group`, `apple-group`, `apple-talk-group`, `atlassian-group`, `banyan-group`, `bittorrent-group`, `box-group`, `capwap-group`, `cisco-jabber-group`, `cisco-phone-group`, `concur-group`, `corba-group`, `dameware-group`, `demandware-group`, `dropbox-group`, `edonkey-emule-group`, `espn-group`, `fasttrack-group`, `flash-group`, `fring-group`, `ftp-group`, `gnutella-group`, `google-group`, `gotomeeting-group`, `hubspot-group`, `icq-group`, `imap-group`, `intuit-group`, `ipsec-group`, `irc-group`, `jive-group`, `kakao-group`, `kerberos-group`, `ldap-group`, `marketo-group`, `ms-cloud-group`, `msn-messenger-group`, `netbios-group`, `netsuite-group`, `nntp-group`, `npmp-group`, `oracle-group`, `pop3-group`, `prm-group`, `qq-group`, `ringcentral-group`, `salesforce-group`, `sap-group`, `servicenow-group`, `smtp-group`, `snmp-group`, `sqlsvr-group`, `stun-group`, `sugar-crm-group`, `telepresence-group`, `tftp-group`, `tiktok-group`, `vmware-group`, `vnc-group`, `wap-group`, `webex-group`, `workday-group`, `xns-xerox-group`, `xunlei-group`, `yahoo-group`, `yahoo-messenger-group`, `zendesk-group`, `zoho-crm-group`, `other`
         :param pulumi.Input[_builtins.str] business_relevance: Business Relevance
                  - Choices: `business-relevant`, `business-irrelevant`, `default`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict']]]] l3l4s: L3/L4 Attributes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict', 'outputs.CustomApplicationL3l4']]]] l3l4s: L3/L4 Attributes
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] server_names: Server Names (Fully Qualified Domain names or Regex starting with `*` but not ending with `*` or both separated by commas.)
         :param pulumi.Input[_builtins.str] traffic_class: Traffic Class
                  - Choices: `multimedia-conferencing`, `network-control`, `signaling`, `voip-telephony`, `ops-admin-mgmt`, `multimedia-streaming`, `real-time-interactive`, `bulk-data`, `transactional-data`, `broadcast-video`
@@ -410,7 +410,7 @@ class CustomApplication(pulumi.CustomResource):
                  application_family: pulumi.Input[Optional[_builtins.str]] = None,
                  application_group: pulumi.Input[Optional[_builtins.str]] = None,
                  business_relevance: pulumi.Input[Optional[_builtins.str]] = None,
-                 l3l4s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict']]]]] = None,
+                 l3l4s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict', 'outputs.CustomApplicationL3l4']]]]] = None,
                  server_names: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  traffic_class: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -446,7 +446,7 @@ class CustomApplication(pulumi.CustomResource):
             application_family: pulumi.Input[Optional[_builtins.str]] = None,
             application_group: pulumi.Input[Optional[_builtins.str]] = None,
             business_relevance: pulumi.Input[Optional[_builtins.str]] = None,
-            l3l4s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict']]]]] = None,
+            l3l4s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict', 'outputs.CustomApplicationL3l4']]]]] = None,
             server_names: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             traffic_class: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CustomApplication':
@@ -464,7 +464,7 @@ class CustomApplication(pulumi.CustomResource):
                  - Choices: `adp-group`, `amazon-group`, `aol-group`, `apple-group`, `apple-talk-group`, `atlassian-group`, `banyan-group`, `bittorrent-group`, `box-group`, `capwap-group`, `cisco-jabber-group`, `cisco-phone-group`, `concur-group`, `corba-group`, `dameware-group`, `demandware-group`, `dropbox-group`, `edonkey-emule-group`, `espn-group`, `fasttrack-group`, `flash-group`, `fring-group`, `ftp-group`, `gnutella-group`, `google-group`, `gotomeeting-group`, `hubspot-group`, `icq-group`, `imap-group`, `intuit-group`, `ipsec-group`, `irc-group`, `jive-group`, `kakao-group`, `kerberos-group`, `ldap-group`, `marketo-group`, `ms-cloud-group`, `msn-messenger-group`, `netbios-group`, `netsuite-group`, `nntp-group`, `npmp-group`, `oracle-group`, `pop3-group`, `prm-group`, `qq-group`, `ringcentral-group`, `salesforce-group`, `sap-group`, `servicenow-group`, `smtp-group`, `snmp-group`, `sqlsvr-group`, `stun-group`, `sugar-crm-group`, `telepresence-group`, `tftp-group`, `tiktok-group`, `vmware-group`, `vnc-group`, `wap-group`, `webex-group`, `workday-group`, `xns-xerox-group`, `xunlei-group`, `yahoo-group`, `yahoo-messenger-group`, `zendesk-group`, `zoho-crm-group`, `other`
         :param pulumi.Input[_builtins.str] business_relevance: Business Relevance
                  - Choices: `business-relevant`, `business-irrelevant`, `default`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict']]]] l3l4s: L3/L4 Attributes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict', 'outputs.CustomApplicationL3l4']]]] l3l4s: L3/L4 Attributes
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] server_names: Server Names (Fully Qualified Domain names or Regex starting with `*` but not ending with `*` or both separated by commas.)
         :param pulumi.Input[_builtins.str] traffic_class: Traffic Class
                  - Choices: `multimedia-conferencing`, `network-control`, `signaling`, `voip-telephony`, `ops-admin-mgmt`, `multimedia-streaming`, `real-time-interactive`, `bulk-data`, `transactional-data`, `broadcast-video`

@@ -1902,8 +1902,8 @@ class SseZscalerFeature(pulumi.CustomResource):
                  force_ssl_inspection_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  idle_time: pulumi.Input[Optional[_builtins.int]] = None,
                  idle_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 interface_pairs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfacePairArgs', 'SseZscalerFeatureInterfacePairArgsDict']]]]] = None,
-                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfaceArgs', 'SseZscalerFeatureInterfaceArgsDict']]]]] = None,
+                 interface_pairs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfacePairArgs', 'SseZscalerFeatureInterfacePairArgsDict', 'outputs.SseZscalerFeatureInterfacePair']]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfaceArgs', 'SseZscalerFeatureInterfaceArgsDict', 'outputs.SseZscalerFeatureInterface']]]]] = None,
                  ip_enforced_for_known_browsers: pulumi.Input[Optional[_builtins.bool]] = None,
                  ip_enforced_for_known_browsers_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ips_control: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1922,12 +1922,12 @@ class SseZscalerFeature(pulumi.CustomResource):
                  secondary_data_center: pulumi.Input[Optional[_builtins.str]] = None,
                  secondary_data_center_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  src_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
-                 sub_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureSubLocationArgs', 'SseZscalerFeatureSubLocationArgsDict']]]]] = None,
+                 sub_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureSubLocationArgs', 'SseZscalerFeatureSubLocationArgsDict', 'outputs.SseZscalerFeatureSubLocation']]]]] = None,
                  surrogate_ip: pulumi.Input[Optional[_builtins.bool]] = None,
                  surrogate_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureTrackerArgs', 'SseZscalerFeatureTrackerArgsDict']]]]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureTrackerArgs', 'SseZscalerFeatureTrackerArgsDict', 'outputs.SseZscalerFeatureTracker']]]]] = None,
                  up_bandwidth: pulumi.Input[Optional[_builtins.float]] = None,
                  up_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  xff_forward_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -2035,8 +2035,8 @@ class SseZscalerFeature(pulumi.CustomResource):
                  - At Least: `1`
                  - Default value: `1`
         :param pulumi.Input[_builtins.str] idle_time_variable: Variable name, Attribute conditional on `surrogate_ip` equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfacePairArgs', 'SseZscalerFeatureInterfacePairArgsDict']]]] interface_pairs: Interface Pair for active and backup
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfaceArgs', 'SseZscalerFeatureInterfaceArgsDict']]]] interfaces: Interface name: IPsec when present
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfacePairArgs', 'SseZscalerFeatureInterfacePairArgsDict', 'outputs.SseZscalerFeatureInterfacePair']]]] interface_pairs: Interface Pair for active and backup
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfaceArgs', 'SseZscalerFeatureInterfaceArgsDict', 'outputs.SseZscalerFeatureInterface']]]] interfaces: Interface name: IPsec when present
         :param pulumi.Input[_builtins.bool] ip_enforced_for_known_browsers: Enforce Surrogate IP for known browsers
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_enforced_for_known_browsers_variable: Variable name
@@ -2071,7 +2071,7 @@ class SseZscalerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] surrogate_ip_variable: Variable name, Attribute conditional on `auth_required` equal to `true`
         :param pulumi.Input[_builtins.str] tracker_source_ip: Source IP address for Tracker
         :param pulumi.Input[_builtins.str] tracker_source_ip_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SseZscalerFeatureTrackerArgs', 'SseZscalerFeatureTrackerArgsDict']]]] trackers: Tracker configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SseZscalerFeatureTrackerArgs', 'SseZscalerFeatureTrackerArgsDict', 'outputs.SseZscalerFeatureTracker']]]] trackers: Tracker configuration
         :param pulumi.Input[_builtins.float] up_bandwidth: , Attribute conditional on `enforce_bandwidth_control` equal to `true`
                  - Range: `0.1`-`99999`
         :param pulumi.Input[_builtins.str] up_bandwidth_variable: Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `true`
@@ -2188,8 +2188,8 @@ class SseZscalerFeature(pulumi.CustomResource):
                  force_ssl_inspection_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  idle_time: pulumi.Input[Optional[_builtins.int]] = None,
                  idle_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 interface_pairs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfacePairArgs', 'SseZscalerFeatureInterfacePairArgsDict']]]]] = None,
-                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfaceArgs', 'SseZscalerFeatureInterfaceArgsDict']]]]] = None,
+                 interface_pairs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfacePairArgs', 'SseZscalerFeatureInterfacePairArgsDict', 'outputs.SseZscalerFeatureInterfacePair']]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfaceArgs', 'SseZscalerFeatureInterfaceArgsDict', 'outputs.SseZscalerFeatureInterface']]]]] = None,
                  ip_enforced_for_known_browsers: pulumi.Input[Optional[_builtins.bool]] = None,
                  ip_enforced_for_known_browsers_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ips_control: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -2208,12 +2208,12 @@ class SseZscalerFeature(pulumi.CustomResource):
                  secondary_data_center: pulumi.Input[Optional[_builtins.str]] = None,
                  secondary_data_center_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  src_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
-                 sub_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureSubLocationArgs', 'SseZscalerFeatureSubLocationArgsDict']]]]] = None,
+                 sub_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureSubLocationArgs', 'SseZscalerFeatureSubLocationArgsDict', 'outputs.SseZscalerFeatureSubLocation']]]]] = None,
                  surrogate_ip: pulumi.Input[Optional[_builtins.bool]] = None,
                  surrogate_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureTrackerArgs', 'SseZscalerFeatureTrackerArgsDict']]]]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureTrackerArgs', 'SseZscalerFeatureTrackerArgsDict', 'outputs.SseZscalerFeatureTracker']]]]] = None,
                  up_bandwidth: pulumi.Input[Optional[_builtins.float]] = None,
                  up_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  xff_forward_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -2324,8 +2324,8 @@ class SseZscalerFeature(pulumi.CustomResource):
             force_ssl_inspection_variable: pulumi.Input[Optional[_builtins.str]] = None,
             idle_time: pulumi.Input[Optional[_builtins.int]] = None,
             idle_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            interface_pairs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfacePairArgs', 'SseZscalerFeatureInterfacePairArgsDict']]]]] = None,
-            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfaceArgs', 'SseZscalerFeatureInterfaceArgsDict']]]]] = None,
+            interface_pairs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfacePairArgs', 'SseZscalerFeatureInterfacePairArgsDict', 'outputs.SseZscalerFeatureInterfacePair']]]]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfaceArgs', 'SseZscalerFeatureInterfaceArgsDict', 'outputs.SseZscalerFeatureInterface']]]]] = None,
             ip_enforced_for_known_browsers: pulumi.Input[Optional[_builtins.bool]] = None,
             ip_enforced_for_known_browsers_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ips_control: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -2344,12 +2344,12 @@ class SseZscalerFeature(pulumi.CustomResource):
             secondary_data_center: pulumi.Input[Optional[_builtins.str]] = None,
             secondary_data_center_variable: pulumi.Input[Optional[_builtins.str]] = None,
             src_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
-            sub_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureSubLocationArgs', 'SseZscalerFeatureSubLocationArgsDict']]]]] = None,
+            sub_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureSubLocationArgs', 'SseZscalerFeatureSubLocationArgsDict', 'outputs.SseZscalerFeatureSubLocation']]]]] = None,
             surrogate_ip: pulumi.Input[Optional[_builtins.bool]] = None,
             surrogate_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tracker_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
             tracker_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureTrackerArgs', 'SseZscalerFeatureTrackerArgsDict']]]]] = None,
+            trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseZscalerFeatureTrackerArgs', 'SseZscalerFeatureTrackerArgsDict', 'outputs.SseZscalerFeatureTracker']]]]] = None,
             up_bandwidth: pulumi.Input[Optional[_builtins.float]] = None,
             up_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None,
@@ -2398,8 +2398,8 @@ class SseZscalerFeature(pulumi.CustomResource):
                  - At Least: `1`
                  - Default value: `1`
         :param pulumi.Input[_builtins.str] idle_time_variable: Variable name, Attribute conditional on `surrogate_ip` equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfacePairArgs', 'SseZscalerFeatureInterfacePairArgsDict']]]] interface_pairs: Interface Pair for active and backup
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfaceArgs', 'SseZscalerFeatureInterfaceArgsDict']]]] interfaces: Interface name: IPsec when present
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfacePairArgs', 'SseZscalerFeatureInterfacePairArgsDict', 'outputs.SseZscalerFeatureInterfacePair']]]] interface_pairs: Interface Pair for active and backup
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SseZscalerFeatureInterfaceArgs', 'SseZscalerFeatureInterfaceArgsDict', 'outputs.SseZscalerFeatureInterface']]]] interfaces: Interface name: IPsec when present
         :param pulumi.Input[_builtins.bool] ip_enforced_for_known_browsers: Enforce Surrogate IP for known browsers
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_enforced_for_known_browsers_variable: Variable name
@@ -2434,7 +2434,7 @@ class SseZscalerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] surrogate_ip_variable: Variable name, Attribute conditional on `auth_required` equal to `true`
         :param pulumi.Input[_builtins.str] tracker_source_ip: Source IP address for Tracker
         :param pulumi.Input[_builtins.str] tracker_source_ip_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SseZscalerFeatureTrackerArgs', 'SseZscalerFeatureTrackerArgsDict']]]] trackers: Tracker configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SseZscalerFeatureTrackerArgs', 'SseZscalerFeatureTrackerArgsDict', 'outputs.SseZscalerFeatureTracker']]]] trackers: Tracker configuration
         :param pulumi.Input[_builtins.float] up_bandwidth: , Attribute conditional on `enforce_bandwidth_control` equal to `true`
                  - Range: `0.1`-`99999`
         :param pulumi.Input[_builtins.str] up_bandwidth_variable: Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `true`

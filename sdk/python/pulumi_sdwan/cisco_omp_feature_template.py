@@ -1140,8 +1140,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 advertise_ipv4_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]]] = None,
-                 advertise_ipv6_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]]] = None,
+                 advertise_ipv4_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict', 'outputs.CiscoOmpFeatureTemplateAdvertiseIpv4Route']]]]] = None,
+                 advertise_ipv6_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict', 'outputs.CiscoOmpFeatureTemplateAdvertiseIpv6Route']]]]] = None,
                  advertisement_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  advertisement_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1219,8 +1219,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]] advertise_ipv4_routes: Advertise locally learned routes to OMP
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]] advertise_ipv6_routes: Advertise locally learned routes to OMP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict', 'outputs.CiscoOmpFeatureTemplateAdvertiseIpv4Route']]]] advertise_ipv4_routes: Advertise locally learned routes to OMP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict', 'outputs.CiscoOmpFeatureTemplateAdvertiseIpv6Route']]]] advertise_ipv6_routes: Advertise locally learned routes to OMP
         :param pulumi.Input[_builtins.int] advertisement_interval: Set the time between OMP Update packets
                  - Range: `0`-`65535`
                  - Default value: `1`
@@ -1336,8 +1336,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 advertise_ipv4_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]]] = None,
-                 advertise_ipv6_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]]] = None,
+                 advertise_ipv4_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict', 'outputs.CiscoOmpFeatureTemplateAdvertiseIpv4Route']]]]] = None,
+                 advertise_ipv6_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict', 'outputs.CiscoOmpFeatureTemplateAdvertiseIpv6Route']]]]] = None,
                  advertisement_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  advertisement_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1423,8 +1423,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            advertise_ipv4_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]]] = None,
-            advertise_ipv6_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]]] = None,
+            advertise_ipv4_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict', 'outputs.CiscoOmpFeatureTemplateAdvertiseIpv4Route']]]]] = None,
+            advertise_ipv6_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict', 'outputs.CiscoOmpFeatureTemplateAdvertiseIpv6Route']]]]] = None,
             advertisement_interval: pulumi.Input[Optional[_builtins.int]] = None,
             advertisement_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1463,8 +1463,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]] advertise_ipv4_routes: Advertise locally learned routes to OMP
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]] advertise_ipv6_routes: Advertise locally learned routes to OMP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict', 'outputs.CiscoOmpFeatureTemplateAdvertiseIpv4Route']]]] advertise_ipv4_routes: Advertise locally learned routes to OMP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict', 'outputs.CiscoOmpFeatureTemplateAdvertiseIpv6Route']]]] advertise_ipv6_routes: Advertise locally learned routes to OMP
         :param pulumi.Input[_builtins.int] advertisement_interval: Set the time between OMP Update packets
                  - Range: `0`-`65535`
                  - Default value: `1`

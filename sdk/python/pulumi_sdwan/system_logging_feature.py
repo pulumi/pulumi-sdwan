@@ -469,10 +469,10 @@ class SystemLoggingFeature(pulumi.CustomResource):
                  disk_file_size: pulumi.Input[Optional[_builtins.int]] = None,
                  disk_file_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv4ServerArgs', 'SystemLoggingFeatureIpv4ServerArgsDict']]]]] = None,
-                 ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv6ServerArgs', 'SystemLoggingFeatureIpv6ServerArgsDict']]]]] = None,
+                 ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv4ServerArgs', 'SystemLoggingFeatureIpv4ServerArgsDict', 'outputs.SystemLoggingFeatureIpv4Server']]]]] = None,
+                 ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv6ServerArgs', 'SystemLoggingFeatureIpv6ServerArgsDict', 'outputs.SystemLoggingFeatureIpv6Server']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureTlsProfileArgs', 'SystemLoggingFeatureTlsProfileArgsDict']]]]] = None,
+                 tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureTlsProfileArgs', 'SystemLoggingFeatureTlsProfileArgsDict', 'outputs.SystemLoggingFeatureTlsProfile']]]]] = None,
                  __props__=None):
         """
         This resource can manage a System Logging Feature.
@@ -542,10 +542,10 @@ class SystemLoggingFeature(pulumi.CustomResource):
                  - Default value: `10`
         :param pulumi.Input[_builtins.str] disk_file_size_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv4ServerArgs', 'SystemLoggingFeatureIpv4ServerArgsDict']]]] ipv4_servers: Enable logging to remote server
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv6ServerArgs', 'SystemLoggingFeatureIpv6ServerArgsDict']]]] ipv6_servers: Enable logging to remote ipv6 server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv4ServerArgs', 'SystemLoggingFeatureIpv4ServerArgsDict', 'outputs.SystemLoggingFeatureIpv4Server']]]] ipv4_servers: Enable logging to remote server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv6ServerArgs', 'SystemLoggingFeatureIpv6ServerArgsDict', 'outputs.SystemLoggingFeatureIpv6Server']]]] ipv6_servers: Enable logging to remote ipv6 server
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingFeatureTlsProfileArgs', 'SystemLoggingFeatureTlsProfileArgsDict']]]] tls_profiles: Configure a TLS profile
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingFeatureTlsProfileArgs', 'SystemLoggingFeatureTlsProfileArgsDict', 'outputs.SystemLoggingFeatureTlsProfile']]]] tls_profiles: Configure a TLS profile
         """
         ...
     @overload
@@ -629,10 +629,10 @@ class SystemLoggingFeature(pulumi.CustomResource):
                  disk_file_size: pulumi.Input[Optional[_builtins.int]] = None,
                  disk_file_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv4ServerArgs', 'SystemLoggingFeatureIpv4ServerArgsDict']]]]] = None,
-                 ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv6ServerArgs', 'SystemLoggingFeatureIpv6ServerArgsDict']]]]] = None,
+                 ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv4ServerArgs', 'SystemLoggingFeatureIpv4ServerArgsDict', 'outputs.SystemLoggingFeatureIpv4Server']]]]] = None,
+                 ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv6ServerArgs', 'SystemLoggingFeatureIpv6ServerArgsDict', 'outputs.SystemLoggingFeatureIpv6Server']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureTlsProfileArgs', 'SystemLoggingFeatureTlsProfileArgsDict']]]]] = None,
+                 tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureTlsProfileArgs', 'SystemLoggingFeatureTlsProfileArgsDict', 'outputs.SystemLoggingFeatureTlsProfile']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -675,10 +675,10 @@ class SystemLoggingFeature(pulumi.CustomResource):
             disk_file_size: pulumi.Input[Optional[_builtins.int]] = None,
             disk_file_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv4ServerArgs', 'SystemLoggingFeatureIpv4ServerArgsDict']]]]] = None,
-            ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv6ServerArgs', 'SystemLoggingFeatureIpv6ServerArgsDict']]]]] = None,
+            ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv4ServerArgs', 'SystemLoggingFeatureIpv4ServerArgsDict', 'outputs.SystemLoggingFeatureIpv4Server']]]]] = None,
+            ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv6ServerArgs', 'SystemLoggingFeatureIpv6ServerArgsDict', 'outputs.SystemLoggingFeatureIpv6Server']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureTlsProfileArgs', 'SystemLoggingFeatureTlsProfileArgsDict']]]]] = None,
+            tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureTlsProfileArgs', 'SystemLoggingFeatureTlsProfileArgsDict', 'outputs.SystemLoggingFeatureTlsProfile']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SystemLoggingFeature':
         """
         Get an existing SystemLoggingFeature resource's state with the given name, id, and optional extra
@@ -700,10 +700,10 @@ class SystemLoggingFeature(pulumi.CustomResource):
                  - Default value: `10`
         :param pulumi.Input[_builtins.str] disk_file_size_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv4ServerArgs', 'SystemLoggingFeatureIpv4ServerArgsDict']]]] ipv4_servers: Enable logging to remote server
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv6ServerArgs', 'SystemLoggingFeatureIpv6ServerArgsDict']]]] ipv6_servers: Enable logging to remote ipv6 server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv4ServerArgs', 'SystemLoggingFeatureIpv4ServerArgsDict', 'outputs.SystemLoggingFeatureIpv4Server']]]] ipv4_servers: Enable logging to remote server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv6ServerArgs', 'SystemLoggingFeatureIpv6ServerArgsDict', 'outputs.SystemLoggingFeatureIpv6Server']]]] ipv6_servers: Enable logging to remote ipv6 server
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingFeatureTlsProfileArgs', 'SystemLoggingFeatureTlsProfileArgsDict']]]] tls_profiles: Configure a TLS profile
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingFeatureTlsProfileArgs', 'SystemLoggingFeatureTlsProfileArgsDict', 'outputs.SystemLoggingFeatureTlsProfile']]]] tls_profiles: Configure a TLS profile
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

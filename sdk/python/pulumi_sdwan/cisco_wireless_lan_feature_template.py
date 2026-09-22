@@ -757,7 +757,7 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
                  shutdown24ghz_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  shutdown5ghz: pulumi.Input[Optional[_builtins.bool]] = None,
                  shutdown5ghz_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoWirelessLanFeatureTemplateSsidArgs', 'CiscoWirelessLanFeatureTemplateSsidArgsDict']]]]] = None,
+                 ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoWirelessLanFeatureTemplateSsidArgs', 'CiscoWirelessLanFeatureTemplateSsidArgsDict', 'outputs.CiscoWirelessLanFeatureTemplateSsid']]]]] = None,
                  username: pulumi.Input[Optional[_builtins.str]] = None,
                  username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -833,7 +833,7 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] shutdown5ghz: 5GHz Shutdown
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown5ghz_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoWirelessLanFeatureTemplateSsidArgs', 'CiscoWirelessLanFeatureTemplateSsidArgsDict']]]] ssids: Configure Wi-Fi SSID
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoWirelessLanFeatureTemplateSsidArgs', 'CiscoWirelessLanFeatureTemplateSsidArgsDict', 'outputs.CiscoWirelessLanFeatureTemplateSsid']]]] ssids: Configure Wi-Fi SSID
         :param pulumi.Input[_builtins.str] username: Set management username
         :param pulumi.Input[_builtins.str] username_variable: Variable name
         """
@@ -921,7 +921,7 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
                  shutdown24ghz_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  shutdown5ghz: pulumi.Input[Optional[_builtins.bool]] = None,
                  shutdown5ghz_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoWirelessLanFeatureTemplateSsidArgs', 'CiscoWirelessLanFeatureTemplateSsidArgsDict']]]]] = None,
+                 ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoWirelessLanFeatureTemplateSsidArgs', 'CiscoWirelessLanFeatureTemplateSsidArgsDict', 'outputs.CiscoWirelessLanFeatureTemplateSsid']]]]] = None,
                  username: pulumi.Input[Optional[_builtins.str]] = None,
                  username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -986,7 +986,7 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
             shutdown24ghz_variable: pulumi.Input[Optional[_builtins.str]] = None,
             shutdown5ghz: pulumi.Input[Optional[_builtins.bool]] = None,
             shutdown5ghz_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoWirelessLanFeatureTemplateSsidArgs', 'CiscoWirelessLanFeatureTemplateSsidArgsDict']]]]] = None,
+            ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoWirelessLanFeatureTemplateSsidArgs', 'CiscoWirelessLanFeatureTemplateSsidArgsDict', 'outputs.CiscoWirelessLanFeatureTemplateSsid']]]]] = None,
             template_type: pulumi.Input[Optional[_builtins.str]] = None,
             username: pulumi.Input[Optional[_builtins.str]] = None,
             username_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1022,7 +1022,7 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] shutdown5ghz: 5GHz Shutdown
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown5ghz_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoWirelessLanFeatureTemplateSsidArgs', 'CiscoWirelessLanFeatureTemplateSsidArgsDict']]]] ssids: Configure Wi-Fi SSID
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoWirelessLanFeatureTemplateSsidArgs', 'CiscoWirelessLanFeatureTemplateSsidArgsDict', 'outputs.CiscoWirelessLanFeatureTemplateSsid']]]] ssids: Configure Wi-Fi SSID
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.str] username: Set management username
         :param pulumi.Input[_builtins.str] username_variable: Variable name

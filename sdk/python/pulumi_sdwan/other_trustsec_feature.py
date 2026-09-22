@@ -1123,7 +1123,7 @@ class OtherTrustsecFeature(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  speaker_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
                  speaker_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 sxp_connections: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict']]]]] = None,
+                 sxp_connections: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict', 'outputs.OtherTrustsecFeatureSxpConnection']]]]] = None,
                  sxp_default_password: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_default_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_key_chain: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1216,7 +1216,7 @@ class OtherTrustsecFeature(pulumi.CustomResource):
                  - Range: `1`-`65534`
                  - Default value: `120`
         :param pulumi.Input[_builtins.str] speaker_hold_time_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict']]]] sxp_connections: Configure SXP Connections
+        :param pulumi.Input[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict', 'outputs.OtherTrustsecFeatureSxpConnection']]]] sxp_connections: Configure SXP Connections
         :param pulumi.Input[_builtins.str] sxp_default_password: Configure SXP default password
         :param pulumi.Input[_builtins.str] sxp_default_password_variable: Variable name
         :param pulumi.Input[_builtins.str] sxp_key_chain: Configure SXP key-chain
@@ -1324,7 +1324,7 @@ class OtherTrustsecFeature(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  speaker_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
                  speaker_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 sxp_connections: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict']]]]] = None,
+                 sxp_connections: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict', 'outputs.OtherTrustsecFeatureSxpConnection']]]]] = None,
                  sxp_default_password: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_default_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_key_chain: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1408,7 +1408,7 @@ class OtherTrustsecFeature(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             speaker_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
             speaker_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            sxp_connections: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict']]]]] = None,
+            sxp_connections: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict', 'outputs.OtherTrustsecFeatureSxpConnection']]]]] = None,
             sxp_default_password: pulumi.Input[Optional[_builtins.str]] = None,
             sxp_default_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
             sxp_key_chain: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1456,7 +1456,7 @@ class OtherTrustsecFeature(pulumi.CustomResource):
                  - Range: `1`-`65534`
                  - Default value: `120`
         :param pulumi.Input[_builtins.str] speaker_hold_time_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict']]]] sxp_connections: Configure SXP Connections
+        :param pulumi.Input[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict', 'outputs.OtherTrustsecFeatureSxpConnection']]]] sxp_connections: Configure SXP Connections
         :param pulumi.Input[_builtins.str] sxp_default_password: Configure SXP default password
         :param pulumi.Input[_builtins.str] sxp_default_password_variable: Variable name
         :param pulumi.Input[_builtins.str] sxp_key_chain: Configure SXP key-chain

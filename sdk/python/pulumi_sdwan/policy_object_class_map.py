@@ -185,7 +185,7 @@ class PolicyObjectClassMap(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectClassMapEntryArgs', 'PolicyObjectClassMapEntryArgsDict']]]]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectClassMapEntryArgs', 'PolicyObjectClassMapEntryArgsDict', 'outputs.PolicyObjectClassMapEntry']]]]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -222,7 +222,7 @@ class PolicyObjectClassMap(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
-        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectClassMapEntryArgs', 'PolicyObjectClassMapEntryArgsDict']]]] entries: class map List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectClassMapEntryArgs', 'PolicyObjectClassMapEntryArgsDict', 'outputs.PolicyObjectClassMapEntry']]]] entries: class map List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         """
@@ -278,7 +278,7 @@ class PolicyObjectClassMap(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectClassMapEntryArgs', 'PolicyObjectClassMapEntryArgsDict']]]]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectClassMapEntryArgs', 'PolicyObjectClassMapEntryArgsDict', 'outputs.PolicyObjectClassMapEntry']]]]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -310,7 +310,7 @@ class PolicyObjectClassMap(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
-            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectClassMapEntryArgs', 'PolicyObjectClassMapEntryArgsDict']]]]] = None,
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectClassMapEntryArgs', 'PolicyObjectClassMapEntryArgsDict', 'outputs.PolicyObjectClassMapEntry']]]]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'PolicyObjectClassMap':
@@ -322,7 +322,7 @@ class PolicyObjectClassMap(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
-        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectClassMapEntryArgs', 'PolicyObjectClassMapEntryArgsDict']]]] entries: class map List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectClassMapEntryArgs', 'PolicyObjectClassMapEntryArgsDict', 'outputs.PolicyObjectClassMapEntry']]]] entries: class map List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         :param pulumi.Input[_builtins.int] version: The version of the Policy_object

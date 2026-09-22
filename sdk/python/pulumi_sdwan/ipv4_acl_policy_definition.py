@@ -207,7 +207,7 @@ class Ipv4AclPolicyDefinition(pulumi.CustomResource):
                  default_action: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict', 'outputs.Ipv4AclPolicyDefinitionSequence']]]]] = None,
                  __props__=None):
         """
         This resource can manage a IPv4 ACL Policy Definition .
@@ -255,7 +255,7 @@ class Ipv4AclPolicyDefinition(pulumi.CustomResource):
                  - Choices: `accept`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict']]]] sequences: List of ACL sequences
+        :param pulumi.Input[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict', 'outputs.Ipv4AclPolicyDefinitionSequence']]]] sequences: List of ACL sequences
         """
         ...
     @overload
@@ -321,7 +321,7 @@ class Ipv4AclPolicyDefinition(pulumi.CustomResource):
                  default_action: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict', 'outputs.Ipv4AclPolicyDefinitionSequence']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -354,7 +354,7 @@ class Ipv4AclPolicyDefinition(pulumi.CustomResource):
             default_action: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict']]]]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict', 'outputs.Ipv4AclPolicyDefinitionSequence']]]]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'Ipv4AclPolicyDefinition':
         """
@@ -368,7 +368,7 @@ class Ipv4AclPolicyDefinition(pulumi.CustomResource):
                  - Choices: `accept`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict']]]] sequences: List of ACL sequences
+        :param pulumi.Input[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict', 'outputs.Ipv4AclPolicyDefinitionSequence']]]] sequences: List of ACL sequences
         :param pulumi.Input[_builtins.str] type: Type
         :param pulumi.Input[_builtins.int] version: The version of the object
         """

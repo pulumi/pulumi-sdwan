@@ -234,7 +234,7 @@ class HubAndSpokeTopologyPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 topologies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict']]]]] = None,
+                 topologies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict', 'outputs.HubAndSpokeTopologyPolicyDefinitionTopology']]]]] = None,
                  vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
                  vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
@@ -279,7 +279,7 @@ class HubAndSpokeTopologyPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict']]]] topologies: List of topologies
+        :param pulumi.Input[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict', 'outputs.HubAndSpokeTopologyPolicyDefinitionTopology']]]] topologies: List of topologies
         :param pulumi.Input[_builtins.str] vpn_list_id: VPN list ID
         :param pulumi.Input[_builtins.int] vpn_list_version: VPN list version
         """
@@ -343,7 +343,7 @@ class HubAndSpokeTopologyPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 topologies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict']]]]] = None,
+                 topologies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict', 'outputs.HubAndSpokeTopologyPolicyDefinitionTopology']]]]] = None,
                  vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
                  vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
@@ -378,7 +378,7 @@ class HubAndSpokeTopologyPolicyDefinition(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            topologies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict']]]]] = None,
+            topologies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict', 'outputs.HubAndSpokeTopologyPolicyDefinitionTopology']]]]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None,
             vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -392,7 +392,7 @@ class HubAndSpokeTopologyPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict']]]] topologies: List of topologies
+        :param pulumi.Input[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict', 'outputs.HubAndSpokeTopologyPolicyDefinitionTopology']]]] topologies: List of topologies
         :param pulumi.Input[_builtins.str] type: Type
         :param pulumi.Input[_builtins.int] version: The version of the object
         :param pulumi.Input[_builtins.str] vpn_list_id: VPN list ID

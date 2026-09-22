@@ -208,7 +208,7 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
                  default_action: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomControlTopologyPolicyDefinitionSequenceArgs', 'CustomControlTopologyPolicyDefinitionSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomControlTopologyPolicyDefinitionSequenceArgs', 'CustomControlTopologyPolicyDefinitionSequenceArgsDict', 'outputs.CustomControlTopologyPolicyDefinitionSequence']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Custom Control Topology Policy Definition .
@@ -258,7 +258,7 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
                  - Choices: `accept`, `reject`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CustomControlTopologyPolicyDefinitionSequenceArgs', 'CustomControlTopologyPolicyDefinitionSequenceArgsDict']]]] sequences: List of sequences
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CustomControlTopologyPolicyDefinitionSequenceArgs', 'CustomControlTopologyPolicyDefinitionSequenceArgsDict', 'outputs.CustomControlTopologyPolicyDefinitionSequence']]]] sequences: List of sequences
         """
         ...
     @overload
@@ -326,7 +326,7 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
                  default_action: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomControlTopologyPolicyDefinitionSequenceArgs', 'CustomControlTopologyPolicyDefinitionSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomControlTopologyPolicyDefinitionSequenceArgs', 'CustomControlTopologyPolicyDefinitionSequenceArgsDict', 'outputs.CustomControlTopologyPolicyDefinitionSequence']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -357,7 +357,7 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
             default_action: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomControlTopologyPolicyDefinitionSequenceArgs', 'CustomControlTopologyPolicyDefinitionSequenceArgsDict']]]]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomControlTopologyPolicyDefinitionSequenceArgs', 'CustomControlTopologyPolicyDefinitionSequenceArgsDict', 'outputs.CustomControlTopologyPolicyDefinitionSequence']]]]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CustomControlTopologyPolicyDefinition':
         """
@@ -371,7 +371,7 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
                  - Choices: `accept`, `reject`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CustomControlTopologyPolicyDefinitionSequenceArgs', 'CustomControlTopologyPolicyDefinitionSequenceArgsDict']]]] sequences: List of sequences
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CustomControlTopologyPolicyDefinitionSequenceArgs', 'CustomControlTopologyPolicyDefinitionSequenceArgsDict', 'outputs.CustomControlTopologyPolicyDefinitionSequence']]]] sequences: List of sequences
         :param pulumi.Input[_builtins.str] type: Type
         :param pulumi.Input[_builtins.int] version: The version of the object
         """

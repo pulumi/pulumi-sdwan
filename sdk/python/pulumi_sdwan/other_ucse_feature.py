@@ -637,7 +637,7 @@ class OtherUcseFeature(pulumi.CustomResource):
                  default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict']]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict', 'outputs.OtherUcseFeatureInterface']]]]] = None,
                  ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -703,7 +703,7 @@ class OtherUcseFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] default_gateway_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict']]]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
+        :param pulumi.Input[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict', 'outputs.OtherUcseFeatureInterface']]]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
         :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
@@ -785,7 +785,7 @@ class OtherUcseFeature(pulumi.CustomResource):
                  default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict']]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict', 'outputs.OtherUcseFeatureInterface']]]]] = None,
                  ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -845,7 +845,7 @@ class OtherUcseFeature(pulumi.CustomResource):
             default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict']]]]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict', 'outputs.OtherUcseFeatureInterface']]]]] = None,
             ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
             ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -875,7 +875,7 @@ class OtherUcseFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] default_gateway_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict']]]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
+        :param pulumi.Input[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict', 'outputs.OtherUcseFeatureInterface']]]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
         :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature

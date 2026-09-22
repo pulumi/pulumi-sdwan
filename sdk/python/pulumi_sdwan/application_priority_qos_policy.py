@@ -252,7 +252,7 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict']]]]] = None,
+                 qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict', 'outputs.ApplicationPriorityQosPolicyQosScheduler']]]]] = None,
                  target_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  target_interfaces_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -295,7 +295,7 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Policy
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict']]]] qos_schedulers: qosSchedulers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict', 'outputs.ApplicationPriorityQosPolicyQosScheduler']]]] qos_schedulers: qosSchedulers
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_interfaces: interfaces
         :param pulumi.Input[_builtins.str] target_interfaces_variable: Variable name
         """
@@ -357,7 +357,7 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict']]]]] = None,
+                 qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict', 'outputs.ApplicationPriorityQosPolicyQosScheduler']]]]] = None,
                  target_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  target_interfaces_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -391,7 +391,7 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
             description: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict']]]]] = None,
+            qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict', 'outputs.ApplicationPriorityQosPolicyQosScheduler']]]]] = None,
             target_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             target_interfaces_variable: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ApplicationPriorityQosPolicy':
@@ -405,7 +405,7 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Policy
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict']]]] qos_schedulers: qosSchedulers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict', 'outputs.ApplicationPriorityQosPolicyQosScheduler']]]] qos_schedulers: qosSchedulers
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_interfaces: interfaces
         :param pulumi.Input[_builtins.str] target_interfaces_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Policy

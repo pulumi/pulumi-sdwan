@@ -234,7 +234,7 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]]] = None,
+                 regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict', 'outputs.MeshTopologyPolicyDefinitionRegion']]]]] = None,
                  vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
                  vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
@@ -270,7 +270,7 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]] regions: List of regions
+        :param pulumi.Input[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict', 'outputs.MeshTopologyPolicyDefinitionRegion']]]] regions: List of regions
         :param pulumi.Input[_builtins.str] vpn_list_id: VPN list ID
         :param pulumi.Input[_builtins.int] vpn_list_version: VPN list version
         """
@@ -325,7 +325,7 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]]] = None,
+                 regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict', 'outputs.MeshTopologyPolicyDefinitionRegion']]]]] = None,
                  vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
                  vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
@@ -360,7 +360,7 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]]] = None,
+            regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict', 'outputs.MeshTopologyPolicyDefinitionRegion']]]]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None,
             vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -374,7 +374,7 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]] regions: List of regions
+        :param pulumi.Input[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict', 'outputs.MeshTopologyPolicyDefinitionRegion']]]] regions: List of regions
         :param pulumi.Input[_builtins.str] type: Type
         :param pulumi.Input[_builtins.int] version: The version of the object
         :param pulumi.Input[_builtins.str] vpn_list_id: VPN list ID

@@ -896,8 +896,8 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_address: pulumi.Input[Optional[_builtins.str]] = None,
                  network_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 option_codes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]]] = None,
-                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]]] = None,
+                 option_codes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict', 'outputs.ServiceDhcpServerFeatureOptionCode']]]]] = None,
+                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict', 'outputs.ServiceDhcpServerFeatureStaticLease']]]]] = None,
                  subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
                  subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -973,8 +973,8 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] network_address: Network Address
         :param pulumi.Input[_builtins.str] network_address_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]] option_codes: Configure Options Code
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]] static_leases: Configure static IP addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict', 'outputs.ServiceDhcpServerFeatureOptionCode']]]] option_codes: Configure Options Code
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict', 'outputs.ServiceDhcpServerFeatureStaticLease']]]] static_leases: Configure static IP addresses
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
                  - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
@@ -1066,8 +1066,8 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_address: pulumi.Input[Optional[_builtins.str]] = None,
                  network_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 option_codes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]]] = None,
-                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]]] = None,
+                 option_codes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict', 'outputs.ServiceDhcpServerFeatureOptionCode']]]]] = None,
+                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict', 'outputs.ServiceDhcpServerFeatureStaticLease']]]]] = None,
                  subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
                  subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -1138,8 +1138,8 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             network_address: pulumi.Input[Optional[_builtins.str]] = None,
             network_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            option_codes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]]] = None,
-            static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]]] = None,
+            option_codes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict', 'outputs.ServiceDhcpServerFeatureOptionCode']]]]] = None,
+            static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict', 'outputs.ServiceDhcpServerFeatureStaticLease']]]]] = None,
             subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
             subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -1175,8 +1175,8 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] network_address: Network Address
         :param pulumi.Input[_builtins.str] network_address_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]] option_codes: Configure Options Code
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]] static_leases: Configure static IP addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict', 'outputs.ServiceDhcpServerFeatureOptionCode']]]] option_codes: Configure Options Code
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict', 'outputs.ServiceDhcpServerFeatureStaticLease']]]] static_leases: Configure static IP addresses
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
                  - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name

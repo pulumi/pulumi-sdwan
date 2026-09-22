@@ -229,7 +229,7 @@ class SystemIpv6DeviceAccessFeature(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemIpv6DeviceAccessFeatureSequenceArgs', 'SystemIpv6DeviceAccessFeatureSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemIpv6DeviceAccessFeatureSequenceArgs', 'SystemIpv6DeviceAccessFeatureSequenceArgsDict', 'outputs.SystemIpv6DeviceAccessFeatureSequence']]]]] = None,
                  __props__=None):
         """
         This resource can manage a System IPv6 Device Access Feature.
@@ -273,7 +273,7 @@ class SystemIpv6DeviceAccessFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemIpv6DeviceAccessFeatureSequenceArgs', 'SystemIpv6DeviceAccessFeatureSequenceArgsDict']]]] sequences: Device Access Control List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemIpv6DeviceAccessFeatureSequenceArgs', 'SystemIpv6DeviceAccessFeatureSequenceArgsDict', 'outputs.SystemIpv6DeviceAccessFeatureSequence']]]] sequences: Device Access Control List
         """
         ...
     @overload
@@ -334,7 +334,7 @@ class SystemIpv6DeviceAccessFeature(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemIpv6DeviceAccessFeatureSequenceArgs', 'SystemIpv6DeviceAccessFeatureSequenceArgsDict']]]]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemIpv6DeviceAccessFeatureSequenceArgs', 'SystemIpv6DeviceAccessFeatureSequenceArgsDict', 'outputs.SystemIpv6DeviceAccessFeatureSequence']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -366,7 +366,7 @@ class SystemIpv6DeviceAccessFeature(pulumi.CustomResource):
             description: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemIpv6DeviceAccessFeatureSequenceArgs', 'SystemIpv6DeviceAccessFeatureSequenceArgsDict']]]]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemIpv6DeviceAccessFeatureSequenceArgs', 'SystemIpv6DeviceAccessFeatureSequenceArgsDict', 'outputs.SystemIpv6DeviceAccessFeatureSequence']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SystemIpv6DeviceAccessFeature':
         """
         Get an existing SystemIpv6DeviceAccessFeature resource's state with the given name, id, and optional extra
@@ -381,7 +381,7 @@ class SystemIpv6DeviceAccessFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemIpv6DeviceAccessFeatureSequenceArgs', 'SystemIpv6DeviceAccessFeatureSequenceArgsDict']]]] sequences: Device Access Control List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemIpv6DeviceAccessFeatureSequenceArgs', 'SystemIpv6DeviceAccessFeatureSequenceArgsDict', 'outputs.SystemIpv6DeviceAccessFeatureSequence']]]] sequences: Device Access Control List
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

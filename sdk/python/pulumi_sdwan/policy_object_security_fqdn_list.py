@@ -177,7 +177,7 @@ class PolicyObjectSecurityFqdnList(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityFqdnListEntryArgs', 'PolicyObjectSecurityFqdnListEntryArgsDict']]]]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityFqdnListEntryArgs', 'PolicyObjectSecurityFqdnListEntryArgsDict', 'outputs.PolicyObjectSecurityFqdnListEntry']]]]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -269,7 +269,7 @@ class PolicyObjectSecurityFqdnList(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityFqdnListEntryArgs', 'PolicyObjectSecurityFqdnListEntryArgsDict']]]]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityFqdnListEntryArgs', 'PolicyObjectSecurityFqdnListEntryArgsDict', 'outputs.PolicyObjectSecurityFqdnListEntry']]]]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -301,7 +301,7 @@ class PolicyObjectSecurityFqdnList(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
-            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityFqdnListEntryArgs', 'PolicyObjectSecurityFqdnListEntryArgsDict']]]]] = None,
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityFqdnListEntryArgs', 'PolicyObjectSecurityFqdnListEntryArgsDict', 'outputs.PolicyObjectSecurityFqdnListEntry']]]]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'PolicyObjectSecurityFqdnList':

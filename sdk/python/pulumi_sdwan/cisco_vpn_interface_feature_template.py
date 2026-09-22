@@ -7012,7 +7012,7 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceFeatureTemplateAccessListArgsDict']]]]] = None,
+                 access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceFeatureTemplateAccessListArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateAccessList']]]]] = None,
                  address: pulumi.Input[Optional[_builtins.str]] = None,
                  address_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  arp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
@@ -7061,16 +7061,16 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
                  iperf_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_dhcp_helper_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_dhcp_helpers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ipv4_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgsDict']]]]] = None,
-                 ipv4_vrrps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict']]]]] = None,
-                 ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
+                 ipv4_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddress']]]]] = None,
+                 ipv4_vrrps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv4Vrrp']]]]] = None,
+                 ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6AccessList']]]]] = None,
                  ipv6_address: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_dhcp_helpers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgsDict']]]]] = None,
+                 ipv6_dhcp_helpers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelper']]]]] = None,
                  ipv6_nat: pulumi.Input[Optional[_builtins.bool]] = None,
                  ipv6_nat_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgsDict']]]]] = None,
-                 ipv6_vrrps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgsDict']]]]] = None,
+                 ipv6_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddress']]]]] = None,
+                 ipv6_vrrps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6Vrrp']]]]] = None,
                  load_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  load_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  mac_address: pulumi.Input[Optional[_builtins.str]] = None,
@@ -7127,10 +7127,10 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
                  shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  speed: pulumi.Input[Optional[_builtins.str]] = None,
                  speed_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 static_arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticArpArgs', 'CiscoVpnInterfaceFeatureTemplateStaticArpArgsDict']]]]] = None,
-                 static_nat66_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgsDict']]]]] = None,
-                 static_nat_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgsDict']]]]] = None,
-                 static_port_forward_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgsDict']]]]] = None,
+                 static_arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticArpArgs', 'CiscoVpnInterfaceFeatureTemplateStaticArpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticArp']]]]] = None,
+                 static_nat66_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticNat66Entry']]]]] = None,
+                 static_nat_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticNatEntry']]]]] = None,
+                 static_port_forward_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntry']]]]] = None,
                  static_sgt: pulumi.Input[Optional[_builtins.int]] = None,
                  static_sgt_trusted: pulumi.Input[Optional[_builtins.bool]] = None,
                  static_sgt_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -7182,7 +7182,7 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_control_connections: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_control_connections_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs', 'CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs', 'CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulation']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
                  tunnel_interface_gre_tunnel_destination_ip: pulumi.Input[Optional[_builtins.str]] = None,
@@ -7420,7 +7420,7 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceFeatureTemplateAccessListArgsDict']]]] access_lists: Apply ACL
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceFeatureTemplateAccessListArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateAccessList']]]] access_lists: Apply ACL
         :param pulumi.Input[_builtins.str] address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] address_variable: Variable name
         :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds
@@ -7491,17 +7491,17 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] iperf_server_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Assign secondary IP addresses
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict']]]] ipv4_vrrps: Enable VRRP
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgsDict']]]] ipv6_access_lists: Apply IPv6 access list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddress']]]] ipv4_secondary_addresses: Assign secondary IP addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv4Vrrp']]]] ipv4_vrrps: Enable VRRP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6AccessList']]]] ipv6_access_lists: Apply IPv6 access list
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgsDict']]]] ipv6_dhcp_helpers: DHCPv6 Helper
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelper']]]] ipv6_dhcp_helpers: DHCPv6 Helper
         :param pulumi.Input[_builtins.bool] ipv6_nat: NAT64 on this interface
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_nat_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgsDict']]]] ipv6_secondary_addresses: Assign secondary IPv6 addresses
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgsDict']]]] ipv6_vrrps: Enable VRRP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddress']]]] ipv6_secondary_addresses: Assign secondary IPv6 addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6Vrrp']]]] ipv6_vrrps: Enable VRRP
         :param pulumi.Input[_builtins.int] load_interval: Interval for interface load calculation
                  - Range: `30`-`600`
                  - Default value: `30`
@@ -7584,10 +7584,10 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] speed: Set interface speed
                  - Choices: `10`, `100`, `1000`, `2500`, `10000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticArpArgs', 'CiscoVpnInterfaceFeatureTemplateStaticArpArgsDict']]]] static_arps: Configure static ARP entries
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgsDict']]]] static_nat66_entries: static NAT
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgsDict']]]] static_nat_entries: Configure static NAT entries
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgsDict']]]] static_port_forward_entries: Configure Port Forward entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticArpArgs', 'CiscoVpnInterfaceFeatureTemplateStaticArpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticArp']]]] static_arps: Configure static ARP entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticNat66Entry']]]] static_nat66_entries: static NAT
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticNatEntry']]]] static_nat_entries: Configure static NAT entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntry']]]] static_port_forward_entries: Configure Port Forward entries
         :param pulumi.Input[_builtins.int] static_sgt: SGT value between 2 and 65519.
                  - Range: `2`-`65519`
         :param pulumi.Input[_builtins.bool] static_sgt_trusted: Indicates that the interface is trustworthy for CTS.
@@ -7666,7 +7666,7 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] tunnel_interface_control_connections: Allow Control Connection
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_control_connections_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs', 'CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs', 'CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulation']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list
         :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip: Extend the TLOC to a remote node over GRE tunnel
@@ -7942,7 +7942,7 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceFeatureTemplateAccessListArgsDict']]]]] = None,
+                 access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceFeatureTemplateAccessListArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateAccessList']]]]] = None,
                  address: pulumi.Input[Optional[_builtins.str]] = None,
                  address_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  arp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
@@ -7991,16 +7991,16 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
                  iperf_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_dhcp_helper_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv4_dhcp_helpers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ipv4_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgsDict']]]]] = None,
-                 ipv4_vrrps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict']]]]] = None,
-                 ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
+                 ipv4_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddress']]]]] = None,
+                 ipv4_vrrps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv4Vrrp']]]]] = None,
+                 ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6AccessList']]]]] = None,
                  ipv6_address: pulumi.Input[Optional[_builtins.str]] = None,
                  ipv6_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_dhcp_helpers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgsDict']]]]] = None,
+                 ipv6_dhcp_helpers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelper']]]]] = None,
                  ipv6_nat: pulumi.Input[Optional[_builtins.bool]] = None,
                  ipv6_nat_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgsDict']]]]] = None,
-                 ipv6_vrrps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgsDict']]]]] = None,
+                 ipv6_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddress']]]]] = None,
+                 ipv6_vrrps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6Vrrp']]]]] = None,
                  load_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  load_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  mac_address: pulumi.Input[Optional[_builtins.str]] = None,
@@ -8057,10 +8057,10 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
                  shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  speed: pulumi.Input[Optional[_builtins.str]] = None,
                  speed_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 static_arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticArpArgs', 'CiscoVpnInterfaceFeatureTemplateStaticArpArgsDict']]]]] = None,
-                 static_nat66_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgsDict']]]]] = None,
-                 static_nat_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgsDict']]]]] = None,
-                 static_port_forward_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgsDict']]]]] = None,
+                 static_arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticArpArgs', 'CiscoVpnInterfaceFeatureTemplateStaticArpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticArp']]]]] = None,
+                 static_nat66_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticNat66Entry']]]]] = None,
+                 static_nat_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticNatEntry']]]]] = None,
+                 static_port_forward_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntry']]]]] = None,
                  static_sgt: pulumi.Input[Optional[_builtins.int]] = None,
                  static_sgt_trusted: pulumi.Input[Optional[_builtins.bool]] = None,
                  static_sgt_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -8112,7 +8112,7 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
                  tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_control_connections: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnel_interface_control_connections_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs', 'CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+                 tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs', 'CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulation']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
                  tunnel_interface_gre_tunnel_destination_ip: pulumi.Input[Optional[_builtins.str]] = None,
@@ -8377,7 +8377,7 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceFeatureTemplateAccessListArgsDict']]]]] = None,
+            access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceFeatureTemplateAccessListArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateAccessList']]]]] = None,
             address: pulumi.Input[Optional[_builtins.str]] = None,
             address_variable: pulumi.Input[Optional[_builtins.str]] = None,
             arp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
@@ -8426,16 +8426,16 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
             iperf_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ipv4_dhcp_helper_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ipv4_dhcp_helpers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            ipv4_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgsDict']]]]] = None,
-            ipv4_vrrps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict']]]]] = None,
-            ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
+            ipv4_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddress']]]]] = None,
+            ipv4_vrrps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv4Vrrp']]]]] = None,
+            ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6AccessList']]]]] = None,
             ipv6_address: pulumi.Input[Optional[_builtins.str]] = None,
             ipv6_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv6_dhcp_helpers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgsDict']]]]] = None,
+            ipv6_dhcp_helpers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelper']]]]] = None,
             ipv6_nat: pulumi.Input[Optional[_builtins.bool]] = None,
             ipv6_nat_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv6_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgsDict']]]]] = None,
-            ipv6_vrrps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgsDict']]]]] = None,
+            ipv6_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddress']]]]] = None,
+            ipv6_vrrps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6Vrrp']]]]] = None,
             load_interval: pulumi.Input[Optional[_builtins.int]] = None,
             load_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
             mac_address: pulumi.Input[Optional[_builtins.str]] = None,
@@ -8492,10 +8492,10 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
             shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
             speed: pulumi.Input[Optional[_builtins.str]] = None,
             speed_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            static_arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticArpArgs', 'CiscoVpnInterfaceFeatureTemplateStaticArpArgsDict']]]]] = None,
-            static_nat66_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgsDict']]]]] = None,
-            static_nat_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgsDict']]]]] = None,
-            static_port_forward_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgsDict']]]]] = None,
+            static_arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticArpArgs', 'CiscoVpnInterfaceFeatureTemplateStaticArpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticArp']]]]] = None,
+            static_nat66_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticNat66Entry']]]]] = None,
+            static_nat_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticNatEntry']]]]] = None,
+            static_port_forward_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntry']]]]] = None,
             static_sgt: pulumi.Input[Optional[_builtins.int]] = None,
             static_sgt_trusted: pulumi.Input[Optional[_builtins.bool]] = None,
             static_sgt_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -8548,7 +8548,7 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
             tunnel_interface_color_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_control_connections: pulumi.Input[Optional[_builtins.bool]] = None,
             tunnel_interface_control_connections_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs', 'CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]]] = None,
+            tunnel_interface_encapsulations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs', 'CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulation']]]]] = None,
             tunnel_interface_exclude_controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface_exclude_controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
             tunnel_interface_gre_tunnel_destination_ip: pulumi.Input[Optional[_builtins.str]] = None,
@@ -8591,7 +8591,7 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceFeatureTemplateAccessListArgsDict']]]] access_lists: Apply ACL
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceFeatureTemplateAccessListArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateAccessList']]]] access_lists: Apply ACL
         :param pulumi.Input[_builtins.str] address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] address_variable: Variable name
         :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds
@@ -8662,17 +8662,17 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] iperf_server_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Assign secondary IP addresses
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict']]]] ipv4_vrrps: Enable VRRP
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgsDict']]]] ipv6_access_lists: Apply IPv6 access list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddress']]]] ipv4_secondary_addresses: Assign secondary IP addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv4Vrrp']]]] ipv4_vrrps: Enable VRRP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6AccessList']]]] ipv6_access_lists: Apply IPv6 access list
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgsDict']]]] ipv6_dhcp_helpers: DHCPv6 Helper
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelper']]]] ipv6_dhcp_helpers: DHCPv6 Helper
         :param pulumi.Input[_builtins.bool] ipv6_nat: NAT64 on this interface
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_nat_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgsDict']]]] ipv6_secondary_addresses: Assign secondary IPv6 addresses
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgsDict']]]] ipv6_vrrps: Enable VRRP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddress']]]] ipv6_secondary_addresses: Assign secondary IPv6 addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs', 'CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateIpv6Vrrp']]]] ipv6_vrrps: Enable VRRP
         :param pulumi.Input[_builtins.int] load_interval: Interval for interface load calculation
                  - Range: `30`-`600`
                  - Default value: `30`
@@ -8755,10 +8755,10 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] speed: Set interface speed
                  - Choices: `10`, `100`, `1000`, `2500`, `10000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticArpArgs', 'CiscoVpnInterfaceFeatureTemplateStaticArpArgsDict']]]] static_arps: Configure static ARP entries
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgsDict']]]] static_nat66_entries: static NAT
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgsDict']]]] static_nat_entries: Configure static NAT entries
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgsDict']]]] static_port_forward_entries: Configure Port Forward entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticArpArgs', 'CiscoVpnInterfaceFeatureTemplateStaticArpArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticArp']]]] static_arps: Configure static ARP entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticNat66Entry']]]] static_nat66_entries: static NAT
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticNatEntry']]]] static_nat_entries: Configure static NAT entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs', 'CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntry']]]] static_port_forward_entries: Configure Port Forward entries
         :param pulumi.Input[_builtins.int] static_sgt: SGT value between 2 and 65519.
                  - Range: `2`-`65519`
         :param pulumi.Input[_builtins.bool] static_sgt_trusted: Indicates that the interface is trustworthy for CTS.
@@ -8838,7 +8838,7 @@ class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] tunnel_interface_control_connections: Allow Control Connection
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_control_connections_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs', 'CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs', 'CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgsDict', 'outputs.CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulation']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list
         :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip: Extend the TLOC to a remote node over GRE tunnel

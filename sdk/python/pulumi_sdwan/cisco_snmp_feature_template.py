@@ -528,20 +528,20 @@ class CiscoSnmpFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 communities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateCommunityArgs', 'CiscoSnmpFeatureTemplateCommunityArgsDict']]]]] = None,
+                 communities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateCommunityArgs', 'CiscoSnmpFeatureTemplateCommunityArgsDict', 'outputs.CiscoSnmpFeatureTemplateCommunity']]]]] = None,
                  contact: pulumi.Input[Optional[_builtins.str]] = None,
                  contact_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateGroupArgs', 'CiscoSnmpFeatureTemplateGroupArgsDict']]]]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateGroupArgs', 'CiscoSnmpFeatureTemplateGroupArgsDict', 'outputs.CiscoSnmpFeatureTemplateGroup']]]]] = None,
                  location: pulumi.Input[Optional[_builtins.str]] = None,
                  location_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
                  shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 trap_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateTrapTargetArgs', 'CiscoSnmpFeatureTemplateTrapTargetArgsDict']]]]] = None,
-                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateUserArgs', 'CiscoSnmpFeatureTemplateUserArgsDict']]]]] = None,
-                 views: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateViewArgs', 'CiscoSnmpFeatureTemplateViewArgsDict']]]]] = None,
+                 trap_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateTrapTargetArgs', 'CiscoSnmpFeatureTemplateTrapTargetArgsDict', 'outputs.CiscoSnmpFeatureTemplateTrapTarget']]]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateUserArgs', 'CiscoSnmpFeatureTemplateUserArgsDict', 'outputs.CiscoSnmpFeatureTemplateUser']]]]] = None,
+                 views: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateViewArgs', 'CiscoSnmpFeatureTemplateViewArgsDict', 'outputs.CiscoSnmpFeatureTemplateView']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco SNMP feature template.
@@ -606,22 +606,22 @@ class CiscoSnmpFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateCommunityArgs', 'CiscoSnmpFeatureTemplateCommunityArgsDict']]]] communities: Configure SNMP community
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateCommunityArgs', 'CiscoSnmpFeatureTemplateCommunityArgsDict', 'outputs.CiscoSnmpFeatureTemplateCommunity']]]] communities: Configure SNMP community
         :param pulumi.Input[_builtins.str] contact: Set the contact for this managed node
         :param pulumi.Input[_builtins.str] contact_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
                  - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateGroupArgs', 'CiscoSnmpFeatureTemplateGroupArgsDict']]]] groups: Configure an SNMP group
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateGroupArgs', 'CiscoSnmpFeatureTemplateGroupArgsDict', 'outputs.CiscoSnmpFeatureTemplateGroup']]]] groups: Configure an SNMP group
         :param pulumi.Input[_builtins.str] location: Set the physical location of this managed node
         :param pulumi.Input[_builtins.str] location_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateTrapTargetArgs', 'CiscoSnmpFeatureTemplateTrapTargetArgsDict']]]] trap_targets: Configure SNMP server to receive SNMP traps
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateUserArgs', 'CiscoSnmpFeatureTemplateUserArgsDict']]]] users: Configure an SNMP user
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateViewArgs', 'CiscoSnmpFeatureTemplateViewArgsDict']]]] views: Configure a view record
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateTrapTargetArgs', 'CiscoSnmpFeatureTemplateTrapTargetArgsDict', 'outputs.CiscoSnmpFeatureTemplateTrapTarget']]]] trap_targets: Configure SNMP server to receive SNMP traps
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateUserArgs', 'CiscoSnmpFeatureTemplateUserArgsDict', 'outputs.CiscoSnmpFeatureTemplateUser']]]] users: Configure an SNMP user
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateViewArgs', 'CiscoSnmpFeatureTemplateViewArgsDict', 'outputs.CiscoSnmpFeatureTemplateView']]]] views: Configure a view record
         """
         ...
     @overload
@@ -705,20 +705,20 @@ class CiscoSnmpFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 communities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateCommunityArgs', 'CiscoSnmpFeatureTemplateCommunityArgsDict']]]]] = None,
+                 communities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateCommunityArgs', 'CiscoSnmpFeatureTemplateCommunityArgsDict', 'outputs.CiscoSnmpFeatureTemplateCommunity']]]]] = None,
                  contact: pulumi.Input[Optional[_builtins.str]] = None,
                  contact_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateGroupArgs', 'CiscoSnmpFeatureTemplateGroupArgsDict']]]]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateGroupArgs', 'CiscoSnmpFeatureTemplateGroupArgsDict', 'outputs.CiscoSnmpFeatureTemplateGroup']]]]] = None,
                  location: pulumi.Input[Optional[_builtins.str]] = None,
                  location_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
                  shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 trap_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateTrapTargetArgs', 'CiscoSnmpFeatureTemplateTrapTargetArgsDict']]]]] = None,
-                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateUserArgs', 'CiscoSnmpFeatureTemplateUserArgsDict']]]]] = None,
-                 views: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateViewArgs', 'CiscoSnmpFeatureTemplateViewArgsDict']]]]] = None,
+                 trap_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateTrapTargetArgs', 'CiscoSnmpFeatureTemplateTrapTargetArgsDict', 'outputs.CiscoSnmpFeatureTemplateTrapTarget']]]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateUserArgs', 'CiscoSnmpFeatureTemplateUserArgsDict', 'outputs.CiscoSnmpFeatureTemplateUser']]]]] = None,
+                 views: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateViewArgs', 'CiscoSnmpFeatureTemplateViewArgsDict', 'outputs.CiscoSnmpFeatureTemplateView']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -758,22 +758,22 @@ class CiscoSnmpFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            communities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateCommunityArgs', 'CiscoSnmpFeatureTemplateCommunityArgsDict']]]]] = None,
+            communities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateCommunityArgs', 'CiscoSnmpFeatureTemplateCommunityArgsDict', 'outputs.CiscoSnmpFeatureTemplateCommunity']]]]] = None,
             contact: pulumi.Input[Optional[_builtins.str]] = None,
             contact_variable: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateGroupArgs', 'CiscoSnmpFeatureTemplateGroupArgsDict']]]]] = None,
+            groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateGroupArgs', 'CiscoSnmpFeatureTemplateGroupArgsDict', 'outputs.CiscoSnmpFeatureTemplateGroup']]]]] = None,
             location: pulumi.Input[Optional[_builtins.str]] = None,
             location_variable: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
             shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
             template_type: pulumi.Input[Optional[_builtins.str]] = None,
-            trap_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateTrapTargetArgs', 'CiscoSnmpFeatureTemplateTrapTargetArgsDict']]]]] = None,
-            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateUserArgs', 'CiscoSnmpFeatureTemplateUserArgsDict']]]]] = None,
+            trap_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateTrapTargetArgs', 'CiscoSnmpFeatureTemplateTrapTargetArgsDict', 'outputs.CiscoSnmpFeatureTemplateTrapTarget']]]]] = None,
+            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateUserArgs', 'CiscoSnmpFeatureTemplateUserArgsDict', 'outputs.CiscoSnmpFeatureTemplateUser']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None,
-            views: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateViewArgs', 'CiscoSnmpFeatureTemplateViewArgsDict']]]]] = None) -> 'CiscoSnmpFeatureTemplate':
+            views: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateViewArgs', 'CiscoSnmpFeatureTemplateViewArgsDict', 'outputs.CiscoSnmpFeatureTemplateView']]]]] = None) -> 'CiscoSnmpFeatureTemplate':
         """
         Get an existing CiscoSnmpFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -781,13 +781,13 @@ class CiscoSnmpFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateCommunityArgs', 'CiscoSnmpFeatureTemplateCommunityArgsDict']]]] communities: Configure SNMP community
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateCommunityArgs', 'CiscoSnmpFeatureTemplateCommunityArgsDict', 'outputs.CiscoSnmpFeatureTemplateCommunity']]]] communities: Configure SNMP community
         :param pulumi.Input[_builtins.str] contact: Set the contact for this managed node
         :param pulumi.Input[_builtins.str] contact_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
                  - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateGroupArgs', 'CiscoSnmpFeatureTemplateGroupArgsDict']]]] groups: Configure an SNMP group
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateGroupArgs', 'CiscoSnmpFeatureTemplateGroupArgsDict', 'outputs.CiscoSnmpFeatureTemplateGroup']]]] groups: Configure an SNMP group
         :param pulumi.Input[_builtins.str] location: Set the physical location of this managed node
         :param pulumi.Input[_builtins.str] location_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
@@ -795,10 +795,10 @@ class CiscoSnmpFeatureTemplate(pulumi.CustomResource):
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateTrapTargetArgs', 'CiscoSnmpFeatureTemplateTrapTargetArgsDict']]]] trap_targets: Configure SNMP server to receive SNMP traps
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateUserArgs', 'CiscoSnmpFeatureTemplateUserArgsDict']]]] users: Configure an SNMP user
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateTrapTargetArgs', 'CiscoSnmpFeatureTemplateTrapTargetArgsDict', 'outputs.CiscoSnmpFeatureTemplateTrapTarget']]]] trap_targets: Configure SNMP server to receive SNMP traps
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateUserArgs', 'CiscoSnmpFeatureTemplateUserArgsDict', 'outputs.CiscoSnmpFeatureTemplateUser']]]] users: Configure an SNMP user
         :param pulumi.Input[_builtins.int] version: The version of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateViewArgs', 'CiscoSnmpFeatureTemplateViewArgsDict']]]] views: Configure a view record
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateViewArgs', 'CiscoSnmpFeatureTemplateViewArgsDict', 'outputs.CiscoSnmpFeatureTemplateView']]]] views: Configure a view record
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

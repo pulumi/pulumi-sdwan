@@ -177,7 +177,7 @@ class PolicyObjectSecurityScalableGroupTagList(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityScalableGroupTagListEntryArgs', 'PolicyObjectSecurityScalableGroupTagListEntryArgsDict']]]]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityScalableGroupTagListEntryArgs', 'PolicyObjectSecurityScalableGroupTagListEntryArgsDict', 'outputs.PolicyObjectSecurityScalableGroupTagListEntry']]]]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -271,7 +271,7 @@ class PolicyObjectSecurityScalableGroupTagList(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityScalableGroupTagListEntryArgs', 'PolicyObjectSecurityScalableGroupTagListEntryArgsDict']]]]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityScalableGroupTagListEntryArgs', 'PolicyObjectSecurityScalableGroupTagListEntryArgsDict', 'outputs.PolicyObjectSecurityScalableGroupTagListEntry']]]]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -303,7 +303,7 @@ class PolicyObjectSecurityScalableGroupTagList(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
-            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityScalableGroupTagListEntryArgs', 'PolicyObjectSecurityScalableGroupTagListEntryArgsDict']]]]] = None,
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyObjectSecurityScalableGroupTagListEntryArgs', 'PolicyObjectSecurityScalableGroupTagListEntryArgsDict', 'outputs.PolicyObjectSecurityScalableGroupTagListEntry']]]]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'PolicyObjectSecurityScalableGroupTagList':
