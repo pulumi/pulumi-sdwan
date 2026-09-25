@@ -288,10 +288,14 @@ import com.pulumi.sdwan.inputs.GetRoutePolicyDefinitionArgs;
 import com.pulumi.sdwan.inputs.GetRoutePolicyDefinitionPlainArgs;
 import com.pulumi.sdwan.inputs.GetRuleSetPolicyDefinitionArgs;
 import com.pulumi.sdwan.inputs.GetRuleSetPolicyDefinitionPlainArgs;
+import com.pulumi.sdwan.inputs.GetScopeArgs;
+import com.pulumi.sdwan.inputs.GetScopePlainArgs;
 import com.pulumi.sdwan.inputs.GetSecurityAppHostingFeatureTemplateArgs;
 import com.pulumi.sdwan.inputs.GetSecurityAppHostingFeatureTemplatePlainArgs;
 import com.pulumi.sdwan.inputs.GetSecurityPolicyArgs;
 import com.pulumi.sdwan.inputs.GetSecurityPolicyPlainArgs;
+import com.pulumi.sdwan.inputs.GetServiceAppqoeFeatureArgs;
+import com.pulumi.sdwan.inputs.GetServiceAppqoeFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeatureArgs;
 import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceDualRouterHaFeatureArgs;
@@ -433,6 +437,10 @@ import com.pulumi.sdwan.inputs.GetTopologyMeshFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetTrafficDataPolicyDefinitionArgs;
 import com.pulumi.sdwan.inputs.GetTrafficDataPolicyDefinitionPlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureArgs;
+import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs;
+import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateCellularProfileFeaturePlainArgs;
+import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateGpsFeatureArgs;
+import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateGpsFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportCellularProfileFeatureArgs;
 import com.pulumi.sdwan.inputs.GetTransportCellularProfileFeaturePlainArgs;
@@ -670,8 +678,10 @@ import com.pulumi.sdwan.outputs.GetRegionListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetRewriteRulePolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetRoutePolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetRuleSetPolicyDefinitionResult;
+import com.pulumi.sdwan.outputs.GetScopeResult;
 import com.pulumi.sdwan.outputs.GetSecurityAppHostingFeatureTemplateResult;
 import com.pulumi.sdwan.outputs.GetSecurityPolicyResult;
+import com.pulumi.sdwan.outputs.GetServiceAppqoeFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceDhcpServerFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceDualRouterHaFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceFeatureProfileResult;
@@ -742,6 +752,8 @@ import com.pulumi.sdwan.outputs.GetTopologyGroupResult;
 import com.pulumi.sdwan.outputs.GetTopologyHubSpokeFeatureResult;
 import com.pulumi.sdwan.outputs.GetTopologyMeshFeatureResult;
 import com.pulumi.sdwan.outputs.GetTrafficDataPolicyDefinitionResult;
+import com.pulumi.sdwan.outputs.GetTransportCellularControllerFeatureAssociateCellularProfileFeatureResult;
+import com.pulumi.sdwan.outputs.GetTransportCellularControllerFeatureAssociateGpsFeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportCellularControllerFeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportCellularProfileFeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportFeatureProfileResult;
@@ -31817,6 +31829,206 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getRuleSetPolicyDefinition:getRuleSetPolicyDefinition", TypeShape.of(GetRuleSetPolicyDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * This data source can read the Scope .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetScopeArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getScope(GetScopeArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetScopeResult> getScope(GetScopeArgs args) {
+        return getScope(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Scope .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetScopeArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getScope(GetScopeArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetScopeResult> getScopePlain(GetScopePlainArgs args) {
+        return getScopePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Scope .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetScopeArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getScope(GetScopeArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetScopeResult> getScope(GetScopeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getScope:getScope", TypeShape.of(GetScopeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Scope .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetScopeArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getScope(GetScopeArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetScopeResult> getScope(GetScopeArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getScope:getScope", TypeShape.of(GetScopeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Scope .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetScopeArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getScope(GetScopeArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetScopeResult> getScopePlain(GetScopePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getScope:getScope", TypeShape.of(GetScopeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * This data source can read the Security App Hosting feature template.
      * 
      * ## Example Usage
@@ -32295,6 +32507,211 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetSecurityPolicyResult> getSecurityPolicyPlain(GetSecurityPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getSecurityPolicy:getSecurityPolicy", TypeShape.of(GetSecurityPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service AppQoE Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceAppqoeFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceAppqoeFeature(GetServiceAppqoeFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceAppqoeFeatureResult> getServiceAppqoeFeature(GetServiceAppqoeFeatureArgs args) {
+        return getServiceAppqoeFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service AppQoE Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceAppqoeFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceAppqoeFeature(GetServiceAppqoeFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetServiceAppqoeFeatureResult> getServiceAppqoeFeaturePlain(GetServiceAppqoeFeaturePlainArgs args) {
+        return getServiceAppqoeFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service AppQoE Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceAppqoeFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceAppqoeFeature(GetServiceAppqoeFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceAppqoeFeatureResult> getServiceAppqoeFeature(GetServiceAppqoeFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getServiceAppqoeFeature:getServiceAppqoeFeature", TypeShape.of(GetServiceAppqoeFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service AppQoE Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceAppqoeFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceAppqoeFeature(GetServiceAppqoeFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceAppqoeFeatureResult> getServiceAppqoeFeature(GetServiceAppqoeFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getServiceAppqoeFeature:getServiceAppqoeFeature", TypeShape.of(GetServiceAppqoeFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service AppQoE Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceAppqoeFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceAppqoeFeature(GetServiceAppqoeFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetServiceAppqoeFeatureResult> getServiceAppqoeFeaturePlain(GetServiceAppqoeFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getServiceAppqoeFeature:getServiceAppqoeFeature", TypeShape.of(GetServiceAppqoeFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Service DHCP Server Feature.
@@ -46955,6 +47372,426 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetTransportCellularControllerFeatureResult> getTransportCellularControllerFeaturePlain(GetTransportCellularControllerFeaturePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getTransportCellularControllerFeature:getTransportCellularControllerFeature", TypeShape.of(GetTransportCellularControllerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport Cellular Controller Feature Associate Cellular Profile Feature .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportCellularControllerFeatureAssociateCellularProfileFeature(GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportCellularControllerFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTransportCellularControllerFeatureAssociateCellularProfileFeatureResult> getTransportCellularControllerFeatureAssociateCellularProfileFeature(GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs args) {
+        return getTransportCellularControllerFeatureAssociateCellularProfileFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Transport Cellular Controller Feature Associate Cellular Profile Feature .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportCellularControllerFeatureAssociateCellularProfileFeature(GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportCellularControllerFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTransportCellularControllerFeatureAssociateCellularProfileFeatureResult> getTransportCellularControllerFeatureAssociateCellularProfileFeaturePlain(GetTransportCellularControllerFeatureAssociateCellularProfileFeaturePlainArgs args) {
+        return getTransportCellularControllerFeatureAssociateCellularProfileFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Transport Cellular Controller Feature Associate Cellular Profile Feature .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportCellularControllerFeatureAssociateCellularProfileFeature(GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportCellularControllerFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTransportCellularControllerFeatureAssociateCellularProfileFeatureResult> getTransportCellularControllerFeatureAssociateCellularProfileFeature(GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTransportCellularControllerFeatureAssociateCellularProfileFeature:getTransportCellularControllerFeatureAssociateCellularProfileFeature", TypeShape.of(GetTransportCellularControllerFeatureAssociateCellularProfileFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport Cellular Controller Feature Associate Cellular Profile Feature .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportCellularControllerFeatureAssociateCellularProfileFeature(GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportCellularControllerFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTransportCellularControllerFeatureAssociateCellularProfileFeatureResult> getTransportCellularControllerFeatureAssociateCellularProfileFeature(GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTransportCellularControllerFeatureAssociateCellularProfileFeature:getTransportCellularControllerFeatureAssociateCellularProfileFeature", TypeShape.of(GetTransportCellularControllerFeatureAssociateCellularProfileFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport Cellular Controller Feature Associate Cellular Profile Feature .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportCellularControllerFeatureAssociateCellularProfileFeature(GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportCellularControllerFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTransportCellularControllerFeatureAssociateCellularProfileFeatureResult> getTransportCellularControllerFeatureAssociateCellularProfileFeaturePlain(GetTransportCellularControllerFeatureAssociateCellularProfileFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getTransportCellularControllerFeatureAssociateCellularProfileFeature:getTransportCellularControllerFeatureAssociateCellularProfileFeature", TypeShape.of(GetTransportCellularControllerFeatureAssociateCellularProfileFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport Cellular Controller Feature Associate GPS Feature .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateGpsFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportCellularControllerFeatureAssociateGpsFeature(GetTransportCellularControllerFeatureAssociateGpsFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportCellularControllerFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTransportCellularControllerFeatureAssociateGpsFeatureResult> getTransportCellularControllerFeatureAssociateGpsFeature(GetTransportCellularControllerFeatureAssociateGpsFeatureArgs args) {
+        return getTransportCellularControllerFeatureAssociateGpsFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Transport Cellular Controller Feature Associate GPS Feature .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateGpsFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportCellularControllerFeatureAssociateGpsFeature(GetTransportCellularControllerFeatureAssociateGpsFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportCellularControllerFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTransportCellularControllerFeatureAssociateGpsFeatureResult> getTransportCellularControllerFeatureAssociateGpsFeaturePlain(GetTransportCellularControllerFeatureAssociateGpsFeaturePlainArgs args) {
+        return getTransportCellularControllerFeatureAssociateGpsFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Transport Cellular Controller Feature Associate GPS Feature .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateGpsFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportCellularControllerFeatureAssociateGpsFeature(GetTransportCellularControllerFeatureAssociateGpsFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportCellularControllerFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTransportCellularControllerFeatureAssociateGpsFeatureResult> getTransportCellularControllerFeatureAssociateGpsFeature(GetTransportCellularControllerFeatureAssociateGpsFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTransportCellularControllerFeatureAssociateGpsFeature:getTransportCellularControllerFeatureAssociateGpsFeature", TypeShape.of(GetTransportCellularControllerFeatureAssociateGpsFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport Cellular Controller Feature Associate GPS Feature .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateGpsFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportCellularControllerFeatureAssociateGpsFeature(GetTransportCellularControllerFeatureAssociateGpsFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportCellularControllerFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTransportCellularControllerFeatureAssociateGpsFeatureResult> getTransportCellularControllerFeatureAssociateGpsFeature(GetTransportCellularControllerFeatureAssociateGpsFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTransportCellularControllerFeatureAssociateGpsFeature:getTransportCellularControllerFeatureAssociateGpsFeature", TypeShape.of(GetTransportCellularControllerFeatureAssociateGpsFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport Cellular Controller Feature Associate GPS Feature .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateGpsFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportCellularControllerFeatureAssociateGpsFeature(GetTransportCellularControllerFeatureAssociateGpsFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportCellularControllerFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTransportCellularControllerFeatureAssociateGpsFeatureResult> getTransportCellularControllerFeatureAssociateGpsFeaturePlain(GetTransportCellularControllerFeatureAssociateGpsFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getTransportCellularControllerFeatureAssociateGpsFeature:getTransportCellularControllerFeatureAssociateGpsFeature", TypeShape.of(GetTransportCellularControllerFeatureAssociateGpsFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Transport Cellular Profile Feature.

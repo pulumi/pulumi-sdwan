@@ -46,6 +46,8 @@ namespace Pulumi.Sdwan
     ///         ApplicationGroup = "ipsec-group",
     ///         TrafficClass = "signaling",
     ///         BusinessRelevance = "business-relevant",
+    ///         EndpointType = "ip",
+    ///         EndpointValue = "10.2.2.2",
     ///     });
     /// 
     /// });
@@ -88,6 +90,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("businessRelevance")]
         public Output<string?> BusinessRelevance { get; private set; } = null!;
+
+        /// <summary>
+        /// Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        ///   - Choices: `Ip`, `Fqdn`, `Url`
+        /// </summary>
+        [Output("endpointType")]
+        public Output<string?> EndpointType { get; private set; } = null!;
+
+        /// <summary>
+        /// Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("endpointValue")]
+        public Output<string?> EndpointValue { get; private set; } = null!;
 
         /// <summary>
         /// L3/L4 Attributes
@@ -187,6 +202,19 @@ namespace Pulumi.Sdwan
         [Input("businessRelevance")]
         public Input<string>? BusinessRelevance { get; set; }
 
+        /// <summary>
+        /// Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        ///   - Choices: `Ip`, `Fqdn`, `Url`
+        /// </summary>
+        [Input("endpointType")]
+        public Input<string>? EndpointType { get; set; }
+
+        /// <summary>
+        /// Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("endpointValue")]
+        public Input<string>? EndpointValue { get; set; }
+
         [Input("l3l4s")]
         private InputList<Inputs.CustomApplicationL3l4Args>? _l3l4s;
 
@@ -252,6 +280,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("businessRelevance")]
         public Input<string>? BusinessRelevance { get; set; }
+
+        /// <summary>
+        /// Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        ///   - Choices: `Ip`, `Fqdn`, `Url`
+        /// </summary>
+        [Input("endpointType")]
+        public Input<string>? EndpointType { get; set; }
+
+        /// <summary>
+        /// Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("endpointValue")]
+        public Input<string>? EndpointValue { get; set; }
 
         [Input("l3l4s")]
         private InputList<Inputs.CustomApplicationL3l4GetArgs>? _l3l4s;

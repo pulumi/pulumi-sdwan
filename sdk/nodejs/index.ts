@@ -1060,6 +1060,11 @@ export const getRuleSetPolicyDefinition: typeof import("./getRuleSetPolicyDefini
 export const getRuleSetPolicyDefinitionOutput: typeof import("./getRuleSetPolicyDefinition").getRuleSetPolicyDefinitionOutput = null as any;
 utilities.lazyLoad(exports, ["getRuleSetPolicyDefinition","getRuleSetPolicyDefinitionOutput"], () => require("./getRuleSetPolicyDefinition"));
 
+export { GetScopeArgs, GetScopeResult, GetScopeOutputArgs } from "./getScope";
+export const getScope: typeof import("./getScope").getScope = null as any;
+export const getScopeOutput: typeof import("./getScope").getScopeOutput = null as any;
+utilities.lazyLoad(exports, ["getScope","getScopeOutput"], () => require("./getScope"));
+
 export { GetSecurityAppHostingFeatureTemplateArgs, GetSecurityAppHostingFeatureTemplateResult, GetSecurityAppHostingFeatureTemplateOutputArgs } from "./getSecurityAppHostingFeatureTemplate";
 export const getSecurityAppHostingFeatureTemplate: typeof import("./getSecurityAppHostingFeatureTemplate").getSecurityAppHostingFeatureTemplate = null as any;
 export const getSecurityAppHostingFeatureTemplateOutput: typeof import("./getSecurityAppHostingFeatureTemplate").getSecurityAppHostingFeatureTemplateOutput = null as any;
@@ -1069,6 +1074,11 @@ export { GetSecurityPolicyArgs, GetSecurityPolicyResult, GetSecurityPolicyOutput
 export const getSecurityPolicy: typeof import("./getSecurityPolicy").getSecurityPolicy = null as any;
 export const getSecurityPolicyOutput: typeof import("./getSecurityPolicy").getSecurityPolicyOutput = null as any;
 utilities.lazyLoad(exports, ["getSecurityPolicy","getSecurityPolicyOutput"], () => require("./getSecurityPolicy"));
+
+export { GetServiceAppqoeFeatureArgs, GetServiceAppqoeFeatureResult, GetServiceAppqoeFeatureOutputArgs } from "./getServiceAppqoeFeature";
+export const getServiceAppqoeFeature: typeof import("./getServiceAppqoeFeature").getServiceAppqoeFeature = null as any;
+export const getServiceAppqoeFeatureOutput: typeof import("./getServiceAppqoeFeature").getServiceAppqoeFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceAppqoeFeature","getServiceAppqoeFeatureOutput"], () => require("./getServiceAppqoeFeature"));
 
 export { GetServiceDhcpServerFeatureArgs, GetServiceDhcpServerFeatureResult, GetServiceDhcpServerFeatureOutputArgs } from "./getServiceDhcpServerFeature";
 export const getServiceDhcpServerFeature: typeof import("./getServiceDhcpServerFeature").getServiceDhcpServerFeature = null as any;
@@ -1424,6 +1434,16 @@ export { GetTransportCellularControllerFeatureArgs, GetTransportCellularControll
 export const getTransportCellularControllerFeature: typeof import("./getTransportCellularControllerFeature").getTransportCellularControllerFeature = null as any;
 export const getTransportCellularControllerFeatureOutput: typeof import("./getTransportCellularControllerFeature").getTransportCellularControllerFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getTransportCellularControllerFeature","getTransportCellularControllerFeatureOutput"], () => require("./getTransportCellularControllerFeature"));
+
+export { GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs, GetTransportCellularControllerFeatureAssociateCellularProfileFeatureResult, GetTransportCellularControllerFeatureAssociateCellularProfileFeatureOutputArgs } from "./getTransportCellularControllerFeatureAssociateCellularProfileFeature";
+export const getTransportCellularControllerFeatureAssociateCellularProfileFeature: typeof import("./getTransportCellularControllerFeatureAssociateCellularProfileFeature").getTransportCellularControllerFeatureAssociateCellularProfileFeature = null as any;
+export const getTransportCellularControllerFeatureAssociateCellularProfileFeatureOutput: typeof import("./getTransportCellularControllerFeatureAssociateCellularProfileFeature").getTransportCellularControllerFeatureAssociateCellularProfileFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportCellularControllerFeatureAssociateCellularProfileFeature","getTransportCellularControllerFeatureAssociateCellularProfileFeatureOutput"], () => require("./getTransportCellularControllerFeatureAssociateCellularProfileFeature"));
+
+export { GetTransportCellularControllerFeatureAssociateGpsFeatureArgs, GetTransportCellularControllerFeatureAssociateGpsFeatureResult, GetTransportCellularControllerFeatureAssociateGpsFeatureOutputArgs } from "./getTransportCellularControllerFeatureAssociateGpsFeature";
+export const getTransportCellularControllerFeatureAssociateGpsFeature: typeof import("./getTransportCellularControllerFeatureAssociateGpsFeature").getTransportCellularControllerFeatureAssociateGpsFeature = null as any;
+export const getTransportCellularControllerFeatureAssociateGpsFeatureOutput: typeof import("./getTransportCellularControllerFeatureAssociateGpsFeature").getTransportCellularControllerFeatureAssociateGpsFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportCellularControllerFeatureAssociateGpsFeature","getTransportCellularControllerFeatureAssociateGpsFeatureOutput"], () => require("./getTransportCellularControllerFeatureAssociateGpsFeature"));
 
 export { GetTransportCellularProfileFeatureArgs, GetTransportCellularProfileFeatureResult, GetTransportCellularProfileFeatureOutputArgs } from "./getTransportCellularProfileFeature";
 export const getTransportCellularProfileFeature: typeof import("./getTransportCellularProfileFeature").getTransportCellularProfileFeature = null as any;
@@ -2023,6 +2043,11 @@ export type RuleSetPolicyDefinition = import("./ruleSetPolicyDefinition").RuleSe
 export const RuleSetPolicyDefinition: typeof import("./ruleSetPolicyDefinition").RuleSetPolicyDefinition = null as any;
 utilities.lazyLoad(exports, ["RuleSetPolicyDefinition"], () => require("./ruleSetPolicyDefinition"));
 
+export { ScopeArgs, ScopeState } from "./scope";
+export type Scope = import("./scope").Scope;
+export const Scope: typeof import("./scope").Scope = null as any;
+utilities.lazyLoad(exports, ["Scope"], () => require("./scope"));
+
 export { SecurityAppHostingFeatureTemplateArgs, SecurityAppHostingFeatureTemplateState } from "./securityAppHostingFeatureTemplate";
 export type SecurityAppHostingFeatureTemplate = import("./securityAppHostingFeatureTemplate").SecurityAppHostingFeatureTemplate;
 export const SecurityAppHostingFeatureTemplate: typeof import("./securityAppHostingFeatureTemplate").SecurityAppHostingFeatureTemplate = null as any;
@@ -2032,6 +2057,11 @@ export { SecurityPolicyArgs, SecurityPolicyState } from "./securityPolicy";
 export type SecurityPolicy = import("./securityPolicy").SecurityPolicy;
 export const SecurityPolicy: typeof import("./securityPolicy").SecurityPolicy = null as any;
 utilities.lazyLoad(exports, ["SecurityPolicy"], () => require("./securityPolicy"));
+
+export { ServiceAppqoeFeatureArgs, ServiceAppqoeFeatureState } from "./serviceAppqoeFeature";
+export type ServiceAppqoeFeature = import("./serviceAppqoeFeature").ServiceAppqoeFeature;
+export const ServiceAppqoeFeature: typeof import("./serviceAppqoeFeature").ServiceAppqoeFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceAppqoeFeature"], () => require("./serviceAppqoeFeature"));
 
 export { ServiceDhcpServerFeatureArgs, ServiceDhcpServerFeatureState } from "./serviceDhcpServerFeature";
 export type ServiceDhcpServerFeature = import("./serviceDhcpServerFeature").ServiceDhcpServerFeature;
@@ -2387,6 +2417,16 @@ export { TransportCellularControllerFeatureArgs, TransportCellularControllerFeat
 export type TransportCellularControllerFeature = import("./transportCellularControllerFeature").TransportCellularControllerFeature;
 export const TransportCellularControllerFeature: typeof import("./transportCellularControllerFeature").TransportCellularControllerFeature = null as any;
 utilities.lazyLoad(exports, ["TransportCellularControllerFeature"], () => require("./transportCellularControllerFeature"));
+
+export { TransportCellularControllerFeatureAssociateCellularProfileFeatureArgs, TransportCellularControllerFeatureAssociateCellularProfileFeatureState } from "./transportCellularControllerFeatureAssociateCellularProfileFeature";
+export type TransportCellularControllerFeatureAssociateCellularProfileFeature = import("./transportCellularControllerFeatureAssociateCellularProfileFeature").TransportCellularControllerFeatureAssociateCellularProfileFeature;
+export const TransportCellularControllerFeatureAssociateCellularProfileFeature: typeof import("./transportCellularControllerFeatureAssociateCellularProfileFeature").TransportCellularControllerFeatureAssociateCellularProfileFeature = null as any;
+utilities.lazyLoad(exports, ["TransportCellularControllerFeatureAssociateCellularProfileFeature"], () => require("./transportCellularControllerFeatureAssociateCellularProfileFeature"));
+
+export { TransportCellularControllerFeatureAssociateGpsFeatureArgs, TransportCellularControllerFeatureAssociateGpsFeatureState } from "./transportCellularControllerFeatureAssociateGpsFeature";
+export type TransportCellularControllerFeatureAssociateGpsFeature = import("./transportCellularControllerFeatureAssociateGpsFeature").TransportCellularControllerFeatureAssociateGpsFeature;
+export const TransportCellularControllerFeatureAssociateGpsFeature: typeof import("./transportCellularControllerFeatureAssociateGpsFeature").TransportCellularControllerFeatureAssociateGpsFeature = null as any;
+utilities.lazyLoad(exports, ["TransportCellularControllerFeatureAssociateGpsFeature"], () => require("./transportCellularControllerFeatureAssociateGpsFeature"));
 
 export { TransportCellularProfileFeatureArgs, TransportCellularProfileFeatureState } from "./transportCellularProfileFeature";
 export type TransportCellularProfileFeature = import("./transportCellularProfileFeature").TransportCellularProfileFeature;
@@ -2924,10 +2964,14 @@ const _module = {
                 return new RoutePolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition":
                 return new RuleSetPolicyDefinition(name, <any>undefined, { urn })
+            case "sdwan:index/scope:Scope":
+                return new Scope(name, <any>undefined, { urn })
             case "sdwan:index/securityAppHostingFeatureTemplate:SecurityAppHostingFeatureTemplate":
                 return new SecurityAppHostingFeatureTemplate(name, <any>undefined, { urn })
             case "sdwan:index/securityPolicy:SecurityPolicy":
                 return new SecurityPolicy(name, <any>undefined, { urn })
+            case "sdwan:index/serviceAppqoeFeature:ServiceAppqoeFeature":
+                return new ServiceAppqoeFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature":
                 return new ServiceDhcpServerFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceDualRouterHaFeature:ServiceDualRouterHaFeature":
@@ -3070,6 +3114,10 @@ const _module = {
                 return new TrafficDataPolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/transportCellularControllerFeature:TransportCellularControllerFeature":
                 return new TransportCellularControllerFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportCellularControllerFeatureAssociateCellularProfileFeature:TransportCellularControllerFeatureAssociateCellularProfileFeature":
+                return new TransportCellularControllerFeatureAssociateCellularProfileFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportCellularControllerFeatureAssociateGpsFeature:TransportCellularControllerFeatureAssociateGpsFeature":
+                return new TransportCellularControllerFeatureAssociateGpsFeature(name, <any>undefined, { urn })
             case "sdwan:index/transportCellularProfileFeature:TransportCellularProfileFeature":
                 return new TransportCellularProfileFeature(name, <any>undefined, { urn })
             case "sdwan:index/transportFeatureProfile:TransportFeatureProfile":
@@ -3312,8 +3360,10 @@ pulumi.runtime.registerResourceModule("sdwan", "index/regionListPolicyObject", _
 pulumi.runtime.registerResourceModule("sdwan", "index/rewriteRulePolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/routePolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/ruleSetPolicyDefinition", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/scope", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/securityAppHostingFeatureTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/securityPolicy", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceAppqoeFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceDhcpServerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceDualRouterHaFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceFeatureProfile", _module)
@@ -3385,6 +3435,8 @@ pulumi.runtime.registerResourceModule("sdwan", "index/topologyHubSpokeFeature", 
 pulumi.runtime.registerResourceModule("sdwan", "index/topologyMeshFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/trafficDataPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportCellularControllerFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportCellularControllerFeatureAssociateCellularProfileFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportCellularControllerFeatureAssociateGpsFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportCellularProfileFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportGpsFeature", _module)

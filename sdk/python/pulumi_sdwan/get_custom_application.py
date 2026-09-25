@@ -27,7 +27,7 @@ class GetCustomApplicationResult:
     """
     A collection of values returned by getCustomApplication.
     """
-    def __init__(__self__, app_name=None, application_family=None, application_group=None, business_relevance=None, id=None, l3l4s=None, server_names=None, traffic_class=None, version=None):
+    def __init__(__self__, app_name=None, application_family=None, application_group=None, business_relevance=None, endpoint_type=None, endpoint_value=None, id=None, l3l4s=None, server_names=None, traffic_class=None, version=None):
         if app_name and not isinstance(app_name, str):
             raise TypeError("Expected argument 'app_name' to be a str")
         pulumi.set(__self__, "app_name", app_name)
@@ -40,6 +40,12 @@ class GetCustomApplicationResult:
         if business_relevance and not isinstance(business_relevance, str):
             raise TypeError("Expected argument 'business_relevance' to be a str")
         pulumi.set(__self__, "business_relevance", business_relevance)
+        if endpoint_type and not isinstance(endpoint_type, str):
+            raise TypeError("Expected argument 'endpoint_type' to be a str")
+        pulumi.set(__self__, "endpoint_type", endpoint_type)
+        if endpoint_value and not isinstance(endpoint_value, str):
+            raise TypeError("Expected argument 'endpoint_value' to be a str")
+        pulumi.set(__self__, "endpoint_value", endpoint_value)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -87,6 +93,22 @@ class GetCustomApplicationResult:
         Business Relevance
         """
         return pulumi.get(self, "business_relevance")
+
+    @_builtins.property
+    @pulumi.getter(name="endpointType")
+    def endpoint_type(self) -> _builtins.str:
+        """
+        Endpoint Type
+        """
+        return pulumi.get(self, "endpoint_type")
+
+    @_builtins.property
+    @pulumi.getter(name="endpointValue")
+    def endpoint_value(self) -> _builtins.str:
+        """
+        Endpoint Value
+        """
+        return pulumi.get(self, "endpoint_value")
 
     @_builtins.property
     @pulumi.getter
@@ -139,6 +161,8 @@ class AwaitableGetCustomApplicationResult(GetCustomApplicationResult):
             application_family=self.application_family,
             application_group=self.application_group,
             business_relevance=self.business_relevance,
+            endpoint_type=self.endpoint_type,
+            endpoint_value=self.endpoint_value,
             id=self.id,
             l3l4s=self.l3l4s,
             server_names=self.server_names,
@@ -173,6 +197,8 @@ def get_custom_application(id: Optional[_builtins.str] = None,
         application_family=pulumi.get(__ret__, 'application_family'),
         application_group=pulumi.get(__ret__, 'application_group'),
         business_relevance=pulumi.get(__ret__, 'business_relevance'),
+        endpoint_type=pulumi.get(__ret__, 'endpoint_type'),
+        endpoint_value=pulumi.get(__ret__, 'endpoint_value'),
         id=pulumi.get(__ret__, 'id'),
         l3l4s=pulumi.get(__ret__, 'l3l4s'),
         server_names=pulumi.get(__ret__, 'server_names'),
@@ -204,6 +230,8 @@ def get_custom_application_output(id: pulumi.Input[Optional[_builtins.str]] = No
         application_family=pulumi.get(__response__, 'application_family'),
         application_group=pulumi.get(__response__, 'application_group'),
         business_relevance=pulumi.get(__response__, 'business_relevance'),
+        endpoint_type=pulumi.get(__response__, 'endpoint_type'),
+        endpoint_value=pulumi.get(__response__, 'endpoint_value'),
         id=pulumi.get(__response__, 'id'),
         l3l4s=pulumi.get(__response__, 'l3l4s'),
         server_names=pulumi.get(__response__, 'server_names'),

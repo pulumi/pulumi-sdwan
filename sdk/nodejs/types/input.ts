@@ -7261,6 +7261,10 @@ export interface NetworkHierarchyCflowdCollector {
      */
     exportSpread?: pulumi.Input<boolean | undefined>;
     /**
+     * Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    sourceInterface?: pulumi.Input<string | undefined>;
+    /**
      * Collector UDP port number
      *   - Range: `1024`-`65535`
      *   - Default value: `4739`
@@ -8311,6 +8315,18 @@ export interface RuleSetPolicyDefinitionRule {
     sourcePortListVersion?: pulumi.Input<number | undefined>;
 }
 
+export interface ScopeObject {
+    /**
+     * List of object UUIDs
+     */
+    objectIds: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Object type
+     *   - Choices: `network-hierarchy-node`, `config-group`, `feature-profile`, `device-template`, `feature-template`, `localized-policy`, `security-policy`
+     */
+    objectType: pulumi.Input<string>;
+}
+
 export interface SecurityAppHostingFeatureTemplateVirtualApplication {
     /**
      * List of Virtual applications
@@ -8454,6 +8470,145 @@ export interface SecurityPolicyLogging {
      * External Syslog Server VPN
      */
     externalSyslogServerVpn?: pulumi.Input<string | undefined>;
+}
+
+export interface ServiceAppqoeFeatureCombinedControllerGroup {
+    /**
+     * List of controllers
+     */
+    appnavControllers?: pulumi.Input<pulumi.Input<inputs.ServiceAppqoeFeatureCombinedControllerGroupAppnavController>[] | undefined>;
+}
+
+export interface ServiceAppqoeFeatureCombinedControllerGroupAppnavController {
+}
+
+export interface ServiceAppqoeFeatureCombinedServiceContext {
+    /**
+     * Appnav controller group
+     */
+    appnavControllerGroup?: pulumi.Input<string | undefined>;
+    /**
+     * enable service context
+     */
+    enable?: pulumi.Input<boolean | undefined>;
+    /**
+     * Service node group
+     */
+    serviceNodeGroup?: pulumi.Input<string | undefined>;
+    /**
+     * Service node groups bound to this service context
+     */
+    serviceNodeGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Vpn
+     */
+    vpn?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    vpnVariable?: pulumi.Input<string | undefined>;
+}
+
+export interface ServiceAppqoeFeatureCombinedServiceNodeGroup {
+    /**
+     * Service Node Information
+     */
+    serviceNodes?: pulumi.Input<pulumi.Input<inputs.ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode>[] | undefined>;
+}
+
+export interface ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode {
+}
+
+export interface ServiceAppqoeFeatureForwarderControllerGroup {
+    /**
+     * List of controllers
+     */
+    appnavControllers?: pulumi.Input<pulumi.Input<inputs.ServiceAppqoeFeatureForwarderControllerGroupAppnavController>[] | undefined>;
+}
+
+export interface ServiceAppqoeFeatureForwarderControllerGroupAppnavController {
+    /**
+     * Controller IP Address
+     */
+    address?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    addressVariable?: pulumi.Input<string | undefined>;
+    /**
+     * vpn id
+     *   - Range: `1`-`65530`
+     */
+    vpn?: pulumi.Input<number | undefined>;
+}
+
+export interface ServiceAppqoeFeatureForwarderServiceContext {
+    /**
+     * Appnav controller group
+     */
+    appnavControllerGroup?: pulumi.Input<string | undefined>;
+    /**
+     * enable service context
+     */
+    enable?: pulumi.Input<boolean | undefined>;
+    /**
+     * Service node group
+     */
+    serviceNodeGroup?: pulumi.Input<string | undefined>;
+    /**
+     * Service node groups bound to this service context
+     */
+    serviceNodeGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Vpn
+     */
+    vpn?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    vpnVariable?: pulumi.Input<string | undefined>;
+}
+
+export interface ServiceAppqoeFeatureForwarderServiceNodeGroup {
+    /**
+     * List of service node group
+     *   - Default value: `SNG-APPQOE`
+     */
+    name?: pulumi.Input<string | undefined>;
+    /**
+     * Service Node Information
+     */
+    serviceNodes?: pulumi.Input<pulumi.Input<inputs.ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode>[] | undefined>;
+}
+
+export interface ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode {
+    /**
+     * IP Address
+     */
+    address?: pulumi.Input<string | undefined>;
+}
+
+export interface ServiceAppqoeFeatureServiceNodeServiceNodeGroup {
+    /**
+     * Service Node Information
+     */
+    serviceNodes?: pulumi.Input<pulumi.Input<inputs.ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode>[] | undefined>;
+}
+
+export interface ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode {
+}
+
+export interface ServiceAppqoeFeatureVirtualApplication {
+    /**
+     * Resource Profile
+     *   - Choices: `small`, `medium`, `large`, `extra-large`, `default`
+     *   - Default value: `default`
+     */
+    resourceProfile?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    resourceProfileVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceDhcpServerFeatureOptionCode {

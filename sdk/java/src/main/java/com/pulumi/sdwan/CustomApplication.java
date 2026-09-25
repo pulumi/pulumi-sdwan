@@ -58,6 +58,8 @@ import javax.annotation.Nullable;
  *             .applicationGroup("ipsec-group")
  *             .trafficClass("signaling")
  *             .businessRelevance("business-relevant")
+ *             .endpointType("ip")
+ *             .endpointValue("10.2.2.2")
  *             .build());
  * 
  *     }
@@ -137,6 +139,36 @@ public class CustomApplication extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> businessRelevance() {
         return Codegen.optional(this.businessRelevance);
+    }
+    /**
+     * Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Choices: `ip`, `fqdn`, `url`
+     * 
+     */
+    @Export(name="endpointType", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> endpointType;
+
+    /**
+     * @return Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Choices: `ip`, `fqdn`, `url`
+     * 
+     */
+    public Output<Optional<String>> endpointType() {
+        return Codegen.optional(this.endpointType);
+    }
+    /**
+     * Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="endpointValue", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> endpointValue;
+
+    /**
+     * @return Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> endpointValue() {
+        return Codegen.optional(this.endpointValue);
     }
     /**
      * L3/L4 Attributes

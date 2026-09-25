@@ -134,6 +134,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string BusinessRelevance;
         /// <summary>
+        /// Endpoint Type
+        /// </summary>
+        public readonly string EndpointType;
+        /// <summary>
+        /// Endpoint Value
+        /// </summary>
+        public readonly string EndpointValue;
+        /// <summary>
         /// The id of the object
         /// </summary>
         public readonly string Id;
@@ -164,6 +172,10 @@ namespace Pulumi.Sdwan
 
             string businessRelevance,
 
+            string endpointType,
+
+            string endpointValue,
+
             string id,
 
             ImmutableArray<Outputs.GetCustomApplicationL3l4Result> l3l4s,
@@ -178,6 +190,8 @@ namespace Pulumi.Sdwan
             ApplicationFamily = applicationFamily;
             ApplicationGroup = applicationGroup;
             BusinessRelevance = businessRelevance;
+            EndpointType = endpointType;
+            EndpointValue = endpointValue;
             Id = id;
             L3l4s = l3l4s;
             ServerNames = serverNames;

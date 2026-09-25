@@ -13276,6 +13276,10 @@ export interface GetNetworkHierarchyCflowdCollector {
      */
     exportSpread: boolean;
     /**
+     * Source interface
+     */
+    sourceInterface: string;
+    /**
      * Collector UDP port number
      */
     udpPort: number;
@@ -14253,6 +14257,17 @@ export interface GetRuleSetPolicyDefinitionRule {
     sourcePortListVersion: number;
 }
 
+export interface GetScopeObject {
+    /**
+     * List of object UUIDs
+     */
+    objectIds: string[];
+    /**
+     * Object type
+     */
+    objectType: string;
+}
+
 export interface GetSecurityAppHostingFeatureTemplateVirtualApplication {
     /**
      * List of Virtual applications
@@ -14386,6 +14401,141 @@ export interface GetSecurityPolicyLogging {
      * External Syslog Server VPN
      */
     externalSyslogServerVpn: string;
+}
+
+export interface GetServiceAppqoeFeatureCombinedControllerGroup {
+    /**
+     * List of controllers
+     */
+    appnavControllers: outputs.GetServiceAppqoeFeatureCombinedControllerGroupAppnavController[];
+}
+
+export interface GetServiceAppqoeFeatureCombinedControllerGroupAppnavController {
+}
+
+export interface GetServiceAppqoeFeatureCombinedServiceContext {
+    /**
+     * Appnav controller group
+     */
+    appnavControllerGroup: string;
+    /**
+     * enable service context
+     */
+    enable: boolean;
+    /**
+     * Service node group
+     */
+    serviceNodeGroup: string;
+    /**
+     * Service node groups bound to this service context
+     */
+    serviceNodeGroups: string[];
+    /**
+     * Vpn
+     */
+    vpn: number;
+    /**
+     * Variable name
+     */
+    vpnVariable: string;
+}
+
+export interface GetServiceAppqoeFeatureCombinedServiceNodeGroup {
+    /**
+     * Service Node Information
+     */
+    serviceNodes: outputs.GetServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode[];
+}
+
+export interface GetServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode {
+}
+
+export interface GetServiceAppqoeFeatureForwarderControllerGroup {
+    /**
+     * List of controllers
+     */
+    appnavControllers: outputs.GetServiceAppqoeFeatureForwarderControllerGroupAppnavController[];
+}
+
+export interface GetServiceAppqoeFeatureForwarderControllerGroupAppnavController {
+    /**
+     * Controller IP Address
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+    /**
+     * vpn id
+     */
+    vpn: number;
+}
+
+export interface GetServiceAppqoeFeatureForwarderServiceContext {
+    /**
+     * Appnav controller group
+     */
+    appnavControllerGroup: string;
+    /**
+     * enable service context
+     */
+    enable: boolean;
+    /**
+     * Service node group
+     */
+    serviceNodeGroup: string;
+    /**
+     * Service node groups bound to this service context
+     */
+    serviceNodeGroups: string[];
+    /**
+     * Vpn
+     */
+    vpn: number;
+    /**
+     * Variable name
+     */
+    vpnVariable: string;
+}
+
+export interface GetServiceAppqoeFeatureForwarderServiceNodeGroup {
+    /**
+     * List of service node group
+     */
+    name: string;
+    /**
+     * Service Node Information
+     */
+    serviceNodes: outputs.GetServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode[];
+}
+
+export interface GetServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode {
+    /**
+     * IP Address
+     */
+    address: string;
+}
+
+export interface GetServiceAppqoeFeatureServiceNodeServiceNodeGroup {
+    /**
+     * Service Node Information
+     */
+    serviceNodes: outputs.GetServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode[];
+}
+
+export interface GetServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode {
+}
+
+export interface GetServiceAppqoeFeatureVirtualApplication {
+    /**
+     * Resource Profile
+     */
+    resourceProfile: string;
+    /**
+     * Variable name
+     */
+    resourceProfileVariable: string;
 }
 
 export interface GetServiceDhcpServerFeatureOptionCode {
@@ -24918,6 +25068,10 @@ export interface NetworkHierarchyCflowdCollector {
      */
     exportSpread?: boolean;
     /**
+     * Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    sourceInterface?: string;
+    /**
      * Collector UDP port number
      *   - Range: `1024`-`65535`
      *   - Default value: `4739`
@@ -25968,6 +26122,18 @@ export interface RuleSetPolicyDefinitionRule {
     sourcePortListVersion?: number;
 }
 
+export interface ScopeObject {
+    /**
+     * List of object UUIDs
+     */
+    objectIds: string[];
+    /**
+     * Object type
+     *   - Choices: `network-hierarchy-node`, `config-group`, `feature-profile`, `device-template`, `feature-template`, `localized-policy`, `security-policy`
+     */
+    objectType: string;
+}
+
 export interface SecurityAppHostingFeatureTemplateVirtualApplication {
     /**
      * List of Virtual applications
@@ -26111,6 +26277,145 @@ export interface SecurityPolicyLogging {
      * External Syslog Server VPN
      */
     externalSyslogServerVpn?: string;
+}
+
+export interface ServiceAppqoeFeatureCombinedControllerGroup {
+    /**
+     * List of controllers
+     */
+    appnavControllers?: outputs.ServiceAppqoeFeatureCombinedControllerGroupAppnavController[];
+}
+
+export interface ServiceAppqoeFeatureCombinedControllerGroupAppnavController {
+}
+
+export interface ServiceAppqoeFeatureCombinedServiceContext {
+    /**
+     * Appnav controller group
+     */
+    appnavControllerGroup?: string;
+    /**
+     * enable service context
+     */
+    enable?: boolean;
+    /**
+     * Service node group
+     */
+    serviceNodeGroup?: string;
+    /**
+     * Service node groups bound to this service context
+     */
+    serviceNodeGroups?: string[];
+    /**
+     * Vpn
+     */
+    vpn?: number;
+    /**
+     * Variable name
+     */
+    vpnVariable?: string;
+}
+
+export interface ServiceAppqoeFeatureCombinedServiceNodeGroup {
+    /**
+     * Service Node Information
+     */
+    serviceNodes?: outputs.ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode[];
+}
+
+export interface ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode {
+}
+
+export interface ServiceAppqoeFeatureForwarderControllerGroup {
+    /**
+     * List of controllers
+     */
+    appnavControllers?: outputs.ServiceAppqoeFeatureForwarderControllerGroupAppnavController[];
+}
+
+export interface ServiceAppqoeFeatureForwarderControllerGroupAppnavController {
+    /**
+     * Controller IP Address
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+    /**
+     * vpn id
+     *   - Range: `1`-`65530`
+     */
+    vpn?: number;
+}
+
+export interface ServiceAppqoeFeatureForwarderServiceContext {
+    /**
+     * Appnav controller group
+     */
+    appnavControllerGroup?: string;
+    /**
+     * enable service context
+     */
+    enable?: boolean;
+    /**
+     * Service node group
+     */
+    serviceNodeGroup?: string;
+    /**
+     * Service node groups bound to this service context
+     */
+    serviceNodeGroups?: string[];
+    /**
+     * Vpn
+     */
+    vpn?: number;
+    /**
+     * Variable name
+     */
+    vpnVariable?: string;
+}
+
+export interface ServiceAppqoeFeatureForwarderServiceNodeGroup {
+    /**
+     * List of service node group
+     *   - Default value: `SNG-APPQOE`
+     */
+    name?: string;
+    /**
+     * Service Node Information
+     */
+    serviceNodes?: outputs.ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode[];
+}
+
+export interface ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode {
+    /**
+     * IP Address
+     */
+    address?: string;
+}
+
+export interface ServiceAppqoeFeatureServiceNodeServiceNodeGroup {
+    /**
+     * Service Node Information
+     */
+    serviceNodes?: outputs.ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode[];
+}
+
+export interface ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode {
+}
+
+export interface ServiceAppqoeFeatureVirtualApplication {
+    /**
+     * Resource Profile
+     *   - Choices: `small`, `medium`, `large`, `extra-large`, `default`
+     *   - Default value: `default`
+     */
+    resourceProfile?: string;
+    /**
+     * Variable name
+     */
+    resourceProfileVariable?: string;
 }
 
 export interface ServiceDhcpServerFeatureOptionCode {

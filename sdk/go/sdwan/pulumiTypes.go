@@ -33677,6 +33677,8 @@ type NetworkHierarchyCflowdCollector struct {
 	// Enable export spreading
 	//   - Default value: `false`
 	ExportSpread *bool `pulumi:"exportSpread"`
+	// Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SourceInterface *string `pulumi:"sourceInterface"`
 	// Collector UDP port number
 	//   - Range: `1024`-`65535`
 	//   - Default value: `4739`
@@ -33710,6 +33712,8 @@ type NetworkHierarchyCflowdCollectorArgs struct {
 	// Enable export spreading
 	//   - Default value: `false`
 	ExportSpread pulumi.BoolPtrInput `pulumi:"exportSpread"`
+	// Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	SourceInterface pulumi.StringPtrInput `pulumi:"sourceInterface"`
 	// Collector UDP port number
 	//   - Range: `1024`-`65535`
 	//   - Default value: `4739`
@@ -33792,6 +33796,11 @@ func (o NetworkHierarchyCflowdCollectorOutput) ExportInterval() pulumi.IntPtrOut
 //   - Default value: `false`
 func (o NetworkHierarchyCflowdCollectorOutput) ExportSpread() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v NetworkHierarchyCflowdCollector) *bool { return v.ExportSpread }).(pulumi.BoolPtrOutput)
+}
+
+// Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o NetworkHierarchyCflowdCollectorOutput) SourceInterface() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v NetworkHierarchyCflowdCollector) *string { return v.SourceInterface }).(pulumi.StringPtrOutput)
 }
 
 // Collector UDP port number
@@ -40272,6 +40281,115 @@ func (o RuleSetPolicyDefinitionRuleArrayOutput) Index(i pulumi.IntInput) RuleSet
 	}).(RuleSetPolicyDefinitionRuleOutput)
 }
 
+type ScopeObject struct {
+	// List of object UUIDs
+	ObjectIds []string `pulumi:"objectIds"`
+	// Object type
+	//   - Choices: `network-hierarchy-node`, `config-group`, `feature-profile`, `device-template`, `feature-template`, `localized-policy`, `security-policy`
+	ObjectType string `pulumi:"objectType"`
+}
+
+// ScopeObjectInput is an input type that accepts ScopeObjectArgs and ScopeObjectOutput values.
+// You can construct a concrete instance of `ScopeObjectInput` via:
+//
+//	ScopeObjectArgs{...}
+type ScopeObjectInput interface {
+	pulumi.Input
+
+	ToScopeObjectOutput() ScopeObjectOutput
+	ToScopeObjectOutputWithContext(context.Context) ScopeObjectOutput
+}
+
+type ScopeObjectArgs struct {
+	// List of object UUIDs
+	ObjectIds pulumi.StringArrayInput `pulumi:"objectIds"`
+	// Object type
+	//   - Choices: `network-hierarchy-node`, `config-group`, `feature-profile`, `device-template`, `feature-template`, `localized-policy`, `security-policy`
+	ObjectType pulumi.StringInput `pulumi:"objectType"`
+}
+
+func (ScopeObjectArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ScopeObject)(nil)).Elem()
+}
+
+func (i ScopeObjectArgs) ToScopeObjectOutput() ScopeObjectOutput {
+	return i.ToScopeObjectOutputWithContext(context.Background())
+}
+
+func (i ScopeObjectArgs) ToScopeObjectOutputWithContext(ctx context.Context) ScopeObjectOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ScopeObjectOutput)
+}
+
+// ScopeObjectArrayInput is an input type that accepts ScopeObjectArray and ScopeObjectArrayOutput values.
+// You can construct a concrete instance of `ScopeObjectArrayInput` via:
+//
+//	ScopeObjectArray{ ScopeObjectArgs{...} }
+type ScopeObjectArrayInput interface {
+	pulumi.Input
+
+	ToScopeObjectArrayOutput() ScopeObjectArrayOutput
+	ToScopeObjectArrayOutputWithContext(context.Context) ScopeObjectArrayOutput
+}
+
+type ScopeObjectArray []ScopeObjectInput
+
+func (ScopeObjectArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ScopeObject)(nil)).Elem()
+}
+
+func (i ScopeObjectArray) ToScopeObjectArrayOutput() ScopeObjectArrayOutput {
+	return i.ToScopeObjectArrayOutputWithContext(context.Background())
+}
+
+func (i ScopeObjectArray) ToScopeObjectArrayOutputWithContext(ctx context.Context) ScopeObjectArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ScopeObjectArrayOutput)
+}
+
+type ScopeObjectOutput struct{ *pulumi.OutputState }
+
+func (ScopeObjectOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ScopeObject)(nil)).Elem()
+}
+
+func (o ScopeObjectOutput) ToScopeObjectOutput() ScopeObjectOutput {
+	return o
+}
+
+func (o ScopeObjectOutput) ToScopeObjectOutputWithContext(ctx context.Context) ScopeObjectOutput {
+	return o
+}
+
+// List of object UUIDs
+func (o ScopeObjectOutput) ObjectIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ScopeObject) []string { return v.ObjectIds }).(pulumi.StringArrayOutput)
+}
+
+// Object type
+//   - Choices: `network-hierarchy-node`, `config-group`, `feature-profile`, `device-template`, `feature-template`, `localized-policy`, `security-policy`
+func (o ScopeObjectOutput) ObjectType() pulumi.StringOutput {
+	return o.ApplyT(func(v ScopeObject) string { return v.ObjectType }).(pulumi.StringOutput)
+}
+
+type ScopeObjectArrayOutput struct{ *pulumi.OutputState }
+
+func (ScopeObjectArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ScopeObject)(nil)).Elem()
+}
+
+func (o ScopeObjectArrayOutput) ToScopeObjectArrayOutput() ScopeObjectArrayOutput {
+	return o
+}
+
+func (o ScopeObjectArrayOutput) ToScopeObjectArrayOutputWithContext(ctx context.Context) ScopeObjectArrayOutput {
+	return o
+}
+
+func (o ScopeObjectArrayOutput) Index(i pulumi.IntInput) ScopeObjectOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ScopeObject {
+		return vs[0].([]ScopeObject)[vs[1].(int)]
+	}).(ScopeObjectOutput)
+}
+
 type SecurityAppHostingFeatureTemplateVirtualApplication struct {
 	// List of Virtual applications
 	//   - Choices: `utd`
@@ -41010,6 +41128,1388 @@ func (o SecurityPolicyLoggingArrayOutput) Index(i pulumi.IntInput) SecurityPolic
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) SecurityPolicyLogging {
 		return vs[0].([]SecurityPolicyLogging)[vs[1].(int)]
 	}).(SecurityPolicyLoggingOutput)
+}
+
+type ServiceAppqoeFeatureCombinedControllerGroup struct {
+	// List of controllers
+	AppnavControllers []ServiceAppqoeFeatureCombinedControllerGroupAppnavController `pulumi:"appnavControllers"`
+}
+
+// ServiceAppqoeFeatureCombinedControllerGroupInput is an input type that accepts ServiceAppqoeFeatureCombinedControllerGroupArgs and ServiceAppqoeFeatureCombinedControllerGroupOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureCombinedControllerGroupInput` via:
+//
+//	ServiceAppqoeFeatureCombinedControllerGroupArgs{...}
+type ServiceAppqoeFeatureCombinedControllerGroupInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureCombinedControllerGroupOutput() ServiceAppqoeFeatureCombinedControllerGroupOutput
+	ToServiceAppqoeFeatureCombinedControllerGroupOutputWithContext(context.Context) ServiceAppqoeFeatureCombinedControllerGroupOutput
+}
+
+type ServiceAppqoeFeatureCombinedControllerGroupArgs struct {
+	// List of controllers
+	AppnavControllers ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayInput `pulumi:"appnavControllers"`
+}
+
+func (ServiceAppqoeFeatureCombinedControllerGroupArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureCombinedControllerGroup)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureCombinedControllerGroupArgs) ToServiceAppqoeFeatureCombinedControllerGroupOutput() ServiceAppqoeFeatureCombinedControllerGroupOutput {
+	return i.ToServiceAppqoeFeatureCombinedControllerGroupOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureCombinedControllerGroupArgs) ToServiceAppqoeFeatureCombinedControllerGroupOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedControllerGroupOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureCombinedControllerGroupOutput)
+}
+
+// ServiceAppqoeFeatureCombinedControllerGroupArrayInput is an input type that accepts ServiceAppqoeFeatureCombinedControllerGroupArray and ServiceAppqoeFeatureCombinedControllerGroupArrayOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureCombinedControllerGroupArrayInput` via:
+//
+//	ServiceAppqoeFeatureCombinedControllerGroupArray{ ServiceAppqoeFeatureCombinedControllerGroupArgs{...} }
+type ServiceAppqoeFeatureCombinedControllerGroupArrayInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureCombinedControllerGroupArrayOutput() ServiceAppqoeFeatureCombinedControllerGroupArrayOutput
+	ToServiceAppqoeFeatureCombinedControllerGroupArrayOutputWithContext(context.Context) ServiceAppqoeFeatureCombinedControllerGroupArrayOutput
+}
+
+type ServiceAppqoeFeatureCombinedControllerGroupArray []ServiceAppqoeFeatureCombinedControllerGroupInput
+
+func (ServiceAppqoeFeatureCombinedControllerGroupArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureCombinedControllerGroup)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureCombinedControllerGroupArray) ToServiceAppqoeFeatureCombinedControllerGroupArrayOutput() ServiceAppqoeFeatureCombinedControllerGroupArrayOutput {
+	return i.ToServiceAppqoeFeatureCombinedControllerGroupArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureCombinedControllerGroupArray) ToServiceAppqoeFeatureCombinedControllerGroupArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedControllerGroupArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureCombinedControllerGroupArrayOutput)
+}
+
+type ServiceAppqoeFeatureCombinedControllerGroupOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureCombinedControllerGroupOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureCombinedControllerGroup)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureCombinedControllerGroupOutput) ToServiceAppqoeFeatureCombinedControllerGroupOutput() ServiceAppqoeFeatureCombinedControllerGroupOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedControllerGroupOutput) ToServiceAppqoeFeatureCombinedControllerGroupOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedControllerGroupOutput {
+	return o
+}
+
+// List of controllers
+func (o ServiceAppqoeFeatureCombinedControllerGroupOutput) AppnavControllers() ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureCombinedControllerGroup) []ServiceAppqoeFeatureCombinedControllerGroupAppnavController {
+		return v.AppnavControllers
+	}).(ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput)
+}
+
+type ServiceAppqoeFeatureCombinedControllerGroupArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureCombinedControllerGroupArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureCombinedControllerGroup)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureCombinedControllerGroupArrayOutput) ToServiceAppqoeFeatureCombinedControllerGroupArrayOutput() ServiceAppqoeFeatureCombinedControllerGroupArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedControllerGroupArrayOutput) ToServiceAppqoeFeatureCombinedControllerGroupArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedControllerGroupArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedControllerGroupArrayOutput) Index(i pulumi.IntInput) ServiceAppqoeFeatureCombinedControllerGroupOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceAppqoeFeatureCombinedControllerGroup {
+		return vs[0].([]ServiceAppqoeFeatureCombinedControllerGroup)[vs[1].(int)]
+	}).(ServiceAppqoeFeatureCombinedControllerGroupOutput)
+}
+
+type ServiceAppqoeFeatureCombinedControllerGroupAppnavController struct {
+}
+
+// ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerInput is an input type that accepts ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArgs and ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerInput` via:
+//
+//	ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArgs{...}
+type ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput() ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput
+	ToServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutputWithContext(context.Context) ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput
+}
+
+type ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArgs struct {
+}
+
+func (ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureCombinedControllerGroupAppnavController)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArgs) ToServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput() ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput {
+	return i.ToServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArgs) ToServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput)
+}
+
+// ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayInput is an input type that accepts ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArray and ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayInput` via:
+//
+//	ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArray{ ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArgs{...} }
+type ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput() ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput
+	ToServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutputWithContext(context.Context) ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput
+}
+
+type ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArray []ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerInput
+
+func (ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureCombinedControllerGroupAppnavController)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArray) ToServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput() ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput {
+	return i.ToServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArray) ToServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput)
+}
+
+type ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureCombinedControllerGroupAppnavController)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput) ToServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput() ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput) ToServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput {
+	return o
+}
+
+type ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureCombinedControllerGroupAppnavController)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput) ToServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput() ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput) ToServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput) Index(i pulumi.IntInput) ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceAppqoeFeatureCombinedControllerGroupAppnavController {
+		return vs[0].([]ServiceAppqoeFeatureCombinedControllerGroupAppnavController)[vs[1].(int)]
+	}).(ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput)
+}
+
+type ServiceAppqoeFeatureCombinedServiceContext struct {
+	// Appnav controller group
+	AppnavControllerGroup *string `pulumi:"appnavControllerGroup"`
+	// enable service context
+	Enable *bool `pulumi:"enable"`
+	// Service node group
+	ServiceNodeGroup *string `pulumi:"serviceNodeGroup"`
+	// Service node groups bound to this service context
+	ServiceNodeGroups []string `pulumi:"serviceNodeGroups"`
+	// Vpn
+	Vpn *int `pulumi:"vpn"`
+	// Variable name
+	VpnVariable *string `pulumi:"vpnVariable"`
+}
+
+// ServiceAppqoeFeatureCombinedServiceContextInput is an input type that accepts ServiceAppqoeFeatureCombinedServiceContextArgs and ServiceAppqoeFeatureCombinedServiceContextOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureCombinedServiceContextInput` via:
+//
+//	ServiceAppqoeFeatureCombinedServiceContextArgs{...}
+type ServiceAppqoeFeatureCombinedServiceContextInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureCombinedServiceContextOutput() ServiceAppqoeFeatureCombinedServiceContextOutput
+	ToServiceAppqoeFeatureCombinedServiceContextOutputWithContext(context.Context) ServiceAppqoeFeatureCombinedServiceContextOutput
+}
+
+type ServiceAppqoeFeatureCombinedServiceContextArgs struct {
+	// Appnav controller group
+	AppnavControllerGroup pulumi.StringPtrInput `pulumi:"appnavControllerGroup"`
+	// enable service context
+	Enable pulumi.BoolPtrInput `pulumi:"enable"`
+	// Service node group
+	ServiceNodeGroup pulumi.StringPtrInput `pulumi:"serviceNodeGroup"`
+	// Service node groups bound to this service context
+	ServiceNodeGroups pulumi.StringArrayInput `pulumi:"serviceNodeGroups"`
+	// Vpn
+	Vpn pulumi.IntPtrInput `pulumi:"vpn"`
+	// Variable name
+	VpnVariable pulumi.StringPtrInput `pulumi:"vpnVariable"`
+}
+
+func (ServiceAppqoeFeatureCombinedServiceContextArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureCombinedServiceContext)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureCombinedServiceContextArgs) ToServiceAppqoeFeatureCombinedServiceContextOutput() ServiceAppqoeFeatureCombinedServiceContextOutput {
+	return i.ToServiceAppqoeFeatureCombinedServiceContextOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureCombinedServiceContextArgs) ToServiceAppqoeFeatureCombinedServiceContextOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedServiceContextOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureCombinedServiceContextOutput)
+}
+
+// ServiceAppqoeFeatureCombinedServiceContextArrayInput is an input type that accepts ServiceAppqoeFeatureCombinedServiceContextArray and ServiceAppqoeFeatureCombinedServiceContextArrayOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureCombinedServiceContextArrayInput` via:
+//
+//	ServiceAppqoeFeatureCombinedServiceContextArray{ ServiceAppqoeFeatureCombinedServiceContextArgs{...} }
+type ServiceAppqoeFeatureCombinedServiceContextArrayInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureCombinedServiceContextArrayOutput() ServiceAppqoeFeatureCombinedServiceContextArrayOutput
+	ToServiceAppqoeFeatureCombinedServiceContextArrayOutputWithContext(context.Context) ServiceAppqoeFeatureCombinedServiceContextArrayOutput
+}
+
+type ServiceAppqoeFeatureCombinedServiceContextArray []ServiceAppqoeFeatureCombinedServiceContextInput
+
+func (ServiceAppqoeFeatureCombinedServiceContextArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureCombinedServiceContext)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureCombinedServiceContextArray) ToServiceAppqoeFeatureCombinedServiceContextArrayOutput() ServiceAppqoeFeatureCombinedServiceContextArrayOutput {
+	return i.ToServiceAppqoeFeatureCombinedServiceContextArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureCombinedServiceContextArray) ToServiceAppqoeFeatureCombinedServiceContextArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedServiceContextArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureCombinedServiceContextArrayOutput)
+}
+
+type ServiceAppqoeFeatureCombinedServiceContextOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureCombinedServiceContextOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureCombinedServiceContext)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceContextOutput) ToServiceAppqoeFeatureCombinedServiceContextOutput() ServiceAppqoeFeatureCombinedServiceContextOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceContextOutput) ToServiceAppqoeFeatureCombinedServiceContextOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedServiceContextOutput {
+	return o
+}
+
+// Appnav controller group
+func (o ServiceAppqoeFeatureCombinedServiceContextOutput) AppnavControllerGroup() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureCombinedServiceContext) *string { return v.AppnavControllerGroup }).(pulumi.StringPtrOutput)
+}
+
+// enable service context
+func (o ServiceAppqoeFeatureCombinedServiceContextOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureCombinedServiceContext) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
+}
+
+// Service node group
+func (o ServiceAppqoeFeatureCombinedServiceContextOutput) ServiceNodeGroup() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureCombinedServiceContext) *string { return v.ServiceNodeGroup }).(pulumi.StringPtrOutput)
+}
+
+// Service node groups bound to this service context
+func (o ServiceAppqoeFeatureCombinedServiceContextOutput) ServiceNodeGroups() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureCombinedServiceContext) []string { return v.ServiceNodeGroups }).(pulumi.StringArrayOutput)
+}
+
+// Vpn
+func (o ServiceAppqoeFeatureCombinedServiceContextOutput) Vpn() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureCombinedServiceContext) *int { return v.Vpn }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o ServiceAppqoeFeatureCombinedServiceContextOutput) VpnVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureCombinedServiceContext) *string { return v.VpnVariable }).(pulumi.StringPtrOutput)
+}
+
+type ServiceAppqoeFeatureCombinedServiceContextArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureCombinedServiceContextArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureCombinedServiceContext)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceContextArrayOutput) ToServiceAppqoeFeatureCombinedServiceContextArrayOutput() ServiceAppqoeFeatureCombinedServiceContextArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceContextArrayOutput) ToServiceAppqoeFeatureCombinedServiceContextArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedServiceContextArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceContextArrayOutput) Index(i pulumi.IntInput) ServiceAppqoeFeatureCombinedServiceContextOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceAppqoeFeatureCombinedServiceContext {
+		return vs[0].([]ServiceAppqoeFeatureCombinedServiceContext)[vs[1].(int)]
+	}).(ServiceAppqoeFeatureCombinedServiceContextOutput)
+}
+
+type ServiceAppqoeFeatureCombinedServiceNodeGroup struct {
+	// Service Node Information
+	ServiceNodes []ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode `pulumi:"serviceNodes"`
+}
+
+// ServiceAppqoeFeatureCombinedServiceNodeGroupInput is an input type that accepts ServiceAppqoeFeatureCombinedServiceNodeGroupArgs and ServiceAppqoeFeatureCombinedServiceNodeGroupOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureCombinedServiceNodeGroupInput` via:
+//
+//	ServiceAppqoeFeatureCombinedServiceNodeGroupArgs{...}
+type ServiceAppqoeFeatureCombinedServiceNodeGroupInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureCombinedServiceNodeGroupOutput() ServiceAppqoeFeatureCombinedServiceNodeGroupOutput
+	ToServiceAppqoeFeatureCombinedServiceNodeGroupOutputWithContext(context.Context) ServiceAppqoeFeatureCombinedServiceNodeGroupOutput
+}
+
+type ServiceAppqoeFeatureCombinedServiceNodeGroupArgs struct {
+	// Service Node Information
+	ServiceNodes ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayInput `pulumi:"serviceNodes"`
+}
+
+func (ServiceAppqoeFeatureCombinedServiceNodeGroupArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureCombinedServiceNodeGroup)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureCombinedServiceNodeGroupArgs) ToServiceAppqoeFeatureCombinedServiceNodeGroupOutput() ServiceAppqoeFeatureCombinedServiceNodeGroupOutput {
+	return i.ToServiceAppqoeFeatureCombinedServiceNodeGroupOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureCombinedServiceNodeGroupArgs) ToServiceAppqoeFeatureCombinedServiceNodeGroupOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedServiceNodeGroupOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureCombinedServiceNodeGroupOutput)
+}
+
+// ServiceAppqoeFeatureCombinedServiceNodeGroupArrayInput is an input type that accepts ServiceAppqoeFeatureCombinedServiceNodeGroupArray and ServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureCombinedServiceNodeGroupArrayInput` via:
+//
+//	ServiceAppqoeFeatureCombinedServiceNodeGroupArray{ ServiceAppqoeFeatureCombinedServiceNodeGroupArgs{...} }
+type ServiceAppqoeFeatureCombinedServiceNodeGroupArrayInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput() ServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput
+	ToServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutputWithContext(context.Context) ServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput
+}
+
+type ServiceAppqoeFeatureCombinedServiceNodeGroupArray []ServiceAppqoeFeatureCombinedServiceNodeGroupInput
+
+func (ServiceAppqoeFeatureCombinedServiceNodeGroupArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureCombinedServiceNodeGroup)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureCombinedServiceNodeGroupArray) ToServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput() ServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput {
+	return i.ToServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureCombinedServiceNodeGroupArray) ToServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput)
+}
+
+type ServiceAppqoeFeatureCombinedServiceNodeGroupOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureCombinedServiceNodeGroupOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureCombinedServiceNodeGroup)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceNodeGroupOutput) ToServiceAppqoeFeatureCombinedServiceNodeGroupOutput() ServiceAppqoeFeatureCombinedServiceNodeGroupOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceNodeGroupOutput) ToServiceAppqoeFeatureCombinedServiceNodeGroupOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedServiceNodeGroupOutput {
+	return o
+}
+
+// Service Node Information
+func (o ServiceAppqoeFeatureCombinedServiceNodeGroupOutput) ServiceNodes() ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureCombinedServiceNodeGroup) []ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode {
+		return v.ServiceNodes
+	}).(ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput)
+}
+
+type ServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureCombinedServiceNodeGroup)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput) ToServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput() ServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput) ToServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput) Index(i pulumi.IntInput) ServiceAppqoeFeatureCombinedServiceNodeGroupOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceAppqoeFeatureCombinedServiceNodeGroup {
+		return vs[0].([]ServiceAppqoeFeatureCombinedServiceNodeGroup)[vs[1].(int)]
+	}).(ServiceAppqoeFeatureCombinedServiceNodeGroupOutput)
+}
+
+type ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode struct {
+}
+
+// ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeInput is an input type that accepts ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArgs and ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeInput` via:
+//
+//	ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArgs{...}
+type ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput() ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput
+	ToServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutputWithContext(context.Context) ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput
+}
+
+type ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArgs struct {
+}
+
+func (ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArgs) ToServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput() ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput {
+	return i.ToServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArgs) ToServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput)
+}
+
+// ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayInput is an input type that accepts ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArray and ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayInput` via:
+//
+//	ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArray{ ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArgs{...} }
+type ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput() ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput
+	ToServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutputWithContext(context.Context) ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput
+}
+
+type ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArray []ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeInput
+
+func (ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArray) ToServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput() ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput {
+	return i.ToServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArray) ToServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput)
+}
+
+type ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput) ToServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput() ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput) ToServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput {
+	return o
+}
+
+type ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput) ToServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput() ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput) ToServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput) Index(i pulumi.IntInput) ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode {
+		return vs[0].([]ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode)[vs[1].(int)]
+	}).(ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput)
+}
+
+type ServiceAppqoeFeatureForwarderControllerGroup struct {
+	// List of controllers
+	AppnavControllers []ServiceAppqoeFeatureForwarderControllerGroupAppnavController `pulumi:"appnavControllers"`
+}
+
+// ServiceAppqoeFeatureForwarderControllerGroupInput is an input type that accepts ServiceAppqoeFeatureForwarderControllerGroupArgs and ServiceAppqoeFeatureForwarderControllerGroupOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureForwarderControllerGroupInput` via:
+//
+//	ServiceAppqoeFeatureForwarderControllerGroupArgs{...}
+type ServiceAppqoeFeatureForwarderControllerGroupInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureForwarderControllerGroupOutput() ServiceAppqoeFeatureForwarderControllerGroupOutput
+	ToServiceAppqoeFeatureForwarderControllerGroupOutputWithContext(context.Context) ServiceAppqoeFeatureForwarderControllerGroupOutput
+}
+
+type ServiceAppqoeFeatureForwarderControllerGroupArgs struct {
+	// List of controllers
+	AppnavControllers ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayInput `pulumi:"appnavControllers"`
+}
+
+func (ServiceAppqoeFeatureForwarderControllerGroupArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureForwarderControllerGroup)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureForwarderControllerGroupArgs) ToServiceAppqoeFeatureForwarderControllerGroupOutput() ServiceAppqoeFeatureForwarderControllerGroupOutput {
+	return i.ToServiceAppqoeFeatureForwarderControllerGroupOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureForwarderControllerGroupArgs) ToServiceAppqoeFeatureForwarderControllerGroupOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderControllerGroupOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureForwarderControllerGroupOutput)
+}
+
+// ServiceAppqoeFeatureForwarderControllerGroupArrayInput is an input type that accepts ServiceAppqoeFeatureForwarderControllerGroupArray and ServiceAppqoeFeatureForwarderControllerGroupArrayOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureForwarderControllerGroupArrayInput` via:
+//
+//	ServiceAppqoeFeatureForwarderControllerGroupArray{ ServiceAppqoeFeatureForwarderControllerGroupArgs{...} }
+type ServiceAppqoeFeatureForwarderControllerGroupArrayInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureForwarderControllerGroupArrayOutput() ServiceAppqoeFeatureForwarderControllerGroupArrayOutput
+	ToServiceAppqoeFeatureForwarderControllerGroupArrayOutputWithContext(context.Context) ServiceAppqoeFeatureForwarderControllerGroupArrayOutput
+}
+
+type ServiceAppqoeFeatureForwarderControllerGroupArray []ServiceAppqoeFeatureForwarderControllerGroupInput
+
+func (ServiceAppqoeFeatureForwarderControllerGroupArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureForwarderControllerGroup)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureForwarderControllerGroupArray) ToServiceAppqoeFeatureForwarderControllerGroupArrayOutput() ServiceAppqoeFeatureForwarderControllerGroupArrayOutput {
+	return i.ToServiceAppqoeFeatureForwarderControllerGroupArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureForwarderControllerGroupArray) ToServiceAppqoeFeatureForwarderControllerGroupArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderControllerGroupArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureForwarderControllerGroupArrayOutput)
+}
+
+type ServiceAppqoeFeatureForwarderControllerGroupOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureForwarderControllerGroupOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureForwarderControllerGroup)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureForwarderControllerGroupOutput) ToServiceAppqoeFeatureForwarderControllerGroupOutput() ServiceAppqoeFeatureForwarderControllerGroupOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderControllerGroupOutput) ToServiceAppqoeFeatureForwarderControllerGroupOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderControllerGroupOutput {
+	return o
+}
+
+// List of controllers
+func (o ServiceAppqoeFeatureForwarderControllerGroupOutput) AppnavControllers() ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureForwarderControllerGroup) []ServiceAppqoeFeatureForwarderControllerGroupAppnavController {
+		return v.AppnavControllers
+	}).(ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput)
+}
+
+type ServiceAppqoeFeatureForwarderControllerGroupArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureForwarderControllerGroupArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureForwarderControllerGroup)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureForwarderControllerGroupArrayOutput) ToServiceAppqoeFeatureForwarderControllerGroupArrayOutput() ServiceAppqoeFeatureForwarderControllerGroupArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderControllerGroupArrayOutput) ToServiceAppqoeFeatureForwarderControllerGroupArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderControllerGroupArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderControllerGroupArrayOutput) Index(i pulumi.IntInput) ServiceAppqoeFeatureForwarderControllerGroupOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceAppqoeFeatureForwarderControllerGroup {
+		return vs[0].([]ServiceAppqoeFeatureForwarderControllerGroup)[vs[1].(int)]
+	}).(ServiceAppqoeFeatureForwarderControllerGroupOutput)
+}
+
+type ServiceAppqoeFeatureForwarderControllerGroupAppnavController struct {
+	// Controller IP Address
+	Address *string `pulumi:"address"`
+	// Variable name
+	AddressVariable *string `pulumi:"addressVariable"`
+	// vpn id
+	//   - Range: `1`-`65530`
+	Vpn *int `pulumi:"vpn"`
+}
+
+// ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerInput is an input type that accepts ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArgs and ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerInput` via:
+//
+//	ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArgs{...}
+type ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput() ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput
+	ToServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutputWithContext(context.Context) ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput
+}
+
+type ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArgs struct {
+	// Controller IP Address
+	Address pulumi.StringPtrInput `pulumi:"address"`
+	// Variable name
+	AddressVariable pulumi.StringPtrInput `pulumi:"addressVariable"`
+	// vpn id
+	//   - Range: `1`-`65530`
+	Vpn pulumi.IntPtrInput `pulumi:"vpn"`
+}
+
+func (ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureForwarderControllerGroupAppnavController)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArgs) ToServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput() ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput {
+	return i.ToServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArgs) ToServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput)
+}
+
+// ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayInput is an input type that accepts ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArray and ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayInput` via:
+//
+//	ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArray{ ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArgs{...} }
+type ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput() ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput
+	ToServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutputWithContext(context.Context) ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput
+}
+
+type ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArray []ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerInput
+
+func (ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureForwarderControllerGroupAppnavController)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArray) ToServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput() ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput {
+	return i.ToServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArray) ToServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput)
+}
+
+type ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureForwarderControllerGroupAppnavController)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput) ToServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput() ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput) ToServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput {
+	return o
+}
+
+// Controller IP Address
+func (o ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput) Address() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureForwarderControllerGroupAppnavController) *string { return v.Address }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput) AddressVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureForwarderControllerGroupAppnavController) *string { return v.AddressVariable }).(pulumi.StringPtrOutput)
+}
+
+// vpn id
+//   - Range: `1`-`65530`
+func (o ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput) Vpn() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureForwarderControllerGroupAppnavController) *int { return v.Vpn }).(pulumi.IntPtrOutput)
+}
+
+type ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureForwarderControllerGroupAppnavController)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput) ToServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput() ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput) ToServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput) Index(i pulumi.IntInput) ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceAppqoeFeatureForwarderControllerGroupAppnavController {
+		return vs[0].([]ServiceAppqoeFeatureForwarderControllerGroupAppnavController)[vs[1].(int)]
+	}).(ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput)
+}
+
+type ServiceAppqoeFeatureForwarderServiceContext struct {
+	// Appnav controller group
+	AppnavControllerGroup *string `pulumi:"appnavControllerGroup"`
+	// enable service context
+	Enable *bool `pulumi:"enable"`
+	// Service node group
+	ServiceNodeGroup *string `pulumi:"serviceNodeGroup"`
+	// Service node groups bound to this service context
+	ServiceNodeGroups []string `pulumi:"serviceNodeGroups"`
+	// Vpn
+	Vpn *int `pulumi:"vpn"`
+	// Variable name
+	VpnVariable *string `pulumi:"vpnVariable"`
+}
+
+// ServiceAppqoeFeatureForwarderServiceContextInput is an input type that accepts ServiceAppqoeFeatureForwarderServiceContextArgs and ServiceAppqoeFeatureForwarderServiceContextOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureForwarderServiceContextInput` via:
+//
+//	ServiceAppqoeFeatureForwarderServiceContextArgs{...}
+type ServiceAppqoeFeatureForwarderServiceContextInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureForwarderServiceContextOutput() ServiceAppqoeFeatureForwarderServiceContextOutput
+	ToServiceAppqoeFeatureForwarderServiceContextOutputWithContext(context.Context) ServiceAppqoeFeatureForwarderServiceContextOutput
+}
+
+type ServiceAppqoeFeatureForwarderServiceContextArgs struct {
+	// Appnav controller group
+	AppnavControllerGroup pulumi.StringPtrInput `pulumi:"appnavControllerGroup"`
+	// enable service context
+	Enable pulumi.BoolPtrInput `pulumi:"enable"`
+	// Service node group
+	ServiceNodeGroup pulumi.StringPtrInput `pulumi:"serviceNodeGroup"`
+	// Service node groups bound to this service context
+	ServiceNodeGroups pulumi.StringArrayInput `pulumi:"serviceNodeGroups"`
+	// Vpn
+	Vpn pulumi.IntPtrInput `pulumi:"vpn"`
+	// Variable name
+	VpnVariable pulumi.StringPtrInput `pulumi:"vpnVariable"`
+}
+
+func (ServiceAppqoeFeatureForwarderServiceContextArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureForwarderServiceContext)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureForwarderServiceContextArgs) ToServiceAppqoeFeatureForwarderServiceContextOutput() ServiceAppqoeFeatureForwarderServiceContextOutput {
+	return i.ToServiceAppqoeFeatureForwarderServiceContextOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureForwarderServiceContextArgs) ToServiceAppqoeFeatureForwarderServiceContextOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderServiceContextOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureForwarderServiceContextOutput)
+}
+
+// ServiceAppqoeFeatureForwarderServiceContextArrayInput is an input type that accepts ServiceAppqoeFeatureForwarderServiceContextArray and ServiceAppqoeFeatureForwarderServiceContextArrayOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureForwarderServiceContextArrayInput` via:
+//
+//	ServiceAppqoeFeatureForwarderServiceContextArray{ ServiceAppqoeFeatureForwarderServiceContextArgs{...} }
+type ServiceAppqoeFeatureForwarderServiceContextArrayInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureForwarderServiceContextArrayOutput() ServiceAppqoeFeatureForwarderServiceContextArrayOutput
+	ToServiceAppqoeFeatureForwarderServiceContextArrayOutputWithContext(context.Context) ServiceAppqoeFeatureForwarderServiceContextArrayOutput
+}
+
+type ServiceAppqoeFeatureForwarderServiceContextArray []ServiceAppqoeFeatureForwarderServiceContextInput
+
+func (ServiceAppqoeFeatureForwarderServiceContextArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureForwarderServiceContext)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureForwarderServiceContextArray) ToServiceAppqoeFeatureForwarderServiceContextArrayOutput() ServiceAppqoeFeatureForwarderServiceContextArrayOutput {
+	return i.ToServiceAppqoeFeatureForwarderServiceContextArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureForwarderServiceContextArray) ToServiceAppqoeFeatureForwarderServiceContextArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderServiceContextArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureForwarderServiceContextArrayOutput)
+}
+
+type ServiceAppqoeFeatureForwarderServiceContextOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureForwarderServiceContextOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureForwarderServiceContext)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceContextOutput) ToServiceAppqoeFeatureForwarderServiceContextOutput() ServiceAppqoeFeatureForwarderServiceContextOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceContextOutput) ToServiceAppqoeFeatureForwarderServiceContextOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderServiceContextOutput {
+	return o
+}
+
+// Appnav controller group
+func (o ServiceAppqoeFeatureForwarderServiceContextOutput) AppnavControllerGroup() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureForwarderServiceContext) *string { return v.AppnavControllerGroup }).(pulumi.StringPtrOutput)
+}
+
+// enable service context
+func (o ServiceAppqoeFeatureForwarderServiceContextOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureForwarderServiceContext) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
+}
+
+// Service node group
+func (o ServiceAppqoeFeatureForwarderServiceContextOutput) ServiceNodeGroup() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureForwarderServiceContext) *string { return v.ServiceNodeGroup }).(pulumi.StringPtrOutput)
+}
+
+// Service node groups bound to this service context
+func (o ServiceAppqoeFeatureForwarderServiceContextOutput) ServiceNodeGroups() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureForwarderServiceContext) []string { return v.ServiceNodeGroups }).(pulumi.StringArrayOutput)
+}
+
+// Vpn
+func (o ServiceAppqoeFeatureForwarderServiceContextOutput) Vpn() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureForwarderServiceContext) *int { return v.Vpn }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o ServiceAppqoeFeatureForwarderServiceContextOutput) VpnVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureForwarderServiceContext) *string { return v.VpnVariable }).(pulumi.StringPtrOutput)
+}
+
+type ServiceAppqoeFeatureForwarderServiceContextArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureForwarderServiceContextArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureForwarderServiceContext)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceContextArrayOutput) ToServiceAppqoeFeatureForwarderServiceContextArrayOutput() ServiceAppqoeFeatureForwarderServiceContextArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceContextArrayOutput) ToServiceAppqoeFeatureForwarderServiceContextArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderServiceContextArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceContextArrayOutput) Index(i pulumi.IntInput) ServiceAppqoeFeatureForwarderServiceContextOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceAppqoeFeatureForwarderServiceContext {
+		return vs[0].([]ServiceAppqoeFeatureForwarderServiceContext)[vs[1].(int)]
+	}).(ServiceAppqoeFeatureForwarderServiceContextOutput)
+}
+
+type ServiceAppqoeFeatureForwarderServiceNodeGroup struct {
+	// List of service node group
+	//   - Default value: `SNG-APPQOE`
+	Name *string `pulumi:"name"`
+	// Service Node Information
+	ServiceNodes []ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode `pulumi:"serviceNodes"`
+}
+
+// ServiceAppqoeFeatureForwarderServiceNodeGroupInput is an input type that accepts ServiceAppqoeFeatureForwarderServiceNodeGroupArgs and ServiceAppqoeFeatureForwarderServiceNodeGroupOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureForwarderServiceNodeGroupInput` via:
+//
+//	ServiceAppqoeFeatureForwarderServiceNodeGroupArgs{...}
+type ServiceAppqoeFeatureForwarderServiceNodeGroupInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureForwarderServiceNodeGroupOutput() ServiceAppqoeFeatureForwarderServiceNodeGroupOutput
+	ToServiceAppqoeFeatureForwarderServiceNodeGroupOutputWithContext(context.Context) ServiceAppqoeFeatureForwarderServiceNodeGroupOutput
+}
+
+type ServiceAppqoeFeatureForwarderServiceNodeGroupArgs struct {
+	// List of service node group
+	//   - Default value: `SNG-APPQOE`
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// Service Node Information
+	ServiceNodes ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayInput `pulumi:"serviceNodes"`
+}
+
+func (ServiceAppqoeFeatureForwarderServiceNodeGroupArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureForwarderServiceNodeGroup)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureForwarderServiceNodeGroupArgs) ToServiceAppqoeFeatureForwarderServiceNodeGroupOutput() ServiceAppqoeFeatureForwarderServiceNodeGroupOutput {
+	return i.ToServiceAppqoeFeatureForwarderServiceNodeGroupOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureForwarderServiceNodeGroupArgs) ToServiceAppqoeFeatureForwarderServiceNodeGroupOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderServiceNodeGroupOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureForwarderServiceNodeGroupOutput)
+}
+
+// ServiceAppqoeFeatureForwarderServiceNodeGroupArrayInput is an input type that accepts ServiceAppqoeFeatureForwarderServiceNodeGroupArray and ServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureForwarderServiceNodeGroupArrayInput` via:
+//
+//	ServiceAppqoeFeatureForwarderServiceNodeGroupArray{ ServiceAppqoeFeatureForwarderServiceNodeGroupArgs{...} }
+type ServiceAppqoeFeatureForwarderServiceNodeGroupArrayInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput() ServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput
+	ToServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutputWithContext(context.Context) ServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput
+}
+
+type ServiceAppqoeFeatureForwarderServiceNodeGroupArray []ServiceAppqoeFeatureForwarderServiceNodeGroupInput
+
+func (ServiceAppqoeFeatureForwarderServiceNodeGroupArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureForwarderServiceNodeGroup)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureForwarderServiceNodeGroupArray) ToServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput() ServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput {
+	return i.ToServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureForwarderServiceNodeGroupArray) ToServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput)
+}
+
+type ServiceAppqoeFeatureForwarderServiceNodeGroupOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureForwarderServiceNodeGroupOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureForwarderServiceNodeGroup)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceNodeGroupOutput) ToServiceAppqoeFeatureForwarderServiceNodeGroupOutput() ServiceAppqoeFeatureForwarderServiceNodeGroupOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceNodeGroupOutput) ToServiceAppqoeFeatureForwarderServiceNodeGroupOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderServiceNodeGroupOutput {
+	return o
+}
+
+// List of service node group
+//   - Default value: `SNG-APPQOE`
+func (o ServiceAppqoeFeatureForwarderServiceNodeGroupOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureForwarderServiceNodeGroup) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+// Service Node Information
+func (o ServiceAppqoeFeatureForwarderServiceNodeGroupOutput) ServiceNodes() ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureForwarderServiceNodeGroup) []ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode {
+		return v.ServiceNodes
+	}).(ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput)
+}
+
+type ServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureForwarderServiceNodeGroup)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput) ToServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput() ServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput) ToServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput) Index(i pulumi.IntInput) ServiceAppqoeFeatureForwarderServiceNodeGroupOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceAppqoeFeatureForwarderServiceNodeGroup {
+		return vs[0].([]ServiceAppqoeFeatureForwarderServiceNodeGroup)[vs[1].(int)]
+	}).(ServiceAppqoeFeatureForwarderServiceNodeGroupOutput)
+}
+
+type ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode struct {
+	// IP Address
+	Address *string `pulumi:"address"`
+}
+
+// ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeInput is an input type that accepts ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArgs and ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeInput` via:
+//
+//	ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArgs{...}
+type ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput() ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput
+	ToServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutputWithContext(context.Context) ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput
+}
+
+type ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArgs struct {
+	// IP Address
+	Address pulumi.StringPtrInput `pulumi:"address"`
+}
+
+func (ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArgs) ToServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput() ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput {
+	return i.ToServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArgs) ToServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput)
+}
+
+// ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayInput is an input type that accepts ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArray and ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayInput` via:
+//
+//	ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArray{ ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArgs{...} }
+type ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput() ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput
+	ToServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutputWithContext(context.Context) ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput
+}
+
+type ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArray []ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeInput
+
+func (ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArray) ToServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput() ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput {
+	return i.ToServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArray) ToServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput)
+}
+
+type ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput) ToServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput() ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput) ToServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput {
+	return o
+}
+
+// IP Address
+func (o ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput) Address() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode) *string { return v.Address }).(pulumi.StringPtrOutput)
+}
+
+type ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput) ToServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput() ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput) ToServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput) Index(i pulumi.IntInput) ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode {
+		return vs[0].([]ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode)[vs[1].(int)]
+	}).(ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput)
+}
+
+type ServiceAppqoeFeatureServiceNodeServiceNodeGroup struct {
+	// Service Node Information
+	ServiceNodes []ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode `pulumi:"serviceNodes"`
+}
+
+// ServiceAppqoeFeatureServiceNodeServiceNodeGroupInput is an input type that accepts ServiceAppqoeFeatureServiceNodeServiceNodeGroupArgs and ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureServiceNodeServiceNodeGroupInput` via:
+//
+//	ServiceAppqoeFeatureServiceNodeServiceNodeGroupArgs{...}
+type ServiceAppqoeFeatureServiceNodeServiceNodeGroupInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput() ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput
+	ToServiceAppqoeFeatureServiceNodeServiceNodeGroupOutputWithContext(context.Context) ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput
+}
+
+type ServiceAppqoeFeatureServiceNodeServiceNodeGroupArgs struct {
+	// Service Node Information
+	ServiceNodes ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayInput `pulumi:"serviceNodes"`
+}
+
+func (ServiceAppqoeFeatureServiceNodeServiceNodeGroupArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureServiceNodeServiceNodeGroup)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureServiceNodeServiceNodeGroupArgs) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput() ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput {
+	return i.ToServiceAppqoeFeatureServiceNodeServiceNodeGroupOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureServiceNodeServiceNodeGroupArgs) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupOutputWithContext(ctx context.Context) ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput)
+}
+
+// ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayInput is an input type that accepts ServiceAppqoeFeatureServiceNodeServiceNodeGroupArray and ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayInput` via:
+//
+//	ServiceAppqoeFeatureServiceNodeServiceNodeGroupArray{ ServiceAppqoeFeatureServiceNodeServiceNodeGroupArgs{...} }
+type ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput() ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput
+	ToServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutputWithContext(context.Context) ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput
+}
+
+type ServiceAppqoeFeatureServiceNodeServiceNodeGroupArray []ServiceAppqoeFeatureServiceNodeServiceNodeGroupInput
+
+func (ServiceAppqoeFeatureServiceNodeServiceNodeGroupArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureServiceNodeServiceNodeGroup)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureServiceNodeServiceNodeGroupArray) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput() ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput {
+	return i.ToServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureServiceNodeServiceNodeGroupArray) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput)
+}
+
+type ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureServiceNodeServiceNodeGroup)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput() ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupOutputWithContext(ctx context.Context) ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput {
+	return o
+}
+
+// Service Node Information
+func (o ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput) ServiceNodes() ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureServiceNodeServiceNodeGroup) []ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode {
+		return v.ServiceNodes
+	}).(ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput)
+}
+
+type ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureServiceNodeServiceNodeGroup)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput() ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput) Index(i pulumi.IntInput) ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceAppqoeFeatureServiceNodeServiceNodeGroup {
+		return vs[0].([]ServiceAppqoeFeatureServiceNodeServiceNodeGroup)[vs[1].(int)]
+	}).(ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput)
+}
+
+type ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode struct {
+}
+
+// ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeInput is an input type that accepts ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArgs and ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeInput` via:
+//
+//	ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArgs{...}
+type ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput() ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput
+	ToServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutputWithContext(context.Context) ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput
+}
+
+type ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArgs struct {
+}
+
+func (ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArgs) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput() ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput {
+	return i.ToServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArgs) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutputWithContext(ctx context.Context) ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput)
+}
+
+// ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayInput is an input type that accepts ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArray and ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayInput` via:
+//
+//	ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArray{ ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArgs{...} }
+type ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput() ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput
+	ToServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutputWithContext(context.Context) ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput
+}
+
+type ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArray []ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeInput
+
+func (ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArray) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput() ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput {
+	return i.ToServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArray) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput)
+}
+
+type ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput() ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutputWithContext(ctx context.Context) ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput {
+	return o
+}
+
+type ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput() ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput) ToServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput) Index(i pulumi.IntInput) ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode {
+		return vs[0].([]ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode)[vs[1].(int)]
+	}).(ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput)
+}
+
+type ServiceAppqoeFeatureVirtualApplication struct {
+	// Resource Profile
+	//   - Choices: `small`, `medium`, `large`, `extra-large`, `default`
+	//   - Default value: `default`
+	ResourceProfile *string `pulumi:"resourceProfile"`
+	// Variable name
+	ResourceProfileVariable *string `pulumi:"resourceProfileVariable"`
+}
+
+// ServiceAppqoeFeatureVirtualApplicationInput is an input type that accepts ServiceAppqoeFeatureVirtualApplicationArgs and ServiceAppqoeFeatureVirtualApplicationOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureVirtualApplicationInput` via:
+//
+//	ServiceAppqoeFeatureVirtualApplicationArgs{...}
+type ServiceAppqoeFeatureVirtualApplicationInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureVirtualApplicationOutput() ServiceAppqoeFeatureVirtualApplicationOutput
+	ToServiceAppqoeFeatureVirtualApplicationOutputWithContext(context.Context) ServiceAppqoeFeatureVirtualApplicationOutput
+}
+
+type ServiceAppqoeFeatureVirtualApplicationArgs struct {
+	// Resource Profile
+	//   - Choices: `small`, `medium`, `large`, `extra-large`, `default`
+	//   - Default value: `default`
+	ResourceProfile pulumi.StringPtrInput `pulumi:"resourceProfile"`
+	// Variable name
+	ResourceProfileVariable pulumi.StringPtrInput `pulumi:"resourceProfileVariable"`
+}
+
+func (ServiceAppqoeFeatureVirtualApplicationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureVirtualApplication)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureVirtualApplicationArgs) ToServiceAppqoeFeatureVirtualApplicationOutput() ServiceAppqoeFeatureVirtualApplicationOutput {
+	return i.ToServiceAppqoeFeatureVirtualApplicationOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureVirtualApplicationArgs) ToServiceAppqoeFeatureVirtualApplicationOutputWithContext(ctx context.Context) ServiceAppqoeFeatureVirtualApplicationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureVirtualApplicationOutput)
+}
+
+// ServiceAppqoeFeatureVirtualApplicationArrayInput is an input type that accepts ServiceAppqoeFeatureVirtualApplicationArray and ServiceAppqoeFeatureVirtualApplicationArrayOutput values.
+// You can construct a concrete instance of `ServiceAppqoeFeatureVirtualApplicationArrayInput` via:
+//
+//	ServiceAppqoeFeatureVirtualApplicationArray{ ServiceAppqoeFeatureVirtualApplicationArgs{...} }
+type ServiceAppqoeFeatureVirtualApplicationArrayInput interface {
+	pulumi.Input
+
+	ToServiceAppqoeFeatureVirtualApplicationArrayOutput() ServiceAppqoeFeatureVirtualApplicationArrayOutput
+	ToServiceAppqoeFeatureVirtualApplicationArrayOutputWithContext(context.Context) ServiceAppqoeFeatureVirtualApplicationArrayOutput
+}
+
+type ServiceAppqoeFeatureVirtualApplicationArray []ServiceAppqoeFeatureVirtualApplicationInput
+
+func (ServiceAppqoeFeatureVirtualApplicationArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureVirtualApplication)(nil)).Elem()
+}
+
+func (i ServiceAppqoeFeatureVirtualApplicationArray) ToServiceAppqoeFeatureVirtualApplicationArrayOutput() ServiceAppqoeFeatureVirtualApplicationArrayOutput {
+	return i.ToServiceAppqoeFeatureVirtualApplicationArrayOutputWithContext(context.Background())
+}
+
+func (i ServiceAppqoeFeatureVirtualApplicationArray) ToServiceAppqoeFeatureVirtualApplicationArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureVirtualApplicationArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ServiceAppqoeFeatureVirtualApplicationArrayOutput)
+}
+
+type ServiceAppqoeFeatureVirtualApplicationOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureVirtualApplicationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ServiceAppqoeFeatureVirtualApplication)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureVirtualApplicationOutput) ToServiceAppqoeFeatureVirtualApplicationOutput() ServiceAppqoeFeatureVirtualApplicationOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureVirtualApplicationOutput) ToServiceAppqoeFeatureVirtualApplicationOutputWithContext(ctx context.Context) ServiceAppqoeFeatureVirtualApplicationOutput {
+	return o
+}
+
+// Resource Profile
+//   - Choices: `small`, `medium`, `large`, `extra-large`, `default`
+//   - Default value: `default`
+func (o ServiceAppqoeFeatureVirtualApplicationOutput) ResourceProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureVirtualApplication) *string { return v.ResourceProfile }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o ServiceAppqoeFeatureVirtualApplicationOutput) ResourceProfileVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceAppqoeFeatureVirtualApplication) *string { return v.ResourceProfileVariable }).(pulumi.StringPtrOutput)
+}
+
+type ServiceAppqoeFeatureVirtualApplicationArrayOutput struct{ *pulumi.OutputState }
+
+func (ServiceAppqoeFeatureVirtualApplicationArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ServiceAppqoeFeatureVirtualApplication)(nil)).Elem()
+}
+
+func (o ServiceAppqoeFeatureVirtualApplicationArrayOutput) ToServiceAppqoeFeatureVirtualApplicationArrayOutput() ServiceAppqoeFeatureVirtualApplicationArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureVirtualApplicationArrayOutput) ToServiceAppqoeFeatureVirtualApplicationArrayOutputWithContext(ctx context.Context) ServiceAppqoeFeatureVirtualApplicationArrayOutput {
+	return o
+}
+
+func (o ServiceAppqoeFeatureVirtualApplicationArrayOutput) Index(i pulumi.IntInput) ServiceAppqoeFeatureVirtualApplicationOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceAppqoeFeatureVirtualApplication {
+		return vs[0].([]ServiceAppqoeFeatureVirtualApplication)[vs[1].(int)]
+	}).(ServiceAppqoeFeatureVirtualApplicationOutput)
 }
 
 type ServiceDhcpServerFeatureOptionCode struct {
@@ -80937,2041 +82437,6 @@ func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray
 	}).(TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput)
 }
 
-type TransportWanVpnInterfaceEthernetFeatureArp struct {
-	// IP V4 Address
-	IpAddress *string `pulumi:"ipAddress"`
-	// Variable name
-	IpAddressVariable *string `pulumi:"ipAddressVariable"`
-	// MAC Address
-	MacAddress *string `pulumi:"macAddress"`
-	// Variable name
-	MacAddressVariable *string `pulumi:"macAddressVariable"`
-}
-
-// TransportWanVpnInterfaceEthernetFeatureArpInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureArpArgs and TransportWanVpnInterfaceEthernetFeatureArpOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureArpInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureArpArgs{...}
-type TransportWanVpnInterfaceEthernetFeatureArpInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureArpOutput() TransportWanVpnInterfaceEthernetFeatureArpOutput
-	ToTransportWanVpnInterfaceEthernetFeatureArpOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureArpOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureArpArgs struct {
-	// IP V4 Address
-	IpAddress pulumi.StringPtrInput `pulumi:"ipAddress"`
-	// Variable name
-	IpAddressVariable pulumi.StringPtrInput `pulumi:"ipAddressVariable"`
-	// MAC Address
-	MacAddress pulumi.StringPtrInput `pulumi:"macAddress"`
-	// Variable name
-	MacAddressVariable pulumi.StringPtrInput `pulumi:"macAddressVariable"`
-}
-
-func (TransportWanVpnInterfaceEthernetFeatureArpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureArp)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureArpArgs) ToTransportWanVpnInterfaceEthernetFeatureArpOutput() TransportWanVpnInterfaceEthernetFeatureArpOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureArpOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureArpArgs) ToTransportWanVpnInterfaceEthernetFeatureArpOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureArpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureArpOutput)
-}
-
-// TransportWanVpnInterfaceEthernetFeatureArpArrayInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureArpArray and TransportWanVpnInterfaceEthernetFeatureArpArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureArpArrayInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureArpArray{ TransportWanVpnInterfaceEthernetFeatureArpArgs{...} }
-type TransportWanVpnInterfaceEthernetFeatureArpArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureArpArrayOutput() TransportWanVpnInterfaceEthernetFeatureArpArrayOutput
-	ToTransportWanVpnInterfaceEthernetFeatureArpArrayOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureArpArrayOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureArpArray []TransportWanVpnInterfaceEthernetFeatureArpInput
-
-func (TransportWanVpnInterfaceEthernetFeatureArpArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureArp)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureArpArray) ToTransportWanVpnInterfaceEthernetFeatureArpArrayOutput() TransportWanVpnInterfaceEthernetFeatureArpArrayOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureArpArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureArpArray) ToTransportWanVpnInterfaceEthernetFeatureArpArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureArpArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureArpArrayOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureArpOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureArpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureArp)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureArpOutput) ToTransportWanVpnInterfaceEthernetFeatureArpOutput() TransportWanVpnInterfaceEthernetFeatureArpOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureArpOutput) ToTransportWanVpnInterfaceEthernetFeatureArpOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureArpOutput {
-	return o
-}
-
-// IP V4 Address
-func (o TransportWanVpnInterfaceEthernetFeatureArpOutput) IpAddress() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureArp) *string { return v.IpAddress }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureArpOutput) IpAddressVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureArp) *string { return v.IpAddressVariable }).(pulumi.StringPtrOutput)
-}
-
-// MAC Address
-func (o TransportWanVpnInterfaceEthernetFeatureArpOutput) MacAddress() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureArp) *string { return v.MacAddress }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureArpOutput) MacAddressVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureArp) *string { return v.MacAddressVariable }).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureArpArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureArpArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureArp)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureArpArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureArpArrayOutput() TransportWanVpnInterfaceEthernetFeatureArpArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureArpArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureArpArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureArpArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureArpArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceEthernetFeatureArpOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceEthernetFeatureArp {
-		return vs[0].([]TransportWanVpnInterfaceEthernetFeatureArp)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceEthernetFeatureArpOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress struct {
-	// IpV4 Address
-	Address *string `pulumi:"address"`
-	// Variable name
-	AddressVariable *string `pulumi:"addressVariable"`
-	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-	SubnetMask *string `pulumi:"subnetMask"`
-	// Variable name
-	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
-}
-
-// TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs and TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs{...}
-type TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput() TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput
-	ToTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs struct {
-	// IpV4 Address
-	Address pulumi.StringPtrInput `pulumi:"address"`
-	// Variable name
-	AddressVariable pulumi.StringPtrInput `pulumi:"addressVariable"`
-	// Subnet Mask
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-	SubnetMask pulumi.StringPtrInput `pulumi:"subnetMask"`
-	// Variable name
-	SubnetMaskVariable pulumi.StringPtrInput `pulumi:"subnetMaskVariable"`
-}
-
-func (TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs) ToTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput() TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs) ToTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput)
-}
-
-// TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray and TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray{ TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs{...} }
-type TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput() TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput
-	ToTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray []TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput
-
-func (TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray) ToTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput() TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray) ToTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) ToTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput() TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) ToTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
-	return o
-}
-
-// IpV4 Address
-func (o TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) Address() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress) *string { return v.Address }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) AddressVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress) *string { return v.AddressVariable }).(pulumi.StringPtrOutput)
-}
-
-// Subnet Mask
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-func (o TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) SubnetMask() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress) *string { return v.SubnetMask }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) SubnetMaskVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress) *string {
-		return v.SubnetMaskVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput() TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
-		return vs[0].([]TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress struct {
-	// IPv6 Address Secondary
-	Address *string `pulumi:"address"`
-	// Variable name
-	AddressVariable *string `pulumi:"addressVariable"`
-}
-
-// TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs and TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs{...}
-type TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput() TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput
-	ToTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs struct {
-	// IPv6 Address Secondary
-	Address pulumi.StringPtrInput `pulumi:"address"`
-	// Variable name
-	AddressVariable pulumi.StringPtrInput `pulumi:"addressVariable"`
-}
-
-func (TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs) ToTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput() TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs) ToTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput)
-}
-
-// TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArray and TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArray{ TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs{...} }
-type TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput() TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput
-	ToTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArray []TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressInput
-
-func (TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArray) ToTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput() TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArray) ToTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput) ToTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput() TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput) ToTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput {
-	return o
-}
-
-// IPv6 Address Secondary
-func (o TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput) Address() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress) *string { return v.Address }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput) AddressVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress) *string {
-		return v.AddressVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput() TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress {
-		return vs[0].([]TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress struct {
-	// IPv6 Address Secondary
-	Address *string `pulumi:"address"`
-	// Variable name
-	AddressVariable *string `pulumi:"addressVariable"`
-}
-
-// TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs and TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs{...}
-type TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput() TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput
-	ToTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs struct {
-	// IPv6 Address Secondary
-	Address pulumi.StringPtrInput `pulumi:"address"`
-	// Variable name
-	AddressVariable pulumi.StringPtrInput `pulumi:"addressVariable"`
-}
-
-func (TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs) ToTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput() TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs) ToTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput)
-}
-
-// TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArray and TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArray{ TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs{...} }
-type TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput() TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput
-	ToTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArray []TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressInput
-
-func (TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArray) ToTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput() TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArray) ToTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput) ToTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput() TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput) ToTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput {
-	return o
-}
-
-// IPv6 Address Secondary
-func (o TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput) Address() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress) *string { return v.Address }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput) AddressVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress) *string { return v.AddressVariable }).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput() TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress {
-		return vs[0].([]TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback struct {
-	// NAT Inside Source Loopback Interface
-	LoopbackInterface *string `pulumi:"loopbackInterface"`
-	// Variable name
-	LoopbackInterfaceVariable *string `pulumi:"loopbackInterfaceVariable"`
-}
-
-// TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs and TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs{...}
-type TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput() TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput
-	ToTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs struct {
-	// NAT Inside Source Loopback Interface
-	LoopbackInterface pulumi.StringPtrInput `pulumi:"loopbackInterface"`
-	// Variable name
-	LoopbackInterfaceVariable pulumi.StringPtrInput `pulumi:"loopbackInterfaceVariable"`
-}
-
-func (TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput() TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput)
-}
-
-// TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray and TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray{ TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs{...} }
-type TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput() TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput
-	ToTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray []TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackInput
-
-func (TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput() TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput() TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput {
-	return o
-}
-
-// NAT Inside Source Loopback Interface
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput) LoopbackInterface() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback) *string { return v.LoopbackInterface }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput) LoopbackInterfaceVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback) *string {
-		return v.LoopbackInterfaceVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput() TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback {
-		return vs[0].([]TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool struct {
-	// Enable DualRouter HA Mapping
-	//   - Default value: `false`
-	EnableDualRouterHaMapping *bool `pulumi:"enableDualRouterHaMapping"`
-	// NAT Pool Name
-	//   - Range: `1`-`4095`
-	Name *int `pulumi:"name"`
-	// Variable name
-	NameVariable *string `pulumi:"nameVariable"`
-	// NAT Overload
-	//   - Default value: `true`
-	Overload *bool `pulumi:"overload"`
-	// Variable name
-	OverloadVariable *string `pulumi:"overloadVariable"`
-	// NAT Pool Prefix Length
-	//   - Range: `1`-`32`
-	PrefixLength *int `pulumi:"prefixLength"`
-	// Variable name
-	PrefixLengthVariable *string `pulumi:"prefixLengthVariable"`
-	// NAT Pool Range End
-	RangeEnd *string `pulumi:"rangeEnd"`
-	// Variable name
-	RangeEndVariable *string `pulumi:"rangeEndVariable"`
-	// NAT Pool Range Start
-	RangeStart *string `pulumi:"rangeStart"`
-	// Variable name
-	RangeStartVariable *string `pulumi:"rangeStartVariable"`
-}
-
-// TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs and TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs{...}
-type TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput() TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput
-	ToTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs struct {
-	// Enable DualRouter HA Mapping
-	//   - Default value: `false`
-	EnableDualRouterHaMapping pulumi.BoolPtrInput `pulumi:"enableDualRouterHaMapping"`
-	// NAT Pool Name
-	//   - Range: `1`-`4095`
-	Name pulumi.IntPtrInput `pulumi:"name"`
-	// Variable name
-	NameVariable pulumi.StringPtrInput `pulumi:"nameVariable"`
-	// NAT Overload
-	//   - Default value: `true`
-	Overload pulumi.BoolPtrInput `pulumi:"overload"`
-	// Variable name
-	OverloadVariable pulumi.StringPtrInput `pulumi:"overloadVariable"`
-	// NAT Pool Prefix Length
-	//   - Range: `1`-`32`
-	PrefixLength pulumi.IntPtrInput `pulumi:"prefixLength"`
-	// Variable name
-	PrefixLengthVariable pulumi.StringPtrInput `pulumi:"prefixLengthVariable"`
-	// NAT Pool Range End
-	RangeEnd pulumi.StringPtrInput `pulumi:"rangeEnd"`
-	// Variable name
-	RangeEndVariable pulumi.StringPtrInput `pulumi:"rangeEndVariable"`
-	// NAT Pool Range Start
-	RangeStart pulumi.StringPtrInput `pulumi:"rangeStart"`
-	// Variable name
-	RangeStartVariable pulumi.StringPtrInput `pulumi:"rangeStartVariable"`
-}
-
-func (TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput() TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput)
-}
-
-// TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray and TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray{ TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs{...} }
-type TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput() TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput
-	ToTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray []TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolInput
-
-func (TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput() TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput() TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput {
-	return o
-}
-
-// Enable DualRouter HA Mapping
-//   - Default value: `false`
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) EnableDualRouterHaMapping() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) *bool { return v.EnableDualRouterHaMapping }).(pulumi.BoolPtrOutput)
-}
-
-// NAT Pool Name
-//   - Range: `1`-`4095`
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) Name() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) *int { return v.Name }).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) NameVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) *string { return v.NameVariable }).(pulumi.StringPtrOutput)
-}
-
-// NAT Overload
-//   - Default value: `true`
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) Overload() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) *bool { return v.Overload }).(pulumi.BoolPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) OverloadVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) *string { return v.OverloadVariable }).(pulumi.StringPtrOutput)
-}
-
-// NAT Pool Prefix Length
-//   - Range: `1`-`32`
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) PrefixLength() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) *int { return v.PrefixLength }).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) PrefixLengthVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) *string { return v.PrefixLengthVariable }).(pulumi.StringPtrOutput)
-}
-
-// NAT Pool Range End
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) RangeEnd() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) *string { return v.RangeEnd }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) RangeEndVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) *string { return v.RangeEndVariable }).(pulumi.StringPtrOutput)
-}
-
-// NAT Pool Range Start
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) RangeStart() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) *string { return v.RangeStart }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) RangeStartVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) *string { return v.RangeStartVariable }).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput() TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool {
-		return vs[0].([]TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNewStaticNat struct {
-	// Direction of static NAT translation
-	//   - Choices: `inside`
-	//   - Default value: `inside`
-	Direction *string `pulumi:"direction"`
-	// Enable DualRouter HA Mapping
-	//   - Default value: `false`
-	EnableDualRouterHaMapping *bool `pulumi:"enableDualRouterHaMapping"`
-	// Source IP address to be translated
-	SourceIp *string `pulumi:"sourceIp"`
-	// Variable name
-	SourceIpVariable *string `pulumi:"sourceIpVariable"`
-	// Source VPN ID
-	//   - Range: `0`-`65530`
-	//   - Default value: `0`
-	SourceVpn *int `pulumi:"sourceVpn"`
-	// Variable name
-	SourceVpnVariable *string `pulumi:"sourceVpnVariable"`
-	// Statically translated source IP address
-	TranslatedIp *string `pulumi:"translatedIp"`
-	// Variable name
-	TranslatedIpVariable *string `pulumi:"translatedIpVariable"`
-}
-
-// TransportWanVpnInterfaceEthernetFeatureNewStaticNatInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs and TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureNewStaticNatInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs{...}
-type TransportWanVpnInterfaceEthernetFeatureNewStaticNatInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput() TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput
-	ToTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs struct {
-	// Direction of static NAT translation
-	//   - Choices: `inside`
-	//   - Default value: `inside`
-	Direction pulumi.StringPtrInput `pulumi:"direction"`
-	// Enable DualRouter HA Mapping
-	//   - Default value: `false`
-	EnableDualRouterHaMapping pulumi.BoolPtrInput `pulumi:"enableDualRouterHaMapping"`
-	// Source IP address to be translated
-	SourceIp pulumi.StringPtrInput `pulumi:"sourceIp"`
-	// Variable name
-	SourceIpVariable pulumi.StringPtrInput `pulumi:"sourceIpVariable"`
-	// Source VPN ID
-	//   - Range: `0`-`65530`
-	//   - Default value: `0`
-	SourceVpn pulumi.IntPtrInput `pulumi:"sourceVpn"`
-	// Variable name
-	SourceVpnVariable pulumi.StringPtrInput `pulumi:"sourceVpnVariable"`
-	// Statically translated source IP address
-	TranslatedIp pulumi.StringPtrInput `pulumi:"translatedIp"`
-	// Variable name
-	TranslatedIpVariable pulumi.StringPtrInput `pulumi:"translatedIpVariable"`
-}
-
-func (TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureNewStaticNat)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs) ToTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput() TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs) ToTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput)
-}
-
-// TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureNewStaticNatArray and TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureNewStaticNatArray{ TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs{...} }
-type TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput() TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput
-	ToTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNewStaticNatArray []TransportWanVpnInterfaceEthernetFeatureNewStaticNatInput
-
-func (TransportWanVpnInterfaceEthernetFeatureNewStaticNatArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureNewStaticNat)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureNewStaticNatArray) ToTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput() TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureNewStaticNatArray) ToTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureNewStaticNat)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) ToTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput() TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) ToTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput {
-	return o
-}
-
-// Direction of static NAT translation
-//   - Choices: `inside`
-//   - Default value: `inside`
-func (o TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) Direction() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNewStaticNat) *string { return v.Direction }).(pulumi.StringPtrOutput)
-}
-
-// Enable DualRouter HA Mapping
-//   - Default value: `false`
-func (o TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) EnableDualRouterHaMapping() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNewStaticNat) *bool { return v.EnableDualRouterHaMapping }).(pulumi.BoolPtrOutput)
-}
-
-// Source IP address to be translated
-func (o TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) SourceIp() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNewStaticNat) *string { return v.SourceIp }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) SourceIpVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNewStaticNat) *string { return v.SourceIpVariable }).(pulumi.StringPtrOutput)
-}
-
-// Source VPN ID
-//   - Range: `0`-`65530`
-//   - Default value: `0`
-func (o TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) SourceVpn() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNewStaticNat) *int { return v.SourceVpn }).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) SourceVpnVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNewStaticNat) *string { return v.SourceVpnVariable }).(pulumi.StringPtrOutput)
-}
-
-// Statically translated source IP address
-func (o TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) TranslatedIp() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNewStaticNat) *string { return v.TranslatedIp }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) TranslatedIpVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureNewStaticNat) *string { return v.TranslatedIpVariable }).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureNewStaticNat)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput() TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceEthernetFeatureNewStaticNat {
-		return vs[0].([]TransportWanVpnInterfaceEthernetFeatureNewStaticNat)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink struct {
-	InterfaceId *string `pulumi:"interfaceId"`
-	// Set lacp mode
-	//   - Choices: `active`, `passive`
-	//   - Default value: `active`
-	LacpMode *string `pulumi:"lacpMode"`
-	// Variable name
-	LacpModeVariable *string `pulumi:"lacpModeVariable"`
-	// Set lacp port priority
-	//   - Range: `1`-`65535`
-	LacpPortPriority *int `pulumi:"lacpPortPriority"`
-	// Variable name
-	LacpPortPriorityVariable *string `pulumi:"lacpPortPriorityVariable"`
-	// Set lacp rate
-	//   - Choices: `fast`, `normal`
-	LacpRate *string `pulumi:"lacpRate"`
-	// Variable name
-	LacpRateVariable *string `pulumi:"lacpRateVariable"`
-}
-
-// TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkInput is an input type that accepts TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs and TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs{...}
-type TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput() TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput
-	ToTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs struct {
-	InterfaceId pulumi.StringPtrInput `pulumi:"interfaceId"`
-	// Set lacp mode
-	//   - Choices: `active`, `passive`
-	//   - Default value: `active`
-	LacpMode pulumi.StringPtrInput `pulumi:"lacpMode"`
-	// Variable name
-	LacpModeVariable pulumi.StringPtrInput `pulumi:"lacpModeVariable"`
-	// Set lacp port priority
-	//   - Range: `1`-`65535`
-	LacpPortPriority pulumi.IntPtrInput `pulumi:"lacpPortPriority"`
-	// Variable name
-	LacpPortPriorityVariable pulumi.StringPtrInput `pulumi:"lacpPortPriorityVariable"`
-	// Set lacp rate
-	//   - Choices: `fast`, `normal`
-	LacpRate pulumi.StringPtrInput `pulumi:"lacpRate"`
-	// Variable name
-	LacpRateVariable pulumi.StringPtrInput `pulumi:"lacpRateVariable"`
-}
-
-func (TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs) ToTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput() TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs) ToTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput)
-}
-
-// TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayInput is an input type that accepts TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArray and TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArray{ TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs{...} }
-type TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput() TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput
-	ToTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArray []TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkInput
-
-func (TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArray) ToTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput() TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArray) ToTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) ToTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput() TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) ToTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) InterfaceId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink) *string { return v.InterfaceId }).(pulumi.StringPtrOutput)
-}
-
-// Set lacp mode
-//   - Choices: `active`, `passive`
-//   - Default value: `active`
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) LacpMode() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink) *string { return v.LacpMode }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) LacpModeVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink) *string {
-		return v.LacpModeVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-// Set lacp port priority
-//   - Range: `1`-`65535`
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) LacpPortPriority() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink) *int {
-		return v.LacpPortPriority
-	}).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) LacpPortPriorityVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink) *string {
-		return v.LacpPortPriorityVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-// Set lacp rate
-//   - Choices: `fast`, `normal`
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) LacpRate() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink) *string { return v.LacpRate }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) LacpRateVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink) *string {
-		return v.LacpRateVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput) ToTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput() TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput) ToTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink {
-		return vs[0].([]TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink struct {
-	InterfaceId *string `pulumi:"interfaceId"`
-}
-
-// TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkInput is an input type that accepts TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs and TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs{...}
-type TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput() TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput
-	ToTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs struct {
-	InterfaceId pulumi.StringPtrInput `pulumi:"interfaceId"`
-}
-
-func (TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs) ToTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput() TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs) ToTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput)
-}
-
-// TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayInput is an input type that accepts TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArray and TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArray{ TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs{...} }
-type TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput() TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput
-	ToTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArray []TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkInput
-
-func (TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArray) ToTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput() TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArray) ToTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput) ToTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput() TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput) ToTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput) InterfaceId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink) *string {
-		return v.InterfaceId
-	}).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput) ToTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput() TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput) ToTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink {
-		return vs[0].([]TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureStaticNat66 struct {
-	// Egress Interface
-	//   - Default value: `false`
-	EgressInterface *bool `pulumi:"egressInterface"`
-	// Variable name
-	EgressInterfaceVariable *string `pulumi:"egressInterfaceVariable"`
-	// Source Prefix
-	SourcePrefix *string `pulumi:"sourcePrefix"`
-	// Variable name
-	SourcePrefixVariable *string `pulumi:"sourcePrefixVariable"`
-	// Source VPN ID
-	//   - Range: `0`-`65530`
-	SourceVpnId *int `pulumi:"sourceVpnId"`
-	// Variable name
-	SourceVpnIdVariable *string `pulumi:"sourceVpnIdVariable"`
-	// Translated Source Prefix
-	TranslatedSourcePrefix *string `pulumi:"translatedSourcePrefix"`
-	// Variable name
-	TranslatedSourcePrefixVariable *string `pulumi:"translatedSourcePrefixVariable"`
-}
-
-// TransportWanVpnInterfaceEthernetFeatureStaticNat66Input is an input type that accepts TransportWanVpnInterfaceEthernetFeatureStaticNat66Args and TransportWanVpnInterfaceEthernetFeatureStaticNat66Output values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureStaticNat66Input` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureStaticNat66Args{...}
-type TransportWanVpnInterfaceEthernetFeatureStaticNat66Input interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureStaticNat66Output() TransportWanVpnInterfaceEthernetFeatureStaticNat66Output
-	ToTransportWanVpnInterfaceEthernetFeatureStaticNat66OutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureStaticNat66Output
-}
-
-type TransportWanVpnInterfaceEthernetFeatureStaticNat66Args struct {
-	// Egress Interface
-	//   - Default value: `false`
-	EgressInterface pulumi.BoolPtrInput `pulumi:"egressInterface"`
-	// Variable name
-	EgressInterfaceVariable pulumi.StringPtrInput `pulumi:"egressInterfaceVariable"`
-	// Source Prefix
-	SourcePrefix pulumi.StringPtrInput `pulumi:"sourcePrefix"`
-	// Variable name
-	SourcePrefixVariable pulumi.StringPtrInput `pulumi:"sourcePrefixVariable"`
-	// Source VPN ID
-	//   - Range: `0`-`65530`
-	SourceVpnId pulumi.IntPtrInput `pulumi:"sourceVpnId"`
-	// Variable name
-	SourceVpnIdVariable pulumi.StringPtrInput `pulumi:"sourceVpnIdVariable"`
-	// Translated Source Prefix
-	TranslatedSourcePrefix pulumi.StringPtrInput `pulumi:"translatedSourcePrefix"`
-	// Variable name
-	TranslatedSourcePrefixVariable pulumi.StringPtrInput `pulumi:"translatedSourcePrefixVariable"`
-}
-
-func (TransportWanVpnInterfaceEthernetFeatureStaticNat66Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureStaticNat66)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureStaticNat66Args) ToTransportWanVpnInterfaceEthernetFeatureStaticNat66Output() TransportWanVpnInterfaceEthernetFeatureStaticNat66Output {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureStaticNat66OutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureStaticNat66Args) ToTransportWanVpnInterfaceEthernetFeatureStaticNat66OutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureStaticNat66Output {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureStaticNat66Output)
-}
-
-// TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureStaticNat66Array and TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureStaticNat66Array{ TransportWanVpnInterfaceEthernetFeatureStaticNat66Args{...} }
-type TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput() TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput
-	ToTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureStaticNat66Array []TransportWanVpnInterfaceEthernetFeatureStaticNat66Input
-
-func (TransportWanVpnInterfaceEthernetFeatureStaticNat66Array) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureStaticNat66)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureStaticNat66Array) ToTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput() TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureStaticNat66Array) ToTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureStaticNat66Output struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureStaticNat66Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureStaticNat66)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureStaticNat66Output) ToTransportWanVpnInterfaceEthernetFeatureStaticNat66Output() TransportWanVpnInterfaceEthernetFeatureStaticNat66Output {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureStaticNat66Output) ToTransportWanVpnInterfaceEthernetFeatureStaticNat66OutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureStaticNat66Output {
-	return o
-}
-
-// Egress Interface
-//   - Default value: `false`
-func (o TransportWanVpnInterfaceEthernetFeatureStaticNat66Output) EgressInterface() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticNat66) *bool { return v.EgressInterface }).(pulumi.BoolPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureStaticNat66Output) EgressInterfaceVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticNat66) *string { return v.EgressInterfaceVariable }).(pulumi.StringPtrOutput)
-}
-
-// Source Prefix
-func (o TransportWanVpnInterfaceEthernetFeatureStaticNat66Output) SourcePrefix() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticNat66) *string { return v.SourcePrefix }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureStaticNat66Output) SourcePrefixVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticNat66) *string { return v.SourcePrefixVariable }).(pulumi.StringPtrOutput)
-}
-
-// Source VPN ID
-//   - Range: `0`-`65530`
-func (o TransportWanVpnInterfaceEthernetFeatureStaticNat66Output) SourceVpnId() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticNat66) *int { return v.SourceVpnId }).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureStaticNat66Output) SourceVpnIdVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticNat66) *string { return v.SourceVpnIdVariable }).(pulumi.StringPtrOutput)
-}
-
-// Translated Source Prefix
-func (o TransportWanVpnInterfaceEthernetFeatureStaticNat66Output) TranslatedSourcePrefix() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticNat66) *string { return v.TranslatedSourcePrefix }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureStaticNat66Output) TranslatedSourcePrefixVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticNat66) *string {
-		return v.TranslatedSourcePrefixVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureStaticNat66)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput() TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceEthernetFeatureStaticNat66Output {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceEthernetFeatureStaticNat66 {
-		return vs[0].([]TransportWanVpnInterfaceEthernetFeatureStaticNat66)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceEthernetFeatureStaticNat66Output)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureStaticPortForward struct {
-	// Direction of static NAT translation
-	//   - Choices: `inside`
-	//   - Default value: `inside`
-	Direction *string `pulumi:"direction"`
-	// Enable DualRouter HA Mapping
-	//   - Default value: `false`
-	EnableDualRouterHaMapping *bool `pulumi:"enableDualRouterHaMapping"`
-	// Protocol
-	//   - Choices: `tcp`, `udp`
-	Protocol *string `pulumi:"protocol"`
-	// Variable name
-	ProtocolVariable *string `pulumi:"protocolVariable"`
-	// Source IP address to be translated
-	SourceIp *string `pulumi:"sourceIp"`
-	// Variable name
-	SourceIpVariable *string `pulumi:"sourceIpVariable"`
-	// source port to be translated
-	//   - Range: `1`-`65535`
-	SourcePort *int `pulumi:"sourcePort"`
-	// Variable name
-	SourcePortVariable *string `pulumi:"sourcePortVariable"`
-	// Source VPN ID
-	//   - Range: `0`-`65530`
-	//   - Default value: `0`
-	SourceVpn *int `pulumi:"sourceVpn"`
-	// Variable name
-	SourceVpnVariable *string `pulumi:"sourceVpnVariable"`
-	// Statically translated source IP address
-	TranslatedIp *string `pulumi:"translatedIp"`
-	// Variable name
-	TranslatedIpVariable *string `pulumi:"translatedIpVariable"`
-	// Statically translated source IP address
-	//   - Range: `1`-`65535`
-	TranslatedPort *int `pulumi:"translatedPort"`
-	// Variable name
-	TranslatedPortVariable *string `pulumi:"translatedPortVariable"`
-}
-
-// TransportWanVpnInterfaceEthernetFeatureStaticPortForwardInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs and TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureStaticPortForwardInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs{...}
-type TransportWanVpnInterfaceEthernetFeatureStaticPortForwardInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput() TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput
-	ToTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs struct {
-	// Direction of static NAT translation
-	//   - Choices: `inside`
-	//   - Default value: `inside`
-	Direction pulumi.StringPtrInput `pulumi:"direction"`
-	// Enable DualRouter HA Mapping
-	//   - Default value: `false`
-	EnableDualRouterHaMapping pulumi.BoolPtrInput `pulumi:"enableDualRouterHaMapping"`
-	// Protocol
-	//   - Choices: `tcp`, `udp`
-	Protocol pulumi.StringPtrInput `pulumi:"protocol"`
-	// Variable name
-	ProtocolVariable pulumi.StringPtrInput `pulumi:"protocolVariable"`
-	// Source IP address to be translated
-	SourceIp pulumi.StringPtrInput `pulumi:"sourceIp"`
-	// Variable name
-	SourceIpVariable pulumi.StringPtrInput `pulumi:"sourceIpVariable"`
-	// source port to be translated
-	//   - Range: `1`-`65535`
-	SourcePort pulumi.IntPtrInput `pulumi:"sourcePort"`
-	// Variable name
-	SourcePortVariable pulumi.StringPtrInput `pulumi:"sourcePortVariable"`
-	// Source VPN ID
-	//   - Range: `0`-`65530`
-	//   - Default value: `0`
-	SourceVpn pulumi.IntPtrInput `pulumi:"sourceVpn"`
-	// Variable name
-	SourceVpnVariable pulumi.StringPtrInput `pulumi:"sourceVpnVariable"`
-	// Statically translated source IP address
-	TranslatedIp pulumi.StringPtrInput `pulumi:"translatedIp"`
-	// Variable name
-	TranslatedIpVariable pulumi.StringPtrInput `pulumi:"translatedIpVariable"`
-	// Statically translated source IP address
-	//   - Range: `1`-`65535`
-	TranslatedPort pulumi.IntPtrInput `pulumi:"translatedPort"`
-	// Variable name
-	TranslatedPortVariable pulumi.StringPtrInput `pulumi:"translatedPortVariable"`
-}
-
-func (TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureStaticPortForward)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs) ToTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput() TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs) ToTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput)
-}
-
-// TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray and TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray{ TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs{...} }
-type TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput() TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput
-	ToTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray []TransportWanVpnInterfaceEthernetFeatureStaticPortForwardInput
-
-func (TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureStaticPortForward)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray) ToTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput() TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray) ToTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureStaticPortForward)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) ToTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput() TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) ToTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput {
-	return o
-}
-
-// Direction of static NAT translation
-//   - Choices: `inside`
-//   - Default value: `inside`
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) Direction() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticPortForward) *string { return v.Direction }).(pulumi.StringPtrOutput)
-}
-
-// Enable DualRouter HA Mapping
-//   - Default value: `false`
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) EnableDualRouterHaMapping() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticPortForward) *bool {
-		return v.EnableDualRouterHaMapping
-	}).(pulumi.BoolPtrOutput)
-}
-
-// Protocol
-//   - Choices: `tcp`, `udp`
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) Protocol() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticPortForward) *string { return v.Protocol }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) ProtocolVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticPortForward) *string { return v.ProtocolVariable }).(pulumi.StringPtrOutput)
-}
-
-// Source IP address to be translated
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) SourceIp() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticPortForward) *string { return v.SourceIp }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) SourceIpVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticPortForward) *string { return v.SourceIpVariable }).(pulumi.StringPtrOutput)
-}
-
-// source port to be translated
-//   - Range: `1`-`65535`
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) SourcePort() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticPortForward) *int { return v.SourcePort }).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) SourcePortVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticPortForward) *string { return v.SourcePortVariable }).(pulumi.StringPtrOutput)
-}
-
-// Source VPN ID
-//   - Range: `0`-`65530`
-//   - Default value: `0`
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) SourceVpn() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticPortForward) *int { return v.SourceVpn }).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) SourceVpnVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticPortForward) *string { return v.SourceVpnVariable }).(pulumi.StringPtrOutput)
-}
-
-// Statically translated source IP address
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) TranslatedIp() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticPortForward) *string { return v.TranslatedIp }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) TranslatedIpVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticPortForward) *string {
-		return v.TranslatedIpVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-// Statically translated source IP address
-//   - Range: `1`-`65535`
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) TranslatedPort() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticPortForward) *int { return v.TranslatedPort }).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) TranslatedPortVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureStaticPortForward) *string {
-		return v.TranslatedPortVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureStaticPortForward)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput() TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceEthernetFeatureStaticPortForward {
-		return vs[0].([]TransportWanVpnInterfaceEthernetFeatureStaticPortForward)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation struct {
-	// Encapsulation
-	//   - Choices: `gre`, `ipsec`
-	Encapsulation *string `pulumi:"encapsulation"`
-	// Set preference for TLOC
-	//   - Range: `0`-`4294967295`
-	Preference *int `pulumi:"preference"`
-	// Variable name
-	PreferenceVariable *string `pulumi:"preferenceVariable"`
-	// Set weight for TLOC
-	//   - Range: `1`-`255`
-	//   - Default value: `1`
-	Weight *int `pulumi:"weight"`
-	// Variable name
-	WeightVariable *string `pulumi:"weightVariable"`
-}
-
-// TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs and TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs{...}
-type TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput() TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput
-	ToTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs struct {
-	// Encapsulation
-	//   - Choices: `gre`, `ipsec`
-	Encapsulation pulumi.StringPtrInput `pulumi:"encapsulation"`
-	// Set preference for TLOC
-	//   - Range: `0`-`4294967295`
-	Preference pulumi.IntPtrInput `pulumi:"preference"`
-	// Variable name
-	PreferenceVariable pulumi.StringPtrInput `pulumi:"preferenceVariable"`
-	// Set weight for TLOC
-	//   - Range: `1`-`255`
-	//   - Default value: `1`
-	Weight pulumi.IntPtrInput `pulumi:"weight"`
-	// Variable name
-	WeightVariable pulumi.StringPtrInput `pulumi:"weightVariable"`
-}
-
-func (TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs) ToTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput() TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs) ToTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput)
-}
-
-// TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayInput is an input type that accepts TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArray and TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayInput` via:
-//
-//	TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArray{ TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs{...} }
-type TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput() TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput
-	ToTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(context.Context) TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput
-}
-
-type TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArray []TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationInput
-
-func (TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArray) ToTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput() TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput {
-	return i.ToTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArray) ToTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput) ToTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput() TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput) ToTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput {
-	return o
-}
-
-// Encapsulation
-//   - Choices: `gre`, `ipsec`
-func (o TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput) Encapsulation() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation) *string {
-		return v.Encapsulation
-	}).(pulumi.StringPtrOutput)
-}
-
-// Set preference for TLOC
-//   - Range: `0`-`4294967295`
-func (o TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput) Preference() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation) *int { return v.Preference }).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput) PreferenceVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation) *string {
-		return v.PreferenceVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-// Set weight for TLOC
-//   - Range: `1`-`255`
-//   - Default value: `1`
-func (o TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput) Weight() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation) *int { return v.Weight }).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput) WeightVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation) *string {
-		return v.WeightVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput() TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput) ToTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation {
-		return vs[0].([]TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput)
-}
-
-type TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation struct {
-	// Encapsulation
-	//   - Choices: `gre`, `ipsec`
-	Encapsulation *string `pulumi:"encapsulation"`
-	// Set preference for TLOC
-	//   - Range: `0`-`4294967295`
-	Preference *int `pulumi:"preference"`
-	// Variable name
-	PreferenceVariable *string `pulumi:"preferenceVariable"`
-	// Set weight for TLOC
-	//   - Range: `1`-`255`
-	//   - Default value: `1`
-	Weight *int `pulumi:"weight"`
-	// Variable name
-	WeightVariable *string `pulumi:"weightVariable"`
-}
-
-// TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationInput is an input type that accepts TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgs and TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationInput` via:
-//
-//	TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgs{...}
-type TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput() TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput
-	ToTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutputWithContext(context.Context) TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput
-}
-
-type TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgs struct {
-	// Encapsulation
-	//   - Choices: `gre`, `ipsec`
-	Encapsulation pulumi.StringPtrInput `pulumi:"encapsulation"`
-	// Set preference for TLOC
-	//   - Range: `0`-`4294967295`
-	Preference pulumi.IntPtrInput `pulumi:"preference"`
-	// Variable name
-	PreferenceVariable pulumi.StringPtrInput `pulumi:"preferenceVariable"`
-	// Set weight for TLOC
-	//   - Range: `1`-`255`
-	//   - Default value: `1`
-	Weight pulumi.IntPtrInput `pulumi:"weight"`
-	// Variable name
-	WeightVariable pulumi.StringPtrInput `pulumi:"weightVariable"`
-}
-
-func (TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgs) ToTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput() TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput {
-	return i.ToTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgs) ToTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput)
-}
-
-// TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayInput is an input type that accepts TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArray and TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayInput` via:
-//
-//	TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArray{ TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgs{...} }
-type TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput() TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput
-	ToTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(context.Context) TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput
-}
-
-type TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArray []TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationInput
-
-func (TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArray) ToTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput() TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput {
-	return i.ToTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArray) ToTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput)
-}
-
-type TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput) ToTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput() TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput) ToTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput {
-	return o
-}
-
-// Encapsulation
-//   - Choices: `gre`, `ipsec`
-func (o TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput) Encapsulation() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation) *string {
-		return v.Encapsulation
-	}).(pulumi.StringPtrOutput)
-}
-
-// Set preference for TLOC
-//   - Range: `0`-`4294967295`
-func (o TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput) Preference() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation) *int {
-		return v.Preference
-	}).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput) PreferenceVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation) *string {
-		return v.PreferenceVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-// Set weight for TLOC
-//   - Range: `1`-`255`
-//   - Default value: `1`
-func (o TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput) Weight() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation) *int { return v.Weight }).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput) WeightVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation) *string {
-		return v.WeightVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput) ToTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput() TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput) ToTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation {
-		return vs[0].([]TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput)
-}
-
-type UrlFilteringPolicyDefinitionLogging struct {
-	// External Syslog Server IP
-	ExternalSyslogServerIp *string `pulumi:"externalSyslogServerIp"`
-	// External Syslog Server VPN
-	ExternalSyslogServerVpn *string `pulumi:"externalSyslogServerVpn"`
-}
-
-// UrlFilteringPolicyDefinitionLoggingInput is an input type that accepts UrlFilteringPolicyDefinitionLoggingArgs and UrlFilteringPolicyDefinitionLoggingOutput values.
-// You can construct a concrete instance of `UrlFilteringPolicyDefinitionLoggingInput` via:
-//
-//	UrlFilteringPolicyDefinitionLoggingArgs{...}
-type UrlFilteringPolicyDefinitionLoggingInput interface {
-	pulumi.Input
-
-	ToUrlFilteringPolicyDefinitionLoggingOutput() UrlFilteringPolicyDefinitionLoggingOutput
-	ToUrlFilteringPolicyDefinitionLoggingOutputWithContext(context.Context) UrlFilteringPolicyDefinitionLoggingOutput
-}
-
-type UrlFilteringPolicyDefinitionLoggingArgs struct {
-	// External Syslog Server IP
-	ExternalSyslogServerIp pulumi.StringPtrInput `pulumi:"externalSyslogServerIp"`
-	// External Syslog Server VPN
-	ExternalSyslogServerVpn pulumi.StringPtrInput `pulumi:"externalSyslogServerVpn"`
-}
-
-func (UrlFilteringPolicyDefinitionLoggingArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*UrlFilteringPolicyDefinitionLogging)(nil)).Elem()
-}
-
-func (i UrlFilteringPolicyDefinitionLoggingArgs) ToUrlFilteringPolicyDefinitionLoggingOutput() UrlFilteringPolicyDefinitionLoggingOutput {
-	return i.ToUrlFilteringPolicyDefinitionLoggingOutputWithContext(context.Background())
-}
-
-func (i UrlFilteringPolicyDefinitionLoggingArgs) ToUrlFilteringPolicyDefinitionLoggingOutputWithContext(ctx context.Context) UrlFilteringPolicyDefinitionLoggingOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(UrlFilteringPolicyDefinitionLoggingOutput)
-}
-
-// UrlFilteringPolicyDefinitionLoggingArrayInput is an input type that accepts UrlFilteringPolicyDefinitionLoggingArray and UrlFilteringPolicyDefinitionLoggingArrayOutput values.
-// You can construct a concrete instance of `UrlFilteringPolicyDefinitionLoggingArrayInput` via:
-//
-//	UrlFilteringPolicyDefinitionLoggingArray{ UrlFilteringPolicyDefinitionLoggingArgs{...} }
-type UrlFilteringPolicyDefinitionLoggingArrayInput interface {
-	pulumi.Input
-
-	ToUrlFilteringPolicyDefinitionLoggingArrayOutput() UrlFilteringPolicyDefinitionLoggingArrayOutput
-	ToUrlFilteringPolicyDefinitionLoggingArrayOutputWithContext(context.Context) UrlFilteringPolicyDefinitionLoggingArrayOutput
-}
-
-type UrlFilteringPolicyDefinitionLoggingArray []UrlFilteringPolicyDefinitionLoggingInput
-
-func (UrlFilteringPolicyDefinitionLoggingArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]UrlFilteringPolicyDefinitionLogging)(nil)).Elem()
-}
-
-func (i UrlFilteringPolicyDefinitionLoggingArray) ToUrlFilteringPolicyDefinitionLoggingArrayOutput() UrlFilteringPolicyDefinitionLoggingArrayOutput {
-	return i.ToUrlFilteringPolicyDefinitionLoggingArrayOutputWithContext(context.Background())
-}
-
-func (i UrlFilteringPolicyDefinitionLoggingArray) ToUrlFilteringPolicyDefinitionLoggingArrayOutputWithContext(ctx context.Context) UrlFilteringPolicyDefinitionLoggingArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(UrlFilteringPolicyDefinitionLoggingArrayOutput)
-}
-
-type UrlFilteringPolicyDefinitionLoggingOutput struct{ *pulumi.OutputState }
-
-func (UrlFilteringPolicyDefinitionLoggingOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*UrlFilteringPolicyDefinitionLogging)(nil)).Elem()
-}
-
-func (o UrlFilteringPolicyDefinitionLoggingOutput) ToUrlFilteringPolicyDefinitionLoggingOutput() UrlFilteringPolicyDefinitionLoggingOutput {
-	return o
-}
-
-func (o UrlFilteringPolicyDefinitionLoggingOutput) ToUrlFilteringPolicyDefinitionLoggingOutputWithContext(ctx context.Context) UrlFilteringPolicyDefinitionLoggingOutput {
-	return o
-}
-
-// External Syslog Server IP
-func (o UrlFilteringPolicyDefinitionLoggingOutput) ExternalSyslogServerIp() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v UrlFilteringPolicyDefinitionLogging) *string { return v.ExternalSyslogServerIp }).(pulumi.StringPtrOutput)
-}
-
-// External Syslog Server VPN
-func (o UrlFilteringPolicyDefinitionLoggingOutput) ExternalSyslogServerVpn() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v UrlFilteringPolicyDefinitionLogging) *string { return v.ExternalSyslogServerVpn }).(pulumi.StringPtrOutput)
-}
-
-type UrlFilteringPolicyDefinitionLoggingArrayOutput struct{ *pulumi.OutputState }
-
-func (UrlFilteringPolicyDefinitionLoggingArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]UrlFilteringPolicyDefinitionLogging)(nil)).Elem()
-}
-
-func (o UrlFilteringPolicyDefinitionLoggingArrayOutput) ToUrlFilteringPolicyDefinitionLoggingArrayOutput() UrlFilteringPolicyDefinitionLoggingArrayOutput {
-	return o
-}
-
-func (o UrlFilteringPolicyDefinitionLoggingArrayOutput) ToUrlFilteringPolicyDefinitionLoggingArrayOutputWithContext(ctx context.Context) UrlFilteringPolicyDefinitionLoggingArrayOutput {
-	return o
-}
-
-func (o UrlFilteringPolicyDefinitionLoggingArrayOutput) Index(i pulumi.IntInput) UrlFilteringPolicyDefinitionLoggingOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) UrlFilteringPolicyDefinitionLogging {
-		return vs[0].([]UrlFilteringPolicyDefinitionLogging)[vs[1].(int)]
-	}).(UrlFilteringPolicyDefinitionLoggingOutput)
-}
-
 func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*AllowUrlListPolicyObjectEntryInput)(nil)).Elem(), AllowUrlListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AllowUrlListPolicyObjectEntryArrayInput)(nil)).Elem(), AllowUrlListPolicyObjectEntryArray{})
@@ -83471,6 +82936,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*RoutePolicyDefinitionSequenceMatchEntryArrayInput)(nil)).Elem(), RoutePolicyDefinitionSequenceMatchEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*RuleSetPolicyDefinitionRuleInput)(nil)).Elem(), RuleSetPolicyDefinitionRuleArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*RuleSetPolicyDefinitionRuleArrayInput)(nil)).Elem(), RuleSetPolicyDefinitionRuleArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ScopeObjectInput)(nil)).Elem(), ScopeObjectArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ScopeObjectArrayInput)(nil)).Elem(), ScopeObjectArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*SecurityAppHostingFeatureTemplateVirtualApplicationInput)(nil)).Elem(), SecurityAppHostingFeatureTemplateVirtualApplicationArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*SecurityAppHostingFeatureTemplateVirtualApplicationArrayInput)(nil)).Elem(), SecurityAppHostingFeatureTemplateVirtualApplicationArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*SecurityPolicyDefinitionInput)(nil)).Elem(), SecurityPolicyDefinitionArgs{})
@@ -83481,6 +82948,32 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*SecurityPolicyHighSpeedLoggingEntryArrayInput)(nil)).Elem(), SecurityPolicyHighSpeedLoggingEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*SecurityPolicyLoggingInput)(nil)).Elem(), SecurityPolicyLoggingArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*SecurityPolicyLoggingArrayInput)(nil)).Elem(), SecurityPolicyLoggingArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureCombinedControllerGroupInput)(nil)).Elem(), ServiceAppqoeFeatureCombinedControllerGroupArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureCombinedControllerGroupArrayInput)(nil)).Elem(), ServiceAppqoeFeatureCombinedControllerGroupArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerInput)(nil)).Elem(), ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayInput)(nil)).Elem(), ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureCombinedServiceContextInput)(nil)).Elem(), ServiceAppqoeFeatureCombinedServiceContextArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureCombinedServiceContextArrayInput)(nil)).Elem(), ServiceAppqoeFeatureCombinedServiceContextArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureCombinedServiceNodeGroupInput)(nil)).Elem(), ServiceAppqoeFeatureCombinedServiceNodeGroupArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureCombinedServiceNodeGroupArrayInput)(nil)).Elem(), ServiceAppqoeFeatureCombinedServiceNodeGroupArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeInput)(nil)).Elem(), ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayInput)(nil)).Elem(), ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureForwarderControllerGroupInput)(nil)).Elem(), ServiceAppqoeFeatureForwarderControllerGroupArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureForwarderControllerGroupArrayInput)(nil)).Elem(), ServiceAppqoeFeatureForwarderControllerGroupArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerInput)(nil)).Elem(), ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayInput)(nil)).Elem(), ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureForwarderServiceContextInput)(nil)).Elem(), ServiceAppqoeFeatureForwarderServiceContextArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureForwarderServiceContextArrayInput)(nil)).Elem(), ServiceAppqoeFeatureForwarderServiceContextArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureForwarderServiceNodeGroupInput)(nil)).Elem(), ServiceAppqoeFeatureForwarderServiceNodeGroupArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureForwarderServiceNodeGroupArrayInput)(nil)).Elem(), ServiceAppqoeFeatureForwarderServiceNodeGroupArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeInput)(nil)).Elem(), ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayInput)(nil)).Elem(), ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureServiceNodeServiceNodeGroupInput)(nil)).Elem(), ServiceAppqoeFeatureServiceNodeServiceNodeGroupArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayInput)(nil)).Elem(), ServiceAppqoeFeatureServiceNodeServiceNodeGroupArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeInput)(nil)).Elem(), ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayInput)(nil)).Elem(), ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureVirtualApplicationInput)(nil)).Elem(), ServiceAppqoeFeatureVirtualApplicationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ServiceAppqoeFeatureVirtualApplicationArrayInput)(nil)).Elem(), ServiceAppqoeFeatureVirtualApplicationArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceDhcpServerFeatureOptionCodeInput)(nil)).Elem(), ServiceDhcpServerFeatureOptionCodeArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceDhcpServerFeatureOptionCodeArrayInput)(nil)).Elem(), ServiceDhcpServerFeatureOptionCodeArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceDhcpServerFeatureStaticLeaseInput)(nil)).Elem(), ServiceDhcpServerFeatureStaticLeaseArgs{})
@@ -83945,34 +83438,6 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureArpArrayInput)(nil)).Elem(), TransportWanVpnInterfaceCellularFeatureArpArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput)(nil)).Elem(), TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayInput)(nil)).Elem(), TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureArpInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureArpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureArpArrayInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureArpArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureNewStaticNatInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureNewStaticNatArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureStaticNat66Input)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureStaticNat66Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureStaticNat66Array{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureStaticPortForwardInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationInput)(nil)).Elem(), TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayInput)(nil)).Elem(), TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*UrlFilteringPolicyDefinitionLoggingInput)(nil)).Elem(), UrlFilteringPolicyDefinitionLoggingArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*UrlFilteringPolicyDefinitionLoggingArrayInput)(nil)).Elem(), UrlFilteringPolicyDefinitionLoggingArray{})
 	pulumi.RegisterOutputType(AllowUrlListPolicyObjectEntryOutput{})
 	pulumi.RegisterOutputType(AllowUrlListPolicyObjectEntryArrayOutput{})
 	pulumi.RegisterOutputType(AppProbeClassPolicyObjectMappingOutput{})
@@ -84471,6 +83936,8 @@ func init() {
 	pulumi.RegisterOutputType(RoutePolicyDefinitionSequenceMatchEntryArrayOutput{})
 	pulumi.RegisterOutputType(RuleSetPolicyDefinitionRuleOutput{})
 	pulumi.RegisterOutputType(RuleSetPolicyDefinitionRuleArrayOutput{})
+	pulumi.RegisterOutputType(ScopeObjectOutput{})
+	pulumi.RegisterOutputType(ScopeObjectArrayOutput{})
 	pulumi.RegisterOutputType(SecurityAppHostingFeatureTemplateVirtualApplicationOutput{})
 	pulumi.RegisterOutputType(SecurityAppHostingFeatureTemplateVirtualApplicationArrayOutput{})
 	pulumi.RegisterOutputType(SecurityPolicyDefinitionOutput{})
@@ -84481,6 +83948,32 @@ func init() {
 	pulumi.RegisterOutputType(SecurityPolicyHighSpeedLoggingEntryArrayOutput{})
 	pulumi.RegisterOutputType(SecurityPolicyLoggingOutput{})
 	pulumi.RegisterOutputType(SecurityPolicyLoggingArrayOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureCombinedControllerGroupOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureCombinedControllerGroupArrayOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArrayOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureCombinedServiceContextOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureCombinedServiceContextArrayOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureCombinedServiceNodeGroupOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureCombinedServiceNodeGroupArrayOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArrayOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureForwarderControllerGroupOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureForwarderControllerGroupArrayOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArrayOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureForwarderServiceContextOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureForwarderServiceContextArrayOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureForwarderServiceNodeGroupOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureForwarderServiceNodeGroupArrayOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArrayOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureServiceNodeServiceNodeGroupOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureServiceNodeServiceNodeGroupArrayOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArrayOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureVirtualApplicationOutput{})
+	pulumi.RegisterOutputType(ServiceAppqoeFeatureVirtualApplicationArrayOutput{})
 	pulumi.RegisterOutputType(ServiceDhcpServerFeatureOptionCodeOutput{})
 	pulumi.RegisterOutputType(ServiceDhcpServerFeatureOptionCodeArrayOutput{})
 	pulumi.RegisterOutputType(ServiceDhcpServerFeatureStaticLeaseOutput{})
@@ -84945,32 +84438,4 @@ func init() {
 	pulumi.RegisterOutputType(TransportWanVpnInterfaceCellularFeatureArpArrayOutput{})
 	pulumi.RegisterOutputType(TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput{})
 	pulumi.RegisterOutputType(TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureArpOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureArpArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureStaticNat66Output{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArrayOutput{})
-	pulumi.RegisterOutputType(UrlFilteringPolicyDefinitionLoggingOutput{})
-	pulumi.RegisterOutputType(UrlFilteringPolicyDefinitionLoggingArrayOutput{})
 }

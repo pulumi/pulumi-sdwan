@@ -47,6 +47,8 @@ import (
 //				ApplicationGroup:  pulumi.String("ipsec-group"),
 //				TrafficClass:      pulumi.String("signaling"),
 //				BusinessRelevance: pulumi.String("business-relevant"),
+//				EndpointType:      pulumi.String("ip"),
+//				EndpointValue:     pulumi.String("10.2.2.2"),
 //			})
 //			if err != nil {
 //				return err
@@ -78,6 +80,11 @@ type CustomApplication struct {
 	// Business Relevance
 	//   - Choices: `business-relevant`, `business-irrelevant`, `default`
 	BusinessRelevance pulumi.StringPtrOutput `pulumi:"businessRelevance"`
+	// Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Choices: `ip`, `fqdn`, `url`
+	EndpointType pulumi.StringPtrOutput `pulumi:"endpointType"`
+	// Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	EndpointValue pulumi.StringPtrOutput `pulumi:"endpointValue"`
 	// L3/L4 Attributes
 	L3l4s CustomApplicationL3l4ArrayOutput `pulumi:"l3l4s"`
 	// Server Names (Fully Qualified Domain names or Regex starting with `*` but not ending with `*` or both separated by commas.)
@@ -133,6 +140,11 @@ type customApplicationState struct {
 	// Business Relevance
 	//   - Choices: `business-relevant`, `business-irrelevant`, `default`
 	BusinessRelevance *string `pulumi:"businessRelevance"`
+	// Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Choices: `ip`, `fqdn`, `url`
+	EndpointType *string `pulumi:"endpointType"`
+	// Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	EndpointValue *string `pulumi:"endpointValue"`
 	// L3/L4 Attributes
 	L3l4s []CustomApplicationL3l4 `pulumi:"l3l4s"`
 	// Server Names (Fully Qualified Domain names or Regex starting with `*` but not ending with `*` or both separated by commas.)
@@ -156,6 +168,11 @@ type CustomApplicationState struct {
 	// Business Relevance
 	//   - Choices: `business-relevant`, `business-irrelevant`, `default`
 	BusinessRelevance pulumi.StringPtrInput
+	// Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Choices: `ip`, `fqdn`, `url`
+	EndpointType pulumi.StringPtrInput
+	// Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	EndpointValue pulumi.StringPtrInput
 	// L3/L4 Attributes
 	L3l4s CustomApplicationL3l4ArrayInput
 	// Server Names (Fully Qualified Domain names or Regex starting with `*` but not ending with `*` or both separated by commas.)
@@ -183,6 +200,11 @@ type customApplicationArgs struct {
 	// Business Relevance
 	//   - Choices: `business-relevant`, `business-irrelevant`, `default`
 	BusinessRelevance *string `pulumi:"businessRelevance"`
+	// Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Choices: `ip`, `fqdn`, `url`
+	EndpointType *string `pulumi:"endpointType"`
+	// Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	EndpointValue *string `pulumi:"endpointValue"`
 	// L3/L4 Attributes
 	L3l4s []CustomApplicationL3l4 `pulumi:"l3l4s"`
 	// Server Names (Fully Qualified Domain names or Regex starting with `*` but not ending with `*` or both separated by commas.)
@@ -205,6 +227,11 @@ type CustomApplicationArgs struct {
 	// Business Relevance
 	//   - Choices: `business-relevant`, `business-irrelevant`, `default`
 	BusinessRelevance pulumi.StringPtrInput
+	// Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	//   - Choices: `ip`, `fqdn`, `url`
+	EndpointType pulumi.StringPtrInput
+	// Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	EndpointValue pulumi.StringPtrInput
 	// L3/L4 Attributes
 	L3l4s CustomApplicationL3l4ArrayInput
 	// Server Names (Fully Qualified Domain names or Regex starting with `*` but not ending with `*` or both separated by commas.)
@@ -322,6 +349,17 @@ func (o CustomApplicationOutput) ApplicationGroup() pulumi.StringPtrOutput {
 //   - Choices: `business-relevant`, `business-irrelevant`, `default`
 func (o CustomApplicationOutput) BusinessRelevance() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CustomApplication) pulumi.StringPtrOutput { return v.BusinessRelevance }).(pulumi.StringPtrOutput)
+}
+
+// Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+//   - Choices: `ip`, `fqdn`, `url`
+func (o CustomApplicationOutput) EndpointType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *CustomApplication) pulumi.StringPtrOutput { return v.EndpointType }).(pulumi.StringPtrOutput)
+}
+
+// Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o CustomApplicationOutput) EndpointValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *CustomApplication) pulumi.StringPtrOutput { return v.EndpointValue }).(pulumi.StringPtrOutput)
 }
 
 // L3/L4 Attributes

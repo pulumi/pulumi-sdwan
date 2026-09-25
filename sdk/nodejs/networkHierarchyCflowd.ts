@@ -27,6 +27,7 @@ import * as utilities from "./utilities";
  *     collectors: [{
  *         vpnId: 1,
  *         address: "10.0.0.1",
+ *         sourceInterface: "Loopback1",
  *         udpPort: 4739,
  *         exportSpread: true,
  *         bfdMetricsExport: true,

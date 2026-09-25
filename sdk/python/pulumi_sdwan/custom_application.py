@@ -25,6 +25,8 @@ class CustomApplicationArgs:
                  application_family: pulumi.Input[Optional[_builtins.str]] = None,
                  application_group: pulumi.Input[Optional[_builtins.str]] = None,
                  business_relevance: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_value: pulumi.Input[Optional[_builtins.str]] = None,
                  l3l4s: pulumi.Input[Optional[Sequence[pulumi.Input['CustomApplicationL3l4Args']]]] = None,
                  server_names: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  traffic_class: pulumi.Input[Optional[_builtins.str]] = None):
@@ -38,6 +40,9 @@ class CustomApplicationArgs:
                  - Choices: `adp-group`, `amazon-group`, `aol-group`, `apple-group`, `apple-talk-group`, `atlassian-group`, `banyan-group`, `bittorrent-group`, `box-group`, `capwap-group`, `cisco-jabber-group`, `cisco-phone-group`, `concur-group`, `corba-group`, `dameware-group`, `demandware-group`, `dropbox-group`, `edonkey-emule-group`, `espn-group`, `fasttrack-group`, `flash-group`, `fring-group`, `ftp-group`, `gnutella-group`, `google-group`, `gotomeeting-group`, `hubspot-group`, `icq-group`, `imap-group`, `intuit-group`, `ipsec-group`, `irc-group`, `jive-group`, `kakao-group`, `kerberos-group`, `ldap-group`, `marketo-group`, `ms-cloud-group`, `msn-messenger-group`, `netbios-group`, `netsuite-group`, `nntp-group`, `npmp-group`, `oracle-group`, `pop3-group`, `prm-group`, `qq-group`, `ringcentral-group`, `salesforce-group`, `sap-group`, `servicenow-group`, `smtp-group`, `snmp-group`, `sqlsvr-group`, `stun-group`, `sugar-crm-group`, `telepresence-group`, `tftp-group`, `tiktok-group`, `vmware-group`, `vnc-group`, `wap-group`, `webex-group`, `workday-group`, `xns-xerox-group`, `xunlei-group`, `yahoo-group`, `yahoo-messenger-group`, `zendesk-group`, `zoho-crm-group`, `other`
         :param pulumi.Input[_builtins.str] business_relevance: Business Relevance
                  - Choices: `business-relevant`, `business-irrelevant`, `default`
+        :param pulumi.Input[_builtins.str] endpoint_type: Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+                 - Choices: `ip`, `fqdn`, `url`
+        :param pulumi.Input[_builtins.str] endpoint_value: Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[Sequence[pulumi.Input['CustomApplicationL3l4Args']]] l3l4s: L3/L4 Attributes
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] server_names: Server Names (Fully Qualified Domain names or Regex starting with `*` but not ending with `*` or both separated by commas.)
         :param pulumi.Input[_builtins.str] traffic_class: Traffic Class
@@ -50,6 +55,10 @@ class CustomApplicationArgs:
             pulumi.set(__self__, "application_group", application_group)
         if business_relevance is not None:
             pulumi.set(__self__, "business_relevance", business_relevance)
+        if endpoint_type is not None:
+            pulumi.set(__self__, "endpoint_type", endpoint_type)
+        if endpoint_value is not None:
+            pulumi.set(__self__, "endpoint_value", endpoint_value)
         if l3l4s is not None:
             pulumi.set(__self__, "l3l4s", l3l4s)
         if server_names is not None:
@@ -109,6 +118,31 @@ class CustomApplicationArgs:
         pulumi.set(self, "business_relevance", value)
 
     @_builtins.property
+    @pulumi.getter(name="endpointType")
+    def endpoint_type(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+          - Choices: `ip`, `fqdn`, `url`
+        """
+        return pulumi.get(self, "endpoint_type")
+
+    @endpoint_type.setter
+    def endpoint_type(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "endpoint_type", value)
+
+    @_builtins.property
+    @pulumi.getter(name="endpointValue")
+    def endpoint_value(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "endpoint_value")
+
+    @endpoint_value.setter
+    def endpoint_value(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "endpoint_value", value)
+
+    @_builtins.property
     @pulumi.getter
     def l3l4s(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CustomApplicationL3l4Args']]]]:
         """
@@ -153,6 +187,8 @@ class _CustomApplicationState:
                  application_family: pulumi.Input[Optional[_builtins.str]] = None,
                  application_group: pulumi.Input[Optional[_builtins.str]] = None,
                  business_relevance: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_value: pulumi.Input[Optional[_builtins.str]] = None,
                  l3l4s: pulumi.Input[Optional[Sequence[pulumi.Input['CustomApplicationL3l4Args']]]] = None,
                  server_names: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  traffic_class: pulumi.Input[Optional[_builtins.str]] = None,
@@ -167,6 +203,9 @@ class _CustomApplicationState:
                  - Choices: `adp-group`, `amazon-group`, `aol-group`, `apple-group`, `apple-talk-group`, `atlassian-group`, `banyan-group`, `bittorrent-group`, `box-group`, `capwap-group`, `cisco-jabber-group`, `cisco-phone-group`, `concur-group`, `corba-group`, `dameware-group`, `demandware-group`, `dropbox-group`, `edonkey-emule-group`, `espn-group`, `fasttrack-group`, `flash-group`, `fring-group`, `ftp-group`, `gnutella-group`, `google-group`, `gotomeeting-group`, `hubspot-group`, `icq-group`, `imap-group`, `intuit-group`, `ipsec-group`, `irc-group`, `jive-group`, `kakao-group`, `kerberos-group`, `ldap-group`, `marketo-group`, `ms-cloud-group`, `msn-messenger-group`, `netbios-group`, `netsuite-group`, `nntp-group`, `npmp-group`, `oracle-group`, `pop3-group`, `prm-group`, `qq-group`, `ringcentral-group`, `salesforce-group`, `sap-group`, `servicenow-group`, `smtp-group`, `snmp-group`, `sqlsvr-group`, `stun-group`, `sugar-crm-group`, `telepresence-group`, `tftp-group`, `tiktok-group`, `vmware-group`, `vnc-group`, `wap-group`, `webex-group`, `workday-group`, `xns-xerox-group`, `xunlei-group`, `yahoo-group`, `yahoo-messenger-group`, `zendesk-group`, `zoho-crm-group`, `other`
         :param pulumi.Input[_builtins.str] business_relevance: Business Relevance
                  - Choices: `business-relevant`, `business-irrelevant`, `default`
+        :param pulumi.Input[_builtins.str] endpoint_type: Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+                 - Choices: `ip`, `fqdn`, `url`
+        :param pulumi.Input[_builtins.str] endpoint_value: Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[Sequence[pulumi.Input['CustomApplicationL3l4Args']]] l3l4s: L3/L4 Attributes
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] server_names: Server Names (Fully Qualified Domain names or Regex starting with `*` but not ending with `*` or both separated by commas.)
         :param pulumi.Input[_builtins.str] traffic_class: Traffic Class
@@ -181,6 +220,10 @@ class _CustomApplicationState:
             pulumi.set(__self__, "application_group", application_group)
         if business_relevance is not None:
             pulumi.set(__self__, "business_relevance", business_relevance)
+        if endpoint_type is not None:
+            pulumi.set(__self__, "endpoint_type", endpoint_type)
+        if endpoint_value is not None:
+            pulumi.set(__self__, "endpoint_value", endpoint_value)
         if l3l4s is not None:
             pulumi.set(__self__, "l3l4s", l3l4s)
         if server_names is not None:
@@ -242,6 +285,31 @@ class _CustomApplicationState:
         pulumi.set(self, "business_relevance", value)
 
     @_builtins.property
+    @pulumi.getter(name="endpointType")
+    def endpoint_type(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+          - Choices: `ip`, `fqdn`, `url`
+        """
+        return pulumi.get(self, "endpoint_type")
+
+    @endpoint_type.setter
+    def endpoint_type(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "endpoint_type", value)
+
+    @_builtins.property
+    @pulumi.getter(name="endpointValue")
+    def endpoint_value(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "endpoint_value")
+
+    @endpoint_value.setter
+    def endpoint_value(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "endpoint_value", value)
+
+    @_builtins.property
     @pulumi.getter
     def l3l4s(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CustomApplicationL3l4Args']]]]:
         """
@@ -301,6 +369,8 @@ class CustomApplication(pulumi.CustomResource):
                  application_family: pulumi.Input[Optional[_builtins.str]] = None,
                  application_group: pulumi.Input[Optional[_builtins.str]] = None,
                  business_relevance: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_value: pulumi.Input[Optional[_builtins.str]] = None,
                  l3l4s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict', 'outputs.CustomApplicationL3l4']]]]] = None,
                  server_names: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  traffic_class: pulumi.Input[Optional[_builtins.str]] = None,
@@ -326,7 +396,9 @@ class CustomApplication(pulumi.CustomResource):
             application_family="routing",
             application_group="ipsec-group",
             traffic_class="signaling",
-            business_relevance="business-relevant")
+            business_relevance="business-relevant",
+            endpoint_type="ip",
+            endpoint_value="10.2.2.2")
         ```
 
         ## Import
@@ -347,6 +419,9 @@ class CustomApplication(pulumi.CustomResource):
                  - Choices: `adp-group`, `amazon-group`, `aol-group`, `apple-group`, `apple-talk-group`, `atlassian-group`, `banyan-group`, `bittorrent-group`, `box-group`, `capwap-group`, `cisco-jabber-group`, `cisco-phone-group`, `concur-group`, `corba-group`, `dameware-group`, `demandware-group`, `dropbox-group`, `edonkey-emule-group`, `espn-group`, `fasttrack-group`, `flash-group`, `fring-group`, `ftp-group`, `gnutella-group`, `google-group`, `gotomeeting-group`, `hubspot-group`, `icq-group`, `imap-group`, `intuit-group`, `ipsec-group`, `irc-group`, `jive-group`, `kakao-group`, `kerberos-group`, `ldap-group`, `marketo-group`, `ms-cloud-group`, `msn-messenger-group`, `netbios-group`, `netsuite-group`, `nntp-group`, `npmp-group`, `oracle-group`, `pop3-group`, `prm-group`, `qq-group`, `ringcentral-group`, `salesforce-group`, `sap-group`, `servicenow-group`, `smtp-group`, `snmp-group`, `sqlsvr-group`, `stun-group`, `sugar-crm-group`, `telepresence-group`, `tftp-group`, `tiktok-group`, `vmware-group`, `vnc-group`, `wap-group`, `webex-group`, `workday-group`, `xns-xerox-group`, `xunlei-group`, `yahoo-group`, `yahoo-messenger-group`, `zendesk-group`, `zoho-crm-group`, `other`
         :param pulumi.Input[_builtins.str] business_relevance: Business Relevance
                  - Choices: `business-relevant`, `business-irrelevant`, `default`
+        :param pulumi.Input[_builtins.str] endpoint_type: Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+                 - Choices: `ip`, `fqdn`, `url`
+        :param pulumi.Input[_builtins.str] endpoint_value: Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict', 'outputs.CustomApplicationL3l4']]]] l3l4s: L3/L4 Attributes
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] server_names: Server Names (Fully Qualified Domain names or Regex starting with `*` but not ending with `*` or both separated by commas.)
         :param pulumi.Input[_builtins.str] traffic_class: Traffic Class
@@ -379,7 +454,9 @@ class CustomApplication(pulumi.CustomResource):
             application_family="routing",
             application_group="ipsec-group",
             traffic_class="signaling",
-            business_relevance="business-relevant")
+            business_relevance="business-relevant",
+            endpoint_type="ip",
+            endpoint_value="10.2.2.2")
         ```
 
         ## Import
@@ -410,6 +487,8 @@ class CustomApplication(pulumi.CustomResource):
                  application_family: pulumi.Input[Optional[_builtins.str]] = None,
                  application_group: pulumi.Input[Optional[_builtins.str]] = None,
                  business_relevance: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_value: pulumi.Input[Optional[_builtins.str]] = None,
                  l3l4s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict', 'outputs.CustomApplicationL3l4']]]]] = None,
                  server_names: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  traffic_class: pulumi.Input[Optional[_builtins.str]] = None,
@@ -428,6 +507,8 @@ class CustomApplication(pulumi.CustomResource):
             __props__.__dict__["application_family"] = application_family
             __props__.__dict__["application_group"] = application_group
             __props__.__dict__["business_relevance"] = business_relevance
+            __props__.__dict__["endpoint_type"] = endpoint_type
+            __props__.__dict__["endpoint_value"] = endpoint_value
             __props__.__dict__["l3l4s"] = l3l4s
             __props__.__dict__["server_names"] = server_names
             __props__.__dict__["traffic_class"] = traffic_class
@@ -446,6 +527,8 @@ class CustomApplication(pulumi.CustomResource):
             application_family: pulumi.Input[Optional[_builtins.str]] = None,
             application_group: pulumi.Input[Optional[_builtins.str]] = None,
             business_relevance: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_type: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_value: pulumi.Input[Optional[_builtins.str]] = None,
             l3l4s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict', 'outputs.CustomApplicationL3l4']]]]] = None,
             server_names: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             traffic_class: pulumi.Input[Optional[_builtins.str]] = None,
@@ -464,6 +547,9 @@ class CustomApplication(pulumi.CustomResource):
                  - Choices: `adp-group`, `amazon-group`, `aol-group`, `apple-group`, `apple-talk-group`, `atlassian-group`, `banyan-group`, `bittorrent-group`, `box-group`, `capwap-group`, `cisco-jabber-group`, `cisco-phone-group`, `concur-group`, `corba-group`, `dameware-group`, `demandware-group`, `dropbox-group`, `edonkey-emule-group`, `espn-group`, `fasttrack-group`, `flash-group`, `fring-group`, `ftp-group`, `gnutella-group`, `google-group`, `gotomeeting-group`, `hubspot-group`, `icq-group`, `imap-group`, `intuit-group`, `ipsec-group`, `irc-group`, `jive-group`, `kakao-group`, `kerberos-group`, `ldap-group`, `marketo-group`, `ms-cloud-group`, `msn-messenger-group`, `netbios-group`, `netsuite-group`, `nntp-group`, `npmp-group`, `oracle-group`, `pop3-group`, `prm-group`, `qq-group`, `ringcentral-group`, `salesforce-group`, `sap-group`, `servicenow-group`, `smtp-group`, `snmp-group`, `sqlsvr-group`, `stun-group`, `sugar-crm-group`, `telepresence-group`, `tftp-group`, `tiktok-group`, `vmware-group`, `vnc-group`, `wap-group`, `webex-group`, `workday-group`, `xns-xerox-group`, `xunlei-group`, `yahoo-group`, `yahoo-messenger-group`, `zendesk-group`, `zoho-crm-group`, `other`
         :param pulumi.Input[_builtins.str] business_relevance: Business Relevance
                  - Choices: `business-relevant`, `business-irrelevant`, `default`
+        :param pulumi.Input[_builtins.str] endpoint_type: Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+                 - Choices: `ip`, `fqdn`, `url`
+        :param pulumi.Input[_builtins.str] endpoint_value: Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict', 'outputs.CustomApplicationL3l4']]]] l3l4s: L3/L4 Attributes
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] server_names: Server Names (Fully Qualified Domain names or Regex starting with `*` but not ending with `*` or both separated by commas.)
         :param pulumi.Input[_builtins.str] traffic_class: Traffic Class
@@ -478,6 +564,8 @@ class CustomApplication(pulumi.CustomResource):
         __props__.__dict__["application_family"] = application_family
         __props__.__dict__["application_group"] = application_group
         __props__.__dict__["business_relevance"] = business_relevance
+        __props__.__dict__["endpoint_type"] = endpoint_type
+        __props__.__dict__["endpoint_value"] = endpoint_value
         __props__.__dict__["l3l4s"] = l3l4s
         __props__.__dict__["server_names"] = server_names
         __props__.__dict__["traffic_class"] = traffic_class
@@ -518,6 +606,23 @@ class CustomApplication(pulumi.CustomResource):
           - Choices: `business-relevant`, `business-irrelevant`, `default`
         """
         return pulumi.get(self, "business_relevance")
+
+    @_builtins.property
+    @pulumi.getter(name="endpointType")
+    def endpoint_type(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+          - Choices: `ip`, `fqdn`, `url`
+        """
+        return pulumi.get(self, "endpoint_type")
+
+    @_builtins.property
+    @pulumi.getter(name="endpointValue")
+    def endpoint_value(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "endpoint_value")
 
     @_builtins.property
     @pulumi.getter

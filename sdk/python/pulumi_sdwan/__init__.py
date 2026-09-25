@@ -217,8 +217,10 @@ from .get_region_list_policy_object import *
 from .get_rewrite_rule_policy_definition import *
 from .get_route_policy_definition import *
 from .get_rule_set_policy_definition import *
+from .get_scope import *
 from .get_security_app_hosting_feature_template import *
 from .get_security_policy import *
+from .get_service_appqoe_feature import *
 from .get_service_dhcp_server_feature import *
 from .get_service_dual_router_ha_feature import *
 from .get_service_feature_profile import *
@@ -290,6 +292,8 @@ from .get_topology_hub_spoke_feature import *
 from .get_topology_mesh_feature import *
 from .get_traffic_data_policy_definition import *
 from .get_transport_cellular_controller_feature import *
+from .get_transport_cellular_controller_feature_associate_cellular_profile_feature import *
+from .get_transport_cellular_controller_feature_associate_gps_feature import *
 from .get_transport_cellular_profile_feature import *
 from .get_transport_feature_profile import *
 from .get_transport_gps_feature import *
@@ -410,8 +414,10 @@ from .region_list_policy_object import *
 from .rewrite_rule_policy_definition import *
 from .route_policy_definition import *
 from .rule_set_policy_definition import *
+from .scope import *
 from .security_app_hosting_feature_template import *
 from .security_policy import *
+from .service_appqoe_feature import *
 from .service_dhcp_server_feature import *
 from .service_dual_router_ha_feature import *
 from .service_feature_profile import *
@@ -483,6 +489,8 @@ from .topology_hub_spoke_feature import *
 from .topology_mesh_feature import *
 from .traffic_data_policy_definition import *
 from .transport_cellular_controller_feature import *
+from .transport_cellular_controller_feature_associate_cellular_profile_feature import *
+from .transport_cellular_controller_feature_associate_gps_feature import *
 from .transport_cellular_profile_feature import *
 from .transport_feature_profile import *
 from .transport_gps_feature import *
@@ -1674,6 +1682,14 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/scope",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/scope:Scope": "Scope"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/securityAppHostingFeatureTemplate",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1686,6 +1702,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/securityPolicy:SecurityPolicy": "SecurityPolicy"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/serviceAppqoeFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/serviceAppqoeFeature:ServiceAppqoeFeature": "ServiceAppqoeFeature"
   }
  },
  {
@@ -2254,6 +2278,22 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/transportCellularControllerFeature:TransportCellularControllerFeature": "TransportCellularControllerFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/transportCellularControllerFeatureAssociateCellularProfileFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/transportCellularControllerFeatureAssociateCellularProfileFeature:TransportCellularControllerFeatureAssociateCellularProfileFeature": "TransportCellularControllerFeatureAssociateCellularProfileFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/transportCellularControllerFeatureAssociateGpsFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/transportCellularControllerFeatureAssociateGpsFeature:TransportCellularControllerFeatureAssociateGpsFeature": "TransportCellularControllerFeatureAssociateGpsFeature"
   }
  },
  {

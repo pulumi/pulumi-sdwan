@@ -87,6 +87,21 @@ public final class NetworkHierarchyCflowdCollectorArgs extends com.pulumi.resour
     }
 
     /**
+     * Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="sourceInterface")
+    private @Nullable Output<String> sourceInterface;
+
+    /**
+     * @return Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> sourceInterface() {
+        return Optional.ofNullable(this.sourceInterface);
+    }
+
+    /**
      * Collector UDP port number
      *   - Range: `1024`-`65535`
      *   - Default value: `4739`
@@ -129,6 +144,7 @@ public final class NetworkHierarchyCflowdCollectorArgs extends com.pulumi.resour
         this.bfdMetricsExport = $.bfdMetricsExport;
         this.exportInterval = $.exportInterval;
         this.exportSpread = $.exportSpread;
+        this.sourceInterface = $.sourceInterface;
         this.udpPort = $.udpPort;
         this.vpnId = $.vpnId;
     }
@@ -241,6 +257,27 @@ public final class NetworkHierarchyCflowdCollectorArgs extends com.pulumi.resour
          */
         public Builder exportSpread(Boolean exportSpread) {
             return exportSpread(Output.of(exportSpread));
+        }
+
+        /**
+         * @param sourceInterface Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceInterface(@Nullable Output<String> sourceInterface) {
+            $.sourceInterface = sourceInterface;
+            return this;
+        }
+
+        /**
+         * @param sourceInterface Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceInterface(String sourceInterface) {
+            return sourceInterface(Output.of(sourceInterface));
         }
 
         /**

@@ -64,6 +64,10 @@ type LookupCustomApplicationResult struct {
 	ApplicationGroup string `pulumi:"applicationGroup"`
 	// Business Relevance
 	BusinessRelevance string `pulumi:"businessRelevance"`
+	// Endpoint Type
+	EndpointType string `pulumi:"endpointType"`
+	// Endpoint Value
+	EndpointValue string `pulumi:"endpointValue"`
 	// The id of the object
 	Id string `pulumi:"id"`
 	// L3/L4 Attributes
@@ -124,6 +128,16 @@ func (o LookupCustomApplicationResultOutput) ApplicationGroup() pulumi.StringOut
 // Business Relevance
 func (o LookupCustomApplicationResultOutput) BusinessRelevance() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCustomApplicationResult) string { return v.BusinessRelevance }).(pulumi.StringOutput)
+}
+
+// Endpoint Type
+func (o LookupCustomApplicationResultOutput) EndpointType() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCustomApplicationResult) string { return v.EndpointType }).(pulumi.StringOutput)
+}
+
+// Endpoint Value
+func (o LookupCustomApplicationResultOutput) EndpointValue() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCustomApplicationResult) string { return v.EndpointValue }).(pulumi.StringOutput)
 }
 
 // The id of the object
