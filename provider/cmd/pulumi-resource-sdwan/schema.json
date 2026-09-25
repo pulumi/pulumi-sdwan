@@ -8010,6 +8010,10 @@
                     "type": "boolean",
                     "description": "Enable export spreading\n  - Default value: \u003cspan pulumi-lang-nodejs=\"`false`\" pulumi-lang-dotnet=\"`False`\" pulumi-lang-go=\"`false`\" pulumi-lang-python=\"`false`\" pulumi-lang-yaml=\"`false`\" pulumi-lang-java=\"`false`\" pulumi-lang-hcl=\"`false`\"\u003e`false`\u003c/span\u003e\n"
                 },
+                "sourceInterface": {
+                    "type": "string",
+                    "description": "Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher\n"
+                },
                 "udpPort": {
                     "type": "integer",
                     "description": "Collector UDP port number\n  - Range: \u003cspan pulumi-lang-nodejs=\"`1024`\" pulumi-lang-dotnet=\"`1024`\" pulumi-lang-go=\"`1024`\" pulumi-lang-python=\"`1024`\" pulumi-lang-yaml=\"`1024`\" pulumi-lang-java=\"`1024`\" pulumi-lang-hcl=\"`1024`\"\u003e`1024`\u003c/span\u003e-\u003cspan pulumi-lang-nodejs=\"`65535`\" pulumi-lang-dotnet=\"`65535`\" pulumi-lang-go=\"`65535`\" pulumi-lang-python=\"`65535`\" pulumi-lang-yaml=\"`65535`\" pulumi-lang-java=\"`65535`\" pulumi-lang-hcl=\"`65535`\"\u003e`65535`\u003c/span\u003e\n  - Default value: \u003cspan pulumi-lang-nodejs=\"`4739`\" pulumi-lang-dotnet=\"`4739`\" pulumi-lang-go=\"`4739`\" pulumi-lang-python=\"`4739`\" pulumi-lang-yaml=\"`4739`\" pulumi-lang-java=\"`4739`\" pulumi-lang-hcl=\"`4739`\"\u003e`4739`\u003c/span\u003e\n"
@@ -9222,6 +9226,26 @@
                 "order"
             ]
         },
+        "sdwan:index/ScopeObject:ScopeObject": {
+            "properties": {
+                "objectIds": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of object UUIDs\n"
+                },
+                "objectType": {
+                    "type": "string",
+                    "description": "Object type\n  - Choices: `network-hierarchy-node`, `config-group`, `feature-profile`, `device-template`, `feature-template`, `localized-policy`, `security-policy`\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "objectIds",
+                "objectType"
+            ]
+        },
         "sdwan:index/SecurityAppHostingFeatureTemplateVirtualApplication:SecurityAppHostingFeatureTemplateVirtualApplication": {
             "properties": {
                 "applicationType": {
@@ -9375,6 +9399,182 @@
                 "externalSyslogServerVpn": {
                     "type": "string",
                     "description": "External Syslog Server VPN\n"
+                }
+            },
+            "type": "object"
+        },
+        "sdwan:index/ServiceAppqoeFeatureCombinedControllerGroup:ServiceAppqoeFeatureCombinedControllerGroup": {
+            "properties": {
+                "appnavControllers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureCombinedControllerGroupAppnavController:ServiceAppqoeFeatureCombinedControllerGroupAppnavController"
+                    },
+                    "description": "List of controllers\n"
+                }
+            },
+            "type": "object"
+        },
+        "sdwan:index/ServiceAppqoeFeatureCombinedControllerGroupAppnavController:ServiceAppqoeFeatureCombinedControllerGroupAppnavController": {
+            "type": "object"
+        },
+        "sdwan:index/ServiceAppqoeFeatureCombinedServiceContext:ServiceAppqoeFeatureCombinedServiceContext": {
+            "properties": {
+                "appnavControllerGroup": {
+                    "type": "string",
+                    "description": "Appnav controller group\n"
+                },
+                "enable": {
+                    "type": "boolean",
+                    "description": "enable service context\n"
+                },
+                "serviceNodeGroup": {
+                    "type": "string",
+                    "description": "Service node group\n"
+                },
+                "serviceNodeGroups": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "Service node groups bound to this service context\n"
+                },
+                "vpn": {
+                    "type": "integer",
+                    "description": "Vpn\n"
+                },
+                "vpnVariable": {
+                    "type": "string",
+                    "description": "Variable name\n"
+                }
+            },
+            "type": "object"
+        },
+        "sdwan:index/ServiceAppqoeFeatureCombinedServiceNodeGroup:ServiceAppqoeFeatureCombinedServiceNodeGroup": {
+            "properties": {
+                "serviceNodes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode:ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode"
+                    },
+                    "description": "Service Node Information\n"
+                }
+            },
+            "type": "object"
+        },
+        "sdwan:index/ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode:ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode": {
+            "type": "object"
+        },
+        "sdwan:index/ServiceAppqoeFeatureForwarderControllerGroup:ServiceAppqoeFeatureForwarderControllerGroup": {
+            "properties": {
+                "appnavControllers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureForwarderControllerGroupAppnavController:ServiceAppqoeFeatureForwarderControllerGroupAppnavController"
+                    },
+                    "description": "List of controllers\n"
+                }
+            },
+            "type": "object"
+        },
+        "sdwan:index/ServiceAppqoeFeatureForwarderControllerGroupAppnavController:ServiceAppqoeFeatureForwarderControllerGroupAppnavController": {
+            "properties": {
+                "address": {
+                    "type": "string",
+                    "description": "Controller IP Address\n"
+                },
+                "addressVariable": {
+                    "type": "string",
+                    "description": "Variable name\n"
+                },
+                "vpn": {
+                    "type": "integer",
+                    "description": "vpn id\n  - Range: \u003cspan pulumi-lang-nodejs=\"`1`\" pulumi-lang-dotnet=\"`1`\" pulumi-lang-go=\"`1`\" pulumi-lang-python=\"`1`\" pulumi-lang-yaml=\"`1`\" pulumi-lang-java=\"`1`\" pulumi-lang-hcl=\"`1`\"\u003e`1`\u003c/span\u003e-\u003cspan pulumi-lang-nodejs=\"`65530`\" pulumi-lang-dotnet=\"`65530`\" pulumi-lang-go=\"`65530`\" pulumi-lang-python=\"`65530`\" pulumi-lang-yaml=\"`65530`\" pulumi-lang-java=\"`65530`\" pulumi-lang-hcl=\"`65530`\"\u003e`65530`\u003c/span\u003e\n"
+                }
+            },
+            "type": "object"
+        },
+        "sdwan:index/ServiceAppqoeFeatureForwarderServiceContext:ServiceAppqoeFeatureForwarderServiceContext": {
+            "properties": {
+                "appnavControllerGroup": {
+                    "type": "string",
+                    "description": "Appnav controller group\n"
+                },
+                "enable": {
+                    "type": "boolean",
+                    "description": "enable service context\n"
+                },
+                "serviceNodeGroup": {
+                    "type": "string",
+                    "description": "Service node group\n"
+                },
+                "serviceNodeGroups": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "Service node groups bound to this service context\n"
+                },
+                "vpn": {
+                    "type": "integer",
+                    "description": "Vpn\n"
+                },
+                "vpnVariable": {
+                    "type": "string",
+                    "description": "Variable name\n"
+                }
+            },
+            "type": "object"
+        },
+        "sdwan:index/ServiceAppqoeFeatureForwarderServiceNodeGroup:ServiceAppqoeFeatureForwarderServiceNodeGroup": {
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "List of service node group\n  - Default value: `SNG-APPQOE`\n"
+                },
+                "serviceNodes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode:ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode"
+                    },
+                    "description": "Service Node Information\n"
+                }
+            },
+            "type": "object"
+        },
+        "sdwan:index/ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode:ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode": {
+            "properties": {
+                "address": {
+                    "type": "string",
+                    "description": "IP Address\n"
+                }
+            },
+            "type": "object"
+        },
+        "sdwan:index/ServiceAppqoeFeatureServiceNodeServiceNodeGroup:ServiceAppqoeFeatureServiceNodeServiceNodeGroup": {
+            "properties": {
+                "serviceNodes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode:ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode"
+                    },
+                    "description": "Service Node Information\n"
+                }
+            },
+            "type": "object"
+        },
+        "sdwan:index/ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode:ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode": {
+            "type": "object"
+        },
+        "sdwan:index/ServiceAppqoeFeatureVirtualApplication:ServiceAppqoeFeatureVirtualApplication": {
+            "properties": {
+                "resourceProfile": {
+                    "type": "string",
+                    "description": "Resource Profile\n  - Choices: \u003cspan pulumi-lang-nodejs=\"`small`\" pulumi-lang-dotnet=\"`Small`\" pulumi-lang-go=\"`small`\" pulumi-lang-python=\"`small`\" pulumi-lang-yaml=\"`small`\" pulumi-lang-java=\"`small`\" pulumi-lang-hcl=\"`small`\"\u003e`small`\u003c/span\u003e, \u003cspan pulumi-lang-nodejs=\"`medium`\" pulumi-lang-dotnet=\"`Medium`\" pulumi-lang-go=\"`medium`\" pulumi-lang-python=\"`medium`\" pulumi-lang-yaml=\"`medium`\" pulumi-lang-java=\"`medium`\" pulumi-lang-hcl=\"`medium`\"\u003e`medium`\u003c/span\u003e, \u003cspan pulumi-lang-nodejs=\"`large`\" pulumi-lang-dotnet=\"`Large`\" pulumi-lang-go=\"`large`\" pulumi-lang-python=\"`large`\" pulumi-lang-yaml=\"`large`\" pulumi-lang-java=\"`large`\" pulumi-lang-hcl=\"`large`\"\u003e`large`\u003c/span\u003e, `extra-large`, \u003cspan pulumi-lang-nodejs=\"`default`\" pulumi-lang-dotnet=\"`Default`\" pulumi-lang-go=\"`default`\" pulumi-lang-python=\"`default`\" pulumi-lang-yaml=\"`default`\" pulumi-lang-java=\"`default`\" pulumi-lang-hcl=\"`default`\"\u003e`default`\u003c/span\u003e\n  - Default value: \u003cspan pulumi-lang-nodejs=\"`default`\" pulumi-lang-dotnet=\"`Default`\" pulumi-lang-go=\"`default`\" pulumi-lang-python=\"`default`\" pulumi-lang-yaml=\"`default`\" pulumi-lang-java=\"`default`\" pulumi-lang-hcl=\"`default`\"\u003e`default`\u003c/span\u003e\n"
+                },
+                "resourceProfileVariable": {
+                    "type": "string",
+                    "description": "Variable name\n"
                 }
             },
             "type": "object"
@@ -31281,6 +31481,10 @@
                     "type": "boolean",
                     "description": "Enable export spreading\n"
                 },
+                "sourceInterface": {
+                    "type": "string",
+                    "description": "Source interface\n"
+                },
                 "udpPort": {
                     "type": "integer",
                     "description": "Collector UDP port number\n"
@@ -31296,6 +31500,7 @@
                 "bfdMetricsExport",
                 "exportInterval",
                 "exportSpread",
+                "sourceInterface",
                 "udpPort",
                 "vpnId"
             ],
@@ -33040,6 +33245,31 @@
                 }
             }
         },
+        "sdwan:index/getScopeObject:getScopeObject": {
+            "properties": {
+                "objectIds": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of object UUIDs\n"
+                },
+                "objectType": {
+                    "type": "string",
+                    "description": "Object type\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "objectIds",
+                "objectType"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
         "sdwan:index/getSecurityAppHostingFeatureTemplateVirtualApplication:getSecurityAppHostingFeatureTemplateVirtualApplication": {
             "properties": {
                 "applicationType": {
@@ -33246,6 +33476,276 @@
                 "externalSyslogServerIp",
                 "externalSyslogServerSourceInterface",
                 "externalSyslogServerVpn"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "sdwan:index/getServiceAppqoeFeatureCombinedControllerGroup:getServiceAppqoeFeatureCombinedControllerGroup": {
+            "properties": {
+                "appnavControllers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/getServiceAppqoeFeatureCombinedControllerGroupAppnavController:getServiceAppqoeFeatureCombinedControllerGroupAppnavController"
+                    },
+                    "description": "List of controllers\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "appnavControllers"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "sdwan:index/getServiceAppqoeFeatureCombinedControllerGroupAppnavController:getServiceAppqoeFeatureCombinedControllerGroupAppnavController": {
+            "type": "object"
+        },
+        "sdwan:index/getServiceAppqoeFeatureCombinedServiceContext:getServiceAppqoeFeatureCombinedServiceContext": {
+            "properties": {
+                "appnavControllerGroup": {
+                    "type": "string",
+                    "description": "Appnav controller group\n"
+                },
+                "enable": {
+                    "type": "boolean",
+                    "description": "enable service context\n"
+                },
+                "serviceNodeGroup": {
+                    "type": "string",
+                    "description": "Service node group\n"
+                },
+                "serviceNodeGroups": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "Service node groups bound to this service context\n"
+                },
+                "vpn": {
+                    "type": "integer",
+                    "description": "Vpn\n"
+                },
+                "vpnVariable": {
+                    "type": "string",
+                    "description": "Variable name\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "appnavControllerGroup",
+                "enable",
+                "serviceNodeGroup",
+                "serviceNodeGroups",
+                "vpn",
+                "vpnVariable"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "sdwan:index/getServiceAppqoeFeatureCombinedServiceNodeGroup:getServiceAppqoeFeatureCombinedServiceNodeGroup": {
+            "properties": {
+                "serviceNodes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/getServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode:getServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode"
+                    },
+                    "description": "Service Node Information\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "serviceNodes"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "sdwan:index/getServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode:getServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode": {
+            "type": "object"
+        },
+        "sdwan:index/getServiceAppqoeFeatureForwarderControllerGroup:getServiceAppqoeFeatureForwarderControllerGroup": {
+            "properties": {
+                "appnavControllers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/getServiceAppqoeFeatureForwarderControllerGroupAppnavController:getServiceAppqoeFeatureForwarderControllerGroupAppnavController"
+                    },
+                    "description": "List of controllers\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "appnavControllers"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "sdwan:index/getServiceAppqoeFeatureForwarderControllerGroupAppnavController:getServiceAppqoeFeatureForwarderControllerGroupAppnavController": {
+            "properties": {
+                "address": {
+                    "type": "string",
+                    "description": "Controller IP Address\n"
+                },
+                "addressVariable": {
+                    "type": "string",
+                    "description": "Variable name\n"
+                },
+                "vpn": {
+                    "type": "integer",
+                    "description": "vpn id\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "address",
+                "addressVariable",
+                "vpn"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "sdwan:index/getServiceAppqoeFeatureForwarderServiceContext:getServiceAppqoeFeatureForwarderServiceContext": {
+            "properties": {
+                "appnavControllerGroup": {
+                    "type": "string",
+                    "description": "Appnav controller group\n"
+                },
+                "enable": {
+                    "type": "boolean",
+                    "description": "enable service context\n"
+                },
+                "serviceNodeGroup": {
+                    "type": "string",
+                    "description": "Service node group\n"
+                },
+                "serviceNodeGroups": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "Service node groups bound to this service context\n"
+                },
+                "vpn": {
+                    "type": "integer",
+                    "description": "Vpn\n"
+                },
+                "vpnVariable": {
+                    "type": "string",
+                    "description": "Variable name\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "appnavControllerGroup",
+                "enable",
+                "serviceNodeGroup",
+                "serviceNodeGroups",
+                "vpn",
+                "vpnVariable"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "sdwan:index/getServiceAppqoeFeatureForwarderServiceNodeGroup:getServiceAppqoeFeatureForwarderServiceNodeGroup": {
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "List of service node group\n"
+                },
+                "serviceNodes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/getServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode:getServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode"
+                    },
+                    "description": "Service Node Information\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "name",
+                "serviceNodes"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "sdwan:index/getServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode:getServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode": {
+            "properties": {
+                "address": {
+                    "type": "string",
+                    "description": "IP Address\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "address"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "sdwan:index/getServiceAppqoeFeatureServiceNodeServiceNodeGroup:getServiceAppqoeFeatureServiceNodeServiceNodeGroup": {
+            "properties": {
+                "serviceNodes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/getServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode:getServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode"
+                    },
+                    "description": "Service Node Information\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "serviceNodes"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "sdwan:index/getServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode:getServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode": {
+            "type": "object"
+        },
+        "sdwan:index/getServiceAppqoeFeatureVirtualApplication:getServiceAppqoeFeatureVirtualApplication": {
+            "properties": {
+                "resourceProfile": {
+                    "type": "string",
+                    "description": "Resource Profile\n"
+                },
+                "resourceProfileVariable": {
+                    "type": "string",
+                    "description": "Variable name\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "resourceProfile",
+                "resourceProfileVariable"
             ],
             "language": {
                 "nodejs": {
@@ -64807,7 +65307,7 @@
             }
         },
         "sdwan:index/customApplication:CustomApplication": {
-            "description": "This resource can manage a Custom Application .\n  - Minimum SD-WAN Manager version: `20.15.0`\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sdwan from \"@pulumi/sdwan\";\n\nconst example = new sdwan.CustomApplication(\"example\", {\n    appName: \"Example-Custom\",\n    serverNames: [\"*customapp.com\"],\n    l3l4s: [{\n        ipAddresses: [\"192.168.1.0/24\"],\n        l4Protocol: \"TCP\",\n        ports: \"1 10-20\",\n    }],\n    applicationFamily: \"routing\",\n    applicationGroup: \"ipsec-group\",\n    trafficClass: \"signaling\",\n    businessRelevance: \"business-relevant\",\n});\n```\n```python\nimport pulumi\nimport pulumi_sdwan as sdwan\n\nexample = sdwan.CustomApplication(\"example\",\n    app_name=\"Example-Custom\",\n    server_names=[\"*customapp.com\"],\n    l3l4s=[{\n        \"ip_addresses\": [\"192.168.1.0/24\"],\n        \"l4_protocol\": \"TCP\",\n        \"ports\": \"1 10-20\",\n    }],\n    application_family=\"routing\",\n    application_group=\"ipsec-group\",\n    traffic_class=\"signaling\",\n    business_relevance=\"business-relevant\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sdwan = Pulumi.Sdwan;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Sdwan.CustomApplication(\"example\", new()\n    {\n        AppName = \"Example-Custom\",\n        ServerNames = new[]\n        {\n            \"*customapp.com\",\n        },\n        L3l4s = new[]\n        {\n            new Sdwan.Inputs.CustomApplicationL3l4Args\n            {\n                IpAddresses = new[]\n                {\n                    \"192.168.1.0/24\",\n                },\n                L4Protocol = \"TCP\",\n                Ports = \"1 10-20\",\n            },\n        },\n        ApplicationFamily = \"routing\",\n        ApplicationGroup = \"ipsec-group\",\n        TrafficClass = \"signaling\",\n        BusinessRelevance = \"business-relevant\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := sdwan.NewCustomApplication(ctx, \"example\", \u0026sdwan.CustomApplicationArgs{\n\t\t\tAppName: pulumi.String(\"Example-Custom\"),\n\t\t\tServerNames: pulumi.StringArray{\n\t\t\t\tpulumi.String(\"*customapp.com\"),\n\t\t\t},\n\t\t\tL3l4s: sdwan.CustomApplicationL3l4Array{\n\t\t\t\t\u0026sdwan.CustomApplicationL3l4Args{\n\t\t\t\t\tIpAddresses: pulumi.StringArray{\n\t\t\t\t\t\tpulumi.String(\"192.168.1.0/24\"),\n\t\t\t\t\t},\n\t\t\t\t\tL4Protocol: pulumi.String(\"TCP\"),\n\t\t\t\t\tPorts:      pulumi.String(\"1 10-20\"),\n\t\t\t\t},\n\t\t\t},\n\t\t\tApplicationFamily: pulumi.String(\"routing\"),\n\t\t\tApplicationGroup:  pulumi.String(\"ipsec-group\"),\n\t\t\tTrafficClass:      pulumi.String(\"signaling\"),\n\t\t\tBusinessRelevance: pulumi.String(\"business-relevant\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    sdwan = {\n      source = \"pulumi/sdwan\"\n    }\n  }\n}\n\nresource \"sdwan_customapplication\" \"example\" {\n  app_name     = \"Example-Custom\"\n  server_names = [\"*customapp.com\"]\n  l3l4s {\n    ip_addresses = [\"192.168.1.0/24\"]\n    l4_protocol  = \"TCP\"\n    ports        = \"1 10-20\"\n  }\n  application_family = \"routing\"\n  application_group  = \"ipsec-group\"\n  traffic_class      = \"signaling\"\n  business_relevance = \"business-relevant\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sdwan.CustomApplication;\nimport com.pulumi.sdwan.CustomApplicationArgs;\nimport com.pulumi.sdwan.inputs.CustomApplicationL3l4Args;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new CustomApplication(\"example\", CustomApplicationArgs.builder()\n            .appName(\"Example-Custom\")\n            .serverNames(\"*customapp.com\")\n            .l3l4s(CustomApplicationL3l4Args.builder()\n                .ipAddresses(\"192.168.1.0/24\")\n                .l4Protocol(\"TCP\")\n                .ports(\"1 10-20\")\n                .build())\n            .applicationFamily(\"routing\")\n            .applicationGroup(\"ipsec-group\")\n            .trafficClass(\"signaling\")\n            .businessRelevance(\"business-relevant\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: sdwan:CustomApplication\n    properties:\n      appName: Example-Custom\n      serverNames:\n        - '*customapp.com'\n      l3l4s:\n        - ipAddresses:\n            - 192.168.1.0/24\n          l4Protocol: TCP\n          ports: 1 10-20\n      applicationFamily: routing\n      applicationGroup: ipsec-group\n      trafficClass: signaling\n      businessRelevance: business-relevant\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import sdwan:index/customApplication:CustomApplication example \"f6b2c44c-693c-4763-b010-895aa3d236bd\"\n```\n\n",
+            "description": "This resource can manage a Custom Application .\n  - Minimum SD-WAN Manager version: `20.15.0`\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sdwan from \"@pulumi/sdwan\";\n\nconst example = new sdwan.CustomApplication(\"example\", {\n    appName: \"Example-Custom\",\n    serverNames: [\"*customapp.com\"],\n    l3l4s: [{\n        ipAddresses: [\"192.168.1.0/24\"],\n        l4Protocol: \"TCP\",\n        ports: \"1 10-20\",\n    }],\n    applicationFamily: \"routing\",\n    applicationGroup: \"ipsec-group\",\n    trafficClass: \"signaling\",\n    businessRelevance: \"business-relevant\",\n    endpointType: \"ip\",\n    endpointValue: \"10.2.2.2\",\n});\n```\n```python\nimport pulumi\nimport pulumi_sdwan as sdwan\n\nexample = sdwan.CustomApplication(\"example\",\n    app_name=\"Example-Custom\",\n    server_names=[\"*customapp.com\"],\n    l3l4s=[{\n        \"ip_addresses\": [\"192.168.1.0/24\"],\n        \"l4_protocol\": \"TCP\",\n        \"ports\": \"1 10-20\",\n    }],\n    application_family=\"routing\",\n    application_group=\"ipsec-group\",\n    traffic_class=\"signaling\",\n    business_relevance=\"business-relevant\",\n    endpoint_type=\"ip\",\n    endpoint_value=\"10.2.2.2\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sdwan = Pulumi.Sdwan;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Sdwan.CustomApplication(\"example\", new()\n    {\n        AppName = \"Example-Custom\",\n        ServerNames = new[]\n        {\n            \"*customapp.com\",\n        },\n        L3l4s = new[]\n        {\n            new Sdwan.Inputs.CustomApplicationL3l4Args\n            {\n                IpAddresses = new[]\n                {\n                    \"192.168.1.0/24\",\n                },\n                L4Protocol = \"TCP\",\n                Ports = \"1 10-20\",\n            },\n        },\n        ApplicationFamily = \"routing\",\n        ApplicationGroup = \"ipsec-group\",\n        TrafficClass = \"signaling\",\n        BusinessRelevance = \"business-relevant\",\n        EndpointType = \"ip\",\n        EndpointValue = \"10.2.2.2\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := sdwan.NewCustomApplication(ctx, \"example\", \u0026sdwan.CustomApplicationArgs{\n\t\t\tAppName: pulumi.String(\"Example-Custom\"),\n\t\t\tServerNames: pulumi.StringArray{\n\t\t\t\tpulumi.String(\"*customapp.com\"),\n\t\t\t},\n\t\t\tL3l4s: sdwan.CustomApplicationL3l4Array{\n\t\t\t\t\u0026sdwan.CustomApplicationL3l4Args{\n\t\t\t\t\tIpAddresses: pulumi.StringArray{\n\t\t\t\t\t\tpulumi.String(\"192.168.1.0/24\"),\n\t\t\t\t\t},\n\t\t\t\t\tL4Protocol: pulumi.String(\"TCP\"),\n\t\t\t\t\tPorts:      pulumi.String(\"1 10-20\"),\n\t\t\t\t},\n\t\t\t},\n\t\t\tApplicationFamily: pulumi.String(\"routing\"),\n\t\t\tApplicationGroup:  pulumi.String(\"ipsec-group\"),\n\t\t\tTrafficClass:      pulumi.String(\"signaling\"),\n\t\t\tBusinessRelevance: pulumi.String(\"business-relevant\"),\n\t\t\tEndpointType:      pulumi.String(\"ip\"),\n\t\t\tEndpointValue:     pulumi.String(\"10.2.2.2\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    sdwan = {\n      source = \"pulumi/sdwan\"\n    }\n  }\n}\n\nresource \"sdwan_customapplication\" \"example\" {\n  app_name     = \"Example-Custom\"\n  server_names = [\"*customapp.com\"]\n  l3l4s {\n    ip_addresses = [\"192.168.1.0/24\"]\n    l4_protocol  = \"TCP\"\n    ports        = \"1 10-20\"\n  }\n  application_family = \"routing\"\n  application_group  = \"ipsec-group\"\n  traffic_class      = \"signaling\"\n  business_relevance = \"business-relevant\"\n  endpoint_type      = \"ip\"\n  endpoint_value     = \"10.2.2.2\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sdwan.CustomApplication;\nimport com.pulumi.sdwan.CustomApplicationArgs;\nimport com.pulumi.sdwan.inputs.CustomApplicationL3l4Args;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new CustomApplication(\"example\", CustomApplicationArgs.builder()\n            .appName(\"Example-Custom\")\n            .serverNames(\"*customapp.com\")\n            .l3l4s(CustomApplicationL3l4Args.builder()\n                .ipAddresses(\"192.168.1.0/24\")\n                .l4Protocol(\"TCP\")\n                .ports(\"1 10-20\")\n                .build())\n            .applicationFamily(\"routing\")\n            .applicationGroup(\"ipsec-group\")\n            .trafficClass(\"signaling\")\n            .businessRelevance(\"business-relevant\")\n            .endpointType(\"ip\")\n            .endpointValue(\"10.2.2.2\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: sdwan:CustomApplication\n    properties:\n      appName: Example-Custom\n      serverNames:\n        - '*customapp.com'\n      l3l4s:\n        - ipAddresses:\n            - 192.168.1.0/24\n          l4Protocol: TCP\n          ports: 1 10-20\n      applicationFamily: routing\n      applicationGroup: ipsec-group\n      trafficClass: signaling\n      businessRelevance: business-relevant\n      endpointType: ip\n      endpointValue: 10.2.2.2\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import sdwan:index/customApplication:CustomApplication example \"f6b2c44c-693c-4763-b010-895aa3d236bd\"\n```\n\n",
             "properties": {
                 "appName": {
                     "type": "string",
@@ -64824,6 +65324,14 @@
                 "businessRelevance": {
                     "type": "string",
                     "description": "Business Relevance\n  - Choices: `business-relevant`, `business-irrelevant`, \u003cspan pulumi-lang-nodejs=\"`default`\" pulumi-lang-dotnet=\"`Default`\" pulumi-lang-go=\"`default`\" pulumi-lang-python=\"`default`\" pulumi-lang-yaml=\"`default`\" pulumi-lang-java=\"`default`\" pulumi-lang-hcl=\"`default`\"\u003e`default`\u003c/span\u003e"
+                },
+                "endpointType": {
+                    "type": "string",
+                    "description": "Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher\n  - Choices: \u003cspan pulumi-lang-nodejs=\"`ip`\" pulumi-lang-dotnet=\"`Ip`\" pulumi-lang-go=\"`ip`\" pulumi-lang-python=\"`ip`\" pulumi-lang-yaml=\"`ip`\" pulumi-lang-java=\"`ip`\" pulumi-lang-hcl=\"`ip`\"\u003e`ip`\u003c/span\u003e, \u003cspan pulumi-lang-nodejs=\"`fqdn`\" pulumi-lang-dotnet=\"`Fqdn`\" pulumi-lang-go=\"`fqdn`\" pulumi-lang-python=\"`fqdn`\" pulumi-lang-yaml=\"`fqdn`\" pulumi-lang-java=\"`fqdn`\" pulumi-lang-hcl=\"`fqdn`\"\u003e`fqdn`\u003c/span\u003e, \u003cspan pulumi-lang-nodejs=\"`url`\" pulumi-lang-dotnet=\"`Url`\" pulumi-lang-go=\"`url`\" pulumi-lang-python=\"`url`\" pulumi-lang-yaml=\"`url`\" pulumi-lang-java=\"`url`\" pulumi-lang-hcl=\"`url`\"\u003e`url`\u003c/span\u003e"
+                },
+                "endpointValue": {
+                    "type": "string",
+                    "description": "Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher"
                 },
                 "l3l4s": {
                     "type": "array",
@@ -64869,6 +65377,14 @@
                     "type": "string",
                     "description": "Business Relevance\n  - Choices: `business-relevant`, `business-irrelevant`, \u003cspan pulumi-lang-nodejs=\"`default`\" pulumi-lang-dotnet=\"`Default`\" pulumi-lang-go=\"`default`\" pulumi-lang-python=\"`default`\" pulumi-lang-yaml=\"`default`\" pulumi-lang-java=\"`default`\" pulumi-lang-hcl=\"`default`\"\u003e`default`\u003c/span\u003e"
                 },
+                "endpointType": {
+                    "type": "string",
+                    "description": "Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher\n  - Choices: \u003cspan pulumi-lang-nodejs=\"`ip`\" pulumi-lang-dotnet=\"`Ip`\" pulumi-lang-go=\"`ip`\" pulumi-lang-python=\"`ip`\" pulumi-lang-yaml=\"`ip`\" pulumi-lang-java=\"`ip`\" pulumi-lang-hcl=\"`ip`\"\u003e`ip`\u003c/span\u003e, \u003cspan pulumi-lang-nodejs=\"`fqdn`\" pulumi-lang-dotnet=\"`Fqdn`\" pulumi-lang-go=\"`fqdn`\" pulumi-lang-python=\"`fqdn`\" pulumi-lang-yaml=\"`fqdn`\" pulumi-lang-java=\"`fqdn`\" pulumi-lang-hcl=\"`fqdn`\"\u003e`fqdn`\u003c/span\u003e, \u003cspan pulumi-lang-nodejs=\"`url`\" pulumi-lang-dotnet=\"`Url`\" pulumi-lang-go=\"`url`\" pulumi-lang-python=\"`url`\" pulumi-lang-yaml=\"`url`\" pulumi-lang-java=\"`url`\" pulumi-lang-hcl=\"`url`\"\u003e`url`\u003c/span\u003e"
+                },
+                "endpointValue": {
+                    "type": "string",
+                    "description": "Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher"
+                },
                 "l3l4s": {
                     "type": "array",
                     "items": {
@@ -64909,6 +65425,14 @@
                     "businessRelevance": {
                         "type": "string",
                         "description": "Business Relevance\n  - Choices: `business-relevant`, `business-irrelevant`, \u003cspan pulumi-lang-nodejs=\"`default`\" pulumi-lang-dotnet=\"`Default`\" pulumi-lang-go=\"`default`\" pulumi-lang-python=\"`default`\" pulumi-lang-yaml=\"`default`\" pulumi-lang-java=\"`default`\" pulumi-lang-hcl=\"`default`\"\u003e`default`\u003c/span\u003e"
+                    },
+                    "endpointType": {
+                        "type": "string",
+                        "description": "Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher\n  - Choices: \u003cspan pulumi-lang-nodejs=\"`ip`\" pulumi-lang-dotnet=\"`Ip`\" pulumi-lang-go=\"`ip`\" pulumi-lang-python=\"`ip`\" pulumi-lang-yaml=\"`ip`\" pulumi-lang-java=\"`ip`\" pulumi-lang-hcl=\"`ip`\"\u003e`ip`\u003c/span\u003e, \u003cspan pulumi-lang-nodejs=\"`fqdn`\" pulumi-lang-dotnet=\"`Fqdn`\" pulumi-lang-go=\"`fqdn`\" pulumi-lang-python=\"`fqdn`\" pulumi-lang-yaml=\"`fqdn`\" pulumi-lang-java=\"`fqdn`\" pulumi-lang-hcl=\"`fqdn`\"\u003e`fqdn`\u003c/span\u003e, \u003cspan pulumi-lang-nodejs=\"`url`\" pulumi-lang-dotnet=\"`Url`\" pulumi-lang-go=\"`url`\" pulumi-lang-python=\"`url`\" pulumi-lang-yaml=\"`url`\" pulumi-lang-java=\"`url`\" pulumi-lang-hcl=\"`url`\"\u003e`url`\u003c/span\u003e"
+                    },
+                    "endpointValue": {
+                        "type": "string",
+                        "description": "Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher"
                     },
                     "l3l4s": {
                         "type": "array",
@@ -68254,7 +68778,7 @@
             }
         },
         "sdwan:index/networkHierarchyCflowd:NetworkHierarchyCflowd": {
-            "description": "This resource can manage Network Hierarchy Cflowd settings.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sdwan from \"@pulumi/sdwan\";\n\nconst example = new sdwan.NetworkHierarchyCflowd(\"example\", {\n    flowActiveTimeout: 600,\n    flowInactiveTimeout: 60,\n    flowRefreshTime: 600,\n    flowSamplingInterval: 1,\n    collectTlocLoopback: true,\n    protocol: \"ipv4\",\n    collectTos: true,\n    collectDscpOutput: true,\n    collectors: [{\n        vpnId: 1,\n        address: \"10.0.0.1\",\n        udpPort: 4739,\n        exportSpread: true,\n        bfdMetricsExport: true,\n        exportInterval: 600,\n    }],\n});\n```\n```python\nimport pulumi\nimport pulumi_sdwan as sdwan\n\nexample = sdwan.NetworkHierarchyCflowd(\"example\",\n    flow_active_timeout=600,\n    flow_inactive_timeout=60,\n    flow_refresh_time=600,\n    flow_sampling_interval=1,\n    collect_tloc_loopback=True,\n    protocol=\"ipv4\",\n    collect_tos=True,\n    collect_dscp_output=True,\n    collectors=[{\n        \"vpn_id\": 1,\n        \"address\": \"10.0.0.1\",\n        \"udp_port\": 4739,\n        \"export_spread\": True,\n        \"bfd_metrics_export\": True,\n        \"export_interval\": 600,\n    }])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sdwan = Pulumi.Sdwan;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Sdwan.NetworkHierarchyCflowd(\"example\", new()\n    {\n        FlowActiveTimeout = 600,\n        FlowInactiveTimeout = 60,\n        FlowRefreshTime = 600,\n        FlowSamplingInterval = 1,\n        CollectTlocLoopback = true,\n        Protocol = \"ipv4\",\n        CollectTos = true,\n        CollectDscpOutput = true,\n        Collectors = new[]\n        {\n            new Sdwan.Inputs.NetworkHierarchyCflowdCollectorArgs\n            {\n                VpnId = 1,\n                Address = \"10.0.0.1\",\n                UdpPort = 4739,\n                ExportSpread = true,\n                BfdMetricsExport = true,\n                ExportInterval = 600,\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := sdwan.NewNetworkHierarchyCflowd(ctx, \"example\", \u0026sdwan.NetworkHierarchyCflowdArgs{\n\t\t\tFlowActiveTimeout:    pulumi.Int(600),\n\t\t\tFlowInactiveTimeout:  pulumi.Int(60),\n\t\t\tFlowRefreshTime:      pulumi.Int(600),\n\t\t\tFlowSamplingInterval: pulumi.Int(1),\n\t\t\tCollectTlocLoopback:  pulumi.Bool(true),\n\t\t\tProtocol:             pulumi.String(\"ipv4\"),\n\t\t\tCollectTos:           pulumi.Bool(true),\n\t\t\tCollectDscpOutput:    pulumi.Bool(true),\n\t\t\tCollectors: sdwan.NetworkHierarchyCflowdCollectorArray{\n\t\t\t\t\u0026sdwan.NetworkHierarchyCflowdCollectorArgs{\n\t\t\t\t\tVpnId:            pulumi.Int(1),\n\t\t\t\t\tAddress:          pulumi.String(\"10.0.0.1\"),\n\t\t\t\t\tUdpPort:          pulumi.Int(4739),\n\t\t\t\t\tExportSpread:     pulumi.Bool(true),\n\t\t\t\t\tBfdMetricsExport: pulumi.Bool(true),\n\t\t\t\t\tExportInterval:   pulumi.Int(600),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    sdwan = {\n      source = \"pulumi/sdwan\"\n    }\n  }\n}\n\nresource \"sdwan_networkhierarchycflowd\" \"example\" {\n  flow_active_timeout    = 600\n  flow_inactive_timeout  = 60\n  flow_refresh_time      = 600\n  flow_sampling_interval = 1\n  collect_tloc_loopback  = true\n  protocol               = \"ipv4\"\n  collect_tos            = true\n  collect_dscp_output    = true\n  collectors {\n    vpn_id             = 1\n    address            = \"10.0.0.1\"\n    udp_port           = 4739\n    export_spread      = true\n    bfd_metrics_export = true\n    export_interval    = 600\n  }\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sdwan.NetworkHierarchyCflowd;\nimport com.pulumi.sdwan.NetworkHierarchyCflowdArgs;\nimport com.pulumi.sdwan.inputs.NetworkHierarchyCflowdCollectorArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new NetworkHierarchyCflowd(\"example\", NetworkHierarchyCflowdArgs.builder()\n            .flowActiveTimeout(600)\n            .flowInactiveTimeout(60)\n            .flowRefreshTime(600)\n            .flowSamplingInterval(1)\n            .collectTlocLoopback(true)\n            .protocol(\"ipv4\")\n            .collectTos(true)\n            .collectDscpOutput(true)\n            .collectors(NetworkHierarchyCflowdCollectorArgs.builder()\n                .vpnId(1)\n                .address(\"10.0.0.1\")\n                .udpPort(4739)\n                .exportSpread(true)\n                .bfdMetricsExport(true)\n                .exportInterval(600)\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: sdwan:NetworkHierarchyCflowd\n    properties:\n      flowActiveTimeout: 600\n      flowInactiveTimeout: 60\n      flowRefreshTime: 600\n      flowSamplingInterval: 1\n      collectTlocLoopback: true\n      protocol: ipv4\n      collectTos: true\n      collectDscpOutput: true\n      collectors:\n        - vpnId: 1\n          address: 10.0.0.1\n          udpPort: 4739\n          exportSpread: true\n          bfdMetricsExport: true\n          exportInterval: 600\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import sdwan:index/networkHierarchyCflowd:NetworkHierarchyCflowd example \"f6b2c44c-693c-4763-b010-895aa3d236bd\"\n```\n\n",
+            "description": "This resource can manage Network Hierarchy Cflowd settings.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sdwan from \"@pulumi/sdwan\";\n\nconst example = new sdwan.NetworkHierarchyCflowd(\"example\", {\n    flowActiveTimeout: 600,\n    flowInactiveTimeout: 60,\n    flowRefreshTime: 600,\n    flowSamplingInterval: 1,\n    collectTlocLoopback: true,\n    protocol: \"ipv4\",\n    collectTos: true,\n    collectDscpOutput: true,\n    collectors: [{\n        vpnId: 1,\n        address: \"10.0.0.1\",\n        sourceInterface: \"Loopback1\",\n        udpPort: 4739,\n        exportSpread: true,\n        bfdMetricsExport: true,\n        exportInterval: 600,\n    }],\n});\n```\n```python\nimport pulumi\nimport pulumi_sdwan as sdwan\n\nexample = sdwan.NetworkHierarchyCflowd(\"example\",\n    flow_active_timeout=600,\n    flow_inactive_timeout=60,\n    flow_refresh_time=600,\n    flow_sampling_interval=1,\n    collect_tloc_loopback=True,\n    protocol=\"ipv4\",\n    collect_tos=True,\n    collect_dscp_output=True,\n    collectors=[{\n        \"vpn_id\": 1,\n        \"address\": \"10.0.0.1\",\n        \"source_interface\": \"Loopback1\",\n        \"udp_port\": 4739,\n        \"export_spread\": True,\n        \"bfd_metrics_export\": True,\n        \"export_interval\": 600,\n    }])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sdwan = Pulumi.Sdwan;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Sdwan.NetworkHierarchyCflowd(\"example\", new()\n    {\n        FlowActiveTimeout = 600,\n        FlowInactiveTimeout = 60,\n        FlowRefreshTime = 600,\n        FlowSamplingInterval = 1,\n        CollectTlocLoopback = true,\n        Protocol = \"ipv4\",\n        CollectTos = true,\n        CollectDscpOutput = true,\n        Collectors = new[]\n        {\n            new Sdwan.Inputs.NetworkHierarchyCflowdCollectorArgs\n            {\n                VpnId = 1,\n                Address = \"10.0.0.1\",\n                SourceInterface = \"Loopback1\",\n                UdpPort = 4739,\n                ExportSpread = true,\n                BfdMetricsExport = true,\n                ExportInterval = 600,\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := sdwan.NewNetworkHierarchyCflowd(ctx, \"example\", \u0026sdwan.NetworkHierarchyCflowdArgs{\n\t\t\tFlowActiveTimeout:    pulumi.Int(600),\n\t\t\tFlowInactiveTimeout:  pulumi.Int(60),\n\t\t\tFlowRefreshTime:      pulumi.Int(600),\n\t\t\tFlowSamplingInterval: pulumi.Int(1),\n\t\t\tCollectTlocLoopback:  pulumi.Bool(true),\n\t\t\tProtocol:             pulumi.String(\"ipv4\"),\n\t\t\tCollectTos:           pulumi.Bool(true),\n\t\t\tCollectDscpOutput:    pulumi.Bool(true),\n\t\t\tCollectors: sdwan.NetworkHierarchyCflowdCollectorArray{\n\t\t\t\t\u0026sdwan.NetworkHierarchyCflowdCollectorArgs{\n\t\t\t\t\tVpnId:            pulumi.Int(1),\n\t\t\t\t\tAddress:          pulumi.String(\"10.0.0.1\"),\n\t\t\t\t\tSourceInterface:  pulumi.String(\"Loopback1\"),\n\t\t\t\t\tUdpPort:          pulumi.Int(4739),\n\t\t\t\t\tExportSpread:     pulumi.Bool(true),\n\t\t\t\t\tBfdMetricsExport: pulumi.Bool(true),\n\t\t\t\t\tExportInterval:   pulumi.Int(600),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    sdwan = {\n      source = \"pulumi/sdwan\"\n    }\n  }\n}\n\nresource \"sdwan_networkhierarchycflowd\" \"example\" {\n  flow_active_timeout    = 600\n  flow_inactive_timeout  = 60\n  flow_refresh_time      = 600\n  flow_sampling_interval = 1\n  collect_tloc_loopback  = true\n  protocol               = \"ipv4\"\n  collect_tos            = true\n  collect_dscp_output    = true\n  collectors {\n    vpn_id             = 1\n    address            = \"10.0.0.1\"\n    source_interface   = \"Loopback1\"\n    udp_port           = 4739\n    export_spread      = true\n    bfd_metrics_export = true\n    export_interval    = 600\n  }\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sdwan.NetworkHierarchyCflowd;\nimport com.pulumi.sdwan.NetworkHierarchyCflowdArgs;\nimport com.pulumi.sdwan.inputs.NetworkHierarchyCflowdCollectorArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new NetworkHierarchyCflowd(\"example\", NetworkHierarchyCflowdArgs.builder()\n            .flowActiveTimeout(600)\n            .flowInactiveTimeout(60)\n            .flowRefreshTime(600)\n            .flowSamplingInterval(1)\n            .collectTlocLoopback(true)\n            .protocol(\"ipv4\")\n            .collectTos(true)\n            .collectDscpOutput(true)\n            .collectors(NetworkHierarchyCflowdCollectorArgs.builder()\n                .vpnId(1)\n                .address(\"10.0.0.1\")\n                .sourceInterface(\"Loopback1\")\n                .udpPort(4739)\n                .exportSpread(true)\n                .bfdMetricsExport(true)\n                .exportInterval(600)\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: sdwan:NetworkHierarchyCflowd\n    properties:\n      flowActiveTimeout: 600\n      flowInactiveTimeout: 60\n      flowRefreshTime: 600\n      flowSamplingInterval: 1\n      collectTlocLoopback: true\n      protocol: ipv4\n      collectTos: true\n      collectDscpOutput: true\n      collectors:\n        - vpnId: 1\n          address: 10.0.0.1\n          sourceInterface: Loopback1\n          udpPort: 4739\n          exportSpread: true\n          bfdMetricsExport: true\n          exportInterval: 600\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import sdwan:index/networkHierarchyCflowd:NetworkHierarchyCflowd example \"f6b2c44c-693c-4763-b010-895aa3d236bd\"\n```\n\n",
             "properties": {
                 "collectDscpOutput": {
                     "type": "boolean",
@@ -74268,6 +74792,88 @@
                 "type": "object"
             }
         },
+        "sdwan:index/scope:Scope": {
+            "description": "This resource can manage a Scope .\n  - Minimum SD-WAN Manager version: `20.15.0`\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sdwan from \"@pulumi/sdwan\";\n\nconst example = new sdwan.Scope(\"example\", {\n    name: \"west1\",\n    description: \"West Coast Domain1\",\n    objects: [{\n        objectType: \"feature-profile\",\n        objectIds: [\"003c4e0b-a2da-486d-8ee7-0e6dd4551bae\"],\n    }],\n});\n```\n```python\nimport pulumi\nimport pulumi_sdwan as sdwan\n\nexample = sdwan.Scope(\"example\",\n    name=\"west1\",\n    description=\"West Coast Domain1\",\n    objects=[{\n        \"object_type\": \"feature-profile\",\n        \"object_ids\": [\"003c4e0b-a2da-486d-8ee7-0e6dd4551bae\"],\n    }])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sdwan = Pulumi.Sdwan;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Sdwan.Scope(\"example\", new()\n    {\n        Name = \"west1\",\n        Description = \"West Coast Domain1\",\n        Objects = new[]\n        {\n            new Sdwan.Inputs.ScopeObjectArgs\n            {\n                ObjectType = \"feature-profile\",\n                ObjectIds = new[]\n                {\n                    \"003c4e0b-a2da-486d-8ee7-0e6dd4551bae\",\n                },\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := sdwan.NewScope(ctx, \"example\", \u0026sdwan.ScopeArgs{\n\t\t\tName:        pulumi.String(\"west1\"),\n\t\t\tDescription: pulumi.String(\"West Coast Domain1\"),\n\t\t\tObjects: sdwan.ScopeObjectArray{\n\t\t\t\t\u0026sdwan.ScopeObjectArgs{\n\t\t\t\t\tObjectType: pulumi.String(\"feature-profile\"),\n\t\t\t\t\tObjectIds: pulumi.StringArray{\n\t\t\t\t\t\tpulumi.String(\"003c4e0b-a2da-486d-8ee7-0e6dd4551bae\"),\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    sdwan = {\n      source = \"pulumi/sdwan\"\n    }\n  }\n}\n\nresource \"sdwan_scope\" \"example\" {\n  name        = \"west1\"\n  description = \"West Coast Domain1\"\n  objects {\n    object_type = \"feature-profile\"\n    object_ids  = [\"003c4e0b-a2da-486d-8ee7-0e6dd4551bae\"]\n  }\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sdwan.Scope;\nimport com.pulumi.sdwan.ScopeArgs;\nimport com.pulumi.sdwan.inputs.ScopeObjectArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new Scope(\"example\", ScopeArgs.builder()\n            .name(\"west1\")\n            .description(\"West Coast Domain1\")\n            .objects(ScopeObjectArgs.builder()\n                .objectType(\"feature-profile\")\n                .objectIds(\"003c4e0b-a2da-486d-8ee7-0e6dd4551bae\")\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: sdwan:Scope\n    properties:\n      name: west1\n      description: West Coast Domain1\n      objects:\n        - objectType: feature-profile\n          objectIds:\n            - 003c4e0b-a2da-486d-8ee7-0e6dd4551bae\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import sdwan:index/scope:Scope example \"f6b2c44c-693c-4763-b010-895aa3d236bd\"\n```\n\n",
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "Description"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the scope"
+                },
+                "objects": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ScopeObject:ScopeObject"
+                    },
+                    "description": "List of objects belonging to the scope"
+                },
+                "users": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of users who reference the scope"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "inputProperties": {
+                "description": {
+                    "type": "string",
+                    "description": "Description"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the scope"
+                },
+                "objects": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ScopeObject:ScopeObject"
+                    },
+                    "description": "List of objects belonging to the scope"
+                },
+                "users": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of users who reference the scope"
+                }
+            },
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Scope resources.\n",
+                "properties": {
+                    "description": {
+                        "type": "string",
+                        "description": "Description"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the scope"
+                    },
+                    "objects": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/ScopeObject:ScopeObject"
+                        },
+                        "description": "List of objects belonging to the scope"
+                    },
+                    "users": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "List of users who reference the scope"
+                    }
+                },
+                "type": "object"
+            }
+        },
         "sdwan:index/securityAppHostingFeatureTemplate:SecurityAppHostingFeatureTemplate": {
             "description": "This resource can manage a Security App Hosting feature template.\n  - Minimum SD-WAN Manager version: `15.0.0`\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sdwan from \"@pulumi/sdwan\";\n\nconst example = new sdwan.SecurityAppHostingFeatureTemplate(\"example\", {\n    name: \"Example\",\n    description: \"My Example\",\n    deviceTypes: [\"vedge-C8000V\"],\n    virtualApplications: [{\n        instanceId: \"2e89c1fe-440a-43f5-9f3a-54a9836fdbb5\",\n        applicationType: \"utd\",\n        nat: true,\n        databaseUrl: false,\n        resourceProfile: \"low\",\n        serviceGatewayIp: \"1.2.3.4/24\",\n        serviceIp: \"1.2.3.5/24\",\n        dataGatewayIp: \"192.0.2.1/24\",\n        dataServiceIp: \"192.0.2.2/24\",\n    }],\n});\n```\n```python\nimport pulumi\nimport pulumi_sdwan as sdwan\n\nexample = sdwan.SecurityAppHostingFeatureTemplate(\"example\",\n    name=\"Example\",\n    description=\"My Example\",\n    device_types=[\"vedge-C8000V\"],\n    virtual_applications=[{\n        \"instance_id\": \"2e89c1fe-440a-43f5-9f3a-54a9836fdbb5\",\n        \"application_type\": \"utd\",\n        \"nat\": True,\n        \"database_url\": False,\n        \"resource_profile\": \"low\",\n        \"service_gateway_ip\": \"1.2.3.4/24\",\n        \"service_ip\": \"1.2.3.5/24\",\n        \"data_gateway_ip\": \"192.0.2.1/24\",\n        \"data_service_ip\": \"192.0.2.2/24\",\n    }])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sdwan = Pulumi.Sdwan;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Sdwan.SecurityAppHostingFeatureTemplate(\"example\", new()\n    {\n        Name = \"Example\",\n        Description = \"My Example\",\n        DeviceTypes = new[]\n        {\n            \"vedge-C8000V\",\n        },\n        VirtualApplications = new[]\n        {\n            new Sdwan.Inputs.SecurityAppHostingFeatureTemplateVirtualApplicationArgs\n            {\n                InstanceId = \"2e89c1fe-440a-43f5-9f3a-54a9836fdbb5\",\n                ApplicationType = \"utd\",\n                Nat = true,\n                DatabaseUrl = false,\n                ResourceProfile = \"low\",\n                ServiceGatewayIp = \"1.2.3.4/24\",\n                ServiceIp = \"1.2.3.5/24\",\n                DataGatewayIp = \"192.0.2.1/24\",\n                DataServiceIp = \"192.0.2.2/24\",\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := sdwan.NewSecurityAppHostingFeatureTemplate(ctx, \"example\", \u0026sdwan.SecurityAppHostingFeatureTemplateArgs{\n\t\t\tName:        pulumi.String(\"Example\"),\n\t\t\tDescription: pulumi.String(\"My Example\"),\n\t\t\tDeviceTypes: pulumi.StringArray{\n\t\t\t\tpulumi.String(\"vedge-C8000V\"),\n\t\t\t},\n\t\t\tVirtualApplications: sdwan.SecurityAppHostingFeatureTemplateVirtualApplicationArray{\n\t\t\t\t\u0026sdwan.SecurityAppHostingFeatureTemplateVirtualApplicationArgs{\n\t\t\t\t\tInstanceId:       pulumi.String(\"2e89c1fe-440a-43f5-9f3a-54a9836fdbb5\"),\n\t\t\t\t\tApplicationType:  pulumi.String(\"utd\"),\n\t\t\t\t\tNat:              pulumi.Bool(true),\n\t\t\t\t\tDatabaseUrl:      pulumi.Bool(false),\n\t\t\t\t\tResourceProfile:  pulumi.String(\"low\"),\n\t\t\t\t\tServiceGatewayIp: pulumi.String(\"1.2.3.4/24\"),\n\t\t\t\t\tServiceIp:        pulumi.String(\"1.2.3.5/24\"),\n\t\t\t\t\tDataGatewayIp:    pulumi.String(\"192.0.2.1/24\"),\n\t\t\t\t\tDataServiceIp:    pulumi.String(\"192.0.2.2/24\"),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    sdwan = {\n      source = \"pulumi/sdwan\"\n    }\n  }\n}\n\nresource \"sdwan_securityapphostingfeaturetemplate\" \"example\" {\n  name         = \"Example\"\n  description  = \"My Example\"\n  device_types = [\"vedge-C8000V\"]\n  virtual_applications {\n    instance_id        = \"2e89c1fe-440a-43f5-9f3a-54a9836fdbb5\"\n    application_type   = \"utd\"\n    nat                = true\n    database_url       = false\n    resource_profile   = \"low\"\n    service_gateway_ip = \"1.2.3.4/24\"\n    service_ip         = \"1.2.3.5/24\"\n    data_gateway_ip    = \"192.0.2.1/24\"\n    data_service_ip    = \"192.0.2.2/24\"\n  }\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sdwan.SecurityAppHostingFeatureTemplate;\nimport com.pulumi.sdwan.SecurityAppHostingFeatureTemplateArgs;\nimport com.pulumi.sdwan.inputs.SecurityAppHostingFeatureTemplateVirtualApplicationArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new SecurityAppHostingFeatureTemplate(\"example\", SecurityAppHostingFeatureTemplateArgs.builder()\n            .name(\"Example\")\n            .description(\"My Example\")\n            .deviceTypes(\"vedge-C8000V\")\n            .virtualApplications(SecurityAppHostingFeatureTemplateVirtualApplicationArgs.builder()\n                .instanceId(\"2e89c1fe-440a-43f5-9f3a-54a9836fdbb5\")\n                .applicationType(\"utd\")\n                .nat(true)\n                .databaseUrl(false)\n                .resourceProfile(\"low\")\n                .serviceGatewayIp(\"1.2.3.4/24\")\n                .serviceIp(\"1.2.3.5/24\")\n                .dataGatewayIp(\"192.0.2.1/24\")\n                .dataServiceIp(\"192.0.2.2/24\")\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: sdwan:SecurityAppHostingFeatureTemplate\n    properties:\n      name: Example\n      description: My Example\n      deviceTypes:\n        - vedge-C8000V\n      virtualApplications:\n        - instanceId: 2e89c1fe-440a-43f5-9f3a-54a9836fdbb5\n          applicationType: utd\n          nat: true\n          databaseUrl: false\n          resourceProfile: low\n          serviceGatewayIp: 1.2.3.4/24\n          serviceIp: 1.2.3.5/24\n          dataGatewayIp: 192.0.2.1/24\n          dataServiceIp: 192.0.2.2/24\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import sdwan:index/securityAppHostingFeatureTemplate:SecurityAppHostingFeatureTemplate example \"f6b2c44c-693c-4763-b010-895aa3d236bd\"\n```\n\n",
             "properties": {
@@ -74678,6 +75284,253 @@
                     "version": {
                         "type": "integer",
                         "description": "The version of the object"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "sdwan:index/serviceAppqoeFeature:ServiceAppqoeFeature": {
+            "description": "\u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e selects which subtree is sent — `forwarder_*` for role \u003cspan pulumi-lang-nodejs=\"`forwarder`\" pulumi-lang-dotnet=\"`Forwarder`\" pulumi-lang-go=\"`forwarder`\" pulumi-lang-python=\"`forwarder`\" pulumi-lang-yaml=\"`forwarder`\" pulumi-lang-java=\"`forwarder`\" pulumi-lang-hcl=\"`forwarder`\"\u003e`forwarder`\u003c/span\u003e, `combined_*` for `forwarderAndServiceNode`(`WithDre`), `service_node_*` for `serviceNode`(`WithDre`); attributes for the wrong role are silently dropped from the request and show as a permanent `pulumi preview` diff. \u003cspan pulumi-lang-nodejs=\"`combinedControllerGroups`\" pulumi-lang-dotnet=\"`CombinedControllerGroups`\" pulumi-lang-go=\"`combinedControllerGroups`\" pulumi-lang-python=\"`combined_controller_groups`\" pulumi-lang-yaml=\"`combinedControllerGroups`\" pulumi-lang-java=\"`combinedControllerGroups`\" pulumi-lang-hcl=\"`combined_controller_groups`\"\u003e`combinedControllerGroups`\u003c/span\u003e, \u003cspan pulumi-lang-nodejs=\"`combinedServiceNodeGroups`\" pulumi-lang-dotnet=\"`CombinedServiceNodeGroups`\" pulumi-lang-go=\"`combinedServiceNodeGroups`\" pulumi-lang-python=\"`combined_service_node_groups`\" pulumi-lang-yaml=\"`combinedServiceNodeGroups`\" pulumi-lang-java=\"`combinedServiceNodeGroups`\" pulumi-lang-hcl=\"`combined_service_node_groups`\"\u003e`combinedServiceNodeGroups`\u003c/span\u003e, and \u003cspan pulumi-lang-nodejs=\"`serviceNodeServiceNodeGroups`\" pulumi-lang-dotnet=\"`ServiceNodeServiceNodeGroups`\" pulumi-lang-go=\"`serviceNodeServiceNodeGroups`\" pulumi-lang-python=\"`service_node_service_node_groups`\" pulumi-lang-yaml=\"`serviceNodeServiceNodeGroups`\" pulumi-lang-java=\"`serviceNodeServiceNodeGroups`\" pulumi-lang-hcl=\"`service_node_service_node_groups`\"\u003e`serviceNodeServiceNodeGroups`\u003c/span\u003e have no configurable fields (Manager fixes their names/addresses) — set each list item to `{}`. \u003cspan pulumi-lang-nodejs=\"`combinedServiceContexts`\" pulumi-lang-dotnet=\"`CombinedServiceContexts`\" pulumi-lang-go=\"`combinedServiceContexts`\" pulumi-lang-python=\"`combined_service_contexts`\" pulumi-lang-yaml=\"`combinedServiceContexts`\" pulumi-lang-java=\"`combinedServiceContexts`\" pulumi-lang-hcl=\"`combined_service_contexts`\"\u003e`combinedServiceContexts`\u003c/span\u003e is required whenever the role is \u003cspan pulumi-lang-nodejs=\"`combined`\" pulumi-lang-dotnet=\"`Combined`\" pulumi-lang-go=\"`combined`\" pulumi-lang-python=\"`combined`\" pulumi-lang-yaml=\"`combined`\" pulumi-lang-java=\"`combined`\" pulumi-lang-hcl=\"`combined`\"\u003e`combined`\u003c/span\u003e: leaving it empty deploys via the API but breaks the Manager GUI's own Save button. A `...WithDre` role requires \u003cspan pulumi-lang-nodejs=\"`virtualApplications`\" pulumi-lang-dotnet=\"`VirtualApplications`\" pulumi-lang-go=\"`virtualApplications`\" pulumi-lang-python=\"`virtual_applications`\" pulumi-lang-yaml=\"`virtualApplications`\" pulumi-lang-java=\"`virtualApplications`\" pulumi-lang-hcl=\"`virtual_applications`\"\u003e`virtualApplications`\u003c/span\u003e with at least one entry (`{}` is fine) — omitting it while DRE is enabled sends an inconsistent payload the GUI never produces. \u003cspan pulumi-lang-nodejs=\"`serviceNodeGroup`\" pulumi-lang-dotnet=\"`ServiceNodeGroup`\" pulumi-lang-go=\"`serviceNodeGroup`\" pulumi-lang-python=\"`service_node_group`\" pulumi-lang-yaml=\"`serviceNodeGroup`\" pulumi-lang-java=\"`serviceNodeGroup`\" pulumi-lang-hcl=\"`service_node_group`\"\u003e`serviceNodeGroup`\u003c/span\u003e is the primary service node group bound to the context; \u003cspan pulumi-lang-nodejs=\"`serviceNodeGroups`\" pulumi-lang-dotnet=\"`ServiceNodeGroups`\" pulumi-lang-go=\"`serviceNodeGroups`\" pulumi-lang-python=\"`service_node_groups`\" pulumi-lang-yaml=\"`serviceNodeGroups`\" pulumi-lang-java=\"`serviceNodeGroups`\" pulumi-lang-hcl=\"`service_node_groups`\"\u003e`serviceNodeGroups`\u003c/span\u003e lists every group bound to it (Manager supports binding more than one) — set both to the same single value/list when there's only one group.\n  - Minimum SD-WAN Manager version: `20.15.0`\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sdwan from \"@pulumi/sdwan\";\n\nconst example = new sdwan.ServiceAppqoeFeature(\"example\", {\n    name: \"Example\",\n    description: \"My Example\",\n    featureProfileId: \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n    appqoeDeviceRole: \"forwarder\",\n    forwarderControllerGroups: [{\n        appnavControllers: [{\n            address: \"192.168.2.1\",\n            vpn: 1,\n        }],\n    }],\n    forwarderServiceNodeGroups: [{\n        serviceNodes: [{\n            address: \"192.168.2.2\",\n        }],\n    }],\n    forwarderServiceContexts: [{\n        appnavControllerGroup: \"ACG-APPQOE\",\n        serviceNodeGroup: \"SNG-APPQOE\",\n        serviceNodeGroups: [\"SNG-APPQOE\"],\n        enable: true,\n        vpn: 0,\n    }],\n});\n```\n```python\nimport pulumi\nimport pulumi_sdwan as sdwan\n\nexample = sdwan.ServiceAppqoeFeature(\"example\",\n    name=\"Example\",\n    description=\"My Example\",\n    feature_profile_id=\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n    appqoe_device_role=\"forwarder\",\n    forwarder_controller_groups=[{\n        \"appnav_controllers\": [{\n            \"address\": \"192.168.2.1\",\n            \"vpn\": 1,\n        }],\n    }],\n    forwarder_service_node_groups=[{\n        \"service_nodes\": [{\n            \"address\": \"192.168.2.2\",\n        }],\n    }],\n    forwarder_service_contexts=[{\n        \"appnav_controller_group\": \"ACG-APPQOE\",\n        \"service_node_group\": \"SNG-APPQOE\",\n        \"service_node_groups\": [\"SNG-APPQOE\"],\n        \"enable\": True,\n        \"vpn\": 0,\n    }])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sdwan = Pulumi.Sdwan;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Sdwan.ServiceAppqoeFeature(\"example\", new()\n    {\n        Name = \"Example\",\n        Description = \"My Example\",\n        FeatureProfileId = \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n        AppqoeDeviceRole = \"forwarder\",\n        ForwarderControllerGroups = new[]\n        {\n            new Sdwan.Inputs.ServiceAppqoeFeatureForwarderControllerGroupArgs\n            {\n                AppnavControllers = new[]\n                {\n                    new Sdwan.Inputs.ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArgs\n                    {\n                        Address = \"192.168.2.1\",\n                        Vpn = 1,\n                    },\n                },\n            },\n        },\n        ForwarderServiceNodeGroups = new[]\n        {\n            new Sdwan.Inputs.ServiceAppqoeFeatureForwarderServiceNodeGroupArgs\n            {\n                ServiceNodes = new[]\n                {\n                    new Sdwan.Inputs.ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArgs\n                    {\n                        Address = \"192.168.2.2\",\n                    },\n                },\n            },\n        },\n        ForwarderServiceContexts = new[]\n        {\n            new Sdwan.Inputs.ServiceAppqoeFeatureForwarderServiceContextArgs\n            {\n                AppnavControllerGroup = \"ACG-APPQOE\",\n                ServiceNodeGroup = \"SNG-APPQOE\",\n                ServiceNodeGroups = new[]\n                {\n                    \"SNG-APPQOE\",\n                },\n                Enable = true,\n                Vpn = 0,\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := sdwan.NewServiceAppqoeFeature(ctx, \"example\", \u0026sdwan.ServiceAppqoeFeatureArgs{\n\t\t\tName:             pulumi.String(\"Example\"),\n\t\t\tDescription:      pulumi.String(\"My Example\"),\n\t\t\tFeatureProfileId: pulumi.String(\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\"),\n\t\t\tAppqoeDeviceRole: pulumi.String(\"forwarder\"),\n\t\t\tForwarderControllerGroups: sdwan.ServiceAppqoeFeatureForwarderControllerGroupArray{\n\t\t\t\t\u0026sdwan.ServiceAppqoeFeatureForwarderControllerGroupArgs{\n\t\t\t\t\tAppnavControllers: sdwan.ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArray{\n\t\t\t\t\t\t\u0026sdwan.ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArgs{\n\t\t\t\t\t\t\tAddress: pulumi.String(\"192.168.2.1\"),\n\t\t\t\t\t\t\tVpn:     pulumi.Int(1),\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t\tForwarderServiceNodeGroups: sdwan.ServiceAppqoeFeatureForwarderServiceNodeGroupArray{\n\t\t\t\t\u0026sdwan.ServiceAppqoeFeatureForwarderServiceNodeGroupArgs{\n\t\t\t\t\tServiceNodes: sdwan.ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArray{\n\t\t\t\t\t\t\u0026sdwan.ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArgs{\n\t\t\t\t\t\t\tAddress: pulumi.String(\"192.168.2.2\"),\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t\tForwarderServiceContexts: sdwan.ServiceAppqoeFeatureForwarderServiceContextArray{\n\t\t\t\t\u0026sdwan.ServiceAppqoeFeatureForwarderServiceContextArgs{\n\t\t\t\t\tAppnavControllerGroup: pulumi.String(\"ACG-APPQOE\"),\n\t\t\t\t\tServiceNodeGroup:      pulumi.String(\"SNG-APPQOE\"),\n\t\t\t\t\tServiceNodeGroups: pulumi.StringArray{\n\t\t\t\t\t\tpulumi.String(\"SNG-APPQOE\"),\n\t\t\t\t\t},\n\t\t\t\t\tEnable: pulumi.Bool(true),\n\t\t\t\t\tVpn:    pulumi.Int(0),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    sdwan = {\n      source = \"pulumi/sdwan\"\n    }\n  }\n}\n\nresource \"sdwan_serviceappqoefeature\" \"example\" {\n  name               = \"Example\"\n  description        = \"My Example\"\n  feature_profile_id = \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\"\n  appqoe_device_role = \"forwarder\"\n  forwarder_controller_groups {\n    appnav_controllers {\n      address = \"192.168.2.1\"\n      vpn     = 1\n    }\n  }\n  forwarder_service_node_groups {\n    service_nodes {\n      address = \"192.168.2.2\"\n    }\n  }\n  forwarder_service_contexts {\n    appnav_controller_group = \"ACG-APPQOE\"\n    service_node_group      = \"SNG-APPQOE\"\n    service_node_groups     = [\"SNG-APPQOE\"]\n    enable                  = true\n    vpn                     = 0\n  }\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sdwan.ServiceAppqoeFeature;\nimport com.pulumi.sdwan.ServiceAppqoeFeatureArgs;\nimport com.pulumi.sdwan.inputs.ServiceAppqoeFeatureForwarderControllerGroupArgs;\nimport com.pulumi.sdwan.inputs.ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArgs;\nimport com.pulumi.sdwan.inputs.ServiceAppqoeFeatureForwarderServiceNodeGroupArgs;\nimport com.pulumi.sdwan.inputs.ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArgs;\nimport com.pulumi.sdwan.inputs.ServiceAppqoeFeatureForwarderServiceContextArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new ServiceAppqoeFeature(\"example\", ServiceAppqoeFeatureArgs.builder()\n            .name(\"Example\")\n            .description(\"My Example\")\n            .featureProfileId(\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\")\n            .appqoeDeviceRole(\"forwarder\")\n            .forwarderControllerGroups(ServiceAppqoeFeatureForwarderControllerGroupArgs.builder()\n                .appnavControllers(ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArgs.builder()\n                    .address(\"192.168.2.1\")\n                    .vpn(1)\n                    .build())\n                .build())\n            .forwarderServiceNodeGroups(ServiceAppqoeFeatureForwarderServiceNodeGroupArgs.builder()\n                .serviceNodes(ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArgs.builder()\n                    .address(\"192.168.2.2\")\n                    .build())\n                .build())\n            .forwarderServiceContexts(ServiceAppqoeFeatureForwarderServiceContextArgs.builder()\n                .appnavControllerGroup(\"ACG-APPQOE\")\n                .serviceNodeGroup(\"SNG-APPQOE\")\n                .serviceNodeGroups(\"SNG-APPQOE\")\n                .enable(true)\n                .vpn(0)\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: sdwan:ServiceAppqoeFeature\n    properties:\n      name: Example\n      description: My Example\n      featureProfileId: f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\n      appqoeDeviceRole: forwarder\n      forwarderControllerGroups:\n        - appnavControllers:\n            - address: 192.168.2.1\n              vpn: 1\n      forwarderServiceNodeGroups:\n        - serviceNodes:\n            - address: 192.168.2.2\n      forwarderServiceContexts:\n        - appnavControllerGroup: ACG-APPQOE\n          serviceNodeGroup: SNG-APPQOE\n          serviceNodeGroups:\n            - SNG-APPQOE\n          enable: true\n          vpn: 0\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\nExpected import identifier with the format: \"service_appqoe_feature_id,feature_profile_id\"\n\n```sh\n$ pulumi import sdwan:index/serviceAppqoeFeature:ServiceAppqoeFeature example \"f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\"\n```\n\n",
+            "properties": {
+                "appqoeDeviceRole": {
+                    "type": "string",
+                    "description": "Appqoe Device Role\n  - Choices: \u003cspan pulumi-lang-nodejs=\"`forwarder`\" pulumi-lang-dotnet=\"`Forwarder`\" pulumi-lang-go=\"`forwarder`\" pulumi-lang-python=\"`forwarder`\" pulumi-lang-yaml=\"`forwarder`\" pulumi-lang-java=\"`forwarder`\" pulumi-lang-hcl=\"`forwarder`\"\u003e`forwarder`\u003c/span\u003e, `forwarderAndServiceNode`, `serviceNode`, `serviceNodeWithDre`, `forwarderAndServiceNodeWithDre`"
+                },
+                "combinedControllerGroups": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureCombinedControllerGroup:ServiceAppqoeFeatureCombinedControllerGroup"
+                    },
+                    "description": "Appnav controller group name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `forwarderAndServiceNode`"
+                },
+                "combinedServiceContexts": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureCombinedServiceContext:ServiceAppqoeFeatureCombinedServiceContext"
+                    },
+                    "description": "Appqoe, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `forwarderAndServiceNode`"
+                },
+                "combinedServiceNodeGroups": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureCombinedServiceNodeGroup:ServiceAppqoeFeatureCombinedServiceNodeGroup"
+                    },
+                    "description": "Name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `forwarderAndServiceNode`"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "The description of the Feature"
+                },
+                "featureProfileId": {
+                    "type": "string",
+                    "description": "Feature Profile ID"
+                },
+                "forwarderControllerGroups": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureForwarderControllerGroup:ServiceAppqoeFeatureForwarderControllerGroup"
+                    },
+                    "description": "Appnav controller group name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e equal to \u003cspan pulumi-lang-nodejs=\"`forwarder`\" pulumi-lang-dotnet=\"`Forwarder`\" pulumi-lang-go=\"`forwarder`\" pulumi-lang-python=\"`forwarder`\" pulumi-lang-yaml=\"`forwarder`\" pulumi-lang-java=\"`forwarder`\" pulumi-lang-hcl=\"`forwarder`\"\u003e`forwarder`\u003c/span\u003e"
+                },
+                "forwarderServiceContexts": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureForwarderServiceContext:ServiceAppqoeFeatureForwarderServiceContext"
+                    },
+                    "description": "Appqoe, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e equal to \u003cspan pulumi-lang-nodejs=\"`forwarder`\" pulumi-lang-dotnet=\"`Forwarder`\" pulumi-lang-go=\"`forwarder`\" pulumi-lang-python=\"`forwarder`\" pulumi-lang-yaml=\"`forwarder`\" pulumi-lang-java=\"`forwarder`\" pulumi-lang-hcl=\"`forwarder`\"\u003e`forwarder`\u003c/span\u003e"
+                },
+                "forwarderServiceNodeGroups": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureForwarderServiceNodeGroup:ServiceAppqoeFeatureForwarderServiceNodeGroup"
+                    },
+                    "description": "Name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e equal to \u003cspan pulumi-lang-nodejs=\"`forwarder`\" pulumi-lang-dotnet=\"`Forwarder`\" pulumi-lang-go=\"`forwarder`\" pulumi-lang-python=\"`forwarder`\" pulumi-lang-yaml=\"`forwarder`\" pulumi-lang-java=\"`forwarder`\" pulumi-lang-hcl=\"`forwarder`\"\u003e`forwarder`\u003c/span\u003e"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the Feature"
+                },
+                "serviceNodeServiceNodeGroups": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureServiceNodeServiceNodeGroup:ServiceAppqoeFeatureServiceNodeServiceNodeGroup"
+                    },
+                    "description": "Name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `serviceNode`"
+                },
+                "version": {
+                    "type": "integer",
+                    "description": "The version of the Feature"
+                },
+                "virtualApplications": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureVirtualApplication:ServiceAppqoeFeatureVirtualApplication"
+                    },
+                    "description": "Virtual application Instance, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `Dre`"
+                }
+            },
+            "required": [
+                "appqoeDeviceRole",
+                "featureProfileId",
+                "name",
+                "version"
+            ],
+            "inputProperties": {
+                "appqoeDeviceRole": {
+                    "type": "string",
+                    "description": "Appqoe Device Role\n  - Choices: \u003cspan pulumi-lang-nodejs=\"`forwarder`\" pulumi-lang-dotnet=\"`Forwarder`\" pulumi-lang-go=\"`forwarder`\" pulumi-lang-python=\"`forwarder`\" pulumi-lang-yaml=\"`forwarder`\" pulumi-lang-java=\"`forwarder`\" pulumi-lang-hcl=\"`forwarder`\"\u003e`forwarder`\u003c/span\u003e, `forwarderAndServiceNode`, `serviceNode`, `serviceNodeWithDre`, `forwarderAndServiceNodeWithDre`"
+                },
+                "combinedControllerGroups": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureCombinedControllerGroup:ServiceAppqoeFeatureCombinedControllerGroup"
+                    },
+                    "description": "Appnav controller group name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `forwarderAndServiceNode`"
+                },
+                "combinedServiceContexts": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureCombinedServiceContext:ServiceAppqoeFeatureCombinedServiceContext"
+                    },
+                    "description": "Appqoe, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `forwarderAndServiceNode`"
+                },
+                "combinedServiceNodeGroups": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureCombinedServiceNodeGroup:ServiceAppqoeFeatureCombinedServiceNodeGroup"
+                    },
+                    "description": "Name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `forwarderAndServiceNode`"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "The description of the Feature"
+                },
+                "featureProfileId": {
+                    "type": "string",
+                    "description": "Feature Profile ID"
+                },
+                "forwarderControllerGroups": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureForwarderControllerGroup:ServiceAppqoeFeatureForwarderControllerGroup"
+                    },
+                    "description": "Appnav controller group name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e equal to \u003cspan pulumi-lang-nodejs=\"`forwarder`\" pulumi-lang-dotnet=\"`Forwarder`\" pulumi-lang-go=\"`forwarder`\" pulumi-lang-python=\"`forwarder`\" pulumi-lang-yaml=\"`forwarder`\" pulumi-lang-java=\"`forwarder`\" pulumi-lang-hcl=\"`forwarder`\"\u003e`forwarder`\u003c/span\u003e"
+                },
+                "forwarderServiceContexts": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureForwarderServiceContext:ServiceAppqoeFeatureForwarderServiceContext"
+                    },
+                    "description": "Appqoe, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e equal to \u003cspan pulumi-lang-nodejs=\"`forwarder`\" pulumi-lang-dotnet=\"`Forwarder`\" pulumi-lang-go=\"`forwarder`\" pulumi-lang-python=\"`forwarder`\" pulumi-lang-yaml=\"`forwarder`\" pulumi-lang-java=\"`forwarder`\" pulumi-lang-hcl=\"`forwarder`\"\u003e`forwarder`\u003c/span\u003e"
+                },
+                "forwarderServiceNodeGroups": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureForwarderServiceNodeGroup:ServiceAppqoeFeatureForwarderServiceNodeGroup"
+                    },
+                    "description": "Name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e equal to \u003cspan pulumi-lang-nodejs=\"`forwarder`\" pulumi-lang-dotnet=\"`Forwarder`\" pulumi-lang-go=\"`forwarder`\" pulumi-lang-python=\"`forwarder`\" pulumi-lang-yaml=\"`forwarder`\" pulumi-lang-java=\"`forwarder`\" pulumi-lang-hcl=\"`forwarder`\"\u003e`forwarder`\u003c/span\u003e"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the Feature"
+                },
+                "serviceNodeServiceNodeGroups": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureServiceNodeServiceNodeGroup:ServiceAppqoeFeatureServiceNodeServiceNodeGroup"
+                    },
+                    "description": "Name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `serviceNode`"
+                },
+                "virtualApplications": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureVirtualApplication:ServiceAppqoeFeatureVirtualApplication"
+                    },
+                    "description": "Virtual application Instance, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `Dre`"
+                }
+            },
+            "requiredInputs": [
+                "appqoeDeviceRole",
+                "featureProfileId"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering ServiceAppqoeFeature resources.\n",
+                "properties": {
+                    "appqoeDeviceRole": {
+                        "type": "string",
+                        "description": "Appqoe Device Role\n  - Choices: \u003cspan pulumi-lang-nodejs=\"`forwarder`\" pulumi-lang-dotnet=\"`Forwarder`\" pulumi-lang-go=\"`forwarder`\" pulumi-lang-python=\"`forwarder`\" pulumi-lang-yaml=\"`forwarder`\" pulumi-lang-java=\"`forwarder`\" pulumi-lang-hcl=\"`forwarder`\"\u003e`forwarder`\u003c/span\u003e, `forwarderAndServiceNode`, `serviceNode`, `serviceNodeWithDre`, `forwarderAndServiceNodeWithDre`"
+                    },
+                    "combinedControllerGroups": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureCombinedControllerGroup:ServiceAppqoeFeatureCombinedControllerGroup"
+                        },
+                        "description": "Appnav controller group name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `forwarderAndServiceNode`"
+                    },
+                    "combinedServiceContexts": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureCombinedServiceContext:ServiceAppqoeFeatureCombinedServiceContext"
+                        },
+                        "description": "Appqoe, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `forwarderAndServiceNode`"
+                    },
+                    "combinedServiceNodeGroups": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureCombinedServiceNodeGroup:ServiceAppqoeFeatureCombinedServiceNodeGroup"
+                        },
+                        "description": "Name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `forwarderAndServiceNode`"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "The description of the Feature"
+                    },
+                    "featureProfileId": {
+                        "type": "string",
+                        "description": "Feature Profile ID"
+                    },
+                    "forwarderControllerGroups": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureForwarderControllerGroup:ServiceAppqoeFeatureForwarderControllerGroup"
+                        },
+                        "description": "Appnav controller group name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e equal to \u003cspan pulumi-lang-nodejs=\"`forwarder`\" pulumi-lang-dotnet=\"`Forwarder`\" pulumi-lang-go=\"`forwarder`\" pulumi-lang-python=\"`forwarder`\" pulumi-lang-yaml=\"`forwarder`\" pulumi-lang-java=\"`forwarder`\" pulumi-lang-hcl=\"`forwarder`\"\u003e`forwarder`\u003c/span\u003e"
+                    },
+                    "forwarderServiceContexts": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureForwarderServiceContext:ServiceAppqoeFeatureForwarderServiceContext"
+                        },
+                        "description": "Appqoe, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e equal to \u003cspan pulumi-lang-nodejs=\"`forwarder`\" pulumi-lang-dotnet=\"`Forwarder`\" pulumi-lang-go=\"`forwarder`\" pulumi-lang-python=\"`forwarder`\" pulumi-lang-yaml=\"`forwarder`\" pulumi-lang-java=\"`forwarder`\" pulumi-lang-hcl=\"`forwarder`\"\u003e`forwarder`\u003c/span\u003e"
+                    },
+                    "forwarderServiceNodeGroups": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureForwarderServiceNodeGroup:ServiceAppqoeFeatureForwarderServiceNodeGroup"
+                        },
+                        "description": "Name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e equal to \u003cspan pulumi-lang-nodejs=\"`forwarder`\" pulumi-lang-dotnet=\"`Forwarder`\" pulumi-lang-go=\"`forwarder`\" pulumi-lang-python=\"`forwarder`\" pulumi-lang-yaml=\"`forwarder`\" pulumi-lang-java=\"`forwarder`\" pulumi-lang-hcl=\"`forwarder`\"\u003e`forwarder`\u003c/span\u003e"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the Feature"
+                    },
+                    "serviceNodeServiceNodeGroups": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureServiceNodeServiceNodeGroup:ServiceAppqoeFeatureServiceNodeServiceNodeGroup"
+                        },
+                        "description": "Name, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `serviceNode`"
+                    },
+                    "version": {
+                        "type": "integer",
+                        "description": "The version of the Feature"
+                    },
+                    "virtualApplications": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/ServiceAppqoeFeatureVirtualApplication:ServiceAppqoeFeatureVirtualApplication"
+                        },
+                        "description": "Virtual application Instance, Attribute conditional on \u003cspan pulumi-lang-nodejs=\"`appqoeDeviceRole`\" pulumi-lang-dotnet=\"`AppqoeDeviceRole`\" pulumi-lang-go=\"`appqoeDeviceRole`\" pulumi-lang-python=\"`appqoe_device_role`\" pulumi-lang-yaml=\"`appqoeDeviceRole`\" pulumi-lang-java=\"`appqoeDeviceRole`\" pulumi-lang-hcl=\"`appqoe_device_role`\"\u003e`appqoeDeviceRole`\u003c/span\u003e containing `Dre`"
                     }
                 },
                 "type": "object"
@@ -93296,6 +94149,142 @@
                     "version": {
                         "type": "integer",
                         "description": "The version of the Feature"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "sdwan:index/transportCellularControllerFeatureAssociateCellularProfileFeature:TransportCellularControllerFeatureAssociateCellularProfileFeature": {
+            "description": "This resource can manage a Transport Cellular Controller Feature Associate Cellular Profile Feature .\n  - Minimum SD-WAN Manager version: `20.15.0`\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sdwan from \"@pulumi/sdwan\";\n\nconst example = new sdwan.TransportCellularControllerFeatureAssociateCellularProfileFeature(\"example\", {\n    featureProfileId: \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n    transportCellularControllerFeatureId: \"140331f6-5418-4755-a059-13c77eb96037\",\n    transportCellularProfileFeatureId: \"140331f6-5418-4755-a059-13c77eb96037\",\n});\n```\n```python\nimport pulumi\nimport pulumi_sdwan as sdwan\n\nexample = sdwan.TransportCellularControllerFeatureAssociateCellularProfileFeature(\"example\",\n    feature_profile_id=\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n    transport_cellular_controller_feature_id=\"140331f6-5418-4755-a059-13c77eb96037\",\n    transport_cellular_profile_feature_id=\"140331f6-5418-4755-a059-13c77eb96037\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sdwan = Pulumi.Sdwan;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Sdwan.TransportCellularControllerFeatureAssociateCellularProfileFeature(\"example\", new()\n    {\n        FeatureProfileId = \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n        TransportCellularControllerFeatureId = \"140331f6-5418-4755-a059-13c77eb96037\",\n        TransportCellularProfileFeatureId = \"140331f6-5418-4755-a059-13c77eb96037\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := sdwan.NewTransportCellularControllerFeatureAssociateCellularProfileFeature(ctx, \"example\", \u0026sdwan.TransportCellularControllerFeatureAssociateCellularProfileFeatureArgs{\n\t\t\tFeatureProfileId:                     pulumi.String(\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\"),\n\t\t\tTransportCellularControllerFeatureId: pulumi.String(\"140331f6-5418-4755-a059-13c77eb96037\"),\n\t\t\tTransportCellularProfileFeatureId:    pulumi.String(\"140331f6-5418-4755-a059-13c77eb96037\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    sdwan = {\n      source = \"pulumi/sdwan\"\n    }\n  }\n}\n\nresource \"sdwan_transportcellularcontrollerfeatureassociatecellularprofilefeature\" \"example\" {\n  feature_profile_id                       = \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\"\n  transport_cellular_controller_feature_id = \"140331f6-5418-4755-a059-13c77eb96037\"\n  transport_cellular_profile_feature_id    = \"140331f6-5418-4755-a059-13c77eb96037\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sdwan.TransportCellularControllerFeatureAssociateCellularProfileFeature;\nimport com.pulumi.sdwan.TransportCellularControllerFeatureAssociateCellularProfileFeatureArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new TransportCellularControllerFeatureAssociateCellularProfileFeature(\"example\", TransportCellularControllerFeatureAssociateCellularProfileFeatureArgs.builder()\n            .featureProfileId(\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\")\n            .transportCellularControllerFeatureId(\"140331f6-5418-4755-a059-13c77eb96037\")\n            .transportCellularProfileFeatureId(\"140331f6-5418-4755-a059-13c77eb96037\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: sdwan:TransportCellularControllerFeatureAssociateCellularProfileFeature\n    properties:\n      featureProfileId: f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\n      transportCellularControllerFeatureId: 140331f6-5418-4755-a059-13c77eb96037\n      transportCellularProfileFeatureId: 140331f6-5418-4755-a059-13c77eb96037\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\nExpected import identifier with the format: \"transport_cellular_controller_feature_associate_cellular_profile_feature_id,feature_profile_id,transport_cellular_controller_feature_id\"\n\n```sh\n$ pulumi import sdwan:index/transportCellularControllerFeatureAssociateCellularProfileFeature:TransportCellularControllerFeatureAssociateCellularProfileFeature example \"f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037\"\n```\n\n",
+            "properties": {
+                "featureProfileId": {
+                    "type": "string",
+                    "description": "Feature Profile ID\n"
+                },
+                "transportCellularControllerFeatureId": {
+                    "type": "string",
+                    "description": "Transport Cellular Controller Feature ID\n"
+                },
+                "transportCellularProfileFeatureId": {
+                    "type": "string",
+                    "description": "Transport Cellular Profile Feature ID\n"
+                },
+                "version": {
+                    "type": "integer",
+                    "description": "The version of the object\n"
+                }
+            },
+            "required": [
+                "featureProfileId",
+                "transportCellularControllerFeatureId",
+                "transportCellularProfileFeatureId",
+                "version"
+            ],
+            "inputProperties": {
+                "featureProfileId": {
+                    "type": "string",
+                    "description": "Feature Profile ID\n"
+                },
+                "transportCellularControllerFeatureId": {
+                    "type": "string",
+                    "description": "Transport Cellular Controller Feature ID\n"
+                },
+                "transportCellularProfileFeatureId": {
+                    "type": "string",
+                    "description": "Transport Cellular Profile Feature ID\n"
+                }
+            },
+            "requiredInputs": [
+                "featureProfileId",
+                "transportCellularControllerFeatureId",
+                "transportCellularProfileFeatureId"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering TransportCellularControllerFeatureAssociateCellularProfileFeature resources.\n",
+                "properties": {
+                    "featureProfileId": {
+                        "type": "string",
+                        "description": "Feature Profile ID\n"
+                    },
+                    "transportCellularControllerFeatureId": {
+                        "type": "string",
+                        "description": "Transport Cellular Controller Feature ID\n"
+                    },
+                    "transportCellularProfileFeatureId": {
+                        "type": "string",
+                        "description": "Transport Cellular Profile Feature ID\n"
+                    },
+                    "version": {
+                        "type": "integer",
+                        "description": "The version of the object\n"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "sdwan:index/transportCellularControllerFeatureAssociateGpsFeature:TransportCellularControllerFeatureAssociateGpsFeature": {
+            "description": "This resource can manage a Transport Cellular Controller Feature Associate GPS Feature .\n  - Minimum SD-WAN Manager version: `20.15.0`\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sdwan from \"@pulumi/sdwan\";\n\nconst example = new sdwan.TransportCellularControllerFeatureAssociateGpsFeature(\"example\", {\n    featureProfileId: \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n    transportCellularControllerFeatureId: \"140331f6-5418-4755-a059-13c77eb96037\",\n    transportGpsFeatureId: \"140331f6-5418-4755-a059-13c77eb96037\",\n});\n```\n```python\nimport pulumi\nimport pulumi_sdwan as sdwan\n\nexample = sdwan.TransportCellularControllerFeatureAssociateGpsFeature(\"example\",\n    feature_profile_id=\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n    transport_cellular_controller_feature_id=\"140331f6-5418-4755-a059-13c77eb96037\",\n    transport_gps_feature_id=\"140331f6-5418-4755-a059-13c77eb96037\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sdwan = Pulumi.Sdwan;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Sdwan.TransportCellularControllerFeatureAssociateGpsFeature(\"example\", new()\n    {\n        FeatureProfileId = \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n        TransportCellularControllerFeatureId = \"140331f6-5418-4755-a059-13c77eb96037\",\n        TransportGpsFeatureId = \"140331f6-5418-4755-a059-13c77eb96037\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := sdwan.NewTransportCellularControllerFeatureAssociateGpsFeature(ctx, \"example\", \u0026sdwan.TransportCellularControllerFeatureAssociateGpsFeatureArgs{\n\t\t\tFeatureProfileId:                     pulumi.String(\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\"),\n\t\t\tTransportCellularControllerFeatureId: pulumi.String(\"140331f6-5418-4755-a059-13c77eb96037\"),\n\t\t\tTransportGpsFeatureId:                pulumi.String(\"140331f6-5418-4755-a059-13c77eb96037\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    sdwan = {\n      source = \"pulumi/sdwan\"\n    }\n  }\n}\n\nresource \"sdwan_transportcellularcontrollerfeatureassociategpsfeature\" \"example\" {\n  feature_profile_id                       = \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\"\n  transport_cellular_controller_feature_id = \"140331f6-5418-4755-a059-13c77eb96037\"\n  transport_gps_feature_id                 = \"140331f6-5418-4755-a059-13c77eb96037\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sdwan.TransportCellularControllerFeatureAssociateGpsFeature;\nimport com.pulumi.sdwan.TransportCellularControllerFeatureAssociateGpsFeatureArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new TransportCellularControllerFeatureAssociateGpsFeature(\"example\", TransportCellularControllerFeatureAssociateGpsFeatureArgs.builder()\n            .featureProfileId(\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\")\n            .transportCellularControllerFeatureId(\"140331f6-5418-4755-a059-13c77eb96037\")\n            .transportGpsFeatureId(\"140331f6-5418-4755-a059-13c77eb96037\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: sdwan:TransportCellularControllerFeatureAssociateGpsFeature\n    properties:\n      featureProfileId: f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\n      transportCellularControllerFeatureId: 140331f6-5418-4755-a059-13c77eb96037\n      transportGpsFeatureId: 140331f6-5418-4755-a059-13c77eb96037\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\nExpected import identifier with the format: \"transport_cellular_controller_feature_associate_gps_feature_id,feature_profile_id,transport_cellular_controller_feature_id\"\n\n```sh\n$ pulumi import sdwan:index/transportCellularControllerFeatureAssociateGpsFeature:TransportCellularControllerFeatureAssociateGpsFeature example \"f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037\"\n```\n\n",
+            "properties": {
+                "featureProfileId": {
+                    "type": "string",
+                    "description": "Feature Profile ID\n"
+                },
+                "transportCellularControllerFeatureId": {
+                    "type": "string",
+                    "description": "Transport Cellular Controller Feature ID\n"
+                },
+                "transportGpsFeatureId": {
+                    "type": "string",
+                    "description": "Transport GPS Feature ID\n"
+                },
+                "version": {
+                    "type": "integer",
+                    "description": "The version of the object\n"
+                }
+            },
+            "required": [
+                "featureProfileId",
+                "transportCellularControllerFeatureId",
+                "transportGpsFeatureId",
+                "version"
+            ],
+            "inputProperties": {
+                "featureProfileId": {
+                    "type": "string",
+                    "description": "Feature Profile ID\n"
+                },
+                "transportCellularControllerFeatureId": {
+                    "type": "string",
+                    "description": "Transport Cellular Controller Feature ID\n"
+                },
+                "transportGpsFeatureId": {
+                    "type": "string",
+                    "description": "Transport GPS Feature ID\n"
+                }
+            },
+            "requiredInputs": [
+                "featureProfileId",
+                "transportCellularControllerFeatureId",
+                "transportGpsFeatureId"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering TransportCellularControllerFeatureAssociateGpsFeature resources.\n",
+                "properties": {
+                    "featureProfileId": {
+                        "type": "string",
+                        "description": "Feature Profile ID\n"
+                    },
+                    "transportCellularControllerFeatureId": {
+                        "type": "string",
+                        "description": "Transport Cellular Controller Feature ID\n"
+                    },
+                    "transportGpsFeatureId": {
+                        "type": "string",
+                        "description": "Transport GPS Feature ID\n"
+                    },
+                    "version": {
+                        "type": "integer",
+                        "description": "The version of the object\n"
                     }
                 },
                 "type": "object"
@@ -129561,6 +130550,14 @@
                         "description": "Business Relevance\n",
                         "type": "string"
                     },
+                    "endpointType": {
+                        "description": "Endpoint Type\n",
+                        "type": "string"
+                    },
+                    "endpointValue": {
+                        "description": "Endpoint Value\n",
+                        "type": "string"
+                    },
                     "id": {
                         "description": "The id of the object\n",
                         "type": "string"
@@ -129593,6 +130590,8 @@
                     "applicationFamily",
                     "applicationGroup",
                     "businessRelevance",
+                    "endpointType",
+                    "endpointValue",
                     "id",
                     "l3l4s",
                     "serverNames",
@@ -135679,6 +136678,61 @@
                 "type": "object"
             }
         },
+        "sdwan:index/getScope:getScope": {
+            "description": "This data source can read the Scope .\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sdwan from \"@pulumi/sdwan\";\n\nconst example = sdwan.getScope({\n    id: \"f6b2c44c-693c-4763-b010-895aa3d236bd\",\n});\n```\n```python\nimport pulumi\nimport pulumi_sdwan as sdwan\n\nexample = sdwan.get_scope(id=\"f6b2c44c-693c-4763-b010-895aa3d236bd\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sdwan = Pulumi.Sdwan;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Sdwan.GetScope.Invoke(new()\n    {\n        Id = \"f6b2c44c-693c-4763-b010-895aa3d236bd\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := sdwan.GetScope(ctx, \u0026sdwan.LookupScopeArgs{\n\t\t\tId: \"f6b2c44c-693c-4763-b010-895aa3d236bd\",\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    sdwan = {\n      source = \"pulumi/sdwan\"\n    }\n  }\n}\n\ndata \"sdwan_getscope\" \"example\" {\n  id = \"f6b2c44c-693c-4763-b010-895aa3d236bd\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sdwan.SdwanFunctions;\nimport com.pulumi.sdwan.inputs.GetScopeArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = SdwanFunctions.getScope(GetScopeArgs.builder()\n            .id(\"f6b2c44c-693c-4763-b010-895aa3d236bd\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: sdwan:getScope\n      arguments:\n        id: f6b2c44c-693c-4763-b010-895aa3d236bd\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getScope.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the object\n"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "id"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getScope.\n",
+                "properties": {
+                    "description": {
+                        "description": "Description\n",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The id of the object\n",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "The name of the scope\n",
+                        "type": "string"
+                    },
+                    "objects": {
+                        "description": "List of objects belonging to the scope\n",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/getScopeObject:getScopeObject"
+                        },
+                        "type": "array"
+                    },
+                    "users": {
+                        "description": "List of users who reference the scope\n",
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "description",
+                    "id",
+                    "name",
+                    "objects",
+                    "users"
+                ],
+                "type": "object"
+            }
+        },
         "sdwan:index/getSecurityAppHostingFeatureTemplate:getSecurityAppHostingFeatureTemplate": {
             "description": "This data source can read the Security App Hosting feature template.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sdwan from \"@pulumi/sdwan\";\n\nconst example = sdwan.getSecurityAppHostingFeatureTemplate({\n    id: \"f6b2c44c-693c-4763-b010-895aa3d236bd\",\n});\n```\n```python\nimport pulumi\nimport pulumi_sdwan as sdwan\n\nexample = sdwan.get_security_app_hosting_feature_template(id=\"f6b2c44c-693c-4763-b010-895aa3d236bd\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sdwan = Pulumi.Sdwan;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Sdwan.GetSecurityAppHostingFeatureTemplate.Invoke(new()\n    {\n        Id = \"f6b2c44c-693c-4763-b010-895aa3d236bd\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := sdwan.GetSecurityAppHostingFeatureTemplate(ctx, \u0026sdwan.LookupSecurityAppHostingFeatureTemplateArgs{\n\t\t\tId: pulumi.StringRef(\"f6b2c44c-693c-4763-b010-895aa3d236bd\"),\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    sdwan = {\n      source = \"pulumi/sdwan\"\n    }\n  }\n}\n\ndata \"sdwan_getsecurityapphostingfeaturetemplate\" \"example\" {\n  id = \"f6b2c44c-693c-4763-b010-895aa3d236bd\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sdwan.SdwanFunctions;\nimport com.pulumi.sdwan.inputs.GetSecurityAppHostingFeatureTemplateArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = SdwanFunctions.getSecurityAppHostingFeatureTemplate(GetSecurityAppHostingFeatureTemplateArgs.builder()\n            .id(\"f6b2c44c-693c-4763-b010-895aa3d236bd\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: sdwan:getSecurityAppHostingFeatureTemplate\n      arguments:\n        id: f6b2c44c-693c-4763-b010-895aa3d236bd\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
             "inputs": {
@@ -135888,6 +136942,132 @@
                     "unifiedLogging",
                     "useCase",
                     "version"
+                ],
+                "type": "object"
+            }
+        },
+        "sdwan:index/getServiceAppqoeFeature:getServiceAppqoeFeature": {
+            "description": "This data source can read the Service AppQoE Feature.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sdwan from \"@pulumi/sdwan\";\n\nconst example = sdwan.getServiceAppqoeFeature({\n    id: \"f6b2c44c-693c-4763-b010-895aa3d236bd\",\n    featureProfileId: \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n});\n```\n```python\nimport pulumi\nimport pulumi_sdwan as sdwan\n\nexample = sdwan.get_service_appqoe_feature(id=\"f6b2c44c-693c-4763-b010-895aa3d236bd\",\n    feature_profile_id=\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sdwan = Pulumi.Sdwan;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Sdwan.GetServiceAppqoeFeature.Invoke(new()\n    {\n        Id = \"f6b2c44c-693c-4763-b010-895aa3d236bd\",\n        FeatureProfileId = \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := sdwan.GetServiceAppqoeFeature(ctx, \u0026sdwan.LookupServiceAppqoeFeatureArgs{\n\t\t\tId:               pulumi.StringRef(\"f6b2c44c-693c-4763-b010-895aa3d236bd\"),\n\t\t\tFeatureProfileId: \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    sdwan = {\n      source = \"pulumi/sdwan\"\n    }\n  }\n}\n\ndata \"sdwan_getserviceappqoefeature\" \"example\" {\n  id                 = \"f6b2c44c-693c-4763-b010-895aa3d236bd\"\n  feature_profile_id = \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sdwan.SdwanFunctions;\nimport com.pulumi.sdwan.inputs.GetServiceAppqoeFeatureArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = SdwanFunctions.getServiceAppqoeFeature(GetServiceAppqoeFeatureArgs.builder()\n            .id(\"f6b2c44c-693c-4763-b010-895aa3d236bd\")\n            .featureProfileId(\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: sdwan:getServiceAppqoeFeature\n      arguments:\n        id: f6b2c44c-693c-4763-b010-895aa3d236bd\n        featureProfileId: f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getServiceAppqoeFeature.\n",
+                "properties": {
+                    "featureProfileId": {
+                        "type": "string",
+                        "description": "Feature Profile ID\n"
+                    },
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the Feature\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the Feature\n"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "featureProfileId"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getServiceAppqoeFeature.\n",
+                "properties": {
+                    "appqoeDeviceRole": {
+                        "description": "Appqoe Device Role\n",
+                        "type": "string"
+                    },
+                    "combinedControllerGroups": {
+                        "description": "Appnav controller group name\n",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/getServiceAppqoeFeatureCombinedControllerGroup:getServiceAppqoeFeatureCombinedControllerGroup"
+                        },
+                        "type": "array"
+                    },
+                    "combinedServiceContexts": {
+                        "description": "Appqoe\n",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/getServiceAppqoeFeatureCombinedServiceContext:getServiceAppqoeFeatureCombinedServiceContext"
+                        },
+                        "type": "array"
+                    },
+                    "combinedServiceNodeGroups": {
+                        "description": "Name\n",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/getServiceAppqoeFeatureCombinedServiceNodeGroup:getServiceAppqoeFeatureCombinedServiceNodeGroup"
+                        },
+                        "type": "array"
+                    },
+                    "description": {
+                        "description": "The description of the Feature\n",
+                        "type": "string"
+                    },
+                    "featureProfileId": {
+                        "description": "Feature Profile ID\n",
+                        "type": "string"
+                    },
+                    "forwarderControllerGroups": {
+                        "description": "Appnav controller group name\n",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/getServiceAppqoeFeatureForwarderControllerGroup:getServiceAppqoeFeatureForwarderControllerGroup"
+                        },
+                        "type": "array"
+                    },
+                    "forwarderServiceContexts": {
+                        "description": "Appqoe\n",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/getServiceAppqoeFeatureForwarderServiceContext:getServiceAppqoeFeatureForwarderServiceContext"
+                        },
+                        "type": "array"
+                    },
+                    "forwarderServiceNodeGroups": {
+                        "description": "Name\n",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/getServiceAppqoeFeatureForwarderServiceNodeGroup:getServiceAppqoeFeatureForwarderServiceNodeGroup"
+                        },
+                        "type": "array"
+                    },
+                    "id": {
+                        "description": "The id of the Feature\n",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "The name of the Feature\n",
+                        "type": "string"
+                    },
+                    "serviceNodeServiceNodeGroups": {
+                        "description": "Name\n",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/getServiceAppqoeFeatureServiceNodeServiceNodeGroup:getServiceAppqoeFeatureServiceNodeServiceNodeGroup"
+                        },
+                        "type": "array"
+                    },
+                    "version": {
+                        "description": "The version of the Feature\n",
+                        "type": "integer"
+                    },
+                    "virtualApplications": {
+                        "description": "Virtual application Instance\n",
+                        "items": {
+                            "$ref": "#/types/sdwan:index/getServiceAppqoeFeatureVirtualApplication:getServiceAppqoeFeatureVirtualApplication"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "appqoeDeviceRole",
+                    "combinedControllerGroups",
+                    "combinedServiceContexts",
+                    "combinedServiceNodeGroups",
+                    "description",
+                    "featureProfileId",
+                    "forwarderControllerGroups",
+                    "forwarderServiceContexts",
+                    "forwarderServiceNodeGroups",
+                    "id",
+                    "name",
+                    "serviceNodeServiceNodeGroups",
+                    "version",
+                    "virtualApplications"
                 ],
                 "type": "object"
             }
@@ -145525,6 +146705,124 @@
                     "simFailoverRetriesVariable",
                     "simFailoverTimeout",
                     "simFailoverTimeoutVariable",
+                    "version"
+                ],
+                "type": "object"
+            }
+        },
+        "sdwan:index/getTransportCellularControllerFeatureAssociateCellularProfileFeature:getTransportCellularControllerFeatureAssociateCellularProfileFeature": {
+            "description": "This data source can read the Transport Cellular Controller Feature Associate Cellular Profile Feature .\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sdwan from \"@pulumi/sdwan\";\n\nconst example = sdwan.getTransportCellularControllerFeatureAssociateCellularProfileFeature({\n    featureProfileId: \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n    transportCellularControllerFeatureId: \"140331f6-5418-4755-a059-13c77eb96037\",\n    id: \"f6b2c44c-693c-4763-b010-895aa3d236bd\",\n});\n```\n```python\nimport pulumi\nimport pulumi_sdwan as sdwan\n\nexample = sdwan.get_transport_cellular_controller_feature_associate_cellular_profile_feature(feature_profile_id=\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n    transport_cellular_controller_feature_id=\"140331f6-5418-4755-a059-13c77eb96037\",\n    id=\"f6b2c44c-693c-4763-b010-895aa3d236bd\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sdwan = Pulumi.Sdwan;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Sdwan.GetTransportCellularControllerFeatureAssociateCellularProfileFeature.Invoke(new()\n    {\n        FeatureProfileId = \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n        TransportCellularControllerFeatureId = \"140331f6-5418-4755-a059-13c77eb96037\",\n        Id = \"f6b2c44c-693c-4763-b010-895aa3d236bd\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := sdwan.GetTransportCellularControllerFeatureAssociateCellularProfileFeature(ctx, \u0026sdwan.LookupTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs{\n\t\t\tFeatureProfileId:                     \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n\t\t\tTransportCellularControllerFeatureId: \"140331f6-5418-4755-a059-13c77eb96037\",\n\t\t\tId:                                   \"f6b2c44c-693c-4763-b010-895aa3d236bd\",\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    sdwan = {\n      source = \"pulumi/sdwan\"\n    }\n  }\n}\n\ndata \"sdwan_gettransportcellularcontrollerfeatureassociatecellularprofilefeature\" \"example\" {\n  feature_profile_id                       = \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\"\n  transport_cellular_controller_feature_id = \"140331f6-5418-4755-a059-13c77eb96037\"\n  id                                       = \"f6b2c44c-693c-4763-b010-895aa3d236bd\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sdwan.SdwanFunctions;\nimport com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = SdwanFunctions.getTransportCellularControllerFeatureAssociateCellularProfileFeature(GetTransportCellularControllerFeatureAssociateCellularProfileFeatureArgs.builder()\n            .featureProfileId(\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\")\n            .transportCellularControllerFeatureId(\"140331f6-5418-4755-a059-13c77eb96037\")\n            .id(\"f6b2c44c-693c-4763-b010-895aa3d236bd\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: sdwan:getTransportCellularControllerFeatureAssociateCellularProfileFeature\n      arguments:\n        featureProfileId: f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\n        transportCellularControllerFeatureId: 140331f6-5418-4755-a059-13c77eb96037\n        id: f6b2c44c-693c-4763-b010-895aa3d236bd\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getTransportCellularControllerFeatureAssociateCellularProfileFeature.\n",
+                "properties": {
+                    "featureProfileId": {
+                        "type": "string",
+                        "description": "Feature Profile ID\n"
+                    },
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the object\n"
+                    },
+                    "transportCellularControllerFeatureId": {
+                        "type": "string",
+                        "description": "Transport Cellular Controller Feature ID\n"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "featureProfileId",
+                    "id",
+                    "transportCellularControllerFeatureId"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getTransportCellularControllerFeatureAssociateCellularProfileFeature.\n",
+                "properties": {
+                    "featureProfileId": {
+                        "description": "Feature Profile ID\n",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The id of the object\n",
+                        "type": "string"
+                    },
+                    "transportCellularControllerFeatureId": {
+                        "description": "Transport Cellular Controller Feature ID\n",
+                        "type": "string"
+                    },
+                    "transportCellularProfileFeatureId": {
+                        "description": "Transport Cellular Profile Feature ID\n",
+                        "type": "string"
+                    },
+                    "version": {
+                        "description": "The version of the object\n",
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "featureProfileId",
+                    "id",
+                    "transportCellularControllerFeatureId",
+                    "transportCellularProfileFeatureId",
+                    "version"
+                ],
+                "type": "object"
+            }
+        },
+        "sdwan:index/getTransportCellularControllerFeatureAssociateGpsFeature:getTransportCellularControllerFeatureAssociateGpsFeature": {
+            "description": "This data source can read the Transport Cellular Controller Feature Associate GPS Feature .\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sdwan from \"@pulumi/sdwan\";\n\nconst example = sdwan.getTransportCellularControllerFeatureAssociateGpsFeature({\n    featureProfileId: \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n    transportCellularControllerFeatureId: \"140331f6-5418-4755-a059-13c77eb96037\",\n    id: \"f6b2c44c-693c-4763-b010-895aa3d236bd\",\n});\n```\n```python\nimport pulumi\nimport pulumi_sdwan as sdwan\n\nexample = sdwan.get_transport_cellular_controller_feature_associate_gps_feature(feature_profile_id=\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n    transport_cellular_controller_feature_id=\"140331f6-5418-4755-a059-13c77eb96037\",\n    id=\"f6b2c44c-693c-4763-b010-895aa3d236bd\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sdwan = Pulumi.Sdwan;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Sdwan.GetTransportCellularControllerFeatureAssociateGpsFeature.Invoke(new()\n    {\n        FeatureProfileId = \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n        TransportCellularControllerFeatureId = \"140331f6-5418-4755-a059-13c77eb96037\",\n        Id = \"f6b2c44c-693c-4763-b010-895aa3d236bd\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := sdwan.GetTransportCellularControllerFeatureAssociateGpsFeature(ctx, \u0026sdwan.LookupTransportCellularControllerFeatureAssociateGpsFeatureArgs{\n\t\t\tFeatureProfileId:                     \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\",\n\t\t\tTransportCellularControllerFeatureId: \"140331f6-5418-4755-a059-13c77eb96037\",\n\t\t\tId:                                   \"f6b2c44c-693c-4763-b010-895aa3d236bd\",\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    sdwan = {\n      source = \"pulumi/sdwan\"\n    }\n  }\n}\n\ndata \"sdwan_gettransportcellularcontrollerfeatureassociategpsfeature\" \"example\" {\n  feature_profile_id                       = \"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\"\n  transport_cellular_controller_feature_id = \"140331f6-5418-4755-a059-13c77eb96037\"\n  id                                       = \"f6b2c44c-693c-4763-b010-895aa3d236bd\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sdwan.SdwanFunctions;\nimport com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureAssociateGpsFeatureArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = SdwanFunctions.getTransportCellularControllerFeatureAssociateGpsFeature(GetTransportCellularControllerFeatureAssociateGpsFeatureArgs.builder()\n            .featureProfileId(\"f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\")\n            .transportCellularControllerFeatureId(\"140331f6-5418-4755-a059-13c77eb96037\")\n            .id(\"f6b2c44c-693c-4763-b010-895aa3d236bd\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: sdwan:getTransportCellularControllerFeatureAssociateGpsFeature\n      arguments:\n        featureProfileId: f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac\n        transportCellularControllerFeatureId: 140331f6-5418-4755-a059-13c77eb96037\n        id: f6b2c44c-693c-4763-b010-895aa3d236bd\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getTransportCellularControllerFeatureAssociateGpsFeature.\n",
+                "properties": {
+                    "featureProfileId": {
+                        "type": "string",
+                        "description": "Feature Profile ID\n"
+                    },
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the object\n"
+                    },
+                    "transportCellularControllerFeatureId": {
+                        "type": "string",
+                        "description": "Transport Cellular Controller Feature ID\n"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "featureProfileId",
+                    "id",
+                    "transportCellularControllerFeatureId"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getTransportCellularControllerFeatureAssociateGpsFeature.\n",
+                "properties": {
+                    "featureProfileId": {
+                        "description": "Feature Profile ID\n",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The id of the object\n",
+                        "type": "string"
+                    },
+                    "transportCellularControllerFeatureId": {
+                        "description": "Transport Cellular Controller Feature ID\n",
+                        "type": "string"
+                    },
+                    "transportGpsFeatureId": {
+                        "description": "Transport GPS Feature ID\n",
+                        "type": "string"
+                    },
+                    "version": {
+                        "description": "The version of the object\n",
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "featureProfileId",
+                    "id",
+                    "transportCellularControllerFeatureId",
+                    "transportGpsFeatureId",
                     "version"
                 ],
                 "type": "object"
