@@ -404,6 +404,7 @@ class NetworkHierarchyCflowd(pulumi.CustomResource):
             collectors=[{
                 "vpn_id": 1,
                 "address": "10.0.0.1",
+                "source_interface": "Loopback1",
                 "udp_port": 4739,
                 "export_spread": True,
                 "bfd_metrics_export": True,
@@ -467,6 +468,7 @@ class NetworkHierarchyCflowd(pulumi.CustomResource):
             collectors=[{
                 "vpn_id": 1,
                 "address": "10.0.0.1",
+                "source_interface": "Loopback1",
                 "udp_port": 4739,
                 "export_spread": True,
                 "bfd_metrics_export": True,

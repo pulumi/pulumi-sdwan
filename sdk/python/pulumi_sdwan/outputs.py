@@ -265,11 +265,25 @@ __all__ = [
     'RoutePolicyDefinitionSequenceActionEntry',
     'RoutePolicyDefinitionSequenceMatchEntry',
     'RuleSetPolicyDefinitionRule',
+    'ScopeObject',
     'SecurityAppHostingFeatureTemplateVirtualApplication',
     'SecurityPolicyDefinition',
     'SecurityPolicyDefinitionEntry',
     'SecurityPolicyHighSpeedLoggingEntry',
     'SecurityPolicyLogging',
+    'ServiceAppqoeFeatureCombinedControllerGroup',
+    'ServiceAppqoeFeatureCombinedControllerGroupAppnavController',
+    'ServiceAppqoeFeatureCombinedServiceContext',
+    'ServiceAppqoeFeatureCombinedServiceNodeGroup',
+    'ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode',
+    'ServiceAppqoeFeatureForwarderControllerGroup',
+    'ServiceAppqoeFeatureForwarderControllerGroupAppnavController',
+    'ServiceAppqoeFeatureForwarderServiceContext',
+    'ServiceAppqoeFeatureForwarderServiceNodeGroup',
+    'ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode',
+    'ServiceAppqoeFeatureServiceNodeServiceNodeGroup',
+    'ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode',
+    'ServiceAppqoeFeatureVirtualApplication',
     'ServiceDhcpServerFeatureOptionCode',
     'ServiceDhcpServerFeatureStaticLease',
     'ServiceDualRouterHaFeatureRedundancyGroup',
@@ -821,11 +835,25 @@ __all__ = [
     'GetRoutePolicyDefinitionSequenceActionEntryResult',
     'GetRoutePolicyDefinitionSequenceMatchEntryResult',
     'GetRuleSetPolicyDefinitionRuleResult',
+    'GetScopeObjectResult',
     'GetSecurityAppHostingFeatureTemplateVirtualApplicationResult',
     'GetSecurityPolicyDefinitionResult',
     'GetSecurityPolicyDefinitionEntryResult',
     'GetSecurityPolicyHighSpeedLoggingEntryResult',
     'GetSecurityPolicyLoggingResult',
+    'GetServiceAppqoeFeatureCombinedControllerGroupResult',
+    'GetServiceAppqoeFeatureCombinedControllerGroupAppnavControllerResult',
+    'GetServiceAppqoeFeatureCombinedServiceContextResult',
+    'GetServiceAppqoeFeatureCombinedServiceNodeGroupResult',
+    'GetServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeResult',
+    'GetServiceAppqoeFeatureForwarderControllerGroupResult',
+    'GetServiceAppqoeFeatureForwarderControllerGroupAppnavControllerResult',
+    'GetServiceAppqoeFeatureForwarderServiceContextResult',
+    'GetServiceAppqoeFeatureForwarderServiceNodeGroupResult',
+    'GetServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeResult',
+    'GetServiceAppqoeFeatureServiceNodeServiceNodeGroupResult',
+    'GetServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeResult',
+    'GetServiceAppqoeFeatureVirtualApplicationResult',
     'GetServiceDhcpServerFeatureOptionCodeResult',
     'GetServiceDhcpServerFeatureStaticLeaseResult',
     'GetServiceDualRouterHaFeatureRedundancyGroupResult',
@@ -27381,6 +27409,8 @@ class NetworkHierarchyCflowdCollector(dict):
             suggest = "export_interval"
         elif key == "exportSpread":
             suggest = "export_spread"
+        elif key == "sourceInterface":
+            suggest = "source_interface"
 
         if suggest:
             pulumi.log.warn(f"Key '{key}' not found in NetworkHierarchyCflowdCollector. Access the value via the '{suggest}' property getter instead.")
@@ -27399,7 +27429,8 @@ class NetworkHierarchyCflowdCollector(dict):
                  vpn_id: _builtins.int,
                  bfd_metrics_export: Optional[_builtins.bool] = None,
                  export_interval: Optional[_builtins.int] = None,
-                 export_spread: Optional[_builtins.bool] = None):
+                 export_spread: Optional[_builtins.bool] = None,
+                 source_interface: Optional[_builtins.str] = None):
         """
         :param _builtins.str address: Collector IPv4 or IPv6 address
         :param _builtins.int udp_port: Collector UDP port number
@@ -27414,6 +27445,7 @@ class NetworkHierarchyCflowdCollector(dict):
                  - Default value: `600`
         :param _builtins.bool export_spread: Enable export spreading
                  - Default value: `false`
+        :param _builtins.str source_interface: Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         """
         pulumi.set(__self__, "address", address)
         pulumi.set(__self__, "udp_port", udp_port)
@@ -27424,6 +27456,8 @@ class NetworkHierarchyCflowdCollector(dict):
             pulumi.set(__self__, "export_interval", export_interval)
         if export_spread is not None:
             pulumi.set(__self__, "export_spread", export_spread)
+        if source_interface is not None:
+            pulumi.set(__self__, "source_interface", source_interface)
 
     @_builtins.property
     @pulumi.getter
@@ -27479,6 +27513,14 @@ class NetworkHierarchyCflowdCollector(dict):
           - Default value: `false`
         """
         return pulumi.get(self, "export_spread")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceInterface")
+    def source_interface(self) -> Optional[_builtins.str]:
+        """
+        Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "source_interface")
 
 
 @pulumi.output_type
@@ -31320,6 +31362,56 @@ class RuleSetPolicyDefinitionRule(dict):
 
 
 @pulumi.output_type
+class ScopeObject(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "objectIds":
+            suggest = "object_ids"
+        elif key == "objectType":
+            suggest = "object_type"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ScopeObject. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ScopeObject.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ScopeObject.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 object_ids: Sequence[_builtins.str],
+                 object_type: _builtins.str):
+        """
+        :param Sequence[_builtins.str] object_ids: List of object UUIDs
+        :param _builtins.str object_type: Object type
+                 - Choices: `network-hierarchy-node`, `config-group`, `feature-profile`, `device-template`, `feature-template`, `localized-policy`, `security-policy`
+        """
+        pulumi.set(__self__, "object_ids", object_ids)
+        pulumi.set(__self__, "object_type", object_type)
+
+    @_builtins.property
+    @pulumi.getter(name="objectIds")
+    def object_ids(self) -> Sequence[_builtins.str]:
+        """
+        List of object UUIDs
+        """
+        return pulumi.get(self, "object_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="objectType")
+    def object_type(self) -> _builtins.str:
+        """
+        Object type
+          - Choices: `network-hierarchy-node`, `config-group`, `feature-profile`, `device-template`, `feature-template`, `localized-policy`, `security-policy`
+        """
+        return pulumi.get(self, "object_type")
+
+
+@pulumi.output_type
 class SecurityAppHostingFeatureTemplateVirtualApplication(dict):
     @staticmethod
     def __key_warning(key: str):
@@ -31831,6 +31923,557 @@ class SecurityPolicyLogging(dict):
         External Syslog Server VPN
         """
         return pulumi.get(self, "external_syslog_server_vpn")
+
+
+@pulumi.output_type
+class ServiceAppqoeFeatureCombinedControllerGroup(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "appnavControllers":
+            suggest = "appnav_controllers"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ServiceAppqoeFeatureCombinedControllerGroup. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ServiceAppqoeFeatureCombinedControllerGroup.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ServiceAppqoeFeatureCombinedControllerGroup.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 appnav_controllers: Optional[Sequence['outputs.ServiceAppqoeFeatureCombinedControllerGroupAppnavController']] = None):
+        """
+        :param Sequence['ServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArgs'] appnav_controllers: List of controllers
+        """
+        if appnav_controllers is not None:
+            pulumi.set(__self__, "appnav_controllers", appnav_controllers)
+
+    @_builtins.property
+    @pulumi.getter(name="appnavControllers")
+    def appnav_controllers(self) -> Optional[Sequence['outputs.ServiceAppqoeFeatureCombinedControllerGroupAppnavController']]:
+        """
+        List of controllers
+        """
+        return pulumi.get(self, "appnav_controllers")
+
+
+@pulumi.output_type
+class ServiceAppqoeFeatureCombinedControllerGroupAppnavController(dict):
+    def __init__(__self__):
+        pass
+
+
+@pulumi.output_type
+class ServiceAppqoeFeatureCombinedServiceContext(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "appnavControllerGroup":
+            suggest = "appnav_controller_group"
+        elif key == "serviceNodeGroup":
+            suggest = "service_node_group"
+        elif key == "serviceNodeGroups":
+            suggest = "service_node_groups"
+        elif key == "vpnVariable":
+            suggest = "vpn_variable"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ServiceAppqoeFeatureCombinedServiceContext. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ServiceAppqoeFeatureCombinedServiceContext.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ServiceAppqoeFeatureCombinedServiceContext.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 appnav_controller_group: Optional[_builtins.str] = None,
+                 enable: Optional[_builtins.bool] = None,
+                 service_node_group: Optional[_builtins.str] = None,
+                 service_node_groups: Optional[Sequence[_builtins.str]] = None,
+                 vpn: Optional[_builtins.int] = None,
+                 vpn_variable: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str appnav_controller_group: Appnav controller group
+        :param _builtins.bool enable: enable service context
+        :param _builtins.str service_node_group: Service node group
+        :param Sequence[_builtins.str] service_node_groups: Service node groups bound to this service context
+        :param _builtins.int vpn: Vpn
+        :param _builtins.str vpn_variable: Variable name
+        """
+        if appnav_controller_group is not None:
+            pulumi.set(__self__, "appnav_controller_group", appnav_controller_group)
+        if enable is not None:
+            pulumi.set(__self__, "enable", enable)
+        if service_node_group is not None:
+            pulumi.set(__self__, "service_node_group", service_node_group)
+        if service_node_groups is not None:
+            pulumi.set(__self__, "service_node_groups", service_node_groups)
+        if vpn is not None:
+            pulumi.set(__self__, "vpn", vpn)
+        if vpn_variable is not None:
+            pulumi.set(__self__, "vpn_variable", vpn_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="appnavControllerGroup")
+    def appnav_controller_group(self) -> Optional[_builtins.str]:
+        """
+        Appnav controller group
+        """
+        return pulumi.get(self, "appnav_controller_group")
+
+    @_builtins.property
+    @pulumi.getter
+    def enable(self) -> Optional[_builtins.bool]:
+        """
+        enable service context
+        """
+        return pulumi.get(self, "enable")
+
+    @_builtins.property
+    @pulumi.getter(name="serviceNodeGroup")
+    def service_node_group(self) -> Optional[_builtins.str]:
+        """
+        Service node group
+        """
+        return pulumi.get(self, "service_node_group")
+
+    @_builtins.property
+    @pulumi.getter(name="serviceNodeGroups")
+    def service_node_groups(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Service node groups bound to this service context
+        """
+        return pulumi.get(self, "service_node_groups")
+
+    @_builtins.property
+    @pulumi.getter
+    def vpn(self) -> Optional[_builtins.int]:
+        """
+        Vpn
+        """
+        return pulumi.get(self, "vpn")
+
+    @_builtins.property
+    @pulumi.getter(name="vpnVariable")
+    def vpn_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "vpn_variable")
+
+
+@pulumi.output_type
+class ServiceAppqoeFeatureCombinedServiceNodeGroup(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "serviceNodes":
+            suggest = "service_nodes"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ServiceAppqoeFeatureCombinedServiceNodeGroup. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ServiceAppqoeFeatureCombinedServiceNodeGroup.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ServiceAppqoeFeatureCombinedServiceNodeGroup.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 service_nodes: Optional[Sequence['outputs.ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode']] = None):
+        """
+        :param Sequence['ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArgs'] service_nodes: Service Node Information
+        """
+        if service_nodes is not None:
+            pulumi.set(__self__, "service_nodes", service_nodes)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceNodes")
+    def service_nodes(self) -> Optional[Sequence['outputs.ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode']]:
+        """
+        Service Node Information
+        """
+        return pulumi.get(self, "service_nodes")
+
+
+@pulumi.output_type
+class ServiceAppqoeFeatureCombinedServiceNodeGroupServiceNode(dict):
+    def __init__(__self__):
+        pass
+
+
+@pulumi.output_type
+class ServiceAppqoeFeatureForwarderControllerGroup(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "appnavControllers":
+            suggest = "appnav_controllers"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ServiceAppqoeFeatureForwarderControllerGroup. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ServiceAppqoeFeatureForwarderControllerGroup.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ServiceAppqoeFeatureForwarderControllerGroup.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 appnav_controllers: Optional[Sequence['outputs.ServiceAppqoeFeatureForwarderControllerGroupAppnavController']] = None):
+        """
+        :param Sequence['ServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArgs'] appnav_controllers: List of controllers
+        """
+        if appnav_controllers is not None:
+            pulumi.set(__self__, "appnav_controllers", appnav_controllers)
+
+    @_builtins.property
+    @pulumi.getter(name="appnavControllers")
+    def appnav_controllers(self) -> Optional[Sequence['outputs.ServiceAppqoeFeatureForwarderControllerGroupAppnavController']]:
+        """
+        List of controllers
+        """
+        return pulumi.get(self, "appnav_controllers")
+
+
+@pulumi.output_type
+class ServiceAppqoeFeatureForwarderControllerGroupAppnavController(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "addressVariable":
+            suggest = "address_variable"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ServiceAppqoeFeatureForwarderControllerGroupAppnavController. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ServiceAppqoeFeatureForwarderControllerGroupAppnavController.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ServiceAppqoeFeatureForwarderControllerGroupAppnavController.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 address: Optional[_builtins.str] = None,
+                 address_variable: Optional[_builtins.str] = None,
+                 vpn: Optional[_builtins.int] = None):
+        """
+        :param _builtins.str address: Controller IP Address
+        :param _builtins.str address_variable: Variable name
+        :param _builtins.int vpn: vpn id
+                 - Range: `1`-`65530`
+        """
+        if address is not None:
+            pulumi.set(__self__, "address", address)
+        if address_variable is not None:
+            pulumi.set(__self__, "address_variable", address_variable)
+        if vpn is not None:
+            pulumi.set(__self__, "vpn", vpn)
+
+    @_builtins.property
+    @pulumi.getter
+    def address(self) -> Optional[_builtins.str]:
+        """
+        Controller IP Address
+        """
+        return pulumi.get(self, "address")
+
+    @_builtins.property
+    @pulumi.getter(name="addressVariable")
+    def address_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "address_variable")
+
+    @_builtins.property
+    @pulumi.getter
+    def vpn(self) -> Optional[_builtins.int]:
+        """
+        vpn id
+          - Range: `1`-`65530`
+        """
+        return pulumi.get(self, "vpn")
+
+
+@pulumi.output_type
+class ServiceAppqoeFeatureForwarderServiceContext(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "appnavControllerGroup":
+            suggest = "appnav_controller_group"
+        elif key == "serviceNodeGroup":
+            suggest = "service_node_group"
+        elif key == "serviceNodeGroups":
+            suggest = "service_node_groups"
+        elif key == "vpnVariable":
+            suggest = "vpn_variable"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ServiceAppqoeFeatureForwarderServiceContext. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ServiceAppqoeFeatureForwarderServiceContext.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ServiceAppqoeFeatureForwarderServiceContext.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 appnav_controller_group: Optional[_builtins.str] = None,
+                 enable: Optional[_builtins.bool] = None,
+                 service_node_group: Optional[_builtins.str] = None,
+                 service_node_groups: Optional[Sequence[_builtins.str]] = None,
+                 vpn: Optional[_builtins.int] = None,
+                 vpn_variable: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str appnav_controller_group: Appnav controller group
+        :param _builtins.bool enable: enable service context
+        :param _builtins.str service_node_group: Service node group
+        :param Sequence[_builtins.str] service_node_groups: Service node groups bound to this service context
+        :param _builtins.int vpn: Vpn
+        :param _builtins.str vpn_variable: Variable name
+        """
+        if appnav_controller_group is not None:
+            pulumi.set(__self__, "appnav_controller_group", appnav_controller_group)
+        if enable is not None:
+            pulumi.set(__self__, "enable", enable)
+        if service_node_group is not None:
+            pulumi.set(__self__, "service_node_group", service_node_group)
+        if service_node_groups is not None:
+            pulumi.set(__self__, "service_node_groups", service_node_groups)
+        if vpn is not None:
+            pulumi.set(__self__, "vpn", vpn)
+        if vpn_variable is not None:
+            pulumi.set(__self__, "vpn_variable", vpn_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="appnavControllerGroup")
+    def appnav_controller_group(self) -> Optional[_builtins.str]:
+        """
+        Appnav controller group
+        """
+        return pulumi.get(self, "appnav_controller_group")
+
+    @_builtins.property
+    @pulumi.getter
+    def enable(self) -> Optional[_builtins.bool]:
+        """
+        enable service context
+        """
+        return pulumi.get(self, "enable")
+
+    @_builtins.property
+    @pulumi.getter(name="serviceNodeGroup")
+    def service_node_group(self) -> Optional[_builtins.str]:
+        """
+        Service node group
+        """
+        return pulumi.get(self, "service_node_group")
+
+    @_builtins.property
+    @pulumi.getter(name="serviceNodeGroups")
+    def service_node_groups(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Service node groups bound to this service context
+        """
+        return pulumi.get(self, "service_node_groups")
+
+    @_builtins.property
+    @pulumi.getter
+    def vpn(self) -> Optional[_builtins.int]:
+        """
+        Vpn
+        """
+        return pulumi.get(self, "vpn")
+
+    @_builtins.property
+    @pulumi.getter(name="vpnVariable")
+    def vpn_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "vpn_variable")
+
+
+@pulumi.output_type
+class ServiceAppqoeFeatureForwarderServiceNodeGroup(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "serviceNodes":
+            suggest = "service_nodes"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ServiceAppqoeFeatureForwarderServiceNodeGroup. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ServiceAppqoeFeatureForwarderServiceNodeGroup.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ServiceAppqoeFeatureForwarderServiceNodeGroup.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 name: Optional[_builtins.str] = None,
+                 service_nodes: Optional[Sequence['outputs.ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode']] = None):
+        """
+        :param _builtins.str name: List of service node group
+                 - Default value: `SNG-APPQOE`
+        :param Sequence['ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArgs'] service_nodes: Service Node Information
+        """
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if service_nodes is not None:
+            pulumi.set(__self__, "service_nodes", service_nodes)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> Optional[_builtins.str]:
+        """
+        List of service node group
+          - Default value: `SNG-APPQOE`
+        """
+        return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter(name="serviceNodes")
+    def service_nodes(self) -> Optional[Sequence['outputs.ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode']]:
+        """
+        Service Node Information
+        """
+        return pulumi.get(self, "service_nodes")
+
+
+@pulumi.output_type
+class ServiceAppqoeFeatureForwarderServiceNodeGroupServiceNode(dict):
+    def __init__(__self__, *,
+                 address: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str address: IP Address
+        """
+        if address is not None:
+            pulumi.set(__self__, "address", address)
+
+    @_builtins.property
+    @pulumi.getter
+    def address(self) -> Optional[_builtins.str]:
+        """
+        IP Address
+        """
+        return pulumi.get(self, "address")
+
+
+@pulumi.output_type
+class ServiceAppqoeFeatureServiceNodeServiceNodeGroup(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "serviceNodes":
+            suggest = "service_nodes"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ServiceAppqoeFeatureServiceNodeServiceNodeGroup. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ServiceAppqoeFeatureServiceNodeServiceNodeGroup.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ServiceAppqoeFeatureServiceNodeServiceNodeGroup.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 service_nodes: Optional[Sequence['outputs.ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode']] = None):
+        """
+        :param Sequence['ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArgs'] service_nodes: Service Node Information
+        """
+        if service_nodes is not None:
+            pulumi.set(__self__, "service_nodes", service_nodes)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceNodes")
+    def service_nodes(self) -> Optional[Sequence['outputs.ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode']]:
+        """
+        Service Node Information
+        """
+        return pulumi.get(self, "service_nodes")
+
+
+@pulumi.output_type
+class ServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNode(dict):
+    def __init__(__self__):
+        pass
+
+
+@pulumi.output_type
+class ServiceAppqoeFeatureVirtualApplication(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "resourceProfile":
+            suggest = "resource_profile"
+        elif key == "resourceProfileVariable":
+            suggest = "resource_profile_variable"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ServiceAppqoeFeatureVirtualApplication. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ServiceAppqoeFeatureVirtualApplication.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ServiceAppqoeFeatureVirtualApplication.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 resource_profile: Optional[_builtins.str] = None,
+                 resource_profile_variable: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str resource_profile: Resource Profile
+                 - Choices: `small`, `medium`, `large`, `extra-large`, `default`
+                 - Default value: `default`
+        :param _builtins.str resource_profile_variable: Variable name
+        """
+        if resource_profile is not None:
+            pulumi.set(__self__, "resource_profile", resource_profile)
+        if resource_profile_variable is not None:
+            pulumi.set(__self__, "resource_profile_variable", resource_profile_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="resourceProfile")
+    def resource_profile(self) -> Optional[_builtins.str]:
+        """
+        Resource Profile
+          - Choices: `small`, `medium`, `large`, `extra-large`, `default`
+          - Default value: `default`
+        """
+        return pulumi.get(self, "resource_profile")
+
+    @_builtins.property
+    @pulumi.getter(name="resourceProfileVariable")
+    def resource_profile_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "resource_profile_variable")
 
 
 @pulumi.output_type
@@ -89757,6 +90400,7 @@ class GetNetworkHierarchyCflowdCollectorResult(dict):
                  bfd_metrics_export: _builtins.bool,
                  export_interval: _builtins.int,
                  export_spread: _builtins.bool,
+                 source_interface: _builtins.str,
                  udp_port: _builtins.int,
                  vpn_id: _builtins.int):
         """
@@ -89764,6 +90408,7 @@ class GetNetworkHierarchyCflowdCollectorResult(dict):
         :param _builtins.bool bfd_metrics_export: Enable BFD metrics exporting
         :param _builtins.int export_interval: BFD export interval in seconds. Only applied when `bfd_metrics_export` is `true`; if set while `bfd_metrics_export` is `false` or unset, the value is ignored by SD-WAN Manager.
         :param _builtins.bool export_spread: Enable export spreading
+        :param _builtins.str source_interface: Source interface
         :param _builtins.int udp_port: Collector UDP port number
         :param _builtins.int vpn_id: VPN ID
         """
@@ -89771,6 +90416,7 @@ class GetNetworkHierarchyCflowdCollectorResult(dict):
         pulumi.set(__self__, "bfd_metrics_export", bfd_metrics_export)
         pulumi.set(__self__, "export_interval", export_interval)
         pulumi.set(__self__, "export_spread", export_spread)
+        pulumi.set(__self__, "source_interface", source_interface)
         pulumi.set(__self__, "udp_port", udp_port)
         pulumi.set(__self__, "vpn_id", vpn_id)
 
@@ -89805,6 +90451,14 @@ class GetNetworkHierarchyCflowdCollectorResult(dict):
         Enable export spreading
         """
         return pulumi.get(self, "export_spread")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceInterface")
+    def source_interface(self) -> _builtins.str:
+        """
+        Source interface
+        """
+        return pulumi.get(self, "source_interface")
 
     @_builtins.property
     @pulumi.getter(name="udpPort")
@@ -92539,6 +93193,35 @@ class GetRuleSetPolicyDefinitionRuleResult(dict):
 
 
 @pulumi.output_type
+class GetScopeObjectResult(dict):
+    def __init__(__self__, *,
+                 object_ids: Sequence[_builtins.str],
+                 object_type: _builtins.str):
+        """
+        :param Sequence[_builtins.str] object_ids: List of object UUIDs
+        :param _builtins.str object_type: Object type
+        """
+        pulumi.set(__self__, "object_ids", object_ids)
+        pulumi.set(__self__, "object_type", object_type)
+
+    @_builtins.property
+    @pulumi.getter(name="objectIds")
+    def object_ids(self) -> Sequence[_builtins.str]:
+        """
+        List of object UUIDs
+        """
+        return pulumi.get(self, "object_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="objectType")
+    def object_type(self) -> _builtins.str:
+        """
+        Object type
+        """
+        return pulumi.get(self, "object_type")
+
+
+@pulumi.output_type
 class GetSecurityAppHostingFeatureTemplateVirtualApplicationResult(dict):
     def __init__(__self__, *,
                  application_type: _builtins.str,
@@ -92901,6 +93584,358 @@ class GetSecurityPolicyLoggingResult(dict):
         External Syslog Server VPN
         """
         return pulumi.get(self, "external_syslog_server_vpn")
+
+
+@pulumi.output_type
+class GetServiceAppqoeFeatureCombinedControllerGroupResult(dict):
+    def __init__(__self__, *,
+                 appnav_controllers: Sequence['outputs.GetServiceAppqoeFeatureCombinedControllerGroupAppnavControllerResult']):
+        """
+        :param Sequence['GetServiceAppqoeFeatureCombinedControllerGroupAppnavControllerArgs'] appnav_controllers: List of controllers
+        """
+        pulumi.set(__self__, "appnav_controllers", appnav_controllers)
+
+    @_builtins.property
+    @pulumi.getter(name="appnavControllers")
+    def appnav_controllers(self) -> Sequence['outputs.GetServiceAppqoeFeatureCombinedControllerGroupAppnavControllerResult']:
+        """
+        List of controllers
+        """
+        return pulumi.get(self, "appnav_controllers")
+
+
+@pulumi.output_type
+class GetServiceAppqoeFeatureCombinedControllerGroupAppnavControllerResult(dict):
+    def __init__(__self__):
+        pass
+
+
+@pulumi.output_type
+class GetServiceAppqoeFeatureCombinedServiceContextResult(dict):
+    def __init__(__self__, *,
+                 appnav_controller_group: _builtins.str,
+                 enable: _builtins.bool,
+                 service_node_group: _builtins.str,
+                 service_node_groups: Sequence[_builtins.str],
+                 vpn: _builtins.int,
+                 vpn_variable: _builtins.str):
+        """
+        :param _builtins.str appnav_controller_group: Appnav controller group
+        :param _builtins.bool enable: enable service context
+        :param _builtins.str service_node_group: Service node group
+        :param Sequence[_builtins.str] service_node_groups: Service node groups bound to this service context
+        :param _builtins.int vpn: Vpn
+        :param _builtins.str vpn_variable: Variable name
+        """
+        pulumi.set(__self__, "appnav_controller_group", appnav_controller_group)
+        pulumi.set(__self__, "enable", enable)
+        pulumi.set(__self__, "service_node_group", service_node_group)
+        pulumi.set(__self__, "service_node_groups", service_node_groups)
+        pulumi.set(__self__, "vpn", vpn)
+        pulumi.set(__self__, "vpn_variable", vpn_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="appnavControllerGroup")
+    def appnav_controller_group(self) -> _builtins.str:
+        """
+        Appnav controller group
+        """
+        return pulumi.get(self, "appnav_controller_group")
+
+    @_builtins.property
+    @pulumi.getter
+    def enable(self) -> _builtins.bool:
+        """
+        enable service context
+        """
+        return pulumi.get(self, "enable")
+
+    @_builtins.property
+    @pulumi.getter(name="serviceNodeGroup")
+    def service_node_group(self) -> _builtins.str:
+        """
+        Service node group
+        """
+        return pulumi.get(self, "service_node_group")
+
+    @_builtins.property
+    @pulumi.getter(name="serviceNodeGroups")
+    def service_node_groups(self) -> Sequence[_builtins.str]:
+        """
+        Service node groups bound to this service context
+        """
+        return pulumi.get(self, "service_node_groups")
+
+    @_builtins.property
+    @pulumi.getter
+    def vpn(self) -> _builtins.int:
+        """
+        Vpn
+        """
+        return pulumi.get(self, "vpn")
+
+    @_builtins.property
+    @pulumi.getter(name="vpnVariable")
+    def vpn_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "vpn_variable")
+
+
+@pulumi.output_type
+class GetServiceAppqoeFeatureCombinedServiceNodeGroupResult(dict):
+    def __init__(__self__, *,
+                 service_nodes: Sequence['outputs.GetServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeResult']):
+        """
+        :param Sequence['GetServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeArgs'] service_nodes: Service Node Information
+        """
+        pulumi.set(__self__, "service_nodes", service_nodes)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceNodes")
+    def service_nodes(self) -> Sequence['outputs.GetServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeResult']:
+        """
+        Service Node Information
+        """
+        return pulumi.get(self, "service_nodes")
+
+
+@pulumi.output_type
+class GetServiceAppqoeFeatureCombinedServiceNodeGroupServiceNodeResult(dict):
+    def __init__(__self__):
+        pass
+
+
+@pulumi.output_type
+class GetServiceAppqoeFeatureForwarderControllerGroupResult(dict):
+    def __init__(__self__, *,
+                 appnav_controllers: Sequence['outputs.GetServiceAppqoeFeatureForwarderControllerGroupAppnavControllerResult']):
+        """
+        :param Sequence['GetServiceAppqoeFeatureForwarderControllerGroupAppnavControllerArgs'] appnav_controllers: List of controllers
+        """
+        pulumi.set(__self__, "appnav_controllers", appnav_controllers)
+
+    @_builtins.property
+    @pulumi.getter(name="appnavControllers")
+    def appnav_controllers(self) -> Sequence['outputs.GetServiceAppqoeFeatureForwarderControllerGroupAppnavControllerResult']:
+        """
+        List of controllers
+        """
+        return pulumi.get(self, "appnav_controllers")
+
+
+@pulumi.output_type
+class GetServiceAppqoeFeatureForwarderControllerGroupAppnavControllerResult(dict):
+    def __init__(__self__, *,
+                 address: _builtins.str,
+                 address_variable: _builtins.str,
+                 vpn: _builtins.int):
+        """
+        :param _builtins.str address: Controller IP Address
+        :param _builtins.str address_variable: Variable name
+        :param _builtins.int vpn: vpn id
+        """
+        pulumi.set(__self__, "address", address)
+        pulumi.set(__self__, "address_variable", address_variable)
+        pulumi.set(__self__, "vpn", vpn)
+
+    @_builtins.property
+    @pulumi.getter
+    def address(self) -> _builtins.str:
+        """
+        Controller IP Address
+        """
+        return pulumi.get(self, "address")
+
+    @_builtins.property
+    @pulumi.getter(name="addressVariable")
+    def address_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "address_variable")
+
+    @_builtins.property
+    @pulumi.getter
+    def vpn(self) -> _builtins.int:
+        """
+        vpn id
+        """
+        return pulumi.get(self, "vpn")
+
+
+@pulumi.output_type
+class GetServiceAppqoeFeatureForwarderServiceContextResult(dict):
+    def __init__(__self__, *,
+                 appnav_controller_group: _builtins.str,
+                 enable: _builtins.bool,
+                 service_node_group: _builtins.str,
+                 service_node_groups: Sequence[_builtins.str],
+                 vpn: _builtins.int,
+                 vpn_variable: _builtins.str):
+        """
+        :param _builtins.str appnav_controller_group: Appnav controller group
+        :param _builtins.bool enable: enable service context
+        :param _builtins.str service_node_group: Service node group
+        :param Sequence[_builtins.str] service_node_groups: Service node groups bound to this service context
+        :param _builtins.int vpn: Vpn
+        :param _builtins.str vpn_variable: Variable name
+        """
+        pulumi.set(__self__, "appnav_controller_group", appnav_controller_group)
+        pulumi.set(__self__, "enable", enable)
+        pulumi.set(__self__, "service_node_group", service_node_group)
+        pulumi.set(__self__, "service_node_groups", service_node_groups)
+        pulumi.set(__self__, "vpn", vpn)
+        pulumi.set(__self__, "vpn_variable", vpn_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="appnavControllerGroup")
+    def appnav_controller_group(self) -> _builtins.str:
+        """
+        Appnav controller group
+        """
+        return pulumi.get(self, "appnav_controller_group")
+
+    @_builtins.property
+    @pulumi.getter
+    def enable(self) -> _builtins.bool:
+        """
+        enable service context
+        """
+        return pulumi.get(self, "enable")
+
+    @_builtins.property
+    @pulumi.getter(name="serviceNodeGroup")
+    def service_node_group(self) -> _builtins.str:
+        """
+        Service node group
+        """
+        return pulumi.get(self, "service_node_group")
+
+    @_builtins.property
+    @pulumi.getter(name="serviceNodeGroups")
+    def service_node_groups(self) -> Sequence[_builtins.str]:
+        """
+        Service node groups bound to this service context
+        """
+        return pulumi.get(self, "service_node_groups")
+
+    @_builtins.property
+    @pulumi.getter
+    def vpn(self) -> _builtins.int:
+        """
+        Vpn
+        """
+        return pulumi.get(self, "vpn")
+
+    @_builtins.property
+    @pulumi.getter(name="vpnVariable")
+    def vpn_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "vpn_variable")
+
+
+@pulumi.output_type
+class GetServiceAppqoeFeatureForwarderServiceNodeGroupResult(dict):
+    def __init__(__self__, *,
+                 name: _builtins.str,
+                 service_nodes: Sequence['outputs.GetServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeResult']):
+        """
+        :param _builtins.str name: List of service node group
+        :param Sequence['GetServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeArgs'] service_nodes: Service Node Information
+        """
+        pulumi.set(__self__, "name", name)
+        pulumi.set(__self__, "service_nodes", service_nodes)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> _builtins.str:
+        """
+        List of service node group
+        """
+        return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter(name="serviceNodes")
+    def service_nodes(self) -> Sequence['outputs.GetServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeResult']:
+        """
+        Service Node Information
+        """
+        return pulumi.get(self, "service_nodes")
+
+
+@pulumi.output_type
+class GetServiceAppqoeFeatureForwarderServiceNodeGroupServiceNodeResult(dict):
+    def __init__(__self__, *,
+                 address: _builtins.str):
+        """
+        :param _builtins.str address: IP Address
+        """
+        pulumi.set(__self__, "address", address)
+
+    @_builtins.property
+    @pulumi.getter
+    def address(self) -> _builtins.str:
+        """
+        IP Address
+        """
+        return pulumi.get(self, "address")
+
+
+@pulumi.output_type
+class GetServiceAppqoeFeatureServiceNodeServiceNodeGroupResult(dict):
+    def __init__(__self__, *,
+                 service_nodes: Sequence['outputs.GetServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeResult']):
+        """
+        :param Sequence['GetServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeArgs'] service_nodes: Service Node Information
+        """
+        pulumi.set(__self__, "service_nodes", service_nodes)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceNodes")
+    def service_nodes(self) -> Sequence['outputs.GetServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeResult']:
+        """
+        Service Node Information
+        """
+        return pulumi.get(self, "service_nodes")
+
+
+@pulumi.output_type
+class GetServiceAppqoeFeatureServiceNodeServiceNodeGroupServiceNodeResult(dict):
+    def __init__(__self__):
+        pass
+
+
+@pulumi.output_type
+class GetServiceAppqoeFeatureVirtualApplicationResult(dict):
+    def __init__(__self__, *,
+                 resource_profile: _builtins.str,
+                 resource_profile_variable: _builtins.str):
+        """
+        :param _builtins.str resource_profile: Resource Profile
+        :param _builtins.str resource_profile_variable: Variable name
+        """
+        pulumi.set(__self__, "resource_profile", resource_profile)
+        pulumi.set(__self__, "resource_profile_variable", resource_profile_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="resourceProfile")
+    def resource_profile(self) -> _builtins.str:
+        """
+        Resource Profile
+        """
+        return pulumi.get(self, "resource_profile")
+
+    @_builtins.property
+    @pulumi.getter(name="resourceProfileVariable")
+    def resource_profile_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "resource_profile_variable")
 
 
 @pulumi.output_type

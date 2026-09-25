@@ -58,6 +58,14 @@ export interface GetCustomApplicationResult {
      */
     readonly businessRelevance: string;
     /**
+     * Endpoint Type
+     */
+    readonly endpointType: string;
+    /**
+     * Endpoint Value
+     */
+    readonly endpointValue: string;
+    /**
      * The id of the object
      */
     readonly id: string;

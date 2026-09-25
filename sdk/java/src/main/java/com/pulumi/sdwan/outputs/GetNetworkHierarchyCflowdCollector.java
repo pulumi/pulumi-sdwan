@@ -33,6 +33,11 @@ public final class GetNetworkHierarchyCflowdCollector {
      */
     private Boolean exportSpread;
     /**
+     * @return Source interface
+     * 
+     */
+    private String sourceInterface;
+    /**
      * @return Collector UDP port number
      * 
      */
@@ -73,6 +78,13 @@ public final class GetNetworkHierarchyCflowdCollector {
         return this.exportSpread;
     }
     /**
+     * @return Source interface
+     * 
+     */
+    public String sourceInterface() {
+        return this.sourceInterface;
+    }
+    /**
      * @return Collector UDP port number
      * 
      */
@@ -100,6 +112,7 @@ public final class GetNetworkHierarchyCflowdCollector {
         private Boolean bfdMetricsExport;
         private Integer exportInterval;
         private Boolean exportSpread;
+        private String sourceInterface;
         private Integer udpPort;
         private Integer vpnId;
         public Builder() {}
@@ -109,6 +122,7 @@ public final class GetNetworkHierarchyCflowdCollector {
     	      this.bfdMetricsExport = defaults.bfdMetricsExport;
     	      this.exportInterval = defaults.exportInterval;
     	      this.exportSpread = defaults.exportSpread;
+    	      this.sourceInterface = defaults.sourceInterface;
     	      this.udpPort = defaults.udpPort;
     	      this.vpnId = defaults.vpnId;
         }
@@ -146,6 +160,14 @@ public final class GetNetworkHierarchyCflowdCollector {
             return this;
         }
         @CustomType.Setter
+        public Builder sourceInterface(String sourceInterface) {
+            if (sourceInterface == null) {
+              throw new MissingRequiredPropertyException("GetNetworkHierarchyCflowdCollector", "sourceInterface");
+            }
+            this.sourceInterface = sourceInterface;
+            return this;
+        }
+        @CustomType.Setter
         public Builder udpPort(Integer udpPort) {
             if (udpPort == null) {
               throw new MissingRequiredPropertyException("GetNetworkHierarchyCflowdCollector", "udpPort");
@@ -167,6 +189,7 @@ public final class GetNetworkHierarchyCflowdCollector {
             _resultValue.bfdMetricsExport = bfdMetricsExport;
             _resultValue.exportInterval = exportInterval;
             _resultValue.exportSpread = exportSpread;
+            _resultValue.sourceInterface = sourceInterface;
             _resultValue.udpPort = udpPort;
             _resultValue.vpnId = vpnId;
             return _resultValue;

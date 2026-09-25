@@ -28,6 +28,8 @@ import * as utilities from "./utilities";
  *     applicationGroup: "ipsec-group",
  *     trafficClass: "signaling",
  *     businessRelevance: "business-relevant",
+ *     endpointType: "ip",
+ *     endpointValue: "10.2.2.2",
  * });
  * ```
  *
@@ -87,6 +89,15 @@ export class CustomApplication extends pulumi.CustomResource {
      */
     declare public readonly businessRelevance: pulumi.Output<string | undefined>;
     /**
+     * Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Choices: `ip`, `fqdn`, `url`
+     */
+    declare public readonly endpointType: pulumi.Output<string | undefined>;
+    /**
+     * Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    declare public readonly endpointValue: pulumi.Output<string | undefined>;
+    /**
      * L3/L4 Attributes
      */
     declare public readonly l3l4s: pulumi.Output<outputs.CustomApplicationL3l4[] | undefined>;
@@ -121,6 +132,8 @@ export class CustomApplication extends pulumi.CustomResource {
             resourceInputs["applicationFamily"] = state?.applicationFamily;
             resourceInputs["applicationGroup"] = state?.applicationGroup;
             resourceInputs["businessRelevance"] = state?.businessRelevance;
+            resourceInputs["endpointType"] = state?.endpointType;
+            resourceInputs["endpointValue"] = state?.endpointValue;
             resourceInputs["l3l4s"] = state?.l3l4s;
             resourceInputs["serverNames"] = state?.serverNames;
             resourceInputs["trafficClass"] = state?.trafficClass;
@@ -134,6 +147,8 @@ export class CustomApplication extends pulumi.CustomResource {
             resourceInputs["applicationFamily"] = args?.applicationFamily;
             resourceInputs["applicationGroup"] = args?.applicationGroup;
             resourceInputs["businessRelevance"] = args?.businessRelevance;
+            resourceInputs["endpointType"] = args?.endpointType;
+            resourceInputs["endpointValue"] = args?.endpointValue;
             resourceInputs["l3l4s"] = args?.l3l4s;
             resourceInputs["serverNames"] = args?.serverNames;
             resourceInputs["trafficClass"] = args?.trafficClass;
@@ -167,6 +182,15 @@ export interface CustomApplicationState {
      *   - Choices: `business-relevant`, `business-irrelevant`, `default`
      */
     businessRelevance?: pulumi.Input<string | undefined>;
+    /**
+     * Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Choices: `ip`, `fqdn`, `url`
+     */
+    endpointType?: pulumi.Input<string | undefined>;
+    /**
+     * Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    endpointValue?: pulumi.Input<string | undefined>;
     /**
      * L3/L4 Attributes
      */
@@ -209,6 +233,15 @@ export interface CustomApplicationArgs {
      *   - Choices: `business-relevant`, `business-irrelevant`, `default`
      */
     businessRelevance?: pulumi.Input<string | undefined>;
+    /**
+     * Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Choices: `ip`, `fqdn`, `url`
+     */
+    endpointType?: pulumi.Input<string | undefined>;
+    /**
+     * Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    endpointValue?: pulumi.Input<string | undefined>;
     /**
      * L3/L4 Attributes
      */

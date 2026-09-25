@@ -30,6 +30,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly bool ExportSpread;
         /// <summary>
+        /// Source interface
+        /// </summary>
+        public readonly string SourceInterface;
+        /// <summary>
         /// Collector UDP port number
         /// </summary>
         public readonly int UdpPort;
@@ -48,6 +52,8 @@ namespace Pulumi.Sdwan.Outputs
 
             bool exportSpread,
 
+            string sourceInterface,
+
             int udpPort,
 
             int vpnId)
@@ -56,6 +62,7 @@ namespace Pulumi.Sdwan.Outputs
             BfdMetricsExport = bfdMetricsExport;
             ExportInterval = exportInterval;
             ExportSpread = exportSpread;
+            SourceInterface = sourceInterface;
             UdpPort = udpPort;
             VpnId = vpnId;
         }

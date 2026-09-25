@@ -2133,6 +2133,24 @@
                     }
                 }
             },
+            "sdwan_scope": {
+                "current": "sdwan:index/scope:Scope",
+                "fields": {
+                    "objects": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "object_ids": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "users": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "sdwan_security_app_hosting_feature_template": {
                 "current": "sdwan:index/securityAppHostingFeatureTemplate:SecurityAppHostingFeatureTemplate",
                 "fields": {
@@ -2161,6 +2179,84 @@
                         "maxItemsOne": false
                     },
                     "logging": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_service_appqoe_feature": {
+                "current": "sdwan:index/serviceAppqoeFeature:ServiceAppqoeFeature",
+                "fields": {
+                    "combined_controller_groups": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "appnav_controllers": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "combined_service_contexts": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "service_node_groups": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "combined_service_node_groups": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "service_nodes": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "forwarder_controller_groups": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "appnav_controllers": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "forwarder_service_contexts": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "service_node_groups": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "forwarder_service_node_groups": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "service_nodes": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "service_node_service_node_groups": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "service_nodes": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "virtual_applications": {
                         "maxItemsOne": false
                     }
                 }
@@ -3441,6 +3537,12 @@
             },
             "sdwan_transport_cellular_controller_feature": {
                 "current": "sdwan:index/transportCellularControllerFeature:TransportCellularControllerFeature"
+            },
+            "sdwan_transport_cellular_controller_feature_associate_cellular_profile_feature": {
+                "current": "sdwan:index/transportCellularControllerFeatureAssociateCellularProfileFeature:TransportCellularControllerFeatureAssociateCellularProfileFeature"
+            },
+            "sdwan_transport_cellular_controller_feature_associate_gps_feature": {
+                "current": "sdwan:index/transportCellularControllerFeatureAssociateGpsFeature:TransportCellularControllerFeatureAssociateGpsFeature"
             },
             "sdwan_transport_cellular_profile_feature": {
                 "current": "sdwan:index/transportCellularProfileFeature:TransportCellularProfileFeature"
@@ -6423,6 +6525,24 @@
                     }
                 }
             },
+            "sdwan_scope": {
+                "current": "sdwan:index/getScope:getScope",
+                "fields": {
+                    "objects": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "object_ids": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "users": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "sdwan_security_app_hosting_feature_template": {
                 "current": "sdwan:index/getSecurityAppHostingFeatureTemplate:getSecurityAppHostingFeatureTemplate",
                 "fields": {
@@ -6451,6 +6571,84 @@
                         "maxItemsOne": false
                     },
                     "logging": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_service_appqoe_feature": {
+                "current": "sdwan:index/getServiceAppqoeFeature:getServiceAppqoeFeature",
+                "fields": {
+                    "combined_controller_groups": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "appnav_controllers": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "combined_service_contexts": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "service_node_groups": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "combined_service_node_groups": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "service_nodes": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "forwarder_controller_groups": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "appnav_controllers": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "forwarder_service_contexts": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "service_node_groups": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "forwarder_service_node_groups": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "service_nodes": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "service_node_service_node_groups": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "service_nodes": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "virtual_applications": {
                         "maxItemsOne": false
                     }
                 }
@@ -7732,6 +7930,12 @@
             "sdwan_transport_cellular_controller_feature": {
                 "current": "sdwan:index/getTransportCellularControllerFeature:getTransportCellularControllerFeature"
             },
+            "sdwan_transport_cellular_controller_feature_associate_cellular_profile_feature": {
+                "current": "sdwan:index/getTransportCellularControllerFeatureAssociateCellularProfileFeature:getTransportCellularControllerFeatureAssociateCellularProfileFeature"
+            },
+            "sdwan_transport_cellular_controller_feature_associate_gps_feature": {
+                "current": "sdwan:index/getTransportCellularControllerFeatureAssociateGpsFeature:getTransportCellularControllerFeatureAssociateGpsFeature"
+            },
             "sdwan_transport_cellular_profile_feature": {
                 "current": "sdwan:index/getTransportCellularProfileFeature:getTransportCellularProfileFeature"
             },
@@ -8758,8 +8962,10 @@
             "sdwan_rewrite_rule_policy_definition": {},
             "sdwan_route_policy_definition": {},
             "sdwan_rule_set_policy_definition": {},
+            "sdwan_scope": {},
             "sdwan_security_app_hosting_feature_template": {},
             "sdwan_security_policy": {},
+            "sdwan_service_appqoe_feature": {},
             "sdwan_service_dhcp_server_feature": {},
             "sdwan_service_dual_router_ha_feature": {},
             "sdwan_service_feature_profile": {},
@@ -8831,6 +9037,8 @@
             "sdwan_topology_mesh_feature": {},
             "sdwan_traffic_data_policy_definition": {},
             "sdwan_transport_cellular_controller_feature": {},
+            "sdwan_transport_cellular_controller_feature_associate_cellular_profile_feature": {},
+            "sdwan_transport_cellular_controller_feature_associate_gps_feature": {},
             "sdwan_transport_cellular_profile_feature": {},
             "sdwan_transport_feature_profile": {},
             "sdwan_transport_gps_feature": {},

@@ -38,6 +38,7 @@ namespace Pulumi.Sdwan
     ///             {
     ///                 VpnId = 1,
     ///                 Address = "10.0.0.1",
+    ///                 SourceInterface = "Loopback1",
     ///                 UdpPort = 4739,
     ///                 ExportSpread = true,
     ///                 BfdMetricsExport = true,

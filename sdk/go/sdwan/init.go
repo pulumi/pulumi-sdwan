@@ -303,10 +303,14 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &RoutePolicyDefinition{}
 	case "sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition":
 		r = &RuleSetPolicyDefinition{}
+	case "sdwan:index/scope:Scope":
+		r = &Scope{}
 	case "sdwan:index/securityAppHostingFeatureTemplate:SecurityAppHostingFeatureTemplate":
 		r = &SecurityAppHostingFeatureTemplate{}
 	case "sdwan:index/securityPolicy:SecurityPolicy":
 		r = &SecurityPolicy{}
+	case "sdwan:index/serviceAppqoeFeature:ServiceAppqoeFeature":
+		r = &ServiceAppqoeFeature{}
 	case "sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature":
 		r = &ServiceDhcpServerFeature{}
 	case "sdwan:index/serviceDualRouterHaFeature:ServiceDualRouterHaFeature":
@@ -449,6 +453,10 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &TrafficDataPolicyDefinition{}
 	case "sdwan:index/transportCellularControllerFeature:TransportCellularControllerFeature":
 		r = &TransportCellularControllerFeature{}
+	case "sdwan:index/transportCellularControllerFeatureAssociateCellularProfileFeature:TransportCellularControllerFeatureAssociateCellularProfileFeature":
+		r = &TransportCellularControllerFeatureAssociateCellularProfileFeature{}
+	case "sdwan:index/transportCellularControllerFeatureAssociateGpsFeature:TransportCellularControllerFeatureAssociateGpsFeature":
+		r = &TransportCellularControllerFeatureAssociateGpsFeature{}
 	case "sdwan:index/transportCellularProfileFeature:TransportCellularProfileFeature":
 		r = &TransportCellularProfileFeature{}
 	case "sdwan:index/transportFeatureProfile:TransportFeatureProfile":
@@ -1283,12 +1291,22 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/scope",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/securityAppHostingFeatureTemplate",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/securityPolicy",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/serviceAppqoeFeature",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -1644,6 +1662,16 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/transportCellularControllerFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/transportCellularControllerFeatureAssociateCellularProfileFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/transportCellularControllerFeatureAssociateGpsFeature",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

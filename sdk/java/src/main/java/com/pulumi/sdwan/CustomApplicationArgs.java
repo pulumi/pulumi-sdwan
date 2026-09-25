@@ -85,6 +85,38 @@ public final class CustomApplicationArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
+     * Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Choices: `ip`, `fqdn`, `url`
+     * 
+     */
+    @Import(name="endpointType")
+    private @Nullable Output<String> endpointType;
+
+    /**
+     * @return Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Choices: `ip`, `fqdn`, `url`
+     * 
+     */
+    public Optional<Output<String>> endpointType() {
+        return Optional.ofNullable(this.endpointType);
+    }
+
+    /**
+     * Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="endpointValue")
+    private @Nullable Output<String> endpointValue;
+
+    /**
+     * @return Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> endpointValue() {
+        return Optional.ofNullable(this.endpointValue);
+    }
+
+    /**
      * L3/L4 Attributes
      * 
      */
@@ -138,6 +170,8 @@ public final class CustomApplicationArgs extends com.pulumi.resources.ResourceAr
         this.applicationFamily = $.applicationFamily;
         this.applicationGroup = $.applicationGroup;
         this.businessRelevance = $.businessRelevance;
+        this.endpointType = $.endpointType;
+        this.endpointValue = $.endpointValue;
         this.l3l4s = $.l3l4s;
         this.serverNames = $.serverNames;
         this.trafficClass = $.trafficClass;
@@ -249,6 +283,50 @@ public final class CustomApplicationArgs extends com.pulumi.resources.ResourceAr
          */
         public Builder businessRelevance(String businessRelevance) {
             return businessRelevance(Output.of(businessRelevance));
+        }
+
+        /**
+         * @param endpointType Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         *   - Choices: `ip`, `fqdn`, `url`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointType(@Nullable Output<String> endpointType) {
+            $.endpointType = endpointType;
+            return this;
+        }
+
+        /**
+         * @param endpointType Endpoint Type, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         *   - Choices: `ip`, `fqdn`, `url`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointType(String endpointType) {
+            return endpointType(Output.of(endpointType));
+        }
+
+        /**
+         * @param endpointValue Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointValue(@Nullable Output<String> endpointValue) {
+            $.endpointValue = endpointValue;
+            return this;
+        }
+
+        /**
+         * @param endpointValue Endpoint Value, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointValue(String endpointValue) {
+            return endpointValue(Output.of(endpointValue));
         }
 
         /**

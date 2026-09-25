@@ -34,6 +34,16 @@ public final class GetCustomApplicationResult {
      */
     private String businessRelevance;
     /**
+     * @return Endpoint Type
+     * 
+     */
+    private String endpointType;
+    /**
+     * @return Endpoint Value
+     * 
+     */
+    private String endpointValue;
+    /**
      * @return The id of the object
      * 
      */
@@ -89,6 +99,20 @@ public final class GetCustomApplicationResult {
         return this.businessRelevance;
     }
     /**
+     * @return Endpoint Type
+     * 
+     */
+    public String endpointType() {
+        return this.endpointType;
+    }
+    /**
+     * @return Endpoint Value
+     * 
+     */
+    public String endpointValue() {
+        return this.endpointValue;
+    }
+    /**
      * @return The id of the object
      * 
      */
@@ -137,6 +161,8 @@ public final class GetCustomApplicationResult {
         private String applicationFamily;
         private String applicationGroup;
         private String businessRelevance;
+        private String endpointType;
+        private String endpointValue;
         private String id;
         private List<GetCustomApplicationL3l4> l3l4s;
         private List<String> serverNames;
@@ -149,6 +175,8 @@ public final class GetCustomApplicationResult {
     	      this.applicationFamily = defaults.applicationFamily;
     	      this.applicationGroup = defaults.applicationGroup;
     	      this.businessRelevance = defaults.businessRelevance;
+    	      this.endpointType = defaults.endpointType;
+    	      this.endpointValue = defaults.endpointValue;
     	      this.id = defaults.id;
     	      this.l3l4s = defaults.l3l4s;
     	      this.serverNames = defaults.serverNames;
@@ -186,6 +214,22 @@ public final class GetCustomApplicationResult {
               throw new MissingRequiredPropertyException("GetCustomApplicationResult", "businessRelevance");
             }
             this.businessRelevance = businessRelevance;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder endpointType(String endpointType) {
+            if (endpointType == null) {
+              throw new MissingRequiredPropertyException("GetCustomApplicationResult", "endpointType");
+            }
+            this.endpointType = endpointType;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder endpointValue(String endpointValue) {
+            if (endpointValue == null) {
+              throw new MissingRequiredPropertyException("GetCustomApplicationResult", "endpointValue");
+            }
+            this.endpointValue = endpointValue;
             return this;
         }
         @CustomType.Setter
@@ -240,6 +284,8 @@ public final class GetCustomApplicationResult {
             _resultValue.applicationFamily = applicationFamily;
             _resultValue.applicationGroup = applicationGroup;
             _resultValue.businessRelevance = businessRelevance;
+            _resultValue.endpointType = endpointType;
+            _resultValue.endpointValue = endpointValue;
             _resultValue.id = id;
             _resultValue.l3l4s = l3l4s;
             _resultValue.serverNames = serverNames;

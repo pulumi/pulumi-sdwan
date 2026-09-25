@@ -34,6 +34,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly bool? ExportSpread;
         /// <summary>
+        /// Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public readonly string? SourceInterface;
+        /// <summary>
         /// Collector UDP port number
         ///   - Range: `1024`-`65535`
         ///   - Default value: `4739`
@@ -55,6 +59,8 @@ namespace Pulumi.Sdwan.Outputs
 
             bool? exportSpread,
 
+            string? sourceInterface,
+
             int udpPort,
 
             int vpnId)
@@ -63,6 +69,7 @@ namespace Pulumi.Sdwan.Outputs
             BfdMetricsExport = bfdMetricsExport;
             ExportInterval = exportInterval;
             ExportSpread = exportSpread;
+            SourceInterface = sourceInterface;
             UdpPort = udpPort;
             VpnId = vpnId;
         }

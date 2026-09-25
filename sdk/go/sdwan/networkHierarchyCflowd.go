@@ -41,6 +41,7 @@ import (
 //					&sdwan.NetworkHierarchyCflowdCollectorArgs{
 //						VpnId:            pulumi.Int(1),
 //						Address:          pulumi.String("10.0.0.1"),
+//						SourceInterface:  pulumi.String("Loopback1"),
 //						UdpPort:          pulumi.Int(4739),
 //						ExportSpread:     pulumi.Bool(true),
 //						BfdMetricsExport: pulumi.Bool(true),

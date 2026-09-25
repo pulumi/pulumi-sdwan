@@ -39,6 +39,11 @@ public final class NetworkHierarchyCflowdCollector {
      */
     private @Nullable Boolean exportSpread;
     /**
+     * @return Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    private @Nullable String sourceInterface;
+    /**
      * @return Collector UDP port number
      *   - Range: `1024`-`65535`
      *   - Default value: `4739`
@@ -86,6 +91,13 @@ public final class NetworkHierarchyCflowdCollector {
         return Optional.ofNullable(this.exportSpread);
     }
     /**
+     * @return Source interface, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<String> sourceInterface() {
+        return Optional.ofNullable(this.sourceInterface);
+    }
+    /**
      * @return Collector UDP port number
      *   - Range: `1024`-`65535`
      *   - Default value: `4739`
@@ -116,6 +128,7 @@ public final class NetworkHierarchyCflowdCollector {
         private @Nullable Boolean bfdMetricsExport;
         private @Nullable Integer exportInterval;
         private @Nullable Boolean exportSpread;
+        private @Nullable String sourceInterface;
         private Integer udpPort;
         private Integer vpnId;
         public Builder() {}
@@ -125,6 +138,7 @@ public final class NetworkHierarchyCflowdCollector {
     	      this.bfdMetricsExport = defaults.bfdMetricsExport;
     	      this.exportInterval = defaults.exportInterval;
     	      this.exportSpread = defaults.exportSpread;
+    	      this.sourceInterface = defaults.sourceInterface;
     	      this.udpPort = defaults.udpPort;
     	      this.vpnId = defaults.vpnId;
         }
@@ -156,6 +170,12 @@ public final class NetworkHierarchyCflowdCollector {
             return this;
         }
         @CustomType.Setter
+        public Builder sourceInterface(@Nullable String sourceInterface) {
+
+            this.sourceInterface = sourceInterface;
+            return this;
+        }
+        @CustomType.Setter
         public Builder udpPort(Integer udpPort) {
             if (udpPort == null) {
               throw new MissingRequiredPropertyException("NetworkHierarchyCflowdCollector", "udpPort");
@@ -177,6 +197,7 @@ public final class NetworkHierarchyCflowdCollector {
             _resultValue.bfdMetricsExport = bfdMetricsExport;
             _resultValue.exportInterval = exportInterval;
             _resultValue.exportSpread = exportSpread;
+            _resultValue.sourceInterface = sourceInterface;
             _resultValue.udpPort = udpPort;
             _resultValue.vpnId = vpnId;
             return _resultValue;
