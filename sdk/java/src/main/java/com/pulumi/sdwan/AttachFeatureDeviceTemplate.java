@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var example = new AttachFeatureDeviceTemplate("example", AttachFeatureDeviceTemplateArgs.builder()
- *             .attachFeatureDeviceTemplateId(DT1.id())
+ *             .attachFeatureDeviceTemplateId(DT1.get("id"))
  *             .devices(AttachFeatureDeviceTemplateDeviceArgs.builder()
  *                 .id("C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE")
  *                 .variables(Map.ofEntries(

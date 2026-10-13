@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var example = new ActivateCentralizedPolicy("example", ActivateCentralizedPolicyArgs.builder()
- *             .activateCentralizedPolicyId(POLICY1.id())
+ *             .activateCentralizedPolicyId(POLICY1.get("id"))
  *             .build());
  * 
  *     }
