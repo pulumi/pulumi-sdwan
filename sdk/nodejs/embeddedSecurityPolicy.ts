@@ -36,6 +36,12 @@ import * as utilities from "./utilities";
  *     sessionReclassifyAllow: "on",
  *     icmpUnreachableAllow: "on",
  *     failureMode: "close",
+ *     highSpeedLoggings: [{
+ *         name: "server1",
+ *         sourceInterface: "GigabitEthernet1",
+ *     }],
+ *     syslogServerSourceInterface: "GigabitEthernet1",
+ *     optimized: false,
  *     nat: true,
  *     downloadUrlDatabaseOnDevice: false,
  *     resourceProfile: "low",
@@ -104,6 +110,10 @@ export class EmbeddedSecurityPolicy extends pulumi.CustomResource {
      */
     declare public readonly featureProfileId: pulumi.Output<string>;
     /**
+     * High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    declare public readonly highSpeedLoggings: pulumi.Output<outputs.EmbeddedSecurityPolicyHighSpeedLogging[] | undefined>;
+    /**
      * Setting can be string 'on' or missing for off
      *   - Choices: `on`
      */
@@ -121,6 +131,10 @@ export class EmbeddedSecurityPolicy extends pulumi.CustomResource {
      */
     declare public readonly natVariable: pulumi.Output<string | undefined>;
     /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    declare public readonly optimized: pulumi.Output<boolean | undefined>;
+    /**
      * - Choices: `low`, `medium`, `high`
      */
     declare public readonly resourceProfile: pulumi.Output<string | undefined>;
@@ -133,6 +147,14 @@ export class EmbeddedSecurityPolicy extends pulumi.CustomResource {
      *   - Choices: `on`
      */
     declare public readonly sessionReclassifyAllow: pulumi.Output<string | undefined>;
+    /**
+     * InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    declare public readonly syslogServerSourceInterface: pulumi.Output<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    declare public readonly syslogServerSourceInterfaceVariable: pulumi.Output<string | undefined>;
     declare public readonly tcpSynFloodLimit: pulumi.Output<string | undefined>;
     /**
      * Setting can be string 'on' or missing for off
@@ -164,6 +186,7 @@ export class EmbeddedSecurityPolicy extends pulumi.CustomResource {
             resourceInputs["downloadUrlDatabaseOnDeviceVariable"] = state?.downloadUrlDatabaseOnDeviceVariable;
             resourceInputs["failureMode"] = state?.failureMode;
             resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["highSpeedLoggings"] = state?.highSpeedLoggings;
             resourceInputs["icmpUnreachableAllow"] = state?.icmpUnreachableAllow;
             resourceInputs["maxIncompleteIcmpLimit"] = state?.maxIncompleteIcmpLimit;
             resourceInputs["maxIncompleteTcpLimit"] = state?.maxIncompleteTcpLimit;
@@ -171,9 +194,12 @@ export class EmbeddedSecurityPolicy extends pulumi.CustomResource {
             resourceInputs["name"] = state?.name;
             resourceInputs["nat"] = state?.nat;
             resourceInputs["natVariable"] = state?.natVariable;
+            resourceInputs["optimized"] = state?.optimized;
             resourceInputs["resourceProfile"] = state?.resourceProfile;
             resourceInputs["resourceProfileVariable"] = state?.resourceProfileVariable;
             resourceInputs["sessionReclassifyAllow"] = state?.sessionReclassifyAllow;
+            resourceInputs["syslogServerSourceInterface"] = state?.syslogServerSourceInterface;
+            resourceInputs["syslogServerSourceInterfaceVariable"] = state?.syslogServerSourceInterfaceVariable;
             resourceInputs["tcpSynFloodLimit"] = state?.tcpSynFloodLimit;
             resourceInputs["unifiedLogging"] = state?.unifiedLogging;
             resourceInputs["version"] = state?.version;
@@ -189,6 +215,7 @@ export class EmbeddedSecurityPolicy extends pulumi.CustomResource {
             resourceInputs["downloadUrlDatabaseOnDeviceVariable"] = args?.downloadUrlDatabaseOnDeviceVariable;
             resourceInputs["failureMode"] = args?.failureMode;
             resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["highSpeedLoggings"] = args?.highSpeedLoggings;
             resourceInputs["icmpUnreachableAllow"] = args?.icmpUnreachableAllow;
             resourceInputs["maxIncompleteIcmpLimit"] = args?.maxIncompleteIcmpLimit;
             resourceInputs["maxIncompleteTcpLimit"] = args?.maxIncompleteTcpLimit;
@@ -196,9 +223,12 @@ export class EmbeddedSecurityPolicy extends pulumi.CustomResource {
             resourceInputs["name"] = args?.name;
             resourceInputs["nat"] = args?.nat;
             resourceInputs["natVariable"] = args?.natVariable;
+            resourceInputs["optimized"] = args?.optimized;
             resourceInputs["resourceProfile"] = args?.resourceProfile;
             resourceInputs["resourceProfileVariable"] = args?.resourceProfileVariable;
             resourceInputs["sessionReclassifyAllow"] = args?.sessionReclassifyAllow;
+            resourceInputs["syslogServerSourceInterface"] = args?.syslogServerSourceInterface;
+            resourceInputs["syslogServerSourceInterfaceVariable"] = args?.syslogServerSourceInterfaceVariable;
             resourceInputs["tcpSynFloodLimit"] = args?.tcpSynFloodLimit;
             resourceInputs["unifiedLogging"] = args?.unifiedLogging;
             resourceInputs["version"] = undefined /*out*/;
@@ -236,6 +266,10 @@ export interface EmbeddedSecurityPolicyState {
      */
     featureProfileId?: pulumi.Input<string | undefined>;
     /**
+     * High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    highSpeedLoggings?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityPolicyHighSpeedLogging>[] | undefined>;
+    /**
      * Setting can be string 'on' or missing for off
      *   - Choices: `on`
      */
@@ -253,6 +287,10 @@ export interface EmbeddedSecurityPolicyState {
      */
     natVariable?: pulumi.Input<string | undefined>;
     /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    optimized?: pulumi.Input<boolean | undefined>;
+    /**
      * - Choices: `low`, `medium`, `high`
      */
     resourceProfile?: pulumi.Input<string | undefined>;
@@ -265,6 +303,14 @@ export interface EmbeddedSecurityPolicyState {
      *   - Choices: `on`
      */
     sessionReclassifyAllow?: pulumi.Input<string | undefined>;
+    /**
+     * InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    syslogServerSourceInterface?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    syslogServerSourceInterfaceVariable?: pulumi.Input<string | undefined>;
     tcpSynFloodLimit?: pulumi.Input<string | undefined>;
     /**
      * Setting can be string 'on' or missing for off
@@ -305,6 +351,10 @@ export interface EmbeddedSecurityPolicyArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
+     * High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    highSpeedLoggings?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityPolicyHighSpeedLogging>[] | undefined>;
+    /**
      * Setting can be string 'on' or missing for off
      *   - Choices: `on`
      */
@@ -322,6 +372,10 @@ export interface EmbeddedSecurityPolicyArgs {
      */
     natVariable?: pulumi.Input<string | undefined>;
     /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    optimized?: pulumi.Input<boolean | undefined>;
+    /**
      * - Choices: `low`, `medium`, `high`
      */
     resourceProfile?: pulumi.Input<string | undefined>;
@@ -334,6 +388,14 @@ export interface EmbeddedSecurityPolicyArgs {
      *   - Choices: `on`
      */
     sessionReclassifyAllow?: pulumi.Input<string | undefined>;
+    /**
+     * InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    syslogServerSourceInterface?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    syslogServerSourceInterfaceVariable?: pulumi.Input<string | undefined>;
     tcpSynFloodLimit?: pulumi.Input<string | undefined>;
     /**
      * Setting can be string 'on' or missing for off

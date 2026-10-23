@@ -16,6 +16,7 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// Gateway distance, Attribute conditional on `Gateway` equal to `Null0`
         ///   - Range: `1`-`255`
+        ///   - Default value: `1`
         /// </summary>
         public readonly int? AdministrativeDistance;
         /// <summary>

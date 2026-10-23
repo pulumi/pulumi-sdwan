@@ -62,8 +62,9 @@ type LookupPolicyObjectSecurityZoneArgs struct {
 // A collection of values returned by getPolicyObjectSecurityZone.
 type LookupPolicyObjectSecurityZoneResult struct {
 	// The description of the Policy_object
-	Description string                             `pulumi:"description"`
-	Entries     []GetPolicyObjectSecurityZoneEntry `pulumi:"entries"`
+	Description string `pulumi:"description"`
+	// List of entries
+	Entries []GetPolicyObjectSecurityZoneEntry `pulumi:"entries"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The id of the Policy_object
@@ -113,6 +114,7 @@ func (o LookupPolicyObjectSecurityZoneResultOutput) Description() pulumi.StringO
 	return o.ApplyT(func(v LookupPolicyObjectSecurityZoneResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
+// List of entries
 func (o LookupPolicyObjectSecurityZoneResultOutput) Entries() GetPolicyObjectSecurityZoneEntryArrayOutput {
 	return o.ApplyT(func(v LookupPolicyObjectSecurityZoneResult) []GetPolicyObjectSecurityZoneEntry { return v.Entries }).(GetPolicyObjectSecurityZoneEntryArrayOutput)
 }

@@ -280,6 +280,9 @@ class GetSseZscalerFeatureResult:
     @_builtins.property
     @pulumi.getter
     def country(self) -> _builtins.bool:
+        """
+        Country
+        """
         return pulumi.get(self, "country")
 
     @_builtins.property
@@ -317,6 +320,9 @@ class GetSseZscalerFeatureResult:
     @_builtins.property
     @pulumi.getter(name="dnBandwidth")
     def dn_bandwidth(self) -> _builtins.float:
+        """
+        Download Bandwidth in Mbps
+        """
         return pulumi.get(self, "dn_bandwidth")
 
     @_builtins.property
@@ -330,6 +336,9 @@ class GetSseZscalerFeatureResult:
     @_builtins.property
     @pulumi.getter(name="enforceBandwidthControl")
     def enforce_bandwidth_control(self) -> _builtins.bool:
+        """
+        Enforce Bandwidth Control
+        """
         return pulumi.get(self, "enforce_bandwidth_control")
 
     @_builtins.property
@@ -596,6 +605,9 @@ class GetSseZscalerFeatureResult:
     @_builtins.property
     @pulumi.getter(name="upBandwidth")
     def up_bandwidth(self) -> _builtins.float:
+        """
+        Upload Bandwidth in Mbps
+        """
         return pulumi.get(self, "up_bandwidth")
 
     @_builtins.property

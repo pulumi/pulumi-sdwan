@@ -18,10 +18,12 @@ import * as utilities from "./utilities";
  * });
  * ```
  */
-export function getPolicyObjectFeatureProfile(args: GetPolicyObjectFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetPolicyObjectFeatureProfileResult> {
+export function getPolicyObjectFeatureProfile(args?: GetPolicyObjectFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetPolicyObjectFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,7 +34,11 @@ export interface GetPolicyObjectFeatureProfileArgs {
     /**
      * The id of the object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the policy object feature profile
+     */
+    name?: string;
 }
 
 /**
@@ -66,10 +72,12 @@ export interface GetPolicyObjectFeatureProfileResult {
  * });
  * ```
  */
-export function getPolicyObjectFeatureProfileOutput(args: GetPolicyObjectFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectFeatureProfileResult> {
+export function getPolicyObjectFeatureProfileOutput(args?: GetPolicyObjectFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -80,5 +88,9 @@ export interface GetPolicyObjectFeatureProfileOutputArgs {
     /**
      * The id of the object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the policy object feature profile
+     */
+    name?: pulumi.Input<string | undefined>;
 }

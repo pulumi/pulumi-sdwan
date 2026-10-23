@@ -253,7 +253,7 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceAction {
     appqoeServiceNodeGroup?: pulumi.Input<string | undefined>;
     appqoeTcpOptimization?: pulumi.Input<boolean | undefined>;
     /**
-     * Backup SLA perferred color
+     * Backup SLA preferred color
      */
     backupSlaPreferredColors?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     cflowd?: pulumi.Input<boolean | undefined>;
@@ -314,6 +314,10 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSetParamete
     nextHopLoose?: pulumi.Input<boolean | undefined>;
     policerId?: pulumi.Input<string | undefined>;
     preferredColorGroupId?: pulumi.Input<string | undefined>;
+    /**
+     * Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    preferredColorGroupRestrict?: pulumi.Input<boolean | undefined>;
     preferredRemoteColorRestrict?: pulumi.Input<boolean | undefined>;
     preferredRemoteColors?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     serviceChainFallbackToRouting?: pulumi.Input<boolean | undefined>;
@@ -366,6 +370,10 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSetParamete
 export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass {
     fallbackToBestPath?: pulumi.Input<boolean | undefined>;
     preferredColorGroupListId?: pulumi.Input<string | undefined>;
+    /**
+     * Restrict traffic to the preferred color group, requires `preferredColorGroupListId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    preferredColorGroupRestrict?: pulumi.Input<boolean | undefined>;
     preferredColors?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     preferredRemoteColors?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     remoteColorRestrict?: pulumi.Input<boolean | undefined>;
@@ -404,6 +412,10 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
      * DSCP numbers
      */
     dscps?: pulumi.Input<pulumi.Input<number>[] | undefined>;
+    /**
+     * Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    hierarchyIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * ICMP6 Message
      */
@@ -6414,8 +6426,22 @@ export interface EmbeddedSecurityNgfwPolicySequence {
      */
     baseAction?: pulumi.Input<string | undefined>;
     disableSequence?: pulumi.Input<boolean | undefined>;
+    /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    isRuleSet?: pulumi.Input<boolean | undefined>;
     matchEntries?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityNgfwPolicySequenceMatchEntry>[] | undefined>;
+    /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    sequenceComment?: pulumi.Input<string | undefined>;
     sequenceId?: pulumi.Input<string | undefined>;
+    /**
+     * IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     *   - Choices: `ipv4`, `ipv6`
+     *   - Default value: `ipv4`
+     */
+    sequenceIpType?: pulumi.Input<string | undefined>;
     sequenceName?: pulumi.Input<string | undefined>;
     sequenceType?: pulumi.Input<string | undefined>;
 }
@@ -6433,6 +6459,10 @@ export interface EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     appListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     applicationFamilies?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     applications?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    destinationDataIpv6PrefixListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     destinationDataPrefixListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     destinationDataPrefixes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
@@ -6451,6 +6481,18 @@ export interface EmbeddedSecurityNgfwPolicySequenceMatchEntry {
      * Variable name
      */
     destinationGeoLocationsVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    destinationIpv6DataPrefixes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    destinationIpv6DataPrefixesVariable?: pulumi.Input<string | undefined>;
+    /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    destinationObjectGroupListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     destinationPortListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     destinationPorts?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
@@ -6458,11 +6500,22 @@ export interface EmbeddedSecurityNgfwPolicySequenceMatchEntry {
      */
     destinationPortsVariable?: pulumi.Input<string | undefined>;
     destinationScalableGroupTagListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Deprecated, use `destinationObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+     */
     destinationSecurityGroupListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     flatAppListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     protocolNameListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     protocolNames?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     protocols?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Security rule set IDs, requires `isRuleSet` set to `true` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    ruleSetListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    sourceDataIpv6PrefixListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     sourceDataPrefixListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     sourceDataPrefixes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
@@ -6478,6 +6531,18 @@ export interface EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     sourceIdentityListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     sourceIdentityUsergroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     sourceIdentityUsers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    sourceIpv6DataPrefixes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    sourceIpv6DataPrefixesVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    sourceObjectGroupListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     sourcePortListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     sourcePorts?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
@@ -6485,6 +6550,9 @@ export interface EmbeddedSecurityNgfwPolicySequenceMatchEntry {
      */
     sourcePortsVariable?: pulumi.Input<string | undefined>;
     sourceScalableGroupTagListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Deprecated, use `sourceObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+     */
     sourceSecurityGroupListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
@@ -6506,6 +6574,21 @@ export interface EmbeddedSecurityPolicyAssemblyEntry {
      */
     sourceZone?: pulumi.Input<string | undefined>;
     sourceZoneListId?: pulumi.Input<string | undefined>;
+}
+
+export interface EmbeddedSecurityPolicyHighSpeedLogging {
+    /**
+     * - Choices: `server1`, `server2`, `server3`, `server4`
+     */
+    name?: pulumi.Input<string | undefined>;
+    /**
+     * InterfaceName
+     */
+    sourceInterface?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ExpandedCommunityListPolicyObjectEntry {
@@ -7722,6 +7805,14 @@ export interface PolicyObjectSecurityDataIpv4PrefixListEntry {
     ipPrefixVariable?: pulumi.Input<string | undefined>;
 }
 
+export interface PolicyObjectSecurityDataIpv6PrefixListEntry {
+    ipv6Prefix?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ipv6PrefixVariable?: pulumi.Input<string | undefined>;
+}
+
 export interface PolicyObjectSecurityFqdnListEntry {
     pattern?: pulumi.Input<string | undefined>;
 }
@@ -7758,6 +7849,39 @@ export interface PolicyObjectSecurityLocalDomainListEntry {
     localDomain?: pulumi.Input<string | undefined>;
 }
 
+export interface PolicyObjectSecurityObjectGroupEntry {
+    dataIpv4PrefixListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    dataIpv4Prefixes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    dataIpv4PrefixesVariable?: pulumi.Input<string | undefined>;
+    dataIpv6PrefixListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    dataIpv6Prefixes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    dataIpv6PrefixesVariable?: pulumi.Input<string | undefined>;
+    fqdnListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    fqdns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    fqdnsVariable?: pulumi.Input<string | undefined>;
+    geoLocationListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    geoLocations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    geoLocationsVariable?: pulumi.Input<string | undefined>;
+    portListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    ports?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    portsVariable?: pulumi.Input<string | undefined>;
+}
+
 export interface PolicyObjectSecurityPortListEntry {
     /**
      * can be single port or port range
@@ -7770,6 +7894,111 @@ export interface PolicyObjectSecurityProtocolListEntry {
      * - Choices: `snmp`, `icmp`, `tcp`, `udp`, `echo`, `telnet`, `wins`, `n2h2server`, `nntp`, `pptp`, `rtsp`, `bootpc`, `gdoi`, `tacacs`, `gopher`, `icabrowser`, `skinny`, `sunrpc`, `biff`, `router`, `ircs`, `orasrv`, `ms-cluster-net`, `kermit`, `isakmp`, `sshell`, `realsecure`, `ircu`, `appleqtc`, `pwdgen`, `rdb-dbs-disp`, `creativepartnr`, `finger`, `ftps`, `giop`, `rsvd`, `hp-alarm-mgr`, `uucp`, `kerberos`, `imap`, `time`, `bootps`, `tftp`, `oracle`, `snmptrap`, `http`, `qmtp`, `radius`, `oracle-em-vp`, `tarantella`, `pcanywheredata`, `ldap`, `mgcp`, `sqlsrv`, `hsrp`, `cisco-net-mgmt`, `smtp`, `pcanywherestat`, `exec`, `send`, `stun`, `syslog`, `ms-sql-m`, `citrix`, `creativeserver`, `cifs`, `cisco-sys`, `cisco-tna`, `ms-dotnetster`, `gtpv1`, `gtpv0`, `imap3`, `fcip-port`, `netbios-dgm`, `sip-tls`, `pop3s`, `cisco-fna`, `802-11-iapp`, `oem-agent`, `cisco-tdp`, `tr-rsrb`, `r-winsock`, `sql-net`, `syslog-conn`, `tacacs-ds`, `h225ras`, `ace-svr`, `dhcp-failover`, `igmpv3lite`, `irc-serv`, `entrust-svcs`, `dbcontrolAgent`, `cisco-svcs`, `ipsec-msft`, `microsoft-ds`, `ms-sna`, `rsvpTunnel`, `rsvp-encap`, `hp-collector`, `netbios-ns`, `msexch-routing`, `h323`, `l2tp`, `ldap-admin`, `pop3`, `h323callsigalt`, `ms-sql`, `iscsi-target`, `webster`, `lotusnote`, `ipx`, `entrust-svc-hand`, `citriximaclient`, `rtc-pm-port`, `ftp`, `aol`, `xdmcp`, `oraclenames`, `login`, `iscsi`, `ttc`, `imaps`, `socks`, `ssh`, `dnsix`, `daytime`, `sip`, `discard`, `ntp`, `ldaps`, `https`, `vdolive`, `ica`, `net8-cman`, `cuseeme`, `netstat`, `sms`, `streamworks`, `rtelnet`, `who`, `kazaa`, `ssp`, `dbase`, `timed`, `cddbp`, `telnets`, `ymsgr`, `ident`, `bgp`, `ddns-v3`, `vqp`, `irc`, `ipass`, `x11`, `dns`, `lotusmtap`, `mysql`, `nfs`, `msnmsgr`, `netshow`, `sqlserv`, `hp-managed-node`, `ncp`, `shell`, `realmedia`, `msrpc`, `clp`
      */
     protocolName?: pulumi.Input<string | undefined>;
+}
+
+export interface PolicyObjectSecurityRuleSetSequence {
+    /**
+     * action
+     *   - Choices: `pass`, `inspect`, `drop`
+     */
+    action?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    actionVariable?: pulumi.Input<string | undefined>;
+    destinationDataIpv4PrefixListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    destinationDataIpv6PrefixListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    destinationFqdnListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    destinationFqdns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    destinationFqdnsVariable?: pulumi.Input<string | undefined>;
+    destinationGeoLocationListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Destination Geolocation
+     */
+    destinationGeoLocations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    destinationGeoLocationsVariable?: pulumi.Input<string | undefined>;
+    destinationIpv4Prefixes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    destinationIpv4PrefixesVariable?: pulumi.Input<string | undefined>;
+    destinationIpv6Prefixes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    destinationIpv6PrefixesVariable?: pulumi.Input<string | undefined>;
+    destinationObjectGroupListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    destinationPortListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    destinationPorts?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    destinationPortsVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Sequence name
+     */
+    name?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    nameVariable?: pulumi.Input<string | undefined>;
+    protocolNameListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    protocolNames?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    protocolNamesVariable?: pulumi.Input<string | undefined>;
+    /**
+     * protocol
+     */
+    protocols?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Sequence Id
+     */
+    sequenceId?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    sequenceIdVariable?: pulumi.Input<string | undefined>;
+    /**
+     * ipv4/ ipv6
+     *   - Choices: `ipv4`, `ipv6`
+     */
+    sequenceIpType?: pulumi.Input<string | undefined>;
+    sourceDataIpv4PrefixListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    sourceDataIpv6PrefixListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    sourceGeoLocationListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Source Geolocation
+     */
+    sourceGeoLocations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    sourceGeoLocationsVariable?: pulumi.Input<string | undefined>;
+    sourceIpv4Prefixes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    sourceIpv4PrefixesVariable?: pulumi.Input<string | undefined>;
+    sourceIpv6Prefixes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    sourceIpv6PrefixesVariable?: pulumi.Input<string | undefined>;
+    sourceObjectGroupListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    sourcePortListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    sourcePorts?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Variable name
+     */
+    sourcePortsVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityScalableGroupTagListEntry {
@@ -9175,6 +9404,7 @@ export interface ServiceLanVpnFeatureIpv4StaticRoute {
     /**
      * Gateway distance, Attribute conditional on `gateway` equal to `null0`
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      */
     administrativeDistance?: pulumi.Input<number | undefined>;
     /**
@@ -9250,6 +9480,7 @@ export interface ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHo
     /**
      * Administrative distance
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      */
     administrativeDistance?: pulumi.Input<number | undefined>;
     /**
@@ -9381,6 +9612,7 @@ export interface ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNext
     /**
      * Administrative distance
      *   - Range: `1`-`254`
+     *   - Default value: `1`
      */
     administrativeDistance?: pulumi.Input<number | undefined>;
     /**
@@ -12495,7 +12727,7 @@ export interface ServiceWirelessLanFeatureSsid {
     radiusServerSecretVariable?: pulumi.Input<string | undefined>;
     /**
      * Select security type
-     *   - Choices: `personal`, `open`, `enterprise`
+     *   - Choices: `enterprise`, `personal`, `open`
      */
     securityType?: pulumi.Input<string | undefined>;
     /**
@@ -13078,7 +13310,7 @@ export interface SseZscalerFeatureSubLocation {
      */
     displayTimeUnitVariable?: pulumi.Input<string | undefined>;
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     * Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
      *   - Range: `0.1`-`99999`
      */
     dnBandwidth?: pulumi.Input<number | undefined>;
@@ -13115,6 +13347,9 @@ export interface SseZscalerFeatureSubLocation {
      * Variable name, Attribute conditional on `surrogateIp` equal to `true`
      */
     idleTimeVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Internal Ip address
+     */
     internalIps?: pulumi.Input<pulumi.Input<inputs.SseZscalerFeatureSubLocationInternalIp>[] | undefined>;
     /**
      * If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
@@ -13125,6 +13360,9 @@ export interface SseZscalerFeatureSubLocation {
      * Variable name
      */
     ipEnforcedForKnownBrowsersVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Sub-location name
+     */
     name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
@@ -13163,6 +13401,9 @@ export interface SseZscalerFeatureSubLocation {
      * Variable name
      */
     serviceVpnVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Sub-location Service VPN
+     */
     serviceVpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic., Attribute conditional on `authRequired` equal to `true`
@@ -13174,7 +13415,7 @@ export interface SseZscalerFeatureSubLocation {
      */
     surrogateIpVariable?: pulumi.Input<string | undefined>;
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     * Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
      *   - Range: `0.1`-`99999`
      */
     upBandwidth?: pulumi.Input<number | undefined>;
@@ -14609,6 +14850,9 @@ export interface TlsSslDecryptionPolicyDefinitionUrlRule {
 }
 
 export interface TopologyCustomControlFeatureSequence {
+    /**
+     * List of action entries
+     */
     actionEntries?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureSequenceActionEntry>[] | undefined>;
     /**
      * Base Action
@@ -14625,6 +14869,9 @@ export interface TopologyCustomControlFeatureSequence {
      *   - Choices: `ipv4`, `ipv6`, `all`
      */
     ipType?: pulumi.Input<string | undefined>;
+    /**
+     * Set of match entries
+     */
     matchEntries?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence Name

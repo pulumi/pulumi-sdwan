@@ -93,11 +93,17 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Can be one of the enum value
-        ///   - Choices: `Balanced`, `Connectivity`, `Security`
+        /// Can be one of the enum value, Attribute conditional on `SignatureSetId` not being set
+        ///   - Choices: `Balanced`, `Connectivity`, `Security`, `max-detect`, `no-rules-active`
         /// </summary>
         [Output("signatureSet")]
-        public Output<string> SignatureSet { get; private set; } = null!;
+        public Output<string?> SignatureSet { get; private set; } = null!;
+
+        /// <summary>
+        /// Reference to a user edited signature set parcel, Attribute conditional on `SignatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("signatureSetId")]
+        public Output<string?> SignatureSetId { get; private set; } = null!;
 
         /// <summary>
         /// The version of the Policy_object
@@ -193,11 +199,17 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Can be one of the enum value
-        ///   - Choices: `Balanced`, `Connectivity`, `Security`
+        /// Can be one of the enum value, Attribute conditional on `SignatureSetId` not being set
+        ///   - Choices: `Balanced`, `Connectivity`, `Security`, `max-detect`, `no-rules-active`
         /// </summary>
-        [Input("signatureSet", required: true)]
-        public Input<string> SignatureSet { get; set; } = null!;
+        [Input("signatureSet")]
+        public Input<string>? SignatureSet { get; set; }
+
+        /// <summary>
+        /// Reference to a user edited signature set parcel, Attribute conditional on `SignatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("signatureSetId")]
+        public Input<string>? SignatureSetId { get; set; }
 
         public PolicyObjectUnifiedIntrusionPreventionArgs()
         {
@@ -249,11 +261,17 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Can be one of the enum value
-        ///   - Choices: `Balanced`, `Connectivity`, `Security`
+        /// Can be one of the enum value, Attribute conditional on `SignatureSetId` not being set
+        ///   - Choices: `Balanced`, `Connectivity`, `Security`, `max-detect`, `no-rules-active`
         /// </summary>
         [Input("signatureSet")]
         public Input<string>? SignatureSet { get; set; }
+
+        /// <summary>
+        /// Reference to a user edited signature set parcel, Attribute conditional on `SignatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("signatureSetId")]
+        public Input<string>? SignatureSetId { get; set; }
 
         /// <summary>
         /// The version of the Policy_object

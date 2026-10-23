@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Task<GetDnsSecurityFeatureProfileResult> InvokeAsync(GetDnsSecurityFeatureProfileArgs args, InvokeOptions? options = null)
+        public static Task<GetDnsSecurityFeatureProfileResult> InvokeAsync(GetDnsSecurityFeatureProfileArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetDnsSecurityFeatureProfileResult>("sdwan:index/getDnsSecurityFeatureProfile:getDnsSecurityFeatureProfile", args ?? new GetDnsSecurityFeatureProfileArgs(), options.WithDefaults());
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Output<GetDnsSecurityFeatureProfileResult> Invoke(GetDnsSecurityFeatureProfileInvokeArgs args, InvokeOptions? options = null)
+        public static Output<GetDnsSecurityFeatureProfileResult> Invoke(GetDnsSecurityFeatureProfileInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDnsSecurityFeatureProfileResult>("sdwan:index/getDnsSecurityFeatureProfile:getDnsSecurityFeatureProfile", args ?? new GetDnsSecurityFeatureProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
@@ -90,8 +90,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the dns security feature profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetDnsSecurityFeatureProfileArgs()
         {
@@ -104,8 +110,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the dns security feature profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetDnsSecurityFeatureProfileInvokeArgs()
         {

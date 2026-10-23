@@ -27,6 +27,7 @@ namespace Pulumi.Sdwan.Inputs
         /// <summary>
         /// Administrative distance
         ///   - Range: `1`-`254`
+        ///   - Default value: `1`
         /// </summary>
         [Input("administrativeDistance")]
         public Input<int>? AdministrativeDistance { get; set; }

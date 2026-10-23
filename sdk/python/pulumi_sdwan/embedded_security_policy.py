@@ -28,6 +28,7 @@ class EmbeddedSecurityPolicyArgs:
                  download_url_database_on_device: pulumi.Input[Optional[_builtins.bool]] = None,
                  download_url_database_on_device_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_loggings: pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityPolicyHighSpeedLoggingArgs']]]] = None,
                  icmp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
                  max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
                  max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
@@ -35,9 +36,12 @@ class EmbeddedSecurityPolicyArgs:
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  nat: pulumi.Input[Optional[_builtins.bool]] = None,
                  nat_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 optimized: pulumi.Input[Optional[_builtins.bool]] = None,
                  resource_profile: pulumi.Input[Optional[_builtins.str]] = None,
                  resource_profile_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 syslog_server_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 syslog_server_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
                  unified_logging: pulumi.Input[Optional[_builtins.str]] = None):
         """
@@ -49,14 +53,18 @@ class EmbeddedSecurityPolicyArgs:
         :param pulumi.Input[_builtins.str] description: The description of the Policy
         :param pulumi.Input[_builtins.str] download_url_database_on_device_variable: Variable name
         :param pulumi.Input[_builtins.str] failure_mode: - Choices: `close`, `open`
+        :param pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityPolicyHighSpeedLoggingArgs']]] high_speed_loggings: High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param pulumi.Input[_builtins.str] icmp_unreachable_allow: Setting can be string 'on' or missing for off
                  - Choices: `on`
         :param pulumi.Input[_builtins.str] name: The name of the Policy
         :param pulumi.Input[_builtins.str] nat_variable: Variable name
+        :param pulumi.Input[_builtins.bool] optimized: , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param pulumi.Input[_builtins.str] resource_profile: - Choices: `low`, `medium`, `high`
         :param pulumi.Input[_builtins.str] resource_profile_variable: Variable name
         :param pulumi.Input[_builtins.str] session_reclassify_allow: Setting can be string 'on' or missing for off
                  - Choices: `on`
+        :param pulumi.Input[_builtins.str] syslog_server_source_interface: InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        :param pulumi.Input[_builtins.str] syslog_server_source_interface_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param pulumi.Input[_builtins.str] unified_logging: Setting can be string 'on' or missing for off
                  - Choices: `on`
         """
@@ -73,6 +81,8 @@ class EmbeddedSecurityPolicyArgs:
             pulumi.set(__self__, "download_url_database_on_device_variable", download_url_database_on_device_variable)
         if failure_mode is not None:
             pulumi.set(__self__, "failure_mode", failure_mode)
+        if high_speed_loggings is not None:
+            pulumi.set(__self__, "high_speed_loggings", high_speed_loggings)
         if icmp_unreachable_allow is not None:
             pulumi.set(__self__, "icmp_unreachable_allow", icmp_unreachable_allow)
         if max_incomplete_icmp_limit is not None:
@@ -87,12 +97,18 @@ class EmbeddedSecurityPolicyArgs:
             pulumi.set(__self__, "nat", nat)
         if nat_variable is not None:
             pulumi.set(__self__, "nat_variable", nat_variable)
+        if optimized is not None:
+            pulumi.set(__self__, "optimized", optimized)
         if resource_profile is not None:
             pulumi.set(__self__, "resource_profile", resource_profile)
         if resource_profile_variable is not None:
             pulumi.set(__self__, "resource_profile_variable", resource_profile_variable)
         if session_reclassify_allow is not None:
             pulumi.set(__self__, "session_reclassify_allow", session_reclassify_allow)
+        if syslog_server_source_interface is not None:
+            pulumi.set(__self__, "syslog_server_source_interface", syslog_server_source_interface)
+        if syslog_server_source_interface_variable is not None:
+            pulumi.set(__self__, "syslog_server_source_interface_variable", syslog_server_source_interface_variable)
         if tcp_syn_flood_limit is not None:
             pulumi.set(__self__, "tcp_syn_flood_limit", tcp_syn_flood_limit)
         if unified_logging is not None:
@@ -178,6 +194,18 @@ class EmbeddedSecurityPolicyArgs:
         pulumi.set(self, "failure_mode", value)
 
     @_builtins.property
+    @pulumi.getter(name="highSpeedLoggings")
+    def high_speed_loggings(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityPolicyHighSpeedLoggingArgs']]]]:
+        """
+        High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "high_speed_loggings")
+
+    @high_speed_loggings.setter
+    def high_speed_loggings(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityPolicyHighSpeedLoggingArgs']]]]):
+        pulumi.set(self, "high_speed_loggings", value)
+
+    @_builtins.property
     @pulumi.getter(name="icmpUnreachableAllow")
     def icmp_unreachable_allow(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
@@ -251,6 +279,18 @@ class EmbeddedSecurityPolicyArgs:
         pulumi.set(self, "nat_variable", value)
 
     @_builtins.property
+    @pulumi.getter
+    def optimized(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "optimized")
+
+    @optimized.setter
+    def optimized(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "optimized", value)
+
+    @_builtins.property
     @pulumi.getter(name="resourceProfile")
     def resource_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
@@ -288,6 +328,30 @@ class EmbeddedSecurityPolicyArgs:
         pulumi.set(self, "session_reclassify_allow", value)
 
     @_builtins.property
+    @pulumi.getter(name="syslogServerSourceInterface")
+    def syslog_server_source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "syslog_server_source_interface")
+
+    @syslog_server_source_interface.setter
+    def syslog_server_source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "syslog_server_source_interface", value)
+
+    @_builtins.property
+    @pulumi.getter(name="syslogServerSourceInterfaceVariable")
+    def syslog_server_source_interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "syslog_server_source_interface_variable")
+
+    @syslog_server_source_interface_variable.setter
+    def syslog_server_source_interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "syslog_server_source_interface_variable", value)
+
+    @_builtins.property
     @pulumi.getter(name="tcpSynFloodLimit")
     def tcp_syn_flood_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "tcp_syn_flood_limit")
@@ -320,6 +384,7 @@ class _EmbeddedSecurityPolicyState:
                  download_url_database_on_device_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_loggings: pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityPolicyHighSpeedLoggingArgs']]]] = None,
                  icmp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
                  max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
                  max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
@@ -327,9 +392,12 @@ class _EmbeddedSecurityPolicyState:
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  nat: pulumi.Input[Optional[_builtins.bool]] = None,
                  nat_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 optimized: pulumi.Input[Optional[_builtins.bool]] = None,
                  resource_profile: pulumi.Input[Optional[_builtins.str]] = None,
                  resource_profile_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 syslog_server_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 syslog_server_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
                  unified_logging: pulumi.Input[Optional[_builtins.str]] = None,
                  version: pulumi.Input[Optional[_builtins.int]] = None):
@@ -342,14 +410,18 @@ class _EmbeddedSecurityPolicyState:
         :param pulumi.Input[_builtins.str] download_url_database_on_device_variable: Variable name
         :param pulumi.Input[_builtins.str] failure_mode: - Choices: `close`, `open`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityPolicyHighSpeedLoggingArgs']]] high_speed_loggings: High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param pulumi.Input[_builtins.str] icmp_unreachable_allow: Setting can be string 'on' or missing for off
                  - Choices: `on`
         :param pulumi.Input[_builtins.str] name: The name of the Policy
         :param pulumi.Input[_builtins.str] nat_variable: Variable name
+        :param pulumi.Input[_builtins.bool] optimized: , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param pulumi.Input[_builtins.str] resource_profile: - Choices: `low`, `medium`, `high`
         :param pulumi.Input[_builtins.str] resource_profile_variable: Variable name
         :param pulumi.Input[_builtins.str] session_reclassify_allow: Setting can be string 'on' or missing for off
                  - Choices: `on`
+        :param pulumi.Input[_builtins.str] syslog_server_source_interface: InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        :param pulumi.Input[_builtins.str] syslog_server_source_interface_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param pulumi.Input[_builtins.str] unified_logging: Setting can be string 'on' or missing for off
                  - Choices: `on`
         :param pulumi.Input[_builtins.int] version: The version of the Policy
@@ -368,6 +440,8 @@ class _EmbeddedSecurityPolicyState:
             pulumi.set(__self__, "failure_mode", failure_mode)
         if feature_profile_id is not None:
             pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        if high_speed_loggings is not None:
+            pulumi.set(__self__, "high_speed_loggings", high_speed_loggings)
         if icmp_unreachable_allow is not None:
             pulumi.set(__self__, "icmp_unreachable_allow", icmp_unreachable_allow)
         if max_incomplete_icmp_limit is not None:
@@ -382,12 +456,18 @@ class _EmbeddedSecurityPolicyState:
             pulumi.set(__self__, "nat", nat)
         if nat_variable is not None:
             pulumi.set(__self__, "nat_variable", nat_variable)
+        if optimized is not None:
+            pulumi.set(__self__, "optimized", optimized)
         if resource_profile is not None:
             pulumi.set(__self__, "resource_profile", resource_profile)
         if resource_profile_variable is not None:
             pulumi.set(__self__, "resource_profile_variable", resource_profile_variable)
         if session_reclassify_allow is not None:
             pulumi.set(__self__, "session_reclassify_allow", session_reclassify_allow)
+        if syslog_server_source_interface is not None:
+            pulumi.set(__self__, "syslog_server_source_interface", syslog_server_source_interface)
+        if syslog_server_source_interface_variable is not None:
+            pulumi.set(__self__, "syslog_server_source_interface_variable", syslog_server_source_interface_variable)
         if tcp_syn_flood_limit is not None:
             pulumi.set(__self__, "tcp_syn_flood_limit", tcp_syn_flood_limit)
         if unified_logging is not None:
@@ -475,6 +555,18 @@ class _EmbeddedSecurityPolicyState:
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
+    @pulumi.getter(name="highSpeedLoggings")
+    def high_speed_loggings(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityPolicyHighSpeedLoggingArgs']]]]:
+        """
+        High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "high_speed_loggings")
+
+    @high_speed_loggings.setter
+    def high_speed_loggings(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityPolicyHighSpeedLoggingArgs']]]]):
+        pulumi.set(self, "high_speed_loggings", value)
+
+    @_builtins.property
     @pulumi.getter(name="icmpUnreachableAllow")
     def icmp_unreachable_allow(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
@@ -548,6 +640,18 @@ class _EmbeddedSecurityPolicyState:
         pulumi.set(self, "nat_variable", value)
 
     @_builtins.property
+    @pulumi.getter
+    def optimized(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "optimized")
+
+    @optimized.setter
+    def optimized(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "optimized", value)
+
+    @_builtins.property
     @pulumi.getter(name="resourceProfile")
     def resource_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
@@ -583,6 +687,30 @@ class _EmbeddedSecurityPolicyState:
     @session_reclassify_allow.setter
     def session_reclassify_allow(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "session_reclassify_allow", value)
+
+    @_builtins.property
+    @pulumi.getter(name="syslogServerSourceInterface")
+    def syslog_server_source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "syslog_server_source_interface")
+
+    @syslog_server_source_interface.setter
+    def syslog_server_source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "syslog_server_source_interface", value)
+
+    @_builtins.property
+    @pulumi.getter(name="syslogServerSourceInterfaceVariable")
+    def syslog_server_source_interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "syslog_server_source_interface_variable")
+
+    @syslog_server_source_interface_variable.setter
+    def syslog_server_source_interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "syslog_server_source_interface_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSynFloodLimit")
@@ -632,6 +760,7 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
                  download_url_database_on_device_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EmbeddedSecurityPolicyHighSpeedLoggingArgs', 'EmbeddedSecurityPolicyHighSpeedLoggingArgsDict', 'outputs.EmbeddedSecurityPolicyHighSpeedLogging']]]]] = None,
                  icmp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
                  max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
                  max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
@@ -639,9 +768,12 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  nat: pulumi.Input[Optional[_builtins.bool]] = None,
                  nat_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 optimized: pulumi.Input[Optional[_builtins.bool]] = None,
                  resource_profile: pulumi.Input[Optional[_builtins.str]] = None,
                  resource_profile_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 syslog_server_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 syslog_server_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
                  unified_logging: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -675,6 +807,12 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
             session_reclassify_allow="on",
             icmp_unreachable_allow="on",
             failure_mode="close",
+            high_speed_loggings=[{
+                "name": "server1",
+                "source_interface": "GigabitEthernet1",
+            }],
+            syslog_server_source_interface="GigabitEthernet1",
+            optimized=False,
             nat=True,
             download_url_database_on_device=False,
             resource_profile="low")
@@ -699,14 +837,18 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] download_url_database_on_device_variable: Variable name
         :param pulumi.Input[_builtins.str] failure_mode: - Choices: `close`, `open`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[Sequence[pulumi.Input[Union['EmbeddedSecurityPolicyHighSpeedLoggingArgs', 'EmbeddedSecurityPolicyHighSpeedLoggingArgsDict', 'outputs.EmbeddedSecurityPolicyHighSpeedLogging']]]] high_speed_loggings: High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param pulumi.Input[_builtins.str] icmp_unreachable_allow: Setting can be string 'on' or missing for off
                  - Choices: `on`
         :param pulumi.Input[_builtins.str] name: The name of the Policy
         :param pulumi.Input[_builtins.str] nat_variable: Variable name
+        :param pulumi.Input[_builtins.bool] optimized: , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param pulumi.Input[_builtins.str] resource_profile: - Choices: `low`, `medium`, `high`
         :param pulumi.Input[_builtins.str] resource_profile_variable: Variable name
         :param pulumi.Input[_builtins.str] session_reclassify_allow: Setting can be string 'on' or missing for off
                  - Choices: `on`
+        :param pulumi.Input[_builtins.str] syslog_server_source_interface: InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        :param pulumi.Input[_builtins.str] syslog_server_source_interface_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param pulumi.Input[_builtins.str] unified_logging: Setting can be string 'on' or missing for off
                  - Choices: `on`
         """
@@ -746,6 +888,12 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
             session_reclassify_allow="on",
             icmp_unreachable_allow="on",
             failure_mode="close",
+            high_speed_loggings=[{
+                "name": "server1",
+                "source_interface": "GigabitEthernet1",
+            }],
+            syslog_server_source_interface="GigabitEthernet1",
+            optimized=False,
             nat=True,
             download_url_database_on_device=False,
             resource_profile="low")
@@ -784,6 +932,7 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
                  download_url_database_on_device_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EmbeddedSecurityPolicyHighSpeedLoggingArgs', 'EmbeddedSecurityPolicyHighSpeedLoggingArgsDict', 'outputs.EmbeddedSecurityPolicyHighSpeedLogging']]]]] = None,
                  icmp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
                  max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
                  max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
@@ -791,9 +940,12 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  nat: pulumi.Input[Optional[_builtins.bool]] = None,
                  nat_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 optimized: pulumi.Input[Optional[_builtins.bool]] = None,
                  resource_profile: pulumi.Input[Optional[_builtins.str]] = None,
                  resource_profile_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 syslog_server_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 syslog_server_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
                  unified_logging: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -814,6 +966,7 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
             if feature_profile_id is None and not opts.urn:
                 raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
+            __props__.__dict__["high_speed_loggings"] = high_speed_loggings
             __props__.__dict__["icmp_unreachable_allow"] = icmp_unreachable_allow
             __props__.__dict__["max_incomplete_icmp_limit"] = max_incomplete_icmp_limit
             __props__.__dict__["max_incomplete_tcp_limit"] = max_incomplete_tcp_limit
@@ -821,9 +974,12 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
             __props__.__dict__["name"] = name
             __props__.__dict__["nat"] = nat
             __props__.__dict__["nat_variable"] = nat_variable
+            __props__.__dict__["optimized"] = optimized
             __props__.__dict__["resource_profile"] = resource_profile
             __props__.__dict__["resource_profile_variable"] = resource_profile_variable
             __props__.__dict__["session_reclassify_allow"] = session_reclassify_allow
+            __props__.__dict__["syslog_server_source_interface"] = syslog_server_source_interface
+            __props__.__dict__["syslog_server_source_interface_variable"] = syslog_server_source_interface_variable
             __props__.__dict__["tcp_syn_flood_limit"] = tcp_syn_flood_limit
             __props__.__dict__["unified_logging"] = unified_logging
             __props__.__dict__["version"] = None
@@ -844,6 +1000,7 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
             download_url_database_on_device_variable: pulumi.Input[Optional[_builtins.str]] = None,
             failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            high_speed_loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EmbeddedSecurityPolicyHighSpeedLoggingArgs', 'EmbeddedSecurityPolicyHighSpeedLoggingArgsDict', 'outputs.EmbeddedSecurityPolicyHighSpeedLogging']]]]] = None,
             icmp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
             max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
             max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
@@ -851,9 +1008,12 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             nat: pulumi.Input[Optional[_builtins.bool]] = None,
             nat_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            optimized: pulumi.Input[Optional[_builtins.bool]] = None,
             resource_profile: pulumi.Input[Optional[_builtins.str]] = None,
             resource_profile_variable: pulumi.Input[Optional[_builtins.str]] = None,
             session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+            syslog_server_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            syslog_server_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
             tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
             unified_logging: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'EmbeddedSecurityPolicy':
@@ -870,14 +1030,18 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] download_url_database_on_device_variable: Variable name
         :param pulumi.Input[_builtins.str] failure_mode: - Choices: `close`, `open`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[Sequence[pulumi.Input[Union['EmbeddedSecurityPolicyHighSpeedLoggingArgs', 'EmbeddedSecurityPolicyHighSpeedLoggingArgsDict', 'outputs.EmbeddedSecurityPolicyHighSpeedLogging']]]] high_speed_loggings: High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param pulumi.Input[_builtins.str] icmp_unreachable_allow: Setting can be string 'on' or missing for off
                  - Choices: `on`
         :param pulumi.Input[_builtins.str] name: The name of the Policy
         :param pulumi.Input[_builtins.str] nat_variable: Variable name
+        :param pulumi.Input[_builtins.bool] optimized: , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param pulumi.Input[_builtins.str] resource_profile: - Choices: `low`, `medium`, `high`
         :param pulumi.Input[_builtins.str] resource_profile_variable: Variable name
         :param pulumi.Input[_builtins.str] session_reclassify_allow: Setting can be string 'on' or missing for off
                  - Choices: `on`
+        :param pulumi.Input[_builtins.str] syslog_server_source_interface: InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        :param pulumi.Input[_builtins.str] syslog_server_source_interface_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param pulumi.Input[_builtins.str] unified_logging: Setting can be string 'on' or missing for off
                  - Choices: `on`
         :param pulumi.Input[_builtins.int] version: The version of the Policy
@@ -893,6 +1057,7 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
         __props__.__dict__["download_url_database_on_device_variable"] = download_url_database_on_device_variable
         __props__.__dict__["failure_mode"] = failure_mode
         __props__.__dict__["feature_profile_id"] = feature_profile_id
+        __props__.__dict__["high_speed_loggings"] = high_speed_loggings
         __props__.__dict__["icmp_unreachable_allow"] = icmp_unreachable_allow
         __props__.__dict__["max_incomplete_icmp_limit"] = max_incomplete_icmp_limit
         __props__.__dict__["max_incomplete_tcp_limit"] = max_incomplete_tcp_limit
@@ -900,9 +1065,12 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
         __props__.__dict__["name"] = name
         __props__.__dict__["nat"] = nat
         __props__.__dict__["nat_variable"] = nat_variable
+        __props__.__dict__["optimized"] = optimized
         __props__.__dict__["resource_profile"] = resource_profile
         __props__.__dict__["resource_profile_variable"] = resource_profile_variable
         __props__.__dict__["session_reclassify_allow"] = session_reclassify_allow
+        __props__.__dict__["syslog_server_source_interface"] = syslog_server_source_interface
+        __props__.__dict__["syslog_server_source_interface_variable"] = syslog_server_source_interface_variable
         __props__.__dict__["tcp_syn_flood_limit"] = tcp_syn_flood_limit
         __props__.__dict__["unified_logging"] = unified_logging
         __props__.__dict__["version"] = version
@@ -960,6 +1128,14 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
         return pulumi.get(self, "feature_profile_id")
 
     @_builtins.property
+    @pulumi.getter(name="highSpeedLoggings")
+    def high_speed_loggings(self) -> pulumi.Output[Optional[Sequence['outputs.EmbeddedSecurityPolicyHighSpeedLogging']]]:
+        """
+        High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "high_speed_loggings")
+
+    @_builtins.property
     @pulumi.getter(name="icmpUnreachableAllow")
     def icmp_unreachable_allow(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
@@ -1005,6 +1181,14 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
         return pulumi.get(self, "nat_variable")
 
     @_builtins.property
+    @pulumi.getter
+    def optimized(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "optimized")
+
+    @_builtins.property
     @pulumi.getter(name="resourceProfile")
     def resource_profile(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
@@ -1028,6 +1212,22 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
           - Choices: `on`
         """
         return pulumi.get(self, "session_reclassify_allow")
+
+    @_builtins.property
+    @pulumi.getter(name="syslogServerSourceInterface")
+    def syslog_server_source_interface(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "syslog_server_source_interface")
+
+    @_builtins.property
+    @pulumi.getter(name="syslogServerSourceInterfaceVariable")
+    def syslog_server_source_interface_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "syslog_server_source_interface_variable")
 
     @_builtins.property
     @pulumi.getter(name="tcpSynFloodLimit")

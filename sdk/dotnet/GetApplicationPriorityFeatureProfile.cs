@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Task<GetApplicationPriorityFeatureProfileResult> InvokeAsync(GetApplicationPriorityFeatureProfileArgs args, InvokeOptions? options = null)
+        public static Task<GetApplicationPriorityFeatureProfileResult> InvokeAsync(GetApplicationPriorityFeatureProfileArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetApplicationPriorityFeatureProfileResult>("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", args ?? new GetApplicationPriorityFeatureProfileArgs(), options.WithDefaults());
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Output<GetApplicationPriorityFeatureProfileResult> Invoke(GetApplicationPriorityFeatureProfileInvokeArgs args, InvokeOptions? options = null)
+        public static Output<GetApplicationPriorityFeatureProfileResult> Invoke(GetApplicationPriorityFeatureProfileInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplicationPriorityFeatureProfileResult>("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", args ?? new GetApplicationPriorityFeatureProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
@@ -90,8 +90,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the application priority feature profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetApplicationPriorityFeatureProfileArgs()
         {
@@ -104,8 +110,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the application priority feature profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetApplicationPriorityFeatureProfileInvokeArgs()
         {

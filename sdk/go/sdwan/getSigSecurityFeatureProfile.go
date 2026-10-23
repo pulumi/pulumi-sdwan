@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetSigSecurityFeatureProfile(ctx, &sdwan.LookupSigSecurityFeatureProfileArgs{
-//				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id: pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //			}, nil)
 //			if err != nil {
 //				return err
@@ -51,7 +51,9 @@ func LookupSigSecurityFeatureProfile(ctx *pulumi.Context, args *LookupSigSecurit
 // A collection of arguments for invoking getSigSecurityFeatureProfile.
 type LookupSigSecurityFeatureProfileArgs struct {
 	// The id of the object
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the sig security feature profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getSigSecurityFeatureProfile.
@@ -72,7 +74,9 @@ func LookupSigSecurityFeatureProfileOutput(ctx *pulumi.Context, args LookupSigSe
 // A collection of arguments for invoking getSigSecurityFeatureProfile.
 type LookupSigSecurityFeatureProfileOutputArgs struct {
 	// The id of the object
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the sig security feature profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupSigSecurityFeatureProfileOutputArgs) ElementType() reflect.Type {

@@ -19,8 +19,14 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<Outputs.GetEmbeddedSecurityNgfwPolicySequenceActionResult> Actions;
         public readonly string BaseAction;
         public readonly bool DisableSequence;
+        public readonly bool IsRuleSet;
         public readonly ImmutableArray<Outputs.GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult> MatchEntries;
+        public readonly string SequenceComment;
         public readonly string SequenceId;
+        /// <summary>
+        /// IP address family the sequence matches on, `Ipv4` sequences only accept the IPv4 match attributes and `Ipv6` sequences only accept the IPv6 ones
+        /// </summary>
+        public readonly string SequenceIpType;
         public readonly string SequenceName;
         public readonly string SequenceType;
 
@@ -32,9 +38,15 @@ namespace Pulumi.Sdwan.Outputs
 
             bool disableSequence,
 
+            bool isRuleSet,
+
             ImmutableArray<Outputs.GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult> matchEntries,
 
+            string sequenceComment,
+
             string sequenceId,
+
+            string sequenceIpType,
 
             string sequenceName,
 
@@ -43,8 +55,11 @@ namespace Pulumi.Sdwan.Outputs
             Actions = actions;
             BaseAction = baseAction;
             DisableSequence = disableSequence;
+            IsRuleSet = isRuleSet;
             MatchEntries = matchEntries;
+            SequenceComment = sequenceComment;
             SequenceId = sequenceId;
+            SequenceIpType = sequenceIpType;
             SequenceName = sequenceName;
             SequenceType = sequenceType;
         }

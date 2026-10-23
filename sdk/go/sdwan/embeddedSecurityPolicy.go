@@ -44,15 +44,23 @@ import (
 //						},
 //					},
 //				},
-//				TcpSynFloodLimit:            pulumi.String("432"),
-//				MaxIncompleteTcpLimit:       pulumi.String("12345"),
-//				MaxIncompleteUdpLimit:       pulumi.String("12345"),
-//				MaxIncompleteIcmpLimit:      pulumi.String("12345"),
-//				AuditTrail:                  pulumi.String("on"),
-//				UnifiedLogging:              pulumi.String("on"),
-//				SessionReclassifyAllow:      pulumi.String("on"),
-//				IcmpUnreachableAllow:        pulumi.String("on"),
-//				FailureMode:                 pulumi.String("close"),
+//				TcpSynFloodLimit:       pulumi.String("432"),
+//				MaxIncompleteTcpLimit:  pulumi.String("12345"),
+//				MaxIncompleteUdpLimit:  pulumi.String("12345"),
+//				MaxIncompleteIcmpLimit: pulumi.String("12345"),
+//				AuditTrail:             pulumi.String("on"),
+//				UnifiedLogging:         pulumi.String("on"),
+//				SessionReclassifyAllow: pulumi.String("on"),
+//				IcmpUnreachableAllow:   pulumi.String("on"),
+//				FailureMode:            pulumi.String("close"),
+//				HighSpeedLoggings: sdwan.EmbeddedSecurityPolicyHighSpeedLoggingArray{
+//					&sdwan.EmbeddedSecurityPolicyHighSpeedLoggingArgs{
+//						Name:            pulumi.String("server1"),
+//						SourceInterface: pulumi.String("GigabitEthernet1"),
+//					},
+//				},
+//				SyslogServerSourceInterface: pulumi.String("GigabitEthernet1"),
+//				Optimized:                   pulumi.Bool(false),
 //				Nat:                         pulumi.Bool(true),
 //				DownloadUrlDatabaseOnDevice: pulumi.Bool(false),
 //				ResourceProfile:             pulumi.String("low"),
@@ -91,6 +99,8 @@ type EmbeddedSecurityPolicy struct {
 	FailureMode pulumi.StringPtrOutput `pulumi:"failureMode"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
+	// High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	HighSpeedLoggings EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput `pulumi:"highSpeedLoggings"`
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	IcmpUnreachableAllow   pulumi.StringPtrOutput `pulumi:"icmpUnreachableAllow"`
@@ -102,6 +112,8 @@ type EmbeddedSecurityPolicy struct {
 	Nat  pulumi.BoolPtrOutput `pulumi:"nat"`
 	// Variable name
 	NatVariable pulumi.StringPtrOutput `pulumi:"natVariable"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	Optimized pulumi.BoolPtrOutput `pulumi:"optimized"`
 	// - Choices: `low`, `medium`, `high`
 	ResourceProfile pulumi.StringPtrOutput `pulumi:"resourceProfile"`
 	// Variable name
@@ -109,7 +121,11 @@ type EmbeddedSecurityPolicy struct {
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	SessionReclassifyAllow pulumi.StringPtrOutput `pulumi:"sessionReclassifyAllow"`
-	TcpSynFloodLimit       pulumi.StringPtrOutput `pulumi:"tcpSynFloodLimit"`
+	// InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SyslogServerSourceInterface pulumi.StringPtrOutput `pulumi:"syslogServerSourceInterface"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SyslogServerSourceInterfaceVariable pulumi.StringPtrOutput `pulumi:"syslogServerSourceInterfaceVariable"`
+	TcpSynFloodLimit                    pulumi.StringPtrOutput `pulumi:"tcpSynFloodLimit"`
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	UnifiedLogging pulumi.StringPtrOutput `pulumi:"unifiedLogging"`
@@ -163,6 +179,8 @@ type embeddedSecurityPolicyState struct {
 	FailureMode *string `pulumi:"failureMode"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
+	// High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	HighSpeedLoggings []EmbeddedSecurityPolicyHighSpeedLogging `pulumi:"highSpeedLoggings"`
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	IcmpUnreachableAllow   *string `pulumi:"icmpUnreachableAllow"`
@@ -174,6 +192,8 @@ type embeddedSecurityPolicyState struct {
 	Nat  *bool   `pulumi:"nat"`
 	// Variable name
 	NatVariable *string `pulumi:"natVariable"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	Optimized *bool `pulumi:"optimized"`
 	// - Choices: `low`, `medium`, `high`
 	ResourceProfile *string `pulumi:"resourceProfile"`
 	// Variable name
@@ -181,7 +201,11 @@ type embeddedSecurityPolicyState struct {
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	SessionReclassifyAllow *string `pulumi:"sessionReclassifyAllow"`
-	TcpSynFloodLimit       *string `pulumi:"tcpSynFloodLimit"`
+	// InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SyslogServerSourceInterface *string `pulumi:"syslogServerSourceInterface"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SyslogServerSourceInterfaceVariable *string `pulumi:"syslogServerSourceInterfaceVariable"`
+	TcpSynFloodLimit                    *string `pulumi:"tcpSynFloodLimit"`
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	UnifiedLogging *string `pulumi:"unifiedLogging"`
@@ -203,6 +227,8 @@ type EmbeddedSecurityPolicyState struct {
 	FailureMode pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
+	// High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	HighSpeedLoggings EmbeddedSecurityPolicyHighSpeedLoggingArrayInput
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	IcmpUnreachableAllow   pulumi.StringPtrInput
@@ -214,6 +240,8 @@ type EmbeddedSecurityPolicyState struct {
 	Nat  pulumi.BoolPtrInput
 	// Variable name
 	NatVariable pulumi.StringPtrInput
+	// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	Optimized pulumi.BoolPtrInput
 	// - Choices: `low`, `medium`, `high`
 	ResourceProfile pulumi.StringPtrInput
 	// Variable name
@@ -221,7 +249,11 @@ type EmbeddedSecurityPolicyState struct {
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	SessionReclassifyAllow pulumi.StringPtrInput
-	TcpSynFloodLimit       pulumi.StringPtrInput
+	// InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SyslogServerSourceInterface pulumi.StringPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SyslogServerSourceInterfaceVariable pulumi.StringPtrInput
+	TcpSynFloodLimit                    pulumi.StringPtrInput
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	UnifiedLogging pulumi.StringPtrInput
@@ -247,6 +279,8 @@ type embeddedSecurityPolicyArgs struct {
 	FailureMode *string `pulumi:"failureMode"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
+	// High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	HighSpeedLoggings []EmbeddedSecurityPolicyHighSpeedLogging `pulumi:"highSpeedLoggings"`
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	IcmpUnreachableAllow   *string `pulumi:"icmpUnreachableAllow"`
@@ -258,6 +292,8 @@ type embeddedSecurityPolicyArgs struct {
 	Nat  *bool   `pulumi:"nat"`
 	// Variable name
 	NatVariable *string `pulumi:"natVariable"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	Optimized *bool `pulumi:"optimized"`
 	// - Choices: `low`, `medium`, `high`
 	ResourceProfile *string `pulumi:"resourceProfile"`
 	// Variable name
@@ -265,7 +301,11 @@ type embeddedSecurityPolicyArgs struct {
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	SessionReclassifyAllow *string `pulumi:"sessionReclassifyAllow"`
-	TcpSynFloodLimit       *string `pulumi:"tcpSynFloodLimit"`
+	// InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SyslogServerSourceInterface *string `pulumi:"syslogServerSourceInterface"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SyslogServerSourceInterfaceVariable *string `pulumi:"syslogServerSourceInterfaceVariable"`
+	TcpSynFloodLimit                    *string `pulumi:"tcpSynFloodLimit"`
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	UnifiedLogging *string `pulumi:"unifiedLogging"`
@@ -286,6 +326,8 @@ type EmbeddedSecurityPolicyArgs struct {
 	FailureMode pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
+	// High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	HighSpeedLoggings EmbeddedSecurityPolicyHighSpeedLoggingArrayInput
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	IcmpUnreachableAllow   pulumi.StringPtrInput
@@ -297,6 +339,8 @@ type EmbeddedSecurityPolicyArgs struct {
 	Nat  pulumi.BoolPtrInput
 	// Variable name
 	NatVariable pulumi.StringPtrInput
+	// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	Optimized pulumi.BoolPtrInput
 	// - Choices: `low`, `medium`, `high`
 	ResourceProfile pulumi.StringPtrInput
 	// Variable name
@@ -304,7 +348,11 @@ type EmbeddedSecurityPolicyArgs struct {
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	SessionReclassifyAllow pulumi.StringPtrInput
-	TcpSynFloodLimit       pulumi.StringPtrInput
+	// InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SyslogServerSourceInterface pulumi.StringPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SyslogServerSourceInterfaceVariable pulumi.StringPtrInput
+	TcpSynFloodLimit                    pulumi.StringPtrInput
 	// Setting can be string 'on' or missing for off
 	//   - Choices: `on`
 	UnifiedLogging pulumi.StringPtrInput
@@ -431,6 +479,13 @@ func (o EmbeddedSecurityPolicyOutput) FeatureProfileId() pulumi.StringOutput {
 	return o.ApplyT(func(v *EmbeddedSecurityPolicy) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
+// High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityPolicyOutput) HighSpeedLoggings() EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput {
+	return o.ApplyT(func(v *EmbeddedSecurityPolicy) EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput {
+		return v.HighSpeedLoggings
+	}).(EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput)
+}
+
 // Setting can be string 'on' or missing for off
 //   - Choices: `on`
 func (o EmbeddedSecurityPolicyOutput) IcmpUnreachableAllow() pulumi.StringPtrOutput {
@@ -463,6 +518,11 @@ func (o EmbeddedSecurityPolicyOutput) NatVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EmbeddedSecurityPolicy) pulumi.StringPtrOutput { return v.NatVariable }).(pulumi.StringPtrOutput)
 }
 
+// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityPolicyOutput) Optimized() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *EmbeddedSecurityPolicy) pulumi.BoolPtrOutput { return v.Optimized }).(pulumi.BoolPtrOutput)
+}
+
 // - Choices: `low`, `medium`, `high`
 func (o EmbeddedSecurityPolicyOutput) ResourceProfile() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EmbeddedSecurityPolicy) pulumi.StringPtrOutput { return v.ResourceProfile }).(pulumi.StringPtrOutput)
@@ -477,6 +537,16 @@ func (o EmbeddedSecurityPolicyOutput) ResourceProfileVariable() pulumi.StringPtr
 //   - Choices: `on`
 func (o EmbeddedSecurityPolicyOutput) SessionReclassifyAllow() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EmbeddedSecurityPolicy) pulumi.StringPtrOutput { return v.SessionReclassifyAllow }).(pulumi.StringPtrOutput)
+}
+
+// InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityPolicyOutput) SyslogServerSourceInterface() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *EmbeddedSecurityPolicy) pulumi.StringPtrOutput { return v.SyslogServerSourceInterface }).(pulumi.StringPtrOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityPolicyOutput) SyslogServerSourceInterfaceVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *EmbeddedSecurityPolicy) pulumi.StringPtrOutput { return v.SyslogServerSourceInterfaceVariable }).(pulumi.StringPtrOutput)
 }
 
 func (o EmbeddedSecurityPolicyOutput) TcpSynFloodLimit() pulumi.StringPtrOutput {

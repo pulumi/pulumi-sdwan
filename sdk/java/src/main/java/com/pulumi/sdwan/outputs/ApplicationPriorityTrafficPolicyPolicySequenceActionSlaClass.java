@@ -15,6 +15,11 @@ import javax.annotation.Nullable;
 public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass {
     private @Nullable Boolean fallbackToBestPath;
     private @Nullable String preferredColorGroupListId;
+    /**
+     * @return Restrict traffic to the preferred color group, requires `preferredColorGroupListId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    private @Nullable Boolean preferredColorGroupRestrict;
     private @Nullable List<String> preferredColors;
     private @Nullable List<String> preferredRemoteColors;
     private @Nullable Boolean remoteColorRestrict;
@@ -27,6 +32,13 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass 
     }
     public Optional<String> preferredColorGroupListId() {
         return Optional.ofNullable(this.preferredColorGroupListId);
+    }
+    /**
+     * @return Restrict traffic to the preferred color group, requires `preferredColorGroupListId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Boolean> preferredColorGroupRestrict() {
+        return Optional.ofNullable(this.preferredColorGroupRestrict);
     }
     public List<String> preferredColors() {
         return this.preferredColors == null ? List.of() : this.preferredColors;
@@ -55,6 +67,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass 
     public static final class Builder {
         private @Nullable Boolean fallbackToBestPath;
         private @Nullable String preferredColorGroupListId;
+        private @Nullable Boolean preferredColorGroupRestrict;
         private @Nullable List<String> preferredColors;
         private @Nullable List<String> preferredRemoteColors;
         private @Nullable Boolean remoteColorRestrict;
@@ -65,6 +78,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass 
     	      Objects.requireNonNull(defaults);
     	      this.fallbackToBestPath = defaults.fallbackToBestPath;
     	      this.preferredColorGroupListId = defaults.preferredColorGroupListId;
+    	      this.preferredColorGroupRestrict = defaults.preferredColorGroupRestrict;
     	      this.preferredColors = defaults.preferredColors;
     	      this.preferredRemoteColors = defaults.preferredRemoteColors;
     	      this.remoteColorRestrict = defaults.remoteColorRestrict;
@@ -82,6 +96,12 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass 
         public Builder preferredColorGroupListId(@Nullable String preferredColorGroupListId) {
 
             this.preferredColorGroupListId = preferredColorGroupListId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder preferredColorGroupRestrict(@Nullable Boolean preferredColorGroupRestrict) {
+
+            this.preferredColorGroupRestrict = preferredColorGroupRestrict;
             return this;
         }
         @CustomType.Setter
@@ -124,6 +144,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass 
             final var _resultValue = new ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass();
             _resultValue.fallbackToBestPath = fallbackToBestPath;
             _resultValue.preferredColorGroupListId = preferredColorGroupListId;
+            _resultValue.preferredColorGroupRestrict = preferredColorGroupRestrict;
             _resultValue.preferredColors = preferredColors;
             _resultValue.preferredRemoteColors = preferredRemoteColors;
             _resultValue.remoteColorRestrict = remoteColorRestrict;

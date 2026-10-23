@@ -54,6 +54,11 @@ public final class GetPolicyObjectUnifiedIntrusionPreventionResult {
      */
     private String signatureSet;
     /**
+     * @return Reference to a user edited signature set parcel
+     * 
+     */
+    private String signatureSetId;
+    /**
      * @return The version of the Policy_object
      * 
      */
@@ -120,6 +125,13 @@ public final class GetPolicyObjectUnifiedIntrusionPreventionResult {
         return this.signatureSet;
     }
     /**
+     * @return Reference to a user edited signature set parcel
+     * 
+     */
+    public String signatureSetId() {
+        return this.signatureSetId;
+    }
+    /**
      * @return The version of the Policy_object
      * 
      */
@@ -145,6 +157,7 @@ public final class GetPolicyObjectUnifiedIntrusionPreventionResult {
         private String logLevel;
         private String name;
         private String signatureSet;
+        private String signatureSetId;
         private Integer version;
         public Builder() {}
         public Builder(GetPolicyObjectUnifiedIntrusionPreventionResult defaults) {
@@ -158,6 +171,7 @@ public final class GetPolicyObjectUnifiedIntrusionPreventionResult {
     	      this.logLevel = defaults.logLevel;
     	      this.name = defaults.name;
     	      this.signatureSet = defaults.signatureSet;
+    	      this.signatureSetId = defaults.signatureSetId;
     	      this.version = defaults.version;
         }
 
@@ -234,6 +248,14 @@ public final class GetPolicyObjectUnifiedIntrusionPreventionResult {
             return this;
         }
         @CustomType.Setter
+        public Builder signatureSetId(String signatureSetId) {
+            if (signatureSetId == null) {
+              throw new MissingRequiredPropertyException("GetPolicyObjectUnifiedIntrusionPreventionResult", "signatureSetId");
+            }
+            this.signatureSetId = signatureSetId;
+            return this;
+        }
+        @CustomType.Setter
         public Builder version(Integer version) {
             if (version == null) {
               throw new MissingRequiredPropertyException("GetPolicyObjectUnifiedIntrusionPreventionResult", "version");
@@ -252,6 +274,7 @@ public final class GetPolicyObjectUnifiedIntrusionPreventionResult {
             _resultValue.logLevel = logLevel;
             _resultValue.name = name;
             _resultValue.signatureSet = signatureSet;
+            _resultValue.signatureSetId = signatureSetId;
             _resultValue.version = version;
             return _resultValue;
         }

@@ -44,6 +44,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly ImmutableArray<int> Dscps;
         /// <summary>
+        /// Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public readonly ImmutableArray<string> HierarchyIds;
+        /// <summary>
         /// ICMP6 Message
         /// </summary>
         public readonly ImmutableArray<string> Icmp6Messages;
@@ -121,6 +125,8 @@ namespace Pulumi.Sdwan.Outputs
 
             ImmutableArray<int> dscps,
 
+            ImmutableArray<string> hierarchyIds,
+
             ImmutableArray<string> icmp6Messages,
 
             ImmutableArray<string> icmpMessages,
@@ -161,6 +167,7 @@ namespace Pulumi.Sdwan.Outputs
             Dns = dns;
             DnsApplicationListId = dnsApplicationListId;
             Dscps = dscps;
+            HierarchyIds = hierarchyIds;
             Icmp6Messages = icmp6Messages;
             IcmpMessages = icmpMessages;
             PacketLength = packetLength;

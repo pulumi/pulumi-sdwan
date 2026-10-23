@@ -18,10 +18,12 @@ import * as utilities from "./utilities";
  * });
  * ```
  */
-export function getOtherFeatureProfile(args: GetOtherFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetOtherFeatureProfileResult> {
+export function getOtherFeatureProfile(args?: GetOtherFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetOtherFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getOtherFeatureProfile:getOtherFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,7 +34,11 @@ export interface GetOtherFeatureProfileArgs {
     /**
      * The id of the object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the transport feature profile
+     */
+    name?: string;
 }
 
 /**
@@ -66,10 +72,12 @@ export interface GetOtherFeatureProfileResult {
  * });
  * ```
  */
-export function getOtherFeatureProfileOutput(args: GetOtherFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetOtherFeatureProfileResult> {
+export function getOtherFeatureProfileOutput(args?: GetOtherFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetOtherFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getOtherFeatureProfile:getOtherFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -80,5 +88,9 @@ export interface GetOtherFeatureProfileOutputArgs {
     /**
      * The id of the object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the transport feature profile
+     */
+    name?: pulumi.Input<string | undefined>;
 }

@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetCliFeatureProfile(ctx, &sdwan.LookupCliFeatureProfileArgs{
-//				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id: pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //			}, nil)
 //			if err != nil {
 //				return err
@@ -51,7 +51,9 @@ func LookupCliFeatureProfile(ctx *pulumi.Context, args *LookupCliFeatureProfileA
 // A collection of arguments for invoking getCliFeatureProfile.
 type LookupCliFeatureProfileArgs struct {
 	// The id of the object
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the cli feature profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getCliFeatureProfile.
@@ -72,7 +74,9 @@ func LookupCliFeatureProfileOutput(ctx *pulumi.Context, args LookupCliFeaturePro
 // A collection of arguments for invoking getCliFeatureProfile.
 type LookupCliFeatureProfileOutputArgs struct {
 	// The id of the object
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the cli feature profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupCliFeatureProfileOutputArgs) ElementType() reflect.Type {

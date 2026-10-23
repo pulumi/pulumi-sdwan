@@ -33,9 +33,17 @@ public final class PolicyObjectSecurityZoneState extends com.pulumi.resources.Re
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * List of entries
+     * 
+     */
     @Import(name="entries")
     private @Nullable Output<List<PolicyObjectSecurityZoneEntryArgs>> entries;
 
+    /**
+     * @return List of entries
+     * 
+     */
     public Optional<Output<List<PolicyObjectSecurityZoneEntryArgs>>> entries() {
         return Optional.ofNullable(this.entries);
     }
@@ -134,15 +142,33 @@ public final class PolicyObjectSecurityZoneState extends com.pulumi.resources.Re
             return description(Output.of(description));
         }
 
+        /**
+         * @param entries List of entries
+         * 
+         * @return builder
+         * 
+         */
         public Builder entries(@Nullable Output<List<PolicyObjectSecurityZoneEntryArgs>> entries) {
             $.entries = entries;
             return this;
         }
 
+        /**
+         * @param entries List of entries
+         * 
+         * @return builder
+         * 
+         */
         public Builder entries(List<PolicyObjectSecurityZoneEntryArgs> entries) {
             return entries(Output.of(entries));
         }
 
+        /**
+         * @param entries List of entries
+         * 
+         * @return builder
+         * 
+         */
         public Builder entries(PolicyObjectSecurityZoneEntryArgs... entries) {
             return entries(List.of(entries));
         }

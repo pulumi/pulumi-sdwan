@@ -74,6 +74,7 @@ class AwaitableGetOtherFeatureProfileResult(GetOtherFeatureProfileResult):
 
 
 def get_other_feature_profile(id: Optional[_builtins.str] = None,
+                              name: Optional[_builtins.str] = None,
                               opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetOtherFeatureProfileResult:
     """
     This data source can read the Other Feature Profile .
@@ -89,9 +90,11 @@ def get_other_feature_profile(id: Optional[_builtins.str] = None,
 
 
     :param _builtins.str id: The id of the object
+    :param _builtins.str name: The name of the transport feature profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getOtherFeatureProfile:getOtherFeatureProfile', __args__, opts=opts, typ=GetOtherFeatureProfileResult).value
 
@@ -99,7 +102,8 @@ def get_other_feature_profile(id: Optional[_builtins.str] = None,
         description=pulumi.get(__ret__, 'description'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'))
-def get_other_feature_profile_output(id: pulumi.Input[Optional[_builtins.str]] = None,
+def get_other_feature_profile_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                     name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetOtherFeatureProfileResult]:
     """
     This data source can read the Other Feature Profile .
@@ -115,9 +119,11 @@ def get_other_feature_profile_output(id: pulumi.Input[Optional[_builtins.str]] =
 
 
     :param _builtins.str id: The id of the object
+    :param _builtins.str name: The name of the transport feature profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getOtherFeatureProfile:getOtherFeatureProfile', __args__, opts=opts, typ=GetOtherFeatureProfileResult)
     return __ret__.apply(lambda __response__: GetOtherFeatureProfileResult(

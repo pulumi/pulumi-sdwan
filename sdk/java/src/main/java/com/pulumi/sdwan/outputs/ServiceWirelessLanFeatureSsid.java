@@ -103,7 +103,7 @@ public final class ServiceWirelessLanFeatureSsid {
     private @Nullable String radiusServerSecretVariable;
     /**
      * @return Select security type
-     *   - Choices: `personal`, `open`, `enterprise`
+     *   - Choices: `enterprise`, `personal`, `open`
      * 
      */
     private @Nullable String securityType;
@@ -247,7 +247,7 @@ public final class ServiceWirelessLanFeatureSsid {
     }
     /**
      * @return Select security type
-     *   - Choices: `personal`, `open`, `enterprise`
+     *   - Choices: `enterprise`, `personal`, `open`
      * 
      */
     public Optional<String> securityType() {

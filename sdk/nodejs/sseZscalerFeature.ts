@@ -145,7 +145,8 @@ export class SseZscalerFeature extends pulumi.CustomResource {
      */
     declare public readonly cautionEnabledVariable: pulumi.Output<string | undefined>;
     /**
-     * - Default value: `false`
+     * Country
+     *   - Default value: `false`
      */
     declare public readonly country: pulumi.Output<boolean | undefined>;
     /**
@@ -167,7 +168,7 @@ export class SseZscalerFeature extends pulumi.CustomResource {
      */
     declare public readonly displayTimeUnitVariable: pulumi.Output<string | undefined>;
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      */
     declare public readonly dnBandwidth: pulumi.Output<number | undefined>;
@@ -176,7 +177,8 @@ export class SseZscalerFeature extends pulumi.CustomResource {
      */
     declare public readonly dnBandwidthVariable: pulumi.Output<string | undefined>;
     /**
-     * - Default value: `false`
+     * Enforce Bandwidth Control
+     *   - Default value: `false`
      */
     declare public readonly enforceBandwidthControl: pulumi.Output<boolean | undefined>;
     /**
@@ -310,7 +312,7 @@ export class SseZscalerFeature extends pulumi.CustomResource {
     /**
      * Source IP address for Tracker
      */
-    declare public readonly trackerSourceIp: pulumi.Output<string>;
+    declare public readonly trackerSourceIp: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -320,7 +322,7 @@ export class SseZscalerFeature extends pulumi.CustomResource {
      */
     declare public readonly trackers: pulumi.Output<outputs.SseZscalerFeatureTracker[] | undefined>;
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      */
     declare public readonly upBandwidth: pulumi.Output<number | undefined>;
@@ -420,9 +422,6 @@ export class SseZscalerFeature extends pulumi.CustomResource {
             }
             if (args?.interfaces === undefined && !opts.urn) {
                 throw new Error("Missing required property 'interfaces'");
-            }
-            if (args?.trackerSourceIp === undefined && !opts.urn) {
-                throw new Error("Missing required property 'trackerSourceIp'");
             }
             resourceInputs["aupEnabled"] = args?.aupEnabled;
             resourceInputs["aupEnabledVariable"] = args?.aupEnabledVariable;
@@ -536,7 +535,8 @@ export interface SseZscalerFeatureState {
      */
     cautionEnabledVariable?: pulumi.Input<string | undefined>;
     /**
-     * - Default value: `false`
+     * Country
+     *   - Default value: `false`
      */
     country?: pulumi.Input<boolean | undefined>;
     /**
@@ -558,7 +558,7 @@ export interface SseZscalerFeatureState {
      */
     displayTimeUnitVariable?: pulumi.Input<string | undefined>;
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      */
     dnBandwidth?: pulumi.Input<number | undefined>;
@@ -567,7 +567,8 @@ export interface SseZscalerFeatureState {
      */
     dnBandwidthVariable?: pulumi.Input<string | undefined>;
     /**
-     * - Default value: `false`
+     * Enforce Bandwidth Control
+     *   - Default value: `false`
      */
     enforceBandwidthControl?: pulumi.Input<boolean | undefined>;
     /**
@@ -711,7 +712,7 @@ export interface SseZscalerFeatureState {
      */
     trackers?: pulumi.Input<pulumi.Input<inputs.SseZscalerFeatureTracker>[] | undefined>;
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      */
     upBandwidth?: pulumi.Input<number | undefined>;
@@ -785,7 +786,8 @@ export interface SseZscalerFeatureArgs {
      */
     cautionEnabledVariable?: pulumi.Input<string | undefined>;
     /**
-     * - Default value: `false`
+     * Country
+     *   - Default value: `false`
      */
     country?: pulumi.Input<boolean | undefined>;
     /**
@@ -807,7 +809,7 @@ export interface SseZscalerFeatureArgs {
      */
     displayTimeUnitVariable?: pulumi.Input<string | undefined>;
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      */
     dnBandwidth?: pulumi.Input<number | undefined>;
@@ -816,7 +818,8 @@ export interface SseZscalerFeatureArgs {
      */
     dnBandwidthVariable?: pulumi.Input<string | undefined>;
     /**
-     * - Default value: `false`
+     * Enforce Bandwidth Control
+     *   - Default value: `false`
      */
     enforceBandwidthControl?: pulumi.Input<boolean | undefined>;
     /**
@@ -950,7 +953,7 @@ export interface SseZscalerFeatureArgs {
     /**
      * Source IP address for Tracker
      */
-    trackerSourceIp: pulumi.Input<string>;
+    trackerSourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
@@ -960,7 +963,7 @@ export interface SseZscalerFeatureArgs {
      */
     trackers?: pulumi.Input<pulumi.Input<inputs.SseZscalerFeatureTracker>[] | undefined>;
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      */
     upBandwidth?: pulumi.Input<number | undefined>;

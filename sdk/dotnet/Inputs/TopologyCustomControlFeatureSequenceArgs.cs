@@ -14,6 +14,10 @@ namespace Pulumi.Sdwan.Inputs
     {
         [Input("actionEntries")]
         private InputList<Inputs.TopologyCustomControlFeatureSequenceActionEntryArgs>? _actionEntries;
+
+        /// <summary>
+        /// List of action entries
+        /// </summary>
         public InputList<Inputs.TopologyCustomControlFeatureSequenceActionEntryArgs> ActionEntries
         {
             get => _actionEntries ?? (_actionEntries = new InputList<Inputs.TopologyCustomControlFeatureSequenceActionEntryArgs>());
@@ -43,6 +47,10 @@ namespace Pulumi.Sdwan.Inputs
 
         [Input("matchEntries")]
         private InputList<Inputs.TopologyCustomControlFeatureSequenceMatchEntryArgs>? _matchEntries;
+
+        /// <summary>
+        /// Set of match entries
+        /// </summary>
         public InputList<Inputs.TopologyCustomControlFeatureSequenceMatchEntryArgs> MatchEntries
         {
             get => _matchEntries ?? (_matchEntries = new InputList<Inputs.TopologyCustomControlFeatureSequenceMatchEntryArgs>());

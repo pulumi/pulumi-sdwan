@@ -47,6 +47,11 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
      */
     private List<Integer> dscps;
     /**
+     * @return Site List
+     * 
+     */
+    private List<String> hierarchyIds;
+    /**
      * @return ICMP6 Message
      * 
      */
@@ -166,6 +171,13 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
         return this.dscps;
     }
     /**
+     * @return Site List
+     * 
+     */
+    public List<String> hierarchyIds() {
+        return this.hierarchyIds;
+    }
+    /**
      * @return ICMP6 Message
      * 
      */
@@ -278,6 +290,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
         private String dns;
         private String dnsApplicationListId;
         private List<Integer> dscps;
+        private List<String> hierarchyIds;
         private List<String> icmp6Messages;
         private List<String> icmpMessages;
         private String packetLength;
@@ -306,6 +319,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
     	      this.dns = defaults.dns;
     	      this.dnsApplicationListId = defaults.dnsApplicationListId;
     	      this.dscps = defaults.dscps;
+    	      this.hierarchyIds = defaults.hierarchyIds;
     	      this.icmp6Messages = defaults.icmp6Messages;
     	      this.icmpMessages = defaults.icmpMessages;
     	      this.packetLength = defaults.packetLength;
@@ -408,6 +422,17 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
         }
         public Builder dscps(Integer... dscps) {
             return dscps(List.of(dscps));
+        }
+        @CustomType.Setter
+        public Builder hierarchyIds(List<String> hierarchyIds) {
+            if (hierarchyIds == null) {
+              throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry", "hierarchyIds");
+            }
+            this.hierarchyIds = hierarchyIds;
+            return this;
+        }
+        public Builder hierarchyIds(String... hierarchyIds) {
+            return hierarchyIds(List.of(hierarchyIds));
         }
         @CustomType.Setter
         public Builder icmp6Messages(List<String> icmp6Messages) {
@@ -556,6 +581,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
             _resultValue.dns = dns;
             _resultValue.dnsApplicationListId = dnsApplicationListId;
             _resultValue.dscps = dscps;
+            _resultValue.hierarchyIds = hierarchyIds;
             _resultValue.icmp6Messages = icmp6Messages;
             _resultValue.icmpMessages = icmpMessages;
             _resultValue.packetLength = packetLength;

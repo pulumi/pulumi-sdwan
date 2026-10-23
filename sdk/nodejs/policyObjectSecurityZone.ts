@@ -68,6 +68,9 @@ export class PolicyObjectSecurityZone extends pulumi.CustomResource {
      * The description of the Policy_object
      */
     declare public readonly description: pulumi.Output<string | undefined>;
+    /**
+     * List of entries
+     */
     declare public readonly entries: pulumi.Output<outputs.PolicyObjectSecurityZoneEntry[]>;
     /**
      * Feature Profile ID
@@ -127,6 +130,9 @@ export interface PolicyObjectSecurityZoneState {
      * The description of the Policy_object
      */
     description?: pulumi.Input<string | undefined>;
+    /**
+     * List of entries
+     */
     entries?: pulumi.Input<pulumi.Input<inputs.PolicyObjectSecurityZoneEntry>[] | undefined>;
     /**
      * Feature Profile ID
@@ -150,6 +156,9 @@ export interface PolicyObjectSecurityZoneArgs {
      * The description of the Policy_object
      */
     description?: pulumi.Input<string | undefined>;
+    /**
+     * List of entries
+     */
     entries: pulumi.Input<pulumi.Input<inputs.PolicyObjectSecurityZoneEntry>[]>;
     /**
      * Feature Profile ID

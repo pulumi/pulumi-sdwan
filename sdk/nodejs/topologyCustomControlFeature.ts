@@ -113,11 +113,11 @@ export class TopologyCustomControlFeature extends pulumi.CustomResource {
      */
     declare public readonly targetInboundHierarchyUuids: pulumi.Output<string[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+     * Inbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      */
     declare public readonly targetInboundRegions: pulumi.Output<outputs.TopologyCustomControlFeatureTargetInboundRegion[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
+     * Inbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
      */
     declare public readonly targetInboundSites: pulumi.Output<string[] | undefined>;
     /**
@@ -129,17 +129,21 @@ export class TopologyCustomControlFeature extends pulumi.CustomResource {
      */
     declare public readonly targetOutboundHierarchyUuids: pulumi.Output<string[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+     * Outbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      */
     declare public readonly targetOutboundRegions: pulumi.Output<outputs.TopologyCustomControlFeatureTargetOutboundRegion[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
+     * Outbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
      */
     declare public readonly targetOutboundSites: pulumi.Output<string[] | undefined>;
     /**
-     * - Choices: `edge-router`, `border-router`
+     * Target role
+     *   - Choices: `edge-router`, `border-router`
      */
     declare public readonly targetRole: pulumi.Output<string | undefined>;
+    /**
+     * Target VPN list
+     */
     declare public readonly targetVpns: pulumi.Output<string[] | undefined>;
     /**
      * The version of the Feature
@@ -236,11 +240,11 @@ export interface TopologyCustomControlFeatureState {
      */
     targetInboundHierarchyUuids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+     * Inbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      */
     targetInboundRegions?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureTargetInboundRegion>[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
+     * Inbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
      */
     targetInboundSites?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
@@ -252,17 +256,21 @@ export interface TopologyCustomControlFeatureState {
      */
     targetOutboundHierarchyUuids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+     * Outbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      */
     targetOutboundRegions?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureTargetOutboundRegion>[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
+     * Outbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
      */
     targetOutboundSites?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * - Choices: `edge-router`, `border-router`
+     * Target role
+     *   - Choices: `edge-router`, `border-router`
      */
     targetRole?: pulumi.Input<string | undefined>;
+    /**
+     * Target VPN list
+     */
     targetVpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The version of the Feature
@@ -300,11 +308,11 @@ export interface TopologyCustomControlFeatureArgs {
      */
     targetInboundHierarchyUuids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+     * Inbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      */
     targetInboundRegions?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureTargetInboundRegion>[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
+     * Inbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
      */
     targetInboundSites?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
@@ -316,16 +324,20 @@ export interface TopologyCustomControlFeatureArgs {
      */
     targetOutboundHierarchyUuids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+     * Outbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      */
     targetOutboundRegions?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureTargetOutboundRegion>[] | undefined>;
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
+     * Outbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
      */
     targetOutboundSites?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * - Choices: `edge-router`, `border-router`
+     * Target role
+     *   - Choices: `edge-router`, `border-router`
      */
     targetRole?: pulumi.Input<string | undefined>;
+    /**
+     * Target VPN list
+     */
     targetVpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

@@ -266,14 +266,16 @@ public class SseZscalerFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.cautionEnabledVariable);
     }
     /**
-     * - Default value: `false`
+     * Country
+     *   - Default value: `false`
      * 
      */
     @Export(name="country", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> country;
 
     /**
-     * @return - Default value: `false`
+     * @return Country
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> country() {
@@ -340,7 +342,7 @@ public class SseZscalerFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.displayTimeUnitVariable);
     }
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -348,7 +350,7 @@ public class SseZscalerFeature extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ Double> dnBandwidth;
 
     /**
-     * @return , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * @return Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -370,14 +372,16 @@ public class SseZscalerFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.dnBandwidthVariable);
     }
     /**
-     * - Default value: `false`
+     * Enforce Bandwidth Control
+     *   - Default value: `false`
      * 
      */
     @Export(name="enforceBandwidthControl", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enforceBandwidthControl;
 
     /**
-     * @return - Default value: `false`
+     * @return Enforce Bandwidth Control
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> enforceBandwidthControl() {
@@ -816,14 +820,14 @@ public class SseZscalerFeature extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="trackerSourceIp", refs={String.class}, tree="[0]")
-    private Output<String> trackerSourceIp;
+    private Output</* @Nullable */ String> trackerSourceIp;
 
     /**
      * @return Source IP address for Tracker
      * 
      */
-    public Output<String> trackerSourceIp() {
-        return this.trackerSourceIp;
+    public Output<Optional<String>> trackerSourceIp() {
+        return Codegen.optional(this.trackerSourceIp);
     }
     /**
      * Variable name
@@ -854,7 +858,7 @@ public class SseZscalerFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.trackers);
     }
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -862,7 +866,7 @@ public class SseZscalerFeature extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ Double> upBandwidth;
 
     /**
-     * @return , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * @return Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      * 
      */

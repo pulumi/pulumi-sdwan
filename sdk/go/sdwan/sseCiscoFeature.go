@@ -107,7 +107,7 @@ type SseCiscoFeature struct {
 	// Variable name
 	RegionVariable pulumi.StringPtrOutput `pulumi:"regionVariable"`
 	// Source IP address for Tracker
-	TrackerSourceIp pulumi.StringOutput `pulumi:"trackerSourceIp"`
+	TrackerSourceIp pulumi.StringPtrOutput `pulumi:"trackerSourceIp"`
 	// Variable name
 	TrackerSourceIpVariable pulumi.StringPtrOutput `pulumi:"trackerSourceIpVariable"`
 	// Tracker configuration
@@ -134,9 +134,6 @@ func NewSseCiscoFeature(ctx *pulumi.Context,
 	}
 	if args.Region == nil {
 		return nil, errors.New("invalid value for required argument 'Region'")
-	}
-	if args.TrackerSourceIp == nil {
-		return nil, errors.New("invalid value for required argument 'TrackerSourceIp'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource SseCiscoFeature
@@ -251,7 +248,7 @@ type sseCiscoFeatureArgs struct {
 	// Variable name
 	RegionVariable *string `pulumi:"regionVariable"`
 	// Source IP address for Tracker
-	TrackerSourceIp string `pulumi:"trackerSourceIp"`
+	TrackerSourceIp *string `pulumi:"trackerSourceIp"`
 	// Variable name
 	TrackerSourceIpVariable *string `pulumi:"trackerSourceIpVariable"`
 	// Tracker configuration
@@ -282,7 +279,7 @@ type SseCiscoFeatureArgs struct {
 	// Variable name
 	RegionVariable pulumi.StringPtrInput
 	// Source IP address for Tracker
-	TrackerSourceIp pulumi.StringInput
+	TrackerSourceIp pulumi.StringPtrInput
 	// Variable name
 	TrackerSourceIpVariable pulumi.StringPtrInput
 	// Tracker configuration
@@ -425,8 +422,8 @@ func (o SseCiscoFeatureOutput) RegionVariable() pulumi.StringPtrOutput {
 }
 
 // Source IP address for Tracker
-func (o SseCiscoFeatureOutput) TrackerSourceIp() pulumi.StringOutput {
-	return o.ApplyT(func(v *SseCiscoFeature) pulumi.StringOutput { return v.TrackerSourceIp }).(pulumi.StringOutput)
+func (o SseCiscoFeatureOutput) TrackerSourceIp() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SseCiscoFeature) pulumi.StringPtrOutput { return v.TrackerSourceIp }).(pulumi.StringPtrOutput)
 }
 
 // Variable name

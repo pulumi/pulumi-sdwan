@@ -15,6 +15,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TopologyCustomControlFeatureSequence {
+    /**
+     * @return List of action entries
+     * 
+     */
     private @Nullable List<TopologyCustomControlFeatureSequenceActionEntry> actionEntries;
     /**
      * @return Base Action
@@ -34,6 +38,10 @@ public final class TopologyCustomControlFeatureSequence {
      * 
      */
     private @Nullable String ipType;
+    /**
+     * @return Set of match entries
+     * 
+     */
     private @Nullable List<TopologyCustomControlFeatureSequenceMatchEntry> matchEntries;
     /**
      * @return Sequence Name
@@ -48,6 +56,10 @@ public final class TopologyCustomControlFeatureSequence {
     private @Nullable String type;
 
     private TopologyCustomControlFeatureSequence() {}
+    /**
+     * @return List of action entries
+     * 
+     */
     public List<TopologyCustomControlFeatureSequenceActionEntry> actionEntries() {
         return this.actionEntries == null ? List.of() : this.actionEntries;
     }
@@ -75,6 +87,10 @@ public final class TopologyCustomControlFeatureSequence {
     public Optional<String> ipType() {
         return Optional.ofNullable(this.ipType);
     }
+    /**
+     * @return Set of match entries
+     * 
+     */
     public List<TopologyCustomControlFeatureSequenceMatchEntry> matchEntries() {
         return this.matchEntries == null ? List.of() : this.matchEntries;
     }

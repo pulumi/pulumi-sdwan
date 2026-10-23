@@ -184,6 +184,9 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string CautionEnabledVariable;
+        /// <summary>
+        /// Country
+        /// </summary>
         public readonly bool Country;
         /// <summary>
         /// Variable name
@@ -201,11 +204,17 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string DisplayTimeUnitVariable;
+        /// <summary>
+        /// Download Bandwidth in Mbps
+        /// </summary>
         public readonly double DnBandwidth;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string DnBandwidthVariable;
+        /// <summary>
+        /// Enforce Bandwidth Control
+        /// </summary>
         public readonly bool EnforceBandwidthControl;
         /// <summary>
         /// Variable name
@@ -336,6 +345,9 @@ namespace Pulumi.Sdwan
         /// Tracker configuration
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSseZscalerFeatureTrackerResult> Trackers;
+        /// <summary>
+        /// Upload Bandwidth in Mbps
+        /// </summary>
         public readonly double UpBandwidth;
         /// <summary>
         /// Variable name

@@ -143,7 +143,7 @@ namespace Pulumi.Sdwan
         /// Source IP address for Tracker
         /// </summary>
         [Output("trackerSourceIp")]
-        public Output<string> TrackerSourceIp { get; private set; } = null!;
+        public Output<string?> TrackerSourceIp { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -281,8 +281,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Source IP address for Tracker
         /// </summary>
-        [Input("trackerSourceIp", required: true)]
-        public Input<string> TrackerSourceIp { get; set; } = null!;
+        [Input("trackerSourceIp")]
+        public Input<string>? TrackerSourceIp { get; set; }
 
         /// <summary>
         /// Variable name

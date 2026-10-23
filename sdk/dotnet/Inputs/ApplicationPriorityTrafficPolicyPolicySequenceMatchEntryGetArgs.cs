@@ -74,6 +74,18 @@ namespace Pulumi.Sdwan.Inputs
             set => _dscps = value;
         }
 
+        [Input("hierarchyIds")]
+        private InputList<string>? _hierarchyIds;
+
+        /// <summary>
+        /// Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public InputList<string> HierarchyIds
+        {
+            get => _hierarchyIds ?? (_hierarchyIds = new InputList<string>());
+            set => _hierarchyIds = value;
+        }
+
         [Input("icmp6Messages")]
         private InputList<string>? _icmp6Messages;
 

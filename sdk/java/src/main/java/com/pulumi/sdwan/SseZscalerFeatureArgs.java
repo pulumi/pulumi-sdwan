@@ -187,14 +187,16 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * - Default value: `false`
+     * Country
+     *   - Default value: `false`
      * 
      */
     @Import(name="country")
     private @Nullable Output<Boolean> country;
 
     /**
-     * @return - Default value: `false`
+     * @return Country
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> country() {
@@ -266,7 +268,7 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -274,7 +276,7 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
     private @Nullable Output<Double> dnBandwidth;
 
     /**
-     * @return , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * @return Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -298,14 +300,16 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * - Default value: `false`
+     * Enforce Bandwidth Control
+     *   - Default value: `false`
      * 
      */
     @Import(name="enforceBandwidthControl")
     private @Nullable Output<Boolean> enforceBandwidthControl;
 
     /**
-     * @return - Default value: `false`
+     * @return Enforce Bandwidth Control
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enforceBandwidthControl() {
@@ -773,15 +777,15 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
      * Source IP address for Tracker
      * 
      */
-    @Import(name="trackerSourceIp", required=true)
-    private Output<String> trackerSourceIp;
+    @Import(name="trackerSourceIp")
+    private @Nullable Output<String> trackerSourceIp;
 
     /**
      * @return Source IP address for Tracker
      * 
      */
-    public Output<String> trackerSourceIp() {
-        return this.trackerSourceIp;
+    public Optional<Output<String>> trackerSourceIp() {
+        return Optional.ofNullable(this.trackerSourceIp);
     }
 
     /**
@@ -815,7 +819,7 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -823,7 +827,7 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
     private @Nullable Output<Double> upBandwidth;
 
     /**
-     * @return , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * @return Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -1178,7 +1182,8 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param country - Default value: `false`
+         * @param country Country
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1189,7 +1194,8 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param country - Default value: `false`
+         * @param country Country
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1287,7 +1293,7 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param dnBandwidth , Attribute conditional on `enforceBandwidthControl` equal to `true`
+         * @param dnBandwidth Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
          *   - Range: `0.1`-`99999`
          * 
          * @return builder
@@ -1299,7 +1305,7 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param dnBandwidth , Attribute conditional on `enforceBandwidthControl` equal to `true`
+         * @param dnBandwidth Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
          *   - Range: `0.1`-`99999`
          * 
          * @return builder
@@ -1331,7 +1337,8 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param enforceBandwidthControl - Default value: `false`
+         * @param enforceBandwidthControl Enforce Bandwidth Control
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1342,7 +1349,8 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param enforceBandwidthControl - Default value: `false`
+         * @param enforceBandwidthControl Enforce Bandwidth Control
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2008,7 +2016,7 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder trackerSourceIp(Output<String> trackerSourceIp) {
+        public Builder trackerSourceIp(@Nullable Output<String> trackerSourceIp) {
             $.trackerSourceIp = trackerSourceIp;
             return this;
         }
@@ -2076,7 +2084,7 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param upBandwidth , Attribute conditional on `enforceBandwidthControl` equal to `true`
+         * @param upBandwidth Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
          *   - Range: `0.1`-`99999`
          * 
          * @return builder
@@ -2088,7 +2096,7 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param upBandwidth , Attribute conditional on `enforceBandwidthControl` equal to `true`
+         * @param upBandwidth Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
          *   - Range: `0.1`-`99999`
          * 
          * @return builder
@@ -2172,9 +2180,6 @@ public final class SseZscalerFeatureArgs extends com.pulumi.resources.ResourceAr
             }
             if ($.interfaces == null) {
                 throw new MissingRequiredPropertyException("SseZscalerFeatureArgs", "interfaces");
-            }
-            if ($.trackerSourceIp == null) {
-                throw new MissingRequiredPropertyException("SseZscalerFeatureArgs", "trackerSourceIp");
             }
             return $;
         }

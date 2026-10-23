@@ -87,9 +87,17 @@ public class PolicyObjectSecurityZone extends com.pulumi.resources.CustomResourc
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
+    /**
+     * List of entries
+     * 
+     */
     @Export(name="entries", refs={List.class,PolicyObjectSecurityZoneEntry.class}, tree="[0,1]")
     private Output<List<PolicyObjectSecurityZoneEntry>> entries;
 
+    /**
+     * @return List of entries
+     * 
+     */
     public Output<List<PolicyObjectSecurityZoneEntry>> entries() {
         return this.entries;
     }

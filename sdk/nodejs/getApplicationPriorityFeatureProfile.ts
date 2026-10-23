@@ -18,10 +18,12 @@ import * as utilities from "./utilities";
  * });
  * ```
  */
-export function getApplicationPriorityFeatureProfile(args: GetApplicationPriorityFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationPriorityFeatureProfileResult> {
+export function getApplicationPriorityFeatureProfile(args?: GetApplicationPriorityFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationPriorityFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,7 +34,11 @@ export interface GetApplicationPriorityFeatureProfileArgs {
     /**
      * The id of the object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the application priority feature profile
+     */
+    name?: string;
 }
 
 /**
@@ -66,10 +72,12 @@ export interface GetApplicationPriorityFeatureProfileResult {
  * });
  * ```
  */
-export function getApplicationPriorityFeatureProfileOutput(args: GetApplicationPriorityFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationPriorityFeatureProfileResult> {
+export function getApplicationPriorityFeatureProfileOutput(args?: GetApplicationPriorityFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationPriorityFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -80,5 +88,9 @@ export interface GetApplicationPriorityFeatureProfileOutputArgs {
     /**
      * The id of the object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the application priority feature profile
+     */
+    name?: pulumi.Input<string | undefined>;
 }

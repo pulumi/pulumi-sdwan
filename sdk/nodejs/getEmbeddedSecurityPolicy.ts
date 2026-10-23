@@ -72,6 +72,10 @@ export interface GetEmbeddedSecurityPolicyResult {
      */
     readonly featureProfileId: string;
     /**
+     * High Speed Logging
+     */
+    readonly highSpeedLoggings: outputs.GetEmbeddedSecurityPolicyHighSpeedLogging[];
+    /**
      * Setting can be string 'on' or missing for off
      */
     readonly icmpUnreachableAllow: string;
@@ -91,6 +95,7 @@ export interface GetEmbeddedSecurityPolicyResult {
      * Variable name
      */
     readonly natVariable: string;
+    readonly optimized: boolean;
     readonly resourceProfile: string;
     /**
      * Variable name
@@ -100,6 +105,14 @@ export interface GetEmbeddedSecurityPolicyResult {
      * Setting can be string 'on' or missing for off
      */
     readonly sessionReclassifyAllow: string;
+    /**
+     * InterfaceName
+     */
+    readonly syslogServerSourceInterface: string;
+    /**
+     * Variable name
+     */
+    readonly syslogServerSourceInterfaceVariable: string;
     readonly tcpSynFloodLimit: string;
     /**
      * Setting can be string 'on' or missing for off

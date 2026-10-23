@@ -24,7 +24,6 @@ class SseZscalerFeatureArgs:
                  feature_profile_id: pulumi.Input[_builtins.str],
                  interface_pairs: pulumi.Input[Sequence[pulumi.Input['SseZscalerFeatureInterfacePairArgs']]],
                  interfaces: pulumi.Input[Sequence[pulumi.Input['SseZscalerFeatureInterfaceArgs']]],
-                 tracker_source_ip: pulumi.Input[_builtins.str],
                  aup_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  aup_enabled_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  aup_timeout: pulumi.Input[Optional[_builtins.int]] = None,
@@ -69,6 +68,7 @@ class SseZscalerFeatureArgs:
                  sub_locations: pulumi.Input[Optional[Sequence[pulumi.Input['SseZscalerFeatureSubLocationArgs']]]] = None,
                  surrogate_ip: pulumi.Input[Optional[_builtins.bool]] = None,
                  surrogate_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  trackers: pulumi.Input[Optional[Sequence[pulumi.Input['SseZscalerFeatureTrackerArgs']]]] = None,
                  up_bandwidth: pulumi.Input[Optional[_builtins.float]] = None,
@@ -81,7 +81,6 @@ class SseZscalerFeatureArgs:
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['SseZscalerFeatureInterfacePairArgs']]] interface_pairs: Interface Pair for active and backup
         :param pulumi.Input[Sequence[pulumi.Input['SseZscalerFeatureInterfaceArgs']]] interfaces: Interface name: IPsec when present
-        :param pulumi.Input[_builtins.str] tracker_source_ip: Source IP address for Tracker
         :param pulumi.Input[_builtins.bool] aup_enabled: Enable Acceptable User Policy
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] aup_enabled_variable: Variable name
@@ -98,17 +97,19 @@ class SseZscalerFeatureArgs:
         :param pulumi.Input[_builtins.bool] caution_enabled: Enable Caution
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] caution_enabled_variable: Variable name
-        :param pulumi.Input[_builtins.bool] country: - Default value: `false`
+        :param pulumi.Input[_builtins.bool] country: Country
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] country_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] display_time_unit: Display time unit, Attribute conditional on `surrogate_ip` equal to `true`
                  - Choices: `MINUTE`, `HOUR`, `DAY`
                  - Default value: `MINUTE`
         :param pulumi.Input[_builtins.str] display_time_unit_variable: Variable name, Attribute conditional on `surrogate_ip` equal to `true`
-        :param pulumi.Input[_builtins.float] dn_bandwidth: , Attribute conditional on `enforce_bandwidth_control` equal to `true`
+        :param pulumi.Input[_builtins.float] dn_bandwidth: Download Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `true`
                  - Range: `0.1`-`99999`
         :param pulumi.Input[_builtins.str] dn_bandwidth_variable: Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `true`
-        :param pulumi.Input[_builtins.bool] enforce_bandwidth_control: - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enforce_bandwidth_control: Enforce Bandwidth Control
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enforce_bandwidth_control_variable: Variable name
         :param pulumi.Input[_builtins.bool] force_ssl_inspection: For first-time Acceptable User Policy behavior, force SSL inspection, Attribute conditional on `aup_enabled` equal to `true`
                  - Default value: `false`
@@ -149,9 +150,10 @@ class SseZscalerFeatureArgs:
         :param pulumi.Input[_builtins.bool] surrogate_ip: Enable Surrogate IP, Attribute conditional on `auth_required` equal to `true`
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] surrogate_ip_variable: Variable name, Attribute conditional on `auth_required` equal to `true`
+        :param pulumi.Input[_builtins.str] tracker_source_ip: Source IP address for Tracker
         :param pulumi.Input[_builtins.str] tracker_source_ip_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['SseZscalerFeatureTrackerArgs']]] trackers: Tracker configuration
-        :param pulumi.Input[_builtins.float] up_bandwidth: , Attribute conditional on `enforce_bandwidth_control` equal to `true`
+        :param pulumi.Input[_builtins.float] up_bandwidth: Upload Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `true`
                  - Range: `0.1`-`99999`
         :param pulumi.Input[_builtins.str] up_bandwidth_variable: Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `true`
         :param pulumi.Input[_builtins.bool] xff_forward_enabled: XFF forwarding enabled
@@ -161,7 +163,6 @@ class SseZscalerFeatureArgs:
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         pulumi.set(__self__, "interface_pairs", interface_pairs)
         pulumi.set(__self__, "interfaces", interfaces)
-        pulumi.set(__self__, "tracker_source_ip", tracker_source_ip)
         if aup_enabled is not None:
             pulumi.set(__self__, "aup_enabled", aup_enabled)
         if aup_enabled_variable is not None:
@@ -250,6 +251,8 @@ class SseZscalerFeatureArgs:
             pulumi.set(__self__, "surrogate_ip", surrogate_ip)
         if surrogate_ip_variable is not None:
             pulumi.set(__self__, "surrogate_ip_variable", surrogate_ip_variable)
+        if tracker_source_ip is not None:
+            pulumi.set(__self__, "tracker_source_ip", tracker_source_ip)
         if tracker_source_ip_variable is not None:
             pulumi.set(__self__, "tracker_source_ip_variable", tracker_source_ip_variable)
         if trackers is not None:
@@ -298,18 +301,6 @@ class SseZscalerFeatureArgs:
     @interfaces.setter
     def interfaces(self, value: pulumi.Input[Sequence[pulumi.Input['SseZscalerFeatureInterfaceArgs']]]):
         pulumi.set(self, "interfaces", value)
-
-    @_builtins.property
-    @pulumi.getter(name="trackerSourceIp")
-    def tracker_source_ip(self) -> pulumi.Input[_builtins.str]:
-        """
-        Source IP address for Tracker
-        """
-        return pulumi.get(self, "tracker_source_ip")
-
-    @tracker_source_ip.setter
-    def tracker_source_ip(self, value: pulumi.Input[_builtins.str]):
-        pulumi.set(self, "tracker_source_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="aupEnabled")
@@ -441,7 +432,8 @@ class SseZscalerFeatureArgs:
     @pulumi.getter
     def country(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
-        - Default value: `false`
+        Country
+          - Default value: `false`
         """
         return pulumi.get(self, "country")
 
@@ -503,7 +495,7 @@ class SseZscalerFeatureArgs:
     @pulumi.getter(name="dnBandwidth")
     def dn_bandwidth(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
-        , Attribute conditional on `enforce_bandwidth_control` equal to `true`
+        Download Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `true`
           - Range: `0.1`-`99999`
         """
         return pulumi.get(self, "dn_bandwidth")
@@ -528,7 +520,8 @@ class SseZscalerFeatureArgs:
     @pulumi.getter(name="enforceBandwidthControl")
     def enforce_bandwidth_control(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
-        - Default value: `false`
+        Enforce Bandwidth Control
+          - Default value: `false`
         """
         return pulumi.get(self, "enforce_bandwidth_control")
 
@@ -861,6 +854,18 @@ class SseZscalerFeatureArgs:
         pulumi.set(self, "surrogate_ip_variable", value)
 
     @_builtins.property
+    @pulumi.getter(name="trackerSourceIp")
+    def tracker_source_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Source IP address for Tracker
+        """
+        return pulumi.get(self, "tracker_source_ip")
+
+    @tracker_source_ip.setter
+    def tracker_source_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tracker_source_ip", value)
+
+    @_builtins.property
     @pulumi.getter(name="trackerSourceIpVariable")
     def tracker_source_ip_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
@@ -888,7 +893,7 @@ class SseZscalerFeatureArgs:
     @pulumi.getter(name="upBandwidth")
     def up_bandwidth(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
-        , Attribute conditional on `enforce_bandwidth_control` equal to `true`
+        Upload Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `true`
           - Range: `0.1`-`99999`
         """
         return pulumi.get(self, "up_bandwidth")
@@ -1012,17 +1017,19 @@ class _SseZscalerFeatureState:
         :param pulumi.Input[_builtins.bool] caution_enabled: Enable Caution
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] caution_enabled_variable: Variable name
-        :param pulumi.Input[_builtins.bool] country: - Default value: `false`
+        :param pulumi.Input[_builtins.bool] country: Country
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] country_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] display_time_unit: Display time unit, Attribute conditional on `surrogate_ip` equal to `true`
                  - Choices: `MINUTE`, `HOUR`, `DAY`
                  - Default value: `MINUTE`
         :param pulumi.Input[_builtins.str] display_time_unit_variable: Variable name, Attribute conditional on `surrogate_ip` equal to `true`
-        :param pulumi.Input[_builtins.float] dn_bandwidth: , Attribute conditional on `enforce_bandwidth_control` equal to `true`
+        :param pulumi.Input[_builtins.float] dn_bandwidth: Download Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `true`
                  - Range: `0.1`-`99999`
         :param pulumi.Input[_builtins.str] dn_bandwidth_variable: Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `true`
-        :param pulumi.Input[_builtins.bool] enforce_bandwidth_control: - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enforce_bandwidth_control: Enforce Bandwidth Control
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enforce_bandwidth_control_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] force_ssl_inspection: For first-time Acceptable User Policy behavior, force SSL inspection, Attribute conditional on `aup_enabled` equal to `true`
@@ -1069,7 +1076,7 @@ class _SseZscalerFeatureState:
         :param pulumi.Input[_builtins.str] tracker_source_ip: Source IP address for Tracker
         :param pulumi.Input[_builtins.str] tracker_source_ip_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['SseZscalerFeatureTrackerArgs']]] trackers: Tracker configuration
-        :param pulumi.Input[_builtins.float] up_bandwidth: , Attribute conditional on `enforce_bandwidth_control` equal to `true`
+        :param pulumi.Input[_builtins.float] up_bandwidth: Upload Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `true`
                  - Range: `0.1`-`99999`
         :param pulumi.Input[_builtins.str] up_bandwidth_variable: Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `true`
         :param pulumi.Input[_builtins.int] version: The version of the Feature
@@ -1318,7 +1325,8 @@ class _SseZscalerFeatureState:
     @pulumi.getter
     def country(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
-        - Default value: `false`
+        Country
+          - Default value: `false`
         """
         return pulumi.get(self, "country")
 
@@ -1380,7 +1388,7 @@ class _SseZscalerFeatureState:
     @pulumi.getter(name="dnBandwidth")
     def dn_bandwidth(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
-        , Attribute conditional on `enforce_bandwidth_control` equal to `true`
+        Download Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `true`
           - Range: `0.1`-`99999`
         """
         return pulumi.get(self, "dn_bandwidth")
@@ -1405,7 +1413,8 @@ class _SseZscalerFeatureState:
     @pulumi.getter(name="enforceBandwidthControl")
     def enforce_bandwidth_control(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
-        - Default value: `false`
+        Enforce Bandwidth Control
+          - Default value: `false`
         """
         return pulumi.get(self, "enforce_bandwidth_control")
 
@@ -1813,7 +1822,7 @@ class _SseZscalerFeatureState:
     @pulumi.getter(name="upBandwidth")
     def up_bandwidth(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
-        , Attribute conditional on `enforce_bandwidth_control` equal to `true`
+        Upload Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `true`
           - Range: `0.1`-`99999`
         """
         return pulumi.get(self, "up_bandwidth")
@@ -2015,17 +2024,19 @@ class SseZscalerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] caution_enabled: Enable Caution
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] caution_enabled_variable: Variable name
-        :param pulumi.Input[_builtins.bool] country: - Default value: `false`
+        :param pulumi.Input[_builtins.bool] country: Country
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] country_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] display_time_unit: Display time unit, Attribute conditional on `surrogate_ip` equal to `true`
                  - Choices: `MINUTE`, `HOUR`, `DAY`
                  - Default value: `MINUTE`
         :param pulumi.Input[_builtins.str] display_time_unit_variable: Variable name, Attribute conditional on `surrogate_ip` equal to `true`
-        :param pulumi.Input[_builtins.float] dn_bandwidth: , Attribute conditional on `enforce_bandwidth_control` equal to `true`
+        :param pulumi.Input[_builtins.float] dn_bandwidth: Download Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `true`
                  - Range: `0.1`-`99999`
         :param pulumi.Input[_builtins.str] dn_bandwidth_variable: Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `true`
-        :param pulumi.Input[_builtins.bool] enforce_bandwidth_control: - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enforce_bandwidth_control: Enforce Bandwidth Control
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enforce_bandwidth_control_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] force_ssl_inspection: For first-time Acceptable User Policy behavior, force SSL inspection, Attribute conditional on `aup_enabled` equal to `true`
@@ -2072,7 +2083,7 @@ class SseZscalerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tracker_source_ip: Source IP address for Tracker
         :param pulumi.Input[_builtins.str] tracker_source_ip_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['SseZscalerFeatureTrackerArgs', 'SseZscalerFeatureTrackerArgsDict', 'outputs.SseZscalerFeatureTracker']]]] trackers: Tracker configuration
-        :param pulumi.Input[_builtins.float] up_bandwidth: , Attribute conditional on `enforce_bandwidth_control` equal to `true`
+        :param pulumi.Input[_builtins.float] up_bandwidth: Upload Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `true`
                  - Range: `0.1`-`99999`
         :param pulumi.Input[_builtins.str] up_bandwidth_variable: Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `true`
         :param pulumi.Input[_builtins.bool] xff_forward_enabled: XFF forwarding enabled
@@ -2280,8 +2291,6 @@ class SseZscalerFeature(pulumi.CustomResource):
             __props__.__dict__["sub_locations"] = sub_locations
             __props__.__dict__["surrogate_ip"] = surrogate_ip
             __props__.__dict__["surrogate_ip_variable"] = surrogate_ip_variable
-            if tracker_source_ip is None and not opts.urn:
-                raise TypeError("Missing required property 'tracker_source_ip'")
             __props__.__dict__["tracker_source_ip"] = tracker_source_ip
             __props__.__dict__["tracker_source_ip_variable"] = tracker_source_ip_variable
             __props__.__dict__["trackers"] = trackers
@@ -2378,17 +2387,19 @@ class SseZscalerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] caution_enabled: Enable Caution
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] caution_enabled_variable: Variable name
-        :param pulumi.Input[_builtins.bool] country: - Default value: `false`
+        :param pulumi.Input[_builtins.bool] country: Country
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] country_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] display_time_unit: Display time unit, Attribute conditional on `surrogate_ip` equal to `true`
                  - Choices: `MINUTE`, `HOUR`, `DAY`
                  - Default value: `MINUTE`
         :param pulumi.Input[_builtins.str] display_time_unit_variable: Variable name, Attribute conditional on `surrogate_ip` equal to `true`
-        :param pulumi.Input[_builtins.float] dn_bandwidth: , Attribute conditional on `enforce_bandwidth_control` equal to `true`
+        :param pulumi.Input[_builtins.float] dn_bandwidth: Download Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `true`
                  - Range: `0.1`-`99999`
         :param pulumi.Input[_builtins.str] dn_bandwidth_variable: Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `true`
-        :param pulumi.Input[_builtins.bool] enforce_bandwidth_control: - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enforce_bandwidth_control: Enforce Bandwidth Control
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enforce_bandwidth_control_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] force_ssl_inspection: For first-time Acceptable User Policy behavior, force SSL inspection, Attribute conditional on `aup_enabled` equal to `true`
@@ -2435,7 +2446,7 @@ class SseZscalerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tracker_source_ip: Source IP address for Tracker
         :param pulumi.Input[_builtins.str] tracker_source_ip_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['SseZscalerFeatureTrackerArgs', 'SseZscalerFeatureTrackerArgsDict', 'outputs.SseZscalerFeatureTracker']]]] trackers: Tracker configuration
-        :param pulumi.Input[_builtins.float] up_bandwidth: , Attribute conditional on `enforce_bandwidth_control` equal to `true`
+        :param pulumi.Input[_builtins.float] up_bandwidth: Upload Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `true`
                  - Range: `0.1`-`99999`
         :param pulumi.Input[_builtins.str] up_bandwidth_variable: Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `true`
         :param pulumi.Input[_builtins.int] version: The version of the Feature
@@ -2594,7 +2605,8 @@ class SseZscalerFeature(pulumi.CustomResource):
     @pulumi.getter
     def country(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        - Default value: `false`
+        Country
+          - Default value: `false`
         """
         return pulumi.get(self, "country")
 
@@ -2636,7 +2648,7 @@ class SseZscalerFeature(pulumi.CustomResource):
     @pulumi.getter(name="dnBandwidth")
     def dn_bandwidth(self) -> pulumi.Output[Optional[_builtins.float]]:
         """
-        , Attribute conditional on `enforce_bandwidth_control` equal to `true`
+        Download Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `true`
           - Range: `0.1`-`99999`
         """
         return pulumi.get(self, "dn_bandwidth")
@@ -2653,7 +2665,8 @@ class SseZscalerFeature(pulumi.CustomResource):
     @pulumi.getter(name="enforceBandwidthControl")
     def enforce_bandwidth_control(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        - Default value: `false`
+        Enforce Bandwidth Control
+          - Default value: `false`
         """
         return pulumi.get(self, "enforce_bandwidth_control")
 
@@ -2903,7 +2916,7 @@ class SseZscalerFeature(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="trackerSourceIp")
-    def tracker_source_ip(self) -> pulumi.Output[_builtins.str]:
+    def tracker_source_ip(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Source IP address for Tracker
         """
@@ -2929,7 +2942,7 @@ class SseZscalerFeature(pulumi.CustomResource):
     @pulumi.getter(name="upBandwidth")
     def up_bandwidth(self) -> pulumi.Output[Optional[_builtins.float]]:
         """
-        , Attribute conditional on `enforce_bandwidth_control` equal to `true`
+        Upload Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `true`
           - Range: `0.1`-`99999`
         """
         return pulumi.get(self, "up_bandwidth")

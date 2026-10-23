@@ -26,8 +26,25 @@ public final class EmbeddedSecurityNgfwPolicySequence {
      */
     private @Nullable String baseAction;
     private @Nullable Boolean disableSequence;
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    private @Nullable Boolean isRuleSet;
     private @Nullable List<EmbeddedSecurityNgfwPolicySequenceMatchEntry> matchEntries;
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    private @Nullable String sequenceComment;
     private @Nullable String sequenceId;
+    /**
+     * @return IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     *   - Choices: `ipv4`, `ipv6`
+     *   - Default value: `ipv4`
+     * 
+     */
+    private @Nullable String sequenceIpType;
     private @Nullable String sequenceName;
     private @Nullable String sequenceType;
 
@@ -49,11 +66,34 @@ public final class EmbeddedSecurityNgfwPolicySequence {
     public Optional<Boolean> disableSequence() {
         return Optional.ofNullable(this.disableSequence);
     }
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Boolean> isRuleSet() {
+        return Optional.ofNullable(this.isRuleSet);
+    }
     public List<EmbeddedSecurityNgfwPolicySequenceMatchEntry> matchEntries() {
         return this.matchEntries == null ? List.of() : this.matchEntries;
     }
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<String> sequenceComment() {
+        return Optional.ofNullable(this.sequenceComment);
+    }
     public Optional<String> sequenceId() {
         return Optional.ofNullable(this.sequenceId);
+    }
+    /**
+     * @return IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     *   - Choices: `ipv4`, `ipv6`
+     *   - Default value: `ipv4`
+     * 
+     */
+    public Optional<String> sequenceIpType() {
+        return Optional.ofNullable(this.sequenceIpType);
     }
     public Optional<String> sequenceName() {
         return Optional.ofNullable(this.sequenceName);
@@ -74,8 +114,11 @@ public final class EmbeddedSecurityNgfwPolicySequence {
         private @Nullable List<EmbeddedSecurityNgfwPolicySequenceAction> actions;
         private @Nullable String baseAction;
         private @Nullable Boolean disableSequence;
+        private @Nullable Boolean isRuleSet;
         private @Nullable List<EmbeddedSecurityNgfwPolicySequenceMatchEntry> matchEntries;
+        private @Nullable String sequenceComment;
         private @Nullable String sequenceId;
+        private @Nullable String sequenceIpType;
         private @Nullable String sequenceName;
         private @Nullable String sequenceType;
         public Builder() {}
@@ -84,8 +127,11 @@ public final class EmbeddedSecurityNgfwPolicySequence {
     	      this.actions = defaults.actions;
     	      this.baseAction = defaults.baseAction;
     	      this.disableSequence = defaults.disableSequence;
+    	      this.isRuleSet = defaults.isRuleSet;
     	      this.matchEntries = defaults.matchEntries;
+    	      this.sequenceComment = defaults.sequenceComment;
     	      this.sequenceId = defaults.sequenceId;
+    	      this.sequenceIpType = defaults.sequenceIpType;
     	      this.sequenceName = defaults.sequenceName;
     	      this.sequenceType = defaults.sequenceType;
         }
@@ -112,6 +158,12 @@ public final class EmbeddedSecurityNgfwPolicySequence {
             return this;
         }
         @CustomType.Setter
+        public Builder isRuleSet(@Nullable Boolean isRuleSet) {
+
+            this.isRuleSet = isRuleSet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder matchEntries(@Nullable List<EmbeddedSecurityNgfwPolicySequenceMatchEntry> matchEntries) {
 
             this.matchEntries = matchEntries;
@@ -121,9 +173,21 @@ public final class EmbeddedSecurityNgfwPolicySequence {
             return matchEntries(List.of(matchEntries));
         }
         @CustomType.Setter
+        public Builder sequenceComment(@Nullable String sequenceComment) {
+
+            this.sequenceComment = sequenceComment;
+            return this;
+        }
+        @CustomType.Setter
         public Builder sequenceId(@Nullable String sequenceId) {
 
             this.sequenceId = sequenceId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder sequenceIpType(@Nullable String sequenceIpType) {
+
+            this.sequenceIpType = sequenceIpType;
             return this;
         }
         @CustomType.Setter
@@ -143,8 +207,11 @@ public final class EmbeddedSecurityNgfwPolicySequence {
             _resultValue.actions = actions;
             _resultValue.baseAction = baseAction;
             _resultValue.disableSequence = disableSequence;
+            _resultValue.isRuleSet = isRuleSet;
             _resultValue.matchEntries = matchEntries;
+            _resultValue.sequenceComment = sequenceComment;
             _resultValue.sequenceId = sequenceId;
+            _resultValue.sequenceIpType = sequenceIpType;
             _resultValue.sequenceName = sequenceName;
             _resultValue.sequenceType = sequenceType;
             return _resultValue;

@@ -123,6 +123,7 @@ class AwaitableGetPolicyGroupResult(GetPolicyGroupResult):
 
 
 def get_policy_group(id: Optional[_builtins.str] = None,
+                     name: Optional[_builtins.str] = None,
                      opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetPolicyGroupResult:
     """
     This data source can read the Policy Group .
@@ -138,9 +139,11 @@ def get_policy_group(id: Optional[_builtins.str] = None,
 
 
     :param _builtins.str id: The id of the object
+    :param _builtins.str name: The name of the policy group
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getPolicyGroup:getPolicyGroup', __args__, opts=opts, typ=GetPolicyGroupResult).value
 
@@ -152,7 +155,8 @@ def get_policy_group(id: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         policy_versions=pulumi.get(__ret__, 'policy_versions'),
         solution=pulumi.get(__ret__, 'solution'))
-def get_policy_group_output(id: pulumi.Input[Optional[_builtins.str]] = None,
+def get_policy_group_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                            name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyGroupResult]:
     """
     This data source can read the Policy Group .
@@ -168,9 +172,11 @@ def get_policy_group_output(id: pulumi.Input[Optional[_builtins.str]] = None,
 
 
     :param _builtins.str id: The id of the object
+    :param _builtins.str name: The name of the policy group
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPolicyGroup:getPolicyGroup', __args__, opts=opts, typ=GetPolicyGroupResult)
     return __ret__.apply(lambda __response__: GetPolicyGroupResult(

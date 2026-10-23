@@ -25,7 +25,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<string>? _backupSlaPreferredColors;
 
         /// <summary>
-        /// Backup SLA perferred color
+        /// Backup SLA preferred color
         /// </summary>
         public InputList<string> BackupSlaPreferredColors
         {

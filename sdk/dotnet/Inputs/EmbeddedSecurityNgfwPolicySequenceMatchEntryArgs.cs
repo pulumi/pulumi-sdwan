@@ -36,6 +36,18 @@ namespace Pulumi.Sdwan.Inputs
             set => _applications = value;
         }
 
+        [Input("destinationDataIpv6PrefixListIds")]
+        private InputList<string>? _destinationDataIpv6PrefixListIds;
+
+        /// <summary>
+        /// Only supported on sequences with `SequenceIpType` set to `Ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        public InputList<string> DestinationDataIpv6PrefixListIds
+        {
+            get => _destinationDataIpv6PrefixListIds ?? (_destinationDataIpv6PrefixListIds = new InputList<string>());
+            set => _destinationDataIpv6PrefixListIds = value;
+        }
+
         [Input("destinationDataPrefixListIds")]
         private InputList<string>? _destinationDataPrefixListIds;
         public InputList<string> DestinationDataPrefixListIds
@@ -102,6 +114,36 @@ namespace Pulumi.Sdwan.Inputs
         [Input("destinationGeoLocationsVariable")]
         public Input<string>? DestinationGeoLocationsVariable { get; set; }
 
+        [Input("destinationIpv6DataPrefixes")]
+        private InputList<string>? _destinationIpv6DataPrefixes;
+
+        /// <summary>
+        /// Only supported on sequences with `SequenceIpType` set to `Ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        public InputList<string> DestinationIpv6DataPrefixes
+        {
+            get => _destinationIpv6DataPrefixes ?? (_destinationIpv6DataPrefixes = new InputList<string>());
+            set => _destinationIpv6DataPrefixes = value;
+        }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        [Input("destinationIpv6DataPrefixesVariable")]
+        public Input<string>? DestinationIpv6DataPrefixesVariable { get; set; }
+
+        [Input("destinationObjectGroupListIds")]
+        private InputList<string>? _destinationObjectGroupListIds;
+
+        /// <summary>
+        /// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        public InputList<string> DestinationObjectGroupListIds
+        {
+            get => _destinationObjectGroupListIds ?? (_destinationObjectGroupListIds = new InputList<string>());
+            set => _destinationObjectGroupListIds = value;
+        }
+
         [Input("destinationPortListIds")]
         private InputList<string>? _destinationPortListIds;
         public InputList<string> DestinationPortListIds
@@ -134,6 +176,10 @@ namespace Pulumi.Sdwan.Inputs
 
         [Input("destinationSecurityGroupListIds")]
         private InputList<string>? _destinationSecurityGroupListIds;
+
+        /// <summary>
+        /// Deprecated, use `DestinationObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+        /// </summary>
         public InputList<string> DestinationSecurityGroupListIds
         {
             get => _destinationSecurityGroupListIds ?? (_destinationSecurityGroupListIds = new InputList<string>());
@@ -170,6 +216,30 @@ namespace Pulumi.Sdwan.Inputs
         {
             get => _protocols ?? (_protocols = new InputList<string>());
             set => _protocols = value;
+        }
+
+        [Input("ruleSetListIds")]
+        private InputList<string>? _ruleSetListIds;
+
+        /// <summary>
+        /// Security rule set IDs, requires `IsRuleSet` set to `True` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        public InputList<string> RuleSetListIds
+        {
+            get => _ruleSetListIds ?? (_ruleSetListIds = new InputList<string>());
+            set => _ruleSetListIds = value;
+        }
+
+        [Input("sourceDataIpv6PrefixListIds")]
+        private InputList<string>? _sourceDataIpv6PrefixListIds;
+
+        /// <summary>
+        /// Only supported on sequences with `SequenceIpType` set to `Ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        public InputList<string> SourceDataIpv6PrefixListIds
+        {
+            get => _sourceDataIpv6PrefixListIds ?? (_sourceDataIpv6PrefixListIds = new InputList<string>());
+            set => _sourceDataIpv6PrefixListIds = value;
         }
 
         [Input("sourceDataPrefixListIds")]
@@ -240,6 +310,36 @@ namespace Pulumi.Sdwan.Inputs
             set => _sourceIdentityUsers = value;
         }
 
+        [Input("sourceIpv6DataPrefixes")]
+        private InputList<string>? _sourceIpv6DataPrefixes;
+
+        /// <summary>
+        /// Only supported on sequences with `SequenceIpType` set to `Ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        public InputList<string> SourceIpv6DataPrefixes
+        {
+            get => _sourceIpv6DataPrefixes ?? (_sourceIpv6DataPrefixes = new InputList<string>());
+            set => _sourceIpv6DataPrefixes = value;
+        }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        [Input("sourceIpv6DataPrefixesVariable")]
+        public Input<string>? SourceIpv6DataPrefixesVariable { get; set; }
+
+        [Input("sourceObjectGroupListIds")]
+        private InputList<string>? _sourceObjectGroupListIds;
+
+        /// <summary>
+        /// Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        public InputList<string> SourceObjectGroupListIds
+        {
+            get => _sourceObjectGroupListIds ?? (_sourceObjectGroupListIds = new InputList<string>());
+            set => _sourceObjectGroupListIds = value;
+        }
+
         [Input("sourcePortListIds")]
         private InputList<string>? _sourcePortListIds;
         public InputList<string> SourcePortListIds
@@ -272,6 +372,10 @@ namespace Pulumi.Sdwan.Inputs
 
         [Input("sourceSecurityGroupListIds")]
         private InputList<string>? _sourceSecurityGroupListIds;
+
+        /// <summary>
+        /// Deprecated, use `SourceObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+        /// </summary>
         public InputList<string> SourceSecurityGroupListIds
         {
             get => _sourceSecurityGroupListIds ?? (_sourceSecurityGroupListIds = new InputList<string>());

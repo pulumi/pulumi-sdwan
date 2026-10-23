@@ -92,10 +92,14 @@ export class PolicyObjectUnifiedIntrusionPrevention extends pulumi.CustomResourc
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * Can be one of the enum value
-     *   - Choices: `balanced`, `connectivity`, `security`
+     * Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+     *   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
      */
-    declare public readonly signatureSet: pulumi.Output<string>;
+    declare public readonly signatureSet: pulumi.Output<string | undefined>;
+    /**
+     * Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+     */
+    declare public readonly signatureSetId: pulumi.Output<string | undefined>;
     /**
      * The version of the Policy_object
      */
@@ -122,6 +126,7 @@ export class PolicyObjectUnifiedIntrusionPrevention extends pulumi.CustomResourc
             resourceInputs["logLevel"] = state?.logLevel;
             resourceInputs["name"] = state?.name;
             resourceInputs["signatureSet"] = state?.signatureSet;
+            resourceInputs["signatureSetId"] = state?.signatureSetId;
             resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as PolicyObjectUnifiedIntrusionPreventionArgs | undefined;
@@ -134,9 +139,6 @@ export class PolicyObjectUnifiedIntrusionPrevention extends pulumi.CustomResourc
             if (args?.logLevel === undefined && !opts.urn) {
                 throw new Error("Missing required property 'logLevel'");
             }
-            if (args?.signatureSet === undefined && !opts.urn) {
-                throw new Error("Missing required property 'signatureSet'");
-            }
             resourceInputs["customSignature"] = args?.customSignature;
             resourceInputs["description"] = args?.description;
             resourceInputs["featureProfileId"] = args?.featureProfileId;
@@ -145,6 +147,7 @@ export class PolicyObjectUnifiedIntrusionPrevention extends pulumi.CustomResourc
             resourceInputs["logLevel"] = args?.logLevel;
             resourceInputs["name"] = args?.name;
             resourceInputs["signatureSet"] = args?.signatureSet;
+            resourceInputs["signatureSetId"] = args?.signatureSetId;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -184,10 +187,14 @@ export interface PolicyObjectUnifiedIntrusionPreventionState {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * Can be one of the enum value
-     *   - Choices: `balanced`, `connectivity`, `security`
+     * Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+     *   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
      */
     signatureSet?: pulumi.Input<string | undefined>;
+    /**
+     * Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+     */
+    signatureSetId?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy_object
      */
@@ -226,8 +233,12 @@ export interface PolicyObjectUnifiedIntrusionPreventionArgs {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * Can be one of the enum value
-     *   - Choices: `balanced`, `connectivity`, `security`
+     * Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+     *   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
      */
-    signatureSet: pulumi.Input<string>;
+    signatureSet?: pulumi.Input<string | undefined>;
+    /**
+     * Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+     */
+    signatureSetId?: pulumi.Input<string | undefined>;
 }

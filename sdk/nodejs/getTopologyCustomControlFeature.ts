@@ -75,16 +75,34 @@ export interface GetTopologyCustomControlFeatureResult {
      * Inbound network hierarchy UUIDs
      */
     readonly targetInboundHierarchyUuids: string[];
+    /**
+     * Inbound regions list
+     */
     readonly targetInboundRegions: outputs.GetTopologyCustomControlFeatureTargetInboundRegion[];
+    /**
+     * Inbound site list
+     */
     readonly targetInboundSites: string[];
     readonly targetLevel: string;
     /**
      * Outbound network hierarchy UUIDs
      */
     readonly targetOutboundHierarchyUuids: string[];
+    /**
+     * Outbound regions list
+     */
     readonly targetOutboundRegions: outputs.GetTopologyCustomControlFeatureTargetOutboundRegion[];
+    /**
+     * Outbound site list
+     */
     readonly targetOutboundSites: string[];
+    /**
+     * Target role
+     */
     readonly targetRole: string;
+    /**
+     * Target VPN list
+     */
     readonly targetVpns: string[];
     /**
      * The version of the Feature

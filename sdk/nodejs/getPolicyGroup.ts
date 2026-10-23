@@ -20,10 +20,12 @@ import * as utilities from "./utilities";
  * });
  * ```
  */
-export function getPolicyGroup(args: GetPolicyGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetPolicyGroupResult> {
+export function getPolicyGroup(args?: GetPolicyGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetPolicyGroupResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getPolicyGroup:getPolicyGroup", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -34,7 +36,11 @@ export interface GetPolicyGroupArgs {
     /**
      * The id of the object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the policy group
+     */
+    name?: string;
 }
 
 /**
@@ -84,10 +90,12 @@ export interface GetPolicyGroupResult {
  * });
  * ```
  */
-export function getPolicyGroupOutput(args: GetPolicyGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyGroupResult> {
+export function getPolicyGroupOutput(args?: GetPolicyGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyGroupResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyGroup:getPolicyGroup", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -98,5 +106,9 @@ export interface GetPolicyGroupOutputArgs {
     /**
      * The id of the object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the policy group
+     */
+    name?: pulumi.Input<string | undefined>;
 }

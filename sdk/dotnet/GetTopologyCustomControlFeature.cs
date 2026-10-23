@@ -160,16 +160,34 @@ namespace Pulumi.Sdwan
         /// Inbound network hierarchy UUIDs
         /// </summary>
         public readonly ImmutableArray<string> TargetInboundHierarchyUuids;
+        /// <summary>
+        /// Inbound regions list
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetTopologyCustomControlFeatureTargetInboundRegionResult> TargetInboundRegions;
+        /// <summary>
+        /// Inbound site list
+        /// </summary>
         public readonly ImmutableArray<string> TargetInboundSites;
         public readonly string TargetLevel;
         /// <summary>
         /// Outbound network hierarchy UUIDs
         /// </summary>
         public readonly ImmutableArray<string> TargetOutboundHierarchyUuids;
+        /// <summary>
+        /// Outbound regions list
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetTopologyCustomControlFeatureTargetOutboundRegionResult> TargetOutboundRegions;
+        /// <summary>
+        /// Outbound site list
+        /// </summary>
         public readonly ImmutableArray<string> TargetOutboundSites;
+        /// <summary>
+        /// Target role
+        /// </summary>
         public readonly string TargetRole;
+        /// <summary>
+        /// Target VPN list
+        /// </summary>
         public readonly ImmutableArray<string> TargetVpns;
         /// <summary>
         /// The version of the Feature

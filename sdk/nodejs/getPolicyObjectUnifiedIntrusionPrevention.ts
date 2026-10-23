@@ -84,6 +84,10 @@ export interface GetPolicyObjectUnifiedIntrusionPreventionResult {
      */
     readonly signatureSet: string;
     /**
+     * Reference to a user edited signature set parcel
+     */
+    readonly signatureSetId: string;
+    /**
      * The version of the Policy_object
      */
     readonly version: number;

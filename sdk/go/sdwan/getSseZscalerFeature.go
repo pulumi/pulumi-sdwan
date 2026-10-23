@@ -81,7 +81,8 @@ type LookupSseZscalerFeatureResult struct {
 	CautionEnabled bool `pulumi:"cautionEnabled"`
 	// Variable name
 	CautionEnabledVariable string `pulumi:"cautionEnabledVariable"`
-	Country                bool   `pulumi:"country"`
+	// Country
+	Country bool `pulumi:"country"`
 	// Variable name
 	CountryVariable string `pulumi:"countryVariable"`
 	// The description of the Feature
@@ -89,11 +90,13 @@ type LookupSseZscalerFeatureResult struct {
 	// Display time unit
 	DisplayTimeUnit string `pulumi:"displayTimeUnit"`
 	// Variable name
-	DisplayTimeUnitVariable string  `pulumi:"displayTimeUnitVariable"`
-	DnBandwidth             float64 `pulumi:"dnBandwidth"`
+	DisplayTimeUnitVariable string `pulumi:"displayTimeUnitVariable"`
+	// Download Bandwidth in Mbps
+	DnBandwidth float64 `pulumi:"dnBandwidth"`
 	// Variable name
-	DnBandwidthVariable     string `pulumi:"dnBandwidthVariable"`
-	EnforceBandwidthControl bool   `pulumi:"enforceBandwidthControl"`
+	DnBandwidthVariable string `pulumi:"dnBandwidthVariable"`
+	// Enforce Bandwidth Control
+	EnforceBandwidthControl bool `pulumi:"enforceBandwidthControl"`
 	// Variable name
 	EnforceBandwidthControlVariable string `pulumi:"enforceBandwidthControlVariable"`
 	// Feature Profile ID
@@ -158,8 +161,9 @@ type LookupSseZscalerFeatureResult struct {
 	// Variable name
 	TrackerSourceIpVariable string `pulumi:"trackerSourceIpVariable"`
 	// Tracker configuration
-	Trackers    []GetSseZscalerFeatureTracker `pulumi:"trackers"`
-	UpBandwidth float64                       `pulumi:"upBandwidth"`
+	Trackers []GetSseZscalerFeatureTracker `pulumi:"trackers"`
+	// Upload Bandwidth in Mbps
+	UpBandwidth float64 `pulumi:"upBandwidth"`
 	// Variable name
 	UpBandwidthVariable string `pulumi:"upBandwidthVariable"`
 	// The version of the Feature
@@ -254,6 +258,7 @@ func (o LookupSseZscalerFeatureResultOutput) CautionEnabledVariable() pulumi.Str
 	return o.ApplyT(func(v LookupSseZscalerFeatureResult) string { return v.CautionEnabledVariable }).(pulumi.StringOutput)
 }
 
+// Country
 func (o LookupSseZscalerFeatureResultOutput) Country() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupSseZscalerFeatureResult) bool { return v.Country }).(pulumi.BoolOutput)
 }
@@ -278,6 +283,7 @@ func (o LookupSseZscalerFeatureResultOutput) DisplayTimeUnitVariable() pulumi.St
 	return o.ApplyT(func(v LookupSseZscalerFeatureResult) string { return v.DisplayTimeUnitVariable }).(pulumi.StringOutput)
 }
 
+// Download Bandwidth in Mbps
 func (o LookupSseZscalerFeatureResultOutput) DnBandwidth() pulumi.Float64Output {
 	return o.ApplyT(func(v LookupSseZscalerFeatureResult) float64 { return v.DnBandwidth }).(pulumi.Float64Output)
 }
@@ -287,6 +293,7 @@ func (o LookupSseZscalerFeatureResultOutput) DnBandwidthVariable() pulumi.String
 	return o.ApplyT(func(v LookupSseZscalerFeatureResult) string { return v.DnBandwidthVariable }).(pulumi.StringOutput)
 }
 
+// Enforce Bandwidth Control
 func (o LookupSseZscalerFeatureResultOutput) EnforceBandwidthControl() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupSseZscalerFeatureResult) bool { return v.EnforceBandwidthControl }).(pulumi.BoolOutput)
 }
@@ -455,6 +462,7 @@ func (o LookupSseZscalerFeatureResultOutput) Trackers() GetSseZscalerFeatureTrac
 	return o.ApplyT(func(v LookupSseZscalerFeatureResult) []GetSseZscalerFeatureTracker { return v.Trackers }).(GetSseZscalerFeatureTrackerArrayOutput)
 }
 
+// Upload Bandwidth in Mbps
 func (o LookupSseZscalerFeatureResultOutput) UpBandwidth() pulumi.Float64Output {
 	return o.ApplyT(func(v LookupSseZscalerFeatureResult) float64 { return v.UpBandwidth }).(pulumi.Float64Output)
 }

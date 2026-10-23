@@ -75,9 +75,11 @@ type PolicyObjectUnifiedIntrusionPrevention struct {
 	LogLevel pulumi.StringOutput `pulumi:"logLevel"`
 	// The name of the Policy_object
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Can be one of the enum value
-	//   - Choices: `balanced`, `connectivity`, `security`
-	SignatureSet pulumi.StringOutput `pulumi:"signatureSet"`
+	// Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+	//   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+	SignatureSet pulumi.StringPtrOutput `pulumi:"signatureSet"`
+	// Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+	SignatureSetId pulumi.StringPtrOutput `pulumi:"signatureSetId"`
 	// The version of the Policy_object
 	Version pulumi.IntOutput `pulumi:"version"`
 }
@@ -97,9 +99,6 @@ func NewPolicyObjectUnifiedIntrusionPrevention(ctx *pulumi.Context,
 	}
 	if args.LogLevel == nil {
 		return nil, errors.New("invalid value for required argument 'LogLevel'")
-	}
-	if args.SignatureSet == nil {
-		return nil, errors.New("invalid value for required argument 'SignatureSet'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource PolicyObjectUnifiedIntrusionPrevention
@@ -139,9 +138,11 @@ type policyObjectUnifiedIntrusionPreventionState struct {
 	LogLevel *string `pulumi:"logLevel"`
 	// The name of the Policy_object
 	Name *string `pulumi:"name"`
-	// Can be one of the enum value
-	//   - Choices: `balanced`, `connectivity`, `security`
+	// Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+	//   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
 	SignatureSet *string `pulumi:"signatureSet"`
+	// Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+	SignatureSetId *string `pulumi:"signatureSetId"`
 	// The version of the Policy_object
 	Version *int `pulumi:"version"`
 }
@@ -162,9 +163,11 @@ type PolicyObjectUnifiedIntrusionPreventionState struct {
 	LogLevel pulumi.StringPtrInput
 	// The name of the Policy_object
 	Name pulumi.StringPtrInput
-	// Can be one of the enum value
-	//   - Choices: `balanced`, `connectivity`, `security`
+	// Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+	//   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
 	SignatureSet pulumi.StringPtrInput
+	// Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+	SignatureSetId pulumi.StringPtrInput
 	// The version of the Policy_object
 	Version pulumi.IntPtrInput
 }
@@ -189,9 +192,11 @@ type policyObjectUnifiedIntrusionPreventionArgs struct {
 	LogLevel string `pulumi:"logLevel"`
 	// The name of the Policy_object
 	Name *string `pulumi:"name"`
-	// Can be one of the enum value
-	//   - Choices: `balanced`, `connectivity`, `security`
-	SignatureSet string `pulumi:"signatureSet"`
+	// Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+	//   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+	SignatureSet *string `pulumi:"signatureSet"`
+	// Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+	SignatureSetId *string `pulumi:"signatureSetId"`
 }
 
 // The set of arguments for constructing a PolicyObjectUnifiedIntrusionPrevention resource.
@@ -211,9 +216,11 @@ type PolicyObjectUnifiedIntrusionPreventionArgs struct {
 	LogLevel pulumi.StringInput
 	// The name of the Policy_object
 	Name pulumi.StringPtrInput
-	// Can be one of the enum value
-	//   - Choices: `balanced`, `connectivity`, `security`
-	SignatureSet pulumi.StringInput
+	// Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+	//   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+	SignatureSet pulumi.StringPtrInput
+	// Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+	SignatureSetId pulumi.StringPtrInput
 }
 
 func (PolicyObjectUnifiedIntrusionPreventionArgs) ElementType() reflect.Type {
@@ -341,10 +348,15 @@ func (o PolicyObjectUnifiedIntrusionPreventionOutput) Name() pulumi.StringOutput
 	return o.ApplyT(func(v *PolicyObjectUnifiedIntrusionPrevention) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Can be one of the enum value
-//   - Choices: `balanced`, `connectivity`, `security`
-func (o PolicyObjectUnifiedIntrusionPreventionOutput) SignatureSet() pulumi.StringOutput {
-	return o.ApplyT(func(v *PolicyObjectUnifiedIntrusionPrevention) pulumi.StringOutput { return v.SignatureSet }).(pulumi.StringOutput)
+// Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+//   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+func (o PolicyObjectUnifiedIntrusionPreventionOutput) SignatureSet() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *PolicyObjectUnifiedIntrusionPrevention) pulumi.StringPtrOutput { return v.SignatureSet }).(pulumi.StringPtrOutput)
+}
+
+// Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+func (o PolicyObjectUnifiedIntrusionPreventionOutput) SignatureSetId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *PolicyObjectUnifiedIntrusionPrevention) pulumi.StringPtrOutput { return v.SignatureSetId }).(pulumi.StringPtrOutput)
 }
 
 // The version of the Policy_object

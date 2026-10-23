@@ -14,6 +14,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTopologyCustomControlFeatureSequence {
+    /**
+     * @return List of action entries
+     * 
+     */
     private List<GetTopologyCustomControlFeatureSequenceActionEntry> actionEntries;
     /**
      * @return Base Action
@@ -30,6 +34,10 @@ public final class GetTopologyCustomControlFeatureSequence {
      * 
      */
     private String ipType;
+    /**
+     * @return Set of match entries
+     * 
+     */
     private List<GetTopologyCustomControlFeatureSequenceMatchEntry> matchEntries;
     /**
      * @return Sequence Name
@@ -43,6 +51,10 @@ public final class GetTopologyCustomControlFeatureSequence {
     private String type;
 
     private GetTopologyCustomControlFeatureSequence() {}
+    /**
+     * @return List of action entries
+     * 
+     */
     public List<GetTopologyCustomControlFeatureSequenceActionEntry> actionEntries() {
         return this.actionEntries;
     }
@@ -67,6 +79,10 @@ public final class GetTopologyCustomControlFeatureSequence {
     public String ipType() {
         return this.ipType;
     }
+    /**
+     * @return Set of match entries
+     * 
+     */
     public List<GetTopologyCustomControlFeatureSequenceMatchEntry> matchEntries() {
         return this.matchEntries;
     }

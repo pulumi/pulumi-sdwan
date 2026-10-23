@@ -14,6 +14,11 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
     private List<String> appListIds;
     private List<String> applicationFamilies;
     private List<String> applications;
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`
+     * 
+     */
+    private List<String> destinationDataIpv6PrefixListIds;
     private List<String> destinationDataPrefixListIds;
     private List<String> destinationDataPrefixes;
     /**
@@ -35,6 +40,17 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
      * 
      */
     private String destinationGeoLocationsVariable;
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`
+     * 
+     */
+    private List<String> destinationIpv6DataPrefixes;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String destinationIpv6DataPrefixesVariable;
+    private List<String> destinationObjectGroupListIds;
     private List<String> destinationPortListIds;
     private List<String> destinationPorts;
     /**
@@ -43,11 +59,25 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
      */
     private String destinationPortsVariable;
     private List<String> destinationScalableGroupTagListIds;
+    /**
+     * @return Deprecated, use `destinationObjectGroupListIds` instead
+     * 
+     */
     private List<String> destinationSecurityGroupListIds;
     private List<String> flatAppListIds;
     private List<String> protocolNameListIds;
     private List<String> protocolNames;
     private List<String> protocols;
+    /**
+     * @return Security rule set IDs, requires `isRuleSet` set to `true` on the sequence
+     * 
+     */
+    private List<String> ruleSetListIds;
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`
+     * 
+     */
+    private List<String> sourceDataIpv6PrefixListIds;
     private List<String> sourceDataPrefixListIds;
     private List<String> sourceDataPrefixes;
     /**
@@ -65,6 +95,21 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
     private List<String> sourceIdentityListIds;
     private List<String> sourceIdentityUsergroups;
     private List<String> sourceIdentityUsers;
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`
+     * 
+     */
+    private List<String> sourceIpv6DataPrefixes;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String sourceIpv6DataPrefixesVariable;
+    /**
+     * @return Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012)
+     * 
+     */
+    private List<String> sourceObjectGroupListIds;
     private List<String> sourcePortListIds;
     private List<String> sourcePorts;
     /**
@@ -73,6 +118,10 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
      */
     private String sourcePortsVariable;
     private List<String> sourceScalableGroupTagListIds;
+    /**
+     * @return Deprecated, use `sourceObjectGroupListIds` instead
+     * 
+     */
     private List<String> sourceSecurityGroupListIds;
 
     private GetEmbeddedSecurityNgfwPolicySequenceMatchEntry() {}
@@ -84,6 +133,13 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
     }
     public List<String> applications() {
         return this.applications;
+    }
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`
+     * 
+     */
+    public List<String> destinationDataIpv6PrefixListIds() {
+        return this.destinationDataIpv6PrefixListIds;
     }
     public List<String> destinationDataPrefixListIds() {
         return this.destinationDataPrefixListIds;
@@ -124,6 +180,23 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
     public String destinationGeoLocationsVariable() {
         return this.destinationGeoLocationsVariable;
     }
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`
+     * 
+     */
+    public List<String> destinationIpv6DataPrefixes() {
+        return this.destinationIpv6DataPrefixes;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String destinationIpv6DataPrefixesVariable() {
+        return this.destinationIpv6DataPrefixesVariable;
+    }
+    public List<String> destinationObjectGroupListIds() {
+        return this.destinationObjectGroupListIds;
+    }
     public List<String> destinationPortListIds() {
         return this.destinationPortListIds;
     }
@@ -140,6 +213,10 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
     public List<String> destinationScalableGroupTagListIds() {
         return this.destinationScalableGroupTagListIds;
     }
+    /**
+     * @return Deprecated, use `destinationObjectGroupListIds` instead
+     * 
+     */
     public List<String> destinationSecurityGroupListIds() {
         return this.destinationSecurityGroupListIds;
     }
@@ -154,6 +231,20 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
     }
     public List<String> protocols() {
         return this.protocols;
+    }
+    /**
+     * @return Security rule set IDs, requires `isRuleSet` set to `true` on the sequence
+     * 
+     */
+    public List<String> ruleSetListIds() {
+        return this.ruleSetListIds;
+    }
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`
+     * 
+     */
+    public List<String> sourceDataIpv6PrefixListIds() {
+        return this.sourceDataIpv6PrefixListIds;
     }
     public List<String> sourceDataPrefixListIds() {
         return this.sourceDataPrefixListIds;
@@ -190,6 +281,27 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
     public List<String> sourceIdentityUsers() {
         return this.sourceIdentityUsers;
     }
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`
+     * 
+     */
+    public List<String> sourceIpv6DataPrefixes() {
+        return this.sourceIpv6DataPrefixes;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String sourceIpv6DataPrefixesVariable() {
+        return this.sourceIpv6DataPrefixesVariable;
+    }
+    /**
+     * @return Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012)
+     * 
+     */
+    public List<String> sourceObjectGroupListIds() {
+        return this.sourceObjectGroupListIds;
+    }
     public List<String> sourcePortListIds() {
         return this.sourcePortListIds;
     }
@@ -206,6 +318,10 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
     public List<String> sourceScalableGroupTagListIds() {
         return this.sourceScalableGroupTagListIds;
     }
+    /**
+     * @return Deprecated, use `sourceObjectGroupListIds` instead
+     * 
+     */
     public List<String> sourceSecurityGroupListIds() {
         return this.sourceSecurityGroupListIds;
     }
@@ -222,6 +338,7 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
         private List<String> appListIds;
         private List<String> applicationFamilies;
         private List<String> applications;
+        private List<String> destinationDataIpv6PrefixListIds;
         private List<String> destinationDataPrefixListIds;
         private List<String> destinationDataPrefixes;
         private String destinationDataPrefixesVariable;
@@ -231,6 +348,9 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
         private List<String> destinationGeoLocationListIds;
         private List<String> destinationGeoLocations;
         private String destinationGeoLocationsVariable;
+        private List<String> destinationIpv6DataPrefixes;
+        private String destinationIpv6DataPrefixesVariable;
+        private List<String> destinationObjectGroupListIds;
         private List<String> destinationPortListIds;
         private List<String> destinationPorts;
         private String destinationPortsVariable;
@@ -240,6 +360,8 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
         private List<String> protocolNameListIds;
         private List<String> protocolNames;
         private List<String> protocols;
+        private List<String> ruleSetListIds;
+        private List<String> sourceDataIpv6PrefixListIds;
         private List<String> sourceDataPrefixListIds;
         private List<String> sourceDataPrefixes;
         private String sourceDataPrefixesVariable;
@@ -249,6 +371,9 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
         private List<String> sourceIdentityListIds;
         private List<String> sourceIdentityUsergroups;
         private List<String> sourceIdentityUsers;
+        private List<String> sourceIpv6DataPrefixes;
+        private String sourceIpv6DataPrefixesVariable;
+        private List<String> sourceObjectGroupListIds;
         private List<String> sourcePortListIds;
         private List<String> sourcePorts;
         private String sourcePortsVariable;
@@ -260,6 +385,7 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
     	      this.appListIds = defaults.appListIds;
     	      this.applicationFamilies = defaults.applicationFamilies;
     	      this.applications = defaults.applications;
+    	      this.destinationDataIpv6PrefixListIds = defaults.destinationDataIpv6PrefixListIds;
     	      this.destinationDataPrefixListIds = defaults.destinationDataPrefixListIds;
     	      this.destinationDataPrefixes = defaults.destinationDataPrefixes;
     	      this.destinationDataPrefixesVariable = defaults.destinationDataPrefixesVariable;
@@ -269,6 +395,9 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
     	      this.destinationGeoLocationListIds = defaults.destinationGeoLocationListIds;
     	      this.destinationGeoLocations = defaults.destinationGeoLocations;
     	      this.destinationGeoLocationsVariable = defaults.destinationGeoLocationsVariable;
+    	      this.destinationIpv6DataPrefixes = defaults.destinationIpv6DataPrefixes;
+    	      this.destinationIpv6DataPrefixesVariable = defaults.destinationIpv6DataPrefixesVariable;
+    	      this.destinationObjectGroupListIds = defaults.destinationObjectGroupListIds;
     	      this.destinationPortListIds = defaults.destinationPortListIds;
     	      this.destinationPorts = defaults.destinationPorts;
     	      this.destinationPortsVariable = defaults.destinationPortsVariable;
@@ -278,6 +407,8 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
     	      this.protocolNameListIds = defaults.protocolNameListIds;
     	      this.protocolNames = defaults.protocolNames;
     	      this.protocols = defaults.protocols;
+    	      this.ruleSetListIds = defaults.ruleSetListIds;
+    	      this.sourceDataIpv6PrefixListIds = defaults.sourceDataIpv6PrefixListIds;
     	      this.sourceDataPrefixListIds = defaults.sourceDataPrefixListIds;
     	      this.sourceDataPrefixes = defaults.sourceDataPrefixes;
     	      this.sourceDataPrefixesVariable = defaults.sourceDataPrefixesVariable;
@@ -287,6 +418,9 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
     	      this.sourceIdentityListIds = defaults.sourceIdentityListIds;
     	      this.sourceIdentityUsergroups = defaults.sourceIdentityUsergroups;
     	      this.sourceIdentityUsers = defaults.sourceIdentityUsers;
+    	      this.sourceIpv6DataPrefixes = defaults.sourceIpv6DataPrefixes;
+    	      this.sourceIpv6DataPrefixesVariable = defaults.sourceIpv6DataPrefixesVariable;
+    	      this.sourceObjectGroupListIds = defaults.sourceObjectGroupListIds;
     	      this.sourcePortListIds = defaults.sourcePortListIds;
     	      this.sourcePorts = defaults.sourcePorts;
     	      this.sourcePortsVariable = defaults.sourcePortsVariable;
@@ -326,6 +460,17 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
         }
         public Builder applications(String... applications) {
             return applications(List.of(applications));
+        }
+        @CustomType.Setter
+        public Builder destinationDataIpv6PrefixListIds(List<String> destinationDataIpv6PrefixListIds) {
+            if (destinationDataIpv6PrefixListIds == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequenceMatchEntry", "destinationDataIpv6PrefixListIds");
+            }
+            this.destinationDataIpv6PrefixListIds = destinationDataIpv6PrefixListIds;
+            return this;
+        }
+        public Builder destinationDataIpv6PrefixListIds(String... destinationDataIpv6PrefixListIds) {
+            return destinationDataIpv6PrefixListIds(List.of(destinationDataIpv6PrefixListIds));
         }
         @CustomType.Setter
         public Builder destinationDataPrefixListIds(List<String> destinationDataPrefixListIds) {
@@ -416,6 +561,36 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
             }
             this.destinationGeoLocationsVariable = destinationGeoLocationsVariable;
             return this;
+        }
+        @CustomType.Setter
+        public Builder destinationIpv6DataPrefixes(List<String> destinationIpv6DataPrefixes) {
+            if (destinationIpv6DataPrefixes == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequenceMatchEntry", "destinationIpv6DataPrefixes");
+            }
+            this.destinationIpv6DataPrefixes = destinationIpv6DataPrefixes;
+            return this;
+        }
+        public Builder destinationIpv6DataPrefixes(String... destinationIpv6DataPrefixes) {
+            return destinationIpv6DataPrefixes(List.of(destinationIpv6DataPrefixes));
+        }
+        @CustomType.Setter
+        public Builder destinationIpv6DataPrefixesVariable(String destinationIpv6DataPrefixesVariable) {
+            if (destinationIpv6DataPrefixesVariable == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequenceMatchEntry", "destinationIpv6DataPrefixesVariable");
+            }
+            this.destinationIpv6DataPrefixesVariable = destinationIpv6DataPrefixesVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder destinationObjectGroupListIds(List<String> destinationObjectGroupListIds) {
+            if (destinationObjectGroupListIds == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequenceMatchEntry", "destinationObjectGroupListIds");
+            }
+            this.destinationObjectGroupListIds = destinationObjectGroupListIds;
+            return this;
+        }
+        public Builder destinationObjectGroupListIds(String... destinationObjectGroupListIds) {
+            return destinationObjectGroupListIds(List.of(destinationObjectGroupListIds));
         }
         @CustomType.Setter
         public Builder destinationPortListIds(List<String> destinationPortListIds) {
@@ -514,6 +689,28 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
             return protocols(List.of(protocols));
         }
         @CustomType.Setter
+        public Builder ruleSetListIds(List<String> ruleSetListIds) {
+            if (ruleSetListIds == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequenceMatchEntry", "ruleSetListIds");
+            }
+            this.ruleSetListIds = ruleSetListIds;
+            return this;
+        }
+        public Builder ruleSetListIds(String... ruleSetListIds) {
+            return ruleSetListIds(List.of(ruleSetListIds));
+        }
+        @CustomType.Setter
+        public Builder sourceDataIpv6PrefixListIds(List<String> sourceDataIpv6PrefixListIds) {
+            if (sourceDataIpv6PrefixListIds == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequenceMatchEntry", "sourceDataIpv6PrefixListIds");
+            }
+            this.sourceDataIpv6PrefixListIds = sourceDataIpv6PrefixListIds;
+            return this;
+        }
+        public Builder sourceDataIpv6PrefixListIds(String... sourceDataIpv6PrefixListIds) {
+            return sourceDataIpv6PrefixListIds(List.of(sourceDataIpv6PrefixListIds));
+        }
+        @CustomType.Setter
         public Builder sourceDataPrefixListIds(List<String> sourceDataPrefixListIds) {
             if (sourceDataPrefixListIds == null) {
               throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequenceMatchEntry", "sourceDataPrefixListIds");
@@ -607,6 +804,36 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
             return sourceIdentityUsers(List.of(sourceIdentityUsers));
         }
         @CustomType.Setter
+        public Builder sourceIpv6DataPrefixes(List<String> sourceIpv6DataPrefixes) {
+            if (sourceIpv6DataPrefixes == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequenceMatchEntry", "sourceIpv6DataPrefixes");
+            }
+            this.sourceIpv6DataPrefixes = sourceIpv6DataPrefixes;
+            return this;
+        }
+        public Builder sourceIpv6DataPrefixes(String... sourceIpv6DataPrefixes) {
+            return sourceIpv6DataPrefixes(List.of(sourceIpv6DataPrefixes));
+        }
+        @CustomType.Setter
+        public Builder sourceIpv6DataPrefixesVariable(String sourceIpv6DataPrefixesVariable) {
+            if (sourceIpv6DataPrefixesVariable == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequenceMatchEntry", "sourceIpv6DataPrefixesVariable");
+            }
+            this.sourceIpv6DataPrefixesVariable = sourceIpv6DataPrefixesVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder sourceObjectGroupListIds(List<String> sourceObjectGroupListIds) {
+            if (sourceObjectGroupListIds == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequenceMatchEntry", "sourceObjectGroupListIds");
+            }
+            this.sourceObjectGroupListIds = sourceObjectGroupListIds;
+            return this;
+        }
+        public Builder sourceObjectGroupListIds(String... sourceObjectGroupListIds) {
+            return sourceObjectGroupListIds(List.of(sourceObjectGroupListIds));
+        }
+        @CustomType.Setter
         public Builder sourcePortListIds(List<String> sourcePortListIds) {
             if (sourcePortListIds == null) {
               throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequenceMatchEntry", "sourcePortListIds");
@@ -663,6 +890,7 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
             _resultValue.appListIds = appListIds;
             _resultValue.applicationFamilies = applicationFamilies;
             _resultValue.applications = applications;
+            _resultValue.destinationDataIpv6PrefixListIds = destinationDataIpv6PrefixListIds;
             _resultValue.destinationDataPrefixListIds = destinationDataPrefixListIds;
             _resultValue.destinationDataPrefixes = destinationDataPrefixes;
             _resultValue.destinationDataPrefixesVariable = destinationDataPrefixesVariable;
@@ -672,6 +900,9 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
             _resultValue.destinationGeoLocationListIds = destinationGeoLocationListIds;
             _resultValue.destinationGeoLocations = destinationGeoLocations;
             _resultValue.destinationGeoLocationsVariable = destinationGeoLocationsVariable;
+            _resultValue.destinationIpv6DataPrefixes = destinationIpv6DataPrefixes;
+            _resultValue.destinationIpv6DataPrefixesVariable = destinationIpv6DataPrefixesVariable;
+            _resultValue.destinationObjectGroupListIds = destinationObjectGroupListIds;
             _resultValue.destinationPortListIds = destinationPortListIds;
             _resultValue.destinationPorts = destinationPorts;
             _resultValue.destinationPortsVariable = destinationPortsVariable;
@@ -681,6 +912,8 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
             _resultValue.protocolNameListIds = protocolNameListIds;
             _resultValue.protocolNames = protocolNames;
             _resultValue.protocols = protocols;
+            _resultValue.ruleSetListIds = ruleSetListIds;
+            _resultValue.sourceDataIpv6PrefixListIds = sourceDataIpv6PrefixListIds;
             _resultValue.sourceDataPrefixListIds = sourceDataPrefixListIds;
             _resultValue.sourceDataPrefixes = sourceDataPrefixes;
             _resultValue.sourceDataPrefixesVariable = sourceDataPrefixesVariable;
@@ -690,6 +923,9 @@ public final class GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
             _resultValue.sourceIdentityListIds = sourceIdentityListIds;
             _resultValue.sourceIdentityUsergroups = sourceIdentityUsergroups;
             _resultValue.sourceIdentityUsers = sourceIdentityUsers;
+            _resultValue.sourceIpv6DataPrefixes = sourceIpv6DataPrefixes;
+            _resultValue.sourceIpv6DataPrefixesVariable = sourceIpv6DataPrefixesVariable;
+            _resultValue.sourceObjectGroupListIds = sourceObjectGroupListIds;
             _resultValue.sourcePortListIds = sourcePortListIds;
             _resultValue.sourcePorts = sourcePorts;
             _resultValue.sourcePortsVariable = sourcePortsVariable;

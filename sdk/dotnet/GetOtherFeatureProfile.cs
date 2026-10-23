@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Task<GetOtherFeatureProfileResult> InvokeAsync(GetOtherFeatureProfileArgs args, InvokeOptions? options = null)
+        public static Task<GetOtherFeatureProfileResult> InvokeAsync(GetOtherFeatureProfileArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetOtherFeatureProfileResult>("sdwan:index/getOtherFeatureProfile:getOtherFeatureProfile", args ?? new GetOtherFeatureProfileArgs(), options.WithDefaults());
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Output<GetOtherFeatureProfileResult> Invoke(GetOtherFeatureProfileInvokeArgs args, InvokeOptions? options = null)
+        public static Output<GetOtherFeatureProfileResult> Invoke(GetOtherFeatureProfileInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetOtherFeatureProfileResult>("sdwan:index/getOtherFeatureProfile:getOtherFeatureProfile", args ?? new GetOtherFeatureProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
@@ -90,8 +90,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the transport feature profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetOtherFeatureProfileArgs()
         {
@@ -104,8 +110,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the transport feature profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetOtherFeatureProfileInvokeArgs()
         {

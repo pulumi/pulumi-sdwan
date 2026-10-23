@@ -19,9 +19,17 @@ public final class TopologyCustomControlFeatureSequenceArgs extends com.pulumi.r
 
     public static final TopologyCustomControlFeatureSequenceArgs Empty = new TopologyCustomControlFeatureSequenceArgs();
 
+    /**
+     * List of action entries
+     * 
+     */
     @Import(name="actionEntries")
     private @Nullable Output<List<TopologyCustomControlFeatureSequenceActionEntryArgs>> actionEntries;
 
+    /**
+     * @return List of action entries
+     * 
+     */
     public Optional<Output<List<TopologyCustomControlFeatureSequenceActionEntryArgs>>> actionEntries() {
         return Optional.ofNullable(this.actionEntries);
     }
@@ -77,9 +85,17 @@ public final class TopologyCustomControlFeatureSequenceArgs extends com.pulumi.r
         return Optional.ofNullable(this.ipType);
     }
 
+    /**
+     * Set of match entries
+     * 
+     */
     @Import(name="matchEntries")
     private @Nullable Output<List<TopologyCustomControlFeatureSequenceMatchEntryArgs>> matchEntries;
 
+    /**
+     * @return Set of match entries
+     * 
+     */
     public Optional<Output<List<TopologyCustomControlFeatureSequenceMatchEntryArgs>>> matchEntries() {
         return Optional.ofNullable(this.matchEntries);
     }
@@ -146,15 +162,33 @@ public final class TopologyCustomControlFeatureSequenceArgs extends com.pulumi.r
             $ = new TopologyCustomControlFeatureSequenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionEntries List of action entries
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionEntries(@Nullable Output<List<TopologyCustomControlFeatureSequenceActionEntryArgs>> actionEntries) {
             $.actionEntries = actionEntries;
             return this;
         }
 
+        /**
+         * @param actionEntries List of action entries
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionEntries(List<TopologyCustomControlFeatureSequenceActionEntryArgs> actionEntries) {
             return actionEntries(Output.of(actionEntries));
         }
 
+        /**
+         * @param actionEntries List of action entries
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionEntries(TopologyCustomControlFeatureSequenceActionEntryArgs... actionEntries) {
             return actionEntries(List.of(actionEntries));
         }
@@ -228,15 +262,33 @@ public final class TopologyCustomControlFeatureSequenceArgs extends com.pulumi.r
             return ipType(Output.of(ipType));
         }
 
+        /**
+         * @param matchEntries Set of match entries
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchEntries(@Nullable Output<List<TopologyCustomControlFeatureSequenceMatchEntryArgs>> matchEntries) {
             $.matchEntries = matchEntries;
             return this;
         }
 
+        /**
+         * @param matchEntries Set of match entries
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchEntries(List<TopologyCustomControlFeatureSequenceMatchEntryArgs> matchEntries) {
             return matchEntries(Output.of(matchEntries));
         }
 
+        /**
+         * @param matchEntries Set of match entries
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchEntries(TopologyCustomControlFeatureSequenceMatchEntryArgs... matchEntries) {
             return matchEntries(List.of(matchEntries));
         }

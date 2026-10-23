@@ -253,7 +253,7 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceAction {
     appqoeServiceNodeGroup?: string;
     appqoeTcpOptimization?: boolean;
     /**
-     * Backup SLA perferred color
+     * Backup SLA preferred color
      */
     backupSlaPreferredColors?: string[];
     cflowd?: boolean;
@@ -314,6 +314,10 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSetParamete
     nextHopLoose?: boolean;
     policerId?: string;
     preferredColorGroupId?: string;
+    /**
+     * Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    preferredColorGroupRestrict?: boolean;
     preferredRemoteColorRestrict?: boolean;
     preferredRemoteColors?: string[];
     serviceChainFallbackToRouting?: boolean;
@@ -366,6 +370,10 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSetParamete
 export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass {
     fallbackToBestPath?: boolean;
     preferredColorGroupListId?: string;
+    /**
+     * Restrict traffic to the preferred color group, requires `preferredColorGroupListId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    preferredColorGroupRestrict?: boolean;
     preferredColors?: string[];
     preferredRemoteColors?: string[];
     remoteColorRestrict?: boolean;
@@ -404,6 +412,10 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
      * DSCP numbers
      */
     dscps?: number[];
+    /**
+     * Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    hierarchyIds?: string[];
     /**
      * ICMP6 Message
      */
@@ -6414,8 +6426,22 @@ export interface EmbeddedSecurityNgfwPolicySequence {
      */
     baseAction?: string;
     disableSequence?: boolean;
+    /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    isRuleSet?: boolean;
     matchEntries?: outputs.EmbeddedSecurityNgfwPolicySequenceMatchEntry[];
+    /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    sequenceComment?: string;
     sequenceId?: string;
+    /**
+     * IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     *   - Choices: `ipv4`, `ipv6`
+     *   - Default value: `ipv4`
+     */
+    sequenceIpType?: string;
     sequenceName?: string;
     sequenceType?: string;
 }
@@ -6433,6 +6459,10 @@ export interface EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     appListIds?: string[];
     applicationFamilies?: string[];
     applications?: string[];
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    destinationDataIpv6PrefixListIds?: string[];
     destinationDataPrefixListIds?: string[];
     destinationDataPrefixes?: string[];
     /**
@@ -6451,6 +6481,18 @@ export interface EmbeddedSecurityNgfwPolicySequenceMatchEntry {
      * Variable name
      */
     destinationGeoLocationsVariable?: string;
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    destinationIpv6DataPrefixes?: string[];
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    destinationIpv6DataPrefixesVariable?: string;
+    /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    destinationObjectGroupListIds?: string[];
     destinationPortListIds?: string[];
     destinationPorts?: string[];
     /**
@@ -6458,11 +6500,22 @@ export interface EmbeddedSecurityNgfwPolicySequenceMatchEntry {
      */
     destinationPortsVariable?: string;
     destinationScalableGroupTagListIds?: string[];
+    /**
+     * Deprecated, use `destinationObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+     */
     destinationSecurityGroupListIds?: string[];
     flatAppListIds?: string[];
     protocolNameListIds?: string[];
     protocolNames?: string[];
     protocols?: string[];
+    /**
+     * Security rule set IDs, requires `isRuleSet` set to `true` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    ruleSetListIds?: string[];
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    sourceDataIpv6PrefixListIds?: string[];
     sourceDataPrefixListIds?: string[];
     sourceDataPrefixes?: string[];
     /**
@@ -6478,6 +6531,18 @@ export interface EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     sourceIdentityListIds?: string[];
     sourceIdentityUsergroups?: string[];
     sourceIdentityUsers?: string[];
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    sourceIpv6DataPrefixes?: string[];
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    sourceIpv6DataPrefixesVariable?: string;
+    /**
+     * Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     */
+    sourceObjectGroupListIds?: string[];
     sourcePortListIds?: string[];
     sourcePorts?: string[];
     /**
@@ -6485,6 +6550,9 @@ export interface EmbeddedSecurityNgfwPolicySequenceMatchEntry {
      */
     sourcePortsVariable?: string;
     sourceScalableGroupTagListIds?: string[];
+    /**
+     * Deprecated, use `sourceObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+     */
     sourceSecurityGroupListIds?: string[];
 }
 
@@ -6506,6 +6574,21 @@ export interface EmbeddedSecurityPolicyAssemblyEntry {
      */
     sourceZone?: string;
     sourceZoneListId?: string;
+}
+
+export interface EmbeddedSecurityPolicyHighSpeedLogging {
+    /**
+     * - Choices: `server1`, `server2`, `server3`, `server4`
+     */
+    name?: string;
+    /**
+     * InterfaceName
+     */
+    sourceInterface?: string;
+    /**
+     * Variable name
+     */
+    sourceInterfaceVariable?: string;
 }
 
 export interface ExpandedCommunityListPolicyObjectEntry {
@@ -6825,7 +6908,7 @@ export interface GetApplicationPriorityTrafficPolicyPolicySequenceAction {
     appqoeServiceNodeGroup: string;
     appqoeTcpOptimization: boolean;
     /**
-     * Backup SLA perferred color
+     * Backup SLA preferred color
      */
     backupSlaPreferredColors: string[];
     cflowd: boolean;
@@ -6865,6 +6948,10 @@ export interface GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParam
     nextHopLoose: boolean;
     policerId: string;
     preferredColorGroupId: string;
+    /**
+     * Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set
+     */
+    preferredColorGroupRestrict: boolean;
     preferredRemoteColorRestrict: boolean;
     preferredRemoteColors: string[];
     serviceChainFallbackToRouting: boolean;
@@ -6893,6 +6980,10 @@ export interface GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParam
 export interface GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass {
     fallbackToBestPath: boolean;
     preferredColorGroupListId: string;
+    /**
+     * Restrict traffic to the preferred color group, requires `preferredColorGroupListId` to be set
+     */
+    preferredColorGroupRestrict: boolean;
     preferredColors: string[];
     preferredRemoteColors: string[];
     remoteColorRestrict: boolean;
@@ -6929,6 +7020,10 @@ export interface GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
      * DSCP numbers
      */
     dscps: number[];
+    /**
+     * Site List
+     */
+    hierarchyIds: string[];
     /**
      * ICMP6 Message
      */
@@ -12479,8 +12574,14 @@ export interface GetEmbeddedSecurityNgfwPolicySequence {
     actions: outputs.GetEmbeddedSecurityNgfwPolicySequenceAction[];
     baseAction: string;
     disableSequence: boolean;
+    isRuleSet: boolean;
     matchEntries: outputs.GetEmbeddedSecurityNgfwPolicySequenceMatchEntry[];
+    sequenceComment: string;
     sequenceId: string;
+    /**
+     * IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones
+     */
+    sequenceIpType: string;
     sequenceName: string;
     sequenceType: string;
 }
@@ -12495,6 +12596,10 @@ export interface GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
     appListIds: string[];
     applicationFamilies: string[];
     applications: string[];
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`
+     */
+    destinationDataIpv6PrefixListIds: string[];
     destinationDataPrefixListIds: string[];
     destinationDataPrefixes: string[];
     /**
@@ -12513,6 +12618,15 @@ export interface GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
      * Variable name
      */
     destinationGeoLocationsVariable: string;
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`
+     */
+    destinationIpv6DataPrefixes: string[];
+    /**
+     * Variable name
+     */
+    destinationIpv6DataPrefixesVariable: string;
+    destinationObjectGroupListIds: string[];
     destinationPortListIds: string[];
     destinationPorts: string[];
     /**
@@ -12520,11 +12634,22 @@ export interface GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
      */
     destinationPortsVariable: string;
     destinationScalableGroupTagListIds: string[];
+    /**
+     * Deprecated, use `destinationObjectGroupListIds` instead
+     */
     destinationSecurityGroupListIds: string[];
     flatAppListIds: string[];
     protocolNameListIds: string[];
     protocolNames: string[];
     protocols: string[];
+    /**
+     * Security rule set IDs, requires `isRuleSet` set to `true` on the sequence
+     */
+    ruleSetListIds: string[];
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`
+     */
+    sourceDataIpv6PrefixListIds: string[];
     sourceDataPrefixListIds: string[];
     sourceDataPrefixes: string[];
     /**
@@ -12540,6 +12665,18 @@ export interface GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
     sourceIdentityListIds: string[];
     sourceIdentityUsergroups: string[];
     sourceIdentityUsers: string[];
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`
+     */
+    sourceIpv6DataPrefixes: string[];
+    /**
+     * Variable name
+     */
+    sourceIpv6DataPrefixesVariable: string;
+    /**
+     * Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012)
+     */
+    sourceObjectGroupListIds: string[];
     sourcePortListIds: string[];
     sourcePorts: string[];
     /**
@@ -12547,6 +12684,9 @@ export interface GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
      */
     sourcePortsVariable: string;
     sourceScalableGroupTagListIds: string[];
+    /**
+     * Deprecated, use `sourceObjectGroupListIds` instead
+     */
     sourceSecurityGroupListIds: string[];
 }
 
@@ -12562,6 +12702,18 @@ export interface GetEmbeddedSecurityPolicyAssemblyEntry {
     destinationZoneListId: string;
     sourceZone: string;
     sourceZoneListId: string;
+}
+
+export interface GetEmbeddedSecurityPolicyHighSpeedLogging {
+    name: string;
+    /**
+     * InterfaceName
+     */
+    sourceInterface: string;
+    /**
+     * Variable name
+     */
+    sourceInterfaceVariable: string;
 }
 
 export interface GetExpandedCommunityListPolicyObjectEntry {
@@ -13312,6 +13464,32 @@ export interface GetNetworkHierarchyNodeAddress {
     zipcode: string;
 }
 
+export interface GetNetworkHierarchyNodesNodes {
+    /**
+     * The node's Network Hierarchy UUID
+     */
+    id: string;
+    /**
+     * The type of node: `site`, `region`, `group` or `global`
+     */
+    type: string;
+}
+
+export interface GetNetworkHierarchyNodesResolvedSite {
+    /**
+     * The site's Network Hierarchy node UUID
+     */
+    id: string;
+    /**
+     * The site's name
+     */
+    name: string;
+    /**
+     * The site's numeric site ID
+     */
+    siteId: number;
+}
+
 export interface GetNetworkHierarchySecurityLoggingHighSpeedLogging {
     /**
      * Server port number
@@ -13721,6 +13899,14 @@ export interface GetPolicyObjectSecurityDataIpv4PrefixListEntry {
     ipPrefixVariable: string;
 }
 
+export interface GetPolicyObjectSecurityDataIpv6PrefixListEntry {
+    ipv6Prefix: string;
+    /**
+     * Variable name
+     */
+    ipv6PrefixVariable: string;
+}
+
 export interface GetPolicyObjectSecurityFqdnListEntry {
     pattern: string;
 }
@@ -13755,6 +13941,39 @@ export interface GetPolicyObjectSecurityLocalDomainListEntry {
     localDomain: string;
 }
 
+export interface GetPolicyObjectSecurityObjectGroupEntry {
+    dataIpv4PrefixListIds: string[];
+    dataIpv4Prefixes: string[];
+    /**
+     * Variable name
+     */
+    dataIpv4PrefixesVariable: string;
+    dataIpv6PrefixListIds: string[];
+    dataIpv6Prefixes: string[];
+    /**
+     * Variable name
+     */
+    dataIpv6PrefixesVariable: string;
+    fqdnListIds: string[];
+    fqdns: string[];
+    /**
+     * Variable name
+     */
+    fqdnsVariable: string;
+    geoLocationListIds: string[];
+    geoLocations: string[];
+    /**
+     * Variable name
+     */
+    geoLocationsVariable: string;
+    portListIds: string[];
+    ports: string[];
+    /**
+     * Variable name
+     */
+    portsVariable: string;
+}
+
 export interface GetPolicyObjectSecurityPortListEntry {
     /**
      * can be single port or port range
@@ -13764,6 +13983,109 @@ export interface GetPolicyObjectSecurityPortListEntry {
 
 export interface GetPolicyObjectSecurityProtocolListEntry {
     protocolName: string;
+}
+
+export interface GetPolicyObjectSecurityRuleSetSequence {
+    /**
+     * action
+     */
+    action: string;
+    /**
+     * Variable name
+     */
+    actionVariable: string;
+    destinationDataIpv4PrefixListIds: string[];
+    destinationDataIpv6PrefixListIds: string[];
+    destinationFqdnListIds: string[];
+    destinationFqdns: string[];
+    /**
+     * Variable name
+     */
+    destinationFqdnsVariable: string;
+    destinationGeoLocationListIds: string[];
+    /**
+     * Destination Geolocation
+     */
+    destinationGeoLocations: string[];
+    /**
+     * Variable name
+     */
+    destinationGeoLocationsVariable: string;
+    destinationIpv4Prefixes: string[];
+    /**
+     * Variable name
+     */
+    destinationIpv4PrefixesVariable: string;
+    destinationIpv6Prefixes: string[];
+    /**
+     * Variable name
+     */
+    destinationIpv6PrefixesVariable: string;
+    destinationObjectGroupListIds: string[];
+    destinationPortListIds: string[];
+    destinationPorts: string[];
+    /**
+     * Variable name
+     */
+    destinationPortsVariable: string;
+    /**
+     * Sequence name
+     */
+    name: string;
+    /**
+     * Variable name
+     */
+    nameVariable: string;
+    protocolNameListIds: string[];
+    protocolNames: string[];
+    /**
+     * Variable name
+     */
+    protocolNamesVariable: string;
+    /**
+     * protocol
+     */
+    protocols: string[];
+    /**
+     * Sequence Id
+     */
+    sequenceId: string;
+    /**
+     * Variable name
+     */
+    sequenceIdVariable: string;
+    /**
+     * ipv4/ ipv6
+     */
+    sequenceIpType: string;
+    sourceDataIpv4PrefixListIds: string[];
+    sourceDataIpv6PrefixListIds: string[];
+    sourceGeoLocationListIds: string[];
+    /**
+     * Source Geolocation
+     */
+    sourceGeoLocations: string[];
+    /**
+     * Variable name
+     */
+    sourceGeoLocationsVariable: string;
+    sourceIpv4Prefixes: string[];
+    /**
+     * Variable name
+     */
+    sourceIpv4PrefixesVariable: string;
+    sourceIpv6Prefixes: string[];
+    /**
+     * Variable name
+     */
+    sourceIpv6PrefixesVariable: string;
+    sourceObjectGroupListIds: string[];
+    sourcePortListIds: string[];
+    sourcePorts: string[];
+    /**
+     * Variable name
+     */
+    sourcePortsVariable: string;
 }
 
 export interface GetPolicyObjectSecurityScalableGroupTagListEntry {
@@ -18602,6 +18924,9 @@ export interface GetSseZscalerFeatureSubLocation {
      * Variable name
      */
     displayTimeUnitVariable: string;
+    /**
+     * Download Bandwidth in Mbps
+     */
     dnBandwidth: number;
     /**
      * Variable name
@@ -18631,6 +18956,9 @@ export interface GetSseZscalerFeatureSubLocation {
      * Variable name
      */
     idleTimeVariable: string;
+    /**
+     * Internal Ip address
+     */
     internalIps: outputs.GetSseZscalerFeatureSubLocationInternalIp[];
     /**
      * If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
@@ -18640,6 +18968,9 @@ export interface GetSseZscalerFeatureSubLocation {
      * Variable name
      */
     ipEnforcedForKnownBrowsersVariable: string;
+    /**
+     * Sub-location name
+     */
     name: string;
     /**
      * Variable name
@@ -18673,6 +19004,9 @@ export interface GetSseZscalerFeatureSubLocation {
      * Variable name
      */
     serviceVpnVariable: string;
+    /**
+     * Sub-location Service VPN
+     */
     serviceVpns: string[];
     /**
      * Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic.
@@ -18682,6 +19016,9 @@ export interface GetSseZscalerFeatureSubLocation {
      * Variable name
      */
     surrogateIpVariable: string;
+    /**
+     * Upload Bandwidth in Mbps
+     */
     upBandwidth: number;
     /**
      * Variable name
@@ -19995,6 +20332,9 @@ export interface GetTlsSslDecryptionPolicyDefinitionUrlRule {
 }
 
 export interface GetTopologyCustomControlFeatureSequence {
+    /**
+     * List of action entries
+     */
     actionEntries: outputs.GetTopologyCustomControlFeatureSequenceActionEntry[];
     /**
      * Base Action
@@ -20008,6 +20348,9 @@ export interface GetTopologyCustomControlFeatureSequence {
      * Sequence IP Type
      */
     ipType: string;
+    /**
+     * Set of match entries
+     */
     matchEntries: outputs.GetTopologyCustomControlFeatureSequenceMatchEntry[];
     /**
      * Sequence Name
@@ -25529,6 +25872,14 @@ export interface PolicyObjectSecurityDataIpv4PrefixListEntry {
     ipPrefixVariable?: string;
 }
 
+export interface PolicyObjectSecurityDataIpv6PrefixListEntry {
+    ipv6Prefix?: string;
+    /**
+     * Variable name
+     */
+    ipv6PrefixVariable?: string;
+}
+
 export interface PolicyObjectSecurityFqdnListEntry {
     pattern?: string;
 }
@@ -25565,6 +25916,39 @@ export interface PolicyObjectSecurityLocalDomainListEntry {
     localDomain?: string;
 }
 
+export interface PolicyObjectSecurityObjectGroupEntry {
+    dataIpv4PrefixListIds?: string[];
+    dataIpv4Prefixes?: string[];
+    /**
+     * Variable name
+     */
+    dataIpv4PrefixesVariable?: string;
+    dataIpv6PrefixListIds?: string[];
+    dataIpv6Prefixes?: string[];
+    /**
+     * Variable name
+     */
+    dataIpv6PrefixesVariable?: string;
+    fqdnListIds?: string[];
+    fqdns?: string[];
+    /**
+     * Variable name
+     */
+    fqdnsVariable?: string;
+    geoLocationListIds?: string[];
+    geoLocations?: string[];
+    /**
+     * Variable name
+     */
+    geoLocationsVariable?: string;
+    portListIds?: string[];
+    ports?: string[];
+    /**
+     * Variable name
+     */
+    portsVariable?: string;
+}
+
 export interface PolicyObjectSecurityPortListEntry {
     /**
      * can be single port or port range
@@ -25577,6 +25961,111 @@ export interface PolicyObjectSecurityProtocolListEntry {
      * - Choices: `snmp`, `icmp`, `tcp`, `udp`, `echo`, `telnet`, `wins`, `n2h2server`, `nntp`, `pptp`, `rtsp`, `bootpc`, `gdoi`, `tacacs`, `gopher`, `icabrowser`, `skinny`, `sunrpc`, `biff`, `router`, `ircs`, `orasrv`, `ms-cluster-net`, `kermit`, `isakmp`, `sshell`, `realsecure`, `ircu`, `appleqtc`, `pwdgen`, `rdb-dbs-disp`, `creativepartnr`, `finger`, `ftps`, `giop`, `rsvd`, `hp-alarm-mgr`, `uucp`, `kerberos`, `imap`, `time`, `bootps`, `tftp`, `oracle`, `snmptrap`, `http`, `qmtp`, `radius`, `oracle-em-vp`, `tarantella`, `pcanywheredata`, `ldap`, `mgcp`, `sqlsrv`, `hsrp`, `cisco-net-mgmt`, `smtp`, `pcanywherestat`, `exec`, `send`, `stun`, `syslog`, `ms-sql-m`, `citrix`, `creativeserver`, `cifs`, `cisco-sys`, `cisco-tna`, `ms-dotnetster`, `gtpv1`, `gtpv0`, `imap3`, `fcip-port`, `netbios-dgm`, `sip-tls`, `pop3s`, `cisco-fna`, `802-11-iapp`, `oem-agent`, `cisco-tdp`, `tr-rsrb`, `r-winsock`, `sql-net`, `syslog-conn`, `tacacs-ds`, `h225ras`, `ace-svr`, `dhcp-failover`, `igmpv3lite`, `irc-serv`, `entrust-svcs`, `dbcontrolAgent`, `cisco-svcs`, `ipsec-msft`, `microsoft-ds`, `ms-sna`, `rsvpTunnel`, `rsvp-encap`, `hp-collector`, `netbios-ns`, `msexch-routing`, `h323`, `l2tp`, `ldap-admin`, `pop3`, `h323callsigalt`, `ms-sql`, `iscsi-target`, `webster`, `lotusnote`, `ipx`, `entrust-svc-hand`, `citriximaclient`, `rtc-pm-port`, `ftp`, `aol`, `xdmcp`, `oraclenames`, `login`, `iscsi`, `ttc`, `imaps`, `socks`, `ssh`, `dnsix`, `daytime`, `sip`, `discard`, `ntp`, `ldaps`, `https`, `vdolive`, `ica`, `net8-cman`, `cuseeme`, `netstat`, `sms`, `streamworks`, `rtelnet`, `who`, `kazaa`, `ssp`, `dbase`, `timed`, `cddbp`, `telnets`, `ymsgr`, `ident`, `bgp`, `ddns-v3`, `vqp`, `irc`, `ipass`, `x11`, `dns`, `lotusmtap`, `mysql`, `nfs`, `msnmsgr`, `netshow`, `sqlserv`, `hp-managed-node`, `ncp`, `shell`, `realmedia`, `msrpc`, `clp`
      */
     protocolName?: string;
+}
+
+export interface PolicyObjectSecurityRuleSetSequence {
+    /**
+     * action
+     *   - Choices: `pass`, `inspect`, `drop`
+     */
+    action?: string;
+    /**
+     * Variable name
+     */
+    actionVariable?: string;
+    destinationDataIpv4PrefixListIds?: string[];
+    destinationDataIpv6PrefixListIds?: string[];
+    destinationFqdnListIds?: string[];
+    destinationFqdns?: string[];
+    /**
+     * Variable name
+     */
+    destinationFqdnsVariable?: string;
+    destinationGeoLocationListIds?: string[];
+    /**
+     * Destination Geolocation
+     */
+    destinationGeoLocations?: string[];
+    /**
+     * Variable name
+     */
+    destinationGeoLocationsVariable?: string;
+    destinationIpv4Prefixes?: string[];
+    /**
+     * Variable name
+     */
+    destinationIpv4PrefixesVariable?: string;
+    destinationIpv6Prefixes?: string[];
+    /**
+     * Variable name
+     */
+    destinationIpv6PrefixesVariable?: string;
+    destinationObjectGroupListIds?: string[];
+    destinationPortListIds?: string[];
+    destinationPorts?: string[];
+    /**
+     * Variable name
+     */
+    destinationPortsVariable?: string;
+    /**
+     * Sequence name
+     */
+    name?: string;
+    /**
+     * Variable name
+     */
+    nameVariable?: string;
+    protocolNameListIds?: string[];
+    protocolNames?: string[];
+    /**
+     * Variable name
+     */
+    protocolNamesVariable?: string;
+    /**
+     * protocol
+     */
+    protocols?: string[];
+    /**
+     * Sequence Id
+     */
+    sequenceId?: string;
+    /**
+     * Variable name
+     */
+    sequenceIdVariable?: string;
+    /**
+     * ipv4/ ipv6
+     *   - Choices: `ipv4`, `ipv6`
+     */
+    sequenceIpType?: string;
+    sourceDataIpv4PrefixListIds?: string[];
+    sourceDataIpv6PrefixListIds?: string[];
+    sourceGeoLocationListIds?: string[];
+    /**
+     * Source Geolocation
+     */
+    sourceGeoLocations?: string[];
+    /**
+     * Variable name
+     */
+    sourceGeoLocationsVariable?: string;
+    sourceIpv4Prefixes?: string[];
+    /**
+     * Variable name
+     */
+    sourceIpv4PrefixesVariable?: string;
+    sourceIpv6Prefixes?: string[];
+    /**
+     * Variable name
+     */
+    sourceIpv6PrefixesVariable?: string;
+    sourceObjectGroupListIds?: string[];
+    sourcePortListIds?: string[];
+    sourcePorts?: string[];
+    /**
+     * Variable name
+     */
+    sourcePortsVariable?: string;
 }
 
 export interface PolicyObjectSecurityScalableGroupTagListEntry {
@@ -26982,6 +27471,7 @@ export interface ServiceLanVpnFeatureIpv4StaticRoute {
     /**
      * Gateway distance, Attribute conditional on `gateway` equal to `null0`
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      */
     administrativeDistance?: number;
     /**
@@ -27057,6 +27547,7 @@ export interface ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHo
     /**
      * Administrative distance
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      */
     administrativeDistance?: number;
     /**
@@ -27188,6 +27679,7 @@ export interface ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNext
     /**
      * Administrative distance
      *   - Range: `1`-`254`
+     *   - Default value: `1`
      */
     administrativeDistance?: number;
     /**
@@ -30302,7 +30794,7 @@ export interface ServiceWirelessLanFeatureSsid {
     radiusServerSecretVariable?: string;
     /**
      * Select security type
-     *   - Choices: `personal`, `open`, `enterprise`
+     *   - Choices: `enterprise`, `personal`, `open`
      */
     securityType?: string;
     /**
@@ -30885,7 +31377,7 @@ export interface SseZscalerFeatureSubLocation {
      */
     displayTimeUnitVariable?: string;
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     * Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
      *   - Range: `0.1`-`99999`
      */
     dnBandwidth?: number;
@@ -30922,6 +31414,9 @@ export interface SseZscalerFeatureSubLocation {
      * Variable name, Attribute conditional on `surrogateIp` equal to `true`
      */
     idleTimeVariable?: string;
+    /**
+     * Internal Ip address
+     */
     internalIps?: outputs.SseZscalerFeatureSubLocationInternalIp[];
     /**
      * If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
@@ -30932,6 +31427,9 @@ export interface SseZscalerFeatureSubLocation {
      * Variable name
      */
     ipEnforcedForKnownBrowsersVariable?: string;
+    /**
+     * Sub-location name
+     */
     name?: string;
     /**
      * Variable name
@@ -30970,6 +31468,9 @@ export interface SseZscalerFeatureSubLocation {
      * Variable name
      */
     serviceVpnVariable?: string;
+    /**
+     * Sub-location Service VPN
+     */
     serviceVpns?: string[];
     /**
      * Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic., Attribute conditional on `authRequired` equal to `true`
@@ -30981,7 +31482,7 @@ export interface SseZscalerFeatureSubLocation {
      */
     surrogateIpVariable?: string;
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     * Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
      *   - Range: `0.1`-`99999`
      */
     upBandwidth?: number;
@@ -32416,6 +32917,9 @@ export interface TlsSslDecryptionPolicyDefinitionUrlRule {
 }
 
 export interface TopologyCustomControlFeatureSequence {
+    /**
+     * List of action entries
+     */
     actionEntries?: outputs.TopologyCustomControlFeatureSequenceActionEntry[];
     /**
      * Base Action
@@ -32432,6 +32936,9 @@ export interface TopologyCustomControlFeatureSequence {
      *   - Choices: `ipv4`, `ipv6`, `all`
      */
     ipType?: string;
+    /**
+     * Set of match entries
+     */
     matchEntries?: outputs.TopologyCustomControlFeatureSequenceMatchEntry[];
     /**
      * Sequence Name

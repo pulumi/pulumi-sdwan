@@ -186,6 +186,7 @@ __all__ = [
     'EmbeddedSecurityNgfwPolicySequenceMatchEntry',
     'EmbeddedSecurityPolicyAssembly',
     'EmbeddedSecurityPolicyAssemblyEntry',
+    'EmbeddedSecurityPolicyHighSpeedLogging',
     'ExpandedCommunityListPolicyObjectEntry',
     'ExtendedCommunityListPolicyObjectEntry',
     'FeatureDeviceTemplateGeneralTemplate',
@@ -240,14 +241,17 @@ __all__ = [
     'PolicyObjectPolicerEntry',
     'PolicyObjectPreferredColorGroupEntry',
     'PolicyObjectSecurityDataIpv4PrefixListEntry',
+    'PolicyObjectSecurityDataIpv6PrefixListEntry',
     'PolicyObjectSecurityFqdnListEntry',
     'PolicyObjectSecurityGeolocationListEntry',
     'PolicyObjectSecurityIdentityListEntry',
     'PolicyObjectSecurityIpsSignatureEntry',
     'PolicyObjectSecurityLocalApplicationListEntry',
     'PolicyObjectSecurityLocalDomainListEntry',
+    'PolicyObjectSecurityObjectGroupEntry',
     'PolicyObjectSecurityPortListEntry',
     'PolicyObjectSecurityProtocolListEntry',
+    'PolicyObjectSecurityRuleSetSequence',
     'PolicyObjectSecurityScalableGroupTagListEntry',
     'PolicyObjectSecurityUrlAllowListEntry',
     'PolicyObjectSecurityUrlBlockListEntry',
@@ -755,6 +759,7 @@ __all__ = [
     'GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult',
     'GetEmbeddedSecurityPolicyAssemblyResult',
     'GetEmbeddedSecurityPolicyAssemblyEntryResult',
+    'GetEmbeddedSecurityPolicyHighSpeedLoggingResult',
     'GetExpandedCommunityListPolicyObjectEntryResult',
     'GetExtendedCommunityListPolicyObjectEntryResult',
     'GetFeatureDeviceTemplateGeneralTemplateResult',
@@ -787,6 +792,8 @@ __all__ = [
     'GetMeshTopologyPolicyDefinitionRegionResult',
     'GetNetworkHierarchyCflowdCollectorResult',
     'GetNetworkHierarchyNodeAddressResult',
+    'GetNetworkHierarchyNodesNodesResult',
+    'GetNetworkHierarchyNodesResolvedSiteResult',
     'GetNetworkHierarchySecurityLoggingHighSpeedLoggingResult',
     'GetNetworkHierarchySecurityLoggingUtdSyslogResult',
     'GetOtherThousandeyesFeatureVirtualApplicationResult',
@@ -810,14 +817,17 @@ __all__ = [
     'GetPolicyObjectPolicerEntryResult',
     'GetPolicyObjectPreferredColorGroupEntryResult',
     'GetPolicyObjectSecurityDataIpv4PrefixListEntryResult',
+    'GetPolicyObjectSecurityDataIpv6PrefixListEntryResult',
     'GetPolicyObjectSecurityFqdnListEntryResult',
     'GetPolicyObjectSecurityGeolocationListEntryResult',
     'GetPolicyObjectSecurityIdentityListEntryResult',
     'GetPolicyObjectSecurityIpsSignatureEntryResult',
     'GetPolicyObjectSecurityLocalApplicationListEntryResult',
     'GetPolicyObjectSecurityLocalDomainListEntryResult',
+    'GetPolicyObjectSecurityObjectGroupEntryResult',
     'GetPolicyObjectSecurityPortListEntryResult',
     'GetPolicyObjectSecurityProtocolListEntryResult',
+    'GetPolicyObjectSecurityRuleSetSequenceResult',
     'GetPolicyObjectSecurityScalableGroupTagListEntryResult',
     'GetPolicyObjectSecurityUrlAllowListEntryResult',
     'GetPolicyObjectSecurityUrlBlockListEntryResult',
@@ -2124,7 +2134,7 @@ class ApplicationPriorityTrafficPolicyPolicySequenceAction(dict):
                  set_parameters: Optional[Sequence['outputs.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter']] = None,
                  sla_classes: Optional[Sequence['outputs.ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass']] = None):
         """
-        :param Sequence[_builtins.str] backup_sla_preferred_colors: Backup SLA perferred color
+        :param Sequence[_builtins.str] backup_sla_preferred_colors: Backup SLA preferred color
         :param _builtins.int loss_correct_fec_threshold: - Range: `1`-`5`
         :param _builtins.str loss_correct_type: - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         :param _builtins.int nat_pool: - Range: `1`-`31`
@@ -2202,7 +2212,7 @@ class ApplicationPriorityTrafficPolicyPolicySequenceAction(dict):
     @pulumi.getter(name="backupSlaPreferredColors")
     def backup_sla_preferred_colors(self) -> Optional[Sequence[_builtins.str]]:
         """
-        Backup SLA perferred color
+        Backup SLA preferred color
         """
         return pulumi.get(self, "backup_sla_preferred_colors")
 
@@ -2353,6 +2363,8 @@ class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter(dict):
             suggest = "policer_id"
         elif key == "preferredColorGroupId":
             suggest = "preferred_color_group_id"
+        elif key == "preferredColorGroupRestrict":
+            suggest = "preferred_color_group_restrict"
         elif key == "preferredRemoteColorRestrict":
             suggest = "preferred_remote_color_restrict"
         elif key == "preferredRemoteColors":
@@ -2420,6 +2432,7 @@ class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter(dict):
                  next_hop_loose: Optional[_builtins.bool] = None,
                  policer_id: Optional[_builtins.str] = None,
                  preferred_color_group_id: Optional[_builtins.str] = None,
+                 preferred_color_group_restrict: Optional[_builtins.bool] = None,
                  preferred_remote_color_restrict: Optional[_builtins.bool] = None,
                  preferred_remote_colors: Optional[Sequence[_builtins.str]] = None,
                  service_chain_fallback_to_routing: Optional[_builtins.bool] = None,
@@ -2446,6 +2459,7 @@ class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter(dict):
         """
         :param _builtins.int dscp: - Range: `0`-`63`
         :param _builtins.str local_tloc_list_encapsulation: - Choices: `ipsec`, `gre`
+        :param _builtins.bool preferred_color_group_restrict: Restrict traffic to the preferred color group, requires `preferred_color_group_id` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param _builtins.str service_chain_tloc_encapsulation: - Choices: `ipsec`, `gre`
         :param _builtins.str service_chain_type: - Choices: `SC1`, `SC2`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
         :param _builtins.int service_chain_vpn: - Range: `0`-`65530`
@@ -2475,6 +2489,8 @@ class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter(dict):
             pulumi.set(__self__, "policer_id", policer_id)
         if preferred_color_group_id is not None:
             pulumi.set(__self__, "preferred_color_group_id", preferred_color_group_id)
+        if preferred_color_group_restrict is not None:
+            pulumi.set(__self__, "preferred_color_group_restrict", preferred_color_group_restrict)
         if preferred_remote_color_restrict is not None:
             pulumi.set(__self__, "preferred_remote_color_restrict", preferred_remote_color_restrict)
         if preferred_remote_colors is not None:
@@ -2577,6 +2593,14 @@ class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter(dict):
     @pulumi.getter(name="preferredColorGroupId")
     def preferred_color_group_id(self) -> Optional[_builtins.str]:
         return pulumi.get(self, "preferred_color_group_id")
+
+    @_builtins.property
+    @pulumi.getter(name="preferredColorGroupRestrict")
+    def preferred_color_group_restrict(self) -> Optional[_builtins.bool]:
+        """
+        Restrict traffic to the preferred color group, requires `preferred_color_group_id` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "preferred_color_group_restrict")
 
     @_builtins.property
     @pulumi.getter(name="preferredRemoteColorRestrict")
@@ -2727,6 +2751,8 @@ class ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass(dict):
             suggest = "fallback_to_best_path"
         elif key == "preferredColorGroupListId":
             suggest = "preferred_color_group_list_id"
+        elif key == "preferredColorGroupRestrict":
+            suggest = "preferred_color_group_restrict"
         elif key == "preferredColors":
             suggest = "preferred_colors"
         elif key == "preferredRemoteColors":
@@ -2750,15 +2776,21 @@ class ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass(dict):
     def __init__(__self__, *,
                  fallback_to_best_path: Optional[_builtins.bool] = None,
                  preferred_color_group_list_id: Optional[_builtins.str] = None,
+                 preferred_color_group_restrict: Optional[_builtins.bool] = None,
                  preferred_colors: Optional[Sequence[_builtins.str]] = None,
                  preferred_remote_colors: Optional[Sequence[_builtins.str]] = None,
                  remote_color_restrict: Optional[_builtins.bool] = None,
                  sla_class_list_id: Optional[_builtins.str] = None,
                  strict: Optional[_builtins.bool] = None):
+        """
+        :param _builtins.bool preferred_color_group_restrict: Restrict traffic to the preferred color group, requires `preferred_color_group_list_id` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
         if fallback_to_best_path is not None:
             pulumi.set(__self__, "fallback_to_best_path", fallback_to_best_path)
         if preferred_color_group_list_id is not None:
             pulumi.set(__self__, "preferred_color_group_list_id", preferred_color_group_list_id)
+        if preferred_color_group_restrict is not None:
+            pulumi.set(__self__, "preferred_color_group_restrict", preferred_color_group_restrict)
         if preferred_colors is not None:
             pulumi.set(__self__, "preferred_colors", preferred_colors)
         if preferred_remote_colors is not None:
@@ -2779,6 +2811,14 @@ class ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass(dict):
     @pulumi.getter(name="preferredColorGroupListId")
     def preferred_color_group_list_id(self) -> Optional[_builtins.str]:
         return pulumi.get(self, "preferred_color_group_list_id")
+
+    @_builtins.property
+    @pulumi.getter(name="preferredColorGroupRestrict")
+    def preferred_color_group_restrict(self) -> Optional[_builtins.bool]:
+        """
+        Restrict traffic to the preferred color group, requires `preferred_color_group_list_id` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "preferred_color_group_restrict")
 
     @_builtins.property
     @pulumi.getter(name="preferredColors")
@@ -2827,6 +2867,8 @@ class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry(dict):
             suggest = "destination_region"
         elif key == "dnsApplicationListId":
             suggest = "dns_application_list_id"
+        elif key == "hierarchyIds":
+            suggest = "hierarchy_ids"
         elif key == "icmp6Messages":
             suggest = "icmp6_messages"
         elif key == "icmpMessages":
@@ -2876,6 +2918,7 @@ class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry(dict):
                  dns: Optional[_builtins.str] = None,
                  dns_application_list_id: Optional[_builtins.str] = None,
                  dscps: Optional[Sequence[_builtins.int]] = None,
+                 hierarchy_ids: Optional[Sequence[_builtins.str]] = None,
                  icmp6_messages: Optional[Sequence[_builtins.str]] = None,
                  icmp_messages: Optional[Sequence[_builtins.str]] = None,
                  packet_length: Optional[_builtins.str] = None,
@@ -2900,6 +2943,7 @@ class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry(dict):
         :param _builtins.str dns: Dns
                  - Choices: `request`, `response`
         :param Sequence[_builtins.int] dscps: DSCP numbers
+        :param Sequence[_builtins.str] hierarchy_ids: Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param Sequence[_builtins.str] icmp6_messages: ICMP6 Message
         :param Sequence[_builtins.str] icmp_messages: ICMP Message
         :param _builtins.str packet_length: Packet Length
@@ -2937,6 +2981,8 @@ class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry(dict):
             pulumi.set(__self__, "dns_application_list_id", dns_application_list_id)
         if dscps is not None:
             pulumi.set(__self__, "dscps", dscps)
+        if hierarchy_ids is not None:
+            pulumi.set(__self__, "hierarchy_ids", hierarchy_ids)
         if icmp6_messages is not None:
             pulumi.set(__self__, "icmp6_messages", icmp6_messages)
         if icmp_messages is not None:
@@ -3037,6 +3083,14 @@ class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry(dict):
         DSCP numbers
         """
         return pulumi.get(self, "dscps")
+
+    @_builtins.property
+    @pulumi.getter(name="hierarchyIds")
+    def hierarchy_ids(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "hierarchy_ids")
 
     @_builtins.property
     @pulumi.getter(name="icmp6Messages")
@@ -24127,10 +24181,16 @@ class EmbeddedSecurityNgfwPolicySequence(dict):
             suggest = "base_action"
         elif key == "disableSequence":
             suggest = "disable_sequence"
+        elif key == "isRuleSet":
+            suggest = "is_rule_set"
         elif key == "matchEntries":
             suggest = "match_entries"
+        elif key == "sequenceComment":
+            suggest = "sequence_comment"
         elif key == "sequenceId":
             suggest = "sequence_id"
+        elif key == "sequenceIpType":
+            suggest = "sequence_ip_type"
         elif key == "sequenceName":
             suggest = "sequence_name"
         elif key == "sequenceType":
@@ -24151,13 +24211,21 @@ class EmbeddedSecurityNgfwPolicySequence(dict):
                  actions: Optional[Sequence['outputs.EmbeddedSecurityNgfwPolicySequenceAction']] = None,
                  base_action: Optional[_builtins.str] = None,
                  disable_sequence: Optional[_builtins.bool] = None,
+                 is_rule_set: Optional[_builtins.bool] = None,
                  match_entries: Optional[Sequence['outputs.EmbeddedSecurityNgfwPolicySequenceMatchEntry']] = None,
+                 sequence_comment: Optional[_builtins.str] = None,
                  sequence_id: Optional[_builtins.str] = None,
+                 sequence_ip_type: Optional[_builtins.str] = None,
                  sequence_name: Optional[_builtins.str] = None,
                  sequence_type: Optional[_builtins.str] = None):
         """
         :param Sequence['EmbeddedSecurityNgfwPolicySequenceActionArgs'] actions: can be empty array or with type or parameter
         :param _builtins.str base_action: - Choices: `pass`, `inspect`, `drop`
+        :param _builtins.bool is_rule_set: , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        :param _builtins.str sequence_comment: , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        :param _builtins.str sequence_ip_type: IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+                 - Choices: `ipv4`, `ipv6`
+                 - Default value: `ipv4`
         """
         if actions is not None:
             pulumi.set(__self__, "actions", actions)
@@ -24165,10 +24233,16 @@ class EmbeddedSecurityNgfwPolicySequence(dict):
             pulumi.set(__self__, "base_action", base_action)
         if disable_sequence is not None:
             pulumi.set(__self__, "disable_sequence", disable_sequence)
+        if is_rule_set is not None:
+            pulumi.set(__self__, "is_rule_set", is_rule_set)
         if match_entries is not None:
             pulumi.set(__self__, "match_entries", match_entries)
+        if sequence_comment is not None:
+            pulumi.set(__self__, "sequence_comment", sequence_comment)
         if sequence_id is not None:
             pulumi.set(__self__, "sequence_id", sequence_id)
+        if sequence_ip_type is not None:
+            pulumi.set(__self__, "sequence_ip_type", sequence_ip_type)
         if sequence_name is not None:
             pulumi.set(__self__, "sequence_name", sequence_name)
         if sequence_type is not None:
@@ -24196,14 +24270,40 @@ class EmbeddedSecurityNgfwPolicySequence(dict):
         return pulumi.get(self, "disable_sequence")
 
     @_builtins.property
+    @pulumi.getter(name="isRuleSet")
+    def is_rule_set(self) -> Optional[_builtins.bool]:
+        """
+        , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "is_rule_set")
+
+    @_builtins.property
     @pulumi.getter(name="matchEntries")
     def match_entries(self) -> Optional[Sequence['outputs.EmbeddedSecurityNgfwPolicySequenceMatchEntry']]:
         return pulumi.get(self, "match_entries")
 
     @_builtins.property
+    @pulumi.getter(name="sequenceComment")
+    def sequence_comment(self) -> Optional[_builtins.str]:
+        """
+        , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "sequence_comment")
+
+    @_builtins.property
     @pulumi.getter(name="sequenceId")
     def sequence_id(self) -> Optional[_builtins.str]:
         return pulumi.get(self, "sequence_id")
+
+    @_builtins.property
+    @pulumi.getter(name="sequenceIpType")
+    def sequence_ip_type(self) -> Optional[_builtins.str]:
+        """
+        IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+          - Choices: `ipv4`, `ipv6`
+          - Default value: `ipv4`
+        """
+        return pulumi.get(self, "sequence_ip_type")
 
     @_builtins.property
     @pulumi.getter(name="sequenceName")
@@ -24277,6 +24377,8 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
             suggest = "app_list_ids"
         elif key == "applicationFamilies":
             suggest = "application_families"
+        elif key == "destinationDataIpv6PrefixListIds":
+            suggest = "destination_data_ipv6_prefix_list_ids"
         elif key == "destinationDataPrefixListIds":
             suggest = "destination_data_prefix_list_ids"
         elif key == "destinationDataPrefixes":
@@ -24295,6 +24397,12 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
             suggest = "destination_geo_locations"
         elif key == "destinationGeoLocationsVariable":
             suggest = "destination_geo_locations_variable"
+        elif key == "destinationIpv6DataPrefixes":
+            suggest = "destination_ipv6_data_prefixes"
+        elif key == "destinationIpv6DataPrefixesVariable":
+            suggest = "destination_ipv6_data_prefixes_variable"
+        elif key == "destinationObjectGroupListIds":
+            suggest = "destination_object_group_list_ids"
         elif key == "destinationPortListIds":
             suggest = "destination_port_list_ids"
         elif key == "destinationPorts":
@@ -24311,6 +24419,10 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
             suggest = "protocol_name_list_ids"
         elif key == "protocolNames":
             suggest = "protocol_names"
+        elif key == "ruleSetListIds":
+            suggest = "rule_set_list_ids"
+        elif key == "sourceDataIpv6PrefixListIds":
+            suggest = "source_data_ipv6_prefix_list_ids"
         elif key == "sourceDataPrefixListIds":
             suggest = "source_data_prefix_list_ids"
         elif key == "sourceDataPrefixes":
@@ -24329,6 +24441,12 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
             suggest = "source_identity_usergroups"
         elif key == "sourceIdentityUsers":
             suggest = "source_identity_users"
+        elif key == "sourceIpv6DataPrefixes":
+            suggest = "source_ipv6_data_prefixes"
+        elif key == "sourceIpv6DataPrefixesVariable":
+            suggest = "source_ipv6_data_prefixes_variable"
+        elif key == "sourceObjectGroupListIds":
+            suggest = "source_object_group_list_ids"
         elif key == "sourcePortListIds":
             suggest = "source_port_list_ids"
         elif key == "sourcePorts":
@@ -24355,6 +24473,7 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
                  app_list_ids: Optional[Sequence[_builtins.str]] = None,
                  application_families: Optional[Sequence[_builtins.str]] = None,
                  applications: Optional[Sequence[_builtins.str]] = None,
+                 destination_data_ipv6_prefix_list_ids: Optional[Sequence[_builtins.str]] = None,
                  destination_data_prefix_list_ids: Optional[Sequence[_builtins.str]] = None,
                  destination_data_prefixes: Optional[Sequence[_builtins.str]] = None,
                  destination_data_prefixes_variable: Optional[_builtins.str] = None,
@@ -24364,6 +24483,9 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
                  destination_geo_location_list_ids: Optional[Sequence[_builtins.str]] = None,
                  destination_geo_locations: Optional[Sequence[_builtins.str]] = None,
                  destination_geo_locations_variable: Optional[_builtins.str] = None,
+                 destination_ipv6_data_prefixes: Optional[Sequence[_builtins.str]] = None,
+                 destination_ipv6_data_prefixes_variable: Optional[_builtins.str] = None,
+                 destination_object_group_list_ids: Optional[Sequence[_builtins.str]] = None,
                  destination_port_list_ids: Optional[Sequence[_builtins.str]] = None,
                  destination_ports: Optional[Sequence[_builtins.str]] = None,
                  destination_ports_variable: Optional[_builtins.str] = None,
@@ -24373,6 +24495,8 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
                  protocol_name_list_ids: Optional[Sequence[_builtins.str]] = None,
                  protocol_names: Optional[Sequence[_builtins.str]] = None,
                  protocols: Optional[Sequence[_builtins.str]] = None,
+                 rule_set_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 source_data_ipv6_prefix_list_ids: Optional[Sequence[_builtins.str]] = None,
                  source_data_prefix_list_ids: Optional[Sequence[_builtins.str]] = None,
                  source_data_prefixes: Optional[Sequence[_builtins.str]] = None,
                  source_data_prefixes_variable: Optional[_builtins.str] = None,
@@ -24382,19 +24506,33 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
                  source_identity_list_ids: Optional[Sequence[_builtins.str]] = None,
                  source_identity_usergroups: Optional[Sequence[_builtins.str]] = None,
                  source_identity_users: Optional[Sequence[_builtins.str]] = None,
+                 source_ipv6_data_prefixes: Optional[Sequence[_builtins.str]] = None,
+                 source_ipv6_data_prefixes_variable: Optional[_builtins.str] = None,
+                 source_object_group_list_ids: Optional[Sequence[_builtins.str]] = None,
                  source_port_list_ids: Optional[Sequence[_builtins.str]] = None,
                  source_ports: Optional[Sequence[_builtins.str]] = None,
                  source_ports_variable: Optional[_builtins.str] = None,
                  source_scalable_group_tag_list_ids: Optional[Sequence[_builtins.str]] = None,
                  source_security_group_list_ids: Optional[Sequence[_builtins.str]] = None):
         """
+        :param Sequence[_builtins.str] destination_data_ipv6_prefix_list_ids: Only supported on sequences with `sequence_ip_type` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param _builtins.str destination_data_prefixes_variable: Variable name
         :param _builtins.str destination_fqdns_variable: Variable name
         :param _builtins.str destination_geo_locations_variable: Variable name
+        :param Sequence[_builtins.str] destination_ipv6_data_prefixes: Only supported on sequences with `sequence_ip_type` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        :param _builtins.str destination_ipv6_data_prefixes_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        :param Sequence[_builtins.str] destination_object_group_list_ids: , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param _builtins.str destination_ports_variable: Variable name
+        :param Sequence[_builtins.str] destination_security_group_list_ids: Deprecated, use `destination_object_group_list_ids` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+        :param Sequence[_builtins.str] rule_set_list_ids: Security rule set IDs, requires `is_rule_set` set to `true` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        :param Sequence[_builtins.str] source_data_ipv6_prefix_list_ids: Only supported on sequences with `sequence_ip_type` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param _builtins.str source_data_prefixes_variable: Variable name
         :param _builtins.str source_geo_locations_variable: Variable name
+        :param Sequence[_builtins.str] source_ipv6_data_prefixes: Only supported on sequences with `sequence_ip_type` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        :param _builtins.str source_ipv6_data_prefixes_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        :param Sequence[_builtins.str] source_object_group_list_ids: Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
         :param _builtins.str source_ports_variable: Variable name
+        :param Sequence[_builtins.str] source_security_group_list_ids: Deprecated, use `source_object_group_list_ids` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
         """
         if app_list_ids is not None:
             pulumi.set(__self__, "app_list_ids", app_list_ids)
@@ -24402,6 +24540,8 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
             pulumi.set(__self__, "application_families", application_families)
         if applications is not None:
             pulumi.set(__self__, "applications", applications)
+        if destination_data_ipv6_prefix_list_ids is not None:
+            pulumi.set(__self__, "destination_data_ipv6_prefix_list_ids", destination_data_ipv6_prefix_list_ids)
         if destination_data_prefix_list_ids is not None:
             pulumi.set(__self__, "destination_data_prefix_list_ids", destination_data_prefix_list_ids)
         if destination_data_prefixes is not None:
@@ -24420,6 +24560,12 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
             pulumi.set(__self__, "destination_geo_locations", destination_geo_locations)
         if destination_geo_locations_variable is not None:
             pulumi.set(__self__, "destination_geo_locations_variable", destination_geo_locations_variable)
+        if destination_ipv6_data_prefixes is not None:
+            pulumi.set(__self__, "destination_ipv6_data_prefixes", destination_ipv6_data_prefixes)
+        if destination_ipv6_data_prefixes_variable is not None:
+            pulumi.set(__self__, "destination_ipv6_data_prefixes_variable", destination_ipv6_data_prefixes_variable)
+        if destination_object_group_list_ids is not None:
+            pulumi.set(__self__, "destination_object_group_list_ids", destination_object_group_list_ids)
         if destination_port_list_ids is not None:
             pulumi.set(__self__, "destination_port_list_ids", destination_port_list_ids)
         if destination_ports is not None:
@@ -24438,6 +24584,10 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
             pulumi.set(__self__, "protocol_names", protocol_names)
         if protocols is not None:
             pulumi.set(__self__, "protocols", protocols)
+        if rule_set_list_ids is not None:
+            pulumi.set(__self__, "rule_set_list_ids", rule_set_list_ids)
+        if source_data_ipv6_prefix_list_ids is not None:
+            pulumi.set(__self__, "source_data_ipv6_prefix_list_ids", source_data_ipv6_prefix_list_ids)
         if source_data_prefix_list_ids is not None:
             pulumi.set(__self__, "source_data_prefix_list_ids", source_data_prefix_list_ids)
         if source_data_prefixes is not None:
@@ -24456,6 +24606,12 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
             pulumi.set(__self__, "source_identity_usergroups", source_identity_usergroups)
         if source_identity_users is not None:
             pulumi.set(__self__, "source_identity_users", source_identity_users)
+        if source_ipv6_data_prefixes is not None:
+            pulumi.set(__self__, "source_ipv6_data_prefixes", source_ipv6_data_prefixes)
+        if source_ipv6_data_prefixes_variable is not None:
+            pulumi.set(__self__, "source_ipv6_data_prefixes_variable", source_ipv6_data_prefixes_variable)
+        if source_object_group_list_ids is not None:
+            pulumi.set(__self__, "source_object_group_list_ids", source_object_group_list_ids)
         if source_port_list_ids is not None:
             pulumi.set(__self__, "source_port_list_ids", source_port_list_ids)
         if source_ports is not None:
@@ -24481,6 +24637,14 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
     @pulumi.getter
     def applications(self) -> Optional[Sequence[_builtins.str]]:
         return pulumi.get(self, "applications")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationDataIpv6PrefixListIds")
+    def destination_data_ipv6_prefix_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Only supported on sequences with `sequence_ip_type` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "destination_data_ipv6_prefix_list_ids")
 
     @_builtins.property
     @pulumi.getter(name="destinationDataPrefixListIds")
@@ -24537,6 +24701,30 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
         return pulumi.get(self, "destination_geo_locations_variable")
 
     @_builtins.property
+    @pulumi.getter(name="destinationIpv6DataPrefixes")
+    def destination_ipv6_data_prefixes(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Only supported on sequences with `sequence_ip_type` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "destination_ipv6_data_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationIpv6DataPrefixesVariable")
+    def destination_ipv6_data_prefixes_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "destination_ipv6_data_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationObjectGroupListIds")
+    def destination_object_group_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "destination_object_group_list_ids")
+
+    @_builtins.property
     @pulumi.getter(name="destinationPortListIds")
     def destination_port_list_ids(self) -> Optional[Sequence[_builtins.str]]:
         return pulumi.get(self, "destination_port_list_ids")
@@ -24562,6 +24750,9 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
     @_builtins.property
     @pulumi.getter(name="destinationSecurityGroupListIds")
     def destination_security_group_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Deprecated, use `destination_object_group_list_ids` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+        """
         return pulumi.get(self, "destination_security_group_list_ids")
 
     @_builtins.property
@@ -24583,6 +24774,22 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
     @pulumi.getter
     def protocols(self) -> Optional[Sequence[_builtins.str]]:
         return pulumi.get(self, "protocols")
+
+    @_builtins.property
+    @pulumi.getter(name="ruleSetListIds")
+    def rule_set_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Security rule set IDs, requires `is_rule_set` set to `true` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "rule_set_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceDataIpv6PrefixListIds")
+    def source_data_ipv6_prefix_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Only supported on sequences with `sequence_ip_type` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "source_data_ipv6_prefix_list_ids")
 
     @_builtins.property
     @pulumi.getter(name="sourceDataPrefixListIds")
@@ -24636,6 +24843,30 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
         return pulumi.get(self, "source_identity_users")
 
     @_builtins.property
+    @pulumi.getter(name="sourceIpv6DataPrefixes")
+    def source_ipv6_data_prefixes(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Only supported on sequences with `sequence_ip_type` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "source_ipv6_data_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpv6DataPrefixesVariable")
+    def source_ipv6_data_prefixes_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "source_ipv6_data_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceObjectGroupListIds")
+    def source_object_group_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        """
+        return pulumi.get(self, "source_object_group_list_ids")
+
+    @_builtins.property
     @pulumi.getter(name="sourcePortListIds")
     def source_port_list_ids(self) -> Optional[Sequence[_builtins.str]]:
         return pulumi.get(self, "source_port_list_ids")
@@ -24661,6 +24892,9 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntry(dict):
     @_builtins.property
     @pulumi.getter(name="sourceSecurityGroupListIds")
     def source_security_group_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Deprecated, use `source_object_group_list_ids` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+        """
         return pulumi.get(self, "source_security_group_list_ids")
 
 
@@ -24790,6 +25024,68 @@ class EmbeddedSecurityPolicyAssemblyEntry(dict):
     @pulumi.getter(name="sourceZoneListId")
     def source_zone_list_id(self) -> Optional[_builtins.str]:
         return pulumi.get(self, "source_zone_list_id")
+
+
+@pulumi.output_type
+class EmbeddedSecurityPolicyHighSpeedLogging(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "sourceInterface":
+            suggest = "source_interface"
+        elif key == "sourceInterfaceVariable":
+            suggest = "source_interface_variable"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in EmbeddedSecurityPolicyHighSpeedLogging. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        EmbeddedSecurityPolicyHighSpeedLogging.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        EmbeddedSecurityPolicyHighSpeedLogging.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 name: Optional[_builtins.str] = None,
+                 source_interface: Optional[_builtins.str] = None,
+                 source_interface_variable: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str name: - Choices: `server1`, `server2`, `server3`, `server4`
+        :param _builtins.str source_interface: InterfaceName
+        :param _builtins.str source_interface_variable: Variable name
+        """
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if source_interface is not None:
+            pulumi.set(__self__, "source_interface", source_interface)
+        if source_interface_variable is not None:
+            pulumi.set(__self__, "source_interface_variable", source_interface_variable)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> Optional[_builtins.str]:
+        """
+        - Choices: `server1`, `server2`, `server3`, `server4`
+        """
+        return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceInterface")
+    def source_interface(self) -> Optional[_builtins.str]:
+        """
+        InterfaceName
+        """
+        return pulumi.get(self, "source_interface")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceInterfaceVariable")
+    def source_interface_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_interface_variable")
 
 
 @pulumi.output_type
@@ -29208,6 +29504,52 @@ class PolicyObjectSecurityDataIpv4PrefixListEntry(dict):
 
 
 @pulumi.output_type
+class PolicyObjectSecurityDataIpv6PrefixListEntry(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "ipv6Prefix":
+            suggest = "ipv6_prefix"
+        elif key == "ipv6PrefixVariable":
+            suggest = "ipv6_prefix_variable"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in PolicyObjectSecurityDataIpv6PrefixListEntry. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        PolicyObjectSecurityDataIpv6PrefixListEntry.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        PolicyObjectSecurityDataIpv6PrefixListEntry.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 ipv6_prefix: Optional[_builtins.str] = None,
+                 ipv6_prefix_variable: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str ipv6_prefix_variable: Variable name
+        """
+        if ipv6_prefix is not None:
+            pulumi.set(__self__, "ipv6_prefix", ipv6_prefix)
+        if ipv6_prefix_variable is not None:
+            pulumi.set(__self__, "ipv6_prefix_variable", ipv6_prefix_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="ipv6Prefix")
+    def ipv6_prefix(self) -> Optional[_builtins.str]:
+        return pulumi.get(self, "ipv6_prefix")
+
+    @_builtins.property
+    @pulumi.getter(name="ipv6PrefixVariable")
+    def ipv6_prefix_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipv6_prefix_variable")
+
+
+@pulumi.output_type
 class PolicyObjectSecurityFqdnListEntry(dict):
     def __init__(__self__, *,
                  pattern: Optional[_builtins.str] = None):
@@ -29402,6 +29744,194 @@ class PolicyObjectSecurityLocalDomainListEntry(dict):
 
 
 @pulumi.output_type
+class PolicyObjectSecurityObjectGroupEntry(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "dataIpv4PrefixListIds":
+            suggest = "data_ipv4_prefix_list_ids"
+        elif key == "dataIpv4Prefixes":
+            suggest = "data_ipv4_prefixes"
+        elif key == "dataIpv4PrefixesVariable":
+            suggest = "data_ipv4_prefixes_variable"
+        elif key == "dataIpv6PrefixListIds":
+            suggest = "data_ipv6_prefix_list_ids"
+        elif key == "dataIpv6Prefixes":
+            suggest = "data_ipv6_prefixes"
+        elif key == "dataIpv6PrefixesVariable":
+            suggest = "data_ipv6_prefixes_variable"
+        elif key == "fqdnListIds":
+            suggest = "fqdn_list_ids"
+        elif key == "fqdnsVariable":
+            suggest = "fqdns_variable"
+        elif key == "geoLocationListIds":
+            suggest = "geo_location_list_ids"
+        elif key == "geoLocations":
+            suggest = "geo_locations"
+        elif key == "geoLocationsVariable":
+            suggest = "geo_locations_variable"
+        elif key == "portListIds":
+            suggest = "port_list_ids"
+        elif key == "portsVariable":
+            suggest = "ports_variable"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in PolicyObjectSecurityObjectGroupEntry. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        PolicyObjectSecurityObjectGroupEntry.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        PolicyObjectSecurityObjectGroupEntry.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 data_ipv4_prefix_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 data_ipv4_prefixes: Optional[Sequence[_builtins.str]] = None,
+                 data_ipv4_prefixes_variable: Optional[_builtins.str] = None,
+                 data_ipv6_prefix_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 data_ipv6_prefixes: Optional[Sequence[_builtins.str]] = None,
+                 data_ipv6_prefixes_variable: Optional[_builtins.str] = None,
+                 fqdn_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 fqdns: Optional[Sequence[_builtins.str]] = None,
+                 fqdns_variable: Optional[_builtins.str] = None,
+                 geo_location_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 geo_locations: Optional[Sequence[_builtins.str]] = None,
+                 geo_locations_variable: Optional[_builtins.str] = None,
+                 port_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 ports: Optional[Sequence[_builtins.str]] = None,
+                 ports_variable: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str data_ipv4_prefixes_variable: Variable name
+        :param _builtins.str data_ipv6_prefixes_variable: Variable name
+        :param _builtins.str fqdns_variable: Variable name
+        :param _builtins.str geo_locations_variable: Variable name
+        :param _builtins.str ports_variable: Variable name
+        """
+        if data_ipv4_prefix_list_ids is not None:
+            pulumi.set(__self__, "data_ipv4_prefix_list_ids", data_ipv4_prefix_list_ids)
+        if data_ipv4_prefixes is not None:
+            pulumi.set(__self__, "data_ipv4_prefixes", data_ipv4_prefixes)
+        if data_ipv4_prefixes_variable is not None:
+            pulumi.set(__self__, "data_ipv4_prefixes_variable", data_ipv4_prefixes_variable)
+        if data_ipv6_prefix_list_ids is not None:
+            pulumi.set(__self__, "data_ipv6_prefix_list_ids", data_ipv6_prefix_list_ids)
+        if data_ipv6_prefixes is not None:
+            pulumi.set(__self__, "data_ipv6_prefixes", data_ipv6_prefixes)
+        if data_ipv6_prefixes_variable is not None:
+            pulumi.set(__self__, "data_ipv6_prefixes_variable", data_ipv6_prefixes_variable)
+        if fqdn_list_ids is not None:
+            pulumi.set(__self__, "fqdn_list_ids", fqdn_list_ids)
+        if fqdns is not None:
+            pulumi.set(__self__, "fqdns", fqdns)
+        if fqdns_variable is not None:
+            pulumi.set(__self__, "fqdns_variable", fqdns_variable)
+        if geo_location_list_ids is not None:
+            pulumi.set(__self__, "geo_location_list_ids", geo_location_list_ids)
+        if geo_locations is not None:
+            pulumi.set(__self__, "geo_locations", geo_locations)
+        if geo_locations_variable is not None:
+            pulumi.set(__self__, "geo_locations_variable", geo_locations_variable)
+        if port_list_ids is not None:
+            pulumi.set(__self__, "port_list_ids", port_list_ids)
+        if ports is not None:
+            pulumi.set(__self__, "ports", ports)
+        if ports_variable is not None:
+            pulumi.set(__self__, "ports_variable", ports_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="dataIpv4PrefixListIds")
+    def data_ipv4_prefix_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "data_ipv4_prefix_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="dataIpv4Prefixes")
+    def data_ipv4_prefixes(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "data_ipv4_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="dataIpv4PrefixesVariable")
+    def data_ipv4_prefixes_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "data_ipv4_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="dataIpv6PrefixListIds")
+    def data_ipv6_prefix_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "data_ipv6_prefix_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="dataIpv6Prefixes")
+    def data_ipv6_prefixes(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "data_ipv6_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="dataIpv6PrefixesVariable")
+    def data_ipv6_prefixes_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "data_ipv6_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="fqdnListIds")
+    def fqdn_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "fqdn_list_ids")
+
+    @_builtins.property
+    @pulumi.getter
+    def fqdns(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "fqdns")
+
+    @_builtins.property
+    @pulumi.getter(name="fqdnsVariable")
+    def fqdns_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "fqdns_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="geoLocationListIds")
+    def geo_location_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "geo_location_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="geoLocations")
+    def geo_locations(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "geo_locations")
+
+    @_builtins.property
+    @pulumi.getter(name="geoLocationsVariable")
+    def geo_locations_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "geo_locations_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="portListIds")
+    def port_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "port_list_ids")
+
+    @_builtins.property
+    @pulumi.getter
+    def ports(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "ports")
+
+    @_builtins.property
+    @pulumi.getter(name="portsVariable")
+    def ports_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ports_variable")
+
+
+@pulumi.output_type
 class PolicyObjectSecurityPortListEntry(dict):
     def __init__(__self__, *,
                  port: Optional[_builtins.str] = None):
@@ -29454,6 +29984,506 @@ class PolicyObjectSecurityProtocolListEntry(dict):
         - Choices: `snmp`, `icmp`, `tcp`, `udp`, `echo`, `telnet`, `wins`, `n2h2server`, `nntp`, `pptp`, `rtsp`, `bootpc`, `gdoi`, `tacacs`, `gopher`, `icabrowser`, `skinny`, `sunrpc`, `biff`, `router`, `ircs`, `orasrv`, `ms-cluster-net`, `kermit`, `isakmp`, `sshell`, `realsecure`, `ircu`, `appleqtc`, `pwdgen`, `rdb-dbs-disp`, `creativepartnr`, `finger`, `ftps`, `giop`, `rsvd`, `hp-alarm-mgr`, `uucp`, `kerberos`, `imap`, `time`, `bootps`, `tftp`, `oracle`, `snmptrap`, `http`, `qmtp`, `radius`, `oracle-em-vp`, `tarantella`, `pcanywheredata`, `ldap`, `mgcp`, `sqlsrv`, `hsrp`, `cisco-net-mgmt`, `smtp`, `pcanywherestat`, `exec`, `send`, `stun`, `syslog`, `ms-sql-m`, `citrix`, `creativeserver`, `cifs`, `cisco-sys`, `cisco-tna`, `ms-dotnetster`, `gtpv1`, `gtpv0`, `imap3`, `fcip-port`, `netbios-dgm`, `sip-tls`, `pop3s`, `cisco-fna`, `802-11-iapp`, `oem-agent`, `cisco-tdp`, `tr-rsrb`, `r-winsock`, `sql-net`, `syslog-conn`, `tacacs-ds`, `h225ras`, `ace-svr`, `dhcp-failover`, `igmpv3lite`, `irc-serv`, `entrust-svcs`, `dbcontrol_agent`, `cisco-svcs`, `ipsec-msft`, `microsoft-ds`, `ms-sna`, `rsvp_tunnel`, `rsvp-encap`, `hp-collector`, `netbios-ns`, `msexch-routing`, `h323`, `l2tp`, `ldap-admin`, `pop3`, `h323callsigalt`, `ms-sql`, `iscsi-target`, `webster`, `lotusnote`, `ipx`, `entrust-svc-hand`, `citriximaclient`, `rtc-pm-port`, `ftp`, `aol`, `xdmcp`, `oraclenames`, `login`, `iscsi`, `ttc`, `imaps`, `socks`, `ssh`, `dnsix`, `daytime`, `sip`, `discard`, `ntp`, `ldaps`, `https`, `vdolive`, `ica`, `net8-cman`, `cuseeme`, `netstat`, `sms`, `streamworks`, `rtelnet`, `who`, `kazaa`, `ssp`, `dbase`, `timed`, `cddbp`, `telnets`, `ymsgr`, `ident`, `bgp`, `ddns-v3`, `vqp`, `irc`, `ipass`, `x11`, `dns`, `lotusmtap`, `mysql`, `nfs`, `msnmsgr`, `netshow`, `sqlserv`, `hp-managed-node`, `ncp`, `shell`, `realmedia`, `msrpc`, `clp`
         """
         return pulumi.get(self, "protocol_name")
+
+
+@pulumi.output_type
+class PolicyObjectSecurityRuleSetSequence(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "actionVariable":
+            suggest = "action_variable"
+        elif key == "destinationDataIpv4PrefixListIds":
+            suggest = "destination_data_ipv4_prefix_list_ids"
+        elif key == "destinationDataIpv6PrefixListIds":
+            suggest = "destination_data_ipv6_prefix_list_ids"
+        elif key == "destinationFqdnListIds":
+            suggest = "destination_fqdn_list_ids"
+        elif key == "destinationFqdns":
+            suggest = "destination_fqdns"
+        elif key == "destinationFqdnsVariable":
+            suggest = "destination_fqdns_variable"
+        elif key == "destinationGeoLocationListIds":
+            suggest = "destination_geo_location_list_ids"
+        elif key == "destinationGeoLocations":
+            suggest = "destination_geo_locations"
+        elif key == "destinationGeoLocationsVariable":
+            suggest = "destination_geo_locations_variable"
+        elif key == "destinationIpv4Prefixes":
+            suggest = "destination_ipv4_prefixes"
+        elif key == "destinationIpv4PrefixesVariable":
+            suggest = "destination_ipv4_prefixes_variable"
+        elif key == "destinationIpv6Prefixes":
+            suggest = "destination_ipv6_prefixes"
+        elif key == "destinationIpv6PrefixesVariable":
+            suggest = "destination_ipv6_prefixes_variable"
+        elif key == "destinationObjectGroupListIds":
+            suggest = "destination_object_group_list_ids"
+        elif key == "destinationPortListIds":
+            suggest = "destination_port_list_ids"
+        elif key == "destinationPorts":
+            suggest = "destination_ports"
+        elif key == "destinationPortsVariable":
+            suggest = "destination_ports_variable"
+        elif key == "nameVariable":
+            suggest = "name_variable"
+        elif key == "protocolNameListIds":
+            suggest = "protocol_name_list_ids"
+        elif key == "protocolNames":
+            suggest = "protocol_names"
+        elif key == "protocolNamesVariable":
+            suggest = "protocol_names_variable"
+        elif key == "sequenceId":
+            suggest = "sequence_id"
+        elif key == "sequenceIdVariable":
+            suggest = "sequence_id_variable"
+        elif key == "sequenceIpType":
+            suggest = "sequence_ip_type"
+        elif key == "sourceDataIpv4PrefixListIds":
+            suggest = "source_data_ipv4_prefix_list_ids"
+        elif key == "sourceDataIpv6PrefixListIds":
+            suggest = "source_data_ipv6_prefix_list_ids"
+        elif key == "sourceGeoLocationListIds":
+            suggest = "source_geo_location_list_ids"
+        elif key == "sourceGeoLocations":
+            suggest = "source_geo_locations"
+        elif key == "sourceGeoLocationsVariable":
+            suggest = "source_geo_locations_variable"
+        elif key == "sourceIpv4Prefixes":
+            suggest = "source_ipv4_prefixes"
+        elif key == "sourceIpv4PrefixesVariable":
+            suggest = "source_ipv4_prefixes_variable"
+        elif key == "sourceIpv6Prefixes":
+            suggest = "source_ipv6_prefixes"
+        elif key == "sourceIpv6PrefixesVariable":
+            suggest = "source_ipv6_prefixes_variable"
+        elif key == "sourceObjectGroupListIds":
+            suggest = "source_object_group_list_ids"
+        elif key == "sourcePortListIds":
+            suggest = "source_port_list_ids"
+        elif key == "sourcePorts":
+            suggest = "source_ports"
+        elif key == "sourcePortsVariable":
+            suggest = "source_ports_variable"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in PolicyObjectSecurityRuleSetSequence. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        PolicyObjectSecurityRuleSetSequence.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        PolicyObjectSecurityRuleSetSequence.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 action: Optional[_builtins.str] = None,
+                 action_variable: Optional[_builtins.str] = None,
+                 destination_data_ipv4_prefix_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 destination_data_ipv6_prefix_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 destination_fqdn_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 destination_fqdns: Optional[Sequence[_builtins.str]] = None,
+                 destination_fqdns_variable: Optional[_builtins.str] = None,
+                 destination_geo_location_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 destination_geo_locations: Optional[Sequence[_builtins.str]] = None,
+                 destination_geo_locations_variable: Optional[_builtins.str] = None,
+                 destination_ipv4_prefixes: Optional[Sequence[_builtins.str]] = None,
+                 destination_ipv4_prefixes_variable: Optional[_builtins.str] = None,
+                 destination_ipv6_prefixes: Optional[Sequence[_builtins.str]] = None,
+                 destination_ipv6_prefixes_variable: Optional[_builtins.str] = None,
+                 destination_object_group_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 destination_port_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 destination_ports: Optional[Sequence[_builtins.str]] = None,
+                 destination_ports_variable: Optional[_builtins.str] = None,
+                 name: Optional[_builtins.str] = None,
+                 name_variable: Optional[_builtins.str] = None,
+                 protocol_name_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 protocol_names: Optional[Sequence[_builtins.str]] = None,
+                 protocol_names_variable: Optional[_builtins.str] = None,
+                 protocols: Optional[Sequence[_builtins.str]] = None,
+                 sequence_id: Optional[_builtins.str] = None,
+                 sequence_id_variable: Optional[_builtins.str] = None,
+                 sequence_ip_type: Optional[_builtins.str] = None,
+                 source_data_ipv4_prefix_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 source_data_ipv6_prefix_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 source_geo_location_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 source_geo_locations: Optional[Sequence[_builtins.str]] = None,
+                 source_geo_locations_variable: Optional[_builtins.str] = None,
+                 source_ipv4_prefixes: Optional[Sequence[_builtins.str]] = None,
+                 source_ipv4_prefixes_variable: Optional[_builtins.str] = None,
+                 source_ipv6_prefixes: Optional[Sequence[_builtins.str]] = None,
+                 source_ipv6_prefixes_variable: Optional[_builtins.str] = None,
+                 source_object_group_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 source_port_list_ids: Optional[Sequence[_builtins.str]] = None,
+                 source_ports: Optional[Sequence[_builtins.str]] = None,
+                 source_ports_variable: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str action: action
+                 - Choices: `pass`, `inspect`, `drop`
+        :param _builtins.str action_variable: Variable name
+        :param _builtins.str destination_fqdns_variable: Variable name
+        :param Sequence[_builtins.str] destination_geo_locations: Destination Geolocation
+        :param _builtins.str destination_geo_locations_variable: Variable name
+        :param _builtins.str destination_ipv4_prefixes_variable: Variable name
+        :param _builtins.str destination_ipv6_prefixes_variable: Variable name
+        :param _builtins.str destination_ports_variable: Variable name
+        :param _builtins.str name: Sequence name
+        :param _builtins.str name_variable: Variable name
+        :param _builtins.str protocol_names_variable: Variable name
+        :param Sequence[_builtins.str] protocols: protocol
+        :param _builtins.str sequence_id: Sequence Id
+        :param _builtins.str sequence_id_variable: Variable name
+        :param _builtins.str sequence_ip_type: ipv4/ ipv6
+                 - Choices: `ipv4`, `ipv6`
+        :param Sequence[_builtins.str] source_geo_locations: Source Geolocation
+        :param _builtins.str source_geo_locations_variable: Variable name
+        :param _builtins.str source_ipv4_prefixes_variable: Variable name
+        :param _builtins.str source_ipv6_prefixes_variable: Variable name
+        :param _builtins.str source_ports_variable: Variable name
+        """
+        if action is not None:
+            pulumi.set(__self__, "action", action)
+        if action_variable is not None:
+            pulumi.set(__self__, "action_variable", action_variable)
+        if destination_data_ipv4_prefix_list_ids is not None:
+            pulumi.set(__self__, "destination_data_ipv4_prefix_list_ids", destination_data_ipv4_prefix_list_ids)
+        if destination_data_ipv6_prefix_list_ids is not None:
+            pulumi.set(__self__, "destination_data_ipv6_prefix_list_ids", destination_data_ipv6_prefix_list_ids)
+        if destination_fqdn_list_ids is not None:
+            pulumi.set(__self__, "destination_fqdn_list_ids", destination_fqdn_list_ids)
+        if destination_fqdns is not None:
+            pulumi.set(__self__, "destination_fqdns", destination_fqdns)
+        if destination_fqdns_variable is not None:
+            pulumi.set(__self__, "destination_fqdns_variable", destination_fqdns_variable)
+        if destination_geo_location_list_ids is not None:
+            pulumi.set(__self__, "destination_geo_location_list_ids", destination_geo_location_list_ids)
+        if destination_geo_locations is not None:
+            pulumi.set(__self__, "destination_geo_locations", destination_geo_locations)
+        if destination_geo_locations_variable is not None:
+            pulumi.set(__self__, "destination_geo_locations_variable", destination_geo_locations_variable)
+        if destination_ipv4_prefixes is not None:
+            pulumi.set(__self__, "destination_ipv4_prefixes", destination_ipv4_prefixes)
+        if destination_ipv4_prefixes_variable is not None:
+            pulumi.set(__self__, "destination_ipv4_prefixes_variable", destination_ipv4_prefixes_variable)
+        if destination_ipv6_prefixes is not None:
+            pulumi.set(__self__, "destination_ipv6_prefixes", destination_ipv6_prefixes)
+        if destination_ipv6_prefixes_variable is not None:
+            pulumi.set(__self__, "destination_ipv6_prefixes_variable", destination_ipv6_prefixes_variable)
+        if destination_object_group_list_ids is not None:
+            pulumi.set(__self__, "destination_object_group_list_ids", destination_object_group_list_ids)
+        if destination_port_list_ids is not None:
+            pulumi.set(__self__, "destination_port_list_ids", destination_port_list_ids)
+        if destination_ports is not None:
+            pulumi.set(__self__, "destination_ports", destination_ports)
+        if destination_ports_variable is not None:
+            pulumi.set(__self__, "destination_ports_variable", destination_ports_variable)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if name_variable is not None:
+            pulumi.set(__self__, "name_variable", name_variable)
+        if protocol_name_list_ids is not None:
+            pulumi.set(__self__, "protocol_name_list_ids", protocol_name_list_ids)
+        if protocol_names is not None:
+            pulumi.set(__self__, "protocol_names", protocol_names)
+        if protocol_names_variable is not None:
+            pulumi.set(__self__, "protocol_names_variable", protocol_names_variable)
+        if protocols is not None:
+            pulumi.set(__self__, "protocols", protocols)
+        if sequence_id is not None:
+            pulumi.set(__self__, "sequence_id", sequence_id)
+        if sequence_id_variable is not None:
+            pulumi.set(__self__, "sequence_id_variable", sequence_id_variable)
+        if sequence_ip_type is not None:
+            pulumi.set(__self__, "sequence_ip_type", sequence_ip_type)
+        if source_data_ipv4_prefix_list_ids is not None:
+            pulumi.set(__self__, "source_data_ipv4_prefix_list_ids", source_data_ipv4_prefix_list_ids)
+        if source_data_ipv6_prefix_list_ids is not None:
+            pulumi.set(__self__, "source_data_ipv6_prefix_list_ids", source_data_ipv6_prefix_list_ids)
+        if source_geo_location_list_ids is not None:
+            pulumi.set(__self__, "source_geo_location_list_ids", source_geo_location_list_ids)
+        if source_geo_locations is not None:
+            pulumi.set(__self__, "source_geo_locations", source_geo_locations)
+        if source_geo_locations_variable is not None:
+            pulumi.set(__self__, "source_geo_locations_variable", source_geo_locations_variable)
+        if source_ipv4_prefixes is not None:
+            pulumi.set(__self__, "source_ipv4_prefixes", source_ipv4_prefixes)
+        if source_ipv4_prefixes_variable is not None:
+            pulumi.set(__self__, "source_ipv4_prefixes_variable", source_ipv4_prefixes_variable)
+        if source_ipv6_prefixes is not None:
+            pulumi.set(__self__, "source_ipv6_prefixes", source_ipv6_prefixes)
+        if source_ipv6_prefixes_variable is not None:
+            pulumi.set(__self__, "source_ipv6_prefixes_variable", source_ipv6_prefixes_variable)
+        if source_object_group_list_ids is not None:
+            pulumi.set(__self__, "source_object_group_list_ids", source_object_group_list_ids)
+        if source_port_list_ids is not None:
+            pulumi.set(__self__, "source_port_list_ids", source_port_list_ids)
+        if source_ports is not None:
+            pulumi.set(__self__, "source_ports", source_ports)
+        if source_ports_variable is not None:
+            pulumi.set(__self__, "source_ports_variable", source_ports_variable)
+
+    @_builtins.property
+    @pulumi.getter
+    def action(self) -> Optional[_builtins.str]:
+        """
+        action
+          - Choices: `pass`, `inspect`, `drop`
+        """
+        return pulumi.get(self, "action")
+
+    @_builtins.property
+    @pulumi.getter(name="actionVariable")
+    def action_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "action_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationDataIpv4PrefixListIds")
+    def destination_data_ipv4_prefix_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "destination_data_ipv4_prefix_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationDataIpv6PrefixListIds")
+    def destination_data_ipv6_prefix_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "destination_data_ipv6_prefix_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationFqdnListIds")
+    def destination_fqdn_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "destination_fqdn_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationFqdns")
+    def destination_fqdns(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "destination_fqdns")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationFqdnsVariable")
+    def destination_fqdns_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_fqdns_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationGeoLocationListIds")
+    def destination_geo_location_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "destination_geo_location_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationGeoLocations")
+    def destination_geo_locations(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Destination Geolocation
+        """
+        return pulumi.get(self, "destination_geo_locations")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationGeoLocationsVariable")
+    def destination_geo_locations_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_geo_locations_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationIpv4Prefixes")
+    def destination_ipv4_prefixes(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "destination_ipv4_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationIpv4PrefixesVariable")
+    def destination_ipv4_prefixes_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_ipv4_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationIpv6Prefixes")
+    def destination_ipv6_prefixes(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "destination_ipv6_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationIpv6PrefixesVariable")
+    def destination_ipv6_prefixes_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_ipv6_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationObjectGroupListIds")
+    def destination_object_group_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "destination_object_group_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationPortListIds")
+    def destination_port_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "destination_port_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationPorts")
+    def destination_ports(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "destination_ports")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationPortsVariable")
+    def destination_ports_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_ports_variable")
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> Optional[_builtins.str]:
+        """
+        Sequence name
+        """
+        return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter(name="nameVariable")
+    def name_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "name_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="protocolNameListIds")
+    def protocol_name_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "protocol_name_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="protocolNames")
+    def protocol_names(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "protocol_names")
+
+    @_builtins.property
+    @pulumi.getter(name="protocolNamesVariable")
+    def protocol_names_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "protocol_names_variable")
+
+    @_builtins.property
+    @pulumi.getter
+    def protocols(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        protocol
+        """
+        return pulumi.get(self, "protocols")
+
+    @_builtins.property
+    @pulumi.getter(name="sequenceId")
+    def sequence_id(self) -> Optional[_builtins.str]:
+        """
+        Sequence Id
+        """
+        return pulumi.get(self, "sequence_id")
+
+    @_builtins.property
+    @pulumi.getter(name="sequenceIdVariable")
+    def sequence_id_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "sequence_id_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="sequenceIpType")
+    def sequence_ip_type(self) -> Optional[_builtins.str]:
+        """
+        ipv4/ ipv6
+          - Choices: `ipv4`, `ipv6`
+        """
+        return pulumi.get(self, "sequence_ip_type")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceDataIpv4PrefixListIds")
+    def source_data_ipv4_prefix_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "source_data_ipv4_prefix_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceDataIpv6PrefixListIds")
+    def source_data_ipv6_prefix_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "source_data_ipv6_prefix_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceGeoLocationListIds")
+    def source_geo_location_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "source_geo_location_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceGeoLocations")
+    def source_geo_locations(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Source Geolocation
+        """
+        return pulumi.get(self, "source_geo_locations")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceGeoLocationsVariable")
+    def source_geo_locations_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_geo_locations_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpv4Prefixes")
+    def source_ipv4_prefixes(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "source_ipv4_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpv4PrefixesVariable")
+    def source_ipv4_prefixes_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_ipv4_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpv6Prefixes")
+    def source_ipv6_prefixes(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "source_ipv6_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpv6PrefixesVariable")
+    def source_ipv6_prefixes_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_ipv6_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceObjectGroupListIds")
+    def source_object_group_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "source_object_group_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="sourcePortListIds")
+    def source_port_list_ids(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "source_port_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="sourcePorts")
+    def source_ports(self) -> Optional[Sequence[_builtins.str]]:
+        return pulumi.get(self, "source_ports")
+
+    @_builtins.property
+    @pulumi.getter(name="sourcePortsVariable")
+    def source_ports_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_ports_variable")
 
 
 @pulumi.output_type
@@ -34688,6 +35718,7 @@ class ServiceLanVpnFeatureIpv4StaticRoute(dict):
         """
         :param _builtins.int administrative_distance: Gateway distance, Attribute conditional on `gateway` equal to `null0`
                  - Range: `1`-`255`
+                 - Default value: `1`
         :param _builtins.str administrative_distance_variable: Variable name, Attribute conditional on `gateway` equal to `null0`
         :param _builtins.bool dhcp: IPv4 Route Gateway DHCP, Attribute conditional on `gateway` equal to `dhcp`
         :param _builtins.str gateway: Gateway type
@@ -34736,6 +35767,7 @@ class ServiceLanVpnFeatureIpv4StaticRoute(dict):
         """
         Gateway distance, Attribute conditional on `gateway` equal to `null0`
           - Range: `1`-`255`
+          - Default value: `1`
         """
         return pulumi.get(self, "administrative_distance")
 
@@ -34927,6 +35959,7 @@ class ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHop(dict):
         :param _builtins.str address_variable: Variable name
         :param _builtins.int administrative_distance: Administrative distance
                  - Range: `1`-`255`
+                 - Default value: `1`
         :param _builtins.str administrative_distance_variable: Variable name
         """
         if address is not None:
@@ -34960,6 +35993,7 @@ class ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHop(dict):
         """
         Administrative distance
           - Range: `1`-`255`
+          - Default value: `1`
         """
         return pulumi.get(self, "administrative_distance")
 
@@ -35461,6 +36495,7 @@ class ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHop(dict):
         :param _builtins.str address_variable: Variable name
         :param _builtins.int administrative_distance: Administrative distance
                  - Range: `1`-`254`
+                 - Default value: `1`
         :param _builtins.str administrative_distance_variable: Variable name
         """
         if address is not None:
@@ -35494,6 +36529,7 @@ class ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHop(dict):
         """
         Administrative distance
           - Range: `1`-`254`
+          - Default value: `1`
         """
         return pulumi.get(self, "administrative_distance")
 
@@ -46799,7 +47835,7 @@ class ServiceWirelessLanFeatureSsid(dict):
         :param _builtins.str radius_server_secret: Set RADIUS server shared secret, Attribute conditional on `security_type` equal to `enterprise`
         :param _builtins.str radius_server_secret_variable: Variable name, Attribute conditional on `security_type` equal to `enterprise`
         :param _builtins.str security_type: Select security type
-                 - Choices: `personal`, `open`, `enterprise`
+                 - Choices: `enterprise`, `personal`, `open`
         :param _builtins.str ssid_name: Configure wlan SSID
         :param _builtins.int vlan_id: Set VLAN ID
                  - Range: `1`-`4094`
@@ -46987,7 +48023,7 @@ class ServiceWirelessLanFeatureSsid(dict):
     def security_type(self) -> Optional[_builtins.str]:
         """
         Select security type
-          - Choices: `personal`, `open`, `enterprise`
+          - Choices: `enterprise`, `personal`, `open`
         """
         return pulumi.get(self, "security_type")
 
@@ -48886,7 +49922,7 @@ class SseZscalerFeatureSubLocation(dict):
                  - Choices: `MINUTE`, `HOUR`, `DAY`
                  - Default value: `MINUTE`
         :param _builtins.str display_time_unit_variable: Variable name, Attribute conditional on `surrogate_ip` equal to `true`
-        :param _builtins.float dn_bandwidth: , Attribute conditional on `enforce_bandwidth_control` equal to `override`
+        :param _builtins.float dn_bandwidth: Download Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `override`
                  - Range: `0.1`-`99999`
         :param _builtins.str dn_bandwidth_variable: Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `override`
         :param _builtins.str enforce_bandwidth_control: Enforce Bandwidth Control for sub location
@@ -48900,9 +49936,11 @@ class SseZscalerFeatureSubLocation(dict):
                  - At Least: `1`
                  - Default value: `1`
         :param _builtins.str idle_time_variable: Variable name, Attribute conditional on `surrogate_ip` equal to `true`
+        :param Sequence['SseZscalerFeatureSubLocationInternalIpArgs'] internal_ips: Internal Ip address
         :param _builtins.bool ip_enforced_for_known_browsers: If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
                  - Default value: `false`
         :param _builtins.str ip_enforced_for_known_browsers_variable: Variable name
+        :param _builtins.str name: Sub-location name
         :param _builtins.str name_variable: Variable name
         :param _builtins.bool ofw_enabled: Enforces firewall at the location
                  - Default value: `false`
@@ -48916,10 +49954,11 @@ class SseZscalerFeatureSubLocation(dict):
         :param _builtins.str refresh_time_unit_variable: Variable name, Attribute conditional on `ip_enforced_for_known_browsers` equal to `true`
         :param _builtins.str refresh_time_variable: Variable name, Attribute conditional on `ip_enforced_for_known_browsers` equal to `true`
         :param _builtins.str service_vpn_variable: Variable name
+        :param Sequence[_builtins.str] service_vpns: Sub-location Service VPN
         :param _builtins.bool surrogate_ip: Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic., Attribute conditional on `auth_required` equal to `true`
                  - Default value: `false`
         :param _builtins.str surrogate_ip_variable: Variable name, Attribute conditional on `auth_required` equal to `true`
-        :param _builtins.float up_bandwidth: , Attribute conditional on `enforce_bandwidth_control` equal to `override`
+        :param _builtins.float up_bandwidth: Upload Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `override`
                  - Range: `0.1`-`99999`
         :param _builtins.str up_bandwidth_variable: Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `override`
         """
@@ -49106,7 +50145,7 @@ class SseZscalerFeatureSubLocation(dict):
     @pulumi.getter(name="dnBandwidth")
     def dn_bandwidth(self) -> Optional[_builtins.float]:
         """
-        , Attribute conditional on `enforce_bandwidth_control` equal to `override`
+        Download Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `override`
           - Range: `0.1`-`99999`
         """
         return pulumi.get(self, "dn_bandwidth")
@@ -49175,6 +50214,9 @@ class SseZscalerFeatureSubLocation(dict):
     @_builtins.property
     @pulumi.getter(name="internalIps")
     def internal_ips(self) -> Optional[Sequence['outputs.SseZscalerFeatureSubLocationInternalIp']]:
+        """
+        Internal Ip address
+        """
         return pulumi.get(self, "internal_ips")
 
     @_builtins.property
@@ -49197,6 +50239,9 @@ class SseZscalerFeatureSubLocation(dict):
     @_builtins.property
     @pulumi.getter
     def name(self) -> Optional[_builtins.str]:
+        """
+        Sub-location name
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
@@ -49271,6 +50316,9 @@ class SseZscalerFeatureSubLocation(dict):
     @_builtins.property
     @pulumi.getter(name="serviceVpns")
     def service_vpns(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Sub-location Service VPN
+        """
         return pulumi.get(self, "service_vpns")
 
     @_builtins.property
@@ -49294,7 +50342,7 @@ class SseZscalerFeatureSubLocation(dict):
     @pulumi.getter(name="upBandwidth")
     def up_bandwidth(self) -> Optional[_builtins.float]:
         """
-        , Attribute conditional on `enforce_bandwidth_control` equal to `override`
+        Upload Bandwidth in Mbps, Attribute conditional on `enforce_bandwidth_control` equal to `override`
           - Range: `0.1`-`99999`
         """
         return pulumi.get(self, "up_bandwidth")
@@ -54409,12 +55457,14 @@ class TopologyCustomControlFeatureSequence(dict):
                  name: Optional[_builtins.str] = None,
                  type: Optional[_builtins.str] = None):
         """
+        :param Sequence['TopologyCustomControlFeatureSequenceActionEntryArgs'] action_entries: List of action entries
         :param _builtins.str base_action: Base Action
                  - Choices: `reject`, `accept`
         :param _builtins.int id: Sequence Id
                  - Range: `1`-`65536`
         :param _builtins.str ip_type: Sequence IP Type
                  - Choices: `ipv4`, `ipv6`, `all`
+        :param Sequence['TopologyCustomControlFeatureSequenceMatchEntryArgs'] match_entries: Set of match entries
         :param _builtins.str name: Sequence Name
         :param _builtins.str type: Sequence Type
                  - Choices: `route`, `tloc`
@@ -54437,6 +55487,9 @@ class TopologyCustomControlFeatureSequence(dict):
     @_builtins.property
     @pulumi.getter(name="actionEntries")
     def action_entries(self) -> Optional[Sequence['outputs.TopologyCustomControlFeatureSequenceActionEntry']]:
+        """
+        List of action entries
+        """
         return pulumi.get(self, "action_entries")
 
     @_builtins.property
@@ -54469,6 +55522,9 @@ class TopologyCustomControlFeatureSequence(dict):
     @_builtins.property
     @pulumi.getter(name="matchEntries")
     def match_entries(self) -> Optional[Sequence['outputs.TopologyCustomControlFeatureSequenceMatchEntry']]:
+        """
+        Set of match entries
+        """
         return pulumi.get(self, "match_entries")
 
     @_builtins.property
@@ -72435,7 +73491,7 @@ class GetApplicationPriorityTrafficPolicyPolicySequenceActionResult(dict):
                  set_parameters: Sequence['outputs.GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterResult'],
                  sla_classes: Sequence['outputs.GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassResult']):
         """
-        :param Sequence[_builtins.str] backup_sla_preferred_colors: Backup SLA perferred color
+        :param Sequence[_builtins.str] backup_sla_preferred_colors: Backup SLA preferred color
         :param Sequence['GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgs'] sla_classes: slaClass
         """
         pulumi.set(__self__, "appqoe_dre_optimization", appqoe_dre_optimization)
@@ -72483,7 +73539,7 @@ class GetApplicationPriorityTrafficPolicyPolicySequenceActionResult(dict):
     @pulumi.getter(name="backupSlaPreferredColors")
     def backup_sla_preferred_colors(self) -> Sequence[_builtins.str]:
         """
-        Backup SLA perferred color
+        Backup SLA preferred color
         """
         return pulumi.get(self, "backup_sla_preferred_colors")
 
@@ -72609,6 +73665,7 @@ class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterResult(
                  next_hop_loose: _builtins.bool,
                  policer_id: _builtins.str,
                  preferred_color_group_id: _builtins.str,
+                 preferred_color_group_restrict: _builtins.bool,
                  preferred_remote_color_restrict: _builtins.bool,
                  preferred_remote_colors: Sequence[_builtins.str],
                  service_chain_fallback_to_routing: _builtins.bool,
@@ -72632,6 +73689,9 @@ class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterResult(
                  tloc_ip: _builtins.str,
                  tloc_list_id: _builtins.str,
                  vpn: _builtins.int):
+        """
+        :param _builtins.bool preferred_color_group_restrict: Restrict traffic to the preferred color group, requires `preferred_color_group_id` to be set
+        """
         pulumi.set(__self__, "dscp", dscp)
         pulumi.set(__self__, "forwarding_class_list_id", forwarding_class_list_id)
         pulumi.set(__self__, "local_tloc_list_colors", local_tloc_list_colors)
@@ -72642,6 +73702,7 @@ class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterResult(
         pulumi.set(__self__, "next_hop_loose", next_hop_loose)
         pulumi.set(__self__, "policer_id", policer_id)
         pulumi.set(__self__, "preferred_color_group_id", preferred_color_group_id)
+        pulumi.set(__self__, "preferred_color_group_restrict", preferred_color_group_restrict)
         pulumi.set(__self__, "preferred_remote_color_restrict", preferred_remote_color_restrict)
         pulumi.set(__self__, "preferred_remote_colors", preferred_remote_colors)
         pulumi.set(__self__, "service_chain_fallback_to_routing", service_chain_fallback_to_routing)
@@ -72715,6 +73776,14 @@ class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterResult(
     @pulumi.getter(name="preferredColorGroupId")
     def preferred_color_group_id(self) -> _builtins.str:
         return pulumi.get(self, "preferred_color_group_id")
+
+    @_builtins.property
+    @pulumi.getter(name="preferredColorGroupRestrict")
+    def preferred_color_group_restrict(self) -> _builtins.bool:
+        """
+        Restrict traffic to the preferred color group, requires `preferred_color_group_id` to be set
+        """
+        return pulumi.get(self, "preferred_color_group_restrict")
 
     @_builtins.property
     @pulumi.getter(name="preferredRemoteColorRestrict")
@@ -72837,13 +73906,18 @@ class GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassResult(dict
     def __init__(__self__, *,
                  fallback_to_best_path: _builtins.bool,
                  preferred_color_group_list_id: _builtins.str,
+                 preferred_color_group_restrict: _builtins.bool,
                  preferred_colors: Sequence[_builtins.str],
                  preferred_remote_colors: Sequence[_builtins.str],
                  remote_color_restrict: _builtins.bool,
                  sla_class_list_id: _builtins.str,
                  strict: _builtins.bool):
+        """
+        :param _builtins.bool preferred_color_group_restrict: Restrict traffic to the preferred color group, requires `preferred_color_group_list_id` to be set
+        """
         pulumi.set(__self__, "fallback_to_best_path", fallback_to_best_path)
         pulumi.set(__self__, "preferred_color_group_list_id", preferred_color_group_list_id)
+        pulumi.set(__self__, "preferred_color_group_restrict", preferred_color_group_restrict)
         pulumi.set(__self__, "preferred_colors", preferred_colors)
         pulumi.set(__self__, "preferred_remote_colors", preferred_remote_colors)
         pulumi.set(__self__, "remote_color_restrict", remote_color_restrict)
@@ -72859,6 +73933,14 @@ class GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassResult(dict
     @pulumi.getter(name="preferredColorGroupListId")
     def preferred_color_group_list_id(self) -> _builtins.str:
         return pulumi.get(self, "preferred_color_group_list_id")
+
+    @_builtins.property
+    @pulumi.getter(name="preferredColorGroupRestrict")
+    def preferred_color_group_restrict(self) -> _builtins.bool:
+        """
+        Restrict traffic to the preferred color group, requires `preferred_color_group_list_id` to be set
+        """
+        return pulumi.get(self, "preferred_color_group_restrict")
 
     @_builtins.property
     @pulumi.getter(name="preferredColors")
@@ -72899,6 +73981,7 @@ class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntryResult(dict):
                  dns: _builtins.str,
                  dns_application_list_id: _builtins.str,
                  dscps: Sequence[_builtins.int],
+                 hierarchy_ids: Sequence[_builtins.str],
                  icmp6_messages: Sequence[_builtins.str],
                  icmp_messages: Sequence[_builtins.str],
                  packet_length: _builtins.str,
@@ -72921,6 +74004,7 @@ class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntryResult(dict):
         :param _builtins.str destination_region: Destination Region
         :param _builtins.str dns: Dns
         :param Sequence[_builtins.int] dscps: DSCP numbers
+        :param Sequence[_builtins.str] hierarchy_ids: Site List
         :param Sequence[_builtins.str] icmp6_messages: ICMP6 Message
         :param Sequence[_builtins.str] icmp_messages: ICMP Message
         :param _builtins.str packet_length: Packet Length
@@ -72944,6 +74028,7 @@ class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntryResult(dict):
         pulumi.set(__self__, "dns", dns)
         pulumi.set(__self__, "dns_application_list_id", dns_application_list_id)
         pulumi.set(__self__, "dscps", dscps)
+        pulumi.set(__self__, "hierarchy_ids", hierarchy_ids)
         pulumi.set(__self__, "icmp6_messages", icmp6_messages)
         pulumi.set(__self__, "icmp_messages", icmp_messages)
         pulumi.set(__self__, "packet_length", packet_length)
@@ -73027,6 +74112,14 @@ class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntryResult(dict):
         DSCP numbers
         """
         return pulumi.get(self, "dscps")
+
+    @_builtins.property
+    @pulumi.getter(name="hierarchyIds")
+    def hierarchy_ids(self) -> Sequence[_builtins.str]:
+        """
+        Site List
+        """
+        return pulumi.get(self, "hierarchy_ids")
 
     @_builtins.property
     @pulumi.getter(name="icmp6Messages")
@@ -88096,18 +89189,25 @@ class GetEmbeddedSecurityNgfwPolicySequenceResult(dict):
                  actions: Sequence['outputs.GetEmbeddedSecurityNgfwPolicySequenceActionResult'],
                  base_action: _builtins.str,
                  disable_sequence: _builtins.bool,
+                 is_rule_set: _builtins.bool,
                  match_entries: Sequence['outputs.GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult'],
+                 sequence_comment: _builtins.str,
                  sequence_id: _builtins.str,
+                 sequence_ip_type: _builtins.str,
                  sequence_name: _builtins.str,
                  sequence_type: _builtins.str):
         """
         :param Sequence['GetEmbeddedSecurityNgfwPolicySequenceActionArgs'] actions: can be empty array or with type or parameter
+        :param _builtins.str sequence_ip_type: IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones
         """
         pulumi.set(__self__, "actions", actions)
         pulumi.set(__self__, "base_action", base_action)
         pulumi.set(__self__, "disable_sequence", disable_sequence)
+        pulumi.set(__self__, "is_rule_set", is_rule_set)
         pulumi.set(__self__, "match_entries", match_entries)
+        pulumi.set(__self__, "sequence_comment", sequence_comment)
         pulumi.set(__self__, "sequence_id", sequence_id)
+        pulumi.set(__self__, "sequence_ip_type", sequence_ip_type)
         pulumi.set(__self__, "sequence_name", sequence_name)
         pulumi.set(__self__, "sequence_type", sequence_type)
 
@@ -88130,14 +89230,32 @@ class GetEmbeddedSecurityNgfwPolicySequenceResult(dict):
         return pulumi.get(self, "disable_sequence")
 
     @_builtins.property
+    @pulumi.getter(name="isRuleSet")
+    def is_rule_set(self) -> _builtins.bool:
+        return pulumi.get(self, "is_rule_set")
+
+    @_builtins.property
     @pulumi.getter(name="matchEntries")
     def match_entries(self) -> Sequence['outputs.GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult']:
         return pulumi.get(self, "match_entries")
 
     @_builtins.property
+    @pulumi.getter(name="sequenceComment")
+    def sequence_comment(self) -> _builtins.str:
+        return pulumi.get(self, "sequence_comment")
+
+    @_builtins.property
     @pulumi.getter(name="sequenceId")
     def sequence_id(self) -> _builtins.str:
         return pulumi.get(self, "sequence_id")
+
+    @_builtins.property
+    @pulumi.getter(name="sequenceIpType")
+    def sequence_ip_type(self) -> _builtins.str:
+        """
+        IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones
+        """
+        return pulumi.get(self, "sequence_ip_type")
 
     @_builtins.property
     @pulumi.getter(name="sequenceName")
@@ -88182,6 +89300,7 @@ class GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult(dict):
                  app_list_ids: Sequence[_builtins.str],
                  application_families: Sequence[_builtins.str],
                  applications: Sequence[_builtins.str],
+                 destination_data_ipv6_prefix_list_ids: Sequence[_builtins.str],
                  destination_data_prefix_list_ids: Sequence[_builtins.str],
                  destination_data_prefixes: Sequence[_builtins.str],
                  destination_data_prefixes_variable: _builtins.str,
@@ -88191,6 +89310,9 @@ class GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult(dict):
                  destination_geo_location_list_ids: Sequence[_builtins.str],
                  destination_geo_locations: Sequence[_builtins.str],
                  destination_geo_locations_variable: _builtins.str,
+                 destination_ipv6_data_prefixes: Sequence[_builtins.str],
+                 destination_ipv6_data_prefixes_variable: _builtins.str,
+                 destination_object_group_list_ids: Sequence[_builtins.str],
                  destination_port_list_ids: Sequence[_builtins.str],
                  destination_ports: Sequence[_builtins.str],
                  destination_ports_variable: _builtins.str,
@@ -88200,6 +89322,8 @@ class GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult(dict):
                  protocol_name_list_ids: Sequence[_builtins.str],
                  protocol_names: Sequence[_builtins.str],
                  protocols: Sequence[_builtins.str],
+                 rule_set_list_ids: Sequence[_builtins.str],
+                 source_data_ipv6_prefix_list_ids: Sequence[_builtins.str],
                  source_data_prefix_list_ids: Sequence[_builtins.str],
                  source_data_prefixes: Sequence[_builtins.str],
                  source_data_prefixes_variable: _builtins.str,
@@ -88209,23 +89333,37 @@ class GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult(dict):
                  source_identity_list_ids: Sequence[_builtins.str],
                  source_identity_usergroups: Sequence[_builtins.str],
                  source_identity_users: Sequence[_builtins.str],
+                 source_ipv6_data_prefixes: Sequence[_builtins.str],
+                 source_ipv6_data_prefixes_variable: _builtins.str,
+                 source_object_group_list_ids: Sequence[_builtins.str],
                  source_port_list_ids: Sequence[_builtins.str],
                  source_ports: Sequence[_builtins.str],
                  source_ports_variable: _builtins.str,
                  source_scalable_group_tag_list_ids: Sequence[_builtins.str],
                  source_security_group_list_ids: Sequence[_builtins.str]):
         """
+        :param Sequence[_builtins.str] destination_data_ipv6_prefix_list_ids: Only supported on sequences with `sequence_ip_type` set to `ipv6`
         :param _builtins.str destination_data_prefixes_variable: Variable name
         :param _builtins.str destination_fqdns_variable: Variable name
         :param _builtins.str destination_geo_locations_variable: Variable name
+        :param Sequence[_builtins.str] destination_ipv6_data_prefixes: Only supported on sequences with `sequence_ip_type` set to `ipv6`
+        :param _builtins.str destination_ipv6_data_prefixes_variable: Variable name
         :param _builtins.str destination_ports_variable: Variable name
+        :param Sequence[_builtins.str] destination_security_group_list_ids: Deprecated, use `destination_object_group_list_ids` instead
+        :param Sequence[_builtins.str] rule_set_list_ids: Security rule set IDs, requires `is_rule_set` set to `true` on the sequence
+        :param Sequence[_builtins.str] source_data_ipv6_prefix_list_ids: Only supported on sequences with `sequence_ip_type` set to `ipv6`
         :param _builtins.str source_data_prefixes_variable: Variable name
         :param _builtins.str source_geo_locations_variable: Variable name
+        :param Sequence[_builtins.str] source_ipv6_data_prefixes: Only supported on sequences with `sequence_ip_type` set to `ipv6`
+        :param _builtins.str source_ipv6_data_prefixes_variable: Variable name
+        :param Sequence[_builtins.str] source_object_group_list_ids: Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012)
         :param _builtins.str source_ports_variable: Variable name
+        :param Sequence[_builtins.str] source_security_group_list_ids: Deprecated, use `source_object_group_list_ids` instead
         """
         pulumi.set(__self__, "app_list_ids", app_list_ids)
         pulumi.set(__self__, "application_families", application_families)
         pulumi.set(__self__, "applications", applications)
+        pulumi.set(__self__, "destination_data_ipv6_prefix_list_ids", destination_data_ipv6_prefix_list_ids)
         pulumi.set(__self__, "destination_data_prefix_list_ids", destination_data_prefix_list_ids)
         pulumi.set(__self__, "destination_data_prefixes", destination_data_prefixes)
         pulumi.set(__self__, "destination_data_prefixes_variable", destination_data_prefixes_variable)
@@ -88235,6 +89373,9 @@ class GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult(dict):
         pulumi.set(__self__, "destination_geo_location_list_ids", destination_geo_location_list_ids)
         pulumi.set(__self__, "destination_geo_locations", destination_geo_locations)
         pulumi.set(__self__, "destination_geo_locations_variable", destination_geo_locations_variable)
+        pulumi.set(__self__, "destination_ipv6_data_prefixes", destination_ipv6_data_prefixes)
+        pulumi.set(__self__, "destination_ipv6_data_prefixes_variable", destination_ipv6_data_prefixes_variable)
+        pulumi.set(__self__, "destination_object_group_list_ids", destination_object_group_list_ids)
         pulumi.set(__self__, "destination_port_list_ids", destination_port_list_ids)
         pulumi.set(__self__, "destination_ports", destination_ports)
         pulumi.set(__self__, "destination_ports_variable", destination_ports_variable)
@@ -88244,6 +89385,8 @@ class GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult(dict):
         pulumi.set(__self__, "protocol_name_list_ids", protocol_name_list_ids)
         pulumi.set(__self__, "protocol_names", protocol_names)
         pulumi.set(__self__, "protocols", protocols)
+        pulumi.set(__self__, "rule_set_list_ids", rule_set_list_ids)
+        pulumi.set(__self__, "source_data_ipv6_prefix_list_ids", source_data_ipv6_prefix_list_ids)
         pulumi.set(__self__, "source_data_prefix_list_ids", source_data_prefix_list_ids)
         pulumi.set(__self__, "source_data_prefixes", source_data_prefixes)
         pulumi.set(__self__, "source_data_prefixes_variable", source_data_prefixes_variable)
@@ -88253,6 +89396,9 @@ class GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult(dict):
         pulumi.set(__self__, "source_identity_list_ids", source_identity_list_ids)
         pulumi.set(__self__, "source_identity_usergroups", source_identity_usergroups)
         pulumi.set(__self__, "source_identity_users", source_identity_users)
+        pulumi.set(__self__, "source_ipv6_data_prefixes", source_ipv6_data_prefixes)
+        pulumi.set(__self__, "source_ipv6_data_prefixes_variable", source_ipv6_data_prefixes_variable)
+        pulumi.set(__self__, "source_object_group_list_ids", source_object_group_list_ids)
         pulumi.set(__self__, "source_port_list_ids", source_port_list_ids)
         pulumi.set(__self__, "source_ports", source_ports)
         pulumi.set(__self__, "source_ports_variable", source_ports_variable)
@@ -88273,6 +89419,14 @@ class GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult(dict):
     @pulumi.getter
     def applications(self) -> Sequence[_builtins.str]:
         return pulumi.get(self, "applications")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationDataIpv6PrefixListIds")
+    def destination_data_ipv6_prefix_list_ids(self) -> Sequence[_builtins.str]:
+        """
+        Only supported on sequences with `sequence_ip_type` set to `ipv6`
+        """
+        return pulumi.get(self, "destination_data_ipv6_prefix_list_ids")
 
     @_builtins.property
     @pulumi.getter(name="destinationDataPrefixListIds")
@@ -88329,6 +89483,27 @@ class GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult(dict):
         return pulumi.get(self, "destination_geo_locations_variable")
 
     @_builtins.property
+    @pulumi.getter(name="destinationIpv6DataPrefixes")
+    def destination_ipv6_data_prefixes(self) -> Sequence[_builtins.str]:
+        """
+        Only supported on sequences with `sequence_ip_type` set to `ipv6`
+        """
+        return pulumi.get(self, "destination_ipv6_data_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationIpv6DataPrefixesVariable")
+    def destination_ipv6_data_prefixes_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_ipv6_data_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationObjectGroupListIds")
+    def destination_object_group_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "destination_object_group_list_ids")
+
+    @_builtins.property
     @pulumi.getter(name="destinationPortListIds")
     def destination_port_list_ids(self) -> Sequence[_builtins.str]:
         return pulumi.get(self, "destination_port_list_ids")
@@ -88354,6 +89529,9 @@ class GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult(dict):
     @_builtins.property
     @pulumi.getter(name="destinationSecurityGroupListIds")
     def destination_security_group_list_ids(self) -> Sequence[_builtins.str]:
+        """
+        Deprecated, use `destination_object_group_list_ids` instead
+        """
         return pulumi.get(self, "destination_security_group_list_ids")
 
     @_builtins.property
@@ -88375,6 +89553,22 @@ class GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult(dict):
     @pulumi.getter
     def protocols(self) -> Sequence[_builtins.str]:
         return pulumi.get(self, "protocols")
+
+    @_builtins.property
+    @pulumi.getter(name="ruleSetListIds")
+    def rule_set_list_ids(self) -> Sequence[_builtins.str]:
+        """
+        Security rule set IDs, requires `is_rule_set` set to `true` on the sequence
+        """
+        return pulumi.get(self, "rule_set_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceDataIpv6PrefixListIds")
+    def source_data_ipv6_prefix_list_ids(self) -> Sequence[_builtins.str]:
+        """
+        Only supported on sequences with `sequence_ip_type` set to `ipv6`
+        """
+        return pulumi.get(self, "source_data_ipv6_prefix_list_ids")
 
     @_builtins.property
     @pulumi.getter(name="sourceDataPrefixListIds")
@@ -88428,6 +89622,30 @@ class GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult(dict):
         return pulumi.get(self, "source_identity_users")
 
     @_builtins.property
+    @pulumi.getter(name="sourceIpv6DataPrefixes")
+    def source_ipv6_data_prefixes(self) -> Sequence[_builtins.str]:
+        """
+        Only supported on sequences with `sequence_ip_type` set to `ipv6`
+        """
+        return pulumi.get(self, "source_ipv6_data_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpv6DataPrefixesVariable")
+    def source_ipv6_data_prefixes_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_ipv6_data_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceObjectGroupListIds")
+    def source_object_group_list_ids(self) -> Sequence[_builtins.str]:
+        """
+        Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012)
+        """
+        return pulumi.get(self, "source_object_group_list_ids")
+
+    @_builtins.property
     @pulumi.getter(name="sourcePortListIds")
     def source_port_list_ids(self) -> Sequence[_builtins.str]:
         return pulumi.get(self, "source_port_list_ids")
@@ -88453,6 +89671,9 @@ class GetEmbeddedSecurityNgfwPolicySequenceMatchEntryResult(dict):
     @_builtins.property
     @pulumi.getter(name="sourceSecurityGroupListIds")
     def source_security_group_list_ids(self) -> Sequence[_builtins.str]:
+        """
+        Deprecated, use `source_object_group_list_ids` instead
+        """
         return pulumi.get(self, "source_security_group_list_ids")
 
 
@@ -88520,6 +89741,42 @@ class GetEmbeddedSecurityPolicyAssemblyEntryResult(dict):
     @pulumi.getter(name="sourceZoneListId")
     def source_zone_list_id(self) -> _builtins.str:
         return pulumi.get(self, "source_zone_list_id")
+
+
+@pulumi.output_type
+class GetEmbeddedSecurityPolicyHighSpeedLoggingResult(dict):
+    def __init__(__self__, *,
+                 name: _builtins.str,
+                 source_interface: _builtins.str,
+                 source_interface_variable: _builtins.str):
+        """
+        :param _builtins.str source_interface: InterfaceName
+        :param _builtins.str source_interface_variable: Variable name
+        """
+        pulumi.set(__self__, "name", name)
+        pulumi.set(__self__, "source_interface", source_interface)
+        pulumi.set(__self__, "source_interface_variable", source_interface_variable)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> _builtins.str:
+        return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceInterface")
+    def source_interface(self) -> _builtins.str:
+        """
+        InterfaceName
+        """
+        return pulumi.get(self, "source_interface")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceInterfaceVariable")
+    def source_interface_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_interface_variable")
 
 
 @pulumi.output_type
@@ -90540,6 +91797,75 @@ class GetNetworkHierarchyNodeAddressResult(dict):
 
 
 @pulumi.output_type
+class GetNetworkHierarchyNodesNodesResult(dict):
+    def __init__(__self__, *,
+                 id: _builtins.str,
+                 type: _builtins.str):
+        """
+        :param _builtins.str id: The node's Network Hierarchy UUID
+        :param _builtins.str type: The type of node: `site`, `region`, `group` or `global`
+        """
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "type", type)
+
+    @_builtins.property
+    @pulumi.getter
+    def id(self) -> _builtins.str:
+        """
+        The node's Network Hierarchy UUID
+        """
+        return pulumi.get(self, "id")
+
+    @_builtins.property
+    @pulumi.getter
+    def type(self) -> _builtins.str:
+        """
+        The type of node: `site`, `region`, `group` or `global`
+        """
+        return pulumi.get(self, "type")
+
+
+@pulumi.output_type
+class GetNetworkHierarchyNodesResolvedSiteResult(dict):
+    def __init__(__self__, *,
+                 id: _builtins.str,
+                 name: _builtins.str,
+                 site_id: _builtins.int):
+        """
+        :param _builtins.str id: The site's Network Hierarchy node UUID
+        :param _builtins.str name: The site's name
+        :param _builtins.int site_id: The site's numeric site ID
+        """
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "name", name)
+        pulumi.set(__self__, "site_id", site_id)
+
+    @_builtins.property
+    @pulumi.getter
+    def id(self) -> _builtins.str:
+        """
+        The site's Network Hierarchy node UUID
+        """
+        return pulumi.get(self, "id")
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> _builtins.str:
+        """
+        The site's name
+        """
+        return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter(name="siteId")
+    def site_id(self) -> _builtins.int:
+        """
+        The site's numeric site ID
+        """
+        return pulumi.get(self, "site_id")
+
+
+@pulumi.output_type
 class GetNetworkHierarchySecurityLoggingHighSpeedLoggingResult(dict):
     def __init__(__self__, *,
                  port: _builtins.int,
@@ -91679,6 +93005,31 @@ class GetPolicyObjectSecurityDataIpv4PrefixListEntryResult(dict):
 
 
 @pulumi.output_type
+class GetPolicyObjectSecurityDataIpv6PrefixListEntryResult(dict):
+    def __init__(__self__, *,
+                 ipv6_prefix: _builtins.str,
+                 ipv6_prefix_variable: _builtins.str):
+        """
+        :param _builtins.str ipv6_prefix_variable: Variable name
+        """
+        pulumi.set(__self__, "ipv6_prefix", ipv6_prefix)
+        pulumi.set(__self__, "ipv6_prefix_variable", ipv6_prefix_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="ipv6Prefix")
+    def ipv6_prefix(self) -> _builtins.str:
+        return pulumi.get(self, "ipv6_prefix")
+
+    @_builtins.property
+    @pulumi.getter(name="ipv6PrefixVariable")
+    def ipv6_prefix_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipv6_prefix_variable")
+
+
+@pulumi.output_type
 class GetPolicyObjectSecurityFqdnListEntryResult(dict):
     def __init__(__self__, *,
                  pattern: _builtins.str):
@@ -91789,6 +93140,138 @@ class GetPolicyObjectSecurityLocalDomainListEntryResult(dict):
 
 
 @pulumi.output_type
+class GetPolicyObjectSecurityObjectGroupEntryResult(dict):
+    def __init__(__self__, *,
+                 data_ipv4_prefix_list_ids: Sequence[_builtins.str],
+                 data_ipv4_prefixes: Sequence[_builtins.str],
+                 data_ipv4_prefixes_variable: _builtins.str,
+                 data_ipv6_prefix_list_ids: Sequence[_builtins.str],
+                 data_ipv6_prefixes: Sequence[_builtins.str],
+                 data_ipv6_prefixes_variable: _builtins.str,
+                 fqdn_list_ids: Sequence[_builtins.str],
+                 fqdns: Sequence[_builtins.str],
+                 fqdns_variable: _builtins.str,
+                 geo_location_list_ids: Sequence[_builtins.str],
+                 geo_locations: Sequence[_builtins.str],
+                 geo_locations_variable: _builtins.str,
+                 port_list_ids: Sequence[_builtins.str],
+                 ports: Sequence[_builtins.str],
+                 ports_variable: _builtins.str):
+        """
+        :param _builtins.str data_ipv4_prefixes_variable: Variable name
+        :param _builtins.str data_ipv6_prefixes_variable: Variable name
+        :param _builtins.str fqdns_variable: Variable name
+        :param _builtins.str geo_locations_variable: Variable name
+        :param _builtins.str ports_variable: Variable name
+        """
+        pulumi.set(__self__, "data_ipv4_prefix_list_ids", data_ipv4_prefix_list_ids)
+        pulumi.set(__self__, "data_ipv4_prefixes", data_ipv4_prefixes)
+        pulumi.set(__self__, "data_ipv4_prefixes_variable", data_ipv4_prefixes_variable)
+        pulumi.set(__self__, "data_ipv6_prefix_list_ids", data_ipv6_prefix_list_ids)
+        pulumi.set(__self__, "data_ipv6_prefixes", data_ipv6_prefixes)
+        pulumi.set(__self__, "data_ipv6_prefixes_variable", data_ipv6_prefixes_variable)
+        pulumi.set(__self__, "fqdn_list_ids", fqdn_list_ids)
+        pulumi.set(__self__, "fqdns", fqdns)
+        pulumi.set(__self__, "fqdns_variable", fqdns_variable)
+        pulumi.set(__self__, "geo_location_list_ids", geo_location_list_ids)
+        pulumi.set(__self__, "geo_locations", geo_locations)
+        pulumi.set(__self__, "geo_locations_variable", geo_locations_variable)
+        pulumi.set(__self__, "port_list_ids", port_list_ids)
+        pulumi.set(__self__, "ports", ports)
+        pulumi.set(__self__, "ports_variable", ports_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="dataIpv4PrefixListIds")
+    def data_ipv4_prefix_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "data_ipv4_prefix_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="dataIpv4Prefixes")
+    def data_ipv4_prefixes(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "data_ipv4_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="dataIpv4PrefixesVariable")
+    def data_ipv4_prefixes_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "data_ipv4_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="dataIpv6PrefixListIds")
+    def data_ipv6_prefix_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "data_ipv6_prefix_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="dataIpv6Prefixes")
+    def data_ipv6_prefixes(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "data_ipv6_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="dataIpv6PrefixesVariable")
+    def data_ipv6_prefixes_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "data_ipv6_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="fqdnListIds")
+    def fqdn_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "fqdn_list_ids")
+
+    @_builtins.property
+    @pulumi.getter
+    def fqdns(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "fqdns")
+
+    @_builtins.property
+    @pulumi.getter(name="fqdnsVariable")
+    def fqdns_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "fqdns_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="geoLocationListIds")
+    def geo_location_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "geo_location_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="geoLocations")
+    def geo_locations(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "geo_locations")
+
+    @_builtins.property
+    @pulumi.getter(name="geoLocationsVariable")
+    def geo_locations_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "geo_locations_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="portListIds")
+    def port_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "port_list_ids")
+
+    @_builtins.property
+    @pulumi.getter
+    def ports(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "ports")
+
+    @_builtins.property
+    @pulumi.getter(name="portsVariable")
+    def ports_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ports_variable")
+
+
+@pulumi.output_type
 class GetPolicyObjectSecurityPortListEntryResult(dict):
     def __init__(__self__, *,
                  port: _builtins.str):
@@ -91816,6 +93299,373 @@ class GetPolicyObjectSecurityProtocolListEntryResult(dict):
     @pulumi.getter(name="protocolName")
     def protocol_name(self) -> _builtins.str:
         return pulumi.get(self, "protocol_name")
+
+
+@pulumi.output_type
+class GetPolicyObjectSecurityRuleSetSequenceResult(dict):
+    def __init__(__self__, *,
+                 action: _builtins.str,
+                 action_variable: _builtins.str,
+                 destination_data_ipv4_prefix_list_ids: Sequence[_builtins.str],
+                 destination_data_ipv6_prefix_list_ids: Sequence[_builtins.str],
+                 destination_fqdn_list_ids: Sequence[_builtins.str],
+                 destination_fqdns: Sequence[_builtins.str],
+                 destination_fqdns_variable: _builtins.str,
+                 destination_geo_location_list_ids: Sequence[_builtins.str],
+                 destination_geo_locations: Sequence[_builtins.str],
+                 destination_geo_locations_variable: _builtins.str,
+                 destination_ipv4_prefixes: Sequence[_builtins.str],
+                 destination_ipv4_prefixes_variable: _builtins.str,
+                 destination_ipv6_prefixes: Sequence[_builtins.str],
+                 destination_ipv6_prefixes_variable: _builtins.str,
+                 destination_object_group_list_ids: Sequence[_builtins.str],
+                 destination_port_list_ids: Sequence[_builtins.str],
+                 destination_ports: Sequence[_builtins.str],
+                 destination_ports_variable: _builtins.str,
+                 name: _builtins.str,
+                 name_variable: _builtins.str,
+                 protocol_name_list_ids: Sequence[_builtins.str],
+                 protocol_names: Sequence[_builtins.str],
+                 protocol_names_variable: _builtins.str,
+                 protocols: Sequence[_builtins.str],
+                 sequence_id: _builtins.str,
+                 sequence_id_variable: _builtins.str,
+                 sequence_ip_type: _builtins.str,
+                 source_data_ipv4_prefix_list_ids: Sequence[_builtins.str],
+                 source_data_ipv6_prefix_list_ids: Sequence[_builtins.str],
+                 source_geo_location_list_ids: Sequence[_builtins.str],
+                 source_geo_locations: Sequence[_builtins.str],
+                 source_geo_locations_variable: _builtins.str,
+                 source_ipv4_prefixes: Sequence[_builtins.str],
+                 source_ipv4_prefixes_variable: _builtins.str,
+                 source_ipv6_prefixes: Sequence[_builtins.str],
+                 source_ipv6_prefixes_variable: _builtins.str,
+                 source_object_group_list_ids: Sequence[_builtins.str],
+                 source_port_list_ids: Sequence[_builtins.str],
+                 source_ports: Sequence[_builtins.str],
+                 source_ports_variable: _builtins.str):
+        """
+        :param _builtins.str action: action
+        :param _builtins.str action_variable: Variable name
+        :param _builtins.str destination_fqdns_variable: Variable name
+        :param Sequence[_builtins.str] destination_geo_locations: Destination Geolocation
+        :param _builtins.str destination_geo_locations_variable: Variable name
+        :param _builtins.str destination_ipv4_prefixes_variable: Variable name
+        :param _builtins.str destination_ipv6_prefixes_variable: Variable name
+        :param _builtins.str destination_ports_variable: Variable name
+        :param _builtins.str name: Sequence name
+        :param _builtins.str name_variable: Variable name
+        :param _builtins.str protocol_names_variable: Variable name
+        :param Sequence[_builtins.str] protocols: protocol
+        :param _builtins.str sequence_id: Sequence Id
+        :param _builtins.str sequence_id_variable: Variable name
+        :param _builtins.str sequence_ip_type: ipv4/ ipv6
+        :param Sequence[_builtins.str] source_geo_locations: Source Geolocation
+        :param _builtins.str source_geo_locations_variable: Variable name
+        :param _builtins.str source_ipv4_prefixes_variable: Variable name
+        :param _builtins.str source_ipv6_prefixes_variable: Variable name
+        :param _builtins.str source_ports_variable: Variable name
+        """
+        pulumi.set(__self__, "action", action)
+        pulumi.set(__self__, "action_variable", action_variable)
+        pulumi.set(__self__, "destination_data_ipv4_prefix_list_ids", destination_data_ipv4_prefix_list_ids)
+        pulumi.set(__self__, "destination_data_ipv6_prefix_list_ids", destination_data_ipv6_prefix_list_ids)
+        pulumi.set(__self__, "destination_fqdn_list_ids", destination_fqdn_list_ids)
+        pulumi.set(__self__, "destination_fqdns", destination_fqdns)
+        pulumi.set(__self__, "destination_fqdns_variable", destination_fqdns_variable)
+        pulumi.set(__self__, "destination_geo_location_list_ids", destination_geo_location_list_ids)
+        pulumi.set(__self__, "destination_geo_locations", destination_geo_locations)
+        pulumi.set(__self__, "destination_geo_locations_variable", destination_geo_locations_variable)
+        pulumi.set(__self__, "destination_ipv4_prefixes", destination_ipv4_prefixes)
+        pulumi.set(__self__, "destination_ipv4_prefixes_variable", destination_ipv4_prefixes_variable)
+        pulumi.set(__self__, "destination_ipv6_prefixes", destination_ipv6_prefixes)
+        pulumi.set(__self__, "destination_ipv6_prefixes_variable", destination_ipv6_prefixes_variable)
+        pulumi.set(__self__, "destination_object_group_list_ids", destination_object_group_list_ids)
+        pulumi.set(__self__, "destination_port_list_ids", destination_port_list_ids)
+        pulumi.set(__self__, "destination_ports", destination_ports)
+        pulumi.set(__self__, "destination_ports_variable", destination_ports_variable)
+        pulumi.set(__self__, "name", name)
+        pulumi.set(__self__, "name_variable", name_variable)
+        pulumi.set(__self__, "protocol_name_list_ids", protocol_name_list_ids)
+        pulumi.set(__self__, "protocol_names", protocol_names)
+        pulumi.set(__self__, "protocol_names_variable", protocol_names_variable)
+        pulumi.set(__self__, "protocols", protocols)
+        pulumi.set(__self__, "sequence_id", sequence_id)
+        pulumi.set(__self__, "sequence_id_variable", sequence_id_variable)
+        pulumi.set(__self__, "sequence_ip_type", sequence_ip_type)
+        pulumi.set(__self__, "source_data_ipv4_prefix_list_ids", source_data_ipv4_prefix_list_ids)
+        pulumi.set(__self__, "source_data_ipv6_prefix_list_ids", source_data_ipv6_prefix_list_ids)
+        pulumi.set(__self__, "source_geo_location_list_ids", source_geo_location_list_ids)
+        pulumi.set(__self__, "source_geo_locations", source_geo_locations)
+        pulumi.set(__self__, "source_geo_locations_variable", source_geo_locations_variable)
+        pulumi.set(__self__, "source_ipv4_prefixes", source_ipv4_prefixes)
+        pulumi.set(__self__, "source_ipv4_prefixes_variable", source_ipv4_prefixes_variable)
+        pulumi.set(__self__, "source_ipv6_prefixes", source_ipv6_prefixes)
+        pulumi.set(__self__, "source_ipv6_prefixes_variable", source_ipv6_prefixes_variable)
+        pulumi.set(__self__, "source_object_group_list_ids", source_object_group_list_ids)
+        pulumi.set(__self__, "source_port_list_ids", source_port_list_ids)
+        pulumi.set(__self__, "source_ports", source_ports)
+        pulumi.set(__self__, "source_ports_variable", source_ports_variable)
+
+    @_builtins.property
+    @pulumi.getter
+    def action(self) -> _builtins.str:
+        """
+        action
+        """
+        return pulumi.get(self, "action")
+
+    @_builtins.property
+    @pulumi.getter(name="actionVariable")
+    def action_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "action_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationDataIpv4PrefixListIds")
+    def destination_data_ipv4_prefix_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "destination_data_ipv4_prefix_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationDataIpv6PrefixListIds")
+    def destination_data_ipv6_prefix_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "destination_data_ipv6_prefix_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationFqdnListIds")
+    def destination_fqdn_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "destination_fqdn_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationFqdns")
+    def destination_fqdns(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "destination_fqdns")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationFqdnsVariable")
+    def destination_fqdns_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_fqdns_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationGeoLocationListIds")
+    def destination_geo_location_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "destination_geo_location_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationGeoLocations")
+    def destination_geo_locations(self) -> Sequence[_builtins.str]:
+        """
+        Destination Geolocation
+        """
+        return pulumi.get(self, "destination_geo_locations")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationGeoLocationsVariable")
+    def destination_geo_locations_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_geo_locations_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationIpv4Prefixes")
+    def destination_ipv4_prefixes(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "destination_ipv4_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationIpv4PrefixesVariable")
+    def destination_ipv4_prefixes_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_ipv4_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationIpv6Prefixes")
+    def destination_ipv6_prefixes(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "destination_ipv6_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationIpv6PrefixesVariable")
+    def destination_ipv6_prefixes_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_ipv6_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationObjectGroupListIds")
+    def destination_object_group_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "destination_object_group_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationPortListIds")
+    def destination_port_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "destination_port_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationPorts")
+    def destination_ports(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "destination_ports")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationPortsVariable")
+    def destination_ports_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_ports_variable")
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> _builtins.str:
+        """
+        Sequence name
+        """
+        return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter(name="nameVariable")
+    def name_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "name_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="protocolNameListIds")
+    def protocol_name_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "protocol_name_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="protocolNames")
+    def protocol_names(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "protocol_names")
+
+    @_builtins.property
+    @pulumi.getter(name="protocolNamesVariable")
+    def protocol_names_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "protocol_names_variable")
+
+    @_builtins.property
+    @pulumi.getter
+    def protocols(self) -> Sequence[_builtins.str]:
+        """
+        protocol
+        """
+        return pulumi.get(self, "protocols")
+
+    @_builtins.property
+    @pulumi.getter(name="sequenceId")
+    def sequence_id(self) -> _builtins.str:
+        """
+        Sequence Id
+        """
+        return pulumi.get(self, "sequence_id")
+
+    @_builtins.property
+    @pulumi.getter(name="sequenceIdVariable")
+    def sequence_id_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "sequence_id_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="sequenceIpType")
+    def sequence_ip_type(self) -> _builtins.str:
+        """
+        ipv4/ ipv6
+        """
+        return pulumi.get(self, "sequence_ip_type")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceDataIpv4PrefixListIds")
+    def source_data_ipv4_prefix_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "source_data_ipv4_prefix_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceDataIpv6PrefixListIds")
+    def source_data_ipv6_prefix_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "source_data_ipv6_prefix_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceGeoLocationListIds")
+    def source_geo_location_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "source_geo_location_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceGeoLocations")
+    def source_geo_locations(self) -> Sequence[_builtins.str]:
+        """
+        Source Geolocation
+        """
+        return pulumi.get(self, "source_geo_locations")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceGeoLocationsVariable")
+    def source_geo_locations_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_geo_locations_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpv4Prefixes")
+    def source_ipv4_prefixes(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "source_ipv4_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpv4PrefixesVariable")
+    def source_ipv4_prefixes_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_ipv4_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpv6Prefixes")
+    def source_ipv6_prefixes(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "source_ipv6_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpv6PrefixesVariable")
+    def source_ipv6_prefixes_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_ipv6_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceObjectGroupListIds")
+    def source_object_group_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "source_object_group_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="sourcePortListIds")
+    def source_port_list_ids(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "source_port_list_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="sourcePorts")
+    def source_ports(self) -> Sequence[_builtins.str]:
+        return pulumi.get(self, "source_ports")
+
+    @_builtins.property
+    @pulumi.getter(name="sourcePortsVariable")
+    def source_ports_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_ports_variable")
 
 
 @pulumi.output_type
@@ -105130,6 +106980,7 @@ class GetSseZscalerFeatureSubLocationResult(dict):
         :param _builtins.str caution_enabled_variable: Variable name
         :param _builtins.str display_time_unit: Display time unit for Idle Time to Disassociation
         :param _builtins.str display_time_unit_variable: Variable name
+        :param _builtins.float dn_bandwidth: Download Bandwidth in Mbps
         :param _builtins.str dn_bandwidth_variable: Variable name
         :param _builtins.str enforce_bandwidth_control: Enforce Bandwidth Control for sub location
         :param _builtins.str enforce_bandwidth_control_variable: Variable name
@@ -105137,8 +106988,10 @@ class GetSseZscalerFeatureSubLocationResult(dict):
         :param _builtins.str force_ssl_inspection_variable: Variable name
         :param _builtins.int idle_time: Idle time to disassociation. How long after a completed transaction the service retains the IP address to user mapping.
         :param _builtins.str idle_time_variable: Variable name
+        :param Sequence['GetSseZscalerFeatureSubLocationInternalIpArgs'] internal_ips: Internal Ip address
         :param _builtins.bool ip_enforced_for_known_browsers: If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
         :param _builtins.str ip_enforced_for_known_browsers_variable: Variable name
+        :param _builtins.str name: Sub-location name
         :param _builtins.str name_variable: Variable name
         :param _builtins.bool ofw_enabled: Enforces firewall at the location
         :param _builtins.str ofw_enabled_variable: Variable name
@@ -105147,8 +107000,10 @@ class GetSseZscalerFeatureSubLocationResult(dict):
         :param _builtins.str refresh_time_unit_variable: Variable name
         :param _builtins.str refresh_time_variable: Variable name
         :param _builtins.str service_vpn_variable: Variable name
+        :param Sequence[_builtins.str] service_vpns: Sub-location Service VPN
         :param _builtins.bool surrogate_ip: Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic.
         :param _builtins.str surrogate_ip_variable: Variable name
+        :param _builtins.float up_bandwidth: Upload Bandwidth in Mbps
         :param _builtins.str up_bandwidth_variable: Variable name
         """
         pulumi.set(__self__, "aup_enabled", aup_enabled)
@@ -105288,6 +107143,9 @@ class GetSseZscalerFeatureSubLocationResult(dict):
     @_builtins.property
     @pulumi.getter(name="dnBandwidth")
     def dn_bandwidth(self) -> _builtins.float:
+        """
+        Download Bandwidth in Mbps
+        """
         return pulumi.get(self, "dn_bandwidth")
 
     @_builtins.property
@@ -105349,6 +107207,9 @@ class GetSseZscalerFeatureSubLocationResult(dict):
     @_builtins.property
     @pulumi.getter(name="internalIps")
     def internal_ips(self) -> Sequence['outputs.GetSseZscalerFeatureSubLocationInternalIpResult']:
+        """
+        Internal Ip address
+        """
         return pulumi.get(self, "internal_ips")
 
     @_builtins.property
@@ -105370,6 +107231,9 @@ class GetSseZscalerFeatureSubLocationResult(dict):
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        Sub-location name
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
@@ -105439,6 +107303,9 @@ class GetSseZscalerFeatureSubLocationResult(dict):
     @_builtins.property
     @pulumi.getter(name="serviceVpns")
     def service_vpns(self) -> Sequence[_builtins.str]:
+        """
+        Sub-location Service VPN
+        """
         return pulumi.get(self, "service_vpns")
 
     @_builtins.property
@@ -105460,6 +107327,9 @@ class GetSseZscalerFeatureSubLocationResult(dict):
     @_builtins.property
     @pulumi.getter(name="upBandwidth")
     def up_bandwidth(self) -> _builtins.float:
+        """
+        Upload Bandwidth in Mbps
+        """
         return pulumi.get(self, "up_bandwidth")
 
     @_builtins.property
@@ -109047,9 +110917,11 @@ class GetTopologyCustomControlFeatureSequenceResult(dict):
                  name: _builtins.str,
                  type: _builtins.str):
         """
+        :param Sequence['GetTopologyCustomControlFeatureSequenceActionEntryArgs'] action_entries: List of action entries
         :param _builtins.str base_action: Base Action
         :param _builtins.int id: Sequence Id
         :param _builtins.str ip_type: Sequence IP Type
+        :param Sequence['GetTopologyCustomControlFeatureSequenceMatchEntryArgs'] match_entries: Set of match entries
         :param _builtins.str name: Sequence Name
         :param _builtins.str type: Sequence Type
         """
@@ -109064,6 +110936,9 @@ class GetTopologyCustomControlFeatureSequenceResult(dict):
     @_builtins.property
     @pulumi.getter(name="actionEntries")
     def action_entries(self) -> Sequence['outputs.GetTopologyCustomControlFeatureSequenceActionEntryResult']:
+        """
+        List of action entries
+        """
         return pulumi.get(self, "action_entries")
 
     @_builtins.property
@@ -109093,6 +110968,9 @@ class GetTopologyCustomControlFeatureSequenceResult(dict):
     @_builtins.property
     @pulumi.getter(name="matchEntries")
     def match_entries(self) -> Sequence['outputs.GetTopologyCustomControlFeatureSequenceMatchEntryResult']:
+        """
+        Set of match entries
+        """
         return pulumi.get(self, "match_entries")
 
     @_builtins.property

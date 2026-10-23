@@ -130,7 +130,8 @@ type SseZscalerFeature struct {
 	CautionEnabled pulumi.BoolPtrOutput `pulumi:"cautionEnabled"`
 	// Variable name
 	CautionEnabledVariable pulumi.StringPtrOutput `pulumi:"cautionEnabledVariable"`
-	// - Default value: `false`
+	// Country
+	//   - Default value: `false`
 	Country pulumi.BoolPtrOutput `pulumi:"country"`
 	// Variable name
 	CountryVariable pulumi.StringPtrOutput `pulumi:"countryVariable"`
@@ -142,12 +143,13 @@ type SseZscalerFeature struct {
 	DisplayTimeUnit pulumi.StringPtrOutput `pulumi:"displayTimeUnit"`
 	// Variable name, Attribute conditional on `surrogateIp` equal to `true`
 	DisplayTimeUnitVariable pulumi.StringPtrOutput `pulumi:"displayTimeUnitVariable"`
-	// , Attribute conditional on `enforceBandwidthControl` equal to `true`
+	// Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	//   - Range: `0.1`-`99999`
 	DnBandwidth pulumi.Float64PtrOutput `pulumi:"dnBandwidth"`
 	// Variable name, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	DnBandwidthVariable pulumi.StringPtrOutput `pulumi:"dnBandwidthVariable"`
-	// - Default value: `false`
+	// Enforce Bandwidth Control
+	//   - Default value: `false`
 	EnforceBandwidthControl pulumi.BoolPtrOutput `pulumi:"enforceBandwidthControl"`
 	// Variable name
 	EnforceBandwidthControlVariable pulumi.StringPtrOutput `pulumi:"enforceBandwidthControlVariable"`
@@ -222,12 +224,12 @@ type SseZscalerFeature struct {
 	// Variable name, Attribute conditional on `authRequired` equal to `true`
 	SurrogateIpVariable pulumi.StringPtrOutput `pulumi:"surrogateIpVariable"`
 	// Source IP address for Tracker
-	TrackerSourceIp pulumi.StringOutput `pulumi:"trackerSourceIp"`
+	TrackerSourceIp pulumi.StringPtrOutput `pulumi:"trackerSourceIp"`
 	// Variable name
 	TrackerSourceIpVariable pulumi.StringPtrOutput `pulumi:"trackerSourceIpVariable"`
 	// Tracker configuration
 	Trackers SseZscalerFeatureTrackerArrayOutput `pulumi:"trackers"`
-	// , Attribute conditional on `enforceBandwidthControl` equal to `true`
+	// Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	//   - Range: `0.1`-`99999`
 	UpBandwidth pulumi.Float64PtrOutput `pulumi:"upBandwidth"`
 	// Variable name, Attribute conditional on `enforceBandwidthControl` equal to `true`
@@ -256,9 +258,6 @@ func NewSseZscalerFeature(ctx *pulumi.Context,
 	}
 	if args.Interfaces == nil {
 		return nil, errors.New("invalid value for required argument 'Interfaces'")
-	}
-	if args.TrackerSourceIp == nil {
-		return nil, errors.New("invalid value for required argument 'TrackerSourceIp'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource SseZscalerFeature
@@ -309,7 +308,8 @@ type sseZscalerFeatureState struct {
 	CautionEnabled *bool `pulumi:"cautionEnabled"`
 	// Variable name
 	CautionEnabledVariable *string `pulumi:"cautionEnabledVariable"`
-	// - Default value: `false`
+	// Country
+	//   - Default value: `false`
 	Country *bool `pulumi:"country"`
 	// Variable name
 	CountryVariable *string `pulumi:"countryVariable"`
@@ -321,12 +321,13 @@ type sseZscalerFeatureState struct {
 	DisplayTimeUnit *string `pulumi:"displayTimeUnit"`
 	// Variable name, Attribute conditional on `surrogateIp` equal to `true`
 	DisplayTimeUnitVariable *string `pulumi:"displayTimeUnitVariable"`
-	// , Attribute conditional on `enforceBandwidthControl` equal to `true`
+	// Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	//   - Range: `0.1`-`99999`
 	DnBandwidth *float64 `pulumi:"dnBandwidth"`
 	// Variable name, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	DnBandwidthVariable *string `pulumi:"dnBandwidthVariable"`
-	// - Default value: `false`
+	// Enforce Bandwidth Control
+	//   - Default value: `false`
 	EnforceBandwidthControl *bool `pulumi:"enforceBandwidthControl"`
 	// Variable name
 	EnforceBandwidthControlVariable *string `pulumi:"enforceBandwidthControlVariable"`
@@ -406,7 +407,7 @@ type sseZscalerFeatureState struct {
 	TrackerSourceIpVariable *string `pulumi:"trackerSourceIpVariable"`
 	// Tracker configuration
 	Trackers []SseZscalerFeatureTracker `pulumi:"trackers"`
-	// , Attribute conditional on `enforceBandwidthControl` equal to `true`
+	// Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	//   - Range: `0.1`-`99999`
 	UpBandwidth *float64 `pulumi:"upBandwidth"`
 	// Variable name, Attribute conditional on `enforceBandwidthControl` equal to `true`
@@ -447,7 +448,8 @@ type SseZscalerFeatureState struct {
 	CautionEnabled pulumi.BoolPtrInput
 	// Variable name
 	CautionEnabledVariable pulumi.StringPtrInput
-	// - Default value: `false`
+	// Country
+	//   - Default value: `false`
 	Country pulumi.BoolPtrInput
 	// Variable name
 	CountryVariable pulumi.StringPtrInput
@@ -459,12 +461,13 @@ type SseZscalerFeatureState struct {
 	DisplayTimeUnit pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `surrogateIp` equal to `true`
 	DisplayTimeUnitVariable pulumi.StringPtrInput
-	// , Attribute conditional on `enforceBandwidthControl` equal to `true`
+	// Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	//   - Range: `0.1`-`99999`
 	DnBandwidth pulumi.Float64PtrInput
 	// Variable name, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	DnBandwidthVariable pulumi.StringPtrInput
-	// - Default value: `false`
+	// Enforce Bandwidth Control
+	//   - Default value: `false`
 	EnforceBandwidthControl pulumi.BoolPtrInput
 	// Variable name
 	EnforceBandwidthControlVariable pulumi.StringPtrInput
@@ -544,7 +547,7 @@ type SseZscalerFeatureState struct {
 	TrackerSourceIpVariable pulumi.StringPtrInput
 	// Tracker configuration
 	Trackers SseZscalerFeatureTrackerArrayInput
-	// , Attribute conditional on `enforceBandwidthControl` equal to `true`
+	// Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	//   - Range: `0.1`-`99999`
 	UpBandwidth pulumi.Float64PtrInput
 	// Variable name, Attribute conditional on `enforceBandwidthControl` equal to `true`
@@ -589,7 +592,8 @@ type sseZscalerFeatureArgs struct {
 	CautionEnabled *bool `pulumi:"cautionEnabled"`
 	// Variable name
 	CautionEnabledVariable *string `pulumi:"cautionEnabledVariable"`
-	// - Default value: `false`
+	// Country
+	//   - Default value: `false`
 	Country *bool `pulumi:"country"`
 	// Variable name
 	CountryVariable *string `pulumi:"countryVariable"`
@@ -601,12 +605,13 @@ type sseZscalerFeatureArgs struct {
 	DisplayTimeUnit *string `pulumi:"displayTimeUnit"`
 	// Variable name, Attribute conditional on `surrogateIp` equal to `true`
 	DisplayTimeUnitVariable *string `pulumi:"displayTimeUnitVariable"`
-	// , Attribute conditional on `enforceBandwidthControl` equal to `true`
+	// Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	//   - Range: `0.1`-`99999`
 	DnBandwidth *float64 `pulumi:"dnBandwidth"`
 	// Variable name, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	DnBandwidthVariable *string `pulumi:"dnBandwidthVariable"`
-	// - Default value: `false`
+	// Enforce Bandwidth Control
+	//   - Default value: `false`
 	EnforceBandwidthControl *bool `pulumi:"enforceBandwidthControl"`
 	// Variable name
 	EnforceBandwidthControlVariable *string `pulumi:"enforceBandwidthControlVariable"`
@@ -681,12 +686,12 @@ type sseZscalerFeatureArgs struct {
 	// Variable name, Attribute conditional on `authRequired` equal to `true`
 	SurrogateIpVariable *string `pulumi:"surrogateIpVariable"`
 	// Source IP address for Tracker
-	TrackerSourceIp string `pulumi:"trackerSourceIp"`
+	TrackerSourceIp *string `pulumi:"trackerSourceIp"`
 	// Variable name
 	TrackerSourceIpVariable *string `pulumi:"trackerSourceIpVariable"`
 	// Tracker configuration
 	Trackers []SseZscalerFeatureTracker `pulumi:"trackers"`
-	// , Attribute conditional on `enforceBandwidthControl` equal to `true`
+	// Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	//   - Range: `0.1`-`99999`
 	UpBandwidth *float64 `pulumi:"upBandwidth"`
 	// Variable name, Attribute conditional on `enforceBandwidthControl` equal to `true`
@@ -726,7 +731,8 @@ type SseZscalerFeatureArgs struct {
 	CautionEnabled pulumi.BoolPtrInput
 	// Variable name
 	CautionEnabledVariable pulumi.StringPtrInput
-	// - Default value: `false`
+	// Country
+	//   - Default value: `false`
 	Country pulumi.BoolPtrInput
 	// Variable name
 	CountryVariable pulumi.StringPtrInput
@@ -738,12 +744,13 @@ type SseZscalerFeatureArgs struct {
 	DisplayTimeUnit pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `surrogateIp` equal to `true`
 	DisplayTimeUnitVariable pulumi.StringPtrInput
-	// , Attribute conditional on `enforceBandwidthControl` equal to `true`
+	// Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	//   - Range: `0.1`-`99999`
 	DnBandwidth pulumi.Float64PtrInput
 	// Variable name, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	DnBandwidthVariable pulumi.StringPtrInput
-	// - Default value: `false`
+	// Enforce Bandwidth Control
+	//   - Default value: `false`
 	EnforceBandwidthControl pulumi.BoolPtrInput
 	// Variable name
 	EnforceBandwidthControlVariable pulumi.StringPtrInput
@@ -818,12 +825,12 @@ type SseZscalerFeatureArgs struct {
 	// Variable name, Attribute conditional on `authRequired` equal to `true`
 	SurrogateIpVariable pulumi.StringPtrInput
 	// Source IP address for Tracker
-	TrackerSourceIp pulumi.StringInput
+	TrackerSourceIp pulumi.StringPtrInput
 	// Variable name
 	TrackerSourceIpVariable pulumi.StringPtrInput
 	// Tracker configuration
 	Trackers SseZscalerFeatureTrackerArrayInput
-	// , Attribute conditional on `enforceBandwidthControl` equal to `true`
+	// Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
 	//   - Range: `0.1`-`99999`
 	UpBandwidth pulumi.Float64PtrInput
 	// Variable name, Attribute conditional on `enforceBandwidthControl` equal to `true`
@@ -978,7 +985,8 @@ func (o SseZscalerFeatureOutput) CautionEnabledVariable() pulumi.StringPtrOutput
 	return o.ApplyT(func(v *SseZscalerFeature) pulumi.StringPtrOutput { return v.CautionEnabledVariable }).(pulumi.StringPtrOutput)
 }
 
-// - Default value: `false`
+// Country
+//   - Default value: `false`
 func (o SseZscalerFeatureOutput) Country() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SseZscalerFeature) pulumi.BoolPtrOutput { return v.Country }).(pulumi.BoolPtrOutput)
 }
@@ -1005,7 +1013,7 @@ func (o SseZscalerFeatureOutput) DisplayTimeUnitVariable() pulumi.StringPtrOutpu
 	return o.ApplyT(func(v *SseZscalerFeature) pulumi.StringPtrOutput { return v.DisplayTimeUnitVariable }).(pulumi.StringPtrOutput)
 }
 
-// , Attribute conditional on `enforceBandwidthControl` equal to `true`
+// Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
 //   - Range: `0.1`-`99999`
 func (o SseZscalerFeatureOutput) DnBandwidth() pulumi.Float64PtrOutput {
 	return o.ApplyT(func(v *SseZscalerFeature) pulumi.Float64PtrOutput { return v.DnBandwidth }).(pulumi.Float64PtrOutput)
@@ -1016,7 +1024,8 @@ func (o SseZscalerFeatureOutput) DnBandwidthVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SseZscalerFeature) pulumi.StringPtrOutput { return v.DnBandwidthVariable }).(pulumi.StringPtrOutput)
 }
 
-// - Default value: `false`
+// Enforce Bandwidth Control
+//   - Default value: `false`
 func (o SseZscalerFeatureOutput) EnforceBandwidthControl() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SseZscalerFeature) pulumi.BoolPtrOutput { return v.EnforceBandwidthControl }).(pulumi.BoolPtrOutput)
 }
@@ -1181,8 +1190,8 @@ func (o SseZscalerFeatureOutput) SurrogateIpVariable() pulumi.StringPtrOutput {
 }
 
 // Source IP address for Tracker
-func (o SseZscalerFeatureOutput) TrackerSourceIp() pulumi.StringOutput {
-	return o.ApplyT(func(v *SseZscalerFeature) pulumi.StringOutput { return v.TrackerSourceIp }).(pulumi.StringOutput)
+func (o SseZscalerFeatureOutput) TrackerSourceIp() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SseZscalerFeature) pulumi.StringPtrOutput { return v.TrackerSourceIp }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -1195,7 +1204,7 @@ func (o SseZscalerFeatureOutput) Trackers() SseZscalerFeatureTrackerArrayOutput 
 	return o.ApplyT(func(v *SseZscalerFeature) SseZscalerFeatureTrackerArrayOutput { return v.Trackers }).(SseZscalerFeatureTrackerArrayOutput)
 }
 
-// , Attribute conditional on `enforceBandwidthControl` equal to `true`
+// Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
 //   - Range: `0.1`-`99999`
 func (o SseZscalerFeatureOutput) UpBandwidth() pulumi.Float64PtrOutput {
 	return o.ApplyT(func(v *SseZscalerFeature) pulumi.Float64PtrOutput { return v.UpBandwidth }).(pulumi.Float64PtrOutput)

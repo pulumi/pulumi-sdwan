@@ -15,6 +15,10 @@ namespace Pulumi.Sdwan.Outputs
     {
         public readonly bool? FallbackToBestPath;
         public readonly string? PreferredColorGroupListId;
+        /// <summary>
+        /// Restrict traffic to the preferred color group, requires `PreferredColorGroupListId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public readonly bool? PreferredColorGroupRestrict;
         public readonly ImmutableArray<string> PreferredColors;
         public readonly ImmutableArray<string> PreferredRemoteColors;
         public readonly bool? RemoteColorRestrict;
@@ -26,6 +30,8 @@ namespace Pulumi.Sdwan.Outputs
             bool? fallbackToBestPath,
 
             string? preferredColorGroupListId,
+
+            bool? preferredColorGroupRestrict,
 
             ImmutableArray<string> preferredColors,
 
@@ -39,6 +45,7 @@ namespace Pulumi.Sdwan.Outputs
         {
             FallbackToBestPath = fallbackToBestPath;
             PreferredColorGroupListId = preferredColorGroupListId;
+            PreferredColorGroupRestrict = preferredColorGroupRestrict;
             PreferredColors = preferredColors;
             PreferredRemoteColors = preferredRemoteColors;
             RemoteColorRestrict = remoteColorRestrict;

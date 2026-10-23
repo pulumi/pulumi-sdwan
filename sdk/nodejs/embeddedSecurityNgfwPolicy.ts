@@ -22,9 +22,12 @@ import * as utilities from "./utilities";
  *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
  *     defaultAction: "pass",
  *     sequences: [{
+ *         isRuleSet: false,
  *         sequenceId: "1",
  *         sequenceName: "security",
+ *         sequenceComment: "comment1",
  *         baseAction: "drop",
+ *         sequenceIpType: "ipv4",
  *         sequenceType: "ngfirewall",
  *         disableSequence: false,
  *         matchEntries: [{

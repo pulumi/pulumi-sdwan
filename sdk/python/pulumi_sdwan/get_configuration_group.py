@@ -147,6 +147,7 @@ class AwaitableGetConfigurationGroupResult(GetConfigurationGroupResult):
 
 
 def get_configuration_group(id: Optional[_builtins.str] = None,
+                            name: Optional[_builtins.str] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetConfigurationGroupResult:
     """
     This data source can read the Configuration Group .
@@ -162,9 +163,11 @@ def get_configuration_group(id: Optional[_builtins.str] = None,
 
 
     :param _builtins.str id: The id of the object
+    :param _builtins.str name: The name of the configuration group
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getConfigurationGroup:getConfigurationGroup', __args__, opts=opts, typ=GetConfigurationGroupResult).value
 
@@ -178,7 +181,8 @@ def get_configuration_group(id: Optional[_builtins.str] = None,
         solution=pulumi.get(__ret__, 'solution'),
         topology_devices=pulumi.get(__ret__, 'topology_devices'),
         topology_site_devices=pulumi.get(__ret__, 'topology_site_devices'))
-def get_configuration_group_output(id: pulumi.Input[Optional[_builtins.str]] = None,
+def get_configuration_group_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                   name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetConfigurationGroupResult]:
     """
     This data source can read the Configuration Group .
@@ -194,9 +198,11 @@ def get_configuration_group_output(id: pulumi.Input[Optional[_builtins.str]] = N
 
 
     :param _builtins.str id: The id of the object
+    :param _builtins.str name: The name of the configuration group
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getConfigurationGroup:getConfigurationGroup', __args__, opts=opts, typ=GetConfigurationGroupResult)
     return __ret__.apply(lambda __response__: GetConfigurationGroupResult(

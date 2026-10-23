@@ -166,15 +166,15 @@ public final class SseCiscoFeatureArgs extends com.pulumi.resources.ResourceArgs
      * Source IP address for Tracker
      * 
      */
-    @Import(name="trackerSourceIp", required=true)
-    private Output<String> trackerSourceIp;
+    @Import(name="trackerSourceIp")
+    private @Nullable Output<String> trackerSourceIp;
 
     /**
      * @return Source IP address for Tracker
      * 
      */
-    public Output<String> trackerSourceIp() {
-        return this.trackerSourceIp;
+    public Optional<Output<String>> trackerSourceIp() {
+        return Optional.ofNullable(this.trackerSourceIp);
     }
 
     /**
@@ -463,7 +463,7 @@ public final class SseCiscoFeatureArgs extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder trackerSourceIp(Output<String> trackerSourceIp) {
+        public Builder trackerSourceIp(@Nullable Output<String> trackerSourceIp) {
             $.trackerSourceIp = trackerSourceIp;
             return this;
         }
@@ -542,9 +542,6 @@ public final class SseCiscoFeatureArgs extends com.pulumi.resources.ResourceArgs
             }
             if ($.region == null) {
                 throw new MissingRequiredPropertyException("SseCiscoFeatureArgs", "region");
-            }
-            if ($.trackerSourceIp == null) {
-                throw new MissingRequiredPropertyException("SseCiscoFeatureArgs", "trackerSourceIp");
             }
             return $;
         }

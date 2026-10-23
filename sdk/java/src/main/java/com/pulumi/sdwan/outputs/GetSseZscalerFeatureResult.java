@@ -68,6 +68,10 @@ public final class GetSseZscalerFeatureResult {
      * 
      */
     private String cautionEnabledVariable;
+    /**
+     * @return Country
+     * 
+     */
     private Boolean country;
     /**
      * @return Variable name
@@ -89,12 +93,20 @@ public final class GetSseZscalerFeatureResult {
      * 
      */
     private String displayTimeUnitVariable;
+    /**
+     * @return Download Bandwidth in Mbps
+     * 
+     */
     private Double dnBandwidth;
     /**
      * @return Variable name
      * 
      */
     private String dnBandwidthVariable;
+    /**
+     * @return Enforce Bandwidth Control
+     * 
+     */
     private Boolean enforceBandwidthControl;
     /**
      * @return Variable name
@@ -257,6 +269,10 @@ public final class GetSseZscalerFeatureResult {
      * 
      */
     private List<GetSseZscalerFeatureTracker> trackers;
+    /**
+     * @return Upload Bandwidth in Mbps
+     * 
+     */
     private Double upBandwidth;
     /**
      * @return Variable name
@@ -350,6 +366,10 @@ public final class GetSseZscalerFeatureResult {
     public String cautionEnabledVariable() {
         return this.cautionEnabledVariable;
     }
+    /**
+     * @return Country
+     * 
+     */
     public Boolean country() {
         return this.country;
     }
@@ -381,6 +401,10 @@ public final class GetSseZscalerFeatureResult {
     public String displayTimeUnitVariable() {
         return this.displayTimeUnitVariable;
     }
+    /**
+     * @return Download Bandwidth in Mbps
+     * 
+     */
     public Double dnBandwidth() {
         return this.dnBandwidth;
     }
@@ -391,6 +415,10 @@ public final class GetSseZscalerFeatureResult {
     public String dnBandwidthVariable() {
         return this.dnBandwidthVariable;
     }
+    /**
+     * @return Enforce Bandwidth Control
+     * 
+     */
     public Boolean enforceBandwidthControl() {
         return this.enforceBandwidthControl;
     }
@@ -621,6 +649,10 @@ public final class GetSseZscalerFeatureResult {
     public List<GetSseZscalerFeatureTracker> trackers() {
         return this.trackers;
     }
+    /**
+     * @return Upload Bandwidth in Mbps
+     * 
+     */
     public Double upBandwidth() {
         return this.upBandwidth;
     }

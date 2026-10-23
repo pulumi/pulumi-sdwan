@@ -53,6 +53,12 @@ namespace Pulumi.Sdwan.Inputs
         [Input("preferredColorGroupId")]
         public Input<string>? PreferredColorGroupId { get; set; }
 
+        /// <summary>
+        /// Restrict traffic to the preferred color group, requires `PreferredColorGroupId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("preferredColorGroupRestrict")]
+        public Input<bool>? PreferredColorGroupRestrict { get; set; }
+
         [Input("preferredRemoteColorRestrict")]
         public Input<bool>? PreferredRemoteColorRestrict { get; set; }
 

@@ -26,7 +26,7 @@ class GetPolicyObjectUnifiedIntrusionPreventionResult:
     """
     A collection of values returned by getPolicyObjectUnifiedIntrusionPrevention.
     """
-    def __init__(__self__, custom_signature=None, description=None, feature_profile_id=None, id=None, inspection_mode=None, ips_signature_allow_list_id=None, log_level=None, name=None, signature_set=None, version=None):
+    def __init__(__self__, custom_signature=None, description=None, feature_profile_id=None, id=None, inspection_mode=None, ips_signature_allow_list_id=None, log_level=None, name=None, signature_set=None, signature_set_id=None, version=None):
         if custom_signature and not isinstance(custom_signature, bool):
             raise TypeError("Expected argument 'custom_signature' to be a bool")
         pulumi.set(__self__, "custom_signature", custom_signature)
@@ -54,6 +54,9 @@ class GetPolicyObjectUnifiedIntrusionPreventionResult:
         if signature_set and not isinstance(signature_set, str):
             raise TypeError("Expected argument 'signature_set' to be a str")
         pulumi.set(__self__, "signature_set", signature_set)
+        if signature_set_id and not isinstance(signature_set_id, str):
+            raise TypeError("Expected argument 'signature_set_id' to be a str")
+        pulumi.set(__self__, "signature_set_id", signature_set_id)
         if version and not isinstance(version, int):
             raise TypeError("Expected argument 'version' to be a int")
         pulumi.set(__self__, "version", version)
@@ -128,6 +131,14 @@ class GetPolicyObjectUnifiedIntrusionPreventionResult:
         return pulumi.get(self, "signature_set")
 
     @_builtins.property
+    @pulumi.getter(name="signatureSetId")
+    def signature_set_id(self) -> _builtins.str:
+        """
+        Reference to a user edited signature set parcel
+        """
+        return pulumi.get(self, "signature_set_id")
+
+    @_builtins.property
     @pulumi.getter
     def version(self) -> _builtins.int:
         """
@@ -151,6 +162,7 @@ class AwaitableGetPolicyObjectUnifiedIntrusionPreventionResult(GetPolicyObjectUn
             log_level=self.log_level,
             name=self.name,
             signature_set=self.signature_set,
+            signature_set_id=self.signature_set_id,
             version=self.version)
 
 
@@ -193,6 +205,7 @@ def get_policy_object_unified_intrusion_prevention(feature_profile_id: Optional[
         log_level=pulumi.get(__ret__, 'log_level'),
         name=pulumi.get(__ret__, 'name'),
         signature_set=pulumi.get(__ret__, 'signature_set'),
+        signature_set_id=pulumi.get(__ret__, 'signature_set_id'),
         version=pulumi.get(__ret__, 'version'))
 def get_policy_object_unified_intrusion_prevention_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                           id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
@@ -232,4 +245,5 @@ def get_policy_object_unified_intrusion_prevention_output(feature_profile_id: pu
         log_level=pulumi.get(__response__, 'log_level'),
         name=pulumi.get(__response__, 'name'),
         signature_set=pulumi.get(__response__, 'signature_set'),
+        signature_set_id=pulumi.get(__response__, 'signature_set_id'),
         version=pulumi.get(__response__, 'version')))

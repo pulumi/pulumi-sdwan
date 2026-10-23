@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetSystemFeatureProfile(ctx, &sdwan.LookupSystemFeatureProfileArgs{
-//				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id: pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //			}, nil)
 //			if err != nil {
 //				return err
@@ -51,7 +51,9 @@ func LookupSystemFeatureProfile(ctx *pulumi.Context, args *LookupSystemFeaturePr
 // A collection of arguments for invoking getSystemFeatureProfile.
 type LookupSystemFeatureProfileArgs struct {
 	// The id of the object
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the system feature profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getSystemFeatureProfile.
@@ -72,7 +74,9 @@ func LookupSystemFeatureProfileOutput(ctx *pulumi.Context, args LookupSystemFeat
 // A collection of arguments for invoking getSystemFeatureProfile.
 type LookupSystemFeatureProfileOutputArgs struct {
 	// The id of the object
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the system feature profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupSystemFeatureProfileOutputArgs) ElementType() reflect.Type {

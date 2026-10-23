@@ -32,6 +32,11 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
     private @Nullable Boolean nextHopLoose;
     private @Nullable String policerId;
     private @Nullable String preferredColorGroupId;
+    /**
+     * @return Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    private @Nullable Boolean preferredColorGroupRestrict;
     private @Nullable Boolean preferredRemoteColorRestrict;
     private @Nullable List<String> preferredRemoteColors;
     private @Nullable Boolean serviceChainFallbackToRouting;
@@ -126,6 +131,13 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
     }
     public Optional<String> preferredColorGroupId() {
         return Optional.ofNullable(this.preferredColorGroupId);
+    }
+    /**
+     * @return Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Boolean> preferredColorGroupRestrict() {
+        return Optional.ofNullable(this.preferredColorGroupRestrict);
     }
     public Optional<Boolean> preferredRemoteColorRestrict() {
         return Optional.ofNullable(this.preferredRemoteColorRestrict);
@@ -248,6 +260,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
         private @Nullable Boolean nextHopLoose;
         private @Nullable String policerId;
         private @Nullable String preferredColorGroupId;
+        private @Nullable Boolean preferredColorGroupRestrict;
         private @Nullable Boolean preferredRemoteColorRestrict;
         private @Nullable List<String> preferredRemoteColors;
         private @Nullable Boolean serviceChainFallbackToRouting;
@@ -284,6 +297,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
     	      this.nextHopLoose = defaults.nextHopLoose;
     	      this.policerId = defaults.policerId;
     	      this.preferredColorGroupId = defaults.preferredColorGroupId;
+    	      this.preferredColorGroupRestrict = defaults.preferredColorGroupRestrict;
     	      this.preferredRemoteColorRestrict = defaults.preferredRemoteColorRestrict;
     	      this.preferredRemoteColors = defaults.preferredRemoteColors;
     	      this.serviceChainFallbackToRouting = defaults.serviceChainFallbackToRouting;
@@ -370,6 +384,12 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
         public Builder preferredColorGroupId(@Nullable String preferredColorGroupId) {
 
             this.preferredColorGroupId = preferredColorGroupId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder preferredColorGroupRestrict(@Nullable Boolean preferredColorGroupRestrict) {
+
+            this.preferredColorGroupRestrict = preferredColorGroupRestrict;
             return this;
         }
         @CustomType.Setter
@@ -534,6 +554,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
             _resultValue.nextHopLoose = nextHopLoose;
             _resultValue.policerId = policerId;
             _resultValue.preferredColorGroupId = preferredColorGroupId;
+            _resultValue.preferredColorGroupRestrict = preferredColorGroupRestrict;
             _resultValue.preferredRemoteColorRestrict = preferredRemoteColorRestrict;
             _resultValue.preferredRemoteColors = preferredRemoteColors;
             _resultValue.serviceChainFallbackToRouting = serviceChainFallbackToRouting;

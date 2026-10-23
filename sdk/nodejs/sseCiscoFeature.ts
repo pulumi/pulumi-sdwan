@@ -127,7 +127,7 @@ export class SseCiscoFeature extends pulumi.CustomResource {
     /**
      * Source IP address for Tracker
      */
-    declare public readonly trackerSourceIp: pulumi.Output<string>;
+    declare public readonly trackerSourceIp: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -180,9 +180,6 @@ export class SseCiscoFeature extends pulumi.CustomResource {
             }
             if (args?.region === undefined && !opts.urn) {
                 throw new Error("Missing required property 'region'");
-            }
-            if (args?.trackerSourceIp === undefined && !opts.urn) {
-                throw new Error("Missing required property 'trackerSourceIp'");
             }
             resourceInputs["contextSharingForSgt"] = args?.contextSharingForSgt;
             resourceInputs["contextSharingForVpn"] = args?.contextSharingForVpn;
@@ -310,7 +307,7 @@ export interface SseCiscoFeatureArgs {
     /**
      * Source IP address for Tracker
      */
-    trackerSourceIp: pulumi.Input<string>;
+    trackerSourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */

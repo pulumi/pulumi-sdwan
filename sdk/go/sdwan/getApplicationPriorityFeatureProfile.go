@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetApplicationPriorityFeatureProfile(ctx, &sdwan.LookupApplicationPriorityFeatureProfileArgs{
-//				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id: pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //			}, nil)
 //			if err != nil {
 //				return err
@@ -51,7 +51,9 @@ func LookupApplicationPriorityFeatureProfile(ctx *pulumi.Context, args *LookupAp
 // A collection of arguments for invoking getApplicationPriorityFeatureProfile.
 type LookupApplicationPriorityFeatureProfileArgs struct {
 	// The id of the object
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the application priority feature profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getApplicationPriorityFeatureProfile.
@@ -72,7 +74,9 @@ func LookupApplicationPriorityFeatureProfileOutput(ctx *pulumi.Context, args Loo
 // A collection of arguments for invoking getApplicationPriorityFeatureProfile.
 type LookupApplicationPriorityFeatureProfileOutputArgs struct {
 	// The id of the object
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the application priority feature profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupApplicationPriorityFeatureProfileOutputArgs) ElementType() reflect.Type {

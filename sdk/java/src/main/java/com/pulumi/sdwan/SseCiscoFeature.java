@@ -236,14 +236,14 @@ public class SseCiscoFeature extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="trackerSourceIp", refs={String.class}, tree="[0]")
-    private Output<String> trackerSourceIp;
+    private Output</* @Nullable */ String> trackerSourceIp;
 
     /**
      * @return Source IP address for Tracker
      * 
      */
-    public Output<String> trackerSourceIp() {
-        return this.trackerSourceIp;
+    public Output<Optional<String>> trackerSourceIp() {
+        return Codegen.optional(this.trackerSourceIp);
     }
     /**
      * Variable name

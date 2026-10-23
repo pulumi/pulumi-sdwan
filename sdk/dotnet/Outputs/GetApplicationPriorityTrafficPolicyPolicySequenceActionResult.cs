@@ -17,7 +17,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string AppqoeServiceNodeGroup;
         public readonly bool AppqoeTcpOptimization;
         /// <summary>
-        /// Backup SLA perferred color
+        /// Backup SLA preferred color
         /// </summary>
         public readonly ImmutableArray<string> BackupSlaPreferredColors;
         public readonly bool Cflowd;

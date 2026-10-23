@@ -50,6 +50,11 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
      */
     private @Nullable List<Integer> dscps;
     /**
+     * @return Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    private @Nullable List<String> hierarchyIds;
+    /**
      * @return ICMP6 Message
      * 
      */
@@ -175,6 +180,13 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
         return this.dscps == null ? List.of() : this.dscps;
     }
     /**
+     * @return Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public List<String> hierarchyIds() {
+        return this.hierarchyIds == null ? List.of() : this.hierarchyIds;
+    }
+    /**
      * @return ICMP6 Message
      * 
      */
@@ -291,6 +303,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
         private @Nullable String dns;
         private @Nullable String dnsApplicationListId;
         private @Nullable List<Integer> dscps;
+        private @Nullable List<String> hierarchyIds;
         private @Nullable List<String> icmp6Messages;
         private @Nullable List<String> icmpMessages;
         private @Nullable String packetLength;
@@ -319,6 +332,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
     	      this.dns = defaults.dns;
     	      this.dnsApplicationListId = defaults.dnsApplicationListId;
     	      this.dscps = defaults.dscps;
+    	      this.hierarchyIds = defaults.hierarchyIds;
     	      this.icmp6Messages = defaults.icmp6Messages;
     	      this.icmpMessages = defaults.icmpMessages;
     	      this.packetLength = defaults.packetLength;
@@ -401,6 +415,15 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
         }
         public Builder dscps(Integer... dscps) {
             return dscps(List.of(dscps));
+        }
+        @CustomType.Setter
+        public Builder hierarchyIds(@Nullable List<String> hierarchyIds) {
+
+            this.hierarchyIds = hierarchyIds;
+            return this;
+        }
+        public Builder hierarchyIds(String... hierarchyIds) {
+            return hierarchyIds(List.of(hierarchyIds));
         }
         @CustomType.Setter
         public Builder icmp6Messages(@Nullable List<String> icmp6Messages) {
@@ -519,6 +542,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
             _resultValue.dns = dns;
             _resultValue.dnsApplicationListId = dnsApplicationListId;
             _resultValue.dscps = dscps;
+            _resultValue.hierarchyIds = hierarchyIds;
             _resultValue.icmp6Messages = icmp6Messages;
             _resultValue.icmpMessages = icmpMessages;
             _resultValue.packetLength = packetLength;

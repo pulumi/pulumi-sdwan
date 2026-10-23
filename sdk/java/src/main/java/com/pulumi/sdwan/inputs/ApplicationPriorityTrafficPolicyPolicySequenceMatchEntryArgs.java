@@ -140,6 +140,21 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs 
     }
 
     /**
+     * Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="hierarchyIds")
+    private @Nullable Output<List<String>> hierarchyIds;
+
+    /**
+     * @return Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<List<String>>> hierarchyIds() {
+        return Optional.ofNullable(this.hierarchyIds);
+    }
+
+    /**
      * ICMP6 Message
      * 
      */
@@ -361,6 +376,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs 
         this.dns = $.dns;
         this.dnsApplicationListId = $.dnsApplicationListId;
         this.dscps = $.dscps;
+        this.hierarchyIds = $.hierarchyIds;
         this.icmp6Messages = $.icmp6Messages;
         this.icmpMessages = $.icmpMessages;
         this.packetLength = $.packetLength;
@@ -580,6 +596,37 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs 
          */
         public Builder dscps(Integer... dscps) {
             return dscps(List.of(dscps));
+        }
+
+        /**
+         * @param hierarchyIds Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hierarchyIds(@Nullable Output<List<String>> hierarchyIds) {
+            $.hierarchyIds = hierarchyIds;
+            return this;
+        }
+
+        /**
+         * @param hierarchyIds Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hierarchyIds(List<String> hierarchyIds) {
+            return hierarchyIds(Output.of(hierarchyIds));
+        }
+
+        /**
+         * @param hierarchyIds Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hierarchyIds(String... hierarchyIds) {
+            return hierarchyIds(List.of(hierarchyIds));
         }
 
         /**

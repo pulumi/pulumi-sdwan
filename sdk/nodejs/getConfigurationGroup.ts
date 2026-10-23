@@ -20,10 +20,12 @@ import * as utilities from "./utilities";
  * });
  * ```
  */
-export function getConfigurationGroup(args: GetConfigurationGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetConfigurationGroupResult> {
+export function getConfigurationGroup(args?: GetConfigurationGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetConfigurationGroupResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getConfigurationGroup:getConfigurationGroup", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -34,7 +36,11 @@ export interface GetConfigurationGroupArgs {
     /**
      * The id of the object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the configuration group
+     */
+    name?: string;
 }
 
 /**
@@ -92,10 +98,12 @@ export interface GetConfigurationGroupResult {
  * });
  * ```
  */
-export function getConfigurationGroupOutput(args: GetConfigurationGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetConfigurationGroupResult> {
+export function getConfigurationGroupOutput(args?: GetConfigurationGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetConfigurationGroupResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getConfigurationGroup:getConfigurationGroup", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -106,5 +114,9 @@ export interface GetConfigurationGroupOutputArgs {
     /**
      * The id of the object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the configuration group
+     */
+    name?: pulumi.Input<string | undefined>;
 }

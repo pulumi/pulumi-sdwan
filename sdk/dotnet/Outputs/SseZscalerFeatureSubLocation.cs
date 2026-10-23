@@ -70,7 +70,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? DisplayTimeUnitVariable;
         /// <summary>
-        /// , Attribute conditional on `EnforceBandwidthControl` equal to `Override`
+        /// Download Bandwidth in Mbps, Attribute conditional on `EnforceBandwidthControl` equal to `Override`
         ///   - Range: `0.1`-`99999`
         /// </summary>
         public readonly double? DnBandwidth;
@@ -107,6 +107,9 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name, Attribute conditional on `SurrogateIp` equal to `True`
         /// </summary>
         public readonly string? IdleTimeVariable;
+        /// <summary>
+        /// Internal Ip address
+        /// </summary>
         public readonly ImmutableArray<Outputs.SseZscalerFeatureSubLocationInternalIp> InternalIps;
         /// <summary>
         /// If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
@@ -117,6 +120,9 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string? IpEnforcedForKnownBrowsersVariable;
+        /// <summary>
+        /// Sub-location name
+        /// </summary>
         public readonly string? Name;
         /// <summary>
         /// Variable name
@@ -155,6 +161,9 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string? ServiceVpnVariable;
+        /// <summary>
+        /// Sub-location Service VPN
+        /// </summary>
         public readonly ImmutableArray<string> ServiceVpns;
         /// <summary>
         /// Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic., Attribute conditional on `AuthRequired` equal to `True`
@@ -166,7 +175,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? SurrogateIpVariable;
         /// <summary>
-        /// , Attribute conditional on `EnforceBandwidthControl` equal to `Override`
+        /// Upload Bandwidth in Mbps, Attribute conditional on `EnforceBandwidthControl` equal to `Override`
         ///   - Range: `0.1`-`99999`
         /// </summary>
         public readonly double? UpBandwidth;

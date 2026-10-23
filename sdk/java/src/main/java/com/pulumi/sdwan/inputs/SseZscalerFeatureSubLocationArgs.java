@@ -217,7 +217,7 @@ public final class SseZscalerFeatureSubLocationArgs extends com.pulumi.resources
     }
 
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     * Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -225,7 +225,7 @@ public final class SseZscalerFeatureSubLocationArgs extends com.pulumi.resources
     private @Nullable Output<Double> dnBandwidth;
 
     /**
-     * @return , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     * @return Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -348,9 +348,17 @@ public final class SseZscalerFeatureSubLocationArgs extends com.pulumi.resources
         return Optional.ofNullable(this.idleTimeVariable);
     }
 
+    /**
+     * Internal Ip address
+     * 
+     */
     @Import(name="internalIps")
     private @Nullable Output<List<SseZscalerFeatureSubLocationInternalIpArgs>> internalIps;
 
+    /**
+     * @return Internal Ip address
+     * 
+     */
     public Optional<Output<List<SseZscalerFeatureSubLocationInternalIpArgs>>> internalIps() {
         return Optional.ofNullable(this.internalIps);
     }
@@ -387,9 +395,17 @@ public final class SseZscalerFeatureSubLocationArgs extends com.pulumi.resources
         return Optional.ofNullable(this.ipEnforcedForKnownBrowsersVariable);
     }
 
+    /**
+     * Sub-location name
+     * 
+     */
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Sub-location name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -524,9 +540,17 @@ public final class SseZscalerFeatureSubLocationArgs extends com.pulumi.resources
         return Optional.ofNullable(this.serviceVpnVariable);
     }
 
+    /**
+     * Sub-location Service VPN
+     * 
+     */
     @Import(name="serviceVpns")
     private @Nullable Output<List<String>> serviceVpns;
 
+    /**
+     * @return Sub-location Service VPN
+     * 
+     */
     public Optional<Output<List<String>>> serviceVpns() {
         return Optional.ofNullable(this.serviceVpns);
     }
@@ -564,7 +588,7 @@ public final class SseZscalerFeatureSubLocationArgs extends com.pulumi.resources
     }
 
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     * Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -572,7 +596,7 @@ public final class SseZscalerFeatureSubLocationArgs extends com.pulumi.resources
     private @Nullable Output<Double> upBandwidth;
 
     /**
-     * @return , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     * @return Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -924,7 +948,7 @@ public final class SseZscalerFeatureSubLocationArgs extends com.pulumi.resources
         }
 
         /**
-         * @param dnBandwidth , Attribute conditional on `enforceBandwidthControl` equal to `override`
+         * @param dnBandwidth Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
          *   - Range: `0.1`-`99999`
          * 
          * @return builder
@@ -936,7 +960,7 @@ public final class SseZscalerFeatureSubLocationArgs extends com.pulumi.resources
         }
 
         /**
-         * @param dnBandwidth , Attribute conditional on `enforceBandwidthControl` equal to `override`
+         * @param dnBandwidth Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
          *   - Range: `0.1`-`99999`
          * 
          * @return builder
@@ -1103,15 +1127,33 @@ public final class SseZscalerFeatureSubLocationArgs extends com.pulumi.resources
             return idleTimeVariable(Output.of(idleTimeVariable));
         }
 
+        /**
+         * @param internalIps Internal Ip address
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIps(@Nullable Output<List<SseZscalerFeatureSubLocationInternalIpArgs>> internalIps) {
             $.internalIps = internalIps;
             return this;
         }
 
+        /**
+         * @param internalIps Internal Ip address
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIps(List<SseZscalerFeatureSubLocationInternalIpArgs> internalIps) {
             return internalIps(Output.of(internalIps));
         }
 
+        /**
+         * @param internalIps Internal Ip address
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIps(SseZscalerFeatureSubLocationInternalIpArgs... internalIps) {
             return internalIps(List.of(internalIps));
         }
@@ -1160,11 +1202,23 @@ public final class SseZscalerFeatureSubLocationArgs extends com.pulumi.resources
             return ipEnforcedForKnownBrowsersVariable(Output.of(ipEnforcedForKnownBrowsersVariable));
         }
 
+        /**
+         * @param name Sub-location name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Sub-location name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -1347,15 +1401,33 @@ public final class SseZscalerFeatureSubLocationArgs extends com.pulumi.resources
             return serviceVpnVariable(Output.of(serviceVpnVariable));
         }
 
+        /**
+         * @param serviceVpns Sub-location Service VPN
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceVpns(@Nullable Output<List<String>> serviceVpns) {
             $.serviceVpns = serviceVpns;
             return this;
         }
 
+        /**
+         * @param serviceVpns Sub-location Service VPN
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceVpns(List<String> serviceVpns) {
             return serviceVpns(Output.of(serviceVpns));
         }
 
+        /**
+         * @param serviceVpns Sub-location Service VPN
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceVpns(String... serviceVpns) {
             return serviceVpns(List.of(serviceVpns));
         }
@@ -1405,7 +1477,7 @@ public final class SseZscalerFeatureSubLocationArgs extends com.pulumi.resources
         }
 
         /**
-         * @param upBandwidth , Attribute conditional on `enforceBandwidthControl` equal to `override`
+         * @param upBandwidth Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
          *   - Range: `0.1`-`99999`
          * 
          * @return builder
@@ -1417,7 +1489,7 @@ public final class SseZscalerFeatureSubLocationArgs extends com.pulumi.resources
         }
 
         /**
-         * @param upBandwidth , Attribute conditional on `enforceBandwidthControl` equal to `override`
+         * @param upBandwidth Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
          *   - Range: `0.1`-`99999`
          * 
          * @return builder

@@ -5,9 +5,10 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GetEmbeddedSecurityFeatureProfileArgs extends com.pulumi.resources.InvokeArgs {
@@ -18,21 +19,37 @@ public final class GetEmbeddedSecurityFeatureProfileArgs extends com.pulumi.reso
      * The id of the object
      * 
      */
-    @Import(name="id", required=true)
-    private Output<String> id;
+    @Import(name="id")
+    private @Nullable Output<String> id;
 
     /**
      * @return The id of the object
      * 
      */
-    public Output<String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
+    }
+
+    /**
+     * The name of the embedded security feature profile
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return The name of the embedded security feature profile
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetEmbeddedSecurityFeatureProfileArgs() {}
 
     private GetEmbeddedSecurityFeatureProfileArgs(GetEmbeddedSecurityFeatureProfileArgs $) {
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -59,7 +76,7 @@ public final class GetEmbeddedSecurityFeatureProfileArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder id(Output<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -74,10 +91,28 @@ public final class GetEmbeddedSecurityFeatureProfileArgs extends com.pulumi.reso
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the embedded security feature profile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the embedded security feature profile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
         public GetEmbeddedSecurityFeatureProfileArgs build() {
-            if ($.id == null) {
-                throw new MissingRequiredPropertyException("GetEmbeddedSecurityFeatureProfileArgs", "id");
-            }
             return $;
         }
     }

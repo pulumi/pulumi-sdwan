@@ -18,10 +18,12 @@ import * as utilities from "./utilities";
  * });
  * ```
  */
-export function getCliFeatureProfile(args: GetCliFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetCliFeatureProfileResult> {
+export function getCliFeatureProfile(args?: GetCliFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetCliFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCliFeatureProfile:getCliFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,7 +34,11 @@ export interface GetCliFeatureProfileArgs {
     /**
      * The id of the object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the cli feature profile
+     */
+    name?: string;
 }
 
 /**
@@ -66,10 +72,12 @@ export interface GetCliFeatureProfileResult {
  * });
  * ```
  */
-export function getCliFeatureProfileOutput(args: GetCliFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCliFeatureProfileResult> {
+export function getCliFeatureProfileOutput(args?: GetCliFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCliFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCliFeatureProfile:getCliFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -80,5 +88,9 @@ export interface GetCliFeatureProfileOutputArgs {
     /**
      * The id of the object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the cli feature profile
+     */
+    name?: pulumi.Input<string | undefined>;
 }

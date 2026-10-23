@@ -104,6 +104,21 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
         return Optional.ofNullable(this.preferredColorGroupId);
     }
 
+    /**
+     * Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="preferredColorGroupRestrict")
+    private @Nullable Output<Boolean> preferredColorGroupRestrict;
+
+    /**
+     * @return Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<Boolean>> preferredColorGroupRestrict() {
+        return Optional.ofNullable(this.preferredColorGroupRestrict);
+    }
+
     @Import(name="preferredRemoteColorRestrict")
     private @Nullable Output<Boolean> preferredRemoteColorRestrict;
 
@@ -342,6 +357,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
         this.nextHopLoose = $.nextHopLoose;
         this.policerId = $.policerId;
         this.preferredColorGroupId = $.preferredColorGroupId;
+        this.preferredColorGroupRestrict = $.preferredColorGroupRestrict;
         this.preferredRemoteColorRestrict = $.preferredRemoteColorRestrict;
         this.preferredRemoteColors = $.preferredRemoteColors;
         this.serviceChainFallbackToRouting = $.serviceChainFallbackToRouting;
@@ -501,6 +517,27 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
 
         public Builder preferredColorGroupId(String preferredColorGroupId) {
             return preferredColorGroupId(Output.of(preferredColorGroupId));
+        }
+
+        /**
+         * @param preferredColorGroupRestrict Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preferredColorGroupRestrict(@Nullable Output<Boolean> preferredColorGroupRestrict) {
+            $.preferredColorGroupRestrict = preferredColorGroupRestrict;
+            return this;
+        }
+
+        /**
+         * @param preferredColorGroupRestrict Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preferredColorGroupRestrict(Boolean preferredColorGroupRestrict) {
+            return preferredColorGroupRestrict(Output.of(preferredColorGroupRestrict));
         }
 
         public Builder preferredRemoteColorRestrict(@Nullable Output<Boolean> preferredRemoteColorRestrict) {

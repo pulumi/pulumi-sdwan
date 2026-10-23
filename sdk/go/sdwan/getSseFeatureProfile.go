@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetSseFeatureProfile(ctx, &sdwan.LookupSseFeatureProfileArgs{
-//				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id: pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //			}, nil)
 //			if err != nil {
 //				return err
@@ -51,7 +51,9 @@ func LookupSseFeatureProfile(ctx *pulumi.Context, args *LookupSseFeatureProfileA
 // A collection of arguments for invoking getSseFeatureProfile.
 type LookupSseFeatureProfileArgs struct {
 	// The id of the object
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the sse feature profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getSseFeatureProfile.
@@ -72,7 +74,9 @@ func LookupSseFeatureProfileOutput(ctx *pulumi.Context, args LookupSseFeaturePro
 // A collection of arguments for invoking getSseFeatureProfile.
 type LookupSseFeatureProfileOutputArgs struct {
 	// The id of the object
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the sse feature profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupSseFeatureProfileOutputArgs) ElementType() reflect.Type {

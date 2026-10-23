@@ -178,6 +178,10 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string SignatureSet;
         /// <summary>
+        /// Reference to a user edited signature set parcel
+        /// </summary>
+        public readonly string SignatureSetId;
+        /// <summary>
         /// The version of the Policy_object
         /// </summary>
         public readonly int Version;
@@ -202,6 +206,8 @@ namespace Pulumi.Sdwan
 
             string signatureSet,
 
+            string signatureSetId,
+
             int version)
         {
             CustomSignature = customSignature;
@@ -213,6 +219,7 @@ namespace Pulumi.Sdwan
             LogLevel = logLevel;
             Name = name;
             SignatureSet = signatureSet;
+            SignatureSetId = signatureSetId;
             Version = version;
         }
     }

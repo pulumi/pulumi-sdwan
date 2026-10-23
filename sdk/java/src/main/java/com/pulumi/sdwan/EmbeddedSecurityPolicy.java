@@ -11,6 +11,7 @@ import com.pulumi.sdwan.EmbeddedSecurityPolicyArgs;
 import com.pulumi.sdwan.Utilities;
 import com.pulumi.sdwan.inputs.EmbeddedSecurityPolicyState;
 import com.pulumi.sdwan.outputs.EmbeddedSecurityPolicyAssembly;
+import com.pulumi.sdwan.outputs.EmbeddedSecurityPolicyHighSpeedLogging;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,6 +36,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.EmbeddedSecurityPolicyArgs;
  * import com.pulumi.sdwan.inputs.EmbeddedSecurityPolicyAssemblyArgs;
  * import com.pulumi.sdwan.inputs.EmbeddedSecurityPolicyAssemblyEntryArgs;
+ * import com.pulumi.sdwan.inputs.EmbeddedSecurityPolicyHighSpeedLoggingArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;
@@ -68,6 +70,12 @@ import javax.annotation.Nullable;
  *             .sessionReclassifyAllow("on")
  *             .icmpUnreachableAllow("on")
  *             .failureMode("close")
+ *             .highSpeedLoggings(EmbeddedSecurityPolicyHighSpeedLoggingArgs.builder()
+ *                 .name("server1")
+ *                 .sourceInterface("GigabitEthernet1")
+ *                 .build())
+ *             .syslogServerSourceInterface("GigabitEthernet1")
+ *             .optimized(false)
  *             .nat(true)
  *             .downloadUrlDatabaseOnDevice(false)
  *             .resourceProfile("low")
@@ -176,6 +184,20 @@ public class EmbeddedSecurityPolicy extends com.pulumi.resources.CustomResource 
         return this.featureProfileId;
     }
     /**
+     * High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Export(name="highSpeedLoggings", refs={List.class,EmbeddedSecurityPolicyHighSpeedLogging.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<EmbeddedSecurityPolicyHighSpeedLogging>> highSpeedLoggings;
+
+    /**
+     * @return High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Output<Optional<List<EmbeddedSecurityPolicyHighSpeedLogging>>> highSpeedLoggings() {
+        return Codegen.optional(this.highSpeedLoggings);
+    }
+    /**
      * Setting can be string &#39;on&#39; or missing for off
      *   - Choices: `on`
      * 
@@ -244,6 +266,20 @@ public class EmbeddedSecurityPolicy extends com.pulumi.resources.CustomResource 
         return Codegen.optional(this.natVariable);
     }
     /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Export(name="optimized", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> optimized;
+
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Output<Optional<Boolean>> optimized() {
+        return Codegen.optional(this.optimized);
+    }
+    /**
      * - Choices: `low`, `medium`, `high`
      * 
      */
@@ -286,6 +322,34 @@ public class EmbeddedSecurityPolicy extends com.pulumi.resources.CustomResource 
      */
     public Output<Optional<String>> sessionReclassifyAllow() {
         return Codegen.optional(this.sessionReclassifyAllow);
+    }
+    /**
+     * InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Export(name="syslogServerSourceInterface", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> syslogServerSourceInterface;
+
+    /**
+     * @return InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Output<Optional<String>> syslogServerSourceInterface() {
+        return Codegen.optional(this.syslogServerSourceInterface);
+    }
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Export(name="syslogServerSourceInterfaceVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> syslogServerSourceInterfaceVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Output<Optional<String>> syslogServerSourceInterfaceVariable() {
+        return Codegen.optional(this.syslogServerSourceInterfaceVariable);
     }
     @Export(name="tcpSynFloodLimit", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tcpSynFloodLimit;

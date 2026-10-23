@@ -186,14 +186,16 @@ public final class SseZscalerFeatureState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * - Default value: `false`
+     * Country
+     *   - Default value: `false`
      * 
      */
     @Import(name="country")
     private @Nullable Output<Boolean> country;
 
     /**
-     * @return - Default value: `false`
+     * @return Country
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> country() {
@@ -265,7 +267,7 @@ public final class SseZscalerFeatureState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -273,7 +275,7 @@ public final class SseZscalerFeatureState extends com.pulumi.resources.ResourceA
     private @Nullable Output<Double> dnBandwidth;
 
     /**
-     * @return , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * @return Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -297,14 +299,16 @@ public final class SseZscalerFeatureState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * - Default value: `false`
+     * Enforce Bandwidth Control
+     *   - Default value: `false`
      * 
      */
     @Import(name="enforceBandwidthControl")
     private @Nullable Output<Boolean> enforceBandwidthControl;
 
     /**
-     * @return - Default value: `false`
+     * @return Enforce Bandwidth Control
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enforceBandwidthControl() {
@@ -814,7 +818,7 @@ public final class SseZscalerFeatureState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -822,7 +826,7 @@ public final class SseZscalerFeatureState extends com.pulumi.resources.ResourceA
     private @Nullable Output<Double> upBandwidth;
 
     /**
-     * @return , Attribute conditional on `enforceBandwidthControl` equal to `true`
+     * @return Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -1193,7 +1197,8 @@ public final class SseZscalerFeatureState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param country - Default value: `false`
+         * @param country Country
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1204,7 +1209,8 @@ public final class SseZscalerFeatureState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param country - Default value: `false`
+         * @param country Country
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1302,7 +1308,7 @@ public final class SseZscalerFeatureState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param dnBandwidth , Attribute conditional on `enforceBandwidthControl` equal to `true`
+         * @param dnBandwidth Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
          *   - Range: `0.1`-`99999`
          * 
          * @return builder
@@ -1314,7 +1320,7 @@ public final class SseZscalerFeatureState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param dnBandwidth , Attribute conditional on `enforceBandwidthControl` equal to `true`
+         * @param dnBandwidth Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
          *   - Range: `0.1`-`99999`
          * 
          * @return builder
@@ -1346,7 +1352,8 @@ public final class SseZscalerFeatureState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param enforceBandwidthControl - Default value: `false`
+         * @param enforceBandwidthControl Enforce Bandwidth Control
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1357,7 +1364,8 @@ public final class SseZscalerFeatureState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param enforceBandwidthControl - Default value: `false`
+         * @param enforceBandwidthControl Enforce Bandwidth Control
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2091,7 +2099,7 @@ public final class SseZscalerFeatureState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param upBandwidth , Attribute conditional on `enforceBandwidthControl` equal to `true`
+         * @param upBandwidth Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
          *   - Range: `0.1`-`99999`
          * 
          * @return builder
@@ -2103,7 +2111,7 @@ public final class SseZscalerFeatureState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param upBandwidth , Attribute conditional on `enforceBandwidthControl` equal to `true`
+         * @param upBandwidth Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `true`
          *   - Range: `0.1`-`99999`
          * 
          * @return builder
