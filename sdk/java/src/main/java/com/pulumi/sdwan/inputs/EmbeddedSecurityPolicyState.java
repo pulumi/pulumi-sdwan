@@ -6,6 +6,7 @@ package com.pulumi.sdwan.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.sdwan.inputs.EmbeddedSecurityPolicyAssemblyArgs;
+import com.pulumi.sdwan.inputs.EmbeddedSecurityPolicyHighSpeedLoggingArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -111,6 +112,21 @@ public final class EmbeddedSecurityPolicyState extends com.pulumi.resources.Reso
     }
 
     /**
+     * High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="highSpeedLoggings")
+    private @Nullable Output<List<EmbeddedSecurityPolicyHighSpeedLoggingArgs>> highSpeedLoggings;
+
+    /**
+     * @return High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<List<EmbeddedSecurityPolicyHighSpeedLoggingArgs>>> highSpeedLoggings() {
+        return Optional.ofNullable(this.highSpeedLoggings);
+    }
+
+    /**
      * Setting can be string &#39;on&#39; or missing for off
      *   - Choices: `on`
      * 
@@ -186,6 +202,21 @@ public final class EmbeddedSecurityPolicyState extends com.pulumi.resources.Reso
     }
 
     /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="optimized")
+    private @Nullable Output<Boolean> optimized;
+
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<Boolean>> optimized() {
+        return Optional.ofNullable(this.optimized);
+    }
+
+    /**
      * - Choices: `low`, `medium`, `high`
      * 
      */
@@ -230,6 +261,36 @@ public final class EmbeddedSecurityPolicyState extends com.pulumi.resources.Reso
      */
     public Optional<Output<String>> sessionReclassifyAllow() {
         return Optional.ofNullable(this.sessionReclassifyAllow);
+    }
+
+    /**
+     * InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="syslogServerSourceInterface")
+    private @Nullable Output<String> syslogServerSourceInterface;
+
+    /**
+     * @return InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<String>> syslogServerSourceInterface() {
+        return Optional.ofNullable(this.syslogServerSourceInterface);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="syslogServerSourceInterfaceVariable")
+    private @Nullable Output<String> syslogServerSourceInterfaceVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<String>> syslogServerSourceInterfaceVariable() {
+        return Optional.ofNullable(this.syslogServerSourceInterfaceVariable);
     }
 
     @Import(name="tcpSynFloodLimit")
@@ -281,6 +342,7 @@ public final class EmbeddedSecurityPolicyState extends com.pulumi.resources.Reso
         this.downloadUrlDatabaseOnDeviceVariable = $.downloadUrlDatabaseOnDeviceVariable;
         this.failureMode = $.failureMode;
         this.featureProfileId = $.featureProfileId;
+        this.highSpeedLoggings = $.highSpeedLoggings;
         this.icmpUnreachableAllow = $.icmpUnreachableAllow;
         this.maxIncompleteIcmpLimit = $.maxIncompleteIcmpLimit;
         this.maxIncompleteTcpLimit = $.maxIncompleteTcpLimit;
@@ -288,9 +350,12 @@ public final class EmbeddedSecurityPolicyState extends com.pulumi.resources.Reso
         this.name = $.name;
         this.nat = $.nat;
         this.natVariable = $.natVariable;
+        this.optimized = $.optimized;
         this.resourceProfile = $.resourceProfile;
         this.resourceProfileVariable = $.resourceProfileVariable;
         this.sessionReclassifyAllow = $.sessionReclassifyAllow;
+        this.syslogServerSourceInterface = $.syslogServerSourceInterface;
+        this.syslogServerSourceInterfaceVariable = $.syslogServerSourceInterfaceVariable;
         this.tcpSynFloodLimit = $.tcpSynFloodLimit;
         this.unifiedLogging = $.unifiedLogging;
         this.version = $.version;
@@ -444,6 +509,37 @@ public final class EmbeddedSecurityPolicyState extends com.pulumi.resources.Reso
         }
 
         /**
+         * @param highSpeedLoggings High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder highSpeedLoggings(@Nullable Output<List<EmbeddedSecurityPolicyHighSpeedLoggingArgs>> highSpeedLoggings) {
+            $.highSpeedLoggings = highSpeedLoggings;
+            return this;
+        }
+
+        /**
+         * @param highSpeedLoggings High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder highSpeedLoggings(List<EmbeddedSecurityPolicyHighSpeedLoggingArgs> highSpeedLoggings) {
+            return highSpeedLoggings(Output.of(highSpeedLoggings));
+        }
+
+        /**
+         * @param highSpeedLoggings High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder highSpeedLoggings(EmbeddedSecurityPolicyHighSpeedLoggingArgs... highSpeedLoggings) {
+            return highSpeedLoggings(List.of(highSpeedLoggings));
+        }
+
+        /**
          * @param icmpUnreachableAllow Setting can be string &#39;on&#39; or missing for off
          *   - Choices: `on`
          * 
@@ -545,6 +641,27 @@ public final class EmbeddedSecurityPolicyState extends com.pulumi.resources.Reso
         }
 
         /**
+         * @param optimized , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder optimized(@Nullable Output<Boolean> optimized) {
+            $.optimized = optimized;
+            return this;
+        }
+
+        /**
+         * @param optimized , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder optimized(Boolean optimized) {
+            return optimized(Output.of(optimized));
+        }
+
+        /**
          * @param resourceProfile - Choices: `low`, `medium`, `high`
          * 
          * @return builder
@@ -607,6 +724,48 @@ public final class EmbeddedSecurityPolicyState extends com.pulumi.resources.Reso
          */
         public Builder sessionReclassifyAllow(String sessionReclassifyAllow) {
             return sessionReclassifyAllow(Output.of(sessionReclassifyAllow));
+        }
+
+        /**
+         * @param syslogServerSourceInterface InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder syslogServerSourceInterface(@Nullable Output<String> syslogServerSourceInterface) {
+            $.syslogServerSourceInterface = syslogServerSourceInterface;
+            return this;
+        }
+
+        /**
+         * @param syslogServerSourceInterface InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder syslogServerSourceInterface(String syslogServerSourceInterface) {
+            return syslogServerSourceInterface(Output.of(syslogServerSourceInterface));
+        }
+
+        /**
+         * @param syslogServerSourceInterfaceVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder syslogServerSourceInterfaceVariable(@Nullable Output<String> syslogServerSourceInterfaceVariable) {
+            $.syslogServerSourceInterfaceVariable = syslogServerSourceInterfaceVariable;
+            return this;
+        }
+
+        /**
+         * @param syslogServerSourceInterfaceVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder syslogServerSourceInterfaceVariable(String syslogServerSourceInterfaceVariable) {
+            return syslogServerSourceInterfaceVariable(Output.of(syslogServerSourceInterfaceVariable));
         }
 
         public Builder tcpSynFloodLimit(@Nullable Output<String> tcpSynFloodLimit) {

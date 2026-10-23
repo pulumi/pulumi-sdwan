@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetConfigurationGroup(ctx, &sdwan.LookupConfigurationGroupArgs{
-//				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id: pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //			}, nil)
 //			if err != nil {
 //				return err
@@ -51,7 +51,9 @@ func LookupConfigurationGroup(ctx *pulumi.Context, args *LookupConfigurationGrou
 // A collection of arguments for invoking getConfigurationGroup.
 type LookupConfigurationGroupArgs struct {
 	// The id of the object
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the configuration group
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getConfigurationGroup.
@@ -84,7 +86,9 @@ func LookupConfigurationGroupOutput(ctx *pulumi.Context, args LookupConfiguratio
 // A collection of arguments for invoking getConfigurationGroup.
 type LookupConfigurationGroupOutputArgs struct {
 	// The id of the object
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the configuration group
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupConfigurationGroupOutputArgs) ElementType() reflect.Type {

@@ -59,6 +59,9 @@ namespace Pulumi.Sdwan
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
+        /// <summary>
+        /// List of entries
+        /// </summary>
         [Output("entries")]
         public Output<ImmutableArray<Outputs.PolicyObjectSecurityZoneEntry>> Entries { get; private set; } = null!;
 
@@ -134,6 +137,10 @@ namespace Pulumi.Sdwan
 
         [Input("entries", required: true)]
         private InputList<Inputs.PolicyObjectSecurityZoneEntryArgs>? _entries;
+
+        /// <summary>
+        /// List of entries
+        /// </summary>
         public InputList<Inputs.PolicyObjectSecurityZoneEntryArgs> Entries
         {
             get => _entries ?? (_entries = new InputList<Inputs.PolicyObjectSecurityZoneEntryArgs>());
@@ -168,6 +175,10 @@ namespace Pulumi.Sdwan
 
         [Input("entries")]
         private InputList<Inputs.PolicyObjectSecurityZoneEntryGetArgs>? _entries;
+
+        /// <summary>
+        /// List of entries
+        /// </summary>
         public InputList<Inputs.PolicyObjectSecurityZoneEntryGetArgs> Entries
         {
             get => _entries ?? (_entries = new InputList<Inputs.PolicyObjectSecurityZoneEntryGetArgs>());

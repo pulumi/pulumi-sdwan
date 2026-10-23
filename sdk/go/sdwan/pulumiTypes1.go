@@ -13,6 +13,505 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type TransportWanVpnFeatureNewHostMapping struct {
+	// Hostname
+	HostName *string `pulumi:"hostName"`
+	// Variable name
+	HostNameVariable *string `pulumi:"hostNameVariable"`
+	// List of IP
+	ListOfIpAddresses []string `pulumi:"listOfIpAddresses"`
+	// Variable name
+	ListOfIpAddressesVariable *string `pulumi:"listOfIpAddressesVariable"`
+}
+
+// TransportWanVpnFeatureNewHostMappingInput is an input type that accepts TransportWanVpnFeatureNewHostMappingArgs and TransportWanVpnFeatureNewHostMappingOutput values.
+// You can construct a concrete instance of `TransportWanVpnFeatureNewHostMappingInput` via:
+//
+//	TransportWanVpnFeatureNewHostMappingArgs{...}
+type TransportWanVpnFeatureNewHostMappingInput interface {
+	pulumi.Input
+
+	ToTransportWanVpnFeatureNewHostMappingOutput() TransportWanVpnFeatureNewHostMappingOutput
+	ToTransportWanVpnFeatureNewHostMappingOutputWithContext(context.Context) TransportWanVpnFeatureNewHostMappingOutput
+}
+
+type TransportWanVpnFeatureNewHostMappingArgs struct {
+	// Hostname
+	HostName pulumi.StringPtrInput `pulumi:"hostName"`
+	// Variable name
+	HostNameVariable pulumi.StringPtrInput `pulumi:"hostNameVariable"`
+	// List of IP
+	ListOfIpAddresses pulumi.StringArrayInput `pulumi:"listOfIpAddresses"`
+	// Variable name
+	ListOfIpAddressesVariable pulumi.StringPtrInput `pulumi:"listOfIpAddressesVariable"`
+}
+
+func (TransportWanVpnFeatureNewHostMappingArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*TransportWanVpnFeatureNewHostMapping)(nil)).Elem()
+}
+
+func (i TransportWanVpnFeatureNewHostMappingArgs) ToTransportWanVpnFeatureNewHostMappingOutput() TransportWanVpnFeatureNewHostMappingOutput {
+	return i.ToTransportWanVpnFeatureNewHostMappingOutputWithContext(context.Background())
+}
+
+func (i TransportWanVpnFeatureNewHostMappingArgs) ToTransportWanVpnFeatureNewHostMappingOutputWithContext(ctx context.Context) TransportWanVpnFeatureNewHostMappingOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureNewHostMappingOutput)
+}
+
+// TransportWanVpnFeatureNewHostMappingArrayInput is an input type that accepts TransportWanVpnFeatureNewHostMappingArray and TransportWanVpnFeatureNewHostMappingArrayOutput values.
+// You can construct a concrete instance of `TransportWanVpnFeatureNewHostMappingArrayInput` via:
+//
+//	TransportWanVpnFeatureNewHostMappingArray{ TransportWanVpnFeatureNewHostMappingArgs{...} }
+type TransportWanVpnFeatureNewHostMappingArrayInput interface {
+	pulumi.Input
+
+	ToTransportWanVpnFeatureNewHostMappingArrayOutput() TransportWanVpnFeatureNewHostMappingArrayOutput
+	ToTransportWanVpnFeatureNewHostMappingArrayOutputWithContext(context.Context) TransportWanVpnFeatureNewHostMappingArrayOutput
+}
+
+type TransportWanVpnFeatureNewHostMappingArray []TransportWanVpnFeatureNewHostMappingInput
+
+func (TransportWanVpnFeatureNewHostMappingArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]TransportWanVpnFeatureNewHostMapping)(nil)).Elem()
+}
+
+func (i TransportWanVpnFeatureNewHostMappingArray) ToTransportWanVpnFeatureNewHostMappingArrayOutput() TransportWanVpnFeatureNewHostMappingArrayOutput {
+	return i.ToTransportWanVpnFeatureNewHostMappingArrayOutputWithContext(context.Background())
+}
+
+func (i TransportWanVpnFeatureNewHostMappingArray) ToTransportWanVpnFeatureNewHostMappingArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureNewHostMappingArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureNewHostMappingArrayOutput)
+}
+
+type TransportWanVpnFeatureNewHostMappingOutput struct{ *pulumi.OutputState }
+
+func (TransportWanVpnFeatureNewHostMappingOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*TransportWanVpnFeatureNewHostMapping)(nil)).Elem()
+}
+
+func (o TransportWanVpnFeatureNewHostMappingOutput) ToTransportWanVpnFeatureNewHostMappingOutput() TransportWanVpnFeatureNewHostMappingOutput {
+	return o
+}
+
+func (o TransportWanVpnFeatureNewHostMappingOutput) ToTransportWanVpnFeatureNewHostMappingOutputWithContext(ctx context.Context) TransportWanVpnFeatureNewHostMappingOutput {
+	return o
+}
+
+// Hostname
+func (o TransportWanVpnFeatureNewHostMappingOutput) HostName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportWanVpnFeatureNewHostMapping) *string { return v.HostName }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o TransportWanVpnFeatureNewHostMappingOutput) HostNameVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportWanVpnFeatureNewHostMapping) *string { return v.HostNameVariable }).(pulumi.StringPtrOutput)
+}
+
+// List of IP
+func (o TransportWanVpnFeatureNewHostMappingOutput) ListOfIpAddresses() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v TransportWanVpnFeatureNewHostMapping) []string { return v.ListOfIpAddresses }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o TransportWanVpnFeatureNewHostMappingOutput) ListOfIpAddressesVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportWanVpnFeatureNewHostMapping) *string { return v.ListOfIpAddressesVariable }).(pulumi.StringPtrOutput)
+}
+
+type TransportWanVpnFeatureNewHostMappingArrayOutput struct{ *pulumi.OutputState }
+
+func (TransportWanVpnFeatureNewHostMappingArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]TransportWanVpnFeatureNewHostMapping)(nil)).Elem()
+}
+
+func (o TransportWanVpnFeatureNewHostMappingArrayOutput) ToTransportWanVpnFeatureNewHostMappingArrayOutput() TransportWanVpnFeatureNewHostMappingArrayOutput {
+	return o
+}
+
+func (o TransportWanVpnFeatureNewHostMappingArrayOutput) ToTransportWanVpnFeatureNewHostMappingArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureNewHostMappingArrayOutput {
+	return o
+}
+
+func (o TransportWanVpnFeatureNewHostMappingArrayOutput) Index(i pulumi.IntInput) TransportWanVpnFeatureNewHostMappingOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnFeatureNewHostMapping {
+		return vs[0].([]TransportWanVpnFeatureNewHostMapping)[vs[1].(int)]
+	}).(TransportWanVpnFeatureNewHostMappingOutput)
+}
+
+type TransportWanVpnFeatureService struct {
+	// Service Type
+	//   - Choices: `TE`
+	ServiceType *string `pulumi:"serviceType"`
+}
+
+// TransportWanVpnFeatureServiceInput is an input type that accepts TransportWanVpnFeatureServiceArgs and TransportWanVpnFeatureServiceOutput values.
+// You can construct a concrete instance of `TransportWanVpnFeatureServiceInput` via:
+//
+//	TransportWanVpnFeatureServiceArgs{...}
+type TransportWanVpnFeatureServiceInput interface {
+	pulumi.Input
+
+	ToTransportWanVpnFeatureServiceOutput() TransportWanVpnFeatureServiceOutput
+	ToTransportWanVpnFeatureServiceOutputWithContext(context.Context) TransportWanVpnFeatureServiceOutput
+}
+
+type TransportWanVpnFeatureServiceArgs struct {
+	// Service Type
+	//   - Choices: `TE`
+	ServiceType pulumi.StringPtrInput `pulumi:"serviceType"`
+}
+
+func (TransportWanVpnFeatureServiceArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*TransportWanVpnFeatureService)(nil)).Elem()
+}
+
+func (i TransportWanVpnFeatureServiceArgs) ToTransportWanVpnFeatureServiceOutput() TransportWanVpnFeatureServiceOutput {
+	return i.ToTransportWanVpnFeatureServiceOutputWithContext(context.Background())
+}
+
+func (i TransportWanVpnFeatureServiceArgs) ToTransportWanVpnFeatureServiceOutputWithContext(ctx context.Context) TransportWanVpnFeatureServiceOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureServiceOutput)
+}
+
+// TransportWanVpnFeatureServiceArrayInput is an input type that accepts TransportWanVpnFeatureServiceArray and TransportWanVpnFeatureServiceArrayOutput values.
+// You can construct a concrete instance of `TransportWanVpnFeatureServiceArrayInput` via:
+//
+//	TransportWanVpnFeatureServiceArray{ TransportWanVpnFeatureServiceArgs{...} }
+type TransportWanVpnFeatureServiceArrayInput interface {
+	pulumi.Input
+
+	ToTransportWanVpnFeatureServiceArrayOutput() TransportWanVpnFeatureServiceArrayOutput
+	ToTransportWanVpnFeatureServiceArrayOutputWithContext(context.Context) TransportWanVpnFeatureServiceArrayOutput
+}
+
+type TransportWanVpnFeatureServiceArray []TransportWanVpnFeatureServiceInput
+
+func (TransportWanVpnFeatureServiceArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]TransportWanVpnFeatureService)(nil)).Elem()
+}
+
+func (i TransportWanVpnFeatureServiceArray) ToTransportWanVpnFeatureServiceArrayOutput() TransportWanVpnFeatureServiceArrayOutput {
+	return i.ToTransportWanVpnFeatureServiceArrayOutputWithContext(context.Background())
+}
+
+func (i TransportWanVpnFeatureServiceArray) ToTransportWanVpnFeatureServiceArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureServiceArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureServiceArrayOutput)
+}
+
+type TransportWanVpnFeatureServiceOutput struct{ *pulumi.OutputState }
+
+func (TransportWanVpnFeatureServiceOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*TransportWanVpnFeatureService)(nil)).Elem()
+}
+
+func (o TransportWanVpnFeatureServiceOutput) ToTransportWanVpnFeatureServiceOutput() TransportWanVpnFeatureServiceOutput {
+	return o
+}
+
+func (o TransportWanVpnFeatureServiceOutput) ToTransportWanVpnFeatureServiceOutputWithContext(ctx context.Context) TransportWanVpnFeatureServiceOutput {
+	return o
+}
+
+// Service Type
+//   - Choices: `TE`
+func (o TransportWanVpnFeatureServiceOutput) ServiceType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportWanVpnFeatureService) *string { return v.ServiceType }).(pulumi.StringPtrOutput)
+}
+
+type TransportWanVpnFeatureServiceArrayOutput struct{ *pulumi.OutputState }
+
+func (TransportWanVpnFeatureServiceArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]TransportWanVpnFeatureService)(nil)).Elem()
+}
+
+func (o TransportWanVpnFeatureServiceArrayOutput) ToTransportWanVpnFeatureServiceArrayOutput() TransportWanVpnFeatureServiceArrayOutput {
+	return o
+}
+
+func (o TransportWanVpnFeatureServiceArrayOutput) ToTransportWanVpnFeatureServiceArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureServiceArrayOutput {
+	return o
+}
+
+func (o TransportWanVpnFeatureServiceArrayOutput) Index(i pulumi.IntInput) TransportWanVpnFeatureServiceOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnFeatureService {
+		return vs[0].([]TransportWanVpnFeatureService)[vs[1].(int)]
+	}).(TransportWanVpnFeatureServiceOutput)
+}
+
+type TransportWanVpnInterfaceCellularFeatureArp struct {
+	// IP V4 Address
+	IpAddress *string `pulumi:"ipAddress"`
+	// Variable name
+	IpAddressVariable *string `pulumi:"ipAddressVariable"`
+	// MAC Address
+	MacAddress *string `pulumi:"macAddress"`
+	// Variable name
+	MacAddressVariable *string `pulumi:"macAddressVariable"`
+}
+
+// TransportWanVpnInterfaceCellularFeatureArpInput is an input type that accepts TransportWanVpnInterfaceCellularFeatureArpArgs and TransportWanVpnInterfaceCellularFeatureArpOutput values.
+// You can construct a concrete instance of `TransportWanVpnInterfaceCellularFeatureArpInput` via:
+//
+//	TransportWanVpnInterfaceCellularFeatureArpArgs{...}
+type TransportWanVpnInterfaceCellularFeatureArpInput interface {
+	pulumi.Input
+
+	ToTransportWanVpnInterfaceCellularFeatureArpOutput() TransportWanVpnInterfaceCellularFeatureArpOutput
+	ToTransportWanVpnInterfaceCellularFeatureArpOutputWithContext(context.Context) TransportWanVpnInterfaceCellularFeatureArpOutput
+}
+
+type TransportWanVpnInterfaceCellularFeatureArpArgs struct {
+	// IP V4 Address
+	IpAddress pulumi.StringPtrInput `pulumi:"ipAddress"`
+	// Variable name
+	IpAddressVariable pulumi.StringPtrInput `pulumi:"ipAddressVariable"`
+	// MAC Address
+	MacAddress pulumi.StringPtrInput `pulumi:"macAddress"`
+	// Variable name
+	MacAddressVariable pulumi.StringPtrInput `pulumi:"macAddressVariable"`
+}
+
+func (TransportWanVpnInterfaceCellularFeatureArpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureArp)(nil)).Elem()
+}
+
+func (i TransportWanVpnInterfaceCellularFeatureArpArgs) ToTransportWanVpnInterfaceCellularFeatureArpOutput() TransportWanVpnInterfaceCellularFeatureArpOutput {
+	return i.ToTransportWanVpnInterfaceCellularFeatureArpOutputWithContext(context.Background())
+}
+
+func (i TransportWanVpnInterfaceCellularFeatureArpArgs) ToTransportWanVpnInterfaceCellularFeatureArpOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureArpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceCellularFeatureArpOutput)
+}
+
+// TransportWanVpnInterfaceCellularFeatureArpArrayInput is an input type that accepts TransportWanVpnInterfaceCellularFeatureArpArray and TransportWanVpnInterfaceCellularFeatureArpArrayOutput values.
+// You can construct a concrete instance of `TransportWanVpnInterfaceCellularFeatureArpArrayInput` via:
+//
+//	TransportWanVpnInterfaceCellularFeatureArpArray{ TransportWanVpnInterfaceCellularFeatureArpArgs{...} }
+type TransportWanVpnInterfaceCellularFeatureArpArrayInput interface {
+	pulumi.Input
+
+	ToTransportWanVpnInterfaceCellularFeatureArpArrayOutput() TransportWanVpnInterfaceCellularFeatureArpArrayOutput
+	ToTransportWanVpnInterfaceCellularFeatureArpArrayOutputWithContext(context.Context) TransportWanVpnInterfaceCellularFeatureArpArrayOutput
+}
+
+type TransportWanVpnInterfaceCellularFeatureArpArray []TransportWanVpnInterfaceCellularFeatureArpInput
+
+func (TransportWanVpnInterfaceCellularFeatureArpArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]TransportWanVpnInterfaceCellularFeatureArp)(nil)).Elem()
+}
+
+func (i TransportWanVpnInterfaceCellularFeatureArpArray) ToTransportWanVpnInterfaceCellularFeatureArpArrayOutput() TransportWanVpnInterfaceCellularFeatureArpArrayOutput {
+	return i.ToTransportWanVpnInterfaceCellularFeatureArpArrayOutputWithContext(context.Background())
+}
+
+func (i TransportWanVpnInterfaceCellularFeatureArpArray) ToTransportWanVpnInterfaceCellularFeatureArpArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureArpArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceCellularFeatureArpArrayOutput)
+}
+
+type TransportWanVpnInterfaceCellularFeatureArpOutput struct{ *pulumi.OutputState }
+
+func (TransportWanVpnInterfaceCellularFeatureArpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureArp)(nil)).Elem()
+}
+
+func (o TransportWanVpnInterfaceCellularFeatureArpOutput) ToTransportWanVpnInterfaceCellularFeatureArpOutput() TransportWanVpnInterfaceCellularFeatureArpOutput {
+	return o
+}
+
+func (o TransportWanVpnInterfaceCellularFeatureArpOutput) ToTransportWanVpnInterfaceCellularFeatureArpOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureArpOutput {
+	return o
+}
+
+// IP V4 Address
+func (o TransportWanVpnInterfaceCellularFeatureArpOutput) IpAddress() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureArp) *string { return v.IpAddress }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o TransportWanVpnInterfaceCellularFeatureArpOutput) IpAddressVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureArp) *string { return v.IpAddressVariable }).(pulumi.StringPtrOutput)
+}
+
+// MAC Address
+func (o TransportWanVpnInterfaceCellularFeatureArpOutput) MacAddress() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureArp) *string { return v.MacAddress }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o TransportWanVpnInterfaceCellularFeatureArpOutput) MacAddressVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureArp) *string { return v.MacAddressVariable }).(pulumi.StringPtrOutput)
+}
+
+type TransportWanVpnInterfaceCellularFeatureArpArrayOutput struct{ *pulumi.OutputState }
+
+func (TransportWanVpnInterfaceCellularFeatureArpArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]TransportWanVpnInterfaceCellularFeatureArp)(nil)).Elem()
+}
+
+func (o TransportWanVpnInterfaceCellularFeatureArpArrayOutput) ToTransportWanVpnInterfaceCellularFeatureArpArrayOutput() TransportWanVpnInterfaceCellularFeatureArpArrayOutput {
+	return o
+}
+
+func (o TransportWanVpnInterfaceCellularFeatureArpArrayOutput) ToTransportWanVpnInterfaceCellularFeatureArpArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureArpArrayOutput {
+	return o
+}
+
+func (o TransportWanVpnInterfaceCellularFeatureArpArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceCellularFeatureArpOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceCellularFeatureArp {
+		return vs[0].([]TransportWanVpnInterfaceCellularFeatureArp)[vs[1].(int)]
+	}).(TransportWanVpnInterfaceCellularFeatureArpOutput)
+}
+
+type TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation struct {
+	// Encapsulation
+	//   - Choices: `gre`, `ipsec`
+	Encapsulation *string `pulumi:"encapsulation"`
+	// Set preference for TLOC
+	//   - Range: `0`-`4294967295`
+	Preference *int `pulumi:"preference"`
+	// Variable name
+	PreferenceVariable *string `pulumi:"preferenceVariable"`
+	// Set weight for TLOC
+	//   - Range: `1`-`255`
+	//   - Default value: `1`
+	Weight *int `pulumi:"weight"`
+	// Variable name
+	WeightVariable *string `pulumi:"weightVariable"`
+}
+
+// TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput is an input type that accepts TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs and TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput values.
+// You can construct a concrete instance of `TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput` via:
+//
+//	TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs{...}
+type TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput interface {
+	pulumi.Input
+
+	ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput() TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput
+	ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutputWithContext(context.Context) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput
+}
+
+type TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs struct {
+	// Encapsulation
+	//   - Choices: `gre`, `ipsec`
+	Encapsulation pulumi.StringPtrInput `pulumi:"encapsulation"`
+	// Set preference for TLOC
+	//   - Range: `0`-`4294967295`
+	Preference pulumi.IntPtrInput `pulumi:"preference"`
+	// Variable name
+	PreferenceVariable pulumi.StringPtrInput `pulumi:"preferenceVariable"`
+	// Set weight for TLOC
+	//   - Range: `1`-`255`
+	//   - Default value: `1`
+	Weight pulumi.IntPtrInput `pulumi:"weight"`
+	// Variable name
+	WeightVariable pulumi.StringPtrInput `pulumi:"weightVariable"`
+}
+
+func (TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (i TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput() TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
+	return i.ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutputWithContext(context.Background())
+}
+
+func (i TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput)
+}
+
+// TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayInput is an input type that accepts TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray and TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput values.
+// You can construct a concrete instance of `TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayInput` via:
+//
+//	TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray{ TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs{...} }
+type TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayInput interface {
+	pulumi.Input
+
+	ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput() TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput
+	ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(context.Context) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput
+}
+
+type TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray []TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput
+
+func (TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (i TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput() TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput {
+	return i.ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(context.Background())
+}
+
+func (i TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput)
+}
+
+type TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput struct{ *pulumi.OutputState }
+
+func (TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput() TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
+	return o
+}
+
+func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
+	return o
+}
+
+// Encapsulation
+//   - Choices: `gre`, `ipsec`
+func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) Encapsulation() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) *string {
+		return v.Encapsulation
+	}).(pulumi.StringPtrOutput)
+}
+
+// Set preference for TLOC
+//   - Range: `0`-`4294967295`
+func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) Preference() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) *int { return v.Preference }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) PreferenceVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) *string {
+		return v.PreferenceVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// Set weight for TLOC
+//   - Range: `1`-`255`
+//   - Default value: `1`
+func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) Weight() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) *int { return v.Weight }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) WeightVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) *string {
+		return v.WeightVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+type TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput struct{ *pulumi.OutputState }
+
+func (TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput() TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput {
+	return o
+}
+
+func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput {
+	return o
+}
+
+func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation {
+		return vs[0].([]TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)[vs[1].(int)]
+	}).(TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput)
+}
+
 type TransportWanVpnInterfaceEthernetFeatureArp struct {
 	// IP V4 Address
 	IpAddress *string `pulumi:"ipAddress"`
@@ -11577,7 +12076,7 @@ type GetApplicationPriorityTrafficPolicyPolicySequenceAction struct {
 	AppqoeDreOptimization  bool   `pulumi:"appqoeDreOptimization"`
 	AppqoeServiceNodeGroup string `pulumi:"appqoeServiceNodeGroup"`
 	AppqoeTcpOptimization  bool   `pulumi:"appqoeTcpOptimization"`
-	// Backup SLA perferred color
+	// Backup SLA preferred color
 	BackupSlaPreferredColors  []string                                                              `pulumi:"backupSlaPreferredColors"`
 	Cflowd                    bool                                                                  `pulumi:"cflowd"`
 	CloudProbe                bool                                                                  `pulumi:"cloudProbe"`
@@ -11618,7 +12117,7 @@ type GetApplicationPriorityTrafficPolicyPolicySequenceActionArgs struct {
 	AppqoeDreOptimization  pulumi.BoolInput   `pulumi:"appqoeDreOptimization"`
 	AppqoeServiceNodeGroup pulumi.StringInput `pulumi:"appqoeServiceNodeGroup"`
 	AppqoeTcpOptimization  pulumi.BoolInput   `pulumi:"appqoeTcpOptimization"`
-	// Backup SLA perferred color
+	// Backup SLA preferred color
 	BackupSlaPreferredColors  pulumi.StringArrayInput                                                       `pulumi:"backupSlaPreferredColors"`
 	Cflowd                    pulumi.BoolInput                                                              `pulumi:"cflowd"`
 	CloudProbe                pulumi.BoolInput                                                              `pulumi:"cloudProbe"`
@@ -11709,7 +12208,7 @@ func (o GetApplicationPriorityTrafficPolicyPolicySequenceActionOutput) AppqoeTcp
 	return o.ApplyT(func(v GetApplicationPriorityTrafficPolicyPolicySequenceAction) bool { return v.AppqoeTcpOptimization }).(pulumi.BoolOutput)
 }
 
-// Backup SLA perferred color
+// Backup SLA preferred color
 func (o GetApplicationPriorityTrafficPolicyPolicySequenceActionOutput) BackupSlaPreferredColors() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetApplicationPriorityTrafficPolicyPolicySequenceAction) []string {
 		return v.BackupSlaPreferredColors
@@ -11828,16 +12327,18 @@ func (o GetApplicationPriorityTrafficPolicyPolicySequenceActionArrayOutput) Inde
 }
 
 type GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter struct {
-	Dscp                          int      `pulumi:"dscp"`
-	ForwardingClassListId         string   `pulumi:"forwardingClassListId"`
-	LocalTlocListColors           []string `pulumi:"localTlocListColors"`
-	LocalTlocListEncapsulation    string   `pulumi:"localTlocListEncapsulation"`
-	LocalTlocListRestrict         bool     `pulumi:"localTlocListRestrict"`
-	NextHopIpv4                   string   `pulumi:"nextHopIpv4"`
-	NextHopIpv6                   string   `pulumi:"nextHopIpv6"`
-	NextHopLoose                  bool     `pulumi:"nextHopLoose"`
-	PolicerId                     string   `pulumi:"policerId"`
-	PreferredColorGroupId         string   `pulumi:"preferredColorGroupId"`
+	Dscp                       int      `pulumi:"dscp"`
+	ForwardingClassListId      string   `pulumi:"forwardingClassListId"`
+	LocalTlocListColors        []string `pulumi:"localTlocListColors"`
+	LocalTlocListEncapsulation string   `pulumi:"localTlocListEncapsulation"`
+	LocalTlocListRestrict      bool     `pulumi:"localTlocListRestrict"`
+	NextHopIpv4                string   `pulumi:"nextHopIpv4"`
+	NextHopIpv6                string   `pulumi:"nextHopIpv6"`
+	NextHopLoose               bool     `pulumi:"nextHopLoose"`
+	PolicerId                  string   `pulumi:"policerId"`
+	PreferredColorGroupId      string   `pulumi:"preferredColorGroupId"`
+	// Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set
+	PreferredColorGroupRestrict   bool     `pulumi:"preferredColorGroupRestrict"`
 	PreferredRemoteColorRestrict  bool     `pulumi:"preferredRemoteColorRestrict"`
 	PreferredRemoteColors         []string `pulumi:"preferredRemoteColors"`
 	ServiceChainFallbackToRouting bool     `pulumi:"serviceChainFallbackToRouting"`
@@ -11875,16 +12376,18 @@ type GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterInput in
 }
 
 type GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs struct {
-	Dscp                          pulumi.IntInput         `pulumi:"dscp"`
-	ForwardingClassListId         pulumi.StringInput      `pulumi:"forwardingClassListId"`
-	LocalTlocListColors           pulumi.StringArrayInput `pulumi:"localTlocListColors"`
-	LocalTlocListEncapsulation    pulumi.StringInput      `pulumi:"localTlocListEncapsulation"`
-	LocalTlocListRestrict         pulumi.BoolInput        `pulumi:"localTlocListRestrict"`
-	NextHopIpv4                   pulumi.StringInput      `pulumi:"nextHopIpv4"`
-	NextHopIpv6                   pulumi.StringInput      `pulumi:"nextHopIpv6"`
-	NextHopLoose                  pulumi.BoolInput        `pulumi:"nextHopLoose"`
-	PolicerId                     pulumi.StringInput      `pulumi:"policerId"`
-	PreferredColorGroupId         pulumi.StringInput      `pulumi:"preferredColorGroupId"`
+	Dscp                       pulumi.IntInput         `pulumi:"dscp"`
+	ForwardingClassListId      pulumi.StringInput      `pulumi:"forwardingClassListId"`
+	LocalTlocListColors        pulumi.StringArrayInput `pulumi:"localTlocListColors"`
+	LocalTlocListEncapsulation pulumi.StringInput      `pulumi:"localTlocListEncapsulation"`
+	LocalTlocListRestrict      pulumi.BoolInput        `pulumi:"localTlocListRestrict"`
+	NextHopIpv4                pulumi.StringInput      `pulumi:"nextHopIpv4"`
+	NextHopIpv6                pulumi.StringInput      `pulumi:"nextHopIpv6"`
+	NextHopLoose               pulumi.BoolInput        `pulumi:"nextHopLoose"`
+	PolicerId                  pulumi.StringInput      `pulumi:"policerId"`
+	PreferredColorGroupId      pulumi.StringInput      `pulumi:"preferredColorGroupId"`
+	// Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set
+	PreferredColorGroupRestrict   pulumi.BoolInput        `pulumi:"preferredColorGroupRestrict"`
 	PreferredRemoteColorRestrict  pulumi.BoolInput        `pulumi:"preferredRemoteColorRestrict"`
 	PreferredRemoteColors         pulumi.StringArrayInput `pulumi:"preferredRemoteColors"`
 	ServiceChainFallbackToRouting pulumi.BoolInput        `pulumi:"serviceChainFallbackToRouting"`
@@ -12015,6 +12518,13 @@ func (o GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterOutpu
 	return o.ApplyT(func(v GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter) string {
 		return v.PreferredColorGroupId
 	}).(pulumi.StringOutput)
+}
+
+// Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set
+func (o GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterOutput) PreferredColorGroupRestrict() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter) bool {
+		return v.PreferredColorGroupRestrict
+	}).(pulumi.BoolOutput)
 }
 
 func (o GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterOutput) PreferredRemoteColorRestrict() pulumi.BoolOutput {
@@ -12170,13 +12680,15 @@ func (o GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArray
 }
 
 type GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass struct {
-	FallbackToBestPath        bool     `pulumi:"fallbackToBestPath"`
-	PreferredColorGroupListId string   `pulumi:"preferredColorGroupListId"`
-	PreferredColors           []string `pulumi:"preferredColors"`
-	PreferredRemoteColors     []string `pulumi:"preferredRemoteColors"`
-	RemoteColorRestrict       bool     `pulumi:"remoteColorRestrict"`
-	SlaClassListId            string   `pulumi:"slaClassListId"`
-	Strict                    bool     `pulumi:"strict"`
+	FallbackToBestPath        bool   `pulumi:"fallbackToBestPath"`
+	PreferredColorGroupListId string `pulumi:"preferredColorGroupListId"`
+	// Restrict traffic to the preferred color group, requires `preferredColorGroupListId` to be set
+	PreferredColorGroupRestrict bool     `pulumi:"preferredColorGroupRestrict"`
+	PreferredColors             []string `pulumi:"preferredColors"`
+	PreferredRemoteColors       []string `pulumi:"preferredRemoteColors"`
+	RemoteColorRestrict         bool     `pulumi:"remoteColorRestrict"`
+	SlaClassListId              string   `pulumi:"slaClassListId"`
+	Strict                      bool     `pulumi:"strict"`
 }
 
 // GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassInput is an input type that accepts GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgs and GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassOutput values.
@@ -12191,13 +12703,15 @@ type GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassInput interf
 }
 
 type GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgs struct {
-	FallbackToBestPath        pulumi.BoolInput        `pulumi:"fallbackToBestPath"`
-	PreferredColorGroupListId pulumi.StringInput      `pulumi:"preferredColorGroupListId"`
-	PreferredColors           pulumi.StringArrayInput `pulumi:"preferredColors"`
-	PreferredRemoteColors     pulumi.StringArrayInput `pulumi:"preferredRemoteColors"`
-	RemoteColorRestrict       pulumi.BoolInput        `pulumi:"remoteColorRestrict"`
-	SlaClassListId            pulumi.StringInput      `pulumi:"slaClassListId"`
-	Strict                    pulumi.BoolInput        `pulumi:"strict"`
+	FallbackToBestPath        pulumi.BoolInput   `pulumi:"fallbackToBestPath"`
+	PreferredColorGroupListId pulumi.StringInput `pulumi:"preferredColorGroupListId"`
+	// Restrict traffic to the preferred color group, requires `preferredColorGroupListId` to be set
+	PreferredColorGroupRestrict pulumi.BoolInput        `pulumi:"preferredColorGroupRestrict"`
+	PreferredColors             pulumi.StringArrayInput `pulumi:"preferredColors"`
+	PreferredRemoteColors       pulumi.StringArrayInput `pulumi:"preferredRemoteColors"`
+	RemoteColorRestrict         pulumi.BoolInput        `pulumi:"remoteColorRestrict"`
+	SlaClassListId              pulumi.StringInput      `pulumi:"slaClassListId"`
+	Strict                      pulumi.BoolInput        `pulumi:"strict"`
 }
 
 func (GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgs) ElementType() reflect.Type {
@@ -12261,6 +12775,13 @@ func (o GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassOutput) P
 	return o.ApplyT(func(v GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass) string {
 		return v.PreferredColorGroupListId
 	}).(pulumi.StringOutput)
+}
+
+// Restrict traffic to the preferred color group, requires `preferredColorGroupListId` to be set
+func (o GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassOutput) PreferredColorGroupRestrict() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass) bool {
+		return v.PreferredColorGroupRestrict
+	}).(pulumi.BoolOutput)
 }
 
 func (o GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassOutput) PreferredColors() pulumi.StringArrayOutput {
@@ -12328,6 +12849,8 @@ type GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry struct {
 	DnsApplicationListId string `pulumi:"dnsApplicationListId"`
 	// DSCP numbers
 	Dscps []int `pulumi:"dscps"`
+	// Site List
+	HierarchyIds []string `pulumi:"hierarchyIds"`
 	// ICMP6 Message
 	Icmp6Messages []string `pulumi:"icmp6Messages"`
 	// ICMP Message
@@ -12385,6 +12908,8 @@ type GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs struct {
 	DnsApplicationListId pulumi.StringInput `pulumi:"dnsApplicationListId"`
 	// DSCP numbers
 	Dscps pulumi.IntArrayInput `pulumi:"dscps"`
+	// Site List
+	HierarchyIds pulumi.StringArrayInput `pulumi:"hierarchyIds"`
 	// ICMP6 Message
 	Icmp6Messages pulumi.StringArrayInput `pulumi:"icmp6Messages"`
 	// ICMP Message
@@ -12521,6 +13046,11 @@ func (o GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntryOutput) DnsAp
 // DSCP numbers
 func (o GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntryOutput) Dscps() pulumi.IntArrayOutput {
 	return o.ApplyT(func(v GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry) []int { return v.Dscps }).(pulumi.IntArrayOutput)
+}
+
+// Site List
+func (o GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntryOutput) HierarchyIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry) []string { return v.HierarchyIds }).(pulumi.StringArrayOutput)
 }
 
 // ICMP6 Message
@@ -37590,10 +38120,14 @@ type GetEmbeddedSecurityNgfwPolicySequence struct {
 	Actions         []GetEmbeddedSecurityNgfwPolicySequenceAction     `pulumi:"actions"`
 	BaseAction      string                                            `pulumi:"baseAction"`
 	DisableSequence bool                                              `pulumi:"disableSequence"`
+	IsRuleSet       bool                                              `pulumi:"isRuleSet"`
 	MatchEntries    []GetEmbeddedSecurityNgfwPolicySequenceMatchEntry `pulumi:"matchEntries"`
+	SequenceComment string                                            `pulumi:"sequenceComment"`
 	SequenceId      string                                            `pulumi:"sequenceId"`
-	SequenceName    string                                            `pulumi:"sequenceName"`
-	SequenceType    string                                            `pulumi:"sequenceType"`
+	// IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones
+	SequenceIpType string `pulumi:"sequenceIpType"`
+	SequenceName   string `pulumi:"sequenceName"`
+	SequenceType   string `pulumi:"sequenceType"`
 }
 
 // GetEmbeddedSecurityNgfwPolicySequenceInput is an input type that accepts GetEmbeddedSecurityNgfwPolicySequenceArgs and GetEmbeddedSecurityNgfwPolicySequenceOutput values.
@@ -37612,10 +38146,14 @@ type GetEmbeddedSecurityNgfwPolicySequenceArgs struct {
 	Actions         GetEmbeddedSecurityNgfwPolicySequenceActionArrayInput     `pulumi:"actions"`
 	BaseAction      pulumi.StringInput                                        `pulumi:"baseAction"`
 	DisableSequence pulumi.BoolInput                                          `pulumi:"disableSequence"`
+	IsRuleSet       pulumi.BoolInput                                          `pulumi:"isRuleSet"`
 	MatchEntries    GetEmbeddedSecurityNgfwPolicySequenceMatchEntryArrayInput `pulumi:"matchEntries"`
+	SequenceComment pulumi.StringInput                                        `pulumi:"sequenceComment"`
 	SequenceId      pulumi.StringInput                                        `pulumi:"sequenceId"`
-	SequenceName    pulumi.StringInput                                        `pulumi:"sequenceName"`
-	SequenceType    pulumi.StringInput                                        `pulumi:"sequenceType"`
+	// IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones
+	SequenceIpType pulumi.StringInput `pulumi:"sequenceIpType"`
+	SequenceName   pulumi.StringInput `pulumi:"sequenceName"`
+	SequenceType   pulumi.StringInput `pulumi:"sequenceType"`
 }
 
 func (GetEmbeddedSecurityNgfwPolicySequenceArgs) ElementType() reflect.Type {
@@ -37684,14 +38222,27 @@ func (o GetEmbeddedSecurityNgfwPolicySequenceOutput) DisableSequence() pulumi.Bo
 	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequence) bool { return v.DisableSequence }).(pulumi.BoolOutput)
 }
 
+func (o GetEmbeddedSecurityNgfwPolicySequenceOutput) IsRuleSet() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequence) bool { return v.IsRuleSet }).(pulumi.BoolOutput)
+}
+
 func (o GetEmbeddedSecurityNgfwPolicySequenceOutput) MatchEntries() GetEmbeddedSecurityNgfwPolicySequenceMatchEntryArrayOutput {
 	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequence) []GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
 		return v.MatchEntries
 	}).(GetEmbeddedSecurityNgfwPolicySequenceMatchEntryArrayOutput)
 }
 
+func (o GetEmbeddedSecurityNgfwPolicySequenceOutput) SequenceComment() pulumi.StringOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequence) string { return v.SequenceComment }).(pulumi.StringOutput)
+}
+
 func (o GetEmbeddedSecurityNgfwPolicySequenceOutput) SequenceId() pulumi.StringOutput {
 	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequence) string { return v.SequenceId }).(pulumi.StringOutput)
+}
+
+// IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones
+func (o GetEmbeddedSecurityNgfwPolicySequenceOutput) SequenceIpType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequence) string { return v.SequenceIpType }).(pulumi.StringOutput)
 }
 
 func (o GetEmbeddedSecurityNgfwPolicySequenceOutput) SequenceName() pulumi.StringOutput {
@@ -37829,11 +38380,13 @@ func (o GetEmbeddedSecurityNgfwPolicySequenceActionArrayOutput) Index(i pulumi.I
 }
 
 type GetEmbeddedSecurityNgfwPolicySequenceMatchEntry struct {
-	AppListIds                   []string `pulumi:"appListIds"`
-	ApplicationFamilies          []string `pulumi:"applicationFamilies"`
-	Applications                 []string `pulumi:"applications"`
-	DestinationDataPrefixListIds []string `pulumi:"destinationDataPrefixListIds"`
-	DestinationDataPrefixes      []string `pulumi:"destinationDataPrefixes"`
+	AppListIds          []string `pulumi:"appListIds"`
+	ApplicationFamilies []string `pulumi:"applicationFamilies"`
+	Applications        []string `pulumi:"applications"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`
+	DestinationDataIpv6PrefixListIds []string `pulumi:"destinationDataIpv6PrefixListIds"`
+	DestinationDataPrefixListIds     []string `pulumi:"destinationDataPrefixListIds"`
+	DestinationDataPrefixes          []string `pulumi:"destinationDataPrefixes"`
 	// Variable name
 	DestinationDataPrefixesVariable string   `pulumi:"destinationDataPrefixesVariable"`
 	DestinationFqdnListIds          []string `pulumi:"destinationFqdnListIds"`
@@ -37843,19 +38396,29 @@ type GetEmbeddedSecurityNgfwPolicySequenceMatchEntry struct {
 	DestinationGeoLocationListIds []string `pulumi:"destinationGeoLocationListIds"`
 	DestinationGeoLocations       []string `pulumi:"destinationGeoLocations"`
 	// Variable name
-	DestinationGeoLocationsVariable string   `pulumi:"destinationGeoLocationsVariable"`
-	DestinationPortListIds          []string `pulumi:"destinationPortListIds"`
-	DestinationPorts                []string `pulumi:"destinationPorts"`
+	DestinationGeoLocationsVariable string `pulumi:"destinationGeoLocationsVariable"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`
+	DestinationIpv6DataPrefixes []string `pulumi:"destinationIpv6DataPrefixes"`
+	// Variable name
+	DestinationIpv6DataPrefixesVariable string   `pulumi:"destinationIpv6DataPrefixesVariable"`
+	DestinationObjectGroupListIds       []string `pulumi:"destinationObjectGroupListIds"`
+	DestinationPortListIds              []string `pulumi:"destinationPortListIds"`
+	DestinationPorts                    []string `pulumi:"destinationPorts"`
 	// Variable name
 	DestinationPortsVariable           string   `pulumi:"destinationPortsVariable"`
 	DestinationScalableGroupTagListIds []string `pulumi:"destinationScalableGroupTagListIds"`
-	DestinationSecurityGroupListIds    []string `pulumi:"destinationSecurityGroupListIds"`
-	FlatAppListIds                     []string `pulumi:"flatAppListIds"`
-	ProtocolNameListIds                []string `pulumi:"protocolNameListIds"`
-	ProtocolNames                      []string `pulumi:"protocolNames"`
-	Protocols                          []string `pulumi:"protocols"`
-	SourceDataPrefixListIds            []string `pulumi:"sourceDataPrefixListIds"`
-	SourceDataPrefixes                 []string `pulumi:"sourceDataPrefixes"`
+	// Deprecated, use `destinationObjectGroupListIds` instead
+	DestinationSecurityGroupListIds []string `pulumi:"destinationSecurityGroupListIds"`
+	FlatAppListIds                  []string `pulumi:"flatAppListIds"`
+	ProtocolNameListIds             []string `pulumi:"protocolNameListIds"`
+	ProtocolNames                   []string `pulumi:"protocolNames"`
+	Protocols                       []string `pulumi:"protocols"`
+	// Security rule set IDs, requires `isRuleSet` set to `true` on the sequence
+	RuleSetListIds []string `pulumi:"ruleSetListIds"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`
+	SourceDataIpv6PrefixListIds []string `pulumi:"sourceDataIpv6PrefixListIds"`
+	SourceDataPrefixListIds     []string `pulumi:"sourceDataPrefixListIds"`
+	SourceDataPrefixes          []string `pulumi:"sourceDataPrefixes"`
 	// Variable name
 	SourceDataPrefixesVariable string   `pulumi:"sourceDataPrefixesVariable"`
 	SourceGeoLocationListIds   []string `pulumi:"sourceGeoLocationListIds"`
@@ -37865,12 +38428,19 @@ type GetEmbeddedSecurityNgfwPolicySequenceMatchEntry struct {
 	SourceIdentityListIds      []string `pulumi:"sourceIdentityListIds"`
 	SourceIdentityUsergroups   []string `pulumi:"sourceIdentityUsergroups"`
 	SourceIdentityUsers        []string `pulumi:"sourceIdentityUsers"`
-	SourcePortListIds          []string `pulumi:"sourcePortListIds"`
-	SourcePorts                []string `pulumi:"sourcePorts"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`
+	SourceIpv6DataPrefixes []string `pulumi:"sourceIpv6DataPrefixes"`
+	// Variable name
+	SourceIpv6DataPrefixesVariable string `pulumi:"sourceIpv6DataPrefixesVariable"`
+	// Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012)
+	SourceObjectGroupListIds []string `pulumi:"sourceObjectGroupListIds"`
+	SourcePortListIds        []string `pulumi:"sourcePortListIds"`
+	SourcePorts              []string `pulumi:"sourcePorts"`
 	// Variable name
 	SourcePortsVariable           string   `pulumi:"sourcePortsVariable"`
 	SourceScalableGroupTagListIds []string `pulumi:"sourceScalableGroupTagListIds"`
-	SourceSecurityGroupListIds    []string `pulumi:"sourceSecurityGroupListIds"`
+	// Deprecated, use `sourceObjectGroupListIds` instead
+	SourceSecurityGroupListIds []string `pulumi:"sourceSecurityGroupListIds"`
 }
 
 // GetEmbeddedSecurityNgfwPolicySequenceMatchEntryInput is an input type that accepts GetEmbeddedSecurityNgfwPolicySequenceMatchEntryArgs and GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput values.
@@ -37885,11 +38455,13 @@ type GetEmbeddedSecurityNgfwPolicySequenceMatchEntryInput interface {
 }
 
 type GetEmbeddedSecurityNgfwPolicySequenceMatchEntryArgs struct {
-	AppListIds                   pulumi.StringArrayInput `pulumi:"appListIds"`
-	ApplicationFamilies          pulumi.StringArrayInput `pulumi:"applicationFamilies"`
-	Applications                 pulumi.StringArrayInput `pulumi:"applications"`
-	DestinationDataPrefixListIds pulumi.StringArrayInput `pulumi:"destinationDataPrefixListIds"`
-	DestinationDataPrefixes      pulumi.StringArrayInput `pulumi:"destinationDataPrefixes"`
+	AppListIds          pulumi.StringArrayInput `pulumi:"appListIds"`
+	ApplicationFamilies pulumi.StringArrayInput `pulumi:"applicationFamilies"`
+	Applications        pulumi.StringArrayInput `pulumi:"applications"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`
+	DestinationDataIpv6PrefixListIds pulumi.StringArrayInput `pulumi:"destinationDataIpv6PrefixListIds"`
+	DestinationDataPrefixListIds     pulumi.StringArrayInput `pulumi:"destinationDataPrefixListIds"`
+	DestinationDataPrefixes          pulumi.StringArrayInput `pulumi:"destinationDataPrefixes"`
 	// Variable name
 	DestinationDataPrefixesVariable pulumi.StringInput      `pulumi:"destinationDataPrefixesVariable"`
 	DestinationFqdnListIds          pulumi.StringArrayInput `pulumi:"destinationFqdnListIds"`
@@ -37899,19 +38471,29 @@ type GetEmbeddedSecurityNgfwPolicySequenceMatchEntryArgs struct {
 	DestinationGeoLocationListIds pulumi.StringArrayInput `pulumi:"destinationGeoLocationListIds"`
 	DestinationGeoLocations       pulumi.StringArrayInput `pulumi:"destinationGeoLocations"`
 	// Variable name
-	DestinationGeoLocationsVariable pulumi.StringInput      `pulumi:"destinationGeoLocationsVariable"`
-	DestinationPortListIds          pulumi.StringArrayInput `pulumi:"destinationPortListIds"`
-	DestinationPorts                pulumi.StringArrayInput `pulumi:"destinationPorts"`
+	DestinationGeoLocationsVariable pulumi.StringInput `pulumi:"destinationGeoLocationsVariable"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`
+	DestinationIpv6DataPrefixes pulumi.StringArrayInput `pulumi:"destinationIpv6DataPrefixes"`
+	// Variable name
+	DestinationIpv6DataPrefixesVariable pulumi.StringInput      `pulumi:"destinationIpv6DataPrefixesVariable"`
+	DestinationObjectGroupListIds       pulumi.StringArrayInput `pulumi:"destinationObjectGroupListIds"`
+	DestinationPortListIds              pulumi.StringArrayInput `pulumi:"destinationPortListIds"`
+	DestinationPorts                    pulumi.StringArrayInput `pulumi:"destinationPorts"`
 	// Variable name
 	DestinationPortsVariable           pulumi.StringInput      `pulumi:"destinationPortsVariable"`
 	DestinationScalableGroupTagListIds pulumi.StringArrayInput `pulumi:"destinationScalableGroupTagListIds"`
-	DestinationSecurityGroupListIds    pulumi.StringArrayInput `pulumi:"destinationSecurityGroupListIds"`
-	FlatAppListIds                     pulumi.StringArrayInput `pulumi:"flatAppListIds"`
-	ProtocolNameListIds                pulumi.StringArrayInput `pulumi:"protocolNameListIds"`
-	ProtocolNames                      pulumi.StringArrayInput `pulumi:"protocolNames"`
-	Protocols                          pulumi.StringArrayInput `pulumi:"protocols"`
-	SourceDataPrefixListIds            pulumi.StringArrayInput `pulumi:"sourceDataPrefixListIds"`
-	SourceDataPrefixes                 pulumi.StringArrayInput `pulumi:"sourceDataPrefixes"`
+	// Deprecated, use `destinationObjectGroupListIds` instead
+	DestinationSecurityGroupListIds pulumi.StringArrayInput `pulumi:"destinationSecurityGroupListIds"`
+	FlatAppListIds                  pulumi.StringArrayInput `pulumi:"flatAppListIds"`
+	ProtocolNameListIds             pulumi.StringArrayInput `pulumi:"protocolNameListIds"`
+	ProtocolNames                   pulumi.StringArrayInput `pulumi:"protocolNames"`
+	Protocols                       pulumi.StringArrayInput `pulumi:"protocols"`
+	// Security rule set IDs, requires `isRuleSet` set to `true` on the sequence
+	RuleSetListIds pulumi.StringArrayInput `pulumi:"ruleSetListIds"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`
+	SourceDataIpv6PrefixListIds pulumi.StringArrayInput `pulumi:"sourceDataIpv6PrefixListIds"`
+	SourceDataPrefixListIds     pulumi.StringArrayInput `pulumi:"sourceDataPrefixListIds"`
+	SourceDataPrefixes          pulumi.StringArrayInput `pulumi:"sourceDataPrefixes"`
 	// Variable name
 	SourceDataPrefixesVariable pulumi.StringInput      `pulumi:"sourceDataPrefixesVariable"`
 	SourceGeoLocationListIds   pulumi.StringArrayInput `pulumi:"sourceGeoLocationListIds"`
@@ -37921,12 +38503,19 @@ type GetEmbeddedSecurityNgfwPolicySequenceMatchEntryArgs struct {
 	SourceIdentityListIds      pulumi.StringArrayInput `pulumi:"sourceIdentityListIds"`
 	SourceIdentityUsergroups   pulumi.StringArrayInput `pulumi:"sourceIdentityUsergroups"`
 	SourceIdentityUsers        pulumi.StringArrayInput `pulumi:"sourceIdentityUsers"`
-	SourcePortListIds          pulumi.StringArrayInput `pulumi:"sourcePortListIds"`
-	SourcePorts                pulumi.StringArrayInput `pulumi:"sourcePorts"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`
+	SourceIpv6DataPrefixes pulumi.StringArrayInput `pulumi:"sourceIpv6DataPrefixes"`
+	// Variable name
+	SourceIpv6DataPrefixesVariable pulumi.StringInput `pulumi:"sourceIpv6DataPrefixesVariable"`
+	// Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012)
+	SourceObjectGroupListIds pulumi.StringArrayInput `pulumi:"sourceObjectGroupListIds"`
+	SourcePortListIds        pulumi.StringArrayInput `pulumi:"sourcePortListIds"`
+	SourcePorts              pulumi.StringArrayInput `pulumi:"sourcePorts"`
 	// Variable name
 	SourcePortsVariable           pulumi.StringInput      `pulumi:"sourcePortsVariable"`
 	SourceScalableGroupTagListIds pulumi.StringArrayInput `pulumi:"sourceScalableGroupTagListIds"`
-	SourceSecurityGroupListIds    pulumi.StringArrayInput `pulumi:"sourceSecurityGroupListIds"`
+	// Deprecated, use `sourceObjectGroupListIds` instead
+	SourceSecurityGroupListIds pulumi.StringArrayInput `pulumi:"sourceSecurityGroupListIds"`
 }
 
 func (GetEmbeddedSecurityNgfwPolicySequenceMatchEntryArgs) ElementType() reflect.Type {
@@ -37992,6 +38581,13 @@ func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) Applications() pu
 	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.Applications }).(pulumi.StringArrayOutput)
 }
 
+// Only supported on sequences with `sequenceIpType` set to `ipv6`
+func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationDataIpv6PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string {
+		return v.DestinationDataIpv6PrefixListIds
+	}).(pulumi.StringArrayOutput)
+}
+
 func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationDataPrefixListIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string {
 		return v.DestinationDataPrefixListIds
@@ -38039,6 +38635,24 @@ func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationGeoLoc
 	}).(pulumi.StringOutput)
 }
 
+// Only supported on sequences with `sequenceIpType` set to `ipv6`
+func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationIpv6DataPrefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.DestinationIpv6DataPrefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationIpv6DataPrefixesVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) string {
+		return v.DestinationIpv6DataPrefixesVariable
+	}).(pulumi.StringOutput)
+}
+
+func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationObjectGroupListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string {
+		return v.DestinationObjectGroupListIds
+	}).(pulumi.StringArrayOutput)
+}
+
 func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationPortListIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.DestinationPortListIds }).(pulumi.StringArrayOutput)
 }
@@ -38058,6 +38672,7 @@ func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationScalab
 	}).(pulumi.StringArrayOutput)
 }
 
+// Deprecated, use `destinationObjectGroupListIds` instead
 func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationSecurityGroupListIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string {
 		return v.DestinationSecurityGroupListIds
@@ -38078,6 +38693,16 @@ func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) ProtocolNames() p
 
 func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) Protocols() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.Protocols }).(pulumi.StringArrayOutput)
+}
+
+// Security rule set IDs, requires `isRuleSet` set to `true` on the sequence
+func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) RuleSetListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.RuleSetListIds }).(pulumi.StringArrayOutput)
+}
+
+// Only supported on sequences with `sequenceIpType` set to `ipv6`
+func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceDataIpv6PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.SourceDataIpv6PrefixListIds }).(pulumi.StringArrayOutput)
 }
 
 func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceDataPrefixListIds() pulumi.StringArrayOutput {
@@ -38118,6 +38743,23 @@ func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceIdentityUse
 	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.SourceIdentityUsers }).(pulumi.StringArrayOutput)
 }
 
+// Only supported on sequences with `sequenceIpType` set to `ipv6`
+func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceIpv6DataPrefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.SourceIpv6DataPrefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceIpv6DataPrefixesVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) string {
+		return v.SourceIpv6DataPrefixesVariable
+	}).(pulumi.StringOutput)
+}
+
+// Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012)
+func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceObjectGroupListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.SourceObjectGroupListIds }).(pulumi.StringArrayOutput)
+}
+
 func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourcePortListIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.SourcePortListIds }).(pulumi.StringArrayOutput)
 }
@@ -38137,6 +38779,7 @@ func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceScalableGro
 	}).(pulumi.StringArrayOutput)
 }
 
+// Deprecated, use `sourceObjectGroupListIds` instead
 func (o GetEmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceSecurityGroupListIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetEmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.SourceSecurityGroupListIds }).(pulumi.StringArrayOutput)
 }
@@ -38383,6 +39026,118 @@ func (o GetEmbeddedSecurityPolicyAssemblyEntryArrayOutput) Index(i pulumi.IntInp
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetEmbeddedSecurityPolicyAssemblyEntry {
 		return vs[0].([]GetEmbeddedSecurityPolicyAssemblyEntry)[vs[1].(int)]
 	}).(GetEmbeddedSecurityPolicyAssemblyEntryOutput)
+}
+
+type GetEmbeddedSecurityPolicyHighSpeedLogging struct {
+	Name string `pulumi:"name"`
+	// InterfaceName
+	SourceInterface string `pulumi:"sourceInterface"`
+	// Variable name
+	SourceInterfaceVariable string `pulumi:"sourceInterfaceVariable"`
+}
+
+// GetEmbeddedSecurityPolicyHighSpeedLoggingInput is an input type that accepts GetEmbeddedSecurityPolicyHighSpeedLoggingArgs and GetEmbeddedSecurityPolicyHighSpeedLoggingOutput values.
+// You can construct a concrete instance of `GetEmbeddedSecurityPolicyHighSpeedLoggingInput` via:
+//
+//	GetEmbeddedSecurityPolicyHighSpeedLoggingArgs{...}
+type GetEmbeddedSecurityPolicyHighSpeedLoggingInput interface {
+	pulumi.Input
+
+	ToGetEmbeddedSecurityPolicyHighSpeedLoggingOutput() GetEmbeddedSecurityPolicyHighSpeedLoggingOutput
+	ToGetEmbeddedSecurityPolicyHighSpeedLoggingOutputWithContext(context.Context) GetEmbeddedSecurityPolicyHighSpeedLoggingOutput
+}
+
+type GetEmbeddedSecurityPolicyHighSpeedLoggingArgs struct {
+	Name pulumi.StringInput `pulumi:"name"`
+	// InterfaceName
+	SourceInterface pulumi.StringInput `pulumi:"sourceInterface"`
+	// Variable name
+	SourceInterfaceVariable pulumi.StringInput `pulumi:"sourceInterfaceVariable"`
+}
+
+func (GetEmbeddedSecurityPolicyHighSpeedLoggingArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetEmbeddedSecurityPolicyHighSpeedLogging)(nil)).Elem()
+}
+
+func (i GetEmbeddedSecurityPolicyHighSpeedLoggingArgs) ToGetEmbeddedSecurityPolicyHighSpeedLoggingOutput() GetEmbeddedSecurityPolicyHighSpeedLoggingOutput {
+	return i.ToGetEmbeddedSecurityPolicyHighSpeedLoggingOutputWithContext(context.Background())
+}
+
+func (i GetEmbeddedSecurityPolicyHighSpeedLoggingArgs) ToGetEmbeddedSecurityPolicyHighSpeedLoggingOutputWithContext(ctx context.Context) GetEmbeddedSecurityPolicyHighSpeedLoggingOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetEmbeddedSecurityPolicyHighSpeedLoggingOutput)
+}
+
+// GetEmbeddedSecurityPolicyHighSpeedLoggingArrayInput is an input type that accepts GetEmbeddedSecurityPolicyHighSpeedLoggingArray and GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput values.
+// You can construct a concrete instance of `GetEmbeddedSecurityPolicyHighSpeedLoggingArrayInput` via:
+//
+//	GetEmbeddedSecurityPolicyHighSpeedLoggingArray{ GetEmbeddedSecurityPolicyHighSpeedLoggingArgs{...} }
+type GetEmbeddedSecurityPolicyHighSpeedLoggingArrayInput interface {
+	pulumi.Input
+
+	ToGetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput() GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput
+	ToGetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutputWithContext(context.Context) GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput
+}
+
+type GetEmbeddedSecurityPolicyHighSpeedLoggingArray []GetEmbeddedSecurityPolicyHighSpeedLoggingInput
+
+func (GetEmbeddedSecurityPolicyHighSpeedLoggingArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetEmbeddedSecurityPolicyHighSpeedLogging)(nil)).Elem()
+}
+
+func (i GetEmbeddedSecurityPolicyHighSpeedLoggingArray) ToGetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput() GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput {
+	return i.ToGetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutputWithContext(context.Background())
+}
+
+func (i GetEmbeddedSecurityPolicyHighSpeedLoggingArray) ToGetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutputWithContext(ctx context.Context) GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput)
+}
+
+type GetEmbeddedSecurityPolicyHighSpeedLoggingOutput struct{ *pulumi.OutputState }
+
+func (GetEmbeddedSecurityPolicyHighSpeedLoggingOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetEmbeddedSecurityPolicyHighSpeedLogging)(nil)).Elem()
+}
+
+func (o GetEmbeddedSecurityPolicyHighSpeedLoggingOutput) ToGetEmbeddedSecurityPolicyHighSpeedLoggingOutput() GetEmbeddedSecurityPolicyHighSpeedLoggingOutput {
+	return o
+}
+
+func (o GetEmbeddedSecurityPolicyHighSpeedLoggingOutput) ToGetEmbeddedSecurityPolicyHighSpeedLoggingOutputWithContext(ctx context.Context) GetEmbeddedSecurityPolicyHighSpeedLoggingOutput {
+	return o
+}
+
+func (o GetEmbeddedSecurityPolicyHighSpeedLoggingOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityPolicyHighSpeedLogging) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// InterfaceName
+func (o GetEmbeddedSecurityPolicyHighSpeedLoggingOutput) SourceInterface() pulumi.StringOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityPolicyHighSpeedLogging) string { return v.SourceInterface }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetEmbeddedSecurityPolicyHighSpeedLoggingOutput) SourceInterfaceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetEmbeddedSecurityPolicyHighSpeedLogging) string { return v.SourceInterfaceVariable }).(pulumi.StringOutput)
+}
+
+type GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput struct{ *pulumi.OutputState }
+
+func (GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetEmbeddedSecurityPolicyHighSpeedLogging)(nil)).Elem()
+}
+
+func (o GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput) ToGetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput() GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput {
+	return o
+}
+
+func (o GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput) ToGetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutputWithContext(ctx context.Context) GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput {
+	return o
+}
+
+func (o GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput) Index(i pulumi.IntInput) GetEmbeddedSecurityPolicyHighSpeedLoggingOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetEmbeddedSecurityPolicyHighSpeedLogging {
+		return vs[0].([]GetEmbeddedSecurityPolicyHighSpeedLogging)[vs[1].(int)]
+	}).(GetEmbeddedSecurityPolicyHighSpeedLoggingOutput)
 }
 
 type GetExpandedCommunityListPolicyObjectEntry struct {
@@ -42667,6 +43422,227 @@ func (o GetNetworkHierarchyNodeAddressOutput) Zipcode() pulumi.StringOutput {
 	return o.ApplyT(func(v GetNetworkHierarchyNodeAddress) string { return v.Zipcode }).(pulumi.StringOutput)
 }
 
+type GetNetworkHierarchyNodesNodes struct {
+	// The node's Network Hierarchy UUID
+	Id string `pulumi:"id"`
+	// The type of node: `site`, `region`, `group` or `global`
+	Type string `pulumi:"type"`
+}
+
+// GetNetworkHierarchyNodesNodesInput is an input type that accepts GetNetworkHierarchyNodesNodesArgs and GetNetworkHierarchyNodesNodesOutput values.
+// You can construct a concrete instance of `GetNetworkHierarchyNodesNodesInput` via:
+//
+//	GetNetworkHierarchyNodesNodesArgs{...}
+type GetNetworkHierarchyNodesNodesInput interface {
+	pulumi.Input
+
+	ToGetNetworkHierarchyNodesNodesOutput() GetNetworkHierarchyNodesNodesOutput
+	ToGetNetworkHierarchyNodesNodesOutputWithContext(context.Context) GetNetworkHierarchyNodesNodesOutput
+}
+
+type GetNetworkHierarchyNodesNodesArgs struct {
+	// The node's Network Hierarchy UUID
+	Id pulumi.StringInput `pulumi:"id"`
+	// The type of node: `site`, `region`, `group` or `global`
+	Type pulumi.StringInput `pulumi:"type"`
+}
+
+func (GetNetworkHierarchyNodesNodesArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetNetworkHierarchyNodesNodes)(nil)).Elem()
+}
+
+func (i GetNetworkHierarchyNodesNodesArgs) ToGetNetworkHierarchyNodesNodesOutput() GetNetworkHierarchyNodesNodesOutput {
+	return i.ToGetNetworkHierarchyNodesNodesOutputWithContext(context.Background())
+}
+
+func (i GetNetworkHierarchyNodesNodesArgs) ToGetNetworkHierarchyNodesNodesOutputWithContext(ctx context.Context) GetNetworkHierarchyNodesNodesOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetNetworkHierarchyNodesNodesOutput)
+}
+
+// GetNetworkHierarchyNodesNodesMapInput is an input type that accepts GetNetworkHierarchyNodesNodesMap and GetNetworkHierarchyNodesNodesMapOutput values.
+// You can construct a concrete instance of `GetNetworkHierarchyNodesNodesMapInput` via:
+//
+//	GetNetworkHierarchyNodesNodesMap{ "key": GetNetworkHierarchyNodesNodesArgs{...} }
+type GetNetworkHierarchyNodesNodesMapInput interface {
+	pulumi.Input
+
+	ToGetNetworkHierarchyNodesNodesMapOutput() GetNetworkHierarchyNodesNodesMapOutput
+	ToGetNetworkHierarchyNodesNodesMapOutputWithContext(context.Context) GetNetworkHierarchyNodesNodesMapOutput
+}
+
+type GetNetworkHierarchyNodesNodesMap map[string]GetNetworkHierarchyNodesNodesInput
+
+func (GetNetworkHierarchyNodesNodesMap) ElementType() reflect.Type {
+	return reflect.TypeOf((*map[string]GetNetworkHierarchyNodesNodes)(nil)).Elem()
+}
+
+func (i GetNetworkHierarchyNodesNodesMap) ToGetNetworkHierarchyNodesNodesMapOutput() GetNetworkHierarchyNodesNodesMapOutput {
+	return i.ToGetNetworkHierarchyNodesNodesMapOutputWithContext(context.Background())
+}
+
+func (i GetNetworkHierarchyNodesNodesMap) ToGetNetworkHierarchyNodesNodesMapOutputWithContext(ctx context.Context) GetNetworkHierarchyNodesNodesMapOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetNetworkHierarchyNodesNodesMapOutput)
+}
+
+type GetNetworkHierarchyNodesNodesOutput struct{ *pulumi.OutputState }
+
+func (GetNetworkHierarchyNodesNodesOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetNetworkHierarchyNodesNodes)(nil)).Elem()
+}
+
+func (o GetNetworkHierarchyNodesNodesOutput) ToGetNetworkHierarchyNodesNodesOutput() GetNetworkHierarchyNodesNodesOutput {
+	return o
+}
+
+func (o GetNetworkHierarchyNodesNodesOutput) ToGetNetworkHierarchyNodesNodesOutputWithContext(ctx context.Context) GetNetworkHierarchyNodesNodesOutput {
+	return o
+}
+
+// The node's Network Hierarchy UUID
+func (o GetNetworkHierarchyNodesNodesOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyNodesNodes) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// The type of node: `site`, `region`, `group` or `global`
+func (o GetNetworkHierarchyNodesNodesOutput) Type() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyNodesNodes) string { return v.Type }).(pulumi.StringOutput)
+}
+
+type GetNetworkHierarchyNodesNodesMapOutput struct{ *pulumi.OutputState }
+
+func (GetNetworkHierarchyNodesNodesMapOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*map[string]GetNetworkHierarchyNodesNodes)(nil)).Elem()
+}
+
+func (o GetNetworkHierarchyNodesNodesMapOutput) ToGetNetworkHierarchyNodesNodesMapOutput() GetNetworkHierarchyNodesNodesMapOutput {
+	return o
+}
+
+func (o GetNetworkHierarchyNodesNodesMapOutput) ToGetNetworkHierarchyNodesNodesMapOutputWithContext(ctx context.Context) GetNetworkHierarchyNodesNodesMapOutput {
+	return o
+}
+
+func (o GetNetworkHierarchyNodesNodesMapOutput) MapIndex(k pulumi.StringInput) GetNetworkHierarchyNodesNodesOutput {
+	return pulumi.All(o, k).ApplyT(func(vs []interface{}) GetNetworkHierarchyNodesNodes {
+		return vs[0].(map[string]GetNetworkHierarchyNodesNodes)[vs[1].(string)]
+	}).(GetNetworkHierarchyNodesNodesOutput)
+}
+
+type GetNetworkHierarchyNodesResolvedSite struct {
+	// The site's Network Hierarchy node UUID
+	Id string `pulumi:"id"`
+	// The site's name
+	Name string `pulumi:"name"`
+	// The site's numeric site ID
+	SiteId int `pulumi:"siteId"`
+}
+
+// GetNetworkHierarchyNodesResolvedSiteInput is an input type that accepts GetNetworkHierarchyNodesResolvedSiteArgs and GetNetworkHierarchyNodesResolvedSiteOutput values.
+// You can construct a concrete instance of `GetNetworkHierarchyNodesResolvedSiteInput` via:
+//
+//	GetNetworkHierarchyNodesResolvedSiteArgs{...}
+type GetNetworkHierarchyNodesResolvedSiteInput interface {
+	pulumi.Input
+
+	ToGetNetworkHierarchyNodesResolvedSiteOutput() GetNetworkHierarchyNodesResolvedSiteOutput
+	ToGetNetworkHierarchyNodesResolvedSiteOutputWithContext(context.Context) GetNetworkHierarchyNodesResolvedSiteOutput
+}
+
+type GetNetworkHierarchyNodesResolvedSiteArgs struct {
+	// The site's Network Hierarchy node UUID
+	Id pulumi.StringInput `pulumi:"id"`
+	// The site's name
+	Name pulumi.StringInput `pulumi:"name"`
+	// The site's numeric site ID
+	SiteId pulumi.IntInput `pulumi:"siteId"`
+}
+
+func (GetNetworkHierarchyNodesResolvedSiteArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetNetworkHierarchyNodesResolvedSite)(nil)).Elem()
+}
+
+func (i GetNetworkHierarchyNodesResolvedSiteArgs) ToGetNetworkHierarchyNodesResolvedSiteOutput() GetNetworkHierarchyNodesResolvedSiteOutput {
+	return i.ToGetNetworkHierarchyNodesResolvedSiteOutputWithContext(context.Background())
+}
+
+func (i GetNetworkHierarchyNodesResolvedSiteArgs) ToGetNetworkHierarchyNodesResolvedSiteOutputWithContext(ctx context.Context) GetNetworkHierarchyNodesResolvedSiteOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetNetworkHierarchyNodesResolvedSiteOutput)
+}
+
+// GetNetworkHierarchyNodesResolvedSiteArrayInput is an input type that accepts GetNetworkHierarchyNodesResolvedSiteArray and GetNetworkHierarchyNodesResolvedSiteArrayOutput values.
+// You can construct a concrete instance of `GetNetworkHierarchyNodesResolvedSiteArrayInput` via:
+//
+//	GetNetworkHierarchyNodesResolvedSiteArray{ GetNetworkHierarchyNodesResolvedSiteArgs{...} }
+type GetNetworkHierarchyNodesResolvedSiteArrayInput interface {
+	pulumi.Input
+
+	ToGetNetworkHierarchyNodesResolvedSiteArrayOutput() GetNetworkHierarchyNodesResolvedSiteArrayOutput
+	ToGetNetworkHierarchyNodesResolvedSiteArrayOutputWithContext(context.Context) GetNetworkHierarchyNodesResolvedSiteArrayOutput
+}
+
+type GetNetworkHierarchyNodesResolvedSiteArray []GetNetworkHierarchyNodesResolvedSiteInput
+
+func (GetNetworkHierarchyNodesResolvedSiteArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetNetworkHierarchyNodesResolvedSite)(nil)).Elem()
+}
+
+func (i GetNetworkHierarchyNodesResolvedSiteArray) ToGetNetworkHierarchyNodesResolvedSiteArrayOutput() GetNetworkHierarchyNodesResolvedSiteArrayOutput {
+	return i.ToGetNetworkHierarchyNodesResolvedSiteArrayOutputWithContext(context.Background())
+}
+
+func (i GetNetworkHierarchyNodesResolvedSiteArray) ToGetNetworkHierarchyNodesResolvedSiteArrayOutputWithContext(ctx context.Context) GetNetworkHierarchyNodesResolvedSiteArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetNetworkHierarchyNodesResolvedSiteArrayOutput)
+}
+
+type GetNetworkHierarchyNodesResolvedSiteOutput struct{ *pulumi.OutputState }
+
+func (GetNetworkHierarchyNodesResolvedSiteOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetNetworkHierarchyNodesResolvedSite)(nil)).Elem()
+}
+
+func (o GetNetworkHierarchyNodesResolvedSiteOutput) ToGetNetworkHierarchyNodesResolvedSiteOutput() GetNetworkHierarchyNodesResolvedSiteOutput {
+	return o
+}
+
+func (o GetNetworkHierarchyNodesResolvedSiteOutput) ToGetNetworkHierarchyNodesResolvedSiteOutputWithContext(ctx context.Context) GetNetworkHierarchyNodesResolvedSiteOutput {
+	return o
+}
+
+// The site's Network Hierarchy node UUID
+func (o GetNetworkHierarchyNodesResolvedSiteOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyNodesResolvedSite) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// The site's name
+func (o GetNetworkHierarchyNodesResolvedSiteOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyNodesResolvedSite) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The site's numeric site ID
+func (o GetNetworkHierarchyNodesResolvedSiteOutput) SiteId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyNodesResolvedSite) int { return v.SiteId }).(pulumi.IntOutput)
+}
+
+type GetNetworkHierarchyNodesResolvedSiteArrayOutput struct{ *pulumi.OutputState }
+
+func (GetNetworkHierarchyNodesResolvedSiteArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetNetworkHierarchyNodesResolvedSite)(nil)).Elem()
+}
+
+func (o GetNetworkHierarchyNodesResolvedSiteArrayOutput) ToGetNetworkHierarchyNodesResolvedSiteArrayOutput() GetNetworkHierarchyNodesResolvedSiteArrayOutput {
+	return o
+}
+
+func (o GetNetworkHierarchyNodesResolvedSiteArrayOutput) ToGetNetworkHierarchyNodesResolvedSiteArrayOutputWithContext(ctx context.Context) GetNetworkHierarchyNodesResolvedSiteArrayOutput {
+	return o
+}
+
+func (o GetNetworkHierarchyNodesResolvedSiteArrayOutput) Index(i pulumi.IntInput) GetNetworkHierarchyNodesResolvedSiteOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetNetworkHierarchyNodesResolvedSite {
+		return vs[0].([]GetNetworkHierarchyNodesResolvedSite)[vs[1].(int)]
+	}).(GetNetworkHierarchyNodesResolvedSiteOutput)
+}
+
 type GetNetworkHierarchySecurityLoggingHighSpeedLogging struct {
 	// Server port number
 	Port int `pulumi:"port"`
@@ -45501,6 +46477,109 @@ func (o GetPolicyObjectSecurityDataIpv4PrefixListEntryArrayOutput) Index(i pulum
 	}).(GetPolicyObjectSecurityDataIpv4PrefixListEntryOutput)
 }
 
+type GetPolicyObjectSecurityDataIpv6PrefixListEntry struct {
+	Ipv6Prefix string `pulumi:"ipv6Prefix"`
+	// Variable name
+	Ipv6PrefixVariable string `pulumi:"ipv6PrefixVariable"`
+}
+
+// GetPolicyObjectSecurityDataIpv6PrefixListEntryInput is an input type that accepts GetPolicyObjectSecurityDataIpv6PrefixListEntryArgs and GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput values.
+// You can construct a concrete instance of `GetPolicyObjectSecurityDataIpv6PrefixListEntryInput` via:
+//
+//	GetPolicyObjectSecurityDataIpv6PrefixListEntryArgs{...}
+type GetPolicyObjectSecurityDataIpv6PrefixListEntryInput interface {
+	pulumi.Input
+
+	ToGetPolicyObjectSecurityDataIpv6PrefixListEntryOutput() GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput
+	ToGetPolicyObjectSecurityDataIpv6PrefixListEntryOutputWithContext(context.Context) GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput
+}
+
+type GetPolicyObjectSecurityDataIpv6PrefixListEntryArgs struct {
+	Ipv6Prefix pulumi.StringInput `pulumi:"ipv6Prefix"`
+	// Variable name
+	Ipv6PrefixVariable pulumi.StringInput `pulumi:"ipv6PrefixVariable"`
+}
+
+func (GetPolicyObjectSecurityDataIpv6PrefixListEntryArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetPolicyObjectSecurityDataIpv6PrefixListEntry)(nil)).Elem()
+}
+
+func (i GetPolicyObjectSecurityDataIpv6PrefixListEntryArgs) ToGetPolicyObjectSecurityDataIpv6PrefixListEntryOutput() GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput {
+	return i.ToGetPolicyObjectSecurityDataIpv6PrefixListEntryOutputWithContext(context.Background())
+}
+
+func (i GetPolicyObjectSecurityDataIpv6PrefixListEntryArgs) ToGetPolicyObjectSecurityDataIpv6PrefixListEntryOutputWithContext(ctx context.Context) GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput)
+}
+
+// GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayInput is an input type that accepts GetPolicyObjectSecurityDataIpv6PrefixListEntryArray and GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput values.
+// You can construct a concrete instance of `GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayInput` via:
+//
+//	GetPolicyObjectSecurityDataIpv6PrefixListEntryArray{ GetPolicyObjectSecurityDataIpv6PrefixListEntryArgs{...} }
+type GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayInput interface {
+	pulumi.Input
+
+	ToGetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput() GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput
+	ToGetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutputWithContext(context.Context) GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput
+}
+
+type GetPolicyObjectSecurityDataIpv6PrefixListEntryArray []GetPolicyObjectSecurityDataIpv6PrefixListEntryInput
+
+func (GetPolicyObjectSecurityDataIpv6PrefixListEntryArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetPolicyObjectSecurityDataIpv6PrefixListEntry)(nil)).Elem()
+}
+
+func (i GetPolicyObjectSecurityDataIpv6PrefixListEntryArray) ToGetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput() GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput {
+	return i.ToGetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutputWithContext(context.Background())
+}
+
+func (i GetPolicyObjectSecurityDataIpv6PrefixListEntryArray) ToGetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutputWithContext(ctx context.Context) GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput)
+}
+
+type GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput struct{ *pulumi.OutputState }
+
+func (GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetPolicyObjectSecurityDataIpv6PrefixListEntry)(nil)).Elem()
+}
+
+func (o GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput) ToGetPolicyObjectSecurityDataIpv6PrefixListEntryOutput() GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput {
+	return o
+}
+
+func (o GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput) ToGetPolicyObjectSecurityDataIpv6PrefixListEntryOutputWithContext(ctx context.Context) GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput {
+	return o
+}
+
+func (o GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput) Ipv6Prefix() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityDataIpv6PrefixListEntry) string { return v.Ipv6Prefix }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput) Ipv6PrefixVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityDataIpv6PrefixListEntry) string { return v.Ipv6PrefixVariable }).(pulumi.StringOutput)
+}
+
+type GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput struct{ *pulumi.OutputState }
+
+func (GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetPolicyObjectSecurityDataIpv6PrefixListEntry)(nil)).Elem()
+}
+
+func (o GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput) ToGetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput() GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput {
+	return o
+}
+
+func (o GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput) ToGetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutputWithContext(ctx context.Context) GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput {
+	return o
+}
+
+func (o GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput) Index(i pulumi.IntInput) GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetPolicyObjectSecurityDataIpv6PrefixListEntry {
+		return vs[0].([]GetPolicyObjectSecurityDataIpv6PrefixListEntry)[vs[1].(int)]
+	}).(GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput)
+}
+
 type GetPolicyObjectSecurityFqdnListEntry struct {
 	Pattern string `pulumi:"pattern"`
 }
@@ -46095,6 +47174,199 @@ func (o GetPolicyObjectSecurityLocalDomainListEntryArrayOutput) Index(i pulumi.I
 	}).(GetPolicyObjectSecurityLocalDomainListEntryOutput)
 }
 
+type GetPolicyObjectSecurityObjectGroupEntry struct {
+	DataIpv4PrefixListIds []string `pulumi:"dataIpv4PrefixListIds"`
+	DataIpv4Prefixes      []string `pulumi:"dataIpv4Prefixes"`
+	// Variable name
+	DataIpv4PrefixesVariable string   `pulumi:"dataIpv4PrefixesVariable"`
+	DataIpv6PrefixListIds    []string `pulumi:"dataIpv6PrefixListIds"`
+	DataIpv6Prefixes         []string `pulumi:"dataIpv6Prefixes"`
+	// Variable name
+	DataIpv6PrefixesVariable string   `pulumi:"dataIpv6PrefixesVariable"`
+	FqdnListIds              []string `pulumi:"fqdnListIds"`
+	Fqdns                    []string `pulumi:"fqdns"`
+	// Variable name
+	FqdnsVariable      string   `pulumi:"fqdnsVariable"`
+	GeoLocationListIds []string `pulumi:"geoLocationListIds"`
+	GeoLocations       []string `pulumi:"geoLocations"`
+	// Variable name
+	GeoLocationsVariable string   `pulumi:"geoLocationsVariable"`
+	PortListIds          []string `pulumi:"portListIds"`
+	Ports                []string `pulumi:"ports"`
+	// Variable name
+	PortsVariable string `pulumi:"portsVariable"`
+}
+
+// GetPolicyObjectSecurityObjectGroupEntryInput is an input type that accepts GetPolicyObjectSecurityObjectGroupEntryArgs and GetPolicyObjectSecurityObjectGroupEntryOutput values.
+// You can construct a concrete instance of `GetPolicyObjectSecurityObjectGroupEntryInput` via:
+//
+//	GetPolicyObjectSecurityObjectGroupEntryArgs{...}
+type GetPolicyObjectSecurityObjectGroupEntryInput interface {
+	pulumi.Input
+
+	ToGetPolicyObjectSecurityObjectGroupEntryOutput() GetPolicyObjectSecurityObjectGroupEntryOutput
+	ToGetPolicyObjectSecurityObjectGroupEntryOutputWithContext(context.Context) GetPolicyObjectSecurityObjectGroupEntryOutput
+}
+
+type GetPolicyObjectSecurityObjectGroupEntryArgs struct {
+	DataIpv4PrefixListIds pulumi.StringArrayInput `pulumi:"dataIpv4PrefixListIds"`
+	DataIpv4Prefixes      pulumi.StringArrayInput `pulumi:"dataIpv4Prefixes"`
+	// Variable name
+	DataIpv4PrefixesVariable pulumi.StringInput      `pulumi:"dataIpv4PrefixesVariable"`
+	DataIpv6PrefixListIds    pulumi.StringArrayInput `pulumi:"dataIpv6PrefixListIds"`
+	DataIpv6Prefixes         pulumi.StringArrayInput `pulumi:"dataIpv6Prefixes"`
+	// Variable name
+	DataIpv6PrefixesVariable pulumi.StringInput      `pulumi:"dataIpv6PrefixesVariable"`
+	FqdnListIds              pulumi.StringArrayInput `pulumi:"fqdnListIds"`
+	Fqdns                    pulumi.StringArrayInput `pulumi:"fqdns"`
+	// Variable name
+	FqdnsVariable      pulumi.StringInput      `pulumi:"fqdnsVariable"`
+	GeoLocationListIds pulumi.StringArrayInput `pulumi:"geoLocationListIds"`
+	GeoLocations       pulumi.StringArrayInput `pulumi:"geoLocations"`
+	// Variable name
+	GeoLocationsVariable pulumi.StringInput      `pulumi:"geoLocationsVariable"`
+	PortListIds          pulumi.StringArrayInput `pulumi:"portListIds"`
+	Ports                pulumi.StringArrayInput `pulumi:"ports"`
+	// Variable name
+	PortsVariable pulumi.StringInput `pulumi:"portsVariable"`
+}
+
+func (GetPolicyObjectSecurityObjectGroupEntryArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetPolicyObjectSecurityObjectGroupEntry)(nil)).Elem()
+}
+
+func (i GetPolicyObjectSecurityObjectGroupEntryArgs) ToGetPolicyObjectSecurityObjectGroupEntryOutput() GetPolicyObjectSecurityObjectGroupEntryOutput {
+	return i.ToGetPolicyObjectSecurityObjectGroupEntryOutputWithContext(context.Background())
+}
+
+func (i GetPolicyObjectSecurityObjectGroupEntryArgs) ToGetPolicyObjectSecurityObjectGroupEntryOutputWithContext(ctx context.Context) GetPolicyObjectSecurityObjectGroupEntryOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetPolicyObjectSecurityObjectGroupEntryOutput)
+}
+
+// GetPolicyObjectSecurityObjectGroupEntryArrayInput is an input type that accepts GetPolicyObjectSecurityObjectGroupEntryArray and GetPolicyObjectSecurityObjectGroupEntryArrayOutput values.
+// You can construct a concrete instance of `GetPolicyObjectSecurityObjectGroupEntryArrayInput` via:
+//
+//	GetPolicyObjectSecurityObjectGroupEntryArray{ GetPolicyObjectSecurityObjectGroupEntryArgs{...} }
+type GetPolicyObjectSecurityObjectGroupEntryArrayInput interface {
+	pulumi.Input
+
+	ToGetPolicyObjectSecurityObjectGroupEntryArrayOutput() GetPolicyObjectSecurityObjectGroupEntryArrayOutput
+	ToGetPolicyObjectSecurityObjectGroupEntryArrayOutputWithContext(context.Context) GetPolicyObjectSecurityObjectGroupEntryArrayOutput
+}
+
+type GetPolicyObjectSecurityObjectGroupEntryArray []GetPolicyObjectSecurityObjectGroupEntryInput
+
+func (GetPolicyObjectSecurityObjectGroupEntryArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetPolicyObjectSecurityObjectGroupEntry)(nil)).Elem()
+}
+
+func (i GetPolicyObjectSecurityObjectGroupEntryArray) ToGetPolicyObjectSecurityObjectGroupEntryArrayOutput() GetPolicyObjectSecurityObjectGroupEntryArrayOutput {
+	return i.ToGetPolicyObjectSecurityObjectGroupEntryArrayOutputWithContext(context.Background())
+}
+
+func (i GetPolicyObjectSecurityObjectGroupEntryArray) ToGetPolicyObjectSecurityObjectGroupEntryArrayOutputWithContext(ctx context.Context) GetPolicyObjectSecurityObjectGroupEntryArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetPolicyObjectSecurityObjectGroupEntryArrayOutput)
+}
+
+type GetPolicyObjectSecurityObjectGroupEntryOutput struct{ *pulumi.OutputState }
+
+func (GetPolicyObjectSecurityObjectGroupEntryOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetPolicyObjectSecurityObjectGroupEntry)(nil)).Elem()
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) ToGetPolicyObjectSecurityObjectGroupEntryOutput() GetPolicyObjectSecurityObjectGroupEntryOutput {
+	return o
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) ToGetPolicyObjectSecurityObjectGroupEntryOutputWithContext(ctx context.Context) GetPolicyObjectSecurityObjectGroupEntryOutput {
+	return o
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) DataIpv4PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) []string { return v.DataIpv4PrefixListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) DataIpv4Prefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) []string { return v.DataIpv4Prefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) DataIpv4PrefixesVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) string { return v.DataIpv4PrefixesVariable }).(pulumi.StringOutput)
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) DataIpv6PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) []string { return v.DataIpv6PrefixListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) DataIpv6Prefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) []string { return v.DataIpv6Prefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) DataIpv6PrefixesVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) string { return v.DataIpv6PrefixesVariable }).(pulumi.StringOutput)
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) FqdnListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) []string { return v.FqdnListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) Fqdns() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) []string { return v.Fqdns }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) FqdnsVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) string { return v.FqdnsVariable }).(pulumi.StringOutput)
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) GeoLocationListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) []string { return v.GeoLocationListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) GeoLocations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) []string { return v.GeoLocations }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) GeoLocationsVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) string { return v.GeoLocationsVariable }).(pulumi.StringOutput)
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) PortListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) []string { return v.PortListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) Ports() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) []string { return v.Ports }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityObjectGroupEntryOutput) PortsVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityObjectGroupEntry) string { return v.PortsVariable }).(pulumi.StringOutput)
+}
+
+type GetPolicyObjectSecurityObjectGroupEntryArrayOutput struct{ *pulumi.OutputState }
+
+func (GetPolicyObjectSecurityObjectGroupEntryArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetPolicyObjectSecurityObjectGroupEntry)(nil)).Elem()
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryArrayOutput) ToGetPolicyObjectSecurityObjectGroupEntryArrayOutput() GetPolicyObjectSecurityObjectGroupEntryArrayOutput {
+	return o
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryArrayOutput) ToGetPolicyObjectSecurityObjectGroupEntryArrayOutputWithContext(ctx context.Context) GetPolicyObjectSecurityObjectGroupEntryArrayOutput {
+	return o
+}
+
+func (o GetPolicyObjectSecurityObjectGroupEntryArrayOutput) Index(i pulumi.IntInput) GetPolicyObjectSecurityObjectGroupEntryOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetPolicyObjectSecurityObjectGroupEntry {
+		return vs[0].([]GetPolicyObjectSecurityObjectGroupEntry)[vs[1].(int)]
+	}).(GetPolicyObjectSecurityObjectGroupEntryOutput)
+}
+
 type GetPolicyObjectSecurityPortListEntry struct {
 	// can be single port or port range
 	Port string `pulumi:"port"`
@@ -46284,6 +47556,394 @@ func (o GetPolicyObjectSecurityProtocolListEntryArrayOutput) Index(i pulumi.IntI
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetPolicyObjectSecurityProtocolListEntry {
 		return vs[0].([]GetPolicyObjectSecurityProtocolListEntry)[vs[1].(int)]
 	}).(GetPolicyObjectSecurityProtocolListEntryOutput)
+}
+
+type GetPolicyObjectSecurityRuleSetSequence struct {
+	// action
+	Action string `pulumi:"action"`
+	// Variable name
+	ActionVariable                   string   `pulumi:"actionVariable"`
+	DestinationDataIpv4PrefixListIds []string `pulumi:"destinationDataIpv4PrefixListIds"`
+	DestinationDataIpv6PrefixListIds []string `pulumi:"destinationDataIpv6PrefixListIds"`
+	DestinationFqdnListIds           []string `pulumi:"destinationFqdnListIds"`
+	DestinationFqdns                 []string `pulumi:"destinationFqdns"`
+	// Variable name
+	DestinationFqdnsVariable      string   `pulumi:"destinationFqdnsVariable"`
+	DestinationGeoLocationListIds []string `pulumi:"destinationGeoLocationListIds"`
+	// Destination Geolocation
+	DestinationGeoLocations []string `pulumi:"destinationGeoLocations"`
+	// Variable name
+	DestinationGeoLocationsVariable string   `pulumi:"destinationGeoLocationsVariable"`
+	DestinationIpv4Prefixes         []string `pulumi:"destinationIpv4Prefixes"`
+	// Variable name
+	DestinationIpv4PrefixesVariable string   `pulumi:"destinationIpv4PrefixesVariable"`
+	DestinationIpv6Prefixes         []string `pulumi:"destinationIpv6Prefixes"`
+	// Variable name
+	DestinationIpv6PrefixesVariable string   `pulumi:"destinationIpv6PrefixesVariable"`
+	DestinationObjectGroupListIds   []string `pulumi:"destinationObjectGroupListIds"`
+	DestinationPortListIds          []string `pulumi:"destinationPortListIds"`
+	DestinationPorts                []string `pulumi:"destinationPorts"`
+	// Variable name
+	DestinationPortsVariable string `pulumi:"destinationPortsVariable"`
+	// Sequence name
+	Name string `pulumi:"name"`
+	// Variable name
+	NameVariable        string   `pulumi:"nameVariable"`
+	ProtocolNameListIds []string `pulumi:"protocolNameListIds"`
+	ProtocolNames       []string `pulumi:"protocolNames"`
+	// Variable name
+	ProtocolNamesVariable string `pulumi:"protocolNamesVariable"`
+	// protocol
+	Protocols []string `pulumi:"protocols"`
+	// Sequence Id
+	SequenceId string `pulumi:"sequenceId"`
+	// Variable name
+	SequenceIdVariable string `pulumi:"sequenceIdVariable"`
+	// ipv4/ ipv6
+	SequenceIpType              string   `pulumi:"sequenceIpType"`
+	SourceDataIpv4PrefixListIds []string `pulumi:"sourceDataIpv4PrefixListIds"`
+	SourceDataIpv6PrefixListIds []string `pulumi:"sourceDataIpv6PrefixListIds"`
+	SourceGeoLocationListIds    []string `pulumi:"sourceGeoLocationListIds"`
+	// Source Geolocation
+	SourceGeoLocations []string `pulumi:"sourceGeoLocations"`
+	// Variable name
+	SourceGeoLocationsVariable string   `pulumi:"sourceGeoLocationsVariable"`
+	SourceIpv4Prefixes         []string `pulumi:"sourceIpv4Prefixes"`
+	// Variable name
+	SourceIpv4PrefixesVariable string   `pulumi:"sourceIpv4PrefixesVariable"`
+	SourceIpv6Prefixes         []string `pulumi:"sourceIpv6Prefixes"`
+	// Variable name
+	SourceIpv6PrefixesVariable string   `pulumi:"sourceIpv6PrefixesVariable"`
+	SourceObjectGroupListIds   []string `pulumi:"sourceObjectGroupListIds"`
+	SourcePortListIds          []string `pulumi:"sourcePortListIds"`
+	SourcePorts                []string `pulumi:"sourcePorts"`
+	// Variable name
+	SourcePortsVariable string `pulumi:"sourcePortsVariable"`
+}
+
+// GetPolicyObjectSecurityRuleSetSequenceInput is an input type that accepts GetPolicyObjectSecurityRuleSetSequenceArgs and GetPolicyObjectSecurityRuleSetSequenceOutput values.
+// You can construct a concrete instance of `GetPolicyObjectSecurityRuleSetSequenceInput` via:
+//
+//	GetPolicyObjectSecurityRuleSetSequenceArgs{...}
+type GetPolicyObjectSecurityRuleSetSequenceInput interface {
+	pulumi.Input
+
+	ToGetPolicyObjectSecurityRuleSetSequenceOutput() GetPolicyObjectSecurityRuleSetSequenceOutput
+	ToGetPolicyObjectSecurityRuleSetSequenceOutputWithContext(context.Context) GetPolicyObjectSecurityRuleSetSequenceOutput
+}
+
+type GetPolicyObjectSecurityRuleSetSequenceArgs struct {
+	// action
+	Action pulumi.StringInput `pulumi:"action"`
+	// Variable name
+	ActionVariable                   pulumi.StringInput      `pulumi:"actionVariable"`
+	DestinationDataIpv4PrefixListIds pulumi.StringArrayInput `pulumi:"destinationDataIpv4PrefixListIds"`
+	DestinationDataIpv6PrefixListIds pulumi.StringArrayInput `pulumi:"destinationDataIpv6PrefixListIds"`
+	DestinationFqdnListIds           pulumi.StringArrayInput `pulumi:"destinationFqdnListIds"`
+	DestinationFqdns                 pulumi.StringArrayInput `pulumi:"destinationFqdns"`
+	// Variable name
+	DestinationFqdnsVariable      pulumi.StringInput      `pulumi:"destinationFqdnsVariable"`
+	DestinationGeoLocationListIds pulumi.StringArrayInput `pulumi:"destinationGeoLocationListIds"`
+	// Destination Geolocation
+	DestinationGeoLocations pulumi.StringArrayInput `pulumi:"destinationGeoLocations"`
+	// Variable name
+	DestinationGeoLocationsVariable pulumi.StringInput      `pulumi:"destinationGeoLocationsVariable"`
+	DestinationIpv4Prefixes         pulumi.StringArrayInput `pulumi:"destinationIpv4Prefixes"`
+	// Variable name
+	DestinationIpv4PrefixesVariable pulumi.StringInput      `pulumi:"destinationIpv4PrefixesVariable"`
+	DestinationIpv6Prefixes         pulumi.StringArrayInput `pulumi:"destinationIpv6Prefixes"`
+	// Variable name
+	DestinationIpv6PrefixesVariable pulumi.StringInput      `pulumi:"destinationIpv6PrefixesVariable"`
+	DestinationObjectGroupListIds   pulumi.StringArrayInput `pulumi:"destinationObjectGroupListIds"`
+	DestinationPortListIds          pulumi.StringArrayInput `pulumi:"destinationPortListIds"`
+	DestinationPorts                pulumi.StringArrayInput `pulumi:"destinationPorts"`
+	// Variable name
+	DestinationPortsVariable pulumi.StringInput `pulumi:"destinationPortsVariable"`
+	// Sequence name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Variable name
+	NameVariable        pulumi.StringInput      `pulumi:"nameVariable"`
+	ProtocolNameListIds pulumi.StringArrayInput `pulumi:"protocolNameListIds"`
+	ProtocolNames       pulumi.StringArrayInput `pulumi:"protocolNames"`
+	// Variable name
+	ProtocolNamesVariable pulumi.StringInput `pulumi:"protocolNamesVariable"`
+	// protocol
+	Protocols pulumi.StringArrayInput `pulumi:"protocols"`
+	// Sequence Id
+	SequenceId pulumi.StringInput `pulumi:"sequenceId"`
+	// Variable name
+	SequenceIdVariable pulumi.StringInput `pulumi:"sequenceIdVariable"`
+	// ipv4/ ipv6
+	SequenceIpType              pulumi.StringInput      `pulumi:"sequenceIpType"`
+	SourceDataIpv4PrefixListIds pulumi.StringArrayInput `pulumi:"sourceDataIpv4PrefixListIds"`
+	SourceDataIpv6PrefixListIds pulumi.StringArrayInput `pulumi:"sourceDataIpv6PrefixListIds"`
+	SourceGeoLocationListIds    pulumi.StringArrayInput `pulumi:"sourceGeoLocationListIds"`
+	// Source Geolocation
+	SourceGeoLocations pulumi.StringArrayInput `pulumi:"sourceGeoLocations"`
+	// Variable name
+	SourceGeoLocationsVariable pulumi.StringInput      `pulumi:"sourceGeoLocationsVariable"`
+	SourceIpv4Prefixes         pulumi.StringArrayInput `pulumi:"sourceIpv4Prefixes"`
+	// Variable name
+	SourceIpv4PrefixesVariable pulumi.StringInput      `pulumi:"sourceIpv4PrefixesVariable"`
+	SourceIpv6Prefixes         pulumi.StringArrayInput `pulumi:"sourceIpv6Prefixes"`
+	// Variable name
+	SourceIpv6PrefixesVariable pulumi.StringInput      `pulumi:"sourceIpv6PrefixesVariable"`
+	SourceObjectGroupListIds   pulumi.StringArrayInput `pulumi:"sourceObjectGroupListIds"`
+	SourcePortListIds          pulumi.StringArrayInput `pulumi:"sourcePortListIds"`
+	SourcePorts                pulumi.StringArrayInput `pulumi:"sourcePorts"`
+	// Variable name
+	SourcePortsVariable pulumi.StringInput `pulumi:"sourcePortsVariable"`
+}
+
+func (GetPolicyObjectSecurityRuleSetSequenceArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetPolicyObjectSecurityRuleSetSequence)(nil)).Elem()
+}
+
+func (i GetPolicyObjectSecurityRuleSetSequenceArgs) ToGetPolicyObjectSecurityRuleSetSequenceOutput() GetPolicyObjectSecurityRuleSetSequenceOutput {
+	return i.ToGetPolicyObjectSecurityRuleSetSequenceOutputWithContext(context.Background())
+}
+
+func (i GetPolicyObjectSecurityRuleSetSequenceArgs) ToGetPolicyObjectSecurityRuleSetSequenceOutputWithContext(ctx context.Context) GetPolicyObjectSecurityRuleSetSequenceOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetPolicyObjectSecurityRuleSetSequenceOutput)
+}
+
+// GetPolicyObjectSecurityRuleSetSequenceArrayInput is an input type that accepts GetPolicyObjectSecurityRuleSetSequenceArray and GetPolicyObjectSecurityRuleSetSequenceArrayOutput values.
+// You can construct a concrete instance of `GetPolicyObjectSecurityRuleSetSequenceArrayInput` via:
+//
+//	GetPolicyObjectSecurityRuleSetSequenceArray{ GetPolicyObjectSecurityRuleSetSequenceArgs{...} }
+type GetPolicyObjectSecurityRuleSetSequenceArrayInput interface {
+	pulumi.Input
+
+	ToGetPolicyObjectSecurityRuleSetSequenceArrayOutput() GetPolicyObjectSecurityRuleSetSequenceArrayOutput
+	ToGetPolicyObjectSecurityRuleSetSequenceArrayOutputWithContext(context.Context) GetPolicyObjectSecurityRuleSetSequenceArrayOutput
+}
+
+type GetPolicyObjectSecurityRuleSetSequenceArray []GetPolicyObjectSecurityRuleSetSequenceInput
+
+func (GetPolicyObjectSecurityRuleSetSequenceArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetPolicyObjectSecurityRuleSetSequence)(nil)).Elem()
+}
+
+func (i GetPolicyObjectSecurityRuleSetSequenceArray) ToGetPolicyObjectSecurityRuleSetSequenceArrayOutput() GetPolicyObjectSecurityRuleSetSequenceArrayOutput {
+	return i.ToGetPolicyObjectSecurityRuleSetSequenceArrayOutputWithContext(context.Background())
+}
+
+func (i GetPolicyObjectSecurityRuleSetSequenceArray) ToGetPolicyObjectSecurityRuleSetSequenceArrayOutputWithContext(ctx context.Context) GetPolicyObjectSecurityRuleSetSequenceArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetPolicyObjectSecurityRuleSetSequenceArrayOutput)
+}
+
+type GetPolicyObjectSecurityRuleSetSequenceOutput struct{ *pulumi.OutputState }
+
+func (GetPolicyObjectSecurityRuleSetSequenceOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetPolicyObjectSecurityRuleSetSequence)(nil)).Elem()
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) ToGetPolicyObjectSecurityRuleSetSequenceOutput() GetPolicyObjectSecurityRuleSetSequenceOutput {
+	return o
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) ToGetPolicyObjectSecurityRuleSetSequenceOutputWithContext(ctx context.Context) GetPolicyObjectSecurityRuleSetSequenceOutput {
+	return o
+}
+
+// action
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) Action() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.Action }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) ActionVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.ActionVariable }).(pulumi.StringOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationDataIpv4PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.DestinationDataIpv4PrefixListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationDataIpv6PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.DestinationDataIpv6PrefixListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationFqdnListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.DestinationFqdnListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationFqdns() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.DestinationFqdns }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationFqdnsVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.DestinationFqdnsVariable }).(pulumi.StringOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationGeoLocationListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.DestinationGeoLocationListIds }).(pulumi.StringArrayOutput)
+}
+
+// Destination Geolocation
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationGeoLocations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.DestinationGeoLocations }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationGeoLocationsVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.DestinationGeoLocationsVariable }).(pulumi.StringOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationIpv4Prefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.DestinationIpv4Prefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationIpv4PrefixesVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.DestinationIpv4PrefixesVariable }).(pulumi.StringOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationIpv6Prefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.DestinationIpv6Prefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationIpv6PrefixesVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.DestinationIpv6PrefixesVariable }).(pulumi.StringOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationObjectGroupListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.DestinationObjectGroupListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationPortListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.DestinationPortListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationPorts() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.DestinationPorts }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) DestinationPortsVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.DestinationPortsVariable }).(pulumi.StringOutput)
+}
+
+// Sequence name
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) NameVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.NameVariable }).(pulumi.StringOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) ProtocolNameListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.ProtocolNameListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) ProtocolNames() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.ProtocolNames }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) ProtocolNamesVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.ProtocolNamesVariable }).(pulumi.StringOutput)
+}
+
+// protocol
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) Protocols() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.Protocols }).(pulumi.StringArrayOutput)
+}
+
+// Sequence Id
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SequenceId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.SequenceId }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SequenceIdVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.SequenceIdVariable }).(pulumi.StringOutput)
+}
+
+// ipv4/ ipv6
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SequenceIpType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.SequenceIpType }).(pulumi.StringOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SourceDataIpv4PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.SourceDataIpv4PrefixListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SourceDataIpv6PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.SourceDataIpv6PrefixListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SourceGeoLocationListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.SourceGeoLocationListIds }).(pulumi.StringArrayOutput)
+}
+
+// Source Geolocation
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SourceGeoLocations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.SourceGeoLocations }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SourceGeoLocationsVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.SourceGeoLocationsVariable }).(pulumi.StringOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SourceIpv4Prefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.SourceIpv4Prefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SourceIpv4PrefixesVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.SourceIpv4PrefixesVariable }).(pulumi.StringOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SourceIpv6Prefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.SourceIpv6Prefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SourceIpv6PrefixesVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.SourceIpv6PrefixesVariable }).(pulumi.StringOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SourceObjectGroupListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.SourceObjectGroupListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SourcePortListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.SourcePortListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SourcePorts() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) []string { return v.SourcePorts }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetPolicyObjectSecurityRuleSetSequenceOutput) SourcePortsVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicyObjectSecurityRuleSetSequence) string { return v.SourcePortsVariable }).(pulumi.StringOutput)
+}
+
+type GetPolicyObjectSecurityRuleSetSequenceArrayOutput struct{ *pulumi.OutputState }
+
+func (GetPolicyObjectSecurityRuleSetSequenceArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetPolicyObjectSecurityRuleSetSequence)(nil)).Elem()
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceArrayOutput) ToGetPolicyObjectSecurityRuleSetSequenceArrayOutput() GetPolicyObjectSecurityRuleSetSequenceArrayOutput {
+	return o
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceArrayOutput) ToGetPolicyObjectSecurityRuleSetSequenceArrayOutputWithContext(ctx context.Context) GetPolicyObjectSecurityRuleSetSequenceArrayOutput {
+	return o
+}
+
+func (o GetPolicyObjectSecurityRuleSetSequenceArrayOutput) Index(i pulumi.IntInput) GetPolicyObjectSecurityRuleSetSequenceOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetPolicyObjectSecurityRuleSetSequence {
+		return vs[0].([]GetPolicyObjectSecurityRuleSetSequence)[vs[1].(int)]
+	}).(GetPolicyObjectSecurityRuleSetSequenceOutput)
 }
 
 type GetPolicyObjectSecurityScalableGroupTagListEntry struct {
@@ -70463,8 +72123,9 @@ type GetSseZscalerFeatureSubLocation struct {
 	// Display time unit for Idle Time to Disassociation
 	DisplayTimeUnit string `pulumi:"displayTimeUnit"`
 	// Variable name
-	DisplayTimeUnitVariable string  `pulumi:"displayTimeUnitVariable"`
-	DnBandwidth             float64 `pulumi:"dnBandwidth"`
+	DisplayTimeUnitVariable string `pulumi:"displayTimeUnitVariable"`
+	// Download Bandwidth in Mbps
+	DnBandwidth float64 `pulumi:"dnBandwidth"`
 	// Variable name
 	DnBandwidthVariable string `pulumi:"dnBandwidthVariable"`
 	// Enforce Bandwidth Control for sub location
@@ -70478,13 +72139,15 @@ type GetSseZscalerFeatureSubLocation struct {
 	// Idle time to disassociation. How long after a completed transaction the service retains the IP address to user mapping.
 	IdleTime int `pulumi:"idleTime"`
 	// Variable name
-	IdleTimeVariable string                                      `pulumi:"idleTimeVariable"`
-	InternalIps      []GetSseZscalerFeatureSubLocationInternalIp `pulumi:"internalIps"`
+	IdleTimeVariable string `pulumi:"idleTimeVariable"`
+	// Internal Ip address
+	InternalIps []GetSseZscalerFeatureSubLocationInternalIp `pulumi:"internalIps"`
 	// If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
 	IpEnforcedForKnownBrowsers bool `pulumi:"ipEnforcedForKnownBrowsers"`
 	// Variable name
 	IpEnforcedForKnownBrowsersVariable string `pulumi:"ipEnforcedForKnownBrowsersVariable"`
-	Name                               string `pulumi:"name"`
+	// Sub-location name
+	Name string `pulumi:"name"`
 	// Variable name
 	NameVariable string `pulumi:"nameVariable"`
 	// Enforces firewall at the location
@@ -70500,13 +72163,15 @@ type GetSseZscalerFeatureSubLocation struct {
 	// Variable name
 	RefreshTimeVariable string `pulumi:"refreshTimeVariable"`
 	// Variable name
-	ServiceVpnVariable string   `pulumi:"serviceVpnVariable"`
-	ServiceVpns        []string `pulumi:"serviceVpns"`
+	ServiceVpnVariable string `pulumi:"serviceVpnVariable"`
+	// Sub-location Service VPN
+	ServiceVpns []string `pulumi:"serviceVpns"`
 	// Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic.
 	SurrogateIp bool `pulumi:"surrogateIp"`
 	// Variable name
-	SurrogateIpVariable string  `pulumi:"surrogateIpVariable"`
-	UpBandwidth         float64 `pulumi:"upBandwidth"`
+	SurrogateIpVariable string `pulumi:"surrogateIpVariable"`
+	// Upload Bandwidth in Mbps
+	UpBandwidth float64 `pulumi:"upBandwidth"`
 	// Variable name
 	UpBandwidthVariable string `pulumi:"upBandwidthVariable"`
 }
@@ -70546,8 +72211,9 @@ type GetSseZscalerFeatureSubLocationArgs struct {
 	// Display time unit for Idle Time to Disassociation
 	DisplayTimeUnit pulumi.StringInput `pulumi:"displayTimeUnit"`
 	// Variable name
-	DisplayTimeUnitVariable pulumi.StringInput  `pulumi:"displayTimeUnitVariable"`
-	DnBandwidth             pulumi.Float64Input `pulumi:"dnBandwidth"`
+	DisplayTimeUnitVariable pulumi.StringInput `pulumi:"displayTimeUnitVariable"`
+	// Download Bandwidth in Mbps
+	DnBandwidth pulumi.Float64Input `pulumi:"dnBandwidth"`
 	// Variable name
 	DnBandwidthVariable pulumi.StringInput `pulumi:"dnBandwidthVariable"`
 	// Enforce Bandwidth Control for sub location
@@ -70561,13 +72227,15 @@ type GetSseZscalerFeatureSubLocationArgs struct {
 	// Idle time to disassociation. How long after a completed transaction the service retains the IP address to user mapping.
 	IdleTime pulumi.IntInput `pulumi:"idleTime"`
 	// Variable name
-	IdleTimeVariable pulumi.StringInput                                  `pulumi:"idleTimeVariable"`
-	InternalIps      GetSseZscalerFeatureSubLocationInternalIpArrayInput `pulumi:"internalIps"`
+	IdleTimeVariable pulumi.StringInput `pulumi:"idleTimeVariable"`
+	// Internal Ip address
+	InternalIps GetSseZscalerFeatureSubLocationInternalIpArrayInput `pulumi:"internalIps"`
 	// If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
 	IpEnforcedForKnownBrowsers pulumi.BoolInput `pulumi:"ipEnforcedForKnownBrowsers"`
 	// Variable name
 	IpEnforcedForKnownBrowsersVariable pulumi.StringInput `pulumi:"ipEnforcedForKnownBrowsersVariable"`
-	Name                               pulumi.StringInput `pulumi:"name"`
+	// Sub-location name
+	Name pulumi.StringInput `pulumi:"name"`
 	// Variable name
 	NameVariable pulumi.StringInput `pulumi:"nameVariable"`
 	// Enforces firewall at the location
@@ -70583,13 +72251,15 @@ type GetSseZscalerFeatureSubLocationArgs struct {
 	// Variable name
 	RefreshTimeVariable pulumi.StringInput `pulumi:"refreshTimeVariable"`
 	// Variable name
-	ServiceVpnVariable pulumi.StringInput      `pulumi:"serviceVpnVariable"`
-	ServiceVpns        pulumi.StringArrayInput `pulumi:"serviceVpns"`
+	ServiceVpnVariable pulumi.StringInput `pulumi:"serviceVpnVariable"`
+	// Sub-location Service VPN
+	ServiceVpns pulumi.StringArrayInput `pulumi:"serviceVpns"`
 	// Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic.
 	SurrogateIp pulumi.BoolInput `pulumi:"surrogateIp"`
 	// Variable name
-	SurrogateIpVariable pulumi.StringInput  `pulumi:"surrogateIpVariable"`
-	UpBandwidth         pulumi.Float64Input `pulumi:"upBandwidth"`
+	SurrogateIpVariable pulumi.StringInput `pulumi:"surrogateIpVariable"`
+	// Upload Bandwidth in Mbps
+	UpBandwidth pulumi.Float64Input `pulumi:"upBandwidth"`
 	// Variable name
 	UpBandwidthVariable pulumi.StringInput `pulumi:"upBandwidthVariable"`
 }
@@ -70705,6 +72375,7 @@ func (o GetSseZscalerFeatureSubLocationOutput) DisplayTimeUnitVariable() pulumi.
 	return o.ApplyT(func(v GetSseZscalerFeatureSubLocation) string { return v.DisplayTimeUnitVariable }).(pulumi.StringOutput)
 }
 
+// Download Bandwidth in Mbps
 func (o GetSseZscalerFeatureSubLocationOutput) DnBandwidth() pulumi.Float64Output {
 	return o.ApplyT(func(v GetSseZscalerFeatureSubLocation) float64 { return v.DnBandwidth }).(pulumi.Float64Output)
 }
@@ -70744,6 +72415,7 @@ func (o GetSseZscalerFeatureSubLocationOutput) IdleTimeVariable() pulumi.StringO
 	return o.ApplyT(func(v GetSseZscalerFeatureSubLocation) string { return v.IdleTimeVariable }).(pulumi.StringOutput)
 }
 
+// Internal Ip address
 func (o GetSseZscalerFeatureSubLocationOutput) InternalIps() GetSseZscalerFeatureSubLocationInternalIpArrayOutput {
 	return o.ApplyT(func(v GetSseZscalerFeatureSubLocation) []GetSseZscalerFeatureSubLocationInternalIp {
 		return v.InternalIps
@@ -70760,6 +72432,7 @@ func (o GetSseZscalerFeatureSubLocationOutput) IpEnforcedForKnownBrowsersVariabl
 	return o.ApplyT(func(v GetSseZscalerFeatureSubLocation) string { return v.IpEnforcedForKnownBrowsersVariable }).(pulumi.StringOutput)
 }
 
+// Sub-location name
 func (o GetSseZscalerFeatureSubLocationOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetSseZscalerFeatureSubLocation) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -70804,6 +72477,7 @@ func (o GetSseZscalerFeatureSubLocationOutput) ServiceVpnVariable() pulumi.Strin
 	return o.ApplyT(func(v GetSseZscalerFeatureSubLocation) string { return v.ServiceVpnVariable }).(pulumi.StringOutput)
 }
 
+// Sub-location Service VPN
 func (o GetSseZscalerFeatureSubLocationOutput) ServiceVpns() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetSseZscalerFeatureSubLocation) []string { return v.ServiceVpns }).(pulumi.StringArrayOutput)
 }
@@ -70818,6 +72492,7 @@ func (o GetSseZscalerFeatureSubLocationOutput) SurrogateIpVariable() pulumi.Stri
 	return o.ApplyT(func(v GetSseZscalerFeatureSubLocation) string { return v.SurrogateIpVariable }).(pulumi.StringOutput)
 }
 
+// Upload Bandwidth in Mbps
 func (o GetSseZscalerFeatureSubLocationOutput) UpBandwidth() pulumi.Float64Output {
 	return o.ApplyT(func(v GetSseZscalerFeatureSubLocation) float64 { return v.UpBandwidth }).(pulumi.Float64Output)
 }
@@ -75638,1358 +77313,15 @@ func (o GetSystemSnmpFeatureGroupArrayOutput) Index(i pulumi.IntInput) GetSystem
 	}).(GetSystemSnmpFeatureGroupOutput)
 }
 
-type GetSystemSnmpFeatureTrapTargetServer struct {
-	// Set IPv4/IPv6 address of SNMP server
-	Ip string `pulumi:"ip"`
-	// Variable name
-	IpVariable string `pulumi:"ipVariable"`
-	// Set UDP port number to connect to SNMP server
-	Port int `pulumi:"port"`
-	// Variable name
-	PortVariable string `pulumi:"portVariable"`
-	// Source interface for outgoing SNMP traps
-	SourceInterface string `pulumi:"sourceInterface"`
-	// Variable name
-	SourceInterfaceVariable string `pulumi:"sourceInterfaceVariable"`
-	// Set name of the SNMP user
-	User string `pulumi:"user"`
-	// Set user label of the SNMP community
-	UserLabel string `pulumi:"userLabel"`
-	// Variable name
-	UserVariable string `pulumi:"userVariable"`
-	// Set VPN in which SNMP server is located
-	VpnId int `pulumi:"vpnId"`
-	// Variable name
-	VpnIdVariable string `pulumi:"vpnIdVariable"`
-}
-
-// GetSystemSnmpFeatureTrapTargetServerInput is an input type that accepts GetSystemSnmpFeatureTrapTargetServerArgs and GetSystemSnmpFeatureTrapTargetServerOutput values.
-// You can construct a concrete instance of `GetSystemSnmpFeatureTrapTargetServerInput` via:
-//
-//	GetSystemSnmpFeatureTrapTargetServerArgs{...}
-type GetSystemSnmpFeatureTrapTargetServerInput interface {
-	pulumi.Input
-
-	ToGetSystemSnmpFeatureTrapTargetServerOutput() GetSystemSnmpFeatureTrapTargetServerOutput
-	ToGetSystemSnmpFeatureTrapTargetServerOutputWithContext(context.Context) GetSystemSnmpFeatureTrapTargetServerOutput
-}
-
-type GetSystemSnmpFeatureTrapTargetServerArgs struct {
-	// Set IPv4/IPv6 address of SNMP server
-	Ip pulumi.StringInput `pulumi:"ip"`
-	// Variable name
-	IpVariable pulumi.StringInput `pulumi:"ipVariable"`
-	// Set UDP port number to connect to SNMP server
-	Port pulumi.IntInput `pulumi:"port"`
-	// Variable name
-	PortVariable pulumi.StringInput `pulumi:"portVariable"`
-	// Source interface for outgoing SNMP traps
-	SourceInterface pulumi.StringInput `pulumi:"sourceInterface"`
-	// Variable name
-	SourceInterfaceVariable pulumi.StringInput `pulumi:"sourceInterfaceVariable"`
-	// Set name of the SNMP user
-	User pulumi.StringInput `pulumi:"user"`
-	// Set user label of the SNMP community
-	UserLabel pulumi.StringInput `pulumi:"userLabel"`
-	// Variable name
-	UserVariable pulumi.StringInput `pulumi:"userVariable"`
-	// Set VPN in which SNMP server is located
-	VpnId pulumi.IntInput `pulumi:"vpnId"`
-	// Variable name
-	VpnIdVariable pulumi.StringInput `pulumi:"vpnIdVariable"`
-}
-
-func (GetSystemSnmpFeatureTrapTargetServerArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetSystemSnmpFeatureTrapTargetServer)(nil)).Elem()
-}
-
-func (i GetSystemSnmpFeatureTrapTargetServerArgs) ToGetSystemSnmpFeatureTrapTargetServerOutput() GetSystemSnmpFeatureTrapTargetServerOutput {
-	return i.ToGetSystemSnmpFeatureTrapTargetServerOutputWithContext(context.Background())
-}
-
-func (i GetSystemSnmpFeatureTrapTargetServerArgs) ToGetSystemSnmpFeatureTrapTargetServerOutputWithContext(ctx context.Context) GetSystemSnmpFeatureTrapTargetServerOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureTrapTargetServerOutput)
-}
-
-// GetSystemSnmpFeatureTrapTargetServerArrayInput is an input type that accepts GetSystemSnmpFeatureTrapTargetServerArray and GetSystemSnmpFeatureTrapTargetServerArrayOutput values.
-// You can construct a concrete instance of `GetSystemSnmpFeatureTrapTargetServerArrayInput` via:
-//
-//	GetSystemSnmpFeatureTrapTargetServerArray{ GetSystemSnmpFeatureTrapTargetServerArgs{...} }
-type GetSystemSnmpFeatureTrapTargetServerArrayInput interface {
-	pulumi.Input
-
-	ToGetSystemSnmpFeatureTrapTargetServerArrayOutput() GetSystemSnmpFeatureTrapTargetServerArrayOutput
-	ToGetSystemSnmpFeatureTrapTargetServerArrayOutputWithContext(context.Context) GetSystemSnmpFeatureTrapTargetServerArrayOutput
-}
-
-type GetSystemSnmpFeatureTrapTargetServerArray []GetSystemSnmpFeatureTrapTargetServerInput
-
-func (GetSystemSnmpFeatureTrapTargetServerArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetSystemSnmpFeatureTrapTargetServer)(nil)).Elem()
-}
-
-func (i GetSystemSnmpFeatureTrapTargetServerArray) ToGetSystemSnmpFeatureTrapTargetServerArrayOutput() GetSystemSnmpFeatureTrapTargetServerArrayOutput {
-	return i.ToGetSystemSnmpFeatureTrapTargetServerArrayOutputWithContext(context.Background())
-}
-
-func (i GetSystemSnmpFeatureTrapTargetServerArray) ToGetSystemSnmpFeatureTrapTargetServerArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureTrapTargetServerArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureTrapTargetServerArrayOutput)
-}
-
-type GetSystemSnmpFeatureTrapTargetServerOutput struct{ *pulumi.OutputState }
-
-func (GetSystemSnmpFeatureTrapTargetServerOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetSystemSnmpFeatureTrapTargetServer)(nil)).Elem()
-}
-
-func (o GetSystemSnmpFeatureTrapTargetServerOutput) ToGetSystemSnmpFeatureTrapTargetServerOutput() GetSystemSnmpFeatureTrapTargetServerOutput {
-	return o
-}
-
-func (o GetSystemSnmpFeatureTrapTargetServerOutput) ToGetSystemSnmpFeatureTrapTargetServerOutputWithContext(ctx context.Context) GetSystemSnmpFeatureTrapTargetServerOutput {
-	return o
-}
-
-// Set IPv4/IPv6 address of SNMP server
-func (o GetSystemSnmpFeatureTrapTargetServerOutput) Ip() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.Ip }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetSystemSnmpFeatureTrapTargetServerOutput) IpVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.IpVariable }).(pulumi.StringOutput)
-}
-
-// Set UDP port number to connect to SNMP server
-func (o GetSystemSnmpFeatureTrapTargetServerOutput) Port() pulumi.IntOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) int { return v.Port }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetSystemSnmpFeatureTrapTargetServerOutput) PortVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.PortVariable }).(pulumi.StringOutput)
-}
-
-// Source interface for outgoing SNMP traps
-func (o GetSystemSnmpFeatureTrapTargetServerOutput) SourceInterface() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.SourceInterface }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetSystemSnmpFeatureTrapTargetServerOutput) SourceInterfaceVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.SourceInterfaceVariable }).(pulumi.StringOutput)
-}
-
-// Set name of the SNMP user
-func (o GetSystemSnmpFeatureTrapTargetServerOutput) User() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.User }).(pulumi.StringOutput)
-}
-
-// Set user label of the SNMP community
-func (o GetSystemSnmpFeatureTrapTargetServerOutput) UserLabel() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.UserLabel }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetSystemSnmpFeatureTrapTargetServerOutput) UserVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.UserVariable }).(pulumi.StringOutput)
-}
-
-// Set VPN in which SNMP server is located
-func (o GetSystemSnmpFeatureTrapTargetServerOutput) VpnId() pulumi.IntOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) int { return v.VpnId }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetSystemSnmpFeatureTrapTargetServerOutput) VpnIdVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.VpnIdVariable }).(pulumi.StringOutput)
-}
-
-type GetSystemSnmpFeatureTrapTargetServerArrayOutput struct{ *pulumi.OutputState }
-
-func (GetSystemSnmpFeatureTrapTargetServerArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetSystemSnmpFeatureTrapTargetServer)(nil)).Elem()
-}
-
-func (o GetSystemSnmpFeatureTrapTargetServerArrayOutput) ToGetSystemSnmpFeatureTrapTargetServerArrayOutput() GetSystemSnmpFeatureTrapTargetServerArrayOutput {
-	return o
-}
-
-func (o GetSystemSnmpFeatureTrapTargetServerArrayOutput) ToGetSystemSnmpFeatureTrapTargetServerArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureTrapTargetServerArrayOutput {
-	return o
-}
-
-func (o GetSystemSnmpFeatureTrapTargetServerArrayOutput) Index(i pulumi.IntInput) GetSystemSnmpFeatureTrapTargetServerOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSystemSnmpFeatureTrapTargetServer {
-		return vs[0].([]GetSystemSnmpFeatureTrapTargetServer)[vs[1].(int)]
-	}).(GetSystemSnmpFeatureTrapTargetServerOutput)
-}
-
-type GetSystemSnmpFeatureUser struct {
-	// Specify authentication protocol password
-	AuthenticationPassword string `pulumi:"authenticationPassword"`
-	// Variable name
-	AuthenticationPasswordVariable string `pulumi:"authenticationPasswordVariable"`
-	// Configure authentication protocol
-	AuthenticationProtocol string `pulumi:"authenticationProtocol"`
-	// Variable name
-	AuthenticationProtocolVariable string `pulumi:"authenticationProtocolVariable"`
-	// Name of the SNMP group
-	Group string `pulumi:"group"`
-	// Variable name
-	GroupVariable string `pulumi:"groupVariable"`
-	// Name of the SNMP user
-	Name string `pulumi:"name"`
-	// Specify privacy protocol password
-	PrivacyPassword string `pulumi:"privacyPassword"`
-	// Variable name
-	PrivacyPasswordVariable string `pulumi:"privacyPasswordVariable"`
-	// Configure privacy protocol
-	PrivacyProtocol string `pulumi:"privacyProtocol"`
-	// Variable name
-	PrivacyProtocolVariable string `pulumi:"privacyProtocolVariable"`
-}
-
-// GetSystemSnmpFeatureUserInput is an input type that accepts GetSystemSnmpFeatureUserArgs and GetSystemSnmpFeatureUserOutput values.
-// You can construct a concrete instance of `GetSystemSnmpFeatureUserInput` via:
-//
-//	GetSystemSnmpFeatureUserArgs{...}
-type GetSystemSnmpFeatureUserInput interface {
-	pulumi.Input
-
-	ToGetSystemSnmpFeatureUserOutput() GetSystemSnmpFeatureUserOutput
-	ToGetSystemSnmpFeatureUserOutputWithContext(context.Context) GetSystemSnmpFeatureUserOutput
-}
-
-type GetSystemSnmpFeatureUserArgs struct {
-	// Specify authentication protocol password
-	AuthenticationPassword pulumi.StringInput `pulumi:"authenticationPassword"`
-	// Variable name
-	AuthenticationPasswordVariable pulumi.StringInput `pulumi:"authenticationPasswordVariable"`
-	// Configure authentication protocol
-	AuthenticationProtocol pulumi.StringInput `pulumi:"authenticationProtocol"`
-	// Variable name
-	AuthenticationProtocolVariable pulumi.StringInput `pulumi:"authenticationProtocolVariable"`
-	// Name of the SNMP group
-	Group pulumi.StringInput `pulumi:"group"`
-	// Variable name
-	GroupVariable pulumi.StringInput `pulumi:"groupVariable"`
-	// Name of the SNMP user
-	Name pulumi.StringInput `pulumi:"name"`
-	// Specify privacy protocol password
-	PrivacyPassword pulumi.StringInput `pulumi:"privacyPassword"`
-	// Variable name
-	PrivacyPasswordVariable pulumi.StringInput `pulumi:"privacyPasswordVariable"`
-	// Configure privacy protocol
-	PrivacyProtocol pulumi.StringInput `pulumi:"privacyProtocol"`
-	// Variable name
-	PrivacyProtocolVariable pulumi.StringInput `pulumi:"privacyProtocolVariable"`
-}
-
-func (GetSystemSnmpFeatureUserArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetSystemSnmpFeatureUser)(nil)).Elem()
-}
-
-func (i GetSystemSnmpFeatureUserArgs) ToGetSystemSnmpFeatureUserOutput() GetSystemSnmpFeatureUserOutput {
-	return i.ToGetSystemSnmpFeatureUserOutputWithContext(context.Background())
-}
-
-func (i GetSystemSnmpFeatureUserArgs) ToGetSystemSnmpFeatureUserOutputWithContext(ctx context.Context) GetSystemSnmpFeatureUserOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureUserOutput)
-}
-
-// GetSystemSnmpFeatureUserArrayInput is an input type that accepts GetSystemSnmpFeatureUserArray and GetSystemSnmpFeatureUserArrayOutput values.
-// You can construct a concrete instance of `GetSystemSnmpFeatureUserArrayInput` via:
-//
-//	GetSystemSnmpFeatureUserArray{ GetSystemSnmpFeatureUserArgs{...} }
-type GetSystemSnmpFeatureUserArrayInput interface {
-	pulumi.Input
-
-	ToGetSystemSnmpFeatureUserArrayOutput() GetSystemSnmpFeatureUserArrayOutput
-	ToGetSystemSnmpFeatureUserArrayOutputWithContext(context.Context) GetSystemSnmpFeatureUserArrayOutput
-}
-
-type GetSystemSnmpFeatureUserArray []GetSystemSnmpFeatureUserInput
-
-func (GetSystemSnmpFeatureUserArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetSystemSnmpFeatureUser)(nil)).Elem()
-}
-
-func (i GetSystemSnmpFeatureUserArray) ToGetSystemSnmpFeatureUserArrayOutput() GetSystemSnmpFeatureUserArrayOutput {
-	return i.ToGetSystemSnmpFeatureUserArrayOutputWithContext(context.Background())
-}
-
-func (i GetSystemSnmpFeatureUserArray) ToGetSystemSnmpFeatureUserArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureUserArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureUserArrayOutput)
-}
-
-type GetSystemSnmpFeatureUserOutput struct{ *pulumi.OutputState }
-
-func (GetSystemSnmpFeatureUserOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetSystemSnmpFeatureUser)(nil)).Elem()
-}
-
-func (o GetSystemSnmpFeatureUserOutput) ToGetSystemSnmpFeatureUserOutput() GetSystemSnmpFeatureUserOutput {
-	return o
-}
-
-func (o GetSystemSnmpFeatureUserOutput) ToGetSystemSnmpFeatureUserOutputWithContext(ctx context.Context) GetSystemSnmpFeatureUserOutput {
-	return o
-}
-
-// Specify authentication protocol password
-func (o GetSystemSnmpFeatureUserOutput) AuthenticationPassword() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.AuthenticationPassword }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetSystemSnmpFeatureUserOutput) AuthenticationPasswordVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.AuthenticationPasswordVariable }).(pulumi.StringOutput)
-}
-
-// Configure authentication protocol
-func (o GetSystemSnmpFeatureUserOutput) AuthenticationProtocol() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.AuthenticationProtocol }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetSystemSnmpFeatureUserOutput) AuthenticationProtocolVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.AuthenticationProtocolVariable }).(pulumi.StringOutput)
-}
-
-// Name of the SNMP group
-func (o GetSystemSnmpFeatureUserOutput) Group() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.Group }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetSystemSnmpFeatureUserOutput) GroupVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.GroupVariable }).(pulumi.StringOutput)
-}
-
-// Name of the SNMP user
-func (o GetSystemSnmpFeatureUserOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Specify privacy protocol password
-func (o GetSystemSnmpFeatureUserOutput) PrivacyPassword() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.PrivacyPassword }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetSystemSnmpFeatureUserOutput) PrivacyPasswordVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.PrivacyPasswordVariable }).(pulumi.StringOutput)
-}
-
-// Configure privacy protocol
-func (o GetSystemSnmpFeatureUserOutput) PrivacyProtocol() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.PrivacyProtocol }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetSystemSnmpFeatureUserOutput) PrivacyProtocolVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.PrivacyProtocolVariable }).(pulumi.StringOutput)
-}
-
-type GetSystemSnmpFeatureUserArrayOutput struct{ *pulumi.OutputState }
-
-func (GetSystemSnmpFeatureUserArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetSystemSnmpFeatureUser)(nil)).Elem()
-}
-
-func (o GetSystemSnmpFeatureUserArrayOutput) ToGetSystemSnmpFeatureUserArrayOutput() GetSystemSnmpFeatureUserArrayOutput {
-	return o
-}
-
-func (o GetSystemSnmpFeatureUserArrayOutput) ToGetSystemSnmpFeatureUserArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureUserArrayOutput {
-	return o
-}
-
-func (o GetSystemSnmpFeatureUserArrayOutput) Index(i pulumi.IntInput) GetSystemSnmpFeatureUserOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSystemSnmpFeatureUser {
-		return vs[0].([]GetSystemSnmpFeatureUser)[vs[1].(int)]
-	}).(GetSystemSnmpFeatureUserOutput)
-}
-
-type GetSystemSnmpFeatureView struct {
-	// Set the name of the SNMP view
-	Name string `pulumi:"name"`
-	// Configure SNMP object identifier
-	Oids []GetSystemSnmpFeatureViewOid `pulumi:"oids"`
-}
-
-// GetSystemSnmpFeatureViewInput is an input type that accepts GetSystemSnmpFeatureViewArgs and GetSystemSnmpFeatureViewOutput values.
-// You can construct a concrete instance of `GetSystemSnmpFeatureViewInput` via:
-//
-//	GetSystemSnmpFeatureViewArgs{...}
-type GetSystemSnmpFeatureViewInput interface {
-	pulumi.Input
-
-	ToGetSystemSnmpFeatureViewOutput() GetSystemSnmpFeatureViewOutput
-	ToGetSystemSnmpFeatureViewOutputWithContext(context.Context) GetSystemSnmpFeatureViewOutput
-}
-
-type GetSystemSnmpFeatureViewArgs struct {
-	// Set the name of the SNMP view
-	Name pulumi.StringInput `pulumi:"name"`
-	// Configure SNMP object identifier
-	Oids GetSystemSnmpFeatureViewOidArrayInput `pulumi:"oids"`
-}
-
-func (GetSystemSnmpFeatureViewArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetSystemSnmpFeatureView)(nil)).Elem()
-}
-
-func (i GetSystemSnmpFeatureViewArgs) ToGetSystemSnmpFeatureViewOutput() GetSystemSnmpFeatureViewOutput {
-	return i.ToGetSystemSnmpFeatureViewOutputWithContext(context.Background())
-}
-
-func (i GetSystemSnmpFeatureViewArgs) ToGetSystemSnmpFeatureViewOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureViewOutput)
-}
-
-// GetSystemSnmpFeatureViewArrayInput is an input type that accepts GetSystemSnmpFeatureViewArray and GetSystemSnmpFeatureViewArrayOutput values.
-// You can construct a concrete instance of `GetSystemSnmpFeatureViewArrayInput` via:
-//
-//	GetSystemSnmpFeatureViewArray{ GetSystemSnmpFeatureViewArgs{...} }
-type GetSystemSnmpFeatureViewArrayInput interface {
-	pulumi.Input
-
-	ToGetSystemSnmpFeatureViewArrayOutput() GetSystemSnmpFeatureViewArrayOutput
-	ToGetSystemSnmpFeatureViewArrayOutputWithContext(context.Context) GetSystemSnmpFeatureViewArrayOutput
-}
-
-type GetSystemSnmpFeatureViewArray []GetSystemSnmpFeatureViewInput
-
-func (GetSystemSnmpFeatureViewArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetSystemSnmpFeatureView)(nil)).Elem()
-}
-
-func (i GetSystemSnmpFeatureViewArray) ToGetSystemSnmpFeatureViewArrayOutput() GetSystemSnmpFeatureViewArrayOutput {
-	return i.ToGetSystemSnmpFeatureViewArrayOutputWithContext(context.Background())
-}
-
-func (i GetSystemSnmpFeatureViewArray) ToGetSystemSnmpFeatureViewArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureViewArrayOutput)
-}
-
-type GetSystemSnmpFeatureViewOutput struct{ *pulumi.OutputState }
-
-func (GetSystemSnmpFeatureViewOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetSystemSnmpFeatureView)(nil)).Elem()
-}
-
-func (o GetSystemSnmpFeatureViewOutput) ToGetSystemSnmpFeatureViewOutput() GetSystemSnmpFeatureViewOutput {
-	return o
-}
-
-func (o GetSystemSnmpFeatureViewOutput) ToGetSystemSnmpFeatureViewOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewOutput {
-	return o
-}
-
-// Set the name of the SNMP view
-func (o GetSystemSnmpFeatureViewOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureView) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Configure SNMP object identifier
-func (o GetSystemSnmpFeatureViewOutput) Oids() GetSystemSnmpFeatureViewOidArrayOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureView) []GetSystemSnmpFeatureViewOid { return v.Oids }).(GetSystemSnmpFeatureViewOidArrayOutput)
-}
-
-type GetSystemSnmpFeatureViewArrayOutput struct{ *pulumi.OutputState }
-
-func (GetSystemSnmpFeatureViewArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetSystemSnmpFeatureView)(nil)).Elem()
-}
-
-func (o GetSystemSnmpFeatureViewArrayOutput) ToGetSystemSnmpFeatureViewArrayOutput() GetSystemSnmpFeatureViewArrayOutput {
-	return o
-}
-
-func (o GetSystemSnmpFeatureViewArrayOutput) ToGetSystemSnmpFeatureViewArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewArrayOutput {
-	return o
-}
-
-func (o GetSystemSnmpFeatureViewArrayOutput) Index(i pulumi.IntInput) GetSystemSnmpFeatureViewOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSystemSnmpFeatureView {
-		return vs[0].([]GetSystemSnmpFeatureView)[vs[1].(int)]
-	}).(GetSystemSnmpFeatureViewOutput)
-}
-
-type GetSystemSnmpFeatureViewOid struct {
-	// Exclude the OID
-	Exclude bool `pulumi:"exclude"`
-	// Variable name
-	ExcludeVariable string `pulumi:"excludeVariable"`
-	// Configure identifier of subtree of MIB objects
-	Id string `pulumi:"id"`
-	// Variable name
-	IdVariable string `pulumi:"idVariable"`
-}
-
-// GetSystemSnmpFeatureViewOidInput is an input type that accepts GetSystemSnmpFeatureViewOidArgs and GetSystemSnmpFeatureViewOidOutput values.
-// You can construct a concrete instance of `GetSystemSnmpFeatureViewOidInput` via:
-//
-//	GetSystemSnmpFeatureViewOidArgs{...}
-type GetSystemSnmpFeatureViewOidInput interface {
-	pulumi.Input
-
-	ToGetSystemSnmpFeatureViewOidOutput() GetSystemSnmpFeatureViewOidOutput
-	ToGetSystemSnmpFeatureViewOidOutputWithContext(context.Context) GetSystemSnmpFeatureViewOidOutput
-}
-
-type GetSystemSnmpFeatureViewOidArgs struct {
-	// Exclude the OID
-	Exclude pulumi.BoolInput `pulumi:"exclude"`
-	// Variable name
-	ExcludeVariable pulumi.StringInput `pulumi:"excludeVariable"`
-	// Configure identifier of subtree of MIB objects
-	Id pulumi.StringInput `pulumi:"id"`
-	// Variable name
-	IdVariable pulumi.StringInput `pulumi:"idVariable"`
-}
-
-func (GetSystemSnmpFeatureViewOidArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetSystemSnmpFeatureViewOid)(nil)).Elem()
-}
-
-func (i GetSystemSnmpFeatureViewOidArgs) ToGetSystemSnmpFeatureViewOidOutput() GetSystemSnmpFeatureViewOidOutput {
-	return i.ToGetSystemSnmpFeatureViewOidOutputWithContext(context.Background())
-}
-
-func (i GetSystemSnmpFeatureViewOidArgs) ToGetSystemSnmpFeatureViewOidOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewOidOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureViewOidOutput)
-}
-
-// GetSystemSnmpFeatureViewOidArrayInput is an input type that accepts GetSystemSnmpFeatureViewOidArray and GetSystemSnmpFeatureViewOidArrayOutput values.
-// You can construct a concrete instance of `GetSystemSnmpFeatureViewOidArrayInput` via:
-//
-//	GetSystemSnmpFeatureViewOidArray{ GetSystemSnmpFeatureViewOidArgs{...} }
-type GetSystemSnmpFeatureViewOidArrayInput interface {
-	pulumi.Input
-
-	ToGetSystemSnmpFeatureViewOidArrayOutput() GetSystemSnmpFeatureViewOidArrayOutput
-	ToGetSystemSnmpFeatureViewOidArrayOutputWithContext(context.Context) GetSystemSnmpFeatureViewOidArrayOutput
-}
-
-type GetSystemSnmpFeatureViewOidArray []GetSystemSnmpFeatureViewOidInput
-
-func (GetSystemSnmpFeatureViewOidArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetSystemSnmpFeatureViewOid)(nil)).Elem()
-}
-
-func (i GetSystemSnmpFeatureViewOidArray) ToGetSystemSnmpFeatureViewOidArrayOutput() GetSystemSnmpFeatureViewOidArrayOutput {
-	return i.ToGetSystemSnmpFeatureViewOidArrayOutputWithContext(context.Background())
-}
-
-func (i GetSystemSnmpFeatureViewOidArray) ToGetSystemSnmpFeatureViewOidArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewOidArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureViewOidArrayOutput)
-}
-
-type GetSystemSnmpFeatureViewOidOutput struct{ *pulumi.OutputState }
-
-func (GetSystemSnmpFeatureViewOidOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetSystemSnmpFeatureViewOid)(nil)).Elem()
-}
-
-func (o GetSystemSnmpFeatureViewOidOutput) ToGetSystemSnmpFeatureViewOidOutput() GetSystemSnmpFeatureViewOidOutput {
-	return o
-}
-
-func (o GetSystemSnmpFeatureViewOidOutput) ToGetSystemSnmpFeatureViewOidOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewOidOutput {
-	return o
-}
-
-// Exclude the OID
-func (o GetSystemSnmpFeatureViewOidOutput) Exclude() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureViewOid) bool { return v.Exclude }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetSystemSnmpFeatureViewOidOutput) ExcludeVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureViewOid) string { return v.ExcludeVariable }).(pulumi.StringOutput)
-}
-
-// Configure identifier of subtree of MIB objects
-func (o GetSystemSnmpFeatureViewOidOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureViewOid) string { return v.Id }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetSystemSnmpFeatureViewOidOutput) IdVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSystemSnmpFeatureViewOid) string { return v.IdVariable }).(pulumi.StringOutput)
-}
-
-type GetSystemSnmpFeatureViewOidArrayOutput struct{ *pulumi.OutputState }
-
-func (GetSystemSnmpFeatureViewOidArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetSystemSnmpFeatureViewOid)(nil)).Elem()
-}
-
-func (o GetSystemSnmpFeatureViewOidArrayOutput) ToGetSystemSnmpFeatureViewOidArrayOutput() GetSystemSnmpFeatureViewOidArrayOutput {
-	return o
-}
-
-func (o GetSystemSnmpFeatureViewOidArrayOutput) ToGetSystemSnmpFeatureViewOidArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewOidArrayOutput {
-	return o
-}
-
-func (o GetSystemSnmpFeatureViewOidArrayOutput) Index(i pulumi.IntInput) GetSystemSnmpFeatureViewOidOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSystemSnmpFeatureViewOid {
-		return vs[0].([]GetSystemSnmpFeatureViewOid)[vs[1].(int)]
-	}).(GetSystemSnmpFeatureViewOidOutput)
-}
-
-type GetTlocListPolicyObjectEntry struct {
-	// Color
-	Color string `pulumi:"color"`
-	// Encapsulation
-	Encapsulation string `pulumi:"encapsulation"`
-	// Preference
-	Preference int `pulumi:"preference"`
-	// TLOC IP
-	TlocIp string `pulumi:"tlocIp"`
-}
-
-// GetTlocListPolicyObjectEntryInput is an input type that accepts GetTlocListPolicyObjectEntryArgs and GetTlocListPolicyObjectEntryOutput values.
-// You can construct a concrete instance of `GetTlocListPolicyObjectEntryInput` via:
-//
-//	GetTlocListPolicyObjectEntryArgs{...}
-type GetTlocListPolicyObjectEntryInput interface {
-	pulumi.Input
-
-	ToGetTlocListPolicyObjectEntryOutput() GetTlocListPolicyObjectEntryOutput
-	ToGetTlocListPolicyObjectEntryOutputWithContext(context.Context) GetTlocListPolicyObjectEntryOutput
-}
-
-type GetTlocListPolicyObjectEntryArgs struct {
-	// Color
-	Color pulumi.StringInput `pulumi:"color"`
-	// Encapsulation
-	Encapsulation pulumi.StringInput `pulumi:"encapsulation"`
-	// Preference
-	Preference pulumi.IntInput `pulumi:"preference"`
-	// TLOC IP
-	TlocIp pulumi.StringInput `pulumi:"tlocIp"`
-}
-
-func (GetTlocListPolicyObjectEntryArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTlocListPolicyObjectEntry)(nil)).Elem()
-}
-
-func (i GetTlocListPolicyObjectEntryArgs) ToGetTlocListPolicyObjectEntryOutput() GetTlocListPolicyObjectEntryOutput {
-	return i.ToGetTlocListPolicyObjectEntryOutputWithContext(context.Background())
-}
-
-func (i GetTlocListPolicyObjectEntryArgs) ToGetTlocListPolicyObjectEntryOutputWithContext(ctx context.Context) GetTlocListPolicyObjectEntryOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTlocListPolicyObjectEntryOutput)
-}
-
-// GetTlocListPolicyObjectEntryArrayInput is an input type that accepts GetTlocListPolicyObjectEntryArray and GetTlocListPolicyObjectEntryArrayOutput values.
-// You can construct a concrete instance of `GetTlocListPolicyObjectEntryArrayInput` via:
-//
-//	GetTlocListPolicyObjectEntryArray{ GetTlocListPolicyObjectEntryArgs{...} }
-type GetTlocListPolicyObjectEntryArrayInput interface {
-	pulumi.Input
-
-	ToGetTlocListPolicyObjectEntryArrayOutput() GetTlocListPolicyObjectEntryArrayOutput
-	ToGetTlocListPolicyObjectEntryArrayOutputWithContext(context.Context) GetTlocListPolicyObjectEntryArrayOutput
-}
-
-type GetTlocListPolicyObjectEntryArray []GetTlocListPolicyObjectEntryInput
-
-func (GetTlocListPolicyObjectEntryArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTlocListPolicyObjectEntry)(nil)).Elem()
-}
-
-func (i GetTlocListPolicyObjectEntryArray) ToGetTlocListPolicyObjectEntryArrayOutput() GetTlocListPolicyObjectEntryArrayOutput {
-	return i.ToGetTlocListPolicyObjectEntryArrayOutputWithContext(context.Background())
-}
-
-func (i GetTlocListPolicyObjectEntryArray) ToGetTlocListPolicyObjectEntryArrayOutputWithContext(ctx context.Context) GetTlocListPolicyObjectEntryArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTlocListPolicyObjectEntryArrayOutput)
-}
-
-type GetTlocListPolicyObjectEntryOutput struct{ *pulumi.OutputState }
-
-func (GetTlocListPolicyObjectEntryOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTlocListPolicyObjectEntry)(nil)).Elem()
-}
-
-func (o GetTlocListPolicyObjectEntryOutput) ToGetTlocListPolicyObjectEntryOutput() GetTlocListPolicyObjectEntryOutput {
-	return o
-}
-
-func (o GetTlocListPolicyObjectEntryOutput) ToGetTlocListPolicyObjectEntryOutputWithContext(ctx context.Context) GetTlocListPolicyObjectEntryOutput {
-	return o
-}
-
-// Color
-func (o GetTlocListPolicyObjectEntryOutput) Color() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTlocListPolicyObjectEntry) string { return v.Color }).(pulumi.StringOutput)
-}
-
-// Encapsulation
-func (o GetTlocListPolicyObjectEntryOutput) Encapsulation() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTlocListPolicyObjectEntry) string { return v.Encapsulation }).(pulumi.StringOutput)
-}
-
-// Preference
-func (o GetTlocListPolicyObjectEntryOutput) Preference() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTlocListPolicyObjectEntry) int { return v.Preference }).(pulumi.IntOutput)
-}
-
-// TLOC IP
-func (o GetTlocListPolicyObjectEntryOutput) TlocIp() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTlocListPolicyObjectEntry) string { return v.TlocIp }).(pulumi.StringOutput)
-}
-
-type GetTlocListPolicyObjectEntryArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTlocListPolicyObjectEntryArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTlocListPolicyObjectEntry)(nil)).Elem()
-}
-
-func (o GetTlocListPolicyObjectEntryArrayOutput) ToGetTlocListPolicyObjectEntryArrayOutput() GetTlocListPolicyObjectEntryArrayOutput {
-	return o
-}
-
-func (o GetTlocListPolicyObjectEntryArrayOutput) ToGetTlocListPolicyObjectEntryArrayOutputWithContext(ctx context.Context) GetTlocListPolicyObjectEntryArrayOutput {
-	return o
-}
-
-func (o GetTlocListPolicyObjectEntryArrayOutput) Index(i pulumi.IntInput) GetTlocListPolicyObjectEntryOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTlocListPolicyObjectEntry {
-		return vs[0].([]GetTlocListPolicyObjectEntry)[vs[1].(int)]
-	}).(GetTlocListPolicyObjectEntryOutput)
-}
-
-type GetTlsSslDecryptionPolicyDefinitionNetworkRule struct {
-	// Rule base action
-	BaseAction string `pulumi:"baseAction"`
-	// Rule ID
-	RuleId int `pulumi:"ruleId"`
-	// Rule name
-	RuleName string `pulumi:"ruleName"`
-	// Rule type
-	RuleType string `pulumi:"ruleType"`
-	// List of network source / destination configuration
-	SourceAndDestinationConfigurations []GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration `pulumi:"sourceAndDestinationConfigurations"`
-}
-
-// GetTlsSslDecryptionPolicyDefinitionNetworkRuleInput is an input type that accepts GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs and GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput values.
-// You can construct a concrete instance of `GetTlsSslDecryptionPolicyDefinitionNetworkRuleInput` via:
-//
-//	GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs{...}
-type GetTlsSslDecryptionPolicyDefinitionNetworkRuleInput interface {
-	pulumi.Input
-
-	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput
-	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleOutputWithContext(context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput
-}
-
-type GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs struct {
-	// Rule base action
-	BaseAction pulumi.StringInput `pulumi:"baseAction"`
-	// Rule ID
-	RuleId pulumi.IntInput `pulumi:"ruleId"`
-	// Rule name
-	RuleName pulumi.StringInput `pulumi:"ruleName"`
-	// Rule type
-	RuleType pulumi.StringInput `pulumi:"ruleType"`
-	// List of network source / destination configuration
-	SourceAndDestinationConfigurations GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayInput `pulumi:"sourceAndDestinationConfigurations"`
-}
-
-func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRule)(nil)).Elem()
-}
-
-func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput {
-	return i.ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleOutputWithContext(context.Background())
-}
-
-func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput)
-}
-
-// GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayInput is an input type that accepts GetTlsSslDecryptionPolicyDefinitionNetworkRuleArray and GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput values.
-// You can construct a concrete instance of `GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayInput` via:
-//
-//	GetTlsSslDecryptionPolicyDefinitionNetworkRuleArray{ GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs{...} }
-type GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayInput interface {
-	pulumi.Input
-
-	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput
-	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutputWithContext(context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput
-}
-
-type GetTlsSslDecryptionPolicyDefinitionNetworkRuleArray []GetTlsSslDecryptionPolicyDefinitionNetworkRuleInput
-
-func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTlsSslDecryptionPolicyDefinitionNetworkRule)(nil)).Elem()
-}
-
-func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleArray) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput {
-	return i.ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutputWithContext(context.Background())
-}
-
-func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleArray) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput)
-}
-
-type GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput struct{ *pulumi.OutputState }
-
-func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRule)(nil)).Elem()
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput {
-	return o
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput {
-	return o
-}
-
-// Rule base action
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) BaseAction() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionNetworkRule) string { return v.BaseAction }).(pulumi.StringOutput)
-}
-
-// Rule ID
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) RuleId() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionNetworkRule) int { return v.RuleId }).(pulumi.IntOutput)
-}
-
-// Rule name
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) RuleName() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionNetworkRule) string { return v.RuleName }).(pulumi.StringOutput)
-}
-
-// Rule type
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) RuleType() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionNetworkRule) string { return v.RuleType }).(pulumi.StringOutput)
-}
-
-// List of network source / destination configuration
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) SourceAndDestinationConfigurations() GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput {
-	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionNetworkRule) []GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration {
-		return v.SourceAndDestinationConfigurations
-	}).(GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput)
-}
-
-type GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTlsSslDecryptionPolicyDefinitionNetworkRule)(nil)).Elem()
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput {
-	return o
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput {
-	return o
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput) Index(i pulumi.IntInput) GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTlsSslDecryptionPolicyDefinitionNetworkRule {
-		return vs[0].([]GetTlsSslDecryptionPolicyDefinitionNetworkRule)[vs[1].(int)]
-	}).(GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput)
-}
-
-type GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration struct {
-	// source / destination option
-	Option string `pulumi:"option"`
-	// source / destination option target
-	Value string `pulumi:"value"`
-}
-
-// GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationInput is an input type that accepts GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs and GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput values.
-// You can construct a concrete instance of `GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationInput` via:
-//
-//	GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs{...}
-type GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationInput interface {
-	pulumi.Input
-
-	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput
-	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutputWithContext(context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput
-}
-
-type GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs struct {
-	// source / destination option
-	Option pulumi.StringInput `pulumi:"option"`
-	// source / destination option target
-	Value pulumi.StringInput `pulumi:"value"`
-}
-
-func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration)(nil)).Elem()
-}
-
-func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput {
-	return i.ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutputWithContext(context.Background())
-}
-
-func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput)
-}
-
-// GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayInput is an input type that accepts GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArray and GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput values.
-// You can construct a concrete instance of `GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayInput` via:
-//
-//	GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArray{ GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs{...} }
-type GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayInput interface {
-	pulumi.Input
-
-	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput
-	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutputWithContext(context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput
-}
-
-type GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArray []GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationInput
-
-func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration)(nil)).Elem()
-}
-
-func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArray) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput {
-	return i.ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutputWithContext(context.Background())
-}
-
-func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArray) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput)
-}
-
-type GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput struct{ *pulumi.OutputState }
-
-func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration)(nil)).Elem()
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput {
-	return o
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput {
-	return o
-}
-
-// source / destination option
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput) Option() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration) string {
-		return v.Option
-	}).(pulumi.StringOutput)
-}
-
-// source / destination option target
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput) Value() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration) string {
-		return v.Value
-	}).(pulumi.StringOutput)
-}
-
-type GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration)(nil)).Elem()
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput {
-	return o
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput {
-	return o
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput) Index(i pulumi.IntInput) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration {
-		return vs[0].([]GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration)[vs[1].(int)]
-	}).(GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput)
-}
-
-type GetTlsSslDecryptionPolicyDefinitionUrlRule struct {
-	// Country
-	RuleName string `pulumi:"ruleName"`
-	// List of VPN IDs
-	TargetVpns []string `pulumi:"targetVpns"`
-	// TLS SSL Profile Policy ID
-	TlsSslProfilePolicyId string `pulumi:"tlsSslProfilePolicyId"`
-	// TLS SSL Profile Policy version
-	TlsSslProfilePolicyVersion int `pulumi:"tlsSslProfilePolicyVersion"`
-}
-
-// GetTlsSslDecryptionPolicyDefinitionUrlRuleInput is an input type that accepts GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs and GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput values.
-// You can construct a concrete instance of `GetTlsSslDecryptionPolicyDefinitionUrlRuleInput` via:
-//
-//	GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs{...}
-type GetTlsSslDecryptionPolicyDefinitionUrlRuleInput interface {
-	pulumi.Input
-
-	ToGetTlsSslDecryptionPolicyDefinitionUrlRuleOutput() GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput
-	ToGetTlsSslDecryptionPolicyDefinitionUrlRuleOutputWithContext(context.Context) GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput
-}
-
-type GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs struct {
-	// Country
-	RuleName pulumi.StringInput `pulumi:"ruleName"`
-	// List of VPN IDs
-	TargetVpns pulumi.StringArrayInput `pulumi:"targetVpns"`
-	// TLS SSL Profile Policy ID
-	TlsSslProfilePolicyId pulumi.StringInput `pulumi:"tlsSslProfilePolicyId"`
-	// TLS SSL Profile Policy version
-	TlsSslProfilePolicyVersion pulumi.IntInput `pulumi:"tlsSslProfilePolicyVersion"`
-}
-
-func (GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionUrlRule)(nil)).Elem()
-}
-
-func (i GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleOutput() GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput {
-	return i.ToGetTlsSslDecryptionPolicyDefinitionUrlRuleOutputWithContext(context.Background())
-}
-
-func (i GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput)
-}
-
-// GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayInput is an input type that accepts GetTlsSslDecryptionPolicyDefinitionUrlRuleArray and GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput values.
-// You can construct a concrete instance of `GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayInput` via:
-//
-//	GetTlsSslDecryptionPolicyDefinitionUrlRuleArray{ GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs{...} }
-type GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayInput interface {
-	pulumi.Input
-
-	ToGetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput() GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput
-	ToGetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutputWithContext(context.Context) GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput
-}
-
-type GetTlsSslDecryptionPolicyDefinitionUrlRuleArray []GetTlsSslDecryptionPolicyDefinitionUrlRuleInput
-
-func (GetTlsSslDecryptionPolicyDefinitionUrlRuleArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTlsSslDecryptionPolicyDefinitionUrlRule)(nil)).Elem()
-}
-
-func (i GetTlsSslDecryptionPolicyDefinitionUrlRuleArray) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput() GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput {
-	return i.ToGetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutputWithContext(context.Background())
-}
-
-func (i GetTlsSslDecryptionPolicyDefinitionUrlRuleArray) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput)
-}
-
-type GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput struct{ *pulumi.OutputState }
-
-func (GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionUrlRule)(nil)).Elem()
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleOutput() GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput {
-	return o
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput {
-	return o
-}
-
-// Country
-func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput) RuleName() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionUrlRule) string { return v.RuleName }).(pulumi.StringOutput)
-}
-
-// List of VPN IDs
-func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput) TargetVpns() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionUrlRule) []string { return v.TargetVpns }).(pulumi.StringArrayOutput)
-}
-
-// TLS SSL Profile Policy ID
-func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput) TlsSslProfilePolicyId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionUrlRule) string { return v.TlsSslProfilePolicyId }).(pulumi.StringOutput)
-}
-
-// TLS SSL Profile Policy version
-func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput) TlsSslProfilePolicyVersion() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionUrlRule) int { return v.TlsSslProfilePolicyVersion }).(pulumi.IntOutput)
-}
-
-type GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTlsSslDecryptionPolicyDefinitionUrlRule)(nil)).Elem()
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput() GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput {
-	return o
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput {
-	return o
-}
-
-func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput) Index(i pulumi.IntInput) GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTlsSslDecryptionPolicyDefinitionUrlRule {
-		return vs[0].([]GetTlsSslDecryptionPolicyDefinitionUrlRule)[vs[1].(int)]
-	}).(GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput)
-}
-
-type GetTopologyCustomControlFeatureSequence struct {
-	ActionEntries []GetTopologyCustomControlFeatureSequenceActionEntry `pulumi:"actionEntries"`
-	// Base Action
-	BaseAction string `pulumi:"baseAction"`
-	// Sequence Id
-	Id int `pulumi:"id"`
-	// Sequence IP Type
-	IpType       string                                              `pulumi:"ipType"`
-	MatchEntries []GetTopologyCustomControlFeatureSequenceMatchEntry `pulumi:"matchEntries"`
-	// Sequence Name
-	Name string `pulumi:"name"`
-	// Sequence Type
-	Type string `pulumi:"type"`
-}
-
-// GetTopologyCustomControlFeatureSequenceInput is an input type that accepts GetTopologyCustomControlFeatureSequenceArgs and GetTopologyCustomControlFeatureSequenceOutput values.
-// You can construct a concrete instance of `GetTopologyCustomControlFeatureSequenceInput` via:
-//
-//	GetTopologyCustomControlFeatureSequenceArgs{...}
-type GetTopologyCustomControlFeatureSequenceInput interface {
-	pulumi.Input
-
-	ToGetTopologyCustomControlFeatureSequenceOutput() GetTopologyCustomControlFeatureSequenceOutput
-	ToGetTopologyCustomControlFeatureSequenceOutputWithContext(context.Context) GetTopologyCustomControlFeatureSequenceOutput
-}
-
-type GetTopologyCustomControlFeatureSequenceArgs struct {
-	ActionEntries GetTopologyCustomControlFeatureSequenceActionEntryArrayInput `pulumi:"actionEntries"`
-	// Base Action
-	BaseAction pulumi.StringInput `pulumi:"baseAction"`
-	// Sequence Id
-	Id pulumi.IntInput `pulumi:"id"`
-	// Sequence IP Type
-	IpType       pulumi.StringInput                                          `pulumi:"ipType"`
-	MatchEntries GetTopologyCustomControlFeatureSequenceMatchEntryArrayInput `pulumi:"matchEntries"`
-	// Sequence Name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Sequence Type
-	Type pulumi.StringInput `pulumi:"type"`
-}
-
-func (GetTopologyCustomControlFeatureSequenceArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTopologyCustomControlFeatureSequence)(nil)).Elem()
-}
-
-func (i GetTopologyCustomControlFeatureSequenceArgs) ToGetTopologyCustomControlFeatureSequenceOutput() GetTopologyCustomControlFeatureSequenceOutput {
-	return i.ToGetTopologyCustomControlFeatureSequenceOutputWithContext(context.Background())
-}
-
-func (i GetTopologyCustomControlFeatureSequenceArgs) ToGetTopologyCustomControlFeatureSequenceOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTopologyCustomControlFeatureSequenceOutput)
-}
-
-// GetTopologyCustomControlFeatureSequenceArrayInput is an input type that accepts GetTopologyCustomControlFeatureSequenceArray and GetTopologyCustomControlFeatureSequenceArrayOutput values.
-// You can construct a concrete instance of `GetTopologyCustomControlFeatureSequenceArrayInput` via:
-//
-//	GetTopologyCustomControlFeatureSequenceArray{ GetTopologyCustomControlFeatureSequenceArgs{...} }
-type GetTopologyCustomControlFeatureSequenceArrayInput interface {
-	pulumi.Input
-
-	ToGetTopologyCustomControlFeatureSequenceArrayOutput() GetTopologyCustomControlFeatureSequenceArrayOutput
-	ToGetTopologyCustomControlFeatureSequenceArrayOutputWithContext(context.Context) GetTopologyCustomControlFeatureSequenceArrayOutput
-}
-
-type GetTopologyCustomControlFeatureSequenceArray []GetTopologyCustomControlFeatureSequenceInput
-
-func (GetTopologyCustomControlFeatureSequenceArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTopologyCustomControlFeatureSequence)(nil)).Elem()
-}
-
-func (i GetTopologyCustomControlFeatureSequenceArray) ToGetTopologyCustomControlFeatureSequenceArrayOutput() GetTopologyCustomControlFeatureSequenceArrayOutput {
-	return i.ToGetTopologyCustomControlFeatureSequenceArrayOutputWithContext(context.Background())
-}
-
-func (i GetTopologyCustomControlFeatureSequenceArray) ToGetTopologyCustomControlFeatureSequenceArrayOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTopologyCustomControlFeatureSequenceArrayOutput)
-}
-
-type GetTopologyCustomControlFeatureSequenceOutput struct{ *pulumi.OutputState }
-
-func (GetTopologyCustomControlFeatureSequenceOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTopologyCustomControlFeatureSequence)(nil)).Elem()
-}
-
-func (o GetTopologyCustomControlFeatureSequenceOutput) ToGetTopologyCustomControlFeatureSequenceOutput() GetTopologyCustomControlFeatureSequenceOutput {
-	return o
-}
-
-func (o GetTopologyCustomControlFeatureSequenceOutput) ToGetTopologyCustomControlFeatureSequenceOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceOutput {
-	return o
-}
-
-func (o GetTopologyCustomControlFeatureSequenceOutput) ActionEntries() GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput {
-	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequence) []GetTopologyCustomControlFeatureSequenceActionEntry {
-		return v.ActionEntries
-	}).(GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput)
-}
-
-// Base Action
-func (o GetTopologyCustomControlFeatureSequenceOutput) BaseAction() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequence) string { return v.BaseAction }).(pulumi.StringOutput)
-}
-
-// Sequence Id
-func (o GetTopologyCustomControlFeatureSequenceOutput) Id() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequence) int { return v.Id }).(pulumi.IntOutput)
-}
-
-// Sequence IP Type
-func (o GetTopologyCustomControlFeatureSequenceOutput) IpType() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequence) string { return v.IpType }).(pulumi.StringOutput)
-}
-
-func (o GetTopologyCustomControlFeatureSequenceOutput) MatchEntries() GetTopologyCustomControlFeatureSequenceMatchEntryArrayOutput {
-	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequence) []GetTopologyCustomControlFeatureSequenceMatchEntry {
-		return v.MatchEntries
-	}).(GetTopologyCustomControlFeatureSequenceMatchEntryArrayOutput)
-}
-
-// Sequence Name
-func (o GetTopologyCustomControlFeatureSequenceOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequence) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Sequence Type
-func (o GetTopologyCustomControlFeatureSequenceOutput) Type() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequence) string { return v.Type }).(pulumi.StringOutput)
-}
-
-type GetTopologyCustomControlFeatureSequenceArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTopologyCustomControlFeatureSequenceArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTopologyCustomControlFeatureSequence)(nil)).Elem()
-}
-
-func (o GetTopologyCustomControlFeatureSequenceArrayOutput) ToGetTopologyCustomControlFeatureSequenceArrayOutput() GetTopologyCustomControlFeatureSequenceArrayOutput {
-	return o
-}
-
-func (o GetTopologyCustomControlFeatureSequenceArrayOutput) ToGetTopologyCustomControlFeatureSequenceArrayOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceArrayOutput {
-	return o
-}
-
-func (o GetTopologyCustomControlFeatureSequenceArrayOutput) Index(i pulumi.IntInput) GetTopologyCustomControlFeatureSequenceOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTopologyCustomControlFeatureSequence {
-		return vs[0].([]GetTopologyCustomControlFeatureSequence)[vs[1].(int)]
-	}).(GetTopologyCustomControlFeatureSequenceOutput)
-}
-
-type GetTopologyCustomControlFeatureSequenceActionEntry struct {
-	// Export to VPN list
-	ExportToVpns  []string                                                         `pulumi:"exportToVpns"`
-	SetParameters []GetTopologyCustomControlFeatureSequenceActionEntrySetParameter `pulumi:"setParameters"`
-}
-
-// GetTopologyCustomControlFeatureSequenceActionEntryInput is an input type that accepts GetTopologyCustomControlFeatureSequenceActionEntryArgs and GetTopologyCustomControlFeatureSequenceActionEntryOutput values.
-// You can construct a concrete instance of `GetTopologyCustomControlFeatureSequenceActionEntryInput` via:
-//
-//	GetTopologyCustomControlFeatureSequenceActionEntryArgs{...}
-type GetTopologyCustomControlFeatureSequenceActionEntryInput interface {
-	pulumi.Input
-
-	ToGetTopologyCustomControlFeatureSequenceActionEntryOutput() GetTopologyCustomControlFeatureSequenceActionEntryOutput
-	ToGetTopologyCustomControlFeatureSequenceActionEntryOutputWithContext(context.Context) GetTopologyCustomControlFeatureSequenceActionEntryOutput
-}
-
-type GetTopologyCustomControlFeatureSequenceActionEntryArgs struct {
-	// Export to VPN list
-	ExportToVpns  pulumi.StringArrayInput                                                  `pulumi:"exportToVpns"`
-	SetParameters GetTopologyCustomControlFeatureSequenceActionEntrySetParameterArrayInput `pulumi:"setParameters"`
-}
-
-func (GetTopologyCustomControlFeatureSequenceActionEntryArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceActionEntry)(nil)).Elem()
-}
-
-func (i GetTopologyCustomControlFeatureSequenceActionEntryArgs) ToGetTopologyCustomControlFeatureSequenceActionEntryOutput() GetTopologyCustomControlFeatureSequenceActionEntryOutput {
-	return i.ToGetTopologyCustomControlFeatureSequenceActionEntryOutputWithContext(context.Background())
-}
-
-func (i GetTopologyCustomControlFeatureSequenceActionEntryArgs) ToGetTopologyCustomControlFeatureSequenceActionEntryOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceActionEntryOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTopologyCustomControlFeatureSequenceActionEntryOutput)
-}
-
-// GetTopologyCustomControlFeatureSequenceActionEntryArrayInput is an input type that accepts GetTopologyCustomControlFeatureSequenceActionEntryArray and GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput values.
-// You can construct a concrete instance of `GetTopologyCustomControlFeatureSequenceActionEntryArrayInput` via:
-//
-//	GetTopologyCustomControlFeatureSequenceActionEntryArray{ GetTopologyCustomControlFeatureSequenceActionEntryArgs{...} }
-type GetTopologyCustomControlFeatureSequenceActionEntryArrayInput interface {
-	pulumi.Input
-
-	ToGetTopologyCustomControlFeatureSequenceActionEntryArrayOutput() GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput
-	ToGetTopologyCustomControlFeatureSequenceActionEntryArrayOutputWithContext(context.Context) GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput
-}
-
-type GetTopologyCustomControlFeatureSequenceActionEntryArray []GetTopologyCustomControlFeatureSequenceActionEntryInput
-
-func (GetTopologyCustomControlFeatureSequenceActionEntryArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTopologyCustomControlFeatureSequenceActionEntry)(nil)).Elem()
-}
-
-func (i GetTopologyCustomControlFeatureSequenceActionEntryArray) ToGetTopologyCustomControlFeatureSequenceActionEntryArrayOutput() GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput {
-	return i.ToGetTopologyCustomControlFeatureSequenceActionEntryArrayOutputWithContext(context.Background())
-}
-
-func (i GetTopologyCustomControlFeatureSequenceActionEntryArray) ToGetTopologyCustomControlFeatureSequenceActionEntryArrayOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput)
-}
-
-type GetTopologyCustomControlFeatureSequenceActionEntryOutput struct{ *pulumi.OutputState }
-
-func (GetTopologyCustomControlFeatureSequenceActionEntryOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceActionEntry)(nil)).Elem()
-}
-
-func (o GetTopologyCustomControlFeatureSequenceActionEntryOutput) ToGetTopologyCustomControlFeatureSequenceActionEntryOutput() GetTopologyCustomControlFeatureSequenceActionEntryOutput {
-	return o
-}
-
-func (o GetTopologyCustomControlFeatureSequenceActionEntryOutput) ToGetTopologyCustomControlFeatureSequenceActionEntryOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceActionEntryOutput {
-	return o
-}
-
-// Export to VPN list
-func (o GetTopologyCustomControlFeatureSequenceActionEntryOutput) ExportToVpns() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequenceActionEntry) []string { return v.ExportToVpns }).(pulumi.StringArrayOutput)
-}
-
-func (o GetTopologyCustomControlFeatureSequenceActionEntryOutput) SetParameters() GetTopologyCustomControlFeatureSequenceActionEntrySetParameterArrayOutput {
-	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequenceActionEntry) []GetTopologyCustomControlFeatureSequenceActionEntrySetParameter {
-		return v.SetParameters
-	}).(GetTopologyCustomControlFeatureSequenceActionEntrySetParameterArrayOutput)
-}
-
-type GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTopologyCustomControlFeatureSequenceActionEntry)(nil)).Elem()
-}
-
-func (o GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput) ToGetTopologyCustomControlFeatureSequenceActionEntryArrayOutput() GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput {
-	return o
-}
-
-func (o GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput) ToGetTopologyCustomControlFeatureSequenceActionEntryArrayOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput {
-	return o
-}
-
-func (o GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput) Index(i pulumi.IntInput) GetTopologyCustomControlFeatureSequenceActionEntryOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTopologyCustomControlFeatureSequenceActionEntry {
-		return vs[0].([]GetTopologyCustomControlFeatureSequenceActionEntry)[vs[1].(int)]
-	}).(GetTopologyCustomControlFeatureSequenceActionEntryOutput)
-}
-
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureNewHostMappingInput)(nil)).Elem(), TransportWanVpnFeatureNewHostMappingArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureNewHostMappingArrayInput)(nil)).Elem(), TransportWanVpnFeatureNewHostMappingArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureServiceInput)(nil)).Elem(), TransportWanVpnFeatureServiceArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureServiceArrayInput)(nil)).Elem(), TransportWanVpnFeatureServiceArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureArpInput)(nil)).Elem(), TransportWanVpnInterfaceCellularFeatureArpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureArpArrayInput)(nil)).Elem(), TransportWanVpnInterfaceCellularFeatureArpArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput)(nil)).Elem(), TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayInput)(nil)).Elem(), TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureArpInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureArpArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureArpArrayInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureArpArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput)(nil)).Elem(), TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs{})
@@ -77468,6 +77800,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetEmbeddedSecurityPolicyAssemblyArrayInput)(nil)).Elem(), GetEmbeddedSecurityPolicyAssemblyArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetEmbeddedSecurityPolicyAssemblyEntryInput)(nil)).Elem(), GetEmbeddedSecurityPolicyAssemblyEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetEmbeddedSecurityPolicyAssemblyEntryArrayInput)(nil)).Elem(), GetEmbeddedSecurityPolicyAssemblyEntryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetEmbeddedSecurityPolicyHighSpeedLoggingInput)(nil)).Elem(), GetEmbeddedSecurityPolicyHighSpeedLoggingArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetEmbeddedSecurityPolicyHighSpeedLoggingArrayInput)(nil)).Elem(), GetEmbeddedSecurityPolicyHighSpeedLoggingArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetExpandedCommunityListPolicyObjectEntryInput)(nil)).Elem(), GetExpandedCommunityListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetExpandedCommunityListPolicyObjectEntryArrayInput)(nil)).Elem(), GetExpandedCommunityListPolicyObjectEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetExtendedCommunityListPolicyObjectEntryInput)(nil)).Elem(), GetExtendedCommunityListPolicyObjectEntryArgs{})
@@ -77531,6 +77865,10 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchyCflowdCollectorInput)(nil)).Elem(), GetNetworkHierarchyCflowdCollectorArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchyCflowdCollectorArrayInput)(nil)).Elem(), GetNetworkHierarchyCflowdCollectorArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchyNodeAddressInput)(nil)).Elem(), GetNetworkHierarchyNodeAddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchyNodesNodesInput)(nil)).Elem(), GetNetworkHierarchyNodesNodesArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchyNodesNodesMapInput)(nil)).Elem(), GetNetworkHierarchyNodesNodesMap{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchyNodesResolvedSiteInput)(nil)).Elem(), GetNetworkHierarchyNodesResolvedSiteArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchyNodesResolvedSiteArrayInput)(nil)).Elem(), GetNetworkHierarchyNodesResolvedSiteArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchySecurityLoggingHighSpeedLoggingInput)(nil)).Elem(), GetNetworkHierarchySecurityLoggingHighSpeedLoggingArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayInput)(nil)).Elem(), GetNetworkHierarchySecurityLoggingHighSpeedLoggingArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchySecurityLoggingUtdSyslogInput)(nil)).Elem(), GetNetworkHierarchySecurityLoggingUtdSyslogArgs{})
@@ -77577,6 +77915,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectPreferredColorGroupEntryArrayInput)(nil)).Elem(), GetPolicyObjectPreferredColorGroupEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityDataIpv4PrefixListEntryInput)(nil)).Elem(), GetPolicyObjectSecurityDataIpv4PrefixListEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityDataIpv4PrefixListEntryArrayInput)(nil)).Elem(), GetPolicyObjectSecurityDataIpv4PrefixListEntryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityDataIpv6PrefixListEntryInput)(nil)).Elem(), GetPolicyObjectSecurityDataIpv6PrefixListEntryArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayInput)(nil)).Elem(), GetPolicyObjectSecurityDataIpv6PrefixListEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityFqdnListEntryInput)(nil)).Elem(), GetPolicyObjectSecurityFqdnListEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityFqdnListEntryArrayInput)(nil)).Elem(), GetPolicyObjectSecurityFqdnListEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityGeolocationListEntryInput)(nil)).Elem(), GetPolicyObjectSecurityGeolocationListEntryArgs{})
@@ -77589,10 +77929,14 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityLocalApplicationListEntryArrayInput)(nil)).Elem(), GetPolicyObjectSecurityLocalApplicationListEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityLocalDomainListEntryInput)(nil)).Elem(), GetPolicyObjectSecurityLocalDomainListEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityLocalDomainListEntryArrayInput)(nil)).Elem(), GetPolicyObjectSecurityLocalDomainListEntryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityObjectGroupEntryInput)(nil)).Elem(), GetPolicyObjectSecurityObjectGroupEntryArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityObjectGroupEntryArrayInput)(nil)).Elem(), GetPolicyObjectSecurityObjectGroupEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityPortListEntryInput)(nil)).Elem(), GetPolicyObjectSecurityPortListEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityPortListEntryArrayInput)(nil)).Elem(), GetPolicyObjectSecurityPortListEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityProtocolListEntryInput)(nil)).Elem(), GetPolicyObjectSecurityProtocolListEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityProtocolListEntryArrayInput)(nil)).Elem(), GetPolicyObjectSecurityProtocolListEntryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityRuleSetSequenceInput)(nil)).Elem(), GetPolicyObjectSecurityRuleSetSequenceArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityRuleSetSequenceArrayInput)(nil)).Elem(), GetPolicyObjectSecurityRuleSetSequenceArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityScalableGroupTagListEntryInput)(nil)).Elem(), GetPolicyObjectSecurityScalableGroupTagListEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityScalableGroupTagListEntryArrayInput)(nil)).Elem(), GetPolicyObjectSecurityScalableGroupTagListEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyObjectSecurityUrlAllowListEntryInput)(nil)).Elem(), GetPolicyObjectSecurityUrlAllowListEntryArgs{})
@@ -77969,26 +78313,14 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureCommunityArrayInput)(nil)).Elem(), GetSystemSnmpFeatureCommunityArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureGroupInput)(nil)).Elem(), GetSystemSnmpFeatureGroupArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureGroupArrayInput)(nil)).Elem(), GetSystemSnmpFeatureGroupArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureTrapTargetServerInput)(nil)).Elem(), GetSystemSnmpFeatureTrapTargetServerArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureTrapTargetServerArrayInput)(nil)).Elem(), GetSystemSnmpFeatureTrapTargetServerArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureUserInput)(nil)).Elem(), GetSystemSnmpFeatureUserArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureUserArrayInput)(nil)).Elem(), GetSystemSnmpFeatureUserArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureViewInput)(nil)).Elem(), GetSystemSnmpFeatureViewArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureViewArrayInput)(nil)).Elem(), GetSystemSnmpFeatureViewArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureViewOidInput)(nil)).Elem(), GetSystemSnmpFeatureViewOidArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureViewOidArrayInput)(nil)).Elem(), GetSystemSnmpFeatureViewOidArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTlocListPolicyObjectEntryInput)(nil)).Elem(), GetTlocListPolicyObjectEntryArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTlocListPolicyObjectEntryArrayInput)(nil)).Elem(), GetTlocListPolicyObjectEntryArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRuleInput)(nil)).Elem(), GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayInput)(nil)).Elem(), GetTlsSslDecryptionPolicyDefinitionNetworkRuleArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationInput)(nil)).Elem(), GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayInput)(nil)).Elem(), GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionUrlRuleInput)(nil)).Elem(), GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayInput)(nil)).Elem(), GetTlsSslDecryptionPolicyDefinitionUrlRuleArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceInput)(nil)).Elem(), GetTopologyCustomControlFeatureSequenceArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceArrayInput)(nil)).Elem(), GetTopologyCustomControlFeatureSequenceArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceActionEntryInput)(nil)).Elem(), GetTopologyCustomControlFeatureSequenceActionEntryArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceActionEntryArrayInput)(nil)).Elem(), GetTopologyCustomControlFeatureSequenceActionEntryArray{})
+	pulumi.RegisterOutputType(TransportWanVpnFeatureNewHostMappingOutput{})
+	pulumi.RegisterOutputType(TransportWanVpnFeatureNewHostMappingArrayOutput{})
+	pulumi.RegisterOutputType(TransportWanVpnFeatureServiceOutput{})
+	pulumi.RegisterOutputType(TransportWanVpnFeatureServiceArrayOutput{})
+	pulumi.RegisterOutputType(TransportWanVpnInterfaceCellularFeatureArpOutput{})
+	pulumi.RegisterOutputType(TransportWanVpnInterfaceCellularFeatureArpArrayOutput{})
+	pulumi.RegisterOutputType(TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput{})
+	pulumi.RegisterOutputType(TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput{})
 	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureArpOutput{})
 	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureArpArrayOutput{})
 	pulumi.RegisterOutputType(TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput{})
@@ -78467,6 +78799,8 @@ func init() {
 	pulumi.RegisterOutputType(GetEmbeddedSecurityPolicyAssemblyArrayOutput{})
 	pulumi.RegisterOutputType(GetEmbeddedSecurityPolicyAssemblyEntryOutput{})
 	pulumi.RegisterOutputType(GetEmbeddedSecurityPolicyAssemblyEntryArrayOutput{})
+	pulumi.RegisterOutputType(GetEmbeddedSecurityPolicyHighSpeedLoggingOutput{})
+	pulumi.RegisterOutputType(GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput{})
 	pulumi.RegisterOutputType(GetExpandedCommunityListPolicyObjectEntryOutput{})
 	pulumi.RegisterOutputType(GetExpandedCommunityListPolicyObjectEntryArrayOutput{})
 	pulumi.RegisterOutputType(GetExtendedCommunityListPolicyObjectEntryOutput{})
@@ -78530,6 +78864,10 @@ func init() {
 	pulumi.RegisterOutputType(GetNetworkHierarchyCflowdCollectorOutput{})
 	pulumi.RegisterOutputType(GetNetworkHierarchyCflowdCollectorArrayOutput{})
 	pulumi.RegisterOutputType(GetNetworkHierarchyNodeAddressOutput{})
+	pulumi.RegisterOutputType(GetNetworkHierarchyNodesNodesOutput{})
+	pulumi.RegisterOutputType(GetNetworkHierarchyNodesNodesMapOutput{})
+	pulumi.RegisterOutputType(GetNetworkHierarchyNodesResolvedSiteOutput{})
+	pulumi.RegisterOutputType(GetNetworkHierarchyNodesResolvedSiteArrayOutput{})
 	pulumi.RegisterOutputType(GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput{})
 	pulumi.RegisterOutputType(GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput{})
 	pulumi.RegisterOutputType(GetNetworkHierarchySecurityLoggingUtdSyslogOutput{})
@@ -78576,6 +78914,8 @@ func init() {
 	pulumi.RegisterOutputType(GetPolicyObjectPreferredColorGroupEntryArrayOutput{})
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityDataIpv4PrefixListEntryOutput{})
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityDataIpv4PrefixListEntryArrayOutput{})
+	pulumi.RegisterOutputType(GetPolicyObjectSecurityDataIpv6PrefixListEntryOutput{})
+	pulumi.RegisterOutputType(GetPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput{})
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityFqdnListEntryOutput{})
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityFqdnListEntryArrayOutput{})
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityGeolocationListEntryOutput{})
@@ -78588,10 +78928,14 @@ func init() {
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityLocalApplicationListEntryArrayOutput{})
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityLocalDomainListEntryOutput{})
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityLocalDomainListEntryArrayOutput{})
+	pulumi.RegisterOutputType(GetPolicyObjectSecurityObjectGroupEntryOutput{})
+	pulumi.RegisterOutputType(GetPolicyObjectSecurityObjectGroupEntryArrayOutput{})
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityPortListEntryOutput{})
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityPortListEntryArrayOutput{})
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityProtocolListEntryOutput{})
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityProtocolListEntryArrayOutput{})
+	pulumi.RegisterOutputType(GetPolicyObjectSecurityRuleSetSequenceOutput{})
+	pulumi.RegisterOutputType(GetPolicyObjectSecurityRuleSetSequenceArrayOutput{})
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityScalableGroupTagListEntryOutput{})
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityScalableGroupTagListEntryArrayOutput{})
 	pulumi.RegisterOutputType(GetPolicyObjectSecurityUrlAllowListEntryOutput{})
@@ -78968,24 +79312,4 @@ func init() {
 	pulumi.RegisterOutputType(GetSystemSnmpFeatureCommunityArrayOutput{})
 	pulumi.RegisterOutputType(GetSystemSnmpFeatureGroupOutput{})
 	pulumi.RegisterOutputType(GetSystemSnmpFeatureGroupArrayOutput{})
-	pulumi.RegisterOutputType(GetSystemSnmpFeatureTrapTargetServerOutput{})
-	pulumi.RegisterOutputType(GetSystemSnmpFeatureTrapTargetServerArrayOutput{})
-	pulumi.RegisterOutputType(GetSystemSnmpFeatureUserOutput{})
-	pulumi.RegisterOutputType(GetSystemSnmpFeatureUserArrayOutput{})
-	pulumi.RegisterOutputType(GetSystemSnmpFeatureViewOutput{})
-	pulumi.RegisterOutputType(GetSystemSnmpFeatureViewArrayOutput{})
-	pulumi.RegisterOutputType(GetSystemSnmpFeatureViewOidOutput{})
-	pulumi.RegisterOutputType(GetSystemSnmpFeatureViewOidArrayOutput{})
-	pulumi.RegisterOutputType(GetTlocListPolicyObjectEntryOutput{})
-	pulumi.RegisterOutputType(GetTlocListPolicyObjectEntryArrayOutput{})
-	pulumi.RegisterOutputType(GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput{})
-	pulumi.RegisterOutputType(GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput{})
-	pulumi.RegisterOutputType(GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput{})
-	pulumi.RegisterOutputType(GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput{})
-	pulumi.RegisterOutputType(GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput{})
-	pulumi.RegisterOutputType(GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput{})
-	pulumi.RegisterOutputType(GetTopologyCustomControlFeatureSequenceOutput{})
-	pulumi.RegisterOutputType(GetTopologyCustomControlFeatureSequenceArrayOutput{})
-	pulumi.RegisterOutputType(GetTopologyCustomControlFeatureSequenceActionEntryOutput{})
-	pulumi.RegisterOutputType(GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput{})
 }

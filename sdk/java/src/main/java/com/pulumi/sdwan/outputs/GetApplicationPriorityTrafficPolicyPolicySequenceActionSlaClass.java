@@ -14,6 +14,11 @@ import java.util.Objects;
 public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass {
     private Boolean fallbackToBestPath;
     private String preferredColorGroupListId;
+    /**
+     * @return Restrict traffic to the preferred color group, requires `preferredColorGroupListId` to be set
+     * 
+     */
+    private Boolean preferredColorGroupRestrict;
     private List<String> preferredColors;
     private List<String> preferredRemoteColors;
     private Boolean remoteColorRestrict;
@@ -26,6 +31,13 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaCla
     }
     public String preferredColorGroupListId() {
         return this.preferredColorGroupListId;
+    }
+    /**
+     * @return Restrict traffic to the preferred color group, requires `preferredColorGroupListId` to be set
+     * 
+     */
+    public Boolean preferredColorGroupRestrict() {
+        return this.preferredColorGroupRestrict;
     }
     public List<String> preferredColors() {
         return this.preferredColors;
@@ -54,6 +66,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaCla
     public static final class Builder {
         private Boolean fallbackToBestPath;
         private String preferredColorGroupListId;
+        private Boolean preferredColorGroupRestrict;
         private List<String> preferredColors;
         private List<String> preferredRemoteColors;
         private Boolean remoteColorRestrict;
@@ -64,6 +77,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaCla
     	      Objects.requireNonNull(defaults);
     	      this.fallbackToBestPath = defaults.fallbackToBestPath;
     	      this.preferredColorGroupListId = defaults.preferredColorGroupListId;
+    	      this.preferredColorGroupRestrict = defaults.preferredColorGroupRestrict;
     	      this.preferredColors = defaults.preferredColors;
     	      this.preferredRemoteColors = defaults.preferredRemoteColors;
     	      this.remoteColorRestrict = defaults.remoteColorRestrict;
@@ -85,6 +99,14 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaCla
               throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass", "preferredColorGroupListId");
             }
             this.preferredColorGroupListId = preferredColorGroupListId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder preferredColorGroupRestrict(Boolean preferredColorGroupRestrict) {
+            if (preferredColorGroupRestrict == null) {
+              throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass", "preferredColorGroupRestrict");
+            }
+            this.preferredColorGroupRestrict = preferredColorGroupRestrict;
             return this;
         }
         @CustomType.Setter
@@ -137,6 +159,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaCla
             final var _resultValue = new GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass();
             _resultValue.fallbackToBestPath = fallbackToBestPath;
             _resultValue.preferredColorGroupListId = preferredColorGroupListId;
+            _resultValue.preferredColorGroupRestrict = preferredColorGroupRestrict;
             _resultValue.preferredColors = preferredColors;
             _resultValue.preferredRemoteColors = preferredRemoteColors;
             _resultValue.remoteColorRestrict = remoteColorRestrict;

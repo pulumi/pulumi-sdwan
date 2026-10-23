@@ -15,6 +15,11 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     private @Nullable List<String> appListIds;
     private @Nullable List<String> applicationFamilies;
     private @Nullable List<String> applications;
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    private @Nullable List<String> destinationDataIpv6PrefixListIds;
     private @Nullable List<String> destinationDataPrefixListIds;
     private @Nullable List<String> destinationDataPrefixes;
     /**
@@ -36,6 +41,21 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
      * 
      */
     private @Nullable String destinationGeoLocationsVariable;
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    private @Nullable List<String> destinationIpv6DataPrefixes;
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    private @Nullable String destinationIpv6DataPrefixesVariable;
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    private @Nullable List<String> destinationObjectGroupListIds;
     private @Nullable List<String> destinationPortListIds;
     private @Nullable List<String> destinationPorts;
     /**
@@ -44,11 +64,25 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
      */
     private @Nullable String destinationPortsVariable;
     private @Nullable List<String> destinationScalableGroupTagListIds;
+    /**
+     * @return Deprecated, use `destinationObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+     * 
+     */
     private @Nullable List<String> destinationSecurityGroupListIds;
     private @Nullable List<String> flatAppListIds;
     private @Nullable List<String> protocolNameListIds;
     private @Nullable List<String> protocolNames;
     private @Nullable List<String> protocols;
+    /**
+     * @return Security rule set IDs, requires `isRuleSet` set to `true` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    private @Nullable List<String> ruleSetListIds;
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    private @Nullable List<String> sourceDataIpv6PrefixListIds;
     private @Nullable List<String> sourceDataPrefixListIds;
     private @Nullable List<String> sourceDataPrefixes;
     /**
@@ -66,6 +100,21 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     private @Nullable List<String> sourceIdentityListIds;
     private @Nullable List<String> sourceIdentityUsergroups;
     private @Nullable List<String> sourceIdentityUsers;
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    private @Nullable List<String> sourceIpv6DataPrefixes;
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    private @Nullable String sourceIpv6DataPrefixesVariable;
+    /**
+     * @return Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    private @Nullable List<String> sourceObjectGroupListIds;
     private @Nullable List<String> sourcePortListIds;
     private @Nullable List<String> sourcePorts;
     /**
@@ -74,6 +123,10 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
      */
     private @Nullable String sourcePortsVariable;
     private @Nullable List<String> sourceScalableGroupTagListIds;
+    /**
+     * @return Deprecated, use `sourceObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+     * 
+     */
     private @Nullable List<String> sourceSecurityGroupListIds;
 
     private EmbeddedSecurityNgfwPolicySequenceMatchEntry() {}
@@ -85,6 +138,13 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     }
     public List<String> applications() {
         return this.applications == null ? List.of() : this.applications;
+    }
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public List<String> destinationDataIpv6PrefixListIds() {
+        return this.destinationDataIpv6PrefixListIds == null ? List.of() : this.destinationDataIpv6PrefixListIds;
     }
     public List<String> destinationDataPrefixListIds() {
         return this.destinationDataPrefixListIds == null ? List.of() : this.destinationDataPrefixListIds;
@@ -125,6 +185,27 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     public Optional<String> destinationGeoLocationsVariable() {
         return Optional.ofNullable(this.destinationGeoLocationsVariable);
     }
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public List<String> destinationIpv6DataPrefixes() {
+        return this.destinationIpv6DataPrefixes == null ? List.of() : this.destinationIpv6DataPrefixes;
+    }
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<String> destinationIpv6DataPrefixesVariable() {
+        return Optional.ofNullable(this.destinationIpv6DataPrefixesVariable);
+    }
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public List<String> destinationObjectGroupListIds() {
+        return this.destinationObjectGroupListIds == null ? List.of() : this.destinationObjectGroupListIds;
+    }
     public List<String> destinationPortListIds() {
         return this.destinationPortListIds == null ? List.of() : this.destinationPortListIds;
     }
@@ -141,6 +222,10 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     public List<String> destinationScalableGroupTagListIds() {
         return this.destinationScalableGroupTagListIds == null ? List.of() : this.destinationScalableGroupTagListIds;
     }
+    /**
+     * @return Deprecated, use `destinationObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+     * 
+     */
     public List<String> destinationSecurityGroupListIds() {
         return this.destinationSecurityGroupListIds == null ? List.of() : this.destinationSecurityGroupListIds;
     }
@@ -155,6 +240,20 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     }
     public List<String> protocols() {
         return this.protocols == null ? List.of() : this.protocols;
+    }
+    /**
+     * @return Security rule set IDs, requires `isRuleSet` set to `true` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public List<String> ruleSetListIds() {
+        return this.ruleSetListIds == null ? List.of() : this.ruleSetListIds;
+    }
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public List<String> sourceDataIpv6PrefixListIds() {
+        return this.sourceDataIpv6PrefixListIds == null ? List.of() : this.sourceDataIpv6PrefixListIds;
     }
     public List<String> sourceDataPrefixListIds() {
         return this.sourceDataPrefixListIds == null ? List.of() : this.sourceDataPrefixListIds;
@@ -191,6 +290,27 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     public List<String> sourceIdentityUsers() {
         return this.sourceIdentityUsers == null ? List.of() : this.sourceIdentityUsers;
     }
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public List<String> sourceIpv6DataPrefixes() {
+        return this.sourceIpv6DataPrefixes == null ? List.of() : this.sourceIpv6DataPrefixes;
+    }
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<String> sourceIpv6DataPrefixesVariable() {
+        return Optional.ofNullable(this.sourceIpv6DataPrefixesVariable);
+    }
+    /**
+     * @return Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public List<String> sourceObjectGroupListIds() {
+        return this.sourceObjectGroupListIds == null ? List.of() : this.sourceObjectGroupListIds;
+    }
     public List<String> sourcePortListIds() {
         return this.sourcePortListIds == null ? List.of() : this.sourcePortListIds;
     }
@@ -207,6 +327,10 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     public List<String> sourceScalableGroupTagListIds() {
         return this.sourceScalableGroupTagListIds == null ? List.of() : this.sourceScalableGroupTagListIds;
     }
+    /**
+     * @return Deprecated, use `sourceObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+     * 
+     */
     public List<String> sourceSecurityGroupListIds() {
         return this.sourceSecurityGroupListIds == null ? List.of() : this.sourceSecurityGroupListIds;
     }
@@ -223,6 +347,7 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
         private @Nullable List<String> appListIds;
         private @Nullable List<String> applicationFamilies;
         private @Nullable List<String> applications;
+        private @Nullable List<String> destinationDataIpv6PrefixListIds;
         private @Nullable List<String> destinationDataPrefixListIds;
         private @Nullable List<String> destinationDataPrefixes;
         private @Nullable String destinationDataPrefixesVariable;
@@ -232,6 +357,9 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
         private @Nullable List<String> destinationGeoLocationListIds;
         private @Nullable List<String> destinationGeoLocations;
         private @Nullable String destinationGeoLocationsVariable;
+        private @Nullable List<String> destinationIpv6DataPrefixes;
+        private @Nullable String destinationIpv6DataPrefixesVariable;
+        private @Nullable List<String> destinationObjectGroupListIds;
         private @Nullable List<String> destinationPortListIds;
         private @Nullable List<String> destinationPorts;
         private @Nullable String destinationPortsVariable;
@@ -241,6 +369,8 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
         private @Nullable List<String> protocolNameListIds;
         private @Nullable List<String> protocolNames;
         private @Nullable List<String> protocols;
+        private @Nullable List<String> ruleSetListIds;
+        private @Nullable List<String> sourceDataIpv6PrefixListIds;
         private @Nullable List<String> sourceDataPrefixListIds;
         private @Nullable List<String> sourceDataPrefixes;
         private @Nullable String sourceDataPrefixesVariable;
@@ -250,6 +380,9 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
         private @Nullable List<String> sourceIdentityListIds;
         private @Nullable List<String> sourceIdentityUsergroups;
         private @Nullable List<String> sourceIdentityUsers;
+        private @Nullable List<String> sourceIpv6DataPrefixes;
+        private @Nullable String sourceIpv6DataPrefixesVariable;
+        private @Nullable List<String> sourceObjectGroupListIds;
         private @Nullable List<String> sourcePortListIds;
         private @Nullable List<String> sourcePorts;
         private @Nullable String sourcePortsVariable;
@@ -261,6 +394,7 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     	      this.appListIds = defaults.appListIds;
     	      this.applicationFamilies = defaults.applicationFamilies;
     	      this.applications = defaults.applications;
+    	      this.destinationDataIpv6PrefixListIds = defaults.destinationDataIpv6PrefixListIds;
     	      this.destinationDataPrefixListIds = defaults.destinationDataPrefixListIds;
     	      this.destinationDataPrefixes = defaults.destinationDataPrefixes;
     	      this.destinationDataPrefixesVariable = defaults.destinationDataPrefixesVariable;
@@ -270,6 +404,9 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     	      this.destinationGeoLocationListIds = defaults.destinationGeoLocationListIds;
     	      this.destinationGeoLocations = defaults.destinationGeoLocations;
     	      this.destinationGeoLocationsVariable = defaults.destinationGeoLocationsVariable;
+    	      this.destinationIpv6DataPrefixes = defaults.destinationIpv6DataPrefixes;
+    	      this.destinationIpv6DataPrefixesVariable = defaults.destinationIpv6DataPrefixesVariable;
+    	      this.destinationObjectGroupListIds = defaults.destinationObjectGroupListIds;
     	      this.destinationPortListIds = defaults.destinationPortListIds;
     	      this.destinationPorts = defaults.destinationPorts;
     	      this.destinationPortsVariable = defaults.destinationPortsVariable;
@@ -279,6 +416,8 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     	      this.protocolNameListIds = defaults.protocolNameListIds;
     	      this.protocolNames = defaults.protocolNames;
     	      this.protocols = defaults.protocols;
+    	      this.ruleSetListIds = defaults.ruleSetListIds;
+    	      this.sourceDataIpv6PrefixListIds = defaults.sourceDataIpv6PrefixListIds;
     	      this.sourceDataPrefixListIds = defaults.sourceDataPrefixListIds;
     	      this.sourceDataPrefixes = defaults.sourceDataPrefixes;
     	      this.sourceDataPrefixesVariable = defaults.sourceDataPrefixesVariable;
@@ -288,6 +427,9 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
     	      this.sourceIdentityListIds = defaults.sourceIdentityListIds;
     	      this.sourceIdentityUsergroups = defaults.sourceIdentityUsergroups;
     	      this.sourceIdentityUsers = defaults.sourceIdentityUsers;
+    	      this.sourceIpv6DataPrefixes = defaults.sourceIpv6DataPrefixes;
+    	      this.sourceIpv6DataPrefixesVariable = defaults.sourceIpv6DataPrefixesVariable;
+    	      this.sourceObjectGroupListIds = defaults.sourceObjectGroupListIds;
     	      this.sourcePortListIds = defaults.sourcePortListIds;
     	      this.sourcePorts = defaults.sourcePorts;
     	      this.sourcePortsVariable = defaults.sourcePortsVariable;
@@ -321,6 +463,15 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
         }
         public Builder applications(String... applications) {
             return applications(List.of(applications));
+        }
+        @CustomType.Setter
+        public Builder destinationDataIpv6PrefixListIds(@Nullable List<String> destinationDataIpv6PrefixListIds) {
+
+            this.destinationDataIpv6PrefixListIds = destinationDataIpv6PrefixListIds;
+            return this;
+        }
+        public Builder destinationDataIpv6PrefixListIds(String... destinationDataIpv6PrefixListIds) {
+            return destinationDataIpv6PrefixListIds(List.of(destinationDataIpv6PrefixListIds));
         }
         @CustomType.Setter
         public Builder destinationDataPrefixListIds(@Nullable List<String> destinationDataPrefixListIds) {
@@ -393,6 +544,30 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
 
             this.destinationGeoLocationsVariable = destinationGeoLocationsVariable;
             return this;
+        }
+        @CustomType.Setter
+        public Builder destinationIpv6DataPrefixes(@Nullable List<String> destinationIpv6DataPrefixes) {
+
+            this.destinationIpv6DataPrefixes = destinationIpv6DataPrefixes;
+            return this;
+        }
+        public Builder destinationIpv6DataPrefixes(String... destinationIpv6DataPrefixes) {
+            return destinationIpv6DataPrefixes(List.of(destinationIpv6DataPrefixes));
+        }
+        @CustomType.Setter
+        public Builder destinationIpv6DataPrefixesVariable(@Nullable String destinationIpv6DataPrefixesVariable) {
+
+            this.destinationIpv6DataPrefixesVariable = destinationIpv6DataPrefixesVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder destinationObjectGroupListIds(@Nullable List<String> destinationObjectGroupListIds) {
+
+            this.destinationObjectGroupListIds = destinationObjectGroupListIds;
+            return this;
+        }
+        public Builder destinationObjectGroupListIds(String... destinationObjectGroupListIds) {
+            return destinationObjectGroupListIds(List.of(destinationObjectGroupListIds));
         }
         @CustomType.Setter
         public Builder destinationPortListIds(@Nullable List<String> destinationPortListIds) {
@@ -473,6 +648,24 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
             return protocols(List.of(protocols));
         }
         @CustomType.Setter
+        public Builder ruleSetListIds(@Nullable List<String> ruleSetListIds) {
+
+            this.ruleSetListIds = ruleSetListIds;
+            return this;
+        }
+        public Builder ruleSetListIds(String... ruleSetListIds) {
+            return ruleSetListIds(List.of(ruleSetListIds));
+        }
+        @CustomType.Setter
+        public Builder sourceDataIpv6PrefixListIds(@Nullable List<String> sourceDataIpv6PrefixListIds) {
+
+            this.sourceDataIpv6PrefixListIds = sourceDataIpv6PrefixListIds;
+            return this;
+        }
+        public Builder sourceDataIpv6PrefixListIds(String... sourceDataIpv6PrefixListIds) {
+            return sourceDataIpv6PrefixListIds(List.of(sourceDataIpv6PrefixListIds));
+        }
+        @CustomType.Setter
         public Builder sourceDataPrefixListIds(@Nullable List<String> sourceDataPrefixListIds) {
 
             this.sourceDataPrefixListIds = sourceDataPrefixListIds;
@@ -548,6 +741,30 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
             return sourceIdentityUsers(List.of(sourceIdentityUsers));
         }
         @CustomType.Setter
+        public Builder sourceIpv6DataPrefixes(@Nullable List<String> sourceIpv6DataPrefixes) {
+
+            this.sourceIpv6DataPrefixes = sourceIpv6DataPrefixes;
+            return this;
+        }
+        public Builder sourceIpv6DataPrefixes(String... sourceIpv6DataPrefixes) {
+            return sourceIpv6DataPrefixes(List.of(sourceIpv6DataPrefixes));
+        }
+        @CustomType.Setter
+        public Builder sourceIpv6DataPrefixesVariable(@Nullable String sourceIpv6DataPrefixesVariable) {
+
+            this.sourceIpv6DataPrefixesVariable = sourceIpv6DataPrefixesVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder sourceObjectGroupListIds(@Nullable List<String> sourceObjectGroupListIds) {
+
+            this.sourceObjectGroupListIds = sourceObjectGroupListIds;
+            return this;
+        }
+        public Builder sourceObjectGroupListIds(String... sourceObjectGroupListIds) {
+            return sourceObjectGroupListIds(List.of(sourceObjectGroupListIds));
+        }
+        @CustomType.Setter
         public Builder sourcePortListIds(@Nullable List<String> sourcePortListIds) {
 
             this.sourcePortListIds = sourcePortListIds;
@@ -594,6 +811,7 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
             _resultValue.appListIds = appListIds;
             _resultValue.applicationFamilies = applicationFamilies;
             _resultValue.applications = applications;
+            _resultValue.destinationDataIpv6PrefixListIds = destinationDataIpv6PrefixListIds;
             _resultValue.destinationDataPrefixListIds = destinationDataPrefixListIds;
             _resultValue.destinationDataPrefixes = destinationDataPrefixes;
             _resultValue.destinationDataPrefixesVariable = destinationDataPrefixesVariable;
@@ -603,6 +821,9 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
             _resultValue.destinationGeoLocationListIds = destinationGeoLocationListIds;
             _resultValue.destinationGeoLocations = destinationGeoLocations;
             _resultValue.destinationGeoLocationsVariable = destinationGeoLocationsVariable;
+            _resultValue.destinationIpv6DataPrefixes = destinationIpv6DataPrefixes;
+            _resultValue.destinationIpv6DataPrefixesVariable = destinationIpv6DataPrefixesVariable;
+            _resultValue.destinationObjectGroupListIds = destinationObjectGroupListIds;
             _resultValue.destinationPortListIds = destinationPortListIds;
             _resultValue.destinationPorts = destinationPorts;
             _resultValue.destinationPortsVariable = destinationPortsVariable;
@@ -612,6 +833,8 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
             _resultValue.protocolNameListIds = protocolNameListIds;
             _resultValue.protocolNames = protocolNames;
             _resultValue.protocols = protocols;
+            _resultValue.ruleSetListIds = ruleSetListIds;
+            _resultValue.sourceDataIpv6PrefixListIds = sourceDataIpv6PrefixListIds;
             _resultValue.sourceDataPrefixListIds = sourceDataPrefixListIds;
             _resultValue.sourceDataPrefixes = sourceDataPrefixes;
             _resultValue.sourceDataPrefixesVariable = sourceDataPrefixesVariable;
@@ -621,6 +844,9 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntry {
             _resultValue.sourceIdentityListIds = sourceIdentityListIds;
             _resultValue.sourceIdentityUsergroups = sourceIdentityUsergroups;
             _resultValue.sourceIdentityUsers = sourceIdentityUsers;
+            _resultValue.sourceIpv6DataPrefixes = sourceIpv6DataPrefixes;
+            _resultValue.sourceIpv6DataPrefixesVariable = sourceIpv6DataPrefixesVariable;
+            _resultValue.sourceObjectGroupListIds = sourceObjectGroupListIds;
             _resultValue.sourcePortListIds = sourcePortListIds;
             _resultValue.sourcePorts = sourcePorts;
             _resultValue.sourcePortsVariable = sourcePortsVariable;

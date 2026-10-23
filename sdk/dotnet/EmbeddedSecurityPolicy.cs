@@ -52,6 +52,16 @@ namespace Pulumi.Sdwan
     ///         SessionReclassifyAllow = "on",
     ///         IcmpUnreachableAllow = "on",
     ///         FailureMode = "close",
+    ///         HighSpeedLoggings = new[]
+    ///         {
+    ///             new Sdwan.Inputs.EmbeddedSecurityPolicyHighSpeedLoggingArgs
+    ///             {
+    ///                 Name = "server1",
+    ///                 SourceInterface = "GigabitEthernet1",
+    ///             },
+    ///         },
+    ///         SyslogServerSourceInterface = "GigabitEthernet1",
+    ///         Optimized = false,
     ///         Nat = true,
     ///         DownloadUrlDatabaseOnDevice = false,
     ///         ResourceProfile = "low",
@@ -111,6 +121,12 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
+        /// High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        [Output("highSpeedLoggings")]
+        public Output<ImmutableArray<Outputs.EmbeddedSecurityPolicyHighSpeedLogging>> HighSpeedLoggings { get; private set; } = null!;
+
+        /// <summary>
         /// Setting can be string 'on' or missing for off
         ///   - Choices: `On`
         /// </summary>
@@ -142,6 +158,12 @@ namespace Pulumi.Sdwan
         public Output<string?> NatVariable { get; private set; } = null!;
 
         /// <summary>
+        /// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        [Output("optimized")]
+        public Output<bool?> Optimized { get; private set; } = null!;
+
+        /// <summary>
         /// - Choices: `Low`, `Medium`, `High`
         /// </summary>
         [Output("resourceProfile")]
@@ -159,6 +181,18 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("sessionReclassifyAllow")]
         public Output<string?> SessionReclassifyAllow { get; private set; } = null!;
+
+        /// <summary>
+        /// InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        [Output("syslogServerSourceInterface")]
+        public Output<string?> SyslogServerSourceInterface { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        [Output("syslogServerSourceInterfaceVariable")]
+        public Output<string?> SyslogServerSourceInterfaceVariable { get; private set; } = null!;
 
         [Output("tcpSynFloodLimit")]
         public Output<string?> TcpSynFloodLimit { get; private set; } = null!;
@@ -264,6 +298,18 @@ namespace Pulumi.Sdwan
         [Input("featureProfileId", required: true)]
         public Input<string> FeatureProfileId { get; set; } = null!;
 
+        [Input("highSpeedLoggings")]
+        private InputList<Inputs.EmbeddedSecurityPolicyHighSpeedLoggingArgs>? _highSpeedLoggings;
+
+        /// <summary>
+        /// High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        public InputList<Inputs.EmbeddedSecurityPolicyHighSpeedLoggingArgs> HighSpeedLoggings
+        {
+            get => _highSpeedLoggings ?? (_highSpeedLoggings = new InputList<Inputs.EmbeddedSecurityPolicyHighSpeedLoggingArgs>());
+            set => _highSpeedLoggings = value;
+        }
+
         /// <summary>
         /// Setting can be string 'on' or missing for off
         ///   - Choices: `On`
@@ -296,6 +342,12 @@ namespace Pulumi.Sdwan
         public Input<string>? NatVariable { get; set; }
 
         /// <summary>
+        /// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        [Input("optimized")]
+        public Input<bool>? Optimized { get; set; }
+
+        /// <summary>
         /// - Choices: `Low`, `Medium`, `High`
         /// </summary>
         [Input("resourceProfile")]
@@ -313,6 +365,18 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("sessionReclassifyAllow")]
         public Input<string>? SessionReclassifyAllow { get; set; }
+
+        /// <summary>
+        /// InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        [Input("syslogServerSourceInterface")]
+        public Input<string>? SyslogServerSourceInterface { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        [Input("syslogServerSourceInterfaceVariable")]
+        public Input<string>? SyslogServerSourceInterfaceVariable { get; set; }
 
         [Input("tcpSynFloodLimit")]
         public Input<string>? TcpSynFloodLimit { get; set; }
@@ -374,6 +438,18 @@ namespace Pulumi.Sdwan
         [Input("featureProfileId")]
         public Input<string>? FeatureProfileId { get; set; }
 
+        [Input("highSpeedLoggings")]
+        private InputList<Inputs.EmbeddedSecurityPolicyHighSpeedLoggingGetArgs>? _highSpeedLoggings;
+
+        /// <summary>
+        /// High Speed Logging, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        public InputList<Inputs.EmbeddedSecurityPolicyHighSpeedLoggingGetArgs> HighSpeedLoggings
+        {
+            get => _highSpeedLoggings ?? (_highSpeedLoggings = new InputList<Inputs.EmbeddedSecurityPolicyHighSpeedLoggingGetArgs>());
+            set => _highSpeedLoggings = value;
+        }
+
         /// <summary>
         /// Setting can be string 'on' or missing for off
         ///   - Choices: `On`
@@ -406,6 +482,12 @@ namespace Pulumi.Sdwan
         public Input<string>? NatVariable { get; set; }
 
         /// <summary>
+        /// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        [Input("optimized")]
+        public Input<bool>? Optimized { get; set; }
+
+        /// <summary>
         /// - Choices: `Low`, `Medium`, `High`
         /// </summary>
         [Input("resourceProfile")]
@@ -423,6 +505,18 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("sessionReclassifyAllow")]
         public Input<string>? SessionReclassifyAllow { get; set; }
+
+        /// <summary>
+        /// InterfaceName, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        [Input("syslogServerSourceInterface")]
+        public Input<string>? SyslogServerSourceInterface { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        [Input("syslogServerSourceInterfaceVariable")]
+        public Input<string>? SyslogServerSourceInterfaceVariable { get; set; }
 
         [Input("tcpSynFloodLimit")]
         public Input<string>? TcpSynFloodLimit { get; set; }

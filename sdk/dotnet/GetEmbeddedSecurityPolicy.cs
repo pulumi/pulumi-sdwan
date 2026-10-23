@@ -164,6 +164,10 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string FeatureProfileId;
         /// <summary>
+        /// High Speed Logging
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetEmbeddedSecurityPolicyHighSpeedLoggingResult> HighSpeedLoggings;
+        /// <summary>
         /// Setting can be string 'on' or missing for off
         /// </summary>
         public readonly string IcmpUnreachableAllow;
@@ -183,6 +187,7 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string NatVariable;
+        public readonly bool Optimized;
         public readonly string ResourceProfile;
         /// <summary>
         /// Variable name
@@ -192,6 +197,14 @@ namespace Pulumi.Sdwan
         /// Setting can be string 'on' or missing for off
         /// </summary>
         public readonly string SessionReclassifyAllow;
+        /// <summary>
+        /// InterfaceName
+        /// </summary>
+        public readonly string SyslogServerSourceInterface;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string SyslogServerSourceInterfaceVariable;
         public readonly string TcpSynFloodLimit;
         /// <summary>
         /// Setting can be string 'on' or missing for off
@@ -218,6 +231,8 @@ namespace Pulumi.Sdwan
 
             string featureProfileId,
 
+            ImmutableArray<Outputs.GetEmbeddedSecurityPolicyHighSpeedLoggingResult> highSpeedLoggings,
+
             string icmpUnreachableAllow,
 
             string id,
@@ -234,11 +249,17 @@ namespace Pulumi.Sdwan
 
             string natVariable,
 
+            bool optimized,
+
             string resourceProfile,
 
             string resourceProfileVariable,
 
             string sessionReclassifyAllow,
+
+            string syslogServerSourceInterface,
+
+            string syslogServerSourceInterfaceVariable,
 
             string tcpSynFloodLimit,
 
@@ -253,6 +274,7 @@ namespace Pulumi.Sdwan
             DownloadUrlDatabaseOnDeviceVariable = downloadUrlDatabaseOnDeviceVariable;
             FailureMode = failureMode;
             FeatureProfileId = featureProfileId;
+            HighSpeedLoggings = highSpeedLoggings;
             IcmpUnreachableAllow = icmpUnreachableAllow;
             Id = id;
             MaxIncompleteIcmpLimit = maxIncompleteIcmpLimit;
@@ -261,9 +283,12 @@ namespace Pulumi.Sdwan
             Name = name;
             Nat = nat;
             NatVariable = natVariable;
+            Optimized = optimized;
             ResourceProfile = resourceProfile;
             ResourceProfileVariable = resourceProfileVariable;
             SessionReclassifyAllow = sessionReclassifyAllow;
+            SyslogServerSourceInterface = syslogServerSourceInterface;
+            SyslogServerSourceInterfaceVariable = syslogServerSourceInterfaceVariable;
             TcpSynFloodLimit = tcpSynFloodLimit;
             UnifiedLogging = unifiedLogging;
             Version = version;

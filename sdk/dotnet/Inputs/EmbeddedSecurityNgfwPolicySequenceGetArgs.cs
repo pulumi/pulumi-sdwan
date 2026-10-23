@@ -33,6 +33,12 @@ namespace Pulumi.Sdwan.Inputs
         [Input("disableSequence")]
         public Input<bool>? DisableSequence { get; set; }
 
+        /// <summary>
+        /// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        [Input("isRuleSet")]
+        public Input<bool>? IsRuleSet { get; set; }
+
         [Input("matchEntries")]
         private InputList<Inputs.EmbeddedSecurityNgfwPolicySequenceMatchEntryGetArgs>? _matchEntries;
         public InputList<Inputs.EmbeddedSecurityNgfwPolicySequenceMatchEntryGetArgs> MatchEntries
@@ -41,8 +47,22 @@ namespace Pulumi.Sdwan.Inputs
             set => _matchEntries = value;
         }
 
+        /// <summary>
+        /// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        [Input("sequenceComment")]
+        public Input<string>? SequenceComment { get; set; }
+
         [Input("sequenceId")]
         public Input<string>? SequenceId { get; set; }
+
+        /// <summary>
+        /// IP address family the sequence matches on, `Ipv4` sequences only accept the IPv4 match attributes and `Ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        ///   - Choices: `Ipv4`, `Ipv6`
+        ///   - Default value: `Ipv4`
+        /// </summary>
+        [Input("sequenceIpType")]
+        public Input<string>? SequenceIpType { get; set; }
 
         [Input("sequenceName")]
         public Input<string>? SequenceName { get; set; }

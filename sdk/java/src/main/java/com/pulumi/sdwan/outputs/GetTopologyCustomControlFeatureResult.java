@@ -50,7 +50,15 @@ public final class GetTopologyCustomControlFeatureResult {
      * 
      */
     private List<String> targetInboundHierarchyUuids;
+    /**
+     * @return Inbound regions list
+     * 
+     */
     private List<GetTopologyCustomControlFeatureTargetInboundRegion> targetInboundRegions;
+    /**
+     * @return Inbound site list
+     * 
+     */
     private List<String> targetInboundSites;
     private String targetLevel;
     /**
@@ -58,9 +66,25 @@ public final class GetTopologyCustomControlFeatureResult {
      * 
      */
     private List<String> targetOutboundHierarchyUuids;
+    /**
+     * @return Outbound regions list
+     * 
+     */
     private List<GetTopologyCustomControlFeatureTargetOutboundRegion> targetOutboundRegions;
+    /**
+     * @return Outbound site list
+     * 
+     */
     private List<String> targetOutboundSites;
+    /**
+     * @return Target role
+     * 
+     */
     private String targetRole;
+    /**
+     * @return Target VPN list
+     * 
+     */
     private List<String> targetVpns;
     /**
      * @return The version of the Feature
@@ -118,9 +142,17 @@ public final class GetTopologyCustomControlFeatureResult {
     public List<String> targetInboundHierarchyUuids() {
         return this.targetInboundHierarchyUuids;
     }
+    /**
+     * @return Inbound regions list
+     * 
+     */
     public List<GetTopologyCustomControlFeatureTargetInboundRegion> targetInboundRegions() {
         return this.targetInboundRegions;
     }
+    /**
+     * @return Inbound site list
+     * 
+     */
     public List<String> targetInboundSites() {
         return this.targetInboundSites;
     }
@@ -134,15 +166,31 @@ public final class GetTopologyCustomControlFeatureResult {
     public List<String> targetOutboundHierarchyUuids() {
         return this.targetOutboundHierarchyUuids;
     }
+    /**
+     * @return Outbound regions list
+     * 
+     */
     public List<GetTopologyCustomControlFeatureTargetOutboundRegion> targetOutboundRegions() {
         return this.targetOutboundRegions;
     }
+    /**
+     * @return Outbound site list
+     * 
+     */
     public List<String> targetOutboundSites() {
         return this.targetOutboundSites;
     }
+    /**
+     * @return Target role
+     * 
+     */
     public String targetRole() {
         return this.targetRole;
     }
+    /**
+     * @return Target VPN list
+     * 
+     */
     public List<String> targetVpns() {
         return this.targetVpns;
     }

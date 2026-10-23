@@ -75,6 +75,10 @@ public final class GetSseZscalerFeatureSubLocation {
      * 
      */
     private String displayTimeUnitVariable;
+    /**
+     * @return Download Bandwidth in Mbps
+     * 
+     */
     private Double dnBandwidth;
     /**
      * @return Variable name
@@ -111,6 +115,10 @@ public final class GetSseZscalerFeatureSubLocation {
      * 
      */
     private String idleTimeVariable;
+    /**
+     * @return Internal Ip address
+     * 
+     */
     private List<GetSseZscalerFeatureSubLocationInternalIp> internalIps;
     /**
      * @return If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
@@ -122,6 +130,10 @@ public final class GetSseZscalerFeatureSubLocation {
      * 
      */
     private String ipEnforcedForKnownBrowsersVariable;
+    /**
+     * @return Sub-location name
+     * 
+     */
     private String name;
     /**
      * @return Variable name
@@ -163,6 +175,10 @@ public final class GetSseZscalerFeatureSubLocation {
      * 
      */
     private String serviceVpnVariable;
+    /**
+     * @return Sub-location Service VPN
+     * 
+     */
     private List<String> serviceVpns;
     /**
      * @return Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic.
@@ -174,6 +190,10 @@ public final class GetSseZscalerFeatureSubLocation {
      * 
      */
     private String surrogateIpVariable;
+    /**
+     * @return Upload Bandwidth in Mbps
+     * 
+     */
     private Double upBandwidth;
     /**
      * @return Variable name
@@ -266,6 +286,10 @@ public final class GetSseZscalerFeatureSubLocation {
     public String displayTimeUnitVariable() {
         return this.displayTimeUnitVariable;
     }
+    /**
+     * @return Download Bandwidth in Mbps
+     * 
+     */
     public Double dnBandwidth() {
         return this.dnBandwidth;
     }
@@ -318,6 +342,10 @@ public final class GetSseZscalerFeatureSubLocation {
     public String idleTimeVariable() {
         return this.idleTimeVariable;
     }
+    /**
+     * @return Internal Ip address
+     * 
+     */
     public List<GetSseZscalerFeatureSubLocationInternalIp> internalIps() {
         return this.internalIps;
     }
@@ -335,6 +363,10 @@ public final class GetSseZscalerFeatureSubLocation {
     public String ipEnforcedForKnownBrowsersVariable() {
         return this.ipEnforcedForKnownBrowsersVariable;
     }
+    /**
+     * @return Sub-location name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -394,6 +426,10 @@ public final class GetSseZscalerFeatureSubLocation {
     public String serviceVpnVariable() {
         return this.serviceVpnVariable;
     }
+    /**
+     * @return Sub-location Service VPN
+     * 
+     */
     public List<String> serviceVpns() {
         return this.serviceVpns;
     }
@@ -411,6 +447,10 @@ public final class GetSseZscalerFeatureSubLocation {
     public String surrogateIpVariable() {
         return this.surrogateIpVariable;
     }
+    /**
+     * @return Upload Bandwidth in Mbps
+     * 
+     */
     public Double upBandwidth() {
         return this.upBandwidth;
     }

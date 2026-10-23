@@ -61,6 +61,9 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string DisplayTimeUnitVariable;
+        /// <summary>
+        /// Download Bandwidth in Mbps
+        /// </summary>
         public readonly double DnBandwidth;
         /// <summary>
         /// Variable name
@@ -90,6 +93,9 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string IdleTimeVariable;
+        /// <summary>
+        /// Internal Ip address
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetSseZscalerFeatureSubLocationInternalIpResult> InternalIps;
         /// <summary>
         /// If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
@@ -99,6 +105,9 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string IpEnforcedForKnownBrowsersVariable;
+        /// <summary>
+        /// Sub-location name
+        /// </summary>
         public readonly string Name;
         /// <summary>
         /// Variable name
@@ -132,6 +141,9 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string ServiceVpnVariable;
+        /// <summary>
+        /// Sub-location Service VPN
+        /// </summary>
         public readonly ImmutableArray<string> ServiceVpns;
         /// <summary>
         /// Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic.
@@ -141,6 +153,9 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string SurrogateIpVariable;
+        /// <summary>
+        /// Upload Bandwidth in Mbps
+        /// </summary>
         public readonly double UpBandwidth;
         /// <summary>
         /// Variable name

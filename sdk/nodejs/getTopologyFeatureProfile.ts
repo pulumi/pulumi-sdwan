@@ -18,10 +18,12 @@ import * as utilities from "./utilities";
  * });
  * ```
  */
-export function getTopologyFeatureProfile(args: GetTopologyFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetTopologyFeatureProfileResult> {
+export function getTopologyFeatureProfile(args?: GetTopologyFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetTopologyFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getTopologyFeatureProfile:getTopologyFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,7 +34,11 @@ export interface GetTopologyFeatureProfileArgs {
     /**
      * The id of the object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the topology feature profile
+     */
+    name?: string;
 }
 
 /**
@@ -66,10 +72,12 @@ export interface GetTopologyFeatureProfileResult {
  * });
  * ```
  */
-export function getTopologyFeatureProfileOutput(args: GetTopologyFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTopologyFeatureProfileResult> {
+export function getTopologyFeatureProfileOutput(args?: GetTopologyFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTopologyFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTopologyFeatureProfile:getTopologyFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -80,5 +88,9 @@ export interface GetTopologyFeatureProfileOutputArgs {
     /**
      * The id of the object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the topology feature profile
+     */
+    name?: pulumi.Input<string | undefined>;
 }

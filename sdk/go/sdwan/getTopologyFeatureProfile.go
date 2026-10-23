@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetTopologyFeatureProfile(ctx, &sdwan.LookupTopologyFeatureProfileArgs{
-//				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id: pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //			}, nil)
 //			if err != nil {
 //				return err
@@ -51,7 +51,9 @@ func LookupTopologyFeatureProfile(ctx *pulumi.Context, args *LookupTopologyFeatu
 // A collection of arguments for invoking getTopologyFeatureProfile.
 type LookupTopologyFeatureProfileArgs struct {
 	// The id of the object
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the topology feature profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getTopologyFeatureProfile.
@@ -72,7 +74,9 @@ func LookupTopologyFeatureProfileOutput(ctx *pulumi.Context, args LookupTopology
 // A collection of arguments for invoking getTopologyFeatureProfile.
 type LookupTopologyFeatureProfileOutputArgs struct {
 	// The id of the object
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the topology feature profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupTopologyFeatureProfileOutputArgs) ElementType() reflect.Type {

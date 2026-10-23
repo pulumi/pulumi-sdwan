@@ -119,20 +119,35 @@ public final class PolicyObjectUnifiedIntrusionPreventionArgs extends com.pulumi
     }
 
     /**
-     * Can be one of the enum value
-     *   - Choices: `balanced`, `connectivity`, `security`
+     * Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+     *   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
      * 
      */
-    @Import(name="signatureSet", required=true)
-    private Output<String> signatureSet;
+    @Import(name="signatureSet")
+    private @Nullable Output<String> signatureSet;
 
     /**
-     * @return Can be one of the enum value
-     *   - Choices: `balanced`, `connectivity`, `security`
+     * @return Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+     *   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
      * 
      */
-    public Output<String> signatureSet() {
-        return this.signatureSet;
+    public Optional<Output<String>> signatureSet() {
+        return Optional.ofNullable(this.signatureSet);
+    }
+
+    /**
+     * Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="signatureSetId")
+    private @Nullable Output<String> signatureSetId;
+
+    /**
+     * @return Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> signatureSetId() {
+        return Optional.ofNullable(this.signatureSetId);
     }
 
     private PolicyObjectUnifiedIntrusionPreventionArgs() {}
@@ -146,6 +161,7 @@ public final class PolicyObjectUnifiedIntrusionPreventionArgs extends com.pulumi
         this.logLevel = $.logLevel;
         this.name = $.name;
         this.signatureSet = $.signatureSet;
+        this.signatureSetId = $.signatureSetId;
     }
 
     public static Builder builder() {
@@ -306,26 +322,47 @@ public final class PolicyObjectUnifiedIntrusionPreventionArgs extends com.pulumi
         }
 
         /**
-         * @param signatureSet Can be one of the enum value
-         *   - Choices: `balanced`, `connectivity`, `security`
+         * @param signatureSet Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+         *   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
          * 
          * @return builder
          * 
          */
-        public Builder signatureSet(Output<String> signatureSet) {
+        public Builder signatureSet(@Nullable Output<String> signatureSet) {
             $.signatureSet = signatureSet;
             return this;
         }
 
         /**
-         * @param signatureSet Can be one of the enum value
-         *   - Choices: `balanced`, `connectivity`, `security`
+         * @param signatureSet Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+         *   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
          * 
          * @return builder
          * 
          */
         public Builder signatureSet(String signatureSet) {
             return signatureSet(Output.of(signatureSet));
+        }
+
+        /**
+         * @param signatureSetId Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder signatureSetId(@Nullable Output<String> signatureSetId) {
+            $.signatureSetId = signatureSetId;
+            return this;
+        }
+
+        /**
+         * @param signatureSetId Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder signatureSetId(String signatureSetId) {
+            return signatureSetId(Output.of(signatureSetId));
         }
 
         public PolicyObjectUnifiedIntrusionPreventionArgs build() {
@@ -337,9 +374,6 @@ public final class PolicyObjectUnifiedIntrusionPreventionArgs extends com.pulumi
             }
             if ($.logLevel == null) {
                 throw new MissingRequiredPropertyException("PolicyObjectUnifiedIntrusionPreventionArgs", "logLevel");
-            }
-            if ($.signatureSet == null) {
-                throw new MissingRequiredPropertyException("PolicyObjectUnifiedIntrusionPreventionArgs", "signatureSet");
             }
             return $;
         }

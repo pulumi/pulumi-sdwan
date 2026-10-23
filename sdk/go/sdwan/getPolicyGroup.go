@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetPolicyGroup(ctx, &sdwan.LookupPolicyGroupArgs{
-//				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id: pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //			}, nil)
 //			if err != nil {
 //				return err
@@ -51,7 +51,9 @@ func LookupPolicyGroup(ctx *pulumi.Context, args *LookupPolicyGroupArgs, opts ..
 // A collection of arguments for invoking getPolicyGroup.
 type LookupPolicyGroupArgs struct {
 	// The id of the object
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the policy group
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getPolicyGroup.
@@ -80,7 +82,9 @@ func LookupPolicyGroupOutput(ctx *pulumi.Context, args LookupPolicyGroupOutputAr
 // A collection of arguments for invoking getPolicyGroup.
 type LookupPolicyGroupOutputArgs struct {
 	// The id of the object
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the policy group
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupPolicyGroupOutputArgs) ElementType() reflect.Type {

@@ -61,8 +61,9 @@ type PolicyObjectSecurityZone struct {
 	pulumi.CustomResourceState
 
 	// The description of the Policy_object
-	Description pulumi.StringPtrOutput                   `pulumi:"description"`
-	Entries     PolicyObjectSecurityZoneEntryArrayOutput `pulumi:"entries"`
+	Description pulumi.StringPtrOutput `pulumi:"description"`
+	// List of entries
+	Entries PolicyObjectSecurityZoneEntryArrayOutput `pulumi:"entries"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// The name of the Policy_object
@@ -108,8 +109,9 @@ func GetPolicyObjectSecurityZone(ctx *pulumi.Context,
 // Input properties used for looking up and filtering PolicyObjectSecurityZone resources.
 type policyObjectSecurityZoneState struct {
 	// The description of the Policy_object
-	Description *string                         `pulumi:"description"`
-	Entries     []PolicyObjectSecurityZoneEntry `pulumi:"entries"`
+	Description *string `pulumi:"description"`
+	// List of entries
+	Entries []PolicyObjectSecurityZoneEntry `pulumi:"entries"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
 	// The name of the Policy_object
@@ -121,7 +123,8 @@ type policyObjectSecurityZoneState struct {
 type PolicyObjectSecurityZoneState struct {
 	// The description of the Policy_object
 	Description pulumi.StringPtrInput
-	Entries     PolicyObjectSecurityZoneEntryArrayInput
+	// List of entries
+	Entries PolicyObjectSecurityZoneEntryArrayInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
 	// The name of the Policy_object
@@ -136,8 +139,9 @@ func (PolicyObjectSecurityZoneState) ElementType() reflect.Type {
 
 type policyObjectSecurityZoneArgs struct {
 	// The description of the Policy_object
-	Description *string                         `pulumi:"description"`
-	Entries     []PolicyObjectSecurityZoneEntry `pulumi:"entries"`
+	Description *string `pulumi:"description"`
+	// List of entries
+	Entries []PolicyObjectSecurityZoneEntry `pulumi:"entries"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The name of the Policy_object
@@ -148,7 +152,8 @@ type policyObjectSecurityZoneArgs struct {
 type PolicyObjectSecurityZoneArgs struct {
 	// The description of the Policy_object
 	Description pulumi.StringPtrInput
-	Entries     PolicyObjectSecurityZoneEntryArrayInput
+	// List of entries
+	Entries PolicyObjectSecurityZoneEntryArrayInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
 	// The name of the Policy_object
@@ -247,6 +252,7 @@ func (o PolicyObjectSecurityZoneOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PolicyObjectSecurityZone) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
+// List of entries
 func (o PolicyObjectSecurityZoneOutput) Entries() PolicyObjectSecurityZoneEntryArrayOutput {
 	return o.ApplyT(func(v *PolicyObjectSecurityZone) PolicyObjectSecurityZoneEntryArrayOutput { return v.Entries }).(PolicyObjectSecurityZoneEntryArrayOutput)
 }

@@ -188,28 +188,28 @@ public class TopologyCustomControlFeature extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.targetInboundHierarchyUuids);
     }
     /**
-     * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+     * Inbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      * 
      */
     @Export(name="targetInboundRegions", refs={List.class,TopologyCustomControlFeatureTargetInboundRegion.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TopologyCustomControlFeatureTargetInboundRegion>> targetInboundRegions;
 
     /**
-     * @return , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+     * @return Inbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      * 
      */
     public Output<Optional<List<TopologyCustomControlFeatureTargetInboundRegion>>> targetInboundRegions() {
         return Codegen.optional(this.targetInboundRegions);
     }
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
+     * Inbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
      * 
      */
     @Export(name="targetInboundSites", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> targetInboundSites;
 
     /**
-     * @return , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
+     * @return Inbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
      * 
      */
     public Output<Optional<List<String>>> targetInboundSites() {
@@ -244,50 +244,60 @@ public class TopologyCustomControlFeature extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.targetOutboundHierarchyUuids);
     }
     /**
-     * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+     * Outbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      * 
      */
     @Export(name="targetOutboundRegions", refs={List.class,TopologyCustomControlFeatureTargetOutboundRegion.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TopologyCustomControlFeatureTargetOutboundRegion>> targetOutboundRegions;
 
     /**
-     * @return , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+     * @return Outbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      * 
      */
     public Output<Optional<List<TopologyCustomControlFeatureTargetOutboundRegion>>> targetOutboundRegions() {
         return Codegen.optional(this.targetOutboundRegions);
     }
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
+     * Outbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
      * 
      */
     @Export(name="targetOutboundSites", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> targetOutboundSites;
 
     /**
-     * @return , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
+     * @return Outbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
      * 
      */
     public Output<Optional<List<String>>> targetOutboundSites() {
         return Codegen.optional(this.targetOutboundSites);
     }
     /**
-     * - Choices: `edge-router`, `border-router`
+     * Target role
+     *   - Choices: `edge-router`, `border-router`
      * 
      */
     @Export(name="targetRole", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> targetRole;
 
     /**
-     * @return - Choices: `edge-router`, `border-router`
+     * @return Target role
+     *   - Choices: `edge-router`, `border-router`
      * 
      */
     public Output<Optional<String>> targetRole() {
         return Codegen.optional(this.targetRole);
     }
+    /**
+     * Target VPN list
+     * 
+     */
     @Export(name="targetVpns", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> targetVpns;
 
+    /**
+     * @return Target VPN list
+     * 
+     */
     public Output<Optional<List<String>>> targetVpns() {
         return Codegen.optional(this.targetVpns);
     }

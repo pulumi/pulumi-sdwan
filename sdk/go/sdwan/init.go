@@ -243,6 +243,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &PolicyObjectPreferredColorGroup{}
 	case "sdwan:index/policyObjectSecurityDataIpv4PrefixList:PolicyObjectSecurityDataIpv4PrefixList":
 		r = &PolicyObjectSecurityDataIpv4PrefixList{}
+	case "sdwan:index/policyObjectSecurityDataIpv6PrefixList:PolicyObjectSecurityDataIpv6PrefixList":
+		r = &PolicyObjectSecurityDataIpv6PrefixList{}
 	case "sdwan:index/policyObjectSecurityFqdnList:PolicyObjectSecurityFqdnList":
 		r = &PolicyObjectSecurityFqdnList{}
 	case "sdwan:index/policyObjectSecurityGeolocationList:PolicyObjectSecurityGeolocationList":
@@ -255,10 +257,14 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &PolicyObjectSecurityLocalApplicationList{}
 	case "sdwan:index/policyObjectSecurityLocalDomainList:PolicyObjectSecurityLocalDomainList":
 		r = &PolicyObjectSecurityLocalDomainList{}
+	case "sdwan:index/policyObjectSecurityObjectGroup:PolicyObjectSecurityObjectGroup":
+		r = &PolicyObjectSecurityObjectGroup{}
 	case "sdwan:index/policyObjectSecurityPortList:PolicyObjectSecurityPortList":
 		r = &PolicyObjectSecurityPortList{}
 	case "sdwan:index/policyObjectSecurityProtocolList:PolicyObjectSecurityProtocolList":
 		r = &PolicyObjectSecurityProtocolList{}
+	case "sdwan:index/policyObjectSecurityRuleSet:PolicyObjectSecurityRuleSet":
+		r = &PolicyObjectSecurityRuleSet{}
 	case "sdwan:index/policyObjectSecurityScalableGroupTagList:PolicyObjectSecurityScalableGroupTagList":
 		r = &PolicyObjectSecurityScalableGroupTagList{}
 	case "sdwan:index/policyObjectSecurityUrlAllowList:PolicyObjectSecurityUrlAllowList":
@@ -309,6 +315,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &SecurityAppHostingFeatureTemplate{}
 	case "sdwan:index/securityPolicy:SecurityPolicy":
 		r = &SecurityPolicy{}
+	case "sdwan:index/sendWanEdgeListToControllers:SendWanEdgeListToControllers":
+		r = &SendWanEdgeListToControllers{}
 	case "sdwan:index/serviceAppqoeFeature:ServiceAppqoeFeature":
 		r = &ServiceAppqoeFeature{}
 	case "sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature":
@@ -549,6 +557,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &VpnListPolicyObject{}
 	case "sdwan:index/vpnMembershipPolicyDefinition:VpnMembershipPolicyDefinition":
 		r = &VpnMembershipPolicyDefinition{}
+	case "sdwan:index/wanEdgeCertificateValidate:WanEdgeCertificateValidate":
+		r = &WanEdgeCertificateValidate{}
 	case "sdwan:index/zoneBasedFirewallPolicyDefinition:ZoneBasedFirewallPolicyDefinition":
 		r = &ZoneBasedFirewallPolicyDefinition{}
 	case "sdwan:index/zoneListPolicyObject:ZoneListPolicyObject":
@@ -1141,6 +1151,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/policyObjectSecurityDataIpv6PrefixList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/policyObjectSecurityFqdnList",
 		&module{version},
 	)
@@ -1171,12 +1186,22 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/policyObjectSecurityObjectGroup",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/policyObjectSecurityPortList",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/policyObjectSecurityProtocolList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSecurityRuleSet",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -1302,6 +1327,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/securityPolicy",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/sendWanEdgeListToControllers",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -1902,6 +1932,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/vpnMembershipPolicyDefinition",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/wanEdgeCertificateValidate",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

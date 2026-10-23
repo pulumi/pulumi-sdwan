@@ -24,6 +24,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
     /**
      * Gateway distance, Attribute conditional on `gateway` equal to `null0`
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      * 
      */
     @Import(name="administrativeDistance")
@@ -32,6 +33,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
     /**
      * @return Gateway distance, Attribute conditional on `gateway` equal to `null0`
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> administrativeDistance() {
@@ -261,6 +263,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
         /**
          * @param administrativeDistance Gateway distance, Attribute conditional on `gateway` equal to `null0`
          *   - Range: `1`-`255`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -273,6 +276,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
         /**
          * @param administrativeDistance Gateway distance, Attribute conditional on `gateway` equal to `null0`
          *   - Range: `1`-`255`
+         *   - Default value: `1`
          * 
          * @return builder
          * 

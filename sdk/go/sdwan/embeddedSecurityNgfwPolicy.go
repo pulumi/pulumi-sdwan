@@ -36,9 +36,12 @@ import (
 //				DefaultAction:    pulumi.String("pass"),
 //				Sequences: sdwan.EmbeddedSecurityNgfwPolicySequenceArray{
 //					&sdwan.EmbeddedSecurityNgfwPolicySequenceArgs{
+//						IsRuleSet:       pulumi.Bool(false),
 //						SequenceId:      pulumi.String("1"),
 //						SequenceName:    pulumi.String("security"),
+//						SequenceComment: pulumi.String("comment1"),
 //						BaseAction:      pulumi.String("drop"),
+//						SequenceIpType:  pulumi.String("ipv4"),
 //						SequenceType:    pulumi.String("ngfirewall"),
 //						DisableSequence: pulumi.Bool(false),
 //						MatchEntries: sdwan.EmbeddedSecurityNgfwPolicySequenceMatchEntryArray{

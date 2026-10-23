@@ -136,11 +136,17 @@ class GetTopologyCustomControlFeatureResult:
     @_builtins.property
     @pulumi.getter(name="targetInboundRegions")
     def target_inbound_regions(self) -> Sequence['outputs.GetTopologyCustomControlFeatureTargetInboundRegionResult']:
+        """
+        Inbound regions list
+        """
         return pulumi.get(self, "target_inbound_regions")
 
     @_builtins.property
     @pulumi.getter(name="targetInboundSites")
     def target_inbound_sites(self) -> Sequence[_builtins.str]:
+        """
+        Inbound site list
+        """
         return pulumi.get(self, "target_inbound_sites")
 
     @_builtins.property
@@ -159,21 +165,33 @@ class GetTopologyCustomControlFeatureResult:
     @_builtins.property
     @pulumi.getter(name="targetOutboundRegions")
     def target_outbound_regions(self) -> Sequence['outputs.GetTopologyCustomControlFeatureTargetOutboundRegionResult']:
+        """
+        Outbound regions list
+        """
         return pulumi.get(self, "target_outbound_regions")
 
     @_builtins.property
     @pulumi.getter(name="targetOutboundSites")
     def target_outbound_sites(self) -> Sequence[_builtins.str]:
+        """
+        Outbound site list
+        """
         return pulumi.get(self, "target_outbound_sites")
 
     @_builtins.property
     @pulumi.getter(name="targetRole")
     def target_role(self) -> _builtins.str:
+        """
+        Target role
+        """
         return pulumi.get(self, "target_role")
 
     @_builtins.property
     @pulumi.getter(name="targetVpns")
     def target_vpns(self) -> Sequence[_builtins.str]:
+        """
+        Target VPN list
+        """
         return pulumi.get(self, "target_vpns")
 
     @_builtins.property

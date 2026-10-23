@@ -72,16 +72,22 @@ type LookupTopologyCustomControlFeatureResult struct {
 	// Sequence list
 	Sequences []GetTopologyCustomControlFeatureSequence `pulumi:"sequences"`
 	// Inbound network hierarchy UUIDs
-	TargetInboundHierarchyUuids []string                                             `pulumi:"targetInboundHierarchyUuids"`
-	TargetInboundRegions        []GetTopologyCustomControlFeatureTargetInboundRegion `pulumi:"targetInboundRegions"`
-	TargetInboundSites          []string                                             `pulumi:"targetInboundSites"`
-	TargetLevel                 string                                               `pulumi:"targetLevel"`
+	TargetInboundHierarchyUuids []string `pulumi:"targetInboundHierarchyUuids"`
+	// Inbound regions list
+	TargetInboundRegions []GetTopologyCustomControlFeatureTargetInboundRegion `pulumi:"targetInboundRegions"`
+	// Inbound site list
+	TargetInboundSites []string `pulumi:"targetInboundSites"`
+	TargetLevel        string   `pulumi:"targetLevel"`
 	// Outbound network hierarchy UUIDs
-	TargetOutboundHierarchyUuids []string                                              `pulumi:"targetOutboundHierarchyUuids"`
-	TargetOutboundRegions        []GetTopologyCustomControlFeatureTargetOutboundRegion `pulumi:"targetOutboundRegions"`
-	TargetOutboundSites          []string                                              `pulumi:"targetOutboundSites"`
-	TargetRole                   string                                                `pulumi:"targetRole"`
-	TargetVpns                   []string                                              `pulumi:"targetVpns"`
+	TargetOutboundHierarchyUuids []string `pulumi:"targetOutboundHierarchyUuids"`
+	// Outbound regions list
+	TargetOutboundRegions []GetTopologyCustomControlFeatureTargetOutboundRegion `pulumi:"targetOutboundRegions"`
+	// Outbound site list
+	TargetOutboundSites []string `pulumi:"targetOutboundSites"`
+	// Target role
+	TargetRole string `pulumi:"targetRole"`
+	// Target VPN list
+	TargetVpns []string `pulumi:"targetVpns"`
 	// The version of the Feature
 	Version int `pulumi:"version"`
 }
@@ -155,12 +161,14 @@ func (o LookupTopologyCustomControlFeatureResultOutput) TargetInboundHierarchyUu
 	return o.ApplyT(func(v LookupTopologyCustomControlFeatureResult) []string { return v.TargetInboundHierarchyUuids }).(pulumi.StringArrayOutput)
 }
 
+// Inbound regions list
 func (o LookupTopologyCustomControlFeatureResultOutput) TargetInboundRegions() GetTopologyCustomControlFeatureTargetInboundRegionArrayOutput {
 	return o.ApplyT(func(v LookupTopologyCustomControlFeatureResult) []GetTopologyCustomControlFeatureTargetInboundRegion {
 		return v.TargetInboundRegions
 	}).(GetTopologyCustomControlFeatureTargetInboundRegionArrayOutput)
 }
 
+// Inbound site list
 func (o LookupTopologyCustomControlFeatureResultOutput) TargetInboundSites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupTopologyCustomControlFeatureResult) []string { return v.TargetInboundSites }).(pulumi.StringArrayOutput)
 }
@@ -174,20 +182,24 @@ func (o LookupTopologyCustomControlFeatureResultOutput) TargetOutboundHierarchyU
 	return o.ApplyT(func(v LookupTopologyCustomControlFeatureResult) []string { return v.TargetOutboundHierarchyUuids }).(pulumi.StringArrayOutput)
 }
 
+// Outbound regions list
 func (o LookupTopologyCustomControlFeatureResultOutput) TargetOutboundRegions() GetTopologyCustomControlFeatureTargetOutboundRegionArrayOutput {
 	return o.ApplyT(func(v LookupTopologyCustomControlFeatureResult) []GetTopologyCustomControlFeatureTargetOutboundRegion {
 		return v.TargetOutboundRegions
 	}).(GetTopologyCustomControlFeatureTargetOutboundRegionArrayOutput)
 }
 
+// Outbound site list
 func (o LookupTopologyCustomControlFeatureResultOutput) TargetOutboundSites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupTopologyCustomControlFeatureResult) []string { return v.TargetOutboundSites }).(pulumi.StringArrayOutput)
 }
 
+// Target role
 func (o LookupTopologyCustomControlFeatureResultOutput) TargetRole() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTopologyCustomControlFeatureResult) string { return v.TargetRole }).(pulumi.StringOutput)
 }
 
+// Target VPN list
 func (o LookupTopologyCustomControlFeatureResultOutput) TargetVpns() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupTopologyCustomControlFeatureResult) []string { return v.TargetVpns }).(pulumi.StringArrayOutput)
 }

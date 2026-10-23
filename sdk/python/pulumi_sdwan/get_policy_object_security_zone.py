@@ -58,6 +58,9 @@ class GetPolicyObjectSecurityZoneResult:
     @_builtins.property
     @pulumi.getter
     def entries(self) -> Sequence['outputs.GetPolicyObjectSecurityZoneEntryResult']:
+        """
+        List of entries
+        """
         return pulumi.get(self, "entries")
 
     @_builtins.property

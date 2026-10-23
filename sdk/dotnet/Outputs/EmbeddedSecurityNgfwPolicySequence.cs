@@ -22,8 +22,22 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? BaseAction;
         public readonly bool? DisableSequence;
+        /// <summary>
+        /// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        public readonly bool? IsRuleSet;
         public readonly ImmutableArray<Outputs.EmbeddedSecurityNgfwPolicySequenceMatchEntry> MatchEntries;
+        /// <summary>
+        /// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        /// </summary>
+        public readonly string? SequenceComment;
         public readonly string? SequenceId;
+        /// <summary>
+        /// IP address family the sequence matches on, `Ipv4` sequences only accept the IPv4 match attributes and `Ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+        ///   - Choices: `Ipv4`, `Ipv6`
+        ///   - Default value: `Ipv4`
+        /// </summary>
+        public readonly string? SequenceIpType;
         public readonly string? SequenceName;
         public readonly string? SequenceType;
 
@@ -35,9 +49,15 @@ namespace Pulumi.Sdwan.Outputs
 
             bool? disableSequence,
 
+            bool? isRuleSet,
+
             ImmutableArray<Outputs.EmbeddedSecurityNgfwPolicySequenceMatchEntry> matchEntries,
 
+            string? sequenceComment,
+
             string? sequenceId,
+
+            string? sequenceIpType,
 
             string? sequenceName,
 
@@ -46,8 +66,11 @@ namespace Pulumi.Sdwan.Outputs
             Actions = actions;
             BaseAction = baseAction;
             DisableSequence = disableSequence;
+            IsRuleSet = isRuleSet;
             MatchEntries = matchEntries;
+            SequenceComment = sequenceComment;
             SequenceId = sequenceId;
+            SequenceIpType = sequenceIpType;
             SequenceName = sequenceName;
             SequenceType = sequenceType;
         }

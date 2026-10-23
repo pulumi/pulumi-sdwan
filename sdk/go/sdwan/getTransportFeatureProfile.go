@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetTransportFeatureProfile(ctx, &sdwan.LookupTransportFeatureProfileArgs{
-//				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id: pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //			}, nil)
 //			if err != nil {
 //				return err
@@ -51,7 +51,9 @@ func LookupTransportFeatureProfile(ctx *pulumi.Context, args *LookupTransportFea
 // A collection of arguments for invoking getTransportFeatureProfile.
 type LookupTransportFeatureProfileArgs struct {
 	// The id of the object
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the transport feature profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getTransportFeatureProfile.
@@ -72,7 +74,9 @@ func LookupTransportFeatureProfileOutput(ctx *pulumi.Context, args LookupTranspo
 // A collection of arguments for invoking getTransportFeatureProfile.
 type LookupTransportFeatureProfileOutputArgs struct {
 	// The id of the object
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the transport feature profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupTransportFeatureProfileOutputArgs) ElementType() reflect.Type {

@@ -93,7 +93,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? DisplayTimeUnitVariable { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `EnforceBandwidthControl` equal to `Override`
+        /// Download Bandwidth in Mbps, Attribute conditional on `EnforceBandwidthControl` equal to `Override`
         ///   - Range: `0.1`-`99999`
         /// </summary>
         [Input("dnBandwidth")]
@@ -148,6 +148,10 @@ namespace Pulumi.Sdwan.Inputs
 
         [Input("internalIps")]
         private InputList<Inputs.SseZscalerFeatureSubLocationInternalIpArgs>? _internalIps;
+
+        /// <summary>
+        /// Internal Ip address
+        /// </summary>
         public InputList<Inputs.SseZscalerFeatureSubLocationInternalIpArgs> InternalIps
         {
             get => _internalIps ?? (_internalIps = new InputList<Inputs.SseZscalerFeatureSubLocationInternalIpArgs>());
@@ -167,6 +171,9 @@ namespace Pulumi.Sdwan.Inputs
         [Input("ipEnforcedForKnownBrowsersVariable")]
         public Input<string>? IpEnforcedForKnownBrowsersVariable { get; set; }
 
+        /// <summary>
+        /// Sub-location name
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
@@ -225,6 +232,10 @@ namespace Pulumi.Sdwan.Inputs
 
         [Input("serviceVpns")]
         private InputList<string>? _serviceVpns;
+
+        /// <summary>
+        /// Sub-location Service VPN
+        /// </summary>
         public InputList<string> ServiceVpns
         {
             get => _serviceVpns ?? (_serviceVpns = new InputList<string>());
@@ -245,7 +256,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? SurrogateIpVariable { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `EnforceBandwidthControl` equal to `Override`
+        /// Upload Bandwidth in Mbps, Attribute conditional on `EnforceBandwidthControl` equal to `Override`
         ///   - Range: `0.1`-`99999`
         /// </summary>
         [Input("upBandwidth")]

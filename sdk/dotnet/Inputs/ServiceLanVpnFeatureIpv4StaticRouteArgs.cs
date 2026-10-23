@@ -15,6 +15,7 @@ namespace Pulumi.Sdwan.Inputs
         /// <summary>
         /// Gateway distance, Attribute conditional on `Gateway` equal to `Null0`
         ///   - Range: `1`-`255`
+        ///   - Default value: `1`
         /// </summary>
         [Input("administrativeDistance")]
         public Input<int>? AdministrativeDistance { get; set; }

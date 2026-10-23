@@ -148,6 +148,9 @@ namespace Pulumi.Sdwan
         /// The description of the Policy_object
         /// </summary>
         public readonly string Description;
+        /// <summary>
+        /// List of entries
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetPolicyObjectSecurityZoneEntryResult> Entries;
         /// <summary>
         /// Feature Profile ID

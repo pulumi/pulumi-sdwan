@@ -29,6 +29,10 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? NextHopLoose;
         public readonly string? PolicerId;
         public readonly string? PreferredColorGroupId;
+        /// <summary>
+        /// Restrict traffic to the preferred color group, requires `PreferredColorGroupId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        public readonly bool? PreferredColorGroupRestrict;
         public readonly bool? PreferredRemoteColorRestrict;
         public readonly ImmutableArray<string> PreferredRemoteColors;
         public readonly bool? ServiceChainFallbackToRouting;
@@ -99,6 +103,8 @@ namespace Pulumi.Sdwan.Outputs
 
             string? preferredColorGroupId,
 
+            bool? preferredColorGroupRestrict,
+
             bool? preferredRemoteColorRestrict,
 
             ImmutableArray<string> preferredRemoteColors,
@@ -155,6 +161,7 @@ namespace Pulumi.Sdwan.Outputs
             NextHopLoose = nextHopLoose;
             PolicerId = policerId;
             PreferredColorGroupId = preferredColorGroupId;
+            PreferredColorGroupRestrict = preferredColorGroupRestrict;
             PreferredRemoteColorRestrict = preferredRemoteColorRestrict;
             PreferredRemoteColors = preferredRemoteColors;
             ServiceChainFallbackToRouting = serviceChainFallbackToRouting;

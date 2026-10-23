@@ -18,6 +18,10 @@ public final class GetPolicyObjectSecurityZoneResult {
      * 
      */
     private String description;
+    /**
+     * @return List of entries
+     * 
+     */
     private List<GetPolicyObjectSecurityZoneEntry> entries;
     /**
      * @return Feature Profile ID
@@ -48,6 +52,10 @@ public final class GetPolicyObjectSecurityZoneResult {
     public String description() {
         return this.description;
     }
+    /**
+     * @return List of entries
+     * 
+     */
     public List<GetPolicyObjectSecurityZoneEntry> entries() {
         return this.entries;
     }

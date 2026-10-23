@@ -23,6 +23,11 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
     private Boolean nextHopLoose;
     private String policerId;
     private String preferredColorGroupId;
+    /**
+     * @return Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set
+     * 
+     */
+    private Boolean preferredColorGroupRestrict;
     private Boolean preferredRemoteColorRestrict;
     private List<String> preferredRemoteColors;
     private Boolean serviceChainFallbackToRouting;
@@ -77,6 +82,13 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
     }
     public String preferredColorGroupId() {
         return this.preferredColorGroupId;
+    }
+    /**
+     * @return Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set
+     * 
+     */
+    public Boolean preferredColorGroupRestrict() {
+        return this.preferredColorGroupRestrict;
     }
     public Boolean preferredRemoteColorRestrict() {
         return this.preferredRemoteColorRestrict;
@@ -167,6 +179,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
         private Boolean nextHopLoose;
         private String policerId;
         private String preferredColorGroupId;
+        private Boolean preferredColorGroupRestrict;
         private Boolean preferredRemoteColorRestrict;
         private List<String> preferredRemoteColors;
         private Boolean serviceChainFallbackToRouting;
@@ -203,6 +216,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
     	      this.nextHopLoose = defaults.nextHopLoose;
     	      this.policerId = defaults.policerId;
     	      this.preferredColorGroupId = defaults.preferredColorGroupId;
+    	      this.preferredColorGroupRestrict = defaults.preferredColorGroupRestrict;
     	      this.preferredRemoteColorRestrict = defaults.preferredRemoteColorRestrict;
     	      this.preferredRemoteColors = defaults.preferredRemoteColors;
     	      this.serviceChainFallbackToRouting = defaults.serviceChainFallbackToRouting;
@@ -309,6 +323,14 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
               throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter", "preferredColorGroupId");
             }
             this.preferredColorGroupId = preferredColorGroupId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder preferredColorGroupRestrict(Boolean preferredColorGroupRestrict) {
+            if (preferredColorGroupRestrict == null) {
+              throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter", "preferredColorGroupRestrict");
+            }
+            this.preferredColorGroupRestrict = preferredColorGroupRestrict;
             return this;
         }
         @CustomType.Setter
@@ -519,6 +541,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
             _resultValue.nextHopLoose = nextHopLoose;
             _resultValue.policerId = policerId;
             _resultValue.preferredColorGroupId = preferredColorGroupId;
+            _resultValue.preferredColorGroupRestrict = preferredColorGroupRestrict;
             _resultValue.preferredRemoteColorRestrict = preferredRemoteColorRestrict;
             _resultValue.preferredRemoteColors = preferredRemoteColors;
             _resultValue.serviceChainFallbackToRouting = serviceChainFallbackToRouting;

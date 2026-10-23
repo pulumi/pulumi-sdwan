@@ -78,6 +78,8 @@ type LookupPolicyObjectUnifiedIntrusionPreventionResult struct {
 	Name string `pulumi:"name"`
 	// Can be one of the enum value
 	SignatureSet string `pulumi:"signatureSet"`
+	// Reference to a user edited signature set parcel
+	SignatureSetId string `pulumi:"signatureSetId"`
 	// The version of the Policy_object
 	Version int `pulumi:"version"`
 }
@@ -158,6 +160,11 @@ func (o LookupPolicyObjectUnifiedIntrusionPreventionResultOutput) Name() pulumi.
 // Can be one of the enum value
 func (o LookupPolicyObjectUnifiedIntrusionPreventionResultOutput) SignatureSet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPolicyObjectUnifiedIntrusionPreventionResult) string { return v.SignatureSet }).(pulumi.StringOutput)
+}
+
+// Reference to a user edited signature set parcel
+func (o LookupPolicyObjectUnifiedIntrusionPreventionResultOutput) SignatureSetId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupPolicyObjectUnifiedIntrusionPreventionResult) string { return v.SignatureSetId }).(pulumi.StringOutput)
 }
 
 // The version of the Policy_object

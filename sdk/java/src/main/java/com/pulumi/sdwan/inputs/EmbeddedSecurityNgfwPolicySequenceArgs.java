@@ -56,6 +56,21 @@ public final class EmbeddedSecurityNgfwPolicySequenceArgs extends com.pulumi.res
         return Optional.ofNullable(this.disableSequence);
     }
 
+    /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="isRuleSet")
+    private @Nullable Output<Boolean> isRuleSet;
+
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<Boolean>> isRuleSet() {
+        return Optional.ofNullable(this.isRuleSet);
+    }
+
     @Import(name="matchEntries")
     private @Nullable Output<List<EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs>> matchEntries;
 
@@ -63,11 +78,45 @@ public final class EmbeddedSecurityNgfwPolicySequenceArgs extends com.pulumi.res
         return Optional.ofNullable(this.matchEntries);
     }
 
+    /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="sequenceComment")
+    private @Nullable Output<String> sequenceComment;
+
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<String>> sequenceComment() {
+        return Optional.ofNullable(this.sequenceComment);
+    }
+
     @Import(name="sequenceId")
     private @Nullable Output<String> sequenceId;
 
     public Optional<Output<String>> sequenceId() {
         return Optional.ofNullable(this.sequenceId);
+    }
+
+    /**
+     * IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     *   - Choices: `ipv4`, `ipv6`
+     *   - Default value: `ipv4`
+     * 
+     */
+    @Import(name="sequenceIpType")
+    private @Nullable Output<String> sequenceIpType;
+
+    /**
+     * @return IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     *   - Choices: `ipv4`, `ipv6`
+     *   - Default value: `ipv4`
+     * 
+     */
+    public Optional<Output<String>> sequenceIpType() {
+        return Optional.ofNullable(this.sequenceIpType);
     }
 
     @Import(name="sequenceName")
@@ -90,8 +139,11 @@ public final class EmbeddedSecurityNgfwPolicySequenceArgs extends com.pulumi.res
         this.actions = $.actions;
         this.baseAction = $.baseAction;
         this.disableSequence = $.disableSequence;
+        this.isRuleSet = $.isRuleSet;
         this.matchEntries = $.matchEntries;
+        this.sequenceComment = $.sequenceComment;
         this.sequenceId = $.sequenceId;
+        this.sequenceIpType = $.sequenceIpType;
         this.sequenceName = $.sequenceName;
         this.sequenceType = $.sequenceType;
     }
@@ -175,6 +227,27 @@ public final class EmbeddedSecurityNgfwPolicySequenceArgs extends com.pulumi.res
             return disableSequence(Output.of(disableSequence));
         }
 
+        /**
+         * @param isRuleSet , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isRuleSet(@Nullable Output<Boolean> isRuleSet) {
+            $.isRuleSet = isRuleSet;
+            return this;
+        }
+
+        /**
+         * @param isRuleSet , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isRuleSet(Boolean isRuleSet) {
+            return isRuleSet(Output.of(isRuleSet));
+        }
+
         public Builder matchEntries(@Nullable Output<List<EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs>> matchEntries) {
             $.matchEntries = matchEntries;
             return this;
@@ -188,6 +261,27 @@ public final class EmbeddedSecurityNgfwPolicySequenceArgs extends com.pulumi.res
             return matchEntries(List.of(matchEntries));
         }
 
+        /**
+         * @param sequenceComment , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sequenceComment(@Nullable Output<String> sequenceComment) {
+            $.sequenceComment = sequenceComment;
+            return this;
+        }
+
+        /**
+         * @param sequenceComment , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sequenceComment(String sequenceComment) {
+            return sequenceComment(Output.of(sequenceComment));
+        }
+
         public Builder sequenceId(@Nullable Output<String> sequenceId) {
             $.sequenceId = sequenceId;
             return this;
@@ -195,6 +289,31 @@ public final class EmbeddedSecurityNgfwPolicySequenceArgs extends com.pulumi.res
 
         public Builder sequenceId(String sequenceId) {
             return sequenceId(Output.of(sequenceId));
+        }
+
+        /**
+         * @param sequenceIpType IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         *   - Choices: `ipv4`, `ipv6`
+         *   - Default value: `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sequenceIpType(@Nullable Output<String> sequenceIpType) {
+            $.sequenceIpType = sequenceIpType;
+            return this;
+        }
+
+        /**
+         * @param sequenceIpType IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         *   - Choices: `ipv4`, `ipv6`
+         *   - Default value: `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sequenceIpType(String sequenceIpType) {
+            return sequenceIpType(Output.of(sequenceIpType));
         }
 
         public Builder sequenceName(@Nullable Output<String> sequenceName) {

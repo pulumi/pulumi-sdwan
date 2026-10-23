@@ -92,6 +92,9 @@ export interface GetSseZscalerFeatureResult {
      * Variable name
      */
     readonly cautionEnabledVariable: string;
+    /**
+     * Country
+     */
     readonly country: boolean;
     /**
      * Variable name
@@ -109,11 +112,17 @@ export interface GetSseZscalerFeatureResult {
      * Variable name
      */
     readonly displayTimeUnitVariable: string;
+    /**
+     * Download Bandwidth in Mbps
+     */
     readonly dnBandwidth: number;
     /**
      * Variable name
      */
     readonly dnBandwidthVariable: string;
+    /**
+     * Enforce Bandwidth Control
+     */
     readonly enforceBandwidthControl: boolean;
     /**
      * Variable name
@@ -244,6 +253,9 @@ export interface GetSseZscalerFeatureResult {
      * Tracker configuration
      */
     readonly trackers: outputs.GetSseZscalerFeatureTracker[];
+    /**
+     * Upload Bandwidth in Mbps
+     */
     readonly upBandwidth: number;
     /**
      * Variable name

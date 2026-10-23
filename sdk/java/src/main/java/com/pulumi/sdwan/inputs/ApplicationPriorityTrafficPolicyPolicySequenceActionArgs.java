@@ -42,14 +42,14 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
     }
 
     /**
-     * Backup SLA perferred color
+     * Backup SLA preferred color
      * 
      */
     @Import(name="backupSlaPreferredColors")
     private @Nullable Output<List<String>> backupSlaPreferredColors;
 
     /**
-     * @return Backup SLA perferred color
+     * @return Backup SLA preferred color
      * 
      */
     public Optional<Output<List<String>>> backupSlaPreferredColors() {
@@ -327,7 +327,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
         }
 
         /**
-         * @param backupSlaPreferredColors Backup SLA perferred color
+         * @param backupSlaPreferredColors Backup SLA preferred color
          * 
          * @return builder
          * 
@@ -338,7 +338,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
         }
 
         /**
-         * @param backupSlaPreferredColors Backup SLA perferred color
+         * @param backupSlaPreferredColors Backup SLA preferred color
          * 
          * @return builder
          * 
@@ -348,7 +348,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
         }
 
         /**
-         * @param backupSlaPreferredColors Backup SLA perferred color
+         * @param backupSlaPreferredColors Backup SLA preferred color
          * 
          * @return builder
          * 

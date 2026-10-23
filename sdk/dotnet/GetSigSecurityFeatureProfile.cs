@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Task<GetSigSecurityFeatureProfileResult> InvokeAsync(GetSigSecurityFeatureProfileArgs args, InvokeOptions? options = null)
+        public static Task<GetSigSecurityFeatureProfileResult> InvokeAsync(GetSigSecurityFeatureProfileArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetSigSecurityFeatureProfileResult>("sdwan:index/getSigSecurityFeatureProfile:getSigSecurityFeatureProfile", args ?? new GetSigSecurityFeatureProfileArgs(), options.WithDefaults());
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Output<GetSigSecurityFeatureProfileResult> Invoke(GetSigSecurityFeatureProfileInvokeArgs args, InvokeOptions? options = null)
+        public static Output<GetSigSecurityFeatureProfileResult> Invoke(GetSigSecurityFeatureProfileInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSigSecurityFeatureProfileResult>("sdwan:index/getSigSecurityFeatureProfile:getSigSecurityFeatureProfile", args ?? new GetSigSecurityFeatureProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
@@ -90,8 +90,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the sig security feature profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetSigSecurityFeatureProfileArgs()
         {
@@ -104,8 +110,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the sig security feature profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetSigSecurityFeatureProfileInvokeArgs()
         {

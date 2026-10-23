@@ -56,6 +56,9 @@ export interface GetPolicyObjectSecurityZoneResult {
      * The description of the Policy_object
      */
     readonly description: string;
+    /**
+     * List of entries
+     */
     readonly entries: outputs.GetPolicyObjectSecurityZoneEntry[];
     /**
      * Feature Profile ID

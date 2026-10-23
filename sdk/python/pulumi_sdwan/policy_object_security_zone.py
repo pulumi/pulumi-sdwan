@@ -28,6 +28,7 @@ class PolicyObjectSecurityZoneArgs:
         """
         The set of arguments for constructing a PolicyObjectSecurityZone resource.
 
+        :param pulumi.Input[Sequence[pulumi.Input['PolicyObjectSecurityZoneEntryArgs']]] entries: List of entries
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
@@ -42,6 +43,9 @@ class PolicyObjectSecurityZoneArgs:
     @_builtins.property
     @pulumi.getter
     def entries(self) -> pulumi.Input[Sequence[pulumi.Input['PolicyObjectSecurityZoneEntryArgs']]]:
+        """
+        List of entries
+        """
         return pulumi.get(self, "entries")
 
     @entries.setter
@@ -97,6 +101,7 @@ class _PolicyObjectSecurityZoneState:
         Input properties used for looking up and filtering PolicyObjectSecurityZone resources.
 
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
+        :param pulumi.Input[Sequence[pulumi.Input['PolicyObjectSecurityZoneEntryArgs']]] entries: List of entries
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         :param pulumi.Input[_builtins.int] version: The version of the Policy_object
@@ -127,6 +132,9 @@ class _PolicyObjectSecurityZoneState:
     @_builtins.property
     @pulumi.getter
     def entries(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['PolicyObjectSecurityZoneEntryArgs']]]]:
+        """
+        List of entries
+        """
         return pulumi.get(self, "entries")
 
     @entries.setter
@@ -214,6 +222,7 @@ class PolicyObjectSecurityZone(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
+        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectSecurityZoneEntryArgs', 'PolicyObjectSecurityZoneEntryArgsDict', 'outputs.PolicyObjectSecurityZoneEntry']]]] entries: List of entries
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         """
@@ -313,6 +322,7 @@ class PolicyObjectSecurityZone(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
+        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectSecurityZoneEntryArgs', 'PolicyObjectSecurityZoneEntryArgsDict', 'outputs.PolicyObjectSecurityZoneEntry']]]] entries: List of entries
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         :param pulumi.Input[_builtins.int] version: The version of the Policy_object
@@ -339,6 +349,9 @@ class PolicyObjectSecurityZone(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def entries(self) -> pulumi.Output[Sequence['outputs.PolicyObjectSecurityZoneEntry']]:
+        """
+        List of entries
+        """
         return pulumi.get(self, "entries")
 
     @_builtins.property

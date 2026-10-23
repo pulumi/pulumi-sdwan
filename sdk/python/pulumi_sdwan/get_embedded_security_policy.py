@@ -27,7 +27,7 @@ class GetEmbeddedSecurityPolicyResult:
     """
     A collection of values returned by getEmbeddedSecurityPolicy.
     """
-    def __init__(__self__, assemblies=None, audit_trail=None, description=None, download_url_database_on_device=None, download_url_database_on_device_variable=None, failure_mode=None, feature_profile_id=None, icmp_unreachable_allow=None, id=None, max_incomplete_icmp_limit=None, max_incomplete_tcp_limit=None, max_incomplete_udp_limit=None, name=None, nat=None, nat_variable=None, resource_profile=None, resource_profile_variable=None, session_reclassify_allow=None, tcp_syn_flood_limit=None, unified_logging=None, version=None):
+    def __init__(__self__, assemblies=None, audit_trail=None, description=None, download_url_database_on_device=None, download_url_database_on_device_variable=None, failure_mode=None, feature_profile_id=None, high_speed_loggings=None, icmp_unreachable_allow=None, id=None, max_incomplete_icmp_limit=None, max_incomplete_tcp_limit=None, max_incomplete_udp_limit=None, name=None, nat=None, nat_variable=None, optimized=None, resource_profile=None, resource_profile_variable=None, session_reclassify_allow=None, syslog_server_source_interface=None, syslog_server_source_interface_variable=None, tcp_syn_flood_limit=None, unified_logging=None, version=None):
         if assemblies and not isinstance(assemblies, list):
             raise TypeError("Expected argument 'assemblies' to be a list")
         pulumi.set(__self__, "assemblies", assemblies)
@@ -49,6 +49,9 @@ class GetEmbeddedSecurityPolicyResult:
         if feature_profile_id and not isinstance(feature_profile_id, str):
             raise TypeError("Expected argument 'feature_profile_id' to be a str")
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        if high_speed_loggings and not isinstance(high_speed_loggings, list):
+            raise TypeError("Expected argument 'high_speed_loggings' to be a list")
+        pulumi.set(__self__, "high_speed_loggings", high_speed_loggings)
         if icmp_unreachable_allow and not isinstance(icmp_unreachable_allow, str):
             raise TypeError("Expected argument 'icmp_unreachable_allow' to be a str")
         pulumi.set(__self__, "icmp_unreachable_allow", icmp_unreachable_allow)
@@ -73,6 +76,9 @@ class GetEmbeddedSecurityPolicyResult:
         if nat_variable and not isinstance(nat_variable, str):
             raise TypeError("Expected argument 'nat_variable' to be a str")
         pulumi.set(__self__, "nat_variable", nat_variable)
+        if optimized and not isinstance(optimized, bool):
+            raise TypeError("Expected argument 'optimized' to be a bool")
+        pulumi.set(__self__, "optimized", optimized)
         if resource_profile and not isinstance(resource_profile, str):
             raise TypeError("Expected argument 'resource_profile' to be a str")
         pulumi.set(__self__, "resource_profile", resource_profile)
@@ -82,6 +88,12 @@ class GetEmbeddedSecurityPolicyResult:
         if session_reclassify_allow and not isinstance(session_reclassify_allow, str):
             raise TypeError("Expected argument 'session_reclassify_allow' to be a str")
         pulumi.set(__self__, "session_reclassify_allow", session_reclassify_allow)
+        if syslog_server_source_interface and not isinstance(syslog_server_source_interface, str):
+            raise TypeError("Expected argument 'syslog_server_source_interface' to be a str")
+        pulumi.set(__self__, "syslog_server_source_interface", syslog_server_source_interface)
+        if syslog_server_source_interface_variable and not isinstance(syslog_server_source_interface_variable, str):
+            raise TypeError("Expected argument 'syslog_server_source_interface_variable' to be a str")
+        pulumi.set(__self__, "syslog_server_source_interface_variable", syslog_server_source_interface_variable)
         if tcp_syn_flood_limit and not isinstance(tcp_syn_flood_limit, str):
             raise TypeError("Expected argument 'tcp_syn_flood_limit' to be a str")
         pulumi.set(__self__, "tcp_syn_flood_limit", tcp_syn_flood_limit)
@@ -140,6 +152,14 @@ class GetEmbeddedSecurityPolicyResult:
         return pulumi.get(self, "feature_profile_id")
 
     @_builtins.property
+    @pulumi.getter(name="highSpeedLoggings")
+    def high_speed_loggings(self) -> Sequence['outputs.GetEmbeddedSecurityPolicyHighSpeedLoggingResult']:
+        """
+        High Speed Logging
+        """
+        return pulumi.get(self, "high_speed_loggings")
+
+    @_builtins.property
     @pulumi.getter(name="icmpUnreachableAllow")
     def icmp_unreachable_allow(self) -> _builtins.str:
         """
@@ -192,6 +212,11 @@ class GetEmbeddedSecurityPolicyResult:
         return pulumi.get(self, "nat_variable")
 
     @_builtins.property
+    @pulumi.getter
+    def optimized(self) -> _builtins.bool:
+        return pulumi.get(self, "optimized")
+
+    @_builtins.property
     @pulumi.getter(name="resourceProfile")
     def resource_profile(self) -> _builtins.str:
         return pulumi.get(self, "resource_profile")
@@ -211,6 +236,22 @@ class GetEmbeddedSecurityPolicyResult:
         Setting can be string 'on' or missing for off
         """
         return pulumi.get(self, "session_reclassify_allow")
+
+    @_builtins.property
+    @pulumi.getter(name="syslogServerSourceInterface")
+    def syslog_server_source_interface(self) -> _builtins.str:
+        """
+        InterfaceName
+        """
+        return pulumi.get(self, "syslog_server_source_interface")
+
+    @_builtins.property
+    @pulumi.getter(name="syslogServerSourceInterfaceVariable")
+    def syslog_server_source_interface_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "syslog_server_source_interface_variable")
 
     @_builtins.property
     @pulumi.getter(name="tcpSynFloodLimit")
@@ -247,6 +288,7 @@ class AwaitableGetEmbeddedSecurityPolicyResult(GetEmbeddedSecurityPolicyResult):
             download_url_database_on_device_variable=self.download_url_database_on_device_variable,
             failure_mode=self.failure_mode,
             feature_profile_id=self.feature_profile_id,
+            high_speed_loggings=self.high_speed_loggings,
             icmp_unreachable_allow=self.icmp_unreachable_allow,
             id=self.id,
             max_incomplete_icmp_limit=self.max_incomplete_icmp_limit,
@@ -255,9 +297,12 @@ class AwaitableGetEmbeddedSecurityPolicyResult(GetEmbeddedSecurityPolicyResult):
             name=self.name,
             nat=self.nat,
             nat_variable=self.nat_variable,
+            optimized=self.optimized,
             resource_profile=self.resource_profile,
             resource_profile_variable=self.resource_profile_variable,
             session_reclassify_allow=self.session_reclassify_allow,
+            syslog_server_source_interface=self.syslog_server_source_interface,
+            syslog_server_source_interface_variable=self.syslog_server_source_interface_variable,
             tcp_syn_flood_limit=self.tcp_syn_flood_limit,
             unified_logging=self.unified_logging,
             version=self.version)
@@ -300,6 +345,7 @@ def get_embedded_security_policy(feature_profile_id: Optional[_builtins.str] = N
         download_url_database_on_device_variable=pulumi.get(__ret__, 'download_url_database_on_device_variable'),
         failure_mode=pulumi.get(__ret__, 'failure_mode'),
         feature_profile_id=pulumi.get(__ret__, 'feature_profile_id'),
+        high_speed_loggings=pulumi.get(__ret__, 'high_speed_loggings'),
         icmp_unreachable_allow=pulumi.get(__ret__, 'icmp_unreachable_allow'),
         id=pulumi.get(__ret__, 'id'),
         max_incomplete_icmp_limit=pulumi.get(__ret__, 'max_incomplete_icmp_limit'),
@@ -308,9 +354,12 @@ def get_embedded_security_policy(feature_profile_id: Optional[_builtins.str] = N
         name=pulumi.get(__ret__, 'name'),
         nat=pulumi.get(__ret__, 'nat'),
         nat_variable=pulumi.get(__ret__, 'nat_variable'),
+        optimized=pulumi.get(__ret__, 'optimized'),
         resource_profile=pulumi.get(__ret__, 'resource_profile'),
         resource_profile_variable=pulumi.get(__ret__, 'resource_profile_variable'),
         session_reclassify_allow=pulumi.get(__ret__, 'session_reclassify_allow'),
+        syslog_server_source_interface=pulumi.get(__ret__, 'syslog_server_source_interface'),
+        syslog_server_source_interface_variable=pulumi.get(__ret__, 'syslog_server_source_interface_variable'),
         tcp_syn_flood_limit=pulumi.get(__ret__, 'tcp_syn_flood_limit'),
         unified_logging=pulumi.get(__ret__, 'unified_logging'),
         version=pulumi.get(__ret__, 'version'))
@@ -350,6 +399,7 @@ def get_embedded_security_policy_output(feature_profile_id: pulumi.Input[Optiona
         download_url_database_on_device_variable=pulumi.get(__response__, 'download_url_database_on_device_variable'),
         failure_mode=pulumi.get(__response__, 'failure_mode'),
         feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        high_speed_loggings=pulumi.get(__response__, 'high_speed_loggings'),
         icmp_unreachable_allow=pulumi.get(__response__, 'icmp_unreachable_allow'),
         id=pulumi.get(__response__, 'id'),
         max_incomplete_icmp_limit=pulumi.get(__response__, 'max_incomplete_icmp_limit'),
@@ -358,9 +408,12 @@ def get_embedded_security_policy_output(feature_profile_id: pulumi.Input[Optiona
         name=pulumi.get(__response__, 'name'),
         nat=pulumi.get(__response__, 'nat'),
         nat_variable=pulumi.get(__response__, 'nat_variable'),
+        optimized=pulumi.get(__response__, 'optimized'),
         resource_profile=pulumi.get(__response__, 'resource_profile'),
         resource_profile_variable=pulumi.get(__response__, 'resource_profile_variable'),
         session_reclassify_allow=pulumi.get(__response__, 'session_reclassify_allow'),
+        syslog_server_source_interface=pulumi.get(__response__, 'syslog_server_source_interface'),
+        syslog_server_source_interface_variable=pulumi.get(__response__, 'syslog_server_source_interface_variable'),
         tcp_syn_flood_limit=pulumi.get(__response__, 'tcp_syn_flood_limit'),
         unified_logging=pulumi.get(__response__, 'unified_logging'),
         version=pulumi.get(__response__, 'version')))

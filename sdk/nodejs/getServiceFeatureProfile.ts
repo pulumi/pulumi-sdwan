@@ -18,10 +18,12 @@ import * as utilities from "./utilities";
  * });
  * ```
  */
-export function getServiceFeatureProfile(args: GetServiceFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceFeatureProfileResult> {
+export function getServiceFeatureProfile(args?: GetServiceFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getServiceFeatureProfile:getServiceFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,7 +34,11 @@ export interface GetServiceFeatureProfileArgs {
     /**
      * The id of the object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the service feature profile
+     */
+    name?: string;
 }
 
 /**
@@ -66,10 +72,12 @@ export interface GetServiceFeatureProfileResult {
  * });
  * ```
  */
-export function getServiceFeatureProfileOutput(args: GetServiceFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceFeatureProfileResult> {
+export function getServiceFeatureProfileOutput(args?: GetServiceFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceFeatureProfile:getServiceFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -80,5 +88,9 @@ export interface GetServiceFeatureProfileOutputArgs {
     /**
      * The id of the object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the service feature profile
+     */
+    name?: pulumi.Input<string | undefined>;
 }

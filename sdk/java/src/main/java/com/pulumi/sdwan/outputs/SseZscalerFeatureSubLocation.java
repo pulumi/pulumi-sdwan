@@ -85,7 +85,7 @@ public final class SseZscalerFeatureSubLocation {
      */
     private @Nullable String displayTimeUnitVariable;
     /**
-     * @return , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     * @return Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -130,6 +130,10 @@ public final class SseZscalerFeatureSubLocation {
      * 
      */
     private @Nullable String idleTimeVariable;
+    /**
+     * @return Internal Ip address
+     * 
+     */
     private @Nullable List<SseZscalerFeatureSubLocationInternalIp> internalIps;
     /**
      * @return If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
@@ -142,6 +146,10 @@ public final class SseZscalerFeatureSubLocation {
      * 
      */
     private @Nullable String ipEnforcedForKnownBrowsersVariable;
+    /**
+     * @return Sub-location name
+     * 
+     */
     private @Nullable String name;
     /**
      * @return Variable name
@@ -188,6 +196,10 @@ public final class SseZscalerFeatureSubLocation {
      * 
      */
     private @Nullable String serviceVpnVariable;
+    /**
+     * @return Sub-location Service VPN
+     * 
+     */
     private @Nullable List<String> serviceVpns;
     /**
      * @return Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic., Attribute conditional on `authRequired` equal to `true`
@@ -201,7 +213,7 @@ public final class SseZscalerFeatureSubLocation {
      */
     private @Nullable String surrogateIpVariable;
     /**
-     * @return , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     * @return Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -306,7 +318,7 @@ public final class SseZscalerFeatureSubLocation {
         return Optional.ofNullable(this.displayTimeUnitVariable);
     }
     /**
-     * @return , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     * @return Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
      *   - Range: `0.1`-`99999`
      * 
      */
@@ -367,6 +379,10 @@ public final class SseZscalerFeatureSubLocation {
     public Optional<String> idleTimeVariable() {
         return Optional.ofNullable(this.idleTimeVariable);
     }
+    /**
+     * @return Internal Ip address
+     * 
+     */
     public List<SseZscalerFeatureSubLocationInternalIp> internalIps() {
         return this.internalIps == null ? List.of() : this.internalIps;
     }
@@ -385,6 +401,10 @@ public final class SseZscalerFeatureSubLocation {
     public Optional<String> ipEnforcedForKnownBrowsersVariable() {
         return Optional.ofNullable(this.ipEnforcedForKnownBrowsersVariable);
     }
+    /**
+     * @return Sub-location name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -449,6 +469,10 @@ public final class SseZscalerFeatureSubLocation {
     public Optional<String> serviceVpnVariable() {
         return Optional.ofNullable(this.serviceVpnVariable);
     }
+    /**
+     * @return Sub-location Service VPN
+     * 
+     */
     public List<String> serviceVpns() {
         return this.serviceVpns == null ? List.of() : this.serviceVpns;
     }
@@ -468,7 +492,7 @@ public final class SseZscalerFeatureSubLocation {
         return Optional.ofNullable(this.surrogateIpVariable);
     }
     /**
-     * @return , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     * @return Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
      *   - Range: `0.1`-`99999`
      * 
      */

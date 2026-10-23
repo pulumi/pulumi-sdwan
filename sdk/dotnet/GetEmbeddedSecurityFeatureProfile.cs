@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Task<GetEmbeddedSecurityFeatureProfileResult> InvokeAsync(GetEmbeddedSecurityFeatureProfileArgs args, InvokeOptions? options = null)
+        public static Task<GetEmbeddedSecurityFeatureProfileResult> InvokeAsync(GetEmbeddedSecurityFeatureProfileArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetEmbeddedSecurityFeatureProfileResult>("sdwan:index/getEmbeddedSecurityFeatureProfile:getEmbeddedSecurityFeatureProfile", args ?? new GetEmbeddedSecurityFeatureProfileArgs(), options.WithDefaults());
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Output<GetEmbeddedSecurityFeatureProfileResult> Invoke(GetEmbeddedSecurityFeatureProfileInvokeArgs args, InvokeOptions? options = null)
+        public static Output<GetEmbeddedSecurityFeatureProfileResult> Invoke(GetEmbeddedSecurityFeatureProfileInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetEmbeddedSecurityFeatureProfileResult>("sdwan:index/getEmbeddedSecurityFeatureProfile:getEmbeddedSecurityFeatureProfile", args ?? new GetEmbeddedSecurityFeatureProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
@@ -90,8 +90,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the embedded security feature profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetEmbeddedSecurityFeatureProfileArgs()
         {
@@ -104,8 +110,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the embedded security feature profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetEmbeddedSecurityFeatureProfileInvokeArgs()
         {

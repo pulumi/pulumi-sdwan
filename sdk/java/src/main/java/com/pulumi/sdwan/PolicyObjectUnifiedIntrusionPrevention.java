@@ -168,20 +168,34 @@ public class PolicyObjectUnifiedIntrusionPrevention extends com.pulumi.resources
         return this.name;
     }
     /**
-     * Can be one of the enum value
-     *   - Choices: `balanced`, `connectivity`, `security`
+     * Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+     *   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
      * 
      */
     @Export(name="signatureSet", refs={String.class}, tree="[0]")
-    private Output<String> signatureSet;
+    private Output</* @Nullable */ String> signatureSet;
 
     /**
-     * @return Can be one of the enum value
-     *   - Choices: `balanced`, `connectivity`, `security`
+     * @return Can be one of the enum value, Attribute conditional on `signatureSetId` not being set
+     *   - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
      * 
      */
-    public Output<String> signatureSet() {
-        return this.signatureSet;
+    public Output<Optional<String>> signatureSet() {
+        return Codegen.optional(this.signatureSet);
+    }
+    /**
+     * Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="signatureSetId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> signatureSetId;
+
+    /**
+     * @return Reference to a user edited signature set parcel, Attribute conditional on `signatureSet` not being set and SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> signatureSetId() {
+        return Codegen.optional(this.signatureSetId);
     }
     /**
      * The version of the Policy_object

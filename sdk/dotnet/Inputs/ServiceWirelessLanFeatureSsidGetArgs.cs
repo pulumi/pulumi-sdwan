@@ -118,7 +118,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Select security type
-        ///   - Choices: `Personal`, `Open`, `Enterprise`
+        ///   - Choices: `Enterprise`, `Personal`, `Open`
         /// </summary>
         [Input("securityType")]
         public Input<string>? SecurityType { get; set; }

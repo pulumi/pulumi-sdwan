@@ -16,6 +16,10 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<string> AppListIds;
         public readonly ImmutableArray<string> ApplicationFamilies;
         public readonly ImmutableArray<string> Applications;
+        /// <summary>
+        /// Only supported on sequences with `SequenceIpType` set to `Ipv6`
+        /// </summary>
+        public readonly ImmutableArray<string> DestinationDataIpv6PrefixListIds;
         public readonly ImmutableArray<string> DestinationDataPrefixListIds;
         public readonly ImmutableArray<string> DestinationDataPrefixes;
         /// <summary>
@@ -34,6 +38,15 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string DestinationGeoLocationsVariable;
+        /// <summary>
+        /// Only supported on sequences with `SequenceIpType` set to `Ipv6`
+        /// </summary>
+        public readonly ImmutableArray<string> DestinationIpv6DataPrefixes;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string DestinationIpv6DataPrefixesVariable;
+        public readonly ImmutableArray<string> DestinationObjectGroupListIds;
         public readonly ImmutableArray<string> DestinationPortListIds;
         public readonly ImmutableArray<string> DestinationPorts;
         /// <summary>
@@ -41,11 +54,22 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string DestinationPortsVariable;
         public readonly ImmutableArray<string> DestinationScalableGroupTagListIds;
+        /// <summary>
+        /// Deprecated, use `DestinationObjectGroupListIds` instead
+        /// </summary>
         public readonly ImmutableArray<string> DestinationSecurityGroupListIds;
         public readonly ImmutableArray<string> FlatAppListIds;
         public readonly ImmutableArray<string> ProtocolNameListIds;
         public readonly ImmutableArray<string> ProtocolNames;
         public readonly ImmutableArray<string> Protocols;
+        /// <summary>
+        /// Security rule set IDs, requires `IsRuleSet` set to `True` on the sequence
+        /// </summary>
+        public readonly ImmutableArray<string> RuleSetListIds;
+        /// <summary>
+        /// Only supported on sequences with `SequenceIpType` set to `Ipv6`
+        /// </summary>
+        public readonly ImmutableArray<string> SourceDataIpv6PrefixListIds;
         public readonly ImmutableArray<string> SourceDataPrefixListIds;
         public readonly ImmutableArray<string> SourceDataPrefixes;
         /// <summary>
@@ -61,6 +85,18 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<string> SourceIdentityListIds;
         public readonly ImmutableArray<string> SourceIdentityUsergroups;
         public readonly ImmutableArray<string> SourceIdentityUsers;
+        /// <summary>
+        /// Only supported on sequences with `SequenceIpType` set to `Ipv6`
+        /// </summary>
+        public readonly ImmutableArray<string> SourceIpv6DataPrefixes;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string SourceIpv6DataPrefixesVariable;
+        /// <summary>
+        /// Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012)
+        /// </summary>
+        public readonly ImmutableArray<string> SourceObjectGroupListIds;
         public readonly ImmutableArray<string> SourcePortListIds;
         public readonly ImmutableArray<string> SourcePorts;
         /// <summary>
@@ -68,6 +104,9 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string SourcePortsVariable;
         public readonly ImmutableArray<string> SourceScalableGroupTagListIds;
+        /// <summary>
+        /// Deprecated, use `SourceObjectGroupListIds` instead
+        /// </summary>
         public readonly ImmutableArray<string> SourceSecurityGroupListIds;
 
         [OutputConstructor]
@@ -77,6 +116,8 @@ namespace Pulumi.Sdwan.Outputs
             ImmutableArray<string> applicationFamilies,
 
             ImmutableArray<string> applications,
+
+            ImmutableArray<string> destinationDataIpv6PrefixListIds,
 
             ImmutableArray<string> destinationDataPrefixListIds,
 
@@ -96,6 +137,12 @@ namespace Pulumi.Sdwan.Outputs
 
             string destinationGeoLocationsVariable,
 
+            ImmutableArray<string> destinationIpv6DataPrefixes,
+
+            string destinationIpv6DataPrefixesVariable,
+
+            ImmutableArray<string> destinationObjectGroupListIds,
+
             ImmutableArray<string> destinationPortListIds,
 
             ImmutableArray<string> destinationPorts,
@@ -113,6 +160,10 @@ namespace Pulumi.Sdwan.Outputs
             ImmutableArray<string> protocolNames,
 
             ImmutableArray<string> protocols,
+
+            ImmutableArray<string> ruleSetListIds,
+
+            ImmutableArray<string> sourceDataIpv6PrefixListIds,
 
             ImmutableArray<string> sourceDataPrefixListIds,
 
@@ -132,6 +183,12 @@ namespace Pulumi.Sdwan.Outputs
 
             ImmutableArray<string> sourceIdentityUsers,
 
+            ImmutableArray<string> sourceIpv6DataPrefixes,
+
+            string sourceIpv6DataPrefixesVariable,
+
+            ImmutableArray<string> sourceObjectGroupListIds,
+
             ImmutableArray<string> sourcePortListIds,
 
             ImmutableArray<string> sourcePorts,
@@ -145,6 +202,7 @@ namespace Pulumi.Sdwan.Outputs
             AppListIds = appListIds;
             ApplicationFamilies = applicationFamilies;
             Applications = applications;
+            DestinationDataIpv6PrefixListIds = destinationDataIpv6PrefixListIds;
             DestinationDataPrefixListIds = destinationDataPrefixListIds;
             DestinationDataPrefixes = destinationDataPrefixes;
             DestinationDataPrefixesVariable = destinationDataPrefixesVariable;
@@ -154,6 +212,9 @@ namespace Pulumi.Sdwan.Outputs
             DestinationGeoLocationListIds = destinationGeoLocationListIds;
             DestinationGeoLocations = destinationGeoLocations;
             DestinationGeoLocationsVariable = destinationGeoLocationsVariable;
+            DestinationIpv6DataPrefixes = destinationIpv6DataPrefixes;
+            DestinationIpv6DataPrefixesVariable = destinationIpv6DataPrefixesVariable;
+            DestinationObjectGroupListIds = destinationObjectGroupListIds;
             DestinationPortListIds = destinationPortListIds;
             DestinationPorts = destinationPorts;
             DestinationPortsVariable = destinationPortsVariable;
@@ -163,6 +224,8 @@ namespace Pulumi.Sdwan.Outputs
             ProtocolNameListIds = protocolNameListIds;
             ProtocolNames = protocolNames;
             Protocols = protocols;
+            RuleSetListIds = ruleSetListIds;
+            SourceDataIpv6PrefixListIds = sourceDataIpv6PrefixListIds;
             SourceDataPrefixListIds = sourceDataPrefixListIds;
             SourceDataPrefixes = sourceDataPrefixes;
             SourceDataPrefixesVariable = sourceDataPrefixesVariable;
@@ -172,6 +235,9 @@ namespace Pulumi.Sdwan.Outputs
             SourceIdentityListIds = sourceIdentityListIds;
             SourceIdentityUsergroups = sourceIdentityUsergroups;
             SourceIdentityUsers = sourceIdentityUsers;
+            SourceIpv6DataPrefixes = sourceIpv6DataPrefixes;
+            SourceIpv6DataPrefixesVariable = sourceIpv6DataPrefixesVariable;
+            SourceObjectGroupListIds = sourceObjectGroupListIds;
             SourcePortListIds = sourcePortListIds;
             SourcePorts = sourcePorts;
             SourcePortsVariable = sourcePortsVariable;

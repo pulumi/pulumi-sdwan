@@ -1354,7 +1354,7 @@ type ApplicationPriorityTrafficPolicyPolicySequenceAction struct {
 	AppqoeDreOptimization  *bool   `pulumi:"appqoeDreOptimization"`
 	AppqoeServiceNodeGroup *string `pulumi:"appqoeServiceNodeGroup"`
 	AppqoeTcpOptimization  *bool   `pulumi:"appqoeTcpOptimization"`
-	// Backup SLA perferred color
+	// Backup SLA preferred color
 	BackupSlaPreferredColors []string `pulumi:"backupSlaPreferredColors"`
 	Cflowd                   *bool    `pulumi:"cflowd"`
 	CloudProbe               *bool    `pulumi:"cloudProbe"`
@@ -1400,7 +1400,7 @@ type ApplicationPriorityTrafficPolicyPolicySequenceActionArgs struct {
 	AppqoeDreOptimization  pulumi.BoolPtrInput   `pulumi:"appqoeDreOptimization"`
 	AppqoeServiceNodeGroup pulumi.StringPtrInput `pulumi:"appqoeServiceNodeGroup"`
 	AppqoeTcpOptimization  pulumi.BoolPtrInput   `pulumi:"appqoeTcpOptimization"`
-	// Backup SLA perferred color
+	// Backup SLA preferred color
 	BackupSlaPreferredColors pulumi.StringArrayInput `pulumi:"backupSlaPreferredColors"`
 	Cflowd                   pulumi.BoolPtrInput     `pulumi:"cflowd"`
 	CloudProbe               pulumi.BoolPtrInput     `pulumi:"cloudProbe"`
@@ -1494,7 +1494,7 @@ func (o ApplicationPriorityTrafficPolicyPolicySequenceActionOutput) AppqoeTcpOpt
 	return o.ApplyT(func(v ApplicationPriorityTrafficPolicyPolicySequenceAction) *bool { return v.AppqoeTcpOptimization }).(pulumi.BoolPtrOutput)
 }
 
-// Backup SLA perferred color
+// Backup SLA preferred color
 func (o ApplicationPriorityTrafficPolicyPolicySequenceActionOutput) BackupSlaPreferredColors() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v ApplicationPriorityTrafficPolicyPolicySequenceAction) []string {
 		return v.BackupSlaPreferredColors
@@ -1623,13 +1623,15 @@ type ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter struct {
 	ForwardingClassListId *string  `pulumi:"forwardingClassListId"`
 	LocalTlocListColors   []string `pulumi:"localTlocListColors"`
 	// - Choices: `ipsec`, `gre`
-	LocalTlocListEncapsulation    *string  `pulumi:"localTlocListEncapsulation"`
-	LocalTlocListRestrict         *bool    `pulumi:"localTlocListRestrict"`
-	NextHopIpv4                   *string  `pulumi:"nextHopIpv4"`
-	NextHopIpv6                   *string  `pulumi:"nextHopIpv6"`
-	NextHopLoose                  *bool    `pulumi:"nextHopLoose"`
-	PolicerId                     *string  `pulumi:"policerId"`
-	PreferredColorGroupId         *string  `pulumi:"preferredColorGroupId"`
+	LocalTlocListEncapsulation *string `pulumi:"localTlocListEncapsulation"`
+	LocalTlocListRestrict      *bool   `pulumi:"localTlocListRestrict"`
+	NextHopIpv4                *string `pulumi:"nextHopIpv4"`
+	NextHopIpv6                *string `pulumi:"nextHopIpv6"`
+	NextHopLoose               *bool   `pulumi:"nextHopLoose"`
+	PolicerId                  *string `pulumi:"policerId"`
+	PreferredColorGroupId      *string `pulumi:"preferredColorGroupId"`
+	// Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	PreferredColorGroupRestrict   *bool    `pulumi:"preferredColorGroupRestrict"`
 	PreferredRemoteColorRestrict  *bool    `pulumi:"preferredRemoteColorRestrict"`
 	PreferredRemoteColors         []string `pulumi:"preferredRemoteColors"`
 	ServiceChainFallbackToRouting *bool    `pulumi:"serviceChainFallbackToRouting"`
@@ -1680,13 +1682,15 @@ type ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs struct
 	ForwardingClassListId pulumi.StringPtrInput   `pulumi:"forwardingClassListId"`
 	LocalTlocListColors   pulumi.StringArrayInput `pulumi:"localTlocListColors"`
 	// - Choices: `ipsec`, `gre`
-	LocalTlocListEncapsulation    pulumi.StringPtrInput   `pulumi:"localTlocListEncapsulation"`
-	LocalTlocListRestrict         pulumi.BoolPtrInput     `pulumi:"localTlocListRestrict"`
-	NextHopIpv4                   pulumi.StringPtrInput   `pulumi:"nextHopIpv4"`
-	NextHopIpv6                   pulumi.StringPtrInput   `pulumi:"nextHopIpv6"`
-	NextHopLoose                  pulumi.BoolPtrInput     `pulumi:"nextHopLoose"`
-	PolicerId                     pulumi.StringPtrInput   `pulumi:"policerId"`
-	PreferredColorGroupId         pulumi.StringPtrInput   `pulumi:"preferredColorGroupId"`
+	LocalTlocListEncapsulation pulumi.StringPtrInput `pulumi:"localTlocListEncapsulation"`
+	LocalTlocListRestrict      pulumi.BoolPtrInput   `pulumi:"localTlocListRestrict"`
+	NextHopIpv4                pulumi.StringPtrInput `pulumi:"nextHopIpv4"`
+	NextHopIpv6                pulumi.StringPtrInput `pulumi:"nextHopIpv6"`
+	NextHopLoose               pulumi.BoolPtrInput   `pulumi:"nextHopLoose"`
+	PolicerId                  pulumi.StringPtrInput `pulumi:"policerId"`
+	PreferredColorGroupId      pulumi.StringPtrInput `pulumi:"preferredColorGroupId"`
+	// Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	PreferredColorGroupRestrict   pulumi.BoolPtrInput     `pulumi:"preferredColorGroupRestrict"`
 	PreferredRemoteColorRestrict  pulumi.BoolPtrInput     `pulumi:"preferredRemoteColorRestrict"`
 	PreferredRemoteColors         pulumi.StringArrayInput `pulumi:"preferredRemoteColors"`
 	ServiceChainFallbackToRouting pulumi.BoolPtrInput     `pulumi:"serviceChainFallbackToRouting"`
@@ -1821,6 +1825,13 @@ func (o ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterOutput) 
 	return o.ApplyT(func(v ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter) *string {
 		return v.PreferredColorGroupId
 	}).(pulumi.StringPtrOutput)
+}
+
+// Restrict traffic to the preferred color group, requires `preferredColorGroupId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterOutput) PreferredColorGroupRestrict() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter) *bool {
+		return v.PreferredColorGroupRestrict
+	}).(pulumi.BoolPtrOutput)
 }
 
 func (o ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterOutput) PreferredRemoteColorRestrict() pulumi.BoolPtrOutput {
@@ -1976,13 +1987,15 @@ func (o ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArrayOut
 }
 
 type ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass struct {
-	FallbackToBestPath        *bool    `pulumi:"fallbackToBestPath"`
-	PreferredColorGroupListId *string  `pulumi:"preferredColorGroupListId"`
-	PreferredColors           []string `pulumi:"preferredColors"`
-	PreferredRemoteColors     []string `pulumi:"preferredRemoteColors"`
-	RemoteColorRestrict       *bool    `pulumi:"remoteColorRestrict"`
-	SlaClassListId            *string  `pulumi:"slaClassListId"`
-	Strict                    *bool    `pulumi:"strict"`
+	FallbackToBestPath        *bool   `pulumi:"fallbackToBestPath"`
+	PreferredColorGroupListId *string `pulumi:"preferredColorGroupListId"`
+	// Restrict traffic to the preferred color group, requires `preferredColorGroupListId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	PreferredColorGroupRestrict *bool    `pulumi:"preferredColorGroupRestrict"`
+	PreferredColors             []string `pulumi:"preferredColors"`
+	PreferredRemoteColors       []string `pulumi:"preferredRemoteColors"`
+	RemoteColorRestrict         *bool    `pulumi:"remoteColorRestrict"`
+	SlaClassListId              *string  `pulumi:"slaClassListId"`
+	Strict                      *bool    `pulumi:"strict"`
 }
 
 // ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassInput is an input type that accepts ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgs and ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassOutput values.
@@ -1997,13 +2010,15 @@ type ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassInput interface
 }
 
 type ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgs struct {
-	FallbackToBestPath        pulumi.BoolPtrInput     `pulumi:"fallbackToBestPath"`
-	PreferredColorGroupListId pulumi.StringPtrInput   `pulumi:"preferredColorGroupListId"`
-	PreferredColors           pulumi.StringArrayInput `pulumi:"preferredColors"`
-	PreferredRemoteColors     pulumi.StringArrayInput `pulumi:"preferredRemoteColors"`
-	RemoteColorRestrict       pulumi.BoolPtrInput     `pulumi:"remoteColorRestrict"`
-	SlaClassListId            pulumi.StringPtrInput   `pulumi:"slaClassListId"`
-	Strict                    pulumi.BoolPtrInput     `pulumi:"strict"`
+	FallbackToBestPath        pulumi.BoolPtrInput   `pulumi:"fallbackToBestPath"`
+	PreferredColorGroupListId pulumi.StringPtrInput `pulumi:"preferredColorGroupListId"`
+	// Restrict traffic to the preferred color group, requires `preferredColorGroupListId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	PreferredColorGroupRestrict pulumi.BoolPtrInput     `pulumi:"preferredColorGroupRestrict"`
+	PreferredColors             pulumi.StringArrayInput `pulumi:"preferredColors"`
+	PreferredRemoteColors       pulumi.StringArrayInput `pulumi:"preferredRemoteColors"`
+	RemoteColorRestrict         pulumi.BoolPtrInput     `pulumi:"remoteColorRestrict"`
+	SlaClassListId              pulumi.StringPtrInput   `pulumi:"slaClassListId"`
+	Strict                      pulumi.BoolPtrInput     `pulumi:"strict"`
 }
 
 func (ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgs) ElementType() reflect.Type {
@@ -2067,6 +2082,13 @@ func (o ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassOutput) Pref
 	return o.ApplyT(func(v ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass) *string {
 		return v.PreferredColorGroupListId
 	}).(pulumi.StringPtrOutput)
+}
+
+// Restrict traffic to the preferred color group, requires `preferredColorGroupListId` to be set, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassOutput) PreferredColorGroupRestrict() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass) *bool {
+		return v.PreferredColorGroupRestrict
+	}).(pulumi.BoolPtrOutput)
 }
 
 func (o ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassOutput) PreferredColors() pulumi.StringArrayOutput {
@@ -2134,6 +2156,8 @@ type ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry struct {
 	DnsApplicationListId *string `pulumi:"dnsApplicationListId"`
 	// DSCP numbers
 	Dscps []int `pulumi:"dscps"`
+	// Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	HierarchyIds []string `pulumi:"hierarchyIds"`
 	// ICMP6 Message
 	Icmp6Messages []string `pulumi:"icmp6Messages"`
 	// ICMP Message
@@ -2197,6 +2221,8 @@ type ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs struct {
 	DnsApplicationListId pulumi.StringPtrInput `pulumi:"dnsApplicationListId"`
 	// DSCP numbers
 	Dscps pulumi.IntArrayInput `pulumi:"dscps"`
+	// Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	HierarchyIds pulumi.StringArrayInput `pulumi:"hierarchyIds"`
 	// ICMP6 Message
 	Icmp6Messages pulumi.StringArrayInput `pulumi:"icmp6Messages"`
 	// ICMP Message
@@ -2337,6 +2363,11 @@ func (o ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryOutput) DnsAppli
 // DSCP numbers
 func (o ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryOutput) Dscps() pulumi.IntArrayOutput {
 	return o.ApplyT(func(v ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry) []int { return v.Dscps }).(pulumi.IntArrayOutput)
+}
+
+// Site List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryOutput) HierarchyIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry) []string { return v.HierarchyIds }).(pulumi.StringArrayOutput)
 }
 
 // ICMP6 Message
@@ -28720,12 +28751,20 @@ type EmbeddedSecurityNgfwPolicySequence struct {
 	// can be empty array or with type or parameter
 	Actions []EmbeddedSecurityNgfwPolicySequenceAction `pulumi:"actions"`
 	// - Choices: `pass`, `inspect`, `drop`
-	BaseAction      *string                                        `pulumi:"baseAction"`
-	DisableSequence *bool                                          `pulumi:"disableSequence"`
-	MatchEntries    []EmbeddedSecurityNgfwPolicySequenceMatchEntry `pulumi:"matchEntries"`
-	SequenceId      *string                                        `pulumi:"sequenceId"`
-	SequenceName    *string                                        `pulumi:"sequenceName"`
-	SequenceType    *string                                        `pulumi:"sequenceType"`
+	BaseAction      *string `pulumi:"baseAction"`
+	DisableSequence *bool   `pulumi:"disableSequence"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	IsRuleSet    *bool                                          `pulumi:"isRuleSet"`
+	MatchEntries []EmbeddedSecurityNgfwPolicySequenceMatchEntry `pulumi:"matchEntries"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SequenceComment *string `pulumi:"sequenceComment"`
+	SequenceId      *string `pulumi:"sequenceId"`
+	// IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	//   - Choices: `ipv4`, `ipv6`
+	//   - Default value: `ipv4`
+	SequenceIpType *string `pulumi:"sequenceIpType"`
+	SequenceName   *string `pulumi:"sequenceName"`
+	SequenceType   *string `pulumi:"sequenceType"`
 }
 
 // EmbeddedSecurityNgfwPolicySequenceInput is an input type that accepts EmbeddedSecurityNgfwPolicySequenceArgs and EmbeddedSecurityNgfwPolicySequenceOutput values.
@@ -28743,12 +28782,20 @@ type EmbeddedSecurityNgfwPolicySequenceArgs struct {
 	// can be empty array or with type or parameter
 	Actions EmbeddedSecurityNgfwPolicySequenceActionArrayInput `pulumi:"actions"`
 	// - Choices: `pass`, `inspect`, `drop`
-	BaseAction      pulumi.StringPtrInput                                  `pulumi:"baseAction"`
-	DisableSequence pulumi.BoolPtrInput                                    `pulumi:"disableSequence"`
-	MatchEntries    EmbeddedSecurityNgfwPolicySequenceMatchEntryArrayInput `pulumi:"matchEntries"`
-	SequenceId      pulumi.StringPtrInput                                  `pulumi:"sequenceId"`
-	SequenceName    pulumi.StringPtrInput                                  `pulumi:"sequenceName"`
-	SequenceType    pulumi.StringPtrInput                                  `pulumi:"sequenceType"`
+	BaseAction      pulumi.StringPtrInput `pulumi:"baseAction"`
+	DisableSequence pulumi.BoolPtrInput   `pulumi:"disableSequence"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	IsRuleSet    pulumi.BoolPtrInput                                    `pulumi:"isRuleSet"`
+	MatchEntries EmbeddedSecurityNgfwPolicySequenceMatchEntryArrayInput `pulumi:"matchEntries"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SequenceComment pulumi.StringPtrInput `pulumi:"sequenceComment"`
+	SequenceId      pulumi.StringPtrInput `pulumi:"sequenceId"`
+	// IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	//   - Choices: `ipv4`, `ipv6`
+	//   - Default value: `ipv4`
+	SequenceIpType pulumi.StringPtrInput `pulumi:"sequenceIpType"`
+	SequenceName   pulumi.StringPtrInput `pulumi:"sequenceName"`
+	SequenceType   pulumi.StringPtrInput `pulumi:"sequenceType"`
 }
 
 func (EmbeddedSecurityNgfwPolicySequenceArgs) ElementType() reflect.Type {
@@ -28818,14 +28865,31 @@ func (o EmbeddedSecurityNgfwPolicySequenceOutput) DisableSequence() pulumi.BoolP
 	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequence) *bool { return v.DisableSequence }).(pulumi.BoolPtrOutput)
 }
 
+// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityNgfwPolicySequenceOutput) IsRuleSet() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequence) *bool { return v.IsRuleSet }).(pulumi.BoolPtrOutput)
+}
+
 func (o EmbeddedSecurityNgfwPolicySequenceOutput) MatchEntries() EmbeddedSecurityNgfwPolicySequenceMatchEntryArrayOutput {
 	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequence) []EmbeddedSecurityNgfwPolicySequenceMatchEntry {
 		return v.MatchEntries
 	}).(EmbeddedSecurityNgfwPolicySequenceMatchEntryArrayOutput)
 }
 
+// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityNgfwPolicySequenceOutput) SequenceComment() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequence) *string { return v.SequenceComment }).(pulumi.StringPtrOutput)
+}
+
 func (o EmbeddedSecurityNgfwPolicySequenceOutput) SequenceId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequence) *string { return v.SequenceId }).(pulumi.StringPtrOutput)
+}
+
+// IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+//   - Choices: `ipv4`, `ipv6`
+//   - Default value: `ipv4`
+func (o EmbeddedSecurityNgfwPolicySequenceOutput) SequenceIpType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequence) *string { return v.SequenceIpType }).(pulumi.StringPtrOutput)
 }
 
 func (o EmbeddedSecurityNgfwPolicySequenceOutput) SequenceName() pulumi.StringPtrOutput {
@@ -28966,11 +29030,13 @@ func (o EmbeddedSecurityNgfwPolicySequenceActionArrayOutput) Index(i pulumi.IntI
 }
 
 type EmbeddedSecurityNgfwPolicySequenceMatchEntry struct {
-	AppListIds                   []string `pulumi:"appListIds"`
-	ApplicationFamilies          []string `pulumi:"applicationFamilies"`
-	Applications                 []string `pulumi:"applications"`
-	DestinationDataPrefixListIds []string `pulumi:"destinationDataPrefixListIds"`
-	DestinationDataPrefixes      []string `pulumi:"destinationDataPrefixes"`
+	AppListIds          []string `pulumi:"appListIds"`
+	ApplicationFamilies []string `pulumi:"applicationFamilies"`
+	Applications        []string `pulumi:"applications"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	DestinationDataIpv6PrefixListIds []string `pulumi:"destinationDataIpv6PrefixListIds"`
+	DestinationDataPrefixListIds     []string `pulumi:"destinationDataPrefixListIds"`
+	DestinationDataPrefixes          []string `pulumi:"destinationDataPrefixes"`
 	// Variable name
 	DestinationDataPrefixesVariable *string  `pulumi:"destinationDataPrefixesVariable"`
 	DestinationFqdnListIds          []string `pulumi:"destinationFqdnListIds"`
@@ -28980,19 +29046,30 @@ type EmbeddedSecurityNgfwPolicySequenceMatchEntry struct {
 	DestinationGeoLocationListIds []string `pulumi:"destinationGeoLocationListIds"`
 	DestinationGeoLocations       []string `pulumi:"destinationGeoLocations"`
 	// Variable name
-	DestinationGeoLocationsVariable *string  `pulumi:"destinationGeoLocationsVariable"`
-	DestinationPortListIds          []string `pulumi:"destinationPortListIds"`
-	DestinationPorts                []string `pulumi:"destinationPorts"`
+	DestinationGeoLocationsVariable *string `pulumi:"destinationGeoLocationsVariable"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	DestinationIpv6DataPrefixes []string `pulumi:"destinationIpv6DataPrefixes"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	DestinationIpv6DataPrefixesVariable *string `pulumi:"destinationIpv6DataPrefixesVariable"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	DestinationObjectGroupListIds []string `pulumi:"destinationObjectGroupListIds"`
+	DestinationPortListIds        []string `pulumi:"destinationPortListIds"`
+	DestinationPorts              []string `pulumi:"destinationPorts"`
 	// Variable name
 	DestinationPortsVariable           *string  `pulumi:"destinationPortsVariable"`
 	DestinationScalableGroupTagListIds []string `pulumi:"destinationScalableGroupTagListIds"`
-	DestinationSecurityGroupListIds    []string `pulumi:"destinationSecurityGroupListIds"`
-	FlatAppListIds                     []string `pulumi:"flatAppListIds"`
-	ProtocolNameListIds                []string `pulumi:"protocolNameListIds"`
-	ProtocolNames                      []string `pulumi:"protocolNames"`
-	Protocols                          []string `pulumi:"protocols"`
-	SourceDataPrefixListIds            []string `pulumi:"sourceDataPrefixListIds"`
-	SourceDataPrefixes                 []string `pulumi:"sourceDataPrefixes"`
+	// Deprecated, use `destinationObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+	DestinationSecurityGroupListIds []string `pulumi:"destinationSecurityGroupListIds"`
+	FlatAppListIds                  []string `pulumi:"flatAppListIds"`
+	ProtocolNameListIds             []string `pulumi:"protocolNameListIds"`
+	ProtocolNames                   []string `pulumi:"protocolNames"`
+	Protocols                       []string `pulumi:"protocols"`
+	// Security rule set IDs, requires `isRuleSet` set to `true` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	RuleSetListIds []string `pulumi:"ruleSetListIds"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SourceDataIpv6PrefixListIds []string `pulumi:"sourceDataIpv6PrefixListIds"`
+	SourceDataPrefixListIds     []string `pulumi:"sourceDataPrefixListIds"`
+	SourceDataPrefixes          []string `pulumi:"sourceDataPrefixes"`
 	// Variable name
 	SourceDataPrefixesVariable *string  `pulumi:"sourceDataPrefixesVariable"`
 	SourceGeoLocationListIds   []string `pulumi:"sourceGeoLocationListIds"`
@@ -29002,12 +29079,19 @@ type EmbeddedSecurityNgfwPolicySequenceMatchEntry struct {
 	SourceIdentityListIds      []string `pulumi:"sourceIdentityListIds"`
 	SourceIdentityUsergroups   []string `pulumi:"sourceIdentityUsergroups"`
 	SourceIdentityUsers        []string `pulumi:"sourceIdentityUsers"`
-	SourcePortListIds          []string `pulumi:"sourcePortListIds"`
-	SourcePorts                []string `pulumi:"sourcePorts"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SourceIpv6DataPrefixes []string `pulumi:"sourceIpv6DataPrefixes"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SourceIpv6DataPrefixesVariable *string `pulumi:"sourceIpv6DataPrefixesVariable"`
+	// Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SourceObjectGroupListIds []string `pulumi:"sourceObjectGroupListIds"`
+	SourcePortListIds        []string `pulumi:"sourcePortListIds"`
+	SourcePorts              []string `pulumi:"sourcePorts"`
 	// Variable name
 	SourcePortsVariable           *string  `pulumi:"sourcePortsVariable"`
 	SourceScalableGroupTagListIds []string `pulumi:"sourceScalableGroupTagListIds"`
-	SourceSecurityGroupListIds    []string `pulumi:"sourceSecurityGroupListIds"`
+	// Deprecated, use `sourceObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+	SourceSecurityGroupListIds []string `pulumi:"sourceSecurityGroupListIds"`
 }
 
 // EmbeddedSecurityNgfwPolicySequenceMatchEntryInput is an input type that accepts EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs and EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput values.
@@ -29022,11 +29106,13 @@ type EmbeddedSecurityNgfwPolicySequenceMatchEntryInput interface {
 }
 
 type EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs struct {
-	AppListIds                   pulumi.StringArrayInput `pulumi:"appListIds"`
-	ApplicationFamilies          pulumi.StringArrayInput `pulumi:"applicationFamilies"`
-	Applications                 pulumi.StringArrayInput `pulumi:"applications"`
-	DestinationDataPrefixListIds pulumi.StringArrayInput `pulumi:"destinationDataPrefixListIds"`
-	DestinationDataPrefixes      pulumi.StringArrayInput `pulumi:"destinationDataPrefixes"`
+	AppListIds          pulumi.StringArrayInput `pulumi:"appListIds"`
+	ApplicationFamilies pulumi.StringArrayInput `pulumi:"applicationFamilies"`
+	Applications        pulumi.StringArrayInput `pulumi:"applications"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	DestinationDataIpv6PrefixListIds pulumi.StringArrayInput `pulumi:"destinationDataIpv6PrefixListIds"`
+	DestinationDataPrefixListIds     pulumi.StringArrayInput `pulumi:"destinationDataPrefixListIds"`
+	DestinationDataPrefixes          pulumi.StringArrayInput `pulumi:"destinationDataPrefixes"`
 	// Variable name
 	DestinationDataPrefixesVariable pulumi.StringPtrInput   `pulumi:"destinationDataPrefixesVariable"`
 	DestinationFqdnListIds          pulumi.StringArrayInput `pulumi:"destinationFqdnListIds"`
@@ -29036,19 +29122,30 @@ type EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs struct {
 	DestinationGeoLocationListIds pulumi.StringArrayInput `pulumi:"destinationGeoLocationListIds"`
 	DestinationGeoLocations       pulumi.StringArrayInput `pulumi:"destinationGeoLocations"`
 	// Variable name
-	DestinationGeoLocationsVariable pulumi.StringPtrInput   `pulumi:"destinationGeoLocationsVariable"`
-	DestinationPortListIds          pulumi.StringArrayInput `pulumi:"destinationPortListIds"`
-	DestinationPorts                pulumi.StringArrayInput `pulumi:"destinationPorts"`
+	DestinationGeoLocationsVariable pulumi.StringPtrInput `pulumi:"destinationGeoLocationsVariable"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	DestinationIpv6DataPrefixes pulumi.StringArrayInput `pulumi:"destinationIpv6DataPrefixes"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	DestinationIpv6DataPrefixesVariable pulumi.StringPtrInput `pulumi:"destinationIpv6DataPrefixesVariable"`
+	// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	DestinationObjectGroupListIds pulumi.StringArrayInput `pulumi:"destinationObjectGroupListIds"`
+	DestinationPortListIds        pulumi.StringArrayInput `pulumi:"destinationPortListIds"`
+	DestinationPorts              pulumi.StringArrayInput `pulumi:"destinationPorts"`
 	// Variable name
 	DestinationPortsVariable           pulumi.StringPtrInput   `pulumi:"destinationPortsVariable"`
 	DestinationScalableGroupTagListIds pulumi.StringArrayInput `pulumi:"destinationScalableGroupTagListIds"`
-	DestinationSecurityGroupListIds    pulumi.StringArrayInput `pulumi:"destinationSecurityGroupListIds"`
-	FlatAppListIds                     pulumi.StringArrayInput `pulumi:"flatAppListIds"`
-	ProtocolNameListIds                pulumi.StringArrayInput `pulumi:"protocolNameListIds"`
-	ProtocolNames                      pulumi.StringArrayInput `pulumi:"protocolNames"`
-	Protocols                          pulumi.StringArrayInput `pulumi:"protocols"`
-	SourceDataPrefixListIds            pulumi.StringArrayInput `pulumi:"sourceDataPrefixListIds"`
-	SourceDataPrefixes                 pulumi.StringArrayInput `pulumi:"sourceDataPrefixes"`
+	// Deprecated, use `destinationObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+	DestinationSecurityGroupListIds pulumi.StringArrayInput `pulumi:"destinationSecurityGroupListIds"`
+	FlatAppListIds                  pulumi.StringArrayInput `pulumi:"flatAppListIds"`
+	ProtocolNameListIds             pulumi.StringArrayInput `pulumi:"protocolNameListIds"`
+	ProtocolNames                   pulumi.StringArrayInput `pulumi:"protocolNames"`
+	Protocols                       pulumi.StringArrayInput `pulumi:"protocols"`
+	// Security rule set IDs, requires `isRuleSet` set to `true` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	RuleSetListIds pulumi.StringArrayInput `pulumi:"ruleSetListIds"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SourceDataIpv6PrefixListIds pulumi.StringArrayInput `pulumi:"sourceDataIpv6PrefixListIds"`
+	SourceDataPrefixListIds     pulumi.StringArrayInput `pulumi:"sourceDataPrefixListIds"`
+	SourceDataPrefixes          pulumi.StringArrayInput `pulumi:"sourceDataPrefixes"`
 	// Variable name
 	SourceDataPrefixesVariable pulumi.StringPtrInput   `pulumi:"sourceDataPrefixesVariable"`
 	SourceGeoLocationListIds   pulumi.StringArrayInput `pulumi:"sourceGeoLocationListIds"`
@@ -29058,12 +29155,19 @@ type EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs struct {
 	SourceIdentityListIds      pulumi.StringArrayInput `pulumi:"sourceIdentityListIds"`
 	SourceIdentityUsergroups   pulumi.StringArrayInput `pulumi:"sourceIdentityUsergroups"`
 	SourceIdentityUsers        pulumi.StringArrayInput `pulumi:"sourceIdentityUsers"`
-	SourcePortListIds          pulumi.StringArrayInput `pulumi:"sourcePortListIds"`
-	SourcePorts                pulumi.StringArrayInput `pulumi:"sourcePorts"`
+	// Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SourceIpv6DataPrefixes pulumi.StringArrayInput `pulumi:"sourceIpv6DataPrefixes"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SourceIpv6DataPrefixesVariable pulumi.StringPtrInput `pulumi:"sourceIpv6DataPrefixesVariable"`
+	// Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+	SourceObjectGroupListIds pulumi.StringArrayInput `pulumi:"sourceObjectGroupListIds"`
+	SourcePortListIds        pulumi.StringArrayInput `pulumi:"sourcePortListIds"`
+	SourcePorts              pulumi.StringArrayInput `pulumi:"sourcePorts"`
 	// Variable name
 	SourcePortsVariable           pulumi.StringPtrInput   `pulumi:"sourcePortsVariable"`
 	SourceScalableGroupTagListIds pulumi.StringArrayInput `pulumi:"sourceScalableGroupTagListIds"`
-	SourceSecurityGroupListIds    pulumi.StringArrayInput `pulumi:"sourceSecurityGroupListIds"`
+	// Deprecated, use `sourceObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+	SourceSecurityGroupListIds pulumi.StringArrayInput `pulumi:"sourceSecurityGroupListIds"`
 }
 
 func (EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs) ElementType() reflect.Type {
@@ -29129,6 +29233,13 @@ func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) Applications() pulum
 	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.Applications }).(pulumi.StringArrayOutput)
 }
 
+// Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationDataIpv6PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string {
+		return v.DestinationDataIpv6PrefixListIds
+	}).(pulumi.StringArrayOutput)
+}
+
 func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationDataPrefixListIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.DestinationDataPrefixListIds }).(pulumi.StringArrayOutput)
 }
@@ -29168,6 +29279,23 @@ func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationGeoLocati
 	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) *string { return v.DestinationGeoLocationsVariable }).(pulumi.StringPtrOutput)
 }
 
+// Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationIpv6DataPrefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.DestinationIpv6DataPrefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationIpv6DataPrefixesVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) *string {
+		return v.DestinationIpv6DataPrefixesVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationObjectGroupListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.DestinationObjectGroupListIds }).(pulumi.StringArrayOutput)
+}
+
 func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationPortListIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.DestinationPortListIds }).(pulumi.StringArrayOutput)
 }
@@ -29187,6 +29315,7 @@ func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationScalableG
 	}).(pulumi.StringArrayOutput)
 }
 
+// Deprecated, use `destinationObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
 func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) DestinationSecurityGroupListIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string {
 		return v.DestinationSecurityGroupListIds
@@ -29207,6 +29336,16 @@ func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) ProtocolNames() pulu
 
 func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) Protocols() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.Protocols }).(pulumi.StringArrayOutput)
+}
+
+// Security rule set IDs, requires `isRuleSet` set to `true` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) RuleSetListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.RuleSetListIds }).(pulumi.StringArrayOutput)
+}
+
+// Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceDataIpv6PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.SourceDataIpv6PrefixListIds }).(pulumi.StringArrayOutput)
 }
 
 func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceDataPrefixListIds() pulumi.StringArrayOutput {
@@ -29247,6 +29386,21 @@ func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceIdentityUsers(
 	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.SourceIdentityUsers }).(pulumi.StringArrayOutput)
 }
 
+// Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceIpv6DataPrefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.SourceIpv6DataPrefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceIpv6DataPrefixesVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) *string { return v.SourceIpv6DataPrefixesVariable }).(pulumi.StringPtrOutput)
+}
+
+// Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceObjectGroupListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.SourceObjectGroupListIds }).(pulumi.StringArrayOutput)
+}
+
 func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourcePortListIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.SourcePortListIds }).(pulumi.StringArrayOutput)
 }
@@ -29264,6 +29418,7 @@ func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceScalableGroupT
 	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.SourceScalableGroupTagListIds }).(pulumi.StringArrayOutput)
 }
 
+// Deprecated, use `sourceObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
 func (o EmbeddedSecurityNgfwPolicySequenceMatchEntryOutput) SourceSecurityGroupListIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v EmbeddedSecurityNgfwPolicySequenceMatchEntry) []string { return v.SourceSecurityGroupListIds }).(pulumi.StringArrayOutput)
 }
@@ -29516,6 +29671,121 @@ func (o EmbeddedSecurityPolicyAssemblyEntryArrayOutput) Index(i pulumi.IntInput)
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) EmbeddedSecurityPolicyAssemblyEntry {
 		return vs[0].([]EmbeddedSecurityPolicyAssemblyEntry)[vs[1].(int)]
 	}).(EmbeddedSecurityPolicyAssemblyEntryOutput)
+}
+
+type EmbeddedSecurityPolicyHighSpeedLogging struct {
+	// - Choices: `server1`, `server2`, `server3`, `server4`
+	Name *string `pulumi:"name"`
+	// InterfaceName
+	SourceInterface *string `pulumi:"sourceInterface"`
+	// Variable name
+	SourceInterfaceVariable *string `pulumi:"sourceInterfaceVariable"`
+}
+
+// EmbeddedSecurityPolicyHighSpeedLoggingInput is an input type that accepts EmbeddedSecurityPolicyHighSpeedLoggingArgs and EmbeddedSecurityPolicyHighSpeedLoggingOutput values.
+// You can construct a concrete instance of `EmbeddedSecurityPolicyHighSpeedLoggingInput` via:
+//
+//	EmbeddedSecurityPolicyHighSpeedLoggingArgs{...}
+type EmbeddedSecurityPolicyHighSpeedLoggingInput interface {
+	pulumi.Input
+
+	ToEmbeddedSecurityPolicyHighSpeedLoggingOutput() EmbeddedSecurityPolicyHighSpeedLoggingOutput
+	ToEmbeddedSecurityPolicyHighSpeedLoggingOutputWithContext(context.Context) EmbeddedSecurityPolicyHighSpeedLoggingOutput
+}
+
+type EmbeddedSecurityPolicyHighSpeedLoggingArgs struct {
+	// - Choices: `server1`, `server2`, `server3`, `server4`
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// InterfaceName
+	SourceInterface pulumi.StringPtrInput `pulumi:"sourceInterface"`
+	// Variable name
+	SourceInterfaceVariable pulumi.StringPtrInput `pulumi:"sourceInterfaceVariable"`
+}
+
+func (EmbeddedSecurityPolicyHighSpeedLoggingArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*EmbeddedSecurityPolicyHighSpeedLogging)(nil)).Elem()
+}
+
+func (i EmbeddedSecurityPolicyHighSpeedLoggingArgs) ToEmbeddedSecurityPolicyHighSpeedLoggingOutput() EmbeddedSecurityPolicyHighSpeedLoggingOutput {
+	return i.ToEmbeddedSecurityPolicyHighSpeedLoggingOutputWithContext(context.Background())
+}
+
+func (i EmbeddedSecurityPolicyHighSpeedLoggingArgs) ToEmbeddedSecurityPolicyHighSpeedLoggingOutputWithContext(ctx context.Context) EmbeddedSecurityPolicyHighSpeedLoggingOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(EmbeddedSecurityPolicyHighSpeedLoggingOutput)
+}
+
+// EmbeddedSecurityPolicyHighSpeedLoggingArrayInput is an input type that accepts EmbeddedSecurityPolicyHighSpeedLoggingArray and EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput values.
+// You can construct a concrete instance of `EmbeddedSecurityPolicyHighSpeedLoggingArrayInput` via:
+//
+//	EmbeddedSecurityPolicyHighSpeedLoggingArray{ EmbeddedSecurityPolicyHighSpeedLoggingArgs{...} }
+type EmbeddedSecurityPolicyHighSpeedLoggingArrayInput interface {
+	pulumi.Input
+
+	ToEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput() EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput
+	ToEmbeddedSecurityPolicyHighSpeedLoggingArrayOutputWithContext(context.Context) EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput
+}
+
+type EmbeddedSecurityPolicyHighSpeedLoggingArray []EmbeddedSecurityPolicyHighSpeedLoggingInput
+
+func (EmbeddedSecurityPolicyHighSpeedLoggingArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]EmbeddedSecurityPolicyHighSpeedLogging)(nil)).Elem()
+}
+
+func (i EmbeddedSecurityPolicyHighSpeedLoggingArray) ToEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput() EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput {
+	return i.ToEmbeddedSecurityPolicyHighSpeedLoggingArrayOutputWithContext(context.Background())
+}
+
+func (i EmbeddedSecurityPolicyHighSpeedLoggingArray) ToEmbeddedSecurityPolicyHighSpeedLoggingArrayOutputWithContext(ctx context.Context) EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput)
+}
+
+type EmbeddedSecurityPolicyHighSpeedLoggingOutput struct{ *pulumi.OutputState }
+
+func (EmbeddedSecurityPolicyHighSpeedLoggingOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*EmbeddedSecurityPolicyHighSpeedLogging)(nil)).Elem()
+}
+
+func (o EmbeddedSecurityPolicyHighSpeedLoggingOutput) ToEmbeddedSecurityPolicyHighSpeedLoggingOutput() EmbeddedSecurityPolicyHighSpeedLoggingOutput {
+	return o
+}
+
+func (o EmbeddedSecurityPolicyHighSpeedLoggingOutput) ToEmbeddedSecurityPolicyHighSpeedLoggingOutputWithContext(ctx context.Context) EmbeddedSecurityPolicyHighSpeedLoggingOutput {
+	return o
+}
+
+// - Choices: `server1`, `server2`, `server3`, `server4`
+func (o EmbeddedSecurityPolicyHighSpeedLoggingOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v EmbeddedSecurityPolicyHighSpeedLogging) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+// InterfaceName
+func (o EmbeddedSecurityPolicyHighSpeedLoggingOutput) SourceInterface() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v EmbeddedSecurityPolicyHighSpeedLogging) *string { return v.SourceInterface }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o EmbeddedSecurityPolicyHighSpeedLoggingOutput) SourceInterfaceVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v EmbeddedSecurityPolicyHighSpeedLogging) *string { return v.SourceInterfaceVariable }).(pulumi.StringPtrOutput)
+}
+
+type EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput struct{ *pulumi.OutputState }
+
+func (EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]EmbeddedSecurityPolicyHighSpeedLogging)(nil)).Elem()
+}
+
+func (o EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput) ToEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput() EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput {
+	return o
+}
+
+func (o EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput) ToEmbeddedSecurityPolicyHighSpeedLoggingArrayOutputWithContext(ctx context.Context) EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput {
+	return o
+}
+
+func (o EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput) Index(i pulumi.IntInput) EmbeddedSecurityPolicyHighSpeedLoggingOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) EmbeddedSecurityPolicyHighSpeedLogging {
+		return vs[0].([]EmbeddedSecurityPolicyHighSpeedLogging)[vs[1].(int)]
+	}).(EmbeddedSecurityPolicyHighSpeedLoggingOutput)
 }
 
 type ExpandedCommunityListPolicyObjectEntry struct {
@@ -36840,6 +37110,109 @@ func (o PolicyObjectSecurityDataIpv4PrefixListEntryArrayOutput) Index(i pulumi.I
 	}).(PolicyObjectSecurityDataIpv4PrefixListEntryOutput)
 }
 
+type PolicyObjectSecurityDataIpv6PrefixListEntry struct {
+	Ipv6Prefix *string `pulumi:"ipv6Prefix"`
+	// Variable name
+	Ipv6PrefixVariable *string `pulumi:"ipv6PrefixVariable"`
+}
+
+// PolicyObjectSecurityDataIpv6PrefixListEntryInput is an input type that accepts PolicyObjectSecurityDataIpv6PrefixListEntryArgs and PolicyObjectSecurityDataIpv6PrefixListEntryOutput values.
+// You can construct a concrete instance of `PolicyObjectSecurityDataIpv6PrefixListEntryInput` via:
+//
+//	PolicyObjectSecurityDataIpv6PrefixListEntryArgs{...}
+type PolicyObjectSecurityDataIpv6PrefixListEntryInput interface {
+	pulumi.Input
+
+	ToPolicyObjectSecurityDataIpv6PrefixListEntryOutput() PolicyObjectSecurityDataIpv6PrefixListEntryOutput
+	ToPolicyObjectSecurityDataIpv6PrefixListEntryOutputWithContext(context.Context) PolicyObjectSecurityDataIpv6PrefixListEntryOutput
+}
+
+type PolicyObjectSecurityDataIpv6PrefixListEntryArgs struct {
+	Ipv6Prefix pulumi.StringPtrInput `pulumi:"ipv6Prefix"`
+	// Variable name
+	Ipv6PrefixVariable pulumi.StringPtrInput `pulumi:"ipv6PrefixVariable"`
+}
+
+func (PolicyObjectSecurityDataIpv6PrefixListEntryArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicyObjectSecurityDataIpv6PrefixListEntry)(nil)).Elem()
+}
+
+func (i PolicyObjectSecurityDataIpv6PrefixListEntryArgs) ToPolicyObjectSecurityDataIpv6PrefixListEntryOutput() PolicyObjectSecurityDataIpv6PrefixListEntryOutput {
+	return i.ToPolicyObjectSecurityDataIpv6PrefixListEntryOutputWithContext(context.Background())
+}
+
+func (i PolicyObjectSecurityDataIpv6PrefixListEntryArgs) ToPolicyObjectSecurityDataIpv6PrefixListEntryOutputWithContext(ctx context.Context) PolicyObjectSecurityDataIpv6PrefixListEntryOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicyObjectSecurityDataIpv6PrefixListEntryOutput)
+}
+
+// PolicyObjectSecurityDataIpv6PrefixListEntryArrayInput is an input type that accepts PolicyObjectSecurityDataIpv6PrefixListEntryArray and PolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput values.
+// You can construct a concrete instance of `PolicyObjectSecurityDataIpv6PrefixListEntryArrayInput` via:
+//
+//	PolicyObjectSecurityDataIpv6PrefixListEntryArray{ PolicyObjectSecurityDataIpv6PrefixListEntryArgs{...} }
+type PolicyObjectSecurityDataIpv6PrefixListEntryArrayInput interface {
+	pulumi.Input
+
+	ToPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput() PolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput
+	ToPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutputWithContext(context.Context) PolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput
+}
+
+type PolicyObjectSecurityDataIpv6PrefixListEntryArray []PolicyObjectSecurityDataIpv6PrefixListEntryInput
+
+func (PolicyObjectSecurityDataIpv6PrefixListEntryArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]PolicyObjectSecurityDataIpv6PrefixListEntry)(nil)).Elem()
+}
+
+func (i PolicyObjectSecurityDataIpv6PrefixListEntryArray) ToPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput() PolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput {
+	return i.ToPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutputWithContext(context.Background())
+}
+
+func (i PolicyObjectSecurityDataIpv6PrefixListEntryArray) ToPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutputWithContext(ctx context.Context) PolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput)
+}
+
+type PolicyObjectSecurityDataIpv6PrefixListEntryOutput struct{ *pulumi.OutputState }
+
+func (PolicyObjectSecurityDataIpv6PrefixListEntryOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicyObjectSecurityDataIpv6PrefixListEntry)(nil)).Elem()
+}
+
+func (o PolicyObjectSecurityDataIpv6PrefixListEntryOutput) ToPolicyObjectSecurityDataIpv6PrefixListEntryOutput() PolicyObjectSecurityDataIpv6PrefixListEntryOutput {
+	return o
+}
+
+func (o PolicyObjectSecurityDataIpv6PrefixListEntryOutput) ToPolicyObjectSecurityDataIpv6PrefixListEntryOutputWithContext(ctx context.Context) PolicyObjectSecurityDataIpv6PrefixListEntryOutput {
+	return o
+}
+
+func (o PolicyObjectSecurityDataIpv6PrefixListEntryOutput) Ipv6Prefix() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityDataIpv6PrefixListEntry) *string { return v.Ipv6Prefix }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityDataIpv6PrefixListEntryOutput) Ipv6PrefixVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityDataIpv6PrefixListEntry) *string { return v.Ipv6PrefixVariable }).(pulumi.StringPtrOutput)
+}
+
+type PolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput struct{ *pulumi.OutputState }
+
+func (PolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]PolicyObjectSecurityDataIpv6PrefixListEntry)(nil)).Elem()
+}
+
+func (o PolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput) ToPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput() PolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput {
+	return o
+}
+
+func (o PolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput) ToPolicyObjectSecurityDataIpv6PrefixListEntryArrayOutputWithContext(ctx context.Context) PolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput {
+	return o
+}
+
+func (o PolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput) Index(i pulumi.IntInput) PolicyObjectSecurityDataIpv6PrefixListEntryOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) PolicyObjectSecurityDataIpv6PrefixListEntry {
+		return vs[0].([]PolicyObjectSecurityDataIpv6PrefixListEntry)[vs[1].(int)]
+	}).(PolicyObjectSecurityDataIpv6PrefixListEntryOutput)
+}
+
 type PolicyObjectSecurityFqdnListEntry struct {
 	Pattern *string `pulumi:"pattern"`
 }
@@ -37440,6 +37813,199 @@ func (o PolicyObjectSecurityLocalDomainListEntryArrayOutput) Index(i pulumi.IntI
 	}).(PolicyObjectSecurityLocalDomainListEntryOutput)
 }
 
+type PolicyObjectSecurityObjectGroupEntry struct {
+	DataIpv4PrefixListIds []string `pulumi:"dataIpv4PrefixListIds"`
+	DataIpv4Prefixes      []string `pulumi:"dataIpv4Prefixes"`
+	// Variable name
+	DataIpv4PrefixesVariable *string  `pulumi:"dataIpv4PrefixesVariable"`
+	DataIpv6PrefixListIds    []string `pulumi:"dataIpv6PrefixListIds"`
+	DataIpv6Prefixes         []string `pulumi:"dataIpv6Prefixes"`
+	// Variable name
+	DataIpv6PrefixesVariable *string  `pulumi:"dataIpv6PrefixesVariable"`
+	FqdnListIds              []string `pulumi:"fqdnListIds"`
+	Fqdns                    []string `pulumi:"fqdns"`
+	// Variable name
+	FqdnsVariable      *string  `pulumi:"fqdnsVariable"`
+	GeoLocationListIds []string `pulumi:"geoLocationListIds"`
+	GeoLocations       []string `pulumi:"geoLocations"`
+	// Variable name
+	GeoLocationsVariable *string  `pulumi:"geoLocationsVariable"`
+	PortListIds          []string `pulumi:"portListIds"`
+	Ports                []string `pulumi:"ports"`
+	// Variable name
+	PortsVariable *string `pulumi:"portsVariable"`
+}
+
+// PolicyObjectSecurityObjectGroupEntryInput is an input type that accepts PolicyObjectSecurityObjectGroupEntryArgs and PolicyObjectSecurityObjectGroupEntryOutput values.
+// You can construct a concrete instance of `PolicyObjectSecurityObjectGroupEntryInput` via:
+//
+//	PolicyObjectSecurityObjectGroupEntryArgs{...}
+type PolicyObjectSecurityObjectGroupEntryInput interface {
+	pulumi.Input
+
+	ToPolicyObjectSecurityObjectGroupEntryOutput() PolicyObjectSecurityObjectGroupEntryOutput
+	ToPolicyObjectSecurityObjectGroupEntryOutputWithContext(context.Context) PolicyObjectSecurityObjectGroupEntryOutput
+}
+
+type PolicyObjectSecurityObjectGroupEntryArgs struct {
+	DataIpv4PrefixListIds pulumi.StringArrayInput `pulumi:"dataIpv4PrefixListIds"`
+	DataIpv4Prefixes      pulumi.StringArrayInput `pulumi:"dataIpv4Prefixes"`
+	// Variable name
+	DataIpv4PrefixesVariable pulumi.StringPtrInput   `pulumi:"dataIpv4PrefixesVariable"`
+	DataIpv6PrefixListIds    pulumi.StringArrayInput `pulumi:"dataIpv6PrefixListIds"`
+	DataIpv6Prefixes         pulumi.StringArrayInput `pulumi:"dataIpv6Prefixes"`
+	// Variable name
+	DataIpv6PrefixesVariable pulumi.StringPtrInput   `pulumi:"dataIpv6PrefixesVariable"`
+	FqdnListIds              pulumi.StringArrayInput `pulumi:"fqdnListIds"`
+	Fqdns                    pulumi.StringArrayInput `pulumi:"fqdns"`
+	// Variable name
+	FqdnsVariable      pulumi.StringPtrInput   `pulumi:"fqdnsVariable"`
+	GeoLocationListIds pulumi.StringArrayInput `pulumi:"geoLocationListIds"`
+	GeoLocations       pulumi.StringArrayInput `pulumi:"geoLocations"`
+	// Variable name
+	GeoLocationsVariable pulumi.StringPtrInput   `pulumi:"geoLocationsVariable"`
+	PortListIds          pulumi.StringArrayInput `pulumi:"portListIds"`
+	Ports                pulumi.StringArrayInput `pulumi:"ports"`
+	// Variable name
+	PortsVariable pulumi.StringPtrInput `pulumi:"portsVariable"`
+}
+
+func (PolicyObjectSecurityObjectGroupEntryArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicyObjectSecurityObjectGroupEntry)(nil)).Elem()
+}
+
+func (i PolicyObjectSecurityObjectGroupEntryArgs) ToPolicyObjectSecurityObjectGroupEntryOutput() PolicyObjectSecurityObjectGroupEntryOutput {
+	return i.ToPolicyObjectSecurityObjectGroupEntryOutputWithContext(context.Background())
+}
+
+func (i PolicyObjectSecurityObjectGroupEntryArgs) ToPolicyObjectSecurityObjectGroupEntryOutputWithContext(ctx context.Context) PolicyObjectSecurityObjectGroupEntryOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicyObjectSecurityObjectGroupEntryOutput)
+}
+
+// PolicyObjectSecurityObjectGroupEntryArrayInput is an input type that accepts PolicyObjectSecurityObjectGroupEntryArray and PolicyObjectSecurityObjectGroupEntryArrayOutput values.
+// You can construct a concrete instance of `PolicyObjectSecurityObjectGroupEntryArrayInput` via:
+//
+//	PolicyObjectSecurityObjectGroupEntryArray{ PolicyObjectSecurityObjectGroupEntryArgs{...} }
+type PolicyObjectSecurityObjectGroupEntryArrayInput interface {
+	pulumi.Input
+
+	ToPolicyObjectSecurityObjectGroupEntryArrayOutput() PolicyObjectSecurityObjectGroupEntryArrayOutput
+	ToPolicyObjectSecurityObjectGroupEntryArrayOutputWithContext(context.Context) PolicyObjectSecurityObjectGroupEntryArrayOutput
+}
+
+type PolicyObjectSecurityObjectGroupEntryArray []PolicyObjectSecurityObjectGroupEntryInput
+
+func (PolicyObjectSecurityObjectGroupEntryArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]PolicyObjectSecurityObjectGroupEntry)(nil)).Elem()
+}
+
+func (i PolicyObjectSecurityObjectGroupEntryArray) ToPolicyObjectSecurityObjectGroupEntryArrayOutput() PolicyObjectSecurityObjectGroupEntryArrayOutput {
+	return i.ToPolicyObjectSecurityObjectGroupEntryArrayOutputWithContext(context.Background())
+}
+
+func (i PolicyObjectSecurityObjectGroupEntryArray) ToPolicyObjectSecurityObjectGroupEntryArrayOutputWithContext(ctx context.Context) PolicyObjectSecurityObjectGroupEntryArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicyObjectSecurityObjectGroupEntryArrayOutput)
+}
+
+type PolicyObjectSecurityObjectGroupEntryOutput struct{ *pulumi.OutputState }
+
+func (PolicyObjectSecurityObjectGroupEntryOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicyObjectSecurityObjectGroupEntry)(nil)).Elem()
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryOutput) ToPolicyObjectSecurityObjectGroupEntryOutput() PolicyObjectSecurityObjectGroupEntryOutput {
+	return o
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryOutput) ToPolicyObjectSecurityObjectGroupEntryOutputWithContext(ctx context.Context) PolicyObjectSecurityObjectGroupEntryOutput {
+	return o
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryOutput) DataIpv4PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) []string { return v.DataIpv4PrefixListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryOutput) DataIpv4Prefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) []string { return v.DataIpv4Prefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityObjectGroupEntryOutput) DataIpv4PrefixesVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) *string { return v.DataIpv4PrefixesVariable }).(pulumi.StringPtrOutput)
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryOutput) DataIpv6PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) []string { return v.DataIpv6PrefixListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryOutput) DataIpv6Prefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) []string { return v.DataIpv6Prefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityObjectGroupEntryOutput) DataIpv6PrefixesVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) *string { return v.DataIpv6PrefixesVariable }).(pulumi.StringPtrOutput)
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryOutput) FqdnListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) []string { return v.FqdnListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryOutput) Fqdns() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) []string { return v.Fqdns }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityObjectGroupEntryOutput) FqdnsVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) *string { return v.FqdnsVariable }).(pulumi.StringPtrOutput)
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryOutput) GeoLocationListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) []string { return v.GeoLocationListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryOutput) GeoLocations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) []string { return v.GeoLocations }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityObjectGroupEntryOutput) GeoLocationsVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) *string { return v.GeoLocationsVariable }).(pulumi.StringPtrOutput)
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryOutput) PortListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) []string { return v.PortListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryOutput) Ports() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) []string { return v.Ports }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityObjectGroupEntryOutput) PortsVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityObjectGroupEntry) *string { return v.PortsVariable }).(pulumi.StringPtrOutput)
+}
+
+type PolicyObjectSecurityObjectGroupEntryArrayOutput struct{ *pulumi.OutputState }
+
+func (PolicyObjectSecurityObjectGroupEntryArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]PolicyObjectSecurityObjectGroupEntry)(nil)).Elem()
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryArrayOutput) ToPolicyObjectSecurityObjectGroupEntryArrayOutput() PolicyObjectSecurityObjectGroupEntryArrayOutput {
+	return o
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryArrayOutput) ToPolicyObjectSecurityObjectGroupEntryArrayOutputWithContext(ctx context.Context) PolicyObjectSecurityObjectGroupEntryArrayOutput {
+	return o
+}
+
+func (o PolicyObjectSecurityObjectGroupEntryArrayOutput) Index(i pulumi.IntInput) PolicyObjectSecurityObjectGroupEntryOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) PolicyObjectSecurityObjectGroupEntry {
+		return vs[0].([]PolicyObjectSecurityObjectGroupEntry)[vs[1].(int)]
+	}).(PolicyObjectSecurityObjectGroupEntryOutput)
+}
+
 type PolicyObjectSecurityPortListEntry struct {
 	// can be single port or port range
 	Port *string `pulumi:"port"`
@@ -37632,6 +38198,400 @@ func (o PolicyObjectSecurityProtocolListEntryArrayOutput) Index(i pulumi.IntInpu
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) PolicyObjectSecurityProtocolListEntry {
 		return vs[0].([]PolicyObjectSecurityProtocolListEntry)[vs[1].(int)]
 	}).(PolicyObjectSecurityProtocolListEntryOutput)
+}
+
+type PolicyObjectSecurityRuleSetSequence struct {
+	// action
+	//   - Choices: `pass`, `inspect`, `drop`
+	Action *string `pulumi:"action"`
+	// Variable name
+	ActionVariable                   *string  `pulumi:"actionVariable"`
+	DestinationDataIpv4PrefixListIds []string `pulumi:"destinationDataIpv4PrefixListIds"`
+	DestinationDataIpv6PrefixListIds []string `pulumi:"destinationDataIpv6PrefixListIds"`
+	DestinationFqdnListIds           []string `pulumi:"destinationFqdnListIds"`
+	DestinationFqdns                 []string `pulumi:"destinationFqdns"`
+	// Variable name
+	DestinationFqdnsVariable      *string  `pulumi:"destinationFqdnsVariable"`
+	DestinationGeoLocationListIds []string `pulumi:"destinationGeoLocationListIds"`
+	// Destination Geolocation
+	DestinationGeoLocations []string `pulumi:"destinationGeoLocations"`
+	// Variable name
+	DestinationGeoLocationsVariable *string  `pulumi:"destinationGeoLocationsVariable"`
+	DestinationIpv4Prefixes         []string `pulumi:"destinationIpv4Prefixes"`
+	// Variable name
+	DestinationIpv4PrefixesVariable *string  `pulumi:"destinationIpv4PrefixesVariable"`
+	DestinationIpv6Prefixes         []string `pulumi:"destinationIpv6Prefixes"`
+	// Variable name
+	DestinationIpv6PrefixesVariable *string  `pulumi:"destinationIpv6PrefixesVariable"`
+	DestinationObjectGroupListIds   []string `pulumi:"destinationObjectGroupListIds"`
+	DestinationPortListIds          []string `pulumi:"destinationPortListIds"`
+	DestinationPorts                []string `pulumi:"destinationPorts"`
+	// Variable name
+	DestinationPortsVariable *string `pulumi:"destinationPortsVariable"`
+	// Sequence name
+	Name *string `pulumi:"name"`
+	// Variable name
+	NameVariable        *string  `pulumi:"nameVariable"`
+	ProtocolNameListIds []string `pulumi:"protocolNameListIds"`
+	ProtocolNames       []string `pulumi:"protocolNames"`
+	// Variable name
+	ProtocolNamesVariable *string `pulumi:"protocolNamesVariable"`
+	// protocol
+	Protocols []string `pulumi:"protocols"`
+	// Sequence Id
+	SequenceId *string `pulumi:"sequenceId"`
+	// Variable name
+	SequenceIdVariable *string `pulumi:"sequenceIdVariable"`
+	// ipv4/ ipv6
+	//   - Choices: `ipv4`, `ipv6`
+	SequenceIpType              *string  `pulumi:"sequenceIpType"`
+	SourceDataIpv4PrefixListIds []string `pulumi:"sourceDataIpv4PrefixListIds"`
+	SourceDataIpv6PrefixListIds []string `pulumi:"sourceDataIpv6PrefixListIds"`
+	SourceGeoLocationListIds    []string `pulumi:"sourceGeoLocationListIds"`
+	// Source Geolocation
+	SourceGeoLocations []string `pulumi:"sourceGeoLocations"`
+	// Variable name
+	SourceGeoLocationsVariable *string  `pulumi:"sourceGeoLocationsVariable"`
+	SourceIpv4Prefixes         []string `pulumi:"sourceIpv4Prefixes"`
+	// Variable name
+	SourceIpv4PrefixesVariable *string  `pulumi:"sourceIpv4PrefixesVariable"`
+	SourceIpv6Prefixes         []string `pulumi:"sourceIpv6Prefixes"`
+	// Variable name
+	SourceIpv6PrefixesVariable *string  `pulumi:"sourceIpv6PrefixesVariable"`
+	SourceObjectGroupListIds   []string `pulumi:"sourceObjectGroupListIds"`
+	SourcePortListIds          []string `pulumi:"sourcePortListIds"`
+	SourcePorts                []string `pulumi:"sourcePorts"`
+	// Variable name
+	SourcePortsVariable *string `pulumi:"sourcePortsVariable"`
+}
+
+// PolicyObjectSecurityRuleSetSequenceInput is an input type that accepts PolicyObjectSecurityRuleSetSequenceArgs and PolicyObjectSecurityRuleSetSequenceOutput values.
+// You can construct a concrete instance of `PolicyObjectSecurityRuleSetSequenceInput` via:
+//
+//	PolicyObjectSecurityRuleSetSequenceArgs{...}
+type PolicyObjectSecurityRuleSetSequenceInput interface {
+	pulumi.Input
+
+	ToPolicyObjectSecurityRuleSetSequenceOutput() PolicyObjectSecurityRuleSetSequenceOutput
+	ToPolicyObjectSecurityRuleSetSequenceOutputWithContext(context.Context) PolicyObjectSecurityRuleSetSequenceOutput
+}
+
+type PolicyObjectSecurityRuleSetSequenceArgs struct {
+	// action
+	//   - Choices: `pass`, `inspect`, `drop`
+	Action pulumi.StringPtrInput `pulumi:"action"`
+	// Variable name
+	ActionVariable                   pulumi.StringPtrInput   `pulumi:"actionVariable"`
+	DestinationDataIpv4PrefixListIds pulumi.StringArrayInput `pulumi:"destinationDataIpv4PrefixListIds"`
+	DestinationDataIpv6PrefixListIds pulumi.StringArrayInput `pulumi:"destinationDataIpv6PrefixListIds"`
+	DestinationFqdnListIds           pulumi.StringArrayInput `pulumi:"destinationFqdnListIds"`
+	DestinationFqdns                 pulumi.StringArrayInput `pulumi:"destinationFqdns"`
+	// Variable name
+	DestinationFqdnsVariable      pulumi.StringPtrInput   `pulumi:"destinationFqdnsVariable"`
+	DestinationGeoLocationListIds pulumi.StringArrayInput `pulumi:"destinationGeoLocationListIds"`
+	// Destination Geolocation
+	DestinationGeoLocations pulumi.StringArrayInput `pulumi:"destinationGeoLocations"`
+	// Variable name
+	DestinationGeoLocationsVariable pulumi.StringPtrInput   `pulumi:"destinationGeoLocationsVariable"`
+	DestinationIpv4Prefixes         pulumi.StringArrayInput `pulumi:"destinationIpv4Prefixes"`
+	// Variable name
+	DestinationIpv4PrefixesVariable pulumi.StringPtrInput   `pulumi:"destinationIpv4PrefixesVariable"`
+	DestinationIpv6Prefixes         pulumi.StringArrayInput `pulumi:"destinationIpv6Prefixes"`
+	// Variable name
+	DestinationIpv6PrefixesVariable pulumi.StringPtrInput   `pulumi:"destinationIpv6PrefixesVariable"`
+	DestinationObjectGroupListIds   pulumi.StringArrayInput `pulumi:"destinationObjectGroupListIds"`
+	DestinationPortListIds          pulumi.StringArrayInput `pulumi:"destinationPortListIds"`
+	DestinationPorts                pulumi.StringArrayInput `pulumi:"destinationPorts"`
+	// Variable name
+	DestinationPortsVariable pulumi.StringPtrInput `pulumi:"destinationPortsVariable"`
+	// Sequence name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// Variable name
+	NameVariable        pulumi.StringPtrInput   `pulumi:"nameVariable"`
+	ProtocolNameListIds pulumi.StringArrayInput `pulumi:"protocolNameListIds"`
+	ProtocolNames       pulumi.StringArrayInput `pulumi:"protocolNames"`
+	// Variable name
+	ProtocolNamesVariable pulumi.StringPtrInput `pulumi:"protocolNamesVariable"`
+	// protocol
+	Protocols pulumi.StringArrayInput `pulumi:"protocols"`
+	// Sequence Id
+	SequenceId pulumi.StringPtrInput `pulumi:"sequenceId"`
+	// Variable name
+	SequenceIdVariable pulumi.StringPtrInput `pulumi:"sequenceIdVariable"`
+	// ipv4/ ipv6
+	//   - Choices: `ipv4`, `ipv6`
+	SequenceIpType              pulumi.StringPtrInput   `pulumi:"sequenceIpType"`
+	SourceDataIpv4PrefixListIds pulumi.StringArrayInput `pulumi:"sourceDataIpv4PrefixListIds"`
+	SourceDataIpv6PrefixListIds pulumi.StringArrayInput `pulumi:"sourceDataIpv6PrefixListIds"`
+	SourceGeoLocationListIds    pulumi.StringArrayInput `pulumi:"sourceGeoLocationListIds"`
+	// Source Geolocation
+	SourceGeoLocations pulumi.StringArrayInput `pulumi:"sourceGeoLocations"`
+	// Variable name
+	SourceGeoLocationsVariable pulumi.StringPtrInput   `pulumi:"sourceGeoLocationsVariable"`
+	SourceIpv4Prefixes         pulumi.StringArrayInput `pulumi:"sourceIpv4Prefixes"`
+	// Variable name
+	SourceIpv4PrefixesVariable pulumi.StringPtrInput   `pulumi:"sourceIpv4PrefixesVariable"`
+	SourceIpv6Prefixes         pulumi.StringArrayInput `pulumi:"sourceIpv6Prefixes"`
+	// Variable name
+	SourceIpv6PrefixesVariable pulumi.StringPtrInput   `pulumi:"sourceIpv6PrefixesVariable"`
+	SourceObjectGroupListIds   pulumi.StringArrayInput `pulumi:"sourceObjectGroupListIds"`
+	SourcePortListIds          pulumi.StringArrayInput `pulumi:"sourcePortListIds"`
+	SourcePorts                pulumi.StringArrayInput `pulumi:"sourcePorts"`
+	// Variable name
+	SourcePortsVariable pulumi.StringPtrInput `pulumi:"sourcePortsVariable"`
+}
+
+func (PolicyObjectSecurityRuleSetSequenceArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicyObjectSecurityRuleSetSequence)(nil)).Elem()
+}
+
+func (i PolicyObjectSecurityRuleSetSequenceArgs) ToPolicyObjectSecurityRuleSetSequenceOutput() PolicyObjectSecurityRuleSetSequenceOutput {
+	return i.ToPolicyObjectSecurityRuleSetSequenceOutputWithContext(context.Background())
+}
+
+func (i PolicyObjectSecurityRuleSetSequenceArgs) ToPolicyObjectSecurityRuleSetSequenceOutputWithContext(ctx context.Context) PolicyObjectSecurityRuleSetSequenceOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicyObjectSecurityRuleSetSequenceOutput)
+}
+
+// PolicyObjectSecurityRuleSetSequenceArrayInput is an input type that accepts PolicyObjectSecurityRuleSetSequenceArray and PolicyObjectSecurityRuleSetSequenceArrayOutput values.
+// You can construct a concrete instance of `PolicyObjectSecurityRuleSetSequenceArrayInput` via:
+//
+//	PolicyObjectSecurityRuleSetSequenceArray{ PolicyObjectSecurityRuleSetSequenceArgs{...} }
+type PolicyObjectSecurityRuleSetSequenceArrayInput interface {
+	pulumi.Input
+
+	ToPolicyObjectSecurityRuleSetSequenceArrayOutput() PolicyObjectSecurityRuleSetSequenceArrayOutput
+	ToPolicyObjectSecurityRuleSetSequenceArrayOutputWithContext(context.Context) PolicyObjectSecurityRuleSetSequenceArrayOutput
+}
+
+type PolicyObjectSecurityRuleSetSequenceArray []PolicyObjectSecurityRuleSetSequenceInput
+
+func (PolicyObjectSecurityRuleSetSequenceArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]PolicyObjectSecurityRuleSetSequence)(nil)).Elem()
+}
+
+func (i PolicyObjectSecurityRuleSetSequenceArray) ToPolicyObjectSecurityRuleSetSequenceArrayOutput() PolicyObjectSecurityRuleSetSequenceArrayOutput {
+	return i.ToPolicyObjectSecurityRuleSetSequenceArrayOutputWithContext(context.Background())
+}
+
+func (i PolicyObjectSecurityRuleSetSequenceArray) ToPolicyObjectSecurityRuleSetSequenceArrayOutputWithContext(ctx context.Context) PolicyObjectSecurityRuleSetSequenceArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicyObjectSecurityRuleSetSequenceArrayOutput)
+}
+
+type PolicyObjectSecurityRuleSetSequenceOutput struct{ *pulumi.OutputState }
+
+func (PolicyObjectSecurityRuleSetSequenceOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicyObjectSecurityRuleSetSequence)(nil)).Elem()
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) ToPolicyObjectSecurityRuleSetSequenceOutput() PolicyObjectSecurityRuleSetSequenceOutput {
+	return o
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) ToPolicyObjectSecurityRuleSetSequenceOutputWithContext(ctx context.Context) PolicyObjectSecurityRuleSetSequenceOutput {
+	return o
+}
+
+// action
+//   - Choices: `pass`, `inspect`, `drop`
+func (o PolicyObjectSecurityRuleSetSequenceOutput) Action() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.Action }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityRuleSetSequenceOutput) ActionVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.ActionVariable }).(pulumi.StringPtrOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationDataIpv4PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.DestinationDataIpv4PrefixListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationDataIpv6PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.DestinationDataIpv6PrefixListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationFqdnListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.DestinationFqdnListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationFqdns() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.DestinationFqdns }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationFqdnsVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.DestinationFqdnsVariable }).(pulumi.StringPtrOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationGeoLocationListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.DestinationGeoLocationListIds }).(pulumi.StringArrayOutput)
+}
+
+// Destination Geolocation
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationGeoLocations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.DestinationGeoLocations }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationGeoLocationsVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.DestinationGeoLocationsVariable }).(pulumi.StringPtrOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationIpv4Prefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.DestinationIpv4Prefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationIpv4PrefixesVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.DestinationIpv4PrefixesVariable }).(pulumi.StringPtrOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationIpv6Prefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.DestinationIpv6Prefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationIpv6PrefixesVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.DestinationIpv6PrefixesVariable }).(pulumi.StringPtrOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationObjectGroupListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.DestinationObjectGroupListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationPortListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.DestinationPortListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationPorts() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.DestinationPorts }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityRuleSetSequenceOutput) DestinationPortsVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.DestinationPortsVariable }).(pulumi.StringPtrOutput)
+}
+
+// Sequence name
+func (o PolicyObjectSecurityRuleSetSequenceOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityRuleSetSequenceOutput) NameVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.NameVariable }).(pulumi.StringPtrOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) ProtocolNameListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.ProtocolNameListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) ProtocolNames() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.ProtocolNames }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityRuleSetSequenceOutput) ProtocolNamesVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.ProtocolNamesVariable }).(pulumi.StringPtrOutput)
+}
+
+// protocol
+func (o PolicyObjectSecurityRuleSetSequenceOutput) Protocols() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.Protocols }).(pulumi.StringArrayOutput)
+}
+
+// Sequence Id
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SequenceId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.SequenceId }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SequenceIdVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.SequenceIdVariable }).(pulumi.StringPtrOutput)
+}
+
+// ipv4/ ipv6
+//   - Choices: `ipv4`, `ipv6`
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SequenceIpType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.SequenceIpType }).(pulumi.StringPtrOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SourceDataIpv4PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.SourceDataIpv4PrefixListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SourceDataIpv6PrefixListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.SourceDataIpv6PrefixListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SourceGeoLocationListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.SourceGeoLocationListIds }).(pulumi.StringArrayOutput)
+}
+
+// Source Geolocation
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SourceGeoLocations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.SourceGeoLocations }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SourceGeoLocationsVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.SourceGeoLocationsVariable }).(pulumi.StringPtrOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SourceIpv4Prefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.SourceIpv4Prefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SourceIpv4PrefixesVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.SourceIpv4PrefixesVariable }).(pulumi.StringPtrOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SourceIpv6Prefixes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.SourceIpv6Prefixes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SourceIpv6PrefixesVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.SourceIpv6PrefixesVariable }).(pulumi.StringPtrOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SourceObjectGroupListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.SourceObjectGroupListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SourcePortListIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.SourcePortListIds }).(pulumi.StringArrayOutput)
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SourcePorts() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) []string { return v.SourcePorts }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o PolicyObjectSecurityRuleSetSequenceOutput) SourcePortsVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityRuleSetSequence) *string { return v.SourcePortsVariable }).(pulumi.StringPtrOutput)
+}
+
+type PolicyObjectSecurityRuleSetSequenceArrayOutput struct{ *pulumi.OutputState }
+
+func (PolicyObjectSecurityRuleSetSequenceArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]PolicyObjectSecurityRuleSetSequence)(nil)).Elem()
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceArrayOutput) ToPolicyObjectSecurityRuleSetSequenceArrayOutput() PolicyObjectSecurityRuleSetSequenceArrayOutput {
+	return o
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceArrayOutput) ToPolicyObjectSecurityRuleSetSequenceArrayOutputWithContext(ctx context.Context) PolicyObjectSecurityRuleSetSequenceArrayOutput {
+	return o
+}
+
+func (o PolicyObjectSecurityRuleSetSequenceArrayOutput) Index(i pulumi.IntInput) PolicyObjectSecurityRuleSetSequenceOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) PolicyObjectSecurityRuleSetSequence {
+		return vs[0].([]PolicyObjectSecurityRuleSetSequence)[vs[1].(int)]
+	}).(PolicyObjectSecurityRuleSetSequenceOutput)
 }
 
 type PolicyObjectSecurityScalableGroupTagListEntry struct {
@@ -45735,6 +46695,7 @@ func (o ServiceLanVpnFeatureIpv4ImportRouteTargetArrayOutput) Index(i pulumi.Int
 type ServiceLanVpnFeatureIpv4StaticRoute struct {
 	// Gateway distance, Attribute conditional on `gateway` equal to `null0`
 	//   - Range: `1`-`255`
+	//   - Default value: `1`
 	AdministrativeDistance *int `pulumi:"administrativeDistance"`
 	// Variable name, Attribute conditional on `gateway` equal to `null0`
 	AdministrativeDistanceVariable *string `pulumi:"administrativeDistanceVariable"`
@@ -45778,6 +46739,7 @@ type ServiceLanVpnFeatureIpv4StaticRouteInput interface {
 type ServiceLanVpnFeatureIpv4StaticRouteArgs struct {
 	// Gateway distance, Attribute conditional on `gateway` equal to `null0`
 	//   - Range: `1`-`255`
+	//   - Default value: `1`
 	AdministrativeDistance pulumi.IntPtrInput `pulumi:"administrativeDistance"`
 	// Variable name, Attribute conditional on `gateway` equal to `null0`
 	AdministrativeDistanceVariable pulumi.StringPtrInput `pulumi:"administrativeDistanceVariable"`
@@ -45860,6 +46822,7 @@ func (o ServiceLanVpnFeatureIpv4StaticRouteOutput) ToServiceLanVpnFeatureIpv4Sta
 
 // Gateway distance, Attribute conditional on `gateway` equal to `null0`
 //   - Range: `1`-`255`
+//   - Default value: `1`
 func (o ServiceLanVpnFeatureIpv4StaticRouteOutput) AdministrativeDistance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v ServiceLanVpnFeatureIpv4StaticRoute) *int { return v.AdministrativeDistance }).(pulumi.IntPtrOutput)
 }
@@ -46072,6 +47035,7 @@ type ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHop struct {
 	AddressVariable *string `pulumi:"addressVariable"`
 	// Administrative distance
 	//   - Range: `1`-`255`
+	//   - Default value: `1`
 	AdministrativeDistance *int `pulumi:"administrativeDistance"`
 	// Variable name
 	AdministrativeDistanceVariable *string `pulumi:"administrativeDistanceVariable"`
@@ -46095,6 +47059,7 @@ type ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHopArgs struct
 	AddressVariable pulumi.StringPtrInput `pulumi:"addressVariable"`
 	// Administrative distance
 	//   - Range: `1`-`255`
+	//   - Default value: `1`
 	AdministrativeDistance pulumi.IntPtrInput `pulumi:"administrativeDistance"`
 	// Variable name
 	AdministrativeDistanceVariable pulumi.StringPtrInput `pulumi:"administrativeDistanceVariable"`
@@ -46165,6 +47130,7 @@ func (o ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHopOutput) 
 
 // Administrative distance
 //   - Range: `1`-`255`
+//   - Default value: `1`
 func (o ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHopOutput) AdministrativeDistance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHop) *int {
 		return v.AdministrativeDistance
@@ -46968,6 +47934,7 @@ type ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHop struct {
 	AddressVariable *string `pulumi:"addressVariable"`
 	// Administrative distance
 	//   - Range: `1`-`254`
+	//   - Default value: `1`
 	AdministrativeDistance *int `pulumi:"administrativeDistance"`
 	// Variable name
 	AdministrativeDistanceVariable *string `pulumi:"administrativeDistanceVariable"`
@@ -46991,6 +47958,7 @@ type ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHopArgs stru
 	AddressVariable pulumi.StringPtrInput `pulumi:"addressVariable"`
 	// Administrative distance
 	//   - Range: `1`-`254`
+	//   - Default value: `1`
 	AdministrativeDistance pulumi.IntPtrInput `pulumi:"administrativeDistance"`
 	// Variable name
 	AdministrativeDistanceVariable pulumi.StringPtrInput `pulumi:"administrativeDistanceVariable"`
@@ -47061,6 +48029,7 @@ func (o ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHopOutput
 
 // Administrative distance
 //   - Range: `1`-`254`
+//   - Default value: `1`
 func (o ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHopOutput) AdministrativeDistance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHop) *int {
 		return v.AdministrativeDistance
@@ -61127,7 +62096,7 @@ type ServiceWirelessLanFeatureSsid struct {
 	// Variable name, Attribute conditional on `securityType` equal to `enterprise`
 	RadiusServerSecretVariable *string `pulumi:"radiusServerSecretVariable"`
 	// Select security type
-	//   - Choices: `personal`, `open`, `enterprise`
+	//   - Choices: `enterprise`, `personal`, `open`
 	SecurityType *string `pulumi:"securityType"`
 	// Configure wlan SSID
 	SsidName *string `pulumi:"ssidName"`
@@ -61191,7 +62160,7 @@ type ServiceWirelessLanFeatureSsidArgs struct {
 	// Variable name, Attribute conditional on `securityType` equal to `enterprise`
 	RadiusServerSecretVariable pulumi.StringPtrInput `pulumi:"radiusServerSecretVariable"`
 	// Select security type
-	//   - Choices: `personal`, `open`, `enterprise`
+	//   - Choices: `enterprise`, `personal`, `open`
 	SecurityType pulumi.StringPtrInput `pulumi:"securityType"`
 	// Configure wlan SSID
 	SsidName pulumi.StringPtrInput `pulumi:"ssidName"`
@@ -61342,7 +62311,7 @@ func (o ServiceWirelessLanFeatureSsidOutput) RadiusServerSecretVariable() pulumi
 }
 
 // Select security type
-//   - Choices: `personal`, `open`, `enterprise`
+//   - Choices: `enterprise`, `personal`, `open`
 func (o ServiceWirelessLanFeatureSsidOutput) SecurityType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceWirelessLanFeatureSsid) *string { return v.SecurityType }).(pulumi.StringPtrOutput)
 }
@@ -63093,7 +64062,7 @@ type SseZscalerFeatureSubLocation struct {
 	DisplayTimeUnit *string `pulumi:"displayTimeUnit"`
 	// Variable name, Attribute conditional on `surrogateIp` equal to `true`
 	DisplayTimeUnitVariable *string `pulumi:"displayTimeUnitVariable"`
-	// , Attribute conditional on `enforceBandwidthControl` equal to `override`
+	// Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
 	//   - Range: `0.1`-`99999`
 	DnBandwidth *float64 `pulumi:"dnBandwidth"`
 	// Variable name, Attribute conditional on `enforceBandwidthControl` equal to `override`
@@ -63114,14 +64083,16 @@ type SseZscalerFeatureSubLocation struct {
 	//   - Default value: `1`
 	IdleTime *int `pulumi:"idleTime"`
 	// Variable name, Attribute conditional on `surrogateIp` equal to `true`
-	IdleTimeVariable *string                                  `pulumi:"idleTimeVariable"`
-	InternalIps      []SseZscalerFeatureSubLocationInternalIp `pulumi:"internalIps"`
+	IdleTimeVariable *string `pulumi:"idleTimeVariable"`
+	// Internal Ip address
+	InternalIps []SseZscalerFeatureSubLocationInternalIp `pulumi:"internalIps"`
 	// If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
 	//   - Default value: `false`
 	IpEnforcedForKnownBrowsers *bool `pulumi:"ipEnforcedForKnownBrowsers"`
 	// Variable name
 	IpEnforcedForKnownBrowsersVariable *string `pulumi:"ipEnforcedForKnownBrowsersVariable"`
-	Name                               *string `pulumi:"name"`
+	// Sub-location name
+	Name *string `pulumi:"name"`
 	// Variable name
 	NameVariable *string `pulumi:"nameVariable"`
 	// Enforces firewall at the location
@@ -63142,14 +64113,15 @@ type SseZscalerFeatureSubLocation struct {
 	// Variable name, Attribute conditional on `ipEnforcedForKnownBrowsers` equal to `true`
 	RefreshTimeVariable *string `pulumi:"refreshTimeVariable"`
 	// Variable name
-	ServiceVpnVariable *string  `pulumi:"serviceVpnVariable"`
-	ServiceVpns        []string `pulumi:"serviceVpns"`
+	ServiceVpnVariable *string `pulumi:"serviceVpnVariable"`
+	// Sub-location Service VPN
+	ServiceVpns []string `pulumi:"serviceVpns"`
 	// Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic., Attribute conditional on `authRequired` equal to `true`
 	//   - Default value: `false`
 	SurrogateIp *bool `pulumi:"surrogateIp"`
 	// Variable name, Attribute conditional on `authRequired` equal to `true`
 	SurrogateIpVariable *string `pulumi:"surrogateIpVariable"`
-	// , Attribute conditional on `enforceBandwidthControl` equal to `override`
+	// Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
 	//   - Range: `0.1`-`99999`
 	UpBandwidth *float64 `pulumi:"upBandwidth"`
 	// Variable name, Attribute conditional on `enforceBandwidthControl` equal to `override`
@@ -63200,7 +64172,7 @@ type SseZscalerFeatureSubLocationArgs struct {
 	DisplayTimeUnit pulumi.StringPtrInput `pulumi:"displayTimeUnit"`
 	// Variable name, Attribute conditional on `surrogateIp` equal to `true`
 	DisplayTimeUnitVariable pulumi.StringPtrInput `pulumi:"displayTimeUnitVariable"`
-	// , Attribute conditional on `enforceBandwidthControl` equal to `override`
+	// Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
 	//   - Range: `0.1`-`99999`
 	DnBandwidth pulumi.Float64PtrInput `pulumi:"dnBandwidth"`
 	// Variable name, Attribute conditional on `enforceBandwidthControl` equal to `override`
@@ -63221,14 +64193,16 @@ type SseZscalerFeatureSubLocationArgs struct {
 	//   - Default value: `1`
 	IdleTime pulumi.IntPtrInput `pulumi:"idleTime"`
 	// Variable name, Attribute conditional on `surrogateIp` equal to `true`
-	IdleTimeVariable pulumi.StringPtrInput                            `pulumi:"idleTimeVariable"`
-	InternalIps      SseZscalerFeatureSubLocationInternalIpArrayInput `pulumi:"internalIps"`
+	IdleTimeVariable pulumi.StringPtrInput `pulumi:"idleTimeVariable"`
+	// Internal Ip address
+	InternalIps SseZscalerFeatureSubLocationInternalIpArrayInput `pulumi:"internalIps"`
 	// If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
 	//   - Default value: `false`
 	IpEnforcedForKnownBrowsers pulumi.BoolPtrInput `pulumi:"ipEnforcedForKnownBrowsers"`
 	// Variable name
 	IpEnforcedForKnownBrowsersVariable pulumi.StringPtrInput `pulumi:"ipEnforcedForKnownBrowsersVariable"`
-	Name                               pulumi.StringPtrInput `pulumi:"name"`
+	// Sub-location name
+	Name pulumi.StringPtrInput `pulumi:"name"`
 	// Variable name
 	NameVariable pulumi.StringPtrInput `pulumi:"nameVariable"`
 	// Enforces firewall at the location
@@ -63249,14 +64223,15 @@ type SseZscalerFeatureSubLocationArgs struct {
 	// Variable name, Attribute conditional on `ipEnforcedForKnownBrowsers` equal to `true`
 	RefreshTimeVariable pulumi.StringPtrInput `pulumi:"refreshTimeVariable"`
 	// Variable name
-	ServiceVpnVariable pulumi.StringPtrInput   `pulumi:"serviceVpnVariable"`
-	ServiceVpns        pulumi.StringArrayInput `pulumi:"serviceVpns"`
+	ServiceVpnVariable pulumi.StringPtrInput `pulumi:"serviceVpnVariable"`
+	// Sub-location Service VPN
+	ServiceVpns pulumi.StringArrayInput `pulumi:"serviceVpns"`
 	// Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic., Attribute conditional on `authRequired` equal to `true`
 	//   - Default value: `false`
 	SurrogateIp pulumi.BoolPtrInput `pulumi:"surrogateIp"`
 	// Variable name, Attribute conditional on `authRequired` equal to `true`
 	SurrogateIpVariable pulumi.StringPtrInput `pulumi:"surrogateIpVariable"`
-	// , Attribute conditional on `enforceBandwidthControl` equal to `override`
+	// Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
 	//   - Range: `0.1`-`99999`
 	UpBandwidth pulumi.Float64PtrInput `pulumi:"upBandwidth"`
 	// Variable name, Attribute conditional on `enforceBandwidthControl` equal to `override`
@@ -63382,7 +64357,7 @@ func (o SseZscalerFeatureSubLocationOutput) DisplayTimeUnitVariable() pulumi.Str
 	return o.ApplyT(func(v SseZscalerFeatureSubLocation) *string { return v.DisplayTimeUnitVariable }).(pulumi.StringPtrOutput)
 }
 
-// , Attribute conditional on `enforceBandwidthControl` equal to `override`
+// Download Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
 //   - Range: `0.1`-`99999`
 func (o SseZscalerFeatureSubLocationOutput) DnBandwidth() pulumi.Float64PtrOutput {
 	return o.ApplyT(func(v SseZscalerFeatureSubLocation) *float64 { return v.DnBandwidth }).(pulumi.Float64PtrOutput)
@@ -63428,6 +64403,7 @@ func (o SseZscalerFeatureSubLocationOutput) IdleTimeVariable() pulumi.StringPtrO
 	return o.ApplyT(func(v SseZscalerFeatureSubLocation) *string { return v.IdleTimeVariable }).(pulumi.StringPtrOutput)
 }
 
+// Internal Ip address
 func (o SseZscalerFeatureSubLocationOutput) InternalIps() SseZscalerFeatureSubLocationInternalIpArrayOutput {
 	return o.ApplyT(func(v SseZscalerFeatureSubLocation) []SseZscalerFeatureSubLocationInternalIp { return v.InternalIps }).(SseZscalerFeatureSubLocationInternalIpArrayOutput)
 }
@@ -63443,6 +64419,7 @@ func (o SseZscalerFeatureSubLocationOutput) IpEnforcedForKnownBrowsersVariable()
 	return o.ApplyT(func(v SseZscalerFeatureSubLocation) *string { return v.IpEnforcedForKnownBrowsersVariable }).(pulumi.StringPtrOutput)
 }
 
+// Sub-location name
 func (o SseZscalerFeatureSubLocationOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SseZscalerFeatureSubLocation) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
@@ -63492,6 +64469,7 @@ func (o SseZscalerFeatureSubLocationOutput) ServiceVpnVariable() pulumi.StringPt
 	return o.ApplyT(func(v SseZscalerFeatureSubLocation) *string { return v.ServiceVpnVariable }).(pulumi.StringPtrOutput)
 }
 
+// Sub-location Service VPN
 func (o SseZscalerFeatureSubLocationOutput) ServiceVpns() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v SseZscalerFeatureSubLocation) []string { return v.ServiceVpns }).(pulumi.StringArrayOutput)
 }
@@ -63507,7 +64485,7 @@ func (o SseZscalerFeatureSubLocationOutput) SurrogateIpVariable() pulumi.StringP
 	return o.ApplyT(func(v SseZscalerFeatureSubLocation) *string { return v.SurrogateIpVariable }).(pulumi.StringPtrOutput)
 }
 
-// , Attribute conditional on `enforceBandwidthControl` equal to `override`
+// Upload Bandwidth in Mbps, Attribute conditional on `enforceBandwidthControl` equal to `override`
 //   - Range: `0.1`-`99999`
 func (o SseZscalerFeatureSubLocationOutput) UpBandwidth() pulumi.Float64PtrOutput {
 	return o.ApplyT(func(v SseZscalerFeatureSubLocation) *float64 { return v.UpBandwidth }).(pulumi.Float64PtrOutput)
@@ -69784,6 +70762,7 @@ func (o TlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput) Index(i pulumi.IntIn
 }
 
 type TopologyCustomControlFeatureSequence struct {
+	// List of action entries
 	ActionEntries []TopologyCustomControlFeatureSequenceActionEntry `pulumi:"actionEntries"`
 	// Base Action
 	//   - Choices: `reject`, `accept`
@@ -69793,7 +70772,8 @@ type TopologyCustomControlFeatureSequence struct {
 	Id *int `pulumi:"id"`
 	// Sequence IP Type
 	//   - Choices: `ipv4`, `ipv6`, `all`
-	IpType       *string                                          `pulumi:"ipType"`
+	IpType *string `pulumi:"ipType"`
+	// Set of match entries
 	MatchEntries []TopologyCustomControlFeatureSequenceMatchEntry `pulumi:"matchEntries"`
 	// Sequence Name
 	Name *string `pulumi:"name"`
@@ -69814,6 +70794,7 @@ type TopologyCustomControlFeatureSequenceInput interface {
 }
 
 type TopologyCustomControlFeatureSequenceArgs struct {
+	// List of action entries
 	ActionEntries TopologyCustomControlFeatureSequenceActionEntryArrayInput `pulumi:"actionEntries"`
 	// Base Action
 	//   - Choices: `reject`, `accept`
@@ -69823,7 +70804,8 @@ type TopologyCustomControlFeatureSequenceArgs struct {
 	Id pulumi.IntPtrInput `pulumi:"id"`
 	// Sequence IP Type
 	//   - Choices: `ipv4`, `ipv6`, `all`
-	IpType       pulumi.StringPtrInput                                    `pulumi:"ipType"`
+	IpType pulumi.StringPtrInput `pulumi:"ipType"`
+	// Set of match entries
 	MatchEntries TopologyCustomControlFeatureSequenceMatchEntryArrayInput `pulumi:"matchEntries"`
 	// Sequence Name
 	Name pulumi.StringPtrInput `pulumi:"name"`
@@ -69883,6 +70865,7 @@ func (o TopologyCustomControlFeatureSequenceOutput) ToTopologyCustomControlFeatu
 	return o
 }
 
+// List of action entries
 func (o TopologyCustomControlFeatureSequenceOutput) ActionEntries() TopologyCustomControlFeatureSequenceActionEntryArrayOutput {
 	return o.ApplyT(func(v TopologyCustomControlFeatureSequence) []TopologyCustomControlFeatureSequenceActionEntry {
 		return v.ActionEntries
@@ -69907,6 +70890,7 @@ func (o TopologyCustomControlFeatureSequenceOutput) IpType() pulumi.StringPtrOut
 	return o.ApplyT(func(v TopologyCustomControlFeatureSequence) *string { return v.IpType }).(pulumi.StringPtrOutput)
 }
 
+// Set of match entries
 func (o TopologyCustomControlFeatureSequenceOutput) MatchEntries() TopologyCustomControlFeatureSequenceMatchEntryArrayOutput {
 	return o.ApplyT(func(v TopologyCustomControlFeatureSequence) []TopologyCustomControlFeatureSequenceMatchEntry {
 		return v.MatchEntries
@@ -81938,505 +82922,6 @@ func (o TransportWanVpnFeatureNat64V4PoolArrayOutput) Index(i pulumi.IntInput) T
 	}).(TransportWanVpnFeatureNat64V4PoolOutput)
 }
 
-type TransportWanVpnFeatureNewHostMapping struct {
-	// Hostname
-	HostName *string `pulumi:"hostName"`
-	// Variable name
-	HostNameVariable *string `pulumi:"hostNameVariable"`
-	// List of IP
-	ListOfIpAddresses []string `pulumi:"listOfIpAddresses"`
-	// Variable name
-	ListOfIpAddressesVariable *string `pulumi:"listOfIpAddressesVariable"`
-}
-
-// TransportWanVpnFeatureNewHostMappingInput is an input type that accepts TransportWanVpnFeatureNewHostMappingArgs and TransportWanVpnFeatureNewHostMappingOutput values.
-// You can construct a concrete instance of `TransportWanVpnFeatureNewHostMappingInput` via:
-//
-//	TransportWanVpnFeatureNewHostMappingArgs{...}
-type TransportWanVpnFeatureNewHostMappingInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnFeatureNewHostMappingOutput() TransportWanVpnFeatureNewHostMappingOutput
-	ToTransportWanVpnFeatureNewHostMappingOutputWithContext(context.Context) TransportWanVpnFeatureNewHostMappingOutput
-}
-
-type TransportWanVpnFeatureNewHostMappingArgs struct {
-	// Hostname
-	HostName pulumi.StringPtrInput `pulumi:"hostName"`
-	// Variable name
-	HostNameVariable pulumi.StringPtrInput `pulumi:"hostNameVariable"`
-	// List of IP
-	ListOfIpAddresses pulumi.StringArrayInput `pulumi:"listOfIpAddresses"`
-	// Variable name
-	ListOfIpAddressesVariable pulumi.StringPtrInput `pulumi:"listOfIpAddressesVariable"`
-}
-
-func (TransportWanVpnFeatureNewHostMappingArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnFeatureNewHostMapping)(nil)).Elem()
-}
-
-func (i TransportWanVpnFeatureNewHostMappingArgs) ToTransportWanVpnFeatureNewHostMappingOutput() TransportWanVpnFeatureNewHostMappingOutput {
-	return i.ToTransportWanVpnFeatureNewHostMappingOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnFeatureNewHostMappingArgs) ToTransportWanVpnFeatureNewHostMappingOutputWithContext(ctx context.Context) TransportWanVpnFeatureNewHostMappingOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureNewHostMappingOutput)
-}
-
-// TransportWanVpnFeatureNewHostMappingArrayInput is an input type that accepts TransportWanVpnFeatureNewHostMappingArray and TransportWanVpnFeatureNewHostMappingArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnFeatureNewHostMappingArrayInput` via:
-//
-//	TransportWanVpnFeatureNewHostMappingArray{ TransportWanVpnFeatureNewHostMappingArgs{...} }
-type TransportWanVpnFeatureNewHostMappingArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnFeatureNewHostMappingArrayOutput() TransportWanVpnFeatureNewHostMappingArrayOutput
-	ToTransportWanVpnFeatureNewHostMappingArrayOutputWithContext(context.Context) TransportWanVpnFeatureNewHostMappingArrayOutput
-}
-
-type TransportWanVpnFeatureNewHostMappingArray []TransportWanVpnFeatureNewHostMappingInput
-
-func (TransportWanVpnFeatureNewHostMappingArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnFeatureNewHostMapping)(nil)).Elem()
-}
-
-func (i TransportWanVpnFeatureNewHostMappingArray) ToTransportWanVpnFeatureNewHostMappingArrayOutput() TransportWanVpnFeatureNewHostMappingArrayOutput {
-	return i.ToTransportWanVpnFeatureNewHostMappingArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnFeatureNewHostMappingArray) ToTransportWanVpnFeatureNewHostMappingArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureNewHostMappingArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureNewHostMappingArrayOutput)
-}
-
-type TransportWanVpnFeatureNewHostMappingOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnFeatureNewHostMappingOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnFeatureNewHostMapping)(nil)).Elem()
-}
-
-func (o TransportWanVpnFeatureNewHostMappingOutput) ToTransportWanVpnFeatureNewHostMappingOutput() TransportWanVpnFeatureNewHostMappingOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureNewHostMappingOutput) ToTransportWanVpnFeatureNewHostMappingOutputWithContext(ctx context.Context) TransportWanVpnFeatureNewHostMappingOutput {
-	return o
-}
-
-// Hostname
-func (o TransportWanVpnFeatureNewHostMappingOutput) HostName() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureNewHostMapping) *string { return v.HostName }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnFeatureNewHostMappingOutput) HostNameVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureNewHostMapping) *string { return v.HostNameVariable }).(pulumi.StringPtrOutput)
-}
-
-// List of IP
-func (o TransportWanVpnFeatureNewHostMappingOutput) ListOfIpAddresses() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureNewHostMapping) []string { return v.ListOfIpAddresses }).(pulumi.StringArrayOutput)
-}
-
-// Variable name
-func (o TransportWanVpnFeatureNewHostMappingOutput) ListOfIpAddressesVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureNewHostMapping) *string { return v.ListOfIpAddressesVariable }).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnFeatureNewHostMappingArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnFeatureNewHostMappingArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnFeatureNewHostMapping)(nil)).Elem()
-}
-
-func (o TransportWanVpnFeatureNewHostMappingArrayOutput) ToTransportWanVpnFeatureNewHostMappingArrayOutput() TransportWanVpnFeatureNewHostMappingArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureNewHostMappingArrayOutput) ToTransportWanVpnFeatureNewHostMappingArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureNewHostMappingArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureNewHostMappingArrayOutput) Index(i pulumi.IntInput) TransportWanVpnFeatureNewHostMappingOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnFeatureNewHostMapping {
-		return vs[0].([]TransportWanVpnFeatureNewHostMapping)[vs[1].(int)]
-	}).(TransportWanVpnFeatureNewHostMappingOutput)
-}
-
-type TransportWanVpnFeatureService struct {
-	// Service Type
-	//   - Choices: `TE`
-	ServiceType *string `pulumi:"serviceType"`
-}
-
-// TransportWanVpnFeatureServiceInput is an input type that accepts TransportWanVpnFeatureServiceArgs and TransportWanVpnFeatureServiceOutput values.
-// You can construct a concrete instance of `TransportWanVpnFeatureServiceInput` via:
-//
-//	TransportWanVpnFeatureServiceArgs{...}
-type TransportWanVpnFeatureServiceInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnFeatureServiceOutput() TransportWanVpnFeatureServiceOutput
-	ToTransportWanVpnFeatureServiceOutputWithContext(context.Context) TransportWanVpnFeatureServiceOutput
-}
-
-type TransportWanVpnFeatureServiceArgs struct {
-	// Service Type
-	//   - Choices: `TE`
-	ServiceType pulumi.StringPtrInput `pulumi:"serviceType"`
-}
-
-func (TransportWanVpnFeatureServiceArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnFeatureService)(nil)).Elem()
-}
-
-func (i TransportWanVpnFeatureServiceArgs) ToTransportWanVpnFeatureServiceOutput() TransportWanVpnFeatureServiceOutput {
-	return i.ToTransportWanVpnFeatureServiceOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnFeatureServiceArgs) ToTransportWanVpnFeatureServiceOutputWithContext(ctx context.Context) TransportWanVpnFeatureServiceOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureServiceOutput)
-}
-
-// TransportWanVpnFeatureServiceArrayInput is an input type that accepts TransportWanVpnFeatureServiceArray and TransportWanVpnFeatureServiceArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnFeatureServiceArrayInput` via:
-//
-//	TransportWanVpnFeatureServiceArray{ TransportWanVpnFeatureServiceArgs{...} }
-type TransportWanVpnFeatureServiceArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnFeatureServiceArrayOutput() TransportWanVpnFeatureServiceArrayOutput
-	ToTransportWanVpnFeatureServiceArrayOutputWithContext(context.Context) TransportWanVpnFeatureServiceArrayOutput
-}
-
-type TransportWanVpnFeatureServiceArray []TransportWanVpnFeatureServiceInput
-
-func (TransportWanVpnFeatureServiceArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnFeatureService)(nil)).Elem()
-}
-
-func (i TransportWanVpnFeatureServiceArray) ToTransportWanVpnFeatureServiceArrayOutput() TransportWanVpnFeatureServiceArrayOutput {
-	return i.ToTransportWanVpnFeatureServiceArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnFeatureServiceArray) ToTransportWanVpnFeatureServiceArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureServiceArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureServiceArrayOutput)
-}
-
-type TransportWanVpnFeatureServiceOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnFeatureServiceOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnFeatureService)(nil)).Elem()
-}
-
-func (o TransportWanVpnFeatureServiceOutput) ToTransportWanVpnFeatureServiceOutput() TransportWanVpnFeatureServiceOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureServiceOutput) ToTransportWanVpnFeatureServiceOutputWithContext(ctx context.Context) TransportWanVpnFeatureServiceOutput {
-	return o
-}
-
-// Service Type
-//   - Choices: `TE`
-func (o TransportWanVpnFeatureServiceOutput) ServiceType() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureService) *string { return v.ServiceType }).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnFeatureServiceArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnFeatureServiceArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnFeatureService)(nil)).Elem()
-}
-
-func (o TransportWanVpnFeatureServiceArrayOutput) ToTransportWanVpnFeatureServiceArrayOutput() TransportWanVpnFeatureServiceArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureServiceArrayOutput) ToTransportWanVpnFeatureServiceArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureServiceArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureServiceArrayOutput) Index(i pulumi.IntInput) TransportWanVpnFeatureServiceOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnFeatureService {
-		return vs[0].([]TransportWanVpnFeatureService)[vs[1].(int)]
-	}).(TransportWanVpnFeatureServiceOutput)
-}
-
-type TransportWanVpnInterfaceCellularFeatureArp struct {
-	// IP V4 Address
-	IpAddress *string `pulumi:"ipAddress"`
-	// Variable name
-	IpAddressVariable *string `pulumi:"ipAddressVariable"`
-	// MAC Address
-	MacAddress *string `pulumi:"macAddress"`
-	// Variable name
-	MacAddressVariable *string `pulumi:"macAddressVariable"`
-}
-
-// TransportWanVpnInterfaceCellularFeatureArpInput is an input type that accepts TransportWanVpnInterfaceCellularFeatureArpArgs and TransportWanVpnInterfaceCellularFeatureArpOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceCellularFeatureArpInput` via:
-//
-//	TransportWanVpnInterfaceCellularFeatureArpArgs{...}
-type TransportWanVpnInterfaceCellularFeatureArpInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceCellularFeatureArpOutput() TransportWanVpnInterfaceCellularFeatureArpOutput
-	ToTransportWanVpnInterfaceCellularFeatureArpOutputWithContext(context.Context) TransportWanVpnInterfaceCellularFeatureArpOutput
-}
-
-type TransportWanVpnInterfaceCellularFeatureArpArgs struct {
-	// IP V4 Address
-	IpAddress pulumi.StringPtrInput `pulumi:"ipAddress"`
-	// Variable name
-	IpAddressVariable pulumi.StringPtrInput `pulumi:"ipAddressVariable"`
-	// MAC Address
-	MacAddress pulumi.StringPtrInput `pulumi:"macAddress"`
-	// Variable name
-	MacAddressVariable pulumi.StringPtrInput `pulumi:"macAddressVariable"`
-}
-
-func (TransportWanVpnInterfaceCellularFeatureArpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureArp)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceCellularFeatureArpArgs) ToTransportWanVpnInterfaceCellularFeatureArpOutput() TransportWanVpnInterfaceCellularFeatureArpOutput {
-	return i.ToTransportWanVpnInterfaceCellularFeatureArpOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceCellularFeatureArpArgs) ToTransportWanVpnInterfaceCellularFeatureArpOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureArpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceCellularFeatureArpOutput)
-}
-
-// TransportWanVpnInterfaceCellularFeatureArpArrayInput is an input type that accepts TransportWanVpnInterfaceCellularFeatureArpArray and TransportWanVpnInterfaceCellularFeatureArpArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceCellularFeatureArpArrayInput` via:
-//
-//	TransportWanVpnInterfaceCellularFeatureArpArray{ TransportWanVpnInterfaceCellularFeatureArpArgs{...} }
-type TransportWanVpnInterfaceCellularFeatureArpArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceCellularFeatureArpArrayOutput() TransportWanVpnInterfaceCellularFeatureArpArrayOutput
-	ToTransportWanVpnInterfaceCellularFeatureArpArrayOutputWithContext(context.Context) TransportWanVpnInterfaceCellularFeatureArpArrayOutput
-}
-
-type TransportWanVpnInterfaceCellularFeatureArpArray []TransportWanVpnInterfaceCellularFeatureArpInput
-
-func (TransportWanVpnInterfaceCellularFeatureArpArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceCellularFeatureArp)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceCellularFeatureArpArray) ToTransportWanVpnInterfaceCellularFeatureArpArrayOutput() TransportWanVpnInterfaceCellularFeatureArpArrayOutput {
-	return i.ToTransportWanVpnInterfaceCellularFeatureArpArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceCellularFeatureArpArray) ToTransportWanVpnInterfaceCellularFeatureArpArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureArpArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceCellularFeatureArpArrayOutput)
-}
-
-type TransportWanVpnInterfaceCellularFeatureArpOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceCellularFeatureArpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureArp)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceCellularFeatureArpOutput) ToTransportWanVpnInterfaceCellularFeatureArpOutput() TransportWanVpnInterfaceCellularFeatureArpOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceCellularFeatureArpOutput) ToTransportWanVpnInterfaceCellularFeatureArpOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureArpOutput {
-	return o
-}
-
-// IP V4 Address
-func (o TransportWanVpnInterfaceCellularFeatureArpOutput) IpAddress() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureArp) *string { return v.IpAddress }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceCellularFeatureArpOutput) IpAddressVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureArp) *string { return v.IpAddressVariable }).(pulumi.StringPtrOutput)
-}
-
-// MAC Address
-func (o TransportWanVpnInterfaceCellularFeatureArpOutput) MacAddress() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureArp) *string { return v.MacAddress }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceCellularFeatureArpOutput) MacAddressVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureArp) *string { return v.MacAddressVariable }).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceCellularFeatureArpArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceCellularFeatureArpArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceCellularFeatureArp)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceCellularFeatureArpArrayOutput) ToTransportWanVpnInterfaceCellularFeatureArpArrayOutput() TransportWanVpnInterfaceCellularFeatureArpArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceCellularFeatureArpArrayOutput) ToTransportWanVpnInterfaceCellularFeatureArpArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureArpArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceCellularFeatureArpArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceCellularFeatureArpOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceCellularFeatureArp {
-		return vs[0].([]TransportWanVpnInterfaceCellularFeatureArp)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceCellularFeatureArpOutput)
-}
-
-type TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation struct {
-	// Encapsulation
-	//   - Choices: `gre`, `ipsec`
-	Encapsulation *string `pulumi:"encapsulation"`
-	// Set preference for TLOC
-	//   - Range: `0`-`4294967295`
-	Preference *int `pulumi:"preference"`
-	// Variable name
-	PreferenceVariable *string `pulumi:"preferenceVariable"`
-	// Set weight for TLOC
-	//   - Range: `1`-`255`
-	//   - Default value: `1`
-	Weight *int `pulumi:"weight"`
-	// Variable name
-	WeightVariable *string `pulumi:"weightVariable"`
-}
-
-// TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput is an input type that accepts TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs and TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput` via:
-//
-//	TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs{...}
-type TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput() TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput
-	ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutputWithContext(context.Context) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput
-}
-
-type TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs struct {
-	// Encapsulation
-	//   - Choices: `gre`, `ipsec`
-	Encapsulation pulumi.StringPtrInput `pulumi:"encapsulation"`
-	// Set preference for TLOC
-	//   - Range: `0`-`4294967295`
-	Preference pulumi.IntPtrInput `pulumi:"preference"`
-	// Variable name
-	PreferenceVariable pulumi.StringPtrInput `pulumi:"preferenceVariable"`
-	// Set weight for TLOC
-	//   - Range: `1`-`255`
-	//   - Default value: `1`
-	Weight pulumi.IntPtrInput `pulumi:"weight"`
-	// Variable name
-	WeightVariable pulumi.StringPtrInput `pulumi:"weightVariable"`
-}
-
-func (TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput() TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
-	return i.ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput)
-}
-
-// TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayInput is an input type that accepts TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray and TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayInput` via:
-//
-//	TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray{ TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs{...} }
-type TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput() TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput
-	ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(context.Context) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput
-}
-
-type TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray []TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput
-
-func (TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
-}
-
-func (i TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput() TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput {
-	return i.ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput)
-}
-
-type TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput() TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
-	return o
-}
-
-// Encapsulation
-//   - Choices: `gre`, `ipsec`
-func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) Encapsulation() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) *string {
-		return v.Encapsulation
-	}).(pulumi.StringPtrOutput)
-}
-
-// Set preference for TLOC
-//   - Range: `0`-`4294967295`
-func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) Preference() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) *int { return v.Preference }).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) PreferenceVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) *string {
-		return v.PreferenceVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-// Set weight for TLOC
-//   - Range: `1`-`255`
-//   - Default value: `1`
-func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) Weight() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) *int { return v.Weight }).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) WeightVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) *string {
-		return v.WeightVariable
-	}).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
-}
-
-func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput() TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput) ToTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput) Index(i pulumi.IntInput) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation {
-		return vs[0].([]TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)[vs[1].(int)]
-	}).(TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput)
-}
-
 func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*AllowUrlListPolicyObjectEntryInput)(nil)).Elem(), AllowUrlListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AllowUrlListPolicyObjectEntryArrayInput)(nil)).Elem(), AllowUrlListPolicyObjectEntryArray{})
@@ -82778,6 +83263,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*EmbeddedSecurityPolicyAssemblyArrayInput)(nil)).Elem(), EmbeddedSecurityPolicyAssemblyArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*EmbeddedSecurityPolicyAssemblyEntryInput)(nil)).Elem(), EmbeddedSecurityPolicyAssemblyEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*EmbeddedSecurityPolicyAssemblyEntryArrayInput)(nil)).Elem(), EmbeddedSecurityPolicyAssemblyEntryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*EmbeddedSecurityPolicyHighSpeedLoggingInput)(nil)).Elem(), EmbeddedSecurityPolicyHighSpeedLoggingArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*EmbeddedSecurityPolicyHighSpeedLoggingArrayInput)(nil)).Elem(), EmbeddedSecurityPolicyHighSpeedLoggingArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ExpandedCommunityListPolicyObjectEntryInput)(nil)).Elem(), ExpandedCommunityListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ExpandedCommunityListPolicyObjectEntryArrayInput)(nil)).Elem(), ExpandedCommunityListPolicyObjectEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ExtendedCommunityListPolicyObjectEntryInput)(nil)).Elem(), ExtendedCommunityListPolicyObjectEntryArgs{})
@@ -82886,6 +83373,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectPreferredColorGroupEntryArrayInput)(nil)).Elem(), PolicyObjectPreferredColorGroupEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityDataIpv4PrefixListEntryInput)(nil)).Elem(), PolicyObjectSecurityDataIpv4PrefixListEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityDataIpv4PrefixListEntryArrayInput)(nil)).Elem(), PolicyObjectSecurityDataIpv4PrefixListEntryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityDataIpv6PrefixListEntryInput)(nil)).Elem(), PolicyObjectSecurityDataIpv6PrefixListEntryArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityDataIpv6PrefixListEntryArrayInput)(nil)).Elem(), PolicyObjectSecurityDataIpv6PrefixListEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityFqdnListEntryInput)(nil)).Elem(), PolicyObjectSecurityFqdnListEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityFqdnListEntryArrayInput)(nil)).Elem(), PolicyObjectSecurityFqdnListEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityGeolocationListEntryInput)(nil)).Elem(), PolicyObjectSecurityGeolocationListEntryArgs{})
@@ -82898,10 +83387,14 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityLocalApplicationListEntryArrayInput)(nil)).Elem(), PolicyObjectSecurityLocalApplicationListEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityLocalDomainListEntryInput)(nil)).Elem(), PolicyObjectSecurityLocalDomainListEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityLocalDomainListEntryArrayInput)(nil)).Elem(), PolicyObjectSecurityLocalDomainListEntryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityObjectGroupEntryInput)(nil)).Elem(), PolicyObjectSecurityObjectGroupEntryArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityObjectGroupEntryArrayInput)(nil)).Elem(), PolicyObjectSecurityObjectGroupEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityPortListEntryInput)(nil)).Elem(), PolicyObjectSecurityPortListEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityPortListEntryArrayInput)(nil)).Elem(), PolicyObjectSecurityPortListEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityProtocolListEntryInput)(nil)).Elem(), PolicyObjectSecurityProtocolListEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityProtocolListEntryArrayInput)(nil)).Elem(), PolicyObjectSecurityProtocolListEntryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityRuleSetSequenceInput)(nil)).Elem(), PolicyObjectSecurityRuleSetSequenceArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityRuleSetSequenceArrayInput)(nil)).Elem(), PolicyObjectSecurityRuleSetSequenceArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityScalableGroupTagListEntryInput)(nil)).Elem(), PolicyObjectSecurityScalableGroupTagListEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityScalableGroupTagListEntryArrayInput)(nil)).Elem(), PolicyObjectSecurityScalableGroupTagListEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityUrlAllowListEntryInput)(nil)).Elem(), PolicyObjectSecurityUrlAllowListEntryArgs{})
@@ -83430,14 +83923,6 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureIpv6StaticRouteNextHopArrayInput)(nil)).Elem(), TransportWanVpnFeatureIpv6StaticRouteNextHopArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureNat64V4PoolInput)(nil)).Elem(), TransportWanVpnFeatureNat64V4PoolArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureNat64V4PoolArrayInput)(nil)).Elem(), TransportWanVpnFeatureNat64V4PoolArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureNewHostMappingInput)(nil)).Elem(), TransportWanVpnFeatureNewHostMappingArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureNewHostMappingArrayInput)(nil)).Elem(), TransportWanVpnFeatureNewHostMappingArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureServiceInput)(nil)).Elem(), TransportWanVpnFeatureServiceArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureServiceArrayInput)(nil)).Elem(), TransportWanVpnFeatureServiceArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureArpInput)(nil)).Elem(), TransportWanVpnInterfaceCellularFeatureArpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureArpArrayInput)(nil)).Elem(), TransportWanVpnInterfaceCellularFeatureArpArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput)(nil)).Elem(), TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayInput)(nil)).Elem(), TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray{})
 	pulumi.RegisterOutputType(AllowUrlListPolicyObjectEntryOutput{})
 	pulumi.RegisterOutputType(AllowUrlListPolicyObjectEntryArrayOutput{})
 	pulumi.RegisterOutputType(AppProbeClassPolicyObjectMappingOutput{})
@@ -83778,6 +84263,8 @@ func init() {
 	pulumi.RegisterOutputType(EmbeddedSecurityPolicyAssemblyArrayOutput{})
 	pulumi.RegisterOutputType(EmbeddedSecurityPolicyAssemblyEntryOutput{})
 	pulumi.RegisterOutputType(EmbeddedSecurityPolicyAssemblyEntryArrayOutput{})
+	pulumi.RegisterOutputType(EmbeddedSecurityPolicyHighSpeedLoggingOutput{})
+	pulumi.RegisterOutputType(EmbeddedSecurityPolicyHighSpeedLoggingArrayOutput{})
 	pulumi.RegisterOutputType(ExpandedCommunityListPolicyObjectEntryOutput{})
 	pulumi.RegisterOutputType(ExpandedCommunityListPolicyObjectEntryArrayOutput{})
 	pulumi.RegisterOutputType(ExtendedCommunityListPolicyObjectEntryOutput{})
@@ -83886,6 +84373,8 @@ func init() {
 	pulumi.RegisterOutputType(PolicyObjectPreferredColorGroupEntryArrayOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityDataIpv4PrefixListEntryOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityDataIpv4PrefixListEntryArrayOutput{})
+	pulumi.RegisterOutputType(PolicyObjectSecurityDataIpv6PrefixListEntryOutput{})
+	pulumi.RegisterOutputType(PolicyObjectSecurityDataIpv6PrefixListEntryArrayOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityFqdnListEntryOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityFqdnListEntryArrayOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityGeolocationListEntryOutput{})
@@ -83898,10 +84387,14 @@ func init() {
 	pulumi.RegisterOutputType(PolicyObjectSecurityLocalApplicationListEntryArrayOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityLocalDomainListEntryOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityLocalDomainListEntryArrayOutput{})
+	pulumi.RegisterOutputType(PolicyObjectSecurityObjectGroupEntryOutput{})
+	pulumi.RegisterOutputType(PolicyObjectSecurityObjectGroupEntryArrayOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityPortListEntryOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityPortListEntryArrayOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityProtocolListEntryOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityProtocolListEntryArrayOutput{})
+	pulumi.RegisterOutputType(PolicyObjectSecurityRuleSetSequenceOutput{})
+	pulumi.RegisterOutputType(PolicyObjectSecurityRuleSetSequenceArrayOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityScalableGroupTagListEntryOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityScalableGroupTagListEntryArrayOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityUrlAllowListEntryOutput{})
@@ -84430,12 +84923,4 @@ func init() {
 	pulumi.RegisterOutputType(TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput{})
 	pulumi.RegisterOutputType(TransportWanVpnFeatureNat64V4PoolOutput{})
 	pulumi.RegisterOutputType(TransportWanVpnFeatureNat64V4PoolArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnFeatureNewHostMappingOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnFeatureNewHostMappingArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnFeatureServiceOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnFeatureServiceArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceCellularFeatureArpOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceCellularFeatureArpArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput{})
 }

@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Task<GetConfigurationGroupResult> InvokeAsync(GetConfigurationGroupArgs args, InvokeOptions? options = null)
+        public static Task<GetConfigurationGroupResult> InvokeAsync(GetConfigurationGroupArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetConfigurationGroupResult>("sdwan:index/getConfigurationGroup:getConfigurationGroup", args ?? new GetConfigurationGroupArgs(), options.WithDefaults());
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Output<GetConfigurationGroupResult> Invoke(GetConfigurationGroupInvokeArgs args, InvokeOptions? options = null)
+        public static Output<GetConfigurationGroupResult> Invoke(GetConfigurationGroupInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetConfigurationGroupResult>("sdwan:index/getConfigurationGroup:getConfigurationGroup", args ?? new GetConfigurationGroupInvokeArgs(), options.WithDefaults());
 
         /// <summary>
@@ -90,8 +90,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the configuration group
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetConfigurationGroupArgs()
         {
@@ -104,8 +110,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the configuration group
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetConfigurationGroupInvokeArgs()
         {

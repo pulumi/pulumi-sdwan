@@ -72,6 +72,8 @@ type LookupEmbeddedSecurityPolicyResult struct {
 	FailureMode                         string `pulumi:"failureMode"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
+	// High Speed Logging
+	HighSpeedLoggings []GetEmbeddedSecurityPolicyHighSpeedLogging `pulumi:"highSpeedLoggings"`
 	// Setting can be string 'on' or missing for off
 	IcmpUnreachableAllow string `pulumi:"icmpUnreachableAllow"`
 	// The id of the Policy
@@ -84,12 +86,17 @@ type LookupEmbeddedSecurityPolicyResult struct {
 	Nat  bool   `pulumi:"nat"`
 	// Variable name
 	NatVariable     string `pulumi:"natVariable"`
+	Optimized       bool   `pulumi:"optimized"`
 	ResourceProfile string `pulumi:"resourceProfile"`
 	// Variable name
 	ResourceProfileVariable string `pulumi:"resourceProfileVariable"`
 	// Setting can be string 'on' or missing for off
 	SessionReclassifyAllow string `pulumi:"sessionReclassifyAllow"`
-	TcpSynFloodLimit       string `pulumi:"tcpSynFloodLimit"`
+	// InterfaceName
+	SyslogServerSourceInterface string `pulumi:"syslogServerSourceInterface"`
+	// Variable name
+	SyslogServerSourceInterfaceVariable string `pulumi:"syslogServerSourceInterfaceVariable"`
+	TcpSynFloodLimit                    string `pulumi:"tcpSynFloodLimit"`
 	// Setting can be string 'on' or missing for off
 	UnifiedLogging string `pulumi:"unifiedLogging"`
 	// The version of the Policy
@@ -162,6 +169,13 @@ func (o LookupEmbeddedSecurityPolicyResultOutput) FeatureProfileId() pulumi.Stri
 	return o.ApplyT(func(v LookupEmbeddedSecurityPolicyResult) string { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
+// High Speed Logging
+func (o LookupEmbeddedSecurityPolicyResultOutput) HighSpeedLoggings() GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput {
+	return o.ApplyT(func(v LookupEmbeddedSecurityPolicyResult) []GetEmbeddedSecurityPolicyHighSpeedLogging {
+		return v.HighSpeedLoggings
+	}).(GetEmbeddedSecurityPolicyHighSpeedLoggingArrayOutput)
+}
+
 // Setting can be string 'on' or missing for off
 func (o LookupEmbeddedSecurityPolicyResultOutput) IcmpUnreachableAllow() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEmbeddedSecurityPolicyResult) string { return v.IcmpUnreachableAllow }).(pulumi.StringOutput)
@@ -198,6 +212,10 @@ func (o LookupEmbeddedSecurityPolicyResultOutput) NatVariable() pulumi.StringOut
 	return o.ApplyT(func(v LookupEmbeddedSecurityPolicyResult) string { return v.NatVariable }).(pulumi.StringOutput)
 }
 
+func (o LookupEmbeddedSecurityPolicyResultOutput) Optimized() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupEmbeddedSecurityPolicyResult) bool { return v.Optimized }).(pulumi.BoolOutput)
+}
+
 func (o LookupEmbeddedSecurityPolicyResultOutput) ResourceProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEmbeddedSecurityPolicyResult) string { return v.ResourceProfile }).(pulumi.StringOutput)
 }
@@ -210,6 +228,16 @@ func (o LookupEmbeddedSecurityPolicyResultOutput) ResourceProfileVariable() pulu
 // Setting can be string 'on' or missing for off
 func (o LookupEmbeddedSecurityPolicyResultOutput) SessionReclassifyAllow() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEmbeddedSecurityPolicyResult) string { return v.SessionReclassifyAllow }).(pulumi.StringOutput)
+}
+
+// InterfaceName
+func (o LookupEmbeddedSecurityPolicyResultOutput) SyslogServerSourceInterface() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupEmbeddedSecurityPolicyResult) string { return v.SyslogServerSourceInterface }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o LookupEmbeddedSecurityPolicyResultOutput) SyslogServerSourceInterfaceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupEmbeddedSecurityPolicyResult) string { return v.SyslogServerSourceInterfaceVariable }).(pulumi.StringOutput)
 }
 
 func (o LookupEmbeddedSecurityPolicyResultOutput) TcpSynFloodLimit() pulumi.StringOutput {

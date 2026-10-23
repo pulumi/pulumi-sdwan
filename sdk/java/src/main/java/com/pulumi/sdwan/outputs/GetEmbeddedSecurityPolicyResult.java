@@ -6,6 +6,7 @@ package com.pulumi.sdwan.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.outputs.GetEmbeddedSecurityPolicyAssembly;
+import com.pulumi.sdwan.outputs.GetEmbeddedSecurityPolicyHighSpeedLogging;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,6 +39,11 @@ public final class GetEmbeddedSecurityPolicyResult {
      */
     private String featureProfileId;
     /**
+     * @return High Speed Logging
+     * 
+     */
+    private List<GetEmbeddedSecurityPolicyHighSpeedLogging> highSpeedLoggings;
+    /**
      * @return Setting can be string &#39;on&#39; or missing for off
      * 
      */
@@ -61,6 +67,7 @@ public final class GetEmbeddedSecurityPolicyResult {
      * 
      */
     private String natVariable;
+    private Boolean optimized;
     private String resourceProfile;
     /**
      * @return Variable name
@@ -72,6 +79,16 @@ public final class GetEmbeddedSecurityPolicyResult {
      * 
      */
     private String sessionReclassifyAllow;
+    /**
+     * @return InterfaceName
+     * 
+     */
+    private String syslogServerSourceInterface;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String syslogServerSourceInterfaceVariable;
     private String tcpSynFloodLimit;
     /**
      * @return Setting can be string &#39;on&#39; or missing for off
@@ -123,6 +140,13 @@ public final class GetEmbeddedSecurityPolicyResult {
         return this.featureProfileId;
     }
     /**
+     * @return High Speed Logging
+     * 
+     */
+    public List<GetEmbeddedSecurityPolicyHighSpeedLogging> highSpeedLoggings() {
+        return this.highSpeedLoggings;
+    }
+    /**
      * @return Setting can be string &#39;on&#39; or missing for off
      * 
      */
@@ -162,6 +186,9 @@ public final class GetEmbeddedSecurityPolicyResult {
     public String natVariable() {
         return this.natVariable;
     }
+    public Boolean optimized() {
+        return this.optimized;
+    }
     public String resourceProfile() {
         return this.resourceProfile;
     }
@@ -178,6 +205,20 @@ public final class GetEmbeddedSecurityPolicyResult {
      */
     public String sessionReclassifyAllow() {
         return this.sessionReclassifyAllow;
+    }
+    /**
+     * @return InterfaceName
+     * 
+     */
+    public String syslogServerSourceInterface() {
+        return this.syslogServerSourceInterface;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String syslogServerSourceInterfaceVariable() {
+        return this.syslogServerSourceInterfaceVariable;
     }
     public String tcpSynFloodLimit() {
         return this.tcpSynFloodLimit;
@@ -213,6 +254,7 @@ public final class GetEmbeddedSecurityPolicyResult {
         private String downloadUrlDatabaseOnDeviceVariable;
         private String failureMode;
         private String featureProfileId;
+        private List<GetEmbeddedSecurityPolicyHighSpeedLogging> highSpeedLoggings;
         private String icmpUnreachableAllow;
         private String id;
         private String maxIncompleteIcmpLimit;
@@ -221,9 +263,12 @@ public final class GetEmbeddedSecurityPolicyResult {
         private String name;
         private Boolean nat;
         private String natVariable;
+        private Boolean optimized;
         private String resourceProfile;
         private String resourceProfileVariable;
         private String sessionReclassifyAllow;
+        private String syslogServerSourceInterface;
+        private String syslogServerSourceInterfaceVariable;
         private String tcpSynFloodLimit;
         private String unifiedLogging;
         private Integer version;
@@ -237,6 +282,7 @@ public final class GetEmbeddedSecurityPolicyResult {
     	      this.downloadUrlDatabaseOnDeviceVariable = defaults.downloadUrlDatabaseOnDeviceVariable;
     	      this.failureMode = defaults.failureMode;
     	      this.featureProfileId = defaults.featureProfileId;
+    	      this.highSpeedLoggings = defaults.highSpeedLoggings;
     	      this.icmpUnreachableAllow = defaults.icmpUnreachableAllow;
     	      this.id = defaults.id;
     	      this.maxIncompleteIcmpLimit = defaults.maxIncompleteIcmpLimit;
@@ -245,9 +291,12 @@ public final class GetEmbeddedSecurityPolicyResult {
     	      this.name = defaults.name;
     	      this.nat = defaults.nat;
     	      this.natVariable = defaults.natVariable;
+    	      this.optimized = defaults.optimized;
     	      this.resourceProfile = defaults.resourceProfile;
     	      this.resourceProfileVariable = defaults.resourceProfileVariable;
     	      this.sessionReclassifyAllow = defaults.sessionReclassifyAllow;
+    	      this.syslogServerSourceInterface = defaults.syslogServerSourceInterface;
+    	      this.syslogServerSourceInterfaceVariable = defaults.syslogServerSourceInterfaceVariable;
     	      this.tcpSynFloodLimit = defaults.tcpSynFloodLimit;
     	      this.unifiedLogging = defaults.unifiedLogging;
     	      this.version = defaults.version;
@@ -311,6 +360,17 @@ public final class GetEmbeddedSecurityPolicyResult {
             }
             this.featureProfileId = featureProfileId;
             return this;
+        }
+        @CustomType.Setter
+        public Builder highSpeedLoggings(List<GetEmbeddedSecurityPolicyHighSpeedLogging> highSpeedLoggings) {
+            if (highSpeedLoggings == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityPolicyResult", "highSpeedLoggings");
+            }
+            this.highSpeedLoggings = highSpeedLoggings;
+            return this;
+        }
+        public Builder highSpeedLoggings(GetEmbeddedSecurityPolicyHighSpeedLogging... highSpeedLoggings) {
+            return highSpeedLoggings(List.of(highSpeedLoggings));
         }
         @CustomType.Setter
         public Builder icmpUnreachableAllow(String icmpUnreachableAllow) {
@@ -377,6 +437,14 @@ public final class GetEmbeddedSecurityPolicyResult {
             return this;
         }
         @CustomType.Setter
+        public Builder optimized(Boolean optimized) {
+            if (optimized == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityPolicyResult", "optimized");
+            }
+            this.optimized = optimized;
+            return this;
+        }
+        @CustomType.Setter
         public Builder resourceProfile(String resourceProfile) {
             if (resourceProfile == null) {
               throw new MissingRequiredPropertyException("GetEmbeddedSecurityPolicyResult", "resourceProfile");
@@ -398,6 +466,22 @@ public final class GetEmbeddedSecurityPolicyResult {
               throw new MissingRequiredPropertyException("GetEmbeddedSecurityPolicyResult", "sessionReclassifyAllow");
             }
             this.sessionReclassifyAllow = sessionReclassifyAllow;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder syslogServerSourceInterface(String syslogServerSourceInterface) {
+            if (syslogServerSourceInterface == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityPolicyResult", "syslogServerSourceInterface");
+            }
+            this.syslogServerSourceInterface = syslogServerSourceInterface;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder syslogServerSourceInterfaceVariable(String syslogServerSourceInterfaceVariable) {
+            if (syslogServerSourceInterfaceVariable == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityPolicyResult", "syslogServerSourceInterfaceVariable");
+            }
+            this.syslogServerSourceInterfaceVariable = syslogServerSourceInterfaceVariable;
             return this;
         }
         @CustomType.Setter
@@ -433,6 +517,7 @@ public final class GetEmbeddedSecurityPolicyResult {
             _resultValue.downloadUrlDatabaseOnDeviceVariable = downloadUrlDatabaseOnDeviceVariable;
             _resultValue.failureMode = failureMode;
             _resultValue.featureProfileId = featureProfileId;
+            _resultValue.highSpeedLoggings = highSpeedLoggings;
             _resultValue.icmpUnreachableAllow = icmpUnreachableAllow;
             _resultValue.id = id;
             _resultValue.maxIncompleteIcmpLimit = maxIncompleteIcmpLimit;
@@ -441,9 +526,12 @@ public final class GetEmbeddedSecurityPolicyResult {
             _resultValue.name = name;
             _resultValue.nat = nat;
             _resultValue.natVariable = natVariable;
+            _resultValue.optimized = optimized;
             _resultValue.resourceProfile = resourceProfile;
             _resultValue.resourceProfileVariable = resourceProfileVariable;
             _resultValue.sessionReclassifyAllow = sessionReclassifyAllow;
+            _resultValue.syslogServerSourceInterface = syslogServerSourceInterface;
+            _resultValue.syslogServerSourceInterfaceVariable = syslogServerSourceInterfaceVariable;
             _resultValue.tcpSynFloodLimit = tcpSynFloodLimit;
             _resultValue.unifiedLogging = unifiedLogging;
             _resultValue.version = version;

@@ -87,7 +87,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? RadiusServerSecretVariable;
         /// <summary>
         /// Select security type
-        ///   - Choices: `Personal`, `Open`, `Enterprise`
+        ///   - Choices: `Enterprise`, `Personal`, `Open`
         /// </summary>
         public readonly string? SecurityType;
         /// <summary>

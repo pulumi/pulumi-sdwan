@@ -20,7 +20,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceAction {
     private @Nullable String appqoeServiceNodeGroup;
     private @Nullable Boolean appqoeTcpOptimization;
     /**
-     * @return Backup SLA perferred color
+     * @return Backup SLA preferred color
      * 
      */
     private @Nullable List<String> backupSlaPreferredColors;
@@ -81,7 +81,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceAction {
         return Optional.ofNullable(this.appqoeTcpOptimization);
     }
     /**
-     * @return Backup SLA perferred color
+     * @return Backup SLA preferred color
      * 
      */
     public List<String> backupSlaPreferredColors() {

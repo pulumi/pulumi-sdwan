@@ -230,9 +230,12 @@ class EmbeddedSecurityNgfwPolicy(pulumi.CustomResource):
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
             default_action="pass",
             sequences=[{
+                "is_rule_set": False,
                 "sequence_id": "1",
                 "sequence_name": "security",
+                "sequence_comment": "comment1",
                 "base_action": "drop",
+                "sequence_ip_type": "ipv4",
                 "sequence_type": "ngfirewall",
                 "disable_sequence": False,
                 "match_entries": [{
@@ -285,9 +288,12 @@ class EmbeddedSecurityNgfwPolicy(pulumi.CustomResource):
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
             default_action="pass",
             sequences=[{
+                "is_rule_set": False,
                 "sequence_id": "1",
                 "sequence_name": "security",
+                "sequence_comment": "comment1",
                 "base_action": "drop",
+                "sequence_ip_type": "ipv4",
                 "sequence_type": "ngfirewall",
                 "disable_sequence": False,
                 "match_entries": [{

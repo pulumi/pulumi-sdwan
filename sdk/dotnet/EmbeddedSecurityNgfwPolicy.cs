@@ -33,9 +33,12 @@ namespace Pulumi.Sdwan
     ///         {
     ///             new Sdwan.Inputs.EmbeddedSecurityNgfwPolicySequenceArgs
     ///             {
+    ///                 IsRuleSet = false,
     ///                 SequenceId = "1",
     ///                 SequenceName = "security",
+    ///                 SequenceComment = "comment1",
     ///                 BaseAction = "drop",
+    ///                 SequenceIpType = "ipv4",
     ///                 SequenceType = "ngfirewall",
     ///                 DisableSequence = false,
     ///                 MatchEntries = new[]

@@ -135,13 +135,13 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<string>> TargetInboundHierarchyUuids { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `REGION` or `TargetLevel` equal to `SUB_REGION`
+        /// Inbound regions list, Attribute conditional on `TargetLevel` equal to `REGION` or `TargetLevel` equal to `SUB_REGION`
         /// </summary>
         [Output("targetInboundRegions")]
         public Output<ImmutableArray<Outputs.TopologyCustomControlFeatureTargetInboundRegion>> TargetInboundRegions { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `SITE` and `TargetInboundHierarchyUuids` not being set and `TargetOutboundHierarchyUuids` not being set
+        /// Inbound site list, Attribute conditional on `TargetLevel` equal to `SITE` and `TargetInboundHierarchyUuids` not being set and `TargetOutboundHierarchyUuids` not being set
         /// </summary>
         [Output("targetInboundSites")]
         public Output<ImmutableArray<string>> TargetInboundSites { get; private set; } = null!;
@@ -159,23 +159,27 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<string>> TargetOutboundHierarchyUuids { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `REGION` or `TargetLevel` equal to `SUB_REGION`
+        /// Outbound regions list, Attribute conditional on `TargetLevel` equal to `REGION` or `TargetLevel` equal to `SUB_REGION`
         /// </summary>
         [Output("targetOutboundRegions")]
         public Output<ImmutableArray<Outputs.TopologyCustomControlFeatureTargetOutboundRegion>> TargetOutboundRegions { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `SITE` and `TargetOutboundHierarchyUuids` not being set and `TargetInboundHierarchyUuids` not being set
+        /// Outbound site list, Attribute conditional on `TargetLevel` equal to `SITE` and `TargetOutboundHierarchyUuids` not being set and `TargetInboundHierarchyUuids` not being set
         /// </summary>
         [Output("targetOutboundSites")]
         public Output<ImmutableArray<string>> TargetOutboundSites { get; private set; } = null!;
 
         /// <summary>
-        /// - Choices: `edge-router`, `border-router`
+        /// Target role
+        ///   - Choices: `edge-router`, `border-router`
         /// </summary>
         [Output("targetRole")]
         public Output<string?> TargetRole { get; private set; } = null!;
 
+        /// <summary>
+        /// Target VPN list
+        /// </summary>
         [Output("targetVpns")]
         public Output<ImmutableArray<string>> TargetVpns { get; private set; } = null!;
 
@@ -284,7 +288,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TopologyCustomControlFeatureTargetInboundRegionArgs>? _targetInboundRegions;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `REGION` or `TargetLevel` equal to `SUB_REGION`
+        /// Inbound regions list, Attribute conditional on `TargetLevel` equal to `REGION` or `TargetLevel` equal to `SUB_REGION`
         /// </summary>
         public InputList<Inputs.TopologyCustomControlFeatureTargetInboundRegionArgs> TargetInboundRegions
         {
@@ -296,7 +300,7 @@ namespace Pulumi.Sdwan
         private InputList<string>? _targetInboundSites;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `SITE` and `TargetInboundHierarchyUuids` not being set and `TargetOutboundHierarchyUuids` not being set
+        /// Inbound site list, Attribute conditional on `TargetLevel` equal to `SITE` and `TargetInboundHierarchyUuids` not being set and `TargetOutboundHierarchyUuids` not being set
         /// </summary>
         public InputList<string> TargetInboundSites
         {
@@ -326,7 +330,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TopologyCustomControlFeatureTargetOutboundRegionArgs>? _targetOutboundRegions;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `REGION` or `TargetLevel` equal to `SUB_REGION`
+        /// Outbound regions list, Attribute conditional on `TargetLevel` equal to `REGION` or `TargetLevel` equal to `SUB_REGION`
         /// </summary>
         public InputList<Inputs.TopologyCustomControlFeatureTargetOutboundRegionArgs> TargetOutboundRegions
         {
@@ -338,7 +342,7 @@ namespace Pulumi.Sdwan
         private InputList<string>? _targetOutboundSites;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `SITE` and `TargetOutboundHierarchyUuids` not being set and `TargetInboundHierarchyUuids` not being set
+        /// Outbound site list, Attribute conditional on `TargetLevel` equal to `SITE` and `TargetOutboundHierarchyUuids` not being set and `TargetInboundHierarchyUuids` not being set
         /// </summary>
         public InputList<string> TargetOutboundSites
         {
@@ -347,13 +351,18 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// - Choices: `edge-router`, `border-router`
+        /// Target role
+        ///   - Choices: `edge-router`, `border-router`
         /// </summary>
         [Input("targetRole")]
         public Input<string>? TargetRole { get; set; }
 
         [Input("targetVpns")]
         private InputList<string>? _targetVpns;
+
+        /// <summary>
+        /// Target VPN list
+        /// </summary>
         public InputList<string> TargetVpns
         {
             get => _targetVpns ?? (_targetVpns = new InputList<string>());
@@ -421,7 +430,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TopologyCustomControlFeatureTargetInboundRegionGetArgs>? _targetInboundRegions;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `REGION` or `TargetLevel` equal to `SUB_REGION`
+        /// Inbound regions list, Attribute conditional on `TargetLevel` equal to `REGION` or `TargetLevel` equal to `SUB_REGION`
         /// </summary>
         public InputList<Inputs.TopologyCustomControlFeatureTargetInboundRegionGetArgs> TargetInboundRegions
         {
@@ -433,7 +442,7 @@ namespace Pulumi.Sdwan
         private InputList<string>? _targetInboundSites;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `SITE` and `TargetInboundHierarchyUuids` not being set and `TargetOutboundHierarchyUuids` not being set
+        /// Inbound site list, Attribute conditional on `TargetLevel` equal to `SITE` and `TargetInboundHierarchyUuids` not being set and `TargetOutboundHierarchyUuids` not being set
         /// </summary>
         public InputList<string> TargetInboundSites
         {
@@ -463,7 +472,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TopologyCustomControlFeatureTargetOutboundRegionGetArgs>? _targetOutboundRegions;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `REGION` or `TargetLevel` equal to `SUB_REGION`
+        /// Outbound regions list, Attribute conditional on `TargetLevel` equal to `REGION` or `TargetLevel` equal to `SUB_REGION`
         /// </summary>
         public InputList<Inputs.TopologyCustomControlFeatureTargetOutboundRegionGetArgs> TargetOutboundRegions
         {
@@ -475,7 +484,7 @@ namespace Pulumi.Sdwan
         private InputList<string>? _targetOutboundSites;
 
         /// <summary>
-        /// , Attribute conditional on `TargetLevel` equal to `SITE` and `TargetOutboundHierarchyUuids` not being set and `TargetInboundHierarchyUuids` not being set
+        /// Outbound site list, Attribute conditional on `TargetLevel` equal to `SITE` and `TargetOutboundHierarchyUuids` not being set and `TargetInboundHierarchyUuids` not being set
         /// </summary>
         public InputList<string> TargetOutboundSites
         {
@@ -484,13 +493,18 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// - Choices: `edge-router`, `border-router`
+        /// Target role
+        ///   - Choices: `edge-router`, `border-router`
         /// </summary>
         [Input("targetRole")]
         public Input<string>? TargetRole { get; set; }
 
         [Input("targetVpns")]
         private InputList<string>? _targetVpns;
+
+        /// <summary>
+        /// Target VPN list
+        /// </summary>
         public InputList<string> TargetVpns
         {
             get => _targetVpns ?? (_targetVpns = new InputList<string>());

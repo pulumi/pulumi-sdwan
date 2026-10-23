@@ -37,6 +37,21 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
         return Optional.ofNullable(this.applications);
     }
 
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="destinationDataIpv6PrefixListIds")
+    private @Nullable Output<List<String>> destinationDataIpv6PrefixListIds;
+
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<List<String>>> destinationDataIpv6PrefixListIds() {
+        return Optional.ofNullable(this.destinationDataIpv6PrefixListIds);
+    }
+
     @Import(name="destinationDataPrefixListIds")
     private @Nullable Output<List<String>> destinationDataPrefixListIds;
 
@@ -124,6 +139,51 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
         return Optional.ofNullable(this.destinationGeoLocationsVariable);
     }
 
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="destinationIpv6DataPrefixes")
+    private @Nullable Output<List<String>> destinationIpv6DataPrefixes;
+
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<List<String>>> destinationIpv6DataPrefixes() {
+        return Optional.ofNullable(this.destinationIpv6DataPrefixes);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="destinationIpv6DataPrefixesVariable")
+    private @Nullable Output<String> destinationIpv6DataPrefixesVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<String>> destinationIpv6DataPrefixesVariable() {
+        return Optional.ofNullable(this.destinationIpv6DataPrefixesVariable);
+    }
+
+    /**
+     * , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="destinationObjectGroupListIds")
+    private @Nullable Output<List<String>> destinationObjectGroupListIds;
+
+    /**
+     * @return , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<List<String>>> destinationObjectGroupListIds() {
+        return Optional.ofNullable(this.destinationObjectGroupListIds);
+    }
+
     @Import(name="destinationPortListIds")
     private @Nullable Output<List<String>> destinationPortListIds;
 
@@ -160,9 +220,17 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
         return Optional.ofNullable(this.destinationScalableGroupTagListIds);
     }
 
+    /**
+     * Deprecated, use `destinationObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+     * 
+     */
     @Import(name="destinationSecurityGroupListIds")
     private @Nullable Output<List<String>> destinationSecurityGroupListIds;
 
+    /**
+     * @return Deprecated, use `destinationObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+     * 
+     */
     public Optional<Output<List<String>>> destinationSecurityGroupListIds() {
         return Optional.ofNullable(this.destinationSecurityGroupListIds);
     }
@@ -193,6 +261,36 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
 
     public Optional<Output<List<String>>> protocols() {
         return Optional.ofNullable(this.protocols);
+    }
+
+    /**
+     * Security rule set IDs, requires `isRuleSet` set to `true` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="ruleSetListIds")
+    private @Nullable Output<List<String>> ruleSetListIds;
+
+    /**
+     * @return Security rule set IDs, requires `isRuleSet` set to `true` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<List<String>>> ruleSetListIds() {
+        return Optional.ofNullable(this.ruleSetListIds);
+    }
+
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="sourceDataIpv6PrefixListIds")
+    private @Nullable Output<List<String>> sourceDataIpv6PrefixListIds;
+
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<List<String>>> sourceDataIpv6PrefixListIds() {
+        return Optional.ofNullable(this.sourceDataIpv6PrefixListIds);
     }
 
     @Import(name="sourceDataPrefixListIds")
@@ -274,6 +372,51 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
         return Optional.ofNullable(this.sourceIdentityUsers);
     }
 
+    /**
+     * Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="sourceIpv6DataPrefixes")
+    private @Nullable Output<List<String>> sourceIpv6DataPrefixes;
+
+    /**
+     * @return Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<List<String>>> sourceIpv6DataPrefixes() {
+        return Optional.ofNullable(this.sourceIpv6DataPrefixes);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="sourceIpv6DataPrefixesVariable")
+    private @Nullable Output<String> sourceIpv6DataPrefixesVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<String>> sourceIpv6DataPrefixesVariable() {
+        return Optional.ofNullable(this.sourceIpv6DataPrefixesVariable);
+    }
+
+    /**
+     * Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    @Import(name="sourceObjectGroupListIds")
+    private @Nullable Output<List<String>> sourceObjectGroupListIds;
+
+    /**
+     * @return Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+     * 
+     */
+    public Optional<Output<List<String>>> sourceObjectGroupListIds() {
+        return Optional.ofNullable(this.sourceObjectGroupListIds);
+    }
+
     @Import(name="sourcePortListIds")
     private @Nullable Output<List<String>> sourcePortListIds;
 
@@ -310,9 +453,17 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
         return Optional.ofNullable(this.sourceScalableGroupTagListIds);
     }
 
+    /**
+     * Deprecated, use `sourceObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+     * 
+     */
     @Import(name="sourceSecurityGroupListIds")
     private @Nullable Output<List<String>> sourceSecurityGroupListIds;
 
+    /**
+     * @return Deprecated, use `sourceObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+     * 
+     */
     public Optional<Output<List<String>>> sourceSecurityGroupListIds() {
         return Optional.ofNullable(this.sourceSecurityGroupListIds);
     }
@@ -323,6 +474,7 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
         this.appListIds = $.appListIds;
         this.applicationFamilies = $.applicationFamilies;
         this.applications = $.applications;
+        this.destinationDataIpv6PrefixListIds = $.destinationDataIpv6PrefixListIds;
         this.destinationDataPrefixListIds = $.destinationDataPrefixListIds;
         this.destinationDataPrefixes = $.destinationDataPrefixes;
         this.destinationDataPrefixesVariable = $.destinationDataPrefixesVariable;
@@ -332,6 +484,9 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
         this.destinationGeoLocationListIds = $.destinationGeoLocationListIds;
         this.destinationGeoLocations = $.destinationGeoLocations;
         this.destinationGeoLocationsVariable = $.destinationGeoLocationsVariable;
+        this.destinationIpv6DataPrefixes = $.destinationIpv6DataPrefixes;
+        this.destinationIpv6DataPrefixesVariable = $.destinationIpv6DataPrefixesVariable;
+        this.destinationObjectGroupListIds = $.destinationObjectGroupListIds;
         this.destinationPortListIds = $.destinationPortListIds;
         this.destinationPorts = $.destinationPorts;
         this.destinationPortsVariable = $.destinationPortsVariable;
@@ -341,6 +496,8 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
         this.protocolNameListIds = $.protocolNameListIds;
         this.protocolNames = $.protocolNames;
         this.protocols = $.protocols;
+        this.ruleSetListIds = $.ruleSetListIds;
+        this.sourceDataIpv6PrefixListIds = $.sourceDataIpv6PrefixListIds;
         this.sourceDataPrefixListIds = $.sourceDataPrefixListIds;
         this.sourceDataPrefixes = $.sourceDataPrefixes;
         this.sourceDataPrefixesVariable = $.sourceDataPrefixesVariable;
@@ -350,6 +507,9 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
         this.sourceIdentityListIds = $.sourceIdentityListIds;
         this.sourceIdentityUsergroups = $.sourceIdentityUsergroups;
         this.sourceIdentityUsers = $.sourceIdentityUsers;
+        this.sourceIpv6DataPrefixes = $.sourceIpv6DataPrefixes;
+        this.sourceIpv6DataPrefixesVariable = $.sourceIpv6DataPrefixesVariable;
+        this.sourceObjectGroupListIds = $.sourceObjectGroupListIds;
         this.sourcePortListIds = $.sourcePortListIds;
         this.sourcePorts = $.sourcePorts;
         this.sourcePortsVariable = $.sourcePortsVariable;
@@ -412,6 +572,37 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
 
         public Builder applications(String... applications) {
             return applications(List.of(applications));
+        }
+
+        /**
+         * @param destinationDataIpv6PrefixListIds Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationDataIpv6PrefixListIds(@Nullable Output<List<String>> destinationDataIpv6PrefixListIds) {
+            $.destinationDataIpv6PrefixListIds = destinationDataIpv6PrefixListIds;
+            return this;
+        }
+
+        /**
+         * @param destinationDataIpv6PrefixListIds Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationDataIpv6PrefixListIds(List<String> destinationDataIpv6PrefixListIds) {
+            return destinationDataIpv6PrefixListIds(Output.of(destinationDataIpv6PrefixListIds));
+        }
+
+        /**
+         * @param destinationDataIpv6PrefixListIds Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationDataIpv6PrefixListIds(String... destinationDataIpv6PrefixListIds) {
+            return destinationDataIpv6PrefixListIds(List.of(destinationDataIpv6PrefixListIds));
         }
 
         public Builder destinationDataPrefixListIds(@Nullable Output<List<String>> destinationDataPrefixListIds) {
@@ -555,6 +746,89 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
             return destinationGeoLocationsVariable(Output.of(destinationGeoLocationsVariable));
         }
 
+        /**
+         * @param destinationIpv6DataPrefixes Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationIpv6DataPrefixes(@Nullable Output<List<String>> destinationIpv6DataPrefixes) {
+            $.destinationIpv6DataPrefixes = destinationIpv6DataPrefixes;
+            return this;
+        }
+
+        /**
+         * @param destinationIpv6DataPrefixes Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationIpv6DataPrefixes(List<String> destinationIpv6DataPrefixes) {
+            return destinationIpv6DataPrefixes(Output.of(destinationIpv6DataPrefixes));
+        }
+
+        /**
+         * @param destinationIpv6DataPrefixes Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationIpv6DataPrefixes(String... destinationIpv6DataPrefixes) {
+            return destinationIpv6DataPrefixes(List.of(destinationIpv6DataPrefixes));
+        }
+
+        /**
+         * @param destinationIpv6DataPrefixesVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationIpv6DataPrefixesVariable(@Nullable Output<String> destinationIpv6DataPrefixesVariable) {
+            $.destinationIpv6DataPrefixesVariable = destinationIpv6DataPrefixesVariable;
+            return this;
+        }
+
+        /**
+         * @param destinationIpv6DataPrefixesVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationIpv6DataPrefixesVariable(String destinationIpv6DataPrefixesVariable) {
+            return destinationIpv6DataPrefixesVariable(Output.of(destinationIpv6DataPrefixesVariable));
+        }
+
+        /**
+         * @param destinationObjectGroupListIds , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationObjectGroupListIds(@Nullable Output<List<String>> destinationObjectGroupListIds) {
+            $.destinationObjectGroupListIds = destinationObjectGroupListIds;
+            return this;
+        }
+
+        /**
+         * @param destinationObjectGroupListIds , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationObjectGroupListIds(List<String> destinationObjectGroupListIds) {
+            return destinationObjectGroupListIds(Output.of(destinationObjectGroupListIds));
+        }
+
+        /**
+         * @param destinationObjectGroupListIds , Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationObjectGroupListIds(String... destinationObjectGroupListIds) {
+            return destinationObjectGroupListIds(List.of(destinationObjectGroupListIds));
+        }
+
         public Builder destinationPortListIds(@Nullable Output<List<String>> destinationPortListIds) {
             $.destinationPortListIds = destinationPortListIds;
             return this;
@@ -615,15 +889,33 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
             return destinationScalableGroupTagListIds(List.of(destinationScalableGroupTagListIds));
         }
 
+        /**
+         * @param destinationSecurityGroupListIds Deprecated, use `destinationObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationSecurityGroupListIds(@Nullable Output<List<String>> destinationSecurityGroupListIds) {
             $.destinationSecurityGroupListIds = destinationSecurityGroupListIds;
             return this;
         }
 
+        /**
+         * @param destinationSecurityGroupListIds Deprecated, use `destinationObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationSecurityGroupListIds(List<String> destinationSecurityGroupListIds) {
             return destinationSecurityGroupListIds(Output.of(destinationSecurityGroupListIds));
         }
 
+        /**
+         * @param destinationSecurityGroupListIds Deprecated, use `destinationObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationSecurityGroupListIds(String... destinationSecurityGroupListIds) {
             return destinationSecurityGroupListIds(List.of(destinationSecurityGroupListIds));
         }
@@ -678,6 +970,68 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
 
         public Builder protocols(String... protocols) {
             return protocols(List.of(protocols));
+        }
+
+        /**
+         * @param ruleSetListIds Security rule set IDs, requires `isRuleSet` set to `true` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleSetListIds(@Nullable Output<List<String>> ruleSetListIds) {
+            $.ruleSetListIds = ruleSetListIds;
+            return this;
+        }
+
+        /**
+         * @param ruleSetListIds Security rule set IDs, requires `isRuleSet` set to `true` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleSetListIds(List<String> ruleSetListIds) {
+            return ruleSetListIds(Output.of(ruleSetListIds));
+        }
+
+        /**
+         * @param ruleSetListIds Security rule set IDs, requires `isRuleSet` set to `true` on the sequence, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleSetListIds(String... ruleSetListIds) {
+            return ruleSetListIds(List.of(ruleSetListIds));
+        }
+
+        /**
+         * @param sourceDataIpv6PrefixListIds Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceDataIpv6PrefixListIds(@Nullable Output<List<String>> sourceDataIpv6PrefixListIds) {
+            $.sourceDataIpv6PrefixListIds = sourceDataIpv6PrefixListIds;
+            return this;
+        }
+
+        /**
+         * @param sourceDataIpv6PrefixListIds Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceDataIpv6PrefixListIds(List<String> sourceDataIpv6PrefixListIds) {
+            return sourceDataIpv6PrefixListIds(Output.of(sourceDataIpv6PrefixListIds));
+        }
+
+        /**
+         * @param sourceDataIpv6PrefixListIds Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceDataIpv6PrefixListIds(String... sourceDataIpv6PrefixListIds) {
+            return sourceDataIpv6PrefixListIds(List.of(sourceDataIpv6PrefixListIds));
         }
 
         public Builder sourceDataPrefixListIds(@Nullable Output<List<String>> sourceDataPrefixListIds) {
@@ -813,6 +1167,89 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
             return sourceIdentityUsers(List.of(sourceIdentityUsers));
         }
 
+        /**
+         * @param sourceIpv6DataPrefixes Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceIpv6DataPrefixes(@Nullable Output<List<String>> sourceIpv6DataPrefixes) {
+            $.sourceIpv6DataPrefixes = sourceIpv6DataPrefixes;
+            return this;
+        }
+
+        /**
+         * @param sourceIpv6DataPrefixes Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceIpv6DataPrefixes(List<String> sourceIpv6DataPrefixes) {
+            return sourceIpv6DataPrefixes(Output.of(sourceIpv6DataPrefixes));
+        }
+
+        /**
+         * @param sourceIpv6DataPrefixes Only supported on sequences with `sequenceIpType` set to `ipv6`, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceIpv6DataPrefixes(String... sourceIpv6DataPrefixes) {
+            return sourceIpv6DataPrefixes(List.of(sourceIpv6DataPrefixes));
+        }
+
+        /**
+         * @param sourceIpv6DataPrefixesVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceIpv6DataPrefixesVariable(@Nullable Output<String> sourceIpv6DataPrefixesVariable) {
+            $.sourceIpv6DataPrefixesVariable = sourceIpv6DataPrefixesVariable;
+            return this;
+        }
+
+        /**
+         * @param sourceIpv6DataPrefixesVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceIpv6DataPrefixesVariable(String sourceIpv6DataPrefixesVariable) {
+            return sourceIpv6DataPrefixesVariable(Output.of(sourceIpv6DataPrefixesVariable));
+        }
+
+        /**
+         * @param sourceObjectGroupListIds Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceObjectGroupListIds(@Nullable Output<List<String>> sourceObjectGroupListIds) {
+            $.sourceObjectGroupListIds = sourceObjectGroupListIds;
+            return this;
+        }
+
+        /**
+         * @param sourceObjectGroupListIds Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceObjectGroupListIds(List<String> sourceObjectGroupListIds) {
+            return sourceObjectGroupListIds(Output.of(sourceObjectGroupListIds));
+        }
+
+        /**
+         * @param sourceObjectGroupListIds Referenced object groups must not contain FQDNs, SD-WAN Manager rejects them as a source (PPARC0012), Attribute conditional on SD-WAN Manager version `20.18.0` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceObjectGroupListIds(String... sourceObjectGroupListIds) {
+            return sourceObjectGroupListIds(List.of(sourceObjectGroupListIds));
+        }
+
         public Builder sourcePortListIds(@Nullable Output<List<String>> sourcePortListIds) {
             $.sourcePortListIds = sourcePortListIds;
             return this;
@@ -873,15 +1310,33 @@ public final class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs extends com.
             return sourceScalableGroupTagListIds(List.of(sourceScalableGroupTagListIds));
         }
 
+        /**
+         * @param sourceSecurityGroupListIds Deprecated, use `sourceObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSecurityGroupListIds(@Nullable Output<List<String>> sourceSecurityGroupListIds) {
             $.sourceSecurityGroupListIds = sourceSecurityGroupListIds;
             return this;
         }
 
+        /**
+         * @param sourceSecurityGroupListIds Deprecated, use `sourceObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSecurityGroupListIds(List<String> sourceSecurityGroupListIds) {
             return sourceSecurityGroupListIds(Output.of(sourceSecurityGroupListIds));
         }
 
+        /**
+         * @param sourceSecurityGroupListIds Deprecated, use `sourceObjectGroupListIds` instead, Attribute conditional on SD-WAN Manager version lower than `20.18.0`
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSecurityGroupListIds(String... sourceSecurityGroupListIds) {
             return sourceSecurityGroupListIds(List.of(sourceSecurityGroupListIds));
         }

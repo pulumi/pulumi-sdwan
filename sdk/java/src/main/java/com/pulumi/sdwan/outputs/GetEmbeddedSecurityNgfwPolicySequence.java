@@ -21,8 +21,15 @@ public final class GetEmbeddedSecurityNgfwPolicySequence {
     private List<GetEmbeddedSecurityNgfwPolicySequenceAction> actions;
     private String baseAction;
     private Boolean disableSequence;
+    private Boolean isRuleSet;
     private List<GetEmbeddedSecurityNgfwPolicySequenceMatchEntry> matchEntries;
+    private String sequenceComment;
     private String sequenceId;
+    /**
+     * @return IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones
+     * 
+     */
+    private String sequenceIpType;
     private String sequenceName;
     private String sequenceType;
 
@@ -40,11 +47,24 @@ public final class GetEmbeddedSecurityNgfwPolicySequence {
     public Boolean disableSequence() {
         return this.disableSequence;
     }
+    public Boolean isRuleSet() {
+        return this.isRuleSet;
+    }
     public List<GetEmbeddedSecurityNgfwPolicySequenceMatchEntry> matchEntries() {
         return this.matchEntries;
     }
+    public String sequenceComment() {
+        return this.sequenceComment;
+    }
     public String sequenceId() {
         return this.sequenceId;
+    }
+    /**
+     * @return IP address family the sequence matches on, `ipv4` sequences only accept the IPv4 match attributes and `ipv6` sequences only accept the IPv6 ones
+     * 
+     */
+    public String sequenceIpType() {
+        return this.sequenceIpType;
     }
     public String sequenceName() {
         return this.sequenceName;
@@ -65,8 +85,11 @@ public final class GetEmbeddedSecurityNgfwPolicySequence {
         private List<GetEmbeddedSecurityNgfwPolicySequenceAction> actions;
         private String baseAction;
         private Boolean disableSequence;
+        private Boolean isRuleSet;
         private List<GetEmbeddedSecurityNgfwPolicySequenceMatchEntry> matchEntries;
+        private String sequenceComment;
         private String sequenceId;
+        private String sequenceIpType;
         private String sequenceName;
         private String sequenceType;
         public Builder() {}
@@ -75,8 +98,11 @@ public final class GetEmbeddedSecurityNgfwPolicySequence {
     	      this.actions = defaults.actions;
     	      this.baseAction = defaults.baseAction;
     	      this.disableSequence = defaults.disableSequence;
+    	      this.isRuleSet = defaults.isRuleSet;
     	      this.matchEntries = defaults.matchEntries;
+    	      this.sequenceComment = defaults.sequenceComment;
     	      this.sequenceId = defaults.sequenceId;
+    	      this.sequenceIpType = defaults.sequenceIpType;
     	      this.sequenceName = defaults.sequenceName;
     	      this.sequenceType = defaults.sequenceType;
         }
@@ -109,6 +135,14 @@ public final class GetEmbeddedSecurityNgfwPolicySequence {
             return this;
         }
         @CustomType.Setter
+        public Builder isRuleSet(Boolean isRuleSet) {
+            if (isRuleSet == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequence", "isRuleSet");
+            }
+            this.isRuleSet = isRuleSet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder matchEntries(List<GetEmbeddedSecurityNgfwPolicySequenceMatchEntry> matchEntries) {
             if (matchEntries == null) {
               throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequence", "matchEntries");
@@ -120,11 +154,27 @@ public final class GetEmbeddedSecurityNgfwPolicySequence {
             return matchEntries(List.of(matchEntries));
         }
         @CustomType.Setter
+        public Builder sequenceComment(String sequenceComment) {
+            if (sequenceComment == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequence", "sequenceComment");
+            }
+            this.sequenceComment = sequenceComment;
+            return this;
+        }
+        @CustomType.Setter
         public Builder sequenceId(String sequenceId) {
             if (sequenceId == null) {
               throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequence", "sequenceId");
             }
             this.sequenceId = sequenceId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder sequenceIpType(String sequenceIpType) {
+            if (sequenceIpType == null) {
+              throw new MissingRequiredPropertyException("GetEmbeddedSecurityNgfwPolicySequence", "sequenceIpType");
+            }
+            this.sequenceIpType = sequenceIpType;
             return this;
         }
         @CustomType.Setter
@@ -148,8 +198,11 @@ public final class GetEmbeddedSecurityNgfwPolicySequence {
             _resultValue.actions = actions;
             _resultValue.baseAction = baseAction;
             _resultValue.disableSequence = disableSequence;
+            _resultValue.isRuleSet = isRuleSet;
             _resultValue.matchEntries = matchEntries;
+            _resultValue.sequenceComment = sequenceComment;
             _resultValue.sequenceId = sequenceId;
+            _resultValue.sequenceIpType = sequenceIpType;
             _resultValue.sequenceName = sequenceName;
             _resultValue.sequenceType = sequenceType;
             return _resultValue;

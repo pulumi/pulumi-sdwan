@@ -113,14 +113,14 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
     }
 
     /**
-     * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+     * Inbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      * 
      */
     @Import(name="targetInboundRegions")
     private @Nullable Output<List<TopologyCustomControlFeatureTargetInboundRegionArgs>> targetInboundRegions;
 
     /**
-     * @return , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+     * @return Inbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      * 
      */
     public Optional<Output<List<TopologyCustomControlFeatureTargetInboundRegionArgs>>> targetInboundRegions() {
@@ -128,14 +128,14 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
     }
 
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
+     * Inbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
      * 
      */
     @Import(name="targetInboundSites")
     private @Nullable Output<List<String>> targetInboundSites;
 
     /**
-     * @return , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
+     * @return Inbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
      * 
      */
     public Optional<Output<List<String>>> targetInboundSites() {
@@ -173,14 +173,14 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
     }
 
     /**
-     * , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+     * Outbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      * 
      */
     @Import(name="targetOutboundRegions")
     private @Nullable Output<List<TopologyCustomControlFeatureTargetOutboundRegionArgs>> targetOutboundRegions;
 
     /**
-     * @return , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+     * @return Outbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
      * 
      */
     public Optional<Output<List<TopologyCustomControlFeatureTargetOutboundRegionArgs>>> targetOutboundRegions() {
@@ -188,14 +188,14 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
     }
 
     /**
-     * , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
+     * Outbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
      * 
      */
     @Import(name="targetOutboundSites")
     private @Nullable Output<List<String>> targetOutboundSites;
 
     /**
-     * @return , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
+     * @return Outbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
      * 
      */
     public Optional<Output<List<String>>> targetOutboundSites() {
@@ -203,23 +203,33 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
     }
 
     /**
-     * - Choices: `edge-router`, `border-router`
+     * Target role
+     *   - Choices: `edge-router`, `border-router`
      * 
      */
     @Import(name="targetRole")
     private @Nullable Output<String> targetRole;
 
     /**
-     * @return - Choices: `edge-router`, `border-router`
+     * @return Target role
+     *   - Choices: `edge-router`, `border-router`
      * 
      */
     public Optional<Output<String>> targetRole() {
         return Optional.ofNullable(this.targetRole);
     }
 
+    /**
+     * Target VPN list
+     * 
+     */
     @Import(name="targetVpns")
     private @Nullable Output<List<String>> targetVpns;
 
+    /**
+     * @return Target VPN list
+     * 
+     */
     public Optional<Output<List<String>>> targetVpns() {
         return Optional.ofNullable(this.targetVpns);
     }
@@ -426,7 +436,7 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
         }
 
         /**
-         * @param targetInboundRegions , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+         * @param targetInboundRegions Inbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
          * 
          * @return builder
          * 
@@ -437,7 +447,7 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
         }
 
         /**
-         * @param targetInboundRegions , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+         * @param targetInboundRegions Inbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
          * 
          * @return builder
          * 
@@ -447,7 +457,7 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
         }
 
         /**
-         * @param targetInboundRegions , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+         * @param targetInboundRegions Inbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
          * 
          * @return builder
          * 
@@ -457,7 +467,7 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
         }
 
         /**
-         * @param targetInboundSites , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
+         * @param targetInboundSites Inbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
          * 
          * @return builder
          * 
@@ -468,7 +478,7 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
         }
 
         /**
-         * @param targetInboundSites , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
+         * @param targetInboundSites Inbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
          * 
          * @return builder
          * 
@@ -478,7 +488,7 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
         }
 
         /**
-         * @param targetInboundSites , Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
+         * @param targetInboundSites Inbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetInboundHierarchyUuids` not being set and `targetOutboundHierarchyUuids` not being set
          * 
          * @return builder
          * 
@@ -540,7 +550,7 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
         }
 
         /**
-         * @param targetOutboundRegions , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+         * @param targetOutboundRegions Outbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
          * 
          * @return builder
          * 
@@ -551,7 +561,7 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
         }
 
         /**
-         * @param targetOutboundRegions , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+         * @param targetOutboundRegions Outbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
          * 
          * @return builder
          * 
@@ -561,7 +571,7 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
         }
 
         /**
-         * @param targetOutboundRegions , Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
+         * @param targetOutboundRegions Outbound regions list, Attribute conditional on `targetLevel` equal to `REGION` or `targetLevel` equal to `SUB_REGION`
          * 
          * @return builder
          * 
@@ -571,7 +581,7 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
         }
 
         /**
-         * @param targetOutboundSites , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
+         * @param targetOutboundSites Outbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
          * 
          * @return builder
          * 
@@ -582,7 +592,7 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
         }
 
         /**
-         * @param targetOutboundSites , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
+         * @param targetOutboundSites Outbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
          * 
          * @return builder
          * 
@@ -592,7 +602,7 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
         }
 
         /**
-         * @param targetOutboundSites , Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
+         * @param targetOutboundSites Outbound site list, Attribute conditional on `targetLevel` equal to `SITE` and `targetOutboundHierarchyUuids` not being set and `targetInboundHierarchyUuids` not being set
          * 
          * @return builder
          * 
@@ -602,7 +612,8 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
         }
 
         /**
-         * @param targetRole - Choices: `edge-router`, `border-router`
+         * @param targetRole Target role
+         *   - Choices: `edge-router`, `border-router`
          * 
          * @return builder
          * 
@@ -613,7 +624,8 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
         }
 
         /**
-         * @param targetRole - Choices: `edge-router`, `border-router`
+         * @param targetRole Target role
+         *   - Choices: `edge-router`, `border-router`
          * 
          * @return builder
          * 
@@ -622,15 +634,33 @@ public final class TopologyCustomControlFeatureState extends com.pulumi.resource
             return targetRole(Output.of(targetRole));
         }
 
+        /**
+         * @param targetVpns Target VPN list
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVpns(@Nullable Output<List<String>> targetVpns) {
             $.targetVpns = targetVpns;
             return this;
         }
 
+        /**
+         * @param targetVpns Target VPN list
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVpns(List<String> targetVpns) {
             return targetVpns(Output.of(targetVpns));
         }
 
+        /**
+         * @param targetVpns Target VPN list
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVpns(String... targetVpns) {
             return targetVpns(List.of(targetVpns));
         }

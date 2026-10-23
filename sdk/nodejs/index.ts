@@ -785,6 +785,11 @@ export const getNetworkHierarchyNode: typeof import("./getNetworkHierarchyNode")
 export const getNetworkHierarchyNodeOutput: typeof import("./getNetworkHierarchyNode").getNetworkHierarchyNodeOutput = null as any;
 utilities.lazyLoad(exports, ["getNetworkHierarchyNode","getNetworkHierarchyNodeOutput"], () => require("./getNetworkHierarchyNode"));
 
+export { GetNetworkHierarchyNodesArgs, GetNetworkHierarchyNodesResult, GetNetworkHierarchyNodesOutputArgs } from "./getNetworkHierarchyNodes";
+export const getNetworkHierarchyNodes: typeof import("./getNetworkHierarchyNodes").getNetworkHierarchyNodes = null as any;
+export const getNetworkHierarchyNodesOutput: typeof import("./getNetworkHierarchyNodes").getNetworkHierarchyNodesOutput = null as any;
+utilities.lazyLoad(exports, ["getNetworkHierarchyNodes","getNetworkHierarchyNodesOutput"], () => require("./getNetworkHierarchyNodes"));
+
 export { GetNetworkHierarchySecurityLoggingArgs, GetNetworkHierarchySecurityLoggingResult, GetNetworkHierarchySecurityLoggingOutputArgs } from "./getNetworkHierarchySecurityLogging";
 export const getNetworkHierarchySecurityLogging: typeof import("./getNetworkHierarchySecurityLogging").getNetworkHierarchySecurityLogging = null as any;
 export const getNetworkHierarchySecurityLoggingOutput: typeof import("./getNetworkHierarchySecurityLogging").getNetworkHierarchySecurityLoggingOutput = null as any;
@@ -910,6 +915,11 @@ export const getPolicyObjectSecurityDataIpv4PrefixList: typeof import("./getPoli
 export const getPolicyObjectSecurityDataIpv4PrefixListOutput: typeof import("./getPolicyObjectSecurityDataIpv4PrefixList").getPolicyObjectSecurityDataIpv4PrefixListOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicyObjectSecurityDataIpv4PrefixList","getPolicyObjectSecurityDataIpv4PrefixListOutput"], () => require("./getPolicyObjectSecurityDataIpv4PrefixList"));
 
+export { GetPolicyObjectSecurityDataIpv6PrefixListArgs, GetPolicyObjectSecurityDataIpv6PrefixListResult, GetPolicyObjectSecurityDataIpv6PrefixListOutputArgs } from "./getPolicyObjectSecurityDataIpv6PrefixList";
+export const getPolicyObjectSecurityDataIpv6PrefixList: typeof import("./getPolicyObjectSecurityDataIpv6PrefixList").getPolicyObjectSecurityDataIpv6PrefixList = null as any;
+export const getPolicyObjectSecurityDataIpv6PrefixListOutput: typeof import("./getPolicyObjectSecurityDataIpv6PrefixList").getPolicyObjectSecurityDataIpv6PrefixListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityDataIpv6PrefixList","getPolicyObjectSecurityDataIpv6PrefixListOutput"], () => require("./getPolicyObjectSecurityDataIpv6PrefixList"));
+
 export { GetPolicyObjectSecurityFqdnListArgs, GetPolicyObjectSecurityFqdnListResult, GetPolicyObjectSecurityFqdnListOutputArgs } from "./getPolicyObjectSecurityFqdnList";
 export const getPolicyObjectSecurityFqdnList: typeof import("./getPolicyObjectSecurityFqdnList").getPolicyObjectSecurityFqdnList = null as any;
 export const getPolicyObjectSecurityFqdnListOutput: typeof import("./getPolicyObjectSecurityFqdnList").getPolicyObjectSecurityFqdnListOutput = null as any;
@@ -940,6 +950,11 @@ export const getPolicyObjectSecurityLocalDomainList: typeof import("./getPolicyO
 export const getPolicyObjectSecurityLocalDomainListOutput: typeof import("./getPolicyObjectSecurityLocalDomainList").getPolicyObjectSecurityLocalDomainListOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicyObjectSecurityLocalDomainList","getPolicyObjectSecurityLocalDomainListOutput"], () => require("./getPolicyObjectSecurityLocalDomainList"));
 
+export { GetPolicyObjectSecurityObjectGroupArgs, GetPolicyObjectSecurityObjectGroupResult, GetPolicyObjectSecurityObjectGroupOutputArgs } from "./getPolicyObjectSecurityObjectGroup";
+export const getPolicyObjectSecurityObjectGroup: typeof import("./getPolicyObjectSecurityObjectGroup").getPolicyObjectSecurityObjectGroup = null as any;
+export const getPolicyObjectSecurityObjectGroupOutput: typeof import("./getPolicyObjectSecurityObjectGroup").getPolicyObjectSecurityObjectGroupOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityObjectGroup","getPolicyObjectSecurityObjectGroupOutput"], () => require("./getPolicyObjectSecurityObjectGroup"));
+
 export { GetPolicyObjectSecurityPortListArgs, GetPolicyObjectSecurityPortListResult, GetPolicyObjectSecurityPortListOutputArgs } from "./getPolicyObjectSecurityPortList";
 export const getPolicyObjectSecurityPortList: typeof import("./getPolicyObjectSecurityPortList").getPolicyObjectSecurityPortList = null as any;
 export const getPolicyObjectSecurityPortListOutput: typeof import("./getPolicyObjectSecurityPortList").getPolicyObjectSecurityPortListOutput = null as any;
@@ -949,6 +964,11 @@ export { GetPolicyObjectSecurityProtocolListArgs, GetPolicyObjectSecurityProtoco
 export const getPolicyObjectSecurityProtocolList: typeof import("./getPolicyObjectSecurityProtocolList").getPolicyObjectSecurityProtocolList = null as any;
 export const getPolicyObjectSecurityProtocolListOutput: typeof import("./getPolicyObjectSecurityProtocolList").getPolicyObjectSecurityProtocolListOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicyObjectSecurityProtocolList","getPolicyObjectSecurityProtocolListOutput"], () => require("./getPolicyObjectSecurityProtocolList"));
+
+export { GetPolicyObjectSecurityRuleSetArgs, GetPolicyObjectSecurityRuleSetResult, GetPolicyObjectSecurityRuleSetOutputArgs } from "./getPolicyObjectSecurityRuleSet";
+export const getPolicyObjectSecurityRuleSet: typeof import("./getPolicyObjectSecurityRuleSet").getPolicyObjectSecurityRuleSet = null as any;
+export const getPolicyObjectSecurityRuleSetOutput: typeof import("./getPolicyObjectSecurityRuleSet").getPolicyObjectSecurityRuleSetOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityRuleSet","getPolicyObjectSecurityRuleSetOutput"], () => require("./getPolicyObjectSecurityRuleSet"));
 
 export { GetPolicyObjectSecurityScalableGroupTagListArgs, GetPolicyObjectSecurityScalableGroupTagListResult, GetPolicyObjectSecurityScalableGroupTagListOutputArgs } from "./getPolicyObjectSecurityScalableGroupTagList";
 export const getPolicyObjectSecurityScalableGroupTagList: typeof import("./getPolicyObjectSecurityScalableGroupTagList").getPolicyObjectSecurityScalableGroupTagList = null as any;
@@ -1890,6 +1910,11 @@ export type PolicyObjectSecurityDataIpv4PrefixList = import("./policyObjectSecur
 export const PolicyObjectSecurityDataIpv4PrefixList: typeof import("./policyObjectSecurityDataIpv4PrefixList").PolicyObjectSecurityDataIpv4PrefixList = null as any;
 utilities.lazyLoad(exports, ["PolicyObjectSecurityDataIpv4PrefixList"], () => require("./policyObjectSecurityDataIpv4PrefixList"));
 
+export { PolicyObjectSecurityDataIpv6PrefixListArgs, PolicyObjectSecurityDataIpv6PrefixListState } from "./policyObjectSecurityDataIpv6PrefixList";
+export type PolicyObjectSecurityDataIpv6PrefixList = import("./policyObjectSecurityDataIpv6PrefixList").PolicyObjectSecurityDataIpv6PrefixList;
+export const PolicyObjectSecurityDataIpv6PrefixList: typeof import("./policyObjectSecurityDataIpv6PrefixList").PolicyObjectSecurityDataIpv6PrefixList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityDataIpv6PrefixList"], () => require("./policyObjectSecurityDataIpv6PrefixList"));
+
 export { PolicyObjectSecurityFqdnListArgs, PolicyObjectSecurityFqdnListState } from "./policyObjectSecurityFqdnList";
 export type PolicyObjectSecurityFqdnList = import("./policyObjectSecurityFqdnList").PolicyObjectSecurityFqdnList;
 export const PolicyObjectSecurityFqdnList: typeof import("./policyObjectSecurityFqdnList").PolicyObjectSecurityFqdnList = null as any;
@@ -1920,6 +1945,11 @@ export type PolicyObjectSecurityLocalDomainList = import("./policyObjectSecurity
 export const PolicyObjectSecurityLocalDomainList: typeof import("./policyObjectSecurityLocalDomainList").PolicyObjectSecurityLocalDomainList = null as any;
 utilities.lazyLoad(exports, ["PolicyObjectSecurityLocalDomainList"], () => require("./policyObjectSecurityLocalDomainList"));
 
+export { PolicyObjectSecurityObjectGroupArgs, PolicyObjectSecurityObjectGroupState } from "./policyObjectSecurityObjectGroup";
+export type PolicyObjectSecurityObjectGroup = import("./policyObjectSecurityObjectGroup").PolicyObjectSecurityObjectGroup;
+export const PolicyObjectSecurityObjectGroup: typeof import("./policyObjectSecurityObjectGroup").PolicyObjectSecurityObjectGroup = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityObjectGroup"], () => require("./policyObjectSecurityObjectGroup"));
+
 export { PolicyObjectSecurityPortListArgs, PolicyObjectSecurityPortListState } from "./policyObjectSecurityPortList";
 export type PolicyObjectSecurityPortList = import("./policyObjectSecurityPortList").PolicyObjectSecurityPortList;
 export const PolicyObjectSecurityPortList: typeof import("./policyObjectSecurityPortList").PolicyObjectSecurityPortList = null as any;
@@ -1929,6 +1959,11 @@ export { PolicyObjectSecurityProtocolListArgs, PolicyObjectSecurityProtocolListS
 export type PolicyObjectSecurityProtocolList = import("./policyObjectSecurityProtocolList").PolicyObjectSecurityProtocolList;
 export const PolicyObjectSecurityProtocolList: typeof import("./policyObjectSecurityProtocolList").PolicyObjectSecurityProtocolList = null as any;
 utilities.lazyLoad(exports, ["PolicyObjectSecurityProtocolList"], () => require("./policyObjectSecurityProtocolList"));
+
+export { PolicyObjectSecurityRuleSetArgs, PolicyObjectSecurityRuleSetState } from "./policyObjectSecurityRuleSet";
+export type PolicyObjectSecurityRuleSet = import("./policyObjectSecurityRuleSet").PolicyObjectSecurityRuleSet;
+export const PolicyObjectSecurityRuleSet: typeof import("./policyObjectSecurityRuleSet").PolicyObjectSecurityRuleSet = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityRuleSet"], () => require("./policyObjectSecurityRuleSet"));
 
 export { PolicyObjectSecurityScalableGroupTagListArgs, PolicyObjectSecurityScalableGroupTagListState } from "./policyObjectSecurityScalableGroupTagList";
 export type PolicyObjectSecurityScalableGroupTagList = import("./policyObjectSecurityScalableGroupTagList").PolicyObjectSecurityScalableGroupTagList;
@@ -2057,6 +2092,11 @@ export { SecurityPolicyArgs, SecurityPolicyState } from "./securityPolicy";
 export type SecurityPolicy = import("./securityPolicy").SecurityPolicy;
 export const SecurityPolicy: typeof import("./securityPolicy").SecurityPolicy = null as any;
 utilities.lazyLoad(exports, ["SecurityPolicy"], () => require("./securityPolicy"));
+
+export { SendWanEdgeListToControllersArgs, SendWanEdgeListToControllersState } from "./sendWanEdgeListToControllers";
+export type SendWanEdgeListToControllers = import("./sendWanEdgeListToControllers").SendWanEdgeListToControllers;
+export const SendWanEdgeListToControllers: typeof import("./sendWanEdgeListToControllers").SendWanEdgeListToControllers = null as any;
+utilities.lazyLoad(exports, ["SendWanEdgeListToControllers"], () => require("./sendWanEdgeListToControllers"));
 
 export { ServiceAppqoeFeatureArgs, ServiceAppqoeFeatureState } from "./serviceAppqoeFeature";
 export type ServiceAppqoeFeature = import("./serviceAppqoeFeature").ServiceAppqoeFeature;
@@ -2658,6 +2698,11 @@ export type VpnMembershipPolicyDefinition = import("./vpnMembershipPolicyDefinit
 export const VpnMembershipPolicyDefinition: typeof import("./vpnMembershipPolicyDefinition").VpnMembershipPolicyDefinition = null as any;
 utilities.lazyLoad(exports, ["VpnMembershipPolicyDefinition"], () => require("./vpnMembershipPolicyDefinition"));
 
+export { WanEdgeCertificateValidateArgs, WanEdgeCertificateValidateState } from "./wanEdgeCertificateValidate";
+export type WanEdgeCertificateValidate = import("./wanEdgeCertificateValidate").WanEdgeCertificateValidate;
+export const WanEdgeCertificateValidate: typeof import("./wanEdgeCertificateValidate").WanEdgeCertificateValidate = null as any;
+utilities.lazyLoad(exports, ["WanEdgeCertificateValidate"], () => require("./wanEdgeCertificateValidate"));
+
 export { ZoneBasedFirewallPolicyDefinitionArgs, ZoneBasedFirewallPolicyDefinitionState } from "./zoneBasedFirewallPolicyDefinition";
 export type ZoneBasedFirewallPolicyDefinition = import("./zoneBasedFirewallPolicyDefinition").ZoneBasedFirewallPolicyDefinition;
 export const ZoneBasedFirewallPolicyDefinition: typeof import("./zoneBasedFirewallPolicyDefinition").ZoneBasedFirewallPolicyDefinition = null as any;
@@ -2904,6 +2949,8 @@ const _module = {
                 return new PolicyObjectPreferredColorGroup(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityDataIpv4PrefixList:PolicyObjectSecurityDataIpv4PrefixList":
                 return new PolicyObjectSecurityDataIpv4PrefixList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityDataIpv6PrefixList:PolicyObjectSecurityDataIpv6PrefixList":
+                return new PolicyObjectSecurityDataIpv6PrefixList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityFqdnList:PolicyObjectSecurityFqdnList":
                 return new PolicyObjectSecurityFqdnList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityGeolocationList:PolicyObjectSecurityGeolocationList":
@@ -2916,10 +2963,14 @@ const _module = {
                 return new PolicyObjectSecurityLocalApplicationList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityLocalDomainList:PolicyObjectSecurityLocalDomainList":
                 return new PolicyObjectSecurityLocalDomainList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityObjectGroup:PolicyObjectSecurityObjectGroup":
+                return new PolicyObjectSecurityObjectGroup(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityPortList:PolicyObjectSecurityPortList":
                 return new PolicyObjectSecurityPortList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityProtocolList:PolicyObjectSecurityProtocolList":
                 return new PolicyObjectSecurityProtocolList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityRuleSet:PolicyObjectSecurityRuleSet":
+                return new PolicyObjectSecurityRuleSet(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityScalableGroupTagList:PolicyObjectSecurityScalableGroupTagList":
                 return new PolicyObjectSecurityScalableGroupTagList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityUrlAllowList:PolicyObjectSecurityUrlAllowList":
@@ -2970,6 +3021,8 @@ const _module = {
                 return new SecurityAppHostingFeatureTemplate(name, <any>undefined, { urn })
             case "sdwan:index/securityPolicy:SecurityPolicy":
                 return new SecurityPolicy(name, <any>undefined, { urn })
+            case "sdwan:index/sendWanEdgeListToControllers:SendWanEdgeListToControllers":
+                return new SendWanEdgeListToControllers(name, <any>undefined, { urn })
             case "sdwan:index/serviceAppqoeFeature:ServiceAppqoeFeature":
                 return new ServiceAppqoeFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature":
@@ -3210,6 +3263,8 @@ const _module = {
                 return new VpnListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/vpnMembershipPolicyDefinition:VpnMembershipPolicyDefinition":
                 return new VpnMembershipPolicyDefinition(name, <any>undefined, { urn })
+            case "sdwan:index/wanEdgeCertificateValidate:WanEdgeCertificateValidate":
+                return new WanEdgeCertificateValidate(name, <any>undefined, { urn })
             case "sdwan:index/zoneBasedFirewallPolicyDefinition:ZoneBasedFirewallPolicyDefinition":
                 return new ZoneBasedFirewallPolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/zoneListPolicyObject:ZoneListPolicyObject":
@@ -3330,14 +3385,17 @@ pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectMirror", _modu
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectPolicer", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectPreferredColorGroup", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityDataIpv4PrefixList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityDataIpv6PrefixList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityFqdnList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityGeolocationList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityIdentityList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityIpsSignature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityLocalApplicationList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityLocalDomainList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityObjectGroup", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityPortList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityProtocolList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityRuleSet", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityScalableGroupTagList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityUrlAllowList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityUrlBlockList", _module)
@@ -3363,6 +3421,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/ruleSetPolicyDefinition", 
 pulumi.runtime.registerResourceModule("sdwan", "index/scope", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/securityAppHostingFeatureTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/securityPolicy", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/sendWanEdgeListToControllers", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceAppqoeFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceDhcpServerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceDualRouterHaFeature", _module)
@@ -3483,6 +3542,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/vpnInterfaceSviFeatureTemp
 pulumi.runtime.registerResourceModule("sdwan", "index/vpnInterfaceT1E1SerialFeatureTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/vpnListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/vpnMembershipPolicyDefinition", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/wanEdgeCertificateValidate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/zoneBasedFirewallPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/zoneListPolicyObject", _module)
 pulumi.runtime.registerResourcePackage("sdwan", {

@@ -22,11 +22,12 @@ class PolicyObjectUnifiedIntrusionPreventionArgs:
                  feature_profile_id: pulumi.Input[_builtins.str],
                  inspection_mode: pulumi.Input[_builtins.str],
                  log_level: pulumi.Input[_builtins.str],
-                 signature_set: pulumi.Input[_builtins.str],
                  custom_signature: pulumi.Input[Optional[_builtins.bool]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  ips_signature_allow_list_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 name: pulumi.Input[Optional[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 signature_set: pulumi.Input[Optional[_builtins.str]] = None,
+                 signature_set_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicyObjectUnifiedIntrusionPrevention resource.
 
@@ -35,16 +36,16 @@ class PolicyObjectUnifiedIntrusionPreventionArgs:
                  - Choices: `detection`, `protection`
         :param pulumi.Input[_builtins.str] log_level: Can be one of the enum value
                  - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
-        :param pulumi.Input[_builtins.str] signature_set: Can be one of the enum value
-                 - Choices: `balanced`, `connectivity`, `security`
         :param pulumi.Input[_builtins.bool] custom_signature: Can be one of the enum value
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
+        :param pulumi.Input[_builtins.str] signature_set: Can be one of the enum value, Attribute conditional on `signature_set_id` not being set
+                 - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+        :param pulumi.Input[_builtins.str] signature_set_id: Reference to a user edited signature set parcel, Attribute conditional on `signature_set` not being set and SD-WAN Manager version `20.18.1` or higher
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         pulumi.set(__self__, "inspection_mode", inspection_mode)
         pulumi.set(__self__, "log_level", log_level)
-        pulumi.set(__self__, "signature_set", signature_set)
         if custom_signature is not None:
             pulumi.set(__self__, "custom_signature", custom_signature)
         if description is not None:
@@ -53,6 +54,10 @@ class PolicyObjectUnifiedIntrusionPreventionArgs:
             pulumi.set(__self__, "ips_signature_allow_list_id", ips_signature_allow_list_id)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if signature_set is not None:
+            pulumi.set(__self__, "signature_set", signature_set)
+        if signature_set_id is not None:
+            pulumi.set(__self__, "signature_set_id", signature_set_id)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
@@ -91,19 +96,6 @@ class PolicyObjectUnifiedIntrusionPreventionArgs:
     @log_level.setter
     def log_level(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "log_level", value)
-
-    @_builtins.property
-    @pulumi.getter(name="signatureSet")
-    def signature_set(self) -> pulumi.Input[_builtins.str]:
-        """
-        Can be one of the enum value
-          - Choices: `balanced`, `connectivity`, `security`
-        """
-        return pulumi.get(self, "signature_set")
-
-    @signature_set.setter
-    def signature_set(self, value: pulumi.Input[_builtins.str]):
-        pulumi.set(self, "signature_set", value)
 
     @_builtins.property
     @pulumi.getter(name="customSignature")
@@ -150,6 +142,31 @@ class PolicyObjectUnifiedIntrusionPreventionArgs:
     def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
+    @_builtins.property
+    @pulumi.getter(name="signatureSet")
+    def signature_set(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Can be one of the enum value, Attribute conditional on `signature_set_id` not being set
+          - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+        """
+        return pulumi.get(self, "signature_set")
+
+    @signature_set.setter
+    def signature_set(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "signature_set", value)
+
+    @_builtins.property
+    @pulumi.getter(name="signatureSetId")
+    def signature_set_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Reference to a user edited signature set parcel, Attribute conditional on `signature_set` not being set and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "signature_set_id")
+
+    @signature_set_id.setter
+    def signature_set_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "signature_set_id", value)
+
 
 @pulumi.input_type
 class _PolicyObjectUnifiedIntrusionPreventionState:
@@ -162,6 +179,7 @@ class _PolicyObjectUnifiedIntrusionPreventionState:
                  log_level: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  signature_set: pulumi.Input[Optional[_builtins.str]] = None,
+                 signature_set_id: pulumi.Input[Optional[_builtins.str]] = None,
                  version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PolicyObjectUnifiedIntrusionPrevention resources.
@@ -174,8 +192,9 @@ class _PolicyObjectUnifiedIntrusionPreventionState:
         :param pulumi.Input[_builtins.str] log_level: Can be one of the enum value
                  - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
-        :param pulumi.Input[_builtins.str] signature_set: Can be one of the enum value
-                 - Choices: `balanced`, `connectivity`, `security`
+        :param pulumi.Input[_builtins.str] signature_set: Can be one of the enum value, Attribute conditional on `signature_set_id` not being set
+                 - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+        :param pulumi.Input[_builtins.str] signature_set_id: Reference to a user edited signature set parcel, Attribute conditional on `signature_set` not being set and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.int] version: The version of the Policy_object
         """
         if custom_signature is not None:
@@ -194,6 +213,8 @@ class _PolicyObjectUnifiedIntrusionPreventionState:
             pulumi.set(__self__, "name", name)
         if signature_set is not None:
             pulumi.set(__self__, "signature_set", signature_set)
+        if signature_set_id is not None:
+            pulumi.set(__self__, "signature_set_id", signature_set_id)
         if version is not None:
             pulumi.set(__self__, "version", version)
 
@@ -284,14 +305,26 @@ class _PolicyObjectUnifiedIntrusionPreventionState:
     @pulumi.getter(name="signatureSet")
     def signature_set(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Can be one of the enum value
-          - Choices: `balanced`, `connectivity`, `security`
+        Can be one of the enum value, Attribute conditional on `signature_set_id` not being set
+          - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
         """
         return pulumi.get(self, "signature_set")
 
     @signature_set.setter
     def signature_set(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "signature_set", value)
+
+    @_builtins.property
+    @pulumi.getter(name="signatureSetId")
+    def signature_set_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Reference to a user edited signature set parcel, Attribute conditional on `signature_set` not being set and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "signature_set_id")
+
+    @signature_set_id.setter
+    def signature_set_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "signature_set_id", value)
 
     @_builtins.property
     @pulumi.getter
@@ -320,6 +353,7 @@ class PolicyObjectUnifiedIntrusionPrevention(pulumi.CustomResource):
                  log_level: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  signature_set: pulumi.Input[Optional[_builtins.str]] = None,
+                 signature_set_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Policy Object Unified Intrusion Prevention Policy_object.
@@ -363,8 +397,9 @@ class PolicyObjectUnifiedIntrusionPrevention(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] log_level: Can be one of the enum value
                  - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
-        :param pulumi.Input[_builtins.str] signature_set: Can be one of the enum value
-                 - Choices: `balanced`, `connectivity`, `security`
+        :param pulumi.Input[_builtins.str] signature_set: Can be one of the enum value, Attribute conditional on `signature_set_id` not being set
+                 - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+        :param pulumi.Input[_builtins.str] signature_set_id: Reference to a user edited signature set parcel, Attribute conditional on `signature_set` not being set and SD-WAN Manager version `20.18.1` or higher
         """
         ...
     @overload
@@ -427,6 +462,7 @@ class PolicyObjectUnifiedIntrusionPrevention(pulumi.CustomResource):
                  log_level: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  signature_set: pulumi.Input[Optional[_builtins.str]] = None,
+                 signature_set_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -449,9 +485,8 @@ class PolicyObjectUnifiedIntrusionPrevention(pulumi.CustomResource):
                 raise TypeError("Missing required property 'log_level'")
             __props__.__dict__["log_level"] = log_level
             __props__.__dict__["name"] = name
-            if signature_set is None and not opts.urn:
-                raise TypeError("Missing required property 'signature_set'")
             __props__.__dict__["signature_set"] = signature_set
+            __props__.__dict__["signature_set_id"] = signature_set_id
             __props__.__dict__["version"] = None
         super(PolicyObjectUnifiedIntrusionPrevention, __self__).__init__(
             'sdwan:index/policyObjectUnifiedIntrusionPrevention:PolicyObjectUnifiedIntrusionPrevention',
@@ -471,6 +506,7 @@ class PolicyObjectUnifiedIntrusionPrevention(pulumi.CustomResource):
             log_level: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             signature_set: pulumi.Input[Optional[_builtins.str]] = None,
+            signature_set_id: pulumi.Input[Optional[_builtins.str]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'PolicyObjectUnifiedIntrusionPrevention':
         """
         Get an existing PolicyObjectUnifiedIntrusionPrevention resource's state with the given name, id, and optional extra
@@ -487,8 +523,9 @@ class PolicyObjectUnifiedIntrusionPrevention(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] log_level: Can be one of the enum value
                  - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
-        :param pulumi.Input[_builtins.str] signature_set: Can be one of the enum value
-                 - Choices: `balanced`, `connectivity`, `security`
+        :param pulumi.Input[_builtins.str] signature_set: Can be one of the enum value, Attribute conditional on `signature_set_id` not being set
+                 - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+        :param pulumi.Input[_builtins.str] signature_set_id: Reference to a user edited signature set parcel, Attribute conditional on `signature_set` not being set and SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[_builtins.int] version: The version of the Policy_object
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -503,6 +540,7 @@ class PolicyObjectUnifiedIntrusionPrevention(pulumi.CustomResource):
         __props__.__dict__["log_level"] = log_level
         __props__.__dict__["name"] = name
         __props__.__dict__["signature_set"] = signature_set
+        __props__.__dict__["signature_set_id"] = signature_set_id
         __props__.__dict__["version"] = version
         return PolicyObjectUnifiedIntrusionPrevention(resource_name, opts=opts, __props__=__props__)
 
@@ -563,12 +601,20 @@ class PolicyObjectUnifiedIntrusionPrevention(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="signatureSet")
-    def signature_set(self) -> pulumi.Output[_builtins.str]:
+    def signature_set(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Can be one of the enum value
-          - Choices: `balanced`, `connectivity`, `security`
+        Can be one of the enum value, Attribute conditional on `signature_set_id` not being set
+          - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
         """
         return pulumi.get(self, "signature_set")
+
+    @_builtins.property
+    @pulumi.getter(name="signatureSetId")
+    def signature_set_id(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Reference to a user edited signature set parcel, Attribute conditional on `signature_set` not being set and SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "signature_set_id")
 
     @_builtins.property
     @pulumi.getter

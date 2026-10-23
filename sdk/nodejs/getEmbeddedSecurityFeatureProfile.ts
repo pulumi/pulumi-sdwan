@@ -18,10 +18,12 @@ import * as utilities from "./utilities";
  * });
  * ```
  */
-export function getEmbeddedSecurityFeatureProfile(args: GetEmbeddedSecurityFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetEmbeddedSecurityFeatureProfileResult> {
+export function getEmbeddedSecurityFeatureProfile(args?: GetEmbeddedSecurityFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetEmbeddedSecurityFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getEmbeddedSecurityFeatureProfile:getEmbeddedSecurityFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,7 +34,11 @@ export interface GetEmbeddedSecurityFeatureProfileArgs {
     /**
      * The id of the object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the embedded security feature profile
+     */
+    name?: string;
 }
 
 /**
@@ -66,10 +72,12 @@ export interface GetEmbeddedSecurityFeatureProfileResult {
  * });
  * ```
  */
-export function getEmbeddedSecurityFeatureProfileOutput(args: GetEmbeddedSecurityFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetEmbeddedSecurityFeatureProfileResult> {
+export function getEmbeddedSecurityFeatureProfileOutput(args?: GetEmbeddedSecurityFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetEmbeddedSecurityFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getEmbeddedSecurityFeatureProfile:getEmbeddedSecurityFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -80,5 +88,9 @@ export interface GetEmbeddedSecurityFeatureProfileOutputArgs {
     /**
      * The id of the object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the embedded security feature profile
+     */
+    name?: pulumi.Input<string | undefined>;
 }

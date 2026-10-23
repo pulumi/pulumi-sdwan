@@ -162,6 +162,7 @@ from .get_mesh_topology_policy_definition import *
 from .get_mirror_policy_object import *
 from .get_network_hierarchy_cflowd import *
 from .get_network_hierarchy_node import *
+from .get_network_hierarchy_nodes import *
 from .get_network_hierarchy_security_logging import *
 from .get_object_group_policy_definition import *
 from .get_other_feature_profile import *
@@ -187,14 +188,17 @@ from .get_policy_object_mirror import *
 from .get_policy_object_policer import *
 from .get_policy_object_preferred_color_group import *
 from .get_policy_object_security_data_ipv4_prefix_list import *
+from .get_policy_object_security_data_ipv6_prefix_list import *
 from .get_policy_object_security_fqdn_list import *
 from .get_policy_object_security_geolocation_list import *
 from .get_policy_object_security_identity_list import *
 from .get_policy_object_security_ips_signature import *
 from .get_policy_object_security_local_application_list import *
 from .get_policy_object_security_local_domain_list import *
+from .get_policy_object_security_object_group import *
 from .get_policy_object_security_port_list import *
 from .get_policy_object_security_protocol_list import *
+from .get_policy_object_security_rule_set import *
 from .get_policy_object_security_scalable_group_tag_list import *
 from .get_policy_object_security_url_allow_list import *
 from .get_policy_object_security_url_block_list import *
@@ -383,14 +387,17 @@ from .policy_object_mirror import *
 from .policy_object_policer import *
 from .policy_object_preferred_color_group import *
 from .policy_object_security_data_ipv4_prefix_list import *
+from .policy_object_security_data_ipv6_prefix_list import *
 from .policy_object_security_fqdn_list import *
 from .policy_object_security_geolocation_list import *
 from .policy_object_security_identity_list import *
 from .policy_object_security_ips_signature import *
 from .policy_object_security_local_application_list import *
 from .policy_object_security_local_domain_list import *
+from .policy_object_security_object_group import *
 from .policy_object_security_port_list import *
 from .policy_object_security_protocol_list import *
+from .policy_object_security_rule_set import *
 from .policy_object_security_scalable_group_tag_list import *
 from .policy_object_security_url_allow_list import *
 from .policy_object_security_url_block_list import *
@@ -417,6 +424,7 @@ from .rule_set_policy_definition import *
 from .scope import *
 from .security_app_hosting_feature_template import *
 from .security_policy import *
+from .send_wan_edge_list_to_controllers import *
 from .service_appqoe_feature import *
 from .service_dhcp_server_feature import *
 from .service_dual_router_ha_feature import *
@@ -537,6 +545,7 @@ from .vpn_interface_svi_feature_template import *
 from .vpn_interface_t1_e1_serial_feature_template import *
 from .vpn_list_policy_object import *
 from .vpn_membership_policy_definition import *
+from .wan_edge_certificate_validate import *
 from .zone_based_firewall_policy_definition import *
 from .zone_list_policy_object import *
 from ._inputs import *
@@ -1442,6 +1451,14 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityDataIpv6PrefixList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityDataIpv6PrefixList:PolicyObjectSecurityDataIpv6PrefixList": "PolicyObjectSecurityDataIpv6PrefixList"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/policyObjectSecurityFqdnList",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1490,6 +1507,14 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityObjectGroup",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityObjectGroup:PolicyObjectSecurityObjectGroup": "PolicyObjectSecurityObjectGroup"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/policyObjectSecurityPortList",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1502,6 +1527,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/policyObjectSecurityProtocolList:PolicyObjectSecurityProtocolList": "PolicyObjectSecurityProtocolList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityRuleSet",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityRuleSet:PolicyObjectSecurityRuleSet": "PolicyObjectSecurityRuleSet"
   }
  },
  {
@@ -1702,6 +1735,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/securityPolicy:SecurityPolicy": "SecurityPolicy"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/sendWanEdgeListToControllers",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/sendWanEdgeListToControllers:SendWanEdgeListToControllers": "SendWanEdgeListToControllers"
   }
  },
  {
@@ -2662,6 +2703,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/vpnMembershipPolicyDefinition:VpnMembershipPolicyDefinition": "VpnMembershipPolicyDefinition"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/wanEdgeCertificateValidate",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/wanEdgeCertificateValidate:WanEdgeCertificateValidate": "WanEdgeCertificateValidate"
   }
  },
  {

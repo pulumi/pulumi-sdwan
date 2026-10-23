@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Task<GetPolicyObjectFeatureProfileResult> InvokeAsync(GetPolicyObjectFeatureProfileArgs args, InvokeOptions? options = null)
+        public static Task<GetPolicyObjectFeatureProfileResult> InvokeAsync(GetPolicyObjectFeatureProfileArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetPolicyObjectFeatureProfileResult>("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", args ?? new GetPolicyObjectFeatureProfileArgs(), options.WithDefaults());
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Output<GetPolicyObjectFeatureProfileResult> Invoke(GetPolicyObjectFeatureProfileInvokeArgs args, InvokeOptions? options = null)
+        public static Output<GetPolicyObjectFeatureProfileResult> Invoke(GetPolicyObjectFeatureProfileInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPolicyObjectFeatureProfileResult>("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", args ?? new GetPolicyObjectFeatureProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
@@ -90,8 +90,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the policy object feature profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetPolicyObjectFeatureProfileArgs()
         {
@@ -104,8 +110,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the policy object feature profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetPolicyObjectFeatureProfileInvokeArgs()
         {

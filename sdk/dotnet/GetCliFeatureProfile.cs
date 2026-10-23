@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Task<GetCliFeatureProfileResult> InvokeAsync(GetCliFeatureProfileArgs args, InvokeOptions? options = null)
+        public static Task<GetCliFeatureProfileResult> InvokeAsync(GetCliFeatureProfileArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetCliFeatureProfileResult>("sdwan:index/getCliFeatureProfile:getCliFeatureProfile", args ?? new GetCliFeatureProfileArgs(), options.WithDefaults());
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Output<GetCliFeatureProfileResult> Invoke(GetCliFeatureProfileInvokeArgs args, InvokeOptions? options = null)
+        public static Output<GetCliFeatureProfileResult> Invoke(GetCliFeatureProfileInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCliFeatureProfileResult>("sdwan:index/getCliFeatureProfile:getCliFeatureProfile", args ?? new GetCliFeatureProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
@@ -90,8 +90,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the cli feature profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetCliFeatureProfileArgs()
         {
@@ -104,8 +110,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the cli feature profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetCliFeatureProfileInvokeArgs()
         {

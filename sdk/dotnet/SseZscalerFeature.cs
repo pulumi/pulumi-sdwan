@@ -173,7 +173,8 @@ namespace Pulumi.Sdwan
         public Output<string?> CautionEnabledVariable { get; private set; } = null!;
 
         /// <summary>
-        /// - Default value: `False`
+        /// Country
+        ///   - Default value: `False`
         /// </summary>
         [Output("country")]
         public Output<bool?> Country { get; private set; } = null!;
@@ -205,7 +206,7 @@ namespace Pulumi.Sdwan
         public Output<string?> DisplayTimeUnitVariable { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `EnforceBandwidthControl` equal to `True`
+        /// Download Bandwidth in Mbps, Attribute conditional on `EnforceBandwidthControl` equal to `True`
         ///   - Range: `0.1`-`99999`
         /// </summary>
         [Output("dnBandwidth")]
@@ -218,7 +219,8 @@ namespace Pulumi.Sdwan
         public Output<string?> DnBandwidthVariable { get; private set; } = null!;
 
         /// <summary>
-        /// - Default value: `False`
+        /// Enforce Bandwidth Control
+        ///   - Default value: `False`
         /// </summary>
         [Output("enforceBandwidthControl")]
         public Output<bool?> EnforceBandwidthControl { get; private set; } = null!;
@@ -413,7 +415,7 @@ namespace Pulumi.Sdwan
         /// Source IP address for Tracker
         /// </summary>
         [Output("trackerSourceIp")]
-        public Output<string> TrackerSourceIp { get; private set; } = null!;
+        public Output<string?> TrackerSourceIp { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -428,7 +430,7 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.SseZscalerFeatureTracker>> Trackers { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `EnforceBandwidthControl` equal to `True`
+        /// Upload Bandwidth in Mbps, Attribute conditional on `EnforceBandwidthControl` equal to `True`
         ///   - Range: `0.1`-`99999`
         /// </summary>
         [Output("upBandwidth")]
@@ -572,7 +574,8 @@ namespace Pulumi.Sdwan
         public Input<string>? CautionEnabledVariable { get; set; }
 
         /// <summary>
-        /// - Default value: `False`
+        /// Country
+        ///   - Default value: `False`
         /// </summary>
         [Input("country")]
         public Input<bool>? Country { get; set; }
@@ -604,7 +607,7 @@ namespace Pulumi.Sdwan
         public Input<string>? DisplayTimeUnitVariable { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `EnforceBandwidthControl` equal to `True`
+        /// Download Bandwidth in Mbps, Attribute conditional on `EnforceBandwidthControl` equal to `True`
         ///   - Range: `0.1`-`99999`
         /// </summary>
         [Input("dnBandwidth")]
@@ -617,7 +620,8 @@ namespace Pulumi.Sdwan
         public Input<string>? DnBandwidthVariable { get; set; }
 
         /// <summary>
-        /// - Default value: `False`
+        /// Enforce Bandwidth Control
+        ///   - Default value: `False`
         /// </summary>
         [Input("enforceBandwidthControl")]
         public Input<bool>? EnforceBandwidthControl { get; set; }
@@ -828,8 +832,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Source IP address for Tracker
         /// </summary>
-        [Input("trackerSourceIp", required: true)]
-        public Input<string> TrackerSourceIp { get; set; } = null!;
+        [Input("trackerSourceIp")]
+        public Input<string>? TrackerSourceIp { get; set; }
 
         /// <summary>
         /// Variable name
@@ -850,7 +854,7 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// , Attribute conditional on `EnforceBandwidthControl` equal to `True`
+        /// Upload Bandwidth in Mbps, Attribute conditional on `EnforceBandwidthControl` equal to `True`
         ///   - Range: `0.1`-`99999`
         /// </summary>
         [Input("upBandwidth")]
@@ -950,7 +954,8 @@ namespace Pulumi.Sdwan
         public Input<string>? CautionEnabledVariable { get; set; }
 
         /// <summary>
-        /// - Default value: `False`
+        /// Country
+        ///   - Default value: `False`
         /// </summary>
         [Input("country")]
         public Input<bool>? Country { get; set; }
@@ -982,7 +987,7 @@ namespace Pulumi.Sdwan
         public Input<string>? DisplayTimeUnitVariable { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `EnforceBandwidthControl` equal to `True`
+        /// Download Bandwidth in Mbps, Attribute conditional on `EnforceBandwidthControl` equal to `True`
         ///   - Range: `0.1`-`99999`
         /// </summary>
         [Input("dnBandwidth")]
@@ -995,7 +1000,8 @@ namespace Pulumi.Sdwan
         public Input<string>? DnBandwidthVariable { get; set; }
 
         /// <summary>
-        /// - Default value: `False`
+        /// Enforce Bandwidth Control
+        ///   - Default value: `False`
         /// </summary>
         [Input("enforceBandwidthControl")]
         public Input<bool>? EnforceBandwidthControl { get; set; }
@@ -1228,7 +1234,7 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// , Attribute conditional on `EnforceBandwidthControl` equal to `True`
+        /// Upload Bandwidth in Mbps, Attribute conditional on `EnforceBandwidthControl` equal to `True`
         ///   - Range: `0.1`-`99999`
         /// </summary>
         [Input("upBandwidth")]

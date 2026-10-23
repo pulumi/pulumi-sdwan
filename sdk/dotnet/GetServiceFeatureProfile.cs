@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Task<GetServiceFeatureProfileResult> InvokeAsync(GetServiceFeatureProfileArgs args, InvokeOptions? options = null)
+        public static Task<GetServiceFeatureProfileResult> InvokeAsync(GetServiceFeatureProfileArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetServiceFeatureProfileResult>("sdwan:index/getServiceFeatureProfile:getServiceFeatureProfile", args ?? new GetServiceFeatureProfileArgs(), options.WithDefaults());
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Output<GetServiceFeatureProfileResult> Invoke(GetServiceFeatureProfileInvokeArgs args, InvokeOptions? options = null)
+        public static Output<GetServiceFeatureProfileResult> Invoke(GetServiceFeatureProfileInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceFeatureProfileResult>("sdwan:index/getServiceFeatureProfile:getServiceFeatureProfile", args ?? new GetServiceFeatureProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
@@ -90,8 +90,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the service feature profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetServiceFeatureProfileArgs()
         {
@@ -104,8 +110,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the service feature profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetServiceFeatureProfileInvokeArgs()
         {

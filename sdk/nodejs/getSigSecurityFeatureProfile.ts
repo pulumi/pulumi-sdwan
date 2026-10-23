@@ -18,10 +18,12 @@ import * as utilities from "./utilities";
  * });
  * ```
  */
-export function getSigSecurityFeatureProfile(args: GetSigSecurityFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetSigSecurityFeatureProfileResult> {
+export function getSigSecurityFeatureProfile(args?: GetSigSecurityFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetSigSecurityFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSigSecurityFeatureProfile:getSigSecurityFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,7 +34,11 @@ export interface GetSigSecurityFeatureProfileArgs {
     /**
      * The id of the object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the sig security feature profile
+     */
+    name?: string;
 }
 
 /**
@@ -66,10 +72,12 @@ export interface GetSigSecurityFeatureProfileResult {
  * });
  * ```
  */
-export function getSigSecurityFeatureProfileOutput(args: GetSigSecurityFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSigSecurityFeatureProfileResult> {
+export function getSigSecurityFeatureProfileOutput(args?: GetSigSecurityFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSigSecurityFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSigSecurityFeatureProfile:getSigSecurityFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -80,5 +88,9 @@ export interface GetSigSecurityFeatureProfileOutputArgs {
     /**
      * The id of the object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the sig security feature profile
+     */
+    name?: pulumi.Input<string | undefined>;
 }

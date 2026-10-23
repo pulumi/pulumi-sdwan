@@ -20,6 +20,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
     /**
      * @return Gateway distance, Attribute conditional on `gateway` equal to `null0`
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      * 
      */
     private @Nullable Integer administrativeDistance;
@@ -90,6 +91,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
     /**
      * @return Gateway distance, Attribute conditional on `gateway` equal to `null0`
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      * 
      */
     public Optional<Integer> administrativeDistance() {

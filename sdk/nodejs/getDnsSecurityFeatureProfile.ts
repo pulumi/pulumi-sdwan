@@ -18,10 +18,12 @@ import * as utilities from "./utilities";
  * });
  * ```
  */
-export function getDnsSecurityFeatureProfile(args: GetDnsSecurityFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetDnsSecurityFeatureProfileResult> {
+export function getDnsSecurityFeatureProfile(args?: GetDnsSecurityFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetDnsSecurityFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getDnsSecurityFeatureProfile:getDnsSecurityFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,7 +34,11 @@ export interface GetDnsSecurityFeatureProfileArgs {
     /**
      * The id of the object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the dns security feature profile
+     */
+    name?: string;
 }
 
 /**
@@ -66,10 +72,12 @@ export interface GetDnsSecurityFeatureProfileResult {
  * });
  * ```
  */
-export function getDnsSecurityFeatureProfileOutput(args: GetDnsSecurityFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDnsSecurityFeatureProfileResult> {
+export function getDnsSecurityFeatureProfileOutput(args?: GetDnsSecurityFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDnsSecurityFeatureProfileResult> {
+    args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getDnsSecurityFeatureProfile:getDnsSecurityFeatureProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -80,5 +88,9 @@ export interface GetDnsSecurityFeatureProfileOutputArgs {
     /**
      * The id of the object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the dns security feature profile
+     */
+    name?: pulumi.Input<string | undefined>;
 }

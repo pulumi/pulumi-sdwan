@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Task<GetTopologyFeatureProfileResult> InvokeAsync(GetTopologyFeatureProfileArgs args, InvokeOptions? options = null)
+        public static Task<GetTopologyFeatureProfileResult> InvokeAsync(GetTopologyFeatureProfileArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetTopologyFeatureProfileResult>("sdwan:index/getTopologyFeatureProfile:getTopologyFeatureProfile", args ?? new GetTopologyFeatureProfileArgs(), options.WithDefaults());
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Output<GetTopologyFeatureProfileResult> Invoke(GetTopologyFeatureProfileInvokeArgs args, InvokeOptions? options = null)
+        public static Output<GetTopologyFeatureProfileResult> Invoke(GetTopologyFeatureProfileInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTopologyFeatureProfileResult>("sdwan:index/getTopologyFeatureProfile:getTopologyFeatureProfile", args ?? new GetTopologyFeatureProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
@@ -90,8 +90,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the topology feature profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetTopologyFeatureProfileArgs()
         {
@@ -104,8 +110,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the topology feature profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetTopologyFeatureProfileInvokeArgs()
         {

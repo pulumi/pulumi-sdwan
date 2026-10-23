@@ -24,6 +24,7 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// Administrative distance
         ///   - Range: `1`-`254`
+        ///   - Default value: `1`
         /// </summary>
         public readonly int? AdministrativeDistance;
         /// <summary>

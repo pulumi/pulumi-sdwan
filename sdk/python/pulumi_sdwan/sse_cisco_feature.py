@@ -25,12 +25,12 @@ class SseCiscoFeatureArgs:
                  interface_pairs: pulumi.Input[Sequence[pulumi.Input['SseCiscoFeatureInterfacePairArgs']]],
                  interfaces: pulumi.Input[Sequence[pulumi.Input['SseCiscoFeatureInterfaceArgs']]],
                  region: pulumi.Input[_builtins.str],
-                 tracker_source_ip: pulumi.Input[_builtins.str],
                  context_sharing_for_sgt: pulumi.Input[Optional[_builtins.bool]] = None,
                  context_sharing_for_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  region_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  tracker_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  trackers: pulumi.Input[Optional[Sequence[pulumi.Input['SseCiscoFeatureTrackerArgs']]]] = None):
         """
@@ -41,7 +41,6 @@ class SseCiscoFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input['SseCiscoFeatureInterfaceArgs']]] interfaces: Interface name: IPsec when present
         :param pulumi.Input[_builtins.str] region: Region for Primary and Secondary Datacenter
                  - Default value: `auto`
-        :param pulumi.Input[_builtins.str] tracker_source_ip: Source IP address for Tracker
         :param pulumi.Input[_builtins.bool] context_sharing_for_sgt: Enable/disable Cisco SSE context sharing for sgt
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] context_sharing_for_vpn: Enable/disable Cisco SSE context sharing for vpn
@@ -49,6 +48,7 @@ class SseCiscoFeatureArgs:
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] region_variable: Variable name
+        :param pulumi.Input[_builtins.str] tracker_source_ip: Source IP address for Tracker
         :param pulumi.Input[_builtins.str] tracker_source_ip_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['SseCiscoFeatureTrackerArgs']]] trackers: Tracker configuration
         """
@@ -56,7 +56,6 @@ class SseCiscoFeatureArgs:
         pulumi.set(__self__, "interface_pairs", interface_pairs)
         pulumi.set(__self__, "interfaces", interfaces)
         pulumi.set(__self__, "region", region)
-        pulumi.set(__self__, "tracker_source_ip", tracker_source_ip)
         if context_sharing_for_sgt is not None:
             pulumi.set(__self__, "context_sharing_for_sgt", context_sharing_for_sgt)
         if context_sharing_for_vpn is not None:
@@ -67,6 +66,8 @@ class SseCiscoFeatureArgs:
             pulumi.set(__self__, "name", name)
         if region_variable is not None:
             pulumi.set(__self__, "region_variable", region_variable)
+        if tracker_source_ip is not None:
+            pulumi.set(__self__, "tracker_source_ip", tracker_source_ip)
         if tracker_source_ip_variable is not None:
             pulumi.set(__self__, "tracker_source_ip_variable", tracker_source_ip_variable)
         if trackers is not None:
@@ -120,18 +121,6 @@ class SseCiscoFeatureArgs:
     @region.setter
     def region(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "region", value)
-
-    @_builtins.property
-    @pulumi.getter(name="trackerSourceIp")
-    def tracker_source_ip(self) -> pulumi.Input[_builtins.str]:
-        """
-        Source IP address for Tracker
-        """
-        return pulumi.get(self, "tracker_source_ip")
-
-    @tracker_source_ip.setter
-    def tracker_source_ip(self, value: pulumi.Input[_builtins.str]):
-        pulumi.set(self, "tracker_source_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="contextSharingForSgt")
@@ -194,6 +183,18 @@ class SseCiscoFeatureArgs:
     @region_variable.setter
     def region_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "region_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trackerSourceIp")
+    def tracker_source_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Source IP address for Tracker
+        """
+        return pulumi.get(self, "tracker_source_ip")
+
+    @tracker_source_ip.setter
+    def tracker_source_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tracker_source_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerSourceIpVariable")
@@ -641,8 +642,6 @@ class SseCiscoFeature(pulumi.CustomResource):
                 raise TypeError("Missing required property 'region'")
             __props__.__dict__["region"] = region
             __props__.__dict__["region_variable"] = region_variable
-            if tracker_source_ip is None and not opts.urn:
-                raise TypeError("Missing required property 'tracker_source_ip'")
             __props__.__dict__["tracker_source_ip"] = tracker_source_ip
             __props__.__dict__["tracker_source_ip_variable"] = tracker_source_ip_variable
             __props__.__dict__["trackers"] = trackers
@@ -790,7 +789,7 @@ class SseCiscoFeature(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="trackerSourceIp")
-    def tracker_source_ip(self) -> pulumi.Output[_builtins.str]:
+    def tracker_source_ip(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Source IP address for Tracker
         """

@@ -13,6 +13,9 @@ namespace Pulumi.Sdwan.Outputs
     [OutputType]
     public sealed class TopologyCustomControlFeatureSequence
     {
+        /// <summary>
+        /// List of action entries
+        /// </summary>
         public readonly ImmutableArray<Outputs.TopologyCustomControlFeatureSequenceActionEntry> ActionEntries;
         /// <summary>
         /// Base Action
@@ -29,6 +32,9 @@ namespace Pulumi.Sdwan.Outputs
         ///   - Choices: `Ipv4`, `Ipv6`, `All`
         /// </summary>
         public readonly string? IpType;
+        /// <summary>
+        /// Set of match entries
+        /// </summary>
         public readonly ImmutableArray<Outputs.TopologyCustomControlFeatureSequenceMatchEntry> MatchEntries;
         /// <summary>
         /// Sequence Name

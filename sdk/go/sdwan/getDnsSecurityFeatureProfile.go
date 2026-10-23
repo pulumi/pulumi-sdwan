@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetDnsSecurityFeatureProfile(ctx, &sdwan.LookupDnsSecurityFeatureProfileArgs{
-//				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id: pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //			}, nil)
 //			if err != nil {
 //				return err
@@ -51,7 +51,9 @@ func LookupDnsSecurityFeatureProfile(ctx *pulumi.Context, args *LookupDnsSecurit
 // A collection of arguments for invoking getDnsSecurityFeatureProfile.
 type LookupDnsSecurityFeatureProfileArgs struct {
 	// The id of the object
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the dns security feature profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getDnsSecurityFeatureProfile.
@@ -72,7 +74,9 @@ func LookupDnsSecurityFeatureProfileOutput(ctx *pulumi.Context, args LookupDnsSe
 // A collection of arguments for invoking getDnsSecurityFeatureProfile.
 type LookupDnsSecurityFeatureProfileOutputArgs struct {
 	// The id of the object
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the dns security feature profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupDnsSecurityFeatureProfileOutputArgs) ElementType() reflect.Type {

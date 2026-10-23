@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Task<GetPolicyGroupResult> InvokeAsync(GetPolicyGroupArgs args, InvokeOptions? options = null)
+        public static Task<GetPolicyGroupResult> InvokeAsync(GetPolicyGroupArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetPolicyGroupResult>("sdwan:index/getPolicyGroup:getPolicyGroup", args ?? new GetPolicyGroupArgs(), options.WithDefaults());
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan
         /// });
         /// ```
         /// </summary>
-        public static Output<GetPolicyGroupResult> Invoke(GetPolicyGroupInvokeArgs args, InvokeOptions? options = null)
+        public static Output<GetPolicyGroupResult> Invoke(GetPolicyGroupInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPolicyGroupResult>("sdwan:index/getPolicyGroup:getPolicyGroup", args ?? new GetPolicyGroupInvokeArgs(), options.WithDefaults());
 
         /// <summary>
@@ -90,8 +90,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the policy group
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetPolicyGroupArgs()
         {
@@ -104,8 +110,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the object
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the policy group
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetPolicyGroupInvokeArgs()
         {

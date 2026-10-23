@@ -13,6 +13,1363 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetSystemSnmpFeatureTrapTargetServer struct {
+	// Set IPv4/IPv6 address of SNMP server
+	Ip string `pulumi:"ip"`
+	// Variable name
+	IpVariable string `pulumi:"ipVariable"`
+	// Set UDP port number to connect to SNMP server
+	Port int `pulumi:"port"`
+	// Variable name
+	PortVariable string `pulumi:"portVariable"`
+	// Source interface for outgoing SNMP traps
+	SourceInterface string `pulumi:"sourceInterface"`
+	// Variable name
+	SourceInterfaceVariable string `pulumi:"sourceInterfaceVariable"`
+	// Set name of the SNMP user
+	User string `pulumi:"user"`
+	// Set user label of the SNMP community
+	UserLabel string `pulumi:"userLabel"`
+	// Variable name
+	UserVariable string `pulumi:"userVariable"`
+	// Set VPN in which SNMP server is located
+	VpnId int `pulumi:"vpnId"`
+	// Variable name
+	VpnIdVariable string `pulumi:"vpnIdVariable"`
+}
+
+// GetSystemSnmpFeatureTrapTargetServerInput is an input type that accepts GetSystemSnmpFeatureTrapTargetServerArgs and GetSystemSnmpFeatureTrapTargetServerOutput values.
+// You can construct a concrete instance of `GetSystemSnmpFeatureTrapTargetServerInput` via:
+//
+//	GetSystemSnmpFeatureTrapTargetServerArgs{...}
+type GetSystemSnmpFeatureTrapTargetServerInput interface {
+	pulumi.Input
+
+	ToGetSystemSnmpFeatureTrapTargetServerOutput() GetSystemSnmpFeatureTrapTargetServerOutput
+	ToGetSystemSnmpFeatureTrapTargetServerOutputWithContext(context.Context) GetSystemSnmpFeatureTrapTargetServerOutput
+}
+
+type GetSystemSnmpFeatureTrapTargetServerArgs struct {
+	// Set IPv4/IPv6 address of SNMP server
+	Ip pulumi.StringInput `pulumi:"ip"`
+	// Variable name
+	IpVariable pulumi.StringInput `pulumi:"ipVariable"`
+	// Set UDP port number to connect to SNMP server
+	Port pulumi.IntInput `pulumi:"port"`
+	// Variable name
+	PortVariable pulumi.StringInput `pulumi:"portVariable"`
+	// Source interface for outgoing SNMP traps
+	SourceInterface pulumi.StringInput `pulumi:"sourceInterface"`
+	// Variable name
+	SourceInterfaceVariable pulumi.StringInput `pulumi:"sourceInterfaceVariable"`
+	// Set name of the SNMP user
+	User pulumi.StringInput `pulumi:"user"`
+	// Set user label of the SNMP community
+	UserLabel pulumi.StringInput `pulumi:"userLabel"`
+	// Variable name
+	UserVariable pulumi.StringInput `pulumi:"userVariable"`
+	// Set VPN in which SNMP server is located
+	VpnId pulumi.IntInput `pulumi:"vpnId"`
+	// Variable name
+	VpnIdVariable pulumi.StringInput `pulumi:"vpnIdVariable"`
+}
+
+func (GetSystemSnmpFeatureTrapTargetServerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSnmpFeatureTrapTargetServer)(nil)).Elem()
+}
+
+func (i GetSystemSnmpFeatureTrapTargetServerArgs) ToGetSystemSnmpFeatureTrapTargetServerOutput() GetSystemSnmpFeatureTrapTargetServerOutput {
+	return i.ToGetSystemSnmpFeatureTrapTargetServerOutputWithContext(context.Background())
+}
+
+func (i GetSystemSnmpFeatureTrapTargetServerArgs) ToGetSystemSnmpFeatureTrapTargetServerOutputWithContext(ctx context.Context) GetSystemSnmpFeatureTrapTargetServerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureTrapTargetServerOutput)
+}
+
+// GetSystemSnmpFeatureTrapTargetServerArrayInput is an input type that accepts GetSystemSnmpFeatureTrapTargetServerArray and GetSystemSnmpFeatureTrapTargetServerArrayOutput values.
+// You can construct a concrete instance of `GetSystemSnmpFeatureTrapTargetServerArrayInput` via:
+//
+//	GetSystemSnmpFeatureTrapTargetServerArray{ GetSystemSnmpFeatureTrapTargetServerArgs{...} }
+type GetSystemSnmpFeatureTrapTargetServerArrayInput interface {
+	pulumi.Input
+
+	ToGetSystemSnmpFeatureTrapTargetServerArrayOutput() GetSystemSnmpFeatureTrapTargetServerArrayOutput
+	ToGetSystemSnmpFeatureTrapTargetServerArrayOutputWithContext(context.Context) GetSystemSnmpFeatureTrapTargetServerArrayOutput
+}
+
+type GetSystemSnmpFeatureTrapTargetServerArray []GetSystemSnmpFeatureTrapTargetServerInput
+
+func (GetSystemSnmpFeatureTrapTargetServerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSnmpFeatureTrapTargetServer)(nil)).Elem()
+}
+
+func (i GetSystemSnmpFeatureTrapTargetServerArray) ToGetSystemSnmpFeatureTrapTargetServerArrayOutput() GetSystemSnmpFeatureTrapTargetServerArrayOutput {
+	return i.ToGetSystemSnmpFeatureTrapTargetServerArrayOutputWithContext(context.Background())
+}
+
+func (i GetSystemSnmpFeatureTrapTargetServerArray) ToGetSystemSnmpFeatureTrapTargetServerArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureTrapTargetServerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureTrapTargetServerArrayOutput)
+}
+
+type GetSystemSnmpFeatureTrapTargetServerOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSnmpFeatureTrapTargetServerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSnmpFeatureTrapTargetServer)(nil)).Elem()
+}
+
+func (o GetSystemSnmpFeatureTrapTargetServerOutput) ToGetSystemSnmpFeatureTrapTargetServerOutput() GetSystemSnmpFeatureTrapTargetServerOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureTrapTargetServerOutput) ToGetSystemSnmpFeatureTrapTargetServerOutputWithContext(ctx context.Context) GetSystemSnmpFeatureTrapTargetServerOutput {
+	return o
+}
+
+// Set IPv4/IPv6 address of SNMP server
+func (o GetSystemSnmpFeatureTrapTargetServerOutput) Ip() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.Ip }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureTrapTargetServerOutput) IpVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.IpVariable }).(pulumi.StringOutput)
+}
+
+// Set UDP port number to connect to SNMP server
+func (o GetSystemSnmpFeatureTrapTargetServerOutput) Port() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) int { return v.Port }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureTrapTargetServerOutput) PortVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.PortVariable }).(pulumi.StringOutput)
+}
+
+// Source interface for outgoing SNMP traps
+func (o GetSystemSnmpFeatureTrapTargetServerOutput) SourceInterface() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.SourceInterface }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureTrapTargetServerOutput) SourceInterfaceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.SourceInterfaceVariable }).(pulumi.StringOutput)
+}
+
+// Set name of the SNMP user
+func (o GetSystemSnmpFeatureTrapTargetServerOutput) User() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.User }).(pulumi.StringOutput)
+}
+
+// Set user label of the SNMP community
+func (o GetSystemSnmpFeatureTrapTargetServerOutput) UserLabel() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.UserLabel }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureTrapTargetServerOutput) UserVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.UserVariable }).(pulumi.StringOutput)
+}
+
+// Set VPN in which SNMP server is located
+func (o GetSystemSnmpFeatureTrapTargetServerOutput) VpnId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) int { return v.VpnId }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureTrapTargetServerOutput) VpnIdVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureTrapTargetServer) string { return v.VpnIdVariable }).(pulumi.StringOutput)
+}
+
+type GetSystemSnmpFeatureTrapTargetServerArrayOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSnmpFeatureTrapTargetServerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSnmpFeatureTrapTargetServer)(nil)).Elem()
+}
+
+func (o GetSystemSnmpFeatureTrapTargetServerArrayOutput) ToGetSystemSnmpFeatureTrapTargetServerArrayOutput() GetSystemSnmpFeatureTrapTargetServerArrayOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureTrapTargetServerArrayOutput) ToGetSystemSnmpFeatureTrapTargetServerArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureTrapTargetServerArrayOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureTrapTargetServerArrayOutput) Index(i pulumi.IntInput) GetSystemSnmpFeatureTrapTargetServerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSystemSnmpFeatureTrapTargetServer {
+		return vs[0].([]GetSystemSnmpFeatureTrapTargetServer)[vs[1].(int)]
+	}).(GetSystemSnmpFeatureTrapTargetServerOutput)
+}
+
+type GetSystemSnmpFeatureUser struct {
+	// Specify authentication protocol password
+	AuthenticationPassword string `pulumi:"authenticationPassword"`
+	// Variable name
+	AuthenticationPasswordVariable string `pulumi:"authenticationPasswordVariable"`
+	// Configure authentication protocol
+	AuthenticationProtocol string `pulumi:"authenticationProtocol"`
+	// Variable name
+	AuthenticationProtocolVariable string `pulumi:"authenticationProtocolVariable"`
+	// Name of the SNMP group
+	Group string `pulumi:"group"`
+	// Variable name
+	GroupVariable string `pulumi:"groupVariable"`
+	// Name of the SNMP user
+	Name string `pulumi:"name"`
+	// Specify privacy protocol password
+	PrivacyPassword string `pulumi:"privacyPassword"`
+	// Variable name
+	PrivacyPasswordVariable string `pulumi:"privacyPasswordVariable"`
+	// Configure privacy protocol
+	PrivacyProtocol string `pulumi:"privacyProtocol"`
+	// Variable name
+	PrivacyProtocolVariable string `pulumi:"privacyProtocolVariable"`
+}
+
+// GetSystemSnmpFeatureUserInput is an input type that accepts GetSystemSnmpFeatureUserArgs and GetSystemSnmpFeatureUserOutput values.
+// You can construct a concrete instance of `GetSystemSnmpFeatureUserInput` via:
+//
+//	GetSystemSnmpFeatureUserArgs{...}
+type GetSystemSnmpFeatureUserInput interface {
+	pulumi.Input
+
+	ToGetSystemSnmpFeatureUserOutput() GetSystemSnmpFeatureUserOutput
+	ToGetSystemSnmpFeatureUserOutputWithContext(context.Context) GetSystemSnmpFeatureUserOutput
+}
+
+type GetSystemSnmpFeatureUserArgs struct {
+	// Specify authentication protocol password
+	AuthenticationPassword pulumi.StringInput `pulumi:"authenticationPassword"`
+	// Variable name
+	AuthenticationPasswordVariable pulumi.StringInput `pulumi:"authenticationPasswordVariable"`
+	// Configure authentication protocol
+	AuthenticationProtocol pulumi.StringInput `pulumi:"authenticationProtocol"`
+	// Variable name
+	AuthenticationProtocolVariable pulumi.StringInput `pulumi:"authenticationProtocolVariable"`
+	// Name of the SNMP group
+	Group pulumi.StringInput `pulumi:"group"`
+	// Variable name
+	GroupVariable pulumi.StringInput `pulumi:"groupVariable"`
+	// Name of the SNMP user
+	Name pulumi.StringInput `pulumi:"name"`
+	// Specify privacy protocol password
+	PrivacyPassword pulumi.StringInput `pulumi:"privacyPassword"`
+	// Variable name
+	PrivacyPasswordVariable pulumi.StringInput `pulumi:"privacyPasswordVariable"`
+	// Configure privacy protocol
+	PrivacyProtocol pulumi.StringInput `pulumi:"privacyProtocol"`
+	// Variable name
+	PrivacyProtocolVariable pulumi.StringInput `pulumi:"privacyProtocolVariable"`
+}
+
+func (GetSystemSnmpFeatureUserArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSnmpFeatureUser)(nil)).Elem()
+}
+
+func (i GetSystemSnmpFeatureUserArgs) ToGetSystemSnmpFeatureUserOutput() GetSystemSnmpFeatureUserOutput {
+	return i.ToGetSystemSnmpFeatureUserOutputWithContext(context.Background())
+}
+
+func (i GetSystemSnmpFeatureUserArgs) ToGetSystemSnmpFeatureUserOutputWithContext(ctx context.Context) GetSystemSnmpFeatureUserOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureUserOutput)
+}
+
+// GetSystemSnmpFeatureUserArrayInput is an input type that accepts GetSystemSnmpFeatureUserArray and GetSystemSnmpFeatureUserArrayOutput values.
+// You can construct a concrete instance of `GetSystemSnmpFeatureUserArrayInput` via:
+//
+//	GetSystemSnmpFeatureUserArray{ GetSystemSnmpFeatureUserArgs{...} }
+type GetSystemSnmpFeatureUserArrayInput interface {
+	pulumi.Input
+
+	ToGetSystemSnmpFeatureUserArrayOutput() GetSystemSnmpFeatureUserArrayOutput
+	ToGetSystemSnmpFeatureUserArrayOutputWithContext(context.Context) GetSystemSnmpFeatureUserArrayOutput
+}
+
+type GetSystemSnmpFeatureUserArray []GetSystemSnmpFeatureUserInput
+
+func (GetSystemSnmpFeatureUserArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSnmpFeatureUser)(nil)).Elem()
+}
+
+func (i GetSystemSnmpFeatureUserArray) ToGetSystemSnmpFeatureUserArrayOutput() GetSystemSnmpFeatureUserArrayOutput {
+	return i.ToGetSystemSnmpFeatureUserArrayOutputWithContext(context.Background())
+}
+
+func (i GetSystemSnmpFeatureUserArray) ToGetSystemSnmpFeatureUserArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureUserArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureUserArrayOutput)
+}
+
+type GetSystemSnmpFeatureUserOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSnmpFeatureUserOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSnmpFeatureUser)(nil)).Elem()
+}
+
+func (o GetSystemSnmpFeatureUserOutput) ToGetSystemSnmpFeatureUserOutput() GetSystemSnmpFeatureUserOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureUserOutput) ToGetSystemSnmpFeatureUserOutputWithContext(ctx context.Context) GetSystemSnmpFeatureUserOutput {
+	return o
+}
+
+// Specify authentication protocol password
+func (o GetSystemSnmpFeatureUserOutput) AuthenticationPassword() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.AuthenticationPassword }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureUserOutput) AuthenticationPasswordVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.AuthenticationPasswordVariable }).(pulumi.StringOutput)
+}
+
+// Configure authentication protocol
+func (o GetSystemSnmpFeatureUserOutput) AuthenticationProtocol() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.AuthenticationProtocol }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureUserOutput) AuthenticationProtocolVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.AuthenticationProtocolVariable }).(pulumi.StringOutput)
+}
+
+// Name of the SNMP group
+func (o GetSystemSnmpFeatureUserOutput) Group() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.Group }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureUserOutput) GroupVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.GroupVariable }).(pulumi.StringOutput)
+}
+
+// Name of the SNMP user
+func (o GetSystemSnmpFeatureUserOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Specify privacy protocol password
+func (o GetSystemSnmpFeatureUserOutput) PrivacyPassword() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.PrivacyPassword }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureUserOutput) PrivacyPasswordVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.PrivacyPasswordVariable }).(pulumi.StringOutput)
+}
+
+// Configure privacy protocol
+func (o GetSystemSnmpFeatureUserOutput) PrivacyProtocol() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.PrivacyProtocol }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureUserOutput) PrivacyProtocolVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.PrivacyProtocolVariable }).(pulumi.StringOutput)
+}
+
+type GetSystemSnmpFeatureUserArrayOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSnmpFeatureUserArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSnmpFeatureUser)(nil)).Elem()
+}
+
+func (o GetSystemSnmpFeatureUserArrayOutput) ToGetSystemSnmpFeatureUserArrayOutput() GetSystemSnmpFeatureUserArrayOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureUserArrayOutput) ToGetSystemSnmpFeatureUserArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureUserArrayOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureUserArrayOutput) Index(i pulumi.IntInput) GetSystemSnmpFeatureUserOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSystemSnmpFeatureUser {
+		return vs[0].([]GetSystemSnmpFeatureUser)[vs[1].(int)]
+	}).(GetSystemSnmpFeatureUserOutput)
+}
+
+type GetSystemSnmpFeatureView struct {
+	// Set the name of the SNMP view
+	Name string `pulumi:"name"`
+	// Configure SNMP object identifier
+	Oids []GetSystemSnmpFeatureViewOid `pulumi:"oids"`
+}
+
+// GetSystemSnmpFeatureViewInput is an input type that accepts GetSystemSnmpFeatureViewArgs and GetSystemSnmpFeatureViewOutput values.
+// You can construct a concrete instance of `GetSystemSnmpFeatureViewInput` via:
+//
+//	GetSystemSnmpFeatureViewArgs{...}
+type GetSystemSnmpFeatureViewInput interface {
+	pulumi.Input
+
+	ToGetSystemSnmpFeatureViewOutput() GetSystemSnmpFeatureViewOutput
+	ToGetSystemSnmpFeatureViewOutputWithContext(context.Context) GetSystemSnmpFeatureViewOutput
+}
+
+type GetSystemSnmpFeatureViewArgs struct {
+	// Set the name of the SNMP view
+	Name pulumi.StringInput `pulumi:"name"`
+	// Configure SNMP object identifier
+	Oids GetSystemSnmpFeatureViewOidArrayInput `pulumi:"oids"`
+}
+
+func (GetSystemSnmpFeatureViewArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSnmpFeatureView)(nil)).Elem()
+}
+
+func (i GetSystemSnmpFeatureViewArgs) ToGetSystemSnmpFeatureViewOutput() GetSystemSnmpFeatureViewOutput {
+	return i.ToGetSystemSnmpFeatureViewOutputWithContext(context.Background())
+}
+
+func (i GetSystemSnmpFeatureViewArgs) ToGetSystemSnmpFeatureViewOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureViewOutput)
+}
+
+// GetSystemSnmpFeatureViewArrayInput is an input type that accepts GetSystemSnmpFeatureViewArray and GetSystemSnmpFeatureViewArrayOutput values.
+// You can construct a concrete instance of `GetSystemSnmpFeatureViewArrayInput` via:
+//
+//	GetSystemSnmpFeatureViewArray{ GetSystemSnmpFeatureViewArgs{...} }
+type GetSystemSnmpFeatureViewArrayInput interface {
+	pulumi.Input
+
+	ToGetSystemSnmpFeatureViewArrayOutput() GetSystemSnmpFeatureViewArrayOutput
+	ToGetSystemSnmpFeatureViewArrayOutputWithContext(context.Context) GetSystemSnmpFeatureViewArrayOutput
+}
+
+type GetSystemSnmpFeatureViewArray []GetSystemSnmpFeatureViewInput
+
+func (GetSystemSnmpFeatureViewArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSnmpFeatureView)(nil)).Elem()
+}
+
+func (i GetSystemSnmpFeatureViewArray) ToGetSystemSnmpFeatureViewArrayOutput() GetSystemSnmpFeatureViewArrayOutput {
+	return i.ToGetSystemSnmpFeatureViewArrayOutputWithContext(context.Background())
+}
+
+func (i GetSystemSnmpFeatureViewArray) ToGetSystemSnmpFeatureViewArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureViewArrayOutput)
+}
+
+type GetSystemSnmpFeatureViewOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSnmpFeatureViewOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSnmpFeatureView)(nil)).Elem()
+}
+
+func (o GetSystemSnmpFeatureViewOutput) ToGetSystemSnmpFeatureViewOutput() GetSystemSnmpFeatureViewOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureViewOutput) ToGetSystemSnmpFeatureViewOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewOutput {
+	return o
+}
+
+// Set the name of the SNMP view
+func (o GetSystemSnmpFeatureViewOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureView) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Configure SNMP object identifier
+func (o GetSystemSnmpFeatureViewOutput) Oids() GetSystemSnmpFeatureViewOidArrayOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureView) []GetSystemSnmpFeatureViewOid { return v.Oids }).(GetSystemSnmpFeatureViewOidArrayOutput)
+}
+
+type GetSystemSnmpFeatureViewArrayOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSnmpFeatureViewArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSnmpFeatureView)(nil)).Elem()
+}
+
+func (o GetSystemSnmpFeatureViewArrayOutput) ToGetSystemSnmpFeatureViewArrayOutput() GetSystemSnmpFeatureViewArrayOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureViewArrayOutput) ToGetSystemSnmpFeatureViewArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewArrayOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureViewArrayOutput) Index(i pulumi.IntInput) GetSystemSnmpFeatureViewOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSystemSnmpFeatureView {
+		return vs[0].([]GetSystemSnmpFeatureView)[vs[1].(int)]
+	}).(GetSystemSnmpFeatureViewOutput)
+}
+
+type GetSystemSnmpFeatureViewOid struct {
+	// Exclude the OID
+	Exclude bool `pulumi:"exclude"`
+	// Variable name
+	ExcludeVariable string `pulumi:"excludeVariable"`
+	// Configure identifier of subtree of MIB objects
+	Id string `pulumi:"id"`
+	// Variable name
+	IdVariable string `pulumi:"idVariable"`
+}
+
+// GetSystemSnmpFeatureViewOidInput is an input type that accepts GetSystemSnmpFeatureViewOidArgs and GetSystemSnmpFeatureViewOidOutput values.
+// You can construct a concrete instance of `GetSystemSnmpFeatureViewOidInput` via:
+//
+//	GetSystemSnmpFeatureViewOidArgs{...}
+type GetSystemSnmpFeatureViewOidInput interface {
+	pulumi.Input
+
+	ToGetSystemSnmpFeatureViewOidOutput() GetSystemSnmpFeatureViewOidOutput
+	ToGetSystemSnmpFeatureViewOidOutputWithContext(context.Context) GetSystemSnmpFeatureViewOidOutput
+}
+
+type GetSystemSnmpFeatureViewOidArgs struct {
+	// Exclude the OID
+	Exclude pulumi.BoolInput `pulumi:"exclude"`
+	// Variable name
+	ExcludeVariable pulumi.StringInput `pulumi:"excludeVariable"`
+	// Configure identifier of subtree of MIB objects
+	Id pulumi.StringInput `pulumi:"id"`
+	// Variable name
+	IdVariable pulumi.StringInput `pulumi:"idVariable"`
+}
+
+func (GetSystemSnmpFeatureViewOidArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSnmpFeatureViewOid)(nil)).Elem()
+}
+
+func (i GetSystemSnmpFeatureViewOidArgs) ToGetSystemSnmpFeatureViewOidOutput() GetSystemSnmpFeatureViewOidOutput {
+	return i.ToGetSystemSnmpFeatureViewOidOutputWithContext(context.Background())
+}
+
+func (i GetSystemSnmpFeatureViewOidArgs) ToGetSystemSnmpFeatureViewOidOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewOidOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureViewOidOutput)
+}
+
+// GetSystemSnmpFeatureViewOidArrayInput is an input type that accepts GetSystemSnmpFeatureViewOidArray and GetSystemSnmpFeatureViewOidArrayOutput values.
+// You can construct a concrete instance of `GetSystemSnmpFeatureViewOidArrayInput` via:
+//
+//	GetSystemSnmpFeatureViewOidArray{ GetSystemSnmpFeatureViewOidArgs{...} }
+type GetSystemSnmpFeatureViewOidArrayInput interface {
+	pulumi.Input
+
+	ToGetSystemSnmpFeatureViewOidArrayOutput() GetSystemSnmpFeatureViewOidArrayOutput
+	ToGetSystemSnmpFeatureViewOidArrayOutputWithContext(context.Context) GetSystemSnmpFeatureViewOidArrayOutput
+}
+
+type GetSystemSnmpFeatureViewOidArray []GetSystemSnmpFeatureViewOidInput
+
+func (GetSystemSnmpFeatureViewOidArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSnmpFeatureViewOid)(nil)).Elem()
+}
+
+func (i GetSystemSnmpFeatureViewOidArray) ToGetSystemSnmpFeatureViewOidArrayOutput() GetSystemSnmpFeatureViewOidArrayOutput {
+	return i.ToGetSystemSnmpFeatureViewOidArrayOutputWithContext(context.Background())
+}
+
+func (i GetSystemSnmpFeatureViewOidArray) ToGetSystemSnmpFeatureViewOidArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewOidArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureViewOidArrayOutput)
+}
+
+type GetSystemSnmpFeatureViewOidOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSnmpFeatureViewOidOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSnmpFeatureViewOid)(nil)).Elem()
+}
+
+func (o GetSystemSnmpFeatureViewOidOutput) ToGetSystemSnmpFeatureViewOidOutput() GetSystemSnmpFeatureViewOidOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureViewOidOutput) ToGetSystemSnmpFeatureViewOidOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewOidOutput {
+	return o
+}
+
+// Exclude the OID
+func (o GetSystemSnmpFeatureViewOidOutput) Exclude() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureViewOid) bool { return v.Exclude }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureViewOidOutput) ExcludeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureViewOid) string { return v.ExcludeVariable }).(pulumi.StringOutput)
+}
+
+// Configure identifier of subtree of MIB objects
+func (o GetSystemSnmpFeatureViewOidOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureViewOid) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureViewOidOutput) IdVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureViewOid) string { return v.IdVariable }).(pulumi.StringOutput)
+}
+
+type GetSystemSnmpFeatureViewOidArrayOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSnmpFeatureViewOidArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSnmpFeatureViewOid)(nil)).Elem()
+}
+
+func (o GetSystemSnmpFeatureViewOidArrayOutput) ToGetSystemSnmpFeatureViewOidArrayOutput() GetSystemSnmpFeatureViewOidArrayOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureViewOidArrayOutput) ToGetSystemSnmpFeatureViewOidArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureViewOidArrayOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureViewOidArrayOutput) Index(i pulumi.IntInput) GetSystemSnmpFeatureViewOidOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSystemSnmpFeatureViewOid {
+		return vs[0].([]GetSystemSnmpFeatureViewOid)[vs[1].(int)]
+	}).(GetSystemSnmpFeatureViewOidOutput)
+}
+
+type GetTlocListPolicyObjectEntry struct {
+	// Color
+	Color string `pulumi:"color"`
+	// Encapsulation
+	Encapsulation string `pulumi:"encapsulation"`
+	// Preference
+	Preference int `pulumi:"preference"`
+	// TLOC IP
+	TlocIp string `pulumi:"tlocIp"`
+}
+
+// GetTlocListPolicyObjectEntryInput is an input type that accepts GetTlocListPolicyObjectEntryArgs and GetTlocListPolicyObjectEntryOutput values.
+// You can construct a concrete instance of `GetTlocListPolicyObjectEntryInput` via:
+//
+//	GetTlocListPolicyObjectEntryArgs{...}
+type GetTlocListPolicyObjectEntryInput interface {
+	pulumi.Input
+
+	ToGetTlocListPolicyObjectEntryOutput() GetTlocListPolicyObjectEntryOutput
+	ToGetTlocListPolicyObjectEntryOutputWithContext(context.Context) GetTlocListPolicyObjectEntryOutput
+}
+
+type GetTlocListPolicyObjectEntryArgs struct {
+	// Color
+	Color pulumi.StringInput `pulumi:"color"`
+	// Encapsulation
+	Encapsulation pulumi.StringInput `pulumi:"encapsulation"`
+	// Preference
+	Preference pulumi.IntInput `pulumi:"preference"`
+	// TLOC IP
+	TlocIp pulumi.StringInput `pulumi:"tlocIp"`
+}
+
+func (GetTlocListPolicyObjectEntryArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTlocListPolicyObjectEntry)(nil)).Elem()
+}
+
+func (i GetTlocListPolicyObjectEntryArgs) ToGetTlocListPolicyObjectEntryOutput() GetTlocListPolicyObjectEntryOutput {
+	return i.ToGetTlocListPolicyObjectEntryOutputWithContext(context.Background())
+}
+
+func (i GetTlocListPolicyObjectEntryArgs) ToGetTlocListPolicyObjectEntryOutputWithContext(ctx context.Context) GetTlocListPolicyObjectEntryOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTlocListPolicyObjectEntryOutput)
+}
+
+// GetTlocListPolicyObjectEntryArrayInput is an input type that accepts GetTlocListPolicyObjectEntryArray and GetTlocListPolicyObjectEntryArrayOutput values.
+// You can construct a concrete instance of `GetTlocListPolicyObjectEntryArrayInput` via:
+//
+//	GetTlocListPolicyObjectEntryArray{ GetTlocListPolicyObjectEntryArgs{...} }
+type GetTlocListPolicyObjectEntryArrayInput interface {
+	pulumi.Input
+
+	ToGetTlocListPolicyObjectEntryArrayOutput() GetTlocListPolicyObjectEntryArrayOutput
+	ToGetTlocListPolicyObjectEntryArrayOutputWithContext(context.Context) GetTlocListPolicyObjectEntryArrayOutput
+}
+
+type GetTlocListPolicyObjectEntryArray []GetTlocListPolicyObjectEntryInput
+
+func (GetTlocListPolicyObjectEntryArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTlocListPolicyObjectEntry)(nil)).Elem()
+}
+
+func (i GetTlocListPolicyObjectEntryArray) ToGetTlocListPolicyObjectEntryArrayOutput() GetTlocListPolicyObjectEntryArrayOutput {
+	return i.ToGetTlocListPolicyObjectEntryArrayOutputWithContext(context.Background())
+}
+
+func (i GetTlocListPolicyObjectEntryArray) ToGetTlocListPolicyObjectEntryArrayOutputWithContext(ctx context.Context) GetTlocListPolicyObjectEntryArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTlocListPolicyObjectEntryArrayOutput)
+}
+
+type GetTlocListPolicyObjectEntryOutput struct{ *pulumi.OutputState }
+
+func (GetTlocListPolicyObjectEntryOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTlocListPolicyObjectEntry)(nil)).Elem()
+}
+
+func (o GetTlocListPolicyObjectEntryOutput) ToGetTlocListPolicyObjectEntryOutput() GetTlocListPolicyObjectEntryOutput {
+	return o
+}
+
+func (o GetTlocListPolicyObjectEntryOutput) ToGetTlocListPolicyObjectEntryOutputWithContext(ctx context.Context) GetTlocListPolicyObjectEntryOutput {
+	return o
+}
+
+// Color
+func (o GetTlocListPolicyObjectEntryOutput) Color() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlocListPolicyObjectEntry) string { return v.Color }).(pulumi.StringOutput)
+}
+
+// Encapsulation
+func (o GetTlocListPolicyObjectEntryOutput) Encapsulation() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlocListPolicyObjectEntry) string { return v.Encapsulation }).(pulumi.StringOutput)
+}
+
+// Preference
+func (o GetTlocListPolicyObjectEntryOutput) Preference() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTlocListPolicyObjectEntry) int { return v.Preference }).(pulumi.IntOutput)
+}
+
+// TLOC IP
+func (o GetTlocListPolicyObjectEntryOutput) TlocIp() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlocListPolicyObjectEntry) string { return v.TlocIp }).(pulumi.StringOutput)
+}
+
+type GetTlocListPolicyObjectEntryArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTlocListPolicyObjectEntryArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTlocListPolicyObjectEntry)(nil)).Elem()
+}
+
+func (o GetTlocListPolicyObjectEntryArrayOutput) ToGetTlocListPolicyObjectEntryArrayOutput() GetTlocListPolicyObjectEntryArrayOutput {
+	return o
+}
+
+func (o GetTlocListPolicyObjectEntryArrayOutput) ToGetTlocListPolicyObjectEntryArrayOutputWithContext(ctx context.Context) GetTlocListPolicyObjectEntryArrayOutput {
+	return o
+}
+
+func (o GetTlocListPolicyObjectEntryArrayOutput) Index(i pulumi.IntInput) GetTlocListPolicyObjectEntryOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTlocListPolicyObjectEntry {
+		return vs[0].([]GetTlocListPolicyObjectEntry)[vs[1].(int)]
+	}).(GetTlocListPolicyObjectEntryOutput)
+}
+
+type GetTlsSslDecryptionPolicyDefinitionNetworkRule struct {
+	// Rule base action
+	BaseAction string `pulumi:"baseAction"`
+	// Rule ID
+	RuleId int `pulumi:"ruleId"`
+	// Rule name
+	RuleName string `pulumi:"ruleName"`
+	// Rule type
+	RuleType string `pulumi:"ruleType"`
+	// List of network source / destination configuration
+	SourceAndDestinationConfigurations []GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration `pulumi:"sourceAndDestinationConfigurations"`
+}
+
+// GetTlsSslDecryptionPolicyDefinitionNetworkRuleInput is an input type that accepts GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs and GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput values.
+// You can construct a concrete instance of `GetTlsSslDecryptionPolicyDefinitionNetworkRuleInput` via:
+//
+//	GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs{...}
+type GetTlsSslDecryptionPolicyDefinitionNetworkRuleInput interface {
+	pulumi.Input
+
+	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput
+	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleOutputWithContext(context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput
+}
+
+type GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs struct {
+	// Rule base action
+	BaseAction pulumi.StringInput `pulumi:"baseAction"`
+	// Rule ID
+	RuleId pulumi.IntInput `pulumi:"ruleId"`
+	// Rule name
+	RuleName pulumi.StringInput `pulumi:"ruleName"`
+	// Rule type
+	RuleType pulumi.StringInput `pulumi:"ruleType"`
+	// List of network source / destination configuration
+	SourceAndDestinationConfigurations GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayInput `pulumi:"sourceAndDestinationConfigurations"`
+}
+
+func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRule)(nil)).Elem()
+}
+
+func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput {
+	return i.ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleOutputWithContext(context.Background())
+}
+
+func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput)
+}
+
+// GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayInput is an input type that accepts GetTlsSslDecryptionPolicyDefinitionNetworkRuleArray and GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput values.
+// You can construct a concrete instance of `GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayInput` via:
+//
+//	GetTlsSslDecryptionPolicyDefinitionNetworkRuleArray{ GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs{...} }
+type GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayInput interface {
+	pulumi.Input
+
+	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput
+	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutputWithContext(context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput
+}
+
+type GetTlsSslDecryptionPolicyDefinitionNetworkRuleArray []GetTlsSslDecryptionPolicyDefinitionNetworkRuleInput
+
+func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTlsSslDecryptionPolicyDefinitionNetworkRule)(nil)).Elem()
+}
+
+func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleArray) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput {
+	return i.ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutputWithContext(context.Background())
+}
+
+func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleArray) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput)
+}
+
+type GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput struct{ *pulumi.OutputState }
+
+func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRule)(nil)).Elem()
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput {
+	return o
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput {
+	return o
+}
+
+// Rule base action
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) BaseAction() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionNetworkRule) string { return v.BaseAction }).(pulumi.StringOutput)
+}
+
+// Rule ID
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) RuleId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionNetworkRule) int { return v.RuleId }).(pulumi.IntOutput)
+}
+
+// Rule name
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) RuleName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionNetworkRule) string { return v.RuleName }).(pulumi.StringOutput)
+}
+
+// Rule type
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) RuleType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionNetworkRule) string { return v.RuleType }).(pulumi.StringOutput)
+}
+
+// List of network source / destination configuration
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput) SourceAndDestinationConfigurations() GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput {
+	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionNetworkRule) []GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration {
+		return v.SourceAndDestinationConfigurations
+	}).(GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput)
+}
+
+type GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTlsSslDecryptionPolicyDefinitionNetworkRule)(nil)).Elem()
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput {
+	return o
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput {
+	return o
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput) Index(i pulumi.IntInput) GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTlsSslDecryptionPolicyDefinitionNetworkRule {
+		return vs[0].([]GetTlsSslDecryptionPolicyDefinitionNetworkRule)[vs[1].(int)]
+	}).(GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput)
+}
+
+type GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration struct {
+	// source / destination option
+	Option string `pulumi:"option"`
+	// source / destination option target
+	Value string `pulumi:"value"`
+}
+
+// GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationInput is an input type that accepts GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs and GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput values.
+// You can construct a concrete instance of `GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationInput` via:
+//
+//	GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs{...}
+type GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationInput interface {
+	pulumi.Input
+
+	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput
+	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutputWithContext(context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput
+}
+
+type GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs struct {
+	// source / destination option
+	Option pulumi.StringInput `pulumi:"option"`
+	// source / destination option target
+	Value pulumi.StringInput `pulumi:"value"`
+}
+
+func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration)(nil)).Elem()
+}
+
+func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput {
+	return i.ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutputWithContext(context.Background())
+}
+
+func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput)
+}
+
+// GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayInput is an input type that accepts GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArray and GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput values.
+// You can construct a concrete instance of `GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayInput` via:
+//
+//	GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArray{ GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs{...} }
+type GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayInput interface {
+	pulumi.Input
+
+	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput
+	ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutputWithContext(context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput
+}
+
+type GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArray []GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationInput
+
+func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration)(nil)).Elem()
+}
+
+func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArray) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput {
+	return i.ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutputWithContext(context.Background())
+}
+
+func (i GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArray) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput)
+}
+
+type GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput struct{ *pulumi.OutputState }
+
+func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration)(nil)).Elem()
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput {
+	return o
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput {
+	return o
+}
+
+// source / destination option
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput) Option() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration) string {
+		return v.Option
+	}).(pulumi.StringOutput)
+}
+
+// source / destination option target
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput) Value() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration) string {
+		return v.Value
+	}).(pulumi.StringOutput)
+}
+
+type GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration)(nil)).Elem()
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput() GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput {
+	return o
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput) ToGetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput {
+	return o
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput) Index(i pulumi.IntInput) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration {
+		return vs[0].([]GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration)[vs[1].(int)]
+	}).(GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput)
+}
+
+type GetTlsSslDecryptionPolicyDefinitionUrlRule struct {
+	// Country
+	RuleName string `pulumi:"ruleName"`
+	// List of VPN IDs
+	TargetVpns []string `pulumi:"targetVpns"`
+	// TLS SSL Profile Policy ID
+	TlsSslProfilePolicyId string `pulumi:"tlsSslProfilePolicyId"`
+	// TLS SSL Profile Policy version
+	TlsSslProfilePolicyVersion int `pulumi:"tlsSslProfilePolicyVersion"`
+}
+
+// GetTlsSslDecryptionPolicyDefinitionUrlRuleInput is an input type that accepts GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs and GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput values.
+// You can construct a concrete instance of `GetTlsSslDecryptionPolicyDefinitionUrlRuleInput` via:
+//
+//	GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs{...}
+type GetTlsSslDecryptionPolicyDefinitionUrlRuleInput interface {
+	pulumi.Input
+
+	ToGetTlsSslDecryptionPolicyDefinitionUrlRuleOutput() GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput
+	ToGetTlsSslDecryptionPolicyDefinitionUrlRuleOutputWithContext(context.Context) GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput
+}
+
+type GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs struct {
+	// Country
+	RuleName pulumi.StringInput `pulumi:"ruleName"`
+	// List of VPN IDs
+	TargetVpns pulumi.StringArrayInput `pulumi:"targetVpns"`
+	// TLS SSL Profile Policy ID
+	TlsSslProfilePolicyId pulumi.StringInput `pulumi:"tlsSslProfilePolicyId"`
+	// TLS SSL Profile Policy version
+	TlsSslProfilePolicyVersion pulumi.IntInput `pulumi:"tlsSslProfilePolicyVersion"`
+}
+
+func (GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionUrlRule)(nil)).Elem()
+}
+
+func (i GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleOutput() GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput {
+	return i.ToGetTlsSslDecryptionPolicyDefinitionUrlRuleOutputWithContext(context.Background())
+}
+
+func (i GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput)
+}
+
+// GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayInput is an input type that accepts GetTlsSslDecryptionPolicyDefinitionUrlRuleArray and GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput values.
+// You can construct a concrete instance of `GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayInput` via:
+//
+//	GetTlsSslDecryptionPolicyDefinitionUrlRuleArray{ GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs{...} }
+type GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayInput interface {
+	pulumi.Input
+
+	ToGetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput() GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput
+	ToGetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutputWithContext(context.Context) GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput
+}
+
+type GetTlsSslDecryptionPolicyDefinitionUrlRuleArray []GetTlsSslDecryptionPolicyDefinitionUrlRuleInput
+
+func (GetTlsSslDecryptionPolicyDefinitionUrlRuleArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTlsSslDecryptionPolicyDefinitionUrlRule)(nil)).Elem()
+}
+
+func (i GetTlsSslDecryptionPolicyDefinitionUrlRuleArray) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput() GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput {
+	return i.ToGetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutputWithContext(context.Background())
+}
+
+func (i GetTlsSslDecryptionPolicyDefinitionUrlRuleArray) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput)
+}
+
+type GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput struct{ *pulumi.OutputState }
+
+func (GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionUrlRule)(nil)).Elem()
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleOutput() GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput {
+	return o
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput {
+	return o
+}
+
+// Country
+func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput) RuleName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionUrlRule) string { return v.RuleName }).(pulumi.StringOutput)
+}
+
+// List of VPN IDs
+func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput) TargetVpns() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionUrlRule) []string { return v.TargetVpns }).(pulumi.StringArrayOutput)
+}
+
+// TLS SSL Profile Policy ID
+func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput) TlsSslProfilePolicyId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionUrlRule) string { return v.TlsSslProfilePolicyId }).(pulumi.StringOutput)
+}
+
+// TLS SSL Profile Policy version
+func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput) TlsSslProfilePolicyVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTlsSslDecryptionPolicyDefinitionUrlRule) int { return v.TlsSslProfilePolicyVersion }).(pulumi.IntOutput)
+}
+
+type GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTlsSslDecryptionPolicyDefinitionUrlRule)(nil)).Elem()
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput() GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput {
+	return o
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput) ToGetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutputWithContext(ctx context.Context) GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput {
+	return o
+}
+
+func (o GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput) Index(i pulumi.IntInput) GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTlsSslDecryptionPolicyDefinitionUrlRule {
+		return vs[0].([]GetTlsSslDecryptionPolicyDefinitionUrlRule)[vs[1].(int)]
+	}).(GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput)
+}
+
+type GetTopologyCustomControlFeatureSequence struct {
+	// List of action entries
+	ActionEntries []GetTopologyCustomControlFeatureSequenceActionEntry `pulumi:"actionEntries"`
+	// Base Action
+	BaseAction string `pulumi:"baseAction"`
+	// Sequence Id
+	Id int `pulumi:"id"`
+	// Sequence IP Type
+	IpType string `pulumi:"ipType"`
+	// Set of match entries
+	MatchEntries []GetTopologyCustomControlFeatureSequenceMatchEntry `pulumi:"matchEntries"`
+	// Sequence Name
+	Name string `pulumi:"name"`
+	// Sequence Type
+	Type string `pulumi:"type"`
+}
+
+// GetTopologyCustomControlFeatureSequenceInput is an input type that accepts GetTopologyCustomControlFeatureSequenceArgs and GetTopologyCustomControlFeatureSequenceOutput values.
+// You can construct a concrete instance of `GetTopologyCustomControlFeatureSequenceInput` via:
+//
+//	GetTopologyCustomControlFeatureSequenceArgs{...}
+type GetTopologyCustomControlFeatureSequenceInput interface {
+	pulumi.Input
+
+	ToGetTopologyCustomControlFeatureSequenceOutput() GetTopologyCustomControlFeatureSequenceOutput
+	ToGetTopologyCustomControlFeatureSequenceOutputWithContext(context.Context) GetTopologyCustomControlFeatureSequenceOutput
+}
+
+type GetTopologyCustomControlFeatureSequenceArgs struct {
+	// List of action entries
+	ActionEntries GetTopologyCustomControlFeatureSequenceActionEntryArrayInput `pulumi:"actionEntries"`
+	// Base Action
+	BaseAction pulumi.StringInput `pulumi:"baseAction"`
+	// Sequence Id
+	Id pulumi.IntInput `pulumi:"id"`
+	// Sequence IP Type
+	IpType pulumi.StringInput `pulumi:"ipType"`
+	// Set of match entries
+	MatchEntries GetTopologyCustomControlFeatureSequenceMatchEntryArrayInput `pulumi:"matchEntries"`
+	// Sequence Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Sequence Type
+	Type pulumi.StringInput `pulumi:"type"`
+}
+
+func (GetTopologyCustomControlFeatureSequenceArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTopologyCustomControlFeatureSequence)(nil)).Elem()
+}
+
+func (i GetTopologyCustomControlFeatureSequenceArgs) ToGetTopologyCustomControlFeatureSequenceOutput() GetTopologyCustomControlFeatureSequenceOutput {
+	return i.ToGetTopologyCustomControlFeatureSequenceOutputWithContext(context.Background())
+}
+
+func (i GetTopologyCustomControlFeatureSequenceArgs) ToGetTopologyCustomControlFeatureSequenceOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTopologyCustomControlFeatureSequenceOutput)
+}
+
+// GetTopologyCustomControlFeatureSequenceArrayInput is an input type that accepts GetTopologyCustomControlFeatureSequenceArray and GetTopologyCustomControlFeatureSequenceArrayOutput values.
+// You can construct a concrete instance of `GetTopologyCustomControlFeatureSequenceArrayInput` via:
+//
+//	GetTopologyCustomControlFeatureSequenceArray{ GetTopologyCustomControlFeatureSequenceArgs{...} }
+type GetTopologyCustomControlFeatureSequenceArrayInput interface {
+	pulumi.Input
+
+	ToGetTopologyCustomControlFeatureSequenceArrayOutput() GetTopologyCustomControlFeatureSequenceArrayOutput
+	ToGetTopologyCustomControlFeatureSequenceArrayOutputWithContext(context.Context) GetTopologyCustomControlFeatureSequenceArrayOutput
+}
+
+type GetTopologyCustomControlFeatureSequenceArray []GetTopologyCustomControlFeatureSequenceInput
+
+func (GetTopologyCustomControlFeatureSequenceArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTopologyCustomControlFeatureSequence)(nil)).Elem()
+}
+
+func (i GetTopologyCustomControlFeatureSequenceArray) ToGetTopologyCustomControlFeatureSequenceArrayOutput() GetTopologyCustomControlFeatureSequenceArrayOutput {
+	return i.ToGetTopologyCustomControlFeatureSequenceArrayOutputWithContext(context.Background())
+}
+
+func (i GetTopologyCustomControlFeatureSequenceArray) ToGetTopologyCustomControlFeatureSequenceArrayOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTopologyCustomControlFeatureSequenceArrayOutput)
+}
+
+type GetTopologyCustomControlFeatureSequenceOutput struct{ *pulumi.OutputState }
+
+func (GetTopologyCustomControlFeatureSequenceOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTopologyCustomControlFeatureSequence)(nil)).Elem()
+}
+
+func (o GetTopologyCustomControlFeatureSequenceOutput) ToGetTopologyCustomControlFeatureSequenceOutput() GetTopologyCustomControlFeatureSequenceOutput {
+	return o
+}
+
+func (o GetTopologyCustomControlFeatureSequenceOutput) ToGetTopologyCustomControlFeatureSequenceOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceOutput {
+	return o
+}
+
+// List of action entries
+func (o GetTopologyCustomControlFeatureSequenceOutput) ActionEntries() GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput {
+	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequence) []GetTopologyCustomControlFeatureSequenceActionEntry {
+		return v.ActionEntries
+	}).(GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput)
+}
+
+// Base Action
+func (o GetTopologyCustomControlFeatureSequenceOutput) BaseAction() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequence) string { return v.BaseAction }).(pulumi.StringOutput)
+}
+
+// Sequence Id
+func (o GetTopologyCustomControlFeatureSequenceOutput) Id() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequence) int { return v.Id }).(pulumi.IntOutput)
+}
+
+// Sequence IP Type
+func (o GetTopologyCustomControlFeatureSequenceOutput) IpType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequence) string { return v.IpType }).(pulumi.StringOutput)
+}
+
+// Set of match entries
+func (o GetTopologyCustomControlFeatureSequenceOutput) MatchEntries() GetTopologyCustomControlFeatureSequenceMatchEntryArrayOutput {
+	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequence) []GetTopologyCustomControlFeatureSequenceMatchEntry {
+		return v.MatchEntries
+	}).(GetTopologyCustomControlFeatureSequenceMatchEntryArrayOutput)
+}
+
+// Sequence Name
+func (o GetTopologyCustomControlFeatureSequenceOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequence) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Sequence Type
+func (o GetTopologyCustomControlFeatureSequenceOutput) Type() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequence) string { return v.Type }).(pulumi.StringOutput)
+}
+
+type GetTopologyCustomControlFeatureSequenceArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTopologyCustomControlFeatureSequenceArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTopologyCustomControlFeatureSequence)(nil)).Elem()
+}
+
+func (o GetTopologyCustomControlFeatureSequenceArrayOutput) ToGetTopologyCustomControlFeatureSequenceArrayOutput() GetTopologyCustomControlFeatureSequenceArrayOutput {
+	return o
+}
+
+func (o GetTopologyCustomControlFeatureSequenceArrayOutput) ToGetTopologyCustomControlFeatureSequenceArrayOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceArrayOutput {
+	return o
+}
+
+func (o GetTopologyCustomControlFeatureSequenceArrayOutput) Index(i pulumi.IntInput) GetTopologyCustomControlFeatureSequenceOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTopologyCustomControlFeatureSequence {
+		return vs[0].([]GetTopologyCustomControlFeatureSequence)[vs[1].(int)]
+	}).(GetTopologyCustomControlFeatureSequenceOutput)
+}
+
+type GetTopologyCustomControlFeatureSequenceActionEntry struct {
+	// Export to VPN list
+	ExportToVpns  []string                                                         `pulumi:"exportToVpns"`
+	SetParameters []GetTopologyCustomControlFeatureSequenceActionEntrySetParameter `pulumi:"setParameters"`
+}
+
+// GetTopologyCustomControlFeatureSequenceActionEntryInput is an input type that accepts GetTopologyCustomControlFeatureSequenceActionEntryArgs and GetTopologyCustomControlFeatureSequenceActionEntryOutput values.
+// You can construct a concrete instance of `GetTopologyCustomControlFeatureSequenceActionEntryInput` via:
+//
+//	GetTopologyCustomControlFeatureSequenceActionEntryArgs{...}
+type GetTopologyCustomControlFeatureSequenceActionEntryInput interface {
+	pulumi.Input
+
+	ToGetTopologyCustomControlFeatureSequenceActionEntryOutput() GetTopologyCustomControlFeatureSequenceActionEntryOutput
+	ToGetTopologyCustomControlFeatureSequenceActionEntryOutputWithContext(context.Context) GetTopologyCustomControlFeatureSequenceActionEntryOutput
+}
+
+type GetTopologyCustomControlFeatureSequenceActionEntryArgs struct {
+	// Export to VPN list
+	ExportToVpns  pulumi.StringArrayInput                                                  `pulumi:"exportToVpns"`
+	SetParameters GetTopologyCustomControlFeatureSequenceActionEntrySetParameterArrayInput `pulumi:"setParameters"`
+}
+
+func (GetTopologyCustomControlFeatureSequenceActionEntryArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceActionEntry)(nil)).Elem()
+}
+
+func (i GetTopologyCustomControlFeatureSequenceActionEntryArgs) ToGetTopologyCustomControlFeatureSequenceActionEntryOutput() GetTopologyCustomControlFeatureSequenceActionEntryOutput {
+	return i.ToGetTopologyCustomControlFeatureSequenceActionEntryOutputWithContext(context.Background())
+}
+
+func (i GetTopologyCustomControlFeatureSequenceActionEntryArgs) ToGetTopologyCustomControlFeatureSequenceActionEntryOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceActionEntryOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTopologyCustomControlFeatureSequenceActionEntryOutput)
+}
+
+// GetTopologyCustomControlFeatureSequenceActionEntryArrayInput is an input type that accepts GetTopologyCustomControlFeatureSequenceActionEntryArray and GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput values.
+// You can construct a concrete instance of `GetTopologyCustomControlFeatureSequenceActionEntryArrayInput` via:
+//
+//	GetTopologyCustomControlFeatureSequenceActionEntryArray{ GetTopologyCustomControlFeatureSequenceActionEntryArgs{...} }
+type GetTopologyCustomControlFeatureSequenceActionEntryArrayInput interface {
+	pulumi.Input
+
+	ToGetTopologyCustomControlFeatureSequenceActionEntryArrayOutput() GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput
+	ToGetTopologyCustomControlFeatureSequenceActionEntryArrayOutputWithContext(context.Context) GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput
+}
+
+type GetTopologyCustomControlFeatureSequenceActionEntryArray []GetTopologyCustomControlFeatureSequenceActionEntryInput
+
+func (GetTopologyCustomControlFeatureSequenceActionEntryArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTopologyCustomControlFeatureSequenceActionEntry)(nil)).Elem()
+}
+
+func (i GetTopologyCustomControlFeatureSequenceActionEntryArray) ToGetTopologyCustomControlFeatureSequenceActionEntryArrayOutput() GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput {
+	return i.ToGetTopologyCustomControlFeatureSequenceActionEntryArrayOutputWithContext(context.Background())
+}
+
+func (i GetTopologyCustomControlFeatureSequenceActionEntryArray) ToGetTopologyCustomControlFeatureSequenceActionEntryArrayOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput)
+}
+
+type GetTopologyCustomControlFeatureSequenceActionEntryOutput struct{ *pulumi.OutputState }
+
+func (GetTopologyCustomControlFeatureSequenceActionEntryOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceActionEntry)(nil)).Elem()
+}
+
+func (o GetTopologyCustomControlFeatureSequenceActionEntryOutput) ToGetTopologyCustomControlFeatureSequenceActionEntryOutput() GetTopologyCustomControlFeatureSequenceActionEntryOutput {
+	return o
+}
+
+func (o GetTopologyCustomControlFeatureSequenceActionEntryOutput) ToGetTopologyCustomControlFeatureSequenceActionEntryOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceActionEntryOutput {
+	return o
+}
+
+// Export to VPN list
+func (o GetTopologyCustomControlFeatureSequenceActionEntryOutput) ExportToVpns() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequenceActionEntry) []string { return v.ExportToVpns }).(pulumi.StringArrayOutput)
+}
+
+func (o GetTopologyCustomControlFeatureSequenceActionEntryOutput) SetParameters() GetTopologyCustomControlFeatureSequenceActionEntrySetParameterArrayOutput {
+	return o.ApplyT(func(v GetTopologyCustomControlFeatureSequenceActionEntry) []GetTopologyCustomControlFeatureSequenceActionEntrySetParameter {
+		return v.SetParameters
+	}).(GetTopologyCustomControlFeatureSequenceActionEntrySetParameterArrayOutput)
+}
+
+type GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTopologyCustomControlFeatureSequenceActionEntry)(nil)).Elem()
+}
+
+func (o GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput) ToGetTopologyCustomControlFeatureSequenceActionEntryArrayOutput() GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput {
+	return o
+}
+
+func (o GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput) ToGetTopologyCustomControlFeatureSequenceActionEntryArrayOutputWithContext(ctx context.Context) GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput {
+	return o
+}
+
+func (o GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput) Index(i pulumi.IntInput) GetTopologyCustomControlFeatureSequenceActionEntryOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTopologyCustomControlFeatureSequenceActionEntry {
+		return vs[0].([]GetTopologyCustomControlFeatureSequenceActionEntry)[vs[1].(int)]
+	}).(GetTopologyCustomControlFeatureSequenceActionEntryOutput)
+}
+
 type GetTopologyCustomControlFeatureSequenceActionEntrySetParameter struct {
 	// Set affinity
 	Affinity int `pulumi:"affinity"`
@@ -21677,6 +23034,26 @@ func (o GetZoneListPolicyObjectEntryArrayOutput) Index(i pulumi.IntInput) GetZon
 }
 
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureTrapTargetServerInput)(nil)).Elem(), GetSystemSnmpFeatureTrapTargetServerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureTrapTargetServerArrayInput)(nil)).Elem(), GetSystemSnmpFeatureTrapTargetServerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureUserInput)(nil)).Elem(), GetSystemSnmpFeatureUserArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureUserArrayInput)(nil)).Elem(), GetSystemSnmpFeatureUserArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureViewInput)(nil)).Elem(), GetSystemSnmpFeatureViewArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureViewArrayInput)(nil)).Elem(), GetSystemSnmpFeatureViewArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureViewOidInput)(nil)).Elem(), GetSystemSnmpFeatureViewOidArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureViewOidArrayInput)(nil)).Elem(), GetSystemSnmpFeatureViewOidArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTlocListPolicyObjectEntryInput)(nil)).Elem(), GetTlocListPolicyObjectEntryArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTlocListPolicyObjectEntryArrayInput)(nil)).Elem(), GetTlocListPolicyObjectEntryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRuleInput)(nil)).Elem(), GetTlsSslDecryptionPolicyDefinitionNetworkRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayInput)(nil)).Elem(), GetTlsSslDecryptionPolicyDefinitionNetworkRuleArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationInput)(nil)).Elem(), GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayInput)(nil)).Elem(), GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionUrlRuleInput)(nil)).Elem(), GetTlsSslDecryptionPolicyDefinitionUrlRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayInput)(nil)).Elem(), GetTlsSslDecryptionPolicyDefinitionUrlRuleArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceInput)(nil)).Elem(), GetTopologyCustomControlFeatureSequenceArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceArrayInput)(nil)).Elem(), GetTopologyCustomControlFeatureSequenceArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceActionEntryInput)(nil)).Elem(), GetTopologyCustomControlFeatureSequenceActionEntryArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceActionEntryArrayInput)(nil)).Elem(), GetTopologyCustomControlFeatureSequenceActionEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceActionEntrySetParameterInput)(nil)).Elem(), GetTopologyCustomControlFeatureSequenceActionEntrySetParameterArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceActionEntrySetParameterArrayInput)(nil)).Elem(), GetTopologyCustomControlFeatureSequenceActionEntrySetParameterArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTopologyCustomControlFeatureSequenceMatchEntryInput)(nil)).Elem(), GetTopologyCustomControlFeatureSequenceMatchEntryArgs{})
@@ -21957,6 +23334,26 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArrayInput)(nil)).Elem(), GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneListPolicyObjectEntryInput)(nil)).Elem(), GetZoneListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneListPolicyObjectEntryArrayInput)(nil)).Elem(), GetZoneListPolicyObjectEntryArray{})
+	pulumi.RegisterOutputType(GetSystemSnmpFeatureTrapTargetServerOutput{})
+	pulumi.RegisterOutputType(GetSystemSnmpFeatureTrapTargetServerArrayOutput{})
+	pulumi.RegisterOutputType(GetSystemSnmpFeatureUserOutput{})
+	pulumi.RegisterOutputType(GetSystemSnmpFeatureUserArrayOutput{})
+	pulumi.RegisterOutputType(GetSystemSnmpFeatureViewOutput{})
+	pulumi.RegisterOutputType(GetSystemSnmpFeatureViewArrayOutput{})
+	pulumi.RegisterOutputType(GetSystemSnmpFeatureViewOidOutput{})
+	pulumi.RegisterOutputType(GetSystemSnmpFeatureViewOidArrayOutput{})
+	pulumi.RegisterOutputType(GetTlocListPolicyObjectEntryOutput{})
+	pulumi.RegisterOutputType(GetTlocListPolicyObjectEntryArrayOutput{})
+	pulumi.RegisterOutputType(GetTlsSslDecryptionPolicyDefinitionNetworkRuleOutput{})
+	pulumi.RegisterOutputType(GetTlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput{})
+	pulumi.RegisterOutputType(GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationOutput{})
+	pulumi.RegisterOutputType(GetTlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArrayOutput{})
+	pulumi.RegisterOutputType(GetTlsSslDecryptionPolicyDefinitionUrlRuleOutput{})
+	pulumi.RegisterOutputType(GetTlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput{})
+	pulumi.RegisterOutputType(GetTopologyCustomControlFeatureSequenceOutput{})
+	pulumi.RegisterOutputType(GetTopologyCustomControlFeatureSequenceArrayOutput{})
+	pulumi.RegisterOutputType(GetTopologyCustomControlFeatureSequenceActionEntryOutput{})
+	pulumi.RegisterOutputType(GetTopologyCustomControlFeatureSequenceActionEntryArrayOutput{})
 	pulumi.RegisterOutputType(GetTopologyCustomControlFeatureSequenceActionEntrySetParameterOutput{})
 	pulumi.RegisterOutputType(GetTopologyCustomControlFeatureSequenceActionEntrySetParameterArrayOutput{})
 	pulumi.RegisterOutputType(GetTopologyCustomControlFeatureSequenceMatchEntryOutput{})

@@ -19,7 +19,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceAction {
     private String appqoeServiceNodeGroup;
     private Boolean appqoeTcpOptimization;
     /**
-     * @return Backup SLA perferred color
+     * @return Backup SLA preferred color
      * 
      */
     private List<String> backupSlaPreferredColors;
@@ -60,7 +60,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceAction {
         return this.appqoeTcpOptimization;
     }
     /**
-     * @return Backup SLA perferred color
+     * @return Backup SLA preferred color
      * 
      */
     public List<String> backupSlaPreferredColors() {
