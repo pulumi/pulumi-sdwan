@@ -161,6 +161,12 @@ func (EmbeddedSecurityNgfwPolicyState) ElementType() reflect.Type {
 	return reflect.TypeOf((*embeddedSecurityNgfwPolicyState)(nil)).Elem()
 }
 
+// EmbeddedSecurityNgfwPolicyExists checks whether an existing EmbeddedSecurityNgfwPolicy resource with the given ID exists.
+func EmbeddedSecurityNgfwPolicyExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *EmbeddedSecurityNgfwPolicyState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/embeddedSecurityNgfwPolicy:EmbeddedSecurityNgfwPolicy", id, state, "", opts...)
+}
+
 type embeddedSecurityNgfwPolicyArgs struct {
 	// - Choices: `pass`, `drop`
 	DefaultAction string `pulumi:"defaultAction"`

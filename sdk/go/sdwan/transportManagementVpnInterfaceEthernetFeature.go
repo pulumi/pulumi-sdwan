@@ -530,6 +530,12 @@ func (TransportManagementVpnInterfaceEthernetFeatureState) ElementType() reflect
 	return reflect.TypeOf((*transportManagementVpnInterfaceEthernetFeatureState)(nil)).Elem()
 }
 
+// TransportManagementVpnInterfaceEthernetFeatureExists checks whether an existing TransportManagementVpnInterfaceEthernetFeature resource with the given ID exists.
+func TransportManagementVpnInterfaceEthernetFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportManagementVpnInterfaceEthernetFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportManagementVpnInterfaceEthernetFeature:TransportManagementVpnInterfaceEthernetFeature", id, state, "", opts...)
+}
+
 type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	// Configure ARP entries
 	ArpEntries []TransportManagementVpnInterfaceEthernetFeatureArpEntry `pulumi:"arpEntries"`

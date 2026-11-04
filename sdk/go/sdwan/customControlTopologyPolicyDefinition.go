@@ -161,6 +161,12 @@ func (CustomControlTopologyPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*customControlTopologyPolicyDefinitionState)(nil)).Elem()
 }
 
+// CustomControlTopologyPolicyDefinitionExists checks whether an existing CustomControlTopologyPolicyDefinition resource with the given ID exists.
+func CustomControlTopologyPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CustomControlTopologyPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition", id, state, "", opts...)
+}
+
 type customControlTopologyPolicyDefinitionArgs struct {
 	// Default action, either `accept` or `reject`
 	//   - Choices: `accept`, `reject`

@@ -644,6 +644,12 @@ func (SystemBasicFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemBasicFeatureState)(nil)).Elem()
 }
 
+// SystemBasicFeatureExists checks whether an existing SystemBasicFeature resource with the given ID exists.
+func SystemBasicFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemBasicFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemBasicFeature:SystemBasicFeature", id, state, "", opts...)
+}
+
 type systemBasicFeatureArgs struct {
 	// Collect admin-tech before reboot due to daemon failure
 	//   - Default value: `true`

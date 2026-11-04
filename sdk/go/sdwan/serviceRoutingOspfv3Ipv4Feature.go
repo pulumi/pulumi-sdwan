@@ -442,6 +442,12 @@ func (ServiceRoutingOspfv3Ipv4FeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceRoutingOspfv3Ipv4FeatureState)(nil)).Elem()
 }
 
+// ServiceRoutingOspfv3Ipv4FeatureExists checks whether an existing ServiceRoutingOspfv3Ipv4Feature resource with the given ID exists.
+func ServiceRoutingOspfv3Ipv4FeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceRoutingOspfv3Ipv4FeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceRoutingOspfv3Ipv4Feature:ServiceRoutingOspfv3Ipv4Feature", id, state, "", opts...)
+}
+
 type serviceRoutingOspfv3Ipv4FeatureArgs struct {
 	// Configure OSPFv3 IPv4 area
 	Areas []ServiceRoutingOspfv3Ipv4FeatureArea `pulumi:"areas"`

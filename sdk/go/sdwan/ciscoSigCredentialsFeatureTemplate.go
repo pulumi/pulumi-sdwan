@@ -281,6 +281,12 @@ func (CiscoSigCredentialsFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoSigCredentialsFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoSigCredentialsFeatureTemplateExists checks whether an existing CiscoSigCredentialsFeatureTemplate resource with the given ID exists.
+func CiscoSigCredentialsFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoSigCredentialsFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoSigCredentialsFeatureTemplate:CiscoSigCredentialsFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoSigCredentialsFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`

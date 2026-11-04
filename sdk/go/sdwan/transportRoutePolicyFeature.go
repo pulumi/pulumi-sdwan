@@ -169,6 +169,12 @@ func (TransportRoutePolicyFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*transportRoutePolicyFeatureState)(nil)).Elem()
 }
 
+// TransportRoutePolicyFeatureExists checks whether an existing TransportRoutePolicyFeature resource with the given ID exists.
+func TransportRoutePolicyFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportRoutePolicyFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportRoutePolicyFeature:TransportRoutePolicyFeature", id, state, "", opts...)
+}
+
 type transportRoutePolicyFeatureArgs struct {
 	// Default Action
 	//   - Choices: `reject`, `accept`

@@ -181,6 +181,12 @@ func (SystemPerformanceMonitoringFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemPerformanceMonitoringFeatureState)(nil)).Elem()
 }
 
+// SystemPerformanceMonitoringFeatureExists checks whether an existing SystemPerformanceMonitoringFeature resource with the given ID exists.
+func SystemPerformanceMonitoringFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemPerformanceMonitoringFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemPerformanceMonitoringFeature:SystemPerformanceMonitoringFeature", id, state, "", opts...)
+}
+
 type systemPerformanceMonitoringFeatureArgs struct {
 	// Application groups to be monitored
 	AppPerfMonitorAppGroups []string `pulumi:"appPerfMonitorAppGroups"`

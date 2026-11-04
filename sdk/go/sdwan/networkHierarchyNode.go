@@ -166,6 +166,12 @@ func (NetworkHierarchyNodeState) ElementType() reflect.Type {
 	return reflect.TypeOf((*networkHierarchyNodeState)(nil)).Elem()
 }
 
+// NetworkHierarchyNodeExists checks whether an existing NetworkHierarchyNode resource with the given ID exists.
+func NetworkHierarchyNodeExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *NetworkHierarchyNodeState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/networkHierarchyNode:NetworkHierarchyNode", id, state, "", opts...)
+}
+
 type networkHierarchyNodeArgs struct {
 	// The address of the site (only for site type nodes)
 	Address *NetworkHierarchyNodeAddress `pulumi:"address"`

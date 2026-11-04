@@ -219,6 +219,12 @@ func (LocalizedPolicyState) ElementType() reflect.Type {
 	return reflect.TypeOf((*localizedPolicyState)(nil)).Elem()
 }
 
+// LocalizedPolicyExists checks whether an existing LocalizedPolicy resource with the given ID exists.
+func LocalizedPolicyExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LocalizedPolicyState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/localizedPolicy:LocalizedPolicy", id, state, "", opts...)
+}
+
 type localizedPolicyArgs struct {
 	// IPv4 application visibility
 	//   - Default value: `false`

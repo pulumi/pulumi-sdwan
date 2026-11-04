@@ -24,7 +24,7 @@ public final class GetServiceLanVpnInterfaceSviFeatureResult {
     private String aclIpv6EgressFeatureId;
     private String aclIpv6IngressFeatureId;
     /**
-     * @return Timeout value for dynamically learned ARP entries, \n\n seconds
+     * @return Timeout value for dynamically learned ARP entries, &#92;n&#92;n seconds
      * 
      */
     private Integer arpTimeout;
@@ -84,7 +84,7 @@ public final class GetServiceLanVpnInterfaceSviFeatureResult {
      */
     private String interfaceDescriptionVariable;
     /**
-     * @return Interface MTU \n\n in bytes
+     * @return Interface MTU &#92;n&#92;n in bytes
      * 
      */
     private Integer interfaceMtu;
@@ -114,7 +114,7 @@ public final class GetServiceLanVpnInterfaceSviFeatureResult {
      */
     private String ipDirectedBroadcastVariable;
     /**
-     * @return IP MTU \n\n, in bytes
+     * @return IP MTU &#92;n&#92;n, in bytes
      * 
      */
     private Integer ipMtu;
@@ -238,7 +238,7 @@ public final class GetServiceLanVpnInterfaceSviFeatureResult {
         return this.aclIpv6IngressFeatureId;
     }
     /**
-     * @return Timeout value for dynamically learned ARP entries, \n\n seconds
+     * @return Timeout value for dynamically learned ARP entries, &#92;n&#92;n seconds
      * 
      */
     public Integer arpTimeout() {
@@ -322,7 +322,7 @@ public final class GetServiceLanVpnInterfaceSviFeatureResult {
         return this.interfaceDescriptionVariable;
     }
     /**
-     * @return Interface MTU \n\n in bytes
+     * @return Interface MTU &#92;n&#92;n in bytes
      * 
      */
     public Integer interfaceMtu() {
@@ -364,7 +364,7 @@ public final class GetServiceLanVpnInterfaceSviFeatureResult {
         return this.ipDirectedBroadcastVariable;
     }
     /**
-     * @return IP MTU \n\n, in bytes
+     * @return IP MTU &#92;n&#92;n, in bytes
      * 
      */
     public Integer ipMtu() {

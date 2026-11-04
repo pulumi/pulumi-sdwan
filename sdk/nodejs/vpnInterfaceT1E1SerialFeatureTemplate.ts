@@ -115,6 +115,17 @@ export class VpnInterfaceT1E1SerialFeatureTemplate extends pulumi.CustomResource
         return new VpnInterfaceT1E1SerialFeatureTemplate(name, <any>state, { ...opts, id: id });
     }
 
+    /**
+     * Check whether an existing VpnInterfaceT1E1SerialFeatureTemplate resource with the given ID exists.
+     *
+     * @param id The _unique_ provider ID of the resource to check.
+     * @param state Any extra arguments used during the lookup.
+     * @param opts Optional settings to control the behavior of the CustomResource.
+     */
+    public static exists(id: pulumi.Input<string>, state?: VpnInterfaceT1E1SerialFeatureTemplateState, opts?: pulumi.CustomResourceOptions): pulumi.Output<boolean> {
+        return pulumi.runtime.existsResource("sdwan:index/vpnInterfaceT1E1SerialFeatureTemplate:VpnInterfaceT1E1SerialFeatureTemplate", id, <any>state || {}, { ...opts }, undefined);
+    }
+
     /** @internal */
     public static readonly __pulumiType = 'sdwan:index/vpnInterfaceT1E1SerialFeatureTemplate:VpnInterfaceT1E1SerialFeatureTemplate';
 

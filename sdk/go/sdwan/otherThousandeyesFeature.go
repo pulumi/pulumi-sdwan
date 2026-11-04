@@ -143,6 +143,12 @@ func (OtherThousandeyesFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*otherThousandeyesFeatureState)(nil)).Elem()
 }
 
+// OtherThousandeyesFeatureExists checks whether an existing OtherThousandeyesFeature resource with the given ID exists.
+func OtherThousandeyesFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *OtherThousandeyesFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/otherThousandeyesFeature:OtherThousandeyesFeature", id, state, "", opts...)
+}
+
 type otherThousandeyesFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

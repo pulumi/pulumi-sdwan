@@ -353,6 +353,22 @@ class TopologyGroup(pulumi.CustomResource):
         __props__.__dict__["solution"] = solution
         return TopologyGroup(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            solution: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["featureProfileIds"] = feature_profile_ids
+        __props__["featureVersions"] = feature_versions
+        __props__["name"] = name
+        __props__["solution"] = solution
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/topologyGroup:TopologyGroup', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[_builtins.str]:

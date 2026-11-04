@@ -238,6 +238,12 @@ func (SwitchportFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchportFeatureTemplateState)(nil)).Elem()
 }
 
+// SwitchportFeatureTemplateExists checks whether an existing SwitchportFeatureTemplate resource with the given ID exists.
+func SwitchportFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchportFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/switchportFeatureTemplate:SwitchportFeatureTemplate", id, state, "", opts...)
+}
+
 type switchportFeatureTemplateArgs struct {
 	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
 	//   - Range: `0`-`1000000`

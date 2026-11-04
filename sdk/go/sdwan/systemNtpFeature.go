@@ -213,6 +213,12 @@ func (SystemNtpFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemNtpFeatureState)(nil)).Elem()
 }
 
+// SystemNtpFeatureExists checks whether an existing SystemNtpFeature resource with the given ID exists.
+func SystemNtpFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemNtpFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemNtpFeature:SystemNtpFeature", id, state, "", opts...)
+}
+
 type systemNtpFeatureArgs struct {
 	// Set MD5 authentication key
 	AuthenticationKeys []SystemNtpFeatureAuthenticationKey `pulumi:"authenticationKeys"`

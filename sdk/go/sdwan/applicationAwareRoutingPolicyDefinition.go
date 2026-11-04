@@ -168,6 +168,12 @@ func (ApplicationAwareRoutingPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applicationAwareRoutingPolicyDefinitionState)(nil)).Elem()
 }
 
+// ApplicationAwareRoutingPolicyDefinitionExists checks whether an existing ApplicationAwareRoutingPolicyDefinition resource with the given ID exists.
+func ApplicationAwareRoutingPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplicationAwareRoutingPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/applicationAwareRoutingPolicyDefinition:ApplicationAwareRoutingPolicyDefinition", id, state, "", opts...)
+}
+
 type applicationAwareRoutingPolicyDefinitionArgs struct {
 	// Type of default action
 	//   - Choices: `slaClass`

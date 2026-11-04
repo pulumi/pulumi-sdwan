@@ -150,6 +150,12 @@ func (SystemIpv6DeviceAccessFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemIpv6DeviceAccessFeatureState)(nil)).Elem()
 }
 
+// SystemIpv6DeviceAccessFeatureExists checks whether an existing SystemIpv6DeviceAccessFeature resource with the given ID exists.
+func SystemIpv6DeviceAccessFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemIpv6DeviceAccessFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemIpv6DeviceAccessFeature:SystemIpv6DeviceAccessFeature", id, state, "", opts...)
+}
+
 type systemIpv6DeviceAccessFeatureArgs struct {
 	// Default Action
 	//   - Choices: `drop`, `accept`

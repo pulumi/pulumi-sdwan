@@ -225,6 +225,12 @@ func (CellularControllerFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cellularControllerFeatureTemplateState)(nil)).Elem()
 }
 
+// CellularControllerFeatureTemplateExists checks whether an existing CellularControllerFeatureTemplate resource with the given ID exists.
+func CellularControllerFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CellularControllerFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/cellularControllerFeatureTemplate:CellularControllerFeatureTemplate", id, state, "", opts...)
+}
+
 type cellularControllerFeatureTemplateArgs struct {
 	// Cellular interface name
 	CellularInterfaceId *string `pulumi:"cellularInterfaceId"`

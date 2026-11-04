@@ -258,6 +258,18 @@ class NetworkHierarchySecurityLogging(pulumi.CustomResource):
         __props__.__dict__["utd_syslogs"] = utd_syslogs
         return NetworkHierarchySecurityLogging(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            high_speed_loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingHighSpeedLoggingArgs', 'NetworkHierarchySecurityLoggingHighSpeedLoggingArgsDict', 'outputs.NetworkHierarchySecurityLoggingHighSpeedLogging']]]]] = None,
+            node_id: pulumi.Input[Optional[_builtins.str]] = None,
+            utd_syslogs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchySecurityLoggingUtdSyslogArgs', 'NetworkHierarchySecurityLoggingUtdSyslogArgsDict', 'outputs.NetworkHierarchySecurityLoggingUtdSyslog']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["highSpeedLoggings"] = high_speed_loggings
+        __props__["nodeId"] = node_id
+        __props__["utdSyslogs"] = utd_syslogs
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/networkHierarchySecurityLogging:NetworkHierarchySecurityLogging', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="highSpeedLoggings")
     def high_speed_loggings(self) -> pulumi.Output[Optional[Sequence['outputs.NetworkHierarchySecurityLoggingHighSpeedLogging']]]:

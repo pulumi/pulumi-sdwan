@@ -280,6 +280,12 @@ func (CiscoDhcpServerFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoDhcpServerFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoDhcpServerFeatureTemplateExists checks whether an existing CiscoDhcpServerFeatureTemplate resource with the given ID exists.
+func CiscoDhcpServerFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoDhcpServerFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoDhcpServerFeatureTemplate:CiscoDhcpServerFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoDhcpServerFeatureTemplateArgs struct {
 	// Configure IPv4 prefix range of the DHCP address pool
 	AddressPool *string `pulumi:"addressPool"`

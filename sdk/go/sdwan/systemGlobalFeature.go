@@ -558,6 +558,12 @@ func (SystemGlobalFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemGlobalFeatureState)(nil)).Elem()
 }
 
+// SystemGlobalFeatureExists checks whether an existing SystemGlobalFeature resource with the given ID exists.
+func SystemGlobalFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemGlobalFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemGlobalFeature:SystemGlobalFeature", id, state, "", opts...)
+}
+
 type systemGlobalFeatureArgs struct {
 	// Set ARP Proxy
 	//   - Default value: `false`

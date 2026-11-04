@@ -292,6 +292,20 @@ class ServiceLanVpnFeatureAssociateRoutingEigrpFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return ServiceLanVpnFeatureAssociateRoutingEigrpFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            service_lan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+            service_routing_eigrp_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["serviceLanVpnFeatureId"] = service_lan_vpn_feature_id
+        __props__["serviceRoutingEigrpFeatureId"] = service_routing_eigrp_feature_id
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/serviceLanVpnFeatureAssociateRoutingEigrpFeature:ServiceLanVpnFeatureAssociateRoutingEigrpFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
     def feature_profile_id(self) -> pulumi.Output[_builtins.str]:

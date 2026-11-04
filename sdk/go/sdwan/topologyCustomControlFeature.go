@@ -241,6 +241,12 @@ func (TopologyCustomControlFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*topologyCustomControlFeatureState)(nil)).Elem()
 }
 
+// TopologyCustomControlFeatureExists checks whether an existing TopologyCustomControlFeature resource with the given ID exists.
+func TopologyCustomControlFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TopologyCustomControlFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/topologyCustomControlFeature:TopologyCustomControlFeature", id, state, "", opts...)
+}
+
 type topologyCustomControlFeatureArgs struct {
 	// Default Action
 	//   - Choices: `reject`, `accept`

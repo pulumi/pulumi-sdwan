@@ -108,7 +108,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String ikeModeVariable;
     /**
-     * @return IKE rekey interval \n\n seconds
+     * @return IKE rekey interval &#92;n&#92;n seconds
      * 
      */
     private Integer ikeRekeyInterval;
@@ -128,7 +128,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String ikeRemoteIdVariable;
     /**
-     * @return IKE Version \n\n
+     * @return IKE Version &#92;n&#92;n
      * 
      */
     private Integer ikeVersion;
@@ -163,7 +163,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String ipsecCiphersuiteVariable;
     /**
-     * @return IPsec rekey interval \n\n seconds
+     * @return IPsec rekey interval &#92;n&#92;n seconds
      * 
      */
     private Integer ipsecRekeyInterval;
@@ -189,7 +189,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String ipv4AddressVariable;
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return Interface MTU &#92;n&#92;n, in bytes
      * 
      */
     private Integer ipv4Mtu;
@@ -225,7 +225,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String ipv6AddressVariable;
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return Interface MTU &#92;n&#92;n, in bytes
      * 
      */
     private Integer ipv6Mtu;
@@ -315,7 +315,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private Boolean tunnelProtection;
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     private String tunnelRouteViaInterface;
@@ -325,7 +325,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String tunnelRouteViaInterfaceVariable;
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     private String tunnelRouteViaIpv4Address;
@@ -335,7 +335,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String tunnelRouteViaIpv4AddressVariable;
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     private String tunnelRouteViaIpv6Address;
@@ -345,7 +345,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String tunnelRouteViaIpv6AddressVariable;
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     private String tunnelRouteViaLoopback;
@@ -355,12 +355,12 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String tunnelRouteViaLoopbackVariable;
     /**
-     * @return \n\n Interface name
+     * @return &#92;n&#92;n Interface name
      * 
      */
     private String tunnelSourceInterface;
     /**
-     * @return \n\n Interface name
+     * @return &#92;n&#92;n Interface name
      * 
      */
     private String tunnelSourceInterfaceLoopback;
@@ -535,7 +535,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.ikeModeVariable;
     }
     /**
-     * @return IKE rekey interval \n\n seconds
+     * @return IKE rekey interval &#92;n&#92;n seconds
      * 
      */
     public Integer ikeRekeyInterval() {
@@ -563,7 +563,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.ikeRemoteIdVariable;
     }
     /**
-     * @return IKE Version \n\n
+     * @return IKE Version &#92;n&#92;n
      * 
      */
     public Integer ikeVersion() {
@@ -612,7 +612,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.ipsecCiphersuiteVariable;
     }
     /**
-     * @return IPsec rekey interval \n\n seconds
+     * @return IPsec rekey interval &#92;n&#92;n seconds
      * 
      */
     public Integer ipsecRekeyInterval() {
@@ -650,7 +650,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.ipv4AddressVariable;
     }
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return Interface MTU &#92;n&#92;n, in bytes
      * 
      */
     public Integer ipv4Mtu() {
@@ -702,7 +702,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.ipv6AddressVariable;
     }
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return Interface MTU &#92;n&#92;n, in bytes
      * 
      */
     public Integer ipv6Mtu() {
@@ -828,7 +828,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.tunnelProtection;
     }
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     public String tunnelRouteViaInterface() {
@@ -842,7 +842,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.tunnelRouteViaInterfaceVariable;
     }
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     public String tunnelRouteViaIpv4Address() {
@@ -856,7 +856,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.tunnelRouteViaIpv4AddressVariable;
     }
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     public String tunnelRouteViaIpv6Address() {
@@ -870,7 +870,7 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.tunnelRouteViaIpv6AddressVariable;
     }
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     public String tunnelRouteViaLoopback() {
@@ -884,14 +884,14 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.tunnelRouteViaLoopbackVariable;
     }
     /**
-     * @return \n\n Interface name
+     * @return &#92;n&#92;n Interface name
      * 
      */
     public String tunnelSourceInterface() {
         return this.tunnelSourceInterface;
     }
     /**
-     * @return \n\n Interface name
+     * @return &#92;n&#92;n Interface name
      * 
      */
     public String tunnelSourceInterfaceLoopback() {

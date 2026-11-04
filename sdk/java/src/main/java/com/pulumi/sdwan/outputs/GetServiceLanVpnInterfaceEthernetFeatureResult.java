@@ -38,7 +38,7 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
      */
     private String aclShapingRateVariable;
     /**
-     * @return Timeout value for dynamically learned ARP entries, \n\n seconds
+     * @return Timeout value for dynamically learned ARP entries, &#92;n&#92;n seconds
      * 
      */
     private Integer arpTimeout;
@@ -135,7 +135,7 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
      */
     private String ipDirectedBroadcastVariable;
     /**
-     * @return IP MTU for GigabitEthernet main \n\n, GigabitEthernet subinterface \n\n, Other Interfaces \n\n in bytes
+     * @return IP MTU for GigabitEthernet main &#92;n&#92;n, GigabitEthernet subinterface &#92;n&#92;n, Other Interfaces &#92;n&#92;n in bytes
      * 
      */
     private Integer ipMtu;
@@ -596,7 +596,7 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
         return this.aclShapingRateVariable;
     }
     /**
-     * @return Timeout value for dynamically learned ARP entries, \n\n seconds
+     * @return Timeout value for dynamically learned ARP entries, &#92;n&#92;n seconds
      * 
      */
     public Integer arpTimeout() {
@@ -735,7 +735,7 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
         return this.ipDirectedBroadcastVariable;
     }
     /**
-     * @return IP MTU for GigabitEthernet main \n\n, GigabitEthernet subinterface \n\n, Other Interfaces \n\n in bytes
+     * @return IP MTU for GigabitEthernet main &#92;n&#92;n, GigabitEthernet subinterface &#92;n&#92;n, Other Interfaces &#92;n&#92;n in bytes
      * 
      */
     public Integer ipMtu() {

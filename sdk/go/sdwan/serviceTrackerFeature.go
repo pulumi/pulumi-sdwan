@@ -296,6 +296,12 @@ func (ServiceTrackerFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceTrackerFeatureState)(nil)).Elem()
 }
 
+// ServiceTrackerFeatureExists checks whether an existing ServiceTrackerFeature resource with the given ID exists.
+func ServiceTrackerFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceTrackerFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceTrackerFeature:ServiceTrackerFeature", id, state, "", opts...)
+}
+
 type serviceTrackerFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

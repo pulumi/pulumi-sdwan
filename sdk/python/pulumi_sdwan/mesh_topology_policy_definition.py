@@ -393,6 +393,26 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
         __props__.__dict__["vpn_list_version"] = vpn_list_version
         return MeshTopologyPolicyDefinition(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict', 'outputs.MeshTopologyPolicyDefinitionRegion']]]]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["name"] = name
+        __props__["regions"] = regions
+        __props__["type"] = type
+        __props__["version"] = version
+        __props__["vpnListId"] = vpn_list_id
+        __props__["vpnListVersion"] = vpn_list_version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/meshTopologyPolicyDefinition:MeshTopologyPolicyDefinition', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[_builtins.str]:

@@ -126,7 +126,7 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      */
     private Boolean mrfEnableCoreRegion;
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return Interface MTU &#92;n&#92;n, in bytes
      * 
      */
     private Integer mtu;
@@ -442,7 +442,7 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      */
     private String tunnelInterfaceGroupsVariable;
     /**
-     * @return Set time period of control hello packets \n\n milli seconds
+     * @return Set time period of control hello packets &#92;n&#92;n milli seconds
      * 
      */
     private Integer tunnelInterfaceHelloInterval;
@@ -452,7 +452,7 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      */
     private String tunnelInterfaceHelloIntervalVariable;
     /**
-     * @return Set tolerance of control hello packets \n\n seconds
+     * @return Set tolerance of control hello packets &#92;n&#92;n seconds
      * 
      */
     private Integer tunnelInterfaceHelloTolerance;
@@ -492,7 +492,7 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      */
     private String tunnelInterfaceMaxControlConnectionsVariable;
     /**
-     * @return Set time period of nat refresh packets \n\n seconds
+     * @return Set time period of nat refresh packets &#92;n&#92;n seconds
      * 
      */
     private Integer tunnelInterfaceNatRefreshInterval;
@@ -542,7 +542,7 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      */
     private String tunnelInterfaceVbondAsStunServerVariable;
     /**
-     * @return Set interface preference for control connection to vManage \n\n
+     * @return Set interface preference for control connection to vManage &#92;n&#92;n
      * 
      */
     private Integer tunnelInterfaceVmanageConnectionPreference;
@@ -734,7 +734,7 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
         return this.mrfEnableCoreRegion;
     }
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return Interface MTU &#92;n&#92;n, in bytes
      * 
      */
     public Integer mtu() {
@@ -1178,7 +1178,7 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
         return this.tunnelInterfaceGroupsVariable;
     }
     /**
-     * @return Set time period of control hello packets \n\n milli seconds
+     * @return Set time period of control hello packets &#92;n&#92;n milli seconds
      * 
      */
     public Integer tunnelInterfaceHelloInterval() {
@@ -1192,7 +1192,7 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
         return this.tunnelInterfaceHelloIntervalVariable;
     }
     /**
-     * @return Set tolerance of control hello packets \n\n seconds
+     * @return Set tolerance of control hello packets &#92;n&#92;n seconds
      * 
      */
     public Integer tunnelInterfaceHelloTolerance() {
@@ -1248,7 +1248,7 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
         return this.tunnelInterfaceMaxControlConnectionsVariable;
     }
     /**
-     * @return Set time period of nat refresh packets \n\n seconds
+     * @return Set time period of nat refresh packets &#92;n&#92;n seconds
      * 
      */
     public Integer tunnelInterfaceNatRefreshInterval() {
@@ -1318,7 +1318,7 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
         return this.tunnelInterfaceVbondAsStunServerVariable;
     }
     /**
-     * @return Set interface preference for control connection to vManage \n\n
+     * @return Set interface preference for control connection to vManage &#92;n&#92;n
      * 
      */
     public Integer tunnelInterfaceVmanageConnectionPreference() {

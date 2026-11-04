@@ -321,6 +321,12 @@ func (SystemAaaFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemAaaFeatureState)(nil)).Elem()
 }
 
+// SystemAaaFeatureExists checks whether an existing SystemAaaFeature resource with the given ID exists.
+func SystemAaaFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemAaaFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemAaaFeature:SystemAaaFeature", id, state, "", opts...)
+}
+
 type systemAaaFeatureArgs struct {
 	// Accounting configurations parameters
 	//   - Default value: `false`

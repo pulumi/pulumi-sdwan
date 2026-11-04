@@ -1196,6 +1196,12 @@ func (TransportWanVpnInterfaceCellularFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*transportWanVpnInterfaceCellularFeatureState)(nil)).Elem()
 }
 
+// TransportWanVpnInterfaceCellularFeatureExists checks whether an existing TransportWanVpnInterfaceCellularFeature resource with the given ID exists.
+func TransportWanVpnInterfaceCellularFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportWanVpnInterfaceCellularFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportWanVpnInterfaceCellularFeature:TransportWanVpnInterfaceCellularFeature", id, state, "", opts...)
+}
+
 type transportWanVpnInterfaceCellularFeatureArgs struct {
 	AclIpv4EgressFeatureId  *string `pulumi:"aclIpv4EgressFeatureId"`
 	AclIpv4IngressFeatureId *string `pulumi:"aclIpv4IngressFeatureId"`

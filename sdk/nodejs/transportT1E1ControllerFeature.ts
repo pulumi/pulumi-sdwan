@@ -63,6 +63,17 @@ export class TransportT1E1ControllerFeature extends pulumi.CustomResource {
         return new TransportT1E1ControllerFeature(name, <any>state, { ...opts, id: id });
     }
 
+    /**
+     * Check whether an existing TransportT1E1ControllerFeature resource with the given ID exists.
+     *
+     * @param id The _unique_ provider ID of the resource to check.
+     * @param state Any extra arguments used during the lookup.
+     * @param opts Optional settings to control the behavior of the CustomResource.
+     */
+    public static exists(id: pulumi.Input<string>, state?: TransportT1E1ControllerFeatureState, opts?: pulumi.CustomResourceOptions): pulumi.Output<boolean> {
+        return pulumi.runtime.existsResource("sdwan:index/transportT1E1ControllerFeature:TransportT1E1ControllerFeature", id, <any>state || {}, { ...opts }, undefined);
+    }
+
     /** @internal */
     public static readonly __pulumiType = 'sdwan:index/transportT1E1ControllerFeature:TransportT1E1ControllerFeature';
 

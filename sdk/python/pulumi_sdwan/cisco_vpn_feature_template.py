@@ -1831,6 +1831,82 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["vpn_name_variable"] = vpn_name_variable
         return CiscoVpnFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dns_hosts: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateDnsHostArgs', 'CiscoVpnFeatureTemplateDnsHostArgsDict', 'outputs.CiscoVpnFeatureTemplateDnsHost']]]]] = None,
+            dns_ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateDnsIpv4ServerArgs', 'CiscoVpnFeatureTemplateDnsIpv4ServerArgsDict', 'outputs.CiscoVpnFeatureTemplateDnsIpv4Server']]]]] = None,
+            dns_ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateDnsIpv6ServerArgs', 'CiscoVpnFeatureTemplateDnsIpv6ServerArgsDict', 'outputs.CiscoVpnFeatureTemplateDnsIpv6Server']]]]] = None,
+            enhance_ecmp_keying: pulumi.Input[Optional[_builtins.bool]] = None,
+            enhance_ecmp_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_static_gre_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs', 'CiscoVpnFeatureTemplateIpv4StaticGreRouteArgsDict', 'outputs.CiscoVpnFeatureTemplateIpv4StaticGreRoute']]]]] = None,
+            ipv4_static_ipsec_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs', 'CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgsDict', 'outputs.CiscoVpnFeatureTemplateIpv4StaticIpsecRoute']]]]] = None,
+            ipv4_static_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateIpv4StaticRouteArgs', 'CiscoVpnFeatureTemplateIpv4StaticRouteArgsDict', 'outputs.CiscoVpnFeatureTemplateIpv4StaticRoute']]]]] = None,
+            ipv4_static_service_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateIpv4StaticServiceRouteArgs', 'CiscoVpnFeatureTemplateIpv4StaticServiceRouteArgsDict', 'outputs.CiscoVpnFeatureTemplateIpv4StaticServiceRoute']]]]] = None,
+            ipv6_static_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateIpv6StaticRouteArgs', 'CiscoVpnFeatureTemplateIpv6StaticRouteArgsDict', 'outputs.CiscoVpnFeatureTemplateIpv6StaticRoute']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            nat64_pools: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateNat64PoolArgs', 'CiscoVpnFeatureTemplateNat64PoolArgsDict', 'outputs.CiscoVpnFeatureTemplateNat64Pool']]]]] = None,
+            nat_pools: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateNatPoolArgs', 'CiscoVpnFeatureTemplateNatPoolArgsDict', 'outputs.CiscoVpnFeatureTemplateNatPool']]]]] = None,
+            omp_admin_distance_ipv4: pulumi.Input[Optional[_builtins.int]] = None,
+            omp_admin_distance_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            omp_admin_distance_ipv6: pulumi.Input[Optional[_builtins.int]] = None,
+            omp_admin_distance_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            omp_advertise_ipv4_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgs', 'CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgsDict', 'outputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv4Route']]]]] = None,
+            omp_advertise_ipv6_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgs', 'CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgsDict', 'outputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv6Route']]]]] = None,
+            organization_name: pulumi.Input[Optional[_builtins.str]] = None,
+            port_forward_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplatePortForwardRuleArgs', 'CiscoVpnFeatureTemplatePortForwardRuleArgsDict', 'outputs.CiscoVpnFeatureTemplatePortForwardRule']]]]] = None,
+            route_global_exports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateRouteGlobalExportArgs', 'CiscoVpnFeatureTemplateRouteGlobalExportArgsDict', 'outputs.CiscoVpnFeatureTemplateRouteGlobalExport']]]]] = None,
+            route_global_imports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateRouteGlobalImportArgs', 'CiscoVpnFeatureTemplateRouteGlobalImportArgsDict', 'outputs.CiscoVpnFeatureTemplateRouteGlobalImport']]]]] = None,
+            route_vpn_imports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateRouteVpnImportArgs', 'CiscoVpnFeatureTemplateRouteVpnImportArgsDict', 'outputs.CiscoVpnFeatureTemplateRouteVpnImport']]]]] = None,
+            services: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateServiceArgs', 'CiscoVpnFeatureTemplateServiceArgsDict', 'outputs.CiscoVpnFeatureTemplateService']]]]] = None,
+            static_nat_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateStaticNatRuleArgs', 'CiscoVpnFeatureTemplateStaticNatRuleArgsDict', 'outputs.CiscoVpnFeatureTemplateStaticNatRule']]]]] = None,
+            static_nat_subnet_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateStaticNatSubnetRuleArgs', 'CiscoVpnFeatureTemplateStaticNatSubnetRuleArgsDict', 'outputs.CiscoVpnFeatureTemplateStaticNatSubnetRule']]]]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            tenant_vpn_id: pulumi.Input[Optional[_builtins.int]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vpn_id: pulumi.Input[Optional[_builtins.int]] = None,
+            vpn_name: pulumi.Input[Optional[_builtins.str]] = None,
+            vpn_name_variable: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["dnsHosts"] = dns_hosts
+        __props__["dnsIpv4Servers"] = dns_ipv4_servers
+        __props__["dnsIpv6Servers"] = dns_ipv6_servers
+        __props__["enhanceEcmpKeying"] = enhance_ecmp_keying
+        __props__["enhanceEcmpKeyingVariable"] = enhance_ecmp_keying_variable
+        __props__["ipv4StaticGreRoutes"] = ipv4_static_gre_routes
+        __props__["ipv4StaticIpsecRoutes"] = ipv4_static_ipsec_routes
+        __props__["ipv4StaticRoutes"] = ipv4_static_routes
+        __props__["ipv4StaticServiceRoutes"] = ipv4_static_service_routes
+        __props__["ipv6StaticRoutes"] = ipv6_static_routes
+        __props__["name"] = name
+        __props__["nat64Pools"] = nat64_pools
+        __props__["natPools"] = nat_pools
+        __props__["ompAdminDistanceIpv4"] = omp_admin_distance_ipv4
+        __props__["ompAdminDistanceIpv4Variable"] = omp_admin_distance_ipv4_variable
+        __props__["ompAdminDistanceIpv6"] = omp_admin_distance_ipv6
+        __props__["ompAdminDistanceIpv6Variable"] = omp_admin_distance_ipv6_variable
+        __props__["ompAdvertiseIpv4Routes"] = omp_advertise_ipv4_routes
+        __props__["ompAdvertiseIpv6Routes"] = omp_advertise_ipv6_routes
+        __props__["organizationName"] = organization_name
+        __props__["portForwardRules"] = port_forward_rules
+        __props__["routeGlobalExports"] = route_global_exports
+        __props__["routeGlobalImports"] = route_global_imports
+        __props__["routeVpnImports"] = route_vpn_imports
+        __props__["services"] = services
+        __props__["staticNatRules"] = static_nat_rules
+        __props__["staticNatSubnetRules"] = static_nat_subnet_rules
+        __props__["templateType"] = template_type
+        __props__["tenantVpnId"] = tenant_vpn_id
+        __props__["version"] = version
+        __props__["vpnId"] = vpn_id
+        __props__["vpnName"] = vpn_name
+        __props__["vpnNameVariable"] = vpn_name_variable
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/ciscoVpnFeatureTemplate:CiscoVpnFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[_builtins.str]:

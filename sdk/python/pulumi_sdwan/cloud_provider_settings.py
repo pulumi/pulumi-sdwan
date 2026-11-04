@@ -788,6 +788,44 @@ class CloudProviderSettings(pulumi.CustomResource):
         __props__.__dict__["zscaler_username"] = zscaler_username
         return CloudProviderSettings(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            cisco_sse_auth_key: pulumi.Input[Optional[_builtins.str]] = None,
+            cisco_sse_auth_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            cisco_sse_context_sharing: pulumi.Input[Optional[_builtins.bool]] = None,
+            cisco_sse_org_id: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_auth_key_v2: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_auth_secret_v2: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_dns_auth_key: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_dns_auth_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_org_id: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_sig_auth_key: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_sig_auth_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_organization: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_base_uri: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_key: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_password: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_username: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["ciscoSseAuthKey"] = cisco_sse_auth_key
+        __props__["ciscoSseAuthSecret"] = cisco_sse_auth_secret
+        __props__["ciscoSseContextSharing"] = cisco_sse_context_sharing
+        __props__["ciscoSseOrgId"] = cisco_sse_org_id
+        __props__["umbrellaAuthKeyV2"] = umbrella_auth_key_v2
+        __props__["umbrellaAuthSecretV2"] = umbrella_auth_secret_v2
+        __props__["umbrellaDnsAuthKey"] = umbrella_dns_auth_key
+        __props__["umbrellaDnsAuthSecret"] = umbrella_dns_auth_secret
+        __props__["umbrellaOrgId"] = umbrella_org_id
+        __props__["umbrellaSigAuthKey"] = umbrella_sig_auth_key
+        __props__["umbrellaSigAuthSecret"] = umbrella_sig_auth_secret
+        __props__["zscalerOrganization"] = zscaler_organization
+        __props__["zscalerPartnerBaseUri"] = zscaler_partner_base_uri
+        __props__["zscalerPartnerKey"] = zscaler_partner_key
+        __props__["zscalerPassword"] = zscaler_password
+        __props__["zscalerUsername"] = zscaler_username
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/cloudProviderSettings:CloudProviderSettings', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="ciscoSseAuthKey")
     def cisco_sse_auth_key(self) -> pulumi.Output[Optional[_builtins.str]]:

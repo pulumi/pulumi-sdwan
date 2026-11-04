@@ -642,6 +642,36 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return CflowdPolicyDefinition(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            active_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict', 'outputs.CflowdPolicyDefinitionCollector']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            flow_refresh: pulumi.Input[Optional[_builtins.int]] = None,
+            inactive_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            protocol: pulumi.Input[Optional[_builtins.str]] = None,
+            remarked_dscp: pulumi.Input[Optional[_builtins.bool]] = None,
+            sampling_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            tos: pulumi.Input[Optional[_builtins.bool]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["activeFlowTimeout"] = active_flow_timeout
+        __props__["collectors"] = collectors
+        __props__["description"] = description
+        __props__["flowRefresh"] = flow_refresh
+        __props__["inactiveFlowTimeout"] = inactive_flow_timeout
+        __props__["name"] = name
+        __props__["protocol"] = protocol
+        __props__["remarkedDscp"] = remarked_dscp
+        __props__["samplingInterval"] = sampling_interval
+        __props__["tos"] = tos
+        __props__["type"] = type
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/cflowdPolicyDefinition:CflowdPolicyDefinition', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="activeFlowTimeout")
     def active_flow_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:

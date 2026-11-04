@@ -334,6 +334,22 @@ class TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature(pulumi.Cust
         __props__.__dict__["version"] = version
         return TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            transport_tracker_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+            transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+            transport_wan_vpn_interface_cellular_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["transportTrackerFeatureId"] = transport_tracker_feature_id
+        __props__["transportWanVpnFeatureId"] = transport_wan_vpn_feature_id
+        __props__["transportWanVpnInterfaceCellularFeatureId"] = transport_wan_vpn_interface_cellular_feature_id
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/transportWanVpnInterfaceCellularFeatureAssociateTrackerFeature:TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
     def feature_profile_id(self) -> pulumi.Output[_builtins.str]:

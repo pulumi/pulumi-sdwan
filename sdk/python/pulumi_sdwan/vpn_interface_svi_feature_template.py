@@ -1980,6 +1980,96 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return VpnInterfaceSviFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            arp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            arp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            if_name: pulumi.Input[Optional[_builtins.str]] = None,
+            if_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_description: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ip_directed_broadcast: pulumi.Input[Optional[_builtins.bool]] = None,
+            ip_directed_broadcast_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ip_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+            ip_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv4AccessListArgsDict', 'outputs.VpnInterfaceSviFeatureTemplateIpv4AccessList']]]]] = None,
+            ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_dhcp_helper_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_dhcp_helpers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            ipv4_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs', 'VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgsDict', 'outputs.VpnInterfaceSviFeatureTemplateIpv4SecondaryAddress']]]]] = None,
+            ipv4_vrrps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4VrrpArgs', 'VpnInterfaceSviFeatureTemplateIpv4VrrpArgsDict', 'outputs.VpnInterfaceSviFeatureTemplateIpv4Vrrp']]]]] = None,
+            ipv6_access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv6AccessListArgsDict', 'outputs.VpnInterfaceSviFeatureTemplateIpv6AccessList']]]]] = None,
+            ipv6_address: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_dhcp_client: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv6_dhcp_client_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_dhcp_distance: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv6_dhcp_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_dhcp_helpers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs', 'VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgsDict', 'outputs.VpnInterfaceSviFeatureTemplateIpv6DhcpHelper']]]]] = None,
+            ipv6_dhcp_rapid_commit: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv6_dhcp_rapid_commit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_secondary_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs', 'VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgsDict', 'outputs.VpnInterfaceSviFeatureTemplateIpv6SecondaryAddress']]]]] = None,
+            ipv6_vrrps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs', 'VpnInterfaceSviFeatureTemplateIpv6VrrpArgsDict', 'outputs.VpnInterfaceSviFeatureTemplateIpv6Vrrp']]]]] = None,
+            mtu: pulumi.Input[Optional[_builtins.int]] = None,
+            mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            policers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplatePolicerArgs', 'VpnInterfaceSviFeatureTemplatePolicerArgsDict', 'outputs.VpnInterfaceSviFeatureTemplatePolicer']]]]] = None,
+            shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+            shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            static_arp_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs', 'VpnInterfaceSviFeatureTemplateStaticArpEntryArgsDict', 'outputs.VpnInterfaceSviFeatureTemplateStaticArpEntry']]]]] = None,
+            tcp_mss_adjust: pulumi.Input[Optional[_builtins.int]] = None,
+            tcp_mss_adjust_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["arpTimeout"] = arp_timeout
+        __props__["arpTimeoutVariable"] = arp_timeout_variable
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["ifName"] = if_name
+        __props__["ifNameVariable"] = if_name_variable
+        __props__["interfaceDescription"] = interface_description
+        __props__["interfaceDescriptionVariable"] = interface_description_variable
+        __props__["ipDirectedBroadcast"] = ip_directed_broadcast
+        __props__["ipDirectedBroadcastVariable"] = ip_directed_broadcast_variable
+        __props__["ipMtu"] = ip_mtu
+        __props__["ipMtuVariable"] = ip_mtu_variable
+        __props__["ipv4AccessLists"] = ipv4_access_lists
+        __props__["ipv4Address"] = ipv4_address
+        __props__["ipv4AddressVariable"] = ipv4_address_variable
+        __props__["ipv4DhcpHelperVariable"] = ipv4_dhcp_helper_variable
+        __props__["ipv4DhcpHelpers"] = ipv4_dhcp_helpers
+        __props__["ipv4SecondaryAddresses"] = ipv4_secondary_addresses
+        __props__["ipv4Vrrps"] = ipv4_vrrps
+        __props__["ipv6AccessLists"] = ipv6_access_lists
+        __props__["ipv6Address"] = ipv6_address
+        __props__["ipv6AddressVariable"] = ipv6_address_variable
+        __props__["ipv6DhcpClient"] = ipv6_dhcp_client
+        __props__["ipv6DhcpClientVariable"] = ipv6_dhcp_client_variable
+        __props__["ipv6DhcpDistance"] = ipv6_dhcp_distance
+        __props__["ipv6DhcpDistanceVariable"] = ipv6_dhcp_distance_variable
+        __props__["ipv6DhcpHelpers"] = ipv6_dhcp_helpers
+        __props__["ipv6DhcpRapidCommit"] = ipv6_dhcp_rapid_commit
+        __props__["ipv6DhcpRapidCommitVariable"] = ipv6_dhcp_rapid_commit_variable
+        __props__["ipv6SecondaryAddresses"] = ipv6_secondary_addresses
+        __props__["ipv6Vrrps"] = ipv6_vrrps
+        __props__["mtu"] = mtu
+        __props__["mtuVariable"] = mtu_variable
+        __props__["name"] = name
+        __props__["policers"] = policers
+        __props__["shutdown"] = shutdown
+        __props__["shutdownVariable"] = shutdown_variable
+        __props__["staticArpEntries"] = static_arp_entries
+        __props__["tcpMssAdjust"] = tcp_mss_adjust
+        __props__["tcpMssAdjustVariable"] = tcp_mss_adjust_variable
+        __props__["templateType"] = template_type
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/vpnInterfaceSviFeatureTemplate:VpnInterfaceSviFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="arpTimeout")
     def arp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:

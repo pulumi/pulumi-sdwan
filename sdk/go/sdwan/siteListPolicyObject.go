@@ -117,6 +117,12 @@ func (SiteListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*siteListPolicyObjectState)(nil)).Elem()
 }
 
+// SiteListPolicyObjectExists checks whether an existing SiteListPolicyObject resource with the given ID exists.
+func SiteListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SiteListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/siteListPolicyObject:SiteListPolicyObject", id, state, "", opts...)
+}
+
 type siteListPolicyObjectArgs struct {
 	// List of entries
 	Entries []SiteListPolicyObjectEntry `pulumi:"entries"`

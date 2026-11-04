@@ -117,6 +117,12 @@ func (DataFqdnPrefixListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*dataFqdnPrefixListPolicyObjectState)(nil)).Elem()
 }
 
+// DataFqdnPrefixListPolicyObjectExists checks whether an existing DataFqdnPrefixListPolicyObject resource with the given ID exists.
+func DataFqdnPrefixListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DataFqdnPrefixListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/dataFqdnPrefixListPolicyObject:DataFqdnPrefixListPolicyObject", id, state, "", opts...)
+}
+
 type dataFqdnPrefixListPolicyObjectArgs struct {
 	// List of entries
 	Entries []DataFqdnPrefixListPolicyObjectEntry `pulumi:"entries"`

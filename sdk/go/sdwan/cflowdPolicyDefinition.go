@@ -204,6 +204,12 @@ func (CflowdPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cflowdPolicyDefinitionState)(nil)).Elem()
 }
 
+// CflowdPolicyDefinitionExists checks whether an existing CflowdPolicyDefinition resource with the given ID exists.
+func CflowdPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CflowdPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/cflowdPolicyDefinition:CflowdPolicyDefinition", id, state, "", opts...)
+}
+
 type cflowdPolicyDefinitionArgs struct {
 	// Active flow timeout in seconds
 	//   - Range: `30`-`3600`

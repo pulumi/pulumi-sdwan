@@ -159,6 +159,12 @@ func (TrafficDataPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*trafficDataPolicyDefinitionState)(nil)).Elem()
 }
 
+// TrafficDataPolicyDefinitionExists checks whether an existing TrafficDataPolicyDefinition resource with the given ID exists.
+func TrafficDataPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TrafficDataPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/trafficDataPolicyDefinition:TrafficDataPolicyDefinition", id, state, "", opts...)
+}
+
 type trafficDataPolicyDefinitionArgs struct {
 	// Default action, either `accept` or `drop`
 	//   - Choices: `accept`, `drop`

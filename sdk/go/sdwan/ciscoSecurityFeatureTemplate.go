@@ -280,6 +280,12 @@ func (CiscoSecurityFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoSecurityFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoSecurityFeatureTemplateExists checks whether an existing CiscoSecurityFeatureTemplate resource with the given ID exists.
+func CiscoSecurityFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoSecurityFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoSecurityFeatureTemplate:CiscoSecurityFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoSecurityFeatureTemplateArgs struct {
 	// Variable name
 	AuthenticationTypeVariable *string `pulumi:"authenticationTypeVariable"`

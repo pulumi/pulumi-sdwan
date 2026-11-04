@@ -138,6 +138,12 @@ func (PolicyObjectSecurityIpsSignatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectSecurityIpsSignatureState)(nil)).Elem()
 }
 
+// PolicyObjectSecurityIpsSignatureExists checks whether an existing PolicyObjectSecurityIpsSignature resource with the given ID exists.
+func PolicyObjectSecurityIpsSignatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectSecurityIpsSignatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectSecurityIpsSignature:PolicyObjectSecurityIpsSignature", id, state, "", opts...)
+}
+
 type policyObjectSecurityIpsSignatureArgs struct {
 	// The description of the Policy_object
 	Description *string `pulumi:"description"`

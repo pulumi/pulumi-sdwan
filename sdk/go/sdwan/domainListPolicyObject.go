@@ -117,6 +117,12 @@ func (DomainListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*domainListPolicyObjectState)(nil)).Elem()
 }
 
+// DomainListPolicyObjectExists checks whether an existing DomainListPolicyObject resource with the given ID exists.
+func DomainListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DomainListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/domainListPolicyObject:DomainListPolicyObject", id, state, "", opts...)
+}
+
 type domainListPolicyObjectArgs struct {
 	// List of entries
 	Entries []DomainListPolicyObjectEntry `pulumi:"entries"`

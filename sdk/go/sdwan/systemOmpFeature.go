@@ -641,6 +641,12 @@ func (SystemOmpFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemOmpFeatureState)(nil)).Elem()
 }
 
+// SystemOmpFeatureExists checks whether an existing SystemOmpFeature resource with the given ID exists.
+func SystemOmpFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemOmpFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemOmpFeature:SystemOmpFeature", id, state, "", opts...)
+}
+
 type systemOmpFeatureArgs struct {
 	// BGP
 	//   - Default value: `false`

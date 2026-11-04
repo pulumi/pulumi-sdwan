@@ -565,6 +565,12 @@ func (SseZscalerFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sseZscalerFeatureState)(nil)).Elem()
 }
 
+// SseZscalerFeatureExists checks whether an existing SseZscalerFeature resource with the given ID exists.
+func SseZscalerFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SseZscalerFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/sseZscalerFeature:SseZscalerFeature", id, state, "", opts...)
+}
+
 type sseZscalerFeatureArgs struct {
 	// Enable Acceptable User Policy
 	//   - Default value: `false`

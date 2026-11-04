@@ -21,7 +21,7 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
      */
     private List<GetTransportManagementVpnInterfaceEthernetFeatureArpEntry> arpEntries;
     /**
-     * @return Timeout value for dynamically learned ARP entries, \n\n seconds
+     * @return Timeout value for dynamically learned ARP entries, &#92;n&#92;n seconds
      * 
      */
     private Integer arpTimeout;
@@ -113,7 +113,7 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
      */
     private String ipDirectedBroadcastVariable;
     /**
-     * @return IP MTU for GigabitEthernet main \n\n, GigabitEthernet subinterface \n\n, Other Interfaces \n\n in bytes
+     * @return IP MTU for GigabitEthernet main &#92;n&#92;n, GigabitEthernet subinterface &#92;n&#92;n, Other Interfaces &#92;n&#92;n in bytes
      * 
      */
     private Integer ipMtu;
@@ -298,7 +298,7 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
         return this.arpEntries;
     }
     /**
-     * @return Timeout value for dynamically learned ARP entries, \n\n seconds
+     * @return Timeout value for dynamically learned ARP entries, &#92;n&#92;n seconds
      * 
      */
     public Integer arpTimeout() {
@@ -430,7 +430,7 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
         return this.ipDirectedBroadcastVariable;
     }
     /**
-     * @return IP MTU for GigabitEthernet main \n\n, GigabitEthernet subinterface \n\n, Other Interfaces \n\n in bytes
+     * @return IP MTU for GigabitEthernet main &#92;n&#92;n, GigabitEthernet subinterface &#92;n&#92;n, Other Interfaces &#92;n&#92;n in bytes
      * 
      */
     public Integer ipMtu() {

@@ -241,6 +241,12 @@ func (SystemSnmpFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemSnmpFeatureState)(nil)).Elem()
 }
 
+// SystemSnmpFeatureExists checks whether an existing SystemSnmpFeature resource with the given ID exists.
+func SystemSnmpFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemSnmpFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemSnmpFeature:SystemSnmpFeature", id, state, "", opts...)
+}
+
 type systemSnmpFeatureArgs struct {
 	// Configure SNMP community
 	Communities []SystemSnmpFeatureCommunity `pulumi:"communities"`

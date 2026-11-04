@@ -136,6 +136,12 @@ func (CentralizedPolicyState) ElementType() reflect.Type {
 	return reflect.TypeOf((*centralizedPolicyState)(nil)).Elem()
 }
 
+// CentralizedPolicyExists checks whether an existing CentralizedPolicy resource with the given ID exists.
+func CentralizedPolicyExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CentralizedPolicyState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/centralizedPolicy:CentralizedPolicy", id, state, "", opts...)
+}
+
 type centralizedPolicyArgs struct {
 	// List of policy definitions
 	Definitions []CentralizedPolicyDefinition `pulumi:"definitions"`

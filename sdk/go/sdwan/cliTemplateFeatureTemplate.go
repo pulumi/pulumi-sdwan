@@ -142,6 +142,12 @@ func (CliTemplateFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cliTemplateFeatureTemplateState)(nil)).Elem()
 }
 
+// CliTemplateFeatureTemplateExists checks whether an existing CliTemplateFeatureTemplate resource with the given ID exists.
+func CliTemplateFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CliTemplateFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/cliTemplateFeatureTemplate:CliTemplateFeatureTemplate", id, state, "", opts...)
+}
+
 type cliTemplateFeatureTemplateArgs struct {
 	// Cli config
 	CliConfig *string `pulumi:"cliConfig"`

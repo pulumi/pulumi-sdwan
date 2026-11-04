@@ -149,6 +149,12 @@ func (MeshTopologyPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*meshTopologyPolicyDefinitionState)(nil)).Elem()
 }
 
+// MeshTopologyPolicyDefinitionExists checks whether an existing MeshTopologyPolicyDefinition resource with the given ID exists.
+func MeshTopologyPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *MeshTopologyPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/meshTopologyPolicyDefinition:MeshTopologyPolicyDefinition", id, state, "", opts...)
+}
+
 type meshTopologyPolicyDefinitionArgs struct {
 	// The description of the policy definition
 	Description string `pulumi:"description"`

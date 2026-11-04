@@ -182,6 +182,12 @@ func (ApplicationPriorityTrafficPolicyPolicyState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applicationPriorityTrafficPolicyPolicyState)(nil)).Elem()
 }
 
+// ApplicationPriorityTrafficPolicyPolicyExists checks whether an existing ApplicationPriorityTrafficPolicyPolicy resource with the given ID exists.
+func ApplicationPriorityTrafficPolicyPolicyExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplicationPriorityTrafficPolicyPolicyState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/applicationPriorityTrafficPolicyPolicy:ApplicationPriorityTrafficPolicyPolicy", id, state, "", opts...)
+}
+
 type applicationPriorityTrafficPolicyPolicyArgs struct {
 	// - Choices: `drop`, `accept`
 	DefaultAction string `pulumi:"defaultAction"`

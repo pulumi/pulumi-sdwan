@@ -139,6 +139,12 @@ func (TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureState) Eleme
 	return reflect.TypeOf((*transportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureState)(nil)).Elem()
 }
 
+// TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureExists checks whether an existing TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature resource with the given ID exists.
+func TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportWanVpnInterfaceCellularFeatureAssociateTrackerFeature:TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature", id, state, "", opts...)
+}
+
 type transportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs struct {
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`

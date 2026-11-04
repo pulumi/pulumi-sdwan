@@ -149,6 +149,12 @@ func (PolicyObjectUnifiedAdvancedInspectionProfileState) ElementType() reflect.T
 	return reflect.TypeOf((*policyObjectUnifiedAdvancedInspectionProfileState)(nil)).Elem()
 }
 
+// PolicyObjectUnifiedAdvancedInspectionProfileExists checks whether an existing PolicyObjectUnifiedAdvancedInspectionProfile resource with the given ID exists.
+func PolicyObjectUnifiedAdvancedInspectionProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectUnifiedAdvancedInspectionProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectUnifiedAdvancedInspectionProfile:PolicyObjectUnifiedAdvancedInspectionProfile", id, state, "", opts...)
+}
+
 type policyObjectUnifiedAdvancedInspectionProfileArgs struct {
 	AdvancedMalwareProtectionListId *string `pulumi:"advancedMalwareProtectionListId"`
 	// The description of the Policy_object

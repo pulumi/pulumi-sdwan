@@ -117,6 +117,12 @@ func (ExpandedCommunityListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*expandedCommunityListPolicyObjectState)(nil)).Elem()
 }
 
+// ExpandedCommunityListPolicyObjectExists checks whether an existing ExpandedCommunityListPolicyObject resource with the given ID exists.
+func ExpandedCommunityListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ExpandedCommunityListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/expandedCommunityListPolicyObject:ExpandedCommunityListPolicyObject", id, state, "", opts...)
+}
+
 type expandedCommunityListPolicyObjectArgs struct {
 	// List of entries
 	Entries []ExpandedCommunityListPolicyObjectEntry `pulumi:"entries"`

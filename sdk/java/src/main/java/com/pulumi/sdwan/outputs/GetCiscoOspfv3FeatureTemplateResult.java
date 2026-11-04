@@ -75,7 +75,7 @@ public final class GetCiscoOspfv3FeatureTemplateResult {
      */
     private String ipv4DefaultInformationOriginateAlwaysVariable;
     /**
-     * @return Set metric used to generate default route \n\n
+     * @return Set metric used to generate default route &#92;n&#92;n
      * 
      */
     private Integer ipv4DefaultInformationOriginateMetric;
@@ -245,7 +245,7 @@ public final class GetCiscoOspfv3FeatureTemplateResult {
      */
     private String ipv6DefaultInformationOriginateAlwaysVariable;
     /**
-     * @return Set metric used to generate default route \n\n
+     * @return Set metric used to generate default route &#92;n&#92;n
      * 
      */
     private Integer ipv6DefaultInformationOriginateMetric;
@@ -469,7 +469,7 @@ public final class GetCiscoOspfv3FeatureTemplateResult {
         return this.ipv4DefaultInformationOriginateAlwaysVariable;
     }
     /**
-     * @return Set metric used to generate default route \n\n
+     * @return Set metric used to generate default route &#92;n&#92;n
      * 
      */
     public Integer ipv4DefaultInformationOriginateMetric() {
@@ -707,7 +707,7 @@ public final class GetCiscoOspfv3FeatureTemplateResult {
         return this.ipv6DefaultInformationOriginateAlwaysVariable;
     }
     /**
-     * @return Set metric used to generate default route \n\n
+     * @return Set metric used to generate default route &#92;n&#92;n
      * 
      */
     public Integer ipv6DefaultInformationOriginateMetric() {

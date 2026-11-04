@@ -290,6 +290,12 @@ func (CellularProfileFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cellularProfileFeatureTemplateState)(nil)).Elem()
 }
 
+// CellularProfileFeatureTemplateExists checks whether an existing CellularProfileFeatureTemplate resource with the given ID exists.
+func CellularProfileFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CellularProfileFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/cellularProfileFeatureTemplate:CellularProfileFeatureTemplate", id, state, "", opts...)
+}
+
 type cellularProfileFeatureTemplateArgs struct {
 	// Set access point name
 	AccessPointName *string `pulumi:"accessPointName"`

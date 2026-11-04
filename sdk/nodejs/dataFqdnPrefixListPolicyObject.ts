@@ -45,6 +45,17 @@ export class DataFqdnPrefixListPolicyObject extends pulumi.CustomResource {
         return new DataFqdnPrefixListPolicyObject(name, <any>state, { ...opts, id: id });
     }
 
+    /**
+     * Check whether an existing DataFqdnPrefixListPolicyObject resource with the given ID exists.
+     *
+     * @param id The _unique_ provider ID of the resource to check.
+     * @param state Any extra arguments used during the lookup.
+     * @param opts Optional settings to control the behavior of the CustomResource.
+     */
+    public static exists(id: pulumi.Input<string>, state?: DataFqdnPrefixListPolicyObjectState, opts?: pulumi.CustomResourceOptions): pulumi.Output<boolean> {
+        return pulumi.runtime.existsResource("sdwan:index/dataFqdnPrefixListPolicyObject:DataFqdnPrefixListPolicyObject", id, <any>state || {}, { ...opts }, undefined);
+    }
+
     /** @internal */
     public static readonly __pulumiType = 'sdwan:index/dataFqdnPrefixListPolicyObject:DataFqdnPrefixListPolicyObject';
 

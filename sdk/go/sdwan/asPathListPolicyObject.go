@@ -117,6 +117,12 @@ func (AsPathListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*asPathListPolicyObjectState)(nil)).Elem()
 }
 
+// AsPathListPolicyObjectExists checks whether an existing AsPathListPolicyObject resource with the given ID exists.
+func AsPathListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AsPathListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/asPathListPolicyObject:AsPathListPolicyObject", id, state, "", opts...)
+}
+
 type asPathListPolicyObjectArgs struct {
 	// List of entries
 	Entries []AsPathListPolicyObjectEntry `pulumi:"entries"`

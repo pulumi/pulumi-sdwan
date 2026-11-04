@@ -198,6 +198,12 @@ func (TlsSslProfilePolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*tlsSslProfilePolicyDefinitionState)(nil)).Elem()
 }
 
+// TlsSslProfilePolicyDefinitionExists checks whether an existing TlsSslProfilePolicyDefinition resource with the given ID exists.
+func TlsSslProfilePolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TlsSslProfilePolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/tlsSslProfilePolicyDefinition:TlsSslProfilePolicyDefinition", id, state, "", opts...)
+}
+
 type tlsSslProfilePolicyDefinitionArgs struct {
 	// Allow URL list ID
 	AllowUrlListId *string `pulumi:"allowUrlListId"`

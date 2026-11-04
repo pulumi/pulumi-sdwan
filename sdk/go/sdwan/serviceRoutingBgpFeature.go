@@ -589,6 +589,12 @@ func (ServiceRoutingBgpFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceRoutingBgpFeatureState)(nil)).Elem()
 }
 
+// ServiceRoutingBgpFeatureExists checks whether an existing ServiceRoutingBgpFeature resource with the given ID exists.
+func ServiceRoutingBgpFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceRoutingBgpFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceRoutingBgpFeature:ServiceRoutingBgpFeature", id, state, "", opts...)
+}
+
 type serviceRoutingBgpFeatureArgs struct {
 	// Compare MEDs from all ASs when selecting active BGP paths
 	//   - Default value: `false`

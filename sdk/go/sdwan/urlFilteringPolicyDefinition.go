@@ -220,6 +220,12 @@ func (UrlFilteringPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*urlFilteringPolicyDefinitionState)(nil)).Elem()
 }
 
+// UrlFilteringPolicyDefinitionExists checks whether an existing UrlFilteringPolicyDefinition resource with the given ID exists.
+func UrlFilteringPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *UrlFilteringPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/urlFilteringPolicyDefinition:UrlFilteringPolicyDefinition", id, state, "", opts...)
+}
+
 type urlFilteringPolicyDefinitionArgs struct {
 	// List of alerts options that will be exported as syslog messages
 	Alerts []string `pulumi:"alerts"`

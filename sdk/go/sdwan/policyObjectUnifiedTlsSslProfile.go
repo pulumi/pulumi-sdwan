@@ -192,6 +192,12 @@ func (PolicyObjectUnifiedTlsSslProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectUnifiedTlsSslProfileState)(nil)).Elem()
 }
 
+// PolicyObjectUnifiedTlsSslProfileExists checks whether an existing PolicyObjectUnifiedTlsSslProfile resource with the given ID exists.
+func PolicyObjectUnifiedTlsSslProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectUnifiedTlsSslProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectUnifiedTlsSslProfile:PolicyObjectUnifiedTlsSslProfile", id, state, "", opts...)
+}
+
 type policyObjectUnifiedTlsSslProfileArgs struct {
 	DecryptCategories []string `pulumi:"decryptCategories"`
 	// , Attribute conditional on `reputation` equal to `true`

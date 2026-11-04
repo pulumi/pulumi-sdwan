@@ -698,6 +698,40 @@ class TlsSslProfilePolicyDefinition(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return TlsSslProfilePolicyDefinition(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            allow_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            allow_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            block_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            block_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            decrypt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            fail_decrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            never_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            reputation: pulumi.Input[Optional[_builtins.bool]] = None,
+            skip_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["allowUrlListId"] = allow_url_list_id
+        __props__["allowUrlListVersion"] = allow_url_list_version
+        __props__["blockUrlListId"] = block_url_list_id
+        __props__["blockUrlListVersion"] = block_url_list_version
+        __props__["decryptCategories"] = decrypt_categories
+        __props__["decryptThreshold"] = decrypt_threshold
+        __props__["description"] = description
+        __props__["failDecrypt"] = fail_decrypt
+        __props__["mode"] = mode
+        __props__["name"] = name
+        __props__["neverDecryptCategories"] = never_decrypt_categories
+        __props__["reputation"] = reputation
+        __props__["skipDecryptCategories"] = skip_decrypt_categories
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/tlsSslProfilePolicyDefinition:TlsSslProfilePolicyDefinition', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="allowUrlListId")
     def allow_url_list_id(self) -> pulumi.Output[Optional[_builtins.str]]:

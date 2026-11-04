@@ -214,6 +214,12 @@ func (ServiceAppqoeFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceAppqoeFeatureState)(nil)).Elem()
 }
 
+// ServiceAppqoeFeatureExists checks whether an existing ServiceAppqoeFeature resource with the given ID exists.
+func ServiceAppqoeFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceAppqoeFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceAppqoeFeature:ServiceAppqoeFeature", id, state, "", opts...)
+}
+
 type serviceAppqoeFeatureArgs struct {
 	// Appqoe Device Role
 	//   - Choices: `forwarder`, `forwarderAndServiceNode`, `serviceNode`, `serviceNodeWithDre`, `forwarderAndServiceNodeWithDre`

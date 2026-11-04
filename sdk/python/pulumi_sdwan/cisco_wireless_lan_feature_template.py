@@ -1056,6 +1056,56 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return CiscoWirelessLanFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            controller_default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+            controller_default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            controller_ip_address: pulumi.Input[Optional[_builtins.str]] = None,
+            controller_ip_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            controller_subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+            controller_subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            country: pulumi.Input[Optional[_builtins.str]] = None,
+            country_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            password: pulumi.Input[Optional[_builtins.str]] = None,
+            password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            shutdown24ghz: pulumi.Input[Optional[_builtins.bool]] = None,
+            shutdown24ghz_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            shutdown5ghz: pulumi.Input[Optional[_builtins.bool]] = None,
+            shutdown5ghz_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoWirelessLanFeatureTemplateSsidArgs', 'CiscoWirelessLanFeatureTemplateSsidArgsDict', 'outputs.CiscoWirelessLanFeatureTemplateSsid']]]]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            username: pulumi.Input[Optional[_builtins.str]] = None,
+            username_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["controllerDefaultGateway"] = controller_default_gateway
+        __props__["controllerDefaultGatewayVariable"] = controller_default_gateway_variable
+        __props__["controllerIpAddress"] = controller_ip_address
+        __props__["controllerIpAddressVariable"] = controller_ip_address_variable
+        __props__["controllerSubnetMask"] = controller_subnet_mask
+        __props__["controllerSubnetMaskVariable"] = controller_subnet_mask_variable
+        __props__["country"] = country
+        __props__["countryVariable"] = country_variable
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["name"] = name
+        __props__["password"] = password
+        __props__["passwordVariable"] = password_variable
+        __props__["shutdown24ghz"] = shutdown24ghz
+        __props__["shutdown24ghzVariable"] = shutdown24ghz_variable
+        __props__["shutdown5ghz"] = shutdown5ghz
+        __props__["shutdown5ghzVariable"] = shutdown5ghz_variable
+        __props__["ssids"] = ssids
+        __props__["templateType"] = template_type
+        __props__["username"] = username
+        __props__["usernameVariable"] = username_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/ciscoWirelessLanFeatureTemplate:CiscoWirelessLanFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="controllerDefaultGateway")
     def controller_default_gateway(self) -> pulumi.Output[Optional[_builtins.str]]:

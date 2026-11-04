@@ -226,6 +226,12 @@ func (SystemLoggingFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemLoggingFeatureState)(nil)).Elem()
 }
 
+// SystemLoggingFeatureExists checks whether an existing SystemLoggingFeature resource with the given ID exists.
+func SystemLoggingFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemLoggingFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemLoggingFeature:SystemLoggingFeature", id, state, "", opts...)
+}
+
 type systemLoggingFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

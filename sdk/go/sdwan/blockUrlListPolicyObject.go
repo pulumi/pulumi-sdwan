@@ -117,6 +117,12 @@ func (BlockUrlListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*blockUrlListPolicyObjectState)(nil)).Elem()
 }
 
+// BlockUrlListPolicyObjectExists checks whether an existing BlockUrlListPolicyObject resource with the given ID exists.
+func BlockUrlListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *BlockUrlListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/blockUrlListPolicyObject:BlockUrlListPolicyObject", id, state, "", opts...)
+}
+
 type blockUrlListPolicyObjectArgs struct {
 	// List of entries
 	Entries []BlockUrlListPolicyObjectEntry `pulumi:"entries"`

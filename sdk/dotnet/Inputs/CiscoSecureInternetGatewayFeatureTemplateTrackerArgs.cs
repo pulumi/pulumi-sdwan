@@ -86,7 +86,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// - Choices: `SIG`
-        ///   - Default value: ` SIG`
+        ///   - Default value: `  SIG `
         /// </summary>
         [Input("trackerType")]
         public Input<string>? TrackerType { get; set; }

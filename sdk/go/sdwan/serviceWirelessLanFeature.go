@@ -267,6 +267,12 @@ func (ServiceWirelessLanFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceWirelessLanFeatureState)(nil)).Elem()
 }
 
+// ServiceWirelessLanFeatureExists checks whether an existing ServiceWirelessLanFeature resource with the given ID exists.
+func ServiceWirelessLanFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceWirelessLanFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceWirelessLanFeature:ServiceWirelessLanFeature", id, state, "", opts...)
+}
+
 type serviceWirelessLanFeatureArgs struct {
 	// Select country
 	//   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`

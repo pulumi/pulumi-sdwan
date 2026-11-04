@@ -188,6 +188,12 @@ func (DnsSecurityPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*dnsSecurityPolicyDefinitionState)(nil)).Elem()
 }
 
+// DnsSecurityPolicyDefinitionExists checks whether an existing DnsSecurityPolicyDefinition resource with the given ID exists.
+func DnsSecurityPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DnsSecurityPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition", id, state, "", opts...)
+}
+
 type dnsSecurityPolicyDefinitionArgs struct {
 	// Credentials feature template ID
 	CiscoSigCredentialsFeatureTemplateId string `pulumi:"ciscoSigCredentialsFeatureTemplateId"`

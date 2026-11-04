@@ -1052,6 +1052,56 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return ServiceWirelessLanFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            country: pulumi.Input[Optional[_builtins.str]] = None,
+            country_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            enable24g: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable24g_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            enable5g: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable5g_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            me_default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+            me_default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            me_dynamic_ip_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            me_ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
+            me_ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            me_subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+            me_subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            password: pulumi.Input[Optional[_builtins.str]] = None,
+            password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict', 'outputs.ServiceWirelessLanFeatureSsid']]]]] = None,
+            username: pulumi.Input[Optional[_builtins.str]] = None,
+            username_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["country"] = country
+        __props__["countryVariable"] = country_variable
+        __props__["description"] = description
+        __props__["enable24g"] = enable24g
+        __props__["enable24gVariable"] = enable24g_variable
+        __props__["enable5g"] = enable5g
+        __props__["enable5gVariable"] = enable5g_variable
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["meDefaultGateway"] = me_default_gateway
+        __props__["meDefaultGatewayVariable"] = me_default_gateway_variable
+        __props__["meDynamicIpEnabled"] = me_dynamic_ip_enabled
+        __props__["meIpv4Address"] = me_ipv4_address
+        __props__["meIpv4AddressVariable"] = me_ipv4_address_variable
+        __props__["meSubnetMask"] = me_subnet_mask
+        __props__["meSubnetMaskVariable"] = me_subnet_mask_variable
+        __props__["name"] = name
+        __props__["password"] = password
+        __props__["passwordVariable"] = password_variable
+        __props__["ssids"] = ssids
+        __props__["username"] = username
+        __props__["usernameVariable"] = username_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/serviceWirelessLanFeature:ServiceWirelessLanFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def country(self) -> pulumi.Output[Optional[_builtins.str]]:

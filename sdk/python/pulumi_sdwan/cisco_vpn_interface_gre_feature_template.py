@@ -1524,6 +1524,80 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return CiscoVpnInterfaceGreFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict', 'outputs.CiscoVpnInterfaceGreFeatureTemplateAccessList']]]]] = None,
+            application: pulumi.Input[Optional[_builtins.str]] = None,
+            application_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
+            clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            interface_description: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ip_address: pulumi.Input[Optional[_builtins.str]] = None,
+            ip_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ip_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+            ip_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            rewrite_rule: pulumi.Input[Optional[_builtins.str]] = None,
+            rewrite_rule_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+            shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tcp_mss_adjust: pulumi.Input[Optional[_builtins.int]] = None,
+            tcp_mss_adjust_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            trackers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tunnel_destination: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_destination_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_route_via: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_route_via_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_source: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_source_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accessLists"] = access_lists
+        __props__["application"] = application
+        __props__["applicationVariable"] = application_variable
+        __props__["clearDontFragment"] = clear_dont_fragment
+        __props__["clearDontFragmentVariable"] = clear_dont_fragment_variable
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["interfaceDescription"] = interface_description
+        __props__["interfaceDescriptionVariable"] = interface_description_variable
+        __props__["interfaceName"] = interface_name
+        __props__["interfaceNameVariable"] = interface_name_variable
+        __props__["ipAddress"] = ip_address
+        __props__["ipAddressVariable"] = ip_address_variable
+        __props__["ipMtu"] = ip_mtu
+        __props__["ipMtuVariable"] = ip_mtu_variable
+        __props__["name"] = name
+        __props__["rewriteRule"] = rewrite_rule
+        __props__["rewriteRuleVariable"] = rewrite_rule_variable
+        __props__["shutdown"] = shutdown
+        __props__["shutdownVariable"] = shutdown_variable
+        __props__["tcpMssAdjust"] = tcp_mss_adjust
+        __props__["tcpMssAdjustVariable"] = tcp_mss_adjust_variable
+        __props__["templateType"] = template_type
+        __props__["trackerVariable"] = tracker_variable
+        __props__["trackers"] = trackers
+        __props__["tunnelDestination"] = tunnel_destination
+        __props__["tunnelDestinationVariable"] = tunnel_destination_variable
+        __props__["tunnelRouteVia"] = tunnel_route_via
+        __props__["tunnelRouteViaVariable"] = tunnel_route_via_variable
+        __props__["tunnelSource"] = tunnel_source
+        __props__["tunnelSourceInterface"] = tunnel_source_interface
+        __props__["tunnelSourceInterfaceVariable"] = tunnel_source_interface_variable
+        __props__["tunnelSourceVariable"] = tunnel_source_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/ciscoVpnInterfaceGreFeatureTemplate:CiscoVpnInterfaceGreFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accessLists")
     def access_lists(self) -> pulumi.Output[Optional[Sequence['outputs.CiscoVpnInterfaceGreFeatureTemplateAccessList']]]:

@@ -491,6 +491,12 @@ func (ServiceLanVpnFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceLanVpnFeatureState)(nil)).Elem()
 }
 
+// ServiceLanVpnFeatureExists checks whether an existing ServiceLanVpnFeature resource with the given ID exists.
+func ServiceLanVpnFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceLanVpnFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceLanVpnFeature:ServiceLanVpnFeature", id, state, "", opts...)
+}
+
 type serviceLanVpnFeatureArgs struct {
 	// OMP Advertise IPv4
 	AdvertiseOmpIpv4s []ServiceLanVpnFeatureAdvertiseOmpIpv4 `pulumi:"advertiseOmpIpv4s"`

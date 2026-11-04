@@ -569,6 +569,12 @@ func (CiscoVpnInterfaceIpsecFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoVpnInterfaceIpsecFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoVpnInterfaceIpsecFeatureTemplateExists checks whether an existing CiscoVpnInterfaceIpsecFeatureTemplate resource with the given ID exists.
+func CiscoVpnInterfaceIpsecFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoVpnInterfaceIpsecFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoVpnInterfaceIpsecFeatureTemplate:CiscoVpnInterfaceIpsecFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoVpnInterfaceIpsecFeatureTemplateArgs struct {
 	// Enable Application Tunnel Type
 	//   - Choices: `none`, `sig`

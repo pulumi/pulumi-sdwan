@@ -168,6 +168,12 @@ func (ConfigurationGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*configurationGroupState)(nil)).Elem()
 }
 
+// ConfigurationGroupExists checks whether an existing ConfigurationGroup resource with the given ID exists.
+func ConfigurationGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ConfigurationGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/configurationGroup:ConfigurationGroup", id, state, "", opts...)
+}
+
 type configurationGroupArgs struct {
 	// Description
 	Description string `pulumi:"description"`

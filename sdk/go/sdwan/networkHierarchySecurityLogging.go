@@ -120,6 +120,12 @@ func (NetworkHierarchySecurityLoggingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*networkHierarchySecurityLoggingState)(nil)).Elem()
 }
 
+// NetworkHierarchySecurityLoggingExists checks whether an existing NetworkHierarchySecurityLogging resource with the given ID exists.
+func NetworkHierarchySecurityLoggingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *NetworkHierarchySecurityLoggingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/networkHierarchySecurityLogging:NetworkHierarchySecurityLogging", id, state, "", opts...)
+}
+
 type networkHierarchySecurityLoggingArgs struct {
 	// High speed logging configuration (max 4 entries)
 	HighSpeedLoggings []NetworkHierarchySecurityLoggingHighSpeedLogging `pulumi:"highSpeedLoggings"`

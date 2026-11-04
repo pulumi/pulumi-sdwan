@@ -1098,6 +1098,54 @@ class SystemAaaFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return SystemAaaFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            accounting_group: pulumi.Input[Optional[_builtins.bool]] = None,
+            accounting_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict', 'outputs.SystemAaaFeatureAccountingRule']]]]] = None,
+            authentication_group: pulumi.Input[Optional[_builtins.bool]] = None,
+            authentication_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
+            authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
+            authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict', 'outputs.SystemAaaFeatureAuthorizationRule']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict', 'outputs.SystemAaaFeatureRadiusGroup']]]]] = None,
+            server_auth_orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict', 'outputs.SystemAaaFeatureTacacsGroup']]]]] = None,
+            trustsec_cts_auth_list: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_cts_auth_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_radius_group: pulumi.Input[Optional[_builtins.str]] = None,
+            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict', 'outputs.SystemAaaFeatureUser']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accountingGroup"] = accounting_group
+        __props__["accountingGroupVariable"] = accounting_group_variable
+        __props__["accountingRules"] = accounting_rules
+        __props__["authenticationGroup"] = authentication_group
+        __props__["authenticationGroupVariable"] = authentication_group_variable
+        __props__["authorizationConfigCommands"] = authorization_config_commands
+        __props__["authorizationConfigCommandsVariable"] = authorization_config_commands_variable
+        __props__["authorizationConsole"] = authorization_console
+        __props__["authorizationConsoleVariable"] = authorization_console_variable
+        __props__["authorizationRules"] = authorization_rules
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["name"] = name
+        __props__["radiusGroups"] = radius_groups
+        __props__["serverAuthOrders"] = server_auth_orders
+        __props__["tacacsGroups"] = tacacs_groups
+        __props__["trustsecCtsAuthList"] = trustsec_cts_auth_list
+        __props__["trustsecCtsAuthListVariable"] = trustsec_cts_auth_list_variable
+        __props__["trustsecRadiusGroup"] = trustsec_radius_group
+        __props__["users"] = users
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/systemAaaFeature:SystemAaaFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accountingGroup")
     def accounting_group(self) -> pulumi.Output[Optional[_builtins.bool]]:

@@ -136,6 +136,12 @@ func (CliConfigFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cliConfigFeatureState)(nil)).Elem()
 }
 
+// CliConfigFeatureExists checks whether an existing CliConfigFeature resource with the given ID exists.
+func CliConfigFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CliConfigFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/cliConfigFeature:CliConfigFeature", id, state, "", opts...)
+}
+
 type cliConfigFeatureArgs struct {
 	// CLI configuration
 	CliConfiguration string `pulumi:"cliConfiguration"`

@@ -197,6 +197,12 @@ func (CloudProviderSettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cloudProviderSettingsState)(nil)).Elem()
 }
 
+// CloudProviderSettingsExists checks whether an existing CloudProviderSettings resource with the given ID exists.
+func CloudProviderSettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CloudProviderSettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/cloudProviderSettings:CloudProviderSettings", id, state, "", opts...)
+}
+
 type cloudProviderSettingsArgs struct {
 	// Cisco SSE Authentication Key
 	CiscoSseAuthKey *string `pulumi:"ciscoSseAuthKey"`

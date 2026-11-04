@@ -1341,6 +1341,70 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return CedgePimFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            auto_rp: pulumi.Input[Optional[_builtins.bool]] = None,
+            auto_rp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            bsr_candidate: pulumi.Input[Optional[_builtins.str]] = None,
+            bsr_candidate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            default: pulumi.Input[Optional[_builtins.bool]] = None,
+            default_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            hash_mask_length: pulumi.Input[Optional[_builtins.str]] = None,
+            hash_mask_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateInterfaceArgs', 'CedgePimFeatureTemplateInterfaceArgsDict', 'outputs.CedgePimFeatureTemplateInterface']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            priority: pulumi.Input[Optional[_builtins.int]] = None,
+            priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            range: pulumi.Input[Optional[_builtins.str]] = None,
+            range_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            rp_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAddressArgs', 'CedgePimFeatureTemplateRpAddressArgsDict', 'outputs.CedgePimFeatureTemplateRpAddress']]]]] = None,
+            rp_announce_fields: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAnnounceFieldArgs', 'CedgePimFeatureTemplateRpAnnounceFieldArgsDict', 'outputs.CedgePimFeatureTemplateRpAnnounceField']]]]] = None,
+            rp_candidate_access_list: pulumi.Input[Optional[_builtins.str]] = None,
+            rp_candidate_access_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            rp_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpCandidateArgs', 'CedgePimFeatureTemplateRpCandidateArgsDict', 'outputs.CedgePimFeatureTemplateRpCandidate']]]]] = None,
+            scope: pulumi.Input[Optional[_builtins.int]] = None,
+            scope_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            spt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+            spt_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["autoRp"] = auto_rp
+        __props__["autoRpVariable"] = auto_rp_variable
+        __props__["bsrCandidate"] = bsr_candidate
+        __props__["bsrCandidateVariable"] = bsr_candidate_variable
+        __props__["default"] = default
+        __props__["defaultVariable"] = default_variable
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["hashMaskLength"] = hash_mask_length
+        __props__["hashMaskLengthVariable"] = hash_mask_length_variable
+        __props__["interfaceName"] = interface_name
+        __props__["interfaceNameVariable"] = interface_name_variable
+        __props__["interfaces"] = interfaces
+        __props__["name"] = name
+        __props__["priority"] = priority
+        __props__["priorityVariable"] = priority_variable
+        __props__["range"] = range
+        __props__["rangeVariable"] = range_variable
+        __props__["rpAddresses"] = rp_addresses
+        __props__["rpAnnounceFields"] = rp_announce_fields
+        __props__["rpCandidateAccessList"] = rp_candidate_access_list
+        __props__["rpCandidateAccessListVariable"] = rp_candidate_access_list_variable
+        __props__["rpCandidates"] = rp_candidates
+        __props__["scope"] = scope
+        __props__["scopeVariable"] = scope_variable
+        __props__["sptThreshold"] = spt_threshold
+        __props__["sptThresholdVariable"] = spt_threshold_variable
+        __props__["templateType"] = template_type
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/cedgePimFeatureTemplate:CedgePimFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="autoRp")
     def auto_rp(self) -> pulumi.Output[Optional[_builtins.bool]]:

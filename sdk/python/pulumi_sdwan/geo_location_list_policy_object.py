@@ -251,6 +251,18 @@ class GeoLocationListPolicyObject(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return GeoLocationListPolicyObject(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['GeoLocationListPolicyObjectEntryArgs', 'GeoLocationListPolicyObjectEntryArgsDict', 'outputs.GeoLocationListPolicyObjectEntry']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["entries"] = entries
+        __props__["name"] = name
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/geoLocationListPolicyObject:GeoLocationListPolicyObject', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def entries(self) -> pulumi.Output[Sequence['outputs.GeoLocationListPolicyObjectEntry']]:

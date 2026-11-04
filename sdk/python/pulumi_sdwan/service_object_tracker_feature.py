@@ -756,6 +756,42 @@ class ServiceObjectTrackerFeature(pulumi.CustomResource):
         __props__.__dict__["vpn_variable"] = vpn_variable
         return ServiceObjectTrackerFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            interface: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            object_tracker_id: pulumi.Input[Optional[_builtins.int]] = None,
+            object_tracker_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            object_tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+            route_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            route_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            route_mask: pulumi.Input[Optional[_builtins.str]] = None,
+            route_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vpn: pulumi.Input[Optional[_builtins.int]] = None,
+            vpn_variable: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["interface"] = interface
+        __props__["interfaceVariable"] = interface_variable
+        __props__["name"] = name
+        __props__["objectTrackerId"] = object_tracker_id
+        __props__["objectTrackerIdVariable"] = object_tracker_id_variable
+        __props__["objectTrackerType"] = object_tracker_type
+        __props__["routeIp"] = route_ip
+        __props__["routeIpVariable"] = route_ip_variable
+        __props__["routeMask"] = route_mask
+        __props__["routeMaskVariable"] = route_mask_variable
+        __props__["version"] = version
+        __props__["vpn"] = vpn
+        __props__["vpnVariable"] = vpn_variable
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/serviceObjectTrackerFeature:ServiceObjectTrackerFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

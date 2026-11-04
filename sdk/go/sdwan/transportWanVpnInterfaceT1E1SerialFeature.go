@@ -1003,6 +1003,12 @@ func (TransportWanVpnInterfaceT1E1SerialFeatureState) ElementType() reflect.Type
 	return reflect.TypeOf((*transportWanVpnInterfaceT1E1SerialFeatureState)(nil)).Elem()
 }
 
+// TransportWanVpnInterfaceT1E1SerialFeatureExists checks whether an existing TransportWanVpnInterfaceT1E1SerialFeature resource with the given ID exists.
+func TransportWanVpnInterfaceT1E1SerialFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportWanVpnInterfaceT1E1SerialFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportWanVpnInterfaceT1E1SerialFeature:TransportWanVpnInterfaceT1E1SerialFeature", id, state, "", opts...)
+}
+
 type transportWanVpnInterfaceT1E1SerialFeatureArgs struct {
 	AclIpv4EgressFeatureId  *string `pulumi:"aclIpv4EgressFeatureId"`
 	AclIpv4IngressFeatureId *string `pulumi:"aclIpv4IngressFeatureId"`

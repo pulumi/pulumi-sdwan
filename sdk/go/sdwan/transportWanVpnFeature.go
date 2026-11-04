@@ -274,6 +274,12 @@ func (TransportWanVpnFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*transportWanVpnFeatureState)(nil)).Elem()
 }
 
+// TransportWanVpnFeatureExists checks whether an existing TransportWanVpnFeature resource with the given ID exists.
+func TransportWanVpnFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportWanVpnFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportWanVpnFeature:TransportWanVpnFeature", id, state, "", opts...)
+}
+
 type transportWanVpnFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

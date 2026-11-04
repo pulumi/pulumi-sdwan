@@ -196,6 +196,12 @@ func (DnsSecurityPolicyState) ElementType() reflect.Type {
 	return reflect.TypeOf((*dnsSecurityPolicyState)(nil)).Elem()
 }
 
+// DnsSecurityPolicyExists checks whether an existing DnsSecurityPolicy resource with the given ID exists.
+func DnsSecurityPolicyExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DnsSecurityPolicyState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/dnsSecurityPolicy:DnsSecurityPolicy", id, state, "", opts...)
+}
+
 type dnsSecurityPolicyArgs struct {
 	// String that is a number that corresponds to Umbrella Multi Org, can be empty if not using Umbrella Multi Org
 	ChildOrgId string `pulumi:"childOrgId"`

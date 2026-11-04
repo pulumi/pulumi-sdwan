@@ -117,6 +117,12 @@ func (WanEdgeCertificateValidateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wanEdgeCertificateValidateState)(nil)).Elem()
 }
 
+// WanEdgeCertificateValidateExists checks whether an existing WanEdgeCertificateValidate resource with the given ID exists.
+func WanEdgeCertificateValidateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WanEdgeCertificateValidateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/wanEdgeCertificateValidate:WanEdgeCertificateValidate", id, state, "", opts...)
+}
+
 type wanEdgeCertificateValidateArgs struct {
 	// The chassis number (UUID) of the WAN edge device
 	ChassisNumber string `pulumi:"chassisNumber"`

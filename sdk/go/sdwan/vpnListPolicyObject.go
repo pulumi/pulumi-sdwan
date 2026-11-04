@@ -117,6 +117,12 @@ func (VpnListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*vpnListPolicyObjectState)(nil)).Elem()
 }
 
+// VpnListPolicyObjectExists checks whether an existing VpnListPolicyObject resource with the given ID exists.
+func VpnListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *VpnListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/vpnListPolicyObject:VpnListPolicyObject", id, state, "", opts...)
+}
+
 type vpnListPolicyObjectArgs struct {
 	// List of entries
 	Entries []VpnListPolicyObjectEntry `pulumi:"entries"`

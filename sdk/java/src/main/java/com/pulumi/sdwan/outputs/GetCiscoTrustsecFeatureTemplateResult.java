@@ -40,7 +40,7 @@ public final class GetCiscoTrustsecFeatureTemplateResult {
      */
     private String description;
     /**
-     * @return Configure Local device security group \n\n
+     * @return Configure Local device security group &#92;n&#92;n
      * 
      */
     private Integer deviceSgt;
@@ -75,7 +75,7 @@ public final class GetCiscoTrustsecFeatureTemplateResult {
      */
     private String id;
     /**
-     * @return Configure Maximum allowed hold-time for listener in seconds \n\n
+     * @return Configure Maximum allowed hold-time for listener in seconds &#92;n&#92;n
      * 
      */
     private Integer maximumListenerHoldTime;
@@ -85,7 +85,7 @@ public final class GetCiscoTrustsecFeatureTemplateResult {
      */
     private String maximumListenerHoldTimeVariable;
     /**
-     * @return Configure Minimum allowed hold-time for listener in seconds \n\n
+     * @return Configure Minimum allowed hold-time for listener in seconds &#92;n&#92;n
      * 
      */
     private Integer minimumListenerHoldTime;
@@ -100,7 +100,7 @@ public final class GetCiscoTrustsecFeatureTemplateResult {
      */
     private String name;
     /**
-     * @return Configure Speaker hold-time in seconds \n\n
+     * @return Configure Speaker hold-time in seconds &#92;n&#92;n
      * 
      */
     private Integer speakerHoldTime;
@@ -145,12 +145,12 @@ public final class GetCiscoTrustsecFeatureTemplateResult {
      */
     private String sxpLogBindingChangesVariable;
     /**
-     * @return Configure SXP Node ID \n\n
+     * @return Configure SXP Node ID &#92;n&#92;n
      * 
      */
     private String sxpNodeId;
     /**
-     * @return Define SXP Node ID type \n\n
+     * @return Define SXP Node ID type &#92;n&#92;n
      * 
      */
     private String sxpNodeIdType;
@@ -160,7 +160,7 @@ public final class GetCiscoTrustsecFeatureTemplateResult {
      */
     private String sxpNodeIdVariable;
     /**
-     * @return Configure the SXP reconciliation period in seconds \n\n
+     * @return Configure the SXP reconciliation period in seconds &#92;n&#92;n
      * 
      */
     private Integer sxpReconciliationPeriod;
@@ -170,7 +170,7 @@ public final class GetCiscoTrustsecFeatureTemplateResult {
      */
     private String sxpReconciliationPeriodVariable;
     /**
-     * @return Configure Retry period for SXP connection in seconds \n\n
+     * @return Configure Retry period for SXP connection in seconds &#92;n&#92;n
      * 
      */
     private Integer sxpRetryPeriod;
@@ -237,7 +237,7 @@ public final class GetCiscoTrustsecFeatureTemplateResult {
         return this.description;
     }
     /**
-     * @return Configure Local device security group \n\n
+     * @return Configure Local device security group &#92;n&#92;n
      * 
      */
     public Integer deviceSgt() {
@@ -286,7 +286,7 @@ public final class GetCiscoTrustsecFeatureTemplateResult {
         return this.id;
     }
     /**
-     * @return Configure Maximum allowed hold-time for listener in seconds \n\n
+     * @return Configure Maximum allowed hold-time for listener in seconds &#92;n&#92;n
      * 
      */
     public Integer maximumListenerHoldTime() {
@@ -300,7 +300,7 @@ public final class GetCiscoTrustsecFeatureTemplateResult {
         return this.maximumListenerHoldTimeVariable;
     }
     /**
-     * @return Configure Minimum allowed hold-time for listener in seconds \n\n
+     * @return Configure Minimum allowed hold-time for listener in seconds &#92;n&#92;n
      * 
      */
     public Integer minimumListenerHoldTime() {
@@ -321,7 +321,7 @@ public final class GetCiscoTrustsecFeatureTemplateResult {
         return this.name;
     }
     /**
-     * @return Configure Speaker hold-time in seconds \n\n
+     * @return Configure Speaker hold-time in seconds &#92;n&#92;n
      * 
      */
     public Integer speakerHoldTime() {
@@ -384,14 +384,14 @@ public final class GetCiscoTrustsecFeatureTemplateResult {
         return this.sxpLogBindingChangesVariable;
     }
     /**
-     * @return Configure SXP Node ID \n\n
+     * @return Configure SXP Node ID &#92;n&#92;n
      * 
      */
     public String sxpNodeId() {
         return this.sxpNodeId;
     }
     /**
-     * @return Define SXP Node ID type \n\n
+     * @return Define SXP Node ID type &#92;n&#92;n
      * 
      */
     public String sxpNodeIdType() {
@@ -405,7 +405,7 @@ public final class GetCiscoTrustsecFeatureTemplateResult {
         return this.sxpNodeIdVariable;
     }
     /**
-     * @return Configure the SXP reconciliation period in seconds \n\n
+     * @return Configure the SXP reconciliation period in seconds &#92;n&#92;n
      * 
      */
     public Integer sxpReconciliationPeriod() {
@@ -419,7 +419,7 @@ public final class GetCiscoTrustsecFeatureTemplateResult {
         return this.sxpReconciliationPeriodVariable;
     }
     /**
-     * @return Configure Retry period for SXP connection in seconds \n\n
+     * @return Configure Retry period for SXP connection in seconds &#92;n&#92;n
      * 
      */
     public Integer sxpRetryPeriod() {

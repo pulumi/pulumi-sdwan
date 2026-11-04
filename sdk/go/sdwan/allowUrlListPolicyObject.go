@@ -117,6 +117,12 @@ func (AllowUrlListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*allowUrlListPolicyObjectState)(nil)).Elem()
 }
 
+// AllowUrlListPolicyObjectExists checks whether an existing AllowUrlListPolicyObject resource with the given ID exists.
+func AllowUrlListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AllowUrlListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/allowUrlListPolicyObject:AllowUrlListPolicyObject", id, state, "", opts...)
+}
+
 type allowUrlListPolicyObjectArgs struct {
 	// List of entries
 	Entries []AllowUrlListPolicyObjectEntry `pulumi:"entries"`

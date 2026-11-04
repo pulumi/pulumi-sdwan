@@ -496,6 +496,12 @@ func (VpnInterfaceSviFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*vpnInterfaceSviFeatureTemplateState)(nil)).Elem()
 }
 
+// VpnInterfaceSviFeatureTemplateExists checks whether an existing VpnInterfaceSviFeatureTemplate resource with the given ID exists.
+func VpnInterfaceSviFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *VpnInterfaceSviFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/vpnInterfaceSviFeatureTemplate:VpnInterfaceSviFeatureTemplate", id, state, "", opts...)
+}
+
 type vpnInterfaceSviFeatureTemplateArgs struct {
 	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
 	//   - Range: `0`-`2678400`

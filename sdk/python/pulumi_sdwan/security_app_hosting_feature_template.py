@@ -376,6 +376,24 @@ class SecurityAppHostingFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["virtual_applications"] = virtual_applications
         return SecurityAppHostingFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            virtual_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityAppHostingFeatureTemplateVirtualApplicationArgs', 'SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict', 'outputs.SecurityAppHostingFeatureTemplateVirtualApplication']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["name"] = name
+        __props__["templateType"] = template_type
+        __props__["version"] = version
+        __props__["virtualApplications"] = virtual_applications
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/securityAppHostingFeatureTemplate:SecurityAppHostingFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[_builtins.str]:

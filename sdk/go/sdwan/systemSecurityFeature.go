@@ -247,6 +247,12 @@ func (SystemSecurityFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemSecurityFeatureState)(nil)).Elem()
 }
 
+// SystemSecurityFeatureExists checks whether an existing SystemSecurityFeature resource with the given ID exists.
+func SystemSecurityFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemSecurityFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemSecurityFeature:SystemSecurityFeature", id, state, "", opts...)
+}
+
 type systemSecurityFeatureArgs struct {
 	// Set the sliding replay window size
 	//   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`

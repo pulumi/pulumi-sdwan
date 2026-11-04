@@ -650,6 +650,38 @@ class DnsSecurityPolicyDefinition(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return DnsSecurityPolicyDefinition(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            cisco_sig_credentials_feature_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+            cisco_sig_credentials_feature_template_version: pulumi.Input[Optional[_builtins.int]] = None,
+            custom_dns_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            dnscrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+            domain_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            domain_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            local_domain_bypass_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            match_all_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict', 'outputs.DnsSecurityPolicyDefinitionTargetVpn']]]]] = None,
+            umbrella_dns_default: pulumi.Input[Optional[_builtins.bool]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["ciscoSigCredentialsFeatureTemplateId"] = cisco_sig_credentials_feature_template_id
+        __props__["ciscoSigCredentialsFeatureTemplateVersion"] = cisco_sig_credentials_feature_template_version
+        __props__["customDnsServerIp"] = custom_dns_server_ip
+        __props__["description"] = description
+        __props__["dnscrypt"] = dnscrypt
+        __props__["domainListId"] = domain_list_id
+        __props__["domainListVersion"] = domain_list_version
+        __props__["localDomainBypassEnabled"] = local_domain_bypass_enabled
+        __props__["matchAllVpn"] = match_all_vpn
+        __props__["name"] = name
+        __props__["targetVpns"] = target_vpns
+        __props__["umbrellaDnsDefault"] = umbrella_dns_default
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="ciscoSigCredentialsFeatureTemplateId")
     def cisco_sig_credentials_feature_template_id(self) -> pulumi.Output[_builtins.str]:

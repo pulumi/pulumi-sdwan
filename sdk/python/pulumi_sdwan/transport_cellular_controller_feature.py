@@ -715,6 +715,40 @@ class TransportCellularControllerFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return TransportCellularControllerFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            cellular_id: pulumi.Input[Optional[_builtins.str]] = None,
+            cellular_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            firmware_auto_sim: pulumi.Input[Optional[_builtins.bool]] = None,
+            firmware_auto_sim_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_sim_slot: pulumi.Input[Optional[_builtins.int]] = None,
+            primary_sim_slot_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            sim_failover_retries: pulumi.Input[Optional[_builtins.int]] = None,
+            sim_failover_retries_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            sim_failover_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            sim_failover_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["cellularId"] = cellular_id
+        __props__["cellularIdVariable"] = cellular_id_variable
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["firmwareAutoSim"] = firmware_auto_sim
+        __props__["firmwareAutoSimVariable"] = firmware_auto_sim_variable
+        __props__["name"] = name
+        __props__["primarySimSlot"] = primary_sim_slot
+        __props__["primarySimSlotVariable"] = primary_sim_slot_variable
+        __props__["simFailoverRetries"] = sim_failover_retries
+        __props__["simFailoverRetriesVariable"] = sim_failover_retries_variable
+        __props__["simFailoverTimeout"] = sim_failover_timeout
+        __props__["simFailoverTimeoutVariable"] = sim_failover_timeout_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/transportCellularControllerFeature:TransportCellularControllerFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="cellularId")
     def cellular_id(self) -> pulumi.Output[_builtins.str]:

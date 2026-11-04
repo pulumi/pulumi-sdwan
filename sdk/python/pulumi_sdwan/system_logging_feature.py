@@ -725,6 +725,38 @@ class SystemLoggingFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return SystemLoggingFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            disk_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+            disk_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            disk_file_rotate: pulumi.Input[Optional[_builtins.int]] = None,
+            disk_file_rotate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            disk_file_size: pulumi.Input[Optional[_builtins.int]] = None,
+            disk_file_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv4ServerArgs', 'SystemLoggingFeatureIpv4ServerArgsDict', 'outputs.SystemLoggingFeatureIpv4Server']]]]] = None,
+            ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv6ServerArgs', 'SystemLoggingFeatureIpv6ServerArgsDict', 'outputs.SystemLoggingFeatureIpv6Server']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemLoggingFeatureTlsProfileArgs', 'SystemLoggingFeatureTlsProfileArgsDict', 'outputs.SystemLoggingFeatureTlsProfile']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["diskEnable"] = disk_enable
+        __props__["diskEnableVariable"] = disk_enable_variable
+        __props__["diskFileRotate"] = disk_file_rotate
+        __props__["diskFileRotateVariable"] = disk_file_rotate_variable
+        __props__["diskFileSize"] = disk_file_size
+        __props__["diskFileSizeVariable"] = disk_file_size_variable
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["ipv4Servers"] = ipv4_servers
+        __props__["ipv6Servers"] = ipv6_servers
+        __props__["name"] = name
+        __props__["tlsProfiles"] = tls_profiles
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/systemLoggingFeature:SystemLoggingFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

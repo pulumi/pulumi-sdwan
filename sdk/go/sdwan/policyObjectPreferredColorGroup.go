@@ -148,6 +148,12 @@ func (PolicyObjectPreferredColorGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectPreferredColorGroupState)(nil)).Elem()
 }
 
+// PolicyObjectPreferredColorGroupExists checks whether an existing PolicyObjectPreferredColorGroup resource with the given ID exists.
+func PolicyObjectPreferredColorGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectPreferredColorGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectPreferredColorGroup:PolicyObjectPreferredColorGroup", id, state, "", opts...)
+}
+
 type policyObjectPreferredColorGroupArgs struct {
 	// The description of the Policy_object
 	Description *string `pulumi:"description"`

@@ -135,6 +135,12 @@ func (PolicyObjectSecurityScalableGroupTagListState) ElementType() reflect.Type 
 	return reflect.TypeOf((*policyObjectSecurityScalableGroupTagListState)(nil)).Elem()
 }
 
+// PolicyObjectSecurityScalableGroupTagListExists checks whether an existing PolicyObjectSecurityScalableGroupTagList resource with the given ID exists.
+func PolicyObjectSecurityScalableGroupTagListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectSecurityScalableGroupTagListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectSecurityScalableGroupTagList:PolicyObjectSecurityScalableGroupTagList", id, state, "", opts...)
+}
+
 type policyObjectSecurityScalableGroupTagListArgs struct {
 	// The description of the Policy_object
 	Description *string                                         `pulumi:"description"`

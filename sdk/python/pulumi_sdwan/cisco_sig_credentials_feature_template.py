@@ -1199,6 +1199,66 @@ class CiscoSigCredentialsFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["zscaler_username_variable"] = zscaler_username_variable
         return CiscoSigCredentialsFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_api_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_api_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_api_secret_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_organization_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            zscaler_cloud_name: pulumi.Input[Optional[_builtins.int]] = None,
+            zscaler_cloud_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_organization: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_organization_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_api_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_base_uri: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_base_uri_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_password: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_username: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_password: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_username: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_username_variable: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["name"] = name
+        __props__["templateType"] = template_type
+        __props__["umbrellaApiKey"] = umbrella_api_key
+        __props__["umbrellaApiKeyVariable"] = umbrella_api_key_variable
+        __props__["umbrellaApiSecret"] = umbrella_api_secret
+        __props__["umbrellaApiSecretVariable"] = umbrella_api_secret_variable
+        __props__["umbrellaOrganizationId"] = umbrella_organization_id
+        __props__["umbrellaOrganizationIdVariable"] = umbrella_organization_id_variable
+        __props__["version"] = version
+        __props__["zscalerCloudName"] = zscaler_cloud_name
+        __props__["zscalerCloudNameVariable"] = zscaler_cloud_name_variable
+        __props__["zscalerOrganization"] = zscaler_organization
+        __props__["zscalerOrganizationVariable"] = zscaler_organization_variable
+        __props__["zscalerPartnerApiKey"] = zscaler_partner_api_key
+        __props__["zscalerPartnerApiKeyVariable"] = zscaler_partner_api_key_variable
+        __props__["zscalerPartnerBaseUri"] = zscaler_partner_base_uri
+        __props__["zscalerPartnerBaseUriVariable"] = zscaler_partner_base_uri_variable
+        __props__["zscalerPartnerPassword"] = zscaler_partner_password
+        __props__["zscalerPartnerPasswordVariable"] = zscaler_partner_password_variable
+        __props__["zscalerPartnerUsername"] = zscaler_partner_username
+        __props__["zscalerPartnerUsernameVariable"] = zscaler_partner_username_variable
+        __props__["zscalerPassword"] = zscaler_password
+        __props__["zscalerPasswordVariable"] = zscaler_password_variable
+        __props__["zscalerUsername"] = zscaler_username
+        __props__["zscalerUsernameVariable"] = zscaler_username_variable
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/ciscoSigCredentialsFeatureTemplate:CiscoSigCredentialsFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[_builtins.str]:

@@ -143,6 +143,12 @@ func (PolicyObjectSecurityRuleSetState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectSecurityRuleSetState)(nil)).Elem()
 }
 
+// PolicyObjectSecurityRuleSetExists checks whether an existing PolicyObjectSecurityRuleSet resource with the given ID exists.
+func PolicyObjectSecurityRuleSetExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectSecurityRuleSetState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectSecurityRuleSet:PolicyObjectSecurityRuleSet", id, state, "", opts...)
+}
+
 type policyObjectSecurityRuleSetArgs struct {
 	// The description of the Policy_object
 	Description *string `pulumi:"description"`

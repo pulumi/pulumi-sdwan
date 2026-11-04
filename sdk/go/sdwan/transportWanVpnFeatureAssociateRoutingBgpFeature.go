@@ -129,6 +129,12 @@ func (TransportWanVpnFeatureAssociateRoutingBgpFeatureState) ElementType() refle
 	return reflect.TypeOf((*transportWanVpnFeatureAssociateRoutingBgpFeatureState)(nil)).Elem()
 }
 
+// TransportWanVpnFeatureAssociateRoutingBgpFeatureExists checks whether an existing TransportWanVpnFeatureAssociateRoutingBgpFeature resource with the given ID exists.
+func TransportWanVpnFeatureAssociateRoutingBgpFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportWanVpnFeatureAssociateRoutingBgpFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportWanVpnFeatureAssociateRoutingBgpFeature:TransportWanVpnFeatureAssociateRoutingBgpFeature", id, state, "", opts...)
+}
+
 type transportWanVpnFeatureAssociateRoutingBgpFeatureArgs struct {
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`

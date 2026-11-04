@@ -40,7 +40,7 @@ public final class GetOtherTrustsecFeatureResult {
      */
     private String devicePasswordVariable;
     /**
-     * @return Configure Local device security group \n\n
+     * @return Configure Local device security group &#92;n&#92;n
      * 
      */
     private Integer deviceSgt;
@@ -75,7 +75,7 @@ public final class GetOtherTrustsecFeatureResult {
      */
     private String id;
     /**
-     * @return Configure Maximum allowed hold-time for listener in seconds \n\n
+     * @return Configure Maximum allowed hold-time for listener in seconds &#92;n&#92;n
      * 
      */
     private Integer listenerHoldTimeMax;
@@ -85,7 +85,7 @@ public final class GetOtherTrustsecFeatureResult {
      */
     private String listenerHoldTimeMaxVariable;
     /**
-     * @return Configure Minimum allowed hold-time for listener in seconds \n\n
+     * @return Configure Minimum allowed hold-time for listener in seconds &#92;n&#92;n
      * 
      */
     private Integer listenerHoldTimeMin;
@@ -100,7 +100,7 @@ public final class GetOtherTrustsecFeatureResult {
      */
     private String name;
     /**
-     * @return Configure Speaker hold-time in seconds \n\n
+     * @return Configure Speaker hold-time in seconds &#92;n&#92;n
      * 
      */
     private Integer speakerHoldTime;
@@ -145,7 +145,7 @@ public final class GetOtherTrustsecFeatureResult {
      */
     private String sxpLogBindingChangesVariable;
     /**
-     * @return Configure the SXP reconciliation period in seconds \n\n
+     * @return Configure the SXP reconciliation period in seconds &#92;n&#92;n
      * 
      */
     private Integer sxpReconciliationPeriod;
@@ -155,7 +155,7 @@ public final class GetOtherTrustsecFeatureResult {
      */
     private String sxpReconciliationPeriodVariable;
     /**
-     * @return Configure Retry period for SXP connection in seconds \n\n
+     * @return Configure Retry period for SXP connection in seconds &#92;n&#92;n
      * 
      */
     private Integer sxpRetryPeriod;
@@ -217,7 +217,7 @@ public final class GetOtherTrustsecFeatureResult {
         return this.devicePasswordVariable;
     }
     /**
-     * @return Configure Local device security group \n\n
+     * @return Configure Local device security group &#92;n&#92;n
      * 
      */
     public Integer deviceSgt() {
@@ -266,7 +266,7 @@ public final class GetOtherTrustsecFeatureResult {
         return this.id;
     }
     /**
-     * @return Configure Maximum allowed hold-time for listener in seconds \n\n
+     * @return Configure Maximum allowed hold-time for listener in seconds &#92;n&#92;n
      * 
      */
     public Integer listenerHoldTimeMax() {
@@ -280,7 +280,7 @@ public final class GetOtherTrustsecFeatureResult {
         return this.listenerHoldTimeMaxVariable;
     }
     /**
-     * @return Configure Minimum allowed hold-time for listener in seconds \n\n
+     * @return Configure Minimum allowed hold-time for listener in seconds &#92;n&#92;n
      * 
      */
     public Integer listenerHoldTimeMin() {
@@ -301,7 +301,7 @@ public final class GetOtherTrustsecFeatureResult {
         return this.name;
     }
     /**
-     * @return Configure Speaker hold-time in seconds \n\n
+     * @return Configure Speaker hold-time in seconds &#92;n&#92;n
      * 
      */
     public Integer speakerHoldTime() {
@@ -364,7 +364,7 @@ public final class GetOtherTrustsecFeatureResult {
         return this.sxpLogBindingChangesVariable;
     }
     /**
-     * @return Configure the SXP reconciliation period in seconds \n\n
+     * @return Configure the SXP reconciliation period in seconds &#92;n&#92;n
      * 
      */
     public Integer sxpReconciliationPeriod() {
@@ -378,7 +378,7 @@ public final class GetOtherTrustsecFeatureResult {
         return this.sxpReconciliationPeriodVariable;
     }
     /**
-     * @return Configure Retry period for SXP connection in seconds \n\n
+     * @return Configure Retry period for SXP connection in seconds &#92;n&#92;n
      * 
      */
     public Integer sxpRetryPeriod() {

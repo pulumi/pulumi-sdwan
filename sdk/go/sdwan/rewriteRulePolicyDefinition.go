@@ -136,6 +136,12 @@ func (RewriteRulePolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*rewriteRulePolicyDefinitionState)(nil)).Elem()
 }
 
+// RewriteRulePolicyDefinitionExists checks whether an existing RewriteRulePolicyDefinition resource with the given ID exists.
+func RewriteRulePolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *RewriteRulePolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/rewriteRulePolicyDefinition:RewriteRulePolicyDefinition", id, state, "", opts...)
+}
+
 type rewriteRulePolicyDefinitionArgs struct {
 	// The description of the policy definition
 	Description string `pulumi:"description"`

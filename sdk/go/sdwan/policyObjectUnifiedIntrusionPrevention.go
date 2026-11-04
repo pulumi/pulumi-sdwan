@@ -176,6 +176,12 @@ func (PolicyObjectUnifiedIntrusionPreventionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectUnifiedIntrusionPreventionState)(nil)).Elem()
 }
 
+// PolicyObjectUnifiedIntrusionPreventionExists checks whether an existing PolicyObjectUnifiedIntrusionPrevention resource with the given ID exists.
+func PolicyObjectUnifiedIntrusionPreventionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectUnifiedIntrusionPreventionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectUnifiedIntrusionPrevention:PolicyObjectUnifiedIntrusionPrevention", id, state, "", opts...)
+}
+
 type policyObjectUnifiedIntrusionPreventionArgs struct {
 	// Can be one of the enum value
 	CustomSignature *bool `pulumi:"customSignature"`

@@ -36,7 +36,7 @@ public final class GetTransportRoutingOspfv3Ipv6FeatureResult {
      */
     private String defaultInformationOriginateAlwaysVariable;
     /**
-     * @return Set metric used to generate default route \n\n
+     * @return Set metric used to generate default route &#92;n&#92;n
      * 
      */
     private Integer defaultInformationOriginateMetric;
@@ -242,7 +242,7 @@ public final class GetTransportRoutingOspfv3Ipv6FeatureResult {
         return this.defaultInformationOriginateAlwaysVariable;
     }
     /**
-     * @return Set metric used to generate default route \n\n
+     * @return Set metric used to generate default route &#92;n&#92;n
      * 
      */
     public Integer defaultInformationOriginateMetric() {

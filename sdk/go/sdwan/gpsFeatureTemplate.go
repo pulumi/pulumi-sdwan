@@ -228,6 +228,12 @@ func (GpsFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*gpsFeatureTemplateState)(nil)).Elem()
 }
 
+// GpsFeatureTemplateExists checks whether an existing GpsFeatureTemplate resource with the given ID exists.
+func GpsFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *GpsFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/gpsFeatureTemplate:GpsFeatureTemplate", id, state, "", opts...)
+}
+
 type gpsFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`

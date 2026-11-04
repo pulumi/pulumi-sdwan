@@ -273,6 +273,20 @@ class WanEdgeCertificateValidate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return WanEdgeCertificateValidate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            chassis_number: pulumi.Input[Optional[_builtins.str]] = None,
+            serial_number: pulumi.Input[Optional[_builtins.str]] = None,
+            validity: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["chassisNumber"] = chassis_number
+        __props__["serialNumber"] = serial_number
+        __props__["validity"] = validity
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/wanEdgeCertificateValidate:WanEdgeCertificateValidate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="chassisNumber")
     def chassis_number(self) -> pulumi.Output[_builtins.str]:

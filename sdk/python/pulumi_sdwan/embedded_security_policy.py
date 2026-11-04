@@ -1076,6 +1076,60 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return EmbeddedSecurityPolicy(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            assemblies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EmbeddedSecurityPolicyAssemblyArgs', 'EmbeddedSecurityPolicyAssemblyArgsDict', 'outputs.EmbeddedSecurityPolicyAssembly']]]]] = None,
+            audit_trail: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            download_url_database_on_device: pulumi.Input[Optional[_builtins.bool]] = None,
+            download_url_database_on_device_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            high_speed_loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EmbeddedSecurityPolicyHighSpeedLoggingArgs', 'EmbeddedSecurityPolicyHighSpeedLoggingArgsDict', 'outputs.EmbeddedSecurityPolicyHighSpeedLogging']]]]] = None,
+            icmp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
+            max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+            max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+            max_incomplete_udp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            nat: pulumi.Input[Optional[_builtins.bool]] = None,
+            nat_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            optimized: pulumi.Input[Optional[_builtins.bool]] = None,
+            resource_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            resource_profile_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+            syslog_server_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            syslog_server_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
+            unified_logging: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["assemblies"] = assemblies
+        __props__["auditTrail"] = audit_trail
+        __props__["description"] = description
+        __props__["downloadUrlDatabaseOnDevice"] = download_url_database_on_device
+        __props__["downloadUrlDatabaseOnDeviceVariable"] = download_url_database_on_device_variable
+        __props__["failureMode"] = failure_mode
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["highSpeedLoggings"] = high_speed_loggings
+        __props__["icmpUnreachableAllow"] = icmp_unreachable_allow
+        __props__["maxIncompleteIcmpLimit"] = max_incomplete_icmp_limit
+        __props__["maxIncompleteTcpLimit"] = max_incomplete_tcp_limit
+        __props__["maxIncompleteUdpLimit"] = max_incomplete_udp_limit
+        __props__["name"] = name
+        __props__["nat"] = nat
+        __props__["natVariable"] = nat_variable
+        __props__["optimized"] = optimized
+        __props__["resourceProfile"] = resource_profile
+        __props__["resourceProfileVariable"] = resource_profile_variable
+        __props__["sessionReclassifyAllow"] = session_reclassify_allow
+        __props__["syslogServerSourceInterface"] = syslog_server_source_interface
+        __props__["syslogServerSourceInterfaceVariable"] = syslog_server_source_interface_variable
+        __props__["tcpSynFloodLimit"] = tcp_syn_flood_limit
+        __props__["unifiedLogging"] = unified_logging
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/embeddedSecurityPolicy:EmbeddedSecurityPolicy', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def assemblies(self) -> pulumi.Output[Optional[Sequence['outputs.EmbeddedSecurityPolicyAssembly']]]:

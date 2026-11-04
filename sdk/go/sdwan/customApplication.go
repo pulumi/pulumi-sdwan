@@ -188,6 +188,12 @@ func (CustomApplicationState) ElementType() reflect.Type {
 	return reflect.TypeOf((*customApplicationState)(nil)).Elem()
 }
 
+// CustomApplicationExists checks whether an existing CustomApplication resource with the given ID exists.
+func CustomApplicationExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CustomApplicationState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/customApplication:CustomApplication", id, state, "", opts...)
+}
+
 type customApplicationArgs struct {
 	// Application Name
 	AppName string `pulumi:"appName"`

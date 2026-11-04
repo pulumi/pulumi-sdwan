@@ -152,6 +152,12 @@ func (CedgeIgmpFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cedgeIgmpFeatureTemplateState)(nil)).Elem()
 }
 
+// CedgeIgmpFeatureTemplateExists checks whether an existing CedgeIgmpFeatureTemplate resource with the given ID exists.
+func CedgeIgmpFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CedgeIgmpFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/cedgeIgmpFeatureTemplate:CedgeIgmpFeatureTemplate", id, state, "", opts...)
+}
+
 type cedgeIgmpFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`

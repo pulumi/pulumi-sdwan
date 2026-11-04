@@ -195,6 +195,12 @@ func (ObjectGroupPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*objectGroupPolicyDefinitionState)(nil)).Elem()
 }
 
+// ObjectGroupPolicyDefinitionExists checks whether an existing ObjectGroupPolicyDefinition resource with the given ID exists.
+func ObjectGroupPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ObjectGroupPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/objectGroupPolicyDefinition:ObjectGroupPolicyDefinition", id, state, "", opts...)
+}
+
 type objectGroupPolicyDefinitionArgs struct {
 	// Data FQDN prefix list ID
 	DataFqdnPrefixListId *string `pulumi:"dataFqdnPrefixListId"`

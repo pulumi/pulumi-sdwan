@@ -129,6 +129,12 @@ func (ServiceLanVpnFeatureAssociateMulticastFeatureState) ElementType() reflect.
 	return reflect.TypeOf((*serviceLanVpnFeatureAssociateMulticastFeatureState)(nil)).Elem()
 }
 
+// ServiceLanVpnFeatureAssociateMulticastFeatureExists checks whether an existing ServiceLanVpnFeatureAssociateMulticastFeature resource with the given ID exists.
+func ServiceLanVpnFeatureAssociateMulticastFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceLanVpnFeatureAssociateMulticastFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceLanVpnFeatureAssociateMulticastFeature:ServiceLanVpnFeatureAssociateMulticastFeature", id, state, "", opts...)
+}
+
 type serviceLanVpnFeatureAssociateMulticastFeatureArgs struct {
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`

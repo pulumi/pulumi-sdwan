@@ -169,6 +169,12 @@ func (TransportIpv6TrackerGroupFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*transportIpv6TrackerGroupFeatureState)(nil)).Elem()
 }
 
+// TransportIpv6TrackerGroupFeatureExists checks whether an existing TransportIpv6TrackerGroupFeature resource with the given ID exists.
+func TransportIpv6TrackerGroupFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportIpv6TrackerGroupFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportIpv6TrackerGroupFeature:TransportIpv6TrackerGroupFeature", id, state, "", opts...)
+}
+
 type transportIpv6TrackerGroupFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

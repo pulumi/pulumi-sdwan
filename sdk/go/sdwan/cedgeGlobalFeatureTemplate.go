@@ -506,6 +506,12 @@ func (CedgeGlobalFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cedgeGlobalFeatureTemplateState)(nil)).Elem()
 }
 
+// CedgeGlobalFeatureTemplateExists checks whether an existing CedgeGlobalFeatureTemplate resource with the given ID exists.
+func CedgeGlobalFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CedgeGlobalFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/cedgeGlobalFeatureTemplate:CedgeGlobalFeatureTemplate", id, state, "", opts...)
+}
+
 type cedgeGlobalFeatureTemplateArgs struct {
 	// Set ARP Proxy
 	//   - Default value: `false`

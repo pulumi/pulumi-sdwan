@@ -421,6 +421,12 @@ func (SystemRemoteAccessFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemRemoteAccessFeatureState)(nil)).Elem()
 }
 
+// SystemRemoteAccessFeatureExists checks whether an existing SystemRemoteAccessFeature resource with the given ID exists.
+func SystemRemoteAccessFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemRemoteAccessFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemRemoteAccessFeature:SystemRemoteAccessFeature", id, state, "", opts...)
+}
+
 type systemRemoteAccessFeatureArgs struct {
 	// , Attribute conditional on `connectionTypeSsl` equal to `false`
 	AaaDeriveNameFromPeerDomain *string `pulumi:"aaaDeriveNameFromPeerDomain"`

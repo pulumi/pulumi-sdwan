@@ -199,6 +199,12 @@ func (PolicyObjectUnifiedUrlFilteringState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectUnifiedUrlFilteringState)(nil)).Elem()
 }
 
+// PolicyObjectUnifiedUrlFilteringExists checks whether an existing PolicyObjectUnifiedUrlFiltering resource with the given ID exists.
+func PolicyObjectUnifiedUrlFilteringExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectUnifiedUrlFilteringState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectUnifiedUrlFiltering:PolicyObjectUnifiedUrlFiltering", id, state, "", opts...)
+}
+
 type policyObjectUnifiedUrlFilteringArgs struct {
 	// , Attribute conditional on `enableAlerts` equal to `true`
 	Alerts []string `pulumi:"alerts"`

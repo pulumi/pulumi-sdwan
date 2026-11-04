@@ -1217,6 +1217,66 @@ class CellularProfileFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return CellularProfileFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            access_point_name: pulumi.Input[Optional[_builtins.str]] = None,
+            access_point_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            if_name: pulumi.Input[Optional[_builtins.str]] = None,
+            if_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ip_address: pulumi.Input[Optional[_builtins.str]] = None,
+            ip_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            packet_data_network_type: pulumi.Input[Optional[_builtins.str]] = None,
+            packet_data_network_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_dns_address: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_dns_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_id: pulumi.Input[Optional[_builtins.int]] = None,
+            profile_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_name: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_password: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_username: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_dns_address: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_dns_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accessPointName"] = access_point_name
+        __props__["accessPointNameVariable"] = access_point_name_variable
+        __props__["authenticationType"] = authentication_type
+        __props__["authenticationTypeVariable"] = authentication_type_variable
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["ifName"] = if_name
+        __props__["ifNameVariable"] = if_name_variable
+        __props__["ipAddress"] = ip_address
+        __props__["ipAddressVariable"] = ip_address_variable
+        __props__["name"] = name
+        __props__["packetDataNetworkType"] = packet_data_network_type
+        __props__["packetDataNetworkTypeVariable"] = packet_data_network_type_variable
+        __props__["primaryDnsAddress"] = primary_dns_address
+        __props__["primaryDnsAddressVariable"] = primary_dns_address_variable
+        __props__["profileId"] = profile_id
+        __props__["profileIdVariable"] = profile_id_variable
+        __props__["profileName"] = profile_name
+        __props__["profileNameVariable"] = profile_name_variable
+        __props__["profilePassword"] = profile_password
+        __props__["profilePasswordVariable"] = profile_password_variable
+        __props__["profileUsername"] = profile_username
+        __props__["profileUsernameVariable"] = profile_username_variable
+        __props__["secondaryDnsAddress"] = secondary_dns_address
+        __props__["secondaryDnsAddressVariable"] = secondary_dns_address_variable
+        __props__["templateType"] = template_type
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/cellularProfileFeatureTemplate:CellularProfileFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accessPointName")
     def access_point_name(self) -> pulumi.Output[Optional[_builtins.str]]:

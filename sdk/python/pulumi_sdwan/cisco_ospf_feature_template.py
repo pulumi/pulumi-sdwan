@@ -1662,6 +1662,80 @@ class CiscoOspfFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return CiscoOspfFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateAreaArgs', 'CiscoOspfFeatureTemplateAreaArgsDict', 'outputs.CiscoOspfFeatureTemplateArea']]]]] = None,
+            auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+            auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+            compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+            default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+            default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+            default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+            default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs', 'CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict', 'outputs.CiscoOspfFeatureTemplateMaxMetricRouterLsa']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRedistributeArgs', 'CiscoOspfFeatureTemplateRedistributeArgsDict', 'outputs.CiscoOspfFeatureTemplateRedistribute']]]]] = None,
+            route_policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRoutePolicyArgs', 'CiscoOspfFeatureTemplateRoutePolicyArgsDict', 'outputs.CiscoOspfFeatureTemplateRoutePolicy']]]]] = None,
+            router_id: pulumi.Input[Optional[_builtins.str]] = None,
+            router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+            timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+            timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+            timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["areas"] = areas
+        __props__["autoCostReferenceBandwidth"] = auto_cost_reference_bandwidth
+        __props__["autoCostReferenceBandwidthVariable"] = auto_cost_reference_bandwidth_variable
+        __props__["compatibleRfc1583"] = compatible_rfc1583
+        __props__["compatibleRfc1583Variable"] = compatible_rfc1583_variable
+        __props__["defaultInformationOriginate"] = default_information_originate
+        __props__["defaultInformationOriginateAlways"] = default_information_originate_always
+        __props__["defaultInformationOriginateAlwaysVariable"] = default_information_originate_always_variable
+        __props__["defaultInformationOriginateMetric"] = default_information_originate_metric
+        __props__["defaultInformationOriginateMetricType"] = default_information_originate_metric_type
+        __props__["defaultInformationOriginateMetricTypeVariable"] = default_information_originate_metric_type_variable
+        __props__["defaultInformationOriginateMetricVariable"] = default_information_originate_metric_variable
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["distanceExternal"] = distance_external
+        __props__["distanceExternalVariable"] = distance_external_variable
+        __props__["distanceInterArea"] = distance_inter_area
+        __props__["distanceInterAreaVariable"] = distance_inter_area_variable
+        __props__["distanceIntraArea"] = distance_intra_area
+        __props__["distanceIntraAreaVariable"] = distance_intra_area_variable
+        __props__["maxMetricRouterLsas"] = max_metric_router_lsas
+        __props__["name"] = name
+        __props__["redistributes"] = redistributes
+        __props__["routePolicies"] = route_policies
+        __props__["routerId"] = router_id
+        __props__["routerIdVariable"] = router_id_variable
+        __props__["templateType"] = template_type
+        __props__["timersSpfDelay"] = timers_spf_delay
+        __props__["timersSpfDelayVariable"] = timers_spf_delay_variable
+        __props__["timersSpfInitialHold"] = timers_spf_initial_hold
+        __props__["timersSpfInitialHoldVariable"] = timers_spf_initial_hold_variable
+        __props__["timersSpfMaxHold"] = timers_spf_max_hold
+        __props__["timersSpfMaxHoldVariable"] = timers_spf_max_hold_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/ciscoOspfFeatureTemplate:CiscoOspfFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def areas(self) -> pulumi.Output[Optional[Sequence['outputs.CiscoOspfFeatureTemplateArea']]]:

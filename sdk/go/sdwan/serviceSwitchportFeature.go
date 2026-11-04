@@ -187,6 +187,12 @@ func (ServiceSwitchportFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceSwitchportFeatureState)(nil)).Elem()
 }
 
+// ServiceSwitchportFeatureExists checks whether an existing ServiceSwitchportFeature resource with the given ID exists.
+func ServiceSwitchportFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceSwitchportFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceSwitchportFeature:ServiceSwitchportFeature", id, state, "", opts...)
+}
+
 type serviceSwitchportFeatureArgs struct {
 	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
 	//   - Range: `0`-`1000000`

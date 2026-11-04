@@ -358,6 +358,12 @@ func (OtherTrustsecFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*otherTrustsecFeatureState)(nil)).Elem()
 }
 
+// OtherTrustsecFeatureExists checks whether an existing OtherTrustsecFeature resource with the given ID exists.
+func OtherTrustsecFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *OtherTrustsecFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/otherTrustsecFeature:OtherTrustsecFeature", id, state, "", opts...)
+}
+
 type otherTrustsecFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

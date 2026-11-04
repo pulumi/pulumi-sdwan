@@ -892,6 +892,48 @@ class SystemMrfFeature(pulumi.CustomResource):
         __props__.__dict__["vrf_id_variable"] = vrf_id_variable
         return SystemMrfFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_management_region: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_management_region_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_migration_to_mrf: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            gateway_preference_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            gateway_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+            management_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+            management_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            migration_bgp_community: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            role: pulumi.Input[Optional[_builtins.str]] = None,
+            role_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_region_id: pulumi.Input[Optional[_builtins.int]] = None,
+            secondary_region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vrf_id: pulumi.Input[Optional[_builtins.int]] = None,
+            vrf_id_variable: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["enableManagementRegion"] = enable_management_region
+        __props__["enableManagementRegionVariable"] = enable_management_region_variable
+        __props__["enableMigrationToMrf"] = enable_migration_to_mrf
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["gatewayPreferenceVariable"] = gateway_preference_variable
+        __props__["gatewayPreferences"] = gateway_preferences
+        __props__["managementGateway"] = management_gateway
+        __props__["managementGatewayVariable"] = management_gateway_variable
+        __props__["migrationBgpCommunity"] = migration_bgp_community
+        __props__["name"] = name
+        __props__["role"] = role
+        __props__["roleVariable"] = role_variable
+        __props__["secondaryRegionId"] = secondary_region_id
+        __props__["secondaryRegionIdVariable"] = secondary_region_id_variable
+        __props__["version"] = version
+        __props__["vrfId"] = vrf_id
+        __props__["vrfIdVariable"] = vrf_id_variable
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/systemMrfFeature:SystemMrfFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

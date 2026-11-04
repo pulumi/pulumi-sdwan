@@ -407,6 +407,12 @@ func (ServiceRoutingOspfFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceRoutingOspfFeatureState)(nil)).Elem()
 }
 
+// ServiceRoutingOspfFeatureExists checks whether an existing ServiceRoutingOspfFeature resource with the given ID exists.
+func ServiceRoutingOspfFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceRoutingOspfFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceRoutingOspfFeature:ServiceRoutingOspfFeature", id, state, "", opts...)
+}
+
 type serviceRoutingOspfFeatureArgs struct {
 	// Configure OSPF area
 	Areas []ServiceRoutingOspfFeatureArea `pulumi:"areas"`

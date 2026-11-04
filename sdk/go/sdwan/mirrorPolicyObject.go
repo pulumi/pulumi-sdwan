@@ -123,6 +123,12 @@ func (MirrorPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*mirrorPolicyObjectState)(nil)).Elem()
 }
 
+// MirrorPolicyObjectExists checks whether an existing MirrorPolicyObject resource with the given ID exists.
+func MirrorPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *MirrorPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/mirrorPolicyObject:MirrorPolicyObject", id, state, "", opts...)
+}
+
 type mirrorPolicyObjectArgs struct {
 	// The name of the policy object
 	Name *string `pulumi:"name"`

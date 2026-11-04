@@ -1672,6 +1672,84 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return CiscoTrustsecFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            credentials_id: pulumi.Input[Optional[_builtins.str]] = None,
+            credentials_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            credentials_password: pulumi.Input[Optional[_builtins.str]] = None,
+            credentials_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_sgt: pulumi.Input[Optional[_builtins.int]] = None,
+            device_sgt_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            enable_enforcement: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_enforcement_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_sxp: pulumi.Input[Optional[_builtins.bool]] = None,
+            maximum_listener_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+            maximum_listener_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            minimum_listener_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+            minimum_listener_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            speaker_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+            speaker_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_connections: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoTrustsecFeatureTemplateSxpConnectionArgs', 'CiscoTrustsecFeatureTemplateSxpConnectionArgsDict', 'outputs.CiscoTrustsecFeatureTemplateSxpConnection']]]]] = None,
+            sxp_default_password: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_default_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_key_chain: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_key_chain_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_log_binding_changes: pulumi.Input[Optional[_builtins.bool]] = None,
+            sxp_log_binding_changes_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_node_id: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_node_id_type: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_node_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_reconciliation_period: pulumi.Input[Optional[_builtins.int]] = None,
+            sxp_reconciliation_period_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_retry_period: pulumi.Input[Optional[_builtins.int]] = None,
+            sxp_retry_period_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["credentialsId"] = credentials_id
+        __props__["credentialsIdVariable"] = credentials_id_variable
+        __props__["credentialsPassword"] = credentials_password
+        __props__["credentialsPasswordVariable"] = credentials_password_variable
+        __props__["description"] = description
+        __props__["deviceSgt"] = device_sgt
+        __props__["deviceSgtVariable"] = device_sgt_variable
+        __props__["deviceTypes"] = device_types
+        __props__["enableEnforcement"] = enable_enforcement
+        __props__["enableEnforcementVariable"] = enable_enforcement_variable
+        __props__["enableSxp"] = enable_sxp
+        __props__["maximumListenerHoldTime"] = maximum_listener_hold_time
+        __props__["maximumListenerHoldTimeVariable"] = maximum_listener_hold_time_variable
+        __props__["minimumListenerHoldTime"] = minimum_listener_hold_time
+        __props__["minimumListenerHoldTimeVariable"] = minimum_listener_hold_time_variable
+        __props__["name"] = name
+        __props__["speakerHoldTime"] = speaker_hold_time
+        __props__["speakerHoldTimeVariable"] = speaker_hold_time_variable
+        __props__["sxpConnections"] = sxp_connections
+        __props__["sxpDefaultPassword"] = sxp_default_password
+        __props__["sxpDefaultPasswordVariable"] = sxp_default_password_variable
+        __props__["sxpKeyChain"] = sxp_key_chain
+        __props__["sxpKeyChainVariable"] = sxp_key_chain_variable
+        __props__["sxpLogBindingChanges"] = sxp_log_binding_changes
+        __props__["sxpLogBindingChangesVariable"] = sxp_log_binding_changes_variable
+        __props__["sxpNodeId"] = sxp_node_id
+        __props__["sxpNodeIdType"] = sxp_node_id_type
+        __props__["sxpNodeIdVariable"] = sxp_node_id_variable
+        __props__["sxpReconciliationPeriod"] = sxp_reconciliation_period
+        __props__["sxpReconciliationPeriodVariable"] = sxp_reconciliation_period_variable
+        __props__["sxpRetryPeriod"] = sxp_retry_period
+        __props__["sxpRetryPeriodVariable"] = sxp_retry_period_variable
+        __props__["sxpSourceIp"] = sxp_source_ip
+        __props__["sxpSourceIpVariable"] = sxp_source_ip_variable
+        __props__["templateType"] = template_type
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/ciscoTrustsecFeatureTemplate:CiscoTrustsecFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="credentialsId")
     def credentials_id(self) -> pulumi.Output[Optional[_builtins.str]]:

@@ -444,6 +444,26 @@ class ZoneBasedFirewallPolicyDefinition(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return ZoneBasedFirewallPolicyDefinition(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            apply_zone_pairs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs', 'ZoneBasedFirewallPolicyDefinitionApplyZonePairArgsDict', 'outputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair']]]]] = None,
+            default_action: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneBasedFirewallPolicyDefinitionRuleArgs', 'ZoneBasedFirewallPolicyDefinitionRuleArgsDict', 'outputs.ZoneBasedFirewallPolicyDefinitionRule']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["applyZonePairs"] = apply_zone_pairs
+        __props__["defaultAction"] = default_action
+        __props__["description"] = description
+        __props__["mode"] = mode
+        __props__["name"] = name
+        __props__["rules"] = rules
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/zoneBasedFirewallPolicyDefinition:ZoneBasedFirewallPolicyDefinition', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="applyZonePairs")
     def apply_zone_pairs(self) -> pulumi.Output[Optional[Sequence['outputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair']]]:

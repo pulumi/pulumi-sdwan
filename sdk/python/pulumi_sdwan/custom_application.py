@@ -572,6 +572,32 @@ class CustomApplication(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return CustomApplication(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            app_name: pulumi.Input[Optional[_builtins.str]] = None,
+            application_family: pulumi.Input[Optional[_builtins.str]] = None,
+            application_group: pulumi.Input[Optional[_builtins.str]] = None,
+            business_relevance: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_type: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_value: pulumi.Input[Optional[_builtins.str]] = None,
+            l3l4s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CustomApplicationL3l4Args', 'CustomApplicationL3l4ArgsDict', 'outputs.CustomApplicationL3l4']]]]] = None,
+            server_names: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            traffic_class: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["appName"] = app_name
+        __props__["applicationFamily"] = application_family
+        __props__["applicationGroup"] = application_group
+        __props__["businessRelevance"] = business_relevance
+        __props__["endpointType"] = endpoint_type
+        __props__["endpointValue"] = endpoint_value
+        __props__["l3l4s"] = l3l4s
+        __props__["serverNames"] = server_names
+        __props__["trafficClass"] = traffic_class
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/customApplication:CustomApplication', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="appName")
     def app_name(self) -> pulumi.Output[_builtins.str]:

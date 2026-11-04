@@ -225,6 +225,12 @@ func (SseCiscoFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sseCiscoFeatureState)(nil)).Elem()
 }
 
+// SseCiscoFeatureExists checks whether an existing SseCiscoFeature resource with the given ID exists.
+func SseCiscoFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SseCiscoFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/sseCiscoFeature:SseCiscoFeature", id, state, "", opts...)
+}
+
 type sseCiscoFeatureArgs struct {
 	// Enable/disable Cisco SSE context sharing for sgt
 	//   - Default value: `false`

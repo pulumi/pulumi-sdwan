@@ -1842,6 +1842,12 @@ func (CiscoVpnInterfaceFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoVpnInterfaceFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoVpnInterfaceFeatureTemplateExists checks whether an existing CiscoVpnInterfaceFeatureTemplate resource with the given ID exists.
+func CiscoVpnInterfaceFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoVpnInterfaceFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoVpnInterfaceFeatureTemplate:CiscoVpnInterfaceFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoVpnInterfaceFeatureTemplateArgs struct {
 	// Apply ACL
 	AccessLists []CiscoVpnInterfaceFeatureTemplateAccessList `pulumi:"accessLists"`

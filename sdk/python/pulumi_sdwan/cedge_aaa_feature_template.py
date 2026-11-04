@@ -1537,6 +1537,74 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return CedgeAaaFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAccountingRuleArgs', 'CedgeAaaFeatureTemplateAccountingRuleArgsDict', 'outputs.CedgeAaaFeatureTemplateAccountingRule']]]]] = None,
+            authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
+            authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
+            authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAuthorizationRuleArgs', 'CedgeAaaFeatureTemplateAuthorizationRuleArgsDict', 'outputs.CedgeAaaFeatureTemplateAuthorizationRule']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dot1x_accounting: pulumi.Input[Optional[_builtins.bool]] = None,
+            dot1x_accounting_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            dot1x_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+            dot1x_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_clients: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusClientArgs', 'CedgeAaaFeatureTemplateRadiusClientArgsDict', 'outputs.CedgeAaaFeatureTemplateRadiusClient']]]]] = None,
+            radius_dynamic_author_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_dynamic_author_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_dynamic_author_domain_stripping: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_dynamic_author_domain_stripping_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_dynamic_author_port: pulumi.Input[Optional[_builtins.int]] = None,
+            radius_dynamic_author_port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_dynamic_author_server_key: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_dynamic_author_server_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_server_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusServerGroupArgs', 'CedgeAaaFeatureTemplateRadiusServerGroupArgsDict', 'outputs.CedgeAaaFeatureTemplateRadiusServerGroup']]]]] = None,
+            radius_trustsec_cts_authorization_list: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_trustsec_cts_authorization_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_trustsec_group: pulumi.Input[Optional[_builtins.str]] = None,
+            server_groups_priority_order: pulumi.Input[Optional[_builtins.str]] = None,
+            tacacs_server_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateTacacsServerGroupArgs', 'CedgeAaaFeatureTemplateTacacsServerGroupArgsDict', 'outputs.CedgeAaaFeatureTemplateTacacsServerGroup']]]]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateUserArgs', 'CedgeAaaFeatureTemplateUserArgsDict', 'outputs.CedgeAaaFeatureTemplateUser']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accountingRules"] = accounting_rules
+        __props__["authorizationConfigCommands"] = authorization_config_commands
+        __props__["authorizationConfigCommandsVariable"] = authorization_config_commands_variable
+        __props__["authorizationConsole"] = authorization_console
+        __props__["authorizationConsoleVariable"] = authorization_console_variable
+        __props__["authorizationRules"] = authorization_rules
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["dot1xAccounting"] = dot1x_accounting
+        __props__["dot1xAccountingVariable"] = dot1x_accounting_variable
+        __props__["dot1xAuthentication"] = dot1x_authentication
+        __props__["dot1xAuthenticationVariable"] = dot1x_authentication_variable
+        __props__["name"] = name
+        __props__["radiusClients"] = radius_clients
+        __props__["radiusDynamicAuthorAuthenticationType"] = radius_dynamic_author_authentication_type
+        __props__["radiusDynamicAuthorAuthenticationTypeVariable"] = radius_dynamic_author_authentication_type_variable
+        __props__["radiusDynamicAuthorDomainStripping"] = radius_dynamic_author_domain_stripping
+        __props__["radiusDynamicAuthorDomainStrippingVariable"] = radius_dynamic_author_domain_stripping_variable
+        __props__["radiusDynamicAuthorPort"] = radius_dynamic_author_port
+        __props__["radiusDynamicAuthorPortVariable"] = radius_dynamic_author_port_variable
+        __props__["radiusDynamicAuthorServerKey"] = radius_dynamic_author_server_key
+        __props__["radiusDynamicAuthorServerKeyVariable"] = radius_dynamic_author_server_key_variable
+        __props__["radiusServerGroups"] = radius_server_groups
+        __props__["radiusTrustsecCtsAuthorizationList"] = radius_trustsec_cts_authorization_list
+        __props__["radiusTrustsecCtsAuthorizationListVariable"] = radius_trustsec_cts_authorization_list_variable
+        __props__["radiusTrustsecGroup"] = radius_trustsec_group
+        __props__["serverGroupsPriorityOrder"] = server_groups_priority_order
+        __props__["tacacsServerGroups"] = tacacs_server_groups
+        __props__["templateType"] = template_type
+        __props__["users"] = users
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/cedgeAaaFeatureTemplate:CedgeAaaFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accountingRules")
     def accounting_rules(self) -> pulumi.Output[Optional[Sequence['outputs.CedgeAaaFeatureTemplateAccountingRule']]]:

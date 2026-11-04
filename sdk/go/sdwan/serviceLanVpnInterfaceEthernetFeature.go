@@ -1005,6 +1005,12 @@ func (ServiceLanVpnInterfaceEthernetFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceLanVpnInterfaceEthernetFeatureState)(nil)).Elem()
 }
 
+// ServiceLanVpnInterfaceEthernetFeatureExists checks whether an existing ServiceLanVpnInterfaceEthernetFeature resource with the given ID exists.
+func ServiceLanVpnInterfaceEthernetFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceLanVpnInterfaceEthernetFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceLanVpnInterfaceEthernetFeature:ServiceLanVpnInterfaceEthernetFeature", id, state, "", opts...)
+}
+
 type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	AclIpv4EgressPolicyId  *string `pulumi:"aclIpv4EgressPolicyId"`
 	AclIpv4IngressPolicyId *string `pulumi:"aclIpv4IngressPolicyId"`
