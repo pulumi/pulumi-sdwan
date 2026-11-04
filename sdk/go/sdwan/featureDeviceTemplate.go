@@ -168,6 +168,12 @@ func (FeatureDeviceTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*featureDeviceTemplateState)(nil)).Elem()
 }
 
+// FeatureDeviceTemplateExists checks whether an existing FeatureDeviceTemplate resource with the given ID exists.
+func FeatureDeviceTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *FeatureDeviceTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/featureDeviceTemplate:FeatureDeviceTemplate", id, state, "", opts...)
+}
+
 type featureDeviceTemplateArgs struct {
 	// The description of the device template
 	Description string `pulumi:"description"`

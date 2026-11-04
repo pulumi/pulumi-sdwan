@@ -108,6 +108,12 @@ func (CliFeatureProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cliFeatureProfileState)(nil)).Elem()
 }
 
+// CliFeatureProfileExists checks whether an existing CliFeatureProfile resource with the given ID exists.
+func CliFeatureProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CliFeatureProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/cliFeatureProfile:CliFeatureProfile", id, state, "", opts...)
+}
+
 type cliFeatureProfileArgs struct {
 	// Description
 	Description string `pulumi:"description"`

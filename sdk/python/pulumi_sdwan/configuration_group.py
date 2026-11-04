@@ -492,6 +492,28 @@ class ConfigurationGroup(pulumi.CustomResource):
         __props__.__dict__["topology_site_devices"] = topology_site_devices
         return ConfigurationGroup(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict', 'outputs.ConfigurationGroupDevice']]]]] = None,
+            feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            solution: pulumi.Input[Optional[_builtins.str]] = None,
+            topology_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict', 'outputs.ConfigurationGroupTopologyDevice']]]]] = None,
+            topology_site_devices: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["devices"] = devices
+        __props__["featureProfileIds"] = feature_profile_ids
+        __props__["featureVersions"] = feature_versions
+        __props__["name"] = name
+        __props__["solution"] = solution
+        __props__["topologyDevices"] = topology_devices
+        __props__["topologySiteDevices"] = topology_site_devices
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/configurationGroup:ConfigurationGroup', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[_builtins.str]:

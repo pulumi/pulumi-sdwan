@@ -79,6 +79,12 @@ func (ActivateTopologyGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*activateTopologyGroupState)(nil)).Elem()
 }
 
+// ActivateTopologyGroupExists checks whether an existing ActivateTopologyGroup resource with the given ID exists.
+func ActivateTopologyGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ActivateTopologyGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/activateTopologyGroup:ActivateTopologyGroup", id, state, "", opts...)
+}
+
 type activateTopologyGroupArgs struct {
 	// The ID of the topology group to activate
 	ActivateTopologyGroupId string `pulumi:"activateTopologyGroupId"`

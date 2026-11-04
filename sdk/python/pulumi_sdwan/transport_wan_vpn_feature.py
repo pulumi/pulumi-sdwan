@@ -990,6 +990,52 @@ class TransportWanVpnFeature(pulumi.CustomResource):
         __props__.__dict__["vpn"] = vpn
         return TransportWanVpnFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            enhance_ecmp_keying: pulumi.Input[Optional[_builtins.bool]] = None,
+            enhance_ecmp_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_static_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnFeatureIpv4StaticRouteArgs', 'TransportWanVpnFeatureIpv4StaticRouteArgsDict', 'outputs.TransportWanVpnFeatureIpv4StaticRoute']]]]] = None,
+            ipv6_static_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnFeatureIpv6StaticRouteArgs', 'TransportWanVpnFeatureIpv6StaticRouteArgsDict', 'outputs.TransportWanVpnFeatureIpv6StaticRoute']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            nat64_v4_pools: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnFeatureNat64V4PoolArgs', 'TransportWanVpnFeatureNat64V4PoolArgsDict', 'outputs.TransportWanVpnFeatureNat64V4Pool']]]]] = None,
+            new_host_mappings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnFeatureNewHostMappingArgs', 'TransportWanVpnFeatureNewHostMappingArgsDict', 'outputs.TransportWanVpnFeatureNewHostMapping']]]]] = None,
+            primary_dns_address_ipv4: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_dns_address_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_dns_address_ipv6: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_dns_address_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_dns_address_ipv4: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_dns_address_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_dns_address_ipv6: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_dns_address_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            services: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportWanVpnFeatureServiceArgs', 'TransportWanVpnFeatureServiceArgsDict', 'outputs.TransportWanVpnFeatureService']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vpn: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["enhanceEcmpKeying"] = enhance_ecmp_keying
+        __props__["enhanceEcmpKeyingVariable"] = enhance_ecmp_keying_variable
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["ipv4StaticRoutes"] = ipv4_static_routes
+        __props__["ipv6StaticRoutes"] = ipv6_static_routes
+        __props__["name"] = name
+        __props__["nat64V4Pools"] = nat64_v4_pools
+        __props__["newHostMappings"] = new_host_mappings
+        __props__["primaryDnsAddressIpv4"] = primary_dns_address_ipv4
+        __props__["primaryDnsAddressIpv4Variable"] = primary_dns_address_ipv4_variable
+        __props__["primaryDnsAddressIpv6"] = primary_dns_address_ipv6
+        __props__["primaryDnsAddressIpv6Variable"] = primary_dns_address_ipv6_variable
+        __props__["secondaryDnsAddressIpv4"] = secondary_dns_address_ipv4
+        __props__["secondaryDnsAddressIpv4Variable"] = secondary_dns_address_ipv4_variable
+        __props__["secondaryDnsAddressIpv6"] = secondary_dns_address_ipv6
+        __props__["secondaryDnsAddressIpv6Variable"] = secondary_dns_address_ipv6_variable
+        __props__["services"] = services
+        __props__["version"] = version
+        __props__["vpn"] = vpn
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/transportWanVpnFeature:TransportWanVpnFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

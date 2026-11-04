@@ -292,6 +292,12 @@ func (EigrpFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*eigrpFeatureTemplateState)(nil)).Elem()
 }
 
+// EigrpFeatureTemplateExists checks whether an existing EigrpFeatureTemplate resource with the given ID exists.
+func EigrpFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *EigrpFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/eigrpFeatureTemplate:EigrpFeatureTemplate", id, state, "", opts...)
+}
+
 type eigrpFeatureTemplateArgs struct {
 	// Set EIGRP address family
 	AddressFamilies []EigrpFeatureTemplateAddressFamily `pulumi:"addressFamilies"`

@@ -749,6 +749,42 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return CiscoNtpFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateAuthenticationKeyArgs', 'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict', 'outputs.CiscoNtpFeatureTemplateAuthenticationKey']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            master: pulumi.Input[Optional[_builtins.bool]] = None,
+            master_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            master_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            master_stratum: pulumi.Input[Optional[_builtins.int]] = None,
+            master_stratum_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            master_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateServerArgs', 'CiscoNtpFeatureTemplateServerArgsDict', 'outputs.CiscoNtpFeatureTemplateServer']]]]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            trusted_keys: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+            trusted_keys_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["authenticationKeys"] = authentication_keys
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["master"] = master
+        __props__["masterSourceInterface"] = master_source_interface
+        __props__["masterSourceInterfaceVariable"] = master_source_interface_variable
+        __props__["masterStratum"] = master_stratum
+        __props__["masterStratumVariable"] = master_stratum_variable
+        __props__["masterVariable"] = master_variable
+        __props__["name"] = name
+        __props__["servers"] = servers
+        __props__["templateType"] = template_type
+        __props__["trustedKeys"] = trusted_keys
+        __props__["trustedKeysVariable"] = trusted_keys_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/ciscoNtpFeatureTemplate:CiscoNtpFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="authenticationKeys")
     def authentication_keys(self) -> pulumi.Output[Optional[Sequence['outputs.CiscoNtpFeatureTemplateAuthenticationKey']]]:

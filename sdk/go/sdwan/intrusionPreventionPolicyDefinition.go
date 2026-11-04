@@ -190,6 +190,12 @@ func (IntrusionPreventionPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*intrusionPreventionPolicyDefinitionState)(nil)).Elem()
 }
 
+// IntrusionPreventionPolicyDefinitionExists checks whether an existing IntrusionPreventionPolicyDefinition resource with the given ID exists.
+func IntrusionPreventionPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *IntrusionPreventionPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/intrusionPreventionPolicyDefinition:IntrusionPreventionPolicyDefinition", id, state, "", opts...)
+}
+
 type intrusionPreventionPolicyDefinitionArgs struct {
 	// Custom signature
 	CustomSignature *bool `pulumi:"customSignature"`

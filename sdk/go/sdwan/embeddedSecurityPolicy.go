@@ -265,6 +265,12 @@ func (EmbeddedSecurityPolicyState) ElementType() reflect.Type {
 	return reflect.TypeOf((*embeddedSecurityPolicyState)(nil)).Elem()
 }
 
+// EmbeddedSecurityPolicyExists checks whether an existing EmbeddedSecurityPolicy resource with the given ID exists.
+func EmbeddedSecurityPolicyExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *EmbeddedSecurityPolicyState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/embeddedSecurityPolicy:EmbeddedSecurityPolicy", id, state, "", opts...)
+}
+
 type embeddedSecurityPolicyArgs struct {
 	Assemblies []EmbeddedSecurityPolicyAssembly `pulumi:"assemblies"`
 	// Setting can be string 'on' or missing for off

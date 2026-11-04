@@ -186,6 +186,12 @@ func (SystemBfdFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemBfdFeatureState)(nil)).Elem()
 }
 
+// SystemBfdFeatureExists checks whether an existing SystemBfdFeature resource with the given ID exists.
+func SystemBfdFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemBfdFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemBfdFeature:SystemBfdFeature", id, state, "", opts...)
+}
+
 type systemBfdFeatureArgs struct {
 	// Set color that identifies the WAN transport tunnel
 	Colors []SystemBfdFeatureColor `pulumi:"colors"`

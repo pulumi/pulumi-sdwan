@@ -730,6 +730,40 @@ class SystemNtpFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return SystemNtpFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict', 'outputs.SystemNtpFeatureAuthenticationKey']]]]] = None,
+            authoritative_ntp_server: pulumi.Input[Optional[_builtins.bool]] = None,
+            authoritative_ntp_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict', 'outputs.SystemNtpFeatureServer']]]]] = None,
+            source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            stratum: pulumi.Input[Optional[_builtins.int]] = None,
+            stratum_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            trusted_keys: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+            trusted_keys_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["authenticationKeys"] = authentication_keys
+        __props__["authoritativeNtpServer"] = authoritative_ntp_server
+        __props__["authoritativeNtpServerVariable"] = authoritative_ntp_server_variable
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["name"] = name
+        __props__["servers"] = servers
+        __props__["sourceInterface"] = source_interface
+        __props__["sourceInterfaceVariable"] = source_interface_variable
+        __props__["stratum"] = stratum
+        __props__["stratumVariable"] = stratum_variable
+        __props__["trustedKeys"] = trusted_keys
+        __props__["trustedKeysVariable"] = trusted_keys_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/systemNtpFeature:SystemNtpFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="authenticationKeys")
     def authentication_keys(self) -> pulumi.Output[Optional[Sequence['outputs.SystemNtpFeatureAuthenticationKey']]]:

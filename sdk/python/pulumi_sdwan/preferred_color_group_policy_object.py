@@ -466,6 +466,28 @@ class PreferredColorGroupPolicyObject(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return PreferredColorGroupPolicyObject(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+            tertiary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+            tertiary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["name"] = name
+        __props__["primaryColorPreference"] = primary_color_preference
+        __props__["primaryPathPreference"] = primary_path_preference
+        __props__["secondaryColorPreference"] = secondary_color_preference
+        __props__["secondaryPathPreference"] = secondary_path_preference
+        __props__["tertiaryColorPreference"] = tertiary_color_preference
+        __props__["tertiaryPathPreference"] = tertiary_path_preference
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/preferredColorGroupPolicyObject:PreferredColorGroupPolicyObject', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:

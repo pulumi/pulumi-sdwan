@@ -153,6 +153,12 @@ func (TransportTrackerGroupFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*transportTrackerGroupFeatureState)(nil)).Elem()
 }
 
+// TransportTrackerGroupFeatureExists checks whether an existing TransportTrackerGroupFeature resource with the given ID exists.
+func TransportTrackerGroupFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportTrackerGroupFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportTrackerGroupFeature:TransportTrackerGroupFeature", id, state, "", opts...)
+}
+
 type transportTrackerGroupFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

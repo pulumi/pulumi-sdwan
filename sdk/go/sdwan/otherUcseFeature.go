@@ -250,6 +250,12 @@ func (OtherUcseFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*otherUcseFeatureState)(nil)).Elem()
 }
 
+// OtherUcseFeatureExists checks whether an existing OtherUcseFeature resource with the given ID exists.
+func OtherUcseFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *OtherUcseFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/otherUcseFeature:OtherUcseFeature", id, state, "", opts...)
+}
+
 type otherUcseFeatureArgs struct {
 	// Dedicated
 	//   - Default value: `true`

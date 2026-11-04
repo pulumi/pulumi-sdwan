@@ -139,6 +139,12 @@ func (ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureState) Element
 	return reflect.TypeOf((*serviceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureState)(nil)).Elem()
 }
 
+// ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureExists checks whether an existing ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature resource with the given ID exists.
+func ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature", id, state, "", opts...)
+}
+
 type serviceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs struct {
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`

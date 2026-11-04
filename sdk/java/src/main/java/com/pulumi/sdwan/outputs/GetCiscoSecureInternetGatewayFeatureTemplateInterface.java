@@ -108,7 +108,7 @@ public final class GetCiscoSecureInternetGatewayFeatureTemplateInterface {
      */
     private String ikePreSharedKeyVariable;
     /**
-     * @return IKE rekey interval \n\n seconds
+     * @return IKE rekey interval &#92;n&#92;n seconds
      * 
      */
     private Integer ikeRekeyInterval;
@@ -118,7 +118,7 @@ public final class GetCiscoSecureInternetGatewayFeatureTemplateInterface {
      */
     private String ikeRekeyIntervalVariable;
     /**
-     * @return IKE Version \n\n
+     * @return IKE Version &#92;n&#92;n
      * 
      */
     private Integer ikeVersion;
@@ -153,7 +153,7 @@ public final class GetCiscoSecureInternetGatewayFeatureTemplateInterface {
      */
     private String ipsecPerfectForwardSecrecyVariable;
     /**
-     * @return IPsec rekey interval \n\n seconds
+     * @return IPsec rekey interval &#92;n&#92;n seconds
      * 
      */
     private Integer ipsecRekeyInterval;
@@ -183,7 +183,7 @@ public final class GetCiscoSecureInternetGatewayFeatureTemplateInterface {
      */
     private String ipv4AddressVariable;
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return Interface MTU &#92;n&#92;n, in bytes
      * 
      */
     private Integer mtu;
@@ -263,7 +263,7 @@ public final class GetCiscoSecureInternetGatewayFeatureTemplateInterface {
      */
     private String tunnelPublicIpVariable;
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     private String tunnelRouteVia;
@@ -278,7 +278,7 @@ public final class GetCiscoSecureInternetGatewayFeatureTemplateInterface {
      */
     private String tunnelSource;
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     private String tunnelSourceInterface;
@@ -428,7 +428,7 @@ public final class GetCiscoSecureInternetGatewayFeatureTemplateInterface {
         return this.ikePreSharedKeyVariable;
     }
     /**
-     * @return IKE rekey interval \n\n seconds
+     * @return IKE rekey interval &#92;n&#92;n seconds
      * 
      */
     public Integer ikeRekeyInterval() {
@@ -442,7 +442,7 @@ public final class GetCiscoSecureInternetGatewayFeatureTemplateInterface {
         return this.ikeRekeyIntervalVariable;
     }
     /**
-     * @return IKE Version \n\n
+     * @return IKE Version &#92;n&#92;n
      * 
      */
     public Integer ikeVersion() {
@@ -491,7 +491,7 @@ public final class GetCiscoSecureInternetGatewayFeatureTemplateInterface {
         return this.ipsecPerfectForwardSecrecyVariable;
     }
     /**
-     * @return IPsec rekey interval \n\n seconds
+     * @return IPsec rekey interval &#92;n&#92;n seconds
      * 
      */
     public Integer ipsecRekeyInterval() {
@@ -533,7 +533,7 @@ public final class GetCiscoSecureInternetGatewayFeatureTemplateInterface {
         return this.ipv4AddressVariable;
     }
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return Interface MTU &#92;n&#92;n, in bytes
      * 
      */
     public Integer mtu() {
@@ -645,7 +645,7 @@ public final class GetCiscoSecureInternetGatewayFeatureTemplateInterface {
         return this.tunnelPublicIpVariable;
     }
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     public String tunnelRouteVia() {
@@ -666,7 +666,7 @@ public final class GetCiscoSecureInternetGatewayFeatureTemplateInterface {
         return this.tunnelSource;
     }
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     public String tunnelSourceInterface() {

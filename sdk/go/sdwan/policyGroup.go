@@ -147,6 +147,12 @@ func (PolicyGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyGroupState)(nil)).Elem()
 }
 
+// PolicyGroupExists checks whether an existing PolicyGroup resource with the given ID exists.
+func PolicyGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyGroup:PolicyGroup", id, state, "", opts...)
+}
+
 type policyGroupArgs struct {
 	// Description
 	Description string `pulumi:"description"`

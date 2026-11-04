@@ -116,6 +116,12 @@ func (ClassMapPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*classMapPolicyObjectState)(nil)).Elem()
 }
 
+// ClassMapPolicyObjectExists checks whether an existing ClassMapPolicyObject resource with the given ID exists.
+func ClassMapPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ClassMapPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/classMapPolicyObject:ClassMapPolicyObject", id, state, "", opts...)
+}
+
 type classMapPolicyObjectArgs struct {
 	// The name of the policy object
 	Name *string `pulumi:"name"`

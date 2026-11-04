@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class GetCiscoTrustsecFeatureTemplateSxpConnection {
     /**
-     * @return Configure Connection Maximum hold time \n\n
+     * @return Configure Connection Maximum hold time &#92;n&#92;n
      * 
      */
     private Integer maximumHoldTime;
@@ -23,7 +23,7 @@ public final class GetCiscoTrustsecFeatureTemplateSxpConnection {
      */
     private String maximumHoldTimeVariable;
     /**
-     * @return Configure Connection Minimum hold time \n\n
+     * @return Configure Connection Minimum hold time &#92;n&#92;n
      * 
      */
     private Integer minimumHoldTime;
@@ -38,7 +38,7 @@ public final class GetCiscoTrustsecFeatureTemplateSxpConnection {
      */
     private String mode;
     /**
-     * @return Define Role of a device \n\n
+     * @return Define Role of a device &#92;n&#92;n
      * 
      */
     private String modeType;
@@ -80,7 +80,7 @@ public final class GetCiscoTrustsecFeatureTemplateSxpConnection {
 
     private GetCiscoTrustsecFeatureTemplateSxpConnection() {}
     /**
-     * @return Configure Connection Maximum hold time \n\n
+     * @return Configure Connection Maximum hold time &#92;n&#92;n
      * 
      */
     public Integer maximumHoldTime() {
@@ -94,7 +94,7 @@ public final class GetCiscoTrustsecFeatureTemplateSxpConnection {
         return this.maximumHoldTimeVariable;
     }
     /**
-     * @return Configure Connection Minimum hold time \n\n
+     * @return Configure Connection Minimum hold time &#92;n&#92;n
      * 
      */
     public Integer minimumHoldTime() {
@@ -115,7 +115,7 @@ public final class GetCiscoTrustsecFeatureTemplateSxpConnection {
         return this.mode;
     }
     /**
-     * @return Define Role of a device \n\n
+     * @return Define Role of a device &#92;n&#92;n
      * 
      */
     public String modeType() {

@@ -117,6 +117,12 @@ func (ZoneListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*zoneListPolicyObjectState)(nil)).Elem()
 }
 
+// ZoneListPolicyObjectExists checks whether an existing ZoneListPolicyObject resource with the given ID exists.
+func ZoneListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ZoneListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/zoneListPolicyObject:ZoneListPolicyObject", id, state, "", opts...)
+}
+
 type zoneListPolicyObjectArgs struct {
 	// List of entries
 	Entries []ZoneListPolicyObjectEntry `pulumi:"entries"`

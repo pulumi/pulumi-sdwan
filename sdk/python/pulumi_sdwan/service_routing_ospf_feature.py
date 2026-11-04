@@ -1619,6 +1619,78 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return ServiceRoutingOspfFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureAreaArgs', 'ServiceRoutingOspfFeatureAreaArgsDict', 'outputs.ServiceRoutingOspfFeatureArea']]]]] = None,
+            default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+            default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+            default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+            default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+            default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRedistributeArgs', 'ServiceRoutingOspfFeatureRedistributeArgsDict', 'outputs.ServiceRoutingOspfFeatureRedistribute']]]]] = None,
+            reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+            reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
+            rfc1583_compatible_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            router_id: pulumi.Input[Optional[_builtins.str]] = None,
+            router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingOspfFeatureRouterLsaArgs', 'ServiceRoutingOspfFeatureRouterLsaArgsDict', 'outputs.ServiceRoutingOspfFeatureRouterLsa']]]]] = None,
+            spf_calculation_delay: pulumi.Input[Optional[_builtins.int]] = None,
+            spf_calculation_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            spf_initial_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+            spf_initial_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            spf_maximum_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+            spf_maximum_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["areas"] = areas
+        __props__["defaultInformationOriginate"] = default_information_originate
+        __props__["defaultInformationOriginateAlways"] = default_information_originate_always
+        __props__["defaultInformationOriginateAlwaysVariable"] = default_information_originate_always_variable
+        __props__["defaultInformationOriginateMetric"] = default_information_originate_metric
+        __props__["defaultInformationOriginateMetricType"] = default_information_originate_metric_type
+        __props__["defaultInformationOriginateMetricTypeVariable"] = default_information_originate_metric_type_variable
+        __props__["defaultInformationOriginateMetricVariable"] = default_information_originate_metric_variable
+        __props__["description"] = description
+        __props__["distanceExternal"] = distance_external
+        __props__["distanceExternalVariable"] = distance_external_variable
+        __props__["distanceInterArea"] = distance_inter_area
+        __props__["distanceInterAreaVariable"] = distance_inter_area_variable
+        __props__["distanceIntraArea"] = distance_intra_area
+        __props__["distanceIntraAreaVariable"] = distance_intra_area_variable
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["name"] = name
+        __props__["redistributes"] = redistributes
+        __props__["referenceBandwidth"] = reference_bandwidth
+        __props__["referenceBandwidthVariable"] = reference_bandwidth_variable
+        __props__["rfc1583Compatible"] = rfc1583_compatible
+        __props__["rfc1583CompatibleVariable"] = rfc1583_compatible_variable
+        __props__["routePolicyId"] = route_policy_id
+        __props__["routerId"] = router_id
+        __props__["routerIdVariable"] = router_id_variable
+        __props__["routerLsas"] = router_lsas
+        __props__["spfCalculationDelay"] = spf_calculation_delay
+        __props__["spfCalculationDelayVariable"] = spf_calculation_delay_variable
+        __props__["spfInitialHoldTime"] = spf_initial_hold_time
+        __props__["spfInitialHoldTimeVariable"] = spf_initial_hold_time_variable
+        __props__["spfMaximumHoldTime"] = spf_maximum_hold_time
+        __props__["spfMaximumHoldTimeVariable"] = spf_maximum_hold_time_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/serviceRoutingOspfFeature:ServiceRoutingOspfFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def areas(self) -> pulumi.Output[Optional[Sequence['outputs.ServiceRoutingOspfFeatureArea']]]:

@@ -1367,6 +1367,12 @@ func (VpnInterfaceDslPppoaFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*vpnInterfaceDslPppoaFeatureTemplateState)(nil)).Elem()
 }
 
+// VpnInterfaceDslPppoaFeatureTemplateExists checks whether an existing VpnInterfaceDslPppoaFeatureTemplate resource with the given ID exists.
+func VpnInterfaceDslPppoaFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *VpnInterfaceDslPppoaFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/vpnInterfaceDslPppoaFeatureTemplate:VpnInterfaceDslPppoaFeatureTemplate", id, state, "", opts...)
+}
+
 type vpnInterfaceDslPppoaFeatureTemplateArgs struct {
 	// Apply ACL
 	AccessLists []VpnInterfaceDslPppoaFeatureTemplateAccessList `pulumi:"accessLists"`

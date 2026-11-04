@@ -1082,6 +1082,12 @@ func (VpnInterfaceT1E1SerialFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*vpnInterfaceT1E1SerialFeatureTemplateState)(nil)).Elem()
 }
 
+// VpnInterfaceT1E1SerialFeatureTemplateExists checks whether an existing VpnInterfaceT1E1SerialFeatureTemplate resource with the given ID exists.
+func VpnInterfaceT1E1SerialFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *VpnInterfaceT1E1SerialFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/vpnInterfaceT1E1SerialFeatureTemplate:VpnInterfaceT1E1SerialFeatureTemplate", id, state, "", opts...)
+}
+
 type vpnInterfaceT1E1SerialFeatureTemplateArgs struct {
 	// Link autonegotiation
 	//   - Default value: `true`

@@ -108,6 +108,12 @@ func (SigSecurityFeatureProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sigSecurityFeatureProfileState)(nil)).Elem()
 }
 
+// SigSecurityFeatureProfileExists checks whether an existing SigSecurityFeatureProfile resource with the given ID exists.
+func SigSecurityFeatureProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SigSecurityFeatureProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/sigSecurityFeatureProfile:SigSecurityFeatureProfile", id, state, "", opts...)
+}
+
 type sigSecurityFeatureProfileArgs struct {
 	// Description
 	Description string `pulumi:"description"`

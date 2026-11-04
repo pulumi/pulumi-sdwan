@@ -64,7 +64,7 @@ public final class GetCiscoSystemFeatureTemplateTracker {
      */
     private String endpointIpVariable;
     /**
-     * @return Probe interval \n\n seconds
+     * @return Probe interval &#92;n&#92;n seconds
      * 
      */
     private Integer interval;
@@ -74,7 +74,7 @@ public final class GetCiscoSystemFeatureTemplateTracker {
      */
     private String intervalVariable;
     /**
-     * @return Probe failure multiplier \n\n failed attempts
+     * @return Probe failure multiplier &#92;n&#92;n failed attempts
      * 
      */
     private Integer multiplier;
@@ -99,7 +99,7 @@ public final class GetCiscoSystemFeatureTemplateTracker {
      */
     private Boolean optional;
     /**
-     * @return Probe Timeout threshold \n\n milliseconds
+     * @return Probe Timeout threshold &#92;n&#92;n milliseconds
      * 
      */
     private Integer threshold;
@@ -191,7 +191,7 @@ public final class GetCiscoSystemFeatureTemplateTracker {
         return this.endpointIpVariable;
     }
     /**
-     * @return Probe interval \n\n seconds
+     * @return Probe interval &#92;n&#92;n seconds
      * 
      */
     public Integer interval() {
@@ -205,7 +205,7 @@ public final class GetCiscoSystemFeatureTemplateTracker {
         return this.intervalVariable;
     }
     /**
-     * @return Probe failure multiplier \n\n failed attempts
+     * @return Probe failure multiplier &#92;n&#92;n failed attempts
      * 
      */
     public Integer multiplier() {
@@ -240,7 +240,7 @@ public final class GetCiscoSystemFeatureTemplateTracker {
         return this.optional;
     }
     /**
-     * @return Probe Timeout threshold \n\n milliseconds
+     * @return Probe Timeout threshold &#92;n&#92;n milliseconds
      * 
      */
     public Integer threshold() {

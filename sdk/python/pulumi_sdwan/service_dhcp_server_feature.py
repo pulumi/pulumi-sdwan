@@ -1216,6 +1216,64 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return ServiceDhcpServerFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+            default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_ha_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+            dhcp_ha_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            domain_name: pulumi.Input[Optional[_builtins.str]] = None,
+            domain_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            exclude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            excludes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+            interface_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            lease_time: pulumi.Input[Optional[_builtins.int]] = None,
+            lease_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_address: pulumi.Input[Optional[_builtins.str]] = None,
+            network_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            option_codes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict', 'outputs.ServiceDhcpServerFeatureOptionCode']]]]] = None,
+            static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict', 'outputs.ServiceDhcpServerFeatureStaticLease']]]]] = None,
+            subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+            subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tftp_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["defaultGateway"] = default_gateway
+        __props__["defaultGatewayVariable"] = default_gateway_variable
+        __props__["description"] = description
+        __props__["dhcpHaEnable"] = dhcp_ha_enable
+        __props__["dhcpHaEnableVariable"] = dhcp_ha_enable_variable
+        __props__["dnsServers"] = dns_servers
+        __props__["dnsServersVariable"] = dns_servers_variable
+        __props__["domainName"] = domain_name
+        __props__["domainNameVariable"] = domain_name_variable
+        __props__["excludeVariable"] = exclude_variable
+        __props__["excludes"] = excludes
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["interfaceMtu"] = interface_mtu
+        __props__["interfaceMtuVariable"] = interface_mtu_variable
+        __props__["leaseTime"] = lease_time
+        __props__["leaseTimeVariable"] = lease_time_variable
+        __props__["name"] = name
+        __props__["networkAddress"] = network_address
+        __props__["networkAddressVariable"] = network_address_variable
+        __props__["optionCodes"] = option_codes
+        __props__["staticLeases"] = static_leases
+        __props__["subnetMask"] = subnet_mask
+        __props__["subnetMaskVariable"] = subnet_mask_variable
+        __props__["tftpServers"] = tftp_servers
+        __props__["tftpServersVariable"] = tftp_servers_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="defaultGateway")
     def default_gateway(self) -> pulumi.Output[Optional[_builtins.str]]:

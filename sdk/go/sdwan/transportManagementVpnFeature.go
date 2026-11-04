@@ -236,6 +236,12 @@ func (TransportManagementVpnFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*transportManagementVpnFeatureState)(nil)).Elem()
 }
 
+// TransportManagementVpnFeatureExists checks whether an existing TransportManagementVpnFeature resource with the given ID exists.
+func TransportManagementVpnFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportManagementVpnFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportManagementVpnFeature:TransportManagementVpnFeature", id, state, "", opts...)
+}
+
 type transportManagementVpnFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

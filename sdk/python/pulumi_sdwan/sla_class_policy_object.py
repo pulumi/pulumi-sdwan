@@ -602,6 +602,34 @@ class SlaClassPolicyObject(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return SlaClassPolicyObject(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            app_probe_class_id: pulumi.Input[Optional[_builtins.str]] = None,
+            app_probe_class_version: pulumi.Input[Optional[_builtins.int]] = None,
+            fallback_best_tunnel_criteria: pulumi.Input[Optional[_builtins.str]] = None,
+            fallback_best_tunnel_jitter: pulumi.Input[Optional[_builtins.int]] = None,
+            fallback_best_tunnel_latency: pulumi.Input[Optional[_builtins.int]] = None,
+            fallback_best_tunnel_loss: pulumi.Input[Optional[_builtins.int]] = None,
+            jitter: pulumi.Input[Optional[_builtins.int]] = None,
+            latency: pulumi.Input[Optional[_builtins.int]] = None,
+            loss: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["appProbeClassId"] = app_probe_class_id
+        __props__["appProbeClassVersion"] = app_probe_class_version
+        __props__["fallbackBestTunnelCriteria"] = fallback_best_tunnel_criteria
+        __props__["fallbackBestTunnelJitter"] = fallback_best_tunnel_jitter
+        __props__["fallbackBestTunnelLatency"] = fallback_best_tunnel_latency
+        __props__["fallbackBestTunnelLoss"] = fallback_best_tunnel_loss
+        __props__["jitter"] = jitter
+        __props__["latency"] = latency
+        __props__["loss"] = loss
+        __props__["name"] = name
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/slaClassPolicyObject:SlaClassPolicyObject', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="appProbeClassId")
     def app_probe_class_id(self) -> pulumi.Output[Optional[_builtins.str]]:

@@ -241,6 +241,12 @@ func (CellularCedgeProfileFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cellularCedgeProfileFeatureTemplateState)(nil)).Elem()
 }
 
+// CellularCedgeProfileFeatureTemplateExists checks whether an existing CellularCedgeProfileFeatureTemplate resource with the given ID exists.
+func CellularCedgeProfileFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CellularCedgeProfileFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/cellularCedgeProfileFeatureTemplate:CellularCedgeProfileFeatureTemplate", id, state, "", opts...)
+}
+
 type cellularCedgeProfileFeatureTemplateArgs struct {
 	// Set access point name
 	AccessPointName *string `pulumi:"accessPointName"`

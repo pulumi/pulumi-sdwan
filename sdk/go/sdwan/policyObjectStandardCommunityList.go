@@ -137,6 +137,12 @@ func (PolicyObjectStandardCommunityListState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectStandardCommunityListState)(nil)).Elem()
 }
 
+// PolicyObjectStandardCommunityListExists checks whether an existing PolicyObjectStandardCommunityList resource with the given ID exists.
+func PolicyObjectStandardCommunityListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectStandardCommunityListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectStandardCommunityList:PolicyObjectStandardCommunityList", id, state, "", opts...)
+}
+
 type policyObjectStandardCommunityListArgs struct {
 	// The description of the Policy_object
 	Description *string `pulumi:"description"`

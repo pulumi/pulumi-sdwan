@@ -65,7 +65,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? ThresholdVariable;
         /// <summary>
         /// - Choices: `SIG`
-        ///   - Default value: ` SIG`
+        ///   - Default value: `  SIG `
         /// </summary>
         public readonly string? TrackerType;
 

@@ -118,6 +118,12 @@ func (GeoLocationListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*geoLocationListPolicyObjectState)(nil)).Elem()
 }
 
+// GeoLocationListPolicyObjectExists checks whether an existing GeoLocationListPolicyObject resource with the given ID exists.
+func GeoLocationListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *GeoLocationListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/geoLocationListPolicyObject:GeoLocationListPolicyObject", id, state, "", opts...)
+}
+
 type geoLocationListPolicyObjectArgs struct {
 	// List of entries
 	Entries []GeoLocationListPolicyObjectEntry `pulumi:"entries"`

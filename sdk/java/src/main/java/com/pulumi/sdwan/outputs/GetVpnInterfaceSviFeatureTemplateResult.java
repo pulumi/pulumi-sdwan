@@ -23,7 +23,7 @@ import java.util.Objects;
 @CustomType
 public final class GetVpnInterfaceSviFeatureTemplateResult {
     /**
-     * @return Timeout value for dynamically learned ARP entries, \n\n seconds
+     * @return Timeout value for dynamically learned ARP entries, &#92;n&#92;n seconds
      * 
      */
     private Integer arpTimeout;
@@ -78,7 +78,7 @@ public final class GetVpnInterfaceSviFeatureTemplateResult {
      */
     private String ipDirectedBroadcastVariable;
     /**
-     * @return IP MTU \n\n, in bytes
+     * @return IP MTU &#92;n&#92;n, in bytes
      * 
      */
     private Integer ipMtu;
@@ -183,7 +183,7 @@ public final class GetVpnInterfaceSviFeatureTemplateResult {
      */
     private List<GetVpnInterfaceSviFeatureTemplateIpv6Vrrp> ipv6Vrrps;
     /**
-     * @return Interface MTU \n\n in bytes
+     * @return Interface MTU &#92;n&#92;n in bytes
      * 
      */
     private Integer mtu;
@@ -240,7 +240,7 @@ public final class GetVpnInterfaceSviFeatureTemplateResult {
 
     private GetVpnInterfaceSviFeatureTemplateResult() {}
     /**
-     * @return Timeout value for dynamically learned ARP entries, \n\n seconds
+     * @return Timeout value for dynamically learned ARP entries, &#92;n&#92;n seconds
      * 
      */
     public Integer arpTimeout() {
@@ -317,7 +317,7 @@ public final class GetVpnInterfaceSviFeatureTemplateResult {
         return this.ipDirectedBroadcastVariable;
     }
     /**
-     * @return IP MTU \n\n, in bytes
+     * @return IP MTU &#92;n&#92;n, in bytes
      * 
      */
     public Integer ipMtu() {
@@ -464,7 +464,7 @@ public final class GetVpnInterfaceSviFeatureTemplateResult {
         return this.ipv6Vrrps;
     }
     /**
-     * @return Interface MTU \n\n in bytes
+     * @return Interface MTU &#92;n&#92;n in bytes
      * 
      */
     public Integer mtu() {

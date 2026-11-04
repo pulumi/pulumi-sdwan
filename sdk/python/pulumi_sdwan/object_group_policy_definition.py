@@ -758,6 +758,44 @@ class ObjectGroupPolicyDefinition(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return ObjectGroupPolicyDefinition(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            data_fqdn_prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            data_fqdn_prefix_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            data_ipv4_prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            data_ipv4_prefix_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            fqdn: pulumi.Input[Optional[_builtins.str]] = None,
+            geo_location: pulumi.Input[Optional[_builtins.str]] = None,
+            geo_location_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            geo_location_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv4_prefix: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_prefix_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            port: pulumi.Input[Optional[_builtins.str]] = None,
+            port_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            port_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["dataFqdnPrefixListId"] = data_fqdn_prefix_list_id
+        __props__["dataFqdnPrefixListVersion"] = data_fqdn_prefix_list_version
+        __props__["dataIpv4PrefixListId"] = data_ipv4_prefix_list_id
+        __props__["dataIpv4PrefixListVersion"] = data_ipv4_prefix_list_version
+        __props__["description"] = description
+        __props__["fqdn"] = fqdn
+        __props__["geoLocation"] = geo_location
+        __props__["geoLocationListId"] = geo_location_list_id
+        __props__["geoLocationListVersion"] = geo_location_list_version
+        __props__["ipv4Prefix"] = ipv4_prefix
+        __props__["ipv4PrefixVariable"] = ipv4_prefix_variable
+        __props__["name"] = name
+        __props__["port"] = port
+        __props__["portListId"] = port_list_id
+        __props__["portListVersion"] = port_list_version
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/objectGroupPolicyDefinition:ObjectGroupPolicyDefinition', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="dataFqdnPrefixListId")
     def data_fqdn_prefix_list_id(self) -> pulumi.Output[Optional[_builtins.str]]:

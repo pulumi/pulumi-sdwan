@@ -117,6 +117,12 @@ func (ColorListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*colorListPolicyObjectState)(nil)).Elem()
 }
 
+// ColorListPolicyObjectExists checks whether an existing ColorListPolicyObject resource with the given ID exists.
+func ColorListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ColorListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/colorListPolicyObject:ColorListPolicyObject", id, state, "", opts...)
+}
+
 type colorListPolicyObjectArgs struct {
 	// List of entries
 	Entries []ColorListPolicyObjectEntry `pulumi:"entries"`

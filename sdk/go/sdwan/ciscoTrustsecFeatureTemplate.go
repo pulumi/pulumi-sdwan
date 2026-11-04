@@ -397,6 +397,12 @@ func (CiscoTrustsecFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoTrustsecFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoTrustsecFeatureTemplateExists checks whether an existing CiscoTrustsecFeatureTemplate resource with the given ID exists.
+func CiscoTrustsecFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoTrustsecFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoTrustsecFeatureTemplate:CiscoTrustsecFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoTrustsecFeatureTemplateArgs struct {
 	// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
 	CredentialsId *string `pulumi:"credentialsId"`

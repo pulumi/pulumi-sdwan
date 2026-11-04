@@ -108,6 +108,12 @@ func (ServiceFeatureProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceFeatureProfileState)(nil)).Elem()
 }
 
+// ServiceFeatureProfileExists checks whether an existing ServiceFeatureProfile resource with the given ID exists.
+func ServiceFeatureProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceFeatureProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceFeatureProfile:ServiceFeatureProfile", id, state, "", opts...)
+}
+
 type serviceFeatureProfileArgs struct {
 	// Description
 	Description string `pulumi:"description"`

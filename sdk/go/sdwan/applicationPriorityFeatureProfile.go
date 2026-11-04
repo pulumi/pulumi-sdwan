@@ -108,6 +108,12 @@ func (ApplicationPriorityFeatureProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applicationPriorityFeatureProfileState)(nil)).Elem()
 }
 
+// ApplicationPriorityFeatureProfileExists checks whether an existing ApplicationPriorityFeatureProfile resource with the given ID exists.
+func ApplicationPriorityFeatureProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplicationPriorityFeatureProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile", id, state, "", opts...)
+}
+
 type applicationPriorityFeatureProfileArgs struct {
 	// Description
 	Description string `pulumi:"description"`

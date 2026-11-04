@@ -22,7 +22,7 @@ public final class GetSseCiscoFeatureTracker {
      */
     private String endpointApiUrlVariable;
     /**
-     * @return Probe interval \n\n seconds
+     * @return Probe interval &#92;n&#92;n seconds
      * 
      */
     private Integer interval;
@@ -32,7 +32,7 @@ public final class GetSseCiscoFeatureTracker {
      */
     private String intervalVariable;
     /**
-     * @return Probe failure multiplier \n\n failed attempts
+     * @return Probe failure multiplier &#92;n&#92;n failed attempts
      * 
      */
     private Integer multiplier;
@@ -47,7 +47,7 @@ public final class GetSseCiscoFeatureTracker {
      */
     private String name;
     /**
-     * @return Probe Timeout threshold \n\n milliseconds
+     * @return Probe Timeout threshold &#92;n&#92;n milliseconds
      * 
      */
     private Integer threshold;
@@ -73,7 +73,7 @@ public final class GetSseCiscoFeatureTracker {
         return this.endpointApiUrlVariable;
     }
     /**
-     * @return Probe interval \n\n seconds
+     * @return Probe interval &#92;n&#92;n seconds
      * 
      */
     public Integer interval() {
@@ -87,7 +87,7 @@ public final class GetSseCiscoFeatureTracker {
         return this.intervalVariable;
     }
     /**
-     * @return Probe failure multiplier \n\n failed attempts
+     * @return Probe failure multiplier &#92;n&#92;n failed attempts
      * 
      */
     public Integer multiplier() {
@@ -108,7 +108,7 @@ public final class GetSseCiscoFeatureTracker {
         return this.name;
     }
     /**
-     * @return Probe Timeout threshold \n\n milliseconds
+     * @return Probe Timeout threshold &#92;n&#92;n milliseconds
      * 
      */
     public Integer threshold() {

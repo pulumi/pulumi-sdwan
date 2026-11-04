@@ -967,6 +967,50 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return CiscoSecurityFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            extended_ar_window: pulumi.Input[Optional[_builtins.int]] = None,
+            extended_ar_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict', 'outputs.CiscoSecurityFeatureTemplateKeychain']]]]] = None,
+            keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict', 'outputs.CiscoSecurityFeatureTemplateKey']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
+            pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            replay_window: pulumi.Input[Optional[_builtins.str]] = None,
+            replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["authenticationTypeVariable"] = authentication_type_variable
+        __props__["authenticationTypes"] = authentication_types
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["extendedArWindow"] = extended_ar_window
+        __props__["extendedArWindowVariable"] = extended_ar_window_variable
+        __props__["integrityTypeVariable"] = integrity_type_variable
+        __props__["integrityTypes"] = integrity_types
+        __props__["keychains"] = keychains
+        __props__["keys"] = keys
+        __props__["name"] = name
+        __props__["pairwiseKeying"] = pairwise_keying
+        __props__["pairwiseKeyingVariable"] = pairwise_keying_variable
+        __props__["rekeyInterval"] = rekey_interval
+        __props__["rekeyIntervalVariable"] = rekey_interval_variable
+        __props__["replayWindow"] = replay_window
+        __props__["replayWindowVariable"] = replay_window_variable
+        __props__["templateType"] = template_type
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/ciscoSecurityFeatureTemplate:CiscoSecurityFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="authenticationTypeVariable")
     def authentication_type_variable(self) -> pulumi.Output[Optional[_builtins.str]]:

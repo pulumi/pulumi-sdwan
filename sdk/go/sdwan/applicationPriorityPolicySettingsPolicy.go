@@ -161,6 +161,12 @@ func (ApplicationPriorityPolicySettingsPolicyState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applicationPriorityPolicySettingsPolicyState)(nil)).Elem()
 }
 
+// ApplicationPriorityPolicySettingsPolicyExists checks whether an existing ApplicationPriorityPolicySettingsPolicy resource with the given ID exists.
+func ApplicationPriorityPolicySettingsPolicyExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplicationPriorityPolicySettingsPolicyState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/applicationPriorityPolicySettingsPolicy:ApplicationPriorityPolicySettingsPolicy", id, state, "", opts...)
+}
+
 type applicationPriorityPolicySettingsPolicyArgs struct {
 	// The description of the Policy
 	Description *string `pulumi:"description"`

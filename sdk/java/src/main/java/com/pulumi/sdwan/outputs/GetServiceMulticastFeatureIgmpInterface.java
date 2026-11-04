@@ -29,7 +29,7 @@ public final class GetServiceMulticastFeatureIgmpInterface {
      */
     private List<GetServiceMulticastFeatureIgmpInterfaceJoinGroup> joinGroups;
     /**
-     * @return igmp Version \n\n
+     * @return igmp Version &#92;n&#92;n
      * 
      */
     private Integer version;
@@ -57,7 +57,7 @@ public final class GetServiceMulticastFeatureIgmpInterface {
         return this.joinGroups;
     }
     /**
-     * @return igmp Version \n\n
+     * @return igmp Version &#92;n&#92;n
      * 
      */
     public Integer version() {

@@ -800,6 +800,44 @@ class TransportGpsFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return TransportGpsFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            gps_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+            gps_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            gps_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            gps_mode_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            nmea_destination_address: pulumi.Input[Optional[_builtins.str]] = None,
+            nmea_destination_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            nmea_destination_port: pulumi.Input[Optional[_builtins.int]] = None,
+            nmea_destination_port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            nmea_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+            nmea_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            nmea_source_address: pulumi.Input[Optional[_builtins.str]] = None,
+            nmea_source_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["gpsEnable"] = gps_enable
+        __props__["gpsEnableVariable"] = gps_enable_variable
+        __props__["gpsMode"] = gps_mode
+        __props__["gpsModeVariable"] = gps_mode_variable
+        __props__["name"] = name
+        __props__["nmeaDestinationAddress"] = nmea_destination_address
+        __props__["nmeaDestinationAddressVariable"] = nmea_destination_address_variable
+        __props__["nmeaDestinationPort"] = nmea_destination_port
+        __props__["nmeaDestinationPortVariable"] = nmea_destination_port_variable
+        __props__["nmeaEnable"] = nmea_enable
+        __props__["nmeaEnableVariable"] = nmea_enable_variable
+        __props__["nmeaSourceAddress"] = nmea_source_address
+        __props__["nmeaSourceAddressVariable"] = nmea_source_address_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/transportGpsFeature:TransportGpsFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

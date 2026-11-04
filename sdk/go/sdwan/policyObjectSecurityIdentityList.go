@@ -134,6 +134,12 @@ func (PolicyObjectSecurityIdentityListState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectSecurityIdentityListState)(nil)).Elem()
 }
 
+// PolicyObjectSecurityIdentityListExists checks whether an existing PolicyObjectSecurityIdentityList resource with the given ID exists.
+func PolicyObjectSecurityIdentityListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectSecurityIdentityListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectSecurityIdentityList:PolicyObjectSecurityIdentityList", id, state, "", opts...)
+}
+
 type policyObjectSecurityIdentityListArgs struct {
 	// The description of the Policy_object
 	Description *string `pulumi:"description"`

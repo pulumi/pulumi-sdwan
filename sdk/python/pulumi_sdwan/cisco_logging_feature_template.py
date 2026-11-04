@@ -750,6 +750,40 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return CiscoLoggingFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            disk_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+            disk_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict', 'outputs.CiscoLoggingFeatureTemplateIpv4Server']]]]] = None,
+            ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict', 'outputs.CiscoLoggingFeatureTemplateIpv6Server']]]]] = None,
+            log_rotations: pulumi.Input[Optional[_builtins.int]] = None,
+            log_rotations_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            max_size: pulumi.Input[Optional[_builtins.int]] = None,
+            max_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict', 'outputs.CiscoLoggingFeatureTemplateTlsProfile']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["diskLogging"] = disk_logging
+        __props__["diskLoggingVariable"] = disk_logging_variable
+        __props__["ipv4Servers"] = ipv4_servers
+        __props__["ipv6Servers"] = ipv6_servers
+        __props__["logRotations"] = log_rotations
+        __props__["logRotationsVariable"] = log_rotations_variable
+        __props__["maxSize"] = max_size
+        __props__["maxSizeVariable"] = max_size_variable
+        __props__["name"] = name
+        __props__["templateType"] = template_type
+        __props__["tlsProfiles"] = tls_profiles
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/ciscoLoggingFeatureTemplate:CiscoLoggingFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[_builtins.str]:

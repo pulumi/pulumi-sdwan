@@ -32,7 +32,7 @@ public final class GetServiceRoutingBgpFeatureResult {
      */
     private String alwaysCompareMedVariable;
     /**
-     * @return Set autonomous system number \n\n or \n\n
+     * @return Set autonomous system number &#92;n&#92;n or &#92;n&#92;n
      * 
      */
     private String asNumber;
@@ -305,7 +305,7 @@ public final class GetServiceRoutingBgpFeatureResult {
         return this.alwaysCompareMedVariable;
     }
     /**
-     * @return Set autonomous system number \n\n or \n\n
+     * @return Set autonomous system number &#92;n&#92;n or &#92;n&#92;n
      * 
      */
     public String asNumber() {

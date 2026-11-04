@@ -176,6 +176,12 @@ func (ZoneBasedFirewallPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*zoneBasedFirewallPolicyDefinitionState)(nil)).Elem()
 }
 
+// ZoneBasedFirewallPolicyDefinitionExists checks whether an existing ZoneBasedFirewallPolicyDefinition resource with the given ID exists.
+func ZoneBasedFirewallPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ZoneBasedFirewallPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/zoneBasedFirewallPolicyDefinition:ZoneBasedFirewallPolicyDefinition", id, state, "", opts...)
+}
+
 type zoneBasedFirewallPolicyDefinitionArgs struct {
 	// , Attribute conditional on `mode` equal to `security`
 	ApplyZonePairs []ZoneBasedFirewallPolicyDefinitionApplyZonePair `pulumi:"applyZonePairs"`

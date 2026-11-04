@@ -352,6 +352,12 @@ func (CiscoVpnInterfaceGreFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoVpnInterfaceGreFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoVpnInterfaceGreFeatureTemplateExists checks whether an existing CiscoVpnInterfaceGreFeatureTemplate resource with the given ID exists.
+func CiscoVpnInterfaceGreFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoVpnInterfaceGreFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoVpnInterfaceGreFeatureTemplate:CiscoVpnInterfaceGreFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoVpnInterfaceGreFeatureTemplateArgs struct {
 	// Apply ACL
 	AccessLists []CiscoVpnInterfaceGreFeatureTemplateAccessList `pulumi:"accessLists"`

@@ -787,6 +787,42 @@ class TopologyCustomControlFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return TopologyCustomControlFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            default_action: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureSequenceArgs', 'TopologyCustomControlFeatureSequenceArgsDict', 'outputs.TopologyCustomControlFeatureSequence']]]]] = None,
+            target_inbound_hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            target_inbound_regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetInboundRegionArgs', 'TopologyCustomControlFeatureTargetInboundRegionArgsDict', 'outputs.TopologyCustomControlFeatureTargetInboundRegion']]]]] = None,
+            target_inbound_sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            target_level: pulumi.Input[Optional[_builtins.str]] = None,
+            target_outbound_hierarchy_uuids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            target_outbound_regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyCustomControlFeatureTargetOutboundRegionArgs', 'TopologyCustomControlFeatureTargetOutboundRegionArgsDict', 'outputs.TopologyCustomControlFeatureTargetOutboundRegion']]]]] = None,
+            target_outbound_sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            target_role: pulumi.Input[Optional[_builtins.str]] = None,
+            target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["defaultAction"] = default_action
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["name"] = name
+        __props__["sequences"] = sequences
+        __props__["targetInboundHierarchyUuids"] = target_inbound_hierarchy_uuids
+        __props__["targetInboundRegions"] = target_inbound_regions
+        __props__["targetInboundSites"] = target_inbound_sites
+        __props__["targetLevel"] = target_level
+        __props__["targetOutboundHierarchyUuids"] = target_outbound_hierarchy_uuids
+        __props__["targetOutboundRegions"] = target_outbound_regions
+        __props__["targetOutboundSites"] = target_outbound_sites
+        __props__["targetRole"] = target_role
+        __props__["targetVpns"] = target_vpns
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/topologyCustomControlFeature:TopologyCustomControlFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> pulumi.Output[_builtins.str]:

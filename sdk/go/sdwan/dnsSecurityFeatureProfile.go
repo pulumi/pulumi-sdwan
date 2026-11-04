@@ -108,6 +108,12 @@ func (DnsSecurityFeatureProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*dnsSecurityFeatureProfileState)(nil)).Elem()
 }
 
+// DnsSecurityFeatureProfileExists checks whether an existing DnsSecurityFeatureProfile resource with the given ID exists.
+func DnsSecurityFeatureProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DnsSecurityFeatureProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/dnsSecurityFeatureProfile:DnsSecurityFeatureProfile", id, state, "", opts...)
+}
+
 type dnsSecurityFeatureProfileArgs struct {
 	// Description
 	Description string `pulumi:"description"`

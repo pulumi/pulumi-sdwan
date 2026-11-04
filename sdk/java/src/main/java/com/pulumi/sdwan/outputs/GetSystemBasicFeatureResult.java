@@ -202,7 +202,7 @@ public final class GetSystemBasicFeatureResult {
      */
     private String locationVariable;
     /**
-     * @return Set the maximum number of OMP sessions \n\n the device can have
+     * @return Set the maximum number of OMP sessions &#92;n&#92;n the device can have
      * 
      */
     private Integer maxOmpSessions;
@@ -613,7 +613,7 @@ public final class GetSystemBasicFeatureResult {
         return this.locationVariable;
     }
     /**
-     * @return Set the maximum number of OMP sessions \n\n the device can have
+     * @return Set the maximum number of OMP sessions &#92;n&#92;n the device can have
      * 
      */
     public Integer maxOmpSessions() {

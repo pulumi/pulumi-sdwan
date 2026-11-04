@@ -671,6 +671,12 @@ func (TransportWanVpnInterfaceIpsecFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*transportWanVpnInterfaceIpsecFeatureState)(nil)).Elem()
 }
 
+// TransportWanVpnInterfaceIpsecFeatureExists checks whether an existing TransportWanVpnInterfaceIpsecFeature resource with the given ID exists.
+func TransportWanVpnInterfaceIpsecFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportWanVpnInterfaceIpsecFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportWanVpnInterfaceIpsecFeature:TransportWanVpnInterfaceIpsecFeature", id, state, "", opts...)
+}
+
 type transportWanVpnInterfaceIpsecFeatureArgs struct {
 	// Enable Application Tunnel Type
 	//   - Choices: `none`, `sig`

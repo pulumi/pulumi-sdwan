@@ -176,6 +176,12 @@ func (TransportT1E1ControllerFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*transportT1E1ControllerFeatureState)(nil)).Elem()
 }
 
+// TransportT1E1ControllerFeatureExists checks whether an existing TransportT1E1ControllerFeature resource with the given ID exists.
+func TransportT1E1ControllerFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportT1E1ControllerFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportT1E1ControllerFeature:TransportT1E1ControllerFeature", id, state, "", opts...)
+}
+
 type transportT1E1ControllerFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

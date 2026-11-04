@@ -278,6 +278,12 @@ func (CiscoWirelessLanFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoWirelessLanFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoWirelessLanFeatureTemplateExists checks whether an existing CiscoWirelessLanFeatureTemplate resource with the given ID exists.
+func CiscoWirelessLanFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoWirelessLanFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoWirelessLanFeatureTemplate:CiscoWirelessLanFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoWirelessLanFeatureTemplateArgs struct {
 	// Set mobile express default gateway
 	//   - Default value: `0.0.0.0`

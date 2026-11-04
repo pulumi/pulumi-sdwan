@@ -157,6 +157,12 @@ func (Ipv4DeviceAclPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ipv4DeviceAclPolicyDefinitionState)(nil)).Elem()
 }
 
+// Ipv4DeviceAclPolicyDefinitionExists checks whether an existing Ipv4DeviceAclPolicyDefinition resource with the given ID exists.
+func Ipv4DeviceAclPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *Ipv4DeviceAclPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ipv4DeviceAclPolicyDefinition:Ipv4DeviceAclPolicyDefinition", id, state, "", opts...)
+}
+
 type ipv4DeviceAclPolicyDefinitionArgs struct {
 	// Default action, either `accept` or `drop`
 	//   - Choices: `accept`, `drop`

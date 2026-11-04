@@ -28,7 +28,7 @@ public final class GetServiceRoutingEigrpFeatureResult {
      */
     private String authenticationTypeVariable;
     /**
-     * @return Set autonomous system ID \n\n
+     * @return Set autonomous system ID &#92;n&#92;n
      * 
      */
     private Integer autonomousSystemId;
@@ -140,7 +140,7 @@ public final class GetServiceRoutingEigrpFeatureResult {
         return this.authenticationTypeVariable;
     }
     /**
-     * @return Set autonomous system ID \n\n
+     * @return Set autonomous system ID &#92;n&#92;n
      * 
      */
     public Integer autonomousSystemId() {

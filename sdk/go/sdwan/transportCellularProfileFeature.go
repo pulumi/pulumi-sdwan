@@ -265,6 +265,12 @@ func (TransportCellularProfileFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*transportCellularProfileFeatureState)(nil)).Elem()
 }
 
+// TransportCellularProfileFeatureExists checks whether an existing TransportCellularProfileFeature resource with the given ID exists.
+func TransportCellularProfileFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportCellularProfileFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportCellularProfileFeature:TransportCellularProfileFeature", id, state, "", opts...)
+}
+
 type transportCellularProfileFeatureArgs struct {
 	// Set access point name
 	AccessPointName *string `pulumi:"accessPointName"`

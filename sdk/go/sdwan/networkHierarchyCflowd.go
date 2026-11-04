@@ -208,6 +208,12 @@ func (NetworkHierarchyCflowdState) ElementType() reflect.Type {
 	return reflect.TypeOf((*networkHierarchyCflowdState)(nil)).Elem()
 }
 
+// NetworkHierarchyCflowdExists checks whether an existing NetworkHierarchyCflowd resource with the given ID exists.
+func NetworkHierarchyCflowdExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *NetworkHierarchyCflowdState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/networkHierarchyCflowd:NetworkHierarchyCflowd", id, state, "", opts...)
+}
+
 type networkHierarchyCflowdArgs struct {
 	// Collect remarked DSCP
 	//   - Default value: `false`

@@ -137,6 +137,12 @@ func (RuleSetPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ruleSetPolicyDefinitionState)(nil)).Elem()
 }
 
+// RuleSetPolicyDefinitionExists checks whether an existing RuleSetPolicyDefinition resource with the given ID exists.
+func RuleSetPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *RuleSetPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition", id, state, "", opts...)
+}
+
 type ruleSetPolicyDefinitionArgs struct {
 	// The description of the policy definition
 	Description string `pulumi:"description"`

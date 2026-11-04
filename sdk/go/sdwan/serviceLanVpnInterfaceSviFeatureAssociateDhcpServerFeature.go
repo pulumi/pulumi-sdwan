@@ -139,6 +139,12 @@ func (ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureState) ElementTy
 	return reflect.TypeOf((*serviceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureState)(nil)).Elem()
 }
 
+// ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureExists checks whether an existing ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature resource with the given ID exists.
+func ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature", id, state, "", opts...)
+}
+
 type serviceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs struct {
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`

@@ -663,6 +663,40 @@ class PolicyObjectUnifiedUrlFiltering(pulumi.CustomResource):
         __props__.__dict__["web_reputation"] = web_reputation
         return PolicyObjectUnifiedUrlFiltering(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            block_page_action: pulumi.Input[Optional[_builtins.str]] = None,
+            block_page_contents: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_alerts: pulumi.Input[Optional[_builtins.bool]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            redirect_url: pulumi.Input[Optional[_builtins.str]] = None,
+            url_allow_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            url_block_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            web_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            web_categories_action: pulumi.Input[Optional[_builtins.str]] = None,
+            web_reputation: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["alerts"] = alerts
+        __props__["blockPageAction"] = block_page_action
+        __props__["blockPageContents"] = block_page_contents
+        __props__["description"] = description
+        __props__["enableAlerts"] = enable_alerts
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["name"] = name
+        __props__["redirectUrl"] = redirect_url
+        __props__["urlAllowListId"] = url_allow_list_id
+        __props__["urlBlockListId"] = url_block_list_id
+        __props__["version"] = version
+        __props__["webCategories"] = web_categories
+        __props__["webCategoriesAction"] = web_categories_action
+        __props__["webReputation"] = web_reputation
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/policyObjectUnifiedUrlFiltering:PolicyObjectUnifiedUrlFiltering', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def alerts(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:

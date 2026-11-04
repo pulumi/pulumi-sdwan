@@ -120,6 +120,12 @@ func (TlocListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*tlocListPolicyObjectState)(nil)).Elem()
 }
 
+// TlocListPolicyObjectExists checks whether an existing TlocListPolicyObject resource with the given ID exists.
+func TlocListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TlocListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/tlocListPolicyObject:TlocListPolicyObject", id, state, "", opts...)
+}
+
 type tlocListPolicyObjectArgs struct {
 	// List of entries
 	Entries []TlocListPolicyObjectEntry `pulumi:"entries"`

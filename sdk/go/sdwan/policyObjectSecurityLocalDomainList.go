@@ -134,6 +134,12 @@ func (PolicyObjectSecurityLocalDomainListState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectSecurityLocalDomainListState)(nil)).Elem()
 }
 
+// PolicyObjectSecurityLocalDomainListExists checks whether an existing PolicyObjectSecurityLocalDomainList resource with the given ID exists.
+func PolicyObjectSecurityLocalDomainListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectSecurityLocalDomainListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectSecurityLocalDomainList:PolicyObjectSecurityLocalDomainList", id, state, "", opts...)
+}
+
 type policyObjectSecurityLocalDomainListArgs struct {
 	// The description of the Policy_object
 	Description *string                                    `pulumi:"description"`

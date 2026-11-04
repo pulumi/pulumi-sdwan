@@ -688,6 +688,38 @@ class ServiceAppqoeFeature(pulumi.CustomResource):
         __props__.__dict__["virtual_applications"] = virtual_applications
         return ServiceAppqoeFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            appqoe_device_role: pulumi.Input[Optional[_builtins.str]] = None,
+            combined_controller_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceAppqoeFeatureCombinedControllerGroupArgs', 'ServiceAppqoeFeatureCombinedControllerGroupArgsDict', 'outputs.ServiceAppqoeFeatureCombinedControllerGroup']]]]] = None,
+            combined_service_contexts: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceAppqoeFeatureCombinedServiceContextArgs', 'ServiceAppqoeFeatureCombinedServiceContextArgsDict', 'outputs.ServiceAppqoeFeatureCombinedServiceContext']]]]] = None,
+            combined_service_node_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceAppqoeFeatureCombinedServiceNodeGroupArgs', 'ServiceAppqoeFeatureCombinedServiceNodeGroupArgsDict', 'outputs.ServiceAppqoeFeatureCombinedServiceNodeGroup']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            forwarder_controller_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceAppqoeFeatureForwarderControllerGroupArgs', 'ServiceAppqoeFeatureForwarderControllerGroupArgsDict', 'outputs.ServiceAppqoeFeatureForwarderControllerGroup']]]]] = None,
+            forwarder_service_contexts: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceAppqoeFeatureForwarderServiceContextArgs', 'ServiceAppqoeFeatureForwarderServiceContextArgsDict', 'outputs.ServiceAppqoeFeatureForwarderServiceContext']]]]] = None,
+            forwarder_service_node_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceAppqoeFeatureForwarderServiceNodeGroupArgs', 'ServiceAppqoeFeatureForwarderServiceNodeGroupArgsDict', 'outputs.ServiceAppqoeFeatureForwarderServiceNodeGroup']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            service_node_service_node_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceAppqoeFeatureServiceNodeServiceNodeGroupArgs', 'ServiceAppqoeFeatureServiceNodeServiceNodeGroupArgsDict', 'outputs.ServiceAppqoeFeatureServiceNodeServiceNodeGroup']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            virtual_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceAppqoeFeatureVirtualApplicationArgs', 'ServiceAppqoeFeatureVirtualApplicationArgsDict', 'outputs.ServiceAppqoeFeatureVirtualApplication']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["appqoeDeviceRole"] = appqoe_device_role
+        __props__["combinedControllerGroups"] = combined_controller_groups
+        __props__["combinedServiceContexts"] = combined_service_contexts
+        __props__["combinedServiceNodeGroups"] = combined_service_node_groups
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["forwarderControllerGroups"] = forwarder_controller_groups
+        __props__["forwarderServiceContexts"] = forwarder_service_contexts
+        __props__["forwarderServiceNodeGroups"] = forwarder_service_node_groups
+        __props__["name"] = name
+        __props__["serviceNodeServiceNodeGroups"] = service_node_service_node_groups
+        __props__["version"] = version
+        __props__["virtualApplications"] = virtual_applications
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/serviceAppqoeFeature:ServiceAppqoeFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="appqoeDeviceRole")
     def appqoe_device_role(self) -> pulumi.Output[_builtins.str]:

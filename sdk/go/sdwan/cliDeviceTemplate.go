@@ -146,6 +146,12 @@ func (CliDeviceTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cliDeviceTemplateState)(nil)).Elem()
 }
 
+// CliDeviceTemplateExists checks whether an existing CliDeviceTemplate resource with the given ID exists.
+func CliDeviceTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CliDeviceTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/cliDeviceTemplate:CliDeviceTemplate", id, state, "", opts...)
+}
+
 type cliDeviceTemplateArgs struct {
 	// CLI configuration
 	CliConfiguration string `pulumi:"cliConfiguration"`

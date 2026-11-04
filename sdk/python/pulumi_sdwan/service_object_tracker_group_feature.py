@@ -515,6 +515,30 @@ class ServiceObjectTrackerGroupFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return ServiceObjectTrackerGroupFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            object_tracker_id: pulumi.Input[Optional[_builtins.int]] = None,
+            object_tracker_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            reachable: pulumi.Input[Optional[_builtins.str]] = None,
+            reachable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_elements: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceObjectTrackerGroupFeatureTrackerElementArgs', 'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict', 'outputs.ServiceObjectTrackerGroupFeatureTrackerElement']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["name"] = name
+        __props__["objectTrackerId"] = object_tracker_id
+        __props__["objectTrackerIdVariable"] = object_tracker_id_variable
+        __props__["reachable"] = reachable
+        __props__["reachableVariable"] = reachable_variable
+        __props__["trackerElements"] = tracker_elements
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/serviceObjectTrackerGroupFeature:ServiceObjectTrackerGroupFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

@@ -712,6 +712,38 @@ class SseCiscoFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return SseCiscoFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            context_sharing_for_sgt: pulumi.Input[Optional[_builtins.bool]] = None,
+            context_sharing_for_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_pairs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfacePairArgs', 'SseCiscoFeatureInterfacePairArgsDict', 'outputs.SseCiscoFeatureInterfacePair']]]]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureInterfaceArgs', 'SseCiscoFeatureInterfaceArgsDict', 'outputs.SseCiscoFeatureInterface']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            region: pulumi.Input[Optional[_builtins.str]] = None,
+            region_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SseCiscoFeatureTrackerArgs', 'SseCiscoFeatureTrackerArgsDict', 'outputs.SseCiscoFeatureTracker']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["contextSharingForSgt"] = context_sharing_for_sgt
+        __props__["contextSharingForVpn"] = context_sharing_for_vpn
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["interfacePairs"] = interface_pairs
+        __props__["interfaces"] = interfaces
+        __props__["name"] = name
+        __props__["region"] = region
+        __props__["regionVariable"] = region_variable
+        __props__["trackerSourceIp"] = tracker_source_ip
+        __props__["trackerSourceIpVariable"] = tracker_source_ip_variable
+        __props__["trackers"] = trackers
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/sseCiscoFeature:SseCiscoFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="contextSharingForSgt")
     def context_sharing_for_sgt(self) -> pulumi.Output[Optional[_builtins.bool]]:

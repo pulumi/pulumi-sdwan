@@ -850,6 +850,48 @@ class PolicyObjectUnifiedTlsSslDecryption(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return PolicyObjectUnifiedTlsSslDecryption(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            bundle_string: pulumi.Input[Optional[_builtins.str]] = None,
+            certificate_lifetime: pulumi.Input[Optional[_builtins.str]] = None,
+            certificate_revocation_status: pulumi.Input[Optional[_builtins.str]] = None,
+            default_ca_certificate_bundle: pulumi.Input[Optional[_builtins.bool]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            ec_key_type: pulumi.Input[Optional[_builtins.str]] = None,
+            expired_certificate: pulumi.Input[Optional[_builtins.str]] = None,
+            failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            file_name: pulumi.Input[Optional[_builtins.str]] = None,
+            minimal_tls_ver: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            rsa_keypair_modules: pulumi.Input[Optional[_builtins.str]] = None,
+            unknown_revocation_status: pulumi.Input[Optional[_builtins.str]] = None,
+            unsupported_cipher_suites: pulumi.Input[Optional[_builtins.str]] = None,
+            unsupported_protocol_versions: pulumi.Input[Optional[_builtins.str]] = None,
+            untrusted_certificate: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["bundleString"] = bundle_string
+        __props__["certificateLifetime"] = certificate_lifetime
+        __props__["certificateRevocationStatus"] = certificate_revocation_status
+        __props__["defaultCaCertificateBundle"] = default_ca_certificate_bundle
+        __props__["description"] = description
+        __props__["ecKeyType"] = ec_key_type
+        __props__["expiredCertificate"] = expired_certificate
+        __props__["failureMode"] = failure_mode
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["fileName"] = file_name
+        __props__["minimalTlsVer"] = minimal_tls_ver
+        __props__["name"] = name
+        __props__["rsaKeypairModules"] = rsa_keypair_modules
+        __props__["unknownRevocationStatus"] = unknown_revocation_status
+        __props__["unsupportedCipherSuites"] = unsupported_cipher_suites
+        __props__["unsupportedProtocolVersions"] = unsupported_protocol_versions
+        __props__["untrustedCertificate"] = untrusted_certificate
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/policyObjectUnifiedTlsSslDecryption:PolicyObjectUnifiedTlsSslDecryption', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="bundleString")
     def bundle_string(self) -> pulumi.Output[Optional[_builtins.str]]:

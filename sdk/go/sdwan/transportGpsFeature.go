@@ -216,6 +216,12 @@ func (TransportGpsFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*transportGpsFeatureState)(nil)).Elem()
 }
 
+// TransportGpsFeatureExists checks whether an existing TransportGpsFeature resource with the given ID exists.
+func TransportGpsFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportGpsFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportGpsFeature:TransportGpsFeature", id, state, "", opts...)
+}
+
 type transportGpsFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

@@ -160,6 +160,12 @@ func (HubAndSpokeTopologyPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*hubAndSpokeTopologyPolicyDefinitionState)(nil)).Elem()
 }
 
+// HubAndSpokeTopologyPolicyDefinitionExists checks whether an existing HubAndSpokeTopologyPolicyDefinition resource with the given ID exists.
+func HubAndSpokeTopologyPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *HubAndSpokeTopologyPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/hubAndSpokeTopologyPolicyDefinition:HubAndSpokeTopologyPolicyDefinition", id, state, "", opts...)
+}
+
 type hubAndSpokeTopologyPolicyDefinitionArgs struct {
 	// The description of the policy definition
 	Description string `pulumi:"description"`

@@ -423,6 +423,26 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return ApplicationPriorityQosPolicy(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict', 'outputs.ApplicationPriorityQosPolicyQosScheduler']]]]] = None,
+            target_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            target_interfaces_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["name"] = name
+        __props__["qosSchedulers"] = qos_schedulers
+        __props__["targetInterfaces"] = target_interfaces
+        __props__["targetInterfacesVariable"] = target_interfaces_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/applicationPriorityQosPolicy:ApplicationPriorityQosPolicy', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

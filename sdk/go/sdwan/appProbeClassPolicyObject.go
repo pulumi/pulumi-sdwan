@@ -128,6 +128,12 @@ func (AppProbeClassPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*appProbeClassPolicyObjectState)(nil)).Elem()
 }
 
+// AppProbeClassPolicyObjectExists checks whether an existing AppProbeClassPolicyObject resource with the given ID exists.
+func AppProbeClassPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AppProbeClassPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/appProbeClassPolicyObject:AppProbeClassPolicyObject", id, state, "", opts...)
+}
+
 type appProbeClassPolicyObjectArgs struct {
 	// Forwarding class name
 	ForwardingClass string `pulumi:"forwardingClass"`

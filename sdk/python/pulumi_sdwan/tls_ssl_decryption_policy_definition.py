@@ -1030,6 +1030,52 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return TlsSslDecryptionPolicyDefinition(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            certificate_lifetime_in_days: pulumi.Input[Optional[_builtins.int]] = None,
+            certificate_revocation_status: pulumi.Input[Optional[_builtins.str]] = None,
+            default_action: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            ec_key_type: pulumi.Input[Optional[_builtins.str]] = None,
+            expired_certificate: pulumi.Input[Optional[_builtins.str]] = None,
+            failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            minimal_tls_version: pulumi.Input[Optional[_builtins.str]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs', 'TlsSslDecryptionPolicyDefinitionNetworkRuleArgsDict', 'outputs.TlsSslDecryptionPolicyDefinitionNetworkRule']]]]] = None,
+            rsa_key_pair_modulus: pulumi.Input[Optional[_builtins.str]] = None,
+            ssl_decryption_enabled: pulumi.Input[Optional[_builtins.str]] = None,
+            unknown_revocation_status: pulumi.Input[Optional[_builtins.str]] = None,
+            unsupported_cipher_suites: pulumi.Input[Optional[_builtins.str]] = None,
+            unsupported_protocol_versions: pulumi.Input[Optional[_builtins.str]] = None,
+            untrusted_certificate: pulumi.Input[Optional[_builtins.str]] = None,
+            url_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionUrlRuleArgs', 'TlsSslDecryptionPolicyDefinitionUrlRuleArgsDict', 'outputs.TlsSslDecryptionPolicyDefinitionUrlRule']]]]] = None,
+            use_default_ca_cert_bundle: pulumi.Input[Optional[_builtins.bool]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["certificateLifetimeInDays"] = certificate_lifetime_in_days
+        __props__["certificateRevocationStatus"] = certificate_revocation_status
+        __props__["defaultAction"] = default_action
+        __props__["description"] = description
+        __props__["ecKeyType"] = ec_key_type
+        __props__["expiredCertificate"] = expired_certificate
+        __props__["failureMode"] = failure_mode
+        __props__["minimalTlsVersion"] = minimal_tls_version
+        __props__["mode"] = mode
+        __props__["name"] = name
+        __props__["networkRules"] = network_rules
+        __props__["rsaKeyPairModulus"] = rsa_key_pair_modulus
+        __props__["sslDecryptionEnabled"] = ssl_decryption_enabled
+        __props__["unknownRevocationStatus"] = unknown_revocation_status
+        __props__["unsupportedCipherSuites"] = unsupported_cipher_suites
+        __props__["unsupportedProtocolVersions"] = unsupported_protocol_versions
+        __props__["untrustedCertificate"] = untrusted_certificate
+        __props__["urlRules"] = url_rules
+        __props__["useDefaultCaCertBundle"] = use_default_ca_cert_bundle
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/tlsSslDecryptionPolicyDefinition:TlsSslDecryptionPolicyDefinition', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="certificateLifetimeInDays")
     def certificate_lifetime_in_days(self) -> pulumi.Output[Optional[_builtins.int]]:

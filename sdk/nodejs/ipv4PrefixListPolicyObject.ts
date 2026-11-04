@@ -47,6 +47,17 @@ export class Ipv4PrefixListPolicyObject extends pulumi.CustomResource {
         return new Ipv4PrefixListPolicyObject(name, <any>state, { ...opts, id: id });
     }
 
+    /**
+     * Check whether an existing Ipv4PrefixListPolicyObject resource with the given ID exists.
+     *
+     * @param id The _unique_ provider ID of the resource to check.
+     * @param state Any extra arguments used during the lookup.
+     * @param opts Optional settings to control the behavior of the CustomResource.
+     */
+    public static exists(id: pulumi.Input<string>, state?: Ipv4PrefixListPolicyObjectState, opts?: pulumi.CustomResourceOptions): pulumi.Output<boolean> {
+        return pulumi.runtime.existsResource("sdwan:index/ipv4PrefixListPolicyObject:Ipv4PrefixListPolicyObject", id, <any>state || {}, { ...opts }, undefined);
+    }
+
     /** @internal */
     public static readonly __pulumiType = 'sdwan:index/ipv4PrefixListPolicyObject:Ipv4PrefixListPolicyObject';
 

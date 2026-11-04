@@ -108,6 +108,12 @@ func (PolicyObjectFeatureProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectFeatureProfileState)(nil)).Elem()
 }
 
+// PolicyObjectFeatureProfileExists checks whether an existing PolicyObjectFeatureProfile resource with the given ID exists.
+func PolicyObjectFeatureProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectFeatureProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectFeatureProfile:PolicyObjectFeatureProfile", id, state, "", opts...)
+}
+
 type policyObjectFeatureProfileArgs struct {
 	// Description
 	Description string `pulumi:"description"`

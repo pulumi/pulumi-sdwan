@@ -108,6 +108,12 @@ func (OtherFeatureProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*otherFeatureProfileState)(nil)).Elem()
 }
 
+// OtherFeatureProfileExists checks whether an existing OtherFeatureProfile resource with the given ID exists.
+func OtherFeatureProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *OtherFeatureProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/otherFeatureProfile:OtherFeatureProfile", id, state, "", opts...)
+}
+
 type otherFeatureProfileArgs struct {
 	// Description
 	Description string `pulumi:"description"`

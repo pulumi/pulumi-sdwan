@@ -30,7 +30,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     private String aclIpv6EgressFeatureId;
     private String aclIpv6IngressFeatureId;
     /**
-     * @return Timeout value for dynamically learned ARP entries, \n\n seconds
+     * @return Timeout value for dynamically learned ARP entries, &#92;n&#92;n seconds
      * 
      */
     private Integer arpTimeout;
@@ -176,7 +176,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private String interfaceDescriptionVariable;
     /**
-     * @return Interface MTU GigabitEthernet0 \n\n, Other GigabitEthernet \n\n in bytes
+     * @return Interface MTU GigabitEthernet0 &#92;n&#92;n, Other GigabitEthernet &#92;n&#92;n in bytes
      * 
      */
     private Integer interfaceMtu;
@@ -202,7 +202,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private String ipDirectedBroadcastVariable;
     /**
-     * @return IP MTU for GigabitEthernet main \n\n, GigabitEthernet subinterface \n\n, Other Interfaces \n\n in bytes
+     * @return IP MTU for GigabitEthernet main &#92;n&#92;n, GigabitEthernet subinterface &#92;n&#92;n, Other Interfaces &#92;n&#92;n in bytes
      * 
      */
     private Integer ipMtu;
@@ -1064,7 +1064,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private String tunnelInterfaceGroupsVariable;
     /**
-     * @return Set time period of control hello packets \n\n milli seconds
+     * @return Set time period of control hello packets &#92;n&#92;n milli seconds
      * 
      */
     private Integer tunnelInterfaceHelloInterval;
@@ -1074,7 +1074,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private String tunnelInterfaceHelloIntervalVariable;
     /**
-     * @return Set tolerance of control hello packets \n\n seconds
+     * @return Set tolerance of control hello packets &#92;n&#92;n seconds
      * 
      */
     private Integer tunnelInterfaceHelloTolerance;
@@ -1114,7 +1114,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private String tunnelInterfaceMaxControlConnectionsVariable;
     /**
-     * @return Set time period of nat refresh packets \n\n seconds
+     * @return Set time period of nat refresh packets &#92;n&#92;n seconds
      * 
      */
     private Integer tunnelInterfaceNatRefreshInterval;
@@ -1174,7 +1174,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private String tunnelInterfaceVbondAsStunServerVariable;
     /**
-     * @return Set interface preference for control connection to vManage \n\n
+     * @return Set interface preference for control connection to vManage &#92;n&#92;n
      * 
      */
     private Integer tunnelInterfaceVmanageConnectionPreference;
@@ -1223,7 +1223,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.aclIpv6IngressFeatureId;
     }
     /**
-     * @return Timeout value for dynamically learned ARP entries, \n\n seconds
+     * @return Timeout value for dynamically learned ARP entries, &#92;n&#92;n seconds
      * 
      */
     public Integer arpTimeout() {
@@ -1429,7 +1429,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.interfaceDescriptionVariable;
     }
     /**
-     * @return Interface MTU GigabitEthernet0 \n\n, Other GigabitEthernet \n\n in bytes
+     * @return Interface MTU GigabitEthernet0 &#92;n&#92;n, Other GigabitEthernet &#92;n&#92;n in bytes
      * 
      */
     public Integer interfaceMtu() {
@@ -1467,7 +1467,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.ipDirectedBroadcastVariable;
     }
     /**
-     * @return IP MTU for GigabitEthernet main \n\n, GigabitEthernet subinterface \n\n, Other Interfaces \n\n in bytes
+     * @return IP MTU for GigabitEthernet main &#92;n&#92;n, GigabitEthernet subinterface &#92;n&#92;n, Other Interfaces &#92;n&#92;n in bytes
      * 
      */
     public Integer ipMtu() {
@@ -2677,7 +2677,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.tunnelInterfaceGroupsVariable;
     }
     /**
-     * @return Set time period of control hello packets \n\n milli seconds
+     * @return Set time period of control hello packets &#92;n&#92;n milli seconds
      * 
      */
     public Integer tunnelInterfaceHelloInterval() {
@@ -2691,7 +2691,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.tunnelInterfaceHelloIntervalVariable;
     }
     /**
-     * @return Set tolerance of control hello packets \n\n seconds
+     * @return Set tolerance of control hello packets &#92;n&#92;n seconds
      * 
      */
     public Integer tunnelInterfaceHelloTolerance() {
@@ -2747,7 +2747,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.tunnelInterfaceMaxControlConnectionsVariable;
     }
     /**
-     * @return Set time period of nat refresh packets \n\n seconds
+     * @return Set time period of nat refresh packets &#92;n&#92;n seconds
      * 
      */
     public Integer tunnelInterfaceNatRefreshInterval() {
@@ -2831,7 +2831,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.tunnelInterfaceVbondAsStunServerVariable;
     }
     /**
-     * @return Set interface preference for control connection to vManage \n\n
+     * @return Set interface preference for control connection to vManage &#92;n&#92;n
      * 
      */
     public Integer tunnelInterfaceVmanageConnectionPreference() {

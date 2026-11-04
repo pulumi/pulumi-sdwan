@@ -117,6 +117,12 @@ func (ProtocolListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*protocolListPolicyObjectState)(nil)).Elem()
 }
 
+// ProtocolListPolicyObjectExists checks whether an existing ProtocolListPolicyObject resource with the given ID exists.
+func ProtocolListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ProtocolListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/protocolListPolicyObject:ProtocolListPolicyObject", id, state, "", opts...)
+}
+
 type protocolListPolicyObjectArgs struct {
 	// List of entries
 	Entries []ProtocolListPolicyObjectEntry `pulumi:"entries"`

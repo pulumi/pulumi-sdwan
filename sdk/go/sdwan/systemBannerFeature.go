@@ -143,6 +143,12 @@ func (SystemBannerFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemBannerFeatureState)(nil)).Elem()
 }
 
+// SystemBannerFeatureExists checks whether an existing SystemBannerFeature resource with the given ID exists.
+func SystemBannerFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemBannerFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemBannerFeature:SystemBannerFeature", id, state, "", opts...)
+}
+
 type systemBannerFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

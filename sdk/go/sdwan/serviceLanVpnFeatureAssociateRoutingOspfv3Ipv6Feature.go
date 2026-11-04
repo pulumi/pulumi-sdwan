@@ -129,6 +129,12 @@ func (ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState) ElementType() 
 	return reflect.TypeOf((*serviceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState)(nil)).Elem()
 }
 
+// ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureExists checks whether an existing ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature resource with the given ID exists.
+func ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature:ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature", id, state, "", opts...)
+}
+
 type serviceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs struct {
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`

@@ -156,6 +156,12 @@ func (CiscoThousandeyesFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoThousandeyesFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoThousandeyesFeatureTemplateExists checks whether an existing CiscoThousandeyesFeatureTemplate resource with the given ID exists.
+func CiscoThousandeyesFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoThousandeyesFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoThousandeyesFeatureTemplate:CiscoThousandeyesFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoThousandeyesFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`

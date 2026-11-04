@@ -117,6 +117,12 @@ func (PortListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*portListPolicyObjectState)(nil)).Elem()
 }
 
+// PortListPolicyObjectExists checks whether an existing PortListPolicyObject resource with the given ID exists.
+func PortListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PortListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/portListPolicyObject:PortListPolicyObject", id, state, "", opts...)
+}
+
 type portListPolicyObjectArgs struct {
 	// List of entries
 	Entries []PortListPolicyObjectEntry `pulumi:"entries"`

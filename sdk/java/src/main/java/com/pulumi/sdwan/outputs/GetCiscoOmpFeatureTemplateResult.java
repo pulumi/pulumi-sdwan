@@ -56,7 +56,7 @@ public final class GetCiscoOmpFeatureTemplateResult {
      */
     private String ecmpLimitVariable;
     /**
-     * @return End of RIB timer \n\n seconds
+     * @return End of RIB timer &#92;n&#92;n seconds
      * 
      */
     private Integer eorTimer;
@@ -136,7 +136,7 @@ public final class GetCiscoOmpFeatureTemplateResult {
      */
     private String ompAdminDistanceIpv6Variable;
     /**
-     * @return Set Overlay AS number \n\n or \n\n
+     * @return Set Overlay AS number &#92;n&#92;n or &#92;n&#92;n
      * 
      */
     private Integer overlayAs;
@@ -244,7 +244,7 @@ public final class GetCiscoOmpFeatureTemplateResult {
         return this.ecmpLimitVariable;
     }
     /**
-     * @return End of RIB timer \n\n seconds
+     * @return End of RIB timer &#92;n&#92;n seconds
      * 
      */
     public Integer eorTimer() {
@@ -356,7 +356,7 @@ public final class GetCiscoOmpFeatureTemplateResult {
         return this.ompAdminDistanceIpv6Variable;
     }
     /**
-     * @return Set Overlay AS number \n\n or \n\n
+     * @return Set Overlay AS number &#92;n&#92;n or &#92;n&#92;n
      * 
      */
     public Integer overlayAs() {

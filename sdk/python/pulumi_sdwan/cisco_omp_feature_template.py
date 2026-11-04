@@ -1555,6 +1555,78 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return CiscoOmpFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            advertise_ipv4_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict', 'outputs.CiscoOmpFeatureTemplateAdvertiseIpv4Route']]]]] = None,
+            advertise_ipv6_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict', 'outputs.CiscoOmpFeatureTemplateAdvertiseIpv6Route']]]]] = None,
+            advertisement_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            advertisement_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            ecmp_limit: pulumi.Input[Optional[_builtins.int]] = None,
+            ecmp_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            eor_timer: pulumi.Input[Optional[_builtins.int]] = None,
+            eor_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            graceful_restart: pulumi.Input[Optional[_builtins.bool]] = None,
+            graceful_restart_timer: pulumi.Input[Optional[_builtins.int]] = None,
+            graceful_restart_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            graceful_restart_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+            holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ignore_region_path_length: pulumi.Input[Optional[_builtins.bool]] = None,
+            ignore_region_path_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            omp_admin_distance_ipv4: pulumi.Input[Optional[_builtins.int]] = None,
+            omp_admin_distance_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            omp_admin_distance_ipv6: pulumi.Input[Optional[_builtins.int]] = None,
+            omp_admin_distance_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            overlay_as: pulumi.Input[Optional[_builtins.int]] = None,
+            overlay_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            send_path_limit: pulumi.Input[Optional[_builtins.int]] = None,
+            send_path_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+            shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            transport_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+            transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["advertiseIpv4Routes"] = advertise_ipv4_routes
+        __props__["advertiseIpv6Routes"] = advertise_ipv6_routes
+        __props__["advertisementInterval"] = advertisement_interval
+        __props__["advertisementIntervalVariable"] = advertisement_interval_variable
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["ecmpLimit"] = ecmp_limit
+        __props__["ecmpLimitVariable"] = ecmp_limit_variable
+        __props__["eorTimer"] = eor_timer
+        __props__["eorTimerVariable"] = eor_timer_variable
+        __props__["gracefulRestart"] = graceful_restart
+        __props__["gracefulRestartTimer"] = graceful_restart_timer
+        __props__["gracefulRestartTimerVariable"] = graceful_restart_timer_variable
+        __props__["gracefulRestartVariable"] = graceful_restart_variable
+        __props__["holdtime"] = holdtime
+        __props__["holdtimeVariable"] = holdtime_variable
+        __props__["ignoreRegionPathLength"] = ignore_region_path_length
+        __props__["ignoreRegionPathLengthVariable"] = ignore_region_path_length_variable
+        __props__["name"] = name
+        __props__["ompAdminDistanceIpv4"] = omp_admin_distance_ipv4
+        __props__["ompAdminDistanceIpv4Variable"] = omp_admin_distance_ipv4_variable
+        __props__["ompAdminDistanceIpv6"] = omp_admin_distance_ipv6
+        __props__["ompAdminDistanceIpv6Variable"] = omp_admin_distance_ipv6_variable
+        __props__["overlayAs"] = overlay_as
+        __props__["overlayAsVariable"] = overlay_as_variable
+        __props__["sendPathLimit"] = send_path_limit
+        __props__["sendPathLimitVariable"] = send_path_limit_variable
+        __props__["shutdown"] = shutdown
+        __props__["shutdownVariable"] = shutdown_variable
+        __props__["templateType"] = template_type
+        __props__["transportGateway"] = transport_gateway
+        __props__["transportGatewayVariable"] = transport_gateway_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/ciscoOmpFeatureTemplate:CiscoOmpFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Routes")
     def advertise_ipv4_routes(self) -> pulumi.Output[Optional[Sequence['outputs.CiscoOmpFeatureTemplateAdvertiseIpv4Route']]]:

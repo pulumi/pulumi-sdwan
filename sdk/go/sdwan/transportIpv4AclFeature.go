@@ -173,6 +173,12 @@ func (TransportIpv4AclFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*transportIpv4AclFeatureState)(nil)).Elem()
 }
 
+// TransportIpv4AclFeatureExists checks whether an existing TransportIpv4AclFeature resource with the given ID exists.
+func TransportIpv4AclFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportIpv4AclFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportIpv4AclFeature:TransportIpv4AclFeature", id, state, "", opts...)
+}
+
 type transportIpv4AclFeatureArgs struct {
 	// Default Action
 	//   - Choices: `drop`, `accept`

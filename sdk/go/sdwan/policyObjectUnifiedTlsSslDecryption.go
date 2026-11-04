@@ -245,6 +245,12 @@ func (PolicyObjectUnifiedTlsSslDecryptionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectUnifiedTlsSslDecryptionState)(nil)).Elem()
 }
 
+// PolicyObjectUnifiedTlsSslDecryptionExists checks whether an existing PolicyObjectUnifiedTlsSslDecryption resource with the given ID exists.
+func PolicyObjectUnifiedTlsSslDecryptionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectUnifiedTlsSslDecryptionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectUnifiedTlsSslDecryption:PolicyObjectUnifiedTlsSslDecryption", id, state, "", opts...)
+}
+
 type policyObjectUnifiedTlsSslDecryptionArgs struct {
 	BundleString *string `pulumi:"bundleString"`
 	// If you have vManage as CA or vManage as intermediate CA, this value should be 1

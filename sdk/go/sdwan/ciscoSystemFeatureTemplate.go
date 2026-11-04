@@ -728,6 +728,12 @@ func (CiscoSystemFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoSystemFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoSystemFeatureTemplateExists checks whether an existing CiscoSystemFeatureTemplate resource with the given ID exists.
+func CiscoSystemFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoSystemFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoSystemFeatureTemplate:CiscoSystemFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoSystemFeatureTemplateArgs struct {
 	// Collect admin-tech before reboot due to daemon failure
 	//   - Default value: `true`

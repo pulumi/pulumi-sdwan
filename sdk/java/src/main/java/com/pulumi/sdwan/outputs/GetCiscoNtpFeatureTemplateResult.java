@@ -51,7 +51,7 @@ public final class GetCiscoNtpFeatureTemplateResult {
      */
     private String masterSourceInterfaceVariable;
     /**
-     * @return Master Stratum \n\n
+     * @return Master Stratum &#92;n&#92;n
      * 
      */
     private Integer masterStratum;
@@ -147,7 +147,7 @@ public final class GetCiscoNtpFeatureTemplateResult {
         return this.masterSourceInterfaceVariable;
     }
     /**
-     * @return Master Stratum \n\n
+     * @return Master Stratum &#92;n&#92;n
      * 
      */
     public Integer masterStratum() {

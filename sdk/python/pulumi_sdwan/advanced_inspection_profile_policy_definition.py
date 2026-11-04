@@ -604,6 +604,36 @@ class AdvancedInspectionProfilePolicyDefinition(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return AdvancedInspectionProfilePolicyDefinition(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            advanced_malware_protection_id: pulumi.Input[Optional[_builtins.str]] = None,
+            advanced_malware_protection_version: pulumi.Input[Optional[_builtins.int]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            intrusion_prevention_id: pulumi.Input[Optional[_builtins.str]] = None,
+            intrusion_prevention_version: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            tls_action: pulumi.Input[Optional[_builtins.str]] = None,
+            tls_ssl_decryption_id: pulumi.Input[Optional[_builtins.str]] = None,
+            tls_ssl_decryption_version: pulumi.Input[Optional[_builtins.int]] = None,
+            url_filtering_id: pulumi.Input[Optional[_builtins.str]] = None,
+            url_filtering_version: pulumi.Input[Optional[_builtins.int]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["advancedMalwareProtectionId"] = advanced_malware_protection_id
+        __props__["advancedMalwareProtectionVersion"] = advanced_malware_protection_version
+        __props__["description"] = description
+        __props__["intrusionPreventionId"] = intrusion_prevention_id
+        __props__["intrusionPreventionVersion"] = intrusion_prevention_version
+        __props__["name"] = name
+        __props__["tlsAction"] = tls_action
+        __props__["tlsSslDecryptionId"] = tls_ssl_decryption_id
+        __props__["tlsSslDecryptionVersion"] = tls_ssl_decryption_version
+        __props__["urlFilteringId"] = url_filtering_id
+        __props__["urlFilteringVersion"] = url_filtering_version
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/advancedInspectionProfilePolicyDefinition:AdvancedInspectionProfilePolicyDefinition', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="advancedMalwareProtectionId")
     def advanced_malware_protection_id(self) -> pulumi.Output[Optional[_builtins.str]]:

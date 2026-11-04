@@ -1030,6 +1030,54 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return ServiceRoutingEigrpFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            autonomous_system_id: pulumi.Input[Optional[_builtins.int]] = None,
+            autonomous_system_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            filter: pulumi.Input[Optional[_builtins.bool]] = None,
+            filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
+            hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+            hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict', 'outputs.ServiceRoutingEigrpFeatureInterface']]]]] = None,
+            md5_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict', 'outputs.ServiceRoutingEigrpFeatureMd5Key']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict', 'outputs.ServiceRoutingEigrpFeatureNetwork']]]]] = None,
+            redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict', 'outputs.ServiceRoutingEigrpFeatureRedistribute']]]]] = None,
+            route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["authenticationType"] = authentication_type
+        __props__["authenticationTypeVariable"] = authentication_type_variable
+        __props__["autonomousSystemId"] = autonomous_system_id
+        __props__["autonomousSystemIdVariable"] = autonomous_system_id_variable
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["filter"] = filter
+        __props__["filterVariable"] = filter_variable
+        __props__["helloInterval"] = hello_interval
+        __props__["helloIntervalVariable"] = hello_interval_variable
+        __props__["hmacAuthenticationKey"] = hmac_authentication_key
+        __props__["hmacAuthenticationKeyVariable"] = hmac_authentication_key_variable
+        __props__["holdTime"] = hold_time
+        __props__["holdTimeVariable"] = hold_time_variable
+        __props__["interfaces"] = interfaces
+        __props__["md5Keys"] = md5_keys
+        __props__["name"] = name
+        __props__["networks"] = networks
+        __props__["redistributes"] = redistributes
+        __props__["routePolicyId"] = route_policy_id
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/serviceRoutingEigrpFeature:ServiceRoutingEigrpFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> pulumi.Output[Optional[_builtins.str]]:

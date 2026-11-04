@@ -470,6 +470,28 @@ class TopologyHubSpokeFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return TopologyHubSpokeFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            selected_hierarchy_hubs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            selected_hubs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            spokes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TopologyHubSpokeFeatureSpokeArgs', 'TopologyHubSpokeFeatureSpokeArgsDict', 'outputs.TopologyHubSpokeFeatureSpoke']]]]] = None,
+            target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["name"] = name
+        __props__["selectedHierarchyHubs"] = selected_hierarchy_hubs
+        __props__["selectedHubs"] = selected_hubs
+        __props__["spokes"] = spokes
+        __props__["targetVpns"] = target_vpns
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/topologyHubSpokeFeature:TopologyHubSpokeFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

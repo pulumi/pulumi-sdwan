@@ -823,6 +823,46 @@ class GpsFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return GpsFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            destination_address: pulumi.Input[Optional[_builtins.str]] = None,
+            destination_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            destination_port: pulumi.Input[Optional[_builtins.int]] = None,
+            destination_port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            enable: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            gps_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            gps_mode_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            nmea: pulumi.Input[Optional[_builtins.bool]] = None,
+            nmea_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            source_address: pulumi.Input[Optional[_builtins.str]] = None,
+            source_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["destinationAddress"] = destination_address
+        __props__["destinationAddressVariable"] = destination_address_variable
+        __props__["destinationPort"] = destination_port
+        __props__["destinationPortVariable"] = destination_port_variable
+        __props__["deviceTypes"] = device_types
+        __props__["enable"] = enable
+        __props__["enableVariable"] = enable_variable
+        __props__["gpsMode"] = gps_mode
+        __props__["gpsModeVariable"] = gps_mode_variable
+        __props__["name"] = name
+        __props__["nmea"] = nmea
+        __props__["nmeaVariable"] = nmea_variable
+        __props__["sourceAddress"] = source_address
+        __props__["sourceAddressVariable"] = source_address_variable
+        __props__["templateType"] = template_type
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/gpsFeatureTemplate:GpsFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[_builtins.str]:

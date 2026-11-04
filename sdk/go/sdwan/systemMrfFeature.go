@@ -237,6 +237,12 @@ func (SystemMrfFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemMrfFeatureState)(nil)).Elem()
 }
 
+// SystemMrfFeatureExists checks whether an existing SystemMrfFeature resource with the given ID exists.
+func SystemMrfFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemMrfFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemMrfFeature:SystemMrfFeature", id, state, "", opts...)
+}
+
 type systemMrfFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

@@ -137,6 +137,12 @@ func (PolicyObjectSecurityZoneState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectSecurityZoneState)(nil)).Elem()
 }
 
+// PolicyObjectSecurityZoneExists checks whether an existing PolicyObjectSecurityZone resource with the given ID exists.
+func PolicyObjectSecurityZoneExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectSecurityZoneState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectSecurityZone:PolicyObjectSecurityZone", id, state, "", opts...)
+}
+
 type policyObjectSecurityZoneArgs struct {
 	// The description of the Policy_object
 	Description *string `pulumi:"description"`

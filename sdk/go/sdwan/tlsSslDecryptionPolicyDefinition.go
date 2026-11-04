@@ -280,6 +280,12 @@ func (TlsSslDecryptionPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*tlsSslDecryptionPolicyDefinitionState)(nil)).Elem()
 }
 
+// TlsSslDecryptionPolicyDefinitionExists checks whether an existing TlsSslDecryptionPolicyDefinition resource with the given ID exists.
+func TlsSslDecryptionPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TlsSslDecryptionPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/tlsSslDecryptionPolicyDefinition:TlsSslDecryptionPolicyDefinition", id, state, "", opts...)
+}
+
 type tlsSslDecryptionPolicyDefinitionArgs struct {
 	// Certificate Lifetime(in Days)
 	CertificateLifetimeInDays *int `pulumi:"certificateLifetimeInDays"`

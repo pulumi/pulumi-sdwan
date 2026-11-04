@@ -552,6 +552,12 @@ func (CiscoBgpFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoBgpFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoBgpFeatureTemplateExists checks whether an existing CiscoBgpFeatureTemplate resource with the given ID exists.
+func CiscoBgpFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoBgpFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoBgpFeatureTemplate:CiscoBgpFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoBgpFeatureTemplateArgs struct {
 	// Set BGP address family
 	AddressFamilies []CiscoBgpFeatureTemplateAddressFamily `pulumi:"addressFamilies"`

@@ -332,6 +332,12 @@ func (CedgePimFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cedgePimFeatureTemplateState)(nil)).Elem()
 }
 
+// CedgePimFeatureTemplateExists checks whether an existing CedgePimFeatureTemplate resource with the given ID exists.
+func CedgePimFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CedgePimFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/cedgePimFeatureTemplate:CedgePimFeatureTemplate", id, state, "", opts...)
+}
+
 type cedgePimFeatureTemplateArgs struct {
 	// Enable or disable auto-RP
 	//   - Default value: `false`

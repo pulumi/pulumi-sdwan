@@ -1946,6 +1946,96 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         __props__.__dict__["vpn_variable"] = vpn_variable
         return ServiceLanVpnFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            advertise_omp_ipv4s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureAdvertiseOmpIpv4Args', 'ServiceLanVpnFeatureAdvertiseOmpIpv4ArgsDict', 'outputs.ServiceLanVpnFeatureAdvertiseOmpIpv4']]]]] = None,
+            advertise_omp_ipv6s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureAdvertiseOmpIpv6Args', 'ServiceLanVpnFeatureAdvertiseOmpIpv6ArgsDict', 'outputs.ServiceLanVpnFeatureAdvertiseOmpIpv6']]]]] = None,
+            config_description: pulumi.Input[Optional[_builtins.str]] = None,
+            config_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_sdwan_remote_access: pulumi.Input[Optional[_builtins.bool]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            gre_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureGreRouteArgs', 'ServiceLanVpnFeatureGreRouteArgsDict', 'outputs.ServiceLanVpnFeatureGreRoute']]]]] = None,
+            host_mappings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureHostMappingArgs', 'ServiceLanVpnFeatureHostMappingArgsDict', 'outputs.ServiceLanVpnFeatureHostMapping']]]]] = None,
+            ipsec_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureIpsecRouteArgs', 'ServiceLanVpnFeatureIpsecRouteArgsDict', 'outputs.ServiceLanVpnFeatureIpsecRoute']]]]] = None,
+            ipv4_export_route_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureIpv4ExportRouteTargetArgs', 'ServiceLanVpnFeatureIpv4ExportRouteTargetArgsDict', 'outputs.ServiceLanVpnFeatureIpv4ExportRouteTarget']]]]] = None,
+            ipv4_import_route_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureIpv4ImportRouteTargetArgs', 'ServiceLanVpnFeatureIpv4ImportRouteTargetArgsDict', 'outputs.ServiceLanVpnFeatureIpv4ImportRouteTarget']]]]] = None,
+            ipv4_static_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureIpv4StaticRouteArgs', 'ServiceLanVpnFeatureIpv4StaticRouteArgsDict', 'outputs.ServiceLanVpnFeatureIpv4StaticRoute']]]]] = None,
+            ipv6_export_route_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureIpv6ExportRouteTargetArgs', 'ServiceLanVpnFeatureIpv6ExportRouteTargetArgsDict', 'outputs.ServiceLanVpnFeatureIpv6ExportRouteTarget']]]]] = None,
+            ipv6_import_route_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureIpv6ImportRouteTargetArgs', 'ServiceLanVpnFeatureIpv6ImportRouteTargetArgsDict', 'outputs.ServiceLanVpnFeatureIpv6ImportRouteTarget']]]]] = None,
+            ipv6_static_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureIpv6StaticRouteArgs', 'ServiceLanVpnFeatureIpv6StaticRouteArgsDict', 'outputs.ServiceLanVpnFeatureIpv6StaticRoute']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            nat64_v4_pools: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureNat64V4PoolArgs', 'ServiceLanVpnFeatureNat64V4PoolArgsDict', 'outputs.ServiceLanVpnFeatureNat64V4Pool']]]]] = None,
+            nat_pools: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureNatPoolArgs', 'ServiceLanVpnFeatureNatPoolArgsDict', 'outputs.ServiceLanVpnFeatureNatPool']]]]] = None,
+            nat_port_forwards: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureNatPortForwardArgs', 'ServiceLanVpnFeatureNatPortForwardArgsDict', 'outputs.ServiceLanVpnFeatureNatPortForward']]]]] = None,
+            omp_admin_distance_ipv4: pulumi.Input[Optional[_builtins.int]] = None,
+            omp_admin_distance_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            omp_admin_distance_ipv6: pulumi.Input[Optional[_builtins.int]] = None,
+            omp_admin_distance_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_dns_address_ipv4: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_dns_address_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_dns_address_ipv6: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_dns_address_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            route_leak_from_global_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureRouteLeakFromGlobalVpnArgs', 'ServiceLanVpnFeatureRouteLeakFromGlobalVpnArgsDict', 'outputs.ServiceLanVpnFeatureRouteLeakFromGlobalVpn']]]]] = None,
+            route_leak_from_other_services: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureRouteLeakFromOtherServiceArgs', 'ServiceLanVpnFeatureRouteLeakFromOtherServiceArgsDict', 'outputs.ServiceLanVpnFeatureRouteLeakFromOtherService']]]]] = None,
+            route_leak_to_global_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureRouteLeakToGlobalVpnArgs', 'ServiceLanVpnFeatureRouteLeakToGlobalVpnArgsDict', 'outputs.ServiceLanVpnFeatureRouteLeakToGlobalVpn']]]]] = None,
+            secondary_dns_address_ipv4: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_dns_address_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_dns_address_ipv6: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_dns_address_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            service_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceRouteArgs', 'ServiceLanVpnFeatureServiceRouteArgsDict', 'outputs.ServiceLanVpnFeatureServiceRoute']]]]] = None,
+            services: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceArgs', 'ServiceLanVpnFeatureServiceArgsDict', 'outputs.ServiceLanVpnFeatureService']]]]] = None,
+            static_nat_subnets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatSubnetArgs', 'ServiceLanVpnFeatureStaticNatSubnetArgsDict', 'outputs.ServiceLanVpnFeatureStaticNatSubnet']]]]] = None,
+            static_nats: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatArgs', 'ServiceLanVpnFeatureStaticNatArgsDict', 'outputs.ServiceLanVpnFeatureStaticNat']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vpn: pulumi.Input[Optional[_builtins.int]] = None,
+            vpn_variable: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["advertiseOmpIpv4s"] = advertise_omp_ipv4s
+        __props__["advertiseOmpIpv6s"] = advertise_omp_ipv6s
+        __props__["configDescription"] = config_description
+        __props__["configDescriptionVariable"] = config_description_variable
+        __props__["description"] = description
+        __props__["enableSdwanRemoteAccess"] = enable_sdwan_remote_access
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["greRoutes"] = gre_routes
+        __props__["hostMappings"] = host_mappings
+        __props__["ipsecRoutes"] = ipsec_routes
+        __props__["ipv4ExportRouteTargets"] = ipv4_export_route_targets
+        __props__["ipv4ImportRouteTargets"] = ipv4_import_route_targets
+        __props__["ipv4StaticRoutes"] = ipv4_static_routes
+        __props__["ipv6ExportRouteTargets"] = ipv6_export_route_targets
+        __props__["ipv6ImportRouteTargets"] = ipv6_import_route_targets
+        __props__["ipv6StaticRoutes"] = ipv6_static_routes
+        __props__["name"] = name
+        __props__["nat64V4Pools"] = nat64_v4_pools
+        __props__["natPools"] = nat_pools
+        __props__["natPortForwards"] = nat_port_forwards
+        __props__["ompAdminDistanceIpv4"] = omp_admin_distance_ipv4
+        __props__["ompAdminDistanceIpv4Variable"] = omp_admin_distance_ipv4_variable
+        __props__["ompAdminDistanceIpv6"] = omp_admin_distance_ipv6
+        __props__["ompAdminDistanceIpv6Variable"] = omp_admin_distance_ipv6_variable
+        __props__["primaryDnsAddressIpv4"] = primary_dns_address_ipv4
+        __props__["primaryDnsAddressIpv4Variable"] = primary_dns_address_ipv4_variable
+        __props__["primaryDnsAddressIpv6"] = primary_dns_address_ipv6
+        __props__["primaryDnsAddressIpv6Variable"] = primary_dns_address_ipv6_variable
+        __props__["routeLeakFromGlobalVpns"] = route_leak_from_global_vpns
+        __props__["routeLeakFromOtherServices"] = route_leak_from_other_services
+        __props__["routeLeakToGlobalVpns"] = route_leak_to_global_vpns
+        __props__["secondaryDnsAddressIpv4"] = secondary_dns_address_ipv4
+        __props__["secondaryDnsAddressIpv4Variable"] = secondary_dns_address_ipv4_variable
+        __props__["secondaryDnsAddressIpv6"] = secondary_dns_address_ipv6
+        __props__["secondaryDnsAddressIpv6Variable"] = secondary_dns_address_ipv6_variable
+        __props__["serviceRoutes"] = service_routes
+        __props__["services"] = services
+        __props__["staticNatSubnets"] = static_nat_subnets
+        __props__["staticNats"] = static_nats
+        __props__["version"] = version
+        __props__["vpn"] = vpn
+        __props__["vpnVariable"] = vpn_variable
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/serviceLanVpnFeature:ServiceLanVpnFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="advertiseOmpIpv4s")
     def advertise_omp_ipv4s(self) -> pulumi.Output[Optional[Sequence['outputs.ServiceLanVpnFeatureAdvertiseOmpIpv4']]]:

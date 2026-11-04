@@ -21,7 +21,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? ApplicationType { get; set; }
 
         /// <summary>
-        /// Data Gateway IP 
+        /// Data Gateway IP
         ///   - Default value: `192.0.2.1/24`
         /// </summary>
         [Input("dataGatewayIp")]

@@ -239,6 +239,12 @@ func (CiscoLoggingFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoLoggingFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoLoggingFeatureTemplateExists checks whether an existing CiscoLoggingFeatureTemplate resource with the given ID exists.
+func CiscoLoggingFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoLoggingFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoLoggingFeatureTemplate:CiscoLoggingFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoLoggingFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`

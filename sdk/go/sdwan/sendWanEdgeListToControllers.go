@@ -101,6 +101,12 @@ func (SendWanEdgeListToControllersState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sendWanEdgeListToControllersState)(nil)).Elem()
 }
 
+// SendWanEdgeListToControllersExists checks whether an existing SendWanEdgeListToControllers resource with the given ID exists.
+func SendWanEdgeListToControllersExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SendWanEdgeListToControllersState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/sendWanEdgeListToControllers:SendWanEdgeListToControllers", id, state, "", opts...)
+}
+
 type sendWanEdgeListToControllersArgs struct {
 	// A version value that, when changed, triggers a new push of the WAN edge certificate list to the controllers
 	Version *int `pulumi:"version"`

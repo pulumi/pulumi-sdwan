@@ -155,6 +155,12 @@ func (PolicyObjectSecurityObjectGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectSecurityObjectGroupState)(nil)).Elem()
 }
 
+// PolicyObjectSecurityObjectGroupExists checks whether an existing PolicyObjectSecurityObjectGroup resource with the given ID exists.
+func PolicyObjectSecurityObjectGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectSecurityObjectGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectSecurityObjectGroup:PolicyObjectSecurityObjectGroup", id, state, "", opts...)
+}
+
 type policyObjectSecurityObjectGroupArgs struct {
 	// The description of the Policy_object
 	Description *string                                `pulumi:"description"`

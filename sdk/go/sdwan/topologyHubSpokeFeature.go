@@ -175,6 +175,12 @@ func (TopologyHubSpokeFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*topologyHubSpokeFeatureState)(nil)).Elem()
 }
 
+// TopologyHubSpokeFeatureExists checks whether an existing TopologyHubSpokeFeature resource with the given ID exists.
+func TopologyHubSpokeFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TopologyHubSpokeFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/topologyHubSpokeFeature:TopologyHubSpokeFeature", id, state, "", opts...)
+}
+
 type topologyHubSpokeFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

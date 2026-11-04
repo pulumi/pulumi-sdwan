@@ -822,6 +822,44 @@ class CiscoSnmpFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["views"] = views
         return CiscoSnmpFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            communities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateCommunityArgs', 'CiscoSnmpFeatureTemplateCommunityArgsDict', 'outputs.CiscoSnmpFeatureTemplateCommunity']]]]] = None,
+            contact: pulumi.Input[Optional[_builtins.str]] = None,
+            contact_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateGroupArgs', 'CiscoSnmpFeatureTemplateGroupArgsDict', 'outputs.CiscoSnmpFeatureTemplateGroup']]]]] = None,
+            location: pulumi.Input[Optional[_builtins.str]] = None,
+            location_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+            shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            trap_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateTrapTargetArgs', 'CiscoSnmpFeatureTemplateTrapTargetArgsDict', 'outputs.CiscoSnmpFeatureTemplateTrapTarget']]]]] = None,
+            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateUserArgs', 'CiscoSnmpFeatureTemplateUserArgsDict', 'outputs.CiscoSnmpFeatureTemplateUser']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            views: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateViewArgs', 'CiscoSnmpFeatureTemplateViewArgsDict', 'outputs.CiscoSnmpFeatureTemplateView']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["communities"] = communities
+        __props__["contact"] = contact
+        __props__["contactVariable"] = contact_variable
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["groups"] = groups
+        __props__["location"] = location
+        __props__["locationVariable"] = location_variable
+        __props__["name"] = name
+        __props__["shutdown"] = shutdown
+        __props__["shutdownVariable"] = shutdown_variable
+        __props__["templateType"] = template_type
+        __props__["trapTargets"] = trap_targets
+        __props__["users"] = users
+        __props__["version"] = version
+        __props__["views"] = views
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/ciscoSnmpFeatureTemplate:CiscoSnmpFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def communities(self) -> pulumi.Output[Optional[Sequence['outputs.CiscoSnmpFeatureTemplateCommunity']]]:

@@ -128,7 +128,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
      */
     private String ikePresharedKeyVariable;
     /**
-     * @return IKE rekey interval \n\n seconds
+     * @return IKE rekey interval &#92;n&#92;n seconds
      * 
      */
     private Integer ikeRekeyInterval;
@@ -138,7 +138,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
      */
     private String ikeRekeyIntervalVariable;
     /**
-     * @return IKE Version \n\n
+     * @return IKE Version &#92;n&#92;n
      * 
      */
     private Integer ikeVersion;
@@ -173,7 +173,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
      */
     private String ipsecCiphersuiteVariable;
     /**
-     * @return IPsec rekey interval \n\n seconds
+     * @return IPsec rekey interval &#92;n&#92;n seconds
      * 
      */
     private Integer ipsecRekeyInterval;
@@ -199,7 +199,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
      */
     private String ipv4AddressVariable;
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return Interface MTU &#92;n&#92;n, in bytes
      * 
      */
     private Integer ipv4Mtu;
@@ -235,7 +235,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
      */
     private String ipv6AddressVariable;
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return Interface MTU &#92;n&#92;n, in bytes
      * 
      */
     private Integer ipv6Mtu;
@@ -326,7 +326,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
      */
     private String tunnelMode;
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     private String tunnelRouteVia;
@@ -336,7 +336,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
      */
     private String tunnelRouteViaVariable;
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     private String tunnelSourceInterface;
@@ -530,7 +530,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
         return this.ikePresharedKeyVariable;
     }
     /**
-     * @return IKE rekey interval \n\n seconds
+     * @return IKE rekey interval &#92;n&#92;n seconds
      * 
      */
     public Integer ikeRekeyInterval() {
@@ -544,7 +544,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
         return this.ikeRekeyIntervalVariable;
     }
     /**
-     * @return IKE Version \n\n
+     * @return IKE Version &#92;n&#92;n
      * 
      */
     public Integer ikeVersion() {
@@ -593,7 +593,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
         return this.ipsecCiphersuiteVariable;
     }
     /**
-     * @return IPsec rekey interval \n\n seconds
+     * @return IPsec rekey interval &#92;n&#92;n seconds
      * 
      */
     public Integer ipsecRekeyInterval() {
@@ -631,7 +631,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
         return this.ipv4AddressVariable;
     }
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return Interface MTU &#92;n&#92;n, in bytes
      * 
      */
     public Integer ipv4Mtu() {
@@ -683,7 +683,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
         return this.ipv6AddressVariable;
     }
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return Interface MTU &#92;n&#92;n, in bytes
      * 
      */
     public Integer ipv6Mtu() {
@@ -812,7 +812,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
         return this.tunnelMode;
     }
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     public String tunnelRouteVia() {
@@ -826,7 +826,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
         return this.tunnelRouteViaVariable;
     }
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     public String tunnelSourceInterface() {

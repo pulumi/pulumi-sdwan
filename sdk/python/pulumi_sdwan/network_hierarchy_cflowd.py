@@ -600,6 +600,32 @@ class NetworkHierarchyCflowd(pulumi.CustomResource):
         __props__.__dict__["protocol"] = protocol
         return NetworkHierarchyCflowd(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            collect_dscp_output: pulumi.Input[Optional[_builtins.bool]] = None,
+            collect_tloc_loopback: pulumi.Input[Optional[_builtins.bool]] = None,
+            collect_tos: pulumi.Input[Optional[_builtins.bool]] = None,
+            collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['NetworkHierarchyCflowdCollectorArgs', 'NetworkHierarchyCflowdCollectorArgsDict', 'outputs.NetworkHierarchyCflowdCollector']]]]] = None,
+            flow_active_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            flow_inactive_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            flow_refresh_time: pulumi.Input[Optional[_builtins.int]] = None,
+            flow_sampling_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            node_id: pulumi.Input[Optional[_builtins.str]] = None,
+            protocol: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["collectDscpOutput"] = collect_dscp_output
+        __props__["collectTlocLoopback"] = collect_tloc_loopback
+        __props__["collectTos"] = collect_tos
+        __props__["collectors"] = collectors
+        __props__["flowActiveTimeout"] = flow_active_timeout
+        __props__["flowInactiveTimeout"] = flow_inactive_timeout
+        __props__["flowRefreshTime"] = flow_refresh_time
+        __props__["flowSamplingInterval"] = flow_sampling_interval
+        __props__["nodeId"] = node_id
+        __props__["protocol"] = protocol
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/networkHierarchyCflowd:NetworkHierarchyCflowd', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="collectDscpOutput")
     def collect_dscp_output(self) -> pulumi.Output[Optional[_builtins.bool]]:

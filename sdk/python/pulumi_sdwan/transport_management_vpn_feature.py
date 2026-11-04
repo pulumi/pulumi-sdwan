@@ -841,6 +841,46 @@ class TransportManagementVpnFeature(pulumi.CustomResource):
         __props__.__dict__["vpn_description_variable"] = vpn_description_variable
         return TransportManagementVpnFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_static_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportManagementVpnFeatureIpv4StaticRouteArgs', 'TransportManagementVpnFeatureIpv4StaticRouteArgsDict', 'outputs.TransportManagementVpnFeatureIpv4StaticRoute']]]]] = None,
+            ipv6_static_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportManagementVpnFeatureIpv6StaticRouteArgs', 'TransportManagementVpnFeatureIpv6StaticRouteArgsDict', 'outputs.TransportManagementVpnFeatureIpv6StaticRoute']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            new_host_mappings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportManagementVpnFeatureNewHostMappingArgs', 'TransportManagementVpnFeatureNewHostMappingArgsDict', 'outputs.TransportManagementVpnFeatureNewHostMapping']]]]] = None,
+            primary_dns_address_ipv4: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_dns_address_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_dns_address_ipv6: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_dns_address_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_dns_address_ipv4: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_dns_address_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_dns_address_ipv6: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_dns_address_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vpn_description: pulumi.Input[Optional[_builtins.str]] = None,
+            vpn_description_variable: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["ipv4StaticRoutes"] = ipv4_static_routes
+        __props__["ipv6StaticRoutes"] = ipv6_static_routes
+        __props__["name"] = name
+        __props__["newHostMappings"] = new_host_mappings
+        __props__["primaryDnsAddressIpv4"] = primary_dns_address_ipv4
+        __props__["primaryDnsAddressIpv4Variable"] = primary_dns_address_ipv4_variable
+        __props__["primaryDnsAddressIpv6"] = primary_dns_address_ipv6
+        __props__["primaryDnsAddressIpv6Variable"] = primary_dns_address_ipv6_variable
+        __props__["secondaryDnsAddressIpv4"] = secondary_dns_address_ipv4
+        __props__["secondaryDnsAddressIpv4Variable"] = secondary_dns_address_ipv4_variable
+        __props__["secondaryDnsAddressIpv6"] = secondary_dns_address_ipv6
+        __props__["secondaryDnsAddressIpv6Variable"] = secondary_dns_address_ipv6_variable
+        __props__["version"] = version
+        __props__["vpnDescription"] = vpn_description
+        __props__["vpnDescriptionVariable"] = vpn_description_variable
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/transportManagementVpnFeature:TransportManagementVpnFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

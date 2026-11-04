@@ -135,6 +135,12 @@ func (SystemCaCertificateFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemCaCertificateFeatureState)(nil)).Elem()
 }
 
+// SystemCaCertificateFeatureExists checks whether an existing SystemCaCertificateFeature resource with the given ID exists.
+func SystemCaCertificateFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemCaCertificateFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemCaCertificateFeature:SystemCaCertificateFeature", id, state, "", opts...)
+}
+
 type systemCaCertificateFeatureArgs struct {
 	// Thirdparty CA Certificate List
 	Certificates []SystemCaCertificateFeatureCertificate `pulumi:"certificates"`

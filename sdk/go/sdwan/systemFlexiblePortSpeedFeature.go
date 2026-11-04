@@ -142,6 +142,12 @@ func (SystemFlexiblePortSpeedFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemFlexiblePortSpeedFeatureState)(nil)).Elem()
 }
 
+// SystemFlexiblePortSpeedFeatureExists checks whether an existing SystemFlexiblePortSpeedFeature resource with the given ID exists.
+func SystemFlexiblePortSpeedFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemFlexiblePortSpeedFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/systemFlexiblePortSpeedFeature:SystemFlexiblePortSpeedFeature", id, state, "", opts...)
+}
+
 type systemFlexiblePortSpeedFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

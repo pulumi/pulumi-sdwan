@@ -1087,6 +1087,58 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return TransportCellularProfileFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            access_point_name: pulumi.Input[Optional[_builtins.str]] = None,
+            access_point_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            no_overwrite: pulumi.Input[Optional[_builtins.bool]] = None,
+            no_overwrite_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            packet_data_network_type: pulumi.Input[Optional[_builtins.str]] = None,
+            packet_data_network_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_id: pulumi.Input[Optional[_builtins.int]] = None,
+            profile_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_password: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_username: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            requires_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+            slice_differentiator: pulumi.Input[Optional[_builtins.int]] = None,
+            slice_differentiator_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            slice_type: pulumi.Input[Optional[_builtins.int]] = None,
+            slice_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accessPointName"] = access_point_name
+        __props__["accessPointNameVariable"] = access_point_name_variable
+        __props__["authenticationType"] = authentication_type
+        __props__["authenticationTypeVariable"] = authentication_type_variable
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["name"] = name
+        __props__["noOverwrite"] = no_overwrite
+        __props__["noOverwriteVariable"] = no_overwrite_variable
+        __props__["packetDataNetworkType"] = packet_data_network_type
+        __props__["packetDataNetworkTypeVariable"] = packet_data_network_type_variable
+        __props__["profileId"] = profile_id
+        __props__["profileIdVariable"] = profile_id_variable
+        __props__["profilePassword"] = profile_password
+        __props__["profilePasswordVariable"] = profile_password_variable
+        __props__["profileUsername"] = profile_username
+        __props__["profileUsernameVariable"] = profile_username_variable
+        __props__["requiresAuthentication"] = requires_authentication
+        __props__["sliceDifferentiator"] = slice_differentiator
+        __props__["sliceDifferentiatorVariable"] = slice_differentiator_variable
+        __props__["sliceType"] = slice_type
+        __props__["sliceTypeVariable"] = slice_type_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/transportCellularProfileFeature:TransportCellularProfileFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accessPointName")
     def access_point_name(self) -> pulumi.Output[Optional[_builtins.str]]:

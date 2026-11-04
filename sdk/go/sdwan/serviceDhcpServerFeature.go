@@ -298,6 +298,12 @@ func (ServiceDhcpServerFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceDhcpServerFeatureState)(nil)).Elem()
 }
 
+// ServiceDhcpServerFeatureExists checks whether an existing ServiceDhcpServerFeature resource with the given ID exists.
+func ServiceDhcpServerFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceDhcpServerFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature", id, state, "", opts...)
+}
+
 type serviceDhcpServerFeatureArgs struct {
 	// Set IP address of default gateway
 	DefaultGateway *string `pulumi:"defaultGateway"`

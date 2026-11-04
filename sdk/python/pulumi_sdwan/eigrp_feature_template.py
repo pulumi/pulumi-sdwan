@@ -1068,6 +1068,56 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return EigrpFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            address_families: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict', 'outputs.EigrpFeatureTemplateAddressFamily']]]]] = None,
+            as_number: pulumi.Input[Optional[_builtins.int]] = None,
+            as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            filter: pulumi.Input[Optional[_builtins.bool]] = None,
+            filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
+            hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+            hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict', 'outputs.EigrpFeatureTemplateInterface']]]]] = None,
+            keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict', 'outputs.EigrpFeatureTemplateKey']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            route_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+            route_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["addressFamilies"] = address_families
+        __props__["asNumber"] = as_number
+        __props__["asNumberVariable"] = as_number_variable
+        __props__["authenticationType"] = authentication_type
+        __props__["authenticationTypeVariable"] = authentication_type_variable
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["filter"] = filter
+        __props__["filterVariable"] = filter_variable
+        __props__["helloInterval"] = hello_interval
+        __props__["helloIntervalVariable"] = hello_interval_variable
+        __props__["hmacAuthenticationKey"] = hmac_authentication_key
+        __props__["hmacAuthenticationKeyVariable"] = hmac_authentication_key_variable
+        __props__["holdTime"] = hold_time
+        __props__["holdTimeVariable"] = hold_time_variable
+        __props__["interfaces"] = interfaces
+        __props__["keys"] = keys
+        __props__["name"] = name
+        __props__["routePolicyName"] = route_policy_name
+        __props__["routePolicyNameVariable"] = route_policy_name_variable
+        __props__["templateType"] = template_type
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/eigrpFeatureTemplate:EigrpFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="addressFamilies")
     def address_families(self) -> pulumi.Output[Optional[Sequence['outputs.EigrpFeatureTemplateAddressFamily']]]:

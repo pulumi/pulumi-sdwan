@@ -136,6 +136,12 @@ func (VpnMembershipPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*vpnMembershipPolicyDefinitionState)(nil)).Elem()
 }
 
+// VpnMembershipPolicyDefinitionExists checks whether an existing VpnMembershipPolicyDefinition resource with the given ID exists.
+func VpnMembershipPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *VpnMembershipPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/vpnMembershipPolicyDefinition:VpnMembershipPolicyDefinition", id, state, "", opts...)
+}
+
 type vpnMembershipPolicyDefinitionArgs struct {
 	// The description of the policy definition
 	Description string `pulumi:"description"`

@@ -139,6 +139,12 @@ func (QosMapPolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*qosMapPolicyDefinitionState)(nil)).Elem()
 }
 
+// QosMapPolicyDefinitionExists checks whether an existing QosMapPolicyDefinition resource with the given ID exists.
+func QosMapPolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *QosMapPolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/qosMapPolicyDefinition:QosMapPolicyDefinition", id, state, "", opts...)
+}
+
 type qosMapPolicyDefinitionArgs struct {
 	// The description of the policy definition
 	Description string `pulumi:"description"`

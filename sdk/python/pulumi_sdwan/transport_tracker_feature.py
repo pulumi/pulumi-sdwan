@@ -1121,6 +1121,58 @@ class TransportTrackerFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return TransportTrackerFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_api_url: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_api_url_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_dns_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            icmp_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            icmp_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            interval: pulumi.Input[Optional[_builtins.int]] = None,
+            interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+            multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            threshold: pulumi.Input[Optional[_builtins.int]] = None,
+            threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_name: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["endpointApiUrl"] = endpoint_api_url
+        __props__["endpointApiUrlVariable"] = endpoint_api_url_variable
+        __props__["endpointDnsName"] = endpoint_dns_name
+        __props__["endpointDnsNameVariable"] = endpoint_dns_name_variable
+        __props__["endpointIp"] = endpoint_ip
+        __props__["endpointIpVariable"] = endpoint_ip_variable
+        __props__["endpointTrackerType"] = endpoint_tracker_type
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["icmpInterval"] = icmp_interval
+        __props__["icmpIntervalVariable"] = icmp_interval_variable
+        __props__["interval"] = interval
+        __props__["intervalVariable"] = interval_variable
+        __props__["multiplier"] = multiplier
+        __props__["multiplierVariable"] = multiplier_variable
+        __props__["name"] = name
+        __props__["threshold"] = threshold
+        __props__["thresholdVariable"] = threshold_variable
+        __props__["trackerName"] = tracker_name
+        __props__["trackerNameVariable"] = tracker_name_variable
+        __props__["trackerType"] = tracker_type
+        __props__["trackerTypeVariable"] = tracker_type_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/transportTrackerFeature:TransportTrackerFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

@@ -154,6 +154,12 @@ func (SecurityAppHostingFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*securityAppHostingFeatureTemplateState)(nil)).Elem()
 }
 
+// SecurityAppHostingFeatureTemplateExists checks whether an existing SecurityAppHostingFeatureTemplate resource with the given ID exists.
+func SecurityAppHostingFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SecurityAppHostingFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/securityAppHostingFeatureTemplate:SecurityAppHostingFeatureTemplate", id, state, "", opts...)
+}
+
 type securityAppHostingFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`

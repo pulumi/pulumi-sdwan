@@ -275,6 +275,12 @@ func (ServiceRoutingEigrpFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceRoutingEigrpFeatureState)(nil)).Elem()
 }
 
+// ServiceRoutingEigrpFeatureExists checks whether an existing ServiceRoutingEigrpFeature resource with the given ID exists.
+func ServiceRoutingEigrpFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceRoutingEigrpFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceRoutingEigrpFeature:ServiceRoutingEigrpFeature", id, state, "", opts...)
+}
+
 type serviceRoutingEigrpFeatureArgs struct {
 	// Set EIGRP router authentication type
 	//   - Choices: `md5`, `hmac-sha-256`

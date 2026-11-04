@@ -169,6 +169,12 @@ func (ServiceRoutePolicyFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceRoutePolicyFeatureState)(nil)).Elem()
 }
 
+// ServiceRoutePolicyFeatureExists checks whether an existing ServiceRoutePolicyFeature resource with the given ID exists.
+func ServiceRoutePolicyFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceRoutePolicyFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceRoutePolicyFeature:ServiceRoutePolicyFeature", id, state, "", opts...)
+}
+
 type serviceRoutePolicyFeatureArgs struct {
 	// Default Action
 	//   - Choices: `reject`, `accept`

@@ -790,6 +790,44 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
         __props__.__dict__["web_reputation"] = web_reputation
         return UrlFilteringPolicyDefinition(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            allow_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            allow_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            block_page_action: pulumi.Input[Optional[_builtins.str]] = None,
+            block_page_contents: pulumi.Input[Optional[_builtins.str]] = None,
+            block_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            block_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['UrlFilteringPolicyDefinitionLoggingArgs', 'UrlFilteringPolicyDefinitionLoggingArgsDict', 'outputs.UrlFilteringPolicyDefinitionLogging']]]]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            web_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            web_categories_action: pulumi.Input[Optional[_builtins.str]] = None,
+            web_reputation: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["alerts"] = alerts
+        __props__["allowUrlListId"] = allow_url_list_id
+        __props__["allowUrlListVersion"] = allow_url_list_version
+        __props__["blockPageAction"] = block_page_action
+        __props__["blockPageContents"] = block_page_contents
+        __props__["blockUrlListId"] = block_url_list_id
+        __props__["blockUrlListVersion"] = block_url_list_version
+        __props__["description"] = description
+        __props__["loggings"] = loggings
+        __props__["mode"] = mode
+        __props__["name"] = name
+        __props__["targetVpns"] = target_vpns
+        __props__["version"] = version
+        __props__["webCategories"] = web_categories
+        __props__["webCategoriesAction"] = web_categories_action
+        __props__["webReputation"] = web_reputation
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/urlFilteringPolicyDefinition:UrlFilteringPolicyDefinition', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def alerts(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:

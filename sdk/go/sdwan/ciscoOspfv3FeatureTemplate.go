@@ -796,6 +796,12 @@ func (CiscoOspfv3FeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoOspfv3FeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoOspfv3FeatureTemplateExists checks whether an existing CiscoOspfv3FeatureTemplate resource with the given ID exists.
+func CiscoOspfv3FeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoOspfv3FeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoOspfv3FeatureTemplate:CiscoOspfv3FeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoOspfv3FeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`

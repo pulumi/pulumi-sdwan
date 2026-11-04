@@ -142,6 +142,12 @@ func (PolicerPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policerPolicyObjectState)(nil)).Elem()
 }
 
+// PolicerPolicyObjectExists checks whether an existing PolicerPolicyObject resource with the given ID exists.
+func PolicerPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicerPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policerPolicyObject:PolicerPolicyObject", id, state, "", opts...)
+}
+
 type policerPolicyObjectArgs struct {
 	// Burst in bytes
 	//   - Range: `15000`-`10000000`

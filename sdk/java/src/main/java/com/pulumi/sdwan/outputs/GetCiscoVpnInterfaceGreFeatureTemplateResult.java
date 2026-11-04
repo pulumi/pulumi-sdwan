@@ -65,7 +65,7 @@ public final class GetCiscoVpnInterfaceGreFeatureTemplateResult {
      */
     private String interfaceDescriptionVariable;
     /**
-     * @return Interface name: ge0/\n\n or ge0/\n\n.vlanid or irbbridgeid:1-63 or loopback\n\n or natpool-\n\n when present
+     * @return Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid or irbbridgeid:1-63 or loopback&#92;n&#92;n or natpool-&#92;n&#92;n when present
      * 
      */
     private String interfaceName;
@@ -85,7 +85,7 @@ public final class GetCiscoVpnInterfaceGreFeatureTemplateResult {
      */
     private String ipAddressVariable;
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return Interface MTU &#92;n&#92;n, in bytes
      * 
      */
     private Integer ipMtu;
@@ -155,7 +155,7 @@ public final class GetCiscoVpnInterfaceGreFeatureTemplateResult {
      */
     private String tunnelDestinationVariable;
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     private String tunnelRouteVia;
@@ -170,7 +170,7 @@ public final class GetCiscoVpnInterfaceGreFeatureTemplateResult {
      */
     private String tunnelSource;
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     private String tunnelSourceInterface;
@@ -262,7 +262,7 @@ public final class GetCiscoVpnInterfaceGreFeatureTemplateResult {
         return this.interfaceDescriptionVariable;
     }
     /**
-     * @return Interface name: ge0/\n\n or ge0/\n\n.vlanid or irbbridgeid:1-63 or loopback\n\n or natpool-\n\n when present
+     * @return Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid or irbbridgeid:1-63 or loopback&#92;n&#92;n or natpool-&#92;n&#92;n when present
      * 
      */
     public String interfaceName() {
@@ -290,7 +290,7 @@ public final class GetCiscoVpnInterfaceGreFeatureTemplateResult {
         return this.ipAddressVariable;
     }
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return Interface MTU &#92;n&#92;n, in bytes
      * 
      */
     public Integer ipMtu() {
@@ -388,7 +388,7 @@ public final class GetCiscoVpnInterfaceGreFeatureTemplateResult {
         return this.tunnelDestinationVariable;
     }
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     public String tunnelRouteVia() {
@@ -409,7 +409,7 @@ public final class GetCiscoVpnInterfaceGreFeatureTemplateResult {
         return this.tunnelSource;
     }
     /**
-     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * @return &#92;n&#92;n Interface name: ge0/&#92;n&#92;n or ge0/&#92;n&#92;n.vlanid
      * 
      */
     public String tunnelSourceInterface() {

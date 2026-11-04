@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? ApplicationType;
         /// <summary>
-        /// Data Gateway IP 
+        /// Data Gateway IP
         ///   - Default value: `192.0.2.1/24`
         /// </summary>
         public readonly string? DataGatewayIp;

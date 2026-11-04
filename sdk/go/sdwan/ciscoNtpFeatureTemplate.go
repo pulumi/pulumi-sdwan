@@ -223,6 +223,12 @@ func (CiscoNtpFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoNtpFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoNtpFeatureTemplateExists checks whether an existing CiscoNtpFeatureTemplate resource with the given ID exists.
+func CiscoNtpFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoNtpFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoNtpFeatureTemplate:CiscoNtpFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoNtpFeatureTemplateArgs struct {
 	// Set MD5 authentication key
 	AuthenticationKeys []CiscoNtpFeatureTemplateAuthenticationKey `pulumi:"authenticationKeys"`

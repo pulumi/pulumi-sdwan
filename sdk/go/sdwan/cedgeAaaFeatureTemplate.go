@@ -415,6 +415,12 @@ func (CedgeAaaFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cedgeAaaFeatureTemplateState)(nil)).Elem()
 }
 
+// CedgeAaaFeatureTemplateExists checks whether an existing CedgeAaaFeatureTemplate resource with the given ID exists.
+func CedgeAaaFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CedgeAaaFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/cedgeAaaFeatureTemplate:CedgeAaaFeatureTemplate", id, state, "", opts...)
+}
+
 type cedgeAaaFeatureTemplateArgs struct {
 	// Configure the accounting rules
 	AccountingRules []CedgeAaaFeatureTemplateAccountingRule `pulumi:"accountingRules"`

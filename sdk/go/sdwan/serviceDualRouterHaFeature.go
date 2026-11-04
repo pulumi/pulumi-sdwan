@@ -153,6 +153,12 @@ func (ServiceDualRouterHaFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceDualRouterHaFeatureState)(nil)).Elem()
 }
 
+// ServiceDualRouterHaFeatureExists checks whether an existing ServiceDualRouterHaFeature resource with the given ID exists.
+func ServiceDualRouterHaFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceDualRouterHaFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceDualRouterHaFeature:ServiceDualRouterHaFeature", id, state, "", opts...)
+}
+
 type serviceDualRouterHaFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

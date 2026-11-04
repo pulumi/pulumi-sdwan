@@ -431,7 +431,7 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Propagate AS Path 
+        /// Propagate AS Path
         ///   - Default value: `False`
         /// </summary>
         [Output("propagateAspath")]
@@ -784,7 +784,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Propagate AS Path 
+        /// Propagate AS Path
         ///   - Default value: `False`
         /// </summary>
         [Input("propagateAspath")]
@@ -1087,7 +1087,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Propagate AS Path 
+        /// Propagate AS Path
         ///   - Default value: `False`
         /// </summary>
         [Input("propagateAspath")]

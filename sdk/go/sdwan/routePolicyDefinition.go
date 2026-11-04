@@ -156,6 +156,12 @@ func (RoutePolicyDefinitionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*routePolicyDefinitionState)(nil)).Elem()
 }
 
+// RoutePolicyDefinitionExists checks whether an existing RoutePolicyDefinition resource with the given ID exists.
+func RoutePolicyDefinitionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *RoutePolicyDefinitionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/routePolicyDefinition:RoutePolicyDefinition", id, state, "", opts...)
+}
+
 type routePolicyDefinitionArgs struct {
 	// Default action, either `accept` or `reject`
 	//   - Choices: `accept`, `reject`

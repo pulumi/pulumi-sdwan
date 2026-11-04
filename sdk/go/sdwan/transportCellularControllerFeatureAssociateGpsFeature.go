@@ -129,6 +129,12 @@ func (TransportCellularControllerFeatureAssociateGpsFeatureState) ElementType() 
 	return reflect.TypeOf((*transportCellularControllerFeatureAssociateGpsFeatureState)(nil)).Elem()
 }
 
+// TransportCellularControllerFeatureAssociateGpsFeatureExists checks whether an existing TransportCellularControllerFeatureAssociateGpsFeature resource with the given ID exists.
+func TransportCellularControllerFeatureAssociateGpsFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportCellularControllerFeatureAssociateGpsFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportCellularControllerFeatureAssociateGpsFeature:TransportCellularControllerFeatureAssociateGpsFeature", id, state, "", opts...)
+}
+
 type transportCellularControllerFeatureAssociateGpsFeatureArgs struct {
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`

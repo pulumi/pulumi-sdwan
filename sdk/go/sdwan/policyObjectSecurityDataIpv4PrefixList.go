@@ -134,6 +134,12 @@ func (PolicyObjectSecurityDataIpv4PrefixListState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectSecurityDataIpv4PrefixListState)(nil)).Elem()
 }
 
+// PolicyObjectSecurityDataIpv4PrefixListExists checks whether an existing PolicyObjectSecurityDataIpv4PrefixList resource with the given ID exists.
+func PolicyObjectSecurityDataIpv4PrefixListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectSecurityDataIpv4PrefixListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/policyObjectSecurityDataIpv4PrefixList:PolicyObjectSecurityDataIpv4PrefixList", id, state, "", opts...)
+}
+
 type policyObjectSecurityDataIpv4PrefixListArgs struct {
 	// The description of the Policy_object
 	Description *string                                       `pulumi:"description"`

@@ -161,6 +161,12 @@ func (CiscoBannerFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoBannerFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoBannerFeatureTemplateExists checks whether an existing CiscoBannerFeatureTemplate resource with the given ID exists.
+func CiscoBannerFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoBannerFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoBannerFeatureTemplate:CiscoBannerFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoBannerFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`

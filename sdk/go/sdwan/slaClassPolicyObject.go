@@ -181,6 +181,12 @@ func (SlaClassPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*slaClassPolicyObjectState)(nil)).Elem()
 }
 
+// SlaClassPolicyObjectExists checks whether an existing SlaClassPolicyObject resource with the given ID exists.
+func SlaClassPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SlaClassPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/slaClassPolicyObject:SlaClassPolicyObject", id, state, "", opts...)
+}
+
 type slaClassPolicyObjectArgs struct {
 	// App Probe Class Policy Object ID
 	AppProbeClassId *string `pulumi:"appProbeClassId"`

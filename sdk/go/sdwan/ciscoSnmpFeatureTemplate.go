@@ -252,6 +252,12 @@ func (CiscoSnmpFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoSnmpFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoSnmpFeatureTemplateExists checks whether an existing CiscoSnmpFeatureTemplate resource with the given ID exists.
+func CiscoSnmpFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoSnmpFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoSnmpFeatureTemplate:CiscoSnmpFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoSnmpFeatureTemplateArgs struct {
 	// Configure SNMP community
 	Communities []CiscoSnmpFeatureTemplateCommunity `pulumi:"communities"`

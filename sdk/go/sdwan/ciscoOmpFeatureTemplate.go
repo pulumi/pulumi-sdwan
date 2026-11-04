@@ -381,6 +381,12 @@ func (CiscoOmpFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoOmpFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoOmpFeatureTemplateExists checks whether an existing CiscoOmpFeatureTemplate resource with the given ID exists.
+func CiscoOmpFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoOmpFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoOmpFeatureTemplate:CiscoOmpFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoOmpFeatureTemplateArgs struct {
 	// Advertise locally learned routes to OMP
 	AdvertiseIpv4Routes []CiscoOmpFeatureTemplateAdvertiseIpv4Route `pulumi:"advertiseIpv4Routes"`

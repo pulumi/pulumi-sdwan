@@ -275,6 +275,12 @@ func (SecurityPolicyState) ElementType() reflect.Type {
 	return reflect.TypeOf((*securityPolicyState)(nil)).Elem()
 }
 
+// SecurityPolicyExists checks whether an existing SecurityPolicy resource with the given ID exists.
+func SecurityPolicyExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SecurityPolicyState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/securityPolicy:SecurityPolicy", id, state, "", opts...)
+}
+
 type securityPolicyArgs struct {
 	// Audit trail
 	//   - Choices: `on`, `off`

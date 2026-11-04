@@ -117,6 +117,12 @@ func (LocalApplicationListPolicyObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*localApplicationListPolicyObjectState)(nil)).Elem()
 }
 
+// LocalApplicationListPolicyObjectExists checks whether an existing LocalApplicationListPolicyObject resource with the given ID exists.
+func LocalApplicationListPolicyObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LocalApplicationListPolicyObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/localApplicationListPolicyObject:LocalApplicationListPolicyObject", id, state, "", opts...)
+}
+
 type localApplicationListPolicyObjectArgs struct {
 	// List of entries
 	Entries []LocalApplicationListPolicyObjectEntry `pulumi:"entries"`

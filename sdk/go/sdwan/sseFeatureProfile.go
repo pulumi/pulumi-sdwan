@@ -108,6 +108,12 @@ func (SseFeatureProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sseFeatureProfileState)(nil)).Elem()
 }
 
+// SseFeatureProfileExists checks whether an existing SseFeatureProfile resource with the given ID exists.
+func SseFeatureProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SseFeatureProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/sseFeatureProfile:SseFeatureProfile", id, state, "", opts...)
+}
+
 type sseFeatureProfileArgs struct {
 	// Description
 	Description string `pulumi:"description"`

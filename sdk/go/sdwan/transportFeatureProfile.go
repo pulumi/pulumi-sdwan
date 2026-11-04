@@ -108,6 +108,12 @@ func (TransportFeatureProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*transportFeatureProfileState)(nil)).Elem()
 }
 
+// TransportFeatureProfileExists checks whether an existing TransportFeatureProfile resource with the given ID exists.
+func TransportFeatureProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportFeatureProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportFeatureProfile:TransportFeatureProfile", id, state, "", opts...)
+}
+
 type transportFeatureProfileArgs struct {
 	// Description
 	Description string `pulumi:"description"`

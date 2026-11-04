@@ -750,6 +750,40 @@ class LocalizedPolicy(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return LocalizedPolicy(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            application_visibility_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
+            application_visibility_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
+            cloud_qos: pulumi.Input[Optional[_builtins.bool]] = None,
+            cloud_qos_service_side: pulumi.Input[Optional[_builtins.bool]] = None,
+            definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LocalizedPolicyDefinitionArgs', 'LocalizedPolicyDefinitionArgsDict', 'outputs.LocalizedPolicyDefinition']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            flow_visibility_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
+            flow_visibility_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
+            implicit_acl_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv4_visibility_cache_entries: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv6_visibility_cache_entries: pulumi.Input[Optional[_builtins.int]] = None,
+            log_frequency: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["applicationVisibilityIpv4"] = application_visibility_ipv4
+        __props__["applicationVisibilityIpv6"] = application_visibility_ipv6
+        __props__["cloudQos"] = cloud_qos
+        __props__["cloudQosServiceSide"] = cloud_qos_service_side
+        __props__["definitions"] = definitions
+        __props__["description"] = description
+        __props__["flowVisibilityIpv4"] = flow_visibility_ipv4
+        __props__["flowVisibilityIpv6"] = flow_visibility_ipv6
+        __props__["implicitAclLogging"] = implicit_acl_logging
+        __props__["ipv4VisibilityCacheEntries"] = ipv4_visibility_cache_entries
+        __props__["ipv6VisibilityCacheEntries"] = ipv6_visibility_cache_entries
+        __props__["logFrequency"] = log_frequency
+        __props__["name"] = name
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/localizedPolicy:LocalizedPolicy', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="applicationVisibilityIpv4")
     def application_visibility_ipv4(self) -> pulumi.Output[_builtins.bool]:

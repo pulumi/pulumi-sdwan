@@ -72,7 +72,7 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      */
     private String interfaceDescriptionVariable;
     /**
-     * @return Interface MTU GigabitEthernet0 \n\n, Other GigabitEthernet \n\n in bytes
+     * @return Interface MTU GigabitEthernet0 &#92;n&#92;n, Other GigabitEthernet &#92;n&#92;n in bytes
      * 
      */
     private Integer interfaceMtu;
@@ -98,7 +98,7 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      */
     private String ipDirectedBroadcastVariable;
     /**
-     * @return IP MTU for GigabitEthernet main \n\n, GigabitEthernet subinterface \n\n, Other Interfaces \n\n in bytes
+     * @return IP MTU for GigabitEthernet main &#92;n&#92;n, GigabitEthernet subinterface &#92;n&#92;n, Other Interfaces &#92;n&#92;n in bytes
      * 
      */
     private Integer ipMtu;
@@ -555,7 +555,7 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      */
     private String tunnelInterfaceGroupsVariable;
     /**
-     * @return Set time period of control hello packets \n\n milli seconds
+     * @return Set time period of control hello packets &#92;n&#92;n milli seconds
      * 
      */
     private Integer tunnelInterfaceHelloInterval;
@@ -565,7 +565,7 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      */
     private String tunnelInterfaceHelloIntervalVariable;
     /**
-     * @return Set tolerance of control hello packets \n\n seconds
+     * @return Set tolerance of control hello packets &#92;n&#92;n seconds
      * 
      */
     private Integer tunnelInterfaceHelloTolerance;
@@ -605,7 +605,7 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      */
     private String tunnelInterfaceMaxControlConnectionsVariable;
     /**
-     * @return Set time period of nat refresh packets \n\n seconds
+     * @return Set time period of nat refresh packets &#92;n&#92;n seconds
      * 
      */
     private Integer tunnelInterfaceNatRefreshInterval;
@@ -655,7 +655,7 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      */
     private String tunnelInterfaceVbondAsStunServerVariable;
     /**
-     * @return Set interface preference for control connection to vManage \n\n
+     * @return Set interface preference for control connection to vManage &#92;n&#92;n
      * 
      */
     private Integer tunnelInterfaceVmanageConnectionPreference;
@@ -770,7 +770,7 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         return this.interfaceDescriptionVariable;
     }
     /**
-     * @return Interface MTU GigabitEthernet0 \n\n, Other GigabitEthernet \n\n in bytes
+     * @return Interface MTU GigabitEthernet0 &#92;n&#92;n, Other GigabitEthernet &#92;n&#92;n in bytes
      * 
      */
     public Integer interfaceMtu() {
@@ -808,7 +808,7 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         return this.ipDirectedBroadcastVariable;
     }
     /**
-     * @return IP MTU for GigabitEthernet main \n\n, GigabitEthernet subinterface \n\n, Other Interfaces \n\n in bytes
+     * @return IP MTU for GigabitEthernet main &#92;n&#92;n, GigabitEthernet subinterface &#92;n&#92;n, Other Interfaces &#92;n&#92;n in bytes
      * 
      */
     public Integer ipMtu() {
@@ -1451,7 +1451,7 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         return this.tunnelInterfaceGroupsVariable;
     }
     /**
-     * @return Set time period of control hello packets \n\n milli seconds
+     * @return Set time period of control hello packets &#92;n&#92;n milli seconds
      * 
      */
     public Integer tunnelInterfaceHelloInterval() {
@@ -1465,7 +1465,7 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         return this.tunnelInterfaceHelloIntervalVariable;
     }
     /**
-     * @return Set tolerance of control hello packets \n\n seconds
+     * @return Set tolerance of control hello packets &#92;n&#92;n seconds
      * 
      */
     public Integer tunnelInterfaceHelloTolerance() {
@@ -1521,7 +1521,7 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         return this.tunnelInterfaceMaxControlConnectionsVariable;
     }
     /**
-     * @return Set time period of nat refresh packets \n\n seconds
+     * @return Set time period of nat refresh packets &#92;n&#92;n seconds
      * 
      */
     public Integer tunnelInterfaceNatRefreshInterval() {
@@ -1591,7 +1591,7 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         return this.tunnelInterfaceVbondAsStunServerVariable;
     }
     /**
-     * @return Set interface preference for control connection to vManage \n\n
+     * @return Set interface preference for control connection to vManage &#92;n&#92;n
      * 
      */
     public Integer tunnelInterfaceVmanageConnectionPreference() {

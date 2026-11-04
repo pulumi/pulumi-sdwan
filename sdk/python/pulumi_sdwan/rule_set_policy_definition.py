@@ -311,6 +311,20 @@ class RuleSetPolicyDefinition(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return RuleSetPolicyDefinition(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RuleSetPolicyDefinitionRuleArgs', 'RuleSetPolicyDefinitionRuleArgsDict', 'outputs.RuleSetPolicyDefinitionRule']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["name"] = name
+        __props__["rules"] = rules
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[_builtins.str]:

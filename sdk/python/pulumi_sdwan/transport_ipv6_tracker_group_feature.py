@@ -510,6 +510,30 @@ class TransportIpv6TrackerGroupFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return TransportIpv6TrackerGroupFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_boolean: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_boolean_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_elements: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportIpv6TrackerGroupFeatureTrackerElementArgs', 'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict', 'outputs.TransportIpv6TrackerGroupFeatureTrackerElement']]]]] = None,
+            tracker_name: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["name"] = name
+        __props__["trackerBoolean"] = tracker_boolean
+        __props__["trackerBooleanVariable"] = tracker_boolean_variable
+        __props__["trackerElements"] = tracker_elements
+        __props__["trackerName"] = tracker_name
+        __props__["trackerNameVariable"] = tracker_name_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/transportIpv6TrackerGroupFeature:TransportIpv6TrackerGroupFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

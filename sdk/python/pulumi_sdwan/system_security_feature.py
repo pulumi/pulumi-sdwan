@@ -852,6 +852,44 @@ class SystemSecurityFeature(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return SystemSecurityFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            anti_replay_window: pulumi.Input[Optional[_builtins.str]] = None,
+            anti_replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            extended_anti_replay_window: pulumi.Input[Optional[_builtins.int]] = None,
+            extended_anti_replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            ipsec_pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipsec_pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict', 'outputs.SystemSecurityFeatureKeychain']]]]] = None,
+            keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict', 'outputs.SystemSecurityFeatureKey']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            rekey: pulumi.Input[Optional[_builtins.int]] = None,
+            rekey_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["antiReplayWindow"] = anti_replay_window
+        __props__["antiReplayWindowVariable"] = anti_replay_window_variable
+        __props__["description"] = description
+        __props__["extendedAntiReplayWindow"] = extended_anti_replay_window
+        __props__["extendedAntiReplayWindowVariable"] = extended_anti_replay_window_variable
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["integrityTypeVariable"] = integrity_type_variable
+        __props__["integrityTypes"] = integrity_types
+        __props__["ipsecPairwiseKeying"] = ipsec_pairwise_keying
+        __props__["ipsecPairwiseKeyingVariable"] = ipsec_pairwise_keying_variable
+        __props__["keychains"] = keychains
+        __props__["keys"] = keys
+        __props__["name"] = name
+        __props__["rekey"] = rekey
+        __props__["rekeyVariable"] = rekey_variable
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/systemSecurityFeature:SystemSecurityFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="antiReplayWindow")
     def anti_replay_window(self) -> pulumi.Output[Optional[_builtins.str]]:

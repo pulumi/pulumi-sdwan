@@ -910,6 +910,48 @@ class OtherUcseFeature(pulumi.CustomResource):
         __props__.__dict__["vlan_id_variable"] = vlan_id_variable
         return OtherUcseFeature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            access_port_dedicated: pulumi.Input[Optional[_builtins.bool]] = None,
+            access_port_shared_failover_type: pulumi.Input[Optional[_builtins.str]] = None,
+            access_port_shared_type: pulumi.Input[Optional[_builtins.str]] = None,
+            assign_priority: pulumi.Input[Optional[_builtins.int]] = None,
+            assign_priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            bay: pulumi.Input[Optional[_builtins.int]] = None,
+            default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+            default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict', 'outputs.OtherUcseFeatureInterface']]]]] = None,
+            ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            slot: pulumi.Input[Optional[_builtins.int]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+            vlan_id_variable: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accessPortDedicated"] = access_port_dedicated
+        __props__["accessPortSharedFailoverType"] = access_port_shared_failover_type
+        __props__["accessPortSharedType"] = access_port_shared_type
+        __props__["assignPriority"] = assign_priority
+        __props__["assignPriorityVariable"] = assign_priority_variable
+        __props__["bay"] = bay
+        __props__["defaultGateway"] = default_gateway
+        __props__["defaultGatewayVariable"] = default_gateway_variable
+        __props__["description"] = description
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["interfaces"] = interfaces
+        __props__["ipv4Address"] = ipv4_address
+        __props__["ipv4AddressVariable"] = ipv4_address_variable
+        __props__["name"] = name
+        __props__["slot"] = slot
+        __props__["version"] = version
+        __props__["vlanId"] = vlan_id
+        __props__["vlanIdVariable"] = vlan_id_variable
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/otherUcseFeature:OtherUcseFeature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accessPortDedicated")
     def access_port_dedicated(self) -> pulumi.Output[Optional[_builtins.bool]]:

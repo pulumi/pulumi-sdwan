@@ -22,7 +22,7 @@ public final class GetEigrpFeatureTemplateResult {
      */
     private List<GetEigrpFeatureTemplateAddressFamily> addressFamilies;
     /**
-     * @return Set autonomous system ID \n\n
+     * @return Set autonomous system ID &#92;n&#92;n
      * 
      */
     private Integer asNumber;
@@ -141,7 +141,7 @@ public final class GetEigrpFeatureTemplateResult {
         return this.addressFamilies;
     }
     /**
-     * @return Set autonomous system ID \n\n
+     * @return Set autonomous system ID &#92;n&#92;n
      * 
      */
     public Integer asNumber() {

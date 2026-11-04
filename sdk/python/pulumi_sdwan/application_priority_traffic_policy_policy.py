@@ -475,6 +475,28 @@ class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
         __props__.__dict__["vpns"] = vpns
         return ApplicationPriorityTrafficPolicyPolicy(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            default_action: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            direction: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationPriorityTrafficPolicyPolicySequenceArgs', 'ApplicationPriorityTrafficPolicyPolicySequenceArgsDict', 'outputs.ApplicationPriorityTrafficPolicyPolicySequence']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["defaultAction"] = default_action
+        __props__["description"] = description
+        __props__["direction"] = direction
+        __props__["featureProfileId"] = feature_profile_id
+        __props__["name"] = name
+        __props__["sequences"] = sequences
+        __props__["version"] = version
+        __props__["vpns"] = vpns
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/applicationPriorityTrafficPolicyPolicy:ApplicationPriorityTrafficPolicyPolicy', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> pulumi.Output[_builtins.str]:

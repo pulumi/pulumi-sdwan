@@ -293,6 +293,20 @@ class AppProbeClassPolicyObject(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return AppProbeClassPolicyObject(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            forwarding_class: pulumi.Input[Optional[_builtins.str]] = None,
+            mappings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AppProbeClassPolicyObjectMappingArgs', 'AppProbeClassPolicyObjectMappingArgsDict', 'outputs.AppProbeClassPolicyObjectMapping']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["forwardingClass"] = forwarding_class
+        __props__["mappings"] = mappings
+        __props__["name"] = name
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/appProbeClassPolicyObject:AppProbeClassPolicyObject', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="forwardingClass")
     def forwarding_class(self) -> pulumi.Output[_builtins.str]:

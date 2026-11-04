@@ -207,6 +207,12 @@ func (CiscoBfdFeatureTemplateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ciscoBfdFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoBfdFeatureTemplateExists checks whether an existing CiscoBfdFeatureTemplate resource with the given ID exists.
+func CiscoBfdFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoBfdFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoBfdFeatureTemplate:CiscoBfdFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoBfdFeatureTemplateArgs struct {
 	// Set color that identifies the WAN transport tunnel
 	Colors []CiscoBfdFeatureTemplateColor `pulumi:"colors"`

@@ -258,6 +258,12 @@ func (CiscoSecureInternetGatewayFeatureTemplateState) ElementType() reflect.Type
 	return reflect.TypeOf((*ciscoSecureInternetGatewayFeatureTemplateState)(nil)).Elem()
 }
 
+// CiscoSecureInternetGatewayFeatureTemplateExists checks whether an existing CiscoSecureInternetGatewayFeatureTemplate resource with the given ID exists.
+func CiscoSecureInternetGatewayFeatureTemplateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CiscoSecureInternetGatewayFeatureTemplateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/ciscoSecureInternetGatewayFeatureTemplate:CiscoSecureInternetGatewayFeatureTemplate", id, state, "", opts...)
+}
+
 type ciscoSecureInternetGatewayFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`

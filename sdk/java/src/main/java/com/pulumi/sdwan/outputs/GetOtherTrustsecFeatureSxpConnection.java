@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetOtherTrustsecFeatureSxpConnection {
     /**
-     * @return Configure Connection Maximum hold time \n\n
+     * @return Configure Connection Maximum hold time &#92;n&#92;n
      * 
      */
     private Integer maxHoldTime;
@@ -22,7 +22,7 @@ public final class GetOtherTrustsecFeatureSxpConnection {
      */
     private String maxHoldTimeVariable;
     /**
-     * @return Configure Connection Minimum hold time \n\n
+     * @return Configure Connection Minimum hold time &#92;n&#92;n
      * 
      */
     private Integer minHoldTime;
@@ -37,7 +37,7 @@ public final class GetOtherTrustsecFeatureSxpConnection {
      */
     private String mode;
     /**
-     * @return Define Role of a device \n\n
+     * @return Define Role of a device &#92;n&#92;n
      * 
      */
     private String modeType;
@@ -79,7 +79,7 @@ public final class GetOtherTrustsecFeatureSxpConnection {
 
     private GetOtherTrustsecFeatureSxpConnection() {}
     /**
-     * @return Configure Connection Maximum hold time \n\n
+     * @return Configure Connection Maximum hold time &#92;n&#92;n
      * 
      */
     public Integer maxHoldTime() {
@@ -93,7 +93,7 @@ public final class GetOtherTrustsecFeatureSxpConnection {
         return this.maxHoldTimeVariable;
     }
     /**
-     * @return Configure Connection Minimum hold time \n\n
+     * @return Configure Connection Minimum hold time &#92;n&#92;n
      * 
      */
     public Integer minHoldTime() {
@@ -114,7 +114,7 @@ public final class GetOtherTrustsecFeatureSxpConnection {
         return this.mode;
     }
     /**
-     * @return Define Role of a device \n\n
+     * @return Define Role of a device &#92;n&#92;n
      * 
      */
     public String modeType() {

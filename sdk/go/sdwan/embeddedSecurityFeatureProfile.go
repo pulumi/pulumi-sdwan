@@ -108,6 +108,12 @@ func (EmbeddedSecurityFeatureProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*embeddedSecurityFeatureProfileState)(nil)).Elem()
 }
 
+// EmbeddedSecurityFeatureProfileExists checks whether an existing EmbeddedSecurityFeatureProfile resource with the given ID exists.
+func EmbeddedSecurityFeatureProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *EmbeddedSecurityFeatureProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/embeddedSecurityFeatureProfile:EmbeddedSecurityFeatureProfile", id, state, "", opts...)
+}
+
 type embeddedSecurityFeatureProfileArgs struct {
 	// Description
 	Description string `pulumi:"description"`

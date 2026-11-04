@@ -644,6 +644,36 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return CiscoBfdFeatureTemplate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            colors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict', 'outputs.CiscoBfdFeatureTemplateColor']]]]] = None,
+            default_dscp: pulumi.Input[Optional[_builtins.int]] = None,
+            default_dscp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+            multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            poll_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            poll_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["colors"] = colors
+        __props__["defaultDscp"] = default_dscp
+        __props__["defaultDscpVariable"] = default_dscp_variable
+        __props__["description"] = description
+        __props__["deviceTypes"] = device_types
+        __props__["multiplier"] = multiplier
+        __props__["multiplierVariable"] = multiplier_variable
+        __props__["name"] = name
+        __props__["pollInterval"] = poll_interval
+        __props__["pollIntervalVariable"] = poll_interval_variable
+        __props__["templateType"] = template_type
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/ciscoBfdFeatureTemplate:CiscoBfdFeatureTemplate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def colors(self) -> pulumi.Output[Optional[Sequence['outputs.CiscoBfdFeatureTemplateColor']]]:

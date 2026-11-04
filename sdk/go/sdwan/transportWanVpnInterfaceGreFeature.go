@@ -710,6 +710,12 @@ func (TransportWanVpnInterfaceGreFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*transportWanVpnInterfaceGreFeatureState)(nil)).Elem()
 }
 
+// TransportWanVpnInterfaceGreFeatureExists checks whether an existing TransportWanVpnInterfaceGreFeature resource with the given ID exists.
+func TransportWanVpnInterfaceGreFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TransportWanVpnInterfaceGreFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/transportWanVpnInterfaceGreFeature:TransportWanVpnInterfaceGreFeature", id, state, "", opts...)
+}
+
 type transportWanVpnInterfaceGreFeatureArgs struct {
 	// Enable Application Tunnel Type
 	//   - Choices: `none`, `sig`

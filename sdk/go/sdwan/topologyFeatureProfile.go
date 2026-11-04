@@ -108,6 +108,12 @@ func (TopologyFeatureProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*topologyFeatureProfileState)(nil)).Elem()
 }
 
+// TopologyFeatureProfileExists checks whether an existing TopologyFeatureProfile resource with the given ID exists.
+func TopologyFeatureProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TopologyFeatureProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/topologyFeatureProfile:TopologyFeatureProfile", id, state, "", opts...)
+}
+
 type topologyFeatureProfileArgs struct {
 	// Description
 	Description string `pulumi:"description"`

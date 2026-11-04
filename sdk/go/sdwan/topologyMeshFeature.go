@@ -150,6 +150,12 @@ func (TopologyMeshFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*topologyMeshFeatureState)(nil)).Elem()
 }
 
+// TopologyMeshFeatureExists checks whether an existing TopologyMeshFeature resource with the given ID exists.
+func TopologyMeshFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TopologyMeshFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/topologyMeshFeature:TopologyMeshFeature", id, state, "", opts...)
+}
+
 type topologyMeshFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`

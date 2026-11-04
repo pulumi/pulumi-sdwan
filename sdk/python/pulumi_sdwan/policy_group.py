@@ -400,6 +400,24 @@ class PolicyGroup(pulumi.CustomResource):
         __props__.__dict__["solution"] = solution
         return PolicyGroup(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict', 'outputs.PolicyGroupDevice']]]]] = None,
+            feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            policy_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            solution: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["devices"] = devices
+        __props__["featureProfileIds"] = feature_profile_ids
+        __props__["name"] = name
+        __props__["policyVersions"] = policy_versions
+        __props__["solution"] = solution
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/policyGroup:PolicyGroup', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[_builtins.str]:

@@ -630,6 +630,36 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
         __props__.__dict__["version"] = version
         return IntrusionPreventionPolicyDefinition(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            custom_signature: pulumi.Input[Optional[_builtins.bool]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            inspection_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            ips_signature_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ips_signature_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            log_level: pulumi.Input[Optional[_builtins.str]] = None,
+            loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['IntrusionPreventionPolicyDefinitionLoggingArgs', 'IntrusionPreventionPolicyDefinitionLoggingArgsDict', 'outputs.IntrusionPreventionPolicyDefinitionLogging']]]]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            signature_set: pulumi.Input[Optional[_builtins.str]] = None,
+            target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["customSignature"] = custom_signature
+        __props__["description"] = description
+        __props__["inspectionMode"] = inspection_mode
+        __props__["ipsSignatureListId"] = ips_signature_list_id
+        __props__["ipsSignatureListVersion"] = ips_signature_list_version
+        __props__["logLevel"] = log_level
+        __props__["loggings"] = loggings
+        __props__["mode"] = mode
+        __props__["name"] = name
+        __props__["signatureSet"] = signature_set
+        __props__["targetVpns"] = target_vpns
+        __props__["version"] = version
+        return pulumi.runtime.exists_resource(None, 'sdwan:index/intrusionPreventionPolicyDefinition:IntrusionPreventionPolicyDefinition', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="customSignature")
     def custom_signature(self) -> pulumi.Output[Optional[_builtins.bool]]:

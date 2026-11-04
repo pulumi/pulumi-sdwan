@@ -136,6 +136,12 @@ func (TopologyGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*topologyGroupState)(nil)).Elem()
 }
 
+// TopologyGroupExists checks whether an existing TopologyGroup resource with the given ID exists.
+func TopologyGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TopologyGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/topologyGroup:TopologyGroup", id, state, "", opts...)
+}
+
 type topologyGroupArgs struct {
 	// Description
 	Description string `pulumi:"description"`

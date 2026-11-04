@@ -365,6 +365,12 @@ func (ServiceMulticastFeatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceMulticastFeatureState)(nil)).Elem()
 }
 
+// ServiceMulticastFeatureExists checks whether an existing ServiceMulticastFeature resource with the given ID exists.
+func ServiceMulticastFeatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceMulticastFeatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("sdwan:index/serviceMulticastFeature:ServiceMulticastFeature", id, state, "", opts...)
+}
+
 type serviceMulticastFeatureArgs struct {
 	// Enable or disable RP Announce
 	AutoRpAnnounces []ServiceMulticastFeatureAutoRpAnnounce `pulumi:"autoRpAnnounces"`
