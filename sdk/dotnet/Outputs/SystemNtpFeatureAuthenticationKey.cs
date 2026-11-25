@@ -15,6 +15,8 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        ///   - Only one of `CmacAes128Value`, `CmacAes128ValueVariable` and `CmacAes128ValueWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `CmacAes128ValueWo` together with `CmacAes128ValueWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? CmacAes128Value;
         /// <summary>
@@ -22,13 +24,35 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? CmacAes128ValueVariable;
         /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        ///   - Only one of `CmacAes128Value`, `CmacAes128ValueVariable` and `CmacAes128ValueWo` can be set.
+        /// </summary>
+        public readonly string? CmacAes128ValueWo;
+        /// <summary>
+        /// Rotation trigger for `CmacAes128ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? CmacAes128ValueWoVersion;
+        /// <summary>
         /// HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        ///   - Only one of `HmacSha2Value`, `HmacSha2ValueVariable` and `HmacSha2ValueWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `HmacSha2ValueWo` together with `HmacSha2ValueWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? HmacSha2Value;
         /// <summary>
         /// Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
         /// </summary>
         public readonly string? HmacSha2ValueVariable;
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        ///   - Only one of `HmacSha2Value`, `HmacSha2ValueVariable` and `HmacSha2ValueWo` can be set.
+        /// </summary>
+        public readonly string? HmacSha2ValueWo;
+        /// <summary>
+        /// Rotation trigger for `HmacSha2ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? HmacSha2ValueWoVersion;
         /// <summary>
         /// Authentication key ID
         ///   - Range: `1`-`4294967295`
@@ -40,12 +64,24 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? KeyIdVariable;
         /// <summary>
         /// Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `Md5Value`, `Md5ValueVariable` and `Md5ValueWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `Md5ValueWo` together with `Md5ValueWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? Md5Value;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string? Md5ValueVariable;
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `Md5Value`, `Md5ValueVariable` and `Md5ValueWo` can be set.
+        /// </summary>
+        public readonly string? Md5ValueWo;
+        /// <summary>
+        /// Rotation trigger for `Md5ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? Md5ValueWoVersion;
 
         [OutputConstructor]
         private SystemNtpFeatureAuthenticationKey(
@@ -53,9 +89,17 @@ namespace Pulumi.Sdwan.Outputs
 
             string? cmacAes128ValueVariable,
 
+            string? cmacAes128ValueWo,
+
+            int? cmacAes128ValueWoVersion,
+
             string? hmacSha2Value,
 
             string? hmacSha2ValueVariable,
+
+            string? hmacSha2ValueWo,
+
+            int? hmacSha2ValueWoVersion,
 
             int? keyId,
 
@@ -63,16 +107,26 @@ namespace Pulumi.Sdwan.Outputs
 
             string? md5Value,
 
-            string? md5ValueVariable)
+            string? md5ValueVariable,
+
+            string? md5ValueWo,
+
+            int? md5ValueWoVersion)
         {
             CmacAes128Value = cmacAes128Value;
             CmacAes128ValueVariable = cmacAes128ValueVariable;
+            CmacAes128ValueWo = cmacAes128ValueWo;
+            CmacAes128ValueWoVersion = cmacAes128ValueWoVersion;
             HmacSha2Value = hmacSha2Value;
             HmacSha2ValueVariable = hmacSha2ValueVariable;
+            HmacSha2ValueWo = hmacSha2ValueWo;
+            HmacSha2ValueWoVersion = hmacSha2ValueWoVersion;
             KeyId = keyId;
             KeyIdVariable = keyIdVariable;
             Md5Value = md5Value;
             Md5ValueVariable = md5ValueVariable;
+            Md5ValueWo = md5ValueWo;
+            Md5ValueWoVersion = md5ValueWoVersion;
         }
     }
 }

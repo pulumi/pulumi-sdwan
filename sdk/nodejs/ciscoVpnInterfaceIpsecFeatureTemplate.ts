@@ -453,7 +453,7 @@ export class CiscoVpnInterfaceIpsecFeatureTemplate extends pulumi.CustomResource
             resourceInputs["ikeGroupVariable"] = args?.ikeGroupVariable;
             resourceInputs["ikeMode"] = args?.ikeMode;
             resourceInputs["ikeModeVariable"] = args?.ikeModeVariable;
-            resourceInputs["ikePreSharedKey"] = args?.ikePreSharedKey;
+            resourceInputs["ikePreSharedKey"] = args?.ikePreSharedKey ? pulumi.secret(args.ikePreSharedKey) : undefined;
             resourceInputs["ikePreSharedKeyLocalId"] = args?.ikePreSharedKeyLocalId;
             resourceInputs["ikePreSharedKeyLocalIdVariable"] = args?.ikePreSharedKeyLocalIdVariable;
             resourceInputs["ikePreSharedKeyRemoteId"] = args?.ikePreSharedKeyRemoteId;
@@ -497,6 +497,8 @@ export class CiscoVpnInterfaceIpsecFeatureTemplate extends pulumi.CustomResource
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["ikePreSharedKey"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(CiscoVpnInterfaceIpsecFeatureTemplate.__pulumiType, name, resourceInputs, opts);
     }
 }

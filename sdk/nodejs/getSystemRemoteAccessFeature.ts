@@ -78,6 +78,11 @@ export interface GetSystemRemoteAccessFeatureResult {
      * Variable name
      */
     readonly aaaSpecifyNamePolicyPasswordVariable: string;
+    readonly aaaSpecifyNamePolicyPasswordWo: string;
+    /**
+     * Rotation trigger for `aaaSpecifyNamePolicyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly aaaSpecifyNamePolicyPasswordWoVersion: number;
     readonly anyConnectEapAuthenticationType: string;
     /**
      * Enabled SSL VPN
@@ -186,6 +191,14 @@ export interface GetSystemRemoteAccessFeatureResult {
      * Variable name
      */
     readonly pskAuthenticationPreSharedKeyVariable: string;
+    /**
+     * PSK Pre Shared Key
+     */
+    readonly pskAuthenticationPreSharedKeyWo: string;
+    /**
+     * Rotation trigger for `pskAuthenticationPreSharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly pskAuthenticationPreSharedKeyWoVersion: number;
     /**
      * PSK Selection
      */

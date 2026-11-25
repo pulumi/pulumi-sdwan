@@ -128,6 +128,16 @@ public final class GetServiceLanVpnInterfaceIpsecFeatureResult {
      */
     private String ikePresharedKeyVariable;
     /**
+     * @return Use preshared key to authenticate IKE peer
+     * 
+     */
+    private String ikePresharedKeyWo;
+    /**
+     * @return Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer ikePresharedKeyWoVersion;
+    /**
      * @return IKE rekey interval &#92;n&#92;n seconds
      * 
      */
@@ -520,6 +530,20 @@ public final class GetServiceLanVpnInterfaceIpsecFeatureResult {
         return this.ikePresharedKeyVariable;
     }
     /**
+     * @return Use preshared key to authenticate IKE peer
+     * 
+     */
+    public String ikePresharedKeyWo() {
+        return this.ikePresharedKeyWo;
+    }
+    /**
+     * @return Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer ikePresharedKeyWoVersion() {
+        return this.ikePresharedKeyWoVersion;
+    }
+    /**
      * @return IKE rekey interval &#92;n&#92;n seconds
      * 
      */
@@ -879,6 +903,8 @@ public final class GetServiceLanVpnInterfaceIpsecFeatureResult {
         private String ikeIntegrityProtocolVariable;
         private String ikePresharedKey;
         private String ikePresharedKeyVariable;
+        private String ikePresharedKeyWo;
+        private Integer ikePresharedKeyWoVersion;
         private Integer ikeRekeyInterval;
         private String ikeRekeyIntervalVariable;
         private Integer ikeVersion;
@@ -954,6 +980,8 @@ public final class GetServiceLanVpnInterfaceIpsecFeatureResult {
     	      this.ikeIntegrityProtocolVariable = defaults.ikeIntegrityProtocolVariable;
     	      this.ikePresharedKey = defaults.ikePresharedKey;
     	      this.ikePresharedKeyVariable = defaults.ikePresharedKeyVariable;
+    	      this.ikePresharedKeyWo = defaults.ikePresharedKeyWo;
+    	      this.ikePresharedKeyWoVersion = defaults.ikePresharedKeyWoVersion;
     	      this.ikeRekeyInterval = defaults.ikeRekeyInterval;
     	      this.ikeRekeyIntervalVariable = defaults.ikeRekeyIntervalVariable;
     	      this.ikeVersion = defaults.ikeVersion;
@@ -1187,6 +1215,22 @@ public final class GetServiceLanVpnInterfaceIpsecFeatureResult {
               throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceIpsecFeatureResult", "ikePresharedKeyVariable");
             }
             this.ikePresharedKeyVariable = ikePresharedKeyVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikePresharedKeyWo(String ikePresharedKeyWo) {
+            if (ikePresharedKeyWo == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceIpsecFeatureResult", "ikePresharedKeyWo");
+            }
+            this.ikePresharedKeyWo = ikePresharedKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikePresharedKeyWoVersion(Integer ikePresharedKeyWoVersion) {
+            if (ikePresharedKeyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceIpsecFeatureResult", "ikePresharedKeyWoVersion");
+            }
+            this.ikePresharedKeyWoVersion = ikePresharedKeyWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -1606,6 +1650,8 @@ public final class GetServiceLanVpnInterfaceIpsecFeatureResult {
             _resultValue.ikeIntegrityProtocolVariable = ikeIntegrityProtocolVariable;
             _resultValue.ikePresharedKey = ikePresharedKey;
             _resultValue.ikePresharedKeyVariable = ikePresharedKeyVariable;
+            _resultValue.ikePresharedKeyWo = ikePresharedKeyWo;
+            _resultValue.ikePresharedKeyWoVersion = ikePresharedKeyWoVersion;
             _resultValue.ikeRekeyInterval = ikeRekeyInterval;
             _resultValue.ikeRekeyIntervalVariable = ikeRekeyIntervalVariable;
             _resultValue.ikeVersion = ikeVersion;

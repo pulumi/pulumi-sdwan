@@ -126,6 +126,7 @@ import (
 //				ShapingRate:                    pulumi.Int(10000000),
 //				QosMap:                         pulumi.String("test"),
 //				QosMapVpn:                      pulumi.String("test"),
+//				ServiceProviderName:            pulumi.String("MyISP"),
 //				BandwidthUpstream:              pulumi.Int(214748300),
 //				BandwidthDownstream:            pulumi.Int(214748300),
 //				WriteRule:                      pulumi.String("RULE1"),
@@ -364,6 +365,10 @@ type VpnInterfaceEthernetPppoeFeatureTemplate struct {
 	SecondaryRegion pulumi.StringPtrOutput `pulumi:"secondaryRegion"`
 	// Variable name
 	SecondaryRegionVariable pulumi.StringPtrOutput `pulumi:"secondaryRegionVariable"`
+	// Service Provider Name
+	ServiceProviderName pulumi.StringPtrOutput `pulumi:"serviceProviderName"`
+	// Variable name
+	ServiceProviderNameVariable pulumi.StringPtrOutput `pulumi:"serviceProviderNameVariable"`
 	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
 	//   - Range: `8`-`100000000`
 	ShapingRate pulumi.IntPtrOutput `pulumi:"shapingRate"`
@@ -577,6 +582,17 @@ func NewVpnInterfaceEthernetPppoeFeatureTemplate(ctx *pulumi.Context,
 	if args.DeviceTypes == nil {
 		return nil, errors.New("invalid value for required argument 'DeviceTypes'")
 	}
+	if args.ChapPppAuthPassword != nil {
+		args.ChapPppAuthPassword = pulumi.ToSecret(args.ChapPppAuthPassword).(pulumi.StringPtrInput)
+	}
+	if args.PapPppAuthPassword != nil {
+		args.PapPppAuthPassword = pulumi.ToSecret(args.PapPppAuthPassword).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"chapPppAuthPassword",
+		"papPppAuthPassword",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource VpnInterfaceEthernetPppoeFeatureTemplate
 	err := ctx.RegisterResource("sdwan:index/vpnInterfaceEthernetPppoeFeatureTemplate:VpnInterfaceEthernetPppoeFeatureTemplate", name, args, &resource, opts...)
@@ -797,6 +813,10 @@ type vpnInterfaceEthernetPppoeFeatureTemplateState struct {
 	SecondaryRegion *string `pulumi:"secondaryRegion"`
 	// Variable name
 	SecondaryRegionVariable *string `pulumi:"secondaryRegionVariable"`
+	// Service Provider Name
+	ServiceProviderName *string `pulumi:"serviceProviderName"`
+	// Variable name
+	ServiceProviderNameVariable *string `pulumi:"serviceProviderNameVariable"`
 	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
 	//   - Range: `8`-`100000000`
 	ShapingRate *int `pulumi:"shapingRate"`
@@ -1195,6 +1215,10 @@ type VpnInterfaceEthernetPppoeFeatureTemplateState struct {
 	SecondaryRegion pulumi.StringPtrInput
 	// Variable name
 	SecondaryRegionVariable pulumi.StringPtrInput
+	// Service Provider Name
+	ServiceProviderName pulumi.StringPtrInput
+	// Variable name
+	ServiceProviderNameVariable pulumi.StringPtrInput
 	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
 	//   - Range: `8`-`100000000`
 	ShapingRate pulumi.IntPtrInput
@@ -1603,6 +1627,10 @@ type vpnInterfaceEthernetPppoeFeatureTemplateArgs struct {
 	SecondaryRegion *string `pulumi:"secondaryRegion"`
 	// Variable name
 	SecondaryRegionVariable *string `pulumi:"secondaryRegionVariable"`
+	// Service Provider Name
+	ServiceProviderName *string `pulumi:"serviceProviderName"`
+	// Variable name
+	ServiceProviderNameVariable *string `pulumi:"serviceProviderNameVariable"`
 	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
 	//   - Range: `8`-`100000000`
 	ShapingRate *int `pulumi:"shapingRate"`
@@ -1998,6 +2026,10 @@ type VpnInterfaceEthernetPppoeFeatureTemplateArgs struct {
 	SecondaryRegion pulumi.StringPtrInput
 	// Variable name
 	SecondaryRegionVariable pulumi.StringPtrInput
+	// Service Provider Name
+	ServiceProviderName pulumi.StringPtrInput
+	// Variable name
+	ServiceProviderNameVariable pulumi.StringPtrInput
 	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
 	//   - Range: `8`-`100000000`
 	ShapingRate pulumi.IntPtrInput
@@ -2800,6 +2832,18 @@ func (o VpnInterfaceEthernetPppoeFeatureTemplateOutput) SecondaryRegion() pulumi
 func (o VpnInterfaceEthernetPppoeFeatureTemplateOutput) SecondaryRegionVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceEthernetPppoeFeatureTemplate) pulumi.StringPtrOutput {
 		return v.SecondaryRegionVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// Service Provider Name
+func (o VpnInterfaceEthernetPppoeFeatureTemplateOutput) ServiceProviderName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *VpnInterfaceEthernetPppoeFeatureTemplate) pulumi.StringPtrOutput { return v.ServiceProviderName }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o VpnInterfaceEthernetPppoeFeatureTemplateOutput) ServiceProviderNameVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *VpnInterfaceEthernetPppoeFeatureTemplate) pulumi.StringPtrOutput {
+		return v.ServiceProviderNameVariable
 	}).(pulumi.StringPtrOutput)
 }
 

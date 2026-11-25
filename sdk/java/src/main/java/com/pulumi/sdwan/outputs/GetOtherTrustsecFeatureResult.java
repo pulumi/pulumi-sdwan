@@ -40,6 +40,16 @@ public final class GetOtherTrustsecFeatureResult {
      */
     private String devicePasswordVariable;
     /**
+     * @return Set the password for the device
+     * 
+     */
+    private String devicePasswordWo;
+    /**
+     * @return Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer devicePasswordWoVersion;
+    /**
      * @return Configure Local device security group &#92;n&#92;n
      * 
      */
@@ -124,6 +134,16 @@ public final class GetOtherTrustsecFeatureResult {
      * 
      */
     private String sxpDefaultPasswordVariable;
+    /**
+     * @return Configure SXP default password
+     * 
+     */
+    private String sxpDefaultPasswordWo;
+    /**
+     * @return Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer sxpDefaultPasswordWoVersion;
     /**
      * @return Configure SXP key-chain
      * 
@@ -215,6 +235,20 @@ public final class GetOtherTrustsecFeatureResult {
      */
     public String devicePasswordVariable() {
         return this.devicePasswordVariable;
+    }
+    /**
+     * @return Set the password for the device
+     * 
+     */
+    public String devicePasswordWo() {
+        return this.devicePasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer devicePasswordWoVersion() {
+        return this.devicePasswordWoVersion;
     }
     /**
      * @return Configure Local device security group &#92;n&#92;n
@@ -336,6 +370,20 @@ public final class GetOtherTrustsecFeatureResult {
         return this.sxpDefaultPasswordVariable;
     }
     /**
+     * @return Configure SXP default password
+     * 
+     */
+    public String sxpDefaultPasswordWo() {
+        return this.sxpDefaultPasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer sxpDefaultPasswordWoVersion() {
+        return this.sxpDefaultPasswordWoVersion;
+    }
+    /**
      * @return Configure SXP key-chain
      * 
      */
@@ -427,6 +475,8 @@ public final class GetOtherTrustsecFeatureResult {
         private String deviceIdVariable;
         private String devicePassword;
         private String devicePasswordVariable;
+        private String devicePasswordWo;
+        private Integer devicePasswordWoVersion;
         private Integer deviceSgt;
         private String deviceSgtVariable;
         private Boolean enableEnforcement;
@@ -444,6 +494,8 @@ public final class GetOtherTrustsecFeatureResult {
         private List<GetOtherTrustsecFeatureSxpConnection> sxpConnections;
         private String sxpDefaultPassword;
         private String sxpDefaultPasswordVariable;
+        private String sxpDefaultPasswordWo;
+        private Integer sxpDefaultPasswordWoVersion;
         private String sxpKeyChain;
         private String sxpKeyChainVariable;
         private Boolean sxpLogBindingChanges;
@@ -463,6 +515,8 @@ public final class GetOtherTrustsecFeatureResult {
     	      this.deviceIdVariable = defaults.deviceIdVariable;
     	      this.devicePassword = defaults.devicePassword;
     	      this.devicePasswordVariable = defaults.devicePasswordVariable;
+    	      this.devicePasswordWo = defaults.devicePasswordWo;
+    	      this.devicePasswordWoVersion = defaults.devicePasswordWoVersion;
     	      this.deviceSgt = defaults.deviceSgt;
     	      this.deviceSgtVariable = defaults.deviceSgtVariable;
     	      this.enableEnforcement = defaults.enableEnforcement;
@@ -480,6 +534,8 @@ public final class GetOtherTrustsecFeatureResult {
     	      this.sxpConnections = defaults.sxpConnections;
     	      this.sxpDefaultPassword = defaults.sxpDefaultPassword;
     	      this.sxpDefaultPasswordVariable = defaults.sxpDefaultPasswordVariable;
+    	      this.sxpDefaultPasswordWo = defaults.sxpDefaultPasswordWo;
+    	      this.sxpDefaultPasswordWoVersion = defaults.sxpDefaultPasswordWoVersion;
     	      this.sxpKeyChain = defaults.sxpKeyChain;
     	      this.sxpKeyChainVariable = defaults.sxpKeyChainVariable;
     	      this.sxpLogBindingChanges = defaults.sxpLogBindingChanges;
@@ -531,6 +587,22 @@ public final class GetOtherTrustsecFeatureResult {
               throw new MissingRequiredPropertyException("GetOtherTrustsecFeatureResult", "devicePasswordVariable");
             }
             this.devicePasswordVariable = devicePasswordVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder devicePasswordWo(String devicePasswordWo) {
+            if (devicePasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetOtherTrustsecFeatureResult", "devicePasswordWo");
+            }
+            this.devicePasswordWo = devicePasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder devicePasswordWoVersion(Integer devicePasswordWoVersion) {
+            if (devicePasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetOtherTrustsecFeatureResult", "devicePasswordWoVersion");
+            }
+            this.devicePasswordWoVersion = devicePasswordWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -673,6 +745,22 @@ public final class GetOtherTrustsecFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder sxpDefaultPasswordWo(String sxpDefaultPasswordWo) {
+            if (sxpDefaultPasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetOtherTrustsecFeatureResult", "sxpDefaultPasswordWo");
+            }
+            this.sxpDefaultPasswordWo = sxpDefaultPasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder sxpDefaultPasswordWoVersion(Integer sxpDefaultPasswordWoVersion) {
+            if (sxpDefaultPasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetOtherTrustsecFeatureResult", "sxpDefaultPasswordWoVersion");
+            }
+            this.sxpDefaultPasswordWoVersion = sxpDefaultPasswordWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder sxpKeyChain(String sxpKeyChain) {
             if (sxpKeyChain == null) {
               throw new MissingRequiredPropertyException("GetOtherTrustsecFeatureResult", "sxpKeyChain");
@@ -767,6 +855,8 @@ public final class GetOtherTrustsecFeatureResult {
             _resultValue.deviceIdVariable = deviceIdVariable;
             _resultValue.devicePassword = devicePassword;
             _resultValue.devicePasswordVariable = devicePasswordVariable;
+            _resultValue.devicePasswordWo = devicePasswordWo;
+            _resultValue.devicePasswordWoVersion = devicePasswordWoVersion;
             _resultValue.deviceSgt = deviceSgt;
             _resultValue.deviceSgtVariable = deviceSgtVariable;
             _resultValue.enableEnforcement = enableEnforcement;
@@ -784,6 +874,8 @@ public final class GetOtherTrustsecFeatureResult {
             _resultValue.sxpConnections = sxpConnections;
             _resultValue.sxpDefaultPassword = sxpDefaultPassword;
             _resultValue.sxpDefaultPasswordVariable = sxpDefaultPasswordVariable;
+            _resultValue.sxpDefaultPasswordWo = sxpDefaultPasswordWo;
+            _resultValue.sxpDefaultPasswordWoVersion = sxpDefaultPasswordWoVersion;
             _resultValue.sxpKeyChain = sxpKeyChain;
             _resultValue.sxpKeyChainVariable = sxpKeyChainVariable;
             _resultValue.sxpLogBindingChanges = sxpLogBindingChanges;

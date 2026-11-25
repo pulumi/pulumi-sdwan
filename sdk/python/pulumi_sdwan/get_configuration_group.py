@@ -27,13 +27,10 @@ class GetConfigurationGroupResult:
     """
     A collection of values returned by getConfigurationGroup.
     """
-    def __init__(__self__, description=None, devices=None, feature_profile_ids=None, feature_versions=None, id=None, name=None, solution=None, topology_devices=None, topology_site_devices=None):
+    def __init__(__self__, description=None, feature_profile_ids=None, feature_versions=None, id=None, name=None, solution=None, topology_devices=None, topology_site_devices=None, version=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
-        if devices and not isinstance(devices, list):
-            raise TypeError("Expected argument 'devices' to be a list")
-        pulumi.set(__self__, "devices", devices)
         if feature_profile_ids and not isinstance(feature_profile_ids, list):
             raise TypeError("Expected argument 'feature_profile_ids' to be a list")
         pulumi.set(__self__, "feature_profile_ids", feature_profile_ids)
@@ -55,6 +52,9 @@ class GetConfigurationGroupResult:
         if topology_site_devices and not isinstance(topology_site_devices, int):
             raise TypeError("Expected argument 'topology_site_devices' to be a int")
         pulumi.set(__self__, "topology_site_devices", topology_site_devices)
+        if version and not isinstance(version, int):
+            raise TypeError("Expected argument 'version' to be a int")
+        pulumi.set(__self__, "version", version)
 
     @_builtins.property
     @pulumi.getter
@@ -63,14 +63,6 @@ class GetConfigurationGroupResult:
         Description
         """
         return pulumi.get(self, "description")
-
-    @_builtins.property
-    @pulumi.getter
-    def devices(self) -> Sequence['outputs.GetConfigurationGroupDeviceResult']:
-        """
-        List of devices
-        """
-        return pulumi.get(self, "devices")
 
     @_builtins.property
     @pulumi.getter(name="featureProfileIds")
@@ -128,6 +120,14 @@ class GetConfigurationGroupResult:
         """
         return pulumi.get(self, "topology_site_devices")
 
+    @_builtins.property
+    @pulumi.getter
+    def version(self) -> _builtins.int:
+        """
+        The version of the object
+        """
+        return pulumi.get(self, "version")
+
 
 class AwaitableGetConfigurationGroupResult(GetConfigurationGroupResult):
     # pylint: disable=using-constant-test
@@ -136,14 +136,14 @@ class AwaitableGetConfigurationGroupResult(GetConfigurationGroupResult):
             yield self
         return GetConfigurationGroupResult(
             description=self.description,
-            devices=self.devices,
             feature_profile_ids=self.feature_profile_ids,
             feature_versions=self.feature_versions,
             id=self.id,
             name=self.name,
             solution=self.solution,
             topology_devices=self.topology_devices,
-            topology_site_devices=self.topology_site_devices)
+            topology_site_devices=self.topology_site_devices,
+            version=self.version)
 
 
 def get_configuration_group(id: Optional[_builtins.str] = None,
@@ -173,14 +173,14 @@ def get_configuration_group(id: Optional[_builtins.str] = None,
 
     return AwaitableGetConfigurationGroupResult(
         description=pulumi.get(__ret__, 'description'),
-        devices=pulumi.get(__ret__, 'devices'),
         feature_profile_ids=pulumi.get(__ret__, 'feature_profile_ids'),
         feature_versions=pulumi.get(__ret__, 'feature_versions'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         solution=pulumi.get(__ret__, 'solution'),
         topology_devices=pulumi.get(__ret__, 'topology_devices'),
-        topology_site_devices=pulumi.get(__ret__, 'topology_site_devices'))
+        topology_site_devices=pulumi.get(__ret__, 'topology_site_devices'),
+        version=pulumi.get(__ret__, 'version'))
 def get_configuration_group_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                    name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetConfigurationGroupResult]:
@@ -207,11 +207,11 @@ def get_configuration_group_output(id: pulumi.Input[Optional[Optional[_builtins.
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getConfigurationGroup:getConfigurationGroup', __args__, opts=opts, typ=GetConfigurationGroupResult)
     return __ret__.apply(lambda __response__: GetConfigurationGroupResult(
         description=pulumi.get(__response__, 'description'),
-        devices=pulumi.get(__response__, 'devices'),
         feature_profile_ids=pulumi.get(__response__, 'feature_profile_ids'),
         feature_versions=pulumi.get(__response__, 'feature_versions'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         solution=pulumi.get(__response__, 'solution'),
         topology_devices=pulumi.get(__response__, 'topology_devices'),
-        topology_site_devices=pulumi.get(__response__, 'topology_site_devices')))
+        topology_site_devices=pulumi.get(__response__, 'topology_site_devices'),
+        version=pulumi.get(__response__, 'version')))

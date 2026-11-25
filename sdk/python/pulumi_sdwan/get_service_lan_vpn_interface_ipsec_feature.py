@@ -26,7 +26,7 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
     """
     A collection of values returned by getServiceLanVpnInterfaceIpsecFeature.
     """
-    def __init__(__self__, application_tunnel_type=None, application_tunnel_type_variable=None, clear_dont_fragment=None, clear_dont_fragment_variable=None, description=None, dpd_interval=None, dpd_interval_variable=None, dpd_retries=None, dpd_retries_variable=None, feature_profile_id=None, id=None, ike_ciphersuite=None, ike_ciphersuite_variable=None, ike_diffie_hellman_group=None, ike_diffie_hellman_group_variable=None, ike_id_local_end_point=None, ike_id_local_end_point_variable=None, ike_id_remote_end_point=None, ike_id_remote_end_point_variable=None, ike_integrity_protocol=None, ike_integrity_protocol_variable=None, ike_preshared_key=None, ike_preshared_key_variable=None, ike_rekey_interval=None, ike_rekey_interval_variable=None, ike_version=None, interface_description=None, interface_description_variable=None, interface_name=None, interface_name_variable=None, ipsec_ciphersuite=None, ipsec_ciphersuite_variable=None, ipsec_rekey_interval=None, ipsec_rekey_interval_variable=None, ipsec_replay_window=None, ipsec_replay_window_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_mtu=None, ipv4_mtu_variable=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv4_tcp_mss=None, ipv4_tcp_mss_variable=None, ipv6_address=None, ipv6_address_variable=None, ipv6_mtu=None, ipv6_mtu_variable=None, ipv6_tcp_mss=None, ipv6_tcp_mss_variable=None, name=None, perfect_forward_secrecy=None, perfect_forward_secrecy_variable=None, service_lan_vpn_feature_id=None, shutdown=None, shutdown_variable=None, tracker_id=None, tracker_id_variable=None, tunnel_destination_ipv4_address=None, tunnel_destination_ipv4_address_variable=None, tunnel_destination_ipv6_address=None, tunnel_destination_ipv6_address_variable=None, tunnel_mode=None, tunnel_route_via=None, tunnel_route_via_variable=None, tunnel_source_interface=None, tunnel_source_interface_variable=None, tunnel_source_ipv4_address=None, tunnel_source_ipv4_address_variable=None, tunnel_source_ipv6_address=None, tunnel_source_ipv6_address_variable=None, version=None):
+    def __init__(__self__, application_tunnel_type=None, application_tunnel_type_variable=None, clear_dont_fragment=None, clear_dont_fragment_variable=None, description=None, dpd_interval=None, dpd_interval_variable=None, dpd_retries=None, dpd_retries_variable=None, feature_profile_id=None, id=None, ike_ciphersuite=None, ike_ciphersuite_variable=None, ike_diffie_hellman_group=None, ike_diffie_hellman_group_variable=None, ike_id_local_end_point=None, ike_id_local_end_point_variable=None, ike_id_remote_end_point=None, ike_id_remote_end_point_variable=None, ike_integrity_protocol=None, ike_integrity_protocol_variable=None, ike_preshared_key=None, ike_preshared_key_variable=None, ike_preshared_key_wo=None, ike_preshared_key_wo_version=None, ike_rekey_interval=None, ike_rekey_interval_variable=None, ike_version=None, interface_description=None, interface_description_variable=None, interface_name=None, interface_name_variable=None, ipsec_ciphersuite=None, ipsec_ciphersuite_variable=None, ipsec_rekey_interval=None, ipsec_rekey_interval_variable=None, ipsec_replay_window=None, ipsec_replay_window_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_mtu=None, ipv4_mtu_variable=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv4_tcp_mss=None, ipv4_tcp_mss_variable=None, ipv6_address=None, ipv6_address_variable=None, ipv6_mtu=None, ipv6_mtu_variable=None, ipv6_tcp_mss=None, ipv6_tcp_mss_variable=None, name=None, perfect_forward_secrecy=None, perfect_forward_secrecy_variable=None, service_lan_vpn_feature_id=None, shutdown=None, shutdown_variable=None, tracker_id=None, tracker_id_variable=None, tunnel_destination_ipv4_address=None, tunnel_destination_ipv4_address_variable=None, tunnel_destination_ipv6_address=None, tunnel_destination_ipv6_address_variable=None, tunnel_mode=None, tunnel_route_via=None, tunnel_route_via_variable=None, tunnel_source_interface=None, tunnel_source_interface_variable=None, tunnel_source_ipv4_address=None, tunnel_source_ipv4_address_variable=None, tunnel_source_ipv6_address=None, tunnel_source_ipv6_address_variable=None, version=None):
         if application_tunnel_type and not isinstance(application_tunnel_type, str):
             raise TypeError("Expected argument 'application_tunnel_type' to be a str")
         pulumi.set(__self__, "application_tunnel_type", application_tunnel_type)
@@ -96,6 +96,12 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
         if ike_preshared_key_variable and not isinstance(ike_preshared_key_variable, str):
             raise TypeError("Expected argument 'ike_preshared_key_variable' to be a str")
         pulumi.set(__self__, "ike_preshared_key_variable", ike_preshared_key_variable)
+        if ike_preshared_key_wo and not isinstance(ike_preshared_key_wo, str):
+            raise TypeError("Expected argument 'ike_preshared_key_wo' to be a str")
+        pulumi.set(__self__, "ike_preshared_key_wo", ike_preshared_key_wo)
+        if ike_preshared_key_wo_version and not isinstance(ike_preshared_key_wo_version, int):
+            raise TypeError("Expected argument 'ike_preshared_key_wo_version' to be a int")
+        pulumi.set(__self__, "ike_preshared_key_wo_version", ike_preshared_key_wo_version)
         if ike_rekey_interval and not isinstance(ike_rekey_interval, int):
             raise TypeError("Expected argument 'ike_rekey_interval' to be a int")
         pulumi.set(__self__, "ike_rekey_interval", ike_rekey_interval)
@@ -427,6 +433,22 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
         Variable name
         """
         return pulumi.get(self, "ike_preshared_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ikePresharedKeyWo")
+    def ike_preshared_key_wo(self) -> _builtins.str:
+        """
+        Use preshared key to authenticate IKE peer
+        """
+        return pulumi.get(self, "ike_preshared_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="ikePresharedKeyWoVersion")
+    def ike_preshared_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `ike_preshared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "ike_preshared_key_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="ikeRekeyInterval")
@@ -838,6 +860,8 @@ class AwaitableGetServiceLanVpnInterfaceIpsecFeatureResult(GetServiceLanVpnInter
             ike_integrity_protocol_variable=self.ike_integrity_protocol_variable,
             ike_preshared_key=self.ike_preshared_key,
             ike_preshared_key_variable=self.ike_preshared_key_variable,
+            ike_preshared_key_wo=self.ike_preshared_key_wo,
+            ike_preshared_key_wo_version=self.ike_preshared_key_wo_version,
             ike_rekey_interval=self.ike_rekey_interval,
             ike_rekey_interval_variable=self.ike_rekey_interval_variable,
             ike_version=self.ike_version,
@@ -946,6 +970,8 @@ def get_service_lan_vpn_interface_ipsec_feature(feature_profile_id: Optional[_bu
         ike_integrity_protocol_variable=pulumi.get(__ret__, 'ike_integrity_protocol_variable'),
         ike_preshared_key=pulumi.get(__ret__, 'ike_preshared_key'),
         ike_preshared_key_variable=pulumi.get(__ret__, 'ike_preshared_key_variable'),
+        ike_preshared_key_wo=pulumi.get(__ret__, 'ike_preshared_key_wo'),
+        ike_preshared_key_wo_version=pulumi.get(__ret__, 'ike_preshared_key_wo_version'),
         ike_rekey_interval=pulumi.get(__ret__, 'ike_rekey_interval'),
         ike_rekey_interval_variable=pulumi.get(__ret__, 'ike_rekey_interval_variable'),
         ike_version=pulumi.get(__ret__, 'ike_version'),
@@ -1051,6 +1077,8 @@ def get_service_lan_vpn_interface_ipsec_feature_output(feature_profile_id: pulum
         ike_integrity_protocol_variable=pulumi.get(__response__, 'ike_integrity_protocol_variable'),
         ike_preshared_key=pulumi.get(__response__, 'ike_preshared_key'),
         ike_preshared_key_variable=pulumi.get(__response__, 'ike_preshared_key_variable'),
+        ike_preshared_key_wo=pulumi.get(__response__, 'ike_preshared_key_wo'),
+        ike_preshared_key_wo_version=pulumi.get(__response__, 'ike_preshared_key_wo_version'),
         ike_rekey_interval=pulumi.get(__response__, 'ike_rekey_interval'),
         ike_rekey_interval_variable=pulumi.get(__response__, 'ike_rekey_interval_variable'),
         ike_version=pulumi.get(__response__, 'ike_version'),

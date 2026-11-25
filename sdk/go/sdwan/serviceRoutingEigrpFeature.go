@@ -110,9 +110,17 @@ type ServiceRoutingEigrpFeature struct {
 	// Variable name
 	HelloIntervalVariable pulumi.StringPtrOutput `pulumi:"helloIntervalVariable"`
 	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+	//   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `hmacAuthenticationKeyWo` together with `hmacAuthenticationKeyWoVersion`, which keeps it out of state.
 	HmacAuthenticationKey pulumi.StringPtrOutput `pulumi:"hmacAuthenticationKey"`
 	// Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable pulumi.StringPtrOutput `pulumi:"hmacAuthenticationKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+	//   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+	HmacAuthenticationKeyWo pulumi.StringPtrOutput `pulumi:"hmacAuthenticationKeyWo"`
+	// Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	HmacAuthenticationKeyWoVersion pulumi.IntPtrOutput `pulumi:"hmacAuthenticationKeyWoVersion"`
 	// Set EIGRP hold time
 	//   - Range: `0`-`65535`
 	//   - Default value: `15`
@@ -147,6 +155,17 @@ func NewServiceRoutingEigrpFeature(ctx *pulumi.Context,
 	if args.Networks == nil {
 		return nil, errors.New("invalid value for required argument 'Networks'")
 	}
+	if args.HmacAuthenticationKey != nil {
+		args.HmacAuthenticationKey = pulumi.ToSecret(args.HmacAuthenticationKey).(pulumi.StringPtrInput)
+	}
+	if args.HmacAuthenticationKeyWo != nil {
+		args.HmacAuthenticationKeyWo = pulumi.ToSecret(args.HmacAuthenticationKeyWo).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"hmacAuthenticationKey",
+		"hmacAuthenticationKeyWo",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource ServiceRoutingEigrpFeature
 	err := ctx.RegisterResource("sdwan:index/serviceRoutingEigrpFeature:ServiceRoutingEigrpFeature", name, args, &resource, opts...)
@@ -196,9 +215,17 @@ type serviceRoutingEigrpFeatureState struct {
 	// Variable name
 	HelloIntervalVariable *string `pulumi:"helloIntervalVariable"`
 	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+	//   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `hmacAuthenticationKeyWo` together with `hmacAuthenticationKeyWoVersion`, which keeps it out of state.
 	HmacAuthenticationKey *string `pulumi:"hmacAuthenticationKey"`
 	// Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable *string `pulumi:"hmacAuthenticationKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+	//   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+	HmacAuthenticationKeyWo *string `pulumi:"hmacAuthenticationKeyWo"`
+	// Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	HmacAuthenticationKeyWoVersion *int `pulumi:"hmacAuthenticationKeyWoVersion"`
 	// Set EIGRP hold time
 	//   - Range: `0`-`65535`
 	//   - Default value: `15`
@@ -247,9 +274,17 @@ type ServiceRoutingEigrpFeatureState struct {
 	// Variable name
 	HelloIntervalVariable pulumi.StringPtrInput
 	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+	//   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `hmacAuthenticationKeyWo` together with `hmacAuthenticationKeyWoVersion`, which keeps it out of state.
 	HmacAuthenticationKey pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+	//   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+	HmacAuthenticationKeyWo pulumi.StringPtrInput
+	// Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	HmacAuthenticationKeyWoVersion pulumi.IntPtrInput
 	// Set EIGRP hold time
 	//   - Range: `0`-`65535`
 	//   - Default value: `15`
@@ -308,9 +343,17 @@ type serviceRoutingEigrpFeatureArgs struct {
 	// Variable name
 	HelloIntervalVariable *string `pulumi:"helloIntervalVariable"`
 	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+	//   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `hmacAuthenticationKeyWo` together with `hmacAuthenticationKeyWoVersion`, which keeps it out of state.
 	HmacAuthenticationKey *string `pulumi:"hmacAuthenticationKey"`
 	// Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable *string `pulumi:"hmacAuthenticationKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+	//   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+	HmacAuthenticationKeyWo *string `pulumi:"hmacAuthenticationKeyWo"`
+	// Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	HmacAuthenticationKeyWoVersion *int `pulumi:"hmacAuthenticationKeyWoVersion"`
 	// Set EIGRP hold time
 	//   - Range: `0`-`65535`
 	//   - Default value: `15`
@@ -358,9 +401,17 @@ type ServiceRoutingEigrpFeatureArgs struct {
 	// Variable name
 	HelloIntervalVariable pulumi.StringPtrInput
 	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+	//   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `hmacAuthenticationKeyWo` together with `hmacAuthenticationKeyWoVersion`, which keeps it out of state.
 	HmacAuthenticationKey pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+	//   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+	HmacAuthenticationKeyWo pulumi.StringPtrInput
+	// Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	HmacAuthenticationKeyWoVersion pulumi.IntPtrInput
 	// Set EIGRP hold time
 	//   - Range: `0`-`65535`
 	//   - Default value: `15`
@@ -523,6 +574,8 @@ func (o ServiceRoutingEigrpFeatureOutput) HelloIntervalVariable() pulumi.StringP
 }
 
 // Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+//   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `hmacAuthenticationKeyWo` together with `hmacAuthenticationKeyWoVersion`, which keeps it out of state.
 func (o ServiceRoutingEigrpFeatureOutput) HmacAuthenticationKey() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.StringPtrOutput { return v.HmacAuthenticationKey }).(pulumi.StringPtrOutput)
 }
@@ -530,6 +583,18 @@ func (o ServiceRoutingEigrpFeatureOutput) HmacAuthenticationKey() pulumi.StringP
 // Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 func (o ServiceRoutingEigrpFeatureOutput) HmacAuthenticationKeyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.StringPtrOutput { return v.HmacAuthenticationKeyVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+//   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+func (o ServiceRoutingEigrpFeatureOutput) HmacAuthenticationKeyWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.StringPtrOutput { return v.HmacAuthenticationKeyWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o ServiceRoutingEigrpFeatureOutput) HmacAuthenticationKeyWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.IntPtrOutput { return v.HmacAuthenticationKeyWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set EIGRP hold time

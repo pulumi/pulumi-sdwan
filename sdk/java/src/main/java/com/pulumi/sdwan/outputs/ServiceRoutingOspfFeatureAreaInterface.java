@@ -85,6 +85,8 @@ public final class ServiceRoutingOspfFeatureAreaInterface {
     private @Nullable String lsaRetransmitIntervalVariable;
     /**
      * @return Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
      * 
      */
     private @Nullable String messageDigestKey;
@@ -104,6 +106,18 @@ public final class ServiceRoutingOspfFeatureAreaInterface {
      * 
      */
     private @Nullable String messageDigestKeyVariable;
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     * 
+     */
+    private @Nullable String messageDigestKeyWo;
+    /**
+     * @return Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private @Nullable Integer messageDigestKeyWoVersion;
     /**
      * @return Set interface name
      * 
@@ -235,6 +249,8 @@ public final class ServiceRoutingOspfFeatureAreaInterface {
     }
     /**
      * @return Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<String> messageDigestKey() {
@@ -261,6 +277,22 @@ public final class ServiceRoutingOspfFeatureAreaInterface {
      */
     public Optional<String> messageDigestKeyVariable() {
         return Optional.ofNullable(this.messageDigestKeyVariable);
+    }
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     * 
+     */
+    public Optional<String> messageDigestKeyWo() {
+        return Optional.ofNullable(this.messageDigestKeyWo);
+    }
+    /**
+     * @return Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Integer> messageDigestKeyWoVersion() {
+        return Optional.ofNullable(this.messageDigestKeyWoVersion);
     }
     /**
      * @return Set interface name
@@ -333,6 +365,8 @@ public final class ServiceRoutingOspfFeatureAreaInterface {
         private @Nullable Integer messageDigestKeyId;
         private @Nullable String messageDigestKeyIdVariable;
         private @Nullable String messageDigestKeyVariable;
+        private @Nullable String messageDigestKeyWo;
+        private @Nullable Integer messageDigestKeyWoVersion;
         private @Nullable String name;
         private @Nullable String nameVariable;
         private @Nullable String networkType;
@@ -358,6 +392,8 @@ public final class ServiceRoutingOspfFeatureAreaInterface {
     	      this.messageDigestKeyId = defaults.messageDigestKeyId;
     	      this.messageDigestKeyIdVariable = defaults.messageDigestKeyIdVariable;
     	      this.messageDigestKeyVariable = defaults.messageDigestKeyVariable;
+    	      this.messageDigestKeyWo = defaults.messageDigestKeyWo;
+    	      this.messageDigestKeyWoVersion = defaults.messageDigestKeyWoVersion;
     	      this.name = defaults.name;
     	      this.nameVariable = defaults.nameVariable;
     	      this.networkType = defaults.networkType;
@@ -463,6 +499,18 @@ public final class ServiceRoutingOspfFeatureAreaInterface {
             return this;
         }
         @CustomType.Setter
+        public Builder messageDigestKeyWo(@Nullable String messageDigestKeyWo) {
+
+            this.messageDigestKeyWo = messageDigestKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder messageDigestKeyWoVersion(@Nullable Integer messageDigestKeyWoVersion) {
+
+            this.messageDigestKeyWoVersion = messageDigestKeyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder name(@Nullable String name) {
 
             this.name = name;
@@ -516,6 +564,8 @@ public final class ServiceRoutingOspfFeatureAreaInterface {
             _resultValue.messageDigestKeyId = messageDigestKeyId;
             _resultValue.messageDigestKeyIdVariable = messageDigestKeyIdVariable;
             _resultValue.messageDigestKeyVariable = messageDigestKeyVariable;
+            _resultValue.messageDigestKeyWo = messageDigestKeyWo;
+            _resultValue.messageDigestKeyWoVersion = messageDigestKeyWoVersion;
             _resultValue.name = name;
             _resultValue.nameVariable = nameVariable;
             _resultValue.networkType = networkType;

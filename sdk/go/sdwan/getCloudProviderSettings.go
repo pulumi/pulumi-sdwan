@@ -50,8 +50,16 @@ func LookupCloudProviderSettings(ctx *pulumi.Context, opts ...pulumi.InvokeOptio
 type LookupCloudProviderSettingsResult struct {
 	// Cisco SSE Authentication Key
 	CiscoSseAuthKey string `pulumi:"ciscoSseAuthKey"`
+	// Cisco SSE Authentication Key
+	CiscoSseAuthKeyWo string `pulumi:"ciscoSseAuthKeyWo"`
+	// Rotation trigger for `ciscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	CiscoSseAuthKeyWoVersion int `pulumi:"ciscoSseAuthKeyWoVersion"`
 	// Cisco SSE Authentication Secret
 	CiscoSseAuthSecret string `pulumi:"ciscoSseAuthSecret"`
+	// Cisco SSE Authentication Secret
+	CiscoSseAuthSecretWo string `pulumi:"ciscoSseAuthSecretWo"`
+	// Rotation trigger for `ciscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	CiscoSseAuthSecretWoVersion int `pulumi:"ciscoSseAuthSecretWoVersion"`
 	// Enable Cisco SSE Context Sharing
 	CiscoSseContextSharing bool `pulumi:"ciscoSseContextSharing"`
 	// Cisco SSE Organization ID (numeric string)
@@ -60,26 +68,58 @@ type LookupCloudProviderSettingsResult struct {
 	Id string `pulumi:"id"`
 	// Umbrella Authentication Key (v2)
 	UmbrellaAuthKeyV2 string `pulumi:"umbrellaAuthKeyV2"`
+	// Umbrella Authentication Key (v2)
+	UmbrellaAuthKeyV2Wo string `pulumi:"umbrellaAuthKeyV2Wo"`
+	// Rotation trigger for `umbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	UmbrellaAuthKeyV2WoVersion int `pulumi:"umbrellaAuthKeyV2WoVersion"`
 	// Umbrella Authentication Secret (v2)
 	UmbrellaAuthSecretV2 string `pulumi:"umbrellaAuthSecretV2"`
+	// Umbrella Authentication Secret (v2)
+	UmbrellaAuthSecretV2Wo string `pulumi:"umbrellaAuthSecretV2Wo"`
+	// Rotation trigger for `umbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	UmbrellaAuthSecretV2WoVersion int `pulumi:"umbrellaAuthSecretV2WoVersion"`
 	// Umbrella DNS Authentication Key
 	UmbrellaDnsAuthKey string `pulumi:"umbrellaDnsAuthKey"`
+	// Umbrella DNS Authentication Key
+	UmbrellaDnsAuthKeyWo string `pulumi:"umbrellaDnsAuthKeyWo"`
+	// Rotation trigger for `umbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	UmbrellaDnsAuthKeyWoVersion int `pulumi:"umbrellaDnsAuthKeyWoVersion"`
 	// Umbrella DNS Authentication Secret
 	UmbrellaDnsAuthSecret string `pulumi:"umbrellaDnsAuthSecret"`
+	// Umbrella DNS Authentication Secret
+	UmbrellaDnsAuthSecretWo string `pulumi:"umbrellaDnsAuthSecretWo"`
+	// Rotation trigger for `umbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	UmbrellaDnsAuthSecretWoVersion int `pulumi:"umbrellaDnsAuthSecretWoVersion"`
 	// Umbrella Organization ID (numeric string)
 	UmbrellaOrgId string `pulumi:"umbrellaOrgId"`
 	// Umbrella SIG Authentication Key
 	UmbrellaSigAuthKey string `pulumi:"umbrellaSigAuthKey"`
+	// Umbrella SIG Authentication Key
+	UmbrellaSigAuthKeyWo string `pulumi:"umbrellaSigAuthKeyWo"`
+	// Rotation trigger for `umbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	UmbrellaSigAuthKeyWoVersion int `pulumi:"umbrellaSigAuthKeyWoVersion"`
 	// Umbrella SIG Authentication Secret
 	UmbrellaSigAuthSecret string `pulumi:"umbrellaSigAuthSecret"`
+	// Umbrella SIG Authentication Secret
+	UmbrellaSigAuthSecretWo string `pulumi:"umbrellaSigAuthSecretWo"`
+	// Rotation trigger for `umbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	UmbrellaSigAuthSecretWoVersion int `pulumi:"umbrellaSigAuthSecretWoVersion"`
 	// Zscaler Organization
 	ZscalerOrganization string `pulumi:"zscalerOrganization"`
 	// Zscaler Partner Base URI
 	ZscalerPartnerBaseUri string `pulumi:"zscalerPartnerBaseUri"`
 	// Zscaler Partner Key
 	ZscalerPartnerKey string `pulumi:"zscalerPartnerKey"`
+	// Zscaler Partner Key
+	ZscalerPartnerKeyWo string `pulumi:"zscalerPartnerKeyWo"`
+	// Rotation trigger for `zscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	ZscalerPartnerKeyWoVersion int `pulumi:"zscalerPartnerKeyWoVersion"`
 	// Zscaler Password
 	ZscalerPassword string `pulumi:"zscalerPassword"`
+	// Zscaler Password
+	ZscalerPasswordWo string `pulumi:"zscalerPasswordWo"`
+	// Rotation trigger for `zscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	ZscalerPasswordWoVersion int `pulumi:"zscalerPasswordWoVersion"`
 	// Zscaler Username
 	ZscalerUsername string `pulumi:"zscalerUsername"`
 }
@@ -109,9 +149,29 @@ func (o LookupCloudProviderSettingsResultOutput) CiscoSseAuthKey() pulumi.String
 	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.CiscoSseAuthKey }).(pulumi.StringOutput)
 }
 
+// Cisco SSE Authentication Key
+func (o LookupCloudProviderSettingsResultOutput) CiscoSseAuthKeyWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.CiscoSseAuthKeyWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `ciscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupCloudProviderSettingsResultOutput) CiscoSseAuthKeyWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) int { return v.CiscoSseAuthKeyWoVersion }).(pulumi.IntOutput)
+}
+
 // Cisco SSE Authentication Secret
 func (o LookupCloudProviderSettingsResultOutput) CiscoSseAuthSecret() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.CiscoSseAuthSecret }).(pulumi.StringOutput)
+}
+
+// Cisco SSE Authentication Secret
+func (o LookupCloudProviderSettingsResultOutput) CiscoSseAuthSecretWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.CiscoSseAuthSecretWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `ciscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupCloudProviderSettingsResultOutput) CiscoSseAuthSecretWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) int { return v.CiscoSseAuthSecretWoVersion }).(pulumi.IntOutput)
 }
 
 // Enable Cisco SSE Context Sharing
@@ -134,9 +194,29 @@ func (o LookupCloudProviderSettingsResultOutput) UmbrellaAuthKeyV2() pulumi.Stri
 	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.UmbrellaAuthKeyV2 }).(pulumi.StringOutput)
 }
 
+// Umbrella Authentication Key (v2)
+func (o LookupCloudProviderSettingsResultOutput) UmbrellaAuthKeyV2Wo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.UmbrellaAuthKeyV2Wo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `umbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupCloudProviderSettingsResultOutput) UmbrellaAuthKeyV2WoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) int { return v.UmbrellaAuthKeyV2WoVersion }).(pulumi.IntOutput)
+}
+
 // Umbrella Authentication Secret (v2)
 func (o LookupCloudProviderSettingsResultOutput) UmbrellaAuthSecretV2() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.UmbrellaAuthSecretV2 }).(pulumi.StringOutput)
+}
+
+// Umbrella Authentication Secret (v2)
+func (o LookupCloudProviderSettingsResultOutput) UmbrellaAuthSecretV2Wo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.UmbrellaAuthSecretV2Wo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `umbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupCloudProviderSettingsResultOutput) UmbrellaAuthSecretV2WoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) int { return v.UmbrellaAuthSecretV2WoVersion }).(pulumi.IntOutput)
 }
 
 // Umbrella DNS Authentication Key
@@ -144,9 +224,29 @@ func (o LookupCloudProviderSettingsResultOutput) UmbrellaDnsAuthKey() pulumi.Str
 	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.UmbrellaDnsAuthKey }).(pulumi.StringOutput)
 }
 
+// Umbrella DNS Authentication Key
+func (o LookupCloudProviderSettingsResultOutput) UmbrellaDnsAuthKeyWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.UmbrellaDnsAuthKeyWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `umbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupCloudProviderSettingsResultOutput) UmbrellaDnsAuthKeyWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) int { return v.UmbrellaDnsAuthKeyWoVersion }).(pulumi.IntOutput)
+}
+
 // Umbrella DNS Authentication Secret
 func (o LookupCloudProviderSettingsResultOutput) UmbrellaDnsAuthSecret() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.UmbrellaDnsAuthSecret }).(pulumi.StringOutput)
+}
+
+// Umbrella DNS Authentication Secret
+func (o LookupCloudProviderSettingsResultOutput) UmbrellaDnsAuthSecretWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.UmbrellaDnsAuthSecretWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `umbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupCloudProviderSettingsResultOutput) UmbrellaDnsAuthSecretWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) int { return v.UmbrellaDnsAuthSecretWoVersion }).(pulumi.IntOutput)
 }
 
 // Umbrella Organization ID (numeric string)
@@ -159,9 +259,29 @@ func (o LookupCloudProviderSettingsResultOutput) UmbrellaSigAuthKey() pulumi.Str
 	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.UmbrellaSigAuthKey }).(pulumi.StringOutput)
 }
 
+// Umbrella SIG Authentication Key
+func (o LookupCloudProviderSettingsResultOutput) UmbrellaSigAuthKeyWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.UmbrellaSigAuthKeyWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `umbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupCloudProviderSettingsResultOutput) UmbrellaSigAuthKeyWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) int { return v.UmbrellaSigAuthKeyWoVersion }).(pulumi.IntOutput)
+}
+
 // Umbrella SIG Authentication Secret
 func (o LookupCloudProviderSettingsResultOutput) UmbrellaSigAuthSecret() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.UmbrellaSigAuthSecret }).(pulumi.StringOutput)
+}
+
+// Umbrella SIG Authentication Secret
+func (o LookupCloudProviderSettingsResultOutput) UmbrellaSigAuthSecretWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.UmbrellaSigAuthSecretWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `umbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupCloudProviderSettingsResultOutput) UmbrellaSigAuthSecretWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) int { return v.UmbrellaSigAuthSecretWoVersion }).(pulumi.IntOutput)
 }
 
 // Zscaler Organization
@@ -179,9 +299,29 @@ func (o LookupCloudProviderSettingsResultOutput) ZscalerPartnerKey() pulumi.Stri
 	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.ZscalerPartnerKey }).(pulumi.StringOutput)
 }
 
+// Zscaler Partner Key
+func (o LookupCloudProviderSettingsResultOutput) ZscalerPartnerKeyWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.ZscalerPartnerKeyWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `zscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupCloudProviderSettingsResultOutput) ZscalerPartnerKeyWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) int { return v.ZscalerPartnerKeyWoVersion }).(pulumi.IntOutput)
+}
+
 // Zscaler Password
 func (o LookupCloudProviderSettingsResultOutput) ZscalerPassword() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.ZscalerPassword }).(pulumi.StringOutput)
+}
+
+// Zscaler Password
+func (o LookupCloudProviderSettingsResultOutput) ZscalerPasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) string { return v.ZscalerPasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `zscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupCloudProviderSettingsResultOutput) ZscalerPasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupCloudProviderSettingsResult) int { return v.ZscalerPasswordWoVersion }).(pulumi.IntOutput)
 }
 
 // Zscaler Username

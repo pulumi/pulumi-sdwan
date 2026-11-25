@@ -1244,6 +1244,11 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "chapPppAuthPassword",
+                    "papPppAuthPassword",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -1317,11 +1322,21 @@ namespace Pulumi.Sdwan
         [Input("chapHostnameVariable")]
         public Input<string>? ChapHostnameVariable { get; set; }
 
+        [Input("chapPppAuthPassword")]
+        private Input<string>? _chapPppAuthPassword;
+
         /// <summary>
         /// Specify ppp chap authentication Password
         /// </summary>
-        [Input("chapPppAuthPassword")]
-        public Input<string>? ChapPppAuthPassword { get; set; }
+        public Input<string>? ChapPppAuthPassword
+        {
+            get => _chapPppAuthPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _chapPppAuthPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -1583,11 +1598,21 @@ namespace Pulumi.Sdwan
         [Input("papPassword")]
         public Input<bool>? PapPassword { get; set; }
 
+        [Input("papPppAuthPassword")]
+        private Input<string>? _papPppAuthPassword;
+
         /// <summary>
         /// Specify ppp pap authentication Password
         /// </summary>
-        [Input("papPppAuthPassword")]
-        public Input<string>? PapPppAuthPassword { get; set; }
+        public Input<string>? PapPppAuthPassword
+        {
+            get => _papPppAuthPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _papPppAuthPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -2404,11 +2429,21 @@ namespace Pulumi.Sdwan
         [Input("chapHostnameVariable")]
         public Input<string>? ChapHostnameVariable { get; set; }
 
+        [Input("chapPppAuthPassword")]
+        private Input<string>? _chapPppAuthPassword;
+
         /// <summary>
         /// Specify ppp chap authentication Password
         /// </summary>
-        [Input("chapPppAuthPassword")]
-        public Input<string>? ChapPppAuthPassword { get; set; }
+        public Input<string>? ChapPppAuthPassword
+        {
+            get => _chapPppAuthPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _chapPppAuthPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -2670,11 +2705,21 @@ namespace Pulumi.Sdwan
         [Input("papPassword")]
         public Input<bool>? PapPassword { get; set; }
 
+        [Input("papPppAuthPassword")]
+        private Input<string>? _papPppAuthPassword;
+
         /// <summary>
         /// Specify ppp pap authentication Password
         /// </summary>
-        [Input("papPppAuthPassword")]
-        public Input<string>? PapPppAuthPassword { get; set; }
+        public Input<string>? PapPppAuthPassword
+        {
+            get => _papPppAuthPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _papPppAuthPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name

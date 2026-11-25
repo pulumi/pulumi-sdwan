@@ -5,7 +5,6 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.sdwan.outputs.GetConfigurationGroupDevice;
 import com.pulumi.sdwan.outputs.GetConfigurationGroupTopologyDevice;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,11 +18,6 @@ public final class GetConfigurationGroupResult {
      * 
      */
     private String description;
-    /**
-     * @return List of devices
-     * 
-     */
-    private List<GetConfigurationGroupDevice> devices;
     /**
      * @return List of feature profile IDs
      * 
@@ -59,6 +53,11 @@ public final class GetConfigurationGroupResult {
      * 
      */
     private Integer topologySiteDevices;
+    /**
+     * @return The version of the object
+     * 
+     */
+    private Integer version;
 
     private GetConfigurationGroupResult() {}
     /**
@@ -67,13 +66,6 @@ public final class GetConfigurationGroupResult {
      */
     public String description() {
         return this.description;
-    }
-    /**
-     * @return List of devices
-     * 
-     */
-    public List<GetConfigurationGroupDevice> devices() {
-        return this.devices;
     }
     /**
      * @return List of feature profile IDs
@@ -124,6 +116,13 @@ public final class GetConfigurationGroupResult {
     public Integer topologySiteDevices() {
         return this.topologySiteDevices;
     }
+    /**
+     * @return The version of the object
+     * 
+     */
+    public Integer version() {
+        return this.version;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -135,7 +134,6 @@ public final class GetConfigurationGroupResult {
     @CustomType.Builder
     public static final class Builder {
         private String description;
-        private List<GetConfigurationGroupDevice> devices;
         private List<String> featureProfileIds;
         private List<String> featureVersions;
         private String id;
@@ -143,11 +141,11 @@ public final class GetConfigurationGroupResult {
         private String solution;
         private List<GetConfigurationGroupTopologyDevice> topologyDevices;
         private Integer topologySiteDevices;
+        private Integer version;
         public Builder() {}
         public Builder(GetConfigurationGroupResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
-    	      this.devices = defaults.devices;
     	      this.featureProfileIds = defaults.featureProfileIds;
     	      this.featureVersions = defaults.featureVersions;
     	      this.id = defaults.id;
@@ -155,6 +153,7 @@ public final class GetConfigurationGroupResult {
     	      this.solution = defaults.solution;
     	      this.topologyDevices = defaults.topologyDevices;
     	      this.topologySiteDevices = defaults.topologySiteDevices;
+    	      this.version = defaults.version;
         }
 
         @CustomType.Setter
@@ -164,17 +163,6 @@ public final class GetConfigurationGroupResult {
             }
             this.description = description;
             return this;
-        }
-        @CustomType.Setter
-        public Builder devices(List<GetConfigurationGroupDevice> devices) {
-            if (devices == null) {
-              throw new MissingRequiredPropertyException("GetConfigurationGroupResult", "devices");
-            }
-            this.devices = devices;
-            return this;
-        }
-        public Builder devices(GetConfigurationGroupDevice... devices) {
-            return devices(List.of(devices));
         }
         @CustomType.Setter
         public Builder featureProfileIds(List<String> featureProfileIds) {
@@ -241,10 +229,17 @@ public final class GetConfigurationGroupResult {
             this.topologySiteDevices = topologySiteDevices;
             return this;
         }
+        @CustomType.Setter
+        public Builder version(Integer version) {
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetConfigurationGroupResult", "version");
+            }
+            this.version = version;
+            return this;
+        }
         public GetConfigurationGroupResult build() {
             final var _resultValue = new GetConfigurationGroupResult();
             _resultValue.description = description;
-            _resultValue.devices = devices;
             _resultValue.featureProfileIds = featureProfileIds;
             _resultValue.featureVersions = featureVersions;
             _resultValue.id = id;
@@ -252,6 +247,7 @@ public final class GetConfigurationGroupResult {
             _resultValue.solution = solution;
             _resultValue.topologyDevices = topologyDevices;
             _resultValue.topologySiteDevices = topologySiteDevices;
+            _resultValue.version = version;
             return _resultValue;
         }
     }

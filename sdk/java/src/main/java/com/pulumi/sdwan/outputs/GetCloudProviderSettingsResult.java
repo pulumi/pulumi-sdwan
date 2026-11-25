@@ -6,6 +6,7 @@ package com.pulumi.sdwan.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,10 +18,30 @@ public final class GetCloudProviderSettingsResult {
      */
     private String ciscoSseAuthKey;
     /**
+     * @return Cisco SSE Authentication Key
+     * 
+     */
+    private String ciscoSseAuthKeyWo;
+    /**
+     * @return Rotation trigger for `ciscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer ciscoSseAuthKeyWoVersion;
+    /**
      * @return Cisco SSE Authentication Secret
      * 
      */
     private String ciscoSseAuthSecret;
+    /**
+     * @return Cisco SSE Authentication Secret
+     * 
+     */
+    private String ciscoSseAuthSecretWo;
+    /**
+     * @return Rotation trigger for `ciscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer ciscoSseAuthSecretWoVersion;
     /**
      * @return Enable Cisco SSE Context Sharing
      * 
@@ -42,20 +63,60 @@ public final class GetCloudProviderSettingsResult {
      */
     private String umbrellaAuthKeyV2;
     /**
+     * @return Umbrella Authentication Key (v2)
+     * 
+     */
+    private String umbrellaAuthKeyV2Wo;
+    /**
+     * @return Rotation trigger for `umbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer umbrellaAuthKeyV2WoVersion;
+    /**
      * @return Umbrella Authentication Secret (v2)
      * 
      */
     private String umbrellaAuthSecretV2;
+    /**
+     * @return Umbrella Authentication Secret (v2)
+     * 
+     */
+    private String umbrellaAuthSecretV2Wo;
+    /**
+     * @return Rotation trigger for `umbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer umbrellaAuthSecretV2WoVersion;
     /**
      * @return Umbrella DNS Authentication Key
      * 
      */
     private String umbrellaDnsAuthKey;
     /**
+     * @return Umbrella DNS Authentication Key
+     * 
+     */
+    private String umbrellaDnsAuthKeyWo;
+    /**
+     * @return Rotation trigger for `umbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer umbrellaDnsAuthKeyWoVersion;
+    /**
      * @return Umbrella DNS Authentication Secret
      * 
      */
     private String umbrellaDnsAuthSecret;
+    /**
+     * @return Umbrella DNS Authentication Secret
+     * 
+     */
+    private String umbrellaDnsAuthSecretWo;
+    /**
+     * @return Rotation trigger for `umbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer umbrellaDnsAuthSecretWoVersion;
     /**
      * @return Umbrella Organization ID (numeric string)
      * 
@@ -67,10 +128,30 @@ public final class GetCloudProviderSettingsResult {
      */
     private String umbrellaSigAuthKey;
     /**
+     * @return Umbrella SIG Authentication Key
+     * 
+     */
+    private String umbrellaSigAuthKeyWo;
+    /**
+     * @return Rotation trigger for `umbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer umbrellaSigAuthKeyWoVersion;
+    /**
      * @return Umbrella SIG Authentication Secret
      * 
      */
     private String umbrellaSigAuthSecret;
+    /**
+     * @return Umbrella SIG Authentication Secret
+     * 
+     */
+    private String umbrellaSigAuthSecretWo;
+    /**
+     * @return Rotation trigger for `umbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer umbrellaSigAuthSecretWoVersion;
     /**
      * @return Zscaler Organization
      * 
@@ -87,10 +168,30 @@ public final class GetCloudProviderSettingsResult {
      */
     private String zscalerPartnerKey;
     /**
+     * @return Zscaler Partner Key
+     * 
+     */
+    private String zscalerPartnerKeyWo;
+    /**
+     * @return Rotation trigger for `zscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer zscalerPartnerKeyWoVersion;
+    /**
      * @return Zscaler Password
      * 
      */
     private String zscalerPassword;
+    /**
+     * @return Zscaler Password
+     * 
+     */
+    private String zscalerPasswordWo;
+    /**
+     * @return Rotation trigger for `zscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer zscalerPasswordWoVersion;
     /**
      * @return Zscaler Username
      * 
@@ -106,11 +207,39 @@ public final class GetCloudProviderSettingsResult {
         return this.ciscoSseAuthKey;
     }
     /**
+     * @return Cisco SSE Authentication Key
+     * 
+     */
+    public String ciscoSseAuthKeyWo() {
+        return this.ciscoSseAuthKeyWo;
+    }
+    /**
+     * @return Rotation trigger for `ciscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer ciscoSseAuthKeyWoVersion() {
+        return this.ciscoSseAuthKeyWoVersion;
+    }
+    /**
      * @return Cisco SSE Authentication Secret
      * 
      */
     public String ciscoSseAuthSecret() {
         return this.ciscoSseAuthSecret;
+    }
+    /**
+     * @return Cisco SSE Authentication Secret
+     * 
+     */
+    public String ciscoSseAuthSecretWo() {
+        return this.ciscoSseAuthSecretWo;
+    }
+    /**
+     * @return Rotation trigger for `ciscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer ciscoSseAuthSecretWoVersion() {
+        return this.ciscoSseAuthSecretWoVersion;
     }
     /**
      * @return Enable Cisco SSE Context Sharing
@@ -141,11 +270,39 @@ public final class GetCloudProviderSettingsResult {
         return this.umbrellaAuthKeyV2;
     }
     /**
+     * @return Umbrella Authentication Key (v2)
+     * 
+     */
+    public String umbrellaAuthKeyV2Wo() {
+        return this.umbrellaAuthKeyV2Wo;
+    }
+    /**
+     * @return Rotation trigger for `umbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer umbrellaAuthKeyV2WoVersion() {
+        return this.umbrellaAuthKeyV2WoVersion;
+    }
+    /**
      * @return Umbrella Authentication Secret (v2)
      * 
      */
     public String umbrellaAuthSecretV2() {
         return this.umbrellaAuthSecretV2;
+    }
+    /**
+     * @return Umbrella Authentication Secret (v2)
+     * 
+     */
+    public String umbrellaAuthSecretV2Wo() {
+        return this.umbrellaAuthSecretV2Wo;
+    }
+    /**
+     * @return Rotation trigger for `umbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer umbrellaAuthSecretV2WoVersion() {
+        return this.umbrellaAuthSecretV2WoVersion;
     }
     /**
      * @return Umbrella DNS Authentication Key
@@ -155,11 +312,39 @@ public final class GetCloudProviderSettingsResult {
         return this.umbrellaDnsAuthKey;
     }
     /**
+     * @return Umbrella DNS Authentication Key
+     * 
+     */
+    public String umbrellaDnsAuthKeyWo() {
+        return this.umbrellaDnsAuthKeyWo;
+    }
+    /**
+     * @return Rotation trigger for `umbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer umbrellaDnsAuthKeyWoVersion() {
+        return this.umbrellaDnsAuthKeyWoVersion;
+    }
+    /**
      * @return Umbrella DNS Authentication Secret
      * 
      */
     public String umbrellaDnsAuthSecret() {
         return this.umbrellaDnsAuthSecret;
+    }
+    /**
+     * @return Umbrella DNS Authentication Secret
+     * 
+     */
+    public String umbrellaDnsAuthSecretWo() {
+        return this.umbrellaDnsAuthSecretWo;
+    }
+    /**
+     * @return Rotation trigger for `umbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer umbrellaDnsAuthSecretWoVersion() {
+        return this.umbrellaDnsAuthSecretWoVersion;
     }
     /**
      * @return Umbrella Organization ID (numeric string)
@@ -176,11 +361,39 @@ public final class GetCloudProviderSettingsResult {
         return this.umbrellaSigAuthKey;
     }
     /**
+     * @return Umbrella SIG Authentication Key
+     * 
+     */
+    public String umbrellaSigAuthKeyWo() {
+        return this.umbrellaSigAuthKeyWo;
+    }
+    /**
+     * @return Rotation trigger for `umbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer umbrellaSigAuthKeyWoVersion() {
+        return this.umbrellaSigAuthKeyWoVersion;
+    }
+    /**
      * @return Umbrella SIG Authentication Secret
      * 
      */
     public String umbrellaSigAuthSecret() {
         return this.umbrellaSigAuthSecret;
+    }
+    /**
+     * @return Umbrella SIG Authentication Secret
+     * 
+     */
+    public String umbrellaSigAuthSecretWo() {
+        return this.umbrellaSigAuthSecretWo;
+    }
+    /**
+     * @return Rotation trigger for `umbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer umbrellaSigAuthSecretWoVersion() {
+        return this.umbrellaSigAuthSecretWoVersion;
     }
     /**
      * @return Zscaler Organization
@@ -204,11 +417,39 @@ public final class GetCloudProviderSettingsResult {
         return this.zscalerPartnerKey;
     }
     /**
+     * @return Zscaler Partner Key
+     * 
+     */
+    public String zscalerPartnerKeyWo() {
+        return this.zscalerPartnerKeyWo;
+    }
+    /**
+     * @return Rotation trigger for `zscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer zscalerPartnerKeyWoVersion() {
+        return this.zscalerPartnerKeyWoVersion;
+    }
+    /**
      * @return Zscaler Password
      * 
      */
     public String zscalerPassword() {
         return this.zscalerPassword;
+    }
+    /**
+     * @return Zscaler Password
+     * 
+     */
+    public String zscalerPasswordWo() {
+        return this.zscalerPasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `zscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer zscalerPasswordWoVersion() {
+        return this.zscalerPasswordWoVersion;
     }
     /**
      * @return Zscaler Username
@@ -228,41 +469,81 @@ public final class GetCloudProviderSettingsResult {
     @CustomType.Builder
     public static final class Builder {
         private String ciscoSseAuthKey;
+        private String ciscoSseAuthKeyWo;
+        private Integer ciscoSseAuthKeyWoVersion;
         private String ciscoSseAuthSecret;
+        private String ciscoSseAuthSecretWo;
+        private Integer ciscoSseAuthSecretWoVersion;
         private Boolean ciscoSseContextSharing;
         private String ciscoSseOrgId;
         private String id;
         private String umbrellaAuthKeyV2;
+        private String umbrellaAuthKeyV2Wo;
+        private Integer umbrellaAuthKeyV2WoVersion;
         private String umbrellaAuthSecretV2;
+        private String umbrellaAuthSecretV2Wo;
+        private Integer umbrellaAuthSecretV2WoVersion;
         private String umbrellaDnsAuthKey;
+        private String umbrellaDnsAuthKeyWo;
+        private Integer umbrellaDnsAuthKeyWoVersion;
         private String umbrellaDnsAuthSecret;
+        private String umbrellaDnsAuthSecretWo;
+        private Integer umbrellaDnsAuthSecretWoVersion;
         private String umbrellaOrgId;
         private String umbrellaSigAuthKey;
+        private String umbrellaSigAuthKeyWo;
+        private Integer umbrellaSigAuthKeyWoVersion;
         private String umbrellaSigAuthSecret;
+        private String umbrellaSigAuthSecretWo;
+        private Integer umbrellaSigAuthSecretWoVersion;
         private String zscalerOrganization;
         private String zscalerPartnerBaseUri;
         private String zscalerPartnerKey;
+        private String zscalerPartnerKeyWo;
+        private Integer zscalerPartnerKeyWoVersion;
         private String zscalerPassword;
+        private String zscalerPasswordWo;
+        private Integer zscalerPasswordWoVersion;
         private String zscalerUsername;
         public Builder() {}
         public Builder(GetCloudProviderSettingsResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.ciscoSseAuthKey = defaults.ciscoSseAuthKey;
+    	      this.ciscoSseAuthKeyWo = defaults.ciscoSseAuthKeyWo;
+    	      this.ciscoSseAuthKeyWoVersion = defaults.ciscoSseAuthKeyWoVersion;
     	      this.ciscoSseAuthSecret = defaults.ciscoSseAuthSecret;
+    	      this.ciscoSseAuthSecretWo = defaults.ciscoSseAuthSecretWo;
+    	      this.ciscoSseAuthSecretWoVersion = defaults.ciscoSseAuthSecretWoVersion;
     	      this.ciscoSseContextSharing = defaults.ciscoSseContextSharing;
     	      this.ciscoSseOrgId = defaults.ciscoSseOrgId;
     	      this.id = defaults.id;
     	      this.umbrellaAuthKeyV2 = defaults.umbrellaAuthKeyV2;
+    	      this.umbrellaAuthKeyV2Wo = defaults.umbrellaAuthKeyV2Wo;
+    	      this.umbrellaAuthKeyV2WoVersion = defaults.umbrellaAuthKeyV2WoVersion;
     	      this.umbrellaAuthSecretV2 = defaults.umbrellaAuthSecretV2;
+    	      this.umbrellaAuthSecretV2Wo = defaults.umbrellaAuthSecretV2Wo;
+    	      this.umbrellaAuthSecretV2WoVersion = defaults.umbrellaAuthSecretV2WoVersion;
     	      this.umbrellaDnsAuthKey = defaults.umbrellaDnsAuthKey;
+    	      this.umbrellaDnsAuthKeyWo = defaults.umbrellaDnsAuthKeyWo;
+    	      this.umbrellaDnsAuthKeyWoVersion = defaults.umbrellaDnsAuthKeyWoVersion;
     	      this.umbrellaDnsAuthSecret = defaults.umbrellaDnsAuthSecret;
+    	      this.umbrellaDnsAuthSecretWo = defaults.umbrellaDnsAuthSecretWo;
+    	      this.umbrellaDnsAuthSecretWoVersion = defaults.umbrellaDnsAuthSecretWoVersion;
     	      this.umbrellaOrgId = defaults.umbrellaOrgId;
     	      this.umbrellaSigAuthKey = defaults.umbrellaSigAuthKey;
+    	      this.umbrellaSigAuthKeyWo = defaults.umbrellaSigAuthKeyWo;
+    	      this.umbrellaSigAuthKeyWoVersion = defaults.umbrellaSigAuthKeyWoVersion;
     	      this.umbrellaSigAuthSecret = defaults.umbrellaSigAuthSecret;
+    	      this.umbrellaSigAuthSecretWo = defaults.umbrellaSigAuthSecretWo;
+    	      this.umbrellaSigAuthSecretWoVersion = defaults.umbrellaSigAuthSecretWoVersion;
     	      this.zscalerOrganization = defaults.zscalerOrganization;
     	      this.zscalerPartnerBaseUri = defaults.zscalerPartnerBaseUri;
     	      this.zscalerPartnerKey = defaults.zscalerPartnerKey;
+    	      this.zscalerPartnerKeyWo = defaults.zscalerPartnerKeyWo;
+    	      this.zscalerPartnerKeyWoVersion = defaults.zscalerPartnerKeyWoVersion;
     	      this.zscalerPassword = defaults.zscalerPassword;
+    	      this.zscalerPasswordWo = defaults.zscalerPasswordWo;
+    	      this.zscalerPasswordWoVersion = defaults.zscalerPasswordWoVersion;
     	      this.zscalerUsername = defaults.zscalerUsername;
         }
 
@@ -275,11 +556,43 @@ public final class GetCloudProviderSettingsResult {
             return this;
         }
         @CustomType.Setter
+        public Builder ciscoSseAuthKeyWo(String ciscoSseAuthKeyWo) {
+            if (ciscoSseAuthKeyWo == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "ciscoSseAuthKeyWo");
+            }
+            this.ciscoSseAuthKeyWo = ciscoSseAuthKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ciscoSseAuthKeyWoVersion(Integer ciscoSseAuthKeyWoVersion) {
+            if (ciscoSseAuthKeyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "ciscoSseAuthKeyWoVersion");
+            }
+            this.ciscoSseAuthKeyWoVersion = ciscoSseAuthKeyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder ciscoSseAuthSecret(String ciscoSseAuthSecret) {
             if (ciscoSseAuthSecret == null) {
               throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "ciscoSseAuthSecret");
             }
             this.ciscoSseAuthSecret = ciscoSseAuthSecret;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ciscoSseAuthSecretWo(String ciscoSseAuthSecretWo) {
+            if (ciscoSseAuthSecretWo == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "ciscoSseAuthSecretWo");
+            }
+            this.ciscoSseAuthSecretWo = ciscoSseAuthSecretWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ciscoSseAuthSecretWoVersion(Integer ciscoSseAuthSecretWoVersion) {
+            if (ciscoSseAuthSecretWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "ciscoSseAuthSecretWoVersion");
+            }
+            this.ciscoSseAuthSecretWoVersion = ciscoSseAuthSecretWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -315,11 +628,43 @@ public final class GetCloudProviderSettingsResult {
             return this;
         }
         @CustomType.Setter
+        public Builder umbrellaAuthKeyV2Wo(String umbrellaAuthKeyV2Wo) {
+            if (umbrellaAuthKeyV2Wo == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaAuthKeyV2Wo");
+            }
+            this.umbrellaAuthKeyV2Wo = umbrellaAuthKeyV2Wo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder umbrellaAuthKeyV2WoVersion(Integer umbrellaAuthKeyV2WoVersion) {
+            if (umbrellaAuthKeyV2WoVersion == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaAuthKeyV2WoVersion");
+            }
+            this.umbrellaAuthKeyV2WoVersion = umbrellaAuthKeyV2WoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder umbrellaAuthSecretV2(String umbrellaAuthSecretV2) {
             if (umbrellaAuthSecretV2 == null) {
               throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaAuthSecretV2");
             }
             this.umbrellaAuthSecretV2 = umbrellaAuthSecretV2;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder umbrellaAuthSecretV2Wo(String umbrellaAuthSecretV2Wo) {
+            if (umbrellaAuthSecretV2Wo == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaAuthSecretV2Wo");
+            }
+            this.umbrellaAuthSecretV2Wo = umbrellaAuthSecretV2Wo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder umbrellaAuthSecretV2WoVersion(Integer umbrellaAuthSecretV2WoVersion) {
+            if (umbrellaAuthSecretV2WoVersion == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaAuthSecretV2WoVersion");
+            }
+            this.umbrellaAuthSecretV2WoVersion = umbrellaAuthSecretV2WoVersion;
             return this;
         }
         @CustomType.Setter
@@ -331,11 +676,43 @@ public final class GetCloudProviderSettingsResult {
             return this;
         }
         @CustomType.Setter
+        public Builder umbrellaDnsAuthKeyWo(String umbrellaDnsAuthKeyWo) {
+            if (umbrellaDnsAuthKeyWo == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaDnsAuthKeyWo");
+            }
+            this.umbrellaDnsAuthKeyWo = umbrellaDnsAuthKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder umbrellaDnsAuthKeyWoVersion(Integer umbrellaDnsAuthKeyWoVersion) {
+            if (umbrellaDnsAuthKeyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaDnsAuthKeyWoVersion");
+            }
+            this.umbrellaDnsAuthKeyWoVersion = umbrellaDnsAuthKeyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder umbrellaDnsAuthSecret(String umbrellaDnsAuthSecret) {
             if (umbrellaDnsAuthSecret == null) {
               throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaDnsAuthSecret");
             }
             this.umbrellaDnsAuthSecret = umbrellaDnsAuthSecret;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder umbrellaDnsAuthSecretWo(String umbrellaDnsAuthSecretWo) {
+            if (umbrellaDnsAuthSecretWo == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaDnsAuthSecretWo");
+            }
+            this.umbrellaDnsAuthSecretWo = umbrellaDnsAuthSecretWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder umbrellaDnsAuthSecretWoVersion(Integer umbrellaDnsAuthSecretWoVersion) {
+            if (umbrellaDnsAuthSecretWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaDnsAuthSecretWoVersion");
+            }
+            this.umbrellaDnsAuthSecretWoVersion = umbrellaDnsAuthSecretWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -355,11 +732,43 @@ public final class GetCloudProviderSettingsResult {
             return this;
         }
         @CustomType.Setter
+        public Builder umbrellaSigAuthKeyWo(String umbrellaSigAuthKeyWo) {
+            if (umbrellaSigAuthKeyWo == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaSigAuthKeyWo");
+            }
+            this.umbrellaSigAuthKeyWo = umbrellaSigAuthKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder umbrellaSigAuthKeyWoVersion(Integer umbrellaSigAuthKeyWoVersion) {
+            if (umbrellaSigAuthKeyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaSigAuthKeyWoVersion");
+            }
+            this.umbrellaSigAuthKeyWoVersion = umbrellaSigAuthKeyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder umbrellaSigAuthSecret(String umbrellaSigAuthSecret) {
             if (umbrellaSigAuthSecret == null) {
               throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaSigAuthSecret");
             }
             this.umbrellaSigAuthSecret = umbrellaSigAuthSecret;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder umbrellaSigAuthSecretWo(String umbrellaSigAuthSecretWo) {
+            if (umbrellaSigAuthSecretWo == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaSigAuthSecretWo");
+            }
+            this.umbrellaSigAuthSecretWo = umbrellaSigAuthSecretWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder umbrellaSigAuthSecretWoVersion(Integer umbrellaSigAuthSecretWoVersion) {
+            if (umbrellaSigAuthSecretWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "umbrellaSigAuthSecretWoVersion");
+            }
+            this.umbrellaSigAuthSecretWoVersion = umbrellaSigAuthSecretWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -387,11 +796,43 @@ public final class GetCloudProviderSettingsResult {
             return this;
         }
         @CustomType.Setter
+        public Builder zscalerPartnerKeyWo(String zscalerPartnerKeyWo) {
+            if (zscalerPartnerKeyWo == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "zscalerPartnerKeyWo");
+            }
+            this.zscalerPartnerKeyWo = zscalerPartnerKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder zscalerPartnerKeyWoVersion(Integer zscalerPartnerKeyWoVersion) {
+            if (zscalerPartnerKeyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "zscalerPartnerKeyWoVersion");
+            }
+            this.zscalerPartnerKeyWoVersion = zscalerPartnerKeyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder zscalerPassword(String zscalerPassword) {
             if (zscalerPassword == null) {
               throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "zscalerPassword");
             }
             this.zscalerPassword = zscalerPassword;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder zscalerPasswordWo(String zscalerPasswordWo) {
+            if (zscalerPasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "zscalerPasswordWo");
+            }
+            this.zscalerPasswordWo = zscalerPasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder zscalerPasswordWoVersion(Integer zscalerPasswordWoVersion) {
+            if (zscalerPasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetCloudProviderSettingsResult", "zscalerPasswordWoVersion");
+            }
+            this.zscalerPasswordWoVersion = zscalerPasswordWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -405,21 +846,41 @@ public final class GetCloudProviderSettingsResult {
         public GetCloudProviderSettingsResult build() {
             final var _resultValue = new GetCloudProviderSettingsResult();
             _resultValue.ciscoSseAuthKey = ciscoSseAuthKey;
+            _resultValue.ciscoSseAuthKeyWo = ciscoSseAuthKeyWo;
+            _resultValue.ciscoSseAuthKeyWoVersion = ciscoSseAuthKeyWoVersion;
             _resultValue.ciscoSseAuthSecret = ciscoSseAuthSecret;
+            _resultValue.ciscoSseAuthSecretWo = ciscoSseAuthSecretWo;
+            _resultValue.ciscoSseAuthSecretWoVersion = ciscoSseAuthSecretWoVersion;
             _resultValue.ciscoSseContextSharing = ciscoSseContextSharing;
             _resultValue.ciscoSseOrgId = ciscoSseOrgId;
             _resultValue.id = id;
             _resultValue.umbrellaAuthKeyV2 = umbrellaAuthKeyV2;
+            _resultValue.umbrellaAuthKeyV2Wo = umbrellaAuthKeyV2Wo;
+            _resultValue.umbrellaAuthKeyV2WoVersion = umbrellaAuthKeyV2WoVersion;
             _resultValue.umbrellaAuthSecretV2 = umbrellaAuthSecretV2;
+            _resultValue.umbrellaAuthSecretV2Wo = umbrellaAuthSecretV2Wo;
+            _resultValue.umbrellaAuthSecretV2WoVersion = umbrellaAuthSecretV2WoVersion;
             _resultValue.umbrellaDnsAuthKey = umbrellaDnsAuthKey;
+            _resultValue.umbrellaDnsAuthKeyWo = umbrellaDnsAuthKeyWo;
+            _resultValue.umbrellaDnsAuthKeyWoVersion = umbrellaDnsAuthKeyWoVersion;
             _resultValue.umbrellaDnsAuthSecret = umbrellaDnsAuthSecret;
+            _resultValue.umbrellaDnsAuthSecretWo = umbrellaDnsAuthSecretWo;
+            _resultValue.umbrellaDnsAuthSecretWoVersion = umbrellaDnsAuthSecretWoVersion;
             _resultValue.umbrellaOrgId = umbrellaOrgId;
             _resultValue.umbrellaSigAuthKey = umbrellaSigAuthKey;
+            _resultValue.umbrellaSigAuthKeyWo = umbrellaSigAuthKeyWo;
+            _resultValue.umbrellaSigAuthKeyWoVersion = umbrellaSigAuthKeyWoVersion;
             _resultValue.umbrellaSigAuthSecret = umbrellaSigAuthSecret;
+            _resultValue.umbrellaSigAuthSecretWo = umbrellaSigAuthSecretWo;
+            _resultValue.umbrellaSigAuthSecretWoVersion = umbrellaSigAuthSecretWoVersion;
             _resultValue.zscalerOrganization = zscalerOrganization;
             _resultValue.zscalerPartnerBaseUri = zscalerPartnerBaseUri;
             _resultValue.zscalerPartnerKey = zscalerPartnerKey;
+            _resultValue.zscalerPartnerKeyWo = zscalerPartnerKeyWo;
+            _resultValue.zscalerPartnerKeyWoVersion = zscalerPartnerKeyWoVersion;
             _resultValue.zscalerPassword = zscalerPassword;
+            _resultValue.zscalerPasswordWo = zscalerPasswordWo;
+            _resultValue.zscalerPasswordWoVersion = zscalerPasswordWoVersion;
             _resultValue.zscalerUsername = zscalerUsername;
             return _resultValue;
         }

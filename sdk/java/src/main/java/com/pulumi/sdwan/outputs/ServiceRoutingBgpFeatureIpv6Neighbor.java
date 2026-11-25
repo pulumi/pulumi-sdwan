@@ -121,6 +121,8 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
     private @Nullable String nextHopSelfVariable;
     /**
      * @return Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      * 
      */
     private @Nullable String password;
@@ -129,6 +131,18 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
      * 
      */
     private @Nullable String passwordVariable;
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     * 
+     */
+    private @Nullable String passwordWo;
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private @Nullable Integer passwordWoVersion;
     /**
      * @return Set remote autonomous system number
      * 
@@ -328,6 +342,8 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
     }
     /**
      * @return Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<String> password() {
@@ -339,6 +355,22 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
      */
     public Optional<String> passwordVariable() {
         return Optional.ofNullable(this.passwordVariable);
+    }
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     * 
+     */
+    public Optional<String> passwordWo() {
+        return Optional.ofNullable(this.passwordWo);
+    }
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Integer> passwordWoVersion() {
+        return Optional.ofNullable(this.passwordWoVersion);
     }
     /**
      * @return Set remote autonomous system number
@@ -444,6 +476,8 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
         private @Nullable String nextHopSelfVariable;
         private @Nullable String password;
         private @Nullable String passwordVariable;
+        private @Nullable String passwordWo;
+        private @Nullable Integer passwordWoVersion;
         private @Nullable String remoteAs;
         private @Nullable String remoteAsVariable;
         private @Nullable Boolean sendCommunity;
@@ -478,6 +512,8 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
     	      this.nextHopSelfVariable = defaults.nextHopSelfVariable;
     	      this.password = defaults.password;
     	      this.passwordVariable = defaults.passwordVariable;
+    	      this.passwordWo = defaults.passwordWo;
+    	      this.passwordWoVersion = defaults.passwordWoVersion;
     	      this.remoteAs = defaults.remoteAs;
     	      this.remoteAsVariable = defaults.remoteAsVariable;
     	      this.sendCommunity = defaults.sendCommunity;
@@ -620,6 +656,18 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
             return this;
         }
         @CustomType.Setter
+        public Builder passwordWo(@Nullable String passwordWo) {
+
+            this.passwordWo = passwordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder passwordWoVersion(@Nullable Integer passwordWoVersion) {
+
+            this.passwordWoVersion = passwordWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder remoteAs(@Nullable String remoteAs) {
 
             this.remoteAs = remoteAs;
@@ -702,6 +750,8 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
             _resultValue.nextHopSelfVariable = nextHopSelfVariable;
             _resultValue.password = password;
             _resultValue.passwordVariable = passwordVariable;
+            _resultValue.passwordWo = passwordWo;
+            _resultValue.passwordWoVersion = passwordWoVersion;
             _resultValue.remoteAs = remoteAs;
             _resultValue.remoteAsVariable = remoteAsVariable;
             _resultValue.sendCommunity = sendCommunity;

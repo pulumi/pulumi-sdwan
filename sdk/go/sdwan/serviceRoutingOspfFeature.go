@@ -168,7 +168,10 @@ type ServiceRoutingOspfFeature struct {
 	Rfc1583Compatible pulumi.BoolPtrOutput `pulumi:"rfc1583Compatible"`
 	// Variable name
 	Rfc1583CompatibleVariable pulumi.StringPtrOutput `pulumi:"rfc1583CompatibleVariable"`
-	RoutePolicyId             pulumi.StringPtrOutput `pulumi:"routePolicyId"`
+	// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyId pulumi.StringPtrOutput `pulumi:"routePolicyId"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyIdVariable pulumi.StringPtrOutput `pulumi:"routePolicyIdVariable"`
 	// Set OSPF router ID to override system IP address
 	RouterId pulumi.StringPtrOutput `pulumi:"routerId"`
 	// Variable name
@@ -287,7 +290,10 @@ type serviceRoutingOspfFeatureState struct {
 	Rfc1583Compatible *bool `pulumi:"rfc1583Compatible"`
 	// Variable name
 	Rfc1583CompatibleVariable *string `pulumi:"rfc1583CompatibleVariable"`
-	RoutePolicyId             *string `pulumi:"routePolicyId"`
+	// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyId *string `pulumi:"routePolicyId"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyIdVariable *string `pulumi:"routePolicyIdVariable"`
 	// Set OSPF router ID to override system IP address
 	RouterId *string `pulumi:"routerId"`
 	// Variable name
@@ -374,7 +380,10 @@ type ServiceRoutingOspfFeatureState struct {
 	Rfc1583Compatible pulumi.BoolPtrInput
 	// Variable name
 	Rfc1583CompatibleVariable pulumi.StringPtrInput
-	RoutePolicyId             pulumi.StringPtrInput
+	// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyId pulumi.StringPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyIdVariable pulumi.StringPtrInput
 	// Set OSPF router ID to override system IP address
 	RouterId pulumi.StringPtrInput
 	// Variable name
@@ -471,7 +480,10 @@ type serviceRoutingOspfFeatureArgs struct {
 	Rfc1583Compatible *bool `pulumi:"rfc1583Compatible"`
 	// Variable name
 	Rfc1583CompatibleVariable *string `pulumi:"rfc1583CompatibleVariable"`
-	RoutePolicyId             *string `pulumi:"routePolicyId"`
+	// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyId *string `pulumi:"routePolicyId"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyIdVariable *string `pulumi:"routePolicyIdVariable"`
 	// Set OSPF router ID to override system IP address
 	RouterId *string `pulumi:"routerId"`
 	// Variable name
@@ -557,7 +569,10 @@ type ServiceRoutingOspfFeatureArgs struct {
 	Rfc1583Compatible pulumi.BoolPtrInput
 	// Variable name
 	Rfc1583CompatibleVariable pulumi.StringPtrInput
-	RoutePolicyId             pulumi.StringPtrInput
+	// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyId pulumi.StringPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyIdVariable pulumi.StringPtrInput
 	// Set OSPF router ID to override system IP address
 	RouterId pulumi.StringPtrInput
 	// Variable name
@@ -804,8 +819,14 @@ func (o ServiceRoutingOspfFeatureOutput) Rfc1583CompatibleVariable() pulumi.Stri
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.StringPtrOutput { return v.Rfc1583CompatibleVariable }).(pulumi.StringPtrOutput)
 }
 
+// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
 func (o ServiceRoutingOspfFeatureOutput) RoutePolicyId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.StringPtrOutput { return v.RoutePolicyId }).(pulumi.StringPtrOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+func (o ServiceRoutingOspfFeatureOutput) RoutePolicyIdVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.StringPtrOutput { return v.RoutePolicyIdVariable }).(pulumi.StringPtrOutput)
 }
 
 // Set OSPF router ID to override system IP address

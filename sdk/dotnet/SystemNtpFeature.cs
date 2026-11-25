@@ -36,7 +36,7 @@ namespace Pulumi.Sdwan
     ///                 AuthenticationKey = 41673,
     ///                 Vpn = 1,
     ///                 NtpVersion = 4,
-    ///                 SourceInterface = "Ethernet",
+    ///                 SourceInterface = "GigabitEthernet1",
     ///                 PreferThisNtpServer = false,
     ///             },
     ///         },
@@ -45,7 +45,7 @@ namespace Pulumi.Sdwan
     ///             new Sdwan.Inputs.SystemNtpFeatureAuthenticationKeyArgs
     ///             {
     ///                 KeyId = 49737,
-    ///                 Md5Value = "$CRYPT_CLUSTER",
+    ///                 Md5Value = "md5-key-example",
     ///                 HmacSha2Value = "hmac-sha2-key-example",
     ///                 CmacAes128Value = "cmac-aes128-key-1234",
     ///             },
@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan
     ///         },
     ///         AuthoritativeNtpServer = false,
     ///         Stratum = 1,
-    ///         SourceInterface = "ATM",
+    ///         SourceInterface = "Loopback0",
     ///     });
     /// 
     /// });

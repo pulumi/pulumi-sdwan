@@ -245,6 +245,14 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "umbrellaApiKey",
+                    "umbrellaApiSecret",
+                    "zscalerPartnerApiKey",
+                    "zscalerPartnerPassword",
+                    "zscalerPassword",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -293,11 +301,21 @@ namespace Pulumi.Sdwan
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        [Input("umbrellaApiKey")]
+        private Input<string>? _umbrellaApiKey;
+
         /// <summary>
         /// API Key
         /// </summary>
-        [Input("umbrellaApiKey")]
-        public Input<string>? UmbrellaApiKey { get; set; }
+        public Input<string>? UmbrellaApiKey
+        {
+            get => _umbrellaApiKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaApiKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -305,11 +323,21 @@ namespace Pulumi.Sdwan
         [Input("umbrellaApiKeyVariable")]
         public Input<string>? UmbrellaApiKeyVariable { get; set; }
 
+        [Input("umbrellaApiSecret")]
+        private Input<string>? _umbrellaApiSecret;
+
         /// <summary>
         /// API Secret
         /// </summary>
-        [Input("umbrellaApiSecret")]
-        public Input<string>? UmbrellaApiSecret { get; set; }
+        public Input<string>? UmbrellaApiSecret
+        {
+            get => _umbrellaApiSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaApiSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -354,11 +382,21 @@ namespace Pulumi.Sdwan
         [Input("zscalerOrganizationVariable")]
         public Input<string>? ZscalerOrganizationVariable { get; set; }
 
+        [Input("zscalerPartnerApiKey")]
+        private Input<string>? _zscalerPartnerApiKey;
+
         /// <summary>
         /// Partner API Key
         /// </summary>
-        [Input("zscalerPartnerApiKey")]
-        public Input<string>? ZscalerPartnerApiKey { get; set; }
+        public Input<string>? ZscalerPartnerApiKey
+        {
+            get => _zscalerPartnerApiKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _zscalerPartnerApiKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -378,11 +416,21 @@ namespace Pulumi.Sdwan
         [Input("zscalerPartnerBaseUriVariable")]
         public Input<string>? ZscalerPartnerBaseUriVariable { get; set; }
 
+        [Input("zscalerPartnerPassword")]
+        private Input<string>? _zscalerPartnerPassword;
+
         /// <summary>
         /// Partner Password
         /// </summary>
-        [Input("zscalerPartnerPassword")]
-        public Input<string>? ZscalerPartnerPassword { get; set; }
+        public Input<string>? ZscalerPartnerPassword
+        {
+            get => _zscalerPartnerPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _zscalerPartnerPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -402,11 +450,21 @@ namespace Pulumi.Sdwan
         [Input("zscalerPartnerUsernameVariable")]
         public Input<string>? ZscalerPartnerUsernameVariable { get; set; }
 
+        [Input("zscalerPassword")]
+        private Input<string>? _zscalerPassword;
+
         /// <summary>
         /// Password of Zscaler partner account
         /// </summary>
-        [Input("zscalerPassword")]
-        public Input<string>? ZscalerPassword { get; set; }
+        public Input<string>? ZscalerPassword
+        {
+            get => _zscalerPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _zscalerPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -465,11 +523,21 @@ namespace Pulumi.Sdwan
         [Input("templateType")]
         public Input<string>? TemplateType { get; set; }
 
+        [Input("umbrellaApiKey")]
+        private Input<string>? _umbrellaApiKey;
+
         /// <summary>
         /// API Key
         /// </summary>
-        [Input("umbrellaApiKey")]
-        public Input<string>? UmbrellaApiKey { get; set; }
+        public Input<string>? UmbrellaApiKey
+        {
+            get => _umbrellaApiKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaApiKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -477,11 +545,21 @@ namespace Pulumi.Sdwan
         [Input("umbrellaApiKeyVariable")]
         public Input<string>? UmbrellaApiKeyVariable { get; set; }
 
+        [Input("umbrellaApiSecret")]
+        private Input<string>? _umbrellaApiSecret;
+
         /// <summary>
         /// API Secret
         /// </summary>
-        [Input("umbrellaApiSecret")]
-        public Input<string>? UmbrellaApiSecret { get; set; }
+        public Input<string>? UmbrellaApiSecret
+        {
+            get => _umbrellaApiSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaApiSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -532,11 +610,21 @@ namespace Pulumi.Sdwan
         [Input("zscalerOrganizationVariable")]
         public Input<string>? ZscalerOrganizationVariable { get; set; }
 
+        [Input("zscalerPartnerApiKey")]
+        private Input<string>? _zscalerPartnerApiKey;
+
         /// <summary>
         /// Partner API Key
         /// </summary>
-        [Input("zscalerPartnerApiKey")]
-        public Input<string>? ZscalerPartnerApiKey { get; set; }
+        public Input<string>? ZscalerPartnerApiKey
+        {
+            get => _zscalerPartnerApiKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _zscalerPartnerApiKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -556,11 +644,21 @@ namespace Pulumi.Sdwan
         [Input("zscalerPartnerBaseUriVariable")]
         public Input<string>? ZscalerPartnerBaseUriVariable { get; set; }
 
+        [Input("zscalerPartnerPassword")]
+        private Input<string>? _zscalerPartnerPassword;
+
         /// <summary>
         /// Partner Password
         /// </summary>
-        [Input("zscalerPartnerPassword")]
-        public Input<string>? ZscalerPartnerPassword { get; set; }
+        public Input<string>? ZscalerPartnerPassword
+        {
+            get => _zscalerPartnerPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _zscalerPartnerPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -580,11 +678,21 @@ namespace Pulumi.Sdwan
         [Input("zscalerPartnerUsernameVariable")]
         public Input<string>? ZscalerPartnerUsernameVariable { get; set; }
 
+        [Input("zscalerPassword")]
+        private Input<string>? _zscalerPassword;
+
         /// <summary>
         /// Password of Zscaler partner account
         /// </summary>
-        [Input("zscalerPassword")]
-        public Input<string>? ZscalerPassword { get; set; }
+        public Input<string>? ZscalerPassword
+        {
+            get => _zscalerPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _zscalerPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name

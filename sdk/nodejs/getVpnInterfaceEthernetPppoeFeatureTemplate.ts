@@ -368,6 +368,14 @@ export interface GetVpnInterfaceEthernetPppoeFeatureTemplateResult {
      */
     readonly secondaryRegionVariable: string;
     /**
+     * Service Provider Name
+     */
+    readonly serviceProviderName: string;
+    /**
+     * Variable name
+     */
+    readonly serviceProviderNameVariable: string;
+    /**
      * 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
      */
     readonly shapingRate: number;

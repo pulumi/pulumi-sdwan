@@ -56,17 +56,53 @@ namespace Pulumi.Sdwan.Inputs
         [Input("keepaliveIntervalVariable")]
         public Input<string>? KeepaliveIntervalVariable { get; set; }
 
+        [Input("peerAuthenticationPassword")]
+        private Input<string>? _peerAuthenticationPassword;
+
         /// <summary>
         /// Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `PeerAuthenticationPassword`, `PeerAuthenticationPasswordVariable` and `PeerAuthenticationPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PeerAuthenticationPasswordWo` together with `PeerAuthenticationPasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("peerAuthenticationPassword")]
-        public Input<string>? PeerAuthenticationPassword { get; set; }
+        public Input<string>? PeerAuthenticationPassword
+        {
+            get => _peerAuthenticationPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _peerAuthenticationPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("peerAuthenticationPasswordVariable")]
         public Input<string>? PeerAuthenticationPasswordVariable { get; set; }
+
+        [Input("peerAuthenticationPasswordWo")]
+        private Input<string>? _peerAuthenticationPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `PeerAuthenticationPassword`, `PeerAuthenticationPasswordVariable` and `PeerAuthenticationPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? PeerAuthenticationPasswordWo
+        {
+            get => _peerAuthenticationPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _peerAuthenticationPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `PeerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("peerAuthenticationPasswordWoVersion")]
+        public Input<int>? PeerAuthenticationPasswordWoVersion { get; set; }
 
         /// <summary>
         /// Set MSDP peer ip

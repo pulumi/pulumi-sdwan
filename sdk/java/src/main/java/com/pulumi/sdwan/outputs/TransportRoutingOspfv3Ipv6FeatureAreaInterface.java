@@ -15,6 +15,8 @@ import javax.annotation.Nullable;
 public final class TransportRoutingOspfv3Ipv6FeatureAreaInterface {
     /**
      * @return Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
      * 
      */
     private @Nullable String authenticationKey;
@@ -23,6 +25,18 @@ public final class TransportRoutingOspfv3Ipv6FeatureAreaInterface {
      * 
      */
     private @Nullable String authenticationKeyVariable;
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     * 
+     */
+    private @Nullable String authenticationKeyWo;
+    /**
+     * @return Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private @Nullable Integer authenticationKeyWoVersion;
     /**
      * @return Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`
@@ -123,6 +137,8 @@ public final class TransportRoutingOspfv3Ipv6FeatureAreaInterface {
     private TransportRoutingOspfv3Ipv6FeatureAreaInterface() {}
     /**
      * @return Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<String> authenticationKey() {
@@ -134,6 +150,22 @@ public final class TransportRoutingOspfv3Ipv6FeatureAreaInterface {
      */
     public Optional<String> authenticationKeyVariable() {
         return Optional.ofNullable(this.authenticationKeyVariable);
+    }
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     * 
+     */
+    public Optional<String> authenticationKeyWo() {
+        return Optional.ofNullable(this.authenticationKeyWo);
+    }
+    /**
+     * @return Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Integer> authenticationKeyWoVersion() {
+        return Optional.ofNullable(this.authenticationKeyWoVersion);
     }
     /**
      * @return Set OSPF interface authentication IPSec SPI, range 256..4294967295
@@ -277,6 +309,8 @@ public final class TransportRoutingOspfv3Ipv6FeatureAreaInterface {
     public static final class Builder {
         private @Nullable String authenticationKey;
         private @Nullable String authenticationKeyVariable;
+        private @Nullable String authenticationKeyWo;
+        private @Nullable Integer authenticationKeyWoVersion;
         private @Nullable Integer authenticationSpi;
         private @Nullable String authenticationSpiVariable;
         private @Nullable String authenticationType;
@@ -299,6 +333,8 @@ public final class TransportRoutingOspfv3Ipv6FeatureAreaInterface {
     	      Objects.requireNonNull(defaults);
     	      this.authenticationKey = defaults.authenticationKey;
     	      this.authenticationKeyVariable = defaults.authenticationKeyVariable;
+    	      this.authenticationKeyWo = defaults.authenticationKeyWo;
+    	      this.authenticationKeyWoVersion = defaults.authenticationKeyWoVersion;
     	      this.authenticationSpi = defaults.authenticationSpi;
     	      this.authenticationSpiVariable = defaults.authenticationSpiVariable;
     	      this.authenticationType = defaults.authenticationType;
@@ -328,6 +364,18 @@ public final class TransportRoutingOspfv3Ipv6FeatureAreaInterface {
         public Builder authenticationKeyVariable(@Nullable String authenticationKeyVariable) {
 
             this.authenticationKeyVariable = authenticationKeyVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder authenticationKeyWo(@Nullable String authenticationKeyWo) {
+
+            this.authenticationKeyWo = authenticationKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder authenticationKeyWoVersion(@Nullable Integer authenticationKeyWoVersion) {
+
+            this.authenticationKeyWoVersion = authenticationKeyWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -436,6 +484,8 @@ public final class TransportRoutingOspfv3Ipv6FeatureAreaInterface {
             final var _resultValue = new TransportRoutingOspfv3Ipv6FeatureAreaInterface();
             _resultValue.authenticationKey = authenticationKey;
             _resultValue.authenticationKeyVariable = authenticationKeyVariable;
+            _resultValue.authenticationKeyWo = authenticationKeyWo;
+            _resultValue.authenticationKeyWoVersion = authenticationKeyWoVersion;
             _resultValue.authenticationSpi = authenticationSpi;
             _resultValue.authenticationSpiVariable = authenticationSpiVariable;
             _resultValue.authenticationType = authenticationType;

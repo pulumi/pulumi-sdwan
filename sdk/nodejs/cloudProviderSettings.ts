@@ -75,12 +75,36 @@ export class CloudProviderSettings extends pulumi.CustomResource {
 
     /**
      * Cisco SSE Authentication Key
+     *   - Only one of `ciscoSseAuthKey` and `ciscoSseAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `ciscoSseAuthKeyWo` together with `ciscoSseAuthKeyWoVersion`, which keeps it out of state.
      */
     declare public readonly ciscoSseAuthKey: pulumi.Output<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Cisco SSE Authentication Key
+     *   - Only one of `ciscoSseAuthKey` and `ciscoSseAuthKeyWo` can be set.
+     */
+    declare public readonly ciscoSseAuthKeyWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `ciscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly ciscoSseAuthKeyWoVersion: pulumi.Output<number | undefined>;
+    /**
      * Cisco SSE Authentication Secret
+     *   - Only one of `ciscoSseAuthSecret` and `ciscoSseAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `ciscoSseAuthSecretWo` together with `ciscoSseAuthSecretWoVersion`, which keeps it out of state.
      */
     declare public readonly ciscoSseAuthSecret: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Cisco SSE Authentication Secret
+     *   - Only one of `ciscoSseAuthSecret` and `ciscoSseAuthSecretWo` can be set.
+     */
+    declare public readonly ciscoSseAuthSecretWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `ciscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly ciscoSseAuthSecretWoVersion: pulumi.Output<number | undefined>;
     /**
      * Enable Cisco SSE Context Sharing
      *   - Default value: `false`
@@ -92,32 +116,104 @@ export class CloudProviderSettings extends pulumi.CustomResource {
     declare public readonly ciscoSseOrgId: pulumi.Output<string | undefined>;
     /**
      * Umbrella Authentication Key (v2)
+     *   - Only one of `umbrellaAuthKeyV2` and `umbrellaAuthKeyV2Wo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaAuthKeyV2Wo` together with `umbrellaAuthKeyV2WoVersion`, which keeps it out of state.
      */
     declare public readonly umbrellaAuthKeyV2: pulumi.Output<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella Authentication Key (v2)
+     *   - Only one of `umbrellaAuthKeyV2` and `umbrellaAuthKeyV2Wo` can be set.
+     */
+    declare public readonly umbrellaAuthKeyV2Wo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly umbrellaAuthKeyV2WoVersion: pulumi.Output<number | undefined>;
+    /**
      * Umbrella Authentication Secret (v2)
+     *   - Only one of `umbrellaAuthSecretV2` and `umbrellaAuthSecretV2Wo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaAuthSecretV2Wo` together with `umbrellaAuthSecretV2WoVersion`, which keeps it out of state.
      */
     declare public readonly umbrellaAuthSecretV2: pulumi.Output<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella Authentication Secret (v2)
+     *   - Only one of `umbrellaAuthSecretV2` and `umbrellaAuthSecretV2Wo` can be set.
+     */
+    declare public readonly umbrellaAuthSecretV2Wo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly umbrellaAuthSecretV2WoVersion: pulumi.Output<number | undefined>;
+    /**
      * Umbrella DNS Authentication Key
+     *   - Only one of `umbrellaDnsAuthKey` and `umbrellaDnsAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaDnsAuthKeyWo` together with `umbrellaDnsAuthKeyWoVersion`, which keeps it out of state.
      */
     declare public readonly umbrellaDnsAuthKey: pulumi.Output<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella DNS Authentication Key
+     *   - Only one of `umbrellaDnsAuthKey` and `umbrellaDnsAuthKeyWo` can be set.
+     */
+    declare public readonly umbrellaDnsAuthKeyWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly umbrellaDnsAuthKeyWoVersion: pulumi.Output<number | undefined>;
+    /**
      * Umbrella DNS Authentication Secret
+     *   - Only one of `umbrellaDnsAuthSecret` and `umbrellaDnsAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaDnsAuthSecretWo` together with `umbrellaDnsAuthSecretWoVersion`, which keeps it out of state.
      */
     declare public readonly umbrellaDnsAuthSecret: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella DNS Authentication Secret
+     *   - Only one of `umbrellaDnsAuthSecret` and `umbrellaDnsAuthSecretWo` can be set.
+     */
+    declare public readonly umbrellaDnsAuthSecretWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly umbrellaDnsAuthSecretWoVersion: pulumi.Output<number | undefined>;
     /**
      * Umbrella Organization ID (numeric string)
      */
     declare public readonly umbrellaOrgId: pulumi.Output<string | undefined>;
     /**
      * Umbrella SIG Authentication Key
+     *   - Only one of `umbrellaSigAuthKey` and `umbrellaSigAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaSigAuthKeyWo` together with `umbrellaSigAuthKeyWoVersion`, which keeps it out of state.
      */
     declare public readonly umbrellaSigAuthKey: pulumi.Output<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella SIG Authentication Key
+     *   - Only one of `umbrellaSigAuthKey` and `umbrellaSigAuthKeyWo` can be set.
+     */
+    declare public readonly umbrellaSigAuthKeyWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly umbrellaSigAuthKeyWoVersion: pulumi.Output<number | undefined>;
+    /**
      * Umbrella SIG Authentication Secret
+     *   - Only one of `umbrellaSigAuthSecret` and `umbrellaSigAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaSigAuthSecretWo` together with `umbrellaSigAuthSecretWoVersion`, which keeps it out of state.
      */
     declare public readonly umbrellaSigAuthSecret: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella SIG Authentication Secret
+     *   - Only one of `umbrellaSigAuthSecret` and `umbrellaSigAuthSecretWo` can be set.
+     */
+    declare public readonly umbrellaSigAuthSecretWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly umbrellaSigAuthSecretWoVersion: pulumi.Output<number | undefined>;
     /**
      * Zscaler Organization
      */
@@ -128,12 +224,36 @@ export class CloudProviderSettings extends pulumi.CustomResource {
     declare public readonly zscalerPartnerBaseUri: pulumi.Output<string | undefined>;
     /**
      * Zscaler Partner Key
+     *   - Only one of `zscalerPartnerKey` and `zscalerPartnerKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `zscalerPartnerKeyWo` together with `zscalerPartnerKeyWoVersion`, which keeps it out of state.
      */
     declare public readonly zscalerPartnerKey: pulumi.Output<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Zscaler Partner Key
+     *   - Only one of `zscalerPartnerKey` and `zscalerPartnerKeyWo` can be set.
+     */
+    declare public readonly zscalerPartnerKeyWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `zscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly zscalerPartnerKeyWoVersion: pulumi.Output<number | undefined>;
+    /**
      * Zscaler Password
+     *   - Only one of `zscalerPassword` and `zscalerPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `zscalerPasswordWo` together with `zscalerPasswordWoVersion`, which keeps it out of state.
      */
     declare public readonly zscalerPassword: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Zscaler Password
+     *   - Only one of `zscalerPassword` and `zscalerPasswordWo` can be set.
+     */
+    declare public readonly zscalerPasswordWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `zscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly zscalerPasswordWoVersion: pulumi.Output<number | undefined>;
     /**
      * Zscaler Username
      */
@@ -153,41 +273,83 @@ export class CloudProviderSettings extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as CloudProviderSettingsState | undefined;
             resourceInputs["ciscoSseAuthKey"] = state?.ciscoSseAuthKey;
+            resourceInputs["ciscoSseAuthKeyWo"] = state?.ciscoSseAuthKeyWo;
+            resourceInputs["ciscoSseAuthKeyWoVersion"] = state?.ciscoSseAuthKeyWoVersion;
             resourceInputs["ciscoSseAuthSecret"] = state?.ciscoSseAuthSecret;
+            resourceInputs["ciscoSseAuthSecretWo"] = state?.ciscoSseAuthSecretWo;
+            resourceInputs["ciscoSseAuthSecretWoVersion"] = state?.ciscoSseAuthSecretWoVersion;
             resourceInputs["ciscoSseContextSharing"] = state?.ciscoSseContextSharing;
             resourceInputs["ciscoSseOrgId"] = state?.ciscoSseOrgId;
             resourceInputs["umbrellaAuthKeyV2"] = state?.umbrellaAuthKeyV2;
+            resourceInputs["umbrellaAuthKeyV2Wo"] = state?.umbrellaAuthKeyV2Wo;
+            resourceInputs["umbrellaAuthKeyV2WoVersion"] = state?.umbrellaAuthKeyV2WoVersion;
             resourceInputs["umbrellaAuthSecretV2"] = state?.umbrellaAuthSecretV2;
+            resourceInputs["umbrellaAuthSecretV2Wo"] = state?.umbrellaAuthSecretV2Wo;
+            resourceInputs["umbrellaAuthSecretV2WoVersion"] = state?.umbrellaAuthSecretV2WoVersion;
             resourceInputs["umbrellaDnsAuthKey"] = state?.umbrellaDnsAuthKey;
+            resourceInputs["umbrellaDnsAuthKeyWo"] = state?.umbrellaDnsAuthKeyWo;
+            resourceInputs["umbrellaDnsAuthKeyWoVersion"] = state?.umbrellaDnsAuthKeyWoVersion;
             resourceInputs["umbrellaDnsAuthSecret"] = state?.umbrellaDnsAuthSecret;
+            resourceInputs["umbrellaDnsAuthSecretWo"] = state?.umbrellaDnsAuthSecretWo;
+            resourceInputs["umbrellaDnsAuthSecretWoVersion"] = state?.umbrellaDnsAuthSecretWoVersion;
             resourceInputs["umbrellaOrgId"] = state?.umbrellaOrgId;
             resourceInputs["umbrellaSigAuthKey"] = state?.umbrellaSigAuthKey;
+            resourceInputs["umbrellaSigAuthKeyWo"] = state?.umbrellaSigAuthKeyWo;
+            resourceInputs["umbrellaSigAuthKeyWoVersion"] = state?.umbrellaSigAuthKeyWoVersion;
             resourceInputs["umbrellaSigAuthSecret"] = state?.umbrellaSigAuthSecret;
+            resourceInputs["umbrellaSigAuthSecretWo"] = state?.umbrellaSigAuthSecretWo;
+            resourceInputs["umbrellaSigAuthSecretWoVersion"] = state?.umbrellaSigAuthSecretWoVersion;
             resourceInputs["zscalerOrganization"] = state?.zscalerOrganization;
             resourceInputs["zscalerPartnerBaseUri"] = state?.zscalerPartnerBaseUri;
             resourceInputs["zscalerPartnerKey"] = state?.zscalerPartnerKey;
+            resourceInputs["zscalerPartnerKeyWo"] = state?.zscalerPartnerKeyWo;
+            resourceInputs["zscalerPartnerKeyWoVersion"] = state?.zscalerPartnerKeyWoVersion;
             resourceInputs["zscalerPassword"] = state?.zscalerPassword;
+            resourceInputs["zscalerPasswordWo"] = state?.zscalerPasswordWo;
+            resourceInputs["zscalerPasswordWoVersion"] = state?.zscalerPasswordWoVersion;
             resourceInputs["zscalerUsername"] = state?.zscalerUsername;
         } else {
             const args = argsOrState as CloudProviderSettingsArgs | undefined;
-            resourceInputs["ciscoSseAuthKey"] = args?.ciscoSseAuthKey;
-            resourceInputs["ciscoSseAuthSecret"] = args?.ciscoSseAuthSecret;
+            resourceInputs["ciscoSseAuthKey"] = args?.ciscoSseAuthKey ? pulumi.secret(args.ciscoSseAuthKey) : undefined;
+            resourceInputs["ciscoSseAuthKeyWo"] = args?.ciscoSseAuthKeyWo ? pulumi.secret(args.ciscoSseAuthKeyWo) : undefined;
+            resourceInputs["ciscoSseAuthKeyWoVersion"] = args?.ciscoSseAuthKeyWoVersion;
+            resourceInputs["ciscoSseAuthSecret"] = args?.ciscoSseAuthSecret ? pulumi.secret(args.ciscoSseAuthSecret) : undefined;
+            resourceInputs["ciscoSseAuthSecretWo"] = args?.ciscoSseAuthSecretWo ? pulumi.secret(args.ciscoSseAuthSecretWo) : undefined;
+            resourceInputs["ciscoSseAuthSecretWoVersion"] = args?.ciscoSseAuthSecretWoVersion;
             resourceInputs["ciscoSseContextSharing"] = args?.ciscoSseContextSharing;
             resourceInputs["ciscoSseOrgId"] = args?.ciscoSseOrgId;
-            resourceInputs["umbrellaAuthKeyV2"] = args?.umbrellaAuthKeyV2;
-            resourceInputs["umbrellaAuthSecretV2"] = args?.umbrellaAuthSecretV2;
-            resourceInputs["umbrellaDnsAuthKey"] = args?.umbrellaDnsAuthKey;
-            resourceInputs["umbrellaDnsAuthSecret"] = args?.umbrellaDnsAuthSecret;
+            resourceInputs["umbrellaAuthKeyV2"] = args?.umbrellaAuthKeyV2 ? pulumi.secret(args.umbrellaAuthKeyV2) : undefined;
+            resourceInputs["umbrellaAuthKeyV2Wo"] = args?.umbrellaAuthKeyV2Wo ? pulumi.secret(args.umbrellaAuthKeyV2Wo) : undefined;
+            resourceInputs["umbrellaAuthKeyV2WoVersion"] = args?.umbrellaAuthKeyV2WoVersion;
+            resourceInputs["umbrellaAuthSecretV2"] = args?.umbrellaAuthSecretV2 ? pulumi.secret(args.umbrellaAuthSecretV2) : undefined;
+            resourceInputs["umbrellaAuthSecretV2Wo"] = args?.umbrellaAuthSecretV2Wo ? pulumi.secret(args.umbrellaAuthSecretV2Wo) : undefined;
+            resourceInputs["umbrellaAuthSecretV2WoVersion"] = args?.umbrellaAuthSecretV2WoVersion;
+            resourceInputs["umbrellaDnsAuthKey"] = args?.umbrellaDnsAuthKey ? pulumi.secret(args.umbrellaDnsAuthKey) : undefined;
+            resourceInputs["umbrellaDnsAuthKeyWo"] = args?.umbrellaDnsAuthKeyWo ? pulumi.secret(args.umbrellaDnsAuthKeyWo) : undefined;
+            resourceInputs["umbrellaDnsAuthKeyWoVersion"] = args?.umbrellaDnsAuthKeyWoVersion;
+            resourceInputs["umbrellaDnsAuthSecret"] = args?.umbrellaDnsAuthSecret ? pulumi.secret(args.umbrellaDnsAuthSecret) : undefined;
+            resourceInputs["umbrellaDnsAuthSecretWo"] = args?.umbrellaDnsAuthSecretWo ? pulumi.secret(args.umbrellaDnsAuthSecretWo) : undefined;
+            resourceInputs["umbrellaDnsAuthSecretWoVersion"] = args?.umbrellaDnsAuthSecretWoVersion;
             resourceInputs["umbrellaOrgId"] = args?.umbrellaOrgId;
-            resourceInputs["umbrellaSigAuthKey"] = args?.umbrellaSigAuthKey;
-            resourceInputs["umbrellaSigAuthSecret"] = args?.umbrellaSigAuthSecret;
+            resourceInputs["umbrellaSigAuthKey"] = args?.umbrellaSigAuthKey ? pulumi.secret(args.umbrellaSigAuthKey) : undefined;
+            resourceInputs["umbrellaSigAuthKeyWo"] = args?.umbrellaSigAuthKeyWo ? pulumi.secret(args.umbrellaSigAuthKeyWo) : undefined;
+            resourceInputs["umbrellaSigAuthKeyWoVersion"] = args?.umbrellaSigAuthKeyWoVersion;
+            resourceInputs["umbrellaSigAuthSecret"] = args?.umbrellaSigAuthSecret ? pulumi.secret(args.umbrellaSigAuthSecret) : undefined;
+            resourceInputs["umbrellaSigAuthSecretWo"] = args?.umbrellaSigAuthSecretWo ? pulumi.secret(args.umbrellaSigAuthSecretWo) : undefined;
+            resourceInputs["umbrellaSigAuthSecretWoVersion"] = args?.umbrellaSigAuthSecretWoVersion;
             resourceInputs["zscalerOrganization"] = args?.zscalerOrganization;
             resourceInputs["zscalerPartnerBaseUri"] = args?.zscalerPartnerBaseUri;
-            resourceInputs["zscalerPartnerKey"] = args?.zscalerPartnerKey;
-            resourceInputs["zscalerPassword"] = args?.zscalerPassword;
+            resourceInputs["zscalerPartnerKey"] = args?.zscalerPartnerKey ? pulumi.secret(args.zscalerPartnerKey) : undefined;
+            resourceInputs["zscalerPartnerKeyWo"] = args?.zscalerPartnerKeyWo ? pulumi.secret(args.zscalerPartnerKeyWo) : undefined;
+            resourceInputs["zscalerPartnerKeyWoVersion"] = args?.zscalerPartnerKeyWoVersion;
+            resourceInputs["zscalerPassword"] = args?.zscalerPassword ? pulumi.secret(args.zscalerPassword) : undefined;
+            resourceInputs["zscalerPasswordWo"] = args?.zscalerPasswordWo ? pulumi.secret(args.zscalerPasswordWo) : undefined;
+            resourceInputs["zscalerPasswordWoVersion"] = args?.zscalerPasswordWoVersion;
             resourceInputs["zscalerUsername"] = args?.zscalerUsername;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["ciscoSseAuthKey", "ciscoSseAuthKeyWo", "ciscoSseAuthSecret", "ciscoSseAuthSecretWo", "umbrellaAuthKeyV2", "umbrellaAuthKeyV2Wo", "umbrellaAuthSecretV2", "umbrellaAuthSecretV2Wo", "umbrellaDnsAuthKey", "umbrellaDnsAuthKeyWo", "umbrellaDnsAuthSecret", "umbrellaDnsAuthSecretWo", "umbrellaSigAuthKey", "umbrellaSigAuthKeyWo", "umbrellaSigAuthSecret", "umbrellaSigAuthSecretWo", "zscalerPartnerKey", "zscalerPartnerKeyWo", "zscalerPassword", "zscalerPasswordWo"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(CloudProviderSettings.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -198,12 +360,36 @@ export class CloudProviderSettings extends pulumi.CustomResource {
 export interface CloudProviderSettingsState {
     /**
      * Cisco SSE Authentication Key
+     *   - Only one of `ciscoSseAuthKey` and `ciscoSseAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `ciscoSseAuthKeyWo` together with `ciscoSseAuthKeyWoVersion`, which keeps it out of state.
      */
     ciscoSseAuthKey?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Cisco SSE Authentication Key
+     *   - Only one of `ciscoSseAuthKey` and `ciscoSseAuthKeyWo` can be set.
+     */
+    ciscoSseAuthKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `ciscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    ciscoSseAuthKeyWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Cisco SSE Authentication Secret
+     *   - Only one of `ciscoSseAuthSecret` and `ciscoSseAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `ciscoSseAuthSecretWo` together with `ciscoSseAuthSecretWoVersion`, which keeps it out of state.
      */
     ciscoSseAuthSecret?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Cisco SSE Authentication Secret
+     *   - Only one of `ciscoSseAuthSecret` and `ciscoSseAuthSecretWo` can be set.
+     */
+    ciscoSseAuthSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `ciscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    ciscoSseAuthSecretWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Enable Cisco SSE Context Sharing
      *   - Default value: `false`
@@ -215,32 +401,104 @@ export interface CloudProviderSettingsState {
     ciscoSseOrgId?: pulumi.Input<string | undefined>;
     /**
      * Umbrella Authentication Key (v2)
+     *   - Only one of `umbrellaAuthKeyV2` and `umbrellaAuthKeyV2Wo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaAuthKeyV2Wo` together with `umbrellaAuthKeyV2WoVersion`, which keeps it out of state.
      */
     umbrellaAuthKeyV2?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella Authentication Key (v2)
+     *   - Only one of `umbrellaAuthKeyV2` and `umbrellaAuthKeyV2Wo` can be set.
+     */
+    umbrellaAuthKeyV2Wo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    umbrellaAuthKeyV2WoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Umbrella Authentication Secret (v2)
+     *   - Only one of `umbrellaAuthSecretV2` and `umbrellaAuthSecretV2Wo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaAuthSecretV2Wo` together with `umbrellaAuthSecretV2WoVersion`, which keeps it out of state.
      */
     umbrellaAuthSecretV2?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella Authentication Secret (v2)
+     *   - Only one of `umbrellaAuthSecretV2` and `umbrellaAuthSecretV2Wo` can be set.
+     */
+    umbrellaAuthSecretV2Wo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    umbrellaAuthSecretV2WoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Umbrella DNS Authentication Key
+     *   - Only one of `umbrellaDnsAuthKey` and `umbrellaDnsAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaDnsAuthKeyWo` together with `umbrellaDnsAuthKeyWoVersion`, which keeps it out of state.
      */
     umbrellaDnsAuthKey?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella DNS Authentication Key
+     *   - Only one of `umbrellaDnsAuthKey` and `umbrellaDnsAuthKeyWo` can be set.
+     */
+    umbrellaDnsAuthKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    umbrellaDnsAuthKeyWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Umbrella DNS Authentication Secret
+     *   - Only one of `umbrellaDnsAuthSecret` and `umbrellaDnsAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaDnsAuthSecretWo` together with `umbrellaDnsAuthSecretWoVersion`, which keeps it out of state.
      */
     umbrellaDnsAuthSecret?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella DNS Authentication Secret
+     *   - Only one of `umbrellaDnsAuthSecret` and `umbrellaDnsAuthSecretWo` can be set.
+     */
+    umbrellaDnsAuthSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    umbrellaDnsAuthSecretWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Umbrella Organization ID (numeric string)
      */
     umbrellaOrgId?: pulumi.Input<string | undefined>;
     /**
      * Umbrella SIG Authentication Key
+     *   - Only one of `umbrellaSigAuthKey` and `umbrellaSigAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaSigAuthKeyWo` together with `umbrellaSigAuthKeyWoVersion`, which keeps it out of state.
      */
     umbrellaSigAuthKey?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella SIG Authentication Key
+     *   - Only one of `umbrellaSigAuthKey` and `umbrellaSigAuthKeyWo` can be set.
+     */
+    umbrellaSigAuthKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    umbrellaSigAuthKeyWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Umbrella SIG Authentication Secret
+     *   - Only one of `umbrellaSigAuthSecret` and `umbrellaSigAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaSigAuthSecretWo` together with `umbrellaSigAuthSecretWoVersion`, which keeps it out of state.
      */
     umbrellaSigAuthSecret?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella SIG Authentication Secret
+     *   - Only one of `umbrellaSigAuthSecret` and `umbrellaSigAuthSecretWo` can be set.
+     */
+    umbrellaSigAuthSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    umbrellaSigAuthSecretWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Zscaler Organization
      */
@@ -251,12 +509,36 @@ export interface CloudProviderSettingsState {
     zscalerPartnerBaseUri?: pulumi.Input<string | undefined>;
     /**
      * Zscaler Partner Key
+     *   - Only one of `zscalerPartnerKey` and `zscalerPartnerKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `zscalerPartnerKeyWo` together with `zscalerPartnerKeyWoVersion`, which keeps it out of state.
      */
     zscalerPartnerKey?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Zscaler Partner Key
+     *   - Only one of `zscalerPartnerKey` and `zscalerPartnerKeyWo` can be set.
+     */
+    zscalerPartnerKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `zscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    zscalerPartnerKeyWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Zscaler Password
+     *   - Only one of `zscalerPassword` and `zscalerPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `zscalerPasswordWo` together with `zscalerPasswordWoVersion`, which keeps it out of state.
      */
     zscalerPassword?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Zscaler Password
+     *   - Only one of `zscalerPassword` and `zscalerPasswordWo` can be set.
+     */
+    zscalerPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `zscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    zscalerPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Zscaler Username
      */
@@ -269,12 +551,36 @@ export interface CloudProviderSettingsState {
 export interface CloudProviderSettingsArgs {
     /**
      * Cisco SSE Authentication Key
+     *   - Only one of `ciscoSseAuthKey` and `ciscoSseAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `ciscoSseAuthKeyWo` together with `ciscoSseAuthKeyWoVersion`, which keeps it out of state.
      */
     ciscoSseAuthKey?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Cisco SSE Authentication Key
+     *   - Only one of `ciscoSseAuthKey` and `ciscoSseAuthKeyWo` can be set.
+     */
+    ciscoSseAuthKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `ciscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    ciscoSseAuthKeyWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Cisco SSE Authentication Secret
+     *   - Only one of `ciscoSseAuthSecret` and `ciscoSseAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `ciscoSseAuthSecretWo` together with `ciscoSseAuthSecretWoVersion`, which keeps it out of state.
      */
     ciscoSseAuthSecret?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Cisco SSE Authentication Secret
+     *   - Only one of `ciscoSseAuthSecret` and `ciscoSseAuthSecretWo` can be set.
+     */
+    ciscoSseAuthSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `ciscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    ciscoSseAuthSecretWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Enable Cisco SSE Context Sharing
      *   - Default value: `false`
@@ -286,32 +592,104 @@ export interface CloudProviderSettingsArgs {
     ciscoSseOrgId?: pulumi.Input<string | undefined>;
     /**
      * Umbrella Authentication Key (v2)
+     *   - Only one of `umbrellaAuthKeyV2` and `umbrellaAuthKeyV2Wo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaAuthKeyV2Wo` together with `umbrellaAuthKeyV2WoVersion`, which keeps it out of state.
      */
     umbrellaAuthKeyV2?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella Authentication Key (v2)
+     *   - Only one of `umbrellaAuthKeyV2` and `umbrellaAuthKeyV2Wo` can be set.
+     */
+    umbrellaAuthKeyV2Wo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    umbrellaAuthKeyV2WoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Umbrella Authentication Secret (v2)
+     *   - Only one of `umbrellaAuthSecretV2` and `umbrellaAuthSecretV2Wo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaAuthSecretV2Wo` together with `umbrellaAuthSecretV2WoVersion`, which keeps it out of state.
      */
     umbrellaAuthSecretV2?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella Authentication Secret (v2)
+     *   - Only one of `umbrellaAuthSecretV2` and `umbrellaAuthSecretV2Wo` can be set.
+     */
+    umbrellaAuthSecretV2Wo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    umbrellaAuthSecretV2WoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Umbrella DNS Authentication Key
+     *   - Only one of `umbrellaDnsAuthKey` and `umbrellaDnsAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaDnsAuthKeyWo` together with `umbrellaDnsAuthKeyWoVersion`, which keeps it out of state.
      */
     umbrellaDnsAuthKey?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella DNS Authentication Key
+     *   - Only one of `umbrellaDnsAuthKey` and `umbrellaDnsAuthKeyWo` can be set.
+     */
+    umbrellaDnsAuthKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    umbrellaDnsAuthKeyWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Umbrella DNS Authentication Secret
+     *   - Only one of `umbrellaDnsAuthSecret` and `umbrellaDnsAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaDnsAuthSecretWo` together with `umbrellaDnsAuthSecretWoVersion`, which keeps it out of state.
      */
     umbrellaDnsAuthSecret?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella DNS Authentication Secret
+     *   - Only one of `umbrellaDnsAuthSecret` and `umbrellaDnsAuthSecretWo` can be set.
+     */
+    umbrellaDnsAuthSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    umbrellaDnsAuthSecretWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Umbrella Organization ID (numeric string)
      */
     umbrellaOrgId?: pulumi.Input<string | undefined>;
     /**
      * Umbrella SIG Authentication Key
+     *   - Only one of `umbrellaSigAuthKey` and `umbrellaSigAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaSigAuthKeyWo` together with `umbrellaSigAuthKeyWoVersion`, which keeps it out of state.
      */
     umbrellaSigAuthKey?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella SIG Authentication Key
+     *   - Only one of `umbrellaSigAuthKey` and `umbrellaSigAuthKeyWo` can be set.
+     */
+    umbrellaSigAuthKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    umbrellaSigAuthKeyWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Umbrella SIG Authentication Secret
+     *   - Only one of `umbrellaSigAuthSecret` and `umbrellaSigAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaSigAuthSecretWo` together with `umbrellaSigAuthSecretWoVersion`, which keeps it out of state.
      */
     umbrellaSigAuthSecret?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella SIG Authentication Secret
+     *   - Only one of `umbrellaSigAuthSecret` and `umbrellaSigAuthSecretWo` can be set.
+     */
+    umbrellaSigAuthSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `umbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    umbrellaSigAuthSecretWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Zscaler Organization
      */
@@ -322,12 +700,36 @@ export interface CloudProviderSettingsArgs {
     zscalerPartnerBaseUri?: pulumi.Input<string | undefined>;
     /**
      * Zscaler Partner Key
+     *   - Only one of `zscalerPartnerKey` and `zscalerPartnerKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `zscalerPartnerKeyWo` together with `zscalerPartnerKeyWoVersion`, which keeps it out of state.
      */
     zscalerPartnerKey?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Zscaler Partner Key
+     *   - Only one of `zscalerPartnerKey` and `zscalerPartnerKeyWo` can be set.
+     */
+    zscalerPartnerKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `zscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    zscalerPartnerKeyWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Zscaler Password
+     *   - Only one of `zscalerPassword` and `zscalerPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `zscalerPasswordWo` together with `zscalerPasswordWoVersion`, which keeps it out of state.
      */
     zscalerPassword?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Zscaler Password
+     *   - Only one of `zscalerPassword` and `zscalerPasswordWo` can be set.
+     */
+    zscalerPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `zscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    zscalerPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Zscaler Username
      */

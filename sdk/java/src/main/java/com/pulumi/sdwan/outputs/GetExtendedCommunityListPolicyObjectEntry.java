@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetExtendedCommunityListPolicyObjectEntry {
     /**
-     * @return Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+     * @return Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
      * 
      */
     private String community;
 
     private GetExtendedCommunityListPolicyObjectEntry() {}
     /**
-     * @return Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+     * @return Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
      * 
      */
     public String community() {

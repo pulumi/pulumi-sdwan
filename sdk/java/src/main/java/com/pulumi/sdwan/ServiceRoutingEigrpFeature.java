@@ -250,6 +250,8 @@ public class ServiceRoutingEigrpFeature extends com.pulumi.resources.CustomResou
     }
     /**
      * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+     *   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `hmacAuthenticationKeyWo` together with `hmacAuthenticationKeyWoVersion`, which keeps it out of state.
      * 
      */
     @Export(name="hmacAuthenticationKey", refs={String.class}, tree="[0]")
@@ -257,6 +259,8 @@ public class ServiceRoutingEigrpFeature extends com.pulumi.resources.CustomResou
 
     /**
      * @return Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+     *   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `hmacAuthenticationKeyWo` together with `hmacAuthenticationKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Output<Optional<String>> hmacAuthenticationKey() {
@@ -275,6 +279,38 @@ public class ServiceRoutingEigrpFeature extends com.pulumi.resources.CustomResou
      */
     public Output<Optional<String>> hmacAuthenticationKeyVariable() {
         return Codegen.optional(this.hmacAuthenticationKeyVariable);
+    }
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+     *   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+     * 
+     */
+    @Export(name="hmacAuthenticationKeyWo", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> hmacAuthenticationKeyWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+     *   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+     * 
+     */
+    public Output<Optional<String>> hmacAuthenticationKeyWo() {
+        return Codegen.optional(this.hmacAuthenticationKeyWo);
+    }
+    /**
+     * Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Export(name="hmacAuthenticationKeyWoVersion", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> hmacAuthenticationKeyWoVersion;
+
+    /**
+     * @return Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Output<Optional<Integer>> hmacAuthenticationKeyWoVersion() {
+        return Codegen.optional(this.hmacAuthenticationKeyWoVersion);
     }
     /**
      * Set EIGRP hold time
@@ -438,6 +474,10 @@ public class ServiceRoutingEigrpFeature extends com.pulumi.resources.CustomResou
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "hmacAuthenticationKey",
+                "hmacAuthenticationKeyWo"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

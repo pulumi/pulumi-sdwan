@@ -30,6 +30,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string PasswordVariable;
         /// <summary>
+        /// Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        /// </summary>
+        public readonly string PasswordWo;
+        /// <summary>
+        /// Rotation trigger for `PasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int PasswordWoVersion;
+        /// <summary>
         /// Set Privilege Level for this user
         /// </summary>
         public readonly string Privilege;
@@ -52,6 +60,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string passwordVariable,
 
+            string passwordWo,
+
+            int passwordWoVersion,
+
             string privilege,
 
             string privilegeVariable,
@@ -62,6 +74,8 @@ namespace Pulumi.Sdwan.Outputs
             NameVariable = nameVariable;
             Password = password;
             PasswordVariable = passwordVariable;
+            PasswordWo = passwordWo;
+            PasswordWoVersion = passwordWoVersion;
             Privilege = privilege;
             PrivilegeVariable = privilegeVariable;
             PublicKeys = publicKeys;

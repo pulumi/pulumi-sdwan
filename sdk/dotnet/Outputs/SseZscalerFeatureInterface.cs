@@ -168,12 +168,24 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? PreSharedKeyDynamic;
         /// <summary>
         /// Use preshared key to authenticate IKE peer
+        ///   - Only one of `PreSharedSecret`, `PreSharedSecretVariable` and `PreSharedSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PreSharedSecretWo` together with `PreSharedSecretWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? PreSharedSecret;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string? PreSharedSecretVariable;
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Use preshared key to authenticate IKE peer
+        ///   - Only one of `PreSharedSecret`, `PreSharedSecretVariable` and `PreSharedSecretWo` can be set.
+        /// </summary>
+        public readonly string? PreSharedSecretWo;
+        /// <summary>
+        /// Rotation trigger for `PreSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? PreSharedSecretWoVersion;
         /// <summary>
         /// Administrative state
         ///   - Default value: `False`
@@ -326,6 +338,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string? preSharedSecretVariable,
 
+            string? preSharedSecretWo,
+
+            int? preSharedSecretWoVersion,
+
             bool? shutdown,
 
             int? tcpMssAdjust,
@@ -397,6 +413,8 @@ namespace Pulumi.Sdwan.Outputs
             PreSharedKeyDynamic = preSharedKeyDynamic;
             PreSharedSecret = preSharedSecret;
             PreSharedSecretVariable = preSharedSecretVariable;
+            PreSharedSecretWo = preSharedSecretWo;
+            PreSharedSecretWoVersion = preSharedSecretWoVersion;
             Shutdown = shutdown;
             TcpMssAdjust = tcpMssAdjust;
             TcpMssAdjustVariable = tcpMssAdjustVariable;

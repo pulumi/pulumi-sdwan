@@ -31,6 +31,16 @@ public final class GetServiceRoutingEigrpFeatureMd5Key {
      * 
      */
     private String keyStringVariable;
+    /**
+     * @return Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    private String keyStringWo;
+    /**
+     * @return Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer keyStringWoVersion;
 
     private GetServiceRoutingEigrpFeatureMd5Key() {}
     /**
@@ -61,6 +71,20 @@ public final class GetServiceRoutingEigrpFeatureMd5Key {
     public String keyStringVariable() {
         return this.keyStringVariable;
     }
+    /**
+     * @return Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    public String keyStringWo() {
+        return this.keyStringWo;
+    }
+    /**
+     * @return Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer keyStringWoVersion() {
+        return this.keyStringWoVersion;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -75,6 +99,8 @@ public final class GetServiceRoutingEigrpFeatureMd5Key {
         private String keyIdVariable;
         private String keyString;
         private String keyStringVariable;
+        private String keyStringWo;
+        private Integer keyStringWoVersion;
         public Builder() {}
         public Builder(GetServiceRoutingEigrpFeatureMd5Key defaults) {
     	      Objects.requireNonNull(defaults);
@@ -82,6 +108,8 @@ public final class GetServiceRoutingEigrpFeatureMd5Key {
     	      this.keyIdVariable = defaults.keyIdVariable;
     	      this.keyString = defaults.keyString;
     	      this.keyStringVariable = defaults.keyStringVariable;
+    	      this.keyStringWo = defaults.keyStringWo;
+    	      this.keyStringWoVersion = defaults.keyStringWoVersion;
         }
 
         @CustomType.Setter
@@ -116,12 +144,30 @@ public final class GetServiceRoutingEigrpFeatureMd5Key {
             this.keyStringVariable = keyStringVariable;
             return this;
         }
+        @CustomType.Setter
+        public Builder keyStringWo(String keyStringWo) {
+            if (keyStringWo == null) {
+              throw new MissingRequiredPropertyException("GetServiceRoutingEigrpFeatureMd5Key", "keyStringWo");
+            }
+            this.keyStringWo = keyStringWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder keyStringWoVersion(Integer keyStringWoVersion) {
+            if (keyStringWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetServiceRoutingEigrpFeatureMd5Key", "keyStringWoVersion");
+            }
+            this.keyStringWoVersion = keyStringWoVersion;
+            return this;
+        }
         public GetServiceRoutingEigrpFeatureMd5Key build() {
             final var _resultValue = new GetServiceRoutingEigrpFeatureMd5Key();
             _resultValue.keyId = keyId;
             _resultValue.keyIdVariable = keyIdVariable;
             _resultValue.keyString = keyString;
             _resultValue.keyStringVariable = keyStringVariable;
+            _resultValue.keyStringWo = keyStringWo;
+            _resultValue.keyStringWoVersion = keyStringWoVersion;
             return _resultValue;
         }
     }

@@ -1068,9 +1068,9 @@ class CiscoSigCredentialsFeatureTemplate(pulumi.CustomResource):
                 raise TypeError("Missing required property 'device_types'")
             __props__.__dict__["device_types"] = device_types
             __props__.__dict__["name"] = name
-            __props__.__dict__["umbrella_api_key"] = umbrella_api_key
+            __props__.__dict__["umbrella_api_key"] = None if umbrella_api_key is None else pulumi.Output.secret(umbrella_api_key)
             __props__.__dict__["umbrella_api_key_variable"] = umbrella_api_key_variable
-            __props__.__dict__["umbrella_api_secret"] = umbrella_api_secret
+            __props__.__dict__["umbrella_api_secret"] = None if umbrella_api_secret is None else pulumi.Output.secret(umbrella_api_secret)
             __props__.__dict__["umbrella_api_secret_variable"] = umbrella_api_secret_variable
             __props__.__dict__["umbrella_organization_id"] = umbrella_organization_id
             __props__.__dict__["umbrella_organization_id_variable"] = umbrella_organization_id_variable
@@ -1078,20 +1078,22 @@ class CiscoSigCredentialsFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["zscaler_cloud_name_variable"] = zscaler_cloud_name_variable
             __props__.__dict__["zscaler_organization"] = zscaler_organization
             __props__.__dict__["zscaler_organization_variable"] = zscaler_organization_variable
-            __props__.__dict__["zscaler_partner_api_key"] = zscaler_partner_api_key
+            __props__.__dict__["zscaler_partner_api_key"] = None if zscaler_partner_api_key is None else pulumi.Output.secret(zscaler_partner_api_key)
             __props__.__dict__["zscaler_partner_api_key_variable"] = zscaler_partner_api_key_variable
             __props__.__dict__["zscaler_partner_base_uri"] = zscaler_partner_base_uri
             __props__.__dict__["zscaler_partner_base_uri_variable"] = zscaler_partner_base_uri_variable
-            __props__.__dict__["zscaler_partner_password"] = zscaler_partner_password
+            __props__.__dict__["zscaler_partner_password"] = None if zscaler_partner_password is None else pulumi.Output.secret(zscaler_partner_password)
             __props__.__dict__["zscaler_partner_password_variable"] = zscaler_partner_password_variable
             __props__.__dict__["zscaler_partner_username"] = zscaler_partner_username
             __props__.__dict__["zscaler_partner_username_variable"] = zscaler_partner_username_variable
-            __props__.__dict__["zscaler_password"] = zscaler_password
+            __props__.__dict__["zscaler_password"] = None if zscaler_password is None else pulumi.Output.secret(zscaler_password)
             __props__.__dict__["zscaler_password_variable"] = zscaler_password_variable
             __props__.__dict__["zscaler_username"] = zscaler_username
             __props__.__dict__["zscaler_username_variable"] = zscaler_username_variable
             __props__.__dict__["template_type"] = None
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["umbrellaApiKey", "umbrellaApiSecret", "zscalerPartnerApiKey", "zscalerPartnerPassword", "zscalerPassword"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(CiscoSigCredentialsFeatureTemplate, __self__).__init__(
             'sdwan:index/ciscoSigCredentialsFeatureTemplate:CiscoSigCredentialsFeatureTemplate',
             resource_name,

@@ -25,17 +25,53 @@ namespace Pulumi.Sdwan.Inputs
         [Input("authorizationVariable")]
         public Input<string>? AuthorizationVariable { get; set; }
 
+        [Input("name")]
+        private Input<string>? _name;
+
         /// <summary>
         /// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `Name`, `NameVariable` and `NameWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `NameWo` together with `NameWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("name")]
-        public Input<string>? Name { get; set; }
+        public Input<string>? Name
+        {
+            get => _name;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _name = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("nameVariable")]
         public Input<string>? NameVariable { get; set; }
+
+        [Input("nameWo")]
+        private Input<string>? _nameWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `Name`, `NameVariable` and `NameWo` can be set.
+        /// </summary>
+        public Input<string>? NameWo
+        {
+            get => _nameWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _nameWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `NameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("nameWoVersion")]
+        public Input<int>? NameWoVersion { get; set; }
 
         /// <summary>
         /// Set user label of the SNMP community

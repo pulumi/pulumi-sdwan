@@ -52,6 +52,8 @@ public final class ServiceMulticastFeatureMsdpGroupPeer {
     private @Nullable String keepaliveIntervalVariable;
     /**
      * @return Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `peerAuthenticationPasswordWo` together with `peerAuthenticationPasswordWoVersion`, which keeps it out of state.
      * 
      */
     private @Nullable String peerAuthenticationPassword;
@@ -60,6 +62,18 @@ public final class ServiceMulticastFeatureMsdpGroupPeer {
      * 
      */
     private @Nullable String peerAuthenticationPasswordVariable;
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+     * 
+     */
+    private @Nullable String peerAuthenticationPasswordWo;
+    /**
+     * @return Rotation trigger for `peerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private @Nullable Integer peerAuthenticationPasswordWoVersion;
     /**
      * @return Set MSDP peer ip
      * 
@@ -148,6 +162,8 @@ public final class ServiceMulticastFeatureMsdpGroupPeer {
     }
     /**
      * @return Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `peerAuthenticationPasswordWo` together with `peerAuthenticationPasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<String> peerAuthenticationPassword() {
@@ -159,6 +175,22 @@ public final class ServiceMulticastFeatureMsdpGroupPeer {
      */
     public Optional<String> peerAuthenticationPasswordVariable() {
         return Optional.ofNullable(this.peerAuthenticationPasswordVariable);
+    }
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+     * 
+     */
+    public Optional<String> peerAuthenticationPasswordWo() {
+        return Optional.ofNullable(this.peerAuthenticationPasswordWo);
+    }
+    /**
+     * @return Rotation trigger for `peerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Integer> peerAuthenticationPasswordWoVersion() {
+        return Optional.ofNullable(this.peerAuthenticationPasswordWoVersion);
     }
     /**
      * @return Set MSDP peer ip
@@ -226,6 +258,8 @@ public final class ServiceMulticastFeatureMsdpGroupPeer {
         private @Nullable String keepaliveIntervalVariable;
         private @Nullable String peerAuthenticationPassword;
         private @Nullable String peerAuthenticationPasswordVariable;
+        private @Nullable String peerAuthenticationPasswordWo;
+        private @Nullable Integer peerAuthenticationPasswordWoVersion;
         private @Nullable String peerIp;
         private @Nullable String peerIpVariable;
         private @Nullable String prefixListId;
@@ -245,6 +279,8 @@ public final class ServiceMulticastFeatureMsdpGroupPeer {
     	      this.keepaliveIntervalVariable = defaults.keepaliveIntervalVariable;
     	      this.peerAuthenticationPassword = defaults.peerAuthenticationPassword;
     	      this.peerAuthenticationPasswordVariable = defaults.peerAuthenticationPasswordVariable;
+    	      this.peerAuthenticationPasswordWo = defaults.peerAuthenticationPasswordWo;
+    	      this.peerAuthenticationPasswordWoVersion = defaults.peerAuthenticationPasswordWoVersion;
     	      this.peerIp = defaults.peerIp;
     	      this.peerIpVariable = defaults.peerIpVariable;
     	      this.prefixListId = defaults.prefixListId;
@@ -309,6 +345,18 @@ public final class ServiceMulticastFeatureMsdpGroupPeer {
             return this;
         }
         @CustomType.Setter
+        public Builder peerAuthenticationPasswordWo(@Nullable String peerAuthenticationPasswordWo) {
+
+            this.peerAuthenticationPasswordWo = peerAuthenticationPasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder peerAuthenticationPasswordWoVersion(@Nullable Integer peerAuthenticationPasswordWoVersion) {
+
+            this.peerAuthenticationPasswordWoVersion = peerAuthenticationPasswordWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder peerIp(@Nullable String peerIp) {
 
             this.peerIp = peerIp;
@@ -361,6 +409,8 @@ public final class ServiceMulticastFeatureMsdpGroupPeer {
             _resultValue.keepaliveIntervalVariable = keepaliveIntervalVariable;
             _resultValue.peerAuthenticationPassword = peerAuthenticationPassword;
             _resultValue.peerAuthenticationPasswordVariable = peerAuthenticationPasswordVariable;
+            _resultValue.peerAuthenticationPasswordWo = peerAuthenticationPasswordWo;
+            _resultValue.peerAuthenticationPasswordWoVersion = peerAuthenticationPasswordWoVersion;
             _resultValue.peerIp = peerIp;
             _resultValue.peerIpVariable = peerIpVariable;
             _resultValue.prefixListId = prefixListId;

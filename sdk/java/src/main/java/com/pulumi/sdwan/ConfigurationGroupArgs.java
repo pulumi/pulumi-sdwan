@@ -6,7 +6,6 @@ package com.pulumi.sdwan;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.sdwan.inputs.ConfigurationGroupDeviceArgs;
 import com.pulumi.sdwan.inputs.ConfigurationGroupTopologyDeviceArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,21 +32,6 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
      */
     public Output<String> description() {
         return this.description;
-    }
-
-    /**
-     * List of devices
-     * 
-     */
-    @Import(name="devices")
-    private @Nullable Output<List<ConfigurationGroupDeviceArgs>> devices;
-
-    /**
-     * @return List of devices
-     * 
-     */
-    public Optional<Output<List<ConfigurationGroupDeviceArgs>>> devices() {
-        return Optional.ofNullable(this.devices);
     }
 
     /**
@@ -148,7 +132,6 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
 
     private ConfigurationGroupArgs(ConfigurationGroupArgs $) {
         this.description = $.description;
-        this.devices = $.devices;
         this.featureProfileIds = $.featureProfileIds;
         this.featureVersions = $.featureVersions;
         this.name = $.name;
@@ -194,37 +177,6 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
          */
         public Builder description(String description) {
             return description(Output.of(description));
-        }
-
-        /**
-         * @param devices List of devices
-         * 
-         * @return builder
-         * 
-         */
-        public Builder devices(@Nullable Output<List<ConfigurationGroupDeviceArgs>> devices) {
-            $.devices = devices;
-            return this;
-        }
-
-        /**
-         * @param devices List of devices
-         * 
-         * @return builder
-         * 
-         */
-        public Builder devices(List<ConfigurationGroupDeviceArgs> devices) {
-            return devices(Output.of(devices));
-        }
-
-        /**
-         * @param devices List of devices
-         * 
-         * @return builder
-         * 
-         */
-        public Builder devices(ConfigurationGroupDeviceArgs... devices) {
-            return devices(List.of(devices));
         }
 
         /**

@@ -78,6 +78,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string MessageDigestKeyVariable;
         /// <summary>
+        /// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        /// </summary>
+        public readonly string MessageDigestKeyWo;
+        /// <summary>
+        /// Rotation trigger for `MessageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int MessageDigestKeyWoVersion;
+        /// <summary>
         /// Set interface name
         /// </summary>
         public readonly string Name;
@@ -136,6 +144,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string messageDigestKeyVariable,
 
+            string messageDigestKeyWo,
+
+            int messageDigestKeyWoVersion,
+
             string name,
 
             string nameVariable,
@@ -164,6 +176,8 @@ namespace Pulumi.Sdwan.Outputs
             MessageDigestKeyId = messageDigestKeyId;
             MessageDigestKeyIdVariable = messageDigestKeyIdVariable;
             MessageDigestKeyVariable = messageDigestKeyVariable;
+            MessageDigestKeyWo = messageDigestKeyWo;
+            MessageDigestKeyWoVersion = messageDigestKeyWoVersion;
             Name = name;
             NameVariable = nameVariable;
             NetworkType = networkType;

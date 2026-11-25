@@ -42,6 +42,8 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
                  ike_integrity_protocol_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ike_preshared_key: pulumi.Input[Optional[_builtins.str]] = None,
                  ike_preshared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_preshared_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_preshared_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  ike_rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  ike_rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ike_version: pulumi.Input[Optional[_builtins.int]] = None,
@@ -126,7 +128,13 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
                  - Default value: `main`
         :param pulumi.Input[_builtins.str] ike_integrity_protocol_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_preshared_key: Use preshared key to authenticate IKE peer
+                 - Only one of `ike_preshared_key`, `ike_preshared_key_variable` and `ike_preshared_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `ike_preshared_key_wo` together with `ike_preshared_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] ike_preshared_key_variable: Variable name
+        :param pulumi.Input[_builtins.str] ike_preshared_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Use preshared key to authenticate IKE peer
+                 - Only one of `ike_preshared_key`, `ike_preshared_key_variable` and `ike_preshared_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] ike_preshared_key_wo_version: Rotation trigger for `ike_preshared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] ike_rekey_interval: IKE rekey interval <60..86400> seconds
                  - Range: `60`-`86400`
                  - Default value: `14400`
@@ -177,6 +185,7 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
         :param pulumi.Input[_builtins.str] perfect_forward_secrecy_variable: Variable name
         :param pulumi.Input[_builtins.bool] shutdown: Administrative state
                  - Default value: `true`
+                 - Default value from SD-WAN Manager version `20.18.5`: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_id: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_id_variable: Variable name
@@ -240,6 +249,10 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
             pulumi.set(__self__, "ike_preshared_key", ike_preshared_key)
         if ike_preshared_key_variable is not None:
             pulumi.set(__self__, "ike_preshared_key_variable", ike_preshared_key_variable)
+        if ike_preshared_key_wo is not None:
+            pulumi.set(__self__, "ike_preshared_key_wo", ike_preshared_key_wo)
+        if ike_preshared_key_wo_version is not None:
+            pulumi.set(__self__, "ike_preshared_key_wo_version", ike_preshared_key_wo_version)
         if ike_rekey_interval is not None:
             pulumi.set(__self__, "ike_rekey_interval", ike_rekey_interval)
         if ike_rekey_interval_variable is not None:
@@ -604,6 +617,8 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
     def ike_preshared_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Use preshared key to authenticate IKE peer
+          - Only one of `ike_preshared_key`, `ike_preshared_key_variable` and `ike_preshared_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `ike_preshared_key_wo` together with `ike_preshared_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "ike_preshared_key")
 
@@ -622,6 +637,32 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
     @ike_preshared_key_variable.setter
     def ike_preshared_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ike_preshared_key_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikePresharedKeyWo")
+    def ike_preshared_key_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Use preshared key to authenticate IKE peer
+          - Only one of `ike_preshared_key`, `ike_preshared_key_variable` and `ike_preshared_key_wo` can be set.
+        """
+        return pulumi.get(self, "ike_preshared_key_wo")
+
+    @ike_preshared_key_wo.setter
+    def ike_preshared_key_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_preshared_key_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikePresharedKeyWoVersion")
+    def ike_preshared_key_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `ike_preshared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "ike_preshared_key_wo_version")
+
+    @ike_preshared_key_wo_version.setter
+    def ike_preshared_key_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "ike_preshared_key_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="ikeRekeyInterval")
@@ -1007,6 +1048,7 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
         """
         Administrative state
           - Default value: `true`
+          - Default value from SD-WAN Manager version `20.18.5`: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -1234,6 +1276,8 @@ class _ServiceLanVpnInterfaceIpsecFeatureState:
                  ike_integrity_protocol_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ike_preshared_key: pulumi.Input[Optional[_builtins.str]] = None,
                  ike_preshared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_preshared_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_preshared_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  ike_rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  ike_rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ike_version: pulumi.Input[Optional[_builtins.int]] = None,
@@ -1319,7 +1363,13 @@ class _ServiceLanVpnInterfaceIpsecFeatureState:
                  - Default value: `main`
         :param pulumi.Input[_builtins.str] ike_integrity_protocol_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_preshared_key: Use preshared key to authenticate IKE peer
+                 - Only one of `ike_preshared_key`, `ike_preshared_key_variable` and `ike_preshared_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `ike_preshared_key_wo` together with `ike_preshared_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] ike_preshared_key_variable: Variable name
+        :param pulumi.Input[_builtins.str] ike_preshared_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Use preshared key to authenticate IKE peer
+                 - Only one of `ike_preshared_key`, `ike_preshared_key_variable` and `ike_preshared_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] ike_preshared_key_wo_version: Rotation trigger for `ike_preshared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] ike_rekey_interval: IKE rekey interval <60..86400> seconds
                  - Range: `60`-`86400`
                  - Default value: `14400`
@@ -1371,6 +1421,7 @@ class _ServiceLanVpnInterfaceIpsecFeatureState:
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[_builtins.bool] shutdown: Administrative state
                  - Default value: `true`
+                 - Default value from SD-WAN Manager version `20.18.5`: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_id: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_id_variable: Variable name
@@ -1435,6 +1486,10 @@ class _ServiceLanVpnInterfaceIpsecFeatureState:
             pulumi.set(__self__, "ike_preshared_key", ike_preshared_key)
         if ike_preshared_key_variable is not None:
             pulumi.set(__self__, "ike_preshared_key_variable", ike_preshared_key_variable)
+        if ike_preshared_key_wo is not None:
+            pulumi.set(__self__, "ike_preshared_key_wo", ike_preshared_key_wo)
+        if ike_preshared_key_wo_version is not None:
+            pulumi.set(__self__, "ike_preshared_key_wo_version", ike_preshared_key_wo_version)
         if ike_rekey_interval is not None:
             pulumi.set(__self__, "ike_rekey_interval", ike_rekey_interval)
         if ike_rekey_interval_variable is not None:
@@ -1791,6 +1846,8 @@ class _ServiceLanVpnInterfaceIpsecFeatureState:
     def ike_preshared_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Use preshared key to authenticate IKE peer
+          - Only one of `ike_preshared_key`, `ike_preshared_key_variable` and `ike_preshared_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `ike_preshared_key_wo` together with `ike_preshared_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "ike_preshared_key")
 
@@ -1809,6 +1866,32 @@ class _ServiceLanVpnInterfaceIpsecFeatureState:
     @ike_preshared_key_variable.setter
     def ike_preshared_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ike_preshared_key_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikePresharedKeyWo")
+    def ike_preshared_key_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Use preshared key to authenticate IKE peer
+          - Only one of `ike_preshared_key`, `ike_preshared_key_variable` and `ike_preshared_key_wo` can be set.
+        """
+        return pulumi.get(self, "ike_preshared_key_wo")
+
+    @ike_preshared_key_wo.setter
+    def ike_preshared_key_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_preshared_key_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikePresharedKeyWoVersion")
+    def ike_preshared_key_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `ike_preshared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "ike_preshared_key_wo_version")
+
+    @ike_preshared_key_wo_version.setter
+    def ike_preshared_key_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "ike_preshared_key_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="ikeRekeyInterval")
@@ -2206,6 +2289,7 @@ class _ServiceLanVpnInterfaceIpsecFeatureState:
         """
         Administrative state
           - Default value: `true`
+          - Default value from SD-WAN Manager version `20.18.5`: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -2448,6 +2532,8 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
                  ike_integrity_protocol_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ike_preshared_key: pulumi.Input[Optional[_builtins.str]] = None,
                  ike_preshared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_preshared_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_preshared_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  ike_rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  ike_rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ike_version: pulumi.Input[Optional[_builtins.int]] = None,
@@ -2587,7 +2673,13 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
                  - Default value: `main`
         :param pulumi.Input[_builtins.str] ike_integrity_protocol_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_preshared_key: Use preshared key to authenticate IKE peer
+                 - Only one of `ike_preshared_key`, `ike_preshared_key_variable` and `ike_preshared_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `ike_preshared_key_wo` together with `ike_preshared_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] ike_preshared_key_variable: Variable name
+        :param pulumi.Input[_builtins.str] ike_preshared_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Use preshared key to authenticate IKE peer
+                 - Only one of `ike_preshared_key`, `ike_preshared_key_variable` and `ike_preshared_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] ike_preshared_key_wo_version: Rotation trigger for `ike_preshared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] ike_rekey_interval: IKE rekey interval <60..86400> seconds
                  - Range: `60`-`86400`
                  - Default value: `14400`
@@ -2639,6 +2731,7 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[_builtins.bool] shutdown: Administrative state
                  - Default value: `true`
+                 - Default value from SD-WAN Manager version `20.18.5`: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_id: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_id_variable: Variable name
@@ -2756,6 +2849,8 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
                  ike_integrity_protocol_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ike_preshared_key: pulumi.Input[Optional[_builtins.str]] = None,
                  ike_preshared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_preshared_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_preshared_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  ike_rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  ike_rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  ike_version: pulumi.Input[Optional[_builtins.int]] = None,
@@ -2835,8 +2930,10 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
             __props__.__dict__["ike_id_remote_end_point_variable"] = ike_id_remote_end_point_variable
             __props__.__dict__["ike_integrity_protocol"] = ike_integrity_protocol
             __props__.__dict__["ike_integrity_protocol_variable"] = ike_integrity_protocol_variable
-            __props__.__dict__["ike_preshared_key"] = ike_preshared_key
+            __props__.__dict__["ike_preshared_key"] = None if ike_preshared_key is None else pulumi.Output.secret(ike_preshared_key)
             __props__.__dict__["ike_preshared_key_variable"] = ike_preshared_key_variable
+            __props__.__dict__["ike_preshared_key_wo"] = None if ike_preshared_key_wo is None else pulumi.Output.secret(ike_preshared_key_wo)
+            __props__.__dict__["ike_preshared_key_wo_version"] = ike_preshared_key_wo_version
             __props__.__dict__["ike_rekey_interval"] = ike_rekey_interval
             __props__.__dict__["ike_rekey_interval_variable"] = ike_rekey_interval_variable
             __props__.__dict__["ike_version"] = ike_version
@@ -2888,6 +2985,8 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
             __props__.__dict__["tunnel_source_ipv6_address"] = tunnel_source_ipv6_address
             __props__.__dict__["tunnel_source_ipv6_address_variable"] = tunnel_source_ipv6_address_variable
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["ikePresharedKey", "ikePresharedKeyWo"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(ServiceLanVpnInterfaceIpsecFeature, __self__).__init__(
             'sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature',
             resource_name,
@@ -2920,6 +3019,8 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
             ike_integrity_protocol_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ike_preshared_key: pulumi.Input[Optional[_builtins.str]] = None,
             ike_preshared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ike_preshared_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            ike_preshared_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             ike_rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
             ike_rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ike_version: pulumi.Input[Optional[_builtins.int]] = None,
@@ -3009,7 +3110,13 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
                  - Default value: `main`
         :param pulumi.Input[_builtins.str] ike_integrity_protocol_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_preshared_key: Use preshared key to authenticate IKE peer
+                 - Only one of `ike_preshared_key`, `ike_preshared_key_variable` and `ike_preshared_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `ike_preshared_key_wo` together with `ike_preshared_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] ike_preshared_key_variable: Variable name
+        :param pulumi.Input[_builtins.str] ike_preshared_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Use preshared key to authenticate IKE peer
+                 - Only one of `ike_preshared_key`, `ike_preshared_key_variable` and `ike_preshared_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] ike_preshared_key_wo_version: Rotation trigger for `ike_preshared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] ike_rekey_interval: IKE rekey interval <60..86400> seconds
                  - Range: `60`-`86400`
                  - Default value: `14400`
@@ -3061,6 +3168,7 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[_builtins.bool] shutdown: Administrative state
                  - Default value: `true`
+                 - Default value from SD-WAN Manager version `20.18.5`: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_id: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_id_variable: Variable name
@@ -3107,6 +3215,8 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
         __props__.__dict__["ike_integrity_protocol_variable"] = ike_integrity_protocol_variable
         __props__.__dict__["ike_preshared_key"] = ike_preshared_key
         __props__.__dict__["ike_preshared_key_variable"] = ike_preshared_key_variable
+        __props__.__dict__["ike_preshared_key_wo"] = ike_preshared_key_wo
+        __props__.__dict__["ike_preshared_key_wo_version"] = ike_preshared_key_wo_version
         __props__.__dict__["ike_rekey_interval"] = ike_rekey_interval
         __props__.__dict__["ike_rekey_interval_variable"] = ike_rekey_interval_variable
         __props__.__dict__["ike_version"] = ike_version
@@ -3183,6 +3293,8 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
             ike_integrity_protocol_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ike_preshared_key: pulumi.Input[Optional[_builtins.str]] = None,
             ike_preshared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ike_preshared_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            ike_preshared_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             ike_rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
             ike_rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
             ike_version: pulumi.Input[Optional[_builtins.int]] = None,
@@ -3255,6 +3367,8 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
         __props__["ikeIntegrityProtocolVariable"] = ike_integrity_protocol_variable
         __props__["ikePresharedKey"] = ike_preshared_key
         __props__["ikePresharedKeyVariable"] = ike_preshared_key_variable
+        __props__["ikePresharedKeyWo"] = ike_preshared_key_wo
+        __props__["ikePresharedKeyWoVersion"] = ike_preshared_key_wo_version
         __props__["ikeRekeyInterval"] = ike_rekey_interval
         __props__["ikeRekeyIntervalVariable"] = ike_rekey_interval_variable
         __props__["ikeVersion"] = ike_version
@@ -3483,6 +3597,8 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     def ike_preshared_key(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Use preshared key to authenticate IKE peer
+          - Only one of `ike_preshared_key`, `ike_preshared_key_variable` and `ike_preshared_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `ike_preshared_key_wo` together with `ike_preshared_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "ike_preshared_key")
 
@@ -3493,6 +3609,24 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
         Variable name
         """
         return pulumi.get(self, "ike_preshared_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ikePresharedKeyWo")
+    def ike_preshared_key_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Use preshared key to authenticate IKE peer
+          - Only one of `ike_preshared_key`, `ike_preshared_key_variable` and `ike_preshared_key_wo` can be set.
+        """
+        return pulumi.get(self, "ike_preshared_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="ikePresharedKeyWoVersion")
+    def ike_preshared_key_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `ike_preshared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "ike_preshared_key_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="ikeRekeyInterval")
@@ -3766,6 +3900,7 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
         """
         Administrative state
           - Default value: `true`
+          - Default value from SD-WAN Manager version `20.18.5`: `false`
         """
         return pulumi.get(self, "shutdown")
 

@@ -211,7 +211,7 @@ export class CellularCedgeProfileFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["packetDataNetworkTypeVariable"] = args?.packetDataNetworkTypeVariable;
             resourceInputs["profileId"] = args?.profileId;
             resourceInputs["profileIdVariable"] = args?.profileIdVariable;
-            resourceInputs["profilePassword"] = args?.profilePassword;
+            resourceInputs["profilePassword"] = args?.profilePassword ? pulumi.secret(args.profilePassword) : undefined;
             resourceInputs["profilePasswordVariable"] = args?.profilePasswordVariable;
             resourceInputs["profileUsername"] = args?.profileUsername;
             resourceInputs["profileUsernameVariable"] = args?.profileUsernameVariable;
@@ -219,6 +219,8 @@ export class CellularCedgeProfileFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["profilePassword"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(CellularCedgeProfileFeatureTemplate.__pulumiType, name, resourceInputs, opts);
     }
 }

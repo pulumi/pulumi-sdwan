@@ -25,17 +25,53 @@ namespace Pulumi.Sdwan.Inputs
         [Input("keyIdVariable")]
         public Input<string>? KeyIdVariable { get; set; }
 
+        [Input("keyString")]
+        private Input<string>? _keyString;
+
         /// <summary>
         /// Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `KeyString`, `KeyStringVariable` and `KeyStringWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `KeyStringWo` together with `KeyStringWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("keyString")]
-        public Input<string>? KeyString { get; set; }
+        public Input<string>? KeyString
+        {
+            get => _keyString;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _keyString = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("keyStringVariable")]
         public Input<string>? KeyStringVariable { get; set; }
+
+        [Input("keyStringWo")]
+        private Input<string>? _keyStringWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `KeyString`, `KeyStringVariable` and `KeyStringWo` can be set.
+        /// </summary>
+        public Input<string>? KeyStringWo
+        {
+            get => _keyStringWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _keyStringWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `KeyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("keyStringWoVersion")]
+        public Input<int>? KeyStringWoVersion { get; set; }
 
         public ServiceRoutingEigrpFeatureMd5KeyGetArgs()
         {

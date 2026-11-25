@@ -343,6 +343,8 @@ public final class TransportWanVpnInterfaceIpsecFeatureState extends com.pulumi.
 
     /**
      * Use preshared key to authenticate IKE peer
+     *   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `ikePresharedKeyWo` together with `ikePresharedKeyWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="ikePresharedKey")
@@ -350,6 +352,8 @@ public final class TransportWanVpnInterfaceIpsecFeatureState extends com.pulumi.
 
     /**
      * @return Use preshared key to authenticate IKE peer
+     *   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `ikePresharedKeyWo` together with `ikePresharedKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> ikePresharedKey() {
@@ -369,6 +373,40 @@ public final class TransportWanVpnInterfaceIpsecFeatureState extends com.pulumi.
      */
     public Optional<Output<String>> ikePresharedKeyVariable() {
         return Optional.ofNullable(this.ikePresharedKeyVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+     * 
+     */
+    @Import(name="ikePresharedKeyWo")
+    private @Nullable Output<String> ikePresharedKeyWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> ikePresharedKeyWo() {
+        return Optional.ofNullable(this.ikePresharedKeyWo);
+    }
+
+    /**
+     * Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="ikePresharedKeyWoVersion")
+    private @Nullable Output<Integer> ikePresharedKeyWoVersion;
+
+    /**
+     * @return Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> ikePresharedKeyWoVersion() {
+        return Optional.ofNullable(this.ikePresharedKeyWoVersion);
     }
 
     /**
@@ -892,6 +930,7 @@ public final class TransportWanVpnInterfaceIpsecFeatureState extends com.pulumi.
     /**
      * Administrative state
      *   - Default value: `true`
+     *   - Default value from SD-WAN Manager version `20.18.5`: `false`
      * 
      */
     @Import(name="shutdown")
@@ -900,6 +939,7 @@ public final class TransportWanVpnInterfaceIpsecFeatureState extends com.pulumi.
     /**
      * @return Administrative state
      *   - Default value: `true`
+     *   - Default value from SD-WAN Manager version `20.18.5`: `false`
      * 
      */
     public Optional<Output<Boolean>> shutdown() {
@@ -1205,6 +1245,8 @@ public final class TransportWanVpnInterfaceIpsecFeatureState extends com.pulumi.
         this.ikeIntegrityProtocolVariable = $.ikeIntegrityProtocolVariable;
         this.ikePresharedKey = $.ikePresharedKey;
         this.ikePresharedKeyVariable = $.ikePresharedKeyVariable;
+        this.ikePresharedKeyWo = $.ikePresharedKeyWo;
+        this.ikePresharedKeyWoVersion = $.ikePresharedKeyWoVersion;
         this.ikeRekeyInterval = $.ikeRekeyInterval;
         this.ikeRekeyIntervalVariable = $.ikeRekeyIntervalVariable;
         this.ikeVersion = $.ikeVersion;
@@ -1722,6 +1764,8 @@ public final class TransportWanVpnInterfaceIpsecFeatureState extends com.pulumi.
 
         /**
          * @param ikePresharedKey Use preshared key to authenticate IKE peer
+         *   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `ikePresharedKeyWo` together with `ikePresharedKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1733,6 +1777,8 @@ public final class TransportWanVpnInterfaceIpsecFeatureState extends com.pulumi.
 
         /**
          * @param ikePresharedKey Use preshared key to authenticate IKE peer
+         *   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `ikePresharedKeyWo` together with `ikePresharedKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1760,6 +1806,52 @@ public final class TransportWanVpnInterfaceIpsecFeatureState extends com.pulumi.
          */
         public Builder ikePresharedKeyVariable(String ikePresharedKeyVariable) {
             return ikePresharedKeyVariable(Output.of(ikePresharedKeyVariable));
+        }
+
+        /**
+         * @param ikePresharedKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Use preshared key to authenticate IKE peer
+         *   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikePresharedKeyWo(@Nullable Output<String> ikePresharedKeyWo) {
+            $.ikePresharedKeyWo = ikePresharedKeyWo;
+            return this;
+        }
+
+        /**
+         * @param ikePresharedKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Use preshared key to authenticate IKE peer
+         *   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikePresharedKeyWo(String ikePresharedKeyWo) {
+            return ikePresharedKeyWo(Output.of(ikePresharedKeyWo));
+        }
+
+        /**
+         * @param ikePresharedKeyWoVersion Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikePresharedKeyWoVersion(@Nullable Output<Integer> ikePresharedKeyWoVersion) {
+            $.ikePresharedKeyWoVersion = ikePresharedKeyWoVersion;
+            return this;
+        }
+
+        /**
+         * @param ikePresharedKeyWoVersion Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikePresharedKeyWoVersion(Integer ikePresharedKeyWoVersion) {
+            return ikePresharedKeyWoVersion(Output.of(ikePresharedKeyWoVersion));
         }
 
         /**
@@ -2475,6 +2567,7 @@ public final class TransportWanVpnInterfaceIpsecFeatureState extends com.pulumi.
         /**
          * @param shutdown Administrative state
          *   - Default value: `true`
+         *   - Default value from SD-WAN Manager version `20.18.5`: `false`
          * 
          * @return builder
          * 
@@ -2487,6 +2580,7 @@ public final class TransportWanVpnInterfaceIpsecFeatureState extends com.pulumi.
         /**
          * @param shutdown Administrative state
          *   - Default value: `true`
+         *   - Default value from SD-WAN Manager version `20.18.5`: `false`
          * 
          * @return builder
          * 

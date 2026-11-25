@@ -1397,7 +1397,7 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["radius_dynamic_author_domain_stripping_variable"] = radius_dynamic_author_domain_stripping_variable
             __props__.__dict__["radius_dynamic_author_port"] = radius_dynamic_author_port
             __props__.__dict__["radius_dynamic_author_port_variable"] = radius_dynamic_author_port_variable
-            __props__.__dict__["radius_dynamic_author_server_key"] = radius_dynamic_author_server_key
+            __props__.__dict__["radius_dynamic_author_server_key"] = None if radius_dynamic_author_server_key is None else pulumi.Output.secret(radius_dynamic_author_server_key)
             __props__.__dict__["radius_dynamic_author_server_key_variable"] = radius_dynamic_author_server_key_variable
             __props__.__dict__["radius_server_groups"] = radius_server_groups
             __props__.__dict__["radius_trustsec_cts_authorization_list"] = radius_trustsec_cts_authorization_list
@@ -1408,6 +1408,8 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["users"] = users
             __props__.__dict__["template_type"] = None
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["radiusDynamicAuthorServerKey"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(CedgeAaaFeatureTemplate, __self__).__init__(
             'sdwan:index/cedgeAaaFeatureTemplate:CedgeAaaFeatureTemplate',
             resource_name,

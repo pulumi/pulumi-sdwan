@@ -12,11 +12,23 @@ namespace Pulumi.Sdwan.Inputs
 
     public sealed class SystemNtpFeatureAuthenticationKeyArgs : global::Pulumi.ResourceArgs
     {
+        [Input("cmacAes128Value")]
+        private Input<string>? _cmacAes128Value;
+
         /// <summary>
         /// CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        ///   - Only one of `CmacAes128Value`, `CmacAes128ValueVariable` and `CmacAes128ValueWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `CmacAes128ValueWo` together with `CmacAes128ValueWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("cmacAes128Value")]
-        public Input<string>? CmacAes128Value { get; set; }
+        public Input<string>? CmacAes128Value
+        {
+            get => _cmacAes128Value;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _cmacAes128Value = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
@@ -24,17 +36,77 @@ namespace Pulumi.Sdwan.Inputs
         [Input("cmacAes128ValueVariable")]
         public Input<string>? CmacAes128ValueVariable { get; set; }
 
+        [Input("cmacAes128ValueWo")]
+        private Input<string>? _cmacAes128ValueWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        ///   - Only one of `CmacAes128Value`, `CmacAes128ValueVariable` and `CmacAes128ValueWo` can be set.
+        /// </summary>
+        public Input<string>? CmacAes128ValueWo
+        {
+            get => _cmacAes128ValueWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _cmacAes128ValueWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `CmacAes128ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("cmacAes128ValueWoVersion")]
+        public Input<int>? CmacAes128ValueWoVersion { get; set; }
+
+        [Input("hmacSha2Value")]
+        private Input<string>? _hmacSha2Value;
+
         /// <summary>
         /// HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        ///   - Only one of `HmacSha2Value`, `HmacSha2ValueVariable` and `HmacSha2ValueWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `HmacSha2ValueWo` together with `HmacSha2ValueWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("hmacSha2Value")]
-        public Input<string>? HmacSha2Value { get; set; }
+        public Input<string>? HmacSha2Value
+        {
+            get => _hmacSha2Value;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _hmacSha2Value = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
         /// </summary>
         [Input("hmacSha2ValueVariable")]
         public Input<string>? HmacSha2ValueVariable { get; set; }
+
+        [Input("hmacSha2ValueWo")]
+        private Input<string>? _hmacSha2ValueWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        ///   - Only one of `HmacSha2Value`, `HmacSha2ValueVariable` and `HmacSha2ValueWo` can be set.
+        /// </summary>
+        public Input<string>? HmacSha2ValueWo
+        {
+            get => _hmacSha2ValueWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _hmacSha2ValueWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `HmacSha2ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("hmacSha2ValueWoVersion")]
+        public Input<int>? HmacSha2ValueWoVersion { get; set; }
 
         /// <summary>
         /// Authentication key ID
@@ -49,17 +121,53 @@ namespace Pulumi.Sdwan.Inputs
         [Input("keyIdVariable")]
         public Input<string>? KeyIdVariable { get; set; }
 
+        [Input("md5Value")]
+        private Input<string>? _md5Value;
+
         /// <summary>
         /// Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `Md5Value`, `Md5ValueVariable` and `Md5ValueWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `Md5ValueWo` together with `Md5ValueWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("md5Value")]
-        public Input<string>? Md5Value { get; set; }
+        public Input<string>? Md5Value
+        {
+            get => _md5Value;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _md5Value = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("md5ValueVariable")]
         public Input<string>? Md5ValueVariable { get; set; }
+
+        [Input("md5ValueWo")]
+        private Input<string>? _md5ValueWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `Md5Value`, `Md5ValueVariable` and `Md5ValueWo` can be set.
+        /// </summary>
+        public Input<string>? Md5ValueWo
+        {
+            get => _md5ValueWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _md5ValueWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `Md5ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("md5ValueWoVersion")]
+        public Input<int>? Md5ValueWoVersion { get; set; }
 
         public SystemNtpFeatureAuthenticationKeyArgs()
         {

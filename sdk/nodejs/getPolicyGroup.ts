@@ -2,8 +2,6 @@
 // *** Do not edit by hand unless you're certain you know what you are doing! ***
 
 import * as pulumi from "@pulumi/pulumi";
-import * as inputs from "./types/input";
-import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
@@ -52,10 +50,6 @@ export interface GetPolicyGroupResult {
      */
     readonly description: string;
     /**
-     * List of devices
-     */
-    readonly devices: outputs.GetPolicyGroupDevice[];
-    /**
      * List of feature profile IDs
      */
     readonly featureProfileIds: string[];
@@ -75,6 +69,10 @@ export interface GetPolicyGroupResult {
      * Type of solution
      */
     readonly solution: string;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Policy Group .

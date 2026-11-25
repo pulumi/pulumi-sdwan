@@ -6,6 +6,7 @@ package com.pulumi.sdwan;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,6 +19,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     /**
      * Cisco SSE Authentication Key
+     *   - Only one of `ciscoSseAuthKey` and `ciscoSseAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `ciscoSseAuthKeyWo` together with `ciscoSseAuthKeyWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="ciscoSseAuthKey")
@@ -25,6 +28,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     /**
      * @return Cisco SSE Authentication Key
+     *   - Only one of `ciscoSseAuthKey` and `ciscoSseAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `ciscoSseAuthKeyWo` together with `ciscoSseAuthKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> ciscoSseAuthKey() {
@@ -32,7 +37,43 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Cisco SSE Authentication Key
+     *   - Only one of `ciscoSseAuthKey` and `ciscoSseAuthKeyWo` can be set.
+     * 
+     */
+    @Import(name="ciscoSseAuthKeyWo")
+    private @Nullable Output<String> ciscoSseAuthKeyWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Cisco SSE Authentication Key
+     *   - Only one of `ciscoSseAuthKey` and `ciscoSseAuthKeyWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> ciscoSseAuthKeyWo() {
+        return Optional.ofNullable(this.ciscoSseAuthKeyWo);
+    }
+
+    /**
+     * Rotation trigger for `ciscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="ciscoSseAuthKeyWoVersion")
+    private @Nullable Output<Integer> ciscoSseAuthKeyWoVersion;
+
+    /**
+     * @return Rotation trigger for `ciscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> ciscoSseAuthKeyWoVersion() {
+        return Optional.ofNullable(this.ciscoSseAuthKeyWoVersion);
+    }
+
+    /**
      * Cisco SSE Authentication Secret
+     *   - Only one of `ciscoSseAuthSecret` and `ciscoSseAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `ciscoSseAuthSecretWo` together with `ciscoSseAuthSecretWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="ciscoSseAuthSecret")
@@ -40,10 +81,46 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     /**
      * @return Cisco SSE Authentication Secret
+     *   - Only one of `ciscoSseAuthSecret` and `ciscoSseAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `ciscoSseAuthSecretWo` together with `ciscoSseAuthSecretWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> ciscoSseAuthSecret() {
         return Optional.ofNullable(this.ciscoSseAuthSecret);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Cisco SSE Authentication Secret
+     *   - Only one of `ciscoSseAuthSecret` and `ciscoSseAuthSecretWo` can be set.
+     * 
+     */
+    @Import(name="ciscoSseAuthSecretWo")
+    private @Nullable Output<String> ciscoSseAuthSecretWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Cisco SSE Authentication Secret
+     *   - Only one of `ciscoSseAuthSecret` and `ciscoSseAuthSecretWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> ciscoSseAuthSecretWo() {
+        return Optional.ofNullable(this.ciscoSseAuthSecretWo);
+    }
+
+    /**
+     * Rotation trigger for `ciscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="ciscoSseAuthSecretWoVersion")
+    private @Nullable Output<Integer> ciscoSseAuthSecretWoVersion;
+
+    /**
+     * @return Rotation trigger for `ciscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> ciscoSseAuthSecretWoVersion() {
+        return Optional.ofNullable(this.ciscoSseAuthSecretWoVersion);
     }
 
     /**
@@ -80,6 +157,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     /**
      * Umbrella Authentication Key (v2)
+     *   - Only one of `umbrellaAuthKeyV2` and `umbrellaAuthKeyV2Wo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaAuthKeyV2Wo` together with `umbrellaAuthKeyV2WoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="umbrellaAuthKeyV2")
@@ -87,6 +166,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     /**
      * @return Umbrella Authentication Key (v2)
+     *   - Only one of `umbrellaAuthKeyV2` and `umbrellaAuthKeyV2Wo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaAuthKeyV2Wo` together with `umbrellaAuthKeyV2WoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> umbrellaAuthKeyV2() {
@@ -94,7 +175,43 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella Authentication Key (v2)
+     *   - Only one of `umbrellaAuthKeyV2` and `umbrellaAuthKeyV2Wo` can be set.
+     * 
+     */
+    @Import(name="umbrellaAuthKeyV2Wo")
+    private @Nullable Output<String> umbrellaAuthKeyV2Wo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella Authentication Key (v2)
+     *   - Only one of `umbrellaAuthKeyV2` and `umbrellaAuthKeyV2Wo` can be set.
+     * 
+     */
+    public Optional<Output<String>> umbrellaAuthKeyV2Wo() {
+        return Optional.ofNullable(this.umbrellaAuthKeyV2Wo);
+    }
+
+    /**
+     * Rotation trigger for `umbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="umbrellaAuthKeyV2WoVersion")
+    private @Nullable Output<Integer> umbrellaAuthKeyV2WoVersion;
+
+    /**
+     * @return Rotation trigger for `umbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> umbrellaAuthKeyV2WoVersion() {
+        return Optional.ofNullable(this.umbrellaAuthKeyV2WoVersion);
+    }
+
+    /**
      * Umbrella Authentication Secret (v2)
+     *   - Only one of `umbrellaAuthSecretV2` and `umbrellaAuthSecretV2Wo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaAuthSecretV2Wo` together with `umbrellaAuthSecretV2WoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="umbrellaAuthSecretV2")
@@ -102,6 +219,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     /**
      * @return Umbrella Authentication Secret (v2)
+     *   - Only one of `umbrellaAuthSecretV2` and `umbrellaAuthSecretV2Wo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaAuthSecretV2Wo` together with `umbrellaAuthSecretV2WoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> umbrellaAuthSecretV2() {
@@ -109,7 +228,43 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella Authentication Secret (v2)
+     *   - Only one of `umbrellaAuthSecretV2` and `umbrellaAuthSecretV2Wo` can be set.
+     * 
+     */
+    @Import(name="umbrellaAuthSecretV2Wo")
+    private @Nullable Output<String> umbrellaAuthSecretV2Wo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella Authentication Secret (v2)
+     *   - Only one of `umbrellaAuthSecretV2` and `umbrellaAuthSecretV2Wo` can be set.
+     * 
+     */
+    public Optional<Output<String>> umbrellaAuthSecretV2Wo() {
+        return Optional.ofNullable(this.umbrellaAuthSecretV2Wo);
+    }
+
+    /**
+     * Rotation trigger for `umbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="umbrellaAuthSecretV2WoVersion")
+    private @Nullable Output<Integer> umbrellaAuthSecretV2WoVersion;
+
+    /**
+     * @return Rotation trigger for `umbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> umbrellaAuthSecretV2WoVersion() {
+        return Optional.ofNullable(this.umbrellaAuthSecretV2WoVersion);
+    }
+
+    /**
      * Umbrella DNS Authentication Key
+     *   - Only one of `umbrellaDnsAuthKey` and `umbrellaDnsAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaDnsAuthKeyWo` together with `umbrellaDnsAuthKeyWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="umbrellaDnsAuthKey")
@@ -117,6 +272,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     /**
      * @return Umbrella DNS Authentication Key
+     *   - Only one of `umbrellaDnsAuthKey` and `umbrellaDnsAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaDnsAuthKeyWo` together with `umbrellaDnsAuthKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> umbrellaDnsAuthKey() {
@@ -124,7 +281,43 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella DNS Authentication Key
+     *   - Only one of `umbrellaDnsAuthKey` and `umbrellaDnsAuthKeyWo` can be set.
+     * 
+     */
+    @Import(name="umbrellaDnsAuthKeyWo")
+    private @Nullable Output<String> umbrellaDnsAuthKeyWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella DNS Authentication Key
+     *   - Only one of `umbrellaDnsAuthKey` and `umbrellaDnsAuthKeyWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> umbrellaDnsAuthKeyWo() {
+        return Optional.ofNullable(this.umbrellaDnsAuthKeyWo);
+    }
+
+    /**
+     * Rotation trigger for `umbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="umbrellaDnsAuthKeyWoVersion")
+    private @Nullable Output<Integer> umbrellaDnsAuthKeyWoVersion;
+
+    /**
+     * @return Rotation trigger for `umbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> umbrellaDnsAuthKeyWoVersion() {
+        return Optional.ofNullable(this.umbrellaDnsAuthKeyWoVersion);
+    }
+
+    /**
      * Umbrella DNS Authentication Secret
+     *   - Only one of `umbrellaDnsAuthSecret` and `umbrellaDnsAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaDnsAuthSecretWo` together with `umbrellaDnsAuthSecretWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="umbrellaDnsAuthSecret")
@@ -132,10 +325,46 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     /**
      * @return Umbrella DNS Authentication Secret
+     *   - Only one of `umbrellaDnsAuthSecret` and `umbrellaDnsAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaDnsAuthSecretWo` together with `umbrellaDnsAuthSecretWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> umbrellaDnsAuthSecret() {
         return Optional.ofNullable(this.umbrellaDnsAuthSecret);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella DNS Authentication Secret
+     *   - Only one of `umbrellaDnsAuthSecret` and `umbrellaDnsAuthSecretWo` can be set.
+     * 
+     */
+    @Import(name="umbrellaDnsAuthSecretWo")
+    private @Nullable Output<String> umbrellaDnsAuthSecretWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella DNS Authentication Secret
+     *   - Only one of `umbrellaDnsAuthSecret` and `umbrellaDnsAuthSecretWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> umbrellaDnsAuthSecretWo() {
+        return Optional.ofNullable(this.umbrellaDnsAuthSecretWo);
+    }
+
+    /**
+     * Rotation trigger for `umbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="umbrellaDnsAuthSecretWoVersion")
+    private @Nullable Output<Integer> umbrellaDnsAuthSecretWoVersion;
+
+    /**
+     * @return Rotation trigger for `umbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> umbrellaDnsAuthSecretWoVersion() {
+        return Optional.ofNullable(this.umbrellaDnsAuthSecretWoVersion);
     }
 
     /**
@@ -155,6 +384,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     /**
      * Umbrella SIG Authentication Key
+     *   - Only one of `umbrellaSigAuthKey` and `umbrellaSigAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaSigAuthKeyWo` together with `umbrellaSigAuthKeyWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="umbrellaSigAuthKey")
@@ -162,6 +393,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     /**
      * @return Umbrella SIG Authentication Key
+     *   - Only one of `umbrellaSigAuthKey` and `umbrellaSigAuthKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaSigAuthKeyWo` together with `umbrellaSigAuthKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> umbrellaSigAuthKey() {
@@ -169,7 +402,43 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella SIG Authentication Key
+     *   - Only one of `umbrellaSigAuthKey` and `umbrellaSigAuthKeyWo` can be set.
+     * 
+     */
+    @Import(name="umbrellaSigAuthKeyWo")
+    private @Nullable Output<String> umbrellaSigAuthKeyWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella SIG Authentication Key
+     *   - Only one of `umbrellaSigAuthKey` and `umbrellaSigAuthKeyWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> umbrellaSigAuthKeyWo() {
+        return Optional.ofNullable(this.umbrellaSigAuthKeyWo);
+    }
+
+    /**
+     * Rotation trigger for `umbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="umbrellaSigAuthKeyWoVersion")
+    private @Nullable Output<Integer> umbrellaSigAuthKeyWoVersion;
+
+    /**
+     * @return Rotation trigger for `umbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> umbrellaSigAuthKeyWoVersion() {
+        return Optional.ofNullable(this.umbrellaSigAuthKeyWoVersion);
+    }
+
+    /**
      * Umbrella SIG Authentication Secret
+     *   - Only one of `umbrellaSigAuthSecret` and `umbrellaSigAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaSigAuthSecretWo` together with `umbrellaSigAuthSecretWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="umbrellaSigAuthSecret")
@@ -177,10 +446,46 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     /**
      * @return Umbrella SIG Authentication Secret
+     *   - Only one of `umbrellaSigAuthSecret` and `umbrellaSigAuthSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `umbrellaSigAuthSecretWo` together with `umbrellaSigAuthSecretWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> umbrellaSigAuthSecret() {
         return Optional.ofNullable(this.umbrellaSigAuthSecret);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella SIG Authentication Secret
+     *   - Only one of `umbrellaSigAuthSecret` and `umbrellaSigAuthSecretWo` can be set.
+     * 
+     */
+    @Import(name="umbrellaSigAuthSecretWo")
+    private @Nullable Output<String> umbrellaSigAuthSecretWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Umbrella SIG Authentication Secret
+     *   - Only one of `umbrellaSigAuthSecret` and `umbrellaSigAuthSecretWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> umbrellaSigAuthSecretWo() {
+        return Optional.ofNullable(this.umbrellaSigAuthSecretWo);
+    }
+
+    /**
+     * Rotation trigger for `umbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="umbrellaSigAuthSecretWoVersion")
+    private @Nullable Output<Integer> umbrellaSigAuthSecretWoVersion;
+
+    /**
+     * @return Rotation trigger for `umbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> umbrellaSigAuthSecretWoVersion() {
+        return Optional.ofNullable(this.umbrellaSigAuthSecretWoVersion);
     }
 
     /**
@@ -215,6 +520,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     /**
      * Zscaler Partner Key
+     *   - Only one of `zscalerPartnerKey` and `zscalerPartnerKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `zscalerPartnerKeyWo` together with `zscalerPartnerKeyWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="zscalerPartnerKey")
@@ -222,6 +529,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     /**
      * @return Zscaler Partner Key
+     *   - Only one of `zscalerPartnerKey` and `zscalerPartnerKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `zscalerPartnerKeyWo` together with `zscalerPartnerKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> zscalerPartnerKey() {
@@ -229,7 +538,43 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Zscaler Partner Key
+     *   - Only one of `zscalerPartnerKey` and `zscalerPartnerKeyWo` can be set.
+     * 
+     */
+    @Import(name="zscalerPartnerKeyWo")
+    private @Nullable Output<String> zscalerPartnerKeyWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Zscaler Partner Key
+     *   - Only one of `zscalerPartnerKey` and `zscalerPartnerKeyWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> zscalerPartnerKeyWo() {
+        return Optional.ofNullable(this.zscalerPartnerKeyWo);
+    }
+
+    /**
+     * Rotation trigger for `zscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="zscalerPartnerKeyWoVersion")
+    private @Nullable Output<Integer> zscalerPartnerKeyWoVersion;
+
+    /**
+     * @return Rotation trigger for `zscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> zscalerPartnerKeyWoVersion() {
+        return Optional.ofNullable(this.zscalerPartnerKeyWoVersion);
+    }
+
+    /**
      * Zscaler Password
+     *   - Only one of `zscalerPassword` and `zscalerPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `zscalerPasswordWo` together with `zscalerPasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="zscalerPassword")
@@ -237,10 +582,46 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     /**
      * @return Zscaler Password
+     *   - Only one of `zscalerPassword` and `zscalerPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `zscalerPasswordWo` together with `zscalerPasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> zscalerPassword() {
         return Optional.ofNullable(this.zscalerPassword);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Zscaler Password
+     *   - Only one of `zscalerPassword` and `zscalerPasswordWo` can be set.
+     * 
+     */
+    @Import(name="zscalerPasswordWo")
+    private @Nullable Output<String> zscalerPasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Zscaler Password
+     *   - Only one of `zscalerPassword` and `zscalerPasswordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> zscalerPasswordWo() {
+        return Optional.ofNullable(this.zscalerPasswordWo);
+    }
+
+    /**
+     * Rotation trigger for `zscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="zscalerPasswordWoVersion")
+    private @Nullable Output<Integer> zscalerPasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `zscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> zscalerPasswordWoVersion() {
+        return Optional.ofNullable(this.zscalerPasswordWoVersion);
     }
 
     /**
@@ -262,20 +643,40 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
     private CloudProviderSettingsArgs(CloudProviderSettingsArgs $) {
         this.ciscoSseAuthKey = $.ciscoSseAuthKey;
+        this.ciscoSseAuthKeyWo = $.ciscoSseAuthKeyWo;
+        this.ciscoSseAuthKeyWoVersion = $.ciscoSseAuthKeyWoVersion;
         this.ciscoSseAuthSecret = $.ciscoSseAuthSecret;
+        this.ciscoSseAuthSecretWo = $.ciscoSseAuthSecretWo;
+        this.ciscoSseAuthSecretWoVersion = $.ciscoSseAuthSecretWoVersion;
         this.ciscoSseContextSharing = $.ciscoSseContextSharing;
         this.ciscoSseOrgId = $.ciscoSseOrgId;
         this.umbrellaAuthKeyV2 = $.umbrellaAuthKeyV2;
+        this.umbrellaAuthKeyV2Wo = $.umbrellaAuthKeyV2Wo;
+        this.umbrellaAuthKeyV2WoVersion = $.umbrellaAuthKeyV2WoVersion;
         this.umbrellaAuthSecretV2 = $.umbrellaAuthSecretV2;
+        this.umbrellaAuthSecretV2Wo = $.umbrellaAuthSecretV2Wo;
+        this.umbrellaAuthSecretV2WoVersion = $.umbrellaAuthSecretV2WoVersion;
         this.umbrellaDnsAuthKey = $.umbrellaDnsAuthKey;
+        this.umbrellaDnsAuthKeyWo = $.umbrellaDnsAuthKeyWo;
+        this.umbrellaDnsAuthKeyWoVersion = $.umbrellaDnsAuthKeyWoVersion;
         this.umbrellaDnsAuthSecret = $.umbrellaDnsAuthSecret;
+        this.umbrellaDnsAuthSecretWo = $.umbrellaDnsAuthSecretWo;
+        this.umbrellaDnsAuthSecretWoVersion = $.umbrellaDnsAuthSecretWoVersion;
         this.umbrellaOrgId = $.umbrellaOrgId;
         this.umbrellaSigAuthKey = $.umbrellaSigAuthKey;
+        this.umbrellaSigAuthKeyWo = $.umbrellaSigAuthKeyWo;
+        this.umbrellaSigAuthKeyWoVersion = $.umbrellaSigAuthKeyWoVersion;
         this.umbrellaSigAuthSecret = $.umbrellaSigAuthSecret;
+        this.umbrellaSigAuthSecretWo = $.umbrellaSigAuthSecretWo;
+        this.umbrellaSigAuthSecretWoVersion = $.umbrellaSigAuthSecretWoVersion;
         this.zscalerOrganization = $.zscalerOrganization;
         this.zscalerPartnerBaseUri = $.zscalerPartnerBaseUri;
         this.zscalerPartnerKey = $.zscalerPartnerKey;
+        this.zscalerPartnerKeyWo = $.zscalerPartnerKeyWo;
+        this.zscalerPartnerKeyWoVersion = $.zscalerPartnerKeyWoVersion;
         this.zscalerPassword = $.zscalerPassword;
+        this.zscalerPasswordWo = $.zscalerPasswordWo;
+        this.zscalerPasswordWoVersion = $.zscalerPasswordWoVersion;
         this.zscalerUsername = $.zscalerUsername;
     }
 
@@ -299,6 +700,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
         /**
          * @param ciscoSseAuthKey Cisco SSE Authentication Key
+         *   - Only one of `ciscoSseAuthKey` and `ciscoSseAuthKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `ciscoSseAuthKeyWo` together with `ciscoSseAuthKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -310,6 +713,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
         /**
          * @param ciscoSseAuthKey Cisco SSE Authentication Key
+         *   - Only one of `ciscoSseAuthKey` and `ciscoSseAuthKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `ciscoSseAuthKeyWo` together with `ciscoSseAuthKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -319,7 +724,55 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
+         * @param ciscoSseAuthKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Cisco SSE Authentication Key
+         *   - Only one of `ciscoSseAuthKey` and `ciscoSseAuthKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ciscoSseAuthKeyWo(@Nullable Output<String> ciscoSseAuthKeyWo) {
+            $.ciscoSseAuthKeyWo = ciscoSseAuthKeyWo;
+            return this;
+        }
+
+        /**
+         * @param ciscoSseAuthKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Cisco SSE Authentication Key
+         *   - Only one of `ciscoSseAuthKey` and `ciscoSseAuthKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ciscoSseAuthKeyWo(String ciscoSseAuthKeyWo) {
+            return ciscoSseAuthKeyWo(Output.of(ciscoSseAuthKeyWo));
+        }
+
+        /**
+         * @param ciscoSseAuthKeyWoVersion Rotation trigger for `ciscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ciscoSseAuthKeyWoVersion(@Nullable Output<Integer> ciscoSseAuthKeyWoVersion) {
+            $.ciscoSseAuthKeyWoVersion = ciscoSseAuthKeyWoVersion;
+            return this;
+        }
+
+        /**
+         * @param ciscoSseAuthKeyWoVersion Rotation trigger for `ciscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ciscoSseAuthKeyWoVersion(Integer ciscoSseAuthKeyWoVersion) {
+            return ciscoSseAuthKeyWoVersion(Output.of(ciscoSseAuthKeyWoVersion));
+        }
+
+        /**
          * @param ciscoSseAuthSecret Cisco SSE Authentication Secret
+         *   - Only one of `ciscoSseAuthSecret` and `ciscoSseAuthSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `ciscoSseAuthSecretWo` together with `ciscoSseAuthSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -331,12 +784,60 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
         /**
          * @param ciscoSseAuthSecret Cisco SSE Authentication Secret
+         *   - Only one of `ciscoSseAuthSecret` and `ciscoSseAuthSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `ciscoSseAuthSecretWo` together with `ciscoSseAuthSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
          */
         public Builder ciscoSseAuthSecret(String ciscoSseAuthSecret) {
             return ciscoSseAuthSecret(Output.of(ciscoSseAuthSecret));
+        }
+
+        /**
+         * @param ciscoSseAuthSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Cisco SSE Authentication Secret
+         *   - Only one of `ciscoSseAuthSecret` and `ciscoSseAuthSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ciscoSseAuthSecretWo(@Nullable Output<String> ciscoSseAuthSecretWo) {
+            $.ciscoSseAuthSecretWo = ciscoSseAuthSecretWo;
+            return this;
+        }
+
+        /**
+         * @param ciscoSseAuthSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Cisco SSE Authentication Secret
+         *   - Only one of `ciscoSseAuthSecret` and `ciscoSseAuthSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ciscoSseAuthSecretWo(String ciscoSseAuthSecretWo) {
+            return ciscoSseAuthSecretWo(Output.of(ciscoSseAuthSecretWo));
+        }
+
+        /**
+         * @param ciscoSseAuthSecretWoVersion Rotation trigger for `ciscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ciscoSseAuthSecretWoVersion(@Nullable Output<Integer> ciscoSseAuthSecretWoVersion) {
+            $.ciscoSseAuthSecretWoVersion = ciscoSseAuthSecretWoVersion;
+            return this;
+        }
+
+        /**
+         * @param ciscoSseAuthSecretWoVersion Rotation trigger for `ciscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ciscoSseAuthSecretWoVersion(Integer ciscoSseAuthSecretWoVersion) {
+            return ciscoSseAuthSecretWoVersion(Output.of(ciscoSseAuthSecretWoVersion));
         }
 
         /**
@@ -385,6 +886,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
         /**
          * @param umbrellaAuthKeyV2 Umbrella Authentication Key (v2)
+         *   - Only one of `umbrellaAuthKeyV2` and `umbrellaAuthKeyV2Wo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `umbrellaAuthKeyV2Wo` together with `umbrellaAuthKeyV2WoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -396,6 +899,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
         /**
          * @param umbrellaAuthKeyV2 Umbrella Authentication Key (v2)
+         *   - Only one of `umbrellaAuthKeyV2` and `umbrellaAuthKeyV2Wo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `umbrellaAuthKeyV2Wo` together with `umbrellaAuthKeyV2WoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -405,7 +910,55 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
+         * @param umbrellaAuthKeyV2Wo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Umbrella Authentication Key (v2)
+         *   - Only one of `umbrellaAuthKeyV2` and `umbrellaAuthKeyV2Wo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaAuthKeyV2Wo(@Nullable Output<String> umbrellaAuthKeyV2Wo) {
+            $.umbrellaAuthKeyV2Wo = umbrellaAuthKeyV2Wo;
+            return this;
+        }
+
+        /**
+         * @param umbrellaAuthKeyV2Wo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Umbrella Authentication Key (v2)
+         *   - Only one of `umbrellaAuthKeyV2` and `umbrellaAuthKeyV2Wo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaAuthKeyV2Wo(String umbrellaAuthKeyV2Wo) {
+            return umbrellaAuthKeyV2Wo(Output.of(umbrellaAuthKeyV2Wo));
+        }
+
+        /**
+         * @param umbrellaAuthKeyV2WoVersion Rotation trigger for `umbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaAuthKeyV2WoVersion(@Nullable Output<Integer> umbrellaAuthKeyV2WoVersion) {
+            $.umbrellaAuthKeyV2WoVersion = umbrellaAuthKeyV2WoVersion;
+            return this;
+        }
+
+        /**
+         * @param umbrellaAuthKeyV2WoVersion Rotation trigger for `umbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaAuthKeyV2WoVersion(Integer umbrellaAuthKeyV2WoVersion) {
+            return umbrellaAuthKeyV2WoVersion(Output.of(umbrellaAuthKeyV2WoVersion));
+        }
+
+        /**
          * @param umbrellaAuthSecretV2 Umbrella Authentication Secret (v2)
+         *   - Only one of `umbrellaAuthSecretV2` and `umbrellaAuthSecretV2Wo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `umbrellaAuthSecretV2Wo` together with `umbrellaAuthSecretV2WoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -417,6 +970,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
         /**
          * @param umbrellaAuthSecretV2 Umbrella Authentication Secret (v2)
+         *   - Only one of `umbrellaAuthSecretV2` and `umbrellaAuthSecretV2Wo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `umbrellaAuthSecretV2Wo` together with `umbrellaAuthSecretV2WoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -426,7 +981,55 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
+         * @param umbrellaAuthSecretV2Wo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Umbrella Authentication Secret (v2)
+         *   - Only one of `umbrellaAuthSecretV2` and `umbrellaAuthSecretV2Wo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaAuthSecretV2Wo(@Nullable Output<String> umbrellaAuthSecretV2Wo) {
+            $.umbrellaAuthSecretV2Wo = umbrellaAuthSecretV2Wo;
+            return this;
+        }
+
+        /**
+         * @param umbrellaAuthSecretV2Wo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Umbrella Authentication Secret (v2)
+         *   - Only one of `umbrellaAuthSecretV2` and `umbrellaAuthSecretV2Wo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaAuthSecretV2Wo(String umbrellaAuthSecretV2Wo) {
+            return umbrellaAuthSecretV2Wo(Output.of(umbrellaAuthSecretV2Wo));
+        }
+
+        /**
+         * @param umbrellaAuthSecretV2WoVersion Rotation trigger for `umbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaAuthSecretV2WoVersion(@Nullable Output<Integer> umbrellaAuthSecretV2WoVersion) {
+            $.umbrellaAuthSecretV2WoVersion = umbrellaAuthSecretV2WoVersion;
+            return this;
+        }
+
+        /**
+         * @param umbrellaAuthSecretV2WoVersion Rotation trigger for `umbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaAuthSecretV2WoVersion(Integer umbrellaAuthSecretV2WoVersion) {
+            return umbrellaAuthSecretV2WoVersion(Output.of(umbrellaAuthSecretV2WoVersion));
+        }
+
+        /**
          * @param umbrellaDnsAuthKey Umbrella DNS Authentication Key
+         *   - Only one of `umbrellaDnsAuthKey` and `umbrellaDnsAuthKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `umbrellaDnsAuthKeyWo` together with `umbrellaDnsAuthKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -438,6 +1041,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
         /**
          * @param umbrellaDnsAuthKey Umbrella DNS Authentication Key
+         *   - Only one of `umbrellaDnsAuthKey` and `umbrellaDnsAuthKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `umbrellaDnsAuthKeyWo` together with `umbrellaDnsAuthKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -447,7 +1052,55 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
+         * @param umbrellaDnsAuthKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Umbrella DNS Authentication Key
+         *   - Only one of `umbrellaDnsAuthKey` and `umbrellaDnsAuthKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaDnsAuthKeyWo(@Nullable Output<String> umbrellaDnsAuthKeyWo) {
+            $.umbrellaDnsAuthKeyWo = umbrellaDnsAuthKeyWo;
+            return this;
+        }
+
+        /**
+         * @param umbrellaDnsAuthKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Umbrella DNS Authentication Key
+         *   - Only one of `umbrellaDnsAuthKey` and `umbrellaDnsAuthKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaDnsAuthKeyWo(String umbrellaDnsAuthKeyWo) {
+            return umbrellaDnsAuthKeyWo(Output.of(umbrellaDnsAuthKeyWo));
+        }
+
+        /**
+         * @param umbrellaDnsAuthKeyWoVersion Rotation trigger for `umbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaDnsAuthKeyWoVersion(@Nullable Output<Integer> umbrellaDnsAuthKeyWoVersion) {
+            $.umbrellaDnsAuthKeyWoVersion = umbrellaDnsAuthKeyWoVersion;
+            return this;
+        }
+
+        /**
+         * @param umbrellaDnsAuthKeyWoVersion Rotation trigger for `umbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaDnsAuthKeyWoVersion(Integer umbrellaDnsAuthKeyWoVersion) {
+            return umbrellaDnsAuthKeyWoVersion(Output.of(umbrellaDnsAuthKeyWoVersion));
+        }
+
+        /**
          * @param umbrellaDnsAuthSecret Umbrella DNS Authentication Secret
+         *   - Only one of `umbrellaDnsAuthSecret` and `umbrellaDnsAuthSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `umbrellaDnsAuthSecretWo` together with `umbrellaDnsAuthSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -459,12 +1112,60 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
         /**
          * @param umbrellaDnsAuthSecret Umbrella DNS Authentication Secret
+         *   - Only one of `umbrellaDnsAuthSecret` and `umbrellaDnsAuthSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `umbrellaDnsAuthSecretWo` together with `umbrellaDnsAuthSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
          */
         public Builder umbrellaDnsAuthSecret(String umbrellaDnsAuthSecret) {
             return umbrellaDnsAuthSecret(Output.of(umbrellaDnsAuthSecret));
+        }
+
+        /**
+         * @param umbrellaDnsAuthSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Umbrella DNS Authentication Secret
+         *   - Only one of `umbrellaDnsAuthSecret` and `umbrellaDnsAuthSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaDnsAuthSecretWo(@Nullable Output<String> umbrellaDnsAuthSecretWo) {
+            $.umbrellaDnsAuthSecretWo = umbrellaDnsAuthSecretWo;
+            return this;
+        }
+
+        /**
+         * @param umbrellaDnsAuthSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Umbrella DNS Authentication Secret
+         *   - Only one of `umbrellaDnsAuthSecret` and `umbrellaDnsAuthSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaDnsAuthSecretWo(String umbrellaDnsAuthSecretWo) {
+            return umbrellaDnsAuthSecretWo(Output.of(umbrellaDnsAuthSecretWo));
+        }
+
+        /**
+         * @param umbrellaDnsAuthSecretWoVersion Rotation trigger for `umbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaDnsAuthSecretWoVersion(@Nullable Output<Integer> umbrellaDnsAuthSecretWoVersion) {
+            $.umbrellaDnsAuthSecretWoVersion = umbrellaDnsAuthSecretWoVersion;
+            return this;
+        }
+
+        /**
+         * @param umbrellaDnsAuthSecretWoVersion Rotation trigger for `umbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaDnsAuthSecretWoVersion(Integer umbrellaDnsAuthSecretWoVersion) {
+            return umbrellaDnsAuthSecretWoVersion(Output.of(umbrellaDnsAuthSecretWoVersion));
         }
 
         /**
@@ -490,6 +1191,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
         /**
          * @param umbrellaSigAuthKey Umbrella SIG Authentication Key
+         *   - Only one of `umbrellaSigAuthKey` and `umbrellaSigAuthKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `umbrellaSigAuthKeyWo` together with `umbrellaSigAuthKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -501,6 +1204,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
         /**
          * @param umbrellaSigAuthKey Umbrella SIG Authentication Key
+         *   - Only one of `umbrellaSigAuthKey` and `umbrellaSigAuthKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `umbrellaSigAuthKeyWo` together with `umbrellaSigAuthKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -510,7 +1215,55 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
+         * @param umbrellaSigAuthKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Umbrella SIG Authentication Key
+         *   - Only one of `umbrellaSigAuthKey` and `umbrellaSigAuthKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaSigAuthKeyWo(@Nullable Output<String> umbrellaSigAuthKeyWo) {
+            $.umbrellaSigAuthKeyWo = umbrellaSigAuthKeyWo;
+            return this;
+        }
+
+        /**
+         * @param umbrellaSigAuthKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Umbrella SIG Authentication Key
+         *   - Only one of `umbrellaSigAuthKey` and `umbrellaSigAuthKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaSigAuthKeyWo(String umbrellaSigAuthKeyWo) {
+            return umbrellaSigAuthKeyWo(Output.of(umbrellaSigAuthKeyWo));
+        }
+
+        /**
+         * @param umbrellaSigAuthKeyWoVersion Rotation trigger for `umbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaSigAuthKeyWoVersion(@Nullable Output<Integer> umbrellaSigAuthKeyWoVersion) {
+            $.umbrellaSigAuthKeyWoVersion = umbrellaSigAuthKeyWoVersion;
+            return this;
+        }
+
+        /**
+         * @param umbrellaSigAuthKeyWoVersion Rotation trigger for `umbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaSigAuthKeyWoVersion(Integer umbrellaSigAuthKeyWoVersion) {
+            return umbrellaSigAuthKeyWoVersion(Output.of(umbrellaSigAuthKeyWoVersion));
+        }
+
+        /**
          * @param umbrellaSigAuthSecret Umbrella SIG Authentication Secret
+         *   - Only one of `umbrellaSigAuthSecret` and `umbrellaSigAuthSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `umbrellaSigAuthSecretWo` together with `umbrellaSigAuthSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -522,12 +1275,60 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
         /**
          * @param umbrellaSigAuthSecret Umbrella SIG Authentication Secret
+         *   - Only one of `umbrellaSigAuthSecret` and `umbrellaSigAuthSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `umbrellaSigAuthSecretWo` together with `umbrellaSigAuthSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
          */
         public Builder umbrellaSigAuthSecret(String umbrellaSigAuthSecret) {
             return umbrellaSigAuthSecret(Output.of(umbrellaSigAuthSecret));
+        }
+
+        /**
+         * @param umbrellaSigAuthSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Umbrella SIG Authentication Secret
+         *   - Only one of `umbrellaSigAuthSecret` and `umbrellaSigAuthSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaSigAuthSecretWo(@Nullable Output<String> umbrellaSigAuthSecretWo) {
+            $.umbrellaSigAuthSecretWo = umbrellaSigAuthSecretWo;
+            return this;
+        }
+
+        /**
+         * @param umbrellaSigAuthSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Umbrella SIG Authentication Secret
+         *   - Only one of `umbrellaSigAuthSecret` and `umbrellaSigAuthSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaSigAuthSecretWo(String umbrellaSigAuthSecretWo) {
+            return umbrellaSigAuthSecretWo(Output.of(umbrellaSigAuthSecretWo));
+        }
+
+        /**
+         * @param umbrellaSigAuthSecretWoVersion Rotation trigger for `umbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaSigAuthSecretWoVersion(@Nullable Output<Integer> umbrellaSigAuthSecretWoVersion) {
+            $.umbrellaSigAuthSecretWoVersion = umbrellaSigAuthSecretWoVersion;
+            return this;
+        }
+
+        /**
+         * @param umbrellaSigAuthSecretWoVersion Rotation trigger for `umbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder umbrellaSigAuthSecretWoVersion(Integer umbrellaSigAuthSecretWoVersion) {
+            return umbrellaSigAuthSecretWoVersion(Output.of(umbrellaSigAuthSecretWoVersion));
         }
 
         /**
@@ -574,6 +1375,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
         /**
          * @param zscalerPartnerKey Zscaler Partner Key
+         *   - Only one of `zscalerPartnerKey` and `zscalerPartnerKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `zscalerPartnerKeyWo` together with `zscalerPartnerKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -585,6 +1388,8 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
         /**
          * @param zscalerPartnerKey Zscaler Partner Key
+         *   - Only one of `zscalerPartnerKey` and `zscalerPartnerKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `zscalerPartnerKeyWo` together with `zscalerPartnerKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -594,7 +1399,55 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
         }
 
         /**
+         * @param zscalerPartnerKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Zscaler Partner Key
+         *   - Only one of `zscalerPartnerKey` and `zscalerPartnerKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zscalerPartnerKeyWo(@Nullable Output<String> zscalerPartnerKeyWo) {
+            $.zscalerPartnerKeyWo = zscalerPartnerKeyWo;
+            return this;
+        }
+
+        /**
+         * @param zscalerPartnerKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Zscaler Partner Key
+         *   - Only one of `zscalerPartnerKey` and `zscalerPartnerKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zscalerPartnerKeyWo(String zscalerPartnerKeyWo) {
+            return zscalerPartnerKeyWo(Output.of(zscalerPartnerKeyWo));
+        }
+
+        /**
+         * @param zscalerPartnerKeyWoVersion Rotation trigger for `zscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zscalerPartnerKeyWoVersion(@Nullable Output<Integer> zscalerPartnerKeyWoVersion) {
+            $.zscalerPartnerKeyWoVersion = zscalerPartnerKeyWoVersion;
+            return this;
+        }
+
+        /**
+         * @param zscalerPartnerKeyWoVersion Rotation trigger for `zscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zscalerPartnerKeyWoVersion(Integer zscalerPartnerKeyWoVersion) {
+            return zscalerPartnerKeyWoVersion(Output.of(zscalerPartnerKeyWoVersion));
+        }
+
+        /**
          * @param zscalerPassword Zscaler Password
+         *   - Only one of `zscalerPassword` and `zscalerPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `zscalerPasswordWo` together with `zscalerPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -606,12 +1459,60 @@ public final class CloudProviderSettingsArgs extends com.pulumi.resources.Resour
 
         /**
          * @param zscalerPassword Zscaler Password
+         *   - Only one of `zscalerPassword` and `zscalerPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `zscalerPasswordWo` together with `zscalerPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
          */
         public Builder zscalerPassword(String zscalerPassword) {
             return zscalerPassword(Output.of(zscalerPassword));
+        }
+
+        /**
+         * @param zscalerPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Zscaler Password
+         *   - Only one of `zscalerPassword` and `zscalerPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zscalerPasswordWo(@Nullable Output<String> zscalerPasswordWo) {
+            $.zscalerPasswordWo = zscalerPasswordWo;
+            return this;
+        }
+
+        /**
+         * @param zscalerPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Zscaler Password
+         *   - Only one of `zscalerPassword` and `zscalerPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zscalerPasswordWo(String zscalerPasswordWo) {
+            return zscalerPasswordWo(Output.of(zscalerPasswordWo));
+        }
+
+        /**
+         * @param zscalerPasswordWoVersion Rotation trigger for `zscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zscalerPasswordWoVersion(@Nullable Output<Integer> zscalerPasswordWoVersion) {
+            $.zscalerPasswordWoVersion = zscalerPasswordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param zscalerPasswordWoVersion Rotation trigger for `zscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zscalerPasswordWoVersion(Integer zscalerPasswordWoVersion) {
+            return zscalerPasswordWoVersion(Output.of(zscalerPasswordWoVersion));
         }
 
         /**

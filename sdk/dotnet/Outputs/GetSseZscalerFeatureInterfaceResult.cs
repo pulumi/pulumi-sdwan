@@ -154,6 +154,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string PreSharedSecretVariable;
         /// <summary>
+        /// Use preshared key to authenticate IKE peer
+        /// </summary>
+        public readonly string PreSharedSecretWo;
+        /// <summary>
+        /// Rotation trigger for `PreSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int PreSharedSecretWoVersion;
+        /// <summary>
         /// Administrative state
         /// </summary>
         public readonly bool Shutdown;
@@ -298,6 +306,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string preSharedSecretVariable,
 
+            string preSharedSecretWo,
+
+            int preSharedSecretWoVersion,
+
             bool shutdown,
 
             int tcpMssAdjust,
@@ -369,6 +381,8 @@ namespace Pulumi.Sdwan.Outputs
             PreSharedKeyDynamic = preSharedKeyDynamic;
             PreSharedSecret = preSharedSecret;
             PreSharedSecretVariable = preSharedSecretVariable;
+            PreSharedSecretWo = preSharedSecretWo;
+            PreSharedSecretWoVersion = preSharedSecretWoVersion;
             Shutdown = shutdown;
             TcpMssAdjust = tcpMssAdjust;
             TcpMssAdjustVariable = tcpMssAdjustVariable;

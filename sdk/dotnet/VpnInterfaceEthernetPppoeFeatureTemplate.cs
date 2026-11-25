@@ -128,6 +128,7 @@ namespace Pulumi.Sdwan
     ///         ShapingRate = 10000000,
     ///         QosMap = "test",
     ///         QosMapVpn = "test",
+    ///         ServiceProviderName = "MyISP",
     ///         BandwidthUpstream = 214748300,
     ///         BandwidthDownstream = 214748300,
     ///         WriteRule = "RULE1",
@@ -684,6 +685,18 @@ namespace Pulumi.Sdwan
         public Output<string?> SecondaryRegionVariable { get; private set; } = null!;
 
         /// <summary>
+        /// Service Provider Name
+        /// </summary>
+        [Output("serviceProviderName")]
+        public Output<string?> ServiceProviderName { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Output("serviceProviderNameVariable")]
+        public Output<string?> ServiceProviderNameVariable { get; private set; } = null!;
+
+        /// <summary>
         /// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
         ///   - Range: `8`-`100000000`
         /// </summary>
@@ -1224,6 +1237,11 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "chapPppAuthPassword",
+                    "papPppAuthPassword",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -1297,11 +1315,21 @@ namespace Pulumi.Sdwan
         [Input("chapHostnameVariable")]
         public Input<string>? ChapHostnameVariable { get; set; }
 
+        [Input("chapPppAuthPassword")]
+        private Input<string>? _chapPppAuthPassword;
+
         /// <summary>
         /// Specify ppp chap authentication Password
         /// </summary>
-        [Input("chapPppAuthPassword")]
-        public Input<string>? ChapPppAuthPassword { get; set; }
+        public Input<string>? ChapPppAuthPassword
+        {
+            get => _chapPppAuthPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _chapPppAuthPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -1551,11 +1579,21 @@ namespace Pulumi.Sdwan
         [Input("papPassword")]
         public Input<bool>? PapPassword { get; set; }
 
+        [Input("papPppAuthPassword")]
+        private Input<string>? _papPppAuthPassword;
+
         /// <summary>
         /// Specify ppp pap authentication Password
         /// </summary>
-        [Input("papPppAuthPassword")]
-        public Input<string>? PapPppAuthPassword { get; set; }
+        public Input<string>? PapPppAuthPassword
+        {
+            get => _papPppAuthPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _papPppAuthPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -1783,6 +1821,18 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("secondaryRegionVariable")]
         public Input<string>? SecondaryRegionVariable { get; set; }
+
+        /// <summary>
+        /// Service Provider Name
+        /// </summary>
+        [Input("serviceProviderName")]
+        public Input<string>? ServiceProviderName { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("serviceProviderNameVariable")]
+        public Input<string>? ServiceProviderNameVariable { get; set; }
 
         /// <summary>
         /// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
@@ -2372,11 +2422,21 @@ namespace Pulumi.Sdwan
         [Input("chapHostnameVariable")]
         public Input<string>? ChapHostnameVariable { get; set; }
 
+        [Input("chapPppAuthPassword")]
+        private Input<string>? _chapPppAuthPassword;
+
         /// <summary>
         /// Specify ppp chap authentication Password
         /// </summary>
-        [Input("chapPppAuthPassword")]
-        public Input<string>? ChapPppAuthPassword { get; set; }
+        public Input<string>? ChapPppAuthPassword
+        {
+            get => _chapPppAuthPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _chapPppAuthPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -2626,11 +2686,21 @@ namespace Pulumi.Sdwan
         [Input("papPassword")]
         public Input<bool>? PapPassword { get; set; }
 
+        [Input("papPppAuthPassword")]
+        private Input<string>? _papPppAuthPassword;
+
         /// <summary>
         /// Specify ppp pap authentication Password
         /// </summary>
-        [Input("papPppAuthPassword")]
-        public Input<string>? PapPppAuthPassword { get; set; }
+        public Input<string>? PapPppAuthPassword
+        {
+            get => _papPppAuthPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _papPppAuthPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -2858,6 +2928,18 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("secondaryRegionVariable")]
         public Input<string>? SecondaryRegionVariable { get; set; }
+
+        /// <summary>
+        /// Service Provider Name
+        /// </summary>
+        [Input("serviceProviderName")]
+        public Input<string>? ServiceProviderName { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("serviceProviderNameVariable")]
+        public Input<string>? ServiceProviderNameVariable { get; set; }
 
         /// <summary>
         /// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps

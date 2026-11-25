@@ -51,15 +51,47 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Cisco SSE Authentication Key
+        ///   - Only one of `CiscoSseAuthKey` and `CiscoSseAuthKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `CiscoSseAuthKeyWo` together with `CiscoSseAuthKeyWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("ciscoSseAuthKey")]
         public Output<string?> CiscoSseAuthKey { get; private set; } = null!;
 
         /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Cisco SSE Authentication Key
+        ///   - Only one of `CiscoSseAuthKey` and `CiscoSseAuthKeyWo` can be set.
+        /// </summary>
+        [Output("ciscoSseAuthKeyWo")]
+        public Output<string?> CiscoSseAuthKeyWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `CiscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("ciscoSseAuthKeyWoVersion")]
+        public Output<int?> CiscoSseAuthKeyWoVersion { get; private set; } = null!;
+
+        /// <summary>
         /// Cisco SSE Authentication Secret
+        ///   - Only one of `CiscoSseAuthSecret` and `CiscoSseAuthSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `CiscoSseAuthSecretWo` together with `CiscoSseAuthSecretWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("ciscoSseAuthSecret")]
         public Output<string?> CiscoSseAuthSecret { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Cisco SSE Authentication Secret
+        ///   - Only one of `CiscoSseAuthSecret` and `CiscoSseAuthSecretWo` can be set.
+        /// </summary>
+        [Output("ciscoSseAuthSecretWo")]
+        public Output<string?> CiscoSseAuthSecretWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `CiscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("ciscoSseAuthSecretWoVersion")]
+        public Output<int?> CiscoSseAuthSecretWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// Enable Cisco SSE Context Sharing
@@ -76,27 +108,91 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Umbrella Authentication Key (v2)
+        ///   - Only one of `UmbrellaAuthKeyV2` and `UmbrellaAuthKeyV2Wo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaAuthKeyV2Wo` together with `UmbrellaAuthKeyV2WoVersion`, which keeps it out of state.
         /// </summary>
         [Output("umbrellaAuthKeyV2")]
         public Output<string?> UmbrellaAuthKeyV2 { get; private set; } = null!;
 
         /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella Authentication Key (v2)
+        ///   - Only one of `UmbrellaAuthKeyV2` and `UmbrellaAuthKeyV2Wo` can be set.
+        /// </summary>
+        [Output("umbrellaAuthKeyV2Wo")]
+        public Output<string?> UmbrellaAuthKeyV2Wo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("umbrellaAuthKeyV2WoVersion")]
+        public Output<int?> UmbrellaAuthKeyV2WoVersion { get; private set; } = null!;
+
+        /// <summary>
         /// Umbrella Authentication Secret (v2)
+        ///   - Only one of `UmbrellaAuthSecretV2` and `UmbrellaAuthSecretV2Wo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaAuthSecretV2Wo` together with `UmbrellaAuthSecretV2WoVersion`, which keeps it out of state.
         /// </summary>
         [Output("umbrellaAuthSecretV2")]
         public Output<string?> UmbrellaAuthSecretV2 { get; private set; } = null!;
 
         /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella Authentication Secret (v2)
+        ///   - Only one of `UmbrellaAuthSecretV2` and `UmbrellaAuthSecretV2Wo` can be set.
+        /// </summary>
+        [Output("umbrellaAuthSecretV2Wo")]
+        public Output<string?> UmbrellaAuthSecretV2Wo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("umbrellaAuthSecretV2WoVersion")]
+        public Output<int?> UmbrellaAuthSecretV2WoVersion { get; private set; } = null!;
+
+        /// <summary>
         /// Umbrella DNS Authentication Key
+        ///   - Only one of `UmbrellaDnsAuthKey` and `UmbrellaDnsAuthKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaDnsAuthKeyWo` together with `UmbrellaDnsAuthKeyWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("umbrellaDnsAuthKey")]
         public Output<string?> UmbrellaDnsAuthKey { get; private set; } = null!;
 
         /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella DNS Authentication Key
+        ///   - Only one of `UmbrellaDnsAuthKey` and `UmbrellaDnsAuthKeyWo` can be set.
+        /// </summary>
+        [Output("umbrellaDnsAuthKeyWo")]
+        public Output<string?> UmbrellaDnsAuthKeyWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("umbrellaDnsAuthKeyWoVersion")]
+        public Output<int?> UmbrellaDnsAuthKeyWoVersion { get; private set; } = null!;
+
+        /// <summary>
         /// Umbrella DNS Authentication Secret
+        ///   - Only one of `UmbrellaDnsAuthSecret` and `UmbrellaDnsAuthSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaDnsAuthSecretWo` together with `UmbrellaDnsAuthSecretWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("umbrellaDnsAuthSecret")]
         public Output<string?> UmbrellaDnsAuthSecret { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella DNS Authentication Secret
+        ///   - Only one of `UmbrellaDnsAuthSecret` and `UmbrellaDnsAuthSecretWo` can be set.
+        /// </summary>
+        [Output("umbrellaDnsAuthSecretWo")]
+        public Output<string?> UmbrellaDnsAuthSecretWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("umbrellaDnsAuthSecretWoVersion")]
+        public Output<int?> UmbrellaDnsAuthSecretWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// Umbrella Organization ID (numeric string)
@@ -106,15 +202,47 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Umbrella SIG Authentication Key
+        ///   - Only one of `UmbrellaSigAuthKey` and `UmbrellaSigAuthKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaSigAuthKeyWo` together with `UmbrellaSigAuthKeyWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("umbrellaSigAuthKey")]
         public Output<string?> UmbrellaSigAuthKey { get; private set; } = null!;
 
         /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella SIG Authentication Key
+        ///   - Only one of `UmbrellaSigAuthKey` and `UmbrellaSigAuthKeyWo` can be set.
+        /// </summary>
+        [Output("umbrellaSigAuthKeyWo")]
+        public Output<string?> UmbrellaSigAuthKeyWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("umbrellaSigAuthKeyWoVersion")]
+        public Output<int?> UmbrellaSigAuthKeyWoVersion { get; private set; } = null!;
+
+        /// <summary>
         /// Umbrella SIG Authentication Secret
+        ///   - Only one of `UmbrellaSigAuthSecret` and `UmbrellaSigAuthSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaSigAuthSecretWo` together with `UmbrellaSigAuthSecretWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("umbrellaSigAuthSecret")]
         public Output<string?> UmbrellaSigAuthSecret { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella SIG Authentication Secret
+        ///   - Only one of `UmbrellaSigAuthSecret` and `UmbrellaSigAuthSecretWo` can be set.
+        /// </summary>
+        [Output("umbrellaSigAuthSecretWo")]
+        public Output<string?> UmbrellaSigAuthSecretWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("umbrellaSigAuthSecretWoVersion")]
+        public Output<int?> UmbrellaSigAuthSecretWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// Zscaler Organization
@@ -130,15 +258,47 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Zscaler Partner Key
+        ///   - Only one of `ZscalerPartnerKey` and `ZscalerPartnerKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `ZscalerPartnerKeyWo` together with `ZscalerPartnerKeyWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("zscalerPartnerKey")]
         public Output<string?> ZscalerPartnerKey { get; private set; } = null!;
 
         /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Zscaler Partner Key
+        ///   - Only one of `ZscalerPartnerKey` and `ZscalerPartnerKeyWo` can be set.
+        /// </summary>
+        [Output("zscalerPartnerKeyWo")]
+        public Output<string?> ZscalerPartnerKeyWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `ZscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("zscalerPartnerKeyWoVersion")]
+        public Output<int?> ZscalerPartnerKeyWoVersion { get; private set; } = null!;
+
+        /// <summary>
         /// Zscaler Password
+        ///   - Only one of `ZscalerPassword` and `ZscalerPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `ZscalerPasswordWo` together with `ZscalerPasswordWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("zscalerPassword")]
         public Output<string?> ZscalerPassword { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Zscaler Password
+        ///   - Only one of `ZscalerPassword` and `ZscalerPasswordWo` can be set.
+        /// </summary>
+        [Output("zscalerPasswordWo")]
+        public Output<string?> ZscalerPasswordWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `ZscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("zscalerPasswordWoVersion")]
+        public Output<int?> ZscalerPasswordWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// Zscaler Username
@@ -169,6 +329,29 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "ciscoSseAuthKey",
+                    "ciscoSseAuthKeyWo",
+                    "ciscoSseAuthSecret",
+                    "ciscoSseAuthSecretWo",
+                    "umbrellaAuthKeyV2",
+                    "umbrellaAuthKeyV2Wo",
+                    "umbrellaAuthSecretV2",
+                    "umbrellaAuthSecretV2Wo",
+                    "umbrellaDnsAuthKey",
+                    "umbrellaDnsAuthKeyWo",
+                    "umbrellaDnsAuthSecret",
+                    "umbrellaDnsAuthSecretWo",
+                    "umbrellaSigAuthKey",
+                    "umbrellaSigAuthKeyWo",
+                    "umbrellaSigAuthSecret",
+                    "umbrellaSigAuthSecretWo",
+                    "zscalerPartnerKey",
+                    "zscalerPartnerKeyWo",
+                    "zscalerPassword",
+                    "zscalerPasswordWo",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -192,17 +375,89 @@ namespace Pulumi.Sdwan
 
     public sealed class CloudProviderSettingsArgs : global::Pulumi.ResourceArgs
     {
+        [Input("ciscoSseAuthKey")]
+        private Input<string>? _ciscoSseAuthKey;
+
         /// <summary>
         /// Cisco SSE Authentication Key
+        ///   - Only one of `CiscoSseAuthKey` and `CiscoSseAuthKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `CiscoSseAuthKeyWo` together with `CiscoSseAuthKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("ciscoSseAuthKey")]
-        public Input<string>? CiscoSseAuthKey { get; set; }
+        public Input<string>? CiscoSseAuthKey
+        {
+            get => _ciscoSseAuthKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ciscoSseAuthKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("ciscoSseAuthKeyWo")]
+        private Input<string>? _ciscoSseAuthKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Cisco SSE Authentication Key
+        ///   - Only one of `CiscoSseAuthKey` and `CiscoSseAuthKeyWo` can be set.
+        /// </summary>
+        public Input<string>? CiscoSseAuthKeyWo
+        {
+            get => _ciscoSseAuthKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ciscoSseAuthKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `CiscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("ciscoSseAuthKeyWoVersion")]
+        public Input<int>? CiscoSseAuthKeyWoVersion { get; set; }
+
+        [Input("ciscoSseAuthSecret")]
+        private Input<string>? _ciscoSseAuthSecret;
 
         /// <summary>
         /// Cisco SSE Authentication Secret
+        ///   - Only one of `CiscoSseAuthSecret` and `CiscoSseAuthSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `CiscoSseAuthSecretWo` together with `CiscoSseAuthSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("ciscoSseAuthSecret")]
-        public Input<string>? CiscoSseAuthSecret { get; set; }
+        public Input<string>? CiscoSseAuthSecret
+        {
+            get => _ciscoSseAuthSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ciscoSseAuthSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("ciscoSseAuthSecretWo")]
+        private Input<string>? _ciscoSseAuthSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Cisco SSE Authentication Secret
+        ///   - Only one of `CiscoSseAuthSecret` and `CiscoSseAuthSecretWo` can be set.
+        /// </summary>
+        public Input<string>? CiscoSseAuthSecretWo
+        {
+            get => _ciscoSseAuthSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ciscoSseAuthSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `CiscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("ciscoSseAuthSecretWoVersion")]
+        public Input<int>? CiscoSseAuthSecretWoVersion { get; set; }
 
         /// <summary>
         /// Enable Cisco SSE Context Sharing
@@ -217,29 +472,173 @@ namespace Pulumi.Sdwan
         [Input("ciscoSseOrgId")]
         public Input<string>? CiscoSseOrgId { get; set; }
 
+        [Input("umbrellaAuthKeyV2")]
+        private Input<string>? _umbrellaAuthKeyV2;
+
         /// <summary>
         /// Umbrella Authentication Key (v2)
+        ///   - Only one of `UmbrellaAuthKeyV2` and `UmbrellaAuthKeyV2Wo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaAuthKeyV2Wo` together with `UmbrellaAuthKeyV2WoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("umbrellaAuthKeyV2")]
-        public Input<string>? UmbrellaAuthKeyV2 { get; set; }
+        public Input<string>? UmbrellaAuthKeyV2
+        {
+            get => _umbrellaAuthKeyV2;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaAuthKeyV2 = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("umbrellaAuthKeyV2Wo")]
+        private Input<string>? _umbrellaAuthKeyV2Wo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella Authentication Key (v2)
+        ///   - Only one of `UmbrellaAuthKeyV2` and `UmbrellaAuthKeyV2Wo` can be set.
+        /// </summary>
+        public Input<string>? UmbrellaAuthKeyV2Wo
+        {
+            get => _umbrellaAuthKeyV2Wo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaAuthKeyV2Wo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("umbrellaAuthKeyV2WoVersion")]
+        public Input<int>? UmbrellaAuthKeyV2WoVersion { get; set; }
+
+        [Input("umbrellaAuthSecretV2")]
+        private Input<string>? _umbrellaAuthSecretV2;
 
         /// <summary>
         /// Umbrella Authentication Secret (v2)
+        ///   - Only one of `UmbrellaAuthSecretV2` and `UmbrellaAuthSecretV2Wo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaAuthSecretV2Wo` together with `UmbrellaAuthSecretV2WoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("umbrellaAuthSecretV2")]
-        public Input<string>? UmbrellaAuthSecretV2 { get; set; }
+        public Input<string>? UmbrellaAuthSecretV2
+        {
+            get => _umbrellaAuthSecretV2;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaAuthSecretV2 = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("umbrellaAuthSecretV2Wo")]
+        private Input<string>? _umbrellaAuthSecretV2Wo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella Authentication Secret (v2)
+        ///   - Only one of `UmbrellaAuthSecretV2` and `UmbrellaAuthSecretV2Wo` can be set.
+        /// </summary>
+        public Input<string>? UmbrellaAuthSecretV2Wo
+        {
+            get => _umbrellaAuthSecretV2Wo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaAuthSecretV2Wo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("umbrellaAuthSecretV2WoVersion")]
+        public Input<int>? UmbrellaAuthSecretV2WoVersion { get; set; }
+
+        [Input("umbrellaDnsAuthKey")]
+        private Input<string>? _umbrellaDnsAuthKey;
 
         /// <summary>
         /// Umbrella DNS Authentication Key
+        ///   - Only one of `UmbrellaDnsAuthKey` and `UmbrellaDnsAuthKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaDnsAuthKeyWo` together with `UmbrellaDnsAuthKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("umbrellaDnsAuthKey")]
-        public Input<string>? UmbrellaDnsAuthKey { get; set; }
+        public Input<string>? UmbrellaDnsAuthKey
+        {
+            get => _umbrellaDnsAuthKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaDnsAuthKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("umbrellaDnsAuthKeyWo")]
+        private Input<string>? _umbrellaDnsAuthKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella DNS Authentication Key
+        ///   - Only one of `UmbrellaDnsAuthKey` and `UmbrellaDnsAuthKeyWo` can be set.
+        /// </summary>
+        public Input<string>? UmbrellaDnsAuthKeyWo
+        {
+            get => _umbrellaDnsAuthKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaDnsAuthKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("umbrellaDnsAuthKeyWoVersion")]
+        public Input<int>? UmbrellaDnsAuthKeyWoVersion { get; set; }
+
+        [Input("umbrellaDnsAuthSecret")]
+        private Input<string>? _umbrellaDnsAuthSecret;
 
         /// <summary>
         /// Umbrella DNS Authentication Secret
+        ///   - Only one of `UmbrellaDnsAuthSecret` and `UmbrellaDnsAuthSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaDnsAuthSecretWo` together with `UmbrellaDnsAuthSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("umbrellaDnsAuthSecret")]
-        public Input<string>? UmbrellaDnsAuthSecret { get; set; }
+        public Input<string>? UmbrellaDnsAuthSecret
+        {
+            get => _umbrellaDnsAuthSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaDnsAuthSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("umbrellaDnsAuthSecretWo")]
+        private Input<string>? _umbrellaDnsAuthSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella DNS Authentication Secret
+        ///   - Only one of `UmbrellaDnsAuthSecret` and `UmbrellaDnsAuthSecretWo` can be set.
+        /// </summary>
+        public Input<string>? UmbrellaDnsAuthSecretWo
+        {
+            get => _umbrellaDnsAuthSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaDnsAuthSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("umbrellaDnsAuthSecretWoVersion")]
+        public Input<int>? UmbrellaDnsAuthSecretWoVersion { get; set; }
 
         /// <summary>
         /// Umbrella Organization ID (numeric string)
@@ -247,17 +646,89 @@ namespace Pulumi.Sdwan
         [Input("umbrellaOrgId")]
         public Input<string>? UmbrellaOrgId { get; set; }
 
+        [Input("umbrellaSigAuthKey")]
+        private Input<string>? _umbrellaSigAuthKey;
+
         /// <summary>
         /// Umbrella SIG Authentication Key
+        ///   - Only one of `UmbrellaSigAuthKey` and `UmbrellaSigAuthKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaSigAuthKeyWo` together with `UmbrellaSigAuthKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("umbrellaSigAuthKey")]
-        public Input<string>? UmbrellaSigAuthKey { get; set; }
+        public Input<string>? UmbrellaSigAuthKey
+        {
+            get => _umbrellaSigAuthKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaSigAuthKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("umbrellaSigAuthKeyWo")]
+        private Input<string>? _umbrellaSigAuthKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella SIG Authentication Key
+        ///   - Only one of `UmbrellaSigAuthKey` and `UmbrellaSigAuthKeyWo` can be set.
+        /// </summary>
+        public Input<string>? UmbrellaSigAuthKeyWo
+        {
+            get => _umbrellaSigAuthKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaSigAuthKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("umbrellaSigAuthKeyWoVersion")]
+        public Input<int>? UmbrellaSigAuthKeyWoVersion { get; set; }
+
+        [Input("umbrellaSigAuthSecret")]
+        private Input<string>? _umbrellaSigAuthSecret;
 
         /// <summary>
         /// Umbrella SIG Authentication Secret
+        ///   - Only one of `UmbrellaSigAuthSecret` and `UmbrellaSigAuthSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaSigAuthSecretWo` together with `UmbrellaSigAuthSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("umbrellaSigAuthSecret")]
-        public Input<string>? UmbrellaSigAuthSecret { get; set; }
+        public Input<string>? UmbrellaSigAuthSecret
+        {
+            get => _umbrellaSigAuthSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaSigAuthSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("umbrellaSigAuthSecretWo")]
+        private Input<string>? _umbrellaSigAuthSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella SIG Authentication Secret
+        ///   - Only one of `UmbrellaSigAuthSecret` and `UmbrellaSigAuthSecretWo` can be set.
+        /// </summary>
+        public Input<string>? UmbrellaSigAuthSecretWo
+        {
+            get => _umbrellaSigAuthSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaSigAuthSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("umbrellaSigAuthSecretWoVersion")]
+        public Input<int>? UmbrellaSigAuthSecretWoVersion { get; set; }
 
         /// <summary>
         /// Zscaler Organization
@@ -271,17 +742,89 @@ namespace Pulumi.Sdwan
         [Input("zscalerPartnerBaseUri")]
         public Input<string>? ZscalerPartnerBaseUri { get; set; }
 
+        [Input("zscalerPartnerKey")]
+        private Input<string>? _zscalerPartnerKey;
+
         /// <summary>
         /// Zscaler Partner Key
+        ///   - Only one of `ZscalerPartnerKey` and `ZscalerPartnerKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `ZscalerPartnerKeyWo` together with `ZscalerPartnerKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("zscalerPartnerKey")]
-        public Input<string>? ZscalerPartnerKey { get; set; }
+        public Input<string>? ZscalerPartnerKey
+        {
+            get => _zscalerPartnerKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _zscalerPartnerKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("zscalerPartnerKeyWo")]
+        private Input<string>? _zscalerPartnerKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Zscaler Partner Key
+        ///   - Only one of `ZscalerPartnerKey` and `ZscalerPartnerKeyWo` can be set.
+        /// </summary>
+        public Input<string>? ZscalerPartnerKeyWo
+        {
+            get => _zscalerPartnerKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _zscalerPartnerKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `ZscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("zscalerPartnerKeyWoVersion")]
+        public Input<int>? ZscalerPartnerKeyWoVersion { get; set; }
+
+        [Input("zscalerPassword")]
+        private Input<string>? _zscalerPassword;
 
         /// <summary>
         /// Zscaler Password
+        ///   - Only one of `ZscalerPassword` and `ZscalerPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `ZscalerPasswordWo` together with `ZscalerPasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("zscalerPassword")]
-        public Input<string>? ZscalerPassword { get; set; }
+        public Input<string>? ZscalerPassword
+        {
+            get => _zscalerPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _zscalerPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("zscalerPasswordWo")]
+        private Input<string>? _zscalerPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Zscaler Password
+        ///   - Only one of `ZscalerPassword` and `ZscalerPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? ZscalerPasswordWo
+        {
+            get => _zscalerPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _zscalerPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `ZscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("zscalerPasswordWoVersion")]
+        public Input<int>? ZscalerPasswordWoVersion { get; set; }
 
         /// <summary>
         /// Zscaler Username
@@ -297,17 +840,89 @@ namespace Pulumi.Sdwan
 
     public sealed class CloudProviderSettingsState : global::Pulumi.ResourceArgs
     {
+        [Input("ciscoSseAuthKey")]
+        private Input<string>? _ciscoSseAuthKey;
+
         /// <summary>
         /// Cisco SSE Authentication Key
+        ///   - Only one of `CiscoSseAuthKey` and `CiscoSseAuthKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `CiscoSseAuthKeyWo` together with `CiscoSseAuthKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("ciscoSseAuthKey")]
-        public Input<string>? CiscoSseAuthKey { get; set; }
+        public Input<string>? CiscoSseAuthKey
+        {
+            get => _ciscoSseAuthKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ciscoSseAuthKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("ciscoSseAuthKeyWo")]
+        private Input<string>? _ciscoSseAuthKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Cisco SSE Authentication Key
+        ///   - Only one of `CiscoSseAuthKey` and `CiscoSseAuthKeyWo` can be set.
+        /// </summary>
+        public Input<string>? CiscoSseAuthKeyWo
+        {
+            get => _ciscoSseAuthKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ciscoSseAuthKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `CiscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("ciscoSseAuthKeyWoVersion")]
+        public Input<int>? CiscoSseAuthKeyWoVersion { get; set; }
+
+        [Input("ciscoSseAuthSecret")]
+        private Input<string>? _ciscoSseAuthSecret;
 
         /// <summary>
         /// Cisco SSE Authentication Secret
+        ///   - Only one of `CiscoSseAuthSecret` and `CiscoSseAuthSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `CiscoSseAuthSecretWo` together with `CiscoSseAuthSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("ciscoSseAuthSecret")]
-        public Input<string>? CiscoSseAuthSecret { get; set; }
+        public Input<string>? CiscoSseAuthSecret
+        {
+            get => _ciscoSseAuthSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ciscoSseAuthSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("ciscoSseAuthSecretWo")]
+        private Input<string>? _ciscoSseAuthSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Cisco SSE Authentication Secret
+        ///   - Only one of `CiscoSseAuthSecret` and `CiscoSseAuthSecretWo` can be set.
+        /// </summary>
+        public Input<string>? CiscoSseAuthSecretWo
+        {
+            get => _ciscoSseAuthSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ciscoSseAuthSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `CiscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("ciscoSseAuthSecretWoVersion")]
+        public Input<int>? CiscoSseAuthSecretWoVersion { get; set; }
 
         /// <summary>
         /// Enable Cisco SSE Context Sharing
@@ -322,29 +937,173 @@ namespace Pulumi.Sdwan
         [Input("ciscoSseOrgId")]
         public Input<string>? CiscoSseOrgId { get; set; }
 
+        [Input("umbrellaAuthKeyV2")]
+        private Input<string>? _umbrellaAuthKeyV2;
+
         /// <summary>
         /// Umbrella Authentication Key (v2)
+        ///   - Only one of `UmbrellaAuthKeyV2` and `UmbrellaAuthKeyV2Wo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaAuthKeyV2Wo` together with `UmbrellaAuthKeyV2WoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("umbrellaAuthKeyV2")]
-        public Input<string>? UmbrellaAuthKeyV2 { get; set; }
+        public Input<string>? UmbrellaAuthKeyV2
+        {
+            get => _umbrellaAuthKeyV2;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaAuthKeyV2 = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("umbrellaAuthKeyV2Wo")]
+        private Input<string>? _umbrellaAuthKeyV2Wo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella Authentication Key (v2)
+        ///   - Only one of `UmbrellaAuthKeyV2` and `UmbrellaAuthKeyV2Wo` can be set.
+        /// </summary>
+        public Input<string>? UmbrellaAuthKeyV2Wo
+        {
+            get => _umbrellaAuthKeyV2Wo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaAuthKeyV2Wo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("umbrellaAuthKeyV2WoVersion")]
+        public Input<int>? UmbrellaAuthKeyV2WoVersion { get; set; }
+
+        [Input("umbrellaAuthSecretV2")]
+        private Input<string>? _umbrellaAuthSecretV2;
 
         /// <summary>
         /// Umbrella Authentication Secret (v2)
+        ///   - Only one of `UmbrellaAuthSecretV2` and `UmbrellaAuthSecretV2Wo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaAuthSecretV2Wo` together with `UmbrellaAuthSecretV2WoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("umbrellaAuthSecretV2")]
-        public Input<string>? UmbrellaAuthSecretV2 { get; set; }
+        public Input<string>? UmbrellaAuthSecretV2
+        {
+            get => _umbrellaAuthSecretV2;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaAuthSecretV2 = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("umbrellaAuthSecretV2Wo")]
+        private Input<string>? _umbrellaAuthSecretV2Wo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella Authentication Secret (v2)
+        ///   - Only one of `UmbrellaAuthSecretV2` and `UmbrellaAuthSecretV2Wo` can be set.
+        /// </summary>
+        public Input<string>? UmbrellaAuthSecretV2Wo
+        {
+            get => _umbrellaAuthSecretV2Wo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaAuthSecretV2Wo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("umbrellaAuthSecretV2WoVersion")]
+        public Input<int>? UmbrellaAuthSecretV2WoVersion { get; set; }
+
+        [Input("umbrellaDnsAuthKey")]
+        private Input<string>? _umbrellaDnsAuthKey;
 
         /// <summary>
         /// Umbrella DNS Authentication Key
+        ///   - Only one of `UmbrellaDnsAuthKey` and `UmbrellaDnsAuthKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaDnsAuthKeyWo` together with `UmbrellaDnsAuthKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("umbrellaDnsAuthKey")]
-        public Input<string>? UmbrellaDnsAuthKey { get; set; }
+        public Input<string>? UmbrellaDnsAuthKey
+        {
+            get => _umbrellaDnsAuthKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaDnsAuthKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("umbrellaDnsAuthKeyWo")]
+        private Input<string>? _umbrellaDnsAuthKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella DNS Authentication Key
+        ///   - Only one of `UmbrellaDnsAuthKey` and `UmbrellaDnsAuthKeyWo` can be set.
+        /// </summary>
+        public Input<string>? UmbrellaDnsAuthKeyWo
+        {
+            get => _umbrellaDnsAuthKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaDnsAuthKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("umbrellaDnsAuthKeyWoVersion")]
+        public Input<int>? UmbrellaDnsAuthKeyWoVersion { get; set; }
+
+        [Input("umbrellaDnsAuthSecret")]
+        private Input<string>? _umbrellaDnsAuthSecret;
 
         /// <summary>
         /// Umbrella DNS Authentication Secret
+        ///   - Only one of `UmbrellaDnsAuthSecret` and `UmbrellaDnsAuthSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaDnsAuthSecretWo` together with `UmbrellaDnsAuthSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("umbrellaDnsAuthSecret")]
-        public Input<string>? UmbrellaDnsAuthSecret { get; set; }
+        public Input<string>? UmbrellaDnsAuthSecret
+        {
+            get => _umbrellaDnsAuthSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaDnsAuthSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("umbrellaDnsAuthSecretWo")]
+        private Input<string>? _umbrellaDnsAuthSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella DNS Authentication Secret
+        ///   - Only one of `UmbrellaDnsAuthSecret` and `UmbrellaDnsAuthSecretWo` can be set.
+        /// </summary>
+        public Input<string>? UmbrellaDnsAuthSecretWo
+        {
+            get => _umbrellaDnsAuthSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaDnsAuthSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("umbrellaDnsAuthSecretWoVersion")]
+        public Input<int>? UmbrellaDnsAuthSecretWoVersion { get; set; }
 
         /// <summary>
         /// Umbrella Organization ID (numeric string)
@@ -352,17 +1111,89 @@ namespace Pulumi.Sdwan
         [Input("umbrellaOrgId")]
         public Input<string>? UmbrellaOrgId { get; set; }
 
+        [Input("umbrellaSigAuthKey")]
+        private Input<string>? _umbrellaSigAuthKey;
+
         /// <summary>
         /// Umbrella SIG Authentication Key
+        ///   - Only one of `UmbrellaSigAuthKey` and `UmbrellaSigAuthKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaSigAuthKeyWo` together with `UmbrellaSigAuthKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("umbrellaSigAuthKey")]
-        public Input<string>? UmbrellaSigAuthKey { get; set; }
+        public Input<string>? UmbrellaSigAuthKey
+        {
+            get => _umbrellaSigAuthKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaSigAuthKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("umbrellaSigAuthKeyWo")]
+        private Input<string>? _umbrellaSigAuthKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella SIG Authentication Key
+        ///   - Only one of `UmbrellaSigAuthKey` and `UmbrellaSigAuthKeyWo` can be set.
+        /// </summary>
+        public Input<string>? UmbrellaSigAuthKeyWo
+        {
+            get => _umbrellaSigAuthKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaSigAuthKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("umbrellaSigAuthKeyWoVersion")]
+        public Input<int>? UmbrellaSigAuthKeyWoVersion { get; set; }
+
+        [Input("umbrellaSigAuthSecret")]
+        private Input<string>? _umbrellaSigAuthSecret;
 
         /// <summary>
         /// Umbrella SIG Authentication Secret
+        ///   - Only one of `UmbrellaSigAuthSecret` and `UmbrellaSigAuthSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `UmbrellaSigAuthSecretWo` together with `UmbrellaSigAuthSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("umbrellaSigAuthSecret")]
-        public Input<string>? UmbrellaSigAuthSecret { get; set; }
+        public Input<string>? UmbrellaSigAuthSecret
+        {
+            get => _umbrellaSigAuthSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaSigAuthSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("umbrellaSigAuthSecretWo")]
+        private Input<string>? _umbrellaSigAuthSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Umbrella SIG Authentication Secret
+        ///   - Only one of `UmbrellaSigAuthSecret` and `UmbrellaSigAuthSecretWo` can be set.
+        /// </summary>
+        public Input<string>? UmbrellaSigAuthSecretWo
+        {
+            get => _umbrellaSigAuthSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _umbrellaSigAuthSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `UmbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("umbrellaSigAuthSecretWoVersion")]
+        public Input<int>? UmbrellaSigAuthSecretWoVersion { get; set; }
 
         /// <summary>
         /// Zscaler Organization
@@ -376,17 +1207,89 @@ namespace Pulumi.Sdwan
         [Input("zscalerPartnerBaseUri")]
         public Input<string>? ZscalerPartnerBaseUri { get; set; }
 
+        [Input("zscalerPartnerKey")]
+        private Input<string>? _zscalerPartnerKey;
+
         /// <summary>
         /// Zscaler Partner Key
+        ///   - Only one of `ZscalerPartnerKey` and `ZscalerPartnerKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `ZscalerPartnerKeyWo` together with `ZscalerPartnerKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("zscalerPartnerKey")]
-        public Input<string>? ZscalerPartnerKey { get; set; }
+        public Input<string>? ZscalerPartnerKey
+        {
+            get => _zscalerPartnerKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _zscalerPartnerKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("zscalerPartnerKeyWo")]
+        private Input<string>? _zscalerPartnerKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Zscaler Partner Key
+        ///   - Only one of `ZscalerPartnerKey` and `ZscalerPartnerKeyWo` can be set.
+        /// </summary>
+        public Input<string>? ZscalerPartnerKeyWo
+        {
+            get => _zscalerPartnerKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _zscalerPartnerKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `ZscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("zscalerPartnerKeyWoVersion")]
+        public Input<int>? ZscalerPartnerKeyWoVersion { get; set; }
+
+        [Input("zscalerPassword")]
+        private Input<string>? _zscalerPassword;
 
         /// <summary>
         /// Zscaler Password
+        ///   - Only one of `ZscalerPassword` and `ZscalerPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `ZscalerPasswordWo` together with `ZscalerPasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("zscalerPassword")]
-        public Input<string>? ZscalerPassword { get; set; }
+        public Input<string>? ZscalerPassword
+        {
+            get => _zscalerPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _zscalerPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("zscalerPasswordWo")]
+        private Input<string>? _zscalerPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Zscaler Password
+        ///   - Only one of `ZscalerPassword` and `ZscalerPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? ZscalerPasswordWo
+        {
+            get => _zscalerPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _zscalerPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `ZscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("zscalerPasswordWoVersion")]
+        public Input<int>? ZscalerPasswordWoVersion { get; set; }
 
         /// <summary>
         /// Zscaler Username

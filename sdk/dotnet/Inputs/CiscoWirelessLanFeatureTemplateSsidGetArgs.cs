@@ -38,11 +38,21 @@ namespace Pulumi.Sdwan.Inputs
         [Input("optional")]
         public Input<bool>? Optional { get; set; }
 
+        [Input("passphrase")]
+        private Input<string>? _passphrase;
+
         /// <summary>
         /// Set passphrase
         /// </summary>
-        [Input("passphrase")]
-        public Input<string>? Passphrase { get; set; }
+        public Input<string>? Passphrase
+        {
+            get => _passphrase;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _passphrase = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -104,11 +114,21 @@ namespace Pulumi.Sdwan.Inputs
         [Input("radiusServerPortVariable")]
         public Input<string>? RadiusServerPortVariable { get; set; }
 
+        [Input("radiusServerSecret")]
+        private Input<string>? _radiusServerSecret;
+
         /// <summary>
         /// Set RADIUS server shared secret
         /// </summary>
-        [Input("radiusServerSecret")]
-        public Input<string>? RadiusServerSecret { get; set; }
+        public Input<string>? RadiusServerSecret
+        {
+            get => _radiusServerSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _radiusServerSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name

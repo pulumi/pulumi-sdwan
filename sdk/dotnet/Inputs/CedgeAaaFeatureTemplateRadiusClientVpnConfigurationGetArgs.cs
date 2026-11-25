@@ -18,11 +18,21 @@ namespace Pulumi.Sdwan.Inputs
         [Input("optional")]
         public Input<bool>? Optional { get; set; }
 
+        [Input("serverKey")]
+        private Input<string>? _serverKey;
+
         /// <summary>
         /// Specify a RADIUS client server-key
         /// </summary>
-        [Input("serverKey")]
-        public Input<string>? ServerKey { get; set; }
+        public Input<string>? ServerKey
+        {
+            get => _serverKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _serverKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name

@@ -100,6 +100,8 @@ class VpnInterfaceEthernetPppoeFeatureTemplateArgs:
                  qos_map_vpn_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  secondary_region: pulumi.Input[Optional[_builtins.str]] = None,
                  secondary_region_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_provider_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_provider_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  shaping_rate: pulumi.Input[Optional[_builtins.int]] = None,
                  shaping_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -299,6 +301,8 @@ class VpnInterfaceEthernetPppoeFeatureTemplateArgs:
                  - Choices: `off`, `secondary-only`, `secondary-shared`
                  - Default value: `off`
         :param pulumi.Input[_builtins.str] secondary_region_variable: Variable name
+        :param pulumi.Input[_builtins.str] service_provider_name: Service Provider Name
+        :param pulumi.Input[_builtins.str] service_provider_name_variable: Variable name
         :param pulumi.Input[_builtins.int] shaping_rate: 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
                  - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] shaping_rate_variable: Variable name
@@ -572,6 +576,10 @@ class VpnInterfaceEthernetPppoeFeatureTemplateArgs:
             pulumi.set(__self__, "secondary_region", secondary_region)
         if secondary_region_variable is not None:
             pulumi.set(__self__, "secondary_region_variable", secondary_region_variable)
+        if service_provider_name is not None:
+            pulumi.set(__self__, "service_provider_name", service_provider_name)
+        if service_provider_name_variable is not None:
+            pulumi.set(__self__, "service_provider_name_variable", service_provider_name_variable)
         if shaping_rate is not None:
             pulumi.set(__self__, "shaping_rate", shaping_rate)
         if shaping_rate_variable is not None:
@@ -1717,6 +1725,30 @@ class VpnInterfaceEthernetPppoeFeatureTemplateArgs:
         pulumi.set(self, "secondary_region_variable", value)
 
     @_builtins.property
+    @pulumi.getter(name="serviceProviderName")
+    def service_provider_name(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Service Provider Name
+        """
+        return pulumi.get(self, "service_provider_name")
+
+    @service_provider_name.setter
+    def service_provider_name(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_provider_name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceProviderNameVariable")
+    def service_provider_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "service_provider_name_variable")
+
+    @service_provider_name_variable.setter
+    def service_provider_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_provider_name_variable", value)
+
+    @_builtins.property
     @pulumi.getter(name="shapingRate")
     def shaping_rate(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
@@ -2773,6 +2805,8 @@ class _VpnInterfaceEthernetPppoeFeatureTemplateState:
                  qos_map_vpn_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  secondary_region: pulumi.Input[Optional[_builtins.str]] = None,
                  secondary_region_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_provider_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_provider_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  shaping_rate: pulumi.Input[Optional[_builtins.int]] = None,
                  shaping_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -2974,6 +3008,8 @@ class _VpnInterfaceEthernetPppoeFeatureTemplateState:
                  - Choices: `off`, `secondary-only`, `secondary-shared`
                  - Default value: `off`
         :param pulumi.Input[_builtins.str] secondary_region_variable: Variable name
+        :param pulumi.Input[_builtins.str] service_provider_name: Service Provider Name
+        :param pulumi.Input[_builtins.str] service_provider_name_variable: Variable name
         :param pulumi.Input[_builtins.int] shaping_rate: 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
                  - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] shaping_rate_variable: Variable name
@@ -3251,6 +3287,10 @@ class _VpnInterfaceEthernetPppoeFeatureTemplateState:
             pulumi.set(__self__, "secondary_region", secondary_region)
         if secondary_region_variable is not None:
             pulumi.set(__self__, "secondary_region_variable", secondary_region_variable)
+        if service_provider_name is not None:
+            pulumi.set(__self__, "service_provider_name", service_provider_name)
+        if service_provider_name_variable is not None:
+            pulumi.set(__self__, "service_provider_name_variable", service_provider_name_variable)
         if shaping_rate is not None:
             pulumi.set(__self__, "shaping_rate", shaping_rate)
         if shaping_rate_variable is not None:
@@ -4400,6 +4440,30 @@ class _VpnInterfaceEthernetPppoeFeatureTemplateState:
         pulumi.set(self, "secondary_region_variable", value)
 
     @_builtins.property
+    @pulumi.getter(name="serviceProviderName")
+    def service_provider_name(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Service Provider Name
+        """
+        return pulumi.get(self, "service_provider_name")
+
+    @service_provider_name.setter
+    def service_provider_name(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_provider_name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceProviderNameVariable")
+    def service_provider_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "service_provider_name_variable")
+
+    @service_provider_name_variable.setter
+    def service_provider_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_provider_name_variable", value)
+
+    @_builtins.property
     @pulumi.getter(name="shapingRate")
     def shaping_rate(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
@@ -5483,6 +5547,8 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
                  qos_map_vpn_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  secondary_region: pulumi.Input[Optional[_builtins.str]] = None,
                  secondary_region_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_provider_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_provider_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  shaping_rate: pulumi.Input[Optional[_builtins.int]] = None,
                  shaping_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -5659,6 +5725,7 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
             shaping_rate=10000000,
             qos_map="test",
             qos_map_vpn="test",
+            service_provider_name="MyISP",
             bandwidth_upstream=214748300,
             bandwidth_downstream=214748300,
             write_rule="RULE1",
@@ -5805,6 +5872,8 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
                  - Choices: `off`, `secondary-only`, `secondary-shared`
                  - Default value: `off`
         :param pulumi.Input[_builtins.str] secondary_region_variable: Variable name
+        :param pulumi.Input[_builtins.str] service_provider_name: Service Provider Name
+        :param pulumi.Input[_builtins.str] service_provider_name_variable: Variable name
         :param pulumi.Input[_builtins.int] shaping_rate: 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
                  - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] shaping_rate_variable: Variable name
@@ -6025,6 +6094,7 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
             shaping_rate=10000000,
             qos_map="test",
             qos_map_vpn="test",
+            service_provider_name="MyISP",
             bandwidth_upstream=214748300,
             bandwidth_downstream=214748300,
             write_rule="RULE1",
@@ -6145,6 +6215,8 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
                  qos_map_vpn_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  secondary_region: pulumi.Input[Optional[_builtins.str]] = None,
                  secondary_region_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_provider_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_provider_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  shaping_rate: pulumi.Input[Optional[_builtins.int]] = None,
                  shaping_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -6239,7 +6311,7 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["bandwidth_upstream_variable"] = bandwidth_upstream_variable
             __props__.__dict__["chap_hostname"] = chap_hostname
             __props__.__dict__["chap_hostname_variable"] = chap_hostname_variable
-            __props__.__dict__["chap_ppp_auth_password"] = chap_ppp_auth_password
+            __props__.__dict__["chap_ppp_auth_password"] = None if chap_ppp_auth_password is None else pulumi.Output.secret(chap_ppp_auth_password)
             __props__.__dict__["chap_ppp_auth_password_variable"] = chap_ppp_auth_password_variable
             __props__.__dict__["core_region"] = core_region
             __props__.__dict__["core_region_variable"] = core_region_variable
@@ -6280,7 +6352,7 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["nat_udp_timeout"] = nat_udp_timeout
             __props__.__dict__["nat_udp_timeout_variable"] = nat_udp_timeout_variable
             __props__.__dict__["pap_password"] = pap_password
-            __props__.__dict__["pap_ppp_auth_password"] = pap_ppp_auth_password
+            __props__.__dict__["pap_ppp_auth_password"] = None if pap_ppp_auth_password is None else pulumi.Output.secret(pap_ppp_auth_password)
             __props__.__dict__["pap_ppp_auth_password_variable"] = pap_ppp_auth_password_variable
             __props__.__dict__["pap_username"] = pap_username
             __props__.__dict__["pap_username_variable"] = pap_username_variable
@@ -6315,6 +6387,8 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["qos_map_vpn_variable"] = qos_map_vpn_variable
             __props__.__dict__["secondary_region"] = secondary_region
             __props__.__dict__["secondary_region_variable"] = secondary_region_variable
+            __props__.__dict__["service_provider_name"] = service_provider_name
+            __props__.__dict__["service_provider_name_variable"] = service_provider_name_variable
             __props__.__dict__["shaping_rate"] = shaping_rate
             __props__.__dict__["shaping_rate_variable"] = shaping_rate_variable
             __props__.__dict__["shutdown"] = shutdown
@@ -6395,6 +6469,8 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["write_rule_variable"] = write_rule_variable
             __props__.__dict__["template_type"] = None
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["chapPppAuthPassword", "papPppAuthPassword"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(VpnInterfaceEthernetPppoeFeatureTemplate, __self__).__init__(
             'sdwan:index/vpnInterfaceEthernetPppoeFeatureTemplate:VpnInterfaceEthernetPppoeFeatureTemplate',
             resource_name,
@@ -6484,6 +6560,8 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
             qos_map_vpn_variable: pulumi.Input[Optional[_builtins.str]] = None,
             secondary_region: pulumi.Input[Optional[_builtins.str]] = None,
             secondary_region_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            service_provider_name: pulumi.Input[Optional[_builtins.str]] = None,
+            service_provider_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
             shaping_rate: pulumi.Input[Optional[_builtins.int]] = None,
             shaping_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
             shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -6689,6 +6767,8 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
                  - Choices: `off`, `secondary-only`, `secondary-shared`
                  - Default value: `off`
         :param pulumi.Input[_builtins.str] secondary_region_variable: Variable name
+        :param pulumi.Input[_builtins.str] service_provider_name: Service Provider Name
+        :param pulumi.Input[_builtins.str] service_provider_name_variable: Variable name
         :param pulumi.Input[_builtins.int] shaping_rate: 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
                  - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] shaping_rate_variable: Variable name
@@ -6891,6 +6971,8 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["qos_map_vpn_variable"] = qos_map_vpn_variable
         __props__.__dict__["secondary_region"] = secondary_region
         __props__.__dict__["secondary_region_variable"] = secondary_region_variable
+        __props__.__dict__["service_provider_name"] = service_provider_name
+        __props__.__dict__["service_provider_name_variable"] = service_provider_name_variable
         __props__.__dict__["shaping_rate"] = shaping_rate
         __props__.__dict__["shaping_rate_variable"] = shaping_rate_variable
         __props__.__dict__["shutdown"] = shutdown
@@ -7055,6 +7137,8 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
             qos_map_vpn_variable: pulumi.Input[Optional[_builtins.str]] = None,
             secondary_region: pulumi.Input[Optional[_builtins.str]] = None,
             secondary_region_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            service_provider_name: pulumi.Input[Optional[_builtins.str]] = None,
+            service_provider_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
             shaping_rate: pulumi.Input[Optional[_builtins.int]] = None,
             shaping_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
             shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -7215,6 +7299,8 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
         __props__["qosMapVpnVariable"] = qos_map_vpn_variable
         __props__["secondaryRegion"] = secondary_region
         __props__["secondaryRegionVariable"] = secondary_region_variable
+        __props__["serviceProviderName"] = service_provider_name
+        __props__["serviceProviderNameVariable"] = service_provider_name_variable
         __props__["shapingRate"] = shaping_rate
         __props__["shapingRateVariable"] = shaping_rate_variable
         __props__["shutdown"] = shutdown
@@ -7967,6 +8053,22 @@ class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
         Variable name
         """
         return pulumi.get(self, "secondary_region_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="serviceProviderName")
+    def service_provider_name(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Service Provider Name
+        """
+        return pulumi.get(self, "service_provider_name")
+
+    @_builtins.property
+    @pulumi.getter(name="serviceProviderNameVariable")
+    def service_provider_name_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "service_provider_name_variable")
 
     @_builtins.property
     @pulumi.getter(name="shapingRate")

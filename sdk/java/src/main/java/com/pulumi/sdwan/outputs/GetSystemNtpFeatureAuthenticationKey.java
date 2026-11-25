@@ -22,6 +22,16 @@ public final class GetSystemNtpFeatureAuthenticationKey {
      */
     private String cmacAes128ValueVariable;
     /**
+     * @return CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes)
+     * 
+     */
+    private String cmacAes128ValueWo;
+    /**
+     * @return Rotation trigger for `cmacAes128ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer cmacAes128ValueWoVersion;
+    /**
      * @return HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes)
      * 
      */
@@ -31,6 +41,16 @@ public final class GetSystemNtpFeatureAuthenticationKey {
      * 
      */
     private String hmacSha2ValueVariable;
+    /**
+     * @return HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes)
+     * 
+     */
+    private String hmacSha2ValueWo;
+    /**
+     * @return Rotation trigger for `hmacSha2ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer hmacSha2ValueWoVersion;
     /**
      * @return Authentication key ID
      * 
@@ -51,6 +71,16 @@ public final class GetSystemNtpFeatureAuthenticationKey {
      * 
      */
     private String md5ValueVariable;
+    /**
+     * @return Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    private String md5ValueWo;
+    /**
+     * @return Rotation trigger for `md5ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer md5ValueWoVersion;
 
     private GetSystemNtpFeatureAuthenticationKey() {}
     /**
@@ -68,6 +98,20 @@ public final class GetSystemNtpFeatureAuthenticationKey {
         return this.cmacAes128ValueVariable;
     }
     /**
+     * @return CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes)
+     * 
+     */
+    public String cmacAes128ValueWo() {
+        return this.cmacAes128ValueWo;
+    }
+    /**
+     * @return Rotation trigger for `cmacAes128ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer cmacAes128ValueWoVersion() {
+        return this.cmacAes128ValueWoVersion;
+    }
+    /**
      * @return HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes)
      * 
      */
@@ -80,6 +124,20 @@ public final class GetSystemNtpFeatureAuthenticationKey {
      */
     public String hmacSha2ValueVariable() {
         return this.hmacSha2ValueVariable;
+    }
+    /**
+     * @return HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes)
+     * 
+     */
+    public String hmacSha2ValueWo() {
+        return this.hmacSha2ValueWo;
+    }
+    /**
+     * @return Rotation trigger for `hmacSha2ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer hmacSha2ValueWoVersion() {
+        return this.hmacSha2ValueWoVersion;
     }
     /**
      * @return Authentication key ID
@@ -109,6 +167,20 @@ public final class GetSystemNtpFeatureAuthenticationKey {
     public String md5ValueVariable() {
         return this.md5ValueVariable;
     }
+    /**
+     * @return Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    public String md5ValueWo() {
+        return this.md5ValueWo;
+    }
+    /**
+     * @return Rotation trigger for `md5ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer md5ValueWoVersion() {
+        return this.md5ValueWoVersion;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -121,23 +193,35 @@ public final class GetSystemNtpFeatureAuthenticationKey {
     public static final class Builder {
         private String cmacAes128Value;
         private String cmacAes128ValueVariable;
+        private String cmacAes128ValueWo;
+        private Integer cmacAes128ValueWoVersion;
         private String hmacSha2Value;
         private String hmacSha2ValueVariable;
+        private String hmacSha2ValueWo;
+        private Integer hmacSha2ValueWoVersion;
         private Integer keyId;
         private String keyIdVariable;
         private String md5Value;
         private String md5ValueVariable;
+        private String md5ValueWo;
+        private Integer md5ValueWoVersion;
         public Builder() {}
         public Builder(GetSystemNtpFeatureAuthenticationKey defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.cmacAes128Value = defaults.cmacAes128Value;
     	      this.cmacAes128ValueVariable = defaults.cmacAes128ValueVariable;
+    	      this.cmacAes128ValueWo = defaults.cmacAes128ValueWo;
+    	      this.cmacAes128ValueWoVersion = defaults.cmacAes128ValueWoVersion;
     	      this.hmacSha2Value = defaults.hmacSha2Value;
     	      this.hmacSha2ValueVariable = defaults.hmacSha2ValueVariable;
+    	      this.hmacSha2ValueWo = defaults.hmacSha2ValueWo;
+    	      this.hmacSha2ValueWoVersion = defaults.hmacSha2ValueWoVersion;
     	      this.keyId = defaults.keyId;
     	      this.keyIdVariable = defaults.keyIdVariable;
     	      this.md5Value = defaults.md5Value;
     	      this.md5ValueVariable = defaults.md5ValueVariable;
+    	      this.md5ValueWo = defaults.md5ValueWo;
+    	      this.md5ValueWoVersion = defaults.md5ValueWoVersion;
         }
 
         @CustomType.Setter
@@ -157,6 +241,22 @@ public final class GetSystemNtpFeatureAuthenticationKey {
             return this;
         }
         @CustomType.Setter
+        public Builder cmacAes128ValueWo(String cmacAes128ValueWo) {
+            if (cmacAes128ValueWo == null) {
+              throw new MissingRequiredPropertyException("GetSystemNtpFeatureAuthenticationKey", "cmacAes128ValueWo");
+            }
+            this.cmacAes128ValueWo = cmacAes128ValueWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder cmacAes128ValueWoVersion(Integer cmacAes128ValueWoVersion) {
+            if (cmacAes128ValueWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSystemNtpFeatureAuthenticationKey", "cmacAes128ValueWoVersion");
+            }
+            this.cmacAes128ValueWoVersion = cmacAes128ValueWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder hmacSha2Value(String hmacSha2Value) {
             if (hmacSha2Value == null) {
               throw new MissingRequiredPropertyException("GetSystemNtpFeatureAuthenticationKey", "hmacSha2Value");
@@ -170,6 +270,22 @@ public final class GetSystemNtpFeatureAuthenticationKey {
               throw new MissingRequiredPropertyException("GetSystemNtpFeatureAuthenticationKey", "hmacSha2ValueVariable");
             }
             this.hmacSha2ValueVariable = hmacSha2ValueVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder hmacSha2ValueWo(String hmacSha2ValueWo) {
+            if (hmacSha2ValueWo == null) {
+              throw new MissingRequiredPropertyException("GetSystemNtpFeatureAuthenticationKey", "hmacSha2ValueWo");
+            }
+            this.hmacSha2ValueWo = hmacSha2ValueWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder hmacSha2ValueWoVersion(Integer hmacSha2ValueWoVersion) {
+            if (hmacSha2ValueWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSystemNtpFeatureAuthenticationKey", "hmacSha2ValueWoVersion");
+            }
+            this.hmacSha2ValueWoVersion = hmacSha2ValueWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -204,16 +320,38 @@ public final class GetSystemNtpFeatureAuthenticationKey {
             this.md5ValueVariable = md5ValueVariable;
             return this;
         }
+        @CustomType.Setter
+        public Builder md5ValueWo(String md5ValueWo) {
+            if (md5ValueWo == null) {
+              throw new MissingRequiredPropertyException("GetSystemNtpFeatureAuthenticationKey", "md5ValueWo");
+            }
+            this.md5ValueWo = md5ValueWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder md5ValueWoVersion(Integer md5ValueWoVersion) {
+            if (md5ValueWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSystemNtpFeatureAuthenticationKey", "md5ValueWoVersion");
+            }
+            this.md5ValueWoVersion = md5ValueWoVersion;
+            return this;
+        }
         public GetSystemNtpFeatureAuthenticationKey build() {
             final var _resultValue = new GetSystemNtpFeatureAuthenticationKey();
             _resultValue.cmacAes128Value = cmacAes128Value;
             _resultValue.cmacAes128ValueVariable = cmacAes128ValueVariable;
+            _resultValue.cmacAes128ValueWo = cmacAes128ValueWo;
+            _resultValue.cmacAes128ValueWoVersion = cmacAes128ValueWoVersion;
             _resultValue.hmacSha2Value = hmacSha2Value;
             _resultValue.hmacSha2ValueVariable = hmacSha2ValueVariable;
+            _resultValue.hmacSha2ValueWo = hmacSha2ValueWo;
+            _resultValue.hmacSha2ValueWoVersion = hmacSha2ValueWoVersion;
             _resultValue.keyId = keyId;
             _resultValue.keyIdVariable = keyIdVariable;
             _resultValue.md5Value = md5Value;
             _resultValue.md5ValueVariable = md5ValueVariable;
+            _resultValue.md5ValueWo = md5ValueWo;
+            _resultValue.md5ValueWoVersion = md5ValueWoVersion;
             return _resultValue;
         }
     }

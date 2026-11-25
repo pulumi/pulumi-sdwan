@@ -2338,7 +2338,7 @@ class CiscoVpnInterfaceIpsecFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["ike_group_variable"] = ike_group_variable
             __props__.__dict__["ike_mode"] = ike_mode
             __props__.__dict__["ike_mode_variable"] = ike_mode_variable
-            __props__.__dict__["ike_pre_shared_key"] = ike_pre_shared_key
+            __props__.__dict__["ike_pre_shared_key"] = None if ike_pre_shared_key is None else pulumi.Output.secret(ike_pre_shared_key)
             __props__.__dict__["ike_pre_shared_key_local_id"] = ike_pre_shared_key_local_id
             __props__.__dict__["ike_pre_shared_key_local_id_variable"] = ike_pre_shared_key_local_id_variable
             __props__.__dict__["ike_pre_shared_key_remote_id"] = ike_pre_shared_key_remote_id
@@ -2380,6 +2380,8 @@ class CiscoVpnInterfaceIpsecFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["tunnel_source_variable"] = tunnel_source_variable
             __props__.__dict__["template_type"] = None
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["ikePreSharedKey"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(CiscoVpnInterfaceIpsecFeatureTemplate, __self__).__init__(
             'sdwan:index/ciscoVpnInterfaceIpsecFeatureTemplate:CiscoVpnInterfaceIpsecFeatureTemplate',
             resource_name,

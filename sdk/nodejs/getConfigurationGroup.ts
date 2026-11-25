@@ -52,10 +52,6 @@ export interface GetConfigurationGroupResult {
      */
     readonly description: string;
     /**
-     * List of devices
-     */
-    readonly devices: outputs.GetConfigurationGroupDevice[];
-    /**
      * List of feature profile IDs
      */
     readonly featureProfileIds: string[];
@@ -83,6 +79,10 @@ export interface GetConfigurationGroupResult {
      * Number of devices per site
      */
     readonly topologySiteDevices: number;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Configuration Group .

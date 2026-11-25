@@ -121,6 +121,13 @@ func NewCellularCedgeProfileFeatureTemplate(ctx *pulumi.Context,
 	if args.DeviceTypes == nil {
 		return nil, errors.New("invalid value for required argument 'DeviceTypes'")
 	}
+	if args.ProfilePassword != nil {
+		args.ProfilePassword = pulumi.ToSecret(args.ProfilePassword).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"profilePassword",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource CellularCedgeProfileFeatureTemplate
 	err := ctx.RegisterResource("sdwan:index/cellularCedgeProfileFeatureTemplate:CellularCedgeProfileFeatureTemplate", name, args, &resource, opts...)

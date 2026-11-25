@@ -23,6 +23,16 @@ public final class GetTransportRoutingOspfv3Ipv4FeatureAreaInterface {
      */
     private String authenticationKeyVariable;
     /**
+     * @return Set OSPF interface authentication IPSEC key
+     * 
+     */
+    private String authenticationKeyWo;
+    /**
+     * @return Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer authenticationKeyWoVersion;
+    /**
      * @return Set OSPF interface authentication IPSec SPI, range 256..4294967295
      * 
      */
@@ -122,6 +132,20 @@ public final class GetTransportRoutingOspfv3Ipv4FeatureAreaInterface {
      */
     public String authenticationKeyVariable() {
         return this.authenticationKeyVariable;
+    }
+    /**
+     * @return Set OSPF interface authentication IPSEC key
+     * 
+     */
+    public String authenticationKeyWo() {
+        return this.authenticationKeyWo;
+    }
+    /**
+     * @return Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer authenticationKeyWoVersion() {
+        return this.authenticationKeyWoVersion;
     }
     /**
      * @return Set OSPF interface authentication IPSec SPI, range 256..4294967295
@@ -254,6 +278,8 @@ public final class GetTransportRoutingOspfv3Ipv4FeatureAreaInterface {
     public static final class Builder {
         private String authenticationKey;
         private String authenticationKeyVariable;
+        private String authenticationKeyWo;
+        private Integer authenticationKeyWoVersion;
         private Integer authenticationSpi;
         private String authenticationSpiVariable;
         private String authenticationType;
@@ -276,6 +302,8 @@ public final class GetTransportRoutingOspfv3Ipv4FeatureAreaInterface {
     	      Objects.requireNonNull(defaults);
     	      this.authenticationKey = defaults.authenticationKey;
     	      this.authenticationKeyVariable = defaults.authenticationKeyVariable;
+    	      this.authenticationKeyWo = defaults.authenticationKeyWo;
+    	      this.authenticationKeyWoVersion = defaults.authenticationKeyWoVersion;
     	      this.authenticationSpi = defaults.authenticationSpi;
     	      this.authenticationSpiVariable = defaults.authenticationSpiVariable;
     	      this.authenticationType = defaults.authenticationType;
@@ -309,6 +337,22 @@ public final class GetTransportRoutingOspfv3Ipv4FeatureAreaInterface {
               throw new MissingRequiredPropertyException("GetTransportRoutingOspfv3Ipv4FeatureAreaInterface", "authenticationKeyVariable");
             }
             this.authenticationKeyVariable = authenticationKeyVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder authenticationKeyWo(String authenticationKeyWo) {
+            if (authenticationKeyWo == null) {
+              throw new MissingRequiredPropertyException("GetTransportRoutingOspfv3Ipv4FeatureAreaInterface", "authenticationKeyWo");
+            }
+            this.authenticationKeyWo = authenticationKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder authenticationKeyWoVersion(Integer authenticationKeyWoVersion) {
+            if (authenticationKeyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetTransportRoutingOspfv3Ipv4FeatureAreaInterface", "authenticationKeyWoVersion");
+            }
+            this.authenticationKeyWoVersion = authenticationKeyWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -451,6 +495,8 @@ public final class GetTransportRoutingOspfv3Ipv4FeatureAreaInterface {
             final var _resultValue = new GetTransportRoutingOspfv3Ipv4FeatureAreaInterface();
             _resultValue.authenticationKey = authenticationKey;
             _resultValue.authenticationKeyVariable = authenticationKeyVariable;
+            _resultValue.authenticationKeyWo = authenticationKeyWo;
+            _resultValue.authenticationKeyWoVersion = authenticationKeyWoVersion;
             _resultValue.authenticationSpi = authenticationSpi;
             _resultValue.authenticationSpiVariable = authenticationSpiVariable;
             _resultValue.authenticationType = authenticationType;

@@ -5,7 +5,6 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.sdwan.inputs.ConfigurationGroupDeviceArgs;
 import com.pulumi.sdwan.inputs.ConfigurationGroupTopologyDeviceArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,21 +31,6 @@ public final class ConfigurationGroupState extends com.pulumi.resources.Resource
      */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
-    }
-
-    /**
-     * List of devices
-     * 
-     */
-    @Import(name="devices")
-    private @Nullable Output<List<ConfigurationGroupDeviceArgs>> devices;
-
-    /**
-     * @return List of devices
-     * 
-     */
-    public Optional<Output<List<ConfigurationGroupDeviceArgs>>> devices() {
-        return Optional.ofNullable(this.devices);
     }
 
     /**
@@ -143,17 +127,32 @@ public final class ConfigurationGroupState extends com.pulumi.resources.Resource
         return Optional.ofNullable(this.topologySiteDevices);
     }
 
+    /**
+     * The version of the object
+     * 
+     */
+    @Import(name="version")
+    private @Nullable Output<Integer> version;
+
+    /**
+     * @return The version of the object
+     * 
+     */
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
+    }
+
     private ConfigurationGroupState() {}
 
     private ConfigurationGroupState(ConfigurationGroupState $) {
         this.description = $.description;
-        this.devices = $.devices;
         this.featureProfileIds = $.featureProfileIds;
         this.featureVersions = $.featureVersions;
         this.name = $.name;
         this.solution = $.solution;
         this.topologyDevices = $.topologyDevices;
         this.topologySiteDevices = $.topologySiteDevices;
+        this.version = $.version;
     }
 
     public static Builder builder() {
@@ -193,37 +192,6 @@ public final class ConfigurationGroupState extends com.pulumi.resources.Resource
          */
         public Builder description(String description) {
             return description(Output.of(description));
-        }
-
-        /**
-         * @param devices List of devices
-         * 
-         * @return builder
-         * 
-         */
-        public Builder devices(@Nullable Output<List<ConfigurationGroupDeviceArgs>> devices) {
-            $.devices = devices;
-            return this;
-        }
-
-        /**
-         * @param devices List of devices
-         * 
-         * @return builder
-         * 
-         */
-        public Builder devices(List<ConfigurationGroupDeviceArgs> devices) {
-            return devices(Output.of(devices));
-        }
-
-        /**
-         * @param devices List of devices
-         * 
-         * @return builder
-         * 
-         */
-        public Builder devices(ConfigurationGroupDeviceArgs... devices) {
-            return devices(List.of(devices));
         }
 
         /**
@@ -384,6 +352,27 @@ public final class ConfigurationGroupState extends com.pulumi.resources.Resource
          */
         public Builder topologySiteDevices(Integer topologySiteDevices) {
             return topologySiteDevices(Output.of(topologySiteDevices));
+        }
+
+        /**
+         * @param version The version of the object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(@Nullable Output<Integer> version) {
+            $.version = version;
+            return this;
+        }
+
+        /**
+         * @param version The version of the object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Integer version) {
+            return version(Output.of(version));
         }
 
         public ConfigurationGroupState build() {

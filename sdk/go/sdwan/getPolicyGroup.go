@@ -60,8 +60,6 @@ type LookupPolicyGroupArgs struct {
 type LookupPolicyGroupResult struct {
 	// Description
 	Description string `pulumi:"description"`
-	// List of devices
-	Devices []GetPolicyGroupDevice `pulumi:"devices"`
 	// List of feature profile IDs
 	FeatureProfileIds []string `pulumi:"featureProfileIds"`
 	// The id of the object
@@ -72,6 +70,8 @@ type LookupPolicyGroupResult struct {
 	PolicyVersions []string `pulumi:"policyVersions"`
 	// Type of solution
 	Solution string `pulumi:"solution"`
+	// The version of the object
+	Version int `pulumi:"version"`
 }
 
 func LookupPolicyGroupOutput(ctx *pulumi.Context, args LookupPolicyGroupOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyGroupResultOutput {
@@ -111,11 +111,6 @@ func (o LookupPolicyGroupResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPolicyGroupResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of devices
-func (o LookupPolicyGroupResultOutput) Devices() GetPolicyGroupDeviceArrayOutput {
-	return o.ApplyT(func(v LookupPolicyGroupResult) []GetPolicyGroupDevice { return v.Devices }).(GetPolicyGroupDeviceArrayOutput)
-}
-
 // List of feature profile IDs
 func (o LookupPolicyGroupResultOutput) FeatureProfileIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupPolicyGroupResult) []string { return v.FeatureProfileIds }).(pulumi.StringArrayOutput)
@@ -139,6 +134,11 @@ func (o LookupPolicyGroupResultOutput) PolicyVersions() pulumi.StringArrayOutput
 // Type of solution
 func (o LookupPolicyGroupResultOutput) Solution() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPolicyGroupResult) string { return v.Solution }).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o LookupPolicyGroupResultOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupPolicyGroupResult) int { return v.Version }).(pulumi.IntOutput)
 }
 
 func init() {

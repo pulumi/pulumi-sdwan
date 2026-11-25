@@ -187,6 +187,17 @@ func NewCiscoTrustsecFeatureTemplate(ctx *pulumi.Context,
 	if args.DeviceTypes == nil {
 		return nil, errors.New("invalid value for required argument 'DeviceTypes'")
 	}
+	if args.CredentialsPassword != nil {
+		args.CredentialsPassword = pulumi.ToSecret(args.CredentialsPassword).(pulumi.StringPtrInput)
+	}
+	if args.SxpDefaultPassword != nil {
+		args.SxpDefaultPassword = pulumi.ToSecret(args.SxpDefaultPassword).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"credentialsPassword",
+		"sxpDefaultPassword",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource CiscoTrustsecFeatureTemplate
 	err := ctx.RegisterResource("sdwan:index/ciscoTrustsecFeatureTemplate:CiscoTrustsecFeatureTemplate", name, args, &resource, opts...)

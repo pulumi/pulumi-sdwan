@@ -1286,6 +1286,36 @@ public final class VpnInterfaceEthernetPppoeFeatureTemplateState extends com.pul
     }
 
     /**
+     * Service Provider Name
+     * 
+     */
+    @Import(name="serviceProviderName")
+    private @Nullable Output<String> serviceProviderName;
+
+    /**
+     * @return Service Provider Name
+     * 
+     */
+    public Optional<Output<String>> serviceProviderName() {
+        return Optional.ofNullable(this.serviceProviderName);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="serviceProviderNameVariable")
+    private @Nullable Output<String> serviceProviderNameVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> serviceProviderNameVariable() {
+        return Optional.ofNullable(this.serviceProviderNameVariable);
+    }
+
+    /**
      * 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
      *   - Range: `8`-`100000000`
      * 
@@ -2643,6 +2673,8 @@ public final class VpnInterfaceEthernetPppoeFeatureTemplateState extends com.pul
         this.qosMapVpnVariable = $.qosMapVpnVariable;
         this.secondaryRegion = $.secondaryRegion;
         this.secondaryRegionVariable = $.secondaryRegionVariable;
+        this.serviceProviderName = $.serviceProviderName;
+        this.serviceProviderNameVariable = $.serviceProviderNameVariable;
         this.shapingRate = $.shapingRate;
         this.shapingRateVariable = $.shapingRateVariable;
         this.shutdown = $.shutdown;
@@ -4519,6 +4551,48 @@ public final class VpnInterfaceEthernetPppoeFeatureTemplateState extends com.pul
          */
         public Builder secondaryRegionVariable(String secondaryRegionVariable) {
             return secondaryRegionVariable(Output.of(secondaryRegionVariable));
+        }
+
+        /**
+         * @param serviceProviderName Service Provider Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceProviderName(@Nullable Output<String> serviceProviderName) {
+            $.serviceProviderName = serviceProviderName;
+            return this;
+        }
+
+        /**
+         * @param serviceProviderName Service Provider Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceProviderName(String serviceProviderName) {
+            return serviceProviderName(Output.of(serviceProviderName));
+        }
+
+        /**
+         * @param serviceProviderNameVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceProviderNameVariable(@Nullable Output<String> serviceProviderNameVariable) {
+            $.serviceProviderNameVariable = serviceProviderNameVariable;
+            return this;
+        }
+
+        /**
+         * @param serviceProviderNameVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceProviderNameVariable(String serviceProviderNameVariable) {
+            return serviceProviderNameVariable(Output.of(serviceProviderNameVariable));
         }
 
         /**

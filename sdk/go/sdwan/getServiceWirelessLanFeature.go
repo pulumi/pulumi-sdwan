@@ -99,6 +99,10 @@ type LookupServiceWirelessLanFeatureResult struct {
 	Password string `pulumi:"password"`
 	// Variable name
 	PasswordVariable string `pulumi:"passwordVariable"`
+	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	PasswordWo string `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion int `pulumi:"passwordWoVersion"`
 	// Configure Wi-Fi SSID profile
 	Ssids []GetServiceWirelessLanFeatureSsid `pulumi:"ssids"`
 	// Set management username
@@ -236,6 +240,16 @@ func (o LookupServiceWirelessLanFeatureResultOutput) Password() pulumi.StringOut
 // Variable name
 func (o LookupServiceWirelessLanFeatureResultOutput) PasswordVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceWirelessLanFeatureResult) string { return v.PasswordVariable }).(pulumi.StringOutput)
+}
+
+// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+func (o LookupServiceWirelessLanFeatureResultOutput) PasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceWirelessLanFeatureResult) string { return v.PasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupServiceWirelessLanFeatureResultOutput) PasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupServiceWirelessLanFeatureResult) int { return v.PasswordWoVersion }).(pulumi.IntOutput)
 }
 
 // Configure Wi-Fi SSID profile

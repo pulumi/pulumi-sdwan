@@ -27,7 +27,7 @@ class GetPolicyObjectFeatureProfileParcelsResult:
     """
     A collection of values returned by getPolicyObjectFeatureProfileParcels.
     """
-    def __init__(__self__, created_by=None, feature_profile_id=None, id=None, parcel_type=None, parcels=None):
+    def __init__(__self__, created_by=None, feature_profile_id=None, id=None, parcel_names=None, parcel_type=None, parcels=None):
         if created_by and not isinstance(created_by, str):
             raise TypeError("Expected argument 'created_by' to be a str")
         pulumi.set(__self__, "created_by", created_by)
@@ -37,6 +37,9 @@ class GetPolicyObjectFeatureProfileParcelsResult:
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
+        if parcel_names and not isinstance(parcel_names, list):
+            raise TypeError("Expected argument 'parcel_names' to be a list")
+        pulumi.set(__self__, "parcel_names", parcel_names)
         if parcel_type and not isinstance(parcel_type, str):
             raise TypeError("Expected argument 'parcel_type' to be a str")
         pulumi.set(__self__, "parcel_type", parcel_type)
@@ -69,6 +72,14 @@ class GetPolicyObjectFeatureProfileParcelsResult:
         return pulumi.get(self, "id")
 
     @_builtins.property
+    @pulumi.getter(name="parcelNames")
+    def parcel_names(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+        """
+        return pulumi.get(self, "parcel_names")
+
+    @_builtins.property
     @pulumi.getter(name="parcelType")
     def parcel_type(self) -> Optional[_builtins.str]:
         """
@@ -94,12 +105,14 @@ class AwaitableGetPolicyObjectFeatureProfileParcelsResult(GetPolicyObjectFeature
             created_by=self.created_by,
             feature_profile_id=self.feature_profile_id,
             id=self.id,
+            parcel_names=self.parcel_names,
             parcel_type=self.parcel_type,
             parcels=self.parcels)
 
 
 def get_policy_object_feature_profile_parcels(created_by: Optional[_builtins.str] = None,
                                               feature_profile_id: Optional[_builtins.str] = None,
+                                              parcel_names: Optional[Sequence[_builtins.str]] = None,
                                               parcel_type: Optional[_builtins.str] = None,
                                               opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetPolicyObjectFeatureProfileParcelsResult:
     """
@@ -117,11 +130,13 @@ def get_policy_object_feature_profile_parcels(created_by: Optional[_builtins.str
 
     :param _builtins.str created_by: Filter by creator (e.g. 'system' for system-created parcels)
     :param _builtins.str feature_profile_id: Policy Object Feature Profile ID
+    :param Sequence[_builtins.str] parcel_names: Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
     :param _builtins.str parcel_type: Filter by parcel type (e.g. 'app-list', 'data-prefix')
     """
     __args__ = dict()
     __args__['createdBy'] = created_by
     __args__['featureProfileId'] = feature_profile_id
+    __args__['parcelNames'] = parcel_names
     __args__['parcelType'] = parcel_type
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getPolicyObjectFeatureProfileParcels:getPolicyObjectFeatureProfileParcels', __args__, opts=opts, typ=GetPolicyObjectFeatureProfileParcelsResult).value
@@ -130,10 +145,12 @@ def get_policy_object_feature_profile_parcels(created_by: Optional[_builtins.str
         created_by=pulumi.get(__ret__, 'created_by'),
         feature_profile_id=pulumi.get(__ret__, 'feature_profile_id'),
         id=pulumi.get(__ret__, 'id'),
+        parcel_names=pulumi.get(__ret__, 'parcel_names'),
         parcel_type=pulumi.get(__ret__, 'parcel_type'),
         parcels=pulumi.get(__ret__, 'parcels'))
 def get_policy_object_feature_profile_parcels_output(created_by: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                      feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                     parcel_names: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
                                                      parcel_type: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectFeatureProfileParcelsResult]:
     """
@@ -151,11 +168,13 @@ def get_policy_object_feature_profile_parcels_output(created_by: pulumi.Input[Op
 
     :param _builtins.str created_by: Filter by creator (e.g. 'system' for system-created parcels)
     :param _builtins.str feature_profile_id: Policy Object Feature Profile ID
+    :param Sequence[_builtins.str] parcel_names: Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
     :param _builtins.str parcel_type: Filter by parcel type (e.g. 'app-list', 'data-prefix')
     """
     __args__ = dict()
     __args__['createdBy'] = created_by
     __args__['featureProfileId'] = feature_profile_id
+    __args__['parcelNames'] = parcel_names
     __args__['parcelType'] = parcel_type
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPolicyObjectFeatureProfileParcels:getPolicyObjectFeatureProfileParcels', __args__, opts=opts, typ=GetPolicyObjectFeatureProfileParcelsResult)
@@ -163,5 +182,6 @@ def get_policy_object_feature_profile_parcels_output(created_by: pulumi.Input[Op
         created_by=pulumi.get(__response__, 'created_by'),
         feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
         id=pulumi.get(__response__, 'id'),
+        parcel_names=pulumi.get(__response__, 'parcel_names'),
         parcel_type=pulumi.get(__response__, 'parcel_type'),
         parcels=pulumi.get(__response__, 'parcels')))

@@ -514,19 +514,19 @@ class SystemNtpFeature(pulumi.CustomResource):
                 "authentication_key": 41673,
                 "vpn": 1,
                 "ntp_version": 4,
-                "source_interface": "Ethernet",
+                "source_interface": "GigabitEthernet1",
                 "prefer_this_ntp_server": False,
             }],
             authentication_keys=[{
                 "key_id": 49737,
-                "md5_value": "$CRYPT_CLUSTER",
+                "md5_value": "md5-key-example",
                 "hmac_sha2_value": "hmac-sha2-key-example",
                 "cmac_aes128_value": "cmac-aes128-key-1234",
             }],
             trusted_keys=[49737],
             authoritative_ntp_server=False,
             stratum=1,
-            source_interface="ATM")
+            source_interface="Loopback0")
         ```
 
         ## Import
@@ -583,19 +583,19 @@ class SystemNtpFeature(pulumi.CustomResource):
                 "authentication_key": 41673,
                 "vpn": 1,
                 "ntp_version": 4,
-                "source_interface": "Ethernet",
+                "source_interface": "GigabitEthernet1",
                 "prefer_this_ntp_server": False,
             }],
             authentication_keys=[{
                 "key_id": 49737,
-                "md5_value": "$CRYPT_CLUSTER",
+                "md5_value": "md5-key-example",
                 "hmac_sha2_value": "hmac-sha2-key-example",
                 "cmac_aes128_value": "cmac-aes128-key-1234",
             }],
             trusted_keys=[49737],
             authoritative_ntp_server=False,
             stratum=1,
-            source_interface="ATM")
+            source_interface="Loopback0")
         ```
 
         ## Import

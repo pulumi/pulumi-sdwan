@@ -480,11 +480,7 @@ export interface AsPathListPolicyObjectEntry {
     asPath: pulumi.Input<string>;
 }
 
-export interface AttachFeatureDeviceTemplateDevice {
-    /**
-     * Device ID
-     */
-    id: pulumi.Input<string>;
+export interface AttachFeatureDeviceTemplateDevices {
     /**
      * Device variables
      */
@@ -5866,35 +5862,27 @@ export interface ColorListPolicyObjectEntry {
     color: pulumi.Input<string>;
 }
 
-export interface ConfigurationGroupDevice {
+export interface ConfigurationGroupDevicesDevices {
     /**
      * Deploy to device if enabled.
      *   - Default value: `false`
      */
     deploy?: pulumi.Input<boolean | undefined>;
     /**
-     * Device ID
-     */
-    id?: pulumi.Input<string | undefined>;
-    /**
      * Topology label for dual device configuration group (supported from version 20.18.1 onwards)
      */
     topologyLabel?: pulumi.Input<string | undefined>;
     /**
-     * List of variables
+     * Device variables, keyed by variable name (for example `hostName`). Terraform matches each variable by its name, so a changed value shows as a change of that variable only.
      */
-    variables?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupDeviceVariable>[] | undefined>;
+    variables?: pulumi.Input<{[key: string]: pulumi.Input<inputs.ConfigurationGroupDevicesDevicesVariables>} | undefined>;
 }
 
-export interface ConfigurationGroupDeviceVariable {
+export interface ConfigurationGroupDevicesDevicesVariables {
     /**
      * Use this instead of `value` in case value is of type `List`.
      */
     listValues?: pulumi.Input<pulumi.Input<string>[] | undefined>;
-    /**
-     * Variable name
-     */
-    name: pulumi.Input<string>;
     /**
      * Variable value
      */
@@ -6600,7 +6588,7 @@ export interface ExpandedCommunityListPolicyObjectEntry {
 
 export interface ExtendedCommunityListPolicyObjectEntry {
     /**
-     * Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+     * Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
      */
     community: pulumi.Input<string>;
 }
@@ -7413,12 +7401,24 @@ export interface NetworkHierarchySecurityLoggingUtdSyslog {
 export interface OtherThousandeyesFeatureVirtualApplication {
     /**
      * Set the Account Group Token
+     *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `accountGroupTokenWo` together with `accountGroupTokenWoVersion`, which keeps it out of state.
      */
     accountGroupToken?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     accountGroupTokenVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the Account Group Token
+     *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+     */
+    accountGroupTokenWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `accountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    accountGroupTokenWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set the Agent default gateway
      */
@@ -7595,31 +7595,23 @@ export interface OtherUcseFeatureInterface {
     ucseInterfaceVpnVariable?: pulumi.Input<string | undefined>;
 }
 
-export interface PolicyGroupDevice {
+export interface PolicyGroupDevicesDevices {
     /**
      * Deploy to device if enabled.
      *   - Default value: `false`
      */
     deploy?: pulumi.Input<boolean | undefined>;
     /**
-     * Device ID
+     * Device variables, keyed by variable name (for example `hostName`). Terraform matches each variable by its name, so a changed value shows as a change of that variable only.
      */
-    id?: pulumi.Input<string | undefined>;
-    /**
-     * List of variables
-     */
-    variables?: pulumi.Input<pulumi.Input<inputs.PolicyGroupDeviceVariable>[] | undefined>;
+    variables?: pulumi.Input<{[key: string]: pulumi.Input<inputs.PolicyGroupDevicesDevicesVariables>} | undefined>;
 }
 
-export interface PolicyGroupDeviceVariable {
+export interface PolicyGroupDevicesDevicesVariables {
     /**
      * Use this instead of `value` in case value is of type `List`.
      */
     listValues?: pulumi.Input<pulumi.Input<string>[] | undefined>;
-    /**
-     * Variable name
-     */
-    name: pulumi.Input<string>;
     /**
      * Variable value
      */
@@ -7838,6 +7830,13 @@ export interface PolicyObjectSecurityIdentityListEntry {
 export interface PolicyObjectSecurityIpsSignatureEntry {
     generatorId?: pulumi.Input<string | undefined>;
     signatureId?: pulumi.Input<string | undefined>;
+}
+
+export interface PolicyObjectSecurityIpsSignatureSetEntry {
+    /**
+     * - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+     */
+    baseSignature?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityLocalApplicationListEntry {
@@ -10804,12 +10803,24 @@ export interface ServiceMulticastFeatureMsdpGroupPeer {
     keepaliveIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `peerAuthenticationPasswordWo` together with `peerAuthenticationPasswordWoVersion`, which keeps it out of state.
      */
     peerAuthenticationPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     peerAuthenticationPasswordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+     */
+    peerAuthenticationPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `peerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    peerAuthenticationPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set MSDP peer ip
      */
@@ -11233,12 +11244,24 @@ export interface ServiceRoutingBgpFeatureIpv4Neighbor {
     nextHopSelfVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     passwordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     */
+    passwordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set remote autonomous system number
      */
@@ -11550,12 +11573,24 @@ export interface ServiceRoutingBgpFeatureIpv6Neighbor {
     nextHopSelfVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     passwordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     */
+    passwordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set remote autonomous system number
      */
@@ -11788,12 +11823,24 @@ export interface ServiceRoutingEigrpFeatureMd5Key {
     keyIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
      */
     keyString?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     keyStringVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     */
+    keyStringWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    keyStringWoVersion?: pulumi.Input<number | undefined>;
 }
 
 export interface ServiceRoutingEigrpFeatureNetwork {
@@ -11924,6 +11971,8 @@ export interface ServiceRoutingOspfFeatureAreaInterface {
     lsaRetransmitIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
      */
     messageDigestKey?: pulumi.Input<string | undefined>;
     /**
@@ -11939,6 +11988,16 @@ export interface ServiceRoutingOspfFeatureAreaInterface {
      * Variable name
      */
     messageDigestKeyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     */
+    messageDigestKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    messageDigestKeyWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set interface name
      */
@@ -12025,7 +12084,14 @@ export interface ServiceRoutingOspfFeatureRedistribute {
      * Variable name
      */
     protocolVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
     routePolicyId?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
+    routePolicyIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
@@ -12098,12 +12164,24 @@ export interface ServiceRoutingOspfv3Ipv4FeatureArea {
 export interface ServiceRoutingOspfv3Ipv4FeatureAreaInterface {
     /**
      * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
      */
     authenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     authenticationKeyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     */
+    authenticationKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationKeyWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`
@@ -12238,7 +12316,14 @@ export interface ServiceRoutingOspfv3Ipv4FeatureRedistribute {
      * Variable name
      */
     protocolVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
     routePolicyId?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
+    routePolicyIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
@@ -12294,12 +12379,24 @@ export interface ServiceRoutingOspfv3Ipv6FeatureArea {
 export interface ServiceRoutingOspfv3Ipv6FeatureAreaInterface {
     /**
      * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
      */
     authenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     authenticationKeyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     */
+    authenticationKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationKeyWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`
@@ -12420,7 +12517,14 @@ export interface ServiceRoutingOspfv3Ipv6FeatureRedistribute {
      * Variable name
      */
     protocolVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
     routePolicyId?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
+    routePolicyIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
@@ -12673,12 +12777,24 @@ export interface ServiceWirelessLanFeatureSsid {
     broadcastSsidVariable?: pulumi.Input<string | undefined>;
     /**
      * Set passphrase, Attribute conditional on `securityType` equal to `personal`
+     *   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passphraseWo` together with `passphraseWoVersion`, which keeps it out of state.
      */
     passphrase?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `securityType` equal to `personal`
      */
     passphraseVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set passphrase, Attribute conditional on `securityType` equal to `personal`
+     *   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+     */
+    passphraseWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `passphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passphraseWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Select QoS profile
      *   - Choices: `platinum`, `gold`, `silver`, `bronze`
@@ -12719,12 +12835,24 @@ export interface ServiceWirelessLanFeatureSsid {
     radiusServerPortVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+     *   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `radiusServerSecretWo` together with `radiusServerSecretWoVersion`, which keeps it out of state.
      */
     radiusServerSecret?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `securityType` equal to `enterprise`
      */
     radiusServerSecretVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+     *   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+     */
+    radiusServerSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `radiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    radiusServerSecretWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Select security type
      *   - Choices: `enterprise`, `personal`, `open`
@@ -12743,6 +12871,292 @@ export interface ServiceWirelessLanFeatureSsid {
      * Variable name
      */
     vlanIdVariable?: pulumi.Input<string | undefined>;
+}
+
+export interface SigFeatureInterface {
+    /**
+     * IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
+     */
+    dpdInterval?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    dpdIntervalVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
+     */
+    dpdRetries?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    dpdRetriesVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
+     */
+    ikeCiphersuite?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ikeCiphersuiteVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE Diffie Hellman Groups
+     *   - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+     *   - Default value: `16`
+     */
+    ikeGroup?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ikeGroupVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+     */
+    ikeLocalId?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ikeLocalIdVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE rekey interval <300..1209600> seconds
+     *   - Range: `300`-`86400`
+     *   - Default value: `14400`
+     */
+    ikeRekeyInterval?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    ikeRekeyIntervalVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+     */
+    ikeRemoteId?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ikeRemoteIdVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Interface description
+     */
+    interfaceDescription?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    interfaceDescriptionVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Interface name: IPsec when present
+     */
+    interfaceName?: pulumi.Input<string | undefined>;
+    /**
+     * IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+     *   - Default value: `aes256-cbc-sha512`
+     */
+    ipsecCiphersuite?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ipsecCiphersuiteVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IPsec rekey interval <300..1209600> seconds
+     *   - Range: `300`-`1209600`
+     *   - Default value: `3600`
+     */
+    ipsecRekeyInterval?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    ipsecRekeyIntervalVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Replay window size 32..8192 (must be a power of 2)
+     *   - Default value: `512`
+     */
+    ipsecReplayWindow?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    ipsecReplayWindowVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Interface MTU <576..2000>, in bytes
+     *   - Range: `576`-`2000`
+     *   - Default value: `1400`
+     */
+    mtu?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    mtuVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IPsec perfect forward secrecy settings
+     *   - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+     *   - Default value: `none`
+     */
+    perfectForwardSecrecy?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    perfectForwardSecrecyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Use preshared key to authenticate IKE peer
+     */
+    preSharedKeyDynamic?: pulumi.Input<boolean | undefined>;
+    /**
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
+     */
+    preSharedSecret?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    preSharedSecretVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     */
+    preSharedSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    preSharedSecretWoVersion?: pulumi.Input<number | undefined>;
+    /**
+     * Administrative state
+     *   - Default value: `false`
+     */
+    shutdown?: pulumi.Input<boolean | undefined>;
+    /**
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
+     */
+    tcpMssAdjust?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    tcpMssAdjustVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Enable/disable SIG tracking
+     *   - Default value: `true`
+     */
+    trackEnable?: pulumi.Input<boolean | undefined>;
+    /**
+     * Enable tracker for this interface
+     */
+    tracker?: pulumi.Input<string | undefined>;
+    /**
+     * SIG Tunnel Data Center
+     *   - Choices: `primary-dc`, `secondary-dc`
+     */
+    tunnelDcPreference?: pulumi.Input<string | undefined>;
+    /**
+     * Tunnel destination IP address
+     */
+    tunnelDestination?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    tunnelDestinationVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Public IP required to setup GRE tunnel to Zscaler
+     *   - Default value: `Auto`
+     */
+    tunnelPublicIp?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    tunnelPublicIpVariable?: pulumi.Input<string | undefined>;
+    /**
+     * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    tunnelRouteVia?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    tunnelRouteViaVariable?: pulumi.Input<string | undefined>;
+    /**
+     * SIG Tunnel Provider
+     *   - Choices: `secure-internet-gateway-umbrella`, `secure-internet-gateway-zscaler`, `secure-internet-gateway-other`
+     */
+    tunnelSet?: pulumi.Input<string | undefined>;
+    /**
+     * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+     */
+    tunnelSourceInterface?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    tunnelSourceInterfaceVariable?: pulumi.Input<string | undefined>;
+}
+
+export interface SigFeatureInterfacePair {
+    /**
+     * Active Tunnel Interface for SIG
+     */
+    activeInterface?: pulumi.Input<string | undefined>;
+    /**
+     * Active Tunnel Interface Weight
+     *   - Range: `1`-`255`
+     */
+    activeInterfaceWeight?: pulumi.Input<number | undefined>;
+    /**
+     * Backup Tunnel Interface for SIG
+     */
+    backupInterface?: pulumi.Input<string | undefined>;
+    /**
+     * Backup Tunnel Interface Weight
+     *   - Range: `1`-`255`
+     */
+    backupInterfaceWeight?: pulumi.Input<number | undefined>;
+}
+
+export interface SigFeatureTracker {
+    /**
+     * API url of endpoint
+     */
+    endpointApiUrl?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    endpointApiUrlVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Probe interval <10..600> seconds
+     *   - Range: `20`-`600`
+     *   - Default value: `60`
+     */
+    interval?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    intervalVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Probe failure multiplier <1..10> failed attempts
+     *   - Range: `1`-`10`
+     *   - Default value: `3`
+     */
+    multiplier?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    multiplierVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Tracker name
+     */
+    name?: pulumi.Input<string | undefined>;
+    /**
+     * Probe Timeout threshold <100..1000> milliseconds
+     *   - Range: `100`-`1000`
+     *   - Default value: `300`
+     */
+    threshold?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    thresholdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SiteListPolicyObjectEntry {
@@ -13144,12 +13558,24 @@ export interface SseZscalerFeatureInterface {
     preSharedKeyDynamic?: pulumi.Input<boolean | undefined>;
     /**
      * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
      */
     preSharedSecret?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     preSharedSecretVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     */
+    preSharedSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    preSharedSecretWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Administrative state
      *   - Default value: `false`
@@ -13841,6 +14267,8 @@ export interface SystemAaaFeatureRadiusGroupServer {
     authPortVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
      */
     key?: pulumi.Input<string | undefined>;
     /**
@@ -13863,6 +14291,16 @@ export interface SystemAaaFeatureRadiusGroupServer {
      */
     keyVariable?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     */
+    keyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    keyWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Configure how many times to contact this Radius server
      *   - Range: `1`-`100`
      *   - Default value: `3`
@@ -13874,12 +14312,24 @@ export interface SystemAaaFeatureRadiusGroupServer {
     retransmitVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the Radius server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
      */
     secretKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     secretKeyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the Radius server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     */
+    secretKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    secretKeyWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Configure how long to wait for replies from the Radius server
      *   - Range: `1`-`1000`
@@ -13928,6 +14378,8 @@ export interface SystemAaaFeatureTacacsGroupServer {
     address?: pulumi.Input<string | undefined>;
     /**
      * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
      */
     key?: pulumi.Input<string | undefined>;
     /**
@@ -13940,6 +14392,16 @@ export interface SystemAaaFeatureTacacsGroupServer {
      */
     keyVariable?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     */
+    keyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    keyWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * TACACS Port
      *   - Range: `1`-`65535`
      *   - Default value: `49`
@@ -13951,12 +14413,24 @@ export interface SystemAaaFeatureTacacsGroupServer {
     portVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the TACACS server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
      */
     secretKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     secretKeyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the TACACS server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     */
+    secretKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    secretKeyWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Configure how long to wait for replies from the TACACS server
      *   - Range: `1`-`1000`
@@ -13980,12 +14454,24 @@ export interface SystemAaaFeatureUser {
     nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     passwordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     */
+    passwordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set Privilege Level for this user
      *   - Choices: `1`, `15`
@@ -14361,6 +14847,8 @@ export interface SystemLoggingFeatureTlsProfile {
 export interface SystemNtpFeatureAuthenticationKey {
     /**
      * CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `cmacAes128ValueWo` together with `cmacAes128ValueWoVersion`, which keeps it out of state.
      */
     cmacAes128Value?: pulumi.Input<string | undefined>;
     /**
@@ -14368,13 +14856,35 @@ export interface SystemNtpFeatureAuthenticationKey {
      */
     cmacAes128ValueVariable?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+     */
+    cmacAes128ValueWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `cmacAes128ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    cmacAes128ValueWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `hmacSha2ValueWo` together with `hmacSha2ValueWoVersion`, which keeps it out of state.
      */
     hmacSha2Value?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
      */
     hmacSha2ValueVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+     */
+    hmacSha2ValueWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `hmacSha2ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    hmacSha2ValueWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Authentication key ID
      *   - Range: `1`-`4294967295`
@@ -14386,12 +14896,24 @@ export interface SystemNtpFeatureAuthenticationKey {
     keyIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `md5ValueWo` together with `md5ValueWoVersion`, which keeps it out of state.
      */
     md5Value?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     md5ValueVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+     */
+    md5ValueWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `md5ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    md5ValueWoVersion?: pulumi.Input<number | undefined>;
 }
 
 export interface SystemNtpFeatureServer {
@@ -14515,12 +15037,24 @@ export interface SystemSecurityFeatureKey {
     includeTcpOptionsVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
      */
     keyString?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     keyStringVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     */
+    keyStringWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    keyStringWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Select the chain name
      */
@@ -14603,12 +15137,24 @@ export interface SystemSnmpFeatureCommunity {
     authorizationVariable?: pulumi.Input<string | undefined>;
     /**
      * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `nameWo` together with `nameWoVersion`, which keeps it out of state.
      */
     name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     nameVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+     */
+    nameWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    nameWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set user label of the SNMP community
      */
@@ -14695,12 +15241,24 @@ export interface SystemSnmpFeatureTrapTargetServer {
 export interface SystemSnmpFeatureUser {
     /**
      * Specify authentication protocol password
+     *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationPasswordWo` together with `authenticationPasswordWoVersion`, which keeps it out of state.
      */
     authenticationPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     authenticationPasswordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify authentication protocol password
+     *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+     */
+    authenticationPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Configure authentication protocol
      *   - Choices: `sha`, `sha256`
@@ -14724,12 +15282,24 @@ export interface SystemSnmpFeatureUser {
     name?: pulumi.Input<string | undefined>;
     /**
      * Specify privacy protocol password
+     *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `privacyPasswordWo` together with `privacyPasswordWoVersion`, which keeps it out of state.
      */
     privacyPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     privacyPasswordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify privacy protocol password
+     *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+     */
+    privacyPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    privacyPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Configure privacy protocol
      *   - Choices: `aes-cfb-128`, `aes-256-cfb-128`
@@ -16254,12 +16824,24 @@ export interface TransportRoutingBgpFeatureIpv4Neighbor {
     nextHopSelfVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     passwordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     */
+    passwordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set remote autonomous system number
      */
@@ -16558,12 +17140,24 @@ export interface TransportRoutingBgpFeatureIpv6Neighbor {
     nextHopSelfVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     passwordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     */
+    passwordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set remote autonomous system number
      */
@@ -16837,6 +17431,8 @@ export interface TransportRoutingOspfFeatureAreaInterface {
     lsaRetransmitIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
      */
     messageDigestKey?: pulumi.Input<string | undefined>;
     /**
@@ -16852,6 +17448,16 @@ export interface TransportRoutingOspfFeatureAreaInterface {
      * Variable name
      */
     messageDigestKeyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     */
+    messageDigestKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    messageDigestKeyWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set interface name
      */
@@ -17002,12 +17608,24 @@ export interface TransportRoutingOspfv3Ipv4FeatureArea {
 export interface TransportRoutingOspfv3Ipv4FeatureAreaInterface {
     /**
      * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
      */
     authenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     authenticationKeyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     */
+    authenticationKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationKeyWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`
@@ -17198,12 +17816,24 @@ export interface TransportRoutingOspfv3Ipv6FeatureArea {
 export interface TransportRoutingOspfv3Ipv6FeatureAreaInterface {
     /**
      * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
      */
     authenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     authenticationKeyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     */
+    authenticationKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationKeyWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`

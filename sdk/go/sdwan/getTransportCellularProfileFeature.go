@@ -93,6 +93,10 @@ type LookupTransportCellularProfileFeatureResult struct {
 	ProfilePassword string `pulumi:"profilePassword"`
 	// Variable name
 	ProfilePasswordVariable string `pulumi:"profilePasswordVariable"`
+	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	ProfilePasswordWo string `pulumi:"profilePasswordWo"`
+	// Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	ProfilePasswordWoVersion int `pulumi:"profilePasswordWoVersion"`
 	// Set the profile username
 	ProfileUsername string `pulumi:"profileUsername"`
 	// Variable name
@@ -223,6 +227,16 @@ func (o LookupTransportCellularProfileFeatureResultOutput) ProfilePassword() pul
 // Variable name
 func (o LookupTransportCellularProfileFeatureResultOutput) ProfilePasswordVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) string { return v.ProfilePasswordVariable }).(pulumi.StringOutput)
+}
+
+// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+func (o LookupTransportCellularProfileFeatureResultOutput) ProfilePasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) string { return v.ProfilePasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupTransportCellularProfileFeatureResultOutput) ProfilePasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) int { return v.ProfilePasswordWoVersion }).(pulumi.IntOutput)
 }
 
 // Set the profile username

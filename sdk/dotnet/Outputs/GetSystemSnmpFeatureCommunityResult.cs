@@ -30,6 +30,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string NameVariable;
         /// <summary>
+        /// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        /// </summary>
+        public readonly string NameWo;
+        /// <summary>
+        /// Rotation trigger for `NameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int NameWoVersion;
+        /// <summary>
         /// Set user label of the SNMP community
         /// </summary>
         public readonly string UserLabel;
@@ -52,6 +60,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string nameVariable,
 
+            string nameWo,
+
+            int nameWoVersion,
+
             string userLabel,
 
             string view,
@@ -62,6 +74,8 @@ namespace Pulumi.Sdwan.Outputs
             AuthorizationVariable = authorizationVariable;
             Name = name;
             NameVariable = nameVariable;
+            NameWo = nameWo;
+            NameWoVersion = nameWoVersion;
             UserLabel = userLabel;
             View = view;
             ViewVariable = viewVariable;

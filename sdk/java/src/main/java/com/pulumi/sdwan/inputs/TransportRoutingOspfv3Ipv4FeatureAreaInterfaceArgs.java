@@ -19,6 +19,8 @@ public final class TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs extends co
 
     /**
      * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="authenticationKey")
@@ -26,6 +28,8 @@ public final class TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs extends co
 
     /**
      * @return Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> authenticationKey() {
@@ -45,6 +49,40 @@ public final class TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs extends co
      */
     public Optional<Output<String>> authenticationKeyVariable() {
         return Optional.ofNullable(this.authenticationKeyVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     * 
+     */
+    @Import(name="authenticationKeyWo")
+    private @Nullable Output<String> authenticationKeyWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> authenticationKeyWo() {
+        return Optional.ofNullable(this.authenticationKeyWo);
+    }
+
+    /**
+     * Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="authenticationKeyWoVersion")
+    private @Nullable Output<Integer> authenticationKeyWoVersion;
+
+    /**
+     * @return Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> authenticationKeyWoVersion() {
+        return Optional.ofNullable(this.authenticationKeyWoVersion);
     }
 
     /**
@@ -329,6 +367,8 @@ public final class TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs extends co
     private TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs(TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs $) {
         this.authenticationKey = $.authenticationKey;
         this.authenticationKeyVariable = $.authenticationKeyVariable;
+        this.authenticationKeyWo = $.authenticationKeyWo;
+        this.authenticationKeyWoVersion = $.authenticationKeyWoVersion;
         this.authenticationSpi = $.authenticationSpi;
         this.authenticationSpiVariable = $.authenticationSpiVariable;
         this.authenticationType = $.authenticationType;
@@ -368,6 +408,8 @@ public final class TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs extends co
 
         /**
          * @param authenticationKey Set OSPF interface authentication IPSEC key
+         *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -379,6 +421,8 @@ public final class TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs extends co
 
         /**
          * @param authenticationKey Set OSPF interface authentication IPSEC key
+         *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -406,6 +450,52 @@ public final class TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs extends co
          */
         public Builder authenticationKeyVariable(String authenticationKeyVariable) {
             return authenticationKeyVariable(Output.of(authenticationKeyVariable));
+        }
+
+        /**
+         * @param authenticationKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set OSPF interface authentication IPSEC key
+         *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationKeyWo(@Nullable Output<String> authenticationKeyWo) {
+            $.authenticationKeyWo = authenticationKeyWo;
+            return this;
+        }
+
+        /**
+         * @param authenticationKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set OSPF interface authentication IPSEC key
+         *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationKeyWo(String authenticationKeyWo) {
+            return authenticationKeyWo(Output.of(authenticationKeyWo));
+        }
+
+        /**
+         * @param authenticationKeyWoVersion Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationKeyWoVersion(@Nullable Output<Integer> authenticationKeyWoVersion) {
+            $.authenticationKeyWoVersion = authenticationKeyWoVersion;
+            return this;
+        }
+
+        /**
+         * @param authenticationKeyWoVersion Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationKeyWoVersion(Integer authenticationKeyWoVersion) {
+            return authenticationKeyWoVersion(Output.of(authenticationKeyWoVersion));
         }
 
         /**

@@ -317,7 +317,7 @@ export class CiscoTrustsecFeatureTemplate extends pulumi.CustomResource {
             }
             resourceInputs["credentialsId"] = args?.credentialsId;
             resourceInputs["credentialsIdVariable"] = args?.credentialsIdVariable;
-            resourceInputs["credentialsPassword"] = args?.credentialsPassword;
+            resourceInputs["credentialsPassword"] = args?.credentialsPassword ? pulumi.secret(args.credentialsPassword) : undefined;
             resourceInputs["credentialsPasswordVariable"] = args?.credentialsPasswordVariable;
             resourceInputs["description"] = args?.description;
             resourceInputs["deviceSgt"] = args?.deviceSgt;
@@ -334,7 +334,7 @@ export class CiscoTrustsecFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["speakerHoldTime"] = args?.speakerHoldTime;
             resourceInputs["speakerHoldTimeVariable"] = args?.speakerHoldTimeVariable;
             resourceInputs["sxpConnections"] = args?.sxpConnections;
-            resourceInputs["sxpDefaultPassword"] = args?.sxpDefaultPassword;
+            resourceInputs["sxpDefaultPassword"] = args?.sxpDefaultPassword ? pulumi.secret(args.sxpDefaultPassword) : undefined;
             resourceInputs["sxpDefaultPasswordVariable"] = args?.sxpDefaultPasswordVariable;
             resourceInputs["sxpKeyChain"] = args?.sxpKeyChain;
             resourceInputs["sxpKeyChainVariable"] = args?.sxpKeyChainVariable;
@@ -353,6 +353,8 @@ export class CiscoTrustsecFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["credentialsPassword", "sxpDefaultPassword"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(CiscoTrustsecFeatureTemplate.__pulumiType, name, resourceInputs, opts);
     }
 }

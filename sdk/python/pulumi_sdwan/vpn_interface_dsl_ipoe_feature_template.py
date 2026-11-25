@@ -6391,7 +6391,7 @@ class VpnInterfaceDslIpoeFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["bandwidth_upstream_variable"] = bandwidth_upstream_variable
             __props__.__dict__["chap_hostname"] = chap_hostname
             __props__.__dict__["chap_hostname_variable"] = chap_hostname_variable
-            __props__.__dict__["chap_ppp_auth_password"] = chap_ppp_auth_password
+            __props__.__dict__["chap_ppp_auth_password"] = None if chap_ppp_auth_password is None else pulumi.Output.secret(chap_ppp_auth_password)
             __props__.__dict__["chap_ppp_auth_password_variable"] = chap_ppp_auth_password_variable
             if description is None and not opts.urn:
                 raise TypeError("Missing required property 'description'")
@@ -6436,7 +6436,7 @@ class VpnInterfaceDslIpoeFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["nat_udp_timeout"] = nat_udp_timeout
             __props__.__dict__["nat_udp_timeout_variable"] = nat_udp_timeout_variable
             __props__.__dict__["pap_password"] = pap_password
-            __props__.__dict__["pap_ppp_auth_password"] = pap_ppp_auth_password
+            __props__.__dict__["pap_ppp_auth_password"] = None if pap_ppp_auth_password is None else pulumi.Output.secret(pap_ppp_auth_password)
             __props__.__dict__["pap_ppp_auth_password_variable"] = pap_ppp_auth_password_variable
             __props__.__dict__["pap_username"] = pap_username
             __props__.__dict__["pap_username_variable"] = pap_username_variable
@@ -6551,6 +6551,8 @@ class VpnInterfaceDslIpoeFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["write_rule_variable"] = write_rule_variable
             __props__.__dict__["template_type"] = None
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["chapPppAuthPassword", "papPppAuthPassword"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(VpnInterfaceDslIpoeFeatureTemplate, __self__).__init__(
             'sdwan:index/vpnInterfaceDslIpoeFeatureTemplate:VpnInterfaceDslIpoeFeatureTemplate',
             resource_name,

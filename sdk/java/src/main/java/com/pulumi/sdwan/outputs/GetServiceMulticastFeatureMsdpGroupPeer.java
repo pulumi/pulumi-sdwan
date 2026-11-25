@@ -58,6 +58,16 @@ public final class GetServiceMulticastFeatureMsdpGroupPeer {
      */
     private String peerAuthenticationPasswordVariable;
     /**
+     * @return Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    private String peerAuthenticationPasswordWo;
+    /**
+     * @return Rotation trigger for `peerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer peerAuthenticationPasswordWoVersion;
+    /**
      * @return Set MSDP peer ip
      * 
      */
@@ -154,6 +164,20 @@ public final class GetServiceMulticastFeatureMsdpGroupPeer {
         return this.peerAuthenticationPasswordVariable;
     }
     /**
+     * @return Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    public String peerAuthenticationPasswordWo() {
+        return this.peerAuthenticationPasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `peerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer peerAuthenticationPasswordWoVersion() {
+        return this.peerAuthenticationPasswordWoVersion;
+    }
+    /**
      * @return Set MSDP peer ip
      * 
      */
@@ -217,6 +241,8 @@ public final class GetServiceMulticastFeatureMsdpGroupPeer {
         private String keepaliveIntervalVariable;
         private String peerAuthenticationPassword;
         private String peerAuthenticationPasswordVariable;
+        private String peerAuthenticationPasswordWo;
+        private Integer peerAuthenticationPasswordWoVersion;
         private String peerIp;
         private String peerIpVariable;
         private String prefixListId;
@@ -236,6 +262,8 @@ public final class GetServiceMulticastFeatureMsdpGroupPeer {
     	      this.keepaliveIntervalVariable = defaults.keepaliveIntervalVariable;
     	      this.peerAuthenticationPassword = defaults.peerAuthenticationPassword;
     	      this.peerAuthenticationPasswordVariable = defaults.peerAuthenticationPasswordVariable;
+    	      this.peerAuthenticationPasswordWo = defaults.peerAuthenticationPasswordWo;
+    	      this.peerAuthenticationPasswordWoVersion = defaults.peerAuthenticationPasswordWoVersion;
     	      this.peerIp = defaults.peerIp;
     	      this.peerIpVariable = defaults.peerIpVariable;
     	      this.prefixListId = defaults.prefixListId;
@@ -318,6 +346,22 @@ public final class GetServiceMulticastFeatureMsdpGroupPeer {
             return this;
         }
         @CustomType.Setter
+        public Builder peerAuthenticationPasswordWo(String peerAuthenticationPasswordWo) {
+            if (peerAuthenticationPasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetServiceMulticastFeatureMsdpGroupPeer", "peerAuthenticationPasswordWo");
+            }
+            this.peerAuthenticationPasswordWo = peerAuthenticationPasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder peerAuthenticationPasswordWoVersion(Integer peerAuthenticationPasswordWoVersion) {
+            if (peerAuthenticationPasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetServiceMulticastFeatureMsdpGroupPeer", "peerAuthenticationPasswordWoVersion");
+            }
+            this.peerAuthenticationPasswordWoVersion = peerAuthenticationPasswordWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder peerIp(String peerIp) {
             if (peerIp == null) {
               throw new MissingRequiredPropertyException("GetServiceMulticastFeatureMsdpGroupPeer", "peerIp");
@@ -384,6 +428,8 @@ public final class GetServiceMulticastFeatureMsdpGroupPeer {
             _resultValue.keepaliveIntervalVariable = keepaliveIntervalVariable;
             _resultValue.peerAuthenticationPassword = peerAuthenticationPassword;
             _resultValue.peerAuthenticationPasswordVariable = peerAuthenticationPasswordVariable;
+            _resultValue.peerAuthenticationPasswordWo = peerAuthenticationPasswordWo;
+            _resultValue.peerAuthenticationPasswordWoVersion = peerAuthenticationPasswordWoVersion;
             _resultValue.peerIp = peerIp;
             _resultValue.peerIpVariable = peerIpVariable;
             _resultValue.prefixListId = prefixListId;

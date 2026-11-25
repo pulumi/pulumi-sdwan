@@ -22,6 +22,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string AccountGroupTokenVariable;
         /// <summary>
+        /// Set the Account Group Token
+        /// </summary>
+        public readonly string AccountGroupTokenWo;
+        /// <summary>
+        /// Rotation trigger for `AccountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int AccountGroupTokenWoVersion;
+        /// <summary>
         /// Set the Agent default gateway
         /// </summary>
         public readonly string AgentDefaultGateway;
@@ -104,6 +112,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string accountGroupTokenVariable,
 
+            string accountGroupTokenWo,
+
+            int accountGroupTokenWoVersion,
+
             string agentDefaultGateway,
 
             string agentDefaultGatewayVariable,
@@ -144,6 +156,8 @@ namespace Pulumi.Sdwan.Outputs
         {
             AccountGroupToken = accountGroupToken;
             AccountGroupTokenVariable = accountGroupTokenVariable;
+            AccountGroupTokenWo = accountGroupTokenWo;
+            AccountGroupTokenWoVersion = accountGroupTokenWoVersion;
             AgentDefaultGateway = agentDefaultGateway;
             AgentDefaultGatewayVariable = agentDefaultGatewayVariable;
             Hostname = hostname;

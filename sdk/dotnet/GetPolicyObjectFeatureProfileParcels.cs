@@ -99,6 +99,18 @@ namespace Pulumi.Sdwan
         [Input("featureProfileId", required: true)]
         public string FeatureProfileId { get; set; } = null!;
 
+        [Input("parcelNames")]
+        private List<string>? _parcelNames;
+
+        /// <summary>
+        /// Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+        /// </summary>
+        public List<string> ParcelNames
+        {
+            get => _parcelNames ?? (_parcelNames = new List<string>());
+            set => _parcelNames = value;
+        }
+
         /// <summary>
         /// Filter by parcel type (e.g. 'app-list', 'data-prefix')
         /// </summary>
@@ -124,6 +136,18 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("featureProfileId", required: true)]
         public Input<string> FeatureProfileId { get; set; } = null!;
+
+        [Input("parcelNames")]
+        private InputList<string>? _parcelNames;
+
+        /// <summary>
+        /// Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+        /// </summary>
+        public InputList<string> ParcelNames
+        {
+            get => _parcelNames ?? (_parcelNames = new InputList<string>());
+            set => _parcelNames = value;
+        }
 
         /// <summary>
         /// Filter by parcel type (e.g. 'app-list', 'data-prefix')
@@ -154,6 +178,10 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Id;
         /// <summary>
+        /// Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+        /// </summary>
+        public readonly ImmutableArray<string> ParcelNames;
+        /// <summary>
         /// Filter by parcel type (e.g. 'app-list', 'data-prefix')
         /// </summary>
         public readonly string? ParcelType;
@@ -170,6 +198,8 @@ namespace Pulumi.Sdwan
 
             string id,
 
+            ImmutableArray<string> parcelNames,
+
             string? parcelType,
 
             ImmutableArray<Outputs.GetPolicyObjectFeatureProfileParcelsParcelResult> parcels)
@@ -177,6 +207,7 @@ namespace Pulumi.Sdwan
             CreatedBy = createdBy;
             FeatureProfileId = featureProfileId;
             Id = id;
+            ParcelNames = parcelNames;
             ParcelType = parcelType;
             Parcels = parcels;
         }

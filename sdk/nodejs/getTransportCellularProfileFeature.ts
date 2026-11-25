@@ -115,6 +115,14 @@ export interface GetTransportCellularProfileFeatureResult {
      */
     readonly profilePasswordVariable: string;
     /**
+     * Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    readonly profilePasswordWo: string;
+    /**
+     * Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly profilePasswordWoVersion: number;
+    /**
      * Set the profile username
      */
     readonly profileUsername: string;

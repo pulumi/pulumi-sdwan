@@ -13,6 +13,7 @@ import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceIpsecFeatureState;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
@@ -402,6 +403,8 @@ public class ServiceLanVpnInterfaceIpsecFeature extends com.pulumi.resources.Cus
     }
     /**
      * Use preshared key to authenticate IKE peer
+     *   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `ikePresharedKeyWo` together with `ikePresharedKeyWoVersion`, which keeps it out of state.
      * 
      */
     @Export(name="ikePresharedKey", refs={String.class}, tree="[0]")
@@ -409,6 +412,8 @@ public class ServiceLanVpnInterfaceIpsecFeature extends com.pulumi.resources.Cus
 
     /**
      * @return Use preshared key to authenticate IKE peer
+     *   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `ikePresharedKeyWo` together with `ikePresharedKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Output<Optional<String>> ikePresharedKey() {
@@ -427,6 +432,38 @@ public class ServiceLanVpnInterfaceIpsecFeature extends com.pulumi.resources.Cus
      */
     public Output<Optional<String>> ikePresharedKeyVariable() {
         return Codegen.optional(this.ikePresharedKeyVariable);
+    }
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+     * 
+     */
+    @Export(name="ikePresharedKeyWo", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> ikePresharedKeyWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+     * 
+     */
+    public Output<Optional<String>> ikePresharedKeyWo() {
+        return Codegen.optional(this.ikePresharedKeyWo);
+    }
+    /**
+     * Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Export(name="ikePresharedKeyWoVersion", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> ikePresharedKeyWoVersion;
+
+    /**
+     * @return Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Output<Optional<Integer>> ikePresharedKeyWoVersion() {
+        return Codegen.optional(this.ikePresharedKeyWoVersion);
     }
     /**
      * IKE rekey interval &lt;60..86400&gt; seconds
@@ -901,6 +938,7 @@ public class ServiceLanVpnInterfaceIpsecFeature extends com.pulumi.resources.Cus
     /**
      * Administrative state
      *   - Default value: `true`
+     *   - Default value from SD-WAN Manager version `20.18.5`: `false`
      * 
      */
     @Export(name="shutdown", refs={Boolean.class}, tree="[0]")
@@ -909,6 +947,7 @@ public class ServiceLanVpnInterfaceIpsecFeature extends com.pulumi.resources.Cus
     /**
      * @return Administrative state
      *   - Default value: `true`
+     *   - Default value from SD-WAN Manager version `20.18.5`: `false`
      * 
      */
     public Output<Optional<Boolean>> shutdown() {
@@ -1196,6 +1235,10 @@ public class ServiceLanVpnInterfaceIpsecFeature extends com.pulumi.resources.Cus
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "ikePresharedKey",
+                "ikePresharedKeyWo"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

@@ -144,7 +144,14 @@ export interface GetServiceRoutingOspfFeatureResult {
      * Variable name
      */
     readonly rfc1583CompatibleVariable: string;
+    /**
+     * Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+     */
     readonly routePolicyId: string;
+    /**
+     * Variable name
+     */
+    readonly routePolicyIdVariable: string;
     /**
      * Set OSPF router ID to override system IP address
      */

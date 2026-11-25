@@ -27,7 +27,7 @@ class GetOtherTrustsecFeatureResult:
     """
     A collection of values returned by getOtherTrustsecFeature.
     """
-    def __init__(__self__, description=None, device_id=None, device_id_variable=None, device_password=None, device_password_variable=None, device_sgt=None, device_sgt_variable=None, enable_enforcement=None, enable_enforcement_variable=None, enable_sxp=None, feature_profile_id=None, id=None, listener_hold_time_max=None, listener_hold_time_max_variable=None, listener_hold_time_min=None, listener_hold_time_min_variable=None, name=None, speaker_hold_time=None, speaker_hold_time_variable=None, sxp_connections=None, sxp_default_password=None, sxp_default_password_variable=None, sxp_key_chain=None, sxp_key_chain_variable=None, sxp_log_binding_changes=None, sxp_log_binding_changes_variable=None, sxp_reconciliation_period=None, sxp_reconciliation_period_variable=None, sxp_retry_period=None, sxp_retry_period_variable=None, sxp_source_ip=None, sxp_source_ip_variable=None, version=None):
+    def __init__(__self__, description=None, device_id=None, device_id_variable=None, device_password=None, device_password_variable=None, device_password_wo=None, device_password_wo_version=None, device_sgt=None, device_sgt_variable=None, enable_enforcement=None, enable_enforcement_variable=None, enable_sxp=None, feature_profile_id=None, id=None, listener_hold_time_max=None, listener_hold_time_max_variable=None, listener_hold_time_min=None, listener_hold_time_min_variable=None, name=None, speaker_hold_time=None, speaker_hold_time_variable=None, sxp_connections=None, sxp_default_password=None, sxp_default_password_variable=None, sxp_default_password_wo=None, sxp_default_password_wo_version=None, sxp_key_chain=None, sxp_key_chain_variable=None, sxp_log_binding_changes=None, sxp_log_binding_changes_variable=None, sxp_reconciliation_period=None, sxp_reconciliation_period_variable=None, sxp_retry_period=None, sxp_retry_period_variable=None, sxp_source_ip=None, sxp_source_ip_variable=None, version=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
@@ -43,6 +43,12 @@ class GetOtherTrustsecFeatureResult:
         if device_password_variable and not isinstance(device_password_variable, str):
             raise TypeError("Expected argument 'device_password_variable' to be a str")
         pulumi.set(__self__, "device_password_variable", device_password_variable)
+        if device_password_wo and not isinstance(device_password_wo, str):
+            raise TypeError("Expected argument 'device_password_wo' to be a str")
+        pulumi.set(__self__, "device_password_wo", device_password_wo)
+        if device_password_wo_version and not isinstance(device_password_wo_version, int):
+            raise TypeError("Expected argument 'device_password_wo_version' to be a int")
+        pulumi.set(__self__, "device_password_wo_version", device_password_wo_version)
         if device_sgt and not isinstance(device_sgt, int):
             raise TypeError("Expected argument 'device_sgt' to be a int")
         pulumi.set(__self__, "device_sgt", device_sgt)
@@ -94,6 +100,12 @@ class GetOtherTrustsecFeatureResult:
         if sxp_default_password_variable and not isinstance(sxp_default_password_variable, str):
             raise TypeError("Expected argument 'sxp_default_password_variable' to be a str")
         pulumi.set(__self__, "sxp_default_password_variable", sxp_default_password_variable)
+        if sxp_default_password_wo and not isinstance(sxp_default_password_wo, str):
+            raise TypeError("Expected argument 'sxp_default_password_wo' to be a str")
+        pulumi.set(__self__, "sxp_default_password_wo", sxp_default_password_wo)
+        if sxp_default_password_wo_version and not isinstance(sxp_default_password_wo_version, int):
+            raise TypeError("Expected argument 'sxp_default_password_wo_version' to be a int")
+        pulumi.set(__self__, "sxp_default_password_wo_version", sxp_default_password_wo_version)
         if sxp_key_chain and not isinstance(sxp_key_chain, str):
             raise TypeError("Expected argument 'sxp_key_chain' to be a str")
         pulumi.set(__self__, "sxp_key_chain", sxp_key_chain)
@@ -167,6 +179,22 @@ class GetOtherTrustsecFeatureResult:
         Variable name
         """
         return pulumi.get(self, "device_password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="devicePasswordWo")
+    def device_password_wo(self) -> _builtins.str:
+        """
+        Set the password for the device
+        """
+        return pulumi.get(self, "device_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="devicePasswordWoVersion")
+    def device_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `device_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "device_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="deviceSgt")
@@ -305,6 +333,22 @@ class GetOtherTrustsecFeatureResult:
         return pulumi.get(self, "sxp_default_password_variable")
 
     @_builtins.property
+    @pulumi.getter(name="sxpDefaultPasswordWo")
+    def sxp_default_password_wo(self) -> _builtins.str:
+        """
+        Configure SXP default password
+        """
+        return pulumi.get(self, "sxp_default_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="sxpDefaultPasswordWoVersion")
+    def sxp_default_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `sxp_default_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "sxp_default_password_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="sxpKeyChain")
     def sxp_key_chain(self) -> _builtins.str:
         """
@@ -404,6 +448,8 @@ class AwaitableGetOtherTrustsecFeatureResult(GetOtherTrustsecFeatureResult):
             device_id_variable=self.device_id_variable,
             device_password=self.device_password,
             device_password_variable=self.device_password_variable,
+            device_password_wo=self.device_password_wo,
+            device_password_wo_version=self.device_password_wo_version,
             device_sgt=self.device_sgt,
             device_sgt_variable=self.device_sgt_variable,
             enable_enforcement=self.enable_enforcement,
@@ -421,6 +467,8 @@ class AwaitableGetOtherTrustsecFeatureResult(GetOtherTrustsecFeatureResult):
             sxp_connections=self.sxp_connections,
             sxp_default_password=self.sxp_default_password,
             sxp_default_password_variable=self.sxp_default_password_variable,
+            sxp_default_password_wo=self.sxp_default_password_wo,
+            sxp_default_password_wo_version=self.sxp_default_password_wo_version,
             sxp_key_chain=self.sxp_key_chain,
             sxp_key_chain_variable=self.sxp_key_chain_variable,
             sxp_log_binding_changes=self.sxp_log_binding_changes,
@@ -469,6 +517,8 @@ def get_other_trustsec_feature(feature_profile_id: Optional[_builtins.str] = Non
         device_id_variable=pulumi.get(__ret__, 'device_id_variable'),
         device_password=pulumi.get(__ret__, 'device_password'),
         device_password_variable=pulumi.get(__ret__, 'device_password_variable'),
+        device_password_wo=pulumi.get(__ret__, 'device_password_wo'),
+        device_password_wo_version=pulumi.get(__ret__, 'device_password_wo_version'),
         device_sgt=pulumi.get(__ret__, 'device_sgt'),
         device_sgt_variable=pulumi.get(__ret__, 'device_sgt_variable'),
         enable_enforcement=pulumi.get(__ret__, 'enable_enforcement'),
@@ -486,6 +536,8 @@ def get_other_trustsec_feature(feature_profile_id: Optional[_builtins.str] = Non
         sxp_connections=pulumi.get(__ret__, 'sxp_connections'),
         sxp_default_password=pulumi.get(__ret__, 'sxp_default_password'),
         sxp_default_password_variable=pulumi.get(__ret__, 'sxp_default_password_variable'),
+        sxp_default_password_wo=pulumi.get(__ret__, 'sxp_default_password_wo'),
+        sxp_default_password_wo_version=pulumi.get(__ret__, 'sxp_default_password_wo_version'),
         sxp_key_chain=pulumi.get(__ret__, 'sxp_key_chain'),
         sxp_key_chain_variable=pulumi.get(__ret__, 'sxp_key_chain_variable'),
         sxp_log_binding_changes=pulumi.get(__ret__, 'sxp_log_binding_changes'),
@@ -531,6 +583,8 @@ def get_other_trustsec_feature_output(feature_profile_id: pulumi.Input[Optional[
         device_id_variable=pulumi.get(__response__, 'device_id_variable'),
         device_password=pulumi.get(__response__, 'device_password'),
         device_password_variable=pulumi.get(__response__, 'device_password_variable'),
+        device_password_wo=pulumi.get(__response__, 'device_password_wo'),
+        device_password_wo_version=pulumi.get(__response__, 'device_password_wo_version'),
         device_sgt=pulumi.get(__response__, 'device_sgt'),
         device_sgt_variable=pulumi.get(__response__, 'device_sgt_variable'),
         enable_enforcement=pulumi.get(__response__, 'enable_enforcement'),
@@ -548,6 +602,8 @@ def get_other_trustsec_feature_output(feature_profile_id: pulumi.Input[Optional[
         sxp_connections=pulumi.get(__response__, 'sxp_connections'),
         sxp_default_password=pulumi.get(__response__, 'sxp_default_password'),
         sxp_default_password_variable=pulumi.get(__response__, 'sxp_default_password_variable'),
+        sxp_default_password_wo=pulumi.get(__response__, 'sxp_default_password_wo'),
+        sxp_default_password_wo_version=pulumi.get(__response__, 'sxp_default_password_wo_version'),
         sxp_key_chain=pulumi.get(__response__, 'sxp_key_chain'),
         sxp_key_chain_variable=pulumi.get(__response__, 'sxp_key_chain_variable'),
         sxp_log_binding_changes=pulumi.get(__response__, 'sxp_log_binding_changes'),

@@ -54,6 +54,8 @@ type GetPolicyObjectFeatureProfileParcelsArgs struct {
 	CreatedBy *string `pulumi:"createdBy"`
 	// Policy Object Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
+	// Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+	ParcelNames []string `pulumi:"parcelNames"`
 	// Filter by parcel type (e.g. 'app-list', 'data-prefix')
 	ParcelType *string `pulumi:"parcelType"`
 }
@@ -66,6 +68,8 @@ type GetPolicyObjectFeatureProfileParcelsResult struct {
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The id of the object
 	Id string `pulumi:"id"`
+	// Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+	ParcelNames []string `pulumi:"parcelNames"`
 	// Filter by parcel type (e.g. 'app-list', 'data-prefix')
 	ParcelType *string `pulumi:"parcelType"`
 	// List of parcels associated with this profile
@@ -83,6 +87,8 @@ type GetPolicyObjectFeatureProfileParcelsOutputArgs struct {
 	CreatedBy pulumi.StringPtrInput `pulumi:"createdBy"`
 	// Policy Object Feature Profile ID
 	FeatureProfileId pulumi.StringInput `pulumi:"featureProfileId"`
+	// Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+	ParcelNames pulumi.StringArrayInput `pulumi:"parcelNames"`
 	// Filter by parcel type (e.g. 'app-list', 'data-prefix')
 	ParcelType pulumi.StringPtrInput `pulumi:"parcelType"`
 }
@@ -119,6 +125,11 @@ func (o GetPolicyObjectFeatureProfileParcelsResultOutput) FeatureProfileId() pul
 // The id of the object
 func (o GetPolicyObjectFeatureProfileParcelsResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetPolicyObjectFeatureProfileParcelsResult) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+func (o GetPolicyObjectFeatureProfileParcelsResultOutput) ParcelNames() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetPolicyObjectFeatureProfileParcelsResult) []string { return v.ParcelNames }).(pulumi.StringArrayOutput)
 }
 
 // Filter by parcel type (e.g. 'app-list', 'data-prefix')

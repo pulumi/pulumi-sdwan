@@ -144,6 +144,13 @@ func NewCiscoWirelessLanFeatureTemplate(ctx *pulumi.Context,
 	if args.DeviceTypes == nil {
 		return nil, errors.New("invalid value for required argument 'DeviceTypes'")
 	}
+	if args.Password != nil {
+		args.Password = pulumi.ToSecret(args.Password).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"password",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource CiscoWirelessLanFeatureTemplate
 	err := ctx.RegisterResource("sdwan:index/ciscoWirelessLanFeatureTemplate:CiscoWirelessLanFeatureTemplate", name, args, &resource, opts...)

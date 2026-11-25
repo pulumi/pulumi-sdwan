@@ -38,8 +38,17 @@ namespace Pulumi.Sdwan.Inputs
         [Input("protocolVariable")]
         public Input<string>? ProtocolVariable { get; set; }
 
+        /// <summary>
+        /// Set either RoutePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `RoutePolicyId` being set
+        /// </summary>
         [Input("routePolicyId")]
         public Input<string>? RoutePolicyId { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `RoutePolicyId` being set
+        /// </summary>
+        [Input("routePolicyIdVariable")]
+        public Input<string>? RoutePolicyIdVariable { get; set; }
 
         /// <summary>
         /// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `Protocol` equal to `Omp`

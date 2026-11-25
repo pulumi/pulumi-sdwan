@@ -60,6 +60,7 @@ from .cli_template_feature_template import *
 from .cloud_provider_settings import *
 from .color_list_policy_object import *
 from .configuration_group import *
+from .configuration_group_devices import *
 from .custom_application import *
 from .custom_control_topology_policy_definition import *
 from .data_fqdn_prefix_list_policy_object import *
@@ -193,6 +194,7 @@ from .get_policy_object_security_fqdn_list import *
 from .get_policy_object_security_geolocation_list import *
 from .get_policy_object_security_identity_list import *
 from .get_policy_object_security_ips_signature import *
+from .get_policy_object_security_ips_signature_set import *
 from .get_policy_object_security_local_application_list import *
 from .get_policy_object_security_local_domain_list import *
 from .get_policy_object_security_object_group import *
@@ -259,6 +261,7 @@ from .get_service_switchport_feature import *
 from .get_service_tracker_feature import *
 from .get_service_tracker_group_feature import *
 from .get_service_wireless_lan_feature import *
+from .get_sig_feature import *
 from .get_sig_security_feature_profile import *
 from .get_site_list_policy_object import *
 from .get_sla_class_policy_object import *
@@ -323,6 +326,7 @@ from .get_transport_wan_vpn_feature_associate_routing_ospfv3_ipv6_feature import
 from .get_transport_wan_vpn_interface_cellular_feature import *
 from .get_transport_wan_vpn_interface_cellular_feature_associate_tracker_feature import *
 from .get_transport_wan_vpn_interface_cellular_feature_associate_tracker_group_feature import *
+from .get_transport_wan_vpn_interface_dsl_ipoe_feature import *
 from .get_transport_wan_vpn_interface_ethernet_feature import *
 from .get_transport_wan_vpn_interface_ethernet_feature_associate_ipv6_tracker_feature import *
 from .get_transport_wan_vpn_interface_ethernet_feature_associate_ipv6_tracker_group_feature import *
@@ -371,6 +375,7 @@ from .other_trustsec_feature import *
 from .other_ucse_feature import *
 from .policer_policy_object import *
 from .policy_group import *
+from .policy_group_devices import *
 from .policy_object_app_probe_class import *
 from .policy_object_application_list import *
 from .policy_object_as_path_list import *
@@ -392,6 +397,7 @@ from .policy_object_security_fqdn_list import *
 from .policy_object_security_geolocation_list import *
 from .policy_object_security_identity_list import *
 from .policy_object_security_ips_signature import *
+from .policy_object_security_ips_signature_set import *
 from .policy_object_security_local_application_list import *
 from .policy_object_security_local_domain_list import *
 from .policy_object_security_object_group import *
@@ -460,6 +466,7 @@ from .service_switchport_feature import *
 from .service_tracker_feature import *
 from .service_tracker_group_feature import *
 from .service_wireless_lan_feature import *
+from .sig_feature import *
 from .sig_security_feature_profile import *
 from .site_list_policy_object import *
 from .sla_class_policy_object import *
@@ -524,6 +531,7 @@ from .transport_wan_vpn_feature_associate_routing_ospfv3_ipv6_feature import *
 from .transport_wan_vpn_interface_cellular_feature import *
 from .transport_wan_vpn_interface_cellular_feature_associate_tracker_feature import *
 from .transport_wan_vpn_interface_cellular_feature_associate_tracker_group_feature import *
+from .transport_wan_vpn_interface_dsl_ipoe_feature import *
 from .transport_wan_vpn_interface_ethernet_feature import *
 from .transport_wan_vpn_interface_ethernet_feature_associate_ipv6_tracker_feature import *
 from .transport_wan_vpn_interface_ethernet_feature_associate_ipv6_tracker_group_feature import *
@@ -995,6 +1003,14 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/configurationGroupDevices",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/configurationGroupDevices:ConfigurationGroupDevices": "ConfigurationGroupDevices"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/customApplication",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1323,6 +1339,14 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/policyGroupDevices",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyGroupDevices:PolicyGroupDevices": "PolicyGroupDevices"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/policyObjectAppProbeClass",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1487,6 +1511,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/policyObjectSecurityIpsSignature:PolicyObjectSecurityIpsSignature": "PolicyObjectSecurityIpsSignature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityIpsSignatureSet",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityIpsSignatureSet:PolicyObjectSecurityIpsSignatureSet": "PolicyObjectSecurityIpsSignatureSet"
   }
  },
  {
@@ -2027,6 +2059,14 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/sigFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/sigFeature:SigFeature": "SigFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/sigSecurityFeatureProfile",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -2535,6 +2575,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/transportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature:TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature": "TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/transportWanVpnInterfaceDslIpoeFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/transportWanVpnInterfaceDslIpoeFeature:TransportWanVpnInterfaceDslIpoeFeature": "TransportWanVpnInterfaceDslIpoeFeature"
   }
  },
  {

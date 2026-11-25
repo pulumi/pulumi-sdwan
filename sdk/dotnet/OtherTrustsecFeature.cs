@@ -93,6 +93,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set the password for the device
+        ///   - Only one of `DevicePassword`, `DevicePasswordVariable` and `DevicePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `DevicePasswordWo` together with `DevicePasswordWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("devicePassword")]
         public Output<string?> DevicePassword { get; private set; } = null!;
@@ -102,6 +104,20 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("devicePasswordVariable")]
         public Output<string?> DevicePasswordVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set the password for the device
+        ///   - Only one of `DevicePassword`, `DevicePasswordVariable` and `DevicePasswordWo` can be set.
+        /// </summary>
+        [Output("devicePasswordWo")]
+        public Output<string?> DevicePasswordWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `DevicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("devicePasswordWoVersion")]
+        public Output<int?> DevicePasswordWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// Configure Local device security group &lt;2..65519&gt;
@@ -198,6 +214,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure SXP default password
+        ///   - Only one of `SxpDefaultPassword`, `SxpDefaultPasswordVariable` and `SxpDefaultPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `SxpDefaultPasswordWo` together with `SxpDefaultPasswordWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("sxpDefaultPassword")]
         public Output<string?> SxpDefaultPassword { get; private set; } = null!;
@@ -207,6 +225,20 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("sxpDefaultPasswordVariable")]
         public Output<string?> SxpDefaultPasswordVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Configure SXP default password
+        ///   - Only one of `SxpDefaultPassword`, `SxpDefaultPasswordVariable` and `SxpDefaultPasswordWo` can be set.
+        /// </summary>
+        [Output("sxpDefaultPasswordWo")]
+        public Output<string?> SxpDefaultPasswordWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `SxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("sxpDefaultPasswordWoVersion")]
+        public Output<int?> SxpDefaultPasswordWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// Configure SXP key-chain
@@ -302,6 +334,13 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "devicePassword",
+                    "devicePasswordWo",
+                    "sxpDefaultPassword",
+                    "sxpDefaultPasswordWo",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -343,17 +382,53 @@ namespace Pulumi.Sdwan
         [Input("deviceIdVariable")]
         public Input<string>? DeviceIdVariable { get; set; }
 
+        [Input("devicePassword")]
+        private Input<string>? _devicePassword;
+
         /// <summary>
         /// Set the password for the device
+        ///   - Only one of `DevicePassword`, `DevicePasswordVariable` and `DevicePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `DevicePasswordWo` together with `DevicePasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("devicePassword")]
-        public Input<string>? DevicePassword { get; set; }
+        public Input<string>? DevicePassword
+        {
+            get => _devicePassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _devicePassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("devicePasswordVariable")]
         public Input<string>? DevicePasswordVariable { get; set; }
+
+        [Input("devicePasswordWo")]
+        private Input<string>? _devicePasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set the password for the device
+        ///   - Only one of `DevicePassword`, `DevicePasswordVariable` and `DevicePasswordWo` can be set.
+        /// </summary>
+        public Input<string>? DevicePasswordWo
+        {
+            get => _devicePasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _devicePasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `DevicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("devicePasswordWoVersion")]
+        public Input<int>? DevicePasswordWoVersion { get; set; }
 
         /// <summary>
         /// Configure Local device security group &lt;2..65519&gt;
@@ -454,17 +529,53 @@ namespace Pulumi.Sdwan
             set => _sxpConnections = value;
         }
 
+        [Input("sxpDefaultPassword")]
+        private Input<string>? _sxpDefaultPassword;
+
         /// <summary>
         /// Configure SXP default password
+        ///   - Only one of `SxpDefaultPassword`, `SxpDefaultPasswordVariable` and `SxpDefaultPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `SxpDefaultPasswordWo` together with `SxpDefaultPasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("sxpDefaultPassword")]
-        public Input<string>? SxpDefaultPassword { get; set; }
+        public Input<string>? SxpDefaultPassword
+        {
+            get => _sxpDefaultPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _sxpDefaultPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("sxpDefaultPasswordVariable")]
         public Input<string>? SxpDefaultPasswordVariable { get; set; }
+
+        [Input("sxpDefaultPasswordWo")]
+        private Input<string>? _sxpDefaultPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Configure SXP default password
+        ///   - Only one of `SxpDefaultPassword`, `SxpDefaultPasswordVariable` and `SxpDefaultPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? SxpDefaultPasswordWo
+        {
+            get => _sxpDefaultPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _sxpDefaultPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `SxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("sxpDefaultPasswordWoVersion")]
+        public Input<int>? SxpDefaultPasswordWoVersion { get; set; }
 
         /// <summary>
         /// Configure SXP key-chain
@@ -557,17 +668,53 @@ namespace Pulumi.Sdwan
         [Input("deviceIdVariable")]
         public Input<string>? DeviceIdVariable { get; set; }
 
+        [Input("devicePassword")]
+        private Input<string>? _devicePassword;
+
         /// <summary>
         /// Set the password for the device
+        ///   - Only one of `DevicePassword`, `DevicePasswordVariable` and `DevicePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `DevicePasswordWo` together with `DevicePasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("devicePassword")]
-        public Input<string>? DevicePassword { get; set; }
+        public Input<string>? DevicePassword
+        {
+            get => _devicePassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _devicePassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("devicePasswordVariable")]
         public Input<string>? DevicePasswordVariable { get; set; }
+
+        [Input("devicePasswordWo")]
+        private Input<string>? _devicePasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set the password for the device
+        ///   - Only one of `DevicePassword`, `DevicePasswordVariable` and `DevicePasswordWo` can be set.
+        /// </summary>
+        public Input<string>? DevicePasswordWo
+        {
+            get => _devicePasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _devicePasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `DevicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("devicePasswordWoVersion")]
+        public Input<int>? DevicePasswordWoVersion { get; set; }
 
         /// <summary>
         /// Configure Local device security group &lt;2..65519&gt;
@@ -668,17 +815,53 @@ namespace Pulumi.Sdwan
             set => _sxpConnections = value;
         }
 
+        [Input("sxpDefaultPassword")]
+        private Input<string>? _sxpDefaultPassword;
+
         /// <summary>
         /// Configure SXP default password
+        ///   - Only one of `SxpDefaultPassword`, `SxpDefaultPasswordVariable` and `SxpDefaultPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `SxpDefaultPasswordWo` together with `SxpDefaultPasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("sxpDefaultPassword")]
-        public Input<string>? SxpDefaultPassword { get; set; }
+        public Input<string>? SxpDefaultPassword
+        {
+            get => _sxpDefaultPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _sxpDefaultPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("sxpDefaultPasswordVariable")]
         public Input<string>? SxpDefaultPasswordVariable { get; set; }
+
+        [Input("sxpDefaultPasswordWo")]
+        private Input<string>? _sxpDefaultPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Configure SXP default password
+        ///   - Only one of `SxpDefaultPassword`, `SxpDefaultPasswordVariable` and `SxpDefaultPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? SxpDefaultPasswordWo
+        {
+            get => _sxpDefaultPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _sxpDefaultPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `SxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("sxpDefaultPasswordWoVersion")]
+        public Input<int>? SxpDefaultPasswordWoVersion { get; set; }
 
         /// <summary>
         /// Configure SXP key-chain

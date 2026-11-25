@@ -71,6 +71,10 @@ type LookupOtherTrustsecFeatureResult struct {
 	DevicePassword string `pulumi:"devicePassword"`
 	// Variable name
 	DevicePasswordVariable string `pulumi:"devicePasswordVariable"`
+	// Set the password for the device
+	DevicePasswordWo string `pulumi:"devicePasswordWo"`
+	// Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	DevicePasswordWoVersion int `pulumi:"devicePasswordWoVersion"`
 	// Configure Local device security group \n\n
 	DeviceSgt int `pulumi:"deviceSgt"`
 	// Variable name
@@ -105,6 +109,10 @@ type LookupOtherTrustsecFeatureResult struct {
 	SxpDefaultPassword string `pulumi:"sxpDefaultPassword"`
 	// Variable name
 	SxpDefaultPasswordVariable string `pulumi:"sxpDefaultPasswordVariable"`
+	// Configure SXP default password
+	SxpDefaultPasswordWo string `pulumi:"sxpDefaultPasswordWo"`
+	// Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	SxpDefaultPasswordWoVersion int `pulumi:"sxpDefaultPasswordWoVersion"`
 	// Configure SXP key-chain
 	SxpKeyChain string `pulumi:"sxpKeyChain"`
 	// Variable name
@@ -186,6 +194,16 @@ func (o LookupOtherTrustsecFeatureResultOutput) DevicePassword() pulumi.StringOu
 // Variable name
 func (o LookupOtherTrustsecFeatureResultOutput) DevicePasswordVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOtherTrustsecFeatureResult) string { return v.DevicePasswordVariable }).(pulumi.StringOutput)
+}
+
+// Set the password for the device
+func (o LookupOtherTrustsecFeatureResultOutput) DevicePasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupOtherTrustsecFeatureResult) string { return v.DevicePasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupOtherTrustsecFeatureResultOutput) DevicePasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupOtherTrustsecFeatureResult) int { return v.DevicePasswordWoVersion }).(pulumi.IntOutput)
 }
 
 // Configure Local device security group \n\n
@@ -273,6 +291,16 @@ func (o LookupOtherTrustsecFeatureResultOutput) SxpDefaultPassword() pulumi.Stri
 // Variable name
 func (o LookupOtherTrustsecFeatureResultOutput) SxpDefaultPasswordVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOtherTrustsecFeatureResult) string { return v.SxpDefaultPasswordVariable }).(pulumi.StringOutput)
+}
+
+// Configure SXP default password
+func (o LookupOtherTrustsecFeatureResultOutput) SxpDefaultPasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupOtherTrustsecFeatureResult) string { return v.SxpDefaultPasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupOtherTrustsecFeatureResultOutput) SxpDefaultPasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupOtherTrustsecFeatureResult) int { return v.SxpDefaultPasswordWoVersion }).(pulumi.IntOutput)
 }
 
 // Configure SXP key-chain

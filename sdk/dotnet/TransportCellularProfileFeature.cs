@@ -140,6 +140,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `RequiresAuthentication` equal to `True`
+        ///   - Only one of `ProfilePassword`, `ProfilePasswordVariable` and `ProfilePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `ProfilePasswordWo` together with `ProfilePasswordWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("profilePassword")]
         public Output<string?> ProfilePassword { get; private set; } = null!;
@@ -149,6 +151,20 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("profilePasswordVariable")]
         public Output<string?> ProfilePasswordVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `RequiresAuthentication` equal to `True`
+        ///   - Only one of `ProfilePassword`, `ProfilePasswordVariable` and `ProfilePasswordWo` can be set.
+        /// </summary>
+        [Output("profilePasswordWo")]
+        public Output<string?> ProfilePasswordWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `ProfilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("profilePasswordWoVersion")]
+        public Output<int?> ProfilePasswordWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// Set the profile username, Attribute conditional on `RequiresAuthentication` equal to `True`
@@ -223,6 +239,11 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "profilePassword",
+                    "profilePasswordWo",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -328,17 +349,53 @@ namespace Pulumi.Sdwan
         [Input("profileIdVariable")]
         public Input<string>? ProfileIdVariable { get; set; }
 
+        [Input("profilePassword")]
+        private Input<string>? _profilePassword;
+
         /// <summary>
         /// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `RequiresAuthentication` equal to `True`
+        ///   - Only one of `ProfilePassword`, `ProfilePasswordVariable` and `ProfilePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `ProfilePasswordWo` together with `ProfilePasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("profilePassword")]
-        public Input<string>? ProfilePassword { get; set; }
+        public Input<string>? ProfilePassword
+        {
+            get => _profilePassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _profilePassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Input("profilePasswordVariable")]
         public Input<string>? ProfilePasswordVariable { get; set; }
+
+        [Input("profilePasswordWo")]
+        private Input<string>? _profilePasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `RequiresAuthentication` equal to `True`
+        ///   - Only one of `ProfilePassword`, `ProfilePasswordVariable` and `ProfilePasswordWo` can be set.
+        /// </summary>
+        public Input<string>? ProfilePasswordWo
+        {
+            get => _profilePasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _profilePasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `ProfilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("profilePasswordWoVersion")]
+        public Input<int>? ProfilePasswordWoVersion { get; set; }
 
         /// <summary>
         /// Set the profile username, Attribute conditional on `RequiresAuthentication` equal to `True`
@@ -474,17 +531,53 @@ namespace Pulumi.Sdwan
         [Input("profileIdVariable")]
         public Input<string>? ProfileIdVariable { get; set; }
 
+        [Input("profilePassword")]
+        private Input<string>? _profilePassword;
+
         /// <summary>
         /// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `RequiresAuthentication` equal to `True`
+        ///   - Only one of `ProfilePassword`, `ProfilePasswordVariable` and `ProfilePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `ProfilePasswordWo` together with `ProfilePasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("profilePassword")]
-        public Input<string>? ProfilePassword { get; set; }
+        public Input<string>? ProfilePassword
+        {
+            get => _profilePassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _profilePassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Input("profilePasswordVariable")]
         public Input<string>? ProfilePasswordVariable { get; set; }
+
+        [Input("profilePasswordWo")]
+        private Input<string>? _profilePasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `RequiresAuthentication` equal to `True`
+        ///   - Only one of `ProfilePassword`, `ProfilePasswordVariable` and `ProfilePasswordWo` can be set.
+        /// </summary>
+        public Input<string>? ProfilePasswordWo
+        {
+            get => _profilePasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _profilePasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `ProfilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("profilePasswordWoVersion")]
+        public Input<int>? ProfilePasswordWoVersion { get; set; }
 
         /// <summary>
         /// Set the profile username, Attribute conditional on `RequiresAuthentication` equal to `True`

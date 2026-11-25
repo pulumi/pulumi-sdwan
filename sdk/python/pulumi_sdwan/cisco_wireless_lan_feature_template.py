@@ -948,7 +948,7 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
                 raise TypeError("Missing required property 'device_types'")
             __props__.__dict__["device_types"] = device_types
             __props__.__dict__["name"] = name
-            __props__.__dict__["password"] = password
+            __props__.__dict__["password"] = None if password is None else pulumi.Output.secret(password)
             __props__.__dict__["password_variable"] = password_variable
             __props__.__dict__["shutdown24ghz"] = shutdown24ghz
             __props__.__dict__["shutdown24ghz_variable"] = shutdown24ghz_variable
@@ -959,6 +959,8 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["username_variable"] = username_variable
             __props__.__dict__["template_type"] = None
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["password"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(CiscoWirelessLanFeatureTemplate, __self__).__init__(
             'sdwan:index/ciscoWirelessLanFeatureTemplate:CiscoWirelessLanFeatureTemplate',
             resource_name,

@@ -241,9 +241,9 @@ export class CiscoSigCredentialsFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["description"] = args?.description;
             resourceInputs["deviceTypes"] = args?.deviceTypes;
             resourceInputs["name"] = args?.name;
-            resourceInputs["umbrellaApiKey"] = args?.umbrellaApiKey;
+            resourceInputs["umbrellaApiKey"] = args?.umbrellaApiKey ? pulumi.secret(args.umbrellaApiKey) : undefined;
             resourceInputs["umbrellaApiKeyVariable"] = args?.umbrellaApiKeyVariable;
-            resourceInputs["umbrellaApiSecret"] = args?.umbrellaApiSecret;
+            resourceInputs["umbrellaApiSecret"] = args?.umbrellaApiSecret ? pulumi.secret(args.umbrellaApiSecret) : undefined;
             resourceInputs["umbrellaApiSecretVariable"] = args?.umbrellaApiSecretVariable;
             resourceInputs["umbrellaOrganizationId"] = args?.umbrellaOrganizationId;
             resourceInputs["umbrellaOrganizationIdVariable"] = args?.umbrellaOrganizationIdVariable;
@@ -251,15 +251,15 @@ export class CiscoSigCredentialsFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["zscalerCloudNameVariable"] = args?.zscalerCloudNameVariable;
             resourceInputs["zscalerOrganization"] = args?.zscalerOrganization;
             resourceInputs["zscalerOrganizationVariable"] = args?.zscalerOrganizationVariable;
-            resourceInputs["zscalerPartnerApiKey"] = args?.zscalerPartnerApiKey;
+            resourceInputs["zscalerPartnerApiKey"] = args?.zscalerPartnerApiKey ? pulumi.secret(args.zscalerPartnerApiKey) : undefined;
             resourceInputs["zscalerPartnerApiKeyVariable"] = args?.zscalerPartnerApiKeyVariable;
             resourceInputs["zscalerPartnerBaseUri"] = args?.zscalerPartnerBaseUri;
             resourceInputs["zscalerPartnerBaseUriVariable"] = args?.zscalerPartnerBaseUriVariable;
-            resourceInputs["zscalerPartnerPassword"] = args?.zscalerPartnerPassword;
+            resourceInputs["zscalerPartnerPassword"] = args?.zscalerPartnerPassword ? pulumi.secret(args.zscalerPartnerPassword) : undefined;
             resourceInputs["zscalerPartnerPasswordVariable"] = args?.zscalerPartnerPasswordVariable;
             resourceInputs["zscalerPartnerUsername"] = args?.zscalerPartnerUsername;
             resourceInputs["zscalerPartnerUsernameVariable"] = args?.zscalerPartnerUsernameVariable;
-            resourceInputs["zscalerPassword"] = args?.zscalerPassword;
+            resourceInputs["zscalerPassword"] = args?.zscalerPassword ? pulumi.secret(args.zscalerPassword) : undefined;
             resourceInputs["zscalerPasswordVariable"] = args?.zscalerPasswordVariable;
             resourceInputs["zscalerUsername"] = args?.zscalerUsername;
             resourceInputs["zscalerUsernameVariable"] = args?.zscalerUsernameVariable;
@@ -267,6 +267,8 @@ export class CiscoSigCredentialsFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["umbrellaApiKey", "umbrellaApiSecret", "zscalerPartnerApiKey", "zscalerPartnerPassword", "zscalerPassword"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(CiscoSigCredentialsFeatureTemplate.__pulumiType, name, resourceInputs, opts);
     }
 }

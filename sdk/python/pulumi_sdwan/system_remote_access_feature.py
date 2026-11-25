@@ -31,6 +31,8 @@ class SystemRemoteAccessFeatureArgs:
                  aaa_specify_name_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  aaa_specify_name_policy_password: pulumi.Input[Optional[_builtins.str]] = None,
                  aaa_specify_name_policy_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  any_connect_eap_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
                  connection_type_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
@@ -59,6 +61,8 @@ class SystemRemoteAccessFeatureArgs:
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  psk_authentication_pre_shared_key: pulumi.Input[Optional[_builtins.str]] = None,
                  psk_authentication_pre_shared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  psk_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
                  psk_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  radius_group_name_variable: pulumi.Input[Optional[_builtins.str]] = None):
@@ -74,7 +78,12 @@ class SystemRemoteAccessFeatureArgs:
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] aaa_enable_accounting_variable: Variable name
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_name_variable: Variable name
+        :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password: - Only one of `aaa_specify_name_policy_password`, `aaa_specify_name_policy_password_variable` and `aaa_specify_name_policy_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `aaa_specify_name_policy_password_wo` together with `aaa_specify_name_policy_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password_variable: Variable name
+        :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               - Only one of `aaa_specify_name_policy_password`, `aaa_specify_name_policy_password_variable` and `aaa_specify_name_policy_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] aaa_specify_name_policy_password_wo_version: Rotation trigger for `aaa_specify_name_policy_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] any_connect_eap_authentication_type: , Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `user`, `device`
         :param pulumi.Input[_builtins.bool] connection_type_ssl: Enabled SSL VPN
@@ -116,7 +125,13 @@ class SystemRemoteAccessFeatureArgs:
         :param pulumi.Input[_builtins.str] ipv6_pool_size_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key: PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+                 - Only one of `psk_authentication_pre_shared_key`, `psk_authentication_pre_shared_key_variable` and `psk_authentication_pre_shared_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `psk_authentication_pre_shared_key_wo` together with `psk_authentication_pre_shared_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_variable: Variable name, Attribute conditional on `psk_authentication_type` equal to `group`
+        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+                 - Only one of `psk_authentication_pre_shared_key`, `psk_authentication_pre_shared_key_variable` and `psk_authentication_pre_shared_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] psk_authentication_pre_shared_key_wo_version: Rotation trigger for `psk_authentication_pre_shared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] psk_authentication_type: PSK Selection, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `aaa`, `group`
         :param pulumi.Input[_builtins.str] psk_authentication_type_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
@@ -144,6 +159,10 @@ class SystemRemoteAccessFeatureArgs:
             pulumi.set(__self__, "aaa_specify_name_policy_password", aaa_specify_name_policy_password)
         if aaa_specify_name_policy_password_variable is not None:
             pulumi.set(__self__, "aaa_specify_name_policy_password_variable", aaa_specify_name_policy_password_variable)
+        if aaa_specify_name_policy_password_wo is not None:
+            pulumi.set(__self__, "aaa_specify_name_policy_password_wo", aaa_specify_name_policy_password_wo)
+        if aaa_specify_name_policy_password_wo_version is not None:
+            pulumi.set(__self__, "aaa_specify_name_policy_password_wo_version", aaa_specify_name_policy_password_wo_version)
         if any_connect_eap_authentication_type is not None:
             pulumi.set(__self__, "any_connect_eap_authentication_type", any_connect_eap_authentication_type)
         if connection_type_ssl is not None:
@@ -200,6 +219,10 @@ class SystemRemoteAccessFeatureArgs:
             pulumi.set(__self__, "psk_authentication_pre_shared_key", psk_authentication_pre_shared_key)
         if psk_authentication_pre_shared_key_variable is not None:
             pulumi.set(__self__, "psk_authentication_pre_shared_key_variable", psk_authentication_pre_shared_key_variable)
+        if psk_authentication_pre_shared_key_wo is not None:
+            pulumi.set(__self__, "psk_authentication_pre_shared_key_wo", psk_authentication_pre_shared_key_wo)
+        if psk_authentication_pre_shared_key_wo_version is not None:
+            pulumi.set(__self__, "psk_authentication_pre_shared_key_wo_version", psk_authentication_pre_shared_key_wo_version)
         if psk_authentication_type is not None:
             pulumi.set(__self__, "psk_authentication_type", psk_authentication_type)
         if psk_authentication_type_variable is not None:
@@ -325,6 +348,10 @@ class SystemRemoteAccessFeatureArgs:
     @_builtins.property
     @pulumi.getter(name="aaaSpecifyNamePolicyPassword")
     def aaa_specify_name_policy_password(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        - Only one of `aaa_specify_name_policy_password`, `aaa_specify_name_policy_password_variable` and `aaa_specify_name_policy_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `aaa_specify_name_policy_password_wo` together with `aaa_specify_name_policy_password_wo_version`, which keeps it out of state.
+        """
         return pulumi.get(self, "aaa_specify_name_policy_password")
 
     @aaa_specify_name_policy_password.setter
@@ -342,6 +369,31 @@ class SystemRemoteAccessFeatureArgs:
     @aaa_specify_name_policy_password_variable.setter
     def aaa_specify_name_policy_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_specify_name_policy_password_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="aaaSpecifyNamePolicyPasswordWo")
+    def aaa_specify_name_policy_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        - Only one of `aaa_specify_name_policy_password`, `aaa_specify_name_policy_password_variable` and `aaa_specify_name_policy_password_wo` can be set.
+        """
+        return pulumi.get(self, "aaa_specify_name_policy_password_wo")
+
+    @aaa_specify_name_policy_password_wo.setter
+    def aaa_specify_name_policy_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "aaa_specify_name_policy_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="aaaSpecifyNamePolicyPasswordWoVersion")
+    def aaa_specify_name_policy_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `aaa_specify_name_policy_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "aaa_specify_name_policy_password_wo_version")
+
+    @aaa_specify_name_policy_password_wo_version.setter
+    def aaa_specify_name_policy_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "aaa_specify_name_policy_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="anyConnectEapAuthenticationType")
@@ -674,6 +726,8 @@ class SystemRemoteAccessFeatureArgs:
     def psk_authentication_pre_shared_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+          - Only one of `psk_authentication_pre_shared_key`, `psk_authentication_pre_shared_key_variable` and `psk_authentication_pre_shared_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `psk_authentication_pre_shared_key_wo` together with `psk_authentication_pre_shared_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "psk_authentication_pre_shared_key")
 
@@ -692,6 +746,32 @@ class SystemRemoteAccessFeatureArgs:
     @psk_authentication_pre_shared_key_variable.setter
     def psk_authentication_pre_shared_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "psk_authentication_pre_shared_key_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="pskAuthenticationPreSharedKeyWo")
+    def psk_authentication_pre_shared_key_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+          - Only one of `psk_authentication_pre_shared_key`, `psk_authentication_pre_shared_key_variable` and `psk_authentication_pre_shared_key_wo` can be set.
+        """
+        return pulumi.get(self, "psk_authentication_pre_shared_key_wo")
+
+    @psk_authentication_pre_shared_key_wo.setter
+    def psk_authentication_pre_shared_key_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "psk_authentication_pre_shared_key_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="pskAuthenticationPreSharedKeyWoVersion")
+    def psk_authentication_pre_shared_key_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `psk_authentication_pre_shared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "psk_authentication_pre_shared_key_wo_version")
+
+    @psk_authentication_pre_shared_key_wo_version.setter
+    def psk_authentication_pre_shared_key_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "psk_authentication_pre_shared_key_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="pskAuthenticationType")
@@ -744,6 +824,8 @@ class _SystemRemoteAccessFeatureState:
                  aaa_specify_name_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  aaa_specify_name_policy_password: pulumi.Input[Optional[_builtins.str]] = None,
                  aaa_specify_name_policy_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  any_connect_eap_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
                  connection_type_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
@@ -773,6 +855,8 @@ class _SystemRemoteAccessFeatureState:
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  psk_authentication_pre_shared_key: pulumi.Input[Optional[_builtins.str]] = None,
                  psk_authentication_pre_shared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  psk_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
                  psk_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  radius_group_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -789,7 +873,12 @@ class _SystemRemoteAccessFeatureState:
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] aaa_enable_accounting_variable: Variable name
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_name_variable: Variable name
+        :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password: - Only one of `aaa_specify_name_policy_password`, `aaa_specify_name_policy_password_variable` and `aaa_specify_name_policy_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `aaa_specify_name_policy_password_wo` together with `aaa_specify_name_policy_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password_variable: Variable name
+        :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               - Only one of `aaa_specify_name_policy_password`, `aaa_specify_name_policy_password_variable` and `aaa_specify_name_policy_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] aaa_specify_name_policy_password_wo_version: Rotation trigger for `aaa_specify_name_policy_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] any_connect_eap_authentication_type: , Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `user`, `device`
         :param pulumi.Input[_builtins.bool] connection_type_ssl: Enabled SSL VPN
@@ -832,7 +921,13 @@ class _SystemRemoteAccessFeatureState:
         :param pulumi.Input[_builtins.str] ipv6_pool_size_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key: PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+                 - Only one of `psk_authentication_pre_shared_key`, `psk_authentication_pre_shared_key_variable` and `psk_authentication_pre_shared_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `psk_authentication_pre_shared_key_wo` together with `psk_authentication_pre_shared_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_variable: Variable name, Attribute conditional on `psk_authentication_type` equal to `group`
+        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+                 - Only one of `psk_authentication_pre_shared_key`, `psk_authentication_pre_shared_key_variable` and `psk_authentication_pre_shared_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] psk_authentication_pre_shared_key_wo_version: Rotation trigger for `psk_authentication_pre_shared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] psk_authentication_type: PSK Selection, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `aaa`, `group`
         :param pulumi.Input[_builtins.str] psk_authentication_type_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
@@ -859,6 +954,10 @@ class _SystemRemoteAccessFeatureState:
             pulumi.set(__self__, "aaa_specify_name_policy_password", aaa_specify_name_policy_password)
         if aaa_specify_name_policy_password_variable is not None:
             pulumi.set(__self__, "aaa_specify_name_policy_password_variable", aaa_specify_name_policy_password_variable)
+        if aaa_specify_name_policy_password_wo is not None:
+            pulumi.set(__self__, "aaa_specify_name_policy_password_wo", aaa_specify_name_policy_password_wo)
+        if aaa_specify_name_policy_password_wo_version is not None:
+            pulumi.set(__self__, "aaa_specify_name_policy_password_wo_version", aaa_specify_name_policy_password_wo_version)
         if any_connect_eap_authentication_type is not None:
             pulumi.set(__self__, "any_connect_eap_authentication_type", any_connect_eap_authentication_type)
         if connection_type_ssl is not None:
@@ -917,6 +1016,10 @@ class _SystemRemoteAccessFeatureState:
             pulumi.set(__self__, "psk_authentication_pre_shared_key", psk_authentication_pre_shared_key)
         if psk_authentication_pre_shared_key_variable is not None:
             pulumi.set(__self__, "psk_authentication_pre_shared_key_variable", psk_authentication_pre_shared_key_variable)
+        if psk_authentication_pre_shared_key_wo is not None:
+            pulumi.set(__self__, "psk_authentication_pre_shared_key_wo", psk_authentication_pre_shared_key_wo)
+        if psk_authentication_pre_shared_key_wo_version is not None:
+            pulumi.set(__self__, "psk_authentication_pre_shared_key_wo_version", psk_authentication_pre_shared_key_wo_version)
         if psk_authentication_type is not None:
             pulumi.set(__self__, "psk_authentication_type", psk_authentication_type)
         if psk_authentication_type_variable is not None:
@@ -1025,6 +1128,10 @@ class _SystemRemoteAccessFeatureState:
     @_builtins.property
     @pulumi.getter(name="aaaSpecifyNamePolicyPassword")
     def aaa_specify_name_policy_password(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        - Only one of `aaa_specify_name_policy_password`, `aaa_specify_name_policy_password_variable` and `aaa_specify_name_policy_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `aaa_specify_name_policy_password_wo` together with `aaa_specify_name_policy_password_wo_version`, which keeps it out of state.
+        """
         return pulumi.get(self, "aaa_specify_name_policy_password")
 
     @aaa_specify_name_policy_password.setter
@@ -1042,6 +1149,31 @@ class _SystemRemoteAccessFeatureState:
     @aaa_specify_name_policy_password_variable.setter
     def aaa_specify_name_policy_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_specify_name_policy_password_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="aaaSpecifyNamePolicyPasswordWo")
+    def aaa_specify_name_policy_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        - Only one of `aaa_specify_name_policy_password`, `aaa_specify_name_policy_password_variable` and `aaa_specify_name_policy_password_wo` can be set.
+        """
+        return pulumi.get(self, "aaa_specify_name_policy_password_wo")
+
+    @aaa_specify_name_policy_password_wo.setter
+    def aaa_specify_name_policy_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "aaa_specify_name_policy_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="aaaSpecifyNamePolicyPasswordWoVersion")
+    def aaa_specify_name_policy_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `aaa_specify_name_policy_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "aaa_specify_name_policy_password_wo_version")
+
+    @aaa_specify_name_policy_password_wo_version.setter
+    def aaa_specify_name_policy_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "aaa_specify_name_policy_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="anyConnectEapAuthenticationType")
@@ -1386,6 +1518,8 @@ class _SystemRemoteAccessFeatureState:
     def psk_authentication_pre_shared_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+          - Only one of `psk_authentication_pre_shared_key`, `psk_authentication_pre_shared_key_variable` and `psk_authentication_pre_shared_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `psk_authentication_pre_shared_key_wo` together with `psk_authentication_pre_shared_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "psk_authentication_pre_shared_key")
 
@@ -1404,6 +1538,32 @@ class _SystemRemoteAccessFeatureState:
     @psk_authentication_pre_shared_key_variable.setter
     def psk_authentication_pre_shared_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "psk_authentication_pre_shared_key_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="pskAuthenticationPreSharedKeyWo")
+    def psk_authentication_pre_shared_key_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+          - Only one of `psk_authentication_pre_shared_key`, `psk_authentication_pre_shared_key_variable` and `psk_authentication_pre_shared_key_wo` can be set.
+        """
+        return pulumi.get(self, "psk_authentication_pre_shared_key_wo")
+
+    @psk_authentication_pre_shared_key_wo.setter
+    def psk_authentication_pre_shared_key_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "psk_authentication_pre_shared_key_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="pskAuthenticationPreSharedKeyWoVersion")
+    def psk_authentication_pre_shared_key_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `psk_authentication_pre_shared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "psk_authentication_pre_shared_key_wo_version")
+
+    @psk_authentication_pre_shared_key_wo_version.setter
+    def psk_authentication_pre_shared_key_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "psk_authentication_pre_shared_key_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="pskAuthenticationType")
@@ -1480,6 +1640,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
                  aaa_specify_name_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  aaa_specify_name_policy_password: pulumi.Input[Optional[_builtins.str]] = None,
                  aaa_specify_name_policy_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  any_connect_eap_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
                  connection_type_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1509,6 +1671,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  psk_authentication_pre_shared_key: pulumi.Input[Optional[_builtins.str]] = None,
                  psk_authentication_pre_shared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  psk_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
                  psk_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  radius_group_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1567,7 +1731,12 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] aaa_enable_accounting_variable: Variable name
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_name_variable: Variable name
+        :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password: - Only one of `aaa_specify_name_policy_password`, `aaa_specify_name_policy_password_variable` and `aaa_specify_name_policy_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `aaa_specify_name_policy_password_wo` together with `aaa_specify_name_policy_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password_variable: Variable name
+        :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               - Only one of `aaa_specify_name_policy_password`, `aaa_specify_name_policy_password_variable` and `aaa_specify_name_policy_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] aaa_specify_name_policy_password_wo_version: Rotation trigger for `aaa_specify_name_policy_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] any_connect_eap_authentication_type: , Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `user`, `device`
         :param pulumi.Input[_builtins.bool] connection_type_ssl: Enabled SSL VPN
@@ -1610,7 +1779,13 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ipv6_pool_size_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key: PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+                 - Only one of `psk_authentication_pre_shared_key`, `psk_authentication_pre_shared_key_variable` and `psk_authentication_pre_shared_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `psk_authentication_pre_shared_key_wo` together with `psk_authentication_pre_shared_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_variable: Variable name, Attribute conditional on `psk_authentication_type` equal to `group`
+        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+                 - Only one of `psk_authentication_pre_shared_key`, `psk_authentication_pre_shared_key_variable` and `psk_authentication_pre_shared_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] psk_authentication_pre_shared_key_wo_version: Rotation trigger for `psk_authentication_pre_shared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] psk_authentication_type: PSK Selection, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `aaa`, `group`
         :param pulumi.Input[_builtins.str] psk_authentication_type_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
@@ -1690,6 +1865,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
                  aaa_specify_name_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  aaa_specify_name_policy_password: pulumi.Input[Optional[_builtins.str]] = None,
                  aaa_specify_name_policy_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  any_connect_eap_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
                  connection_type_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1719,6 +1896,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  psk_authentication_pre_shared_key: pulumi.Input[Optional[_builtins.str]] = None,
                  psk_authentication_pre_shared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  psk_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
                  psk_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  radius_group_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1740,8 +1919,10 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
             __props__.__dict__["aaa_enable_accounting_variable"] = aaa_enable_accounting_variable
             __props__.__dict__["aaa_specify_name_policy_name"] = aaa_specify_name_policy_name
             __props__.__dict__["aaa_specify_name_policy_name_variable"] = aaa_specify_name_policy_name_variable
-            __props__.__dict__["aaa_specify_name_policy_password"] = aaa_specify_name_policy_password
+            __props__.__dict__["aaa_specify_name_policy_password"] = None if aaa_specify_name_policy_password is None else pulumi.Output.secret(aaa_specify_name_policy_password)
             __props__.__dict__["aaa_specify_name_policy_password_variable"] = aaa_specify_name_policy_password_variable
+            __props__.__dict__["aaa_specify_name_policy_password_wo"] = None if aaa_specify_name_policy_password_wo is None else pulumi.Output.secret(aaa_specify_name_policy_password_wo)
+            __props__.__dict__["aaa_specify_name_policy_password_wo_version"] = aaa_specify_name_policy_password_wo_version
             __props__.__dict__["any_connect_eap_authentication_type"] = any_connect_eap_authentication_type
             __props__.__dict__["connection_type_ssl"] = connection_type_ssl
             __props__.__dict__["description"] = description
@@ -1771,8 +1952,10 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
             __props__.__dict__["ipv6_pool_size"] = ipv6_pool_size
             __props__.__dict__["ipv6_pool_size_variable"] = ipv6_pool_size_variable
             __props__.__dict__["name"] = name
-            __props__.__dict__["psk_authentication_pre_shared_key"] = psk_authentication_pre_shared_key
+            __props__.__dict__["psk_authentication_pre_shared_key"] = None if psk_authentication_pre_shared_key is None else pulumi.Output.secret(psk_authentication_pre_shared_key)
             __props__.__dict__["psk_authentication_pre_shared_key_variable"] = psk_authentication_pre_shared_key_variable
+            __props__.__dict__["psk_authentication_pre_shared_key_wo"] = None if psk_authentication_pre_shared_key_wo is None else pulumi.Output.secret(psk_authentication_pre_shared_key_wo)
+            __props__.__dict__["psk_authentication_pre_shared_key_wo_version"] = psk_authentication_pre_shared_key_wo_version
             __props__.__dict__["psk_authentication_type"] = psk_authentication_type
             __props__.__dict__["psk_authentication_type_variable"] = psk_authentication_type_variable
             if radius_group_name is None and not opts.urn:
@@ -1780,6 +1963,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
             __props__.__dict__["radius_group_name"] = radius_group_name
             __props__.__dict__["radius_group_name_variable"] = radius_group_name_variable
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["aaaSpecifyNamePolicyPassword", "aaaSpecifyNamePolicyPasswordWo", "pskAuthenticationPreSharedKey", "pskAuthenticationPreSharedKeyWo"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(SystemRemoteAccessFeature, __self__).__init__(
             'sdwan:index/systemRemoteAccessFeature:SystemRemoteAccessFeature',
             resource_name,
@@ -1800,6 +1985,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
             aaa_specify_name_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
             aaa_specify_name_policy_password: pulumi.Input[Optional[_builtins.str]] = None,
             aaa_specify_name_policy_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            aaa_specify_name_policy_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            aaa_specify_name_policy_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             any_connect_eap_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
             connection_type_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1829,6 +2016,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             psk_authentication_pre_shared_key: pulumi.Input[Optional[_builtins.str]] = None,
             psk_authentication_pre_shared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            psk_authentication_pre_shared_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            psk_authentication_pre_shared_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             psk_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
             psk_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
             radius_group_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1849,7 +2038,12 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] aaa_enable_accounting_variable: Variable name
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_name_variable: Variable name
+        :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password: - Only one of `aaa_specify_name_policy_password`, `aaa_specify_name_policy_password_variable` and `aaa_specify_name_policy_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `aaa_specify_name_policy_password_wo` together with `aaa_specify_name_policy_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password_variable: Variable name
+        :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               - Only one of `aaa_specify_name_policy_password`, `aaa_specify_name_policy_password_variable` and `aaa_specify_name_policy_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] aaa_specify_name_policy_password_wo_version: Rotation trigger for `aaa_specify_name_policy_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] any_connect_eap_authentication_type: , Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `user`, `device`
         :param pulumi.Input[_builtins.bool] connection_type_ssl: Enabled SSL VPN
@@ -1892,7 +2086,13 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ipv6_pool_size_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key: PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+                 - Only one of `psk_authentication_pre_shared_key`, `psk_authentication_pre_shared_key_variable` and `psk_authentication_pre_shared_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `psk_authentication_pre_shared_key_wo` together with `psk_authentication_pre_shared_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_variable: Variable name, Attribute conditional on `psk_authentication_type` equal to `group`
+        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+                 - Only one of `psk_authentication_pre_shared_key`, `psk_authentication_pre_shared_key_variable` and `psk_authentication_pre_shared_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] psk_authentication_pre_shared_key_wo_version: Rotation trigger for `psk_authentication_pre_shared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] psk_authentication_type: PSK Selection, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `aaa`, `group`
         :param pulumi.Input[_builtins.str] psk_authentication_type_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
@@ -1913,6 +2113,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
         __props__.__dict__["aaa_specify_name_policy_name_variable"] = aaa_specify_name_policy_name_variable
         __props__.__dict__["aaa_specify_name_policy_password"] = aaa_specify_name_policy_password
         __props__.__dict__["aaa_specify_name_policy_password_variable"] = aaa_specify_name_policy_password_variable
+        __props__.__dict__["aaa_specify_name_policy_password_wo"] = aaa_specify_name_policy_password_wo
+        __props__.__dict__["aaa_specify_name_policy_password_wo_version"] = aaa_specify_name_policy_password_wo_version
         __props__.__dict__["any_connect_eap_authentication_type"] = any_connect_eap_authentication_type
         __props__.__dict__["connection_type_ssl"] = connection_type_ssl
         __props__.__dict__["description"] = description
@@ -1942,6 +2144,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
         __props__.__dict__["name"] = name
         __props__.__dict__["psk_authentication_pre_shared_key"] = psk_authentication_pre_shared_key
         __props__.__dict__["psk_authentication_pre_shared_key_variable"] = psk_authentication_pre_shared_key_variable
+        __props__.__dict__["psk_authentication_pre_shared_key_wo"] = psk_authentication_pre_shared_key_wo
+        __props__.__dict__["psk_authentication_pre_shared_key_wo_version"] = psk_authentication_pre_shared_key_wo_version
         __props__.__dict__["psk_authentication_type"] = psk_authentication_type
         __props__.__dict__["psk_authentication_type_variable"] = psk_authentication_type_variable
         __props__.__dict__["radius_group_name"] = radius_group_name
@@ -1962,6 +2166,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
             aaa_specify_name_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
             aaa_specify_name_policy_password: pulumi.Input[Optional[_builtins.str]] = None,
             aaa_specify_name_policy_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            aaa_specify_name_policy_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            aaa_specify_name_policy_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             any_connect_eap_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
             connection_type_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1991,6 +2197,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             psk_authentication_pre_shared_key: pulumi.Input[Optional[_builtins.str]] = None,
             psk_authentication_pre_shared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            psk_authentication_pre_shared_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            psk_authentication_pre_shared_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             psk_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
             psk_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
             radius_group_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2007,6 +2215,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
         __props__["aaaSpecifyNamePolicyNameVariable"] = aaa_specify_name_policy_name_variable
         __props__["aaaSpecifyNamePolicyPassword"] = aaa_specify_name_policy_password
         __props__["aaaSpecifyNamePolicyPasswordVariable"] = aaa_specify_name_policy_password_variable
+        __props__["aaaSpecifyNamePolicyPasswordWo"] = aaa_specify_name_policy_password_wo
+        __props__["aaaSpecifyNamePolicyPasswordWoVersion"] = aaa_specify_name_policy_password_wo_version
         __props__["anyConnectEapAuthenticationType"] = any_connect_eap_authentication_type
         __props__["connectionTypeSsl"] = connection_type_ssl
         __props__["description"] = description
@@ -2036,6 +2246,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
         __props__["name"] = name
         __props__["pskAuthenticationPreSharedKey"] = psk_authentication_pre_shared_key
         __props__["pskAuthenticationPreSharedKeyVariable"] = psk_authentication_pre_shared_key_variable
+        __props__["pskAuthenticationPreSharedKeyWo"] = psk_authentication_pre_shared_key_wo
+        __props__["pskAuthenticationPreSharedKeyWoVersion"] = psk_authentication_pre_shared_key_wo_version
         __props__["pskAuthenticationType"] = psk_authentication_type
         __props__["pskAuthenticationTypeVariable"] = psk_authentication_type_variable
         __props__["radiusGroupName"] = radius_group_name
@@ -2108,6 +2320,10 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter(name="aaaSpecifyNamePolicyPassword")
     def aaa_specify_name_policy_password(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        - Only one of `aaa_specify_name_policy_password`, `aaa_specify_name_policy_password_variable` and `aaa_specify_name_policy_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `aaa_specify_name_policy_password_wo` together with `aaa_specify_name_policy_password_wo_version`, which keeps it out of state.
+        """
         return pulumi.get(self, "aaa_specify_name_policy_password")
 
     @_builtins.property
@@ -2117,6 +2333,23 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
         Variable name
         """
         return pulumi.get(self, "aaa_specify_name_policy_password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="aaaSpecifyNamePolicyPasswordWo")
+    def aaa_specify_name_policy_password_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        - Only one of `aaa_specify_name_policy_password`, `aaa_specify_name_policy_password_variable` and `aaa_specify_name_policy_password_wo` can be set.
+        """
+        return pulumi.get(self, "aaa_specify_name_policy_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="aaaSpecifyNamePolicyPasswordWoVersion")
+    def aaa_specify_name_policy_password_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `aaa_specify_name_policy_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "aaa_specify_name_policy_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="anyConnectEapAuthenticationType")
@@ -2353,6 +2586,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     def psk_authentication_pre_shared_key(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+          - Only one of `psk_authentication_pre_shared_key`, `psk_authentication_pre_shared_key_variable` and `psk_authentication_pre_shared_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `psk_authentication_pre_shared_key_wo` together with `psk_authentication_pre_shared_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "psk_authentication_pre_shared_key")
 
@@ -2363,6 +2598,24 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
         Variable name, Attribute conditional on `psk_authentication_type` equal to `group`
         """
         return pulumi.get(self, "psk_authentication_pre_shared_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="pskAuthenticationPreSharedKeyWo")
+    def psk_authentication_pre_shared_key_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+          - Only one of `psk_authentication_pre_shared_key`, `psk_authentication_pre_shared_key_variable` and `psk_authentication_pre_shared_key_wo` can be set.
+        """
+        return pulumi.get(self, "psk_authentication_pre_shared_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="pskAuthenticationPreSharedKeyWoVersion")
+    def psk_authentication_pre_shared_key_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `psk_authentication_pre_shared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "psk_authentication_pre_shared_key_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="pskAuthenticationType")

@@ -158,12 +158,24 @@ export class ServiceWirelessLanFeature extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     declare public readonly password: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
     declare public readonly passwordVariable: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     */
+    declare public readonly passwordWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly passwordWoVersion: pulumi.Output<number | undefined>;
     /**
      * Configure Wi-Fi SSID profile
      */
@@ -212,6 +224,8 @@ export class ServiceWirelessLanFeature extends pulumi.CustomResource {
             resourceInputs["name"] = state?.name;
             resourceInputs["password"] = state?.password;
             resourceInputs["passwordVariable"] = state?.passwordVariable;
+            resourceInputs["passwordWo"] = state?.passwordWo;
+            resourceInputs["passwordWoVersion"] = state?.passwordWoVersion;
             resourceInputs["ssids"] = state?.ssids;
             resourceInputs["username"] = state?.username;
             resourceInputs["usernameVariable"] = state?.usernameVariable;
@@ -243,14 +257,18 @@ export class ServiceWirelessLanFeature extends pulumi.CustomResource {
             resourceInputs["meSubnetMask"] = args?.meSubnetMask;
             resourceInputs["meSubnetMaskVariable"] = args?.meSubnetMaskVariable;
             resourceInputs["name"] = args?.name;
-            resourceInputs["password"] = args?.password;
+            resourceInputs["password"] = args?.password ? pulumi.secret(args.password) : undefined;
             resourceInputs["passwordVariable"] = args?.passwordVariable;
+            resourceInputs["passwordWo"] = args?.passwordWo ? pulumi.secret(args.passwordWo) : undefined;
+            resourceInputs["passwordWoVersion"] = args?.passwordWoVersion;
             resourceInputs["ssids"] = args?.ssids;
             resourceInputs["username"] = args?.username;
             resourceInputs["usernameVariable"] = args?.usernameVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["password", "passwordWo"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(ServiceWirelessLanFeature.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -329,12 +347,24 @@ export interface ServiceWirelessLanFeatureState {
     name?: pulumi.Input<string | undefined>;
     /**
      * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     passwordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     */
+    passwordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Configure Wi-Fi SSID profile
      */
@@ -427,12 +457,24 @@ export interface ServiceWirelessLanFeatureArgs {
     name?: pulumi.Input<string | undefined>;
     /**
      * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     passwordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     */
+    passwordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Configure Wi-Fi SSID profile
      */

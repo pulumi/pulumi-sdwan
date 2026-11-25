@@ -221,6 +221,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string PasswordVariable;
         /// <summary>
+        /// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+        /// </summary>
+        public readonly string PasswordWo;
+        /// <summary>
+        /// Rotation trigger for `PasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int PasswordWoVersion;
+        /// <summary>
         /// Configure Wi-Fi SSID profile
         /// </summary>
         public readonly ImmutableArray<Outputs.GetServiceWirelessLanFeatureSsidResult> Ssids;
@@ -277,6 +285,10 @@ namespace Pulumi.Sdwan
 
             string passwordVariable,
 
+            string passwordWo,
+
+            int passwordWoVersion,
+
             ImmutableArray<Outputs.GetServiceWirelessLanFeatureSsidResult> ssids,
 
             string username,
@@ -304,6 +316,8 @@ namespace Pulumi.Sdwan
             Name = name;
             Password = password;
             PasswordVariable = passwordVariable;
+            PasswordWo = passwordWo;
+            PasswordWoVersion = passwordWoVersion;
             Ssids = ssids;
             Username = username;
             UsernameVariable = usernameVariable;

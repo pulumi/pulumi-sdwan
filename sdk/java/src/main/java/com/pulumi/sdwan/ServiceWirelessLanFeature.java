@@ -321,6 +321,8 @@ public class ServiceWirelessLanFeature extends com.pulumi.resources.CustomResour
     }
     /**
      * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can&#39;t substitute 1,l,or ! for i,0 for o,$ for s.
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      * 
      */
     @Export(name="password", refs={String.class}, tree="[0]")
@@ -328,6 +330,8 @@ public class ServiceWirelessLanFeature extends com.pulumi.resources.CustomResour
 
     /**
      * @return Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can&#39;t substitute 1,l,or ! for i,0 for o,$ for s.
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      * 
      */
     public Output<Optional<String>> password() {
@@ -346,6 +350,38 @@ public class ServiceWirelessLanFeature extends com.pulumi.resources.CustomResour
      */
     public Output<Optional<String>> passwordVariable() {
         return Codegen.optional(this.passwordVariable);
+    }
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can&#39;t substitute 1,l,or ! for i,0 for o,$ for s.
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     * 
+     */
+    @Export(name="passwordWo", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> passwordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can&#39;t substitute 1,l,or ! for i,0 for o,$ for s.
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     * 
+     */
+    public Output<Optional<String>> passwordWo() {
+        return Codegen.optional(this.passwordWo);
+    }
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Export(name="passwordWoVersion", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> passwordWoVersion;
+
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Output<Optional<Integer>> passwordWoVersion() {
+        return Codegen.optional(this.passwordWoVersion);
     }
     /**
      * Configure Wi-Fi SSID profile
@@ -443,6 +479,10 @@ public class ServiceWirelessLanFeature extends com.pulumi.resources.CustomResour
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "password",
+                "passwordWo"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

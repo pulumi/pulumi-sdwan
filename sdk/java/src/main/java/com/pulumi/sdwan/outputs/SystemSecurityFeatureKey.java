@@ -90,6 +90,8 @@ public final class SystemSecurityFeatureKey {
     private @Nullable String includeTcpOptionsVariable;
     /**
      * @return Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
      * 
      */
     private @Nullable String keyString;
@@ -98,6 +100,18 @@ public final class SystemSecurityFeatureKey {
      * 
      */
     private @Nullable String keyStringVariable;
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     * 
+     */
+    private @Nullable String keyStringWo;
+    /**
+     * @return Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private @Nullable Integer keyStringWoVersion;
     /**
      * @return Select the chain name
      * 
@@ -274,6 +288,8 @@ public final class SystemSecurityFeatureKey {
     }
     /**
      * @return Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<String> keyString() {
@@ -285,6 +301,22 @@ public final class SystemSecurityFeatureKey {
      */
     public Optional<String> keyStringVariable() {
         return Optional.ofNullable(this.keyStringVariable);
+    }
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     * 
+     */
+    public Optional<String> keyStringWo() {
+        return Optional.ofNullable(this.keyStringWo);
+    }
+    /**
+     * @return Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Integer> keyStringWoVersion() {
+        return Optional.ofNullable(this.keyStringWoVersion);
     }
     /**
      * @return Select the chain name
@@ -407,6 +439,8 @@ public final class SystemSecurityFeatureKey {
         private @Nullable String includeTcpOptionsVariable;
         private @Nullable String keyString;
         private @Nullable String keyStringVariable;
+        private @Nullable String keyStringWo;
+        private @Nullable Integer keyStringWoVersion;
         private @Nullable String name;
         private @Nullable Integer receiverId;
         private @Nullable String receiverIdVariable;
@@ -439,6 +473,8 @@ public final class SystemSecurityFeatureKey {
     	      this.includeTcpOptionsVariable = defaults.includeTcpOptionsVariable;
     	      this.keyString = defaults.keyString;
     	      this.keyStringVariable = defaults.keyStringVariable;
+    	      this.keyStringWo = defaults.keyStringWo;
+    	      this.keyStringWoVersion = defaults.keyStringWoVersion;
     	      this.name = defaults.name;
     	      this.receiverId = defaults.receiverId;
     	      this.receiverIdVariable = defaults.receiverIdVariable;
@@ -551,6 +587,18 @@ public final class SystemSecurityFeatureKey {
             return this;
         }
         @CustomType.Setter
+        public Builder keyStringWo(@Nullable String keyStringWo) {
+
+            this.keyStringWo = keyStringWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder keyStringWoVersion(@Nullable Integer keyStringWoVersion) {
+
+            this.keyStringWoVersion = keyStringWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder name(@Nullable String name) {
 
             this.name = name;
@@ -646,6 +694,8 @@ public final class SystemSecurityFeatureKey {
             _resultValue.includeTcpOptionsVariable = includeTcpOptionsVariable;
             _resultValue.keyString = keyString;
             _resultValue.keyStringVariable = keyStringVariable;
+            _resultValue.keyStringWo = keyStringWo;
+            _resultValue.keyStringWoVersion = keyStringWoVersion;
             _resultValue.name = name;
             _resultValue.receiverId = receiverId;
             _resultValue.receiverIdVariable = receiverIdVariable;

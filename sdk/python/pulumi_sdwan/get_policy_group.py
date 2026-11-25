@@ -13,7 +13,6 @@ if sys.version_info >= (3, 11):
 else:
     from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
-from . import outputs
 
 __all__ = [
     'GetPolicyGroupResult',
@@ -27,13 +26,10 @@ class GetPolicyGroupResult:
     """
     A collection of values returned by getPolicyGroup.
     """
-    def __init__(__self__, description=None, devices=None, feature_profile_ids=None, id=None, name=None, policy_versions=None, solution=None):
+    def __init__(__self__, description=None, feature_profile_ids=None, id=None, name=None, policy_versions=None, solution=None, version=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
-        if devices and not isinstance(devices, list):
-            raise TypeError("Expected argument 'devices' to be a list")
-        pulumi.set(__self__, "devices", devices)
         if feature_profile_ids and not isinstance(feature_profile_ids, list):
             raise TypeError("Expected argument 'feature_profile_ids' to be a list")
         pulumi.set(__self__, "feature_profile_ids", feature_profile_ids)
@@ -49,6 +45,9 @@ class GetPolicyGroupResult:
         if solution and not isinstance(solution, str):
             raise TypeError("Expected argument 'solution' to be a str")
         pulumi.set(__self__, "solution", solution)
+        if version and not isinstance(version, int):
+            raise TypeError("Expected argument 'version' to be a int")
+        pulumi.set(__self__, "version", version)
 
     @_builtins.property
     @pulumi.getter
@@ -57,14 +56,6 @@ class GetPolicyGroupResult:
         Description
         """
         return pulumi.get(self, "description")
-
-    @_builtins.property
-    @pulumi.getter
-    def devices(self) -> Sequence['outputs.GetPolicyGroupDeviceResult']:
-        """
-        List of devices
-        """
-        return pulumi.get(self, "devices")
 
     @_builtins.property
     @pulumi.getter(name="featureProfileIds")
@@ -106,6 +97,14 @@ class GetPolicyGroupResult:
         """
         return pulumi.get(self, "solution")
 
+    @_builtins.property
+    @pulumi.getter
+    def version(self) -> _builtins.int:
+        """
+        The version of the object
+        """
+        return pulumi.get(self, "version")
+
 
 class AwaitableGetPolicyGroupResult(GetPolicyGroupResult):
     # pylint: disable=using-constant-test
@@ -114,12 +113,12 @@ class AwaitableGetPolicyGroupResult(GetPolicyGroupResult):
             yield self
         return GetPolicyGroupResult(
             description=self.description,
-            devices=self.devices,
             feature_profile_ids=self.feature_profile_ids,
             id=self.id,
             name=self.name,
             policy_versions=self.policy_versions,
-            solution=self.solution)
+            solution=self.solution,
+            version=self.version)
 
 
 def get_policy_group(id: Optional[_builtins.str] = None,
@@ -149,12 +148,12 @@ def get_policy_group(id: Optional[_builtins.str] = None,
 
     return AwaitableGetPolicyGroupResult(
         description=pulumi.get(__ret__, 'description'),
-        devices=pulumi.get(__ret__, 'devices'),
         feature_profile_ids=pulumi.get(__ret__, 'feature_profile_ids'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         policy_versions=pulumi.get(__ret__, 'policy_versions'),
-        solution=pulumi.get(__ret__, 'solution'))
+        solution=pulumi.get(__ret__, 'solution'),
+        version=pulumi.get(__ret__, 'version'))
 def get_policy_group_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                             name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyGroupResult]:
@@ -181,9 +180,9 @@ def get_policy_group_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] 
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPolicyGroup:getPolicyGroup', __args__, opts=opts, typ=GetPolicyGroupResult)
     return __ret__.apply(lambda __response__: GetPolicyGroupResult(
         description=pulumi.get(__response__, 'description'),
-        devices=pulumi.get(__response__, 'devices'),
         feature_profile_ids=pulumi.get(__response__, 'feature_profile_ids'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         policy_versions=pulumi.get(__response__, 'policy_versions'),
-        solution=pulumi.get(__response__, 'solution')))
+        solution=pulumi.get(__response__, 'solution'),
+        version=pulumi.get(__response__, 'version')))

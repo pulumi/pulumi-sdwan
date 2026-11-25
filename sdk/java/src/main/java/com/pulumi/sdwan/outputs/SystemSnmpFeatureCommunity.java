@@ -4,6 +4,7 @@
 package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,6 +25,8 @@ public final class SystemSnmpFeatureCommunity {
     private @Nullable String authorizationVariable;
     /**
      * @return Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `nameWo` together with `nameWoVersion`, which keeps it out of state.
      * 
      */
     private @Nullable String name;
@@ -32,6 +35,18 @@ public final class SystemSnmpFeatureCommunity {
      * 
      */
     private @Nullable String nameVariable;
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+     * 
+     */
+    private @Nullable String nameWo;
+    /**
+     * @return Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private @Nullable Integer nameWoVersion;
     /**
      * @return Set user label of the SNMP community
      * 
@@ -66,6 +81,8 @@ public final class SystemSnmpFeatureCommunity {
     }
     /**
      * @return Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `nameWo` together with `nameWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<String> name() {
@@ -77,6 +94,22 @@ public final class SystemSnmpFeatureCommunity {
      */
     public Optional<String> nameVariable() {
         return Optional.ofNullable(this.nameVariable);
+    }
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+     * 
+     */
+    public Optional<String> nameWo() {
+        return Optional.ofNullable(this.nameWo);
+    }
+    /**
+     * @return Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Integer> nameWoVersion() {
+        return Optional.ofNullable(this.nameWoVersion);
     }
     /**
      * @return Set user label of the SNMP community
@@ -113,6 +146,8 @@ public final class SystemSnmpFeatureCommunity {
         private @Nullable String authorizationVariable;
         private @Nullable String name;
         private @Nullable String nameVariable;
+        private @Nullable String nameWo;
+        private @Nullable Integer nameWoVersion;
         private @Nullable String userLabel;
         private @Nullable String view;
         private @Nullable String viewVariable;
@@ -123,6 +158,8 @@ public final class SystemSnmpFeatureCommunity {
     	      this.authorizationVariable = defaults.authorizationVariable;
     	      this.name = defaults.name;
     	      this.nameVariable = defaults.nameVariable;
+    	      this.nameWo = defaults.nameWo;
+    	      this.nameWoVersion = defaults.nameWoVersion;
     	      this.userLabel = defaults.userLabel;
     	      this.view = defaults.view;
     	      this.viewVariable = defaults.viewVariable;
@@ -153,6 +190,18 @@ public final class SystemSnmpFeatureCommunity {
             return this;
         }
         @CustomType.Setter
+        public Builder nameWo(@Nullable String nameWo) {
+
+            this.nameWo = nameWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder nameWoVersion(@Nullable Integer nameWoVersion) {
+
+            this.nameWoVersion = nameWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder userLabel(@Nullable String userLabel) {
 
             this.userLabel = userLabel;
@@ -176,6 +225,8 @@ public final class SystemSnmpFeatureCommunity {
             _resultValue.authorizationVariable = authorizationVariable;
             _resultValue.name = name;
             _resultValue.nameVariable = nameVariable;
+            _resultValue.nameWo = nameWo;
+            _resultValue.nameWoVersion = nameWoVersion;
             _resultValue.userLabel = userLabel;
             _resultValue.view = view;
             _resultValue.viewVariable = viewVariable;

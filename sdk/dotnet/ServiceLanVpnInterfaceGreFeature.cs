@@ -402,6 +402,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Use preshared key to authenticate IKE peer
+        ///   - Only one of `PreSharedSecret`, `PreSharedSecretVariable` and `PreSharedSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PreSharedSecretWo` together with `PreSharedSecretWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("preSharedSecret")]
         public Output<string?> PreSharedSecret { get; private set; } = null!;
@@ -411,6 +413,20 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("preSharedSecretVariable")]
         public Output<string?> PreSharedSecretVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Use preshared key to authenticate IKE peer
+        ///   - Only one of `PreSharedSecret`, `PreSharedSecretVariable` and `PreSharedSecretWo` can be set.
+        /// </summary>
+        [Output("preSharedSecretWo")]
+        public Output<string?> PreSharedSecretWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `PreSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("preSharedSecretWoVersion")]
+        public Output<int?> PreSharedSecretWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// Service LAN VPN Feature ID
@@ -595,6 +611,11 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "preSharedSecret",
+                    "preSharedSecretWo",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -944,17 +965,53 @@ namespace Pulumi.Sdwan
         [Input("perfectForwardSecrecyVariable")]
         public Input<string>? PerfectForwardSecrecyVariable { get; set; }
 
+        [Input("preSharedSecret")]
+        private Input<string>? _preSharedSecret;
+
         /// <summary>
         /// Use preshared key to authenticate IKE peer
+        ///   - Only one of `PreSharedSecret`, `PreSharedSecretVariable` and `PreSharedSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PreSharedSecretWo` together with `PreSharedSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("preSharedSecret")]
-        public Input<string>? PreSharedSecret { get; set; }
+        public Input<string>? PreSharedSecret
+        {
+            get => _preSharedSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _preSharedSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("preSharedSecretVariable")]
         public Input<string>? PreSharedSecretVariable { get; set; }
+
+        [Input("preSharedSecretWo")]
+        private Input<string>? _preSharedSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Use preshared key to authenticate IKE peer
+        ///   - Only one of `PreSharedSecret`, `PreSharedSecretVariable` and `PreSharedSecretWo` can be set.
+        /// </summary>
+        public Input<string>? PreSharedSecretWo
+        {
+            get => _preSharedSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _preSharedSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `PreSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("preSharedSecretWoVersion")]
+        public Input<int>? PreSharedSecretWoVersion { get; set; }
 
         /// <summary>
         /// Service LAN VPN Feature ID
@@ -1444,17 +1501,53 @@ namespace Pulumi.Sdwan
         [Input("perfectForwardSecrecyVariable")]
         public Input<string>? PerfectForwardSecrecyVariable { get; set; }
 
+        [Input("preSharedSecret")]
+        private Input<string>? _preSharedSecret;
+
         /// <summary>
         /// Use preshared key to authenticate IKE peer
+        ///   - Only one of `PreSharedSecret`, `PreSharedSecretVariable` and `PreSharedSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PreSharedSecretWo` together with `PreSharedSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("preSharedSecret")]
-        public Input<string>? PreSharedSecret { get; set; }
+        public Input<string>? PreSharedSecret
+        {
+            get => _preSharedSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _preSharedSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("preSharedSecretVariable")]
         public Input<string>? PreSharedSecretVariable { get; set; }
+
+        [Input("preSharedSecretWo")]
+        private Input<string>? _preSharedSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Use preshared key to authenticate IKE peer
+        ///   - Only one of `PreSharedSecret`, `PreSharedSecretVariable` and `PreSharedSecretWo` can be set.
+        /// </summary>
+        public Input<string>? PreSharedSecretWo
+        {
+            get => _preSharedSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _preSharedSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `PreSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("preSharedSecretWoVersion")]
+        public Input<int>? PreSharedSecretWoVersion { get; set; }
 
         /// <summary>
         /// Service LAN VPN Feature ID

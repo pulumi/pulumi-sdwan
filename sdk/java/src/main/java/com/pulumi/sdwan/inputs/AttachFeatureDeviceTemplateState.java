@@ -5,10 +5,10 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.sdwan.inputs.AttachFeatureDeviceTemplateDeviceArgs;
+import com.pulumi.sdwan.inputs.AttachFeatureDeviceTemplateDevicesArgs;
 import java.lang.Integer;
 import java.lang.String;
-import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -34,17 +34,17 @@ public final class AttachFeatureDeviceTemplateState extends com.pulumi.resources
     }
 
     /**
-     * Devices
+     * Devices attached to the device template, keyed by device ID (chassis ID)
      * 
      */
     @Import(name="devices")
-    private @Nullable Output<List<AttachFeatureDeviceTemplateDeviceArgs>> devices;
+    private @Nullable Output<Map<String,AttachFeatureDeviceTemplateDevicesArgs>> devices;
 
     /**
-     * @return Devices
+     * @return Devices attached to the device template, keyed by device ID (chassis ID)
      * 
      */
-    public Optional<Output<List<AttachFeatureDeviceTemplateDeviceArgs>>> devices() {
+    public Optional<Output<Map<String,AttachFeatureDeviceTemplateDevicesArgs>>> devices() {
         return Optional.ofNullable(this.devices);
     }
 
@@ -111,34 +111,24 @@ public final class AttachFeatureDeviceTemplateState extends com.pulumi.resources
         }
 
         /**
-         * @param devices Devices
+         * @param devices Devices attached to the device template, keyed by device ID (chassis ID)
          * 
          * @return builder
          * 
          */
-        public Builder devices(@Nullable Output<List<AttachFeatureDeviceTemplateDeviceArgs>> devices) {
+        public Builder devices(@Nullable Output<Map<String,AttachFeatureDeviceTemplateDevicesArgs>> devices) {
             $.devices = devices;
             return this;
         }
 
         /**
-         * @param devices Devices
+         * @param devices Devices attached to the device template, keyed by device ID (chassis ID)
          * 
          * @return builder
          * 
          */
-        public Builder devices(List<AttachFeatureDeviceTemplateDeviceArgs> devices) {
+        public Builder devices(Map<String,AttachFeatureDeviceTemplateDevicesArgs> devices) {
             return devices(Output.of(devices));
-        }
-
-        /**
-         * @param devices Devices
-         * 
-         * @return builder
-         * 
-         */
-        public Builder devices(AttachFeatureDeviceTemplateDeviceArgs... devices) {
-            return devices(List.of(devices));
         }
 
         /**

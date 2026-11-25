@@ -254,6 +254,10 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "hmacAuthenticationKey",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -361,11 +365,21 @@ namespace Pulumi.Sdwan
         [Input("helloIntervalVariable")]
         public Input<string>? HelloIntervalVariable { get; set; }
 
+        [Input("hmacAuthenticationKey")]
+        private Input<string>? _hmacAuthenticationKey;
+
         /// <summary>
         /// Set hmac-sha-256 authentication key
         /// </summary>
-        [Input("hmacAuthenticationKey")]
-        public Input<string>? HmacAuthenticationKey { get; set; }
+        public Input<string>? HmacAuthenticationKey
+        {
+            get => _hmacAuthenticationKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _hmacAuthenticationKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -521,11 +535,21 @@ namespace Pulumi.Sdwan
         [Input("helloIntervalVariable")]
         public Input<string>? HelloIntervalVariable { get; set; }
 
+        [Input("hmacAuthenticationKey")]
+        private Input<string>? _hmacAuthenticationKey;
+
         /// <summary>
         /// Set hmac-sha-256 authentication key
         /// </summary>
-        [Input("hmacAuthenticationKey")]
-        public Input<string>? HmacAuthenticationKey { get; set; }
+        public Input<string>? HmacAuthenticationKey
+        {
+            get => _hmacAuthenticationKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _hmacAuthenticationKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name

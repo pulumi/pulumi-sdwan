@@ -26,7 +26,7 @@ class GetSystemRemoteAccessFeatureResult:
     """
     A collection of values returned by getSystemRemoteAccessFeature.
     """
-    def __init__(__self__, aaa_derive_name_from_peer_domain=None, aaa_derive_name_from_peer_domain_variable=None, aaa_derive_name_from_peer_identity=None, aaa_derive_name_from_peer_identity_variable=None, aaa_enable_accounting=None, aaa_enable_accounting_variable=None, aaa_specify_name_policy_name=None, aaa_specify_name_policy_name_variable=None, aaa_specify_name_policy_password=None, aaa_specify_name_policy_password_variable=None, any_connect_eap_authentication_type=None, connection_type_ssl=None, description=None, enable_certificate_list_check=None, enable_certificate_list_check_variable=None, feature_profile_id=None, id=None, ikev2_anti_dos_threshold=None, ikev2_anti_dos_threshold_variable=None, ikev2_local_ike_identity_type=None, ikev2_local_ike_identity_type_variable=None, ikev2_local_ike_identity_value=None, ikev2_local_ike_identity_value_variable=None, ikev2_security_association_lifetime=None, ikev2_security_association_lifetime_variable=None, ipsec_anti_replay_window_size=None, ipsec_anti_replay_window_size_variable=None, ipsec_enable_anti_replay=None, ipsec_enable_anti_replay_variable=None, ipsec_enable_perfect_foward_secrecy=None, ipsec_enable_perfect_foward_secrecy_variable=None, ipsec_security_association_lifetime=None, ipsec_security_association_lifetime_variable=None, ipv4_pool_size=None, ipv4_pool_size_variable=None, ipv6_pool_size=None, ipv6_pool_size_variable=None, name=None, psk_authentication_pre_shared_key=None, psk_authentication_pre_shared_key_variable=None, psk_authentication_type=None, psk_authentication_type_variable=None, radius_group_name=None, radius_group_name_variable=None, version=None):
+    def __init__(__self__, aaa_derive_name_from_peer_domain=None, aaa_derive_name_from_peer_domain_variable=None, aaa_derive_name_from_peer_identity=None, aaa_derive_name_from_peer_identity_variable=None, aaa_enable_accounting=None, aaa_enable_accounting_variable=None, aaa_specify_name_policy_name=None, aaa_specify_name_policy_name_variable=None, aaa_specify_name_policy_password=None, aaa_specify_name_policy_password_variable=None, aaa_specify_name_policy_password_wo=None, aaa_specify_name_policy_password_wo_version=None, any_connect_eap_authentication_type=None, connection_type_ssl=None, description=None, enable_certificate_list_check=None, enable_certificate_list_check_variable=None, feature_profile_id=None, id=None, ikev2_anti_dos_threshold=None, ikev2_anti_dos_threshold_variable=None, ikev2_local_ike_identity_type=None, ikev2_local_ike_identity_type_variable=None, ikev2_local_ike_identity_value=None, ikev2_local_ike_identity_value_variable=None, ikev2_security_association_lifetime=None, ikev2_security_association_lifetime_variable=None, ipsec_anti_replay_window_size=None, ipsec_anti_replay_window_size_variable=None, ipsec_enable_anti_replay=None, ipsec_enable_anti_replay_variable=None, ipsec_enable_perfect_foward_secrecy=None, ipsec_enable_perfect_foward_secrecy_variable=None, ipsec_security_association_lifetime=None, ipsec_security_association_lifetime_variable=None, ipv4_pool_size=None, ipv4_pool_size_variable=None, ipv6_pool_size=None, ipv6_pool_size_variable=None, name=None, psk_authentication_pre_shared_key=None, psk_authentication_pre_shared_key_variable=None, psk_authentication_pre_shared_key_wo=None, psk_authentication_pre_shared_key_wo_version=None, psk_authentication_type=None, psk_authentication_type_variable=None, radius_group_name=None, radius_group_name_variable=None, version=None):
         if aaa_derive_name_from_peer_domain and not isinstance(aaa_derive_name_from_peer_domain, str):
             raise TypeError("Expected argument 'aaa_derive_name_from_peer_domain' to be a str")
         pulumi.set(__self__, "aaa_derive_name_from_peer_domain", aaa_derive_name_from_peer_domain)
@@ -57,6 +57,12 @@ class GetSystemRemoteAccessFeatureResult:
         if aaa_specify_name_policy_password_variable and not isinstance(aaa_specify_name_policy_password_variable, str):
             raise TypeError("Expected argument 'aaa_specify_name_policy_password_variable' to be a str")
         pulumi.set(__self__, "aaa_specify_name_policy_password_variable", aaa_specify_name_policy_password_variable)
+        if aaa_specify_name_policy_password_wo and not isinstance(aaa_specify_name_policy_password_wo, str):
+            raise TypeError("Expected argument 'aaa_specify_name_policy_password_wo' to be a str")
+        pulumi.set(__self__, "aaa_specify_name_policy_password_wo", aaa_specify_name_policy_password_wo)
+        if aaa_specify_name_policy_password_wo_version and not isinstance(aaa_specify_name_policy_password_wo_version, int):
+            raise TypeError("Expected argument 'aaa_specify_name_policy_password_wo_version' to be a int")
+        pulumi.set(__self__, "aaa_specify_name_policy_password_wo_version", aaa_specify_name_policy_password_wo_version)
         if any_connect_eap_authentication_type and not isinstance(any_connect_eap_authentication_type, str):
             raise TypeError("Expected argument 'any_connect_eap_authentication_type' to be a str")
         pulumi.set(__self__, "any_connect_eap_authentication_type", any_connect_eap_authentication_type)
@@ -147,6 +153,12 @@ class GetSystemRemoteAccessFeatureResult:
         if psk_authentication_pre_shared_key_variable and not isinstance(psk_authentication_pre_shared_key_variable, str):
             raise TypeError("Expected argument 'psk_authentication_pre_shared_key_variable' to be a str")
         pulumi.set(__self__, "psk_authentication_pre_shared_key_variable", psk_authentication_pre_shared_key_variable)
+        if psk_authentication_pre_shared_key_wo and not isinstance(psk_authentication_pre_shared_key_wo, str):
+            raise TypeError("Expected argument 'psk_authentication_pre_shared_key_wo' to be a str")
+        pulumi.set(__self__, "psk_authentication_pre_shared_key_wo", psk_authentication_pre_shared_key_wo)
+        if psk_authentication_pre_shared_key_wo_version and not isinstance(psk_authentication_pre_shared_key_wo_version, int):
+            raise TypeError("Expected argument 'psk_authentication_pre_shared_key_wo_version' to be a int")
+        pulumi.set(__self__, "psk_authentication_pre_shared_key_wo_version", psk_authentication_pre_shared_key_wo_version)
         if psk_authentication_type and not isinstance(psk_authentication_type, str):
             raise TypeError("Expected argument 'psk_authentication_type' to be a str")
         pulumi.set(__self__, "psk_authentication_type", psk_authentication_type)
@@ -230,6 +242,19 @@ class GetSystemRemoteAccessFeatureResult:
         Variable name
         """
         return pulumi.get(self, "aaa_specify_name_policy_password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="aaaSpecifyNamePolicyPasswordWo")
+    def aaa_specify_name_policy_password_wo(self) -> _builtins.str:
+        return pulumi.get(self, "aaa_specify_name_policy_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="aaaSpecifyNamePolicyPasswordWoVersion")
+    def aaa_specify_name_policy_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `aaa_specify_name_policy_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "aaa_specify_name_policy_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="anyConnectEapAuthenticationType")
@@ -460,6 +485,22 @@ class GetSystemRemoteAccessFeatureResult:
         return pulumi.get(self, "psk_authentication_pre_shared_key_variable")
 
     @_builtins.property
+    @pulumi.getter(name="pskAuthenticationPreSharedKeyWo")
+    def psk_authentication_pre_shared_key_wo(self) -> _builtins.str:
+        """
+        PSK Pre Shared Key
+        """
+        return pulumi.get(self, "psk_authentication_pre_shared_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="pskAuthenticationPreSharedKeyWoVersion")
+    def psk_authentication_pre_shared_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `psk_authentication_pre_shared_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "psk_authentication_pre_shared_key_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="pskAuthenticationType")
     def psk_authentication_type(self) -> _builtins.str:
         """
@@ -513,6 +554,8 @@ class AwaitableGetSystemRemoteAccessFeatureResult(GetSystemRemoteAccessFeatureRe
             aaa_specify_name_policy_name_variable=self.aaa_specify_name_policy_name_variable,
             aaa_specify_name_policy_password=self.aaa_specify_name_policy_password,
             aaa_specify_name_policy_password_variable=self.aaa_specify_name_policy_password_variable,
+            aaa_specify_name_policy_password_wo=self.aaa_specify_name_policy_password_wo,
+            aaa_specify_name_policy_password_wo_version=self.aaa_specify_name_policy_password_wo_version,
             any_connect_eap_authentication_type=self.any_connect_eap_authentication_type,
             connection_type_ssl=self.connection_type_ssl,
             description=self.description,
@@ -543,6 +586,8 @@ class AwaitableGetSystemRemoteAccessFeatureResult(GetSystemRemoteAccessFeatureRe
             name=self.name,
             psk_authentication_pre_shared_key=self.psk_authentication_pre_shared_key,
             psk_authentication_pre_shared_key_variable=self.psk_authentication_pre_shared_key_variable,
+            psk_authentication_pre_shared_key_wo=self.psk_authentication_pre_shared_key_wo,
+            psk_authentication_pre_shared_key_wo_version=self.psk_authentication_pre_shared_key_wo_version,
             psk_authentication_type=self.psk_authentication_type,
             psk_authentication_type_variable=self.psk_authentication_type_variable,
             radius_group_name=self.radius_group_name,
@@ -590,6 +635,8 @@ def get_system_remote_access_feature(feature_profile_id: Optional[_builtins.str]
         aaa_specify_name_policy_name_variable=pulumi.get(__ret__, 'aaa_specify_name_policy_name_variable'),
         aaa_specify_name_policy_password=pulumi.get(__ret__, 'aaa_specify_name_policy_password'),
         aaa_specify_name_policy_password_variable=pulumi.get(__ret__, 'aaa_specify_name_policy_password_variable'),
+        aaa_specify_name_policy_password_wo=pulumi.get(__ret__, 'aaa_specify_name_policy_password_wo'),
+        aaa_specify_name_policy_password_wo_version=pulumi.get(__ret__, 'aaa_specify_name_policy_password_wo_version'),
         any_connect_eap_authentication_type=pulumi.get(__ret__, 'any_connect_eap_authentication_type'),
         connection_type_ssl=pulumi.get(__ret__, 'connection_type_ssl'),
         description=pulumi.get(__ret__, 'description'),
@@ -620,6 +667,8 @@ def get_system_remote_access_feature(feature_profile_id: Optional[_builtins.str]
         name=pulumi.get(__ret__, 'name'),
         psk_authentication_pre_shared_key=pulumi.get(__ret__, 'psk_authentication_pre_shared_key'),
         psk_authentication_pre_shared_key_variable=pulumi.get(__ret__, 'psk_authentication_pre_shared_key_variable'),
+        psk_authentication_pre_shared_key_wo=pulumi.get(__ret__, 'psk_authentication_pre_shared_key_wo'),
+        psk_authentication_pre_shared_key_wo_version=pulumi.get(__ret__, 'psk_authentication_pre_shared_key_wo_version'),
         psk_authentication_type=pulumi.get(__ret__, 'psk_authentication_type'),
         psk_authentication_type_variable=pulumi.get(__ret__, 'psk_authentication_type_variable'),
         radius_group_name=pulumi.get(__ret__, 'radius_group_name'),
@@ -664,6 +713,8 @@ def get_system_remote_access_feature_output(feature_profile_id: pulumi.Input[Opt
         aaa_specify_name_policy_name_variable=pulumi.get(__response__, 'aaa_specify_name_policy_name_variable'),
         aaa_specify_name_policy_password=pulumi.get(__response__, 'aaa_specify_name_policy_password'),
         aaa_specify_name_policy_password_variable=pulumi.get(__response__, 'aaa_specify_name_policy_password_variable'),
+        aaa_specify_name_policy_password_wo=pulumi.get(__response__, 'aaa_specify_name_policy_password_wo'),
+        aaa_specify_name_policy_password_wo_version=pulumi.get(__response__, 'aaa_specify_name_policy_password_wo_version'),
         any_connect_eap_authentication_type=pulumi.get(__response__, 'any_connect_eap_authentication_type'),
         connection_type_ssl=pulumi.get(__response__, 'connection_type_ssl'),
         description=pulumi.get(__response__, 'description'),
@@ -694,6 +745,8 @@ def get_system_remote_access_feature_output(feature_profile_id: pulumi.Input[Opt
         name=pulumi.get(__response__, 'name'),
         psk_authentication_pre_shared_key=pulumi.get(__response__, 'psk_authentication_pre_shared_key'),
         psk_authentication_pre_shared_key_variable=pulumi.get(__response__, 'psk_authentication_pre_shared_key_variable'),
+        psk_authentication_pre_shared_key_wo=pulumi.get(__response__, 'psk_authentication_pre_shared_key_wo'),
+        psk_authentication_pre_shared_key_wo_version=pulumi.get(__response__, 'psk_authentication_pre_shared_key_wo_version'),
         psk_authentication_type=pulumi.get(__response__, 'psk_authentication_type'),
         psk_authentication_type_variable=pulumi.get(__response__, 'psk_authentication_type_variable'),
         radius_group_name=pulumi.get(__response__, 'radius_group_name'),

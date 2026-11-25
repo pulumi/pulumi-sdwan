@@ -25,11 +25,10 @@ namespace Pulumi.Sdwan
     ///     var example = new Sdwan.AttachFeatureDeviceTemplate("example", new()
     ///     {
     ///         AttachFeatureDeviceTemplateId = DT1.Id,
-    ///         Devices = new[]
+    ///         Devices = 
     ///         {
-    ///             new Sdwan.Inputs.AttachFeatureDeviceTemplateDeviceArgs
+    ///             { "C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE", new Sdwan.Inputs.AttachFeatureDeviceTemplateDevicesArgs
     ///             {
-    ///                 Id = "C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE",
     ///                 Variables = 
     ///                 {
     ///                     { "systemSiteId", "1001" },
@@ -37,7 +36,7 @@ namespace Pulumi.Sdwan
     ///                     { "systemHostName", "router1" },
     ///                     { "vpnIfNameDefaultVEdgeDHCPTunnelInterface", "GigabitEthernet1" },
     ///                 },
-    ///             },
+    ///             } },
     ///         },
     ///     });
     /// 
@@ -64,10 +63,10 @@ namespace Pulumi.Sdwan
         public Output<string> AttachFeatureDeviceTemplateId { get; private set; } = null!;
 
         /// <summary>
-        /// Devices
+        /// Devices attached to the device template, keyed by device ID (chassis ID)
         /// </summary>
         [Output("devices")]
-        public Output<ImmutableArray<Outputs.AttachFeatureDeviceTemplateDevice>> Devices { get; private set; } = null!;
+        public Output<ImmutableDictionary<string, Outputs.AttachFeatureDeviceTemplateDevices>> Devices { get; private set; } = null!;
 
         /// <summary>
         /// The version of the device template
@@ -128,14 +127,14 @@ namespace Pulumi.Sdwan
         public Input<string> AttachFeatureDeviceTemplateId { get; set; } = null!;
 
         [Input("devices", required: true)]
-        private InputList<Inputs.AttachFeatureDeviceTemplateDeviceArgs>? _devices;
+        private InputMap<Inputs.AttachFeatureDeviceTemplateDevicesArgs>? _devices;
 
         /// <summary>
-        /// Devices
+        /// Devices attached to the device template, keyed by device ID (chassis ID)
         /// </summary>
-        public InputList<Inputs.AttachFeatureDeviceTemplateDeviceArgs> Devices
+        public InputMap<Inputs.AttachFeatureDeviceTemplateDevicesArgs> Devices
         {
-            get => _devices ?? (_devices = new InputList<Inputs.AttachFeatureDeviceTemplateDeviceArgs>());
+            get => _devices ?? (_devices = new InputMap<Inputs.AttachFeatureDeviceTemplateDevicesArgs>());
             set => _devices = value;
         }
 
@@ -160,14 +159,14 @@ namespace Pulumi.Sdwan
         public Input<string>? AttachFeatureDeviceTemplateId { get; set; }
 
         [Input("devices")]
-        private InputList<Inputs.AttachFeatureDeviceTemplateDeviceGetArgs>? _devices;
+        private InputMap<Inputs.AttachFeatureDeviceTemplateDevicesGetArgs>? _devices;
 
         /// <summary>
-        /// Devices
+        /// Devices attached to the device template, keyed by device ID (chassis ID)
         /// </summary>
-        public InputList<Inputs.AttachFeatureDeviceTemplateDeviceGetArgs> Devices
+        public InputMap<Inputs.AttachFeatureDeviceTemplateDevicesGetArgs> Devices
         {
-            get => _devices ?? (_devices = new InputList<Inputs.AttachFeatureDeviceTemplateDeviceGetArgs>());
+            get => _devices ?? (_devices = new InputMap<Inputs.AttachFeatureDeviceTemplateDevicesGetArgs>());
             set => _devices = value;
         }
 

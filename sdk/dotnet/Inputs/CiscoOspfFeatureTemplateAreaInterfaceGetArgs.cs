@@ -12,11 +12,21 @@ namespace Pulumi.Sdwan.Inputs
 
     public sealed class CiscoOspfFeatureTemplateAreaInterfaceGetArgs : global::Pulumi.ResourceArgs
     {
+        [Input("authenticationMessageDigestKey")]
+        private Input<string>? _authenticationMessageDigestKey;
+
         /// <summary>
         /// Set MD5 authentication key
         /// </summary>
-        [Input("authenticationMessageDigestKey")]
-        public Input<string>? AuthenticationMessageDigestKey { get; set; }
+        public Input<string>? AuthenticationMessageDigestKey
+        {
+            get => _authenticationMessageDigestKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationMessageDigestKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Set MD5 message digest key

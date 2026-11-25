@@ -4,6 +4,7 @@
 package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -13,6 +14,8 @@ import javax.annotation.Nullable;
 public final class SystemSnmpFeatureUser {
     /**
      * @return Specify authentication protocol password
+     *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationPasswordWo` together with `authenticationPasswordWoVersion`, which keeps it out of state.
      * 
      */
     private @Nullable String authenticationPassword;
@@ -21,6 +24,18 @@ public final class SystemSnmpFeatureUser {
      * 
      */
     private @Nullable String authenticationPasswordVariable;
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify authentication protocol password
+     *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+     * 
+     */
+    private @Nullable String authenticationPasswordWo;
+    /**
+     * @return Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private @Nullable Integer authenticationPasswordWoVersion;
     /**
      * @return Configure authentication protocol
      *   - Choices: `sha`, `sha256`
@@ -49,6 +64,8 @@ public final class SystemSnmpFeatureUser {
     private @Nullable String name;
     /**
      * @return Specify privacy protocol password
+     *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `privacyPasswordWo` together with `privacyPasswordWoVersion`, which keeps it out of state.
      * 
      */
     private @Nullable String privacyPassword;
@@ -57,6 +74,18 @@ public final class SystemSnmpFeatureUser {
      * 
      */
     private @Nullable String privacyPasswordVariable;
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify privacy protocol password
+     *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+     * 
+     */
+    private @Nullable String privacyPasswordWo;
+    /**
+     * @return Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private @Nullable Integer privacyPasswordWoVersion;
     /**
      * @return Configure privacy protocol
      *   - Choices: `aes-cfb-128`, `aes-256-cfb-128`
@@ -72,6 +101,8 @@ public final class SystemSnmpFeatureUser {
     private SystemSnmpFeatureUser() {}
     /**
      * @return Specify authentication protocol password
+     *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationPasswordWo` together with `authenticationPasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<String> authenticationPassword() {
@@ -83,6 +114,22 @@ public final class SystemSnmpFeatureUser {
      */
     public Optional<String> authenticationPasswordVariable() {
         return Optional.ofNullable(this.authenticationPasswordVariable);
+    }
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify authentication protocol password
+     *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+     * 
+     */
+    public Optional<String> authenticationPasswordWo() {
+        return Optional.ofNullable(this.authenticationPasswordWo);
+    }
+    /**
+     * @return Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Integer> authenticationPasswordWoVersion() {
+        return Optional.ofNullable(this.authenticationPasswordWoVersion);
     }
     /**
      * @return Configure authentication protocol
@@ -122,6 +169,8 @@ public final class SystemSnmpFeatureUser {
     }
     /**
      * @return Specify privacy protocol password
+     *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `privacyPasswordWo` together with `privacyPasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<String> privacyPassword() {
@@ -133,6 +182,22 @@ public final class SystemSnmpFeatureUser {
      */
     public Optional<String> privacyPasswordVariable() {
         return Optional.ofNullable(this.privacyPasswordVariable);
+    }
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify privacy protocol password
+     *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+     * 
+     */
+    public Optional<String> privacyPasswordWo() {
+        return Optional.ofNullable(this.privacyPasswordWo);
+    }
+    /**
+     * @return Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Integer> privacyPasswordWoVersion() {
+        return Optional.ofNullable(this.privacyPasswordWoVersion);
     }
     /**
      * @return Configure privacy protocol
@@ -161,6 +226,8 @@ public final class SystemSnmpFeatureUser {
     public static final class Builder {
         private @Nullable String authenticationPassword;
         private @Nullable String authenticationPasswordVariable;
+        private @Nullable String authenticationPasswordWo;
+        private @Nullable Integer authenticationPasswordWoVersion;
         private @Nullable String authenticationProtocol;
         private @Nullable String authenticationProtocolVariable;
         private @Nullable String group;
@@ -168,6 +235,8 @@ public final class SystemSnmpFeatureUser {
         private @Nullable String name;
         private @Nullable String privacyPassword;
         private @Nullable String privacyPasswordVariable;
+        private @Nullable String privacyPasswordWo;
+        private @Nullable Integer privacyPasswordWoVersion;
         private @Nullable String privacyProtocol;
         private @Nullable String privacyProtocolVariable;
         public Builder() {}
@@ -175,6 +244,8 @@ public final class SystemSnmpFeatureUser {
     	      Objects.requireNonNull(defaults);
     	      this.authenticationPassword = defaults.authenticationPassword;
     	      this.authenticationPasswordVariable = defaults.authenticationPasswordVariable;
+    	      this.authenticationPasswordWo = defaults.authenticationPasswordWo;
+    	      this.authenticationPasswordWoVersion = defaults.authenticationPasswordWoVersion;
     	      this.authenticationProtocol = defaults.authenticationProtocol;
     	      this.authenticationProtocolVariable = defaults.authenticationProtocolVariable;
     	      this.group = defaults.group;
@@ -182,6 +253,8 @@ public final class SystemSnmpFeatureUser {
     	      this.name = defaults.name;
     	      this.privacyPassword = defaults.privacyPassword;
     	      this.privacyPasswordVariable = defaults.privacyPasswordVariable;
+    	      this.privacyPasswordWo = defaults.privacyPasswordWo;
+    	      this.privacyPasswordWoVersion = defaults.privacyPasswordWoVersion;
     	      this.privacyProtocol = defaults.privacyProtocol;
     	      this.privacyProtocolVariable = defaults.privacyProtocolVariable;
         }
@@ -196,6 +269,18 @@ public final class SystemSnmpFeatureUser {
         public Builder authenticationPasswordVariable(@Nullable String authenticationPasswordVariable) {
 
             this.authenticationPasswordVariable = authenticationPasswordVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder authenticationPasswordWo(@Nullable String authenticationPasswordWo) {
+
+            this.authenticationPasswordWo = authenticationPasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder authenticationPasswordWoVersion(@Nullable Integer authenticationPasswordWoVersion) {
+
+            this.authenticationPasswordWoVersion = authenticationPasswordWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -241,6 +326,18 @@ public final class SystemSnmpFeatureUser {
             return this;
         }
         @CustomType.Setter
+        public Builder privacyPasswordWo(@Nullable String privacyPasswordWo) {
+
+            this.privacyPasswordWo = privacyPasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder privacyPasswordWoVersion(@Nullable Integer privacyPasswordWoVersion) {
+
+            this.privacyPasswordWoVersion = privacyPasswordWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder privacyProtocol(@Nullable String privacyProtocol) {
 
             this.privacyProtocol = privacyProtocol;
@@ -256,6 +353,8 @@ public final class SystemSnmpFeatureUser {
             final var _resultValue = new SystemSnmpFeatureUser();
             _resultValue.authenticationPassword = authenticationPassword;
             _resultValue.authenticationPasswordVariable = authenticationPasswordVariable;
+            _resultValue.authenticationPasswordWo = authenticationPasswordWo;
+            _resultValue.authenticationPasswordWoVersion = authenticationPasswordWoVersion;
             _resultValue.authenticationProtocol = authenticationProtocol;
             _resultValue.authenticationProtocolVariable = authenticationProtocolVariable;
             _resultValue.group = group;
@@ -263,6 +362,8 @@ public final class SystemSnmpFeatureUser {
             _resultValue.name = name;
             _resultValue.privacyPassword = privacyPassword;
             _resultValue.privacyPasswordVariable = privacyPasswordVariable;
+            _resultValue.privacyPasswordWo = privacyPasswordWo;
+            _resultValue.privacyPasswordWoVersion = privacyPasswordWoVersion;
             _resultValue.privacyProtocol = privacyProtocol;
             _resultValue.privacyProtocolVariable = privacyProtocolVariable;
             return _resultValue;

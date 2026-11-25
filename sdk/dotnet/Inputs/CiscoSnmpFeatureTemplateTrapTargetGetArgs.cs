@@ -12,11 +12,21 @@ namespace Pulumi.Sdwan.Inputs
 
     public sealed class CiscoSnmpFeatureTemplateTrapTargetGetArgs : global::Pulumi.ResourceArgs
     {
+        [Input("communityName")]
+        private Input<string>? _communityName;
+
         /// <summary>
         /// Set name of the SNMP community
         /// </summary>
-        [Input("communityName")]
-        public Input<string>? CommunityName { get; set; }
+        public Input<string>? CommunityName
+        {
+            get => _communityName;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _communityName = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name

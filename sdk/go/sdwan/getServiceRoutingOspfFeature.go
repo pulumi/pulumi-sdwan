@@ -107,7 +107,10 @@ type LookupServiceRoutingOspfFeatureResult struct {
 	Rfc1583Compatible bool `pulumi:"rfc1583Compatible"`
 	// Variable name
 	Rfc1583CompatibleVariable string `pulumi:"rfc1583CompatibleVariable"`
-	RoutePolicyId             string `pulumi:"routePolicyId"`
+	// Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+	RoutePolicyId string `pulumi:"routePolicyId"`
+	// Variable name
+	RoutePolicyIdVariable string `pulumi:"routePolicyIdVariable"`
 	// Set OSPF router ID to override system IP address
 	RouterId string `pulumi:"routerId"`
 	// Variable name
@@ -287,8 +290,14 @@ func (o LookupServiceRoutingOspfFeatureResultOutput) Rfc1583CompatibleVariable()
 	return o.ApplyT(func(v LookupServiceRoutingOspfFeatureResult) string { return v.Rfc1583CompatibleVariable }).(pulumi.StringOutput)
 }
 
+// Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
 func (o LookupServiceRoutingOspfFeatureResultOutput) RoutePolicyId() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceRoutingOspfFeatureResult) string { return v.RoutePolicyId }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o LookupServiceRoutingOspfFeatureResultOutput) RoutePolicyIdVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceRoutingOspfFeatureResult) string { return v.RoutePolicyIdVariable }).(pulumi.StringOutput)
 }
 
 // Set OSPF router ID to override system IP address

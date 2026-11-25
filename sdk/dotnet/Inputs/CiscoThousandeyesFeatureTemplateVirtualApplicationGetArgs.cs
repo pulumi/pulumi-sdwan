@@ -32,11 +32,21 @@ namespace Pulumi.Sdwan.Inputs
         [Input("optional")]
         public Input<bool>? Optional { get; set; }
 
+        [Input("teAccountGroupToken")]
+        private Input<string>? _teAccountGroupToken;
+
         /// <summary>
         /// Set the Account Group Token
         /// </summary>
-        [Input("teAccountGroupToken")]
-        public Input<string>? TeAccountGroupToken { get; set; }
+        public Input<string>? TeAccountGroupToken
+        {
+            get => _teAccountGroupToken;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _teAccountGroupToken = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name

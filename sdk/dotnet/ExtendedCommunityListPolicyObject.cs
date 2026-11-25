@@ -29,7 +29,7 @@ namespace Pulumi.Sdwan
     ///         {
     ///             new Sdwan.Inputs.ExtendedCommunityListPolicyObjectEntryArgs
     ///             {
-    ///                 Community = "community rt 100:10",
+    ///                 Community = "rt 100:10",
     ///             },
     ///         },
     ///     });

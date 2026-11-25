@@ -23,12 +23,24 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? NameVariable;
         /// <summary>
         /// Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `Password`, `PasswordVariable` and `PasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PasswordWo` together with `PasswordWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? Password;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string? PasswordVariable;
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `Password`, `PasswordVariable` and `PasswordWo` can be set.
+        /// </summary>
+        public readonly string? PasswordWo;
+        /// <summary>
+        /// Rotation trigger for `PasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? PasswordWoVersion;
         /// <summary>
         /// Set Privilege Level for this user
         ///   - Choices: `1`, `15`
@@ -54,6 +66,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string? passwordVariable,
 
+            string? passwordWo,
+
+            int? passwordWoVersion,
+
             string? privilege,
 
             string? privilegeVariable,
@@ -64,6 +80,8 @@ namespace Pulumi.Sdwan.Outputs
             NameVariable = nameVariable;
             Password = password;
             PasswordVariable = passwordVariable;
+            PasswordWo = passwordWo;
+            PasswordWoVersion = passwordWoVersion;
             Privilege = privilege;
             PrivilegeVariable = privilegeVariable;
             PublicKeys = publicKeys;

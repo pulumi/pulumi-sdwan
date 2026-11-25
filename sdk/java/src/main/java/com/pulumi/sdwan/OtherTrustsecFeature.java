@@ -138,6 +138,8 @@ public class OtherTrustsecFeature extends com.pulumi.resources.CustomResource {
     }
     /**
      * Set the password for the device
+     *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Export(name="devicePassword", refs={String.class}, tree="[0]")
@@ -145,6 +147,8 @@ public class OtherTrustsecFeature extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Set the password for the device
+     *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Output<Optional<String>> devicePassword() {
@@ -163,6 +167,38 @@ public class OtherTrustsecFeature extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> devicePasswordVariable() {
         return Codegen.optional(this.devicePasswordVariable);
+    }
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the password for the device
+     *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+     * 
+     */
+    @Export(name="devicePasswordWo", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> devicePasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the password for the device
+     *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+     * 
+     */
+    public Output<Optional<String>> devicePasswordWo() {
+        return Codegen.optional(this.devicePasswordWo);
+    }
+    /**
+     * Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Export(name="devicePasswordWoVersion", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> devicePasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Output<Optional<Integer>> devicePasswordWoVersion() {
+        return Codegen.optional(this.devicePasswordWoVersion);
     }
     /**
      * Configure Local device security group &lt;2..65519&gt;
@@ -380,6 +416,8 @@ public class OtherTrustsecFeature extends com.pulumi.resources.CustomResource {
     }
     /**
      * Configure SXP default password
+     *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Export(name="sxpDefaultPassword", refs={String.class}, tree="[0]")
@@ -387,6 +425,8 @@ public class OtherTrustsecFeature extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Configure SXP default password
+     *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Output<Optional<String>> sxpDefaultPassword() {
@@ -405,6 +445,38 @@ public class OtherTrustsecFeature extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> sxpDefaultPasswordVariable() {
         return Codegen.optional(this.sxpDefaultPasswordVariable);
+    }
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Configure SXP default password
+     *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+     * 
+     */
+    @Export(name="sxpDefaultPasswordWo", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> sxpDefaultPasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Configure SXP default password
+     *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+     * 
+     */
+    public Output<Optional<String>> sxpDefaultPasswordWo() {
+        return Codegen.optional(this.sxpDefaultPasswordWo);
+    }
+    /**
+     * Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Export(name="sxpDefaultPasswordWoVersion", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> sxpDefaultPasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Output<Optional<Integer>> sxpDefaultPasswordWoVersion() {
+        return Codegen.optional(this.sxpDefaultPasswordWoVersion);
     }
     /**
      * Configure SXP key-chain
@@ -610,6 +682,12 @@ public class OtherTrustsecFeature extends com.pulumi.resources.CustomResource {
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "devicePassword",
+                "devicePasswordWo",
+                "sxpDefaultPassword",
+                "sxpDefaultPasswordWo"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

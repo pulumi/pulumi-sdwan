@@ -18,6 +18,8 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
 
     /**
      * CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `cmacAes128ValueWo` together with `cmacAes128ValueWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="cmacAes128Value")
@@ -25,6 +27,8 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
 
     /**
      * @return CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `cmacAes128ValueWo` together with `cmacAes128ValueWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> cmacAes128Value() {
@@ -47,7 +51,43 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
     }
 
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+     * 
+     */
+    @Import(name="cmacAes128ValueWo")
+    private @Nullable Output<String> cmacAes128ValueWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> cmacAes128ValueWo() {
+        return Optional.ofNullable(this.cmacAes128ValueWo);
+    }
+
+    /**
+     * Rotation trigger for `cmacAes128ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="cmacAes128ValueWoVersion")
+    private @Nullable Output<Integer> cmacAes128ValueWoVersion;
+
+    /**
+     * @return Rotation trigger for `cmacAes128ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> cmacAes128ValueWoVersion() {
+        return Optional.ofNullable(this.cmacAes128ValueWoVersion);
+    }
+
+    /**
      * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `hmacSha2ValueWo` together with `hmacSha2ValueWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="hmacSha2Value")
@@ -55,6 +95,8 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
 
     /**
      * @return HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `hmacSha2ValueWo` together with `hmacSha2ValueWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> hmacSha2Value() {
@@ -74,6 +116,40 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
      */
     public Optional<Output<String>> hmacSha2ValueVariable() {
         return Optional.ofNullable(this.hmacSha2ValueVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+     * 
+     */
+    @Import(name="hmacSha2ValueWo")
+    private @Nullable Output<String> hmacSha2ValueWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> hmacSha2ValueWo() {
+        return Optional.ofNullable(this.hmacSha2ValueWo);
+    }
+
+    /**
+     * Rotation trigger for `hmacSha2ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="hmacSha2ValueWoVersion")
+    private @Nullable Output<Integer> hmacSha2ValueWoVersion;
+
+    /**
+     * @return Rotation trigger for `hmacSha2ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> hmacSha2ValueWoVersion() {
+        return Optional.ofNullable(this.hmacSha2ValueWoVersion);
     }
 
     /**
@@ -110,6 +186,8 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
 
     /**
      * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `md5ValueWo` together with `md5ValueWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="md5Value")
@@ -117,6 +195,8 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
 
     /**
      * @return Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `md5ValueWo` together with `md5ValueWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> md5Value() {
@@ -138,17 +218,57 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
         return Optional.ofNullable(this.md5ValueVariable);
     }
 
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+     * 
+     */
+    @Import(name="md5ValueWo")
+    private @Nullable Output<String> md5ValueWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> md5ValueWo() {
+        return Optional.ofNullable(this.md5ValueWo);
+    }
+
+    /**
+     * Rotation trigger for `md5ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="md5ValueWoVersion")
+    private @Nullable Output<Integer> md5ValueWoVersion;
+
+    /**
+     * @return Rotation trigger for `md5ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> md5ValueWoVersion() {
+        return Optional.ofNullable(this.md5ValueWoVersion);
+    }
+
     private SystemNtpFeatureAuthenticationKeyArgs() {}
 
     private SystemNtpFeatureAuthenticationKeyArgs(SystemNtpFeatureAuthenticationKeyArgs $) {
         this.cmacAes128Value = $.cmacAes128Value;
         this.cmacAes128ValueVariable = $.cmacAes128ValueVariable;
+        this.cmacAes128ValueWo = $.cmacAes128ValueWo;
+        this.cmacAes128ValueWoVersion = $.cmacAes128ValueWoVersion;
         this.hmacSha2Value = $.hmacSha2Value;
         this.hmacSha2ValueVariable = $.hmacSha2ValueVariable;
+        this.hmacSha2ValueWo = $.hmacSha2ValueWo;
+        this.hmacSha2ValueWoVersion = $.hmacSha2ValueWoVersion;
         this.keyId = $.keyId;
         this.keyIdVariable = $.keyIdVariable;
         this.md5Value = $.md5Value;
         this.md5ValueVariable = $.md5ValueVariable;
+        this.md5ValueWo = $.md5ValueWo;
+        this.md5ValueWoVersion = $.md5ValueWoVersion;
     }
 
     public static Builder builder() {
@@ -171,6 +291,8 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
 
         /**
          * @param cmacAes128Value CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         *   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `cmacAes128ValueWo` together with `cmacAes128ValueWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -182,6 +304,8 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
 
         /**
          * @param cmacAes128Value CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         *   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `cmacAes128ValueWo` together with `cmacAes128ValueWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -212,7 +336,55 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
         }
 
         /**
+         * @param cmacAes128ValueWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         *   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cmacAes128ValueWo(@Nullable Output<String> cmacAes128ValueWo) {
+            $.cmacAes128ValueWo = cmacAes128ValueWo;
+            return this;
+        }
+
+        /**
+         * @param cmacAes128ValueWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         *   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cmacAes128ValueWo(String cmacAes128ValueWo) {
+            return cmacAes128ValueWo(Output.of(cmacAes128ValueWo));
+        }
+
+        /**
+         * @param cmacAes128ValueWoVersion Rotation trigger for `cmacAes128ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cmacAes128ValueWoVersion(@Nullable Output<Integer> cmacAes128ValueWoVersion) {
+            $.cmacAes128ValueWoVersion = cmacAes128ValueWoVersion;
+            return this;
+        }
+
+        /**
+         * @param cmacAes128ValueWoVersion Rotation trigger for `cmacAes128ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cmacAes128ValueWoVersion(Integer cmacAes128ValueWoVersion) {
+            return cmacAes128ValueWoVersion(Output.of(cmacAes128ValueWoVersion));
+        }
+
+        /**
          * @param hmacSha2Value HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         *   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `hmacSha2ValueWo` together with `hmacSha2ValueWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -224,6 +396,8 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
 
         /**
          * @param hmacSha2Value HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         *   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `hmacSha2ValueWo` together with `hmacSha2ValueWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -251,6 +425,52 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
          */
         public Builder hmacSha2ValueVariable(String hmacSha2ValueVariable) {
             return hmacSha2ValueVariable(Output.of(hmacSha2ValueVariable));
+        }
+
+        /**
+         * @param hmacSha2ValueWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         *   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hmacSha2ValueWo(@Nullable Output<String> hmacSha2ValueWo) {
+            $.hmacSha2ValueWo = hmacSha2ValueWo;
+            return this;
+        }
+
+        /**
+         * @param hmacSha2ValueWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         *   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hmacSha2ValueWo(String hmacSha2ValueWo) {
+            return hmacSha2ValueWo(Output.of(hmacSha2ValueWo));
+        }
+
+        /**
+         * @param hmacSha2ValueWoVersion Rotation trigger for `hmacSha2ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hmacSha2ValueWoVersion(@Nullable Output<Integer> hmacSha2ValueWoVersion) {
+            $.hmacSha2ValueWoVersion = hmacSha2ValueWoVersion;
+            return this;
+        }
+
+        /**
+         * @param hmacSha2ValueWoVersion Rotation trigger for `hmacSha2ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hmacSha2ValueWoVersion(Integer hmacSha2ValueWoVersion) {
+            return hmacSha2ValueWoVersion(Output.of(hmacSha2ValueWoVersion));
         }
 
         /**
@@ -299,6 +519,8 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
 
         /**
          * @param md5Value Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `md5ValueWo` together with `md5ValueWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -310,6 +532,8 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
 
         /**
          * @param md5Value Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `md5ValueWo` together with `md5ValueWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -337,6 +561,52 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
          */
         public Builder md5ValueVariable(String md5ValueVariable) {
             return md5ValueVariable(Output.of(md5ValueVariable));
+        }
+
+        /**
+         * @param md5ValueWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder md5ValueWo(@Nullable Output<String> md5ValueWo) {
+            $.md5ValueWo = md5ValueWo;
+            return this;
+        }
+
+        /**
+         * @param md5ValueWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder md5ValueWo(String md5ValueWo) {
+            return md5ValueWo(Output.of(md5ValueWo));
+        }
+
+        /**
+         * @param md5ValueWoVersion Rotation trigger for `md5ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder md5ValueWoVersion(@Nullable Output<Integer> md5ValueWoVersion) {
+            $.md5ValueWoVersion = md5ValueWoVersion;
+            return this;
+        }
+
+        /**
+         * @param md5ValueWoVersion Rotation trigger for `md5ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder md5ValueWoVersion(Integer md5ValueWoVersion) {
+            return md5ValueWoVersion(Output.of(md5ValueWoVersion));
         }
 
         public SystemNtpFeatureAuthenticationKeyArgs build() {

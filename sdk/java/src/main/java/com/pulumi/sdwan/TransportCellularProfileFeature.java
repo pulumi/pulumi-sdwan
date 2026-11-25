@@ -13,6 +13,7 @@ import com.pulumi.sdwan.inputs.TransportCellularProfileFeatureState;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
@@ -270,6 +271,8 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
     }
     /**
      * Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+     *   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `profilePasswordWo` together with `profilePasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Export(name="profilePassword", refs={String.class}, tree="[0]")
@@ -277,6 +280,8 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
 
     /**
      * @return Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+     *   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `profilePasswordWo` together with `profilePasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Output<Optional<String>> profilePassword() {
@@ -295,6 +300,38 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
      */
     public Output<Optional<String>> profilePasswordVariable() {
         return Codegen.optional(this.profilePasswordVariable);
+    }
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+     *   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+     * 
+     */
+    @Export(name="profilePasswordWo", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> profilePasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+     *   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+     * 
+     */
+    public Output<Optional<String>> profilePasswordWo() {
+        return Codegen.optional(this.profilePasswordWo);
+    }
+    /**
+     * Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Export(name="profilePasswordWoVersion", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> profilePasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Output<Optional<Integer>> profilePasswordWoVersion() {
+        return Codegen.optional(this.profilePasswordWoVersion);
     }
     /**
      * Set the profile username, Attribute conditional on `requiresAuthentication` equal to `true`
@@ -452,6 +489,10 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "profilePassword",
+                "profilePasswordWo"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

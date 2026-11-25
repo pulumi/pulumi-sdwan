@@ -68,13 +68,23 @@ namespace Pulumi.Sdwan.Inputs
         [Input("peerIp")]
         public Input<string>? PeerIp { get; set; }
 
+        [Input("presharedKey")]
+        private Input<string>? _presharedKey;
+
         /// <summary>
         /// Define Preshared Key type
         ///   - Choices: `Default`, `key-chain`, `None`
         ///   - Default value: `None`
         /// </summary>
-        [Input("presharedKey")]
-        public Input<string>? PresharedKey { get; set; }
+        public Input<string>? PresharedKey
+        {
+            get => _presharedKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _presharedKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Configure SXP Source IP address (IPv4)

@@ -43,6 +43,16 @@ public final class GetServiceWirelessLanFeatureSsid {
      */
     private String passphraseVariable;
     /**
+     * @return Set passphrase
+     * 
+     */
+    private String passphraseWo;
+    /**
+     * @return Rotation trigger for `passphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer passphraseWoVersion;
+    /**
      * @return Select QoS profile
      * 
      */
@@ -92,6 +102,16 @@ public final class GetServiceWirelessLanFeatureSsid {
      * 
      */
     private String radiusServerSecretVariable;
+    /**
+     * @return Set RADIUS server shared secret
+     * 
+     */
+    private String radiusServerSecretWo;
+    /**
+     * @return Rotation trigger for `radiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer radiusServerSecretWoVersion;
     /**
      * @return Select security type
      * 
@@ -155,6 +175,20 @@ public final class GetServiceWirelessLanFeatureSsid {
      */
     public String passphraseVariable() {
         return this.passphraseVariable;
+    }
+    /**
+     * @return Set passphrase
+     * 
+     */
+    public String passphraseWo() {
+        return this.passphraseWo;
+    }
+    /**
+     * @return Rotation trigger for `passphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer passphraseWoVersion() {
+        return this.passphraseWoVersion;
     }
     /**
      * @return Select QoS profile
@@ -227,6 +261,20 @@ public final class GetServiceWirelessLanFeatureSsid {
         return this.radiusServerSecretVariable;
     }
     /**
+     * @return Set RADIUS server shared secret
+     * 
+     */
+    public String radiusServerSecretWo() {
+        return this.radiusServerSecretWo;
+    }
+    /**
+     * @return Rotation trigger for `radiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer radiusServerSecretWoVersion() {
+        return this.radiusServerSecretWoVersion;
+    }
+    /**
      * @return Select security type
      * 
      */
@@ -270,6 +318,8 @@ public final class GetServiceWirelessLanFeatureSsid {
         private String broadcastSsidVariable;
         private String passphrase;
         private String passphraseVariable;
+        private String passphraseWo;
+        private Integer passphraseWoVersion;
         private String qosProfile;
         private String qosProfileVariable;
         private String radioType;
@@ -280,6 +330,8 @@ public final class GetServiceWirelessLanFeatureSsid {
         private String radiusServerPortVariable;
         private String radiusServerSecret;
         private String radiusServerSecretVariable;
+        private String radiusServerSecretWo;
+        private Integer radiusServerSecretWoVersion;
         private String securityType;
         private String ssidName;
         private Integer vlanId;
@@ -293,6 +345,8 @@ public final class GetServiceWirelessLanFeatureSsid {
     	      this.broadcastSsidVariable = defaults.broadcastSsidVariable;
     	      this.passphrase = defaults.passphrase;
     	      this.passphraseVariable = defaults.passphraseVariable;
+    	      this.passphraseWo = defaults.passphraseWo;
+    	      this.passphraseWoVersion = defaults.passphraseWoVersion;
     	      this.qosProfile = defaults.qosProfile;
     	      this.qosProfileVariable = defaults.qosProfileVariable;
     	      this.radioType = defaults.radioType;
@@ -303,6 +357,8 @@ public final class GetServiceWirelessLanFeatureSsid {
     	      this.radiusServerPortVariable = defaults.radiusServerPortVariable;
     	      this.radiusServerSecret = defaults.radiusServerSecret;
     	      this.radiusServerSecretVariable = defaults.radiusServerSecretVariable;
+    	      this.radiusServerSecretWo = defaults.radiusServerSecretWo;
+    	      this.radiusServerSecretWoVersion = defaults.radiusServerSecretWoVersion;
     	      this.securityType = defaults.securityType;
     	      this.ssidName = defaults.ssidName;
     	      this.vlanId = defaults.vlanId;
@@ -355,6 +411,22 @@ public final class GetServiceWirelessLanFeatureSsid {
               throw new MissingRequiredPropertyException("GetServiceWirelessLanFeatureSsid", "passphraseVariable");
             }
             this.passphraseVariable = passphraseVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder passphraseWo(String passphraseWo) {
+            if (passphraseWo == null) {
+              throw new MissingRequiredPropertyException("GetServiceWirelessLanFeatureSsid", "passphraseWo");
+            }
+            this.passphraseWo = passphraseWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder passphraseWoVersion(Integer passphraseWoVersion) {
+            if (passphraseWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetServiceWirelessLanFeatureSsid", "passphraseWoVersion");
+            }
+            this.passphraseWoVersion = passphraseWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -438,6 +510,22 @@ public final class GetServiceWirelessLanFeatureSsid {
             return this;
         }
         @CustomType.Setter
+        public Builder radiusServerSecretWo(String radiusServerSecretWo) {
+            if (radiusServerSecretWo == null) {
+              throw new MissingRequiredPropertyException("GetServiceWirelessLanFeatureSsid", "radiusServerSecretWo");
+            }
+            this.radiusServerSecretWo = radiusServerSecretWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder radiusServerSecretWoVersion(Integer radiusServerSecretWoVersion) {
+            if (radiusServerSecretWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetServiceWirelessLanFeatureSsid", "radiusServerSecretWoVersion");
+            }
+            this.radiusServerSecretWoVersion = radiusServerSecretWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder securityType(String securityType) {
             if (securityType == null) {
               throw new MissingRequiredPropertyException("GetServiceWirelessLanFeatureSsid", "securityType");
@@ -477,6 +565,8 @@ public final class GetServiceWirelessLanFeatureSsid {
             _resultValue.broadcastSsidVariable = broadcastSsidVariable;
             _resultValue.passphrase = passphrase;
             _resultValue.passphraseVariable = passphraseVariable;
+            _resultValue.passphraseWo = passphraseWo;
+            _resultValue.passphraseWoVersion = passphraseWoVersion;
             _resultValue.qosProfile = qosProfile;
             _resultValue.qosProfileVariable = qosProfileVariable;
             _resultValue.radioType = radioType;
@@ -487,6 +577,8 @@ public final class GetServiceWirelessLanFeatureSsid {
             _resultValue.radiusServerPortVariable = radiusServerPortVariable;
             _resultValue.radiusServerSecret = radiusServerSecret;
             _resultValue.radiusServerSecretVariable = radiusServerSecretVariable;
+            _resultValue.radiusServerSecretWo = radiusServerSecretWo;
+            _resultValue.radiusServerSecretWoVersion = radiusServerSecretWoVersion;
             _resultValue.securityType = securityType;
             _resultValue.ssidName = ssidName;
             _resultValue.vlanId = vlanId;

@@ -30,6 +30,11 @@ public final class GetPolicyObjectFeatureProfileParcelsResult {
      */
     private String id;
     /**
+     * @return Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+     * 
+     */
+    private @Nullable List<String> parcelNames;
+    /**
      * @return Filter by parcel type (e.g. &#39;app-list&#39;, &#39;data-prefix&#39;)
      * 
      */
@@ -63,6 +68,13 @@ public final class GetPolicyObjectFeatureProfileParcelsResult {
         return this.id;
     }
     /**
+     * @return Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+     * 
+     */
+    public List<String> parcelNames() {
+        return this.parcelNames == null ? List.of() : this.parcelNames;
+    }
+    /**
      * @return Filter by parcel type (e.g. &#39;app-list&#39;, &#39;data-prefix&#39;)
      * 
      */
@@ -89,6 +101,7 @@ public final class GetPolicyObjectFeatureProfileParcelsResult {
         private @Nullable String createdBy;
         private String featureProfileId;
         private String id;
+        private @Nullable List<String> parcelNames;
         private @Nullable String parcelType;
         private List<GetPolicyObjectFeatureProfileParcelsParcel> parcels;
         public Builder() {}
@@ -97,6 +110,7 @@ public final class GetPolicyObjectFeatureProfileParcelsResult {
     	      this.createdBy = defaults.createdBy;
     	      this.featureProfileId = defaults.featureProfileId;
     	      this.id = defaults.id;
+    	      this.parcelNames = defaults.parcelNames;
     	      this.parcelType = defaults.parcelType;
     	      this.parcels = defaults.parcels;
         }
@@ -124,6 +138,15 @@ public final class GetPolicyObjectFeatureProfileParcelsResult {
             return this;
         }
         @CustomType.Setter
+        public Builder parcelNames(@Nullable List<String> parcelNames) {
+
+            this.parcelNames = parcelNames;
+            return this;
+        }
+        public Builder parcelNames(String... parcelNames) {
+            return parcelNames(List.of(parcelNames));
+        }
+        @CustomType.Setter
         public Builder parcelType(@Nullable String parcelType) {
 
             this.parcelType = parcelType;
@@ -145,6 +168,7 @@ public final class GetPolicyObjectFeatureProfileParcelsResult {
             _resultValue.createdBy = createdBy;
             _resultValue.featureProfileId = featureProfileId;
             _resultValue.id = id;
+            _resultValue.parcelNames = parcelNames;
             _resultValue.parcelType = parcelType;
             _resultValue.parcels = parcels;
             return _resultValue;

@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  *         var example = new ExtendedCommunityListPolicyObject("example", ExtendedCommunityListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(ExtendedCommunityListPolicyObjectEntryArgs.builder()
- *                 .community("community rt 100:10")
+ *                 .community("rt 100:10")
  *                 .build())
  *             .build());
  * 

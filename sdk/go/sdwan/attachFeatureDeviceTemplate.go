@@ -30,9 +30,8 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.NewAttachFeatureDeviceTemplate(ctx, "example", &sdwan.AttachFeatureDeviceTemplateArgs{
 //				AttachFeatureDeviceTemplateId: pulumi.Any(DT1.Id),
-//				Devices: sdwan.AttachFeatureDeviceTemplateDeviceArray{
-//					&sdwan.AttachFeatureDeviceTemplateDeviceArgs{
-//						Id: pulumi.String("C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE"),
+//				Devices: sdwan.AttachFeatureDeviceTemplateDevicesMap{
+//					"C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE": &sdwan.AttachFeatureDeviceTemplateDevicesArgs{
 //						Variables: pulumi.StringMap{
 //							"systemSiteId":   pulumi.String("1001"),
 //							"systemSystemIp": pulumi.String("1.1.1.1"),
@@ -65,8 +64,8 @@ type AttachFeatureDeviceTemplate struct {
 
 	// The ID of the device template
 	AttachFeatureDeviceTemplateId pulumi.StringOutput `pulumi:"attachFeatureDeviceTemplateId"`
-	// Devices
-	Devices AttachFeatureDeviceTemplateDeviceArrayOutput `pulumi:"devices"`
+	// Devices attached to the device template, keyed by device ID (chassis ID)
+	Devices AttachFeatureDeviceTemplateDevicesMapOutput `pulumi:"devices"`
 	// The version of the device template
 	Version pulumi.IntPtrOutput `pulumi:"version"`
 }
@@ -109,8 +108,8 @@ func GetAttachFeatureDeviceTemplate(ctx *pulumi.Context,
 type attachFeatureDeviceTemplateState struct {
 	// The ID of the device template
 	AttachFeatureDeviceTemplateId *string `pulumi:"attachFeatureDeviceTemplateId"`
-	// Devices
-	Devices []AttachFeatureDeviceTemplateDevice `pulumi:"devices"`
+	// Devices attached to the device template, keyed by device ID (chassis ID)
+	Devices map[string]AttachFeatureDeviceTemplateDevices `pulumi:"devices"`
 	// The version of the device template
 	Version *int `pulumi:"version"`
 }
@@ -118,8 +117,8 @@ type attachFeatureDeviceTemplateState struct {
 type AttachFeatureDeviceTemplateState struct {
 	// The ID of the device template
 	AttachFeatureDeviceTemplateId pulumi.StringPtrInput
-	// Devices
-	Devices AttachFeatureDeviceTemplateDeviceArrayInput
+	// Devices attached to the device template, keyed by device ID (chassis ID)
+	Devices AttachFeatureDeviceTemplateDevicesMapInput
 	// The version of the device template
 	Version pulumi.IntPtrInput
 }
@@ -137,8 +136,8 @@ func AttachFeatureDeviceTemplateExists(ctx *pulumi.Context,
 type attachFeatureDeviceTemplateArgs struct {
 	// The ID of the device template
 	AttachFeatureDeviceTemplateId string `pulumi:"attachFeatureDeviceTemplateId"`
-	// Devices
-	Devices []AttachFeatureDeviceTemplateDevice `pulumi:"devices"`
+	// Devices attached to the device template, keyed by device ID (chassis ID)
+	Devices map[string]AttachFeatureDeviceTemplateDevices `pulumi:"devices"`
 	// The version of the device template
 	Version *int `pulumi:"version"`
 }
@@ -147,8 +146,8 @@ type attachFeatureDeviceTemplateArgs struct {
 type AttachFeatureDeviceTemplateArgs struct {
 	// The ID of the device template
 	AttachFeatureDeviceTemplateId pulumi.StringInput
-	// Devices
-	Devices AttachFeatureDeviceTemplateDeviceArrayInput
+	// Devices attached to the device template, keyed by device ID (chassis ID)
+	Devices AttachFeatureDeviceTemplateDevicesMapInput
 	// The version of the device template
 	Version pulumi.IntPtrInput
 }
@@ -245,9 +244,9 @@ func (o AttachFeatureDeviceTemplateOutput) AttachFeatureDeviceTemplateId() pulum
 	return o.ApplyT(func(v *AttachFeatureDeviceTemplate) pulumi.StringOutput { return v.AttachFeatureDeviceTemplateId }).(pulumi.StringOutput)
 }
 
-// Devices
-func (o AttachFeatureDeviceTemplateOutput) Devices() AttachFeatureDeviceTemplateDeviceArrayOutput {
-	return o.ApplyT(func(v *AttachFeatureDeviceTemplate) AttachFeatureDeviceTemplateDeviceArrayOutput { return v.Devices }).(AttachFeatureDeviceTemplateDeviceArrayOutput)
+// Devices attached to the device template, keyed by device ID (chassis ID)
+func (o AttachFeatureDeviceTemplateOutput) Devices() AttachFeatureDeviceTemplateDevicesMapOutput {
+	return o.ApplyT(func(v *AttachFeatureDeviceTemplate) AttachFeatureDeviceTemplateDevicesMapOutput { return v.Devices }).(AttachFeatureDeviceTemplateDevicesMapOutput)
 }
 
 // The version of the device template

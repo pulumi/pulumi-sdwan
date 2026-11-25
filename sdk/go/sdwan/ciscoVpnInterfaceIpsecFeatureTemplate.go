@@ -245,6 +245,13 @@ func NewCiscoVpnInterfaceIpsecFeatureTemplate(ctx *pulumi.Context,
 	if args.DeviceTypes == nil {
 		return nil, errors.New("invalid value for required argument 'DeviceTypes'")
 	}
+	if args.IkePreSharedKey != nil {
+		args.IkePreSharedKey = pulumi.ToSecret(args.IkePreSharedKey).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"ikePreSharedKey",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource CiscoVpnInterfaceIpsecFeatureTemplate
 	err := ctx.RegisterResource("sdwan:index/ciscoVpnInterfaceIpsecFeatureTemplate:CiscoVpnInterfaceIpsecFeatureTemplate", name, args, &resource, opts...)

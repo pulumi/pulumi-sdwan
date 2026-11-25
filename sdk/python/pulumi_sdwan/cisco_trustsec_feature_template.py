@@ -1485,7 +1485,7 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
 
             __props__.__dict__["credentials_id"] = credentials_id
             __props__.__dict__["credentials_id_variable"] = credentials_id_variable
-            __props__.__dict__["credentials_password"] = credentials_password
+            __props__.__dict__["credentials_password"] = None if credentials_password is None else pulumi.Output.secret(credentials_password)
             __props__.__dict__["credentials_password_variable"] = credentials_password_variable
             if description is None and not opts.urn:
                 raise TypeError("Missing required property 'description'")
@@ -1506,7 +1506,7 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["speaker_hold_time"] = speaker_hold_time
             __props__.__dict__["speaker_hold_time_variable"] = speaker_hold_time_variable
             __props__.__dict__["sxp_connections"] = sxp_connections
-            __props__.__dict__["sxp_default_password"] = sxp_default_password
+            __props__.__dict__["sxp_default_password"] = None if sxp_default_password is None else pulumi.Output.secret(sxp_default_password)
             __props__.__dict__["sxp_default_password_variable"] = sxp_default_password_variable
             __props__.__dict__["sxp_key_chain"] = sxp_key_chain
             __props__.__dict__["sxp_key_chain_variable"] = sxp_key_chain_variable
@@ -1523,6 +1523,8 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["sxp_source_ip_variable"] = sxp_source_ip_variable
             __props__.__dict__["template_type"] = None
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["credentialsPassword", "sxpDefaultPassword"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(CiscoTrustsecFeatureTemplate, __self__).__init__(
             'sdwan:index/ciscoTrustsecFeatureTemplate:CiscoTrustsecFeatureTemplate',
             resource_name,

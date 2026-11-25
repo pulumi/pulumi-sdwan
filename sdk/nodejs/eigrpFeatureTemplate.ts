@@ -245,7 +245,7 @@ export class EigrpFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["filterVariable"] = args?.filterVariable;
             resourceInputs["helloInterval"] = args?.helloInterval;
             resourceInputs["helloIntervalVariable"] = args?.helloIntervalVariable;
-            resourceInputs["hmacAuthenticationKey"] = args?.hmacAuthenticationKey;
+            resourceInputs["hmacAuthenticationKey"] = args?.hmacAuthenticationKey ? pulumi.secret(args.hmacAuthenticationKey) : undefined;
             resourceInputs["hmacAuthenticationKeyVariable"] = args?.hmacAuthenticationKeyVariable;
             resourceInputs["holdTime"] = args?.holdTime;
             resourceInputs["holdTimeVariable"] = args?.holdTimeVariable;
@@ -258,6 +258,8 @@ export class EigrpFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["hmacAuthenticationKey"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(EigrpFeatureTemplate.__pulumiType, name, resourceInputs, opts);
     }
 }

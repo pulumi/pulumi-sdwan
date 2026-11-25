@@ -22,6 +22,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string AuthenticationKeyVariable;
         /// <summary>
+        /// Set OSPF interface authentication IPSEC key
+        /// </summary>
+        public readonly string AuthenticationKeyWo;
+        /// <summary>
+        /// Rotation trigger for `AuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int AuthenticationKeyWoVersion;
+        /// <summary>
         /// Set OSPF interface authentication IPSec SPI, range 256..4294967295
         /// </summary>
         public readonly int AuthenticationSpi;
@@ -96,6 +104,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string authenticationKeyVariable,
 
+            string authenticationKeyWo,
+
+            int authenticationKeyWoVersion,
+
             int authenticationSpi,
 
             string authenticationSpiVariable,
@@ -132,6 +144,8 @@ namespace Pulumi.Sdwan.Outputs
         {
             AuthenticationKey = authenticationKey;
             AuthenticationKeyVariable = authenticationKeyVariable;
+            AuthenticationKeyWo = authenticationKeyWo;
+            AuthenticationKeyWoVersion = authenticationKeyWoVersion;
             AuthenticationSpi = authenticationSpi;
             AuthenticationSpiVariable = authenticationSpiVariable;
             AuthenticationType = authenticationType;

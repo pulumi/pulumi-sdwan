@@ -140,6 +140,13 @@ func NewCellularProfileFeatureTemplate(ctx *pulumi.Context,
 	if args.DeviceTypes == nil {
 		return nil, errors.New("invalid value for required argument 'DeviceTypes'")
 	}
+	if args.ProfilePassword != nil {
+		args.ProfilePassword = pulumi.ToSecret(args.ProfilePassword).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"profilePassword",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource CellularProfileFeatureTemplate
 	err := ctx.RegisterResource("sdwan:index/cellularProfileFeatureTemplate:CellularProfileFeatureTemplate", name, args, &resource, opts...)

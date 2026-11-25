@@ -115,11 +115,21 @@ namespace Pulumi.Sdwan.Inputs
         [Input("includeTcpOptionsVariable")]
         public Input<string>? IncludeTcpOptionsVariable { get; set; }
 
+        [Input("keyString")]
+        private Input<string>? _keyString;
+
         /// <summary>
         /// Specify the Key String
         /// </summary>
-        [Input("keyString")]
-        public Input<string>? KeyString { get; set; }
+        public Input<string>? KeyString
+        {
+            get => _keyString;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _keyString = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name

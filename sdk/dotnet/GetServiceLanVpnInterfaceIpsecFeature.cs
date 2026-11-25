@@ -252,6 +252,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string IkePresharedKeyVariable;
         /// <summary>
+        /// Use preshared key to authenticate IKE peer
+        /// </summary>
+        public readonly string IkePresharedKeyWo;
+        /// <summary>
+        /// Rotation trigger for `IkePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int IkePresharedKeyWoVersion;
+        /// <summary>
         /// IKE rekey interval \n\n seconds
         /// </summary>
         public readonly int IkeRekeyInterval;
@@ -484,6 +492,10 @@ namespace Pulumi.Sdwan
 
             string ikePresharedKeyVariable,
 
+            string ikePresharedKeyWo,
+
+            int ikePresharedKeyWoVersion,
+
             int ikeRekeyInterval,
 
             string ikeRekeyIntervalVariable,
@@ -605,6 +617,8 @@ namespace Pulumi.Sdwan
             IkeIntegrityProtocolVariable = ikeIntegrityProtocolVariable;
             IkePresharedKey = ikePresharedKey;
             IkePresharedKeyVariable = ikePresharedKeyVariable;
+            IkePresharedKeyWo = ikePresharedKeyWo;
+            IkePresharedKeyWoVersion = ikePresharedKeyWoVersion;
             IkeRekeyInterval = ikeRekeyInterval;
             IkeRekeyIntervalVariable = ikeRekeyIntervalVariable;
             IkeVersion = ikeVersion;

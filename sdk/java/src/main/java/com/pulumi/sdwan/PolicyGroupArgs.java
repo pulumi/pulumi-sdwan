@@ -6,7 +6,6 @@ package com.pulumi.sdwan;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.sdwan.inputs.PolicyGroupDeviceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,21 +30,6 @@ public final class PolicyGroupArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Output<String> description() {
         return this.description;
-    }
-
-    /**
-     * List of devices
-     * 
-     */
-    @Import(name="devices")
-    private @Nullable Output<List<PolicyGroupDeviceArgs>> devices;
-
-    /**
-     * @return List of devices
-     * 
-     */
-    public Optional<Output<List<PolicyGroupDeviceArgs>>> devices() {
-        return Optional.ofNullable(this.devices);
     }
 
     /**
@@ -114,7 +98,6 @@ public final class PolicyGroupArgs extends com.pulumi.resources.ResourceArgs {
 
     private PolicyGroupArgs(PolicyGroupArgs $) {
         this.description = $.description;
-        this.devices = $.devices;
         this.featureProfileIds = $.featureProfileIds;
         this.name = $.name;
         this.policyVersions = $.policyVersions;
@@ -158,37 +141,6 @@ public final class PolicyGroupArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder description(String description) {
             return description(Output.of(description));
-        }
-
-        /**
-         * @param devices List of devices
-         * 
-         * @return builder
-         * 
-         */
-        public Builder devices(@Nullable Output<List<PolicyGroupDeviceArgs>> devices) {
-            $.devices = devices;
-            return this;
-        }
-
-        /**
-         * @param devices List of devices
-         * 
-         * @return builder
-         * 
-         */
-        public Builder devices(List<PolicyGroupDeviceArgs> devices) {
-            return devices(Output.of(devices));
-        }
-
-        /**
-         * @param devices List of devices
-         * 
-         * @return builder
-         * 
-         */
-        public Builder devices(PolicyGroupDeviceArgs... devices) {
-            return devices(List.of(devices));
         }
 
         /**

@@ -36,11 +36,6 @@ import (
 //				FeatureProfileIds: pulumi.StringArray{
 //					pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
 //				},
-//				Devices: sdwan.PolicyGroupDeviceArray{
-//					&sdwan.PolicyGroupDeviceArgs{
-//						Id: pulumi.String("C8K-40C0CCFD-9EA8-2B2E-E73B-32C5924EC79B"),
-//					},
-//				},
 //			})
 //			if err != nil {
 //				return err
@@ -63,8 +58,6 @@ type PolicyGroup struct {
 
 	// Description
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of devices
-	Devices PolicyGroupDeviceArrayOutput `pulumi:"devices"`
 	// List of feature profile IDs
 	FeatureProfileIds pulumi.StringArrayOutput `pulumi:"featureProfileIds"`
 	// The name of the policy group
@@ -74,6 +67,8 @@ type PolicyGroup struct {
 	// Type of solution
 	//   - Choices: `sdwan`
 	Solution pulumi.StringOutput `pulumi:"solution"`
+	// The version of the object
+	Version pulumi.IntOutput `pulumi:"version"`
 }
 
 // NewPolicyGroup registers a new resource with the given unique name, arguments, and options.
@@ -114,8 +109,6 @@ func GetPolicyGroup(ctx *pulumi.Context,
 type policyGroupState struct {
 	// Description
 	Description *string `pulumi:"description"`
-	// List of devices
-	Devices []PolicyGroupDevice `pulumi:"devices"`
 	// List of feature profile IDs
 	FeatureProfileIds []string `pulumi:"featureProfileIds"`
 	// The name of the policy group
@@ -125,13 +118,13 @@ type policyGroupState struct {
 	// Type of solution
 	//   - Choices: `sdwan`
 	Solution *string `pulumi:"solution"`
+	// The version of the object
+	Version *int `pulumi:"version"`
 }
 
 type PolicyGroupState struct {
 	// Description
 	Description pulumi.StringPtrInput
-	// List of devices
-	Devices PolicyGroupDeviceArrayInput
 	// List of feature profile IDs
 	FeatureProfileIds pulumi.StringArrayInput
 	// The name of the policy group
@@ -141,6 +134,8 @@ type PolicyGroupState struct {
 	// Type of solution
 	//   - Choices: `sdwan`
 	Solution pulumi.StringPtrInput
+	// The version of the object
+	Version pulumi.IntPtrInput
 }
 
 func (PolicyGroupState) ElementType() reflect.Type {
@@ -156,8 +151,6 @@ func PolicyGroupExists(ctx *pulumi.Context,
 type policyGroupArgs struct {
 	// Description
 	Description string `pulumi:"description"`
-	// List of devices
-	Devices []PolicyGroupDevice `pulumi:"devices"`
 	// List of feature profile IDs
 	FeatureProfileIds []string `pulumi:"featureProfileIds"`
 	// The name of the policy group
@@ -173,8 +166,6 @@ type policyGroupArgs struct {
 type PolicyGroupArgs struct {
 	// Description
 	Description pulumi.StringInput
-	// List of devices
-	Devices PolicyGroupDeviceArrayInput
 	// List of feature profile IDs
 	FeatureProfileIds pulumi.StringArrayInput
 	// The name of the policy group
@@ -278,11 +269,6 @@ func (o PolicyGroupOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *PolicyGroup) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of devices
-func (o PolicyGroupOutput) Devices() PolicyGroupDeviceArrayOutput {
-	return o.ApplyT(func(v *PolicyGroup) PolicyGroupDeviceArrayOutput { return v.Devices }).(PolicyGroupDeviceArrayOutput)
-}
-
 // List of feature profile IDs
 func (o PolicyGroupOutput) FeatureProfileIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *PolicyGroup) pulumi.StringArrayOutput { return v.FeatureProfileIds }).(pulumi.StringArrayOutput)
@@ -302,6 +288,11 @@ func (o PolicyGroupOutput) PolicyVersions() pulumi.StringArrayOutput {
 //   - Choices: `sdwan`
 func (o PolicyGroupOutput) Solution() pulumi.StringOutput {
 	return o.ApplyT(func(v *PolicyGroup) pulumi.StringOutput { return v.Solution }).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o PolicyGroupOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v *PolicyGroup) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
 type PolicyGroupArrayOutput struct{ *pulumi.OutputState }

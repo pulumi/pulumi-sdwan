@@ -36,17 +36,6 @@ import (
 //				FeatureProfileIds: pulumi.StringArray{
 //					pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
 //				},
-//				Devices: sdwan.ConfigurationGroupDeviceArray{
-//					&sdwan.ConfigurationGroupDeviceArgs{
-//						Id: pulumi.String("C8K-40C0CCFD-9EA8-2B2E-E73B-32C5924EC79B"),
-//						Variables: sdwan.ConfigurationGroupDeviceVariableArray{
-//							&sdwan.ConfigurationGroupDeviceVariableArgs{
-//								Name:  pulumi.String("host_name"),
-//								Value: pulumi.String("edge1"),
-//							},
-//						},
-//					},
-//				},
 //			})
 //			if err != nil {
 //				return err
@@ -69,8 +58,6 @@ type ConfigurationGroup struct {
 
 	// Description
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of devices
-	Devices ConfigurationGroupDeviceArrayOutput `pulumi:"devices"`
 	// List of feature profile IDs
 	FeatureProfileIds pulumi.StringArrayOutput `pulumi:"featureProfileIds"`
 	// List of all associated feature versions
@@ -85,6 +72,8 @@ type ConfigurationGroup struct {
 	// Number of devices per site
 	//   - Range: `1`-`20`
 	TopologySiteDevices pulumi.IntPtrOutput `pulumi:"topologySiteDevices"`
+	// The version of the object
+	Version pulumi.IntOutput `pulumi:"version"`
 }
 
 // NewConfigurationGroup registers a new resource with the given unique name, arguments, and options.
@@ -125,8 +114,6 @@ func GetConfigurationGroup(ctx *pulumi.Context,
 type configurationGroupState struct {
 	// Description
 	Description *string `pulumi:"description"`
-	// List of devices
-	Devices []ConfigurationGroupDevice `pulumi:"devices"`
 	// List of feature profile IDs
 	FeatureProfileIds []string `pulumi:"featureProfileIds"`
 	// List of all associated feature versions
@@ -141,13 +128,13 @@ type configurationGroupState struct {
 	// Number of devices per site
 	//   - Range: `1`-`20`
 	TopologySiteDevices *int `pulumi:"topologySiteDevices"`
+	// The version of the object
+	Version *int `pulumi:"version"`
 }
 
 type ConfigurationGroupState struct {
 	// Description
 	Description pulumi.StringPtrInput
-	// List of devices
-	Devices ConfigurationGroupDeviceArrayInput
 	// List of feature profile IDs
 	FeatureProfileIds pulumi.StringArrayInput
 	// List of all associated feature versions
@@ -162,6 +149,8 @@ type ConfigurationGroupState struct {
 	// Number of devices per site
 	//   - Range: `1`-`20`
 	TopologySiteDevices pulumi.IntPtrInput
+	// The version of the object
+	Version pulumi.IntPtrInput
 }
 
 func (ConfigurationGroupState) ElementType() reflect.Type {
@@ -177,8 +166,6 @@ func ConfigurationGroupExists(ctx *pulumi.Context,
 type configurationGroupArgs struct {
 	// Description
 	Description string `pulumi:"description"`
-	// List of devices
-	Devices []ConfigurationGroupDevice `pulumi:"devices"`
 	// List of feature profile IDs
 	FeatureProfileIds []string `pulumi:"featureProfileIds"`
 	// List of all associated feature versions
@@ -199,8 +186,6 @@ type configurationGroupArgs struct {
 type ConfigurationGroupArgs struct {
 	// Description
 	Description pulumi.StringInput
-	// List of devices
-	Devices ConfigurationGroupDeviceArrayInput
 	// List of feature profile IDs
 	FeatureProfileIds pulumi.StringArrayInput
 	// List of all associated feature versions
@@ -309,11 +294,6 @@ func (o ConfigurationGroupOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *ConfigurationGroup) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of devices
-func (o ConfigurationGroupOutput) Devices() ConfigurationGroupDeviceArrayOutput {
-	return o.ApplyT(func(v *ConfigurationGroup) ConfigurationGroupDeviceArrayOutput { return v.Devices }).(ConfigurationGroupDeviceArrayOutput)
-}
-
 // List of feature profile IDs
 func (o ConfigurationGroupOutput) FeatureProfileIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ConfigurationGroup) pulumi.StringArrayOutput { return v.FeatureProfileIds }).(pulumi.StringArrayOutput)
@@ -344,6 +324,11 @@ func (o ConfigurationGroupOutput) TopologyDevices() ConfigurationGroupTopologyDe
 //   - Range: `1`-`20`
 func (o ConfigurationGroupOutput) TopologySiteDevices() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ConfigurationGroup) pulumi.IntPtrOutput { return v.TopologySiteDevices }).(pulumi.IntPtrOutput)
+}
+
+// The version of the object
+func (o ConfigurationGroupOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v *ConfigurationGroup) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
 type ConfigurationGroupArrayOutput struct{ *pulumi.OutputState }

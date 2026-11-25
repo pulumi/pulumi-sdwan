@@ -30,6 +30,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string KeyVariable;
         /// <summary>
+        /// Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        /// </summary>
+        public readonly string KeyWo;
+        /// <summary>
+        /// Rotation trigger for `KeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int KeyWoVersion;
+        /// <summary>
         /// TACACS Port
         /// </summary>
         public readonly int Port;
@@ -45,6 +53,14 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string SecretKeyVariable;
+        /// <summary>
+        /// Set the TACACS server shared type 7 encrypted key
+        /// </summary>
+        public readonly string SecretKeyWo;
+        /// <summary>
+        /// Rotation trigger for `SecretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int SecretKeyWoVersion;
         /// <summary>
         /// Configure how long to wait for replies from the TACACS server
         /// </summary>
@@ -64,6 +80,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string keyVariable,
 
+            string keyWo,
+
+            int keyWoVersion,
+
             int port,
 
             string portVariable,
@@ -71,6 +91,10 @@ namespace Pulumi.Sdwan.Outputs
             string secretKey,
 
             string secretKeyVariable,
+
+            string secretKeyWo,
+
+            int secretKeyWoVersion,
 
             int timeout,
 
@@ -80,10 +104,14 @@ namespace Pulumi.Sdwan.Outputs
             Key = key;
             KeyEnum = keyEnum;
             KeyVariable = keyVariable;
+            KeyWo = keyWo;
+            KeyWoVersion = keyWoVersion;
             Port = port;
             PortVariable = portVariable;
             SecretKey = secretKey;
             SecretKeyVariable = secretKeyVariable;
+            SecretKeyWo = secretKeyWo;
+            SecretKeyWoVersion = secretKeyWoVersion;
             Timeout = timeout;
             TimeoutVariable = timeoutVariable;
         }

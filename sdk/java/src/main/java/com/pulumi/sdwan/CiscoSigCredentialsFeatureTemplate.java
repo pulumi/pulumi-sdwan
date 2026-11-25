@@ -499,6 +499,13 @@ public class CiscoSigCredentialsFeatureTemplate extends com.pulumi.resources.Cus
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "umbrellaApiKey",
+                "umbrellaApiSecret",
+                "zscalerPartnerApiKey",
+                "zscalerPartnerPassword",
+                "zscalerPassword"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

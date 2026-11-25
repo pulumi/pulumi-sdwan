@@ -110,6 +110,16 @@ public final class GetServiceWirelessLanFeatureResult {
      */
     private String passwordVariable;
     /**
+     * @return Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can&#39;t substitute 1,l,or ! for i,0 for o,$ for s.
+     * 
+     */
+    private String passwordWo;
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer passwordWoVersion;
+    /**
      * @return Configure Wi-Fi SSID profile
      * 
      */
@@ -265,6 +275,20 @@ public final class GetServiceWirelessLanFeatureResult {
         return this.passwordVariable;
     }
     /**
+     * @return Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can&#39;t substitute 1,l,or ! for i,0 for o,$ for s.
+     * 
+     */
+    public String passwordWo() {
+        return this.passwordWo;
+    }
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer passwordWoVersion() {
+        return this.passwordWoVersion;
+    }
+    /**
      * @return Configure Wi-Fi SSID profile
      * 
      */
@@ -321,6 +345,8 @@ public final class GetServiceWirelessLanFeatureResult {
         private String name;
         private String password;
         private String passwordVariable;
+        private String passwordWo;
+        private Integer passwordWoVersion;
         private List<GetServiceWirelessLanFeatureSsid> ssids;
         private String username;
         private String usernameVariable;
@@ -347,6 +373,8 @@ public final class GetServiceWirelessLanFeatureResult {
     	      this.name = defaults.name;
     	      this.password = defaults.password;
     	      this.passwordVariable = defaults.passwordVariable;
+    	      this.passwordWo = defaults.passwordWo;
+    	      this.passwordWoVersion = defaults.passwordWoVersion;
     	      this.ssids = defaults.ssids;
     	      this.username = defaults.username;
     	      this.usernameVariable = defaults.usernameVariable;
@@ -506,6 +534,22 @@ public final class GetServiceWirelessLanFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder passwordWo(String passwordWo) {
+            if (passwordWo == null) {
+              throw new MissingRequiredPropertyException("GetServiceWirelessLanFeatureResult", "passwordWo");
+            }
+            this.passwordWo = passwordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder passwordWoVersion(Integer passwordWoVersion) {
+            if (passwordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetServiceWirelessLanFeatureResult", "passwordWoVersion");
+            }
+            this.passwordWoVersion = passwordWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder ssids(List<GetServiceWirelessLanFeatureSsid> ssids) {
             if (ssids == null) {
               throw new MissingRequiredPropertyException("GetServiceWirelessLanFeatureResult", "ssids");
@@ -561,6 +605,8 @@ public final class GetServiceWirelessLanFeatureResult {
             _resultValue.name = name;
             _resultValue.password = password;
             _resultValue.passwordVariable = passwordVariable;
+            _resultValue.passwordWo = passwordWo;
+            _resultValue.passwordWoVersion = passwordWoVersion;
             _resultValue.ssids = ssids;
             _resultValue.username = username;
             _resultValue.usernameVariable = usernameVariable;

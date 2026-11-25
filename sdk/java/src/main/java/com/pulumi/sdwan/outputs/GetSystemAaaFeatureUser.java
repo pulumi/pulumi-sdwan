@@ -6,6 +6,7 @@ package com.pulumi.sdwan.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.outputs.GetSystemAaaFeatureUserPublicKey;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,6 +33,16 @@ public final class GetSystemAaaFeatureUser {
      * 
      */
     private String passwordVariable;
+    /**
+     * @return Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    private String passwordWo;
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer passwordWoVersion;
     /**
      * @return Set Privilege Level for this user
      * 
@@ -78,6 +89,20 @@ public final class GetSystemAaaFeatureUser {
         return this.passwordVariable;
     }
     /**
+     * @return Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    public String passwordWo() {
+        return this.passwordWo;
+    }
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer passwordWoVersion() {
+        return this.passwordWoVersion;
+    }
+    /**
      * @return Set Privilege Level for this user
      * 
      */
@@ -112,6 +137,8 @@ public final class GetSystemAaaFeatureUser {
         private String nameVariable;
         private String password;
         private String passwordVariable;
+        private String passwordWo;
+        private Integer passwordWoVersion;
         private String privilege;
         private String privilegeVariable;
         private List<GetSystemAaaFeatureUserPublicKey> publicKeys;
@@ -122,6 +149,8 @@ public final class GetSystemAaaFeatureUser {
     	      this.nameVariable = defaults.nameVariable;
     	      this.password = defaults.password;
     	      this.passwordVariable = defaults.passwordVariable;
+    	      this.passwordWo = defaults.passwordWo;
+    	      this.passwordWoVersion = defaults.passwordWoVersion;
     	      this.privilege = defaults.privilege;
     	      this.privilegeVariable = defaults.privilegeVariable;
     	      this.publicKeys = defaults.publicKeys;
@@ -160,6 +189,22 @@ public final class GetSystemAaaFeatureUser {
             return this;
         }
         @CustomType.Setter
+        public Builder passwordWo(String passwordWo) {
+            if (passwordWo == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureUser", "passwordWo");
+            }
+            this.passwordWo = passwordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder passwordWoVersion(Integer passwordWoVersion) {
+            if (passwordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureUser", "passwordWoVersion");
+            }
+            this.passwordWoVersion = passwordWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder privilege(String privilege) {
             if (privilege == null) {
               throw new MissingRequiredPropertyException("GetSystemAaaFeatureUser", "privilege");
@@ -192,6 +237,8 @@ public final class GetSystemAaaFeatureUser {
             _resultValue.nameVariable = nameVariable;
             _resultValue.password = password;
             _resultValue.passwordVariable = passwordVariable;
+            _resultValue.passwordWo = passwordWo;
+            _resultValue.passwordWoVersion = passwordWoVersion;
             _resultValue.privilege = privilege;
             _resultValue.privilegeVariable = privilegeVariable;
             _resultValue.publicKeys = publicKeys;

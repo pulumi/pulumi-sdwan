@@ -48,6 +48,7 @@ class ServiceRoutingOspfv3Ipv6FeatureArgs:
                  rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
                  rfc1583_compatible_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  router_id: pulumi.Input[Optional[_builtins.str]] = None,
                  router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  router_lsa_action: pulumi.Input[Optional[_builtins.str]] = None,
@@ -102,6 +103,8 @@ class ServiceRoutingOspfv3Ipv6FeatureArgs:
         :param pulumi.Input[_builtins.bool] rfc1583_compatible: Calculate summary route cost based on RFC 1583
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] rfc1583_compatible_variable: Variable name
+        :param pulumi.Input[_builtins.str] route_policy_id: Set either route_policy_id or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        :param pulumi.Input[_builtins.str] route_policy_id_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
         :param pulumi.Input[_builtins.str] router_id: Set OSPF router ID to override system IP address
         :param pulumi.Input[_builtins.str] router_id_variable: Variable name
         :param pulumi.Input[_builtins.str] router_lsa_action: Not advertise maximum metric Router LSA policy by default
@@ -174,6 +177,8 @@ class ServiceRoutingOspfv3Ipv6FeatureArgs:
             pulumi.set(__self__, "rfc1583_compatible_variable", rfc1583_compatible_variable)
         if route_policy_id is not None:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
+        if route_policy_id_variable is not None:
+            pulumi.set(__self__, "route_policy_id_variable", route_policy_id_variable)
         if router_id is not None:
             pulumi.set(__self__, "router_id", router_id)
         if router_id_variable is not None:
@@ -526,11 +531,26 @@ class ServiceRoutingOspfv3Ipv6FeatureArgs:
     @_builtins.property
     @pulumi.getter(name="routePolicyId")
     def route_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set either route_policy_id or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        """
         return pulumi.get(self, "route_policy_id")
 
     @route_policy_id.setter
     def route_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_policy_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="routePolicyIdVariable")
+    def route_policy_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        """
+        return pulumi.get(self, "route_policy_id_variable")
+
+    @route_policy_id_variable.setter
+    def route_policy_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "route_policy_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="routerId")
@@ -702,6 +722,7 @@ class _ServiceRoutingOspfv3Ipv6FeatureState:
                  rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
                  rfc1583_compatible_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  router_id: pulumi.Input[Optional[_builtins.str]] = None,
                  router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  router_lsa_action: pulumi.Input[Optional[_builtins.str]] = None,
@@ -757,6 +778,8 @@ class _ServiceRoutingOspfv3Ipv6FeatureState:
         :param pulumi.Input[_builtins.bool] rfc1583_compatible: Calculate summary route cost based on RFC 1583
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] rfc1583_compatible_variable: Variable name
+        :param pulumi.Input[_builtins.str] route_policy_id: Set either route_policy_id or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        :param pulumi.Input[_builtins.str] route_policy_id_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
         :param pulumi.Input[_builtins.str] router_id: Set OSPF router ID to override system IP address
         :param pulumi.Input[_builtins.str] router_id_variable: Variable name
         :param pulumi.Input[_builtins.str] router_lsa_action: Not advertise maximum metric Router LSA policy by default
@@ -831,6 +854,8 @@ class _ServiceRoutingOspfv3Ipv6FeatureState:
             pulumi.set(__self__, "rfc1583_compatible_variable", rfc1583_compatible_variable)
         if route_policy_id is not None:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
+        if route_policy_id_variable is not None:
+            pulumi.set(__self__, "route_policy_id_variable", route_policy_id_variable)
         if router_id is not None:
             pulumi.set(__self__, "router_id", router_id)
         if router_id_variable is not None:
@@ -1185,11 +1210,26 @@ class _ServiceRoutingOspfv3Ipv6FeatureState:
     @_builtins.property
     @pulumi.getter(name="routePolicyId")
     def route_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set either route_policy_id or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        """
         return pulumi.get(self, "route_policy_id")
 
     @route_policy_id.setter
     def route_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_policy_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="routePolicyIdVariable")
+    def route_policy_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        """
+        return pulumi.get(self, "route_policy_id_variable")
+
+    @route_policy_id_variable.setter
+    def route_policy_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "route_policy_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="routerId")
@@ -1376,6 +1416,7 @@ class ServiceRoutingOspfv3Ipv6Feature(pulumi.CustomResource):
                  rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
                  rfc1583_compatible_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  router_id: pulumi.Input[Optional[_builtins.str]] = None,
                  router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  router_lsa_action: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1496,6 +1537,8 @@ class ServiceRoutingOspfv3Ipv6Feature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] rfc1583_compatible: Calculate summary route cost based on RFC 1583
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] rfc1583_compatible_variable: Variable name
+        :param pulumi.Input[_builtins.str] route_policy_id: Set either route_policy_id or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        :param pulumi.Input[_builtins.str] route_policy_id_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
         :param pulumi.Input[_builtins.str] router_id: Set OSPF router ID to override system IP address
         :param pulumi.Input[_builtins.str] router_id_variable: Variable name
         :param pulumi.Input[_builtins.str] router_lsa_action: Not advertise maximum metric Router LSA policy by default
@@ -1629,6 +1672,7 @@ class ServiceRoutingOspfv3Ipv6Feature(pulumi.CustomResource):
                  rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
                  rfc1583_compatible_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  router_id: pulumi.Input[Optional[_builtins.str]] = None,
                  router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  router_lsa_action: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1678,6 +1722,7 @@ class ServiceRoutingOspfv3Ipv6Feature(pulumi.CustomResource):
             __props__.__dict__["rfc1583_compatible"] = rfc1583_compatible
             __props__.__dict__["rfc1583_compatible_variable"] = rfc1583_compatible_variable
             __props__.__dict__["route_policy_id"] = route_policy_id
+            __props__.__dict__["route_policy_id_variable"] = route_policy_id_variable
             __props__.__dict__["router_id"] = router_id
             __props__.__dict__["router_id_variable"] = router_id_variable
             __props__.__dict__["router_lsa_action"] = router_lsa_action
@@ -1727,6 +1772,7 @@ class ServiceRoutingOspfv3Ipv6Feature(pulumi.CustomResource):
             rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
             rfc1583_compatible_variable: pulumi.Input[Optional[_builtins.str]] = None,
             route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            route_policy_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
             router_id: pulumi.Input[Optional[_builtins.str]] = None,
             router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
             router_lsa_action: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1786,6 +1832,8 @@ class ServiceRoutingOspfv3Ipv6Feature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] rfc1583_compatible: Calculate summary route cost based on RFC 1583
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] rfc1583_compatible_variable: Variable name
+        :param pulumi.Input[_builtins.str] route_policy_id: Set either route_policy_id or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        :param pulumi.Input[_builtins.str] route_policy_id_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
         :param pulumi.Input[_builtins.str] router_id: Set OSPF router ID to override system IP address
         :param pulumi.Input[_builtins.str] router_id_variable: Variable name
         :param pulumi.Input[_builtins.str] router_lsa_action: Not advertise maximum metric Router LSA policy by default
@@ -1837,6 +1885,7 @@ class ServiceRoutingOspfv3Ipv6Feature(pulumi.CustomResource):
         __props__.__dict__["rfc1583_compatible"] = rfc1583_compatible
         __props__.__dict__["rfc1583_compatible_variable"] = rfc1583_compatible_variable
         __props__.__dict__["route_policy_id"] = route_policy_id
+        __props__.__dict__["route_policy_id_variable"] = route_policy_id_variable
         __props__.__dict__["router_id"] = router_id
         __props__.__dict__["router_id_variable"] = router_id_variable
         __props__.__dict__["router_lsa_action"] = router_lsa_action
@@ -1881,6 +1930,7 @@ class ServiceRoutingOspfv3Ipv6Feature(pulumi.CustomResource):
             rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
             rfc1583_compatible_variable: pulumi.Input[Optional[_builtins.str]] = None,
             route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            route_policy_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
             router_id: pulumi.Input[Optional[_builtins.str]] = None,
             router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
             router_lsa_action: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1921,6 +1971,7 @@ class ServiceRoutingOspfv3Ipv6Feature(pulumi.CustomResource):
         __props__["rfc1583Compatible"] = rfc1583_compatible
         __props__["rfc1583CompatibleVariable"] = rfc1583_compatible_variable
         __props__["routePolicyId"] = route_policy_id
+        __props__["routePolicyIdVariable"] = route_policy_id_variable
         __props__["routerId"] = router_id
         __props__["routerIdVariable"] = router_id_variable
         __props__["routerLsaAction"] = router_lsa_action
@@ -2160,7 +2211,18 @@ class ServiceRoutingOspfv3Ipv6Feature(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter(name="routePolicyId")
     def route_policy_id(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Set either route_policy_id or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        """
         return pulumi.get(self, "route_policy_id")
+
+    @_builtins.property
+    @pulumi.getter(name="routePolicyIdVariable")
+    def route_policy_id_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        """
+        return pulumi.get(self, "route_policy_id_variable")
 
     @_builtins.property
     @pulumi.getter(name="routerId")

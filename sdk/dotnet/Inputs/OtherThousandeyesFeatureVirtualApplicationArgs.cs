@@ -12,17 +12,53 @@ namespace Pulumi.Sdwan.Inputs
 
     public sealed class OtherThousandeyesFeatureVirtualApplicationArgs : global::Pulumi.ResourceArgs
     {
+        [Input("accountGroupToken")]
+        private Input<string>? _accountGroupToken;
+
         /// <summary>
         /// Set the Account Group Token
+        ///   - Only one of `AccountGroupToken`, `AccountGroupTokenVariable` and `AccountGroupTokenWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AccountGroupTokenWo` together with `AccountGroupTokenWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("accountGroupToken")]
-        public Input<string>? AccountGroupToken { get; set; }
+        public Input<string>? AccountGroupToken
+        {
+            get => _accountGroupToken;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _accountGroupToken = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("accountGroupTokenVariable")]
         public Input<string>? AccountGroupTokenVariable { get; set; }
+
+        [Input("accountGroupTokenWo")]
+        private Input<string>? _accountGroupTokenWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set the Account Group Token
+        ///   - Only one of `AccountGroupToken`, `AccountGroupTokenVariable` and `AccountGroupTokenWo` can be set.
+        /// </summary>
+        public Input<string>? AccountGroupTokenWo
+        {
+            get => _accountGroupTokenWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _accountGroupTokenWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `AccountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("accountGroupTokenWoVersion")]
+        public Input<int>? AccountGroupTokenWoVersion { get; set; }
 
         /// <summary>
         /// Set the Agent default gateway

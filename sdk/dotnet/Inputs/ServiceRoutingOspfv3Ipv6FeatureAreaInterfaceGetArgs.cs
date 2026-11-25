@@ -12,17 +12,53 @@ namespace Pulumi.Sdwan.Inputs
 
     public sealed class ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceGetArgs : global::Pulumi.ResourceArgs
     {
+        [Input("authenticationKey")]
+        private Input<string>? _authenticationKey;
+
         /// <summary>
         /// Set OSPF interface authentication IPSEC key
+        ///   - Only one of `AuthenticationKey`, `AuthenticationKeyVariable` and `AuthenticationKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationKeyWo` together with `AuthenticationKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("authenticationKey")]
-        public Input<string>? AuthenticationKey { get; set; }
+        public Input<string>? AuthenticationKey
+        {
+            get => _authenticationKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("authenticationKeyVariable")]
         public Input<string>? AuthenticationKeyVariable { get; set; }
+
+        [Input("authenticationKeyWo")]
+        private Input<string>? _authenticationKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set OSPF interface authentication IPSEC key
+        ///   - Only one of `AuthenticationKey`, `AuthenticationKeyVariable` and `AuthenticationKeyWo` can be set.
+        /// </summary>
+        public Input<string>? AuthenticationKeyWo
+        {
+            get => _authenticationKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `AuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("authenticationKeyWoVersion")]
+        public Input<int>? AuthenticationKeyWoVersion { get; set; }
 
         /// <summary>
         /// Set OSPF interface authentication IPSec SPI, range 256..4294967295

@@ -480,11 +480,7 @@ export interface AsPathListPolicyObjectEntry {
     asPath: string;
 }
 
-export interface AttachFeatureDeviceTemplateDevice {
-    /**
-     * Device ID
-     */
-    id: string;
+export interface AttachFeatureDeviceTemplateDevices {
     /**
      * Device variables
      */
@@ -5866,35 +5862,27 @@ export interface ColorListPolicyObjectEntry {
     color: string;
 }
 
-export interface ConfigurationGroupDevice {
+export interface ConfigurationGroupDevicesDevices {
     /**
      * Deploy to device if enabled.
      *   - Default value: `false`
      */
     deploy: boolean;
     /**
-     * Device ID
-     */
-    id?: string;
-    /**
      * Topology label for dual device configuration group (supported from version 20.18.1 onwards)
      */
     topologyLabel?: string;
     /**
-     * List of variables
+     * Device variables, keyed by variable name (for example `hostName`). Terraform matches each variable by its name, so a changed value shows as a change of that variable only.
      */
-    variables?: outputs.ConfigurationGroupDeviceVariable[];
+    variables?: {[key: string]: outputs.ConfigurationGroupDevicesDevicesVariables};
 }
 
-export interface ConfigurationGroupDeviceVariable {
+export interface ConfigurationGroupDevicesDevicesVariables {
     /**
      * Use this instead of `value` in case value is of type `List`.
      */
     listValues?: string[];
-    /**
-     * Variable name
-     */
-    name: string;
     /**
      * Variable value
      */
@@ -6600,7 +6588,7 @@ export interface ExpandedCommunityListPolicyObjectEntry {
 
 export interface ExtendedCommunityListPolicyObjectEntry {
     /**
-     * Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+     * Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
      */
     community: string;
 }
@@ -12016,40 +12004,6 @@ export interface GetColorListPolicyObjectEntry {
     color: string;
 }
 
-export interface GetConfigurationGroupDevice {
-    /**
-     * Deploy to device if enabled.
-     */
-    deploy: boolean;
-    /**
-     * Device ID
-     */
-    id: string;
-    /**
-     * Topology label for dual device configuration group (supported from version 20.18.1 onwards)
-     */
-    topologyLabel: string;
-    /**
-     * List of variables
-     */
-    variables: outputs.GetConfigurationGroupDeviceVariable[];
-}
-
-export interface GetConfigurationGroupDeviceVariable {
-    /**
-     * Use this instead of `value` in case value is of type `List`.
-     */
-    listValues: string[];
-    /**
-     * Variable name
-     */
-    name: string;
-    /**
-     * Variable value
-     */
-    value: string;
-}
-
 export interface GetConfigurationGroupTopologyDevice {
     /**
      * Criteria attribute
@@ -12725,7 +12679,7 @@ export interface GetExpandedCommunityListPolicyObjectEntry {
 
 export interface GetExtendedCommunityListPolicyObjectEntry {
     /**
-     * Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+     * Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
      */
     community: string;
 }
@@ -13526,6 +13480,14 @@ export interface GetOtherThousandeyesFeatureVirtualApplication {
      */
     accountGroupTokenVariable: string;
     /**
+     * Set the Account Group Token
+     */
+    accountGroupTokenWo: string;
+    /**
+     * Rotation trigger for `accountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    accountGroupTokenWoVersion: number;
+    /**
      * Set the Agent default gateway
      */
     agentDefaultGateway: string;
@@ -13683,36 +13645,6 @@ export interface GetOtherUcseFeatureInterface {
      * Variable name
      */
     ucseInterfaceVpnVariable: string;
-}
-
-export interface GetPolicyGroupDevice {
-    /**
-     * Deploy to device if enabled.
-     */
-    deploy: boolean;
-    /**
-     * Device ID
-     */
-    id: string;
-    /**
-     * List of variables
-     */
-    variables: outputs.GetPolicyGroupDeviceVariable[];
-}
-
-export interface GetPolicyGroupDeviceVariable {
-    /**
-     * Use this instead of `value` in case value is of type `List`.
-     */
-    listValues: string[];
-    /**
-     * Variable name
-     */
-    name: string;
-    /**
-     * Variable value
-     */
-    value: string;
 }
 
 export interface GetPolicyObjectAppProbeClassEntry {
@@ -13930,6 +13862,10 @@ export interface GetPolicyObjectSecurityIdentityListEntry {
 export interface GetPolicyObjectSecurityIpsSignatureEntry {
     generatorId: string;
     signatureId: string;
+}
+
+export interface GetPolicyObjectSecurityIpsSignatureSetEntry {
+    baseSignature: string;
 }
 
 export interface GetPolicyObjectSecurityLocalApplicationListEntry {
@@ -16687,6 +16623,14 @@ export interface GetServiceMulticastFeatureMsdpGroupPeer {
      */
     peerAuthenticationPasswordVariable: string;
     /**
+     * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    peerAuthenticationPasswordWo: string;
+    /**
+     * Rotation trigger for `peerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    peerAuthenticationPasswordWoVersion: number;
+    /**
      * Set MSDP peer ip
      */
     peerIp: string;
@@ -17073,6 +17017,14 @@ export interface GetServiceRoutingBgpFeatureIpv4Neighbor {
      */
     passwordVariable: string;
     /**
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    passwordWo: string;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion: number;
+    /**
      * Set remote autonomous system number
      */
     remoteAs: string;
@@ -17359,6 +17311,14 @@ export interface GetServiceRoutingBgpFeatureIpv6Neighbor {
      */
     passwordVariable: string;
     /**
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    passwordWo: string;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion: number;
+    /**
      * Set remote autonomous system number
      */
     remoteAs: string;
@@ -17575,6 +17535,14 @@ export interface GetServiceRoutingEigrpFeatureMd5Key {
      * Variable name
      */
     keyStringVariable: string;
+    /**
+     * Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    keyStringWo: string;
+    /**
+     * Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    keyStringWoVersion: number;
 }
 
 export interface GetServiceRoutingEigrpFeatureNetwork {
@@ -17705,6 +17673,14 @@ export interface GetServiceRoutingOspfFeatureAreaInterface {
      */
     messageDigestKeyVariable: string;
     /**
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    messageDigestKeyWo: string;
+    /**
+     * Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    messageDigestKeyWoVersion: number;
+    /**
      * Set interface name
      */
     name: string;
@@ -17782,7 +17758,14 @@ export interface GetServiceRoutingOspfFeatureRedistribute {
      * Variable name
      */
     protocolVariable: string;
+    /**
+     * Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+     */
     routePolicyId: string;
+    /**
+     * Variable name
+     */
+    routePolicyIdVariable: string;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
      */
@@ -17856,6 +17839,14 @@ export interface GetServiceRoutingOspfv3Ipv4FeatureAreaInterface {
      * Variable name
      */
     authenticationKeyVariable: string;
+    /**
+     * Set OSPF interface authentication IPSEC key
+     */
+    authenticationKeyWo: string;
+    /**
+     * Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationKeyWoVersion: number;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      */
@@ -17972,7 +17963,14 @@ export interface GetServiceRoutingOspfv3Ipv4FeatureRedistribute {
      * Variable name
      */
     protocolVariable: string;
+    /**
+     * Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+     */
     routePolicyId: string;
+    /**
+     * Variable name
+     */
+    routePolicyIdVariable: string;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
      */
@@ -18031,6 +18029,14 @@ export interface GetServiceRoutingOspfv3Ipv6FeatureAreaInterface {
      * Variable name
      */
     authenticationKeyVariable: string;
+    /**
+     * Set OSPF interface authentication IPSEC key
+     */
+    authenticationKeyWo: string;
+    /**
+     * Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationKeyWoVersion: number;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      */
@@ -18137,7 +18143,14 @@ export interface GetServiceRoutingOspfv3Ipv6FeatureRedistribute {
      * Variable name
      */
     protocolVariable: string;
+    /**
+     * Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+     */
     routePolicyId: string;
+    /**
+     * Variable name
+     */
+    routePolicyIdVariable: string;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
      */
@@ -18376,6 +18389,14 @@ export interface GetServiceWirelessLanFeatureSsid {
      */
     passphraseVariable: string;
     /**
+     * Set passphrase
+     */
+    passphraseWo: string;
+    /**
+     * Rotation trigger for `passphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passphraseWoVersion: number;
+    /**
      * Select QoS profile
      */
     qosProfile: string;
@@ -18416,6 +18437,14 @@ export interface GetServiceWirelessLanFeatureSsid {
      */
     radiusServerSecretVariable: string;
     /**
+     * Set RADIUS server shared secret
+     */
+    radiusServerSecretWo: string;
+    /**
+     * Rotation trigger for `radiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    radiusServerSecretWoVersion: number;
+    /**
      * Select security type
      */
     securityType: string;
@@ -18431,6 +18460,255 @@ export interface GetServiceWirelessLanFeatureSsid {
      * Variable name
      */
     vlanIdVariable: string;
+}
+
+export interface GetSigFeatureInterface {
+    /**
+     * IKE keepalive interval (seconds)
+     */
+    dpdInterval: number;
+    /**
+     * Variable name
+     */
+    dpdIntervalVariable: string;
+    /**
+     * IKE keepalive retries
+     */
+    dpdRetries: number;
+    /**
+     * Variable name
+     */
+    dpdRetriesVariable: string;
+    /**
+     * IKE identity the IKE preshared secret belongs to
+     */
+    ikeCiphersuite: string;
+    /**
+     * Variable name
+     */
+    ikeCiphersuiteVariable: string;
+    /**
+     * IKE Diffie Hellman Groups
+     */
+    ikeGroup: string;
+    /**
+     * Variable name
+     */
+    ikeGroupVariable: string;
+    /**
+     * IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+     */
+    ikeLocalId: string;
+    /**
+     * Variable name
+     */
+    ikeLocalIdVariable: string;
+    /**
+     * IKE rekey interval \n\n seconds
+     */
+    ikeRekeyInterval: number;
+    /**
+     * Variable name
+     */
+    ikeRekeyIntervalVariable: string;
+    /**
+     * IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+     */
+    ikeRemoteId: string;
+    /**
+     * Variable name
+     */
+    ikeRemoteIdVariable: string;
+    /**
+     * Interface description
+     */
+    interfaceDescription: string;
+    /**
+     * Variable name
+     */
+    interfaceDescriptionVariable: string;
+    /**
+     * Interface name: IPsec when present
+     */
+    interfaceName: string;
+    /**
+     * IPsec(ESP) encryption and integrity protocol
+     */
+    ipsecCiphersuite: string;
+    /**
+     * Variable name
+     */
+    ipsecCiphersuiteVariable: string;
+    /**
+     * IPsec rekey interval \n\n seconds
+     */
+    ipsecRekeyInterval: number;
+    /**
+     * Variable name
+     */
+    ipsecRekeyIntervalVariable: string;
+    /**
+     * Replay window size 32..8192 (must be a power of 2)
+     */
+    ipsecReplayWindow: number;
+    /**
+     * Variable name
+     */
+    ipsecReplayWindowVariable: string;
+    /**
+     * Interface MTU \n\n, in bytes
+     */
+    mtu: number;
+    /**
+     * Variable name
+     */
+    mtuVariable: string;
+    /**
+     * IPsec perfect forward secrecy settings
+     */
+    perfectForwardSecrecy: string;
+    /**
+     * Variable name
+     */
+    perfectForwardSecrecyVariable: string;
+    /**
+     * Use preshared key to authenticate IKE peer
+     */
+    preSharedKeyDynamic: boolean;
+    /**
+     * Use preshared key to authenticate IKE peer
+     */
+    preSharedSecret: string;
+    /**
+     * Variable name
+     */
+    preSharedSecretVariable: string;
+    /**
+     * Use preshared key to authenticate IKE peer
+     */
+    preSharedSecretWo: string;
+    /**
+     * Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    preSharedSecretWoVersion: number;
+    /**
+     * Administrative state
+     */
+    shutdown: boolean;
+    /**
+     * TCP MSS on SYN packets, in bytes
+     */
+    tcpMssAdjust: number;
+    /**
+     * Variable name
+     */
+    tcpMssAdjustVariable: string;
+    /**
+     * Enable/disable SIG tracking
+     */
+    trackEnable: boolean;
+    /**
+     * Enable tracker for this interface
+     */
+    tracker: string;
+    /**
+     * SIG Tunnel Data Center
+     */
+    tunnelDcPreference: string;
+    /**
+     * Tunnel destination IP address
+     */
+    tunnelDestination: string;
+    /**
+     * Variable name
+     */
+    tunnelDestinationVariable: string;
+    /**
+     * Public IP required to setup GRE tunnel to Zscaler
+     */
+    tunnelPublicIp: string;
+    /**
+     * Variable name
+     */
+    tunnelPublicIpVariable: string;
+    /**
+     * \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     */
+    tunnelRouteVia: string;
+    /**
+     * Variable name
+     */
+    tunnelRouteViaVariable: string;
+    /**
+     * SIG Tunnel Provider
+     */
+    tunnelSet: string;
+    /**
+     * \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     */
+    tunnelSourceInterface: string;
+    /**
+     * Variable name
+     */
+    tunnelSourceInterfaceVariable: string;
+}
+
+export interface GetSigFeatureInterfacePair {
+    /**
+     * Active Tunnel Interface for SIG
+     */
+    activeInterface: string;
+    /**
+     * Active Tunnel Interface Weight
+     */
+    activeInterfaceWeight: number;
+    /**
+     * Backup Tunnel Interface for SIG
+     */
+    backupInterface: string;
+    /**
+     * Backup Tunnel Interface Weight
+     */
+    backupInterfaceWeight: number;
+}
+
+export interface GetSigFeatureTracker {
+    /**
+     * API url of endpoint
+     */
+    endpointApiUrl: string;
+    /**
+     * Variable name
+     */
+    endpointApiUrlVariable: string;
+    /**
+     * Probe interval \n\n seconds
+     */
+    interval: number;
+    /**
+     * Variable name
+     */
+    intervalVariable: string;
+    /**
+     * Probe failure multiplier \n\n failed attempts
+     */
+    multiplier: number;
+    /**
+     * Variable name
+     */
+    multiplierVariable: string;
+    /**
+     * Tracker name
+     */
+    name: string;
+    /**
+     * Probe Timeout threshold \n\n milliseconds
+     */
+    threshold: number;
+    /**
+     * Variable name
+     */
+    thresholdVariable: string;
 }
 
 export interface GetSiteListPolicyObjectEntry {
@@ -18782,6 +19060,14 @@ export interface GetSseZscalerFeatureInterface {
      * Variable name
      */
     preSharedSecretVariable: string;
+    /**
+     * Use preshared key to authenticate IKE peer
+     */
+    preSharedSecretWo: string;
+    /**
+     * Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    preSharedSecretWoVersion: number;
     /**
      * Administrative state
      */
@@ -19417,6 +19703,14 @@ export interface GetSystemAaaFeatureRadiusGroupServer {
      */
     keyVariable: string;
     /**
+     * Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    keyWo: string;
+    /**
+     * Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    keyWoVersion: number;
+    /**
      * Configure how many times to contact this Radius server
      */
     retransmit: number;
@@ -19432,6 +19726,14 @@ export interface GetSystemAaaFeatureRadiusGroupServer {
      * Variable name
      */
     secretKeyVariable: string;
+    /**
+     * Set the Radius server shared type 7 encrypted key
+     */
+    secretKeyWo: string;
+    /**
+     * Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    secretKeyWoVersion: number;
     /**
      * Configure how long to wait for replies from the Radius server
      */
@@ -19487,6 +19789,14 @@ export interface GetSystemAaaFeatureTacacsGroupServer {
      */
     keyVariable: string;
     /**
+     * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    keyWo: string;
+    /**
+     * Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    keyWoVersion: number;
+    /**
      * TACACS Port
      */
     port: number;
@@ -19502,6 +19812,14 @@ export interface GetSystemAaaFeatureTacacsGroupServer {
      * Variable name
      */
     secretKeyVariable: string;
+    /**
+     * Set the TACACS server shared type 7 encrypted key
+     */
+    secretKeyWo: string;
+    /**
+     * Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    secretKeyWoVersion: number;
     /**
      * Configure how long to wait for replies from the TACACS server
      */
@@ -19529,6 +19847,14 @@ export interface GetSystemAaaFeatureUser {
      * Variable name
      */
     passwordVariable: string;
+    /**
+     * Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    passwordWo: string;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion: number;
     /**
      * Set Privilege Level for this user
      */
@@ -19879,6 +20205,14 @@ export interface GetSystemNtpFeatureAuthenticationKey {
      */
     cmacAes128ValueVariable: string;
     /**
+     * CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes)
+     */
+    cmacAes128ValueWo: string;
+    /**
+     * Rotation trigger for `cmacAes128ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    cmacAes128ValueWoVersion: number;
+    /**
      * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes)
      */
     hmacSha2Value: string;
@@ -19886,6 +20220,14 @@ export interface GetSystemNtpFeatureAuthenticationKey {
      * Variable name
      */
     hmacSha2ValueVariable: string;
+    /**
+     * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes)
+     */
+    hmacSha2ValueWo: string;
+    /**
+     * Rotation trigger for `hmacSha2ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    hmacSha2ValueWoVersion: number;
     /**
      * Authentication key ID
      */
@@ -19902,6 +20244,14 @@ export interface GetSystemNtpFeatureAuthenticationKey {
      * Variable name
      */
     md5ValueVariable: string;
+    /**
+     * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    md5ValueWo: string;
+    /**
+     * Rotation trigger for `md5ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    md5ValueWoVersion: number;
 }
 
 export interface GetSystemNtpFeatureServer {
@@ -20021,6 +20371,14 @@ export interface GetSystemSecurityFeatureKey {
      */
     keyStringVariable: string;
     /**
+     * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    keyStringWo: string;
+    /**
+     * Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    keyStringWoVersion: number;
+    /**
      * Select the chain name
      */
     name: string;
@@ -20102,6 +20460,14 @@ export interface GetSystemSnmpFeatureCommunity {
      * Variable name
      */
     nameVariable: string;
+    /**
+     * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    nameWo: string;
+    /**
+     * Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    nameWoVersion: number;
     /**
      * Set user label of the SNMP community
      */
@@ -20192,6 +20558,14 @@ export interface GetSystemSnmpFeatureUser {
      */
     authenticationPasswordVariable: string;
     /**
+     * Specify authentication protocol password
+     */
+    authenticationPasswordWo: string;
+    /**
+     * Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationPasswordWoVersion: number;
+    /**
      * Configure authentication protocol
      */
     authenticationProtocol: string;
@@ -20219,6 +20593,14 @@ export interface GetSystemSnmpFeatureUser {
      * Variable name
      */
     privacyPasswordVariable: string;
+    /**
+     * Specify privacy protocol password
+     */
+    privacyPasswordWo: string;
+    /**
+     * Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    privacyPasswordWoVersion: number;
     /**
      * Configure privacy protocol
      */
@@ -21625,6 +22007,14 @@ export interface GetTransportRoutingBgpFeatureIpv4Neighbor {
      */
     passwordVariable: string;
     /**
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    passwordWo: string;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion: number;
+    /**
      * Set remote autonomous system number
      */
     remoteAs: string;
@@ -21899,6 +22289,14 @@ export interface GetTransportRoutingBgpFeatureIpv6Neighbor {
      */
     passwordVariable: string;
     /**
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    passwordWo: string;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion: number;
+    /**
      * Set remote autonomous system number
      */
     remoteAs: string;
@@ -22156,6 +22554,14 @@ export interface GetTransportRoutingOspfFeatureAreaInterface {
      */
     messageDigestKeyVariable: string;
     /**
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     */
+    messageDigestKeyWo: string;
+    /**
+     * Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    messageDigestKeyWoVersion: number;
+    /**
      * Set interface name
      */
     name: string;
@@ -22299,6 +22705,14 @@ export interface GetTransportRoutingOspfv3Ipv4FeatureAreaInterface {
      * Variable name
      */
     authenticationKeyVariable: string;
+    /**
+     * Set OSPF interface authentication IPSEC key
+     */
+    authenticationKeyWo: string;
+    /**
+     * Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationKeyWoVersion: number;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      */
@@ -22474,6 +22888,14 @@ export interface GetTransportRoutingOspfv3Ipv6FeatureAreaInterface {
      * Variable name
      */
     authenticationKeyVariable: string;
+    /**
+     * Set OSPF interface authentication IPSEC key
+     */
+    authenticationKeyWo: string;
+    /**
+     * Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationKeyWoVersion: number;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      */
@@ -25480,12 +25902,24 @@ export interface NetworkHierarchySecurityLoggingUtdSyslog {
 export interface OtherThousandeyesFeatureVirtualApplication {
     /**
      * Set the Account Group Token
+     *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `accountGroupTokenWo` together with `accountGroupTokenWoVersion`, which keeps it out of state.
      */
     accountGroupToken?: string;
     /**
      * Variable name
      */
     accountGroupTokenVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the Account Group Token
+     *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+     */
+    accountGroupTokenWo?: string;
+    /**
+     * Rotation trigger for `accountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    accountGroupTokenWoVersion?: number;
     /**
      * Set the Agent default gateway
      */
@@ -25662,31 +26096,23 @@ export interface OtherUcseFeatureInterface {
     ucseInterfaceVpnVariable?: string;
 }
 
-export interface PolicyGroupDevice {
+export interface PolicyGroupDevicesDevices {
     /**
      * Deploy to device if enabled.
      *   - Default value: `false`
      */
     deploy: boolean;
     /**
-     * Device ID
+     * Device variables, keyed by variable name (for example `hostName`). Terraform matches each variable by its name, so a changed value shows as a change of that variable only.
      */
-    id?: string;
-    /**
-     * List of variables
-     */
-    variables?: outputs.PolicyGroupDeviceVariable[];
+    variables?: {[key: string]: outputs.PolicyGroupDevicesDevicesVariables};
 }
 
-export interface PolicyGroupDeviceVariable {
+export interface PolicyGroupDevicesDevicesVariables {
     /**
      * Use this instead of `value` in case value is of type `List`.
      */
     listValues?: string[];
-    /**
-     * Variable name
-     */
-    name: string;
     /**
      * Variable value
      */
@@ -25905,6 +26331,13 @@ export interface PolicyObjectSecurityIdentityListEntry {
 export interface PolicyObjectSecurityIpsSignatureEntry {
     generatorId?: string;
     signatureId?: string;
+}
+
+export interface PolicyObjectSecurityIpsSignatureSetEntry {
+    /**
+     * - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+     */
+    baseSignature?: string;
 }
 
 export interface PolicyObjectSecurityLocalApplicationListEntry {
@@ -28871,12 +29304,24 @@ export interface ServiceMulticastFeatureMsdpGroupPeer {
     keepaliveIntervalVariable?: string;
     /**
      * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `peerAuthenticationPasswordWo` together with `peerAuthenticationPasswordWoVersion`, which keeps it out of state.
      */
     peerAuthenticationPassword?: string;
     /**
      * Variable name
      */
     peerAuthenticationPasswordVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+     */
+    peerAuthenticationPasswordWo?: string;
+    /**
+     * Rotation trigger for `peerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    peerAuthenticationPasswordWoVersion?: number;
     /**
      * Set MSDP peer ip
      */
@@ -29300,12 +29745,24 @@ export interface ServiceRoutingBgpFeatureIpv4Neighbor {
     nextHopSelfVariable?: string;
     /**
      * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: string;
     /**
      * Variable name
      */
     passwordVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     */
+    passwordWo?: string;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: number;
     /**
      * Set remote autonomous system number
      */
@@ -29617,12 +30074,24 @@ export interface ServiceRoutingBgpFeatureIpv6Neighbor {
     nextHopSelfVariable?: string;
     /**
      * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: string;
     /**
      * Variable name
      */
     passwordVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     */
+    passwordWo?: string;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: number;
     /**
      * Set remote autonomous system number
      */
@@ -29855,12 +30324,24 @@ export interface ServiceRoutingEigrpFeatureMd5Key {
     keyIdVariable?: string;
     /**
      * Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
      */
     keyString?: string;
     /**
      * Variable name
      */
     keyStringVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     */
+    keyStringWo?: string;
+    /**
+     * Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    keyStringWoVersion?: number;
 }
 
 export interface ServiceRoutingEigrpFeatureNetwork {
@@ -29991,6 +30472,8 @@ export interface ServiceRoutingOspfFeatureAreaInterface {
     lsaRetransmitIntervalVariable?: string;
     /**
      * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
      */
     messageDigestKey?: string;
     /**
@@ -30006,6 +30489,16 @@ export interface ServiceRoutingOspfFeatureAreaInterface {
      * Variable name
      */
     messageDigestKeyVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     */
+    messageDigestKeyWo?: string;
+    /**
+     * Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    messageDigestKeyWoVersion?: number;
     /**
      * Set interface name
      */
@@ -30092,7 +30585,14 @@ export interface ServiceRoutingOspfFeatureRedistribute {
      * Variable name
      */
     protocolVariable?: string;
+    /**
+     * Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
     routePolicyId?: string;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
+    routePolicyIdVariable?: string;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
@@ -30165,12 +30665,24 @@ export interface ServiceRoutingOspfv3Ipv4FeatureArea {
 export interface ServiceRoutingOspfv3Ipv4FeatureAreaInterface {
     /**
      * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
      */
     authenticationKey?: string;
     /**
      * Variable name
      */
     authenticationKeyVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     */
+    authenticationKeyWo?: string;
+    /**
+     * Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationKeyWoVersion?: number;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`
@@ -30305,7 +30817,14 @@ export interface ServiceRoutingOspfv3Ipv4FeatureRedistribute {
      * Variable name
      */
     protocolVariable?: string;
+    /**
+     * Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
     routePolicyId?: string;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
+    routePolicyIdVariable?: string;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
@@ -30361,12 +30880,24 @@ export interface ServiceRoutingOspfv3Ipv6FeatureArea {
 export interface ServiceRoutingOspfv3Ipv6FeatureAreaInterface {
     /**
      * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
      */
     authenticationKey?: string;
     /**
      * Variable name
      */
     authenticationKeyVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     */
+    authenticationKeyWo?: string;
+    /**
+     * Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationKeyWoVersion?: number;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`
@@ -30487,7 +31018,14 @@ export interface ServiceRoutingOspfv3Ipv6FeatureRedistribute {
      * Variable name
      */
     protocolVariable?: string;
+    /**
+     * Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
     routePolicyId?: string;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
+    routePolicyIdVariable?: string;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
@@ -30740,12 +31278,24 @@ export interface ServiceWirelessLanFeatureSsid {
     broadcastSsidVariable?: string;
     /**
      * Set passphrase, Attribute conditional on `securityType` equal to `personal`
+     *   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passphraseWo` together with `passphraseWoVersion`, which keeps it out of state.
      */
     passphrase?: string;
     /**
      * Variable name, Attribute conditional on `securityType` equal to `personal`
      */
     passphraseVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set passphrase, Attribute conditional on `securityType` equal to `personal`
+     *   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+     */
+    passphraseWo?: string;
+    /**
+     * Rotation trigger for `passphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passphraseWoVersion?: number;
     /**
      * Select QoS profile
      *   - Choices: `platinum`, `gold`, `silver`, `bronze`
@@ -30786,12 +31336,24 @@ export interface ServiceWirelessLanFeatureSsid {
     radiusServerPortVariable?: string;
     /**
      * Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+     *   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `radiusServerSecretWo` together with `radiusServerSecretWoVersion`, which keeps it out of state.
      */
     radiusServerSecret?: string;
     /**
      * Variable name, Attribute conditional on `securityType` equal to `enterprise`
      */
     radiusServerSecretVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+     *   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+     */
+    radiusServerSecretWo?: string;
+    /**
+     * Rotation trigger for `radiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    radiusServerSecretWoVersion?: number;
     /**
      * Select security type
      *   - Choices: `enterprise`, `personal`, `open`
@@ -30810,6 +31372,292 @@ export interface ServiceWirelessLanFeatureSsid {
      * Variable name
      */
     vlanIdVariable?: string;
+}
+
+export interface SigFeatureInterface {
+    /**
+     * IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
+     */
+    dpdInterval?: number;
+    /**
+     * Variable name
+     */
+    dpdIntervalVariable?: string;
+    /**
+     * IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
+     */
+    dpdRetries?: number;
+    /**
+     * Variable name
+     */
+    dpdRetriesVariable?: string;
+    /**
+     * IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
+     */
+    ikeCiphersuite?: string;
+    /**
+     * Variable name
+     */
+    ikeCiphersuiteVariable?: string;
+    /**
+     * IKE Diffie Hellman Groups
+     *   - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+     *   - Default value: `16`
+     */
+    ikeGroup?: string;
+    /**
+     * Variable name
+     */
+    ikeGroupVariable?: string;
+    /**
+     * IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+     */
+    ikeLocalId?: string;
+    /**
+     * Variable name
+     */
+    ikeLocalIdVariable?: string;
+    /**
+     * IKE rekey interval <300..1209600> seconds
+     *   - Range: `300`-`86400`
+     *   - Default value: `14400`
+     */
+    ikeRekeyInterval?: number;
+    /**
+     * Variable name
+     */
+    ikeRekeyIntervalVariable?: string;
+    /**
+     * IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+     */
+    ikeRemoteId?: string;
+    /**
+     * Variable name
+     */
+    ikeRemoteIdVariable?: string;
+    /**
+     * Interface description
+     */
+    interfaceDescription?: string;
+    /**
+     * Variable name
+     */
+    interfaceDescriptionVariable?: string;
+    /**
+     * Interface name: IPsec when present
+     */
+    interfaceName?: string;
+    /**
+     * IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+     *   - Default value: `aes256-cbc-sha512`
+     */
+    ipsecCiphersuite?: string;
+    /**
+     * Variable name
+     */
+    ipsecCiphersuiteVariable?: string;
+    /**
+     * IPsec rekey interval <300..1209600> seconds
+     *   - Range: `300`-`1209600`
+     *   - Default value: `3600`
+     */
+    ipsecRekeyInterval?: number;
+    /**
+     * Variable name
+     */
+    ipsecRekeyIntervalVariable?: string;
+    /**
+     * Replay window size 32..8192 (must be a power of 2)
+     *   - Default value: `512`
+     */
+    ipsecReplayWindow?: number;
+    /**
+     * Variable name
+     */
+    ipsecReplayWindowVariable?: string;
+    /**
+     * Interface MTU <576..2000>, in bytes
+     *   - Range: `576`-`2000`
+     *   - Default value: `1400`
+     */
+    mtu?: number;
+    /**
+     * Variable name
+     */
+    mtuVariable?: string;
+    /**
+     * IPsec perfect forward secrecy settings
+     *   - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+     *   - Default value: `none`
+     */
+    perfectForwardSecrecy?: string;
+    /**
+     * Variable name
+     */
+    perfectForwardSecrecyVariable?: string;
+    /**
+     * Use preshared key to authenticate IKE peer
+     */
+    preSharedKeyDynamic?: boolean;
+    /**
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
+     */
+    preSharedSecret?: string;
+    /**
+     * Variable name
+     */
+    preSharedSecretVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     */
+    preSharedSecretWo?: string;
+    /**
+     * Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    preSharedSecretWoVersion?: number;
+    /**
+     * Administrative state
+     *   - Default value: `false`
+     */
+    shutdown?: boolean;
+    /**
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
+     */
+    tcpMssAdjust?: number;
+    /**
+     * Variable name
+     */
+    tcpMssAdjustVariable?: string;
+    /**
+     * Enable/disable SIG tracking
+     *   - Default value: `true`
+     */
+    trackEnable?: boolean;
+    /**
+     * Enable tracker for this interface
+     */
+    tracker?: string;
+    /**
+     * SIG Tunnel Data Center
+     *   - Choices: `primary-dc`, `secondary-dc`
+     */
+    tunnelDcPreference?: string;
+    /**
+     * Tunnel destination IP address
+     */
+    tunnelDestination?: string;
+    /**
+     * Variable name
+     */
+    tunnelDestinationVariable?: string;
+    /**
+     * Public IP required to setup GRE tunnel to Zscaler
+     *   - Default value: `Auto`
+     */
+    tunnelPublicIp?: string;
+    /**
+     * Variable name
+     */
+    tunnelPublicIpVariable?: string;
+    /**
+     * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    tunnelRouteVia?: string;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    tunnelRouteViaVariable?: string;
+    /**
+     * SIG Tunnel Provider
+     *   - Choices: `secure-internet-gateway-umbrella`, `secure-internet-gateway-zscaler`, `secure-internet-gateway-other`
+     */
+    tunnelSet?: string;
+    /**
+     * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+     */
+    tunnelSourceInterface?: string;
+    /**
+     * Variable name
+     */
+    tunnelSourceInterfaceVariable?: string;
+}
+
+export interface SigFeatureInterfacePair {
+    /**
+     * Active Tunnel Interface for SIG
+     */
+    activeInterface?: string;
+    /**
+     * Active Tunnel Interface Weight
+     *   - Range: `1`-`255`
+     */
+    activeInterfaceWeight?: number;
+    /**
+     * Backup Tunnel Interface for SIG
+     */
+    backupInterface?: string;
+    /**
+     * Backup Tunnel Interface Weight
+     *   - Range: `1`-`255`
+     */
+    backupInterfaceWeight?: number;
+}
+
+export interface SigFeatureTracker {
+    /**
+     * API url of endpoint
+     */
+    endpointApiUrl?: string;
+    /**
+     * Variable name
+     */
+    endpointApiUrlVariable?: string;
+    /**
+     * Probe interval <10..600> seconds
+     *   - Range: `20`-`600`
+     *   - Default value: `60`
+     */
+    interval?: number;
+    /**
+     * Variable name
+     */
+    intervalVariable?: string;
+    /**
+     * Probe failure multiplier <1..10> failed attempts
+     *   - Range: `1`-`10`
+     *   - Default value: `3`
+     */
+    multiplier?: number;
+    /**
+     * Variable name
+     */
+    multiplierVariable?: string;
+    /**
+     * Tracker name
+     */
+    name?: string;
+    /**
+     * Probe Timeout threshold <100..1000> milliseconds
+     *   - Range: `100`-`1000`
+     *   - Default value: `300`
+     */
+    threshold?: number;
+    /**
+     * Variable name
+     */
+    thresholdVariable?: string;
 }
 
 export interface SiteListPolicyObjectEntry {
@@ -31211,12 +32059,24 @@ export interface SseZscalerFeatureInterface {
     preSharedKeyDynamic?: boolean;
     /**
      * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
      */
     preSharedSecret?: string;
     /**
      * Variable name
      */
     preSharedSecretVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     */
+    preSharedSecretWo?: string;
+    /**
+     * Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    preSharedSecretWoVersion?: number;
     /**
      * Administrative state
      *   - Default value: `false`
@@ -31908,6 +32768,8 @@ export interface SystemAaaFeatureRadiusGroupServer {
     authPortVariable?: string;
     /**
      * Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
      */
     key?: string;
     /**
@@ -31930,6 +32792,16 @@ export interface SystemAaaFeatureRadiusGroupServer {
      */
     keyVariable?: string;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     */
+    keyWo?: string;
+    /**
+     * Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    keyWoVersion?: number;
+    /**
      * Configure how many times to contact this Radius server
      *   - Range: `1`-`100`
      *   - Default value: `3`
@@ -31941,12 +32813,24 @@ export interface SystemAaaFeatureRadiusGroupServer {
     retransmitVariable?: string;
     /**
      * Set the Radius server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
      */
     secretKey?: string;
     /**
      * Variable name
      */
     secretKeyVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the Radius server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     */
+    secretKeyWo?: string;
+    /**
+     * Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    secretKeyWoVersion?: number;
     /**
      * Configure how long to wait for replies from the Radius server
      *   - Range: `1`-`1000`
@@ -31995,6 +32879,8 @@ export interface SystemAaaFeatureTacacsGroupServer {
     address?: string;
     /**
      * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
      */
     key?: string;
     /**
@@ -32007,6 +32893,16 @@ export interface SystemAaaFeatureTacacsGroupServer {
      */
     keyVariable?: string;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     */
+    keyWo?: string;
+    /**
+     * Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    keyWoVersion?: number;
+    /**
      * TACACS Port
      *   - Range: `1`-`65535`
      *   - Default value: `49`
@@ -32018,12 +32914,24 @@ export interface SystemAaaFeatureTacacsGroupServer {
     portVariable?: string;
     /**
      * Set the TACACS server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
      */
     secretKey?: string;
     /**
      * Variable name
      */
     secretKeyVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the TACACS server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     */
+    secretKeyWo?: string;
+    /**
+     * Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    secretKeyWoVersion?: number;
     /**
      * Configure how long to wait for replies from the TACACS server
      *   - Range: `1`-`1000`
@@ -32047,12 +32955,24 @@ export interface SystemAaaFeatureUser {
     nameVariable?: string;
     /**
      * Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: string;
     /**
      * Variable name
      */
     passwordVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     */
+    passwordWo?: string;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: number;
     /**
      * Set Privilege Level for this user
      *   - Choices: `1`, `15`
@@ -32428,6 +33348,8 @@ export interface SystemLoggingFeatureTlsProfile {
 export interface SystemNtpFeatureAuthenticationKey {
     /**
      * CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `cmacAes128ValueWo` together with `cmacAes128ValueWoVersion`, which keeps it out of state.
      */
     cmacAes128Value?: string;
     /**
@@ -32435,13 +33357,35 @@ export interface SystemNtpFeatureAuthenticationKey {
      */
     cmacAes128ValueVariable?: string;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+     */
+    cmacAes128ValueWo?: string;
+    /**
+     * Rotation trigger for `cmacAes128ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    cmacAes128ValueWoVersion?: number;
+    /**
      * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `hmacSha2ValueWo` together with `hmacSha2ValueWoVersion`, which keeps it out of state.
      */
     hmacSha2Value?: string;
     /**
      * Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
      */
     hmacSha2ValueVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     *   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+     */
+    hmacSha2ValueWo?: string;
+    /**
+     * Rotation trigger for `hmacSha2ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    hmacSha2ValueWoVersion?: number;
     /**
      * Authentication key ID
      *   - Range: `1`-`4294967295`
@@ -32453,12 +33397,24 @@ export interface SystemNtpFeatureAuthenticationKey {
     keyIdVariable?: string;
     /**
      * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `md5ValueWo` together with `md5ValueWoVersion`, which keeps it out of state.
      */
     md5Value?: string;
     /**
      * Variable name
      */
     md5ValueVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+     */
+    md5ValueWo?: string;
+    /**
+     * Rotation trigger for `md5ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    md5ValueWoVersion?: number;
 }
 
 export interface SystemNtpFeatureServer {
@@ -32582,12 +33538,24 @@ export interface SystemSecurityFeatureKey {
     includeTcpOptionsVariable?: string;
     /**
      * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
      */
     keyString?: string;
     /**
      * Variable name
      */
     keyStringVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     */
+    keyStringWo?: string;
+    /**
+     * Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    keyStringWoVersion?: number;
     /**
      * Select the chain name
      */
@@ -32670,12 +33638,24 @@ export interface SystemSnmpFeatureCommunity {
     authorizationVariable?: string;
     /**
      * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `nameWo` together with `nameWoVersion`, which keeps it out of state.
      */
     name?: string;
     /**
      * Variable name
      */
     nameVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+     */
+    nameWo?: string;
+    /**
+     * Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    nameWoVersion?: number;
     /**
      * Set user label of the SNMP community
      */
@@ -32762,12 +33742,24 @@ export interface SystemSnmpFeatureTrapTargetServer {
 export interface SystemSnmpFeatureUser {
     /**
      * Specify authentication protocol password
+     *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationPasswordWo` together with `authenticationPasswordWoVersion`, which keeps it out of state.
      */
     authenticationPassword?: string;
     /**
      * Variable name
      */
     authenticationPasswordVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify authentication protocol password
+     *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+     */
+    authenticationPasswordWo?: string;
+    /**
+     * Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationPasswordWoVersion?: number;
     /**
      * Configure authentication protocol
      *   - Choices: `sha`, `sha256`
@@ -32791,12 +33783,24 @@ export interface SystemSnmpFeatureUser {
     name?: string;
     /**
      * Specify privacy protocol password
+     *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `privacyPasswordWo` together with `privacyPasswordWoVersion`, which keeps it out of state.
      */
     privacyPassword?: string;
     /**
      * Variable name
      */
     privacyPasswordVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify privacy protocol password
+     *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+     */
+    privacyPasswordWo?: string;
+    /**
+     * Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    privacyPasswordWoVersion?: number;
     /**
      * Configure privacy protocol
      *   - Choices: `aes-cfb-128`, `aes-256-cfb-128`
@@ -34321,12 +35325,24 @@ export interface TransportRoutingBgpFeatureIpv4Neighbor {
     nextHopSelfVariable?: string;
     /**
      * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: string;
     /**
      * Variable name
      */
     passwordVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     */
+    passwordWo?: string;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: number;
     /**
      * Set remote autonomous system number
      */
@@ -34625,12 +35641,24 @@ export interface TransportRoutingBgpFeatureIpv6Neighbor {
     nextHopSelfVariable?: string;
     /**
      * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: string;
     /**
      * Variable name
      */
     passwordVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     */
+    passwordWo?: string;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: number;
     /**
      * Set remote autonomous system number
      */
@@ -34904,6 +35932,8 @@ export interface TransportRoutingOspfFeatureAreaInterface {
     lsaRetransmitIntervalVariable?: string;
     /**
      * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
      */
     messageDigestKey?: string;
     /**
@@ -34919,6 +35949,16 @@ export interface TransportRoutingOspfFeatureAreaInterface {
      * Variable name
      */
     messageDigestKeyVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     */
+    messageDigestKeyWo?: string;
+    /**
+     * Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    messageDigestKeyWoVersion?: number;
     /**
      * Set interface name
      */
@@ -35069,12 +36109,24 @@ export interface TransportRoutingOspfv3Ipv4FeatureArea {
 export interface TransportRoutingOspfv3Ipv4FeatureAreaInterface {
     /**
      * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
      */
     authenticationKey?: string;
     /**
      * Variable name
      */
     authenticationKeyVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     */
+    authenticationKeyWo?: string;
+    /**
+     * Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationKeyWoVersion?: number;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`
@@ -35265,12 +36317,24 @@ export interface TransportRoutingOspfv3Ipv6FeatureArea {
 export interface TransportRoutingOspfv3Ipv6FeatureAreaInterface {
     /**
      * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
      */
     authenticationKey?: string;
     /**
      * Variable name
      */
     authenticationKeyVariable?: string;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set OSPF interface authentication IPSEC key
+     *   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+     */
+    authenticationKeyWo?: string;
+    /**
+     * Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationKeyWoVersion?: number;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`

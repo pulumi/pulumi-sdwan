@@ -84,9 +84,25 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string CiscoSseAuthKey;
         /// <summary>
+        /// Cisco SSE Authentication Key
+        /// </summary>
+        public readonly string CiscoSseAuthKeyWo;
+        /// <summary>
+        /// Rotation trigger for `CiscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int CiscoSseAuthKeyWoVersion;
+        /// <summary>
         /// Cisco SSE Authentication Secret
         /// </summary>
         public readonly string CiscoSseAuthSecret;
+        /// <summary>
+        /// Cisco SSE Authentication Secret
+        /// </summary>
+        public readonly string CiscoSseAuthSecretWo;
+        /// <summary>
+        /// Rotation trigger for `CiscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int CiscoSseAuthSecretWoVersion;
         /// <summary>
         /// Enable Cisco SSE Context Sharing
         /// </summary>
@@ -104,17 +120,49 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string UmbrellaAuthKeyV2;
         /// <summary>
+        /// Umbrella Authentication Key (v2)
+        /// </summary>
+        public readonly string UmbrellaAuthKeyV2Wo;
+        /// <summary>
+        /// Rotation trigger for `UmbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int UmbrellaAuthKeyV2WoVersion;
+        /// <summary>
         /// Umbrella Authentication Secret (v2)
         /// </summary>
         public readonly string UmbrellaAuthSecretV2;
+        /// <summary>
+        /// Umbrella Authentication Secret (v2)
+        /// </summary>
+        public readonly string UmbrellaAuthSecretV2Wo;
+        /// <summary>
+        /// Rotation trigger for `UmbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int UmbrellaAuthSecretV2WoVersion;
         /// <summary>
         /// Umbrella DNS Authentication Key
         /// </summary>
         public readonly string UmbrellaDnsAuthKey;
         /// <summary>
+        /// Umbrella DNS Authentication Key
+        /// </summary>
+        public readonly string UmbrellaDnsAuthKeyWo;
+        /// <summary>
+        /// Rotation trigger for `UmbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int UmbrellaDnsAuthKeyWoVersion;
+        /// <summary>
         /// Umbrella DNS Authentication Secret
         /// </summary>
         public readonly string UmbrellaDnsAuthSecret;
+        /// <summary>
+        /// Umbrella DNS Authentication Secret
+        /// </summary>
+        public readonly string UmbrellaDnsAuthSecretWo;
+        /// <summary>
+        /// Rotation trigger for `UmbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int UmbrellaDnsAuthSecretWoVersion;
         /// <summary>
         /// Umbrella Organization ID (numeric string)
         /// </summary>
@@ -124,9 +172,25 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string UmbrellaSigAuthKey;
         /// <summary>
+        /// Umbrella SIG Authentication Key
+        /// </summary>
+        public readonly string UmbrellaSigAuthKeyWo;
+        /// <summary>
+        /// Rotation trigger for `UmbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int UmbrellaSigAuthKeyWoVersion;
+        /// <summary>
         /// Umbrella SIG Authentication Secret
         /// </summary>
         public readonly string UmbrellaSigAuthSecret;
+        /// <summary>
+        /// Umbrella SIG Authentication Secret
+        /// </summary>
+        public readonly string UmbrellaSigAuthSecretWo;
+        /// <summary>
+        /// Rotation trigger for `UmbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int UmbrellaSigAuthSecretWoVersion;
         /// <summary>
         /// Zscaler Organization
         /// </summary>
@@ -140,9 +204,25 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string ZscalerPartnerKey;
         /// <summary>
+        /// Zscaler Partner Key
+        /// </summary>
+        public readonly string ZscalerPartnerKeyWo;
+        /// <summary>
+        /// Rotation trigger for `ZscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int ZscalerPartnerKeyWoVersion;
+        /// <summary>
         /// Zscaler Password
         /// </summary>
         public readonly string ZscalerPassword;
+        /// <summary>
+        /// Zscaler Password
+        /// </summary>
+        public readonly string ZscalerPasswordWo;
+        /// <summary>
+        /// Rotation trigger for `ZscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int ZscalerPasswordWoVersion;
         /// <summary>
         /// Zscaler Username
         /// </summary>
@@ -152,7 +232,15 @@ namespace Pulumi.Sdwan
         private GetCloudProviderSettingsResult(
             string ciscoSseAuthKey,
 
+            string ciscoSseAuthKeyWo,
+
+            int ciscoSseAuthKeyWoVersion,
+
             string ciscoSseAuthSecret,
+
+            string ciscoSseAuthSecretWo,
+
+            int ciscoSseAuthSecretWoVersion,
 
             bool ciscoSseContextSharing,
 
@@ -162,17 +250,41 @@ namespace Pulumi.Sdwan
 
             string umbrellaAuthKeyV2,
 
+            string umbrellaAuthKeyV2Wo,
+
+            int umbrellaAuthKeyV2WoVersion,
+
             string umbrellaAuthSecretV2,
+
+            string umbrellaAuthSecretV2Wo,
+
+            int umbrellaAuthSecretV2WoVersion,
 
             string umbrellaDnsAuthKey,
 
+            string umbrellaDnsAuthKeyWo,
+
+            int umbrellaDnsAuthKeyWoVersion,
+
             string umbrellaDnsAuthSecret,
+
+            string umbrellaDnsAuthSecretWo,
+
+            int umbrellaDnsAuthSecretWoVersion,
 
             string umbrellaOrgId,
 
             string umbrellaSigAuthKey,
 
+            string umbrellaSigAuthKeyWo,
+
+            int umbrellaSigAuthKeyWoVersion,
+
             string umbrellaSigAuthSecret,
+
+            string umbrellaSigAuthSecretWo,
+
+            int umbrellaSigAuthSecretWoVersion,
 
             string zscalerOrganization,
 
@@ -180,26 +292,54 @@ namespace Pulumi.Sdwan
 
             string zscalerPartnerKey,
 
+            string zscalerPartnerKeyWo,
+
+            int zscalerPartnerKeyWoVersion,
+
             string zscalerPassword,
+
+            string zscalerPasswordWo,
+
+            int zscalerPasswordWoVersion,
 
             string zscalerUsername)
         {
             CiscoSseAuthKey = ciscoSseAuthKey;
+            CiscoSseAuthKeyWo = ciscoSseAuthKeyWo;
+            CiscoSseAuthKeyWoVersion = ciscoSseAuthKeyWoVersion;
             CiscoSseAuthSecret = ciscoSseAuthSecret;
+            CiscoSseAuthSecretWo = ciscoSseAuthSecretWo;
+            CiscoSseAuthSecretWoVersion = ciscoSseAuthSecretWoVersion;
             CiscoSseContextSharing = ciscoSseContextSharing;
             CiscoSseOrgId = ciscoSseOrgId;
             Id = id;
             UmbrellaAuthKeyV2 = umbrellaAuthKeyV2;
+            UmbrellaAuthKeyV2Wo = umbrellaAuthKeyV2Wo;
+            UmbrellaAuthKeyV2WoVersion = umbrellaAuthKeyV2WoVersion;
             UmbrellaAuthSecretV2 = umbrellaAuthSecretV2;
+            UmbrellaAuthSecretV2Wo = umbrellaAuthSecretV2Wo;
+            UmbrellaAuthSecretV2WoVersion = umbrellaAuthSecretV2WoVersion;
             UmbrellaDnsAuthKey = umbrellaDnsAuthKey;
+            UmbrellaDnsAuthKeyWo = umbrellaDnsAuthKeyWo;
+            UmbrellaDnsAuthKeyWoVersion = umbrellaDnsAuthKeyWoVersion;
             UmbrellaDnsAuthSecret = umbrellaDnsAuthSecret;
+            UmbrellaDnsAuthSecretWo = umbrellaDnsAuthSecretWo;
+            UmbrellaDnsAuthSecretWoVersion = umbrellaDnsAuthSecretWoVersion;
             UmbrellaOrgId = umbrellaOrgId;
             UmbrellaSigAuthKey = umbrellaSigAuthKey;
+            UmbrellaSigAuthKeyWo = umbrellaSigAuthKeyWo;
+            UmbrellaSigAuthKeyWoVersion = umbrellaSigAuthKeyWoVersion;
             UmbrellaSigAuthSecret = umbrellaSigAuthSecret;
+            UmbrellaSigAuthSecretWo = umbrellaSigAuthSecretWo;
+            UmbrellaSigAuthSecretWoVersion = umbrellaSigAuthSecretWoVersion;
             ZscalerOrganization = zscalerOrganization;
             ZscalerPartnerBaseUri = zscalerPartnerBaseUri;
             ZscalerPartnerKey = zscalerPartnerKey;
+            ZscalerPartnerKeyWo = zscalerPartnerKeyWo;
+            ZscalerPartnerKeyWoVersion = zscalerPartnerKeyWoVersion;
             ZscalerPassword = zscalerPassword;
+            ZscalerPasswordWo = zscalerPasswordWo;
+            ZscalerPasswordWoVersion = zscalerPasswordWoVersion;
             ZscalerUsername = zscalerUsername;
         }
     }

@@ -87,9 +87,17 @@ type OtherTrustsecFeature struct {
 	// Variable name
 	DeviceIdVariable pulumi.StringPtrOutput `pulumi:"deviceIdVariable"`
 	// Set the password for the device
+	//   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
 	DevicePassword pulumi.StringPtrOutput `pulumi:"devicePassword"`
 	// Variable name
 	DevicePasswordVariable pulumi.StringPtrOutput `pulumi:"devicePasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the password for the device
+	//   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+	DevicePasswordWo pulumi.StringPtrOutput `pulumi:"devicePasswordWo"`
+	// Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	DevicePasswordWoVersion pulumi.IntPtrOutput `pulumi:"devicePasswordWoVersion"`
 	// Configure Local device security group <2..65519>
 	//   - Range: `2`-`65519`
 	DeviceSgt pulumi.IntPtrOutput `pulumi:"deviceSgt"`
@@ -128,9 +136,17 @@ type OtherTrustsecFeature struct {
 	// Configure SXP Connections
 	SxpConnections OtherTrustsecFeatureSxpConnectionArrayOutput `pulumi:"sxpConnections"`
 	// Configure SXP default password
+	//   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
 	SxpDefaultPassword pulumi.StringPtrOutput `pulumi:"sxpDefaultPassword"`
 	// Variable name
 	SxpDefaultPasswordVariable pulumi.StringPtrOutput `pulumi:"sxpDefaultPasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Configure SXP default password
+	//   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+	SxpDefaultPasswordWo pulumi.StringPtrOutput `pulumi:"sxpDefaultPasswordWo"`
+	// Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	SxpDefaultPasswordWoVersion pulumi.IntPtrOutput `pulumi:"sxpDefaultPasswordWoVersion"`
 	// Configure SXP key-chain
 	SxpKeyChain pulumi.StringPtrOutput `pulumi:"sxpKeyChain"`
 	// Variable name
@@ -170,6 +186,25 @@ func NewOtherTrustsecFeature(ctx *pulumi.Context,
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
 	}
+	if args.DevicePassword != nil {
+		args.DevicePassword = pulumi.ToSecret(args.DevicePassword).(pulumi.StringPtrInput)
+	}
+	if args.DevicePasswordWo != nil {
+		args.DevicePasswordWo = pulumi.ToSecret(args.DevicePasswordWo).(pulumi.StringPtrInput)
+	}
+	if args.SxpDefaultPassword != nil {
+		args.SxpDefaultPassword = pulumi.ToSecret(args.SxpDefaultPassword).(pulumi.StringPtrInput)
+	}
+	if args.SxpDefaultPasswordWo != nil {
+		args.SxpDefaultPasswordWo = pulumi.ToSecret(args.SxpDefaultPasswordWo).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"devicePassword",
+		"devicePasswordWo",
+		"sxpDefaultPassword",
+		"sxpDefaultPasswordWo",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource OtherTrustsecFeature
 	err := ctx.RegisterResource("sdwan:index/otherTrustsecFeature:OtherTrustsecFeature", name, args, &resource, opts...)
@@ -200,9 +235,17 @@ type otherTrustsecFeatureState struct {
 	// Variable name
 	DeviceIdVariable *string `pulumi:"deviceIdVariable"`
 	// Set the password for the device
+	//   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
 	DevicePassword *string `pulumi:"devicePassword"`
 	// Variable name
 	DevicePasswordVariable *string `pulumi:"devicePasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the password for the device
+	//   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+	DevicePasswordWo *string `pulumi:"devicePasswordWo"`
+	// Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	DevicePasswordWoVersion *int `pulumi:"devicePasswordWoVersion"`
 	// Configure Local device security group <2..65519>
 	//   - Range: `2`-`65519`
 	DeviceSgt *int `pulumi:"deviceSgt"`
@@ -241,9 +284,17 @@ type otherTrustsecFeatureState struct {
 	// Configure SXP Connections
 	SxpConnections []OtherTrustsecFeatureSxpConnection `pulumi:"sxpConnections"`
 	// Configure SXP default password
+	//   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
 	SxpDefaultPassword *string `pulumi:"sxpDefaultPassword"`
 	// Variable name
 	SxpDefaultPasswordVariable *string `pulumi:"sxpDefaultPasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Configure SXP default password
+	//   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+	SxpDefaultPasswordWo *string `pulumi:"sxpDefaultPasswordWo"`
+	// Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	SxpDefaultPasswordWoVersion *int `pulumi:"sxpDefaultPasswordWoVersion"`
 	// Configure SXP key-chain
 	SxpKeyChain *string `pulumi:"sxpKeyChain"`
 	// Variable name
@@ -281,9 +332,17 @@ type OtherTrustsecFeatureState struct {
 	// Variable name
 	DeviceIdVariable pulumi.StringPtrInput
 	// Set the password for the device
+	//   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
 	DevicePassword pulumi.StringPtrInput
 	// Variable name
 	DevicePasswordVariable pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the password for the device
+	//   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+	DevicePasswordWo pulumi.StringPtrInput
+	// Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	DevicePasswordWoVersion pulumi.IntPtrInput
 	// Configure Local device security group <2..65519>
 	//   - Range: `2`-`65519`
 	DeviceSgt pulumi.IntPtrInput
@@ -322,9 +381,17 @@ type OtherTrustsecFeatureState struct {
 	// Configure SXP Connections
 	SxpConnections OtherTrustsecFeatureSxpConnectionArrayInput
 	// Configure SXP default password
+	//   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
 	SxpDefaultPassword pulumi.StringPtrInput
 	// Variable name
 	SxpDefaultPasswordVariable pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Configure SXP default password
+	//   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+	SxpDefaultPasswordWo pulumi.StringPtrInput
+	// Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	SxpDefaultPasswordWoVersion pulumi.IntPtrInput
 	// Configure SXP key-chain
 	SxpKeyChain pulumi.StringPtrInput
 	// Variable name
@@ -372,9 +439,17 @@ type otherTrustsecFeatureArgs struct {
 	// Variable name
 	DeviceIdVariable *string `pulumi:"deviceIdVariable"`
 	// Set the password for the device
+	//   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
 	DevicePassword *string `pulumi:"devicePassword"`
 	// Variable name
 	DevicePasswordVariable *string `pulumi:"devicePasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the password for the device
+	//   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+	DevicePasswordWo *string `pulumi:"devicePasswordWo"`
+	// Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	DevicePasswordWoVersion *int `pulumi:"devicePasswordWoVersion"`
 	// Configure Local device security group <2..65519>
 	//   - Range: `2`-`65519`
 	DeviceSgt *int `pulumi:"deviceSgt"`
@@ -413,9 +488,17 @@ type otherTrustsecFeatureArgs struct {
 	// Configure SXP Connections
 	SxpConnections []OtherTrustsecFeatureSxpConnection `pulumi:"sxpConnections"`
 	// Configure SXP default password
+	//   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
 	SxpDefaultPassword *string `pulumi:"sxpDefaultPassword"`
 	// Variable name
 	SxpDefaultPasswordVariable *string `pulumi:"sxpDefaultPasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Configure SXP default password
+	//   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+	SxpDefaultPasswordWo *string `pulumi:"sxpDefaultPasswordWo"`
+	// Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	SxpDefaultPasswordWoVersion *int `pulumi:"sxpDefaultPasswordWoVersion"`
 	// Configure SXP key-chain
 	SxpKeyChain *string `pulumi:"sxpKeyChain"`
 	// Variable name
@@ -452,9 +535,17 @@ type OtherTrustsecFeatureArgs struct {
 	// Variable name
 	DeviceIdVariable pulumi.StringPtrInput
 	// Set the password for the device
+	//   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
 	DevicePassword pulumi.StringPtrInput
 	// Variable name
 	DevicePasswordVariable pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the password for the device
+	//   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+	DevicePasswordWo pulumi.StringPtrInput
+	// Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	DevicePasswordWoVersion pulumi.IntPtrInput
 	// Configure Local device security group <2..65519>
 	//   - Range: `2`-`65519`
 	DeviceSgt pulumi.IntPtrInput
@@ -493,9 +584,17 @@ type OtherTrustsecFeatureArgs struct {
 	// Configure SXP Connections
 	SxpConnections OtherTrustsecFeatureSxpConnectionArrayInput
 	// Configure SXP default password
+	//   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
 	SxpDefaultPassword pulumi.StringPtrInput
 	// Variable name
 	SxpDefaultPasswordVariable pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Configure SXP default password
+	//   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+	SxpDefaultPasswordWo pulumi.StringPtrInput
+	// Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	SxpDefaultPasswordWoVersion pulumi.IntPtrInput
 	// Configure SXP key-chain
 	SxpKeyChain pulumi.StringPtrInput
 	// Variable name
@@ -626,6 +725,8 @@ func (o OtherTrustsecFeatureOutput) DeviceIdVariable() pulumi.StringPtrOutput {
 }
 
 // Set the password for the device
+//   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
 func (o OtherTrustsecFeatureOutput) DevicePassword() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *OtherTrustsecFeature) pulumi.StringPtrOutput { return v.DevicePassword }).(pulumi.StringPtrOutput)
 }
@@ -633,6 +734,18 @@ func (o OtherTrustsecFeatureOutput) DevicePassword() pulumi.StringPtrOutput {
 // Variable name
 func (o OtherTrustsecFeatureOutput) DevicePasswordVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *OtherTrustsecFeature) pulumi.StringPtrOutput { return v.DevicePasswordVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set the password for the device
+//   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+func (o OtherTrustsecFeatureOutput) DevicePasswordWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *OtherTrustsecFeature) pulumi.StringPtrOutput { return v.DevicePasswordWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o OtherTrustsecFeatureOutput) DevicePasswordWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *OtherTrustsecFeature) pulumi.IntPtrOutput { return v.DevicePasswordWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Configure Local device security group <2..65519>
@@ -715,6 +828,8 @@ func (o OtherTrustsecFeatureOutput) SxpConnections() OtherTrustsecFeatureSxpConn
 }
 
 // Configure SXP default password
+//   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
 func (o OtherTrustsecFeatureOutput) SxpDefaultPassword() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *OtherTrustsecFeature) pulumi.StringPtrOutput { return v.SxpDefaultPassword }).(pulumi.StringPtrOutput)
 }
@@ -722,6 +837,18 @@ func (o OtherTrustsecFeatureOutput) SxpDefaultPassword() pulumi.StringPtrOutput 
 // Variable name
 func (o OtherTrustsecFeatureOutput) SxpDefaultPasswordVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *OtherTrustsecFeature) pulumi.StringPtrOutput { return v.SxpDefaultPasswordVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Configure SXP default password
+//   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+func (o OtherTrustsecFeatureOutput) SxpDefaultPasswordWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *OtherTrustsecFeature) pulumi.StringPtrOutput { return v.SxpDefaultPasswordWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o OtherTrustsecFeatureOutput) SxpDefaultPasswordWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *OtherTrustsecFeature) pulumi.IntPtrOutput { return v.SxpDefaultPasswordWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Configure SXP key-chain

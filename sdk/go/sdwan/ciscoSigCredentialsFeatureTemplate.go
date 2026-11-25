@@ -137,6 +137,29 @@ func NewCiscoSigCredentialsFeatureTemplate(ctx *pulumi.Context,
 	if args.DeviceTypes == nil {
 		return nil, errors.New("invalid value for required argument 'DeviceTypes'")
 	}
+	if args.UmbrellaApiKey != nil {
+		args.UmbrellaApiKey = pulumi.ToSecret(args.UmbrellaApiKey).(pulumi.StringPtrInput)
+	}
+	if args.UmbrellaApiSecret != nil {
+		args.UmbrellaApiSecret = pulumi.ToSecret(args.UmbrellaApiSecret).(pulumi.StringPtrInput)
+	}
+	if args.ZscalerPartnerApiKey != nil {
+		args.ZscalerPartnerApiKey = pulumi.ToSecret(args.ZscalerPartnerApiKey).(pulumi.StringPtrInput)
+	}
+	if args.ZscalerPartnerPassword != nil {
+		args.ZscalerPartnerPassword = pulumi.ToSecret(args.ZscalerPartnerPassword).(pulumi.StringPtrInput)
+	}
+	if args.ZscalerPassword != nil {
+		args.ZscalerPassword = pulumi.ToSecret(args.ZscalerPassword).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"umbrellaApiKey",
+		"umbrellaApiSecret",
+		"zscalerPartnerApiKey",
+		"zscalerPartnerPassword",
+		"zscalerPassword",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource CiscoSigCredentialsFeatureTemplate
 	err := ctx.RegisterResource("sdwan:index/ciscoSigCredentialsFeatureTemplate:CiscoSigCredentialsFeatureTemplate", name, args, &resource, opts...)

@@ -150,6 +150,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set hmac-sha-256 authentication key, Attribute conditional on `AuthenticationType` equal to `hmac-sha-256`
+        ///   - Only one of `HmacAuthenticationKey`, `HmacAuthenticationKeyVariable` and `HmacAuthenticationKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `HmacAuthenticationKeyWo` together with `HmacAuthenticationKeyWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("hmacAuthenticationKey")]
         public Output<string?> HmacAuthenticationKey { get; private set; } = null!;
@@ -159,6 +161,20 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("hmacAuthenticationKeyVariable")]
         public Output<string?> HmacAuthenticationKeyVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set hmac-sha-256 authentication key, Attribute conditional on `AuthenticationType` equal to `hmac-sha-256`
+        ///   - Only one of `HmacAuthenticationKey`, `HmacAuthenticationKeyVariable` and `HmacAuthenticationKeyWo` can be set.
+        /// </summary>
+        [Output("hmacAuthenticationKeyWo")]
+        public Output<string?> HmacAuthenticationKeyWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `HmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("hmacAuthenticationKeyWoVersion")]
+        public Output<int?> HmacAuthenticationKeyWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// Set EIGRP hold time
@@ -236,6 +252,11 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "hmacAuthenticationKey",
+                    "hmacAuthenticationKeyWo",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -324,17 +345,53 @@ namespace Pulumi.Sdwan
         [Input("helloIntervalVariable")]
         public Input<string>? HelloIntervalVariable { get; set; }
 
+        [Input("hmacAuthenticationKey")]
+        private Input<string>? _hmacAuthenticationKey;
+
         /// <summary>
         /// Set hmac-sha-256 authentication key, Attribute conditional on `AuthenticationType` equal to `hmac-sha-256`
+        ///   - Only one of `HmacAuthenticationKey`, `HmacAuthenticationKeyVariable` and `HmacAuthenticationKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `HmacAuthenticationKeyWo` together with `HmacAuthenticationKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("hmacAuthenticationKey")]
-        public Input<string>? HmacAuthenticationKey { get; set; }
+        public Input<string>? HmacAuthenticationKey
+        {
+            get => _hmacAuthenticationKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _hmacAuthenticationKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name, Attribute conditional on `AuthenticationType` equal to `hmac-sha-256`
         /// </summary>
         [Input("hmacAuthenticationKeyVariable")]
         public Input<string>? HmacAuthenticationKeyVariable { get; set; }
+
+        [Input("hmacAuthenticationKeyWo")]
+        private Input<string>? _hmacAuthenticationKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set hmac-sha-256 authentication key, Attribute conditional on `AuthenticationType` equal to `hmac-sha-256`
+        ///   - Only one of `HmacAuthenticationKey`, `HmacAuthenticationKeyVariable` and `HmacAuthenticationKeyWo` can be set.
+        /// </summary>
+        public Input<string>? HmacAuthenticationKeyWo
+        {
+            get => _hmacAuthenticationKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _hmacAuthenticationKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `HmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("hmacAuthenticationKeyWoVersion")]
+        public Input<int>? HmacAuthenticationKeyWoVersion { get; set; }
 
         /// <summary>
         /// Set EIGRP hold time
@@ -480,17 +537,53 @@ namespace Pulumi.Sdwan
         [Input("helloIntervalVariable")]
         public Input<string>? HelloIntervalVariable { get; set; }
 
+        [Input("hmacAuthenticationKey")]
+        private Input<string>? _hmacAuthenticationKey;
+
         /// <summary>
         /// Set hmac-sha-256 authentication key, Attribute conditional on `AuthenticationType` equal to `hmac-sha-256`
+        ///   - Only one of `HmacAuthenticationKey`, `HmacAuthenticationKeyVariable` and `HmacAuthenticationKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `HmacAuthenticationKeyWo` together with `HmacAuthenticationKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("hmacAuthenticationKey")]
-        public Input<string>? HmacAuthenticationKey { get; set; }
+        public Input<string>? HmacAuthenticationKey
+        {
+            get => _hmacAuthenticationKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _hmacAuthenticationKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name, Attribute conditional on `AuthenticationType` equal to `hmac-sha-256`
         /// </summary>
         [Input("hmacAuthenticationKeyVariable")]
         public Input<string>? HmacAuthenticationKeyVariable { get; set; }
+
+        [Input("hmacAuthenticationKeyWo")]
+        private Input<string>? _hmacAuthenticationKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set hmac-sha-256 authentication key, Attribute conditional on `AuthenticationType` equal to `hmac-sha-256`
+        ///   - Only one of `HmacAuthenticationKey`, `HmacAuthenticationKeyVariable` and `HmacAuthenticationKeyWo` can be set.
+        /// </summary>
+        public Input<string>? HmacAuthenticationKeyWo
+        {
+            get => _hmacAuthenticationKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _hmacAuthenticationKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `HmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("hmacAuthenticationKeyWoVersion")]
+        public Input<int>? HmacAuthenticationKeyWoVersion { get; set; }
 
         /// <summary>
         /// Set EIGRP hold time

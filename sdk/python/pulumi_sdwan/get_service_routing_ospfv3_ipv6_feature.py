@@ -27,7 +27,7 @@ class GetServiceRoutingOspfv3Ipv6FeatureResult:
     """
     A collection of values returned by getServiceRoutingOspfv3Ipv6Feature.
     """
-    def __init__(__self__, areas=None, default_information_originate=None, default_information_originate_always=None, default_information_originate_always_variable=None, default_information_originate_metric=None, default_information_originate_metric_type=None, default_information_originate_metric_type_variable=None, default_information_originate_metric_variable=None, description=None, distance=None, distance_external=None, distance_external_variable=None, distance_inter_area=None, distance_inter_area_variable=None, distance_intra_area=None, distance_intra_area_variable=None, distance_variable=None, feature_profile_id=None, filter=None, filter_variable=None, id=None, name=None, redistributes=None, reference_bandwidth=None, reference_bandwidth_variable=None, rfc1583_compatible=None, rfc1583_compatible_variable=None, route_policy_id=None, router_id=None, router_id_variable=None, router_lsa_action=None, router_lsa_on_startup_time=None, router_lsa_on_startup_time_variable=None, spf_calculation_delay=None, spf_calculation_delay_variable=None, spf_initial_hold_time=None, spf_initial_hold_time_variable=None, spf_maximum_hold_time=None, spf_maximum_hold_time_variable=None, version=None):
+    def __init__(__self__, areas=None, default_information_originate=None, default_information_originate_always=None, default_information_originate_always_variable=None, default_information_originate_metric=None, default_information_originate_metric_type=None, default_information_originate_metric_type_variable=None, default_information_originate_metric_variable=None, description=None, distance=None, distance_external=None, distance_external_variable=None, distance_inter_area=None, distance_inter_area_variable=None, distance_intra_area=None, distance_intra_area_variable=None, distance_variable=None, feature_profile_id=None, filter=None, filter_variable=None, id=None, name=None, redistributes=None, reference_bandwidth=None, reference_bandwidth_variable=None, rfc1583_compatible=None, rfc1583_compatible_variable=None, route_policy_id=None, route_policy_id_variable=None, router_id=None, router_id_variable=None, router_lsa_action=None, router_lsa_on_startup_time=None, router_lsa_on_startup_time_variable=None, spf_calculation_delay=None, spf_calculation_delay_variable=None, spf_initial_hold_time=None, spf_initial_hold_time_variable=None, spf_maximum_hold_time=None, spf_maximum_hold_time_variable=None, version=None):
         if areas and not isinstance(areas, list):
             raise TypeError("Expected argument 'areas' to be a list")
         pulumi.set(__self__, "areas", areas)
@@ -112,6 +112,9 @@ class GetServiceRoutingOspfv3Ipv6FeatureResult:
         if route_policy_id and not isinstance(route_policy_id, str):
             raise TypeError("Expected argument 'route_policy_id' to be a str")
         pulumi.set(__self__, "route_policy_id", route_policy_id)
+        if route_policy_id_variable and not isinstance(route_policy_id_variable, str):
+            raise TypeError("Expected argument 'route_policy_id_variable' to be a str")
+        pulumi.set(__self__, "route_policy_id_variable", route_policy_id_variable)
         if router_id and not isinstance(router_id, str):
             raise TypeError("Expected argument 'router_id' to be a str")
         pulumi.set(__self__, "router_id", router_id)
@@ -368,7 +371,18 @@ class GetServiceRoutingOspfv3Ipv6FeatureResult:
     @_builtins.property
     @pulumi.getter(name="routePolicyId")
     def route_policy_id(self) -> _builtins.str:
+        """
+        Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+        """
         return pulumi.get(self, "route_policy_id")
+
+    @_builtins.property
+    @pulumi.getter(name="routePolicyIdVariable")
+    def route_policy_id_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "route_policy_id_variable")
 
     @_builtins.property
     @pulumi.getter(name="routerId")
@@ -501,6 +515,7 @@ class AwaitableGetServiceRoutingOspfv3Ipv6FeatureResult(GetServiceRoutingOspfv3I
             rfc1583_compatible=self.rfc1583_compatible,
             rfc1583_compatible_variable=self.rfc1583_compatible_variable,
             route_policy_id=self.route_policy_id,
+            route_policy_id_variable=self.route_policy_id_variable,
             router_id=self.router_id,
             router_id_variable=self.router_id_variable,
             router_lsa_action=self.router_lsa_action,
@@ -573,6 +588,7 @@ def get_service_routing_ospfv3_ipv6_feature(feature_profile_id: Optional[_builti
         rfc1583_compatible=pulumi.get(__ret__, 'rfc1583_compatible'),
         rfc1583_compatible_variable=pulumi.get(__ret__, 'rfc1583_compatible_variable'),
         route_policy_id=pulumi.get(__ret__, 'route_policy_id'),
+        route_policy_id_variable=pulumi.get(__ret__, 'route_policy_id_variable'),
         router_id=pulumi.get(__ret__, 'router_id'),
         router_id_variable=pulumi.get(__ret__, 'router_id_variable'),
         router_lsa_action=pulumi.get(__ret__, 'router_lsa_action'),
@@ -642,6 +658,7 @@ def get_service_routing_ospfv3_ipv6_feature_output(feature_profile_id: pulumi.In
         rfc1583_compatible=pulumi.get(__response__, 'rfc1583_compatible'),
         rfc1583_compatible_variable=pulumi.get(__response__, 'rfc1583_compatible_variable'),
         route_policy_id=pulumi.get(__response__, 'route_policy_id'),
+        route_policy_id_variable=pulumi.get(__response__, 'route_policy_id_variable'),
         router_id=pulumi.get(__response__, 'router_id'),
         router_id_variable=pulumi.get(__response__, 'router_id_variable'),
         router_lsa_action=pulumi.get(__response__, 'router_lsa_action'),

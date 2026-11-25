@@ -193,6 +193,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string HmacAuthenticationKeyVariable;
         /// <summary>
+        /// Set hmac-sha-256 authentication key
+        /// </summary>
+        public readonly string HmacAuthenticationKeyWo;
+        /// <summary>
+        /// Rotation trigger for `HmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int HmacAuthenticationKeyWoVersion;
+        /// <summary>
         /// Set EIGRP hold time
         /// </summary>
         public readonly int HoldTime;
@@ -256,6 +264,10 @@ namespace Pulumi.Sdwan
 
             string hmacAuthenticationKeyVariable,
 
+            string hmacAuthenticationKeyWo,
+
+            int hmacAuthenticationKeyWoVersion,
+
             int holdTime,
 
             string holdTimeVariable,
@@ -288,6 +300,8 @@ namespace Pulumi.Sdwan
             HelloIntervalVariable = helloIntervalVariable;
             HmacAuthenticationKey = hmacAuthenticationKey;
             HmacAuthenticationKeyVariable = hmacAuthenticationKeyVariable;
+            HmacAuthenticationKeyWo = hmacAuthenticationKeyWo;
+            HmacAuthenticationKeyWoVersion = hmacAuthenticationKeyWoVersion;
             HoldTime = holdTime;
             HoldTimeVariable = holdTimeVariable;
             Id = id;

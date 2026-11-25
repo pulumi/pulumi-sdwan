@@ -93,6 +93,16 @@ public final class GetSystemSecurityFeatureKey {
      */
     private String keyStringVariable;
     /**
+     * @return Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    private String keyStringWo;
+    /**
+     * @return Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer keyStringWoVersion;
+    /**
      * @return Select the chain name
      * 
      */
@@ -272,6 +282,20 @@ public final class GetSystemSecurityFeatureKey {
         return this.keyStringVariable;
     }
     /**
+     * @return Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    public String keyStringWo() {
+        return this.keyStringWo;
+    }
+    /**
+     * @return Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer keyStringWoVersion() {
+        return this.keyStringWoVersion;
+    }
+    /**
      * @return Select the chain name
      * 
      */
@@ -388,6 +412,8 @@ public final class GetSystemSecurityFeatureKey {
         private String includeTcpOptionsVariable;
         private String keyString;
         private String keyStringVariable;
+        private String keyStringWo;
+        private Integer keyStringWoVersion;
         private String name;
         private Integer receiverId;
         private String receiverIdVariable;
@@ -420,6 +446,8 @@ public final class GetSystemSecurityFeatureKey {
     	      this.includeTcpOptionsVariable = defaults.includeTcpOptionsVariable;
     	      this.keyString = defaults.keyString;
     	      this.keyStringVariable = defaults.keyStringVariable;
+    	      this.keyStringWo = defaults.keyStringWo;
+    	      this.keyStringWoVersion = defaults.keyStringWoVersion;
     	      this.name = defaults.name;
     	      this.receiverId = defaults.receiverId;
     	      this.receiverIdVariable = defaults.receiverIdVariable;
@@ -564,6 +592,22 @@ public final class GetSystemSecurityFeatureKey {
             return this;
         }
         @CustomType.Setter
+        public Builder keyStringWo(String keyStringWo) {
+            if (keyStringWo == null) {
+              throw new MissingRequiredPropertyException("GetSystemSecurityFeatureKey", "keyStringWo");
+            }
+            this.keyStringWo = keyStringWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder keyStringWoVersion(Integer keyStringWoVersion) {
+            if (keyStringWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSystemSecurityFeatureKey", "keyStringWoVersion");
+            }
+            this.keyStringWoVersion = keyStringWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder name(String name) {
             if (name == null) {
               throw new MissingRequiredPropertyException("GetSystemSecurityFeatureKey", "name");
@@ -685,6 +729,8 @@ public final class GetSystemSecurityFeatureKey {
             _resultValue.includeTcpOptionsVariable = includeTcpOptionsVariable;
             _resultValue.keyString = keyString;
             _resultValue.keyStringVariable = keyStringVariable;
+            _resultValue.keyStringWo = keyStringWo;
+            _resultValue.keyStringWoVersion = keyStringWoVersion;
             _resultValue.name = name;
             _resultValue.receiverId = receiverId;
             _resultValue.receiverIdVariable = receiverIdVariable;

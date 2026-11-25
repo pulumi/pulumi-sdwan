@@ -218,9 +218,17 @@ type TransportWanVpnInterfaceGreFeature struct {
 	// Variable name
 	PerfectForwardSecrecyVariable pulumi.StringPtrOutput `pulumi:"perfectForwardSecrecyVariable"`
 	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
 	PreSharedSecret pulumi.StringPtrOutput `pulumi:"preSharedSecret"`
 	// Variable name
 	PreSharedSecretVariable pulumi.StringPtrOutput `pulumi:"preSharedSecretVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	PreSharedSecretWo pulumi.StringPtrOutput `pulumi:"preSharedSecretWo"`
+	// Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PreSharedSecretWoVersion pulumi.IntPtrOutput `pulumi:"preSharedSecretWoVersion"`
 	// Administrative state
 	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
@@ -292,6 +300,17 @@ func NewTransportWanVpnInterfaceGreFeature(ctx *pulumi.Context,
 	if args.TransportWanVpnFeatureId == nil {
 		return nil, errors.New("invalid value for required argument 'TransportWanVpnFeatureId'")
 	}
+	if args.PreSharedSecret != nil {
+		args.PreSharedSecret = pulumi.ToSecret(args.PreSharedSecret).(pulumi.StringPtrInput)
+	}
+	if args.PreSharedSecretWo != nil {
+		args.PreSharedSecretWo = pulumi.ToSecret(args.PreSharedSecretWo).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"preSharedSecret",
+		"preSharedSecretWo",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource TransportWanVpnInterfaceGreFeature
 	err := ctx.RegisterResource("sdwan:index/transportWanVpnInterfaceGreFeature:TransportWanVpnInterfaceGreFeature", name, args, &resource, opts...)
@@ -449,9 +468,17 @@ type transportWanVpnInterfaceGreFeatureState struct {
 	// Variable name
 	PerfectForwardSecrecyVariable *string `pulumi:"perfectForwardSecrecyVariable"`
 	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
 	PreSharedSecret *string `pulumi:"preSharedSecret"`
 	// Variable name
 	PreSharedSecretVariable *string `pulumi:"preSharedSecretVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	PreSharedSecretWo *string `pulumi:"preSharedSecretWo"`
+	// Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PreSharedSecretWoVersion *int `pulumi:"preSharedSecretWoVersion"`
 	// Administrative state
 	//   - Default value: `false`
 	Shutdown *bool `pulumi:"shutdown"`
@@ -645,9 +672,17 @@ type TransportWanVpnInterfaceGreFeatureState struct {
 	// Variable name
 	PerfectForwardSecrecyVariable pulumi.StringPtrInput
 	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
 	PreSharedSecret pulumi.StringPtrInput
 	// Variable name
 	PreSharedSecretVariable pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	PreSharedSecretWo pulumi.StringPtrInput
+	// Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PreSharedSecretWoVersion pulumi.IntPtrInput
 	// Administrative state
 	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrInput
@@ -851,9 +886,17 @@ type transportWanVpnInterfaceGreFeatureArgs struct {
 	// Variable name
 	PerfectForwardSecrecyVariable *string `pulumi:"perfectForwardSecrecyVariable"`
 	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
 	PreSharedSecret *string `pulumi:"preSharedSecret"`
 	// Variable name
 	PreSharedSecretVariable *string `pulumi:"preSharedSecretVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	PreSharedSecretWo *string `pulumi:"preSharedSecretWo"`
+	// Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PreSharedSecretWoVersion *int `pulumi:"preSharedSecretWoVersion"`
 	// Administrative state
 	//   - Default value: `false`
 	Shutdown *bool `pulumi:"shutdown"`
@@ -1046,9 +1089,17 @@ type TransportWanVpnInterfaceGreFeatureArgs struct {
 	// Variable name
 	PerfectForwardSecrecyVariable pulumi.StringPtrInput
 	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
 	PreSharedSecret pulumi.StringPtrInput
 	// Variable name
 	PreSharedSecretVariable pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	PreSharedSecretWo pulumi.StringPtrInput
+	// Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PreSharedSecretWoVersion pulumi.IntPtrInput
 	// Administrative state
 	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrInput
@@ -1490,6 +1541,8 @@ func (o TransportWanVpnInterfaceGreFeatureOutput) PerfectForwardSecrecyVariable(
 }
 
 // Use preshared key to authenticate IKE peer
+//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
 func (o TransportWanVpnInterfaceGreFeatureOutput) PreSharedSecret() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.PreSharedSecret }).(pulumi.StringPtrOutput)
 }
@@ -1497,6 +1550,18 @@ func (o TransportWanVpnInterfaceGreFeatureOutput) PreSharedSecret() pulumi.Strin
 // Variable name
 func (o TransportWanVpnInterfaceGreFeatureOutput) PreSharedSecretVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.PreSharedSecretVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Use preshared key to authenticate IKE peer
+//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+func (o TransportWanVpnInterfaceGreFeatureOutput) PreSharedSecretWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.PreSharedSecretWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o TransportWanVpnInterfaceGreFeatureOutput) PreSharedSecretWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.IntPtrOutput { return v.PreSharedSecretWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Administrative state
