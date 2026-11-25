@@ -32,7 +32,7 @@ import (
 //				Name: pulumi.String("Example"),
 //				Entries: sdwan.ExtendedCommunityListPolicyObjectEntryArray{
 //					&sdwan.ExtendedCommunityListPolicyObjectEntryArgs{
-//						Community: pulumi.String("community rt 100:10"),
+//						Community: pulumi.String("rt 100:10"),
 //					},
 //				},
 //			})

@@ -418,6 +418,16 @@ public final class GetVpnInterfaceEthernetPppoeFeatureTemplateResult {
      */
     private String secondaryRegionVariable;
     /**
+     * @return Service Provider Name
+     * 
+     */
+    private String serviceProviderName;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String serviceProviderNameVariable;
+    /**
      * @return 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
      * 
      */
@@ -1380,6 +1390,20 @@ public final class GetVpnInterfaceEthernetPppoeFeatureTemplateResult {
         return this.secondaryRegionVariable;
     }
     /**
+     * @return Service Provider Name
+     * 
+     */
+    public String serviceProviderName() {
+        return this.serviceProviderName;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String serviceProviderNameVariable() {
+        return this.serviceProviderNameVariable;
+    }
+    /**
      * @return 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
      * 
      */
@@ -2029,6 +2053,8 @@ public final class GetVpnInterfaceEthernetPppoeFeatureTemplateResult {
         private String qosMapVpnVariable;
         private String secondaryRegion;
         private String secondaryRegionVariable;
+        private String serviceProviderName;
+        private String serviceProviderNameVariable;
         private Integer shapingRate;
         private String shapingRateVariable;
         private Boolean shutdown;
@@ -2192,6 +2218,8 @@ public final class GetVpnInterfaceEthernetPppoeFeatureTemplateResult {
     	      this.qosMapVpnVariable = defaults.qosMapVpnVariable;
     	      this.secondaryRegion = defaults.secondaryRegion;
     	      this.secondaryRegionVariable = defaults.secondaryRegionVariable;
+    	      this.serviceProviderName = defaults.serviceProviderName;
+    	      this.serviceProviderNameVariable = defaults.serviceProviderNameVariable;
     	      this.shapingRate = defaults.shapingRate;
     	      this.shapingRateVariable = defaults.shapingRateVariable;
     	      this.shutdown = defaults.shutdown;
@@ -2924,6 +2952,22 @@ public final class GetVpnInterfaceEthernetPppoeFeatureTemplateResult {
               throw new MissingRequiredPropertyException("GetVpnInterfaceEthernetPppoeFeatureTemplateResult", "secondaryRegionVariable");
             }
             this.secondaryRegionVariable = secondaryRegionVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder serviceProviderName(String serviceProviderName) {
+            if (serviceProviderName == null) {
+              throw new MissingRequiredPropertyException("GetVpnInterfaceEthernetPppoeFeatureTemplateResult", "serviceProviderName");
+            }
+            this.serviceProviderName = serviceProviderName;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder serviceProviderNameVariable(String serviceProviderNameVariable) {
+            if (serviceProviderNameVariable == null) {
+              throw new MissingRequiredPropertyException("GetVpnInterfaceEthernetPppoeFeatureTemplateResult", "serviceProviderNameVariable");
+            }
+            this.serviceProviderNameVariable = serviceProviderNameVariable;
             return this;
         }
         @CustomType.Setter
@@ -3660,6 +3704,8 @@ public final class GetVpnInterfaceEthernetPppoeFeatureTemplateResult {
             _resultValue.qosMapVpnVariable = qosMapVpnVariable;
             _resultValue.secondaryRegion = secondaryRegion;
             _resultValue.secondaryRegionVariable = secondaryRegionVariable;
+            _resultValue.serviceProviderName = serviceProviderName;
+            _resultValue.serviceProviderNameVariable = serviceProviderNameVariable;
             _resultValue.shapingRate = shapingRate;
             _resultValue.shapingRateVariable = shapingRateVariable;
             _resultValue.shutdown = shutdown;

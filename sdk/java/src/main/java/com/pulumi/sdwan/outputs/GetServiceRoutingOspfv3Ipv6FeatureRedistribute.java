@@ -21,7 +21,16 @@ public final class GetServiceRoutingOspfv3Ipv6FeatureRedistribute {
      * 
      */
     private String protocolVariable;
+    /**
+     * @return Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+     * 
+     */
     private String routePolicyId;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String routePolicyIdVariable;
     /**
      * @return Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
      * 
@@ -48,8 +57,19 @@ public final class GetServiceRoutingOspfv3Ipv6FeatureRedistribute {
     public String protocolVariable() {
         return this.protocolVariable;
     }
+    /**
+     * @return Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+     * 
+     */
     public String routePolicyId() {
         return this.routePolicyId;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String routePolicyIdVariable() {
+        return this.routePolicyIdVariable;
     }
     /**
      * @return Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
@@ -78,6 +98,7 @@ public final class GetServiceRoutingOspfv3Ipv6FeatureRedistribute {
         private String protocol;
         private String protocolVariable;
         private String routePolicyId;
+        private String routePolicyIdVariable;
         private Boolean translateRibMetric;
         private String translateRibMetricVariable;
         public Builder() {}
@@ -86,6 +107,7 @@ public final class GetServiceRoutingOspfv3Ipv6FeatureRedistribute {
     	      this.protocol = defaults.protocol;
     	      this.protocolVariable = defaults.protocolVariable;
     	      this.routePolicyId = defaults.routePolicyId;
+    	      this.routePolicyIdVariable = defaults.routePolicyIdVariable;
     	      this.translateRibMetric = defaults.translateRibMetric;
     	      this.translateRibMetricVariable = defaults.translateRibMetricVariable;
         }
@@ -115,6 +137,14 @@ public final class GetServiceRoutingOspfv3Ipv6FeatureRedistribute {
             return this;
         }
         @CustomType.Setter
+        public Builder routePolicyIdVariable(String routePolicyIdVariable) {
+            if (routePolicyIdVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceRoutingOspfv3Ipv6FeatureRedistribute", "routePolicyIdVariable");
+            }
+            this.routePolicyIdVariable = routePolicyIdVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder translateRibMetric(Boolean translateRibMetric) {
             if (translateRibMetric == null) {
               throw new MissingRequiredPropertyException("GetServiceRoutingOspfv3Ipv6FeatureRedistribute", "translateRibMetric");
@@ -135,6 +165,7 @@ public final class GetServiceRoutingOspfv3Ipv6FeatureRedistribute {
             _resultValue.protocol = protocol;
             _resultValue.protocolVariable = protocolVariable;
             _resultValue.routePolicyId = routePolicyId;
+            _resultValue.routePolicyIdVariable = routePolicyIdVariable;
             _resultValue.translateRibMetric = translateRibMetric;
             _resultValue.translateRibMetricVariable = translateRibMetricVariable;
             return _resultValue;

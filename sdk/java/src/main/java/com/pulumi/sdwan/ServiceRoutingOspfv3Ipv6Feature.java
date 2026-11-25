@@ -506,11 +506,33 @@ public class ServiceRoutingOspfv3Ipv6Feature extends com.pulumi.resources.Custom
     public Output<Optional<String>> rfc1583CompatibleVariable() {
         return Codegen.optional(this.rfc1583CompatibleVariable);
     }
+    /**
+     * Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     * 
+     */
     @Export(name="routePolicyId", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> routePolicyId;
 
+    /**
+     * @return Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     * 
+     */
     public Output<Optional<String>> routePolicyId() {
         return Codegen.optional(this.routePolicyId);
+    }
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     * 
+     */
+    @Export(name="routePolicyIdVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> routePolicyIdVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     * 
+     */
+    public Output<Optional<String>> routePolicyIdVariable() {
+        return Codegen.optional(this.routePolicyIdVariable);
     }
     /**
      * Set OSPF router ID to override system IP address

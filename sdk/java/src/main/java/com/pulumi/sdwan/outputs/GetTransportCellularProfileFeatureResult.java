@@ -93,6 +93,16 @@ public final class GetTransportCellularProfileFeatureResult {
      */
     private String profilePasswordVariable;
     /**
+     * @return Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    private String profilePasswordWo;
+    /**
+     * @return Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer profilePasswordWoVersion;
+    /**
      * @return Set the profile username
      * 
      */
@@ -247,6 +257,20 @@ public final class GetTransportCellularProfileFeatureResult {
         return this.profilePasswordVariable;
     }
     /**
+     * @return Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    public String profilePasswordWo() {
+        return this.profilePasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer profilePasswordWoVersion() {
+        return this.profilePasswordWoVersion;
+    }
+    /**
      * @return Set the profile username
      * 
      */
@@ -328,6 +352,8 @@ public final class GetTransportCellularProfileFeatureResult {
         private String profileIdVariable;
         private String profilePassword;
         private String profilePasswordVariable;
+        private String profilePasswordWo;
+        private Integer profilePasswordWoVersion;
         private String profileUsername;
         private String profileUsernameVariable;
         private Boolean requiresAuthentication;
@@ -355,6 +381,8 @@ public final class GetTransportCellularProfileFeatureResult {
     	      this.profileIdVariable = defaults.profileIdVariable;
     	      this.profilePassword = defaults.profilePassword;
     	      this.profilePasswordVariable = defaults.profilePasswordVariable;
+    	      this.profilePasswordWo = defaults.profilePasswordWo;
+    	      this.profilePasswordWoVersion = defaults.profilePasswordWoVersion;
     	      this.profileUsername = defaults.profileUsername;
     	      this.profileUsernameVariable = defaults.profileUsernameVariable;
     	      this.requiresAuthentication = defaults.requiresAuthentication;
@@ -494,6 +522,22 @@ public final class GetTransportCellularProfileFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder profilePasswordWo(String profilePasswordWo) {
+            if (profilePasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetTransportCellularProfileFeatureResult", "profilePasswordWo");
+            }
+            this.profilePasswordWo = profilePasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder profilePasswordWoVersion(Integer profilePasswordWoVersion) {
+            if (profilePasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetTransportCellularProfileFeatureResult", "profilePasswordWoVersion");
+            }
+            this.profilePasswordWoVersion = profilePasswordWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder profileUsername(String profileUsername) {
             if (profileUsername == null) {
               throw new MissingRequiredPropertyException("GetTransportCellularProfileFeatureResult", "profileUsername");
@@ -575,6 +619,8 @@ public final class GetTransportCellularProfileFeatureResult {
             _resultValue.profileIdVariable = profileIdVariable;
             _resultValue.profilePassword = profilePassword;
             _resultValue.profilePasswordVariable = profilePasswordVariable;
+            _resultValue.profilePasswordWo = profilePasswordWo;
+            _resultValue.profilePasswordWoVersion = profilePasswordWoVersion;
             _resultValue.profileUsername = profileUsername;
             _resultValue.profileUsernameVariable = profileUsernameVariable;
             _resultValue.requiresAuthentication = requiresAuthentication;

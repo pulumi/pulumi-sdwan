@@ -30,11 +30,21 @@ namespace Pulumi.Sdwan.Inputs
         [Input("optional")]
         public Input<bool>? Optional { get; set; }
 
+        [Input("password")]
+        private Input<string>? _password;
+
         /// <summary>
         /// Set the user password
         /// </summary>
-        [Input("password")]
-        public Input<string>? Password { get; set; }
+        public Input<string>? Password
+        {
+            get => _password;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _password = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Set Privilege Level for this user
@@ -50,11 +60,21 @@ namespace Pulumi.Sdwan.Inputs
         [Input("privilegeLevelVariable")]
         public Input<string>? PrivilegeLevelVariable { get; set; }
 
+        [Input("secret")]
+        private Input<string>? _secret;
+
         /// <summary>
         /// Set the user scrypt password/hash
         /// </summary>
-        [Input("secret")]
-        public Input<string>? Secret { get; set; }
+        public Input<string>? Secret
+        {
+            get => _secret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _secret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         [Input("sshPubkeys")]
         private InputList<Inputs.CedgeAaaFeatureTemplateUserSshPubkeyArgs>? _sshPubkeys;

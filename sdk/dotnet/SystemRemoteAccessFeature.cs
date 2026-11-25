@@ -108,6 +108,10 @@ namespace Pulumi.Sdwan
         [Output("aaaSpecifyNamePolicyNameVariable")]
         public Output<string?> AaaSpecifyNamePolicyNameVariable { get; private set; } = null!;
 
+        /// <summary>
+        /// - Only one of `AaaSpecifyNamePolicyPassword`, `AaaSpecifyNamePolicyPasswordVariable` and `AaaSpecifyNamePolicyPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AaaSpecifyNamePolicyPasswordWo` together with `AaaSpecifyNamePolicyPasswordWoVersion`, which keeps it out of state.
+        /// </summary>
         [Output("aaaSpecifyNamePolicyPassword")]
         public Output<string?> AaaSpecifyNamePolicyPassword { get; private set; } = null!;
 
@@ -116,6 +120,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("aaaSpecifyNamePolicyPasswordVariable")]
         public Output<string?> AaaSpecifyNamePolicyPasswordVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// - Only one of `AaaSpecifyNamePolicyPassword`, `AaaSpecifyNamePolicyPasswordVariable` and `AaaSpecifyNamePolicyPasswordWo` can be set.
+        /// </summary>
+        [Output("aaaSpecifyNamePolicyPasswordWo")]
+        public Output<string?> AaaSpecifyNamePolicyPasswordWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `AaaSpecifyNamePolicyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("aaaSpecifyNamePolicyPasswordWoVersion")]
+        public Output<int?> AaaSpecifyNamePolicyPasswordWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// , Attribute conditional on `ConnectionTypeSsl` equal to `False`
@@ -295,6 +312,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// PSK Pre Shared Key, Attribute conditional on `PskAuthenticationType` equal to `Group`
+        ///   - Only one of `PskAuthenticationPreSharedKey`, `PskAuthenticationPreSharedKeyVariable` and `PskAuthenticationPreSharedKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PskAuthenticationPreSharedKeyWo` together with `PskAuthenticationPreSharedKeyWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("pskAuthenticationPreSharedKey")]
         public Output<string?> PskAuthenticationPreSharedKey { get; private set; } = null!;
@@ -304,6 +323,20 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("pskAuthenticationPreSharedKeyVariable")]
         public Output<string?> PskAuthenticationPreSharedKeyVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// PSK Pre Shared Key, Attribute conditional on `PskAuthenticationType` equal to `Group`
+        ///   - Only one of `PskAuthenticationPreSharedKey`, `PskAuthenticationPreSharedKeyVariable` and `PskAuthenticationPreSharedKeyWo` can be set.
+        /// </summary>
+        [Output("pskAuthenticationPreSharedKeyWo")]
+        public Output<string?> PskAuthenticationPreSharedKeyWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `PskAuthenticationPreSharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("pskAuthenticationPreSharedKeyWoVersion")]
+        public Output<int?> PskAuthenticationPreSharedKeyWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// PSK Selection, Attribute conditional on `ConnectionTypeSsl` equal to `False`
@@ -356,6 +389,13 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "aaaSpecifyNamePolicyPassword",
+                    "aaaSpecifyNamePolicyPasswordWo",
+                    "pskAuthenticationPreSharedKey",
+                    "pskAuthenticationPreSharedKeyWo",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -426,13 +466,50 @@ namespace Pulumi.Sdwan
         public Input<string>? AaaSpecifyNamePolicyNameVariable { get; set; }
 
         [Input("aaaSpecifyNamePolicyPassword")]
-        public Input<string>? AaaSpecifyNamePolicyPassword { get; set; }
+        private Input<string>? _aaaSpecifyNamePolicyPassword;
+
+        /// <summary>
+        /// - Only one of `AaaSpecifyNamePolicyPassword`, `AaaSpecifyNamePolicyPasswordVariable` and `AaaSpecifyNamePolicyPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AaaSpecifyNamePolicyPasswordWo` together with `AaaSpecifyNamePolicyPasswordWoVersion`, which keeps it out of state.
+        /// </summary>
+        public Input<string>? AaaSpecifyNamePolicyPassword
+        {
+            get => _aaaSpecifyNamePolicyPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _aaaSpecifyNamePolicyPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("aaaSpecifyNamePolicyPasswordVariable")]
         public Input<string>? AaaSpecifyNamePolicyPasswordVariable { get; set; }
+
+        [Input("aaaSpecifyNamePolicyPasswordWo")]
+        private Input<string>? _aaaSpecifyNamePolicyPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// - Only one of `AaaSpecifyNamePolicyPassword`, `AaaSpecifyNamePolicyPasswordVariable` and `AaaSpecifyNamePolicyPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? AaaSpecifyNamePolicyPasswordWo
+        {
+            get => _aaaSpecifyNamePolicyPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _aaaSpecifyNamePolicyPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `AaaSpecifyNamePolicyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("aaaSpecifyNamePolicyPasswordWoVersion")]
+        public Input<int>? AaaSpecifyNamePolicyPasswordWoVersion { get; set; }
 
         /// <summary>
         /// , Attribute conditional on `ConnectionTypeSsl` equal to `False`
@@ -610,17 +687,53 @@ namespace Pulumi.Sdwan
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        [Input("pskAuthenticationPreSharedKey")]
+        private Input<string>? _pskAuthenticationPreSharedKey;
+
         /// <summary>
         /// PSK Pre Shared Key, Attribute conditional on `PskAuthenticationType` equal to `Group`
+        ///   - Only one of `PskAuthenticationPreSharedKey`, `PskAuthenticationPreSharedKeyVariable` and `PskAuthenticationPreSharedKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PskAuthenticationPreSharedKeyWo` together with `PskAuthenticationPreSharedKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("pskAuthenticationPreSharedKey")]
-        public Input<string>? PskAuthenticationPreSharedKey { get; set; }
+        public Input<string>? PskAuthenticationPreSharedKey
+        {
+            get => _pskAuthenticationPreSharedKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _pskAuthenticationPreSharedKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name, Attribute conditional on `PskAuthenticationType` equal to `Group`
         /// </summary>
         [Input("pskAuthenticationPreSharedKeyVariable")]
         public Input<string>? PskAuthenticationPreSharedKeyVariable { get; set; }
+
+        [Input("pskAuthenticationPreSharedKeyWo")]
+        private Input<string>? _pskAuthenticationPreSharedKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// PSK Pre Shared Key, Attribute conditional on `PskAuthenticationType` equal to `Group`
+        ///   - Only one of `PskAuthenticationPreSharedKey`, `PskAuthenticationPreSharedKeyVariable` and `PskAuthenticationPreSharedKeyWo` can be set.
+        /// </summary>
+        public Input<string>? PskAuthenticationPreSharedKeyWo
+        {
+            get => _pskAuthenticationPreSharedKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _pskAuthenticationPreSharedKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `PskAuthenticationPreSharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("pskAuthenticationPreSharedKeyWoVersion")]
+        public Input<int>? PskAuthenticationPreSharedKeyWoVersion { get; set; }
 
         /// <summary>
         /// PSK Selection, Attribute conditional on `ConnectionTypeSsl` equal to `False`
@@ -699,13 +812,50 @@ namespace Pulumi.Sdwan
         public Input<string>? AaaSpecifyNamePolicyNameVariable { get; set; }
 
         [Input("aaaSpecifyNamePolicyPassword")]
-        public Input<string>? AaaSpecifyNamePolicyPassword { get; set; }
+        private Input<string>? _aaaSpecifyNamePolicyPassword;
+
+        /// <summary>
+        /// - Only one of `AaaSpecifyNamePolicyPassword`, `AaaSpecifyNamePolicyPasswordVariable` and `AaaSpecifyNamePolicyPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AaaSpecifyNamePolicyPasswordWo` together with `AaaSpecifyNamePolicyPasswordWoVersion`, which keeps it out of state.
+        /// </summary>
+        public Input<string>? AaaSpecifyNamePolicyPassword
+        {
+            get => _aaaSpecifyNamePolicyPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _aaaSpecifyNamePolicyPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("aaaSpecifyNamePolicyPasswordVariable")]
         public Input<string>? AaaSpecifyNamePolicyPasswordVariable { get; set; }
+
+        [Input("aaaSpecifyNamePolicyPasswordWo")]
+        private Input<string>? _aaaSpecifyNamePolicyPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// - Only one of `AaaSpecifyNamePolicyPassword`, `AaaSpecifyNamePolicyPasswordVariable` and `AaaSpecifyNamePolicyPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? AaaSpecifyNamePolicyPasswordWo
+        {
+            get => _aaaSpecifyNamePolicyPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _aaaSpecifyNamePolicyPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `AaaSpecifyNamePolicyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("aaaSpecifyNamePolicyPasswordWoVersion")]
+        public Input<int>? AaaSpecifyNamePolicyPasswordWoVersion { get; set; }
 
         /// <summary>
         /// , Attribute conditional on `ConnectionTypeSsl` equal to `False`
@@ -883,17 +1033,53 @@ namespace Pulumi.Sdwan
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        [Input("pskAuthenticationPreSharedKey")]
+        private Input<string>? _pskAuthenticationPreSharedKey;
+
         /// <summary>
         /// PSK Pre Shared Key, Attribute conditional on `PskAuthenticationType` equal to `Group`
+        ///   - Only one of `PskAuthenticationPreSharedKey`, `PskAuthenticationPreSharedKeyVariable` and `PskAuthenticationPreSharedKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PskAuthenticationPreSharedKeyWo` together with `PskAuthenticationPreSharedKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("pskAuthenticationPreSharedKey")]
-        public Input<string>? PskAuthenticationPreSharedKey { get; set; }
+        public Input<string>? PskAuthenticationPreSharedKey
+        {
+            get => _pskAuthenticationPreSharedKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _pskAuthenticationPreSharedKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name, Attribute conditional on `PskAuthenticationType` equal to `Group`
         /// </summary>
         [Input("pskAuthenticationPreSharedKeyVariable")]
         public Input<string>? PskAuthenticationPreSharedKeyVariable { get; set; }
+
+        [Input("pskAuthenticationPreSharedKeyWo")]
+        private Input<string>? _pskAuthenticationPreSharedKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// PSK Pre Shared Key, Attribute conditional on `PskAuthenticationType` equal to `Group`
+        ///   - Only one of `PskAuthenticationPreSharedKey`, `PskAuthenticationPreSharedKeyVariable` and `PskAuthenticationPreSharedKeyWo` can be set.
+        /// </summary>
+        public Input<string>? PskAuthenticationPreSharedKeyWo
+        {
+            get => _pskAuthenticationPreSharedKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _pskAuthenticationPreSharedKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `PskAuthenticationPreSharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("pskAuthenticationPreSharedKeyWoVersion")]
+        public Input<int>? PskAuthenticationPreSharedKeyWoVersion { get; set; }
 
         /// <summary>
         /// PSK Selection, Attribute conditional on `ConnectionTypeSsl` equal to `False`

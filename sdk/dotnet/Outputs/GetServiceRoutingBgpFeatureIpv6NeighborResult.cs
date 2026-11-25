@@ -98,6 +98,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string PasswordVariable;
         /// <summary>
+        /// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        /// </summary>
+        public readonly string PasswordWo;
+        /// <summary>
+        /// Rotation trigger for `PasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int PasswordWoVersion;
+        /// <summary>
         /// Set remote autonomous system number
         /// </summary>
         public readonly string RemoteAs;
@@ -182,6 +190,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string passwordVariable,
 
+            string passwordWo,
+
+            int passwordWoVersion,
+
             string remoteAs,
 
             string remoteAsVariable,
@@ -223,6 +235,8 @@ namespace Pulumi.Sdwan.Outputs
             NextHopSelfVariable = nextHopSelfVariable;
             Password = password;
             PasswordVariable = passwordVariable;
+            PasswordWo = passwordWo;
+            PasswordWoVersion = passwordWoVersion;
             RemoteAs = remoteAs;
             RemoteAsVariable = remoteAsVariable;
             SendCommunity = sendCommunity;

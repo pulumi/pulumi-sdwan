@@ -172,6 +172,10 @@ type LookupTransportWanVpnInterfaceGreFeatureResult struct {
 	PreSharedSecret string `pulumi:"preSharedSecret"`
 	// Variable name
 	PreSharedSecretVariable string `pulumi:"preSharedSecretVariable"`
+	// Use preshared key to authenticate IKE peer
+	PreSharedSecretWo string `pulumi:"preSharedSecretWo"`
+	// Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PreSharedSecretWoVersion int `pulumi:"preSharedSecretWoVersion"`
 	// Administrative state
 	Shutdown bool `pulumi:"shutdown"`
 	// Variable name
@@ -533,6 +537,16 @@ func (o LookupTransportWanVpnInterfaceGreFeatureResultOutput) PreSharedSecret() 
 // Variable name
 func (o LookupTransportWanVpnInterfaceGreFeatureResultOutput) PreSharedSecretVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceGreFeatureResult) string { return v.PreSharedSecretVariable }).(pulumi.StringOutput)
+}
+
+// Use preshared key to authenticate IKE peer
+func (o LookupTransportWanVpnInterfaceGreFeatureResultOutput) PreSharedSecretWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceGreFeatureResult) string { return v.PreSharedSecretWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupTransportWanVpnInterfaceGreFeatureResultOutput) PreSharedSecretWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceGreFeatureResult) int { return v.PreSharedSecretWoVersion }).(pulumi.IntOutput)
 }
 
 // Administrative state

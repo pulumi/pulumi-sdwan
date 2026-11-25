@@ -208,6 +208,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Use preshared key to authenticate IKE peer
+        ///   - Only one of `IkePresharedKey`, `IkePresharedKeyVariable` and `IkePresharedKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `IkePresharedKeyWo` together with `IkePresharedKeyWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("ikePresharedKey")]
         public Output<string?> IkePresharedKey { get; private set; } = null!;
@@ -217,6 +219,20 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("ikePresharedKeyVariable")]
         public Output<string?> IkePresharedKeyVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Use preshared key to authenticate IKE peer
+        ///   - Only one of `IkePresharedKey`, `IkePresharedKeyVariable` and `IkePresharedKeyWo` can be set.
+        /// </summary>
+        [Output("ikePresharedKeyWo")]
+        public Output<string?> IkePresharedKeyWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `IkePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("ikePresharedKeyWoVersion")]
+        public Output<int?> IkePresharedKeyWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// IKE rekey interval &lt;60..86400&gt; seconds
@@ -425,6 +441,7 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Administrative state
         ///   - Default value: `True`
+        ///   - Default value from SD-WAN Manager version `20.18.5`: `False`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -556,6 +573,11 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "ikePresharedKey",
+                    "ikePresharedKeyWo",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -711,17 +733,53 @@ namespace Pulumi.Sdwan
         [Input("ikeIntegrityProtocolVariable")]
         public Input<string>? IkeIntegrityProtocolVariable { get; set; }
 
+        [Input("ikePresharedKey")]
+        private Input<string>? _ikePresharedKey;
+
         /// <summary>
         /// Use preshared key to authenticate IKE peer
+        ///   - Only one of `IkePresharedKey`, `IkePresharedKeyVariable` and `IkePresharedKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `IkePresharedKeyWo` together with `IkePresharedKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("ikePresharedKey")]
-        public Input<string>? IkePresharedKey { get; set; }
+        public Input<string>? IkePresharedKey
+        {
+            get => _ikePresharedKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ikePresharedKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("ikePresharedKeyVariable")]
         public Input<string>? IkePresharedKeyVariable { get; set; }
+
+        [Input("ikePresharedKeyWo")]
+        private Input<string>? _ikePresharedKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Use preshared key to authenticate IKE peer
+        ///   - Only one of `IkePresharedKey`, `IkePresharedKeyVariable` and `IkePresharedKeyWo` can be set.
+        /// </summary>
+        public Input<string>? IkePresharedKeyWo
+        {
+            get => _ikePresharedKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ikePresharedKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `IkePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("ikePresharedKeyWoVersion")]
+        public Input<int>? IkePresharedKeyWoVersion { get; set; }
 
         /// <summary>
         /// IKE rekey interval &lt;60..86400&gt; seconds
@@ -930,6 +988,7 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Administrative state
         ///   - Default value: `True`
+        ///   - Default value from SD-WAN Manager version `20.18.5`: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -1172,17 +1231,53 @@ namespace Pulumi.Sdwan
         [Input("ikeIntegrityProtocolVariable")]
         public Input<string>? IkeIntegrityProtocolVariable { get; set; }
 
+        [Input("ikePresharedKey")]
+        private Input<string>? _ikePresharedKey;
+
         /// <summary>
         /// Use preshared key to authenticate IKE peer
+        ///   - Only one of `IkePresharedKey`, `IkePresharedKeyVariable` and `IkePresharedKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `IkePresharedKeyWo` together with `IkePresharedKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("ikePresharedKey")]
-        public Input<string>? IkePresharedKey { get; set; }
+        public Input<string>? IkePresharedKey
+        {
+            get => _ikePresharedKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ikePresharedKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("ikePresharedKeyVariable")]
         public Input<string>? IkePresharedKeyVariable { get; set; }
+
+        [Input("ikePresharedKeyWo")]
+        private Input<string>? _ikePresharedKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Use preshared key to authenticate IKE peer
+        ///   - Only one of `IkePresharedKey`, `IkePresharedKeyVariable` and `IkePresharedKeyWo` can be set.
+        /// </summary>
+        public Input<string>? IkePresharedKeyWo
+        {
+            get => _ikePresharedKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ikePresharedKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `IkePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("ikePresharedKeyWoVersion")]
+        public Input<int>? IkePresharedKeyWoVersion { get; set; }
 
         /// <summary>
         /// IKE rekey interval &lt;60..86400&gt; seconds
@@ -1391,6 +1486,7 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Administrative state
         ///   - Default value: `True`
+        ///   - Default value from SD-WAN Manager version `20.18.5`: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }

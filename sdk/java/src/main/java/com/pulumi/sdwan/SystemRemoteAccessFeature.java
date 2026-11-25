@@ -13,6 +13,7 @@ import com.pulumi.sdwan.inputs.SystemRemoteAccessFeatureState;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
@@ -190,9 +191,19 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
     public Output<Optional<String>> aaaSpecifyNamePolicyNameVariable() {
         return Codegen.optional(this.aaaSpecifyNamePolicyNameVariable);
     }
+    /**
+     * - Only one of `aaaSpecifyNamePolicyPassword`, `aaaSpecifyNamePolicyPasswordVariable` and `aaaSpecifyNamePolicyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `aaaSpecifyNamePolicyPasswordWo` together with `aaaSpecifyNamePolicyPasswordWoVersion`, which keeps it out of state.
+     * 
+     */
     @Export(name="aaaSpecifyNamePolicyPassword", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> aaaSpecifyNamePolicyPassword;
 
+    /**
+     * @return - Only one of `aaaSpecifyNamePolicyPassword`, `aaaSpecifyNamePolicyPasswordVariable` and `aaaSpecifyNamePolicyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `aaaSpecifyNamePolicyPasswordWo` together with `aaaSpecifyNamePolicyPasswordWoVersion`, which keeps it out of state.
+     * 
+     */
     public Output<Optional<String>> aaaSpecifyNamePolicyPassword() {
         return Codegen.optional(this.aaaSpecifyNamePolicyPassword);
     }
@@ -209,6 +220,36 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
      */
     public Output<Optional<String>> aaaSpecifyNamePolicyPasswordVariable() {
         return Codegen.optional(this.aaaSpecifyNamePolicyPasswordVariable);
+    }
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * - Only one of `aaaSpecifyNamePolicyPassword`, `aaaSpecifyNamePolicyPasswordVariable` and `aaaSpecifyNamePolicyPasswordWo` can be set.
+     * 
+     */
+    @Export(name="aaaSpecifyNamePolicyPasswordWo", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aaaSpecifyNamePolicyPasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * - Only one of `aaaSpecifyNamePolicyPassword`, `aaaSpecifyNamePolicyPasswordVariable` and `aaaSpecifyNamePolicyPasswordWo` can be set.
+     * 
+     */
+    public Output<Optional<String>> aaaSpecifyNamePolicyPasswordWo() {
+        return Codegen.optional(this.aaaSpecifyNamePolicyPasswordWo);
+    }
+    /**
+     * Rotation trigger for `aaaSpecifyNamePolicyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Export(name="aaaSpecifyNamePolicyPasswordWoVersion", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> aaaSpecifyNamePolicyPasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `aaaSpecifyNamePolicyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Output<Optional<Integer>> aaaSpecifyNamePolicyPasswordWoVersion() {
+        return Codegen.optional(this.aaaSpecifyNamePolicyPasswordWoVersion);
     }
     /**
      * , Attribute conditional on `connectionTypeSsl` equal to `false`
@@ -618,6 +659,8 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
     }
     /**
      * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` equal to `group`
+     *   - Only one of `pskAuthenticationPreSharedKey`, `pskAuthenticationPreSharedKeyVariable` and `pskAuthenticationPreSharedKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `pskAuthenticationPreSharedKeyWo` together with `pskAuthenticationPreSharedKeyWoVersion`, which keeps it out of state.
      * 
      */
     @Export(name="pskAuthenticationPreSharedKey", refs={String.class}, tree="[0]")
@@ -625,6 +668,8 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
 
     /**
      * @return PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` equal to `group`
+     *   - Only one of `pskAuthenticationPreSharedKey`, `pskAuthenticationPreSharedKeyVariable` and `pskAuthenticationPreSharedKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `pskAuthenticationPreSharedKeyWo` together with `pskAuthenticationPreSharedKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Output<Optional<String>> pskAuthenticationPreSharedKey() {
@@ -643,6 +688,38 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
      */
     public Output<Optional<String>> pskAuthenticationPreSharedKeyVariable() {
         return Codegen.optional(this.pskAuthenticationPreSharedKeyVariable);
+    }
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` equal to `group`
+     *   - Only one of `pskAuthenticationPreSharedKey`, `pskAuthenticationPreSharedKeyVariable` and `pskAuthenticationPreSharedKeyWo` can be set.
+     * 
+     */
+    @Export(name="pskAuthenticationPreSharedKeyWo", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> pskAuthenticationPreSharedKeyWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` equal to `group`
+     *   - Only one of `pskAuthenticationPreSharedKey`, `pskAuthenticationPreSharedKeyVariable` and `pskAuthenticationPreSharedKeyWo` can be set.
+     * 
+     */
+    public Output<Optional<String>> pskAuthenticationPreSharedKeyWo() {
+        return Codegen.optional(this.pskAuthenticationPreSharedKeyWo);
+    }
+    /**
+     * Rotation trigger for `pskAuthenticationPreSharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Export(name="pskAuthenticationPreSharedKeyWoVersion", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> pskAuthenticationPreSharedKeyWoVersion;
+
+    /**
+     * @return Rotation trigger for `pskAuthenticationPreSharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Output<Optional<Integer>> pskAuthenticationPreSharedKeyWoVersion() {
+        return Codegen.optional(this.pskAuthenticationPreSharedKeyWoVersion);
     }
     /**
      * PSK Selection, Attribute conditional on `connectionTypeSsl` equal to `false`
@@ -748,6 +825,12 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "aaaSpecifyNamePolicyPassword",
+                "aaaSpecifyNamePolicyPasswordWo",
+                "pskAuthenticationPreSharedKey",
+                "pskAuthenticationPreSharedKeyWo"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

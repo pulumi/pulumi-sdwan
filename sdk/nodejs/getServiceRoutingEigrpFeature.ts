@@ -101,6 +101,14 @@ export interface GetServiceRoutingEigrpFeatureResult {
      */
     readonly hmacAuthenticationKeyVariable: string;
     /**
+     * Set hmac-sha-256 authentication key
+     */
+    readonly hmacAuthenticationKeyWo: string;
+    /**
+     * Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly hmacAuthenticationKeyWoVersion: number;
+    /**
      * Set EIGRP hold time
      */
     readonly holdTime: number;

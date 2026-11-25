@@ -18,11 +18,23 @@ namespace Pulumi.Sdwan.Inputs
         [Input("address")]
         public Input<string>? Address { get; set; }
 
+        [Input("key")]
+        private Input<string>? _key;
+
         /// <summary>
         /// Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `Key`, `KeyVariable` and `KeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `KeyWo` together with `KeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("key")]
-        public Input<string>? Key { get; set; }
+        public Input<string>? Key
+        {
+            get => _key;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _key = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Type of encyption. To be used for type 6
@@ -36,6 +48,30 @@ namespace Pulumi.Sdwan.Inputs
         /// </summary>
         [Input("keyVariable")]
         public Input<string>? KeyVariable { get; set; }
+
+        [Input("keyWo")]
+        private Input<string>? _keyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `Key`, `KeyVariable` and `KeyWo` can be set.
+        /// </summary>
+        public Input<string>? KeyWo
+        {
+            get => _keyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _keyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `KeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("keyWoVersion")]
+        public Input<int>? KeyWoVersion { get; set; }
 
         /// <summary>
         /// TACACS Port
@@ -51,17 +87,53 @@ namespace Pulumi.Sdwan.Inputs
         [Input("portVariable")]
         public Input<string>? PortVariable { get; set; }
 
+        [Input("secretKey")]
+        private Input<string>? _secretKey;
+
         /// <summary>
         /// Set the TACACS server shared type 7 encrypted key
+        ///   - Only one of `SecretKey`, `SecretKeyVariable` and `SecretKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `SecretKeyWo` together with `SecretKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("secretKey")]
-        public Input<string>? SecretKey { get; set; }
+        public Input<string>? SecretKey
+        {
+            get => _secretKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _secretKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("secretKeyVariable")]
         public Input<string>? SecretKeyVariable { get; set; }
+
+        [Input("secretKeyWo")]
+        private Input<string>? _secretKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set the TACACS server shared type 7 encrypted key
+        ///   - Only one of `SecretKey`, `SecretKeyVariable` and `SecretKeyWo` can be set.
+        /// </summary>
+        public Input<string>? SecretKeyWo
+        {
+            get => _secretKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _secretKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `SecretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("secretKeyWoVersion")]
+        public Input<int>? SecretKeyWoVersion { get; set; }
 
         /// <summary>
         /// Configure how long to wait for replies from the TACACS server

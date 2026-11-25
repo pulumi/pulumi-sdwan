@@ -22,6 +22,16 @@ public final class GetOtherThousandeyesFeatureVirtualApplication {
      */
     private String accountGroupTokenVariable;
     /**
+     * @return Set the Account Group Token
+     * 
+     */
+    private String accountGroupTokenWo;
+    /**
+     * @return Rotation trigger for `accountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer accountGroupTokenWoVersion;
+    /**
      * @return Set the Agent default gateway
      * 
      */
@@ -131,6 +141,20 @@ public final class GetOtherThousandeyesFeatureVirtualApplication {
      */
     public String accountGroupTokenVariable() {
         return this.accountGroupTokenVariable;
+    }
+    /**
+     * @return Set the Account Group Token
+     * 
+     */
+    public String accountGroupTokenWo() {
+        return this.accountGroupTokenWo;
+    }
+    /**
+     * @return Rotation trigger for `accountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer accountGroupTokenWoVersion() {
+        return this.accountGroupTokenWoVersion;
     }
     /**
      * @return Set the Agent default gateway
@@ -277,6 +301,8 @@ public final class GetOtherThousandeyesFeatureVirtualApplication {
     public static final class Builder {
         private String accountGroupToken;
         private String accountGroupTokenVariable;
+        private String accountGroupTokenWo;
+        private Integer accountGroupTokenWoVersion;
         private String agentDefaultGateway;
         private String agentDefaultGatewayVariable;
         private String hostname;
@@ -301,6 +327,8 @@ public final class GetOtherThousandeyesFeatureVirtualApplication {
     	      Objects.requireNonNull(defaults);
     	      this.accountGroupToken = defaults.accountGroupToken;
     	      this.accountGroupTokenVariable = defaults.accountGroupTokenVariable;
+    	      this.accountGroupTokenWo = defaults.accountGroupTokenWo;
+    	      this.accountGroupTokenWoVersion = defaults.accountGroupTokenWoVersion;
     	      this.agentDefaultGateway = defaults.agentDefaultGateway;
     	      this.agentDefaultGatewayVariable = defaults.agentDefaultGatewayVariable;
     	      this.hostname = defaults.hostname;
@@ -336,6 +364,22 @@ public final class GetOtherThousandeyesFeatureVirtualApplication {
               throw new MissingRequiredPropertyException("GetOtherThousandeyesFeatureVirtualApplication", "accountGroupTokenVariable");
             }
             this.accountGroupTokenVariable = accountGroupTokenVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder accountGroupTokenWo(String accountGroupTokenWo) {
+            if (accountGroupTokenWo == null) {
+              throw new MissingRequiredPropertyException("GetOtherThousandeyesFeatureVirtualApplication", "accountGroupTokenWo");
+            }
+            this.accountGroupTokenWo = accountGroupTokenWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder accountGroupTokenWoVersion(Integer accountGroupTokenWoVersion) {
+            if (accountGroupTokenWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetOtherThousandeyesFeatureVirtualApplication", "accountGroupTokenWoVersion");
+            }
+            this.accountGroupTokenWoVersion = accountGroupTokenWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -494,6 +538,8 @@ public final class GetOtherThousandeyesFeatureVirtualApplication {
             final var _resultValue = new GetOtherThousandeyesFeatureVirtualApplication();
             _resultValue.accountGroupToken = accountGroupToken;
             _resultValue.accountGroupTokenVariable = accountGroupTokenVariable;
+            _resultValue.accountGroupTokenWo = accountGroupTokenWo;
+            _resultValue.accountGroupTokenWoVersion = accountGroupTokenWoVersion;
             _resultValue.agentDefaultGateway = agentDefaultGateway;
             _resultValue.agentDefaultGatewayVariable = agentDefaultGatewayVariable;
             _resultValue.hostname = hostname;

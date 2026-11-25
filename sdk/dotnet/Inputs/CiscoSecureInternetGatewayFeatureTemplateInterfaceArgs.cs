@@ -95,11 +95,21 @@ namespace Pulumi.Sdwan.Inputs
         [Input("ikeGroupVariable")]
         public Input<string>? IkeGroupVariable { get; set; }
 
+        [Input("ikePreSharedKey")]
+        private Input<string>? _ikePreSharedKey;
+
         /// <summary>
         /// Use preshared key to authenticate IKE peer
         /// </summary>
-        [Input("ikePreSharedKey")]
-        public Input<string>? IkePreSharedKey { get; set; }
+        public Input<string>? IkePreSharedKey
+        {
+            get => _ikePreSharedKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ikePreSharedKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Use preshared key to authenticate IKE peer

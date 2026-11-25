@@ -188,6 +188,16 @@ public final class GetSseZscalerFeatureInterface {
      */
     private String preSharedSecretVariable;
     /**
+     * @return Use preshared key to authenticate IKE peer
+     * 
+     */
+    private String preSharedSecretWo;
+    /**
+     * @return Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer preSharedSecretWoVersion;
+    /**
      * @return Administrative state
      * 
      */
@@ -525,6 +535,20 @@ public final class GetSseZscalerFeatureInterface {
         return this.preSharedSecretVariable;
     }
     /**
+     * @return Use preshared key to authenticate IKE peer
+     * 
+     */
+    public String preSharedSecretWo() {
+        return this.preSharedSecretWo;
+    }
+    /**
+     * @return Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer preSharedSecretWoVersion() {
+        return this.preSharedSecretWoVersion;
+    }
+    /**
      * @return Administrative state
      * 
      */
@@ -695,6 +719,8 @@ public final class GetSseZscalerFeatureInterface {
         private Boolean preSharedKeyDynamic;
         private String preSharedSecret;
         private String preSharedSecretVariable;
+        private String preSharedSecretWo;
+        private Integer preSharedSecretWoVersion;
         private Boolean shutdown;
         private Integer tcpMssAdjust;
         private String tcpMssAdjustVariable;
@@ -751,6 +777,8 @@ public final class GetSseZscalerFeatureInterface {
     	      this.preSharedKeyDynamic = defaults.preSharedKeyDynamic;
     	      this.preSharedSecret = defaults.preSharedSecret;
     	      this.preSharedSecretVariable = defaults.preSharedSecretVariable;
+    	      this.preSharedSecretWo = defaults.preSharedSecretWo;
+    	      this.preSharedSecretWoVersion = defaults.preSharedSecretWoVersion;
     	      this.shutdown = defaults.shutdown;
     	      this.tcpMssAdjust = defaults.tcpMssAdjust;
     	      this.tcpMssAdjustVariable = defaults.tcpMssAdjustVariable;
@@ -1052,6 +1080,22 @@ public final class GetSseZscalerFeatureInterface {
             return this;
         }
         @CustomType.Setter
+        public Builder preSharedSecretWo(String preSharedSecretWo) {
+            if (preSharedSecretWo == null) {
+              throw new MissingRequiredPropertyException("GetSseZscalerFeatureInterface", "preSharedSecretWo");
+            }
+            this.preSharedSecretWo = preSharedSecretWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder preSharedSecretWoVersion(Integer preSharedSecretWoVersion) {
+            if (preSharedSecretWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSseZscalerFeatureInterface", "preSharedSecretWoVersion");
+            }
+            this.preSharedSecretWoVersion = preSharedSecretWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder shutdown(Boolean shutdown) {
             if (shutdown == null) {
               throw new MissingRequiredPropertyException("GetSseZscalerFeatureInterface", "shutdown");
@@ -1232,6 +1276,8 @@ public final class GetSseZscalerFeatureInterface {
             _resultValue.preSharedKeyDynamic = preSharedKeyDynamic;
             _resultValue.preSharedSecret = preSharedSecret;
             _resultValue.preSharedSecretVariable = preSharedSecretVariable;
+            _resultValue.preSharedSecretWo = preSharedSecretWo;
+            _resultValue.preSharedSecretWoVersion = preSharedSecretWoVersion;
             _resultValue.shutdown = shutdown;
             _resultValue.tcpMssAdjust = tcpMssAdjust;
             _resultValue.tcpMssAdjustVariable = tcpMssAdjustVariable;

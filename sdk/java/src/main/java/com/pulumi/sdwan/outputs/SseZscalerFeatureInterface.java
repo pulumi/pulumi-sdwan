@@ -201,6 +201,8 @@ public final class SseZscalerFeatureInterface {
     private @Nullable Boolean preSharedKeyDynamic;
     /**
      * @return Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
      * 
      */
     private @Nullable String preSharedSecret;
@@ -209,6 +211,18 @@ public final class SseZscalerFeatureInterface {
      * 
      */
     private @Nullable String preSharedSecretVariable;
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     * 
+     */
+    private @Nullable String preSharedSecretWo;
+    /**
+     * @return Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private @Nullable Integer preSharedSecretWoVersion;
     /**
      * @return Administrative state
      *   - Default value: `false`
@@ -562,6 +576,8 @@ public final class SseZscalerFeatureInterface {
     }
     /**
      * @return Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<String> preSharedSecret() {
@@ -573,6 +589,22 @@ public final class SseZscalerFeatureInterface {
      */
     public Optional<String> preSharedSecretVariable() {
         return Optional.ofNullable(this.preSharedSecretVariable);
+    }
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     * 
+     */
+    public Optional<String> preSharedSecretWo() {
+        return Optional.ofNullable(this.preSharedSecretWo);
+    }
+    /**
+     * @return Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Integer> preSharedSecretWoVersion() {
+        return Optional.ofNullable(this.preSharedSecretWoVersion);
     }
     /**
      * @return Administrative state
@@ -752,6 +784,8 @@ public final class SseZscalerFeatureInterface {
         private @Nullable Boolean preSharedKeyDynamic;
         private @Nullable String preSharedSecret;
         private @Nullable String preSharedSecretVariable;
+        private @Nullable String preSharedSecretWo;
+        private @Nullable Integer preSharedSecretWoVersion;
         private @Nullable Boolean shutdown;
         private @Nullable Integer tcpMssAdjust;
         private @Nullable String tcpMssAdjustVariable;
@@ -808,6 +842,8 @@ public final class SseZscalerFeatureInterface {
     	      this.preSharedKeyDynamic = defaults.preSharedKeyDynamic;
     	      this.preSharedSecret = defaults.preSharedSecret;
     	      this.preSharedSecretVariable = defaults.preSharedSecretVariable;
+    	      this.preSharedSecretWo = defaults.preSharedSecretWo;
+    	      this.preSharedSecretWoVersion = defaults.preSharedSecretWoVersion;
     	      this.shutdown = defaults.shutdown;
     	      this.tcpMssAdjust = defaults.tcpMssAdjust;
     	      this.tcpMssAdjustVariable = defaults.tcpMssAdjustVariable;
@@ -1039,6 +1075,18 @@ public final class SseZscalerFeatureInterface {
             return this;
         }
         @CustomType.Setter
+        public Builder preSharedSecretWo(@Nullable String preSharedSecretWo) {
+
+            this.preSharedSecretWo = preSharedSecretWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder preSharedSecretWoVersion(@Nullable Integer preSharedSecretWoVersion) {
+
+            this.preSharedSecretWoVersion = preSharedSecretWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder shutdown(@Nullable Boolean shutdown) {
 
             this.shutdown = shutdown;
@@ -1183,6 +1231,8 @@ public final class SseZscalerFeatureInterface {
             _resultValue.preSharedKeyDynamic = preSharedKeyDynamic;
             _resultValue.preSharedSecret = preSharedSecret;
             _resultValue.preSharedSecretVariable = preSharedSecretVariable;
+            _resultValue.preSharedSecretWo = preSharedSecretWo;
+            _resultValue.preSharedSecretWoVersion = preSharedSecretWoVersion;
             _resultValue.shutdown = shutdown;
             _resultValue.tcpMssAdjust = tcpMssAdjust;
             _resultValue.tcpMssAdjustVariable = tcpMssAdjustVariable;

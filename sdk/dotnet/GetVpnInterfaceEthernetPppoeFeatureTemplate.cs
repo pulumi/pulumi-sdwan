@@ -450,6 +450,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string SecondaryRegionVariable;
         /// <summary>
+        /// Service Provider Name
+        /// </summary>
+        public readonly string ServiceProviderName;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string ServiceProviderNameVariable;
+        /// <summary>
         /// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
         /// </summary>
         public readonly int ShapingRate;
@@ -932,6 +940,10 @@ namespace Pulumi.Sdwan
 
             string secondaryRegionVariable,
 
+            string serviceProviderName,
+
+            string serviceProviderNameVariable,
+
             int shapingRate,
 
             string shapingRateVariable,
@@ -1172,6 +1184,8 @@ namespace Pulumi.Sdwan
             QosMapVpnVariable = qosMapVpnVariable;
             SecondaryRegion = secondaryRegion;
             SecondaryRegionVariable = secondaryRegionVariable;
+            ServiceProviderName = serviceProviderName;
+            ServiceProviderNameVariable = serviceProviderNameVariable;
             ShapingRate = shapingRate;
             ShapingRateVariable = shapingRateVariable;
             Shutdown = shutdown;

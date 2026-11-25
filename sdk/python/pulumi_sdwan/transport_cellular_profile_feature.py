@@ -34,6 +34,8 @@ class TransportCellularProfileFeatureArgs:
                  profile_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_password: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  profile_username: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  requires_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -62,7 +64,13 @@ class TransportCellularProfileFeatureArgs:
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
         :param pulumi.Input[_builtins.str] profile_password: Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
+                 - Only one of `profile_password`, `profile_password_variable` and `profile_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `profile_password_wo` together with `profile_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
+                 - Only one of `profile_password`, `profile_password_variable` and `profile_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] profile_password_wo_version: Rotation trigger for `profile_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.bool] requires_authentication: Require authentication type
@@ -102,6 +110,10 @@ class TransportCellularProfileFeatureArgs:
             pulumi.set(__self__, "profile_password", profile_password)
         if profile_password_variable is not None:
             pulumi.set(__self__, "profile_password_variable", profile_password_variable)
+        if profile_password_wo is not None:
+            pulumi.set(__self__, "profile_password_wo", profile_password_wo)
+        if profile_password_wo_version is not None:
+            pulumi.set(__self__, "profile_password_wo_version", profile_password_wo_version)
         if profile_username is not None:
             pulumi.set(__self__, "profile_username", profile_username)
         if profile_username_variable is not None:
@@ -282,6 +294,8 @@ class TransportCellularProfileFeatureArgs:
     def profile_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
+          - Only one of `profile_password`, `profile_password_variable` and `profile_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `profile_password_wo` together with `profile_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "profile_password")
 
@@ -300,6 +314,32 @@ class TransportCellularProfileFeatureArgs:
     @profile_password_variable.setter
     def profile_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_password_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="profilePasswordWo")
+    def profile_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
+          - Only one of `profile_password`, `profile_password_variable` and `profile_password_wo` can be set.
+        """
+        return pulumi.get(self, "profile_password_wo")
+
+    @profile_password_wo.setter
+    def profile_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "profile_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="profilePasswordWoVersion")
+    def profile_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `profile_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "profile_password_wo_version")
+
+    @profile_password_wo_version.setter
+    def profile_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "profile_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="profileUsername")
@@ -406,6 +446,8 @@ class _TransportCellularProfileFeatureState:
                  profile_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_password: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  profile_username: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  requires_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -435,7 +477,13 @@ class _TransportCellularProfileFeatureState:
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
         :param pulumi.Input[_builtins.str] profile_password: Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
+                 - Only one of `profile_password`, `profile_password_variable` and `profile_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `profile_password_wo` together with `profile_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
+                 - Only one of `profile_password`, `profile_password_variable` and `profile_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] profile_password_wo_version: Rotation trigger for `profile_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.bool] requires_authentication: Require authentication type
@@ -477,6 +525,10 @@ class _TransportCellularProfileFeatureState:
             pulumi.set(__self__, "profile_password", profile_password)
         if profile_password_variable is not None:
             pulumi.set(__self__, "profile_password_variable", profile_password_variable)
+        if profile_password_wo is not None:
+            pulumi.set(__self__, "profile_password_wo", profile_password_wo)
+        if profile_password_wo_version is not None:
+            pulumi.set(__self__, "profile_password_wo_version", profile_password_wo_version)
         if profile_username is not None:
             pulumi.set(__self__, "profile_username", profile_username)
         if profile_username_variable is not None:
@@ -659,6 +711,8 @@ class _TransportCellularProfileFeatureState:
     def profile_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
+          - Only one of `profile_password`, `profile_password_variable` and `profile_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `profile_password_wo` together with `profile_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "profile_password")
 
@@ -677,6 +731,32 @@ class _TransportCellularProfileFeatureState:
     @profile_password_variable.setter
     def profile_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_password_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="profilePasswordWo")
+    def profile_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
+          - Only one of `profile_password`, `profile_password_variable` and `profile_password_wo` can be set.
+        """
+        return pulumi.get(self, "profile_password_wo")
+
+    @profile_password_wo.setter
+    def profile_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "profile_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="profilePasswordWoVersion")
+    def profile_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `profile_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "profile_password_wo_version")
+
+    @profile_password_wo_version.setter
+    def profile_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "profile_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="profileUsername")
@@ -798,6 +878,8 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
                  profile_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_password: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  profile_username: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  requires_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -863,7 +945,13 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
         :param pulumi.Input[_builtins.str] profile_password: Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
+                 - Only one of `profile_password`, `profile_password_variable` and `profile_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `profile_password_wo` together with `profile_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
+                 - Only one of `profile_password`, `profile_password_variable` and `profile_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] profile_password_wo_version: Rotation trigger for `profile_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.bool] requires_authentication: Require authentication type
@@ -947,6 +1035,8 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
                  profile_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_password: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  profile_username: pulumi.Input[Optional[_builtins.str]] = None,
                  profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  requires_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -978,8 +1068,10 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
             __props__.__dict__["packet_data_network_type_variable"] = packet_data_network_type_variable
             __props__.__dict__["profile_id"] = profile_id
             __props__.__dict__["profile_id_variable"] = profile_id_variable
-            __props__.__dict__["profile_password"] = profile_password
+            __props__.__dict__["profile_password"] = None if profile_password is None else pulumi.Output.secret(profile_password)
             __props__.__dict__["profile_password_variable"] = profile_password_variable
+            __props__.__dict__["profile_password_wo"] = None if profile_password_wo is None else pulumi.Output.secret(profile_password_wo)
+            __props__.__dict__["profile_password_wo_version"] = profile_password_wo_version
             __props__.__dict__["profile_username"] = profile_username
             __props__.__dict__["profile_username_variable"] = profile_username_variable
             __props__.__dict__["requires_authentication"] = requires_authentication
@@ -988,6 +1080,8 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
             __props__.__dict__["slice_type"] = slice_type
             __props__.__dict__["slice_type_variable"] = slice_type_variable
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["profilePassword", "profilePasswordWo"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(TransportCellularProfileFeature, __self__).__init__(
             'sdwan:index/transportCellularProfileFeature:TransportCellularProfileFeature',
             resource_name,
@@ -1013,6 +1107,8 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
             profile_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
             profile_password: pulumi.Input[Optional[_builtins.str]] = None,
             profile_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             profile_username: pulumi.Input[Optional[_builtins.str]] = None,
             profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
             requires_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1046,7 +1142,13 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
         :param pulumi.Input[_builtins.str] profile_password: Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
+                 - Only one of `profile_password`, `profile_password_variable` and `profile_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `profile_password_wo` together with `profile_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
+                 - Only one of `profile_password`, `profile_password_variable` and `profile_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] profile_password_wo_version: Rotation trigger for `profile_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.bool] requires_authentication: Require authentication type
@@ -1077,6 +1179,8 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         __props__.__dict__["profile_id_variable"] = profile_id_variable
         __props__.__dict__["profile_password"] = profile_password
         __props__.__dict__["profile_password_variable"] = profile_password_variable
+        __props__.__dict__["profile_password_wo"] = profile_password_wo
+        __props__.__dict__["profile_password_wo_version"] = profile_password_wo_version
         __props__.__dict__["profile_username"] = profile_username
         __props__.__dict__["profile_username_variable"] = profile_username_variable
         __props__.__dict__["requires_authentication"] = requires_authentication
@@ -1105,6 +1209,8 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
             profile_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
             profile_password: pulumi.Input[Optional[_builtins.str]] = None,
             profile_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             profile_username: pulumi.Input[Optional[_builtins.str]] = None,
             profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
             requires_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1129,6 +1235,8 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         __props__["profileIdVariable"] = profile_id_variable
         __props__["profilePassword"] = profile_password
         __props__["profilePasswordVariable"] = profile_password_variable
+        __props__["profilePasswordWo"] = profile_password_wo
+        __props__["profilePasswordWoVersion"] = profile_password_wo_version
         __props__["profileUsername"] = profile_username
         __props__["profileUsernameVariable"] = profile_username_variable
         __props__["requiresAuthentication"] = requires_authentication
@@ -1252,6 +1360,8 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
     def profile_password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
+          - Only one of `profile_password`, `profile_password_variable` and `profile_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `profile_password_wo` together with `profile_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "profile_password")
 
@@ -1262,6 +1372,24 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         Variable name, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="profilePasswordWo")
+    def profile_password_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
+          - Only one of `profile_password`, `profile_password_variable` and `profile_password_wo` can be set.
+        """
+        return pulumi.get(self, "profile_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="profilePasswordWoVersion")
+    def profile_password_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `profile_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "profile_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="profileUsername")

@@ -140,12 +140,24 @@ export class ServiceRoutingEigrpFeature extends pulumi.CustomResource {
     declare public readonly helloIntervalVariable: pulumi.Output<string | undefined>;
     /**
      * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+     *   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `hmacAuthenticationKeyWo` together with `hmacAuthenticationKeyWoVersion`, which keeps it out of state.
      */
     declare public readonly hmacAuthenticationKey: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
      */
     declare public readonly hmacAuthenticationKeyVariable: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+     *   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+     */
+    declare public readonly hmacAuthenticationKeyWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly hmacAuthenticationKeyWoVersion: pulumi.Output<number | undefined>;
     /**
      * Set EIGRP hold time
      *   - Range: `0`-`65535`
@@ -207,6 +219,8 @@ export class ServiceRoutingEigrpFeature extends pulumi.CustomResource {
             resourceInputs["helloIntervalVariable"] = state?.helloIntervalVariable;
             resourceInputs["hmacAuthenticationKey"] = state?.hmacAuthenticationKey;
             resourceInputs["hmacAuthenticationKeyVariable"] = state?.hmacAuthenticationKeyVariable;
+            resourceInputs["hmacAuthenticationKeyWo"] = state?.hmacAuthenticationKeyWo;
+            resourceInputs["hmacAuthenticationKeyWoVersion"] = state?.hmacAuthenticationKeyWoVersion;
             resourceInputs["holdTime"] = state?.holdTime;
             resourceInputs["holdTimeVariable"] = state?.holdTimeVariable;
             resourceInputs["interfaces"] = state?.interfaces;
@@ -234,8 +248,10 @@ export class ServiceRoutingEigrpFeature extends pulumi.CustomResource {
             resourceInputs["filterVariable"] = args?.filterVariable;
             resourceInputs["helloInterval"] = args?.helloInterval;
             resourceInputs["helloIntervalVariable"] = args?.helloIntervalVariable;
-            resourceInputs["hmacAuthenticationKey"] = args?.hmacAuthenticationKey;
+            resourceInputs["hmacAuthenticationKey"] = args?.hmacAuthenticationKey ? pulumi.secret(args.hmacAuthenticationKey) : undefined;
             resourceInputs["hmacAuthenticationKeyVariable"] = args?.hmacAuthenticationKeyVariable;
+            resourceInputs["hmacAuthenticationKeyWo"] = args?.hmacAuthenticationKeyWo ? pulumi.secret(args.hmacAuthenticationKeyWo) : undefined;
+            resourceInputs["hmacAuthenticationKeyWoVersion"] = args?.hmacAuthenticationKeyWoVersion;
             resourceInputs["holdTime"] = args?.holdTime;
             resourceInputs["holdTimeVariable"] = args?.holdTimeVariable;
             resourceInputs["interfaces"] = args?.interfaces;
@@ -247,6 +263,8 @@ export class ServiceRoutingEigrpFeature extends pulumi.CustomResource {
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["hmacAuthenticationKey", "hmacAuthenticationKeyWo"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(ServiceRoutingEigrpFeature.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -302,12 +320,24 @@ export interface ServiceRoutingEigrpFeatureState {
     helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+     *   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `hmacAuthenticationKeyWo` together with `hmacAuthenticationKeyWoVersion`, which keeps it out of state.
      */
     hmacAuthenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
      */
     hmacAuthenticationKeyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+     *   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+     */
+    hmacAuthenticationKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    hmacAuthenticationKeyWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set EIGRP hold time
      *   - Range: `0`-`65535`
@@ -396,12 +426,24 @@ export interface ServiceRoutingEigrpFeatureArgs {
     helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+     *   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `hmacAuthenticationKeyWo` together with `hmacAuthenticationKeyWoVersion`, which keeps it out of state.
      */
     hmacAuthenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
      */
     hmacAuthenticationKeyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
+     *   - Only one of `hmacAuthenticationKey`, `hmacAuthenticationKeyVariable` and `hmacAuthenticationKeyWo` can be set.
+     */
+    hmacAuthenticationKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    hmacAuthenticationKeyWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Set EIGRP hold time
      *   - Range: `0`-`65535`

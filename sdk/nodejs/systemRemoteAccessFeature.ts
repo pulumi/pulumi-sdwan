@@ -116,11 +116,24 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      * Variable name
      */
     declare public readonly aaaSpecifyNamePolicyNameVariable: pulumi.Output<string | undefined>;
+    /**
+     * - Only one of `aaaSpecifyNamePolicyPassword`, `aaaSpecifyNamePolicyPasswordVariable` and `aaaSpecifyNamePolicyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `aaaSpecifyNamePolicyPasswordWo` together with `aaaSpecifyNamePolicyPasswordWoVersion`, which keeps it out of state.
+     */
     declare public readonly aaaSpecifyNamePolicyPassword: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
     declare public readonly aaaSpecifyNamePolicyPasswordVariable: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * - Only one of `aaaSpecifyNamePolicyPassword`, `aaaSpecifyNamePolicyPasswordVariable` and `aaaSpecifyNamePolicyPasswordWo` can be set.
+     */
+    declare public readonly aaaSpecifyNamePolicyPasswordWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `aaaSpecifyNamePolicyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly aaaSpecifyNamePolicyPasswordWoVersion: pulumi.Output<number | undefined>;
     /**
      * , Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `user`, `device`
@@ -245,12 +258,24 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` equal to `group`
+     *   - Only one of `pskAuthenticationPreSharedKey`, `pskAuthenticationPreSharedKeyVariable` and `pskAuthenticationPreSharedKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `pskAuthenticationPreSharedKeyWo` together with `pskAuthenticationPreSharedKeyWoVersion`, which keeps it out of state.
      */
     declare public readonly pskAuthenticationPreSharedKey: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `pskAuthenticationType` equal to `group`
      */
     declare public readonly pskAuthenticationPreSharedKeyVariable: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` equal to `group`
+     *   - Only one of `pskAuthenticationPreSharedKey`, `pskAuthenticationPreSharedKeyVariable` and `pskAuthenticationPreSharedKeyWo` can be set.
+     */
+    declare public readonly pskAuthenticationPreSharedKeyWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `pskAuthenticationPreSharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly pskAuthenticationPreSharedKeyWoVersion: pulumi.Output<number | undefined>;
     /**
      * PSK Selection, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `aaa`, `group`
@@ -293,6 +318,8 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
             resourceInputs["aaaSpecifyNamePolicyNameVariable"] = state?.aaaSpecifyNamePolicyNameVariable;
             resourceInputs["aaaSpecifyNamePolicyPassword"] = state?.aaaSpecifyNamePolicyPassword;
             resourceInputs["aaaSpecifyNamePolicyPasswordVariable"] = state?.aaaSpecifyNamePolicyPasswordVariable;
+            resourceInputs["aaaSpecifyNamePolicyPasswordWo"] = state?.aaaSpecifyNamePolicyPasswordWo;
+            resourceInputs["aaaSpecifyNamePolicyPasswordWoVersion"] = state?.aaaSpecifyNamePolicyPasswordWoVersion;
             resourceInputs["anyConnectEapAuthenticationType"] = state?.anyConnectEapAuthenticationType;
             resourceInputs["connectionTypeSsl"] = state?.connectionTypeSsl;
             resourceInputs["description"] = state?.description;
@@ -322,6 +349,8 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
             resourceInputs["name"] = state?.name;
             resourceInputs["pskAuthenticationPreSharedKey"] = state?.pskAuthenticationPreSharedKey;
             resourceInputs["pskAuthenticationPreSharedKeyVariable"] = state?.pskAuthenticationPreSharedKeyVariable;
+            resourceInputs["pskAuthenticationPreSharedKeyWo"] = state?.pskAuthenticationPreSharedKeyWo;
+            resourceInputs["pskAuthenticationPreSharedKeyWoVersion"] = state?.pskAuthenticationPreSharedKeyWoVersion;
             resourceInputs["pskAuthenticationType"] = state?.pskAuthenticationType;
             resourceInputs["pskAuthenticationTypeVariable"] = state?.pskAuthenticationTypeVariable;
             resourceInputs["radiusGroupName"] = state?.radiusGroupName;
@@ -343,8 +372,10 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
             resourceInputs["aaaEnableAccountingVariable"] = args?.aaaEnableAccountingVariable;
             resourceInputs["aaaSpecifyNamePolicyName"] = args?.aaaSpecifyNamePolicyName;
             resourceInputs["aaaSpecifyNamePolicyNameVariable"] = args?.aaaSpecifyNamePolicyNameVariable;
-            resourceInputs["aaaSpecifyNamePolicyPassword"] = args?.aaaSpecifyNamePolicyPassword;
+            resourceInputs["aaaSpecifyNamePolicyPassword"] = args?.aaaSpecifyNamePolicyPassword ? pulumi.secret(args.aaaSpecifyNamePolicyPassword) : undefined;
             resourceInputs["aaaSpecifyNamePolicyPasswordVariable"] = args?.aaaSpecifyNamePolicyPasswordVariable;
+            resourceInputs["aaaSpecifyNamePolicyPasswordWo"] = args?.aaaSpecifyNamePolicyPasswordWo ? pulumi.secret(args.aaaSpecifyNamePolicyPasswordWo) : undefined;
+            resourceInputs["aaaSpecifyNamePolicyPasswordWoVersion"] = args?.aaaSpecifyNamePolicyPasswordWoVersion;
             resourceInputs["anyConnectEapAuthenticationType"] = args?.anyConnectEapAuthenticationType;
             resourceInputs["connectionTypeSsl"] = args?.connectionTypeSsl;
             resourceInputs["description"] = args?.description;
@@ -372,8 +403,10 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
             resourceInputs["ipv6PoolSize"] = args?.ipv6PoolSize;
             resourceInputs["ipv6PoolSizeVariable"] = args?.ipv6PoolSizeVariable;
             resourceInputs["name"] = args?.name;
-            resourceInputs["pskAuthenticationPreSharedKey"] = args?.pskAuthenticationPreSharedKey;
+            resourceInputs["pskAuthenticationPreSharedKey"] = args?.pskAuthenticationPreSharedKey ? pulumi.secret(args.pskAuthenticationPreSharedKey) : undefined;
             resourceInputs["pskAuthenticationPreSharedKeyVariable"] = args?.pskAuthenticationPreSharedKeyVariable;
+            resourceInputs["pskAuthenticationPreSharedKeyWo"] = args?.pskAuthenticationPreSharedKeyWo ? pulumi.secret(args.pskAuthenticationPreSharedKeyWo) : undefined;
+            resourceInputs["pskAuthenticationPreSharedKeyWoVersion"] = args?.pskAuthenticationPreSharedKeyWoVersion;
             resourceInputs["pskAuthenticationType"] = args?.pskAuthenticationType;
             resourceInputs["pskAuthenticationTypeVariable"] = args?.pskAuthenticationTypeVariable;
             resourceInputs["radiusGroupName"] = args?.radiusGroupName;
@@ -381,6 +414,8 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["aaaSpecifyNamePolicyPassword", "aaaSpecifyNamePolicyPasswordWo", "pskAuthenticationPreSharedKey", "pskAuthenticationPreSharedKeyWo"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(SystemRemoteAccessFeature.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -419,11 +454,24 @@ export interface SystemRemoteAccessFeatureState {
      * Variable name
      */
     aaaSpecifyNamePolicyNameVariable?: pulumi.Input<string | undefined>;
+    /**
+     * - Only one of `aaaSpecifyNamePolicyPassword`, `aaaSpecifyNamePolicyPasswordVariable` and `aaaSpecifyNamePolicyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `aaaSpecifyNamePolicyPasswordWo` together with `aaaSpecifyNamePolicyPasswordWoVersion`, which keeps it out of state.
+     */
     aaaSpecifyNamePolicyPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     aaaSpecifyNamePolicyPasswordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * - Only one of `aaaSpecifyNamePolicyPassword`, `aaaSpecifyNamePolicyPasswordVariable` and `aaaSpecifyNamePolicyPasswordWo` can be set.
+     */
+    aaaSpecifyNamePolicyPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `aaaSpecifyNamePolicyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    aaaSpecifyNamePolicyPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * , Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `user`, `device`
@@ -548,12 +596,24 @@ export interface SystemRemoteAccessFeatureState {
     name?: pulumi.Input<string | undefined>;
     /**
      * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` equal to `group`
+     *   - Only one of `pskAuthenticationPreSharedKey`, `pskAuthenticationPreSharedKeyVariable` and `pskAuthenticationPreSharedKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `pskAuthenticationPreSharedKeyWo` together with `pskAuthenticationPreSharedKeyWoVersion`, which keeps it out of state.
      */
     pskAuthenticationPreSharedKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `pskAuthenticationType` equal to `group`
      */
     pskAuthenticationPreSharedKeyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` equal to `group`
+     *   - Only one of `pskAuthenticationPreSharedKey`, `pskAuthenticationPreSharedKeyVariable` and `pskAuthenticationPreSharedKeyWo` can be set.
+     */
+    pskAuthenticationPreSharedKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `pskAuthenticationPreSharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    pskAuthenticationPreSharedKeyWoVersion?: pulumi.Input<number | undefined>;
     /**
      * PSK Selection, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `aaa`, `group`
@@ -608,11 +668,24 @@ export interface SystemRemoteAccessFeatureArgs {
      * Variable name
      */
     aaaSpecifyNamePolicyNameVariable?: pulumi.Input<string | undefined>;
+    /**
+     * - Only one of `aaaSpecifyNamePolicyPassword`, `aaaSpecifyNamePolicyPasswordVariable` and `aaaSpecifyNamePolicyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `aaaSpecifyNamePolicyPasswordWo` together with `aaaSpecifyNamePolicyPasswordWoVersion`, which keeps it out of state.
+     */
     aaaSpecifyNamePolicyPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     aaaSpecifyNamePolicyPasswordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * - Only one of `aaaSpecifyNamePolicyPassword`, `aaaSpecifyNamePolicyPasswordVariable` and `aaaSpecifyNamePolicyPasswordWo` can be set.
+     */
+    aaaSpecifyNamePolicyPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `aaaSpecifyNamePolicyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    aaaSpecifyNamePolicyPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * , Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `user`, `device`
@@ -737,12 +810,24 @@ export interface SystemRemoteAccessFeatureArgs {
     name?: pulumi.Input<string | undefined>;
     /**
      * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` equal to `group`
+     *   - Only one of `pskAuthenticationPreSharedKey`, `pskAuthenticationPreSharedKeyVariable` and `pskAuthenticationPreSharedKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `pskAuthenticationPreSharedKeyWo` together with `pskAuthenticationPreSharedKeyWoVersion`, which keeps it out of state.
      */
     pskAuthenticationPreSharedKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `pskAuthenticationType` equal to `group`
      */
     pskAuthenticationPreSharedKeyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` equal to `group`
+     *   - Only one of `pskAuthenticationPreSharedKey`, `pskAuthenticationPreSharedKeyVariable` and `pskAuthenticationPreSharedKeyWo` can be set.
+     */
+    pskAuthenticationPreSharedKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `pskAuthenticationPreSharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    pskAuthenticationPreSharedKeyWoVersion?: pulumi.Input<number | undefined>;
     /**
      * PSK Selection, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `aaa`, `group`

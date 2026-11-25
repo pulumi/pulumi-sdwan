@@ -46,6 +46,12 @@ public final class GetSystemRemoteAccessFeatureResult {
      * 
      */
     private String aaaSpecifyNamePolicyPasswordVariable;
+    private String aaaSpecifyNamePolicyPasswordWo;
+    /**
+     * @return Rotation trigger for `aaaSpecifyNamePolicyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer aaaSpecifyNamePolicyPasswordWoVersion;
     private String anyConnectEapAuthenticationType;
     /**
      * @return Enabled SSL VPN
@@ -181,6 +187,16 @@ public final class GetSystemRemoteAccessFeatureResult {
      */
     private String pskAuthenticationPreSharedKeyVariable;
     /**
+     * @return PSK Pre Shared Key
+     * 
+     */
+    private String pskAuthenticationPreSharedKeyWo;
+    /**
+     * @return Rotation trigger for `pskAuthenticationPreSharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer pskAuthenticationPreSharedKeyWoVersion;
+    /**
      * @return PSK Selection
      * 
      */
@@ -256,6 +272,16 @@ public final class GetSystemRemoteAccessFeatureResult {
      */
     public String aaaSpecifyNamePolicyPasswordVariable() {
         return this.aaaSpecifyNamePolicyPasswordVariable;
+    }
+    public String aaaSpecifyNamePolicyPasswordWo() {
+        return this.aaaSpecifyNamePolicyPasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `aaaSpecifyNamePolicyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer aaaSpecifyNamePolicyPasswordWoVersion() {
+        return this.aaaSpecifyNamePolicyPasswordWoVersion;
     }
     public String anyConnectEapAuthenticationType() {
         return this.anyConnectEapAuthenticationType;
@@ -452,6 +478,20 @@ public final class GetSystemRemoteAccessFeatureResult {
         return this.pskAuthenticationPreSharedKeyVariable;
     }
     /**
+     * @return PSK Pre Shared Key
+     * 
+     */
+    public String pskAuthenticationPreSharedKeyWo() {
+        return this.pskAuthenticationPreSharedKeyWo;
+    }
+    /**
+     * @return Rotation trigger for `pskAuthenticationPreSharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer pskAuthenticationPreSharedKeyWoVersion() {
+        return this.pskAuthenticationPreSharedKeyWoVersion;
+    }
+    /**
      * @return PSK Selection
      * 
      */
@@ -502,6 +542,8 @@ public final class GetSystemRemoteAccessFeatureResult {
         private String aaaSpecifyNamePolicyNameVariable;
         private String aaaSpecifyNamePolicyPassword;
         private String aaaSpecifyNamePolicyPasswordVariable;
+        private String aaaSpecifyNamePolicyPasswordWo;
+        private Integer aaaSpecifyNamePolicyPasswordWoVersion;
         private String anyConnectEapAuthenticationType;
         private Boolean connectionTypeSsl;
         private String description;
@@ -532,6 +574,8 @@ public final class GetSystemRemoteAccessFeatureResult {
         private String name;
         private String pskAuthenticationPreSharedKey;
         private String pskAuthenticationPreSharedKeyVariable;
+        private String pskAuthenticationPreSharedKeyWo;
+        private Integer pskAuthenticationPreSharedKeyWoVersion;
         private String pskAuthenticationType;
         private String pskAuthenticationTypeVariable;
         private String radiusGroupName;
@@ -550,6 +594,8 @@ public final class GetSystemRemoteAccessFeatureResult {
     	      this.aaaSpecifyNamePolicyNameVariable = defaults.aaaSpecifyNamePolicyNameVariable;
     	      this.aaaSpecifyNamePolicyPassword = defaults.aaaSpecifyNamePolicyPassword;
     	      this.aaaSpecifyNamePolicyPasswordVariable = defaults.aaaSpecifyNamePolicyPasswordVariable;
+    	      this.aaaSpecifyNamePolicyPasswordWo = defaults.aaaSpecifyNamePolicyPasswordWo;
+    	      this.aaaSpecifyNamePolicyPasswordWoVersion = defaults.aaaSpecifyNamePolicyPasswordWoVersion;
     	      this.anyConnectEapAuthenticationType = defaults.anyConnectEapAuthenticationType;
     	      this.connectionTypeSsl = defaults.connectionTypeSsl;
     	      this.description = defaults.description;
@@ -580,6 +626,8 @@ public final class GetSystemRemoteAccessFeatureResult {
     	      this.name = defaults.name;
     	      this.pskAuthenticationPreSharedKey = defaults.pskAuthenticationPreSharedKey;
     	      this.pskAuthenticationPreSharedKeyVariable = defaults.pskAuthenticationPreSharedKeyVariable;
+    	      this.pskAuthenticationPreSharedKeyWo = defaults.pskAuthenticationPreSharedKeyWo;
+    	      this.pskAuthenticationPreSharedKeyWoVersion = defaults.pskAuthenticationPreSharedKeyWoVersion;
     	      this.pskAuthenticationType = defaults.pskAuthenticationType;
     	      this.pskAuthenticationTypeVariable = defaults.pskAuthenticationTypeVariable;
     	      this.radiusGroupName = defaults.radiusGroupName;
@@ -665,6 +713,22 @@ public final class GetSystemRemoteAccessFeatureResult {
               throw new MissingRequiredPropertyException("GetSystemRemoteAccessFeatureResult", "aaaSpecifyNamePolicyPasswordVariable");
             }
             this.aaaSpecifyNamePolicyPasswordVariable = aaaSpecifyNamePolicyPasswordVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder aaaSpecifyNamePolicyPasswordWo(String aaaSpecifyNamePolicyPasswordWo) {
+            if (aaaSpecifyNamePolicyPasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetSystemRemoteAccessFeatureResult", "aaaSpecifyNamePolicyPasswordWo");
+            }
+            this.aaaSpecifyNamePolicyPasswordWo = aaaSpecifyNamePolicyPasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder aaaSpecifyNamePolicyPasswordWoVersion(Integer aaaSpecifyNamePolicyPasswordWoVersion) {
+            if (aaaSpecifyNamePolicyPasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSystemRemoteAccessFeatureResult", "aaaSpecifyNamePolicyPasswordWoVersion");
+            }
+            this.aaaSpecifyNamePolicyPasswordWoVersion = aaaSpecifyNamePolicyPasswordWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -908,6 +972,22 @@ public final class GetSystemRemoteAccessFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder pskAuthenticationPreSharedKeyWo(String pskAuthenticationPreSharedKeyWo) {
+            if (pskAuthenticationPreSharedKeyWo == null) {
+              throw new MissingRequiredPropertyException("GetSystemRemoteAccessFeatureResult", "pskAuthenticationPreSharedKeyWo");
+            }
+            this.pskAuthenticationPreSharedKeyWo = pskAuthenticationPreSharedKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder pskAuthenticationPreSharedKeyWoVersion(Integer pskAuthenticationPreSharedKeyWoVersion) {
+            if (pskAuthenticationPreSharedKeyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSystemRemoteAccessFeatureResult", "pskAuthenticationPreSharedKeyWoVersion");
+            }
+            this.pskAuthenticationPreSharedKeyWoVersion = pskAuthenticationPreSharedKeyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder pskAuthenticationType(String pskAuthenticationType) {
             if (pskAuthenticationType == null) {
               throw new MissingRequiredPropertyException("GetSystemRemoteAccessFeatureResult", "pskAuthenticationType");
@@ -959,6 +1039,8 @@ public final class GetSystemRemoteAccessFeatureResult {
             _resultValue.aaaSpecifyNamePolicyNameVariable = aaaSpecifyNamePolicyNameVariable;
             _resultValue.aaaSpecifyNamePolicyPassword = aaaSpecifyNamePolicyPassword;
             _resultValue.aaaSpecifyNamePolicyPasswordVariable = aaaSpecifyNamePolicyPasswordVariable;
+            _resultValue.aaaSpecifyNamePolicyPasswordWo = aaaSpecifyNamePolicyPasswordWo;
+            _resultValue.aaaSpecifyNamePolicyPasswordWoVersion = aaaSpecifyNamePolicyPasswordWoVersion;
             _resultValue.anyConnectEapAuthenticationType = anyConnectEapAuthenticationType;
             _resultValue.connectionTypeSsl = connectionTypeSsl;
             _resultValue.description = description;
@@ -989,6 +1071,8 @@ public final class GetSystemRemoteAccessFeatureResult {
             _resultValue.name = name;
             _resultValue.pskAuthenticationPreSharedKey = pskAuthenticationPreSharedKey;
             _resultValue.pskAuthenticationPreSharedKeyVariable = pskAuthenticationPreSharedKeyVariable;
+            _resultValue.pskAuthenticationPreSharedKeyWo = pskAuthenticationPreSharedKeyWo;
+            _resultValue.pskAuthenticationPreSharedKeyWoVersion = pskAuthenticationPreSharedKeyWoVersion;
             _resultValue.pskAuthenticationType = pskAuthenticationType;
             _resultValue.pskAuthenticationTypeVariable = pskAuthenticationTypeVariable;
             _resultValue.radiusGroupName = radiusGroupName;

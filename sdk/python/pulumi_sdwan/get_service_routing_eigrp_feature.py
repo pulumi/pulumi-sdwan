@@ -27,7 +27,7 @@ class GetServiceRoutingEigrpFeatureResult:
     """
     A collection of values returned by getServiceRoutingEigrpFeature.
     """
-    def __init__(__self__, authentication_type=None, authentication_type_variable=None, autonomous_system_id=None, autonomous_system_id_variable=None, description=None, feature_profile_id=None, filter=None, filter_variable=None, hello_interval=None, hello_interval_variable=None, hmac_authentication_key=None, hmac_authentication_key_variable=None, hold_time=None, hold_time_variable=None, id=None, interfaces=None, md5_keys=None, name=None, networks=None, redistributes=None, route_policy_id=None, version=None):
+    def __init__(__self__, authentication_type=None, authentication_type_variable=None, autonomous_system_id=None, autonomous_system_id_variable=None, description=None, feature_profile_id=None, filter=None, filter_variable=None, hello_interval=None, hello_interval_variable=None, hmac_authentication_key=None, hmac_authentication_key_variable=None, hmac_authentication_key_wo=None, hmac_authentication_key_wo_version=None, hold_time=None, hold_time_variable=None, id=None, interfaces=None, md5_keys=None, name=None, networks=None, redistributes=None, route_policy_id=None, version=None):
         if authentication_type and not isinstance(authentication_type, str):
             raise TypeError("Expected argument 'authentication_type' to be a str")
         pulumi.set(__self__, "authentication_type", authentication_type)
@@ -64,6 +64,12 @@ class GetServiceRoutingEigrpFeatureResult:
         if hmac_authentication_key_variable and not isinstance(hmac_authentication_key_variable, str):
             raise TypeError("Expected argument 'hmac_authentication_key_variable' to be a str")
         pulumi.set(__self__, "hmac_authentication_key_variable", hmac_authentication_key_variable)
+        if hmac_authentication_key_wo and not isinstance(hmac_authentication_key_wo, str):
+            raise TypeError("Expected argument 'hmac_authentication_key_wo' to be a str")
+        pulumi.set(__self__, "hmac_authentication_key_wo", hmac_authentication_key_wo)
+        if hmac_authentication_key_wo_version and not isinstance(hmac_authentication_key_wo_version, int):
+            raise TypeError("Expected argument 'hmac_authentication_key_wo_version' to be a int")
+        pulumi.set(__self__, "hmac_authentication_key_wo_version", hmac_authentication_key_wo_version)
         if hold_time and not isinstance(hold_time, int):
             raise TypeError("Expected argument 'hold_time' to be a int")
         pulumi.set(__self__, "hold_time", hold_time)
@@ -192,6 +198,22 @@ class GetServiceRoutingEigrpFeatureResult:
         return pulumi.get(self, "hmac_authentication_key_variable")
 
     @_builtins.property
+    @pulumi.getter(name="hmacAuthenticationKeyWo")
+    def hmac_authentication_key_wo(self) -> _builtins.str:
+        """
+        Set hmac-sha-256 authentication key
+        """
+        return pulumi.get(self, "hmac_authentication_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="hmacAuthenticationKeyWoVersion")
+    def hmac_authentication_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `hmac_authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "hmac_authentication_key_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="holdTime")
     def hold_time(self) -> _builtins.int:
         """
@@ -287,6 +309,8 @@ class AwaitableGetServiceRoutingEigrpFeatureResult(GetServiceRoutingEigrpFeature
             hello_interval_variable=self.hello_interval_variable,
             hmac_authentication_key=self.hmac_authentication_key,
             hmac_authentication_key_variable=self.hmac_authentication_key_variable,
+            hmac_authentication_key_wo=self.hmac_authentication_key_wo,
+            hmac_authentication_key_wo_version=self.hmac_authentication_key_wo_version,
             hold_time=self.hold_time,
             hold_time_variable=self.hold_time_variable,
             id=self.id,
@@ -341,6 +365,8 @@ def get_service_routing_eigrp_feature(feature_profile_id: Optional[_builtins.str
         hello_interval_variable=pulumi.get(__ret__, 'hello_interval_variable'),
         hmac_authentication_key=pulumi.get(__ret__, 'hmac_authentication_key'),
         hmac_authentication_key_variable=pulumi.get(__ret__, 'hmac_authentication_key_variable'),
+        hmac_authentication_key_wo=pulumi.get(__ret__, 'hmac_authentication_key_wo'),
+        hmac_authentication_key_wo_version=pulumi.get(__ret__, 'hmac_authentication_key_wo_version'),
         hold_time=pulumi.get(__ret__, 'hold_time'),
         hold_time_variable=pulumi.get(__ret__, 'hold_time_variable'),
         id=pulumi.get(__ret__, 'id'),
@@ -392,6 +418,8 @@ def get_service_routing_eigrp_feature_output(feature_profile_id: pulumi.Input[Op
         hello_interval_variable=pulumi.get(__response__, 'hello_interval_variable'),
         hmac_authentication_key=pulumi.get(__response__, 'hmac_authentication_key'),
         hmac_authentication_key_variable=pulumi.get(__response__, 'hmac_authentication_key_variable'),
+        hmac_authentication_key_wo=pulumi.get(__response__, 'hmac_authentication_key_wo'),
+        hmac_authentication_key_wo_version=pulumi.get(__response__, 'hmac_authentication_key_wo_version'),
         hold_time=pulumi.get(__response__, 'hold_time'),
         hold_time_variable=pulumi.get(__response__, 'hold_time_variable'),
         id=pulumi.get(__response__, 'id'),

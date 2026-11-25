@@ -129,6 +129,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ColorListPolicyObject{}
 	case "sdwan:index/configurationGroup:ConfigurationGroup":
 		r = &ConfigurationGroup{}
+	case "sdwan:index/configurationGroupDevices:ConfigurationGroupDevices":
+		r = &ConfigurationGroupDevices{}
 	case "sdwan:index/customApplication:CustomApplication":
 		r = &CustomApplication{}
 	case "sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition":
@@ -211,6 +213,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &PolicerPolicyObject{}
 	case "sdwan:index/policyGroup:PolicyGroup":
 		r = &PolicyGroup{}
+	case "sdwan:index/policyGroupDevices:PolicyGroupDevices":
+		r = &PolicyGroupDevices{}
 	case "sdwan:index/policyObjectAppProbeClass:PolicyObjectAppProbeClass":
 		r = &PolicyObjectAppProbeClass{}
 	case "sdwan:index/policyObjectApplicationList:PolicyObjectApplicationList":
@@ -253,6 +257,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &PolicyObjectSecurityIdentityList{}
 	case "sdwan:index/policyObjectSecurityIpsSignature:PolicyObjectSecurityIpsSignature":
 		r = &PolicyObjectSecurityIpsSignature{}
+	case "sdwan:index/policyObjectSecurityIpsSignatureSet:PolicyObjectSecurityIpsSignatureSet":
+		r = &PolicyObjectSecurityIpsSignatureSet{}
 	case "sdwan:index/policyObjectSecurityLocalApplicationList:PolicyObjectSecurityLocalApplicationList":
 		r = &PolicyObjectSecurityLocalApplicationList{}
 	case "sdwan:index/policyObjectSecurityLocalDomainList:PolicyObjectSecurityLocalDomainList":
@@ -387,6 +393,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ServiceTrackerGroupFeature{}
 	case "sdwan:index/serviceWirelessLanFeature:ServiceWirelessLanFeature":
 		r = &ServiceWirelessLanFeature{}
+	case "sdwan:index/sigFeature:SigFeature":
+		r = &SigFeature{}
 	case "sdwan:index/sigSecurityFeatureProfile:SigSecurityFeatureProfile":
 		r = &SigSecurityFeatureProfile{}
 	case "sdwan:index/siteListPolicyObject:SiteListPolicyObject":
@@ -515,6 +523,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature{}
 	case "sdwan:index/transportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature:TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature":
 		r = &TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature{}
+	case "sdwan:index/transportWanVpnInterfaceDslIpoeFeature:TransportWanVpnInterfaceDslIpoeFeature":
+		r = &TransportWanVpnInterfaceDslIpoeFeature{}
 	case "sdwan:index/transportWanVpnInterfaceEthernetFeature:TransportWanVpnInterfaceEthernetFeature":
 		r = &TransportWanVpnInterfaceEthernetFeature{}
 	case "sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature":
@@ -866,6 +876,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/configurationGroupDevices",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/customApplication",
 		&module{version},
 	)
@@ -1071,6 +1086,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/policyGroupDevices",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/policyObjectAppProbeClass",
 		&module{version},
 	)
@@ -1172,6 +1192,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/policyObjectSecurityIpsSignature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSecurityIpsSignatureSet",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -1511,6 +1536,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/sigFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/sigSecurityFeatureProfile",
 		&module{version},
 	)
@@ -1827,6 +1857,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/transportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/transportWanVpnInterfaceDslIpoeFeature",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

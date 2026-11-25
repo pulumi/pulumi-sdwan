@@ -29,7 +29,14 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string ProtocolVariable;
+        /// <summary>
+        /// Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+        /// </summary>
         public readonly string RoutePolicyId;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string RoutePolicyIdVariable;
         /// <summary>
         /// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
         /// </summary>
@@ -51,6 +58,8 @@ namespace Pulumi.Sdwan.Outputs
 
             string routePolicyId,
 
+            string routePolicyIdVariable,
+
             bool translateRibMetric,
 
             string translateRibMetricVariable)
@@ -60,6 +69,7 @@ namespace Pulumi.Sdwan.Outputs
             Protocol = protocol;
             ProtocolVariable = protocolVariable;
             RoutePolicyId = routePolicyId;
+            RoutePolicyIdVariable = routePolicyIdVariable;
             TranslateRibMetric = translateRibMetric;
             TranslateRibMetricVariable = translateRibMetricVariable;
         }

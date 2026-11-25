@@ -33,6 +33,8 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
 
     /**
      * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="key")
@@ -40,6 +42,8 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
 
     /**
      * @return Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> key() {
@@ -79,6 +83,40 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
     }
 
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     * 
+     */
+    @Import(name="keyWo")
+    private @Nullable Output<String> keyWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> keyWo() {
+        return Optional.ofNullable(this.keyWo);
+    }
+
+    /**
+     * Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="keyWoVersion")
+    private @Nullable Output<Integer> keyWoVersion;
+
+    /**
+     * @return Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> keyWoVersion() {
+        return Optional.ofNullable(this.keyWoVersion);
+    }
+
+    /**
      * TACACS Port
      *   - Range: `1`-`65535`
      *   - Default value: `49`
@@ -114,6 +152,8 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
 
     /**
      * Set the TACACS server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="secretKey")
@@ -121,6 +161,8 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
 
     /**
      * @return Set the TACACS server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> secretKey() {
@@ -140,6 +182,40 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
      */
     public Optional<Output<String>> secretKeyVariable() {
         return Optional.ofNullable(this.secretKeyVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the TACACS server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     * 
+     */
+    @Import(name="secretKeyWo")
+    private @Nullable Output<String> secretKeyWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the TACACS server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> secretKeyWo() {
+        return Optional.ofNullable(this.secretKeyWo);
+    }
+
+    /**
+     * Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="secretKeyWoVersion")
+    private @Nullable Output<Integer> secretKeyWoVersion;
+
+    /**
+     * @return Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> secretKeyWoVersion() {
+        return Optional.ofNullable(this.secretKeyWoVersion);
     }
 
     /**
@@ -183,10 +259,14 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
         this.key = $.key;
         this.keyEnum = $.keyEnum;
         this.keyVariable = $.keyVariable;
+        this.keyWo = $.keyWo;
+        this.keyWoVersion = $.keyWoVersion;
         this.port = $.port;
         this.portVariable = $.portVariable;
         this.secretKey = $.secretKey;
         this.secretKeyVariable = $.secretKeyVariable;
+        this.secretKeyWo = $.secretKeyWo;
+        this.secretKeyWoVersion = $.secretKeyWoVersion;
         this.timeout = $.timeout;
         this.timeoutVariable = $.timeoutVariable;
     }
@@ -232,6 +312,8 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
 
         /**
          * @param key Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -243,6 +325,8 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
 
         /**
          * @param key Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -296,6 +380,52 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
         }
 
         /**
+         * @param keyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyWo(@Nullable Output<String> keyWo) {
+            $.keyWo = keyWo;
+            return this;
+        }
+
+        /**
+         * @param keyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyWo(String keyWo) {
+            return keyWo(Output.of(keyWo));
+        }
+
+        /**
+         * @param keyWoVersion Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyWoVersion(@Nullable Output<Integer> keyWoVersion) {
+            $.keyWoVersion = keyWoVersion;
+            return this;
+        }
+
+        /**
+         * @param keyWoVersion Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyWoVersion(Integer keyWoVersion) {
+            return keyWoVersion(Output.of(keyWoVersion));
+        }
+
+        /**
          * @param port TACACS Port
          *   - Range: `1`-`65535`
          *   - Default value: `49`
@@ -343,6 +473,8 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
 
         /**
          * @param secretKey Set the TACACS server shared type 7 encrypted key
+         *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -354,6 +486,8 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
 
         /**
          * @param secretKey Set the TACACS server shared type 7 encrypted key
+         *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -381,6 +515,52 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
          */
         public Builder secretKeyVariable(String secretKeyVariable) {
             return secretKeyVariable(Output.of(secretKeyVariable));
+        }
+
+        /**
+         * @param secretKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set the TACACS server shared type 7 encrypted key
+         *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secretKeyWo(@Nullable Output<String> secretKeyWo) {
+            $.secretKeyWo = secretKeyWo;
+            return this;
+        }
+
+        /**
+         * @param secretKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set the TACACS server shared type 7 encrypted key
+         *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secretKeyWo(String secretKeyWo) {
+            return secretKeyWo(Output.of(secretKeyWo));
+        }
+
+        /**
+         * @param secretKeyWoVersion Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secretKeyWoVersion(@Nullable Output<Integer> secretKeyWoVersion) {
+            $.secretKeyWoVersion = secretKeyWoVersion;
+            return this;
+        }
+
+        /**
+         * @param secretKeyWoVersion Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secretKeyWoVersion(Integer secretKeyWoVersion) {
+            return secretKeyWoVersion(Output.of(secretKeyWoVersion));
         }
 
         /**

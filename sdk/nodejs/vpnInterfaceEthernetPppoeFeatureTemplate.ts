@@ -103,6 +103,7 @@ import * as utilities from "./utilities";
  *     shapingRate: 10000000,
  *     qosMap: "test",
  *     qosMapVpn: "test",
+ *     serviceProviderName: "MyISP",
  *     bandwidthUpstream: 214748300,
  *     bandwidthDownstream: 214748300,
  *     writeRule: "RULE1",
@@ -523,6 +524,14 @@ export class VpnInterfaceEthernetPppoeFeatureTemplate extends pulumi.CustomResou
      * Variable name
      */
     declare public readonly secondaryRegionVariable: pulumi.Output<string | undefined>;
+    /**
+     * Service Provider Name
+     */
+    declare public readonly serviceProviderName: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly serviceProviderNameVariable: pulumi.Output<string | undefined>;
     /**
      * 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
      *   - Range: `8`-`100000000`
@@ -974,6 +983,8 @@ export class VpnInterfaceEthernetPppoeFeatureTemplate extends pulumi.CustomResou
             resourceInputs["qosMapVpnVariable"] = state?.qosMapVpnVariable;
             resourceInputs["secondaryRegion"] = state?.secondaryRegion;
             resourceInputs["secondaryRegionVariable"] = state?.secondaryRegionVariable;
+            resourceInputs["serviceProviderName"] = state?.serviceProviderName;
+            resourceInputs["serviceProviderNameVariable"] = state?.serviceProviderNameVariable;
             resourceInputs["shapingRate"] = state?.shapingRate;
             resourceInputs["shapingRateVariable"] = state?.shapingRateVariable;
             resourceInputs["shutdown"] = state?.shutdown;
@@ -1069,7 +1080,7 @@ export class VpnInterfaceEthernetPppoeFeatureTemplate extends pulumi.CustomResou
             resourceInputs["bandwidthUpstreamVariable"] = args?.bandwidthUpstreamVariable;
             resourceInputs["chapHostname"] = args?.chapHostname;
             resourceInputs["chapHostnameVariable"] = args?.chapHostnameVariable;
-            resourceInputs["chapPppAuthPassword"] = args?.chapPppAuthPassword;
+            resourceInputs["chapPppAuthPassword"] = args?.chapPppAuthPassword ? pulumi.secret(args.chapPppAuthPassword) : undefined;
             resourceInputs["chapPppAuthPasswordVariable"] = args?.chapPppAuthPasswordVariable;
             resourceInputs["coreRegion"] = args?.coreRegion;
             resourceInputs["coreRegionVariable"] = args?.coreRegionVariable;
@@ -1106,7 +1117,7 @@ export class VpnInterfaceEthernetPppoeFeatureTemplate extends pulumi.CustomResou
             resourceInputs["natUdpTimeout"] = args?.natUdpTimeout;
             resourceInputs["natUdpTimeoutVariable"] = args?.natUdpTimeoutVariable;
             resourceInputs["papPassword"] = args?.papPassword;
-            resourceInputs["papPppAuthPassword"] = args?.papPppAuthPassword;
+            resourceInputs["papPppAuthPassword"] = args?.papPppAuthPassword ? pulumi.secret(args.papPppAuthPassword) : undefined;
             resourceInputs["papPppAuthPasswordVariable"] = args?.papPppAuthPasswordVariable;
             resourceInputs["papUsername"] = args?.papUsername;
             resourceInputs["papUsernameVariable"] = args?.papUsernameVariable;
@@ -1141,6 +1152,8 @@ export class VpnInterfaceEthernetPppoeFeatureTemplate extends pulumi.CustomResou
             resourceInputs["qosMapVpnVariable"] = args?.qosMapVpnVariable;
             resourceInputs["secondaryRegion"] = args?.secondaryRegion;
             resourceInputs["secondaryRegionVariable"] = args?.secondaryRegionVariable;
+            resourceInputs["serviceProviderName"] = args?.serviceProviderName;
+            resourceInputs["serviceProviderNameVariable"] = args?.serviceProviderNameVariable;
             resourceInputs["shapingRate"] = args?.shapingRate;
             resourceInputs["shapingRateVariable"] = args?.shapingRateVariable;
             resourceInputs["shutdown"] = args?.shutdown;
@@ -1223,6 +1236,8 @@ export class VpnInterfaceEthernetPppoeFeatureTemplate extends pulumi.CustomResou
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["chapPppAuthPassword", "papPppAuthPassword"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(VpnInterfaceEthernetPppoeFeatureTemplate.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -1586,6 +1601,14 @@ export interface VpnInterfaceEthernetPppoeFeatureTemplateState {
      * Variable name
      */
     secondaryRegionVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Service Provider Name
+     */
+    serviceProviderName?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    serviceProviderNameVariable?: pulumi.Input<string | undefined>;
     /**
      * 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
      *   - Range: `8`-`100000000`
@@ -2305,6 +2328,14 @@ export interface VpnInterfaceEthernetPppoeFeatureTemplateArgs {
      * Variable name
      */
     secondaryRegionVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Service Provider Name
+     */
+    serviceProviderName?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    serviceProviderNameVariable?: pulumi.Input<string | undefined>;
     /**
      * 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
      *   - Range: `8`-`100000000`

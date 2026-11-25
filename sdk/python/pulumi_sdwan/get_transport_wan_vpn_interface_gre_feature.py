@@ -26,7 +26,7 @@ class GetTransportWanVpnInterfaceGreFeatureResult:
     """
     A collection of values returned by getTransportWanVpnInterfaceGreFeature.
     """
-    def __init__(__self__, application_tunnel_type=None, application_tunnel_type_variable=None, clear_dont_fragment=None, clear_dont_fragment_variable=None, description=None, dpd_interval=None, dpd_interval_variable=None, dpd_retries=None, dpd_retries_variable=None, feature_profile_id=None, id=None, ike_ciphersuite=None, ike_ciphersuite_variable=None, ike_group=None, ike_group_variable=None, ike_local_id=None, ike_local_id_variable=None, ike_mode=None, ike_mode_variable=None, ike_rekey_interval=None, ike_rekey_interval_variable=None, ike_remote_id=None, ike_remote_id_variable=None, ike_version=None, interface_description=None, interface_description_variable=None, interface_name=None, interface_name_variable=None, ipsec_ciphersuite=None, ipsec_ciphersuite_variable=None, ipsec_rekey_interval=None, ipsec_rekey_interval_variable=None, ipsec_replay_window=None, ipsec_replay_window_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_mtu=None, ipv4_mtu_variable=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv4_tcp_mss=None, ipv4_tcp_mss_variable=None, ipv6_address=None, ipv6_address_variable=None, ipv6_mtu=None, ipv6_mtu_variable=None, ipv6_tcp_mss=None, ipv6_tcp_mss_variable=None, multiplexing=None, multiplexing_variable=None, name=None, perfect_forward_secrecy=None, perfect_forward_secrecy_variable=None, pre_shared_secret=None, pre_shared_secret_variable=None, shutdown=None, shutdown_variable=None, transport_wan_vpn_feature_id=None, tunnel_destination_ipv4_address=None, tunnel_destination_ipv4_address_variable=None, tunnel_destination_ipv6_address=None, tunnel_destination_ipv6_address_variable=None, tunnel_mode=None, tunnel_protection=None, tunnel_route_via_interface=None, tunnel_route_via_interface_variable=None, tunnel_route_via_ipv4_address=None, tunnel_route_via_ipv4_address_variable=None, tunnel_route_via_ipv6_address=None, tunnel_route_via_ipv6_address_variable=None, tunnel_route_via_loopback=None, tunnel_route_via_loopback_variable=None, tunnel_source_interface=None, tunnel_source_interface_loopback=None, tunnel_source_interface_loopback_variable=None, tunnel_source_interface_variable=None, tunnel_source_ipv4_address=None, tunnel_source_ipv4_address_variable=None, tunnel_source_ipv6_address=None, tunnel_source_ipv6_address_variable=None, version=None):
+    def __init__(__self__, application_tunnel_type=None, application_tunnel_type_variable=None, clear_dont_fragment=None, clear_dont_fragment_variable=None, description=None, dpd_interval=None, dpd_interval_variable=None, dpd_retries=None, dpd_retries_variable=None, feature_profile_id=None, id=None, ike_ciphersuite=None, ike_ciphersuite_variable=None, ike_group=None, ike_group_variable=None, ike_local_id=None, ike_local_id_variable=None, ike_mode=None, ike_mode_variable=None, ike_rekey_interval=None, ike_rekey_interval_variable=None, ike_remote_id=None, ike_remote_id_variable=None, ike_version=None, interface_description=None, interface_description_variable=None, interface_name=None, interface_name_variable=None, ipsec_ciphersuite=None, ipsec_ciphersuite_variable=None, ipsec_rekey_interval=None, ipsec_rekey_interval_variable=None, ipsec_replay_window=None, ipsec_replay_window_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_mtu=None, ipv4_mtu_variable=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv4_tcp_mss=None, ipv4_tcp_mss_variable=None, ipv6_address=None, ipv6_address_variable=None, ipv6_mtu=None, ipv6_mtu_variable=None, ipv6_tcp_mss=None, ipv6_tcp_mss_variable=None, multiplexing=None, multiplexing_variable=None, name=None, perfect_forward_secrecy=None, perfect_forward_secrecy_variable=None, pre_shared_secret=None, pre_shared_secret_variable=None, pre_shared_secret_wo=None, pre_shared_secret_wo_version=None, shutdown=None, shutdown_variable=None, transport_wan_vpn_feature_id=None, tunnel_destination_ipv4_address=None, tunnel_destination_ipv4_address_variable=None, tunnel_destination_ipv6_address=None, tunnel_destination_ipv6_address_variable=None, tunnel_mode=None, tunnel_protection=None, tunnel_route_via_interface=None, tunnel_route_via_interface_variable=None, tunnel_route_via_ipv4_address=None, tunnel_route_via_ipv4_address_variable=None, tunnel_route_via_ipv6_address=None, tunnel_route_via_ipv6_address_variable=None, tunnel_route_via_loopback=None, tunnel_route_via_loopback_variable=None, tunnel_source_interface=None, tunnel_source_interface_loopback=None, tunnel_source_interface_loopback_variable=None, tunnel_source_interface_variable=None, tunnel_source_ipv4_address=None, tunnel_source_ipv4_address_variable=None, tunnel_source_ipv6_address=None, tunnel_source_ipv6_address_variable=None, version=None):
         if application_tunnel_type and not isinstance(application_tunnel_type, str):
             raise TypeError("Expected argument 'application_tunnel_type' to be a str")
         pulumi.set(__self__, "application_tunnel_type", application_tunnel_type)
@@ -192,6 +192,12 @@ class GetTransportWanVpnInterfaceGreFeatureResult:
         if pre_shared_secret_variable and not isinstance(pre_shared_secret_variable, str):
             raise TypeError("Expected argument 'pre_shared_secret_variable' to be a str")
         pulumi.set(__self__, "pre_shared_secret_variable", pre_shared_secret_variable)
+        if pre_shared_secret_wo and not isinstance(pre_shared_secret_wo, str):
+            raise TypeError("Expected argument 'pre_shared_secret_wo' to be a str")
+        pulumi.set(__self__, "pre_shared_secret_wo", pre_shared_secret_wo)
+        if pre_shared_secret_wo_version and not isinstance(pre_shared_secret_wo_version, int):
+            raise TypeError("Expected argument 'pre_shared_secret_wo_version' to be a int")
+        pulumi.set(__self__, "pre_shared_secret_wo_version", pre_shared_secret_wo_version)
         if shutdown and not isinstance(shutdown, bool):
             raise TypeError("Expected argument 'shutdown' to be a bool")
         pulumi.set(__self__, "shutdown", shutdown)
@@ -706,6 +712,22 @@ class GetTransportWanVpnInterfaceGreFeatureResult:
         return pulumi.get(self, "pre_shared_secret_variable")
 
     @_builtins.property
+    @pulumi.getter(name="preSharedSecretWo")
+    def pre_shared_secret_wo(self) -> _builtins.str:
+        """
+        Use preshared key to authenticate IKE peer
+        """
+        return pulumi.get(self, "pre_shared_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWoVersion")
+    def pre_shared_secret_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "pre_shared_secret_wo_version")
+
+    @_builtins.property
     @pulumi.getter
     def shutdown(self) -> _builtins.bool:
         """
@@ -975,6 +997,8 @@ class AwaitableGetTransportWanVpnInterfaceGreFeatureResult(GetTransportWanVpnInt
             perfect_forward_secrecy_variable=self.perfect_forward_secrecy_variable,
             pre_shared_secret=self.pre_shared_secret,
             pre_shared_secret_variable=self.pre_shared_secret_variable,
+            pre_shared_secret_wo=self.pre_shared_secret_wo,
+            pre_shared_secret_wo_version=self.pre_shared_secret_wo_version,
             shutdown=self.shutdown,
             shutdown_variable=self.shutdown_variable,
             transport_wan_vpn_feature_id=self.transport_wan_vpn_feature_id,
@@ -1092,6 +1116,8 @@ def get_transport_wan_vpn_interface_gre_feature(feature_profile_id: Optional[_bu
         perfect_forward_secrecy_variable=pulumi.get(__ret__, 'perfect_forward_secrecy_variable'),
         pre_shared_secret=pulumi.get(__ret__, 'pre_shared_secret'),
         pre_shared_secret_variable=pulumi.get(__ret__, 'pre_shared_secret_variable'),
+        pre_shared_secret_wo=pulumi.get(__ret__, 'pre_shared_secret_wo'),
+        pre_shared_secret_wo_version=pulumi.get(__ret__, 'pre_shared_secret_wo_version'),
         shutdown=pulumi.get(__ret__, 'shutdown'),
         shutdown_variable=pulumi.get(__ret__, 'shutdown_variable'),
         transport_wan_vpn_feature_id=pulumi.get(__ret__, 'transport_wan_vpn_feature_id'),
@@ -1206,6 +1232,8 @@ def get_transport_wan_vpn_interface_gre_feature_output(feature_profile_id: pulum
         perfect_forward_secrecy_variable=pulumi.get(__response__, 'perfect_forward_secrecy_variable'),
         pre_shared_secret=pulumi.get(__response__, 'pre_shared_secret'),
         pre_shared_secret_variable=pulumi.get(__response__, 'pre_shared_secret_variable'),
+        pre_shared_secret_wo=pulumi.get(__response__, 'pre_shared_secret_wo'),
+        pre_shared_secret_wo_version=pulumi.get(__response__, 'pre_shared_secret_wo_version'),
         shutdown=pulumi.get(__response__, 'shutdown'),
         shutdown_variable=pulumi.get(__response__, 'shutdown_variable'),
         transport_wan_vpn_feature_id=pulumi.get(__response__, 'transport_wan_vpn_feature_id'),

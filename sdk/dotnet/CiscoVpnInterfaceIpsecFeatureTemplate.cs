@@ -478,6 +478,10 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "ikePreSharedKey",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -617,11 +621,21 @@ namespace Pulumi.Sdwan
         [Input("ikeModeVariable")]
         public Input<string>? IkeModeVariable { get; set; }
 
+        [Input("ikePreSharedKey")]
+        private Input<string>? _ikePreSharedKey;
+
         /// <summary>
         /// Use preshared key to authenticate IKE peer
         /// </summary>
-        [Input("ikePreSharedKey")]
-        public Input<string>? IkePreSharedKey { get; set; }
+        public Input<string>? IkePreSharedKey
+        {
+            get => _ikePreSharedKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ikePreSharedKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
@@ -1003,11 +1017,21 @@ namespace Pulumi.Sdwan
         [Input("ikeModeVariable")]
         public Input<string>? IkeModeVariable { get; set; }
 
+        [Input("ikePreSharedKey")]
+        private Input<string>? _ikePreSharedKey;
+
         /// <summary>
         /// Use preshared key to authenticate IKE peer
         /// </summary>
-        [Input("ikePreSharedKey")]
-        public Input<string>? IkePreSharedKey { get; set; }
+        public Input<string>? IkePreSharedKey
+        {
+            get => _ikePreSharedKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _ikePreSharedKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// IKE ID for the local endpoint. Input IPv4 address, domain name, or email address

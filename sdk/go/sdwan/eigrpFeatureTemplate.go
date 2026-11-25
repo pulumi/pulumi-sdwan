@@ -156,6 +156,13 @@ func NewEigrpFeatureTemplate(ctx *pulumi.Context,
 	if args.DeviceTypes == nil {
 		return nil, errors.New("invalid value for required argument 'DeviceTypes'")
 	}
+	if args.HmacAuthenticationKey != nil {
+		args.HmacAuthenticationKey = pulumi.ToSecret(args.HmacAuthenticationKey).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"hmacAuthenticationKey",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource EigrpFeatureTemplate
 	err := ctx.RegisterResource("sdwan:index/eigrpFeatureTemplate:EigrpFeatureTemplate", name, args, &resource, opts...)

@@ -45,12 +45,24 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? KeepaliveIntervalVariable;
         /// <summary>
         /// Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `PeerAuthenticationPassword`, `PeerAuthenticationPasswordVariable` and `PeerAuthenticationPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PeerAuthenticationPasswordWo` together with `PeerAuthenticationPasswordWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? PeerAuthenticationPassword;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string? PeerAuthenticationPasswordVariable;
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `PeerAuthenticationPassword`, `PeerAuthenticationPasswordVariable` and `PeerAuthenticationPasswordWo` can be set.
+        /// </summary>
+        public readonly string? PeerAuthenticationPasswordWo;
+        /// <summary>
+        /// Rotation trigger for `PeerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? PeerAuthenticationPasswordWoVersion;
         /// <summary>
         /// Set MSDP peer ip
         /// </summary>
@@ -99,6 +111,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string? peerAuthenticationPasswordVariable,
 
+            string? peerAuthenticationPasswordWo,
+
+            int? peerAuthenticationPasswordWoVersion,
+
             string? peerIp,
 
             string? peerIpVariable,
@@ -122,6 +138,8 @@ namespace Pulumi.Sdwan.Outputs
             KeepaliveIntervalVariable = keepaliveIntervalVariable;
             PeerAuthenticationPassword = peerAuthenticationPassword;
             PeerAuthenticationPasswordVariable = peerAuthenticationPasswordVariable;
+            PeerAuthenticationPasswordWo = peerAuthenticationPasswordWo;
+            PeerAuthenticationPasswordWoVersion = peerAuthenticationPasswordWoVersion;
             PeerIp = peerIp;
             PeerIpVariable = peerIpVariable;
             PrefixListId = prefixListId;

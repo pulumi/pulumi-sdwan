@@ -165,6 +165,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string DevicePasswordVariable;
         /// <summary>
+        /// Set the password for the device
+        /// </summary>
+        public readonly string DevicePasswordWo;
+        /// <summary>
+        /// Rotation trigger for `DevicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int DevicePasswordWoVersion;
+        /// <summary>
         /// Configure Local device security group \n\n
         /// </summary>
         public readonly int DeviceSgt;
@@ -233,6 +241,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string SxpDefaultPasswordVariable;
         /// <summary>
+        /// Configure SXP default password
+        /// </summary>
+        public readonly string SxpDefaultPasswordWo;
+        /// <summary>
+        /// Rotation trigger for `SxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int SxpDefaultPasswordWoVersion;
+        /// <summary>
         /// Configure SXP key-chain
         /// </summary>
         public readonly string SxpKeyChain;
@@ -289,6 +305,10 @@ namespace Pulumi.Sdwan
 
             string devicePasswordVariable,
 
+            string devicePasswordWo,
+
+            int devicePasswordWoVersion,
+
             int deviceSgt,
 
             string deviceSgtVariable,
@@ -323,6 +343,10 @@ namespace Pulumi.Sdwan
 
             string sxpDefaultPasswordVariable,
 
+            string sxpDefaultPasswordWo,
+
+            int sxpDefaultPasswordWoVersion,
+
             string sxpKeyChain,
 
             string sxpKeyChainVariable,
@@ -350,6 +374,8 @@ namespace Pulumi.Sdwan
             DeviceIdVariable = deviceIdVariable;
             DevicePassword = devicePassword;
             DevicePasswordVariable = devicePasswordVariable;
+            DevicePasswordWo = devicePasswordWo;
+            DevicePasswordWoVersion = devicePasswordWoVersion;
             DeviceSgt = deviceSgt;
             DeviceSgtVariable = deviceSgtVariable;
             EnableEnforcement = enableEnforcement;
@@ -367,6 +393,8 @@ namespace Pulumi.Sdwan
             SxpConnections = sxpConnections;
             SxpDefaultPassword = sxpDefaultPassword;
             SxpDefaultPasswordVariable = sxpDefaultPasswordVariable;
+            SxpDefaultPasswordWo = sxpDefaultPasswordWo;
+            SxpDefaultPasswordWoVersion = sxpDefaultPasswordWoVersion;
             SxpKeyChain = sxpKeyChain;
             SxpKeyChainVariable = sxpKeyChainVariable;
             SxpLogBindingChanges = sxpLogBindingChanges;

@@ -60,8 +60,6 @@ type LookupConfigurationGroupArgs struct {
 type LookupConfigurationGroupResult struct {
 	// Description
 	Description string `pulumi:"description"`
-	// List of devices
-	Devices []GetConfigurationGroupDevice `pulumi:"devices"`
 	// List of feature profile IDs
 	FeatureProfileIds []string `pulumi:"featureProfileIds"`
 	// List of all associated feature versions
@@ -76,6 +74,8 @@ type LookupConfigurationGroupResult struct {
 	TopologyDevices []GetConfigurationGroupTopologyDevice `pulumi:"topologyDevices"`
 	// Number of devices per site
 	TopologySiteDevices int `pulumi:"topologySiteDevices"`
+	// The version of the object
+	Version int `pulumi:"version"`
 }
 
 func LookupConfigurationGroupOutput(ctx *pulumi.Context, args LookupConfigurationGroupOutputArgs, opts ...pulumi.InvokeOption) LookupConfigurationGroupResultOutput {
@@ -115,11 +115,6 @@ func (o LookupConfigurationGroupResultOutput) Description() pulumi.StringOutput 
 	return o.ApplyT(func(v LookupConfigurationGroupResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of devices
-func (o LookupConfigurationGroupResultOutput) Devices() GetConfigurationGroupDeviceArrayOutput {
-	return o.ApplyT(func(v LookupConfigurationGroupResult) []GetConfigurationGroupDevice { return v.Devices }).(GetConfigurationGroupDeviceArrayOutput)
-}
-
 // List of feature profile IDs
 func (o LookupConfigurationGroupResultOutput) FeatureProfileIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupConfigurationGroupResult) []string { return v.FeatureProfileIds }).(pulumi.StringArrayOutput)
@@ -153,6 +148,11 @@ func (o LookupConfigurationGroupResultOutput) TopologyDevices() GetConfiguration
 // Number of devices per site
 func (o LookupConfigurationGroupResultOutput) TopologySiteDevices() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupConfigurationGroupResult) int { return v.TopologySiteDevices }).(pulumi.IntOutput)
+}
+
+// The version of the object
+func (o LookupConfigurationGroupResultOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupConfigurationGroupResult) int { return v.Version }).(pulumi.IntOutput)
 }
 
 func init() {

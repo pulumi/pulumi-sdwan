@@ -96,9 +96,17 @@ type TransportCellularProfileFeature struct {
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrOutput `pulumi:"profileIdVariable"`
 	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+	//   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `profilePasswordWo` together with `profilePasswordWoVersion`, which keeps it out of state.
 	ProfilePassword pulumi.StringPtrOutput `pulumi:"profilePassword"`
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePasswordVariable pulumi.StringPtrOutput `pulumi:"profilePasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+	//   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+	ProfilePasswordWo pulumi.StringPtrOutput `pulumi:"profilePasswordWo"`
+	// Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	ProfilePasswordWoVersion pulumi.IntPtrOutput `pulumi:"profilePasswordWoVersion"`
 	// Set the profile username, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfileUsername pulumi.StringPtrOutput `pulumi:"profileUsername"`
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
@@ -129,6 +137,17 @@ func NewTransportCellularProfileFeature(ctx *pulumi.Context,
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
 	}
+	if args.ProfilePassword != nil {
+		args.ProfilePassword = pulumi.ToSecret(args.ProfilePassword).(pulumi.StringPtrInput)
+	}
+	if args.ProfilePasswordWo != nil {
+		args.ProfilePasswordWo = pulumi.ToSecret(args.ProfilePasswordWo).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"profilePassword",
+		"profilePasswordWo",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource TransportCellularProfileFeature
 	err := ctx.RegisterResource("sdwan:index/transportCellularProfileFeature:TransportCellularProfileFeature", name, args, &resource, opts...)
@@ -183,9 +202,17 @@ type transportCellularProfileFeatureState struct {
 	// Variable name
 	ProfileIdVariable *string `pulumi:"profileIdVariable"`
 	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+	//   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `profilePasswordWo` together with `profilePasswordWoVersion`, which keeps it out of state.
 	ProfilePassword *string `pulumi:"profilePassword"`
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePasswordVariable *string `pulumi:"profilePasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+	//   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+	ProfilePasswordWo *string `pulumi:"profilePasswordWo"`
+	// Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	ProfilePasswordWoVersion *int `pulumi:"profilePasswordWoVersion"`
 	// Set the profile username, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfileUsername *string `pulumi:"profileUsername"`
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
@@ -238,9 +265,17 @@ type TransportCellularProfileFeatureState struct {
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrInput
 	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+	//   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `profilePasswordWo` together with `profilePasswordWoVersion`, which keeps it out of state.
 	ProfilePassword pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePasswordVariable pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+	//   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+	ProfilePasswordWo pulumi.StringPtrInput
+	// Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	ProfilePasswordWoVersion pulumi.IntPtrInput
 	// Set the profile username, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfileUsername pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
@@ -303,9 +338,17 @@ type transportCellularProfileFeatureArgs struct {
 	// Variable name
 	ProfileIdVariable *string `pulumi:"profileIdVariable"`
 	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+	//   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `profilePasswordWo` together with `profilePasswordWoVersion`, which keeps it out of state.
 	ProfilePassword *string `pulumi:"profilePassword"`
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePasswordVariable *string `pulumi:"profilePasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+	//   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+	ProfilePasswordWo *string `pulumi:"profilePasswordWo"`
+	// Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	ProfilePasswordWoVersion *int `pulumi:"profilePasswordWoVersion"`
 	// Set the profile username, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfileUsername *string `pulumi:"profileUsername"`
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
@@ -357,9 +400,17 @@ type TransportCellularProfileFeatureArgs struct {
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrInput
 	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+	//   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `profilePasswordWo` together with `profilePasswordWoVersion`, which keeps it out of state.
 	ProfilePassword pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePasswordVariable pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+	//   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+	ProfilePasswordWo pulumi.StringPtrInput
+	// Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	ProfilePasswordWoVersion pulumi.IntPtrInput
 	// Set the profile username, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfileUsername pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
@@ -537,6 +588,8 @@ func (o TransportCellularProfileFeatureOutput) ProfileIdVariable() pulumi.String
 }
 
 // Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+//   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `profilePasswordWo` together with `profilePasswordWoVersion`, which keeps it out of state.
 func (o TransportCellularProfileFeatureOutput) ProfilePassword() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.ProfilePassword }).(pulumi.StringPtrOutput)
 }
@@ -544,6 +597,18 @@ func (o TransportCellularProfileFeatureOutput) ProfilePassword() pulumi.StringPt
 // Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
 func (o TransportCellularProfileFeatureOutput) ProfilePasswordVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.ProfilePasswordVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+//   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+func (o TransportCellularProfileFeatureOutput) ProfilePasswordWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.ProfilePasswordWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o TransportCellularProfileFeatureOutput) ProfilePasswordWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.IntPtrOutput { return v.ProfilePasswordWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set the profile username, Attribute conditional on `requiresAuthentication` equal to `true`

@@ -26,13 +26,25 @@ class GetCloudProviderSettingsResult:
     """
     A collection of values returned by getCloudProviderSettings.
     """
-    def __init__(__self__, cisco_sse_auth_key=None, cisco_sse_auth_secret=None, cisco_sse_context_sharing=None, cisco_sse_org_id=None, id=None, umbrella_auth_key_v2=None, umbrella_auth_secret_v2=None, umbrella_dns_auth_key=None, umbrella_dns_auth_secret=None, umbrella_org_id=None, umbrella_sig_auth_key=None, umbrella_sig_auth_secret=None, zscaler_organization=None, zscaler_partner_base_uri=None, zscaler_partner_key=None, zscaler_password=None, zscaler_username=None):
+    def __init__(__self__, cisco_sse_auth_key=None, cisco_sse_auth_key_wo=None, cisco_sse_auth_key_wo_version=None, cisco_sse_auth_secret=None, cisco_sse_auth_secret_wo=None, cisco_sse_auth_secret_wo_version=None, cisco_sse_context_sharing=None, cisco_sse_org_id=None, id=None, umbrella_auth_key_v2=None, umbrella_auth_key_v2_wo=None, umbrella_auth_key_v2_wo_version=None, umbrella_auth_secret_v2=None, umbrella_auth_secret_v2_wo=None, umbrella_auth_secret_v2_wo_version=None, umbrella_dns_auth_key=None, umbrella_dns_auth_key_wo=None, umbrella_dns_auth_key_wo_version=None, umbrella_dns_auth_secret=None, umbrella_dns_auth_secret_wo=None, umbrella_dns_auth_secret_wo_version=None, umbrella_org_id=None, umbrella_sig_auth_key=None, umbrella_sig_auth_key_wo=None, umbrella_sig_auth_key_wo_version=None, umbrella_sig_auth_secret=None, umbrella_sig_auth_secret_wo=None, umbrella_sig_auth_secret_wo_version=None, zscaler_organization=None, zscaler_partner_base_uri=None, zscaler_partner_key=None, zscaler_partner_key_wo=None, zscaler_partner_key_wo_version=None, zscaler_password=None, zscaler_password_wo=None, zscaler_password_wo_version=None, zscaler_username=None):
         if cisco_sse_auth_key and not isinstance(cisco_sse_auth_key, str):
             raise TypeError("Expected argument 'cisco_sse_auth_key' to be a str")
         pulumi.set(__self__, "cisco_sse_auth_key", cisco_sse_auth_key)
+        if cisco_sse_auth_key_wo and not isinstance(cisco_sse_auth_key_wo, str):
+            raise TypeError("Expected argument 'cisco_sse_auth_key_wo' to be a str")
+        pulumi.set(__self__, "cisco_sse_auth_key_wo", cisco_sse_auth_key_wo)
+        if cisco_sse_auth_key_wo_version and not isinstance(cisco_sse_auth_key_wo_version, int):
+            raise TypeError("Expected argument 'cisco_sse_auth_key_wo_version' to be a int")
+        pulumi.set(__self__, "cisco_sse_auth_key_wo_version", cisco_sse_auth_key_wo_version)
         if cisco_sse_auth_secret and not isinstance(cisco_sse_auth_secret, str):
             raise TypeError("Expected argument 'cisco_sse_auth_secret' to be a str")
         pulumi.set(__self__, "cisco_sse_auth_secret", cisco_sse_auth_secret)
+        if cisco_sse_auth_secret_wo and not isinstance(cisco_sse_auth_secret_wo, str):
+            raise TypeError("Expected argument 'cisco_sse_auth_secret_wo' to be a str")
+        pulumi.set(__self__, "cisco_sse_auth_secret_wo", cisco_sse_auth_secret_wo)
+        if cisco_sse_auth_secret_wo_version and not isinstance(cisco_sse_auth_secret_wo_version, int):
+            raise TypeError("Expected argument 'cisco_sse_auth_secret_wo_version' to be a int")
+        pulumi.set(__self__, "cisco_sse_auth_secret_wo_version", cisco_sse_auth_secret_wo_version)
         if cisco_sse_context_sharing and not isinstance(cisco_sse_context_sharing, bool):
             raise TypeError("Expected argument 'cisco_sse_context_sharing' to be a bool")
         pulumi.set(__self__, "cisco_sse_context_sharing", cisco_sse_context_sharing)
@@ -45,24 +57,60 @@ class GetCloudProviderSettingsResult:
         if umbrella_auth_key_v2 and not isinstance(umbrella_auth_key_v2, str):
             raise TypeError("Expected argument 'umbrella_auth_key_v2' to be a str")
         pulumi.set(__self__, "umbrella_auth_key_v2", umbrella_auth_key_v2)
+        if umbrella_auth_key_v2_wo and not isinstance(umbrella_auth_key_v2_wo, str):
+            raise TypeError("Expected argument 'umbrella_auth_key_v2_wo' to be a str")
+        pulumi.set(__self__, "umbrella_auth_key_v2_wo", umbrella_auth_key_v2_wo)
+        if umbrella_auth_key_v2_wo_version and not isinstance(umbrella_auth_key_v2_wo_version, int):
+            raise TypeError("Expected argument 'umbrella_auth_key_v2_wo_version' to be a int")
+        pulumi.set(__self__, "umbrella_auth_key_v2_wo_version", umbrella_auth_key_v2_wo_version)
         if umbrella_auth_secret_v2 and not isinstance(umbrella_auth_secret_v2, str):
             raise TypeError("Expected argument 'umbrella_auth_secret_v2' to be a str")
         pulumi.set(__self__, "umbrella_auth_secret_v2", umbrella_auth_secret_v2)
+        if umbrella_auth_secret_v2_wo and not isinstance(umbrella_auth_secret_v2_wo, str):
+            raise TypeError("Expected argument 'umbrella_auth_secret_v2_wo' to be a str")
+        pulumi.set(__self__, "umbrella_auth_secret_v2_wo", umbrella_auth_secret_v2_wo)
+        if umbrella_auth_secret_v2_wo_version and not isinstance(umbrella_auth_secret_v2_wo_version, int):
+            raise TypeError("Expected argument 'umbrella_auth_secret_v2_wo_version' to be a int")
+        pulumi.set(__self__, "umbrella_auth_secret_v2_wo_version", umbrella_auth_secret_v2_wo_version)
         if umbrella_dns_auth_key and not isinstance(umbrella_dns_auth_key, str):
             raise TypeError("Expected argument 'umbrella_dns_auth_key' to be a str")
         pulumi.set(__self__, "umbrella_dns_auth_key", umbrella_dns_auth_key)
+        if umbrella_dns_auth_key_wo and not isinstance(umbrella_dns_auth_key_wo, str):
+            raise TypeError("Expected argument 'umbrella_dns_auth_key_wo' to be a str")
+        pulumi.set(__self__, "umbrella_dns_auth_key_wo", umbrella_dns_auth_key_wo)
+        if umbrella_dns_auth_key_wo_version and not isinstance(umbrella_dns_auth_key_wo_version, int):
+            raise TypeError("Expected argument 'umbrella_dns_auth_key_wo_version' to be a int")
+        pulumi.set(__self__, "umbrella_dns_auth_key_wo_version", umbrella_dns_auth_key_wo_version)
         if umbrella_dns_auth_secret and not isinstance(umbrella_dns_auth_secret, str):
             raise TypeError("Expected argument 'umbrella_dns_auth_secret' to be a str")
         pulumi.set(__self__, "umbrella_dns_auth_secret", umbrella_dns_auth_secret)
+        if umbrella_dns_auth_secret_wo and not isinstance(umbrella_dns_auth_secret_wo, str):
+            raise TypeError("Expected argument 'umbrella_dns_auth_secret_wo' to be a str")
+        pulumi.set(__self__, "umbrella_dns_auth_secret_wo", umbrella_dns_auth_secret_wo)
+        if umbrella_dns_auth_secret_wo_version and not isinstance(umbrella_dns_auth_secret_wo_version, int):
+            raise TypeError("Expected argument 'umbrella_dns_auth_secret_wo_version' to be a int")
+        pulumi.set(__self__, "umbrella_dns_auth_secret_wo_version", umbrella_dns_auth_secret_wo_version)
         if umbrella_org_id and not isinstance(umbrella_org_id, str):
             raise TypeError("Expected argument 'umbrella_org_id' to be a str")
         pulumi.set(__self__, "umbrella_org_id", umbrella_org_id)
         if umbrella_sig_auth_key and not isinstance(umbrella_sig_auth_key, str):
             raise TypeError("Expected argument 'umbrella_sig_auth_key' to be a str")
         pulumi.set(__self__, "umbrella_sig_auth_key", umbrella_sig_auth_key)
+        if umbrella_sig_auth_key_wo and not isinstance(umbrella_sig_auth_key_wo, str):
+            raise TypeError("Expected argument 'umbrella_sig_auth_key_wo' to be a str")
+        pulumi.set(__self__, "umbrella_sig_auth_key_wo", umbrella_sig_auth_key_wo)
+        if umbrella_sig_auth_key_wo_version and not isinstance(umbrella_sig_auth_key_wo_version, int):
+            raise TypeError("Expected argument 'umbrella_sig_auth_key_wo_version' to be a int")
+        pulumi.set(__self__, "umbrella_sig_auth_key_wo_version", umbrella_sig_auth_key_wo_version)
         if umbrella_sig_auth_secret and not isinstance(umbrella_sig_auth_secret, str):
             raise TypeError("Expected argument 'umbrella_sig_auth_secret' to be a str")
         pulumi.set(__self__, "umbrella_sig_auth_secret", umbrella_sig_auth_secret)
+        if umbrella_sig_auth_secret_wo and not isinstance(umbrella_sig_auth_secret_wo, str):
+            raise TypeError("Expected argument 'umbrella_sig_auth_secret_wo' to be a str")
+        pulumi.set(__self__, "umbrella_sig_auth_secret_wo", umbrella_sig_auth_secret_wo)
+        if umbrella_sig_auth_secret_wo_version and not isinstance(umbrella_sig_auth_secret_wo_version, int):
+            raise TypeError("Expected argument 'umbrella_sig_auth_secret_wo_version' to be a int")
+        pulumi.set(__self__, "umbrella_sig_auth_secret_wo_version", umbrella_sig_auth_secret_wo_version)
         if zscaler_organization and not isinstance(zscaler_organization, str):
             raise TypeError("Expected argument 'zscaler_organization' to be a str")
         pulumi.set(__self__, "zscaler_organization", zscaler_organization)
@@ -72,9 +120,21 @@ class GetCloudProviderSettingsResult:
         if zscaler_partner_key and not isinstance(zscaler_partner_key, str):
             raise TypeError("Expected argument 'zscaler_partner_key' to be a str")
         pulumi.set(__self__, "zscaler_partner_key", zscaler_partner_key)
+        if zscaler_partner_key_wo and not isinstance(zscaler_partner_key_wo, str):
+            raise TypeError("Expected argument 'zscaler_partner_key_wo' to be a str")
+        pulumi.set(__self__, "zscaler_partner_key_wo", zscaler_partner_key_wo)
+        if zscaler_partner_key_wo_version and not isinstance(zscaler_partner_key_wo_version, int):
+            raise TypeError("Expected argument 'zscaler_partner_key_wo_version' to be a int")
+        pulumi.set(__self__, "zscaler_partner_key_wo_version", zscaler_partner_key_wo_version)
         if zscaler_password and not isinstance(zscaler_password, str):
             raise TypeError("Expected argument 'zscaler_password' to be a str")
         pulumi.set(__self__, "zscaler_password", zscaler_password)
+        if zscaler_password_wo and not isinstance(zscaler_password_wo, str):
+            raise TypeError("Expected argument 'zscaler_password_wo' to be a str")
+        pulumi.set(__self__, "zscaler_password_wo", zscaler_password_wo)
+        if zscaler_password_wo_version and not isinstance(zscaler_password_wo_version, int):
+            raise TypeError("Expected argument 'zscaler_password_wo_version' to be a int")
+        pulumi.set(__self__, "zscaler_password_wo_version", zscaler_password_wo_version)
         if zscaler_username and not isinstance(zscaler_username, str):
             raise TypeError("Expected argument 'zscaler_username' to be a str")
         pulumi.set(__self__, "zscaler_username", zscaler_username)
@@ -88,12 +148,44 @@ class GetCloudProviderSettingsResult:
         return pulumi.get(self, "cisco_sse_auth_key")
 
     @_builtins.property
+    @pulumi.getter(name="ciscoSseAuthKeyWo")
+    def cisco_sse_auth_key_wo(self) -> _builtins.str:
+        """
+        Cisco SSE Authentication Key
+        """
+        return pulumi.get(self, "cisco_sse_auth_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="ciscoSseAuthKeyWoVersion")
+    def cisco_sse_auth_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `cisco_sse_auth_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "cisco_sse_auth_key_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="ciscoSseAuthSecret")
     def cisco_sse_auth_secret(self) -> _builtins.str:
         """
         Cisco SSE Authentication Secret
         """
         return pulumi.get(self, "cisco_sse_auth_secret")
+
+    @_builtins.property
+    @pulumi.getter(name="ciscoSseAuthSecretWo")
+    def cisco_sse_auth_secret_wo(self) -> _builtins.str:
+        """
+        Cisco SSE Authentication Secret
+        """
+        return pulumi.get(self, "cisco_sse_auth_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="ciscoSseAuthSecretWoVersion")
+    def cisco_sse_auth_secret_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `cisco_sse_auth_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "cisco_sse_auth_secret_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="ciscoSseContextSharing")
@@ -128,12 +220,44 @@ class GetCloudProviderSettingsResult:
         return pulumi.get(self, "umbrella_auth_key_v2")
 
     @_builtins.property
+    @pulumi.getter(name="umbrellaAuthKeyV2Wo")
+    def umbrella_auth_key_v2_wo(self) -> _builtins.str:
+        """
+        Umbrella Authentication Key (v2)
+        """
+        return pulumi.get(self, "umbrella_auth_key_v2_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="umbrellaAuthKeyV2WoVersion")
+    def umbrella_auth_key_v2_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `umbrella_auth_key_v2_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "umbrella_auth_key_v2_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="umbrellaAuthSecretV2")
     def umbrella_auth_secret_v2(self) -> _builtins.str:
         """
         Umbrella Authentication Secret (v2)
         """
         return pulumi.get(self, "umbrella_auth_secret_v2")
+
+    @_builtins.property
+    @pulumi.getter(name="umbrellaAuthSecretV2Wo")
+    def umbrella_auth_secret_v2_wo(self) -> _builtins.str:
+        """
+        Umbrella Authentication Secret (v2)
+        """
+        return pulumi.get(self, "umbrella_auth_secret_v2_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="umbrellaAuthSecretV2WoVersion")
+    def umbrella_auth_secret_v2_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `umbrella_auth_secret_v2_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "umbrella_auth_secret_v2_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="umbrellaDnsAuthKey")
@@ -144,12 +268,44 @@ class GetCloudProviderSettingsResult:
         return pulumi.get(self, "umbrella_dns_auth_key")
 
     @_builtins.property
+    @pulumi.getter(name="umbrellaDnsAuthKeyWo")
+    def umbrella_dns_auth_key_wo(self) -> _builtins.str:
+        """
+        Umbrella DNS Authentication Key
+        """
+        return pulumi.get(self, "umbrella_dns_auth_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="umbrellaDnsAuthKeyWoVersion")
+    def umbrella_dns_auth_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `umbrella_dns_auth_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "umbrella_dns_auth_key_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="umbrellaDnsAuthSecret")
     def umbrella_dns_auth_secret(self) -> _builtins.str:
         """
         Umbrella DNS Authentication Secret
         """
         return pulumi.get(self, "umbrella_dns_auth_secret")
+
+    @_builtins.property
+    @pulumi.getter(name="umbrellaDnsAuthSecretWo")
+    def umbrella_dns_auth_secret_wo(self) -> _builtins.str:
+        """
+        Umbrella DNS Authentication Secret
+        """
+        return pulumi.get(self, "umbrella_dns_auth_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="umbrellaDnsAuthSecretWoVersion")
+    def umbrella_dns_auth_secret_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `umbrella_dns_auth_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "umbrella_dns_auth_secret_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="umbrellaOrgId")
@@ -168,12 +324,44 @@ class GetCloudProviderSettingsResult:
         return pulumi.get(self, "umbrella_sig_auth_key")
 
     @_builtins.property
+    @pulumi.getter(name="umbrellaSigAuthKeyWo")
+    def umbrella_sig_auth_key_wo(self) -> _builtins.str:
+        """
+        Umbrella SIG Authentication Key
+        """
+        return pulumi.get(self, "umbrella_sig_auth_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="umbrellaSigAuthKeyWoVersion")
+    def umbrella_sig_auth_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `umbrella_sig_auth_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "umbrella_sig_auth_key_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="umbrellaSigAuthSecret")
     def umbrella_sig_auth_secret(self) -> _builtins.str:
         """
         Umbrella SIG Authentication Secret
         """
         return pulumi.get(self, "umbrella_sig_auth_secret")
+
+    @_builtins.property
+    @pulumi.getter(name="umbrellaSigAuthSecretWo")
+    def umbrella_sig_auth_secret_wo(self) -> _builtins.str:
+        """
+        Umbrella SIG Authentication Secret
+        """
+        return pulumi.get(self, "umbrella_sig_auth_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="umbrellaSigAuthSecretWoVersion")
+    def umbrella_sig_auth_secret_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `umbrella_sig_auth_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "umbrella_sig_auth_secret_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="zscalerOrganization")
@@ -200,12 +388,44 @@ class GetCloudProviderSettingsResult:
         return pulumi.get(self, "zscaler_partner_key")
 
     @_builtins.property
+    @pulumi.getter(name="zscalerPartnerKeyWo")
+    def zscaler_partner_key_wo(self) -> _builtins.str:
+        """
+        Zscaler Partner Key
+        """
+        return pulumi.get(self, "zscaler_partner_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="zscalerPartnerKeyWoVersion")
+    def zscaler_partner_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `zscaler_partner_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "zscaler_partner_key_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="zscalerPassword")
     def zscaler_password(self) -> _builtins.str:
         """
         Zscaler Password
         """
         return pulumi.get(self, "zscaler_password")
+
+    @_builtins.property
+    @pulumi.getter(name="zscalerPasswordWo")
+    def zscaler_password_wo(self) -> _builtins.str:
+        """
+        Zscaler Password
+        """
+        return pulumi.get(self, "zscaler_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="zscalerPasswordWoVersion")
+    def zscaler_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `zscaler_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "zscaler_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="zscalerUsername")
@@ -223,21 +443,41 @@ class AwaitableGetCloudProviderSettingsResult(GetCloudProviderSettingsResult):
             yield self
         return GetCloudProviderSettingsResult(
             cisco_sse_auth_key=self.cisco_sse_auth_key,
+            cisco_sse_auth_key_wo=self.cisco_sse_auth_key_wo,
+            cisco_sse_auth_key_wo_version=self.cisco_sse_auth_key_wo_version,
             cisco_sse_auth_secret=self.cisco_sse_auth_secret,
+            cisco_sse_auth_secret_wo=self.cisco_sse_auth_secret_wo,
+            cisco_sse_auth_secret_wo_version=self.cisco_sse_auth_secret_wo_version,
             cisco_sse_context_sharing=self.cisco_sse_context_sharing,
             cisco_sse_org_id=self.cisco_sse_org_id,
             id=self.id,
             umbrella_auth_key_v2=self.umbrella_auth_key_v2,
+            umbrella_auth_key_v2_wo=self.umbrella_auth_key_v2_wo,
+            umbrella_auth_key_v2_wo_version=self.umbrella_auth_key_v2_wo_version,
             umbrella_auth_secret_v2=self.umbrella_auth_secret_v2,
+            umbrella_auth_secret_v2_wo=self.umbrella_auth_secret_v2_wo,
+            umbrella_auth_secret_v2_wo_version=self.umbrella_auth_secret_v2_wo_version,
             umbrella_dns_auth_key=self.umbrella_dns_auth_key,
+            umbrella_dns_auth_key_wo=self.umbrella_dns_auth_key_wo,
+            umbrella_dns_auth_key_wo_version=self.umbrella_dns_auth_key_wo_version,
             umbrella_dns_auth_secret=self.umbrella_dns_auth_secret,
+            umbrella_dns_auth_secret_wo=self.umbrella_dns_auth_secret_wo,
+            umbrella_dns_auth_secret_wo_version=self.umbrella_dns_auth_secret_wo_version,
             umbrella_org_id=self.umbrella_org_id,
             umbrella_sig_auth_key=self.umbrella_sig_auth_key,
+            umbrella_sig_auth_key_wo=self.umbrella_sig_auth_key_wo,
+            umbrella_sig_auth_key_wo_version=self.umbrella_sig_auth_key_wo_version,
             umbrella_sig_auth_secret=self.umbrella_sig_auth_secret,
+            umbrella_sig_auth_secret_wo=self.umbrella_sig_auth_secret_wo,
+            umbrella_sig_auth_secret_wo_version=self.umbrella_sig_auth_secret_wo_version,
             zscaler_organization=self.zscaler_organization,
             zscaler_partner_base_uri=self.zscaler_partner_base_uri,
             zscaler_partner_key=self.zscaler_partner_key,
+            zscaler_partner_key_wo=self.zscaler_partner_key_wo,
+            zscaler_partner_key_wo_version=self.zscaler_partner_key_wo_version,
             zscaler_password=self.zscaler_password,
+            zscaler_password_wo=self.zscaler_password_wo,
+            zscaler_password_wo_version=self.zscaler_password_wo_version,
             zscaler_username=self.zscaler_username)
 
 
@@ -260,21 +500,41 @@ def get_cloud_provider_settings(opts: Optional[pulumi.InvokeOptions] = None) -> 
 
     return AwaitableGetCloudProviderSettingsResult(
         cisco_sse_auth_key=pulumi.get(__ret__, 'cisco_sse_auth_key'),
+        cisco_sse_auth_key_wo=pulumi.get(__ret__, 'cisco_sse_auth_key_wo'),
+        cisco_sse_auth_key_wo_version=pulumi.get(__ret__, 'cisco_sse_auth_key_wo_version'),
         cisco_sse_auth_secret=pulumi.get(__ret__, 'cisco_sse_auth_secret'),
+        cisco_sse_auth_secret_wo=pulumi.get(__ret__, 'cisco_sse_auth_secret_wo'),
+        cisco_sse_auth_secret_wo_version=pulumi.get(__ret__, 'cisco_sse_auth_secret_wo_version'),
         cisco_sse_context_sharing=pulumi.get(__ret__, 'cisco_sse_context_sharing'),
         cisco_sse_org_id=pulumi.get(__ret__, 'cisco_sse_org_id'),
         id=pulumi.get(__ret__, 'id'),
         umbrella_auth_key_v2=pulumi.get(__ret__, 'umbrella_auth_key_v2'),
+        umbrella_auth_key_v2_wo=pulumi.get(__ret__, 'umbrella_auth_key_v2_wo'),
+        umbrella_auth_key_v2_wo_version=pulumi.get(__ret__, 'umbrella_auth_key_v2_wo_version'),
         umbrella_auth_secret_v2=pulumi.get(__ret__, 'umbrella_auth_secret_v2'),
+        umbrella_auth_secret_v2_wo=pulumi.get(__ret__, 'umbrella_auth_secret_v2_wo'),
+        umbrella_auth_secret_v2_wo_version=pulumi.get(__ret__, 'umbrella_auth_secret_v2_wo_version'),
         umbrella_dns_auth_key=pulumi.get(__ret__, 'umbrella_dns_auth_key'),
+        umbrella_dns_auth_key_wo=pulumi.get(__ret__, 'umbrella_dns_auth_key_wo'),
+        umbrella_dns_auth_key_wo_version=pulumi.get(__ret__, 'umbrella_dns_auth_key_wo_version'),
         umbrella_dns_auth_secret=pulumi.get(__ret__, 'umbrella_dns_auth_secret'),
+        umbrella_dns_auth_secret_wo=pulumi.get(__ret__, 'umbrella_dns_auth_secret_wo'),
+        umbrella_dns_auth_secret_wo_version=pulumi.get(__ret__, 'umbrella_dns_auth_secret_wo_version'),
         umbrella_org_id=pulumi.get(__ret__, 'umbrella_org_id'),
         umbrella_sig_auth_key=pulumi.get(__ret__, 'umbrella_sig_auth_key'),
+        umbrella_sig_auth_key_wo=pulumi.get(__ret__, 'umbrella_sig_auth_key_wo'),
+        umbrella_sig_auth_key_wo_version=pulumi.get(__ret__, 'umbrella_sig_auth_key_wo_version'),
         umbrella_sig_auth_secret=pulumi.get(__ret__, 'umbrella_sig_auth_secret'),
+        umbrella_sig_auth_secret_wo=pulumi.get(__ret__, 'umbrella_sig_auth_secret_wo'),
+        umbrella_sig_auth_secret_wo_version=pulumi.get(__ret__, 'umbrella_sig_auth_secret_wo_version'),
         zscaler_organization=pulumi.get(__ret__, 'zscaler_organization'),
         zscaler_partner_base_uri=pulumi.get(__ret__, 'zscaler_partner_base_uri'),
         zscaler_partner_key=pulumi.get(__ret__, 'zscaler_partner_key'),
+        zscaler_partner_key_wo=pulumi.get(__ret__, 'zscaler_partner_key_wo'),
+        zscaler_partner_key_wo_version=pulumi.get(__ret__, 'zscaler_partner_key_wo_version'),
         zscaler_password=pulumi.get(__ret__, 'zscaler_password'),
+        zscaler_password_wo=pulumi.get(__ret__, 'zscaler_password_wo'),
+        zscaler_password_wo_version=pulumi.get(__ret__, 'zscaler_password_wo_version'),
         zscaler_username=pulumi.get(__ret__, 'zscaler_username'))
 def get_cloud_provider_settings_output(opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCloudProviderSettingsResult]:
     """
@@ -294,19 +554,39 @@ def get_cloud_provider_settings_output(opts: Optional[Union[pulumi.InvokeOptions
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCloudProviderSettings:getCloudProviderSettings', __args__, opts=opts, typ=GetCloudProviderSettingsResult)
     return __ret__.apply(lambda __response__: GetCloudProviderSettingsResult(
         cisco_sse_auth_key=pulumi.get(__response__, 'cisco_sse_auth_key'),
+        cisco_sse_auth_key_wo=pulumi.get(__response__, 'cisco_sse_auth_key_wo'),
+        cisco_sse_auth_key_wo_version=pulumi.get(__response__, 'cisco_sse_auth_key_wo_version'),
         cisco_sse_auth_secret=pulumi.get(__response__, 'cisco_sse_auth_secret'),
+        cisco_sse_auth_secret_wo=pulumi.get(__response__, 'cisco_sse_auth_secret_wo'),
+        cisco_sse_auth_secret_wo_version=pulumi.get(__response__, 'cisco_sse_auth_secret_wo_version'),
         cisco_sse_context_sharing=pulumi.get(__response__, 'cisco_sse_context_sharing'),
         cisco_sse_org_id=pulumi.get(__response__, 'cisco_sse_org_id'),
         id=pulumi.get(__response__, 'id'),
         umbrella_auth_key_v2=pulumi.get(__response__, 'umbrella_auth_key_v2'),
+        umbrella_auth_key_v2_wo=pulumi.get(__response__, 'umbrella_auth_key_v2_wo'),
+        umbrella_auth_key_v2_wo_version=pulumi.get(__response__, 'umbrella_auth_key_v2_wo_version'),
         umbrella_auth_secret_v2=pulumi.get(__response__, 'umbrella_auth_secret_v2'),
+        umbrella_auth_secret_v2_wo=pulumi.get(__response__, 'umbrella_auth_secret_v2_wo'),
+        umbrella_auth_secret_v2_wo_version=pulumi.get(__response__, 'umbrella_auth_secret_v2_wo_version'),
         umbrella_dns_auth_key=pulumi.get(__response__, 'umbrella_dns_auth_key'),
+        umbrella_dns_auth_key_wo=pulumi.get(__response__, 'umbrella_dns_auth_key_wo'),
+        umbrella_dns_auth_key_wo_version=pulumi.get(__response__, 'umbrella_dns_auth_key_wo_version'),
         umbrella_dns_auth_secret=pulumi.get(__response__, 'umbrella_dns_auth_secret'),
+        umbrella_dns_auth_secret_wo=pulumi.get(__response__, 'umbrella_dns_auth_secret_wo'),
+        umbrella_dns_auth_secret_wo_version=pulumi.get(__response__, 'umbrella_dns_auth_secret_wo_version'),
         umbrella_org_id=pulumi.get(__response__, 'umbrella_org_id'),
         umbrella_sig_auth_key=pulumi.get(__response__, 'umbrella_sig_auth_key'),
+        umbrella_sig_auth_key_wo=pulumi.get(__response__, 'umbrella_sig_auth_key_wo'),
+        umbrella_sig_auth_key_wo_version=pulumi.get(__response__, 'umbrella_sig_auth_key_wo_version'),
         umbrella_sig_auth_secret=pulumi.get(__response__, 'umbrella_sig_auth_secret'),
+        umbrella_sig_auth_secret_wo=pulumi.get(__response__, 'umbrella_sig_auth_secret_wo'),
+        umbrella_sig_auth_secret_wo_version=pulumi.get(__response__, 'umbrella_sig_auth_secret_wo_version'),
         zscaler_organization=pulumi.get(__response__, 'zscaler_organization'),
         zscaler_partner_base_uri=pulumi.get(__response__, 'zscaler_partner_base_uri'),
         zscaler_partner_key=pulumi.get(__response__, 'zscaler_partner_key'),
+        zscaler_partner_key_wo=pulumi.get(__response__, 'zscaler_partner_key_wo'),
+        zscaler_partner_key_wo_version=pulumi.get(__response__, 'zscaler_partner_key_wo_version'),
         zscaler_password=pulumi.get(__response__, 'zscaler_password'),
+        zscaler_password_wo=pulumi.get(__response__, 'zscaler_password_wo'),
+        zscaler_password_wo_version=pulumi.get(__response__, 'zscaler_password_wo_version'),
         zscaler_username=pulumi.get(__response__, 'zscaler_username')))

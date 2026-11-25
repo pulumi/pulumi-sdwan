@@ -29,6 +29,14 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string KeyStringVariable;
+        /// <summary>
+        /// Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        /// </summary>
+        public readonly string KeyStringWo;
+        /// <summary>
+        /// Rotation trigger for `KeyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int KeyStringWoVersion;
 
         [OutputConstructor]
         private GetServiceRoutingEigrpFeatureMd5KeyResult(
@@ -38,12 +46,18 @@ namespace Pulumi.Sdwan.Outputs
 
             string keyString,
 
-            string keyStringVariable)
+            string keyStringVariable,
+
+            string keyStringWo,
+
+            int keyStringWoVersion)
         {
             KeyId = keyId;
             KeyIdVariable = keyIdVariable;
             KeyString = keyString;
             KeyStringVariable = keyStringVariable;
+            KeyStringWo = keyStringWo;
+            KeyStringWoVersion = keyStringWoVersion;
         }
     }
 }

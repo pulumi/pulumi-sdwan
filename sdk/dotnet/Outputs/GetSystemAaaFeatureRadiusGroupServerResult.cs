@@ -54,6 +54,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string KeyVariable;
         /// <summary>
+        /// Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        /// </summary>
+        public readonly string KeyWo;
+        /// <summary>
+        /// Rotation trigger for `KeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int KeyWoVersion;
+        /// <summary>
         /// Configure how many times to contact this Radius server
         /// </summary>
         public readonly int Retransmit;
@@ -69,6 +77,14 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string SecretKeyVariable;
+        /// <summary>
+        /// Set the Radius server shared type 7 encrypted key
+        /// </summary>
+        public readonly string SecretKeyWo;
+        /// <summary>
+        /// Rotation trigger for `SecretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int SecretKeyWoVersion;
         /// <summary>
         /// Configure how long to wait for replies from the Radius server
         /// </summary>
@@ -100,6 +116,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string keyVariable,
 
+            string keyWo,
+
+            int keyWoVersion,
+
             int retransmit,
 
             string retransmitVariable,
@@ -107,6 +127,10 @@ namespace Pulumi.Sdwan.Outputs
             string secretKey,
 
             string secretKeyVariable,
+
+            string secretKeyWo,
+
+            int secretKeyWoVersion,
 
             int timeout,
 
@@ -122,10 +146,14 @@ namespace Pulumi.Sdwan.Outputs
             KeyType = keyType;
             KeyTypeVariable = keyTypeVariable;
             KeyVariable = keyVariable;
+            KeyWo = keyWo;
+            KeyWoVersion = keyWoVersion;
             Retransmit = retransmit;
             RetransmitVariable = retransmitVariable;
             SecretKey = secretKey;
             SecretKeyVariable = secretKeyVariable;
+            SecretKeyWo = secretKeyWo;
+            SecretKeyWoVersion = secretKeyWoVersion;
             Timeout = timeout;
             TimeoutVariable = timeoutVariable;
         }

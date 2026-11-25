@@ -73,6 +73,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? LsaRetransmitIntervalVariable;
         /// <summary>
         /// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `MessageDigestKey`, `MessageDigestKeyVariable` and `MessageDigestKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `MessageDigestKeyWo` together with `MessageDigestKeyWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? MessageDigestKey;
         /// <summary>
@@ -88,6 +90,16 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string? MessageDigestKeyVariable;
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `MessageDigestKey`, `MessageDigestKeyVariable` and `MessageDigestKeyWo` can be set.
+        /// </summary>
+        public readonly string? MessageDigestKeyWo;
+        /// <summary>
+        /// Rotation trigger for `MessageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? MessageDigestKeyWoVersion;
         /// <summary>
         /// Set interface name
         /// </summary>
@@ -150,6 +162,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string? messageDigestKeyVariable,
 
+            string? messageDigestKeyWo,
+
+            int? messageDigestKeyWoVersion,
+
             string? name,
 
             string? nameVariable,
@@ -178,6 +194,8 @@ namespace Pulumi.Sdwan.Outputs
             MessageDigestKeyId = messageDigestKeyId;
             MessageDigestKeyIdVariable = messageDigestKeyIdVariable;
             MessageDigestKeyVariable = messageDigestKeyVariable;
+            MessageDigestKeyWo = messageDigestKeyWo;
+            MessageDigestKeyWoVersion = messageDigestKeyWoVersion;
             Name = name;
             NameVariable = nameVariable;
             NetworkType = networkType;

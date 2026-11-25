@@ -219,6 +219,8 @@ public final class TransportRoutingOspfFeatureAreaInterfaceArgs extends com.pulu
 
     /**
      * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="messageDigestKey")
@@ -226,6 +228,8 @@ public final class TransportRoutingOspfFeatureAreaInterfaceArgs extends com.pulu
 
     /**
      * @return Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> messageDigestKey() {
@@ -277,6 +281,40 @@ public final class TransportRoutingOspfFeatureAreaInterfaceArgs extends com.pulu
      */
     public Optional<Output<String>> messageDigestKeyVariable() {
         return Optional.ofNullable(this.messageDigestKeyVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     * 
+     */
+    @Import(name="messageDigestKeyWo")
+    private @Nullable Output<String> messageDigestKeyWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> messageDigestKeyWo() {
+        return Optional.ofNullable(this.messageDigestKeyWo);
+    }
+
+    /**
+     * Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="messageDigestKeyWoVersion")
+    private @Nullable Output<Integer> messageDigestKeyWoVersion;
+
+    /**
+     * @return Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> messageDigestKeyWoVersion() {
+        return Optional.ofNullable(this.messageDigestKeyWoVersion);
     }
 
     /**
@@ -394,6 +432,8 @@ public final class TransportRoutingOspfFeatureAreaInterfaceArgs extends com.pulu
         this.messageDigestKeyId = $.messageDigestKeyId;
         this.messageDigestKeyIdVariable = $.messageDigestKeyIdVariable;
         this.messageDigestKeyVariable = $.messageDigestKeyVariable;
+        this.messageDigestKeyWo = $.messageDigestKeyWo;
+        this.messageDigestKeyWoVersion = $.messageDigestKeyWoVersion;
         this.name = $.name;
         this.nameVariable = $.nameVariable;
         this.networkType = $.networkType;
@@ -694,6 +734,8 @@ public final class TransportRoutingOspfFeatureAreaInterfaceArgs extends com.pulu
 
         /**
          * @param messageDigestKey Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -705,6 +747,8 @@ public final class TransportRoutingOspfFeatureAreaInterfaceArgs extends com.pulu
 
         /**
          * @param messageDigestKey Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -776,6 +820,52 @@ public final class TransportRoutingOspfFeatureAreaInterfaceArgs extends com.pulu
          */
         public Builder messageDigestKeyVariable(String messageDigestKeyVariable) {
             return messageDigestKeyVariable(Output.of(messageDigestKeyVariable));
+        }
+
+        /**
+         * @param messageDigestKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder messageDigestKeyWo(@Nullable Output<String> messageDigestKeyWo) {
+            $.messageDigestKeyWo = messageDigestKeyWo;
+            return this;
+        }
+
+        /**
+         * @param messageDigestKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder messageDigestKeyWo(String messageDigestKeyWo) {
+            return messageDigestKeyWo(Output.of(messageDigestKeyWo));
+        }
+
+        /**
+         * @param messageDigestKeyWoVersion Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder messageDigestKeyWoVersion(@Nullable Output<Integer> messageDigestKeyWoVersion) {
+            $.messageDigestKeyWoVersion = messageDigestKeyWoVersion;
+            return this;
+        }
+
+        /**
+         * @param messageDigestKeyWoVersion Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder messageDigestKeyWoVersion(Integer messageDigestKeyWoVersion) {
+            return messageDigestKeyWoVersion(Output.of(messageDigestKeyWoVersion));
         }
 
         /**

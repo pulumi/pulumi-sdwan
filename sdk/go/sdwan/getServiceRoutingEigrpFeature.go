@@ -85,6 +85,10 @@ type LookupServiceRoutingEigrpFeatureResult struct {
 	HmacAuthenticationKey string `pulumi:"hmacAuthenticationKey"`
 	// Variable name
 	HmacAuthenticationKeyVariable string `pulumi:"hmacAuthenticationKeyVariable"`
+	// Set hmac-sha-256 authentication key
+	HmacAuthenticationKeyWo string `pulumi:"hmacAuthenticationKeyWo"`
+	// Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	HmacAuthenticationKeyWoVersion int `pulumi:"hmacAuthenticationKeyWoVersion"`
 	// Set EIGRP hold time
 	HoldTime int `pulumi:"holdTime"`
 	// Variable name
@@ -198,6 +202,16 @@ func (o LookupServiceRoutingEigrpFeatureResultOutput) HmacAuthenticationKey() pu
 // Variable name
 func (o LookupServiceRoutingEigrpFeatureResultOutput) HmacAuthenticationKeyVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceRoutingEigrpFeatureResult) string { return v.HmacAuthenticationKeyVariable }).(pulumi.StringOutput)
+}
+
+// Set hmac-sha-256 authentication key
+func (o LookupServiceRoutingEigrpFeatureResultOutput) HmacAuthenticationKeyWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceRoutingEigrpFeatureResult) string { return v.HmacAuthenticationKeyWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupServiceRoutingEigrpFeatureResultOutput) HmacAuthenticationKeyWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupServiceRoutingEigrpFeatureResult) int { return v.HmacAuthenticationKeyWoVersion }).(pulumi.IntOutput)
 }
 
 // Set EIGRP hold time

@@ -13,6 +13,772 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetSystemSecurityFeatureKey struct {
+	// Configure Accept AO Mismatch
+	AcceptAoMismatch bool `pulumi:"acceptAoMismatch"`
+	// Variable name
+	AcceptAoMismatchVariable string `pulumi:"acceptAoMismatchVariable"`
+	// Send lifetime Duration (seconds)
+	AcceptLifeTimeDuration int `pulumi:"acceptLifeTimeDuration"`
+	// Variable name
+	AcceptLifeTimeDurationVariable string `pulumi:"acceptLifeTimeDurationVariable"`
+	// Configure Key lifetime end time
+	AcceptLifeTimeExact int `pulumi:"acceptLifeTimeExact"`
+	// Infinite lifetime
+	AcceptLifeTimeInfinite bool `pulumi:"acceptLifeTimeInfinite"`
+	// Variable name
+	AcceptLifeTimeInfiniteVariable string `pulumi:"acceptLifeTimeInfiniteVariable"`
+	// Configure Send lifetime Local
+	AcceptLifeTimeLocal bool `pulumi:"acceptLifeTimeLocal"`
+	// Variable name
+	AcceptLifeTimeLocalVariable string `pulumi:"acceptLifeTimeLocalVariable"`
+	// Configure Key lifetime start time
+	AcceptLifeTimeStartEpoch int `pulumi:"acceptLifeTimeStartEpoch"`
+	// Crypto Algorithm
+	CryptoAlgorithm string `pulumi:"cryptoAlgorithm"`
+	// Select the Key ID
+	Id int `pulumi:"id"`
+	// Configure Include TCP Options
+	IncludeTcpOptions bool `pulumi:"includeTcpOptions"`
+	// Variable name
+	IncludeTcpOptionsVariable string `pulumi:"includeTcpOptionsVariable"`
+	// Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	KeyString string `pulumi:"keyString"`
+	// Variable name
+	KeyStringVariable string `pulumi:"keyStringVariable"`
+	// Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	KeyStringWo string `pulumi:"keyStringWo"`
+	// Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	KeyStringWoVersion int `pulumi:"keyStringWoVersion"`
+	// Select the chain name
+	Name string `pulumi:"name"`
+	// Specify the Receiver ID
+	ReceiverId int `pulumi:"receiverId"`
+	// Variable name
+	ReceiverIdVariable string `pulumi:"receiverIdVariable"`
+	// Specify the Send ID
+	SendId int `pulumi:"sendId"`
+	// Variable name
+	SendIdVariable string `pulumi:"sendIdVariable"`
+	// Send lifetime Duration (seconds)
+	SendLifeTimeDuration int `pulumi:"sendLifeTimeDuration"`
+	// Variable name
+	SendLifeTimeDurationVariable string `pulumi:"sendLifeTimeDurationVariable"`
+	// Configure Key lifetime end time
+	SendLifeTimeExact int `pulumi:"sendLifeTimeExact"`
+	// Infinite lifetime
+	SendLifeTimeInfinite bool `pulumi:"sendLifeTimeInfinite"`
+	// Variable name
+	SendLifeTimeInfiniteVariable string `pulumi:"sendLifeTimeInfiniteVariable"`
+	// Configure Send lifetime Local
+	SendLifeTimeLocal bool `pulumi:"sendLifeTimeLocal"`
+	// Variable name
+	SendLifeTimeLocalVariable string `pulumi:"sendLifeTimeLocalVariable"`
+	// Configure Key lifetime start time
+	SendLifeTimeStartEpoch int `pulumi:"sendLifeTimeStartEpoch"`
+}
+
+// GetSystemSecurityFeatureKeyInput is an input type that accepts GetSystemSecurityFeatureKeyArgs and GetSystemSecurityFeatureKeyOutput values.
+// You can construct a concrete instance of `GetSystemSecurityFeatureKeyInput` via:
+//
+//	GetSystemSecurityFeatureKeyArgs{...}
+type GetSystemSecurityFeatureKeyInput interface {
+	pulumi.Input
+
+	ToGetSystemSecurityFeatureKeyOutput() GetSystemSecurityFeatureKeyOutput
+	ToGetSystemSecurityFeatureKeyOutputWithContext(context.Context) GetSystemSecurityFeatureKeyOutput
+}
+
+type GetSystemSecurityFeatureKeyArgs struct {
+	// Configure Accept AO Mismatch
+	AcceptAoMismatch pulumi.BoolInput `pulumi:"acceptAoMismatch"`
+	// Variable name
+	AcceptAoMismatchVariable pulumi.StringInput `pulumi:"acceptAoMismatchVariable"`
+	// Send lifetime Duration (seconds)
+	AcceptLifeTimeDuration pulumi.IntInput `pulumi:"acceptLifeTimeDuration"`
+	// Variable name
+	AcceptLifeTimeDurationVariable pulumi.StringInput `pulumi:"acceptLifeTimeDurationVariable"`
+	// Configure Key lifetime end time
+	AcceptLifeTimeExact pulumi.IntInput `pulumi:"acceptLifeTimeExact"`
+	// Infinite lifetime
+	AcceptLifeTimeInfinite pulumi.BoolInput `pulumi:"acceptLifeTimeInfinite"`
+	// Variable name
+	AcceptLifeTimeInfiniteVariable pulumi.StringInput `pulumi:"acceptLifeTimeInfiniteVariable"`
+	// Configure Send lifetime Local
+	AcceptLifeTimeLocal pulumi.BoolInput `pulumi:"acceptLifeTimeLocal"`
+	// Variable name
+	AcceptLifeTimeLocalVariable pulumi.StringInput `pulumi:"acceptLifeTimeLocalVariable"`
+	// Configure Key lifetime start time
+	AcceptLifeTimeStartEpoch pulumi.IntInput `pulumi:"acceptLifeTimeStartEpoch"`
+	// Crypto Algorithm
+	CryptoAlgorithm pulumi.StringInput `pulumi:"cryptoAlgorithm"`
+	// Select the Key ID
+	Id pulumi.IntInput `pulumi:"id"`
+	// Configure Include TCP Options
+	IncludeTcpOptions pulumi.BoolInput `pulumi:"includeTcpOptions"`
+	// Variable name
+	IncludeTcpOptionsVariable pulumi.StringInput `pulumi:"includeTcpOptionsVariable"`
+	// Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	KeyString pulumi.StringInput `pulumi:"keyString"`
+	// Variable name
+	KeyStringVariable pulumi.StringInput `pulumi:"keyStringVariable"`
+	// Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	KeyStringWo pulumi.StringInput `pulumi:"keyStringWo"`
+	// Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	KeyStringWoVersion pulumi.IntInput `pulumi:"keyStringWoVersion"`
+	// Select the chain name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Specify the Receiver ID
+	ReceiverId pulumi.IntInput `pulumi:"receiverId"`
+	// Variable name
+	ReceiverIdVariable pulumi.StringInput `pulumi:"receiverIdVariable"`
+	// Specify the Send ID
+	SendId pulumi.IntInput `pulumi:"sendId"`
+	// Variable name
+	SendIdVariable pulumi.StringInput `pulumi:"sendIdVariable"`
+	// Send lifetime Duration (seconds)
+	SendLifeTimeDuration pulumi.IntInput `pulumi:"sendLifeTimeDuration"`
+	// Variable name
+	SendLifeTimeDurationVariable pulumi.StringInput `pulumi:"sendLifeTimeDurationVariable"`
+	// Configure Key lifetime end time
+	SendLifeTimeExact pulumi.IntInput `pulumi:"sendLifeTimeExact"`
+	// Infinite lifetime
+	SendLifeTimeInfinite pulumi.BoolInput `pulumi:"sendLifeTimeInfinite"`
+	// Variable name
+	SendLifeTimeInfiniteVariable pulumi.StringInput `pulumi:"sendLifeTimeInfiniteVariable"`
+	// Configure Send lifetime Local
+	SendLifeTimeLocal pulumi.BoolInput `pulumi:"sendLifeTimeLocal"`
+	// Variable name
+	SendLifeTimeLocalVariable pulumi.StringInput `pulumi:"sendLifeTimeLocalVariable"`
+	// Configure Key lifetime start time
+	SendLifeTimeStartEpoch pulumi.IntInput `pulumi:"sendLifeTimeStartEpoch"`
+}
+
+func (GetSystemSecurityFeatureKeyArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSecurityFeatureKey)(nil)).Elem()
+}
+
+func (i GetSystemSecurityFeatureKeyArgs) ToGetSystemSecurityFeatureKeyOutput() GetSystemSecurityFeatureKeyOutput {
+	return i.ToGetSystemSecurityFeatureKeyOutputWithContext(context.Background())
+}
+
+func (i GetSystemSecurityFeatureKeyArgs) ToGetSystemSecurityFeatureKeyOutputWithContext(ctx context.Context) GetSystemSecurityFeatureKeyOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSecurityFeatureKeyOutput)
+}
+
+// GetSystemSecurityFeatureKeyArrayInput is an input type that accepts GetSystemSecurityFeatureKeyArray and GetSystemSecurityFeatureKeyArrayOutput values.
+// You can construct a concrete instance of `GetSystemSecurityFeatureKeyArrayInput` via:
+//
+//	GetSystemSecurityFeatureKeyArray{ GetSystemSecurityFeatureKeyArgs{...} }
+type GetSystemSecurityFeatureKeyArrayInput interface {
+	pulumi.Input
+
+	ToGetSystemSecurityFeatureKeyArrayOutput() GetSystemSecurityFeatureKeyArrayOutput
+	ToGetSystemSecurityFeatureKeyArrayOutputWithContext(context.Context) GetSystemSecurityFeatureKeyArrayOutput
+}
+
+type GetSystemSecurityFeatureKeyArray []GetSystemSecurityFeatureKeyInput
+
+func (GetSystemSecurityFeatureKeyArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSecurityFeatureKey)(nil)).Elem()
+}
+
+func (i GetSystemSecurityFeatureKeyArray) ToGetSystemSecurityFeatureKeyArrayOutput() GetSystemSecurityFeatureKeyArrayOutput {
+	return i.ToGetSystemSecurityFeatureKeyArrayOutputWithContext(context.Background())
+}
+
+func (i GetSystemSecurityFeatureKeyArray) ToGetSystemSecurityFeatureKeyArrayOutputWithContext(ctx context.Context) GetSystemSecurityFeatureKeyArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSecurityFeatureKeyArrayOutput)
+}
+
+type GetSystemSecurityFeatureKeyOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSecurityFeatureKeyOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSecurityFeatureKey)(nil)).Elem()
+}
+
+func (o GetSystemSecurityFeatureKeyOutput) ToGetSystemSecurityFeatureKeyOutput() GetSystemSecurityFeatureKeyOutput {
+	return o
+}
+
+func (o GetSystemSecurityFeatureKeyOutput) ToGetSystemSecurityFeatureKeyOutputWithContext(ctx context.Context) GetSystemSecurityFeatureKeyOutput {
+	return o
+}
+
+// Configure Accept AO Mismatch
+func (o GetSystemSecurityFeatureKeyOutput) AcceptAoMismatch() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) bool { return v.AcceptAoMismatch }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetSystemSecurityFeatureKeyOutput) AcceptAoMismatchVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.AcceptAoMismatchVariable }).(pulumi.StringOutput)
+}
+
+// Send lifetime Duration (seconds)
+func (o GetSystemSecurityFeatureKeyOutput) AcceptLifeTimeDuration() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) int { return v.AcceptLifeTimeDuration }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetSystemSecurityFeatureKeyOutput) AcceptLifeTimeDurationVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.AcceptLifeTimeDurationVariable }).(pulumi.StringOutput)
+}
+
+// Configure Key lifetime end time
+func (o GetSystemSecurityFeatureKeyOutput) AcceptLifeTimeExact() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) int { return v.AcceptLifeTimeExact }).(pulumi.IntOutput)
+}
+
+// Infinite lifetime
+func (o GetSystemSecurityFeatureKeyOutput) AcceptLifeTimeInfinite() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) bool { return v.AcceptLifeTimeInfinite }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetSystemSecurityFeatureKeyOutput) AcceptLifeTimeInfiniteVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.AcceptLifeTimeInfiniteVariable }).(pulumi.StringOutput)
+}
+
+// Configure Send lifetime Local
+func (o GetSystemSecurityFeatureKeyOutput) AcceptLifeTimeLocal() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) bool { return v.AcceptLifeTimeLocal }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetSystemSecurityFeatureKeyOutput) AcceptLifeTimeLocalVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.AcceptLifeTimeLocalVariable }).(pulumi.StringOutput)
+}
+
+// Configure Key lifetime start time
+func (o GetSystemSecurityFeatureKeyOutput) AcceptLifeTimeStartEpoch() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) int { return v.AcceptLifeTimeStartEpoch }).(pulumi.IntOutput)
+}
+
+// Crypto Algorithm
+func (o GetSystemSecurityFeatureKeyOutput) CryptoAlgorithm() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.CryptoAlgorithm }).(pulumi.StringOutput)
+}
+
+// Select the Key ID
+func (o GetSystemSecurityFeatureKeyOutput) Id() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) int { return v.Id }).(pulumi.IntOutput)
+}
+
+// Configure Include TCP Options
+func (o GetSystemSecurityFeatureKeyOutput) IncludeTcpOptions() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) bool { return v.IncludeTcpOptions }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetSystemSecurityFeatureKeyOutput) IncludeTcpOptionsVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.IncludeTcpOptionsVariable }).(pulumi.StringOutput)
+}
+
+// Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+func (o GetSystemSecurityFeatureKeyOutput) KeyString() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.KeyString }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemSecurityFeatureKeyOutput) KeyStringVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.KeyStringVariable }).(pulumi.StringOutput)
+}
+
+// Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+func (o GetSystemSecurityFeatureKeyOutput) KeyStringWo() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.KeyStringWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o GetSystemSecurityFeatureKeyOutput) KeyStringWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) int { return v.KeyStringWoVersion }).(pulumi.IntOutput)
+}
+
+// Select the chain name
+func (o GetSystemSecurityFeatureKeyOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Specify the Receiver ID
+func (o GetSystemSecurityFeatureKeyOutput) ReceiverId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) int { return v.ReceiverId }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetSystemSecurityFeatureKeyOutput) ReceiverIdVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.ReceiverIdVariable }).(pulumi.StringOutput)
+}
+
+// Specify the Send ID
+func (o GetSystemSecurityFeatureKeyOutput) SendId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) int { return v.SendId }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetSystemSecurityFeatureKeyOutput) SendIdVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.SendIdVariable }).(pulumi.StringOutput)
+}
+
+// Send lifetime Duration (seconds)
+func (o GetSystemSecurityFeatureKeyOutput) SendLifeTimeDuration() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) int { return v.SendLifeTimeDuration }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetSystemSecurityFeatureKeyOutput) SendLifeTimeDurationVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.SendLifeTimeDurationVariable }).(pulumi.StringOutput)
+}
+
+// Configure Key lifetime end time
+func (o GetSystemSecurityFeatureKeyOutput) SendLifeTimeExact() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) int { return v.SendLifeTimeExact }).(pulumi.IntOutput)
+}
+
+// Infinite lifetime
+func (o GetSystemSecurityFeatureKeyOutput) SendLifeTimeInfinite() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) bool { return v.SendLifeTimeInfinite }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetSystemSecurityFeatureKeyOutput) SendLifeTimeInfiniteVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.SendLifeTimeInfiniteVariable }).(pulumi.StringOutput)
+}
+
+// Configure Send lifetime Local
+func (o GetSystemSecurityFeatureKeyOutput) SendLifeTimeLocal() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) bool { return v.SendLifeTimeLocal }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetSystemSecurityFeatureKeyOutput) SendLifeTimeLocalVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) string { return v.SendLifeTimeLocalVariable }).(pulumi.StringOutput)
+}
+
+// Configure Key lifetime start time
+func (o GetSystemSecurityFeatureKeyOutput) SendLifeTimeStartEpoch() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKey) int { return v.SendLifeTimeStartEpoch }).(pulumi.IntOutput)
+}
+
+type GetSystemSecurityFeatureKeyArrayOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSecurityFeatureKeyArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSecurityFeatureKey)(nil)).Elem()
+}
+
+func (o GetSystemSecurityFeatureKeyArrayOutput) ToGetSystemSecurityFeatureKeyArrayOutput() GetSystemSecurityFeatureKeyArrayOutput {
+	return o
+}
+
+func (o GetSystemSecurityFeatureKeyArrayOutput) ToGetSystemSecurityFeatureKeyArrayOutputWithContext(ctx context.Context) GetSystemSecurityFeatureKeyArrayOutput {
+	return o
+}
+
+func (o GetSystemSecurityFeatureKeyArrayOutput) Index(i pulumi.IntInput) GetSystemSecurityFeatureKeyOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSystemSecurityFeatureKey {
+		return vs[0].([]GetSystemSecurityFeatureKey)[vs[1].(int)]
+	}).(GetSystemSecurityFeatureKeyOutput)
+}
+
+type GetSystemSecurityFeatureKeychain struct {
+	// Specify the name of the Keychain
+	KeyChainName string `pulumi:"keyChainName"`
+	// Specify the Key ID
+	KeyId int `pulumi:"keyId"`
+}
+
+// GetSystemSecurityFeatureKeychainInput is an input type that accepts GetSystemSecurityFeatureKeychainArgs and GetSystemSecurityFeatureKeychainOutput values.
+// You can construct a concrete instance of `GetSystemSecurityFeatureKeychainInput` via:
+//
+//	GetSystemSecurityFeatureKeychainArgs{...}
+type GetSystemSecurityFeatureKeychainInput interface {
+	pulumi.Input
+
+	ToGetSystemSecurityFeatureKeychainOutput() GetSystemSecurityFeatureKeychainOutput
+	ToGetSystemSecurityFeatureKeychainOutputWithContext(context.Context) GetSystemSecurityFeatureKeychainOutput
+}
+
+type GetSystemSecurityFeatureKeychainArgs struct {
+	// Specify the name of the Keychain
+	KeyChainName pulumi.StringInput `pulumi:"keyChainName"`
+	// Specify the Key ID
+	KeyId pulumi.IntInput `pulumi:"keyId"`
+}
+
+func (GetSystemSecurityFeatureKeychainArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSecurityFeatureKeychain)(nil)).Elem()
+}
+
+func (i GetSystemSecurityFeatureKeychainArgs) ToGetSystemSecurityFeatureKeychainOutput() GetSystemSecurityFeatureKeychainOutput {
+	return i.ToGetSystemSecurityFeatureKeychainOutputWithContext(context.Background())
+}
+
+func (i GetSystemSecurityFeatureKeychainArgs) ToGetSystemSecurityFeatureKeychainOutputWithContext(ctx context.Context) GetSystemSecurityFeatureKeychainOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSecurityFeatureKeychainOutput)
+}
+
+// GetSystemSecurityFeatureKeychainArrayInput is an input type that accepts GetSystemSecurityFeatureKeychainArray and GetSystemSecurityFeatureKeychainArrayOutput values.
+// You can construct a concrete instance of `GetSystemSecurityFeatureKeychainArrayInput` via:
+//
+//	GetSystemSecurityFeatureKeychainArray{ GetSystemSecurityFeatureKeychainArgs{...} }
+type GetSystemSecurityFeatureKeychainArrayInput interface {
+	pulumi.Input
+
+	ToGetSystemSecurityFeatureKeychainArrayOutput() GetSystemSecurityFeatureKeychainArrayOutput
+	ToGetSystemSecurityFeatureKeychainArrayOutputWithContext(context.Context) GetSystemSecurityFeatureKeychainArrayOutput
+}
+
+type GetSystemSecurityFeatureKeychainArray []GetSystemSecurityFeatureKeychainInput
+
+func (GetSystemSecurityFeatureKeychainArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSecurityFeatureKeychain)(nil)).Elem()
+}
+
+func (i GetSystemSecurityFeatureKeychainArray) ToGetSystemSecurityFeatureKeychainArrayOutput() GetSystemSecurityFeatureKeychainArrayOutput {
+	return i.ToGetSystemSecurityFeatureKeychainArrayOutputWithContext(context.Background())
+}
+
+func (i GetSystemSecurityFeatureKeychainArray) ToGetSystemSecurityFeatureKeychainArrayOutputWithContext(ctx context.Context) GetSystemSecurityFeatureKeychainArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSecurityFeatureKeychainArrayOutput)
+}
+
+type GetSystemSecurityFeatureKeychainOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSecurityFeatureKeychainOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSecurityFeatureKeychain)(nil)).Elem()
+}
+
+func (o GetSystemSecurityFeatureKeychainOutput) ToGetSystemSecurityFeatureKeychainOutput() GetSystemSecurityFeatureKeychainOutput {
+	return o
+}
+
+func (o GetSystemSecurityFeatureKeychainOutput) ToGetSystemSecurityFeatureKeychainOutputWithContext(ctx context.Context) GetSystemSecurityFeatureKeychainOutput {
+	return o
+}
+
+// Specify the name of the Keychain
+func (o GetSystemSecurityFeatureKeychainOutput) KeyChainName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKeychain) string { return v.KeyChainName }).(pulumi.StringOutput)
+}
+
+// Specify the Key ID
+func (o GetSystemSecurityFeatureKeychainOutput) KeyId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSecurityFeatureKeychain) int { return v.KeyId }).(pulumi.IntOutput)
+}
+
+type GetSystemSecurityFeatureKeychainArrayOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSecurityFeatureKeychainArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSecurityFeatureKeychain)(nil)).Elem()
+}
+
+func (o GetSystemSecurityFeatureKeychainArrayOutput) ToGetSystemSecurityFeatureKeychainArrayOutput() GetSystemSecurityFeatureKeychainArrayOutput {
+	return o
+}
+
+func (o GetSystemSecurityFeatureKeychainArrayOutput) ToGetSystemSecurityFeatureKeychainArrayOutputWithContext(ctx context.Context) GetSystemSecurityFeatureKeychainArrayOutput {
+	return o
+}
+
+func (o GetSystemSecurityFeatureKeychainArrayOutput) Index(i pulumi.IntInput) GetSystemSecurityFeatureKeychainOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSystemSecurityFeatureKeychain {
+		return vs[0].([]GetSystemSecurityFeatureKeychain)[vs[1].(int)]
+	}).(GetSystemSecurityFeatureKeychainOutput)
+}
+
+type GetSystemSnmpFeatureCommunity struct {
+	// Configure access permissions
+	Authorization string `pulumi:"authorization"`
+	// Variable name
+	AuthorizationVariable string `pulumi:"authorizationVariable"`
+	// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	Name string `pulumi:"name"`
+	// Variable name
+	NameVariable string `pulumi:"nameVariable"`
+	// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	NameWo string `pulumi:"nameWo"`
+	// Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	NameWoVersion int `pulumi:"nameWoVersion"`
+	// Set user label of the SNMP community
+	UserLabel string `pulumi:"userLabel"`
+	// Set name of the SNMP view
+	View string `pulumi:"view"`
+	// Variable name
+	ViewVariable string `pulumi:"viewVariable"`
+}
+
+// GetSystemSnmpFeatureCommunityInput is an input type that accepts GetSystemSnmpFeatureCommunityArgs and GetSystemSnmpFeatureCommunityOutput values.
+// You can construct a concrete instance of `GetSystemSnmpFeatureCommunityInput` via:
+//
+//	GetSystemSnmpFeatureCommunityArgs{...}
+type GetSystemSnmpFeatureCommunityInput interface {
+	pulumi.Input
+
+	ToGetSystemSnmpFeatureCommunityOutput() GetSystemSnmpFeatureCommunityOutput
+	ToGetSystemSnmpFeatureCommunityOutputWithContext(context.Context) GetSystemSnmpFeatureCommunityOutput
+}
+
+type GetSystemSnmpFeatureCommunityArgs struct {
+	// Configure access permissions
+	Authorization pulumi.StringInput `pulumi:"authorization"`
+	// Variable name
+	AuthorizationVariable pulumi.StringInput `pulumi:"authorizationVariable"`
+	// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	Name pulumi.StringInput `pulumi:"name"`
+	// Variable name
+	NameVariable pulumi.StringInput `pulumi:"nameVariable"`
+	// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	NameWo pulumi.StringInput `pulumi:"nameWo"`
+	// Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	NameWoVersion pulumi.IntInput `pulumi:"nameWoVersion"`
+	// Set user label of the SNMP community
+	UserLabel pulumi.StringInput `pulumi:"userLabel"`
+	// Set name of the SNMP view
+	View pulumi.StringInput `pulumi:"view"`
+	// Variable name
+	ViewVariable pulumi.StringInput `pulumi:"viewVariable"`
+}
+
+func (GetSystemSnmpFeatureCommunityArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSnmpFeatureCommunity)(nil)).Elem()
+}
+
+func (i GetSystemSnmpFeatureCommunityArgs) ToGetSystemSnmpFeatureCommunityOutput() GetSystemSnmpFeatureCommunityOutput {
+	return i.ToGetSystemSnmpFeatureCommunityOutputWithContext(context.Background())
+}
+
+func (i GetSystemSnmpFeatureCommunityArgs) ToGetSystemSnmpFeatureCommunityOutputWithContext(ctx context.Context) GetSystemSnmpFeatureCommunityOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureCommunityOutput)
+}
+
+// GetSystemSnmpFeatureCommunityArrayInput is an input type that accepts GetSystemSnmpFeatureCommunityArray and GetSystemSnmpFeatureCommunityArrayOutput values.
+// You can construct a concrete instance of `GetSystemSnmpFeatureCommunityArrayInput` via:
+//
+//	GetSystemSnmpFeatureCommunityArray{ GetSystemSnmpFeatureCommunityArgs{...} }
+type GetSystemSnmpFeatureCommunityArrayInput interface {
+	pulumi.Input
+
+	ToGetSystemSnmpFeatureCommunityArrayOutput() GetSystemSnmpFeatureCommunityArrayOutput
+	ToGetSystemSnmpFeatureCommunityArrayOutputWithContext(context.Context) GetSystemSnmpFeatureCommunityArrayOutput
+}
+
+type GetSystemSnmpFeatureCommunityArray []GetSystemSnmpFeatureCommunityInput
+
+func (GetSystemSnmpFeatureCommunityArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSnmpFeatureCommunity)(nil)).Elem()
+}
+
+func (i GetSystemSnmpFeatureCommunityArray) ToGetSystemSnmpFeatureCommunityArrayOutput() GetSystemSnmpFeatureCommunityArrayOutput {
+	return i.ToGetSystemSnmpFeatureCommunityArrayOutputWithContext(context.Background())
+}
+
+func (i GetSystemSnmpFeatureCommunityArray) ToGetSystemSnmpFeatureCommunityArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureCommunityArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureCommunityArrayOutput)
+}
+
+type GetSystemSnmpFeatureCommunityOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSnmpFeatureCommunityOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSnmpFeatureCommunity)(nil)).Elem()
+}
+
+func (o GetSystemSnmpFeatureCommunityOutput) ToGetSystemSnmpFeatureCommunityOutput() GetSystemSnmpFeatureCommunityOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureCommunityOutput) ToGetSystemSnmpFeatureCommunityOutputWithContext(ctx context.Context) GetSystemSnmpFeatureCommunityOutput {
+	return o
+}
+
+// Configure access permissions
+func (o GetSystemSnmpFeatureCommunityOutput) Authorization() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureCommunity) string { return v.Authorization }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureCommunityOutput) AuthorizationVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureCommunity) string { return v.AuthorizationVariable }).(pulumi.StringOutput)
+}
+
+// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+func (o GetSystemSnmpFeatureCommunityOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureCommunity) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureCommunityOutput) NameVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureCommunity) string { return v.NameVariable }).(pulumi.StringOutput)
+}
+
+// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+func (o GetSystemSnmpFeatureCommunityOutput) NameWo() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureCommunity) string { return v.NameWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o GetSystemSnmpFeatureCommunityOutput) NameWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureCommunity) int { return v.NameWoVersion }).(pulumi.IntOutput)
+}
+
+// Set user label of the SNMP community
+func (o GetSystemSnmpFeatureCommunityOutput) UserLabel() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureCommunity) string { return v.UserLabel }).(pulumi.StringOutput)
+}
+
+// Set name of the SNMP view
+func (o GetSystemSnmpFeatureCommunityOutput) View() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureCommunity) string { return v.View }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureCommunityOutput) ViewVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureCommunity) string { return v.ViewVariable }).(pulumi.StringOutput)
+}
+
+type GetSystemSnmpFeatureCommunityArrayOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSnmpFeatureCommunityArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSnmpFeatureCommunity)(nil)).Elem()
+}
+
+func (o GetSystemSnmpFeatureCommunityArrayOutput) ToGetSystemSnmpFeatureCommunityArrayOutput() GetSystemSnmpFeatureCommunityArrayOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureCommunityArrayOutput) ToGetSystemSnmpFeatureCommunityArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureCommunityArrayOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureCommunityArrayOutput) Index(i pulumi.IntInput) GetSystemSnmpFeatureCommunityOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSystemSnmpFeatureCommunity {
+		return vs[0].([]GetSystemSnmpFeatureCommunity)[vs[1].(int)]
+	}).(GetSystemSnmpFeatureCommunityOutput)
+}
+
+type GetSystemSnmpFeatureGroup struct {
+	// Name of the SNMP group
+	Name string `pulumi:"name"`
+	// Configure security level
+	SecurityLevel string `pulumi:"securityLevel"`
+	// Name of the SNMP view
+	View string `pulumi:"view"`
+	// Variable name
+	ViewVariable string `pulumi:"viewVariable"`
+}
+
+// GetSystemSnmpFeatureGroupInput is an input type that accepts GetSystemSnmpFeatureGroupArgs and GetSystemSnmpFeatureGroupOutput values.
+// You can construct a concrete instance of `GetSystemSnmpFeatureGroupInput` via:
+//
+//	GetSystemSnmpFeatureGroupArgs{...}
+type GetSystemSnmpFeatureGroupInput interface {
+	pulumi.Input
+
+	ToGetSystemSnmpFeatureGroupOutput() GetSystemSnmpFeatureGroupOutput
+	ToGetSystemSnmpFeatureGroupOutputWithContext(context.Context) GetSystemSnmpFeatureGroupOutput
+}
+
+type GetSystemSnmpFeatureGroupArgs struct {
+	// Name of the SNMP group
+	Name pulumi.StringInput `pulumi:"name"`
+	// Configure security level
+	SecurityLevel pulumi.StringInput `pulumi:"securityLevel"`
+	// Name of the SNMP view
+	View pulumi.StringInput `pulumi:"view"`
+	// Variable name
+	ViewVariable pulumi.StringInput `pulumi:"viewVariable"`
+}
+
+func (GetSystemSnmpFeatureGroupArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSnmpFeatureGroup)(nil)).Elem()
+}
+
+func (i GetSystemSnmpFeatureGroupArgs) ToGetSystemSnmpFeatureGroupOutput() GetSystemSnmpFeatureGroupOutput {
+	return i.ToGetSystemSnmpFeatureGroupOutputWithContext(context.Background())
+}
+
+func (i GetSystemSnmpFeatureGroupArgs) ToGetSystemSnmpFeatureGroupOutputWithContext(ctx context.Context) GetSystemSnmpFeatureGroupOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureGroupOutput)
+}
+
+// GetSystemSnmpFeatureGroupArrayInput is an input type that accepts GetSystemSnmpFeatureGroupArray and GetSystemSnmpFeatureGroupArrayOutput values.
+// You can construct a concrete instance of `GetSystemSnmpFeatureGroupArrayInput` via:
+//
+//	GetSystemSnmpFeatureGroupArray{ GetSystemSnmpFeatureGroupArgs{...} }
+type GetSystemSnmpFeatureGroupArrayInput interface {
+	pulumi.Input
+
+	ToGetSystemSnmpFeatureGroupArrayOutput() GetSystemSnmpFeatureGroupArrayOutput
+	ToGetSystemSnmpFeatureGroupArrayOutputWithContext(context.Context) GetSystemSnmpFeatureGroupArrayOutput
+}
+
+type GetSystemSnmpFeatureGroupArray []GetSystemSnmpFeatureGroupInput
+
+func (GetSystemSnmpFeatureGroupArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSnmpFeatureGroup)(nil)).Elem()
+}
+
+func (i GetSystemSnmpFeatureGroupArray) ToGetSystemSnmpFeatureGroupArrayOutput() GetSystemSnmpFeatureGroupArrayOutput {
+	return i.ToGetSystemSnmpFeatureGroupArrayOutputWithContext(context.Background())
+}
+
+func (i GetSystemSnmpFeatureGroupArray) ToGetSystemSnmpFeatureGroupArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureGroupArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemSnmpFeatureGroupArrayOutput)
+}
+
+type GetSystemSnmpFeatureGroupOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSnmpFeatureGroupOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemSnmpFeatureGroup)(nil)).Elem()
+}
+
+func (o GetSystemSnmpFeatureGroupOutput) ToGetSystemSnmpFeatureGroupOutput() GetSystemSnmpFeatureGroupOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureGroupOutput) ToGetSystemSnmpFeatureGroupOutputWithContext(ctx context.Context) GetSystemSnmpFeatureGroupOutput {
+	return o
+}
+
+// Name of the SNMP group
+func (o GetSystemSnmpFeatureGroupOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureGroup) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Configure security level
+func (o GetSystemSnmpFeatureGroupOutput) SecurityLevel() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureGroup) string { return v.SecurityLevel }).(pulumi.StringOutput)
+}
+
+// Name of the SNMP view
+func (o GetSystemSnmpFeatureGroupOutput) View() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureGroup) string { return v.View }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemSnmpFeatureGroupOutput) ViewVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureGroup) string { return v.ViewVariable }).(pulumi.StringOutput)
+}
+
+type GetSystemSnmpFeatureGroupArrayOutput struct{ *pulumi.OutputState }
+
+func (GetSystemSnmpFeatureGroupArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemSnmpFeatureGroup)(nil)).Elem()
+}
+
+func (o GetSystemSnmpFeatureGroupArrayOutput) ToGetSystemSnmpFeatureGroupArrayOutput() GetSystemSnmpFeatureGroupArrayOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureGroupArrayOutput) ToGetSystemSnmpFeatureGroupArrayOutputWithContext(ctx context.Context) GetSystemSnmpFeatureGroupArrayOutput {
+	return o
+}
+
+func (o GetSystemSnmpFeatureGroupArrayOutput) Index(i pulumi.IntInput) GetSystemSnmpFeatureGroupOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSystemSnmpFeatureGroup {
+		return vs[0].([]GetSystemSnmpFeatureGroup)[vs[1].(int)]
+	}).(GetSystemSnmpFeatureGroupOutput)
+}
+
 type GetSystemSnmpFeatureTrapTargetServer struct {
 	// Set IPv4/IPv6 address of SNMP server
 	Ip string `pulumi:"ip"`
@@ -205,6 +971,10 @@ type GetSystemSnmpFeatureUser struct {
 	AuthenticationPassword string `pulumi:"authenticationPassword"`
 	// Variable name
 	AuthenticationPasswordVariable string `pulumi:"authenticationPasswordVariable"`
+	// Specify authentication protocol password
+	AuthenticationPasswordWo string `pulumi:"authenticationPasswordWo"`
+	// Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationPasswordWoVersion int `pulumi:"authenticationPasswordWoVersion"`
 	// Configure authentication protocol
 	AuthenticationProtocol string `pulumi:"authenticationProtocol"`
 	// Variable name
@@ -219,6 +989,10 @@ type GetSystemSnmpFeatureUser struct {
 	PrivacyPassword string `pulumi:"privacyPassword"`
 	// Variable name
 	PrivacyPasswordVariable string `pulumi:"privacyPasswordVariable"`
+	// Specify privacy protocol password
+	PrivacyPasswordWo string `pulumi:"privacyPasswordWo"`
+	// Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PrivacyPasswordWoVersion int `pulumi:"privacyPasswordWoVersion"`
 	// Configure privacy protocol
 	PrivacyProtocol string `pulumi:"privacyProtocol"`
 	// Variable name
@@ -241,6 +1015,10 @@ type GetSystemSnmpFeatureUserArgs struct {
 	AuthenticationPassword pulumi.StringInput `pulumi:"authenticationPassword"`
 	// Variable name
 	AuthenticationPasswordVariable pulumi.StringInput `pulumi:"authenticationPasswordVariable"`
+	// Specify authentication protocol password
+	AuthenticationPasswordWo pulumi.StringInput `pulumi:"authenticationPasswordWo"`
+	// Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationPasswordWoVersion pulumi.IntInput `pulumi:"authenticationPasswordWoVersion"`
 	// Configure authentication protocol
 	AuthenticationProtocol pulumi.StringInput `pulumi:"authenticationProtocol"`
 	// Variable name
@@ -255,6 +1033,10 @@ type GetSystemSnmpFeatureUserArgs struct {
 	PrivacyPassword pulumi.StringInput `pulumi:"privacyPassword"`
 	// Variable name
 	PrivacyPasswordVariable pulumi.StringInput `pulumi:"privacyPasswordVariable"`
+	// Specify privacy protocol password
+	PrivacyPasswordWo pulumi.StringInput `pulumi:"privacyPasswordWo"`
+	// Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PrivacyPasswordWoVersion pulumi.IntInput `pulumi:"privacyPasswordWoVersion"`
 	// Configure privacy protocol
 	PrivacyProtocol pulumi.StringInput `pulumi:"privacyProtocol"`
 	// Variable name
@@ -322,6 +1104,16 @@ func (o GetSystemSnmpFeatureUserOutput) AuthenticationPasswordVariable() pulumi.
 	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.AuthenticationPasswordVariable }).(pulumi.StringOutput)
 }
 
+// Specify authentication protocol password
+func (o GetSystemSnmpFeatureUserOutput) AuthenticationPasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.AuthenticationPasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o GetSystemSnmpFeatureUserOutput) AuthenticationPasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) int { return v.AuthenticationPasswordWoVersion }).(pulumi.IntOutput)
+}
+
 // Configure authentication protocol
 func (o GetSystemSnmpFeatureUserOutput) AuthenticationProtocol() pulumi.StringOutput {
 	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.AuthenticationProtocol }).(pulumi.StringOutput)
@@ -355,6 +1147,16 @@ func (o GetSystemSnmpFeatureUserOutput) PrivacyPassword() pulumi.StringOutput {
 // Variable name
 func (o GetSystemSnmpFeatureUserOutput) PrivacyPasswordVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.PrivacyPasswordVariable }).(pulumi.StringOutput)
+}
+
+// Specify privacy protocol password
+func (o GetSystemSnmpFeatureUserOutput) PrivacyPasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) string { return v.PrivacyPasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o GetSystemSnmpFeatureUserOutput) PrivacyPasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSystemSnmpFeatureUser) int { return v.PrivacyPasswordWoVersion }).(pulumi.IntOutput)
 }
 
 // Configure privacy protocol
@@ -7048,6 +7850,10 @@ type GetTransportRoutingBgpFeatureIpv4Neighbor struct {
 	Password string `pulumi:"password"`
 	// Variable name
 	PasswordVariable string `pulumi:"passwordVariable"`
+	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	PasswordWo string `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion int `pulumi:"passwordWoVersion"`
 	// Set remote autonomous system number
 	RemoteAs string `pulumi:"remoteAs"`
 	// Variable name
@@ -7130,6 +7936,10 @@ type GetTransportRoutingBgpFeatureIpv4NeighborArgs struct {
 	Password pulumi.StringInput `pulumi:"password"`
 	// Variable name
 	PasswordVariable pulumi.StringInput `pulumi:"passwordVariable"`
+	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	PasswordWo pulumi.StringInput `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion pulumi.IntInput `pulumi:"passwordWoVersion"`
 	// Set remote autonomous system number
 	RemoteAs pulumi.StringInput `pulumi:"remoteAs"`
 	// Variable name
@@ -7320,6 +8130,16 @@ func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) Password() pulumi.Strin
 // Variable name
 func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) PasswordVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.PasswordVariable }).(pulumi.StringOutput)
+}
+
+// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) PasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.PasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) PasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) int { return v.PasswordWoVersion }).(pulumi.IntOutput)
 }
 
 // Set remote autonomous system number
@@ -8118,6 +8938,10 @@ type GetTransportRoutingBgpFeatureIpv6Neighbor struct {
 	Password string `pulumi:"password"`
 	// Variable name
 	PasswordVariable string `pulumi:"passwordVariable"`
+	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	PasswordWo string `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion int `pulumi:"passwordWoVersion"`
 	// Set remote autonomous system number
 	RemoteAs string `pulumi:"remoteAs"`
 	// Variable name
@@ -8194,6 +9018,10 @@ type GetTransportRoutingBgpFeatureIpv6NeighborArgs struct {
 	Password pulumi.StringInput `pulumi:"password"`
 	// Variable name
 	PasswordVariable pulumi.StringInput `pulumi:"passwordVariable"`
+	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	PasswordWo pulumi.StringInput `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion pulumi.IntInput `pulumi:"passwordWoVersion"`
 	// Set remote autonomous system number
 	RemoteAs pulumi.StringInput `pulumi:"remoteAs"`
 	// Variable name
@@ -8372,6 +9200,16 @@ func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) Password() pulumi.Strin
 // Variable name
 func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) PasswordVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.PasswordVariable }).(pulumi.StringOutput)
+}
+
+// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) PasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.PasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) PasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) int { return v.PasswordWoVersion }).(pulumi.IntOutput)
 }
 
 // Set remote autonomous system number
@@ -9254,6 +10092,10 @@ type GetTransportRoutingOspfFeatureAreaInterface struct {
 	MessageDigestKeyIdVariable string `pulumi:"messageDigestKeyIdVariable"`
 	// Variable name
 	MessageDigestKeyVariable string `pulumi:"messageDigestKeyVariable"`
+	// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	MessageDigestKeyWo string `pulumi:"messageDigestKeyWo"`
+	// Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	MessageDigestKeyWoVersion int `pulumi:"messageDigestKeyWoVersion"`
 	// Set interface name
 	Name string `pulumi:"name"`
 	// Variable name
@@ -9312,6 +10154,10 @@ type GetTransportRoutingOspfFeatureAreaInterfaceArgs struct {
 	MessageDigestKeyIdVariable pulumi.StringInput `pulumi:"messageDigestKeyIdVariable"`
 	// Variable name
 	MessageDigestKeyVariable pulumi.StringInput `pulumi:"messageDigestKeyVariable"`
+	// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	MessageDigestKeyWo pulumi.StringInput `pulumi:"messageDigestKeyWo"`
+	// Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	MessageDigestKeyWoVersion pulumi.IntInput `pulumi:"messageDigestKeyWoVersion"`
 	// Set interface name
 	Name pulumi.StringInput `pulumi:"name"`
 	// Variable name
@@ -9455,6 +10301,16 @@ func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyIdVar
 // Variable name
 func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.MessageDigestKeyVariable }).(pulumi.StringOutput)
+}
+
+// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyWo() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.MessageDigestKeyWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) int { return v.MessageDigestKeyWoVersion }).(pulumi.IntOutput)
 }
 
 // Set interface name
@@ -10090,6 +10946,10 @@ type GetTransportRoutingOspfv3Ipv4FeatureAreaInterface struct {
 	AuthenticationKey string `pulumi:"authenticationKey"`
 	// Variable name
 	AuthenticationKeyVariable string `pulumi:"authenticationKeyVariable"`
+	// Set OSPF interface authentication IPSEC key
+	AuthenticationKeyWo string `pulumi:"authenticationKeyWo"`
+	// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationKeyWoVersion int `pulumi:"authenticationKeyWoVersion"`
 	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
 	AuthenticationSpi int `pulumi:"authenticationSpi"`
 	// Variable name
@@ -10142,6 +11002,10 @@ type GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs struct {
 	AuthenticationKey pulumi.StringInput `pulumi:"authenticationKey"`
 	// Variable name
 	AuthenticationKeyVariable pulumi.StringInput `pulumi:"authenticationKeyVariable"`
+	// Set OSPF interface authentication IPSEC key
+	AuthenticationKeyWo pulumi.StringInput `pulumi:"authenticationKeyWo"`
+	// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationKeyWoVersion pulumi.IntInput `pulumi:"authenticationKeyWoVersion"`
 	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
 	AuthenticationSpi pulumi.IntInput `pulumi:"authenticationSpi"`
 	// Variable name
@@ -10237,6 +11101,16 @@ func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationK
 // Variable name
 func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKeyVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string { return v.AuthenticationKeyVariable }).(pulumi.StringOutput)
+}
+
+// Set OSPF interface authentication IPSEC key
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKeyWo() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string { return v.AuthenticationKeyWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKeyWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) int { return v.AuthenticationKeyWoVersion }).(pulumi.IntOutput)
 }
 
 // Set OSPF interface authentication IPSec SPI, range 256..4294967295
@@ -10826,6 +11700,10 @@ type GetTransportRoutingOspfv3Ipv6FeatureAreaInterface struct {
 	AuthenticationKey string `pulumi:"authenticationKey"`
 	// Variable name
 	AuthenticationKeyVariable string `pulumi:"authenticationKeyVariable"`
+	// Set OSPF interface authentication IPSEC key
+	AuthenticationKeyWo string `pulumi:"authenticationKeyWo"`
+	// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationKeyWoVersion int `pulumi:"authenticationKeyWoVersion"`
 	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
 	AuthenticationSpi int `pulumi:"authenticationSpi"`
 	// Variable name
@@ -10878,6 +11756,10 @@ type GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs struct {
 	AuthenticationKey pulumi.StringInput `pulumi:"authenticationKey"`
 	// Variable name
 	AuthenticationKeyVariable pulumi.StringInput `pulumi:"authenticationKeyVariable"`
+	// Set OSPF interface authentication IPSEC key
+	AuthenticationKeyWo pulumi.StringInput `pulumi:"authenticationKeyWo"`
+	// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationKeyWoVersion pulumi.IntInput `pulumi:"authenticationKeyWoVersion"`
 	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
 	AuthenticationSpi pulumi.IntInput `pulumi:"authenticationSpi"`
 	// Variable name
@@ -10973,6 +11855,16 @@ func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationK
 // Variable name
 func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKeyVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string { return v.AuthenticationKeyVariable }).(pulumi.StringOutput)
+}
+
+// Set OSPF interface authentication IPSEC key
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKeyWo() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string { return v.AuthenticationKeyWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKeyWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) int { return v.AuthenticationKeyWoVersion }).(pulumi.IntOutput)
 }
 
 // Set OSPF interface authentication IPSec SPI, range 256..4294967295
@@ -23034,6 +23926,14 @@ func (o GetZoneListPolicyObjectEntryArrayOutput) Index(i pulumi.IntInput) GetZon
 }
 
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSecurityFeatureKeyInput)(nil)).Elem(), GetSystemSecurityFeatureKeyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSecurityFeatureKeyArrayInput)(nil)).Elem(), GetSystemSecurityFeatureKeyArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSecurityFeatureKeychainInput)(nil)).Elem(), GetSystemSecurityFeatureKeychainArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSecurityFeatureKeychainArrayInput)(nil)).Elem(), GetSystemSecurityFeatureKeychainArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureCommunityInput)(nil)).Elem(), GetSystemSnmpFeatureCommunityArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureCommunityArrayInput)(nil)).Elem(), GetSystemSnmpFeatureCommunityArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureGroupInput)(nil)).Elem(), GetSystemSnmpFeatureGroupArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureGroupArrayInput)(nil)).Elem(), GetSystemSnmpFeatureGroupArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureTrapTargetServerInput)(nil)).Elem(), GetSystemSnmpFeatureTrapTargetServerArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureTrapTargetServerArrayInput)(nil)).Elem(), GetSystemSnmpFeatureTrapTargetServerArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemSnmpFeatureUserInput)(nil)).Elem(), GetSystemSnmpFeatureUserArgs{})
@@ -23334,6 +24234,14 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArrayInput)(nil)).Elem(), GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneListPolicyObjectEntryInput)(nil)).Elem(), GetZoneListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneListPolicyObjectEntryArrayInput)(nil)).Elem(), GetZoneListPolicyObjectEntryArray{})
+	pulumi.RegisterOutputType(GetSystemSecurityFeatureKeyOutput{})
+	pulumi.RegisterOutputType(GetSystemSecurityFeatureKeyArrayOutput{})
+	pulumi.RegisterOutputType(GetSystemSecurityFeatureKeychainOutput{})
+	pulumi.RegisterOutputType(GetSystemSecurityFeatureKeychainArrayOutput{})
+	pulumi.RegisterOutputType(GetSystemSnmpFeatureCommunityOutput{})
+	pulumi.RegisterOutputType(GetSystemSnmpFeatureCommunityArrayOutput{})
+	pulumi.RegisterOutputType(GetSystemSnmpFeatureGroupOutput{})
+	pulumi.RegisterOutputType(GetSystemSnmpFeatureGroupArrayOutput{})
 	pulumi.RegisterOutputType(GetSystemSnmpFeatureTrapTargetServerOutput{})
 	pulumi.RegisterOutputType(GetSystemSnmpFeatureTrapTargetServerArrayOutput{})
 	pulumi.RegisterOutputType(GetSystemSnmpFeatureUserOutput{})

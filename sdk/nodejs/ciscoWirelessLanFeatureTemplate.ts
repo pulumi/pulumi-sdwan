@@ -241,7 +241,7 @@ export class CiscoWirelessLanFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["description"] = args?.description;
             resourceInputs["deviceTypes"] = args?.deviceTypes;
             resourceInputs["name"] = args?.name;
-            resourceInputs["password"] = args?.password;
+            resourceInputs["password"] = args?.password ? pulumi.secret(args.password) : undefined;
             resourceInputs["passwordVariable"] = args?.passwordVariable;
             resourceInputs["shutdown24ghz"] = args?.shutdown24ghz;
             resourceInputs["shutdown24ghzVariable"] = args?.shutdown24ghzVariable;
@@ -254,6 +254,8 @@ export class CiscoWirelessLanFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["password"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(CiscoWirelessLanFeatureTemplate.__pulumiType, name, resourceInputs, opts);
     }
 }

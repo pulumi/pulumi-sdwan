@@ -62,6 +62,16 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
      */
     private String keyVariable;
     /**
+     * @return Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    private String keyWo;
+    /**
+     * @return Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer keyWoVersion;
+    /**
      * @return Configure how many times to contact this Radius server
      * 
      */
@@ -81,6 +91,16 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
      * 
      */
     private String secretKeyVariable;
+    /**
+     * @return Set the Radius server shared type 7 encrypted key
+     * 
+     */
+    private String secretKeyWo;
+    /**
+     * @return Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer secretKeyWoVersion;
     /**
      * @return Configure how long to wait for replies from the Radius server
      * 
@@ -164,6 +184,20 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
         return this.keyVariable;
     }
     /**
+     * @return Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    public String keyWo() {
+        return this.keyWo;
+    }
+    /**
+     * @return Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer keyWoVersion() {
+        return this.keyWoVersion;
+    }
+    /**
      * @return Configure how many times to contact this Radius server
      * 
      */
@@ -190,6 +224,20 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
      */
     public String secretKeyVariable() {
         return this.secretKeyVariable;
+    }
+    /**
+     * @return Set the Radius server shared type 7 encrypted key
+     * 
+     */
+    public String secretKeyWo() {
+        return this.secretKeyWo;
+    }
+    /**
+     * @return Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer secretKeyWoVersion() {
+        return this.secretKeyWoVersion;
     }
     /**
      * @return Configure how long to wait for replies from the Radius server
@@ -225,10 +273,14 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
         private String keyType;
         private String keyTypeVariable;
         private String keyVariable;
+        private String keyWo;
+        private Integer keyWoVersion;
         private Integer retransmit;
         private String retransmitVariable;
         private String secretKey;
         private String secretKeyVariable;
+        private String secretKeyWo;
+        private Integer secretKeyWoVersion;
         private Integer timeout;
         private String timeoutVariable;
         public Builder() {}
@@ -244,10 +296,14 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
     	      this.keyType = defaults.keyType;
     	      this.keyTypeVariable = defaults.keyTypeVariable;
     	      this.keyVariable = defaults.keyVariable;
+    	      this.keyWo = defaults.keyWo;
+    	      this.keyWoVersion = defaults.keyWoVersion;
     	      this.retransmit = defaults.retransmit;
     	      this.retransmitVariable = defaults.retransmitVariable;
     	      this.secretKey = defaults.secretKey;
     	      this.secretKeyVariable = defaults.secretKeyVariable;
+    	      this.secretKeyWo = defaults.secretKeyWo;
+    	      this.secretKeyWoVersion = defaults.secretKeyWoVersion;
     	      this.timeout = defaults.timeout;
     	      this.timeoutVariable = defaults.timeoutVariable;
         }
@@ -333,6 +389,22 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
             return this;
         }
         @CustomType.Setter
+        public Builder keyWo(String keyWo) {
+            if (keyWo == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureRadiusGroupServer", "keyWo");
+            }
+            this.keyWo = keyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder keyWoVersion(Integer keyWoVersion) {
+            if (keyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureRadiusGroupServer", "keyWoVersion");
+            }
+            this.keyWoVersion = keyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder retransmit(Integer retransmit) {
             if (retransmit == null) {
               throw new MissingRequiredPropertyException("GetSystemAaaFeatureRadiusGroupServer", "retransmit");
@@ -365,6 +437,22 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
             return this;
         }
         @CustomType.Setter
+        public Builder secretKeyWo(String secretKeyWo) {
+            if (secretKeyWo == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureRadiusGroupServer", "secretKeyWo");
+            }
+            this.secretKeyWo = secretKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder secretKeyWoVersion(Integer secretKeyWoVersion) {
+            if (secretKeyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureRadiusGroupServer", "secretKeyWoVersion");
+            }
+            this.secretKeyWoVersion = secretKeyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder timeout(Integer timeout) {
             if (timeout == null) {
               throw new MissingRequiredPropertyException("GetSystemAaaFeatureRadiusGroupServer", "timeout");
@@ -392,10 +480,14 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
             _resultValue.keyType = keyType;
             _resultValue.keyTypeVariable = keyTypeVariable;
             _resultValue.keyVariable = keyVariable;
+            _resultValue.keyWo = keyWo;
+            _resultValue.keyWoVersion = keyWoVersion;
             _resultValue.retransmit = retransmit;
             _resultValue.retransmitVariable = retransmitVariable;
             _resultValue.secretKey = secretKey;
             _resultValue.secretKeyVariable = secretKeyVariable;
+            _resultValue.secretKeyWo = secretKeyWo;
+            _resultValue.secretKeyWoVersion = secretKeyWoVersion;
             _resultValue.timeout = timeout;
             _resultValue.timeoutVariable = timeoutVariable;
             return _resultValue;

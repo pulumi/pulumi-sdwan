@@ -15,12 +15,24 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Set OSPF interface authentication IPSEC key
+        ///   - Only one of `AuthenticationKey`, `AuthenticationKeyVariable` and `AuthenticationKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationKeyWo` together with `AuthenticationKeyWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? AuthenticationKey;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string? AuthenticationKeyVariable;
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set OSPF interface authentication IPSEC key
+        ///   - Only one of `AuthenticationKey`, `AuthenticationKeyVariable` and `AuthenticationKeyWo` can be set.
+        /// </summary>
+        public readonly string? AuthenticationKeyWo;
+        /// <summary>
+        /// Rotation trigger for `AuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? AuthenticationKeyWoVersion;
         /// <summary>
         /// Set OSPF interface authentication IPSec SPI, range 256..4294967295
         ///   - Range: `256`-`4294967295`
@@ -107,6 +119,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string? authenticationKeyVariable,
 
+            string? authenticationKeyWo,
+
+            int? authenticationKeyWoVersion,
+
             int? authenticationSpi,
 
             string? authenticationSpiVariable,
@@ -143,6 +159,8 @@ namespace Pulumi.Sdwan.Outputs
         {
             AuthenticationKey = authenticationKey;
             AuthenticationKeyVariable = authenticationKeyVariable;
+            AuthenticationKeyWo = authenticationKeyWo;
+            AuthenticationKeyWoVersion = authenticationKeyWoVersion;
             AuthenticationSpi = authenticationSpi;
             AuthenticationSpiVariable = authenticationSpiVariable;
             AuthenticationType = authenticationType;

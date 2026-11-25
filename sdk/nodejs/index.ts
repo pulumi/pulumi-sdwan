@@ -275,6 +275,11 @@ export type ConfigurationGroup = import("./configurationGroup").ConfigurationGro
 export const ConfigurationGroup: typeof import("./configurationGroup").ConfigurationGroup = null as any;
 utilities.lazyLoad(exports, ["ConfigurationGroup"], () => require("./configurationGroup"));
 
+export { ConfigurationGroupDevicesArgs, ConfigurationGroupDevicesState } from "./configurationGroupDevices";
+export type ConfigurationGroupDevices = import("./configurationGroupDevices").ConfigurationGroupDevices;
+export const ConfigurationGroupDevices: typeof import("./configurationGroupDevices").ConfigurationGroupDevices = null as any;
+utilities.lazyLoad(exports, ["ConfigurationGroupDevices"], () => require("./configurationGroupDevices"));
+
 export { CustomApplicationArgs, CustomApplicationState } from "./customApplication";
 export type CustomApplication = import("./customApplication").CustomApplication;
 export const CustomApplication: typeof import("./customApplication").CustomApplication = null as any;
@@ -940,6 +945,11 @@ export const getPolicyObjectSecurityIpsSignature: typeof import("./getPolicyObje
 export const getPolicyObjectSecurityIpsSignatureOutput: typeof import("./getPolicyObjectSecurityIpsSignature").getPolicyObjectSecurityIpsSignatureOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicyObjectSecurityIpsSignature","getPolicyObjectSecurityIpsSignatureOutput"], () => require("./getPolicyObjectSecurityIpsSignature"));
 
+export { GetPolicyObjectSecurityIpsSignatureSetArgs, GetPolicyObjectSecurityIpsSignatureSetResult, GetPolicyObjectSecurityIpsSignatureSetOutputArgs } from "./getPolicyObjectSecurityIpsSignatureSet";
+export const getPolicyObjectSecurityIpsSignatureSet: typeof import("./getPolicyObjectSecurityIpsSignatureSet").getPolicyObjectSecurityIpsSignatureSet = null as any;
+export const getPolicyObjectSecurityIpsSignatureSetOutput: typeof import("./getPolicyObjectSecurityIpsSignatureSet").getPolicyObjectSecurityIpsSignatureSetOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityIpsSignatureSet","getPolicyObjectSecurityIpsSignatureSetOutput"], () => require("./getPolicyObjectSecurityIpsSignatureSet"));
+
 export { GetPolicyObjectSecurityLocalApplicationListArgs, GetPolicyObjectSecurityLocalApplicationListResult, GetPolicyObjectSecurityLocalApplicationListOutputArgs } from "./getPolicyObjectSecurityLocalApplicationList";
 export const getPolicyObjectSecurityLocalApplicationList: typeof import("./getPolicyObjectSecurityLocalApplicationList").getPolicyObjectSecurityLocalApplicationList = null as any;
 export const getPolicyObjectSecurityLocalApplicationListOutput: typeof import("./getPolicyObjectSecurityLocalApplicationList").getPolicyObjectSecurityLocalApplicationListOutput = null as any;
@@ -1270,6 +1280,11 @@ export const getServiceWirelessLanFeature: typeof import("./getServiceWirelessLa
 export const getServiceWirelessLanFeatureOutput: typeof import("./getServiceWirelessLanFeature").getServiceWirelessLanFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getServiceWirelessLanFeature","getServiceWirelessLanFeatureOutput"], () => require("./getServiceWirelessLanFeature"));
 
+export { GetSigFeatureArgs, GetSigFeatureResult, GetSigFeatureOutputArgs } from "./getSigFeature";
+export const getSigFeature: typeof import("./getSigFeature").getSigFeature = null as any;
+export const getSigFeatureOutput: typeof import("./getSigFeature").getSigFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSigFeature","getSigFeatureOutput"], () => require("./getSigFeature"));
+
 export { GetSigSecurityFeatureProfileArgs, GetSigSecurityFeatureProfileResult, GetSigSecurityFeatureProfileOutputArgs } from "./getSigSecurityFeatureProfile";
 export const getSigSecurityFeatureProfile: typeof import("./getSigSecurityFeatureProfile").getSigSecurityFeatureProfile = null as any;
 export const getSigSecurityFeatureProfileOutput: typeof import("./getSigSecurityFeatureProfile").getSigSecurityFeatureProfileOutput = null as any;
@@ -1590,6 +1605,11 @@ export const getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeat
 export const getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureOutput: typeof import("./getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature").getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature","getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureOutput"], () => require("./getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature"));
 
+export { GetTransportWanVpnInterfaceDslIpoeFeatureArgs, GetTransportWanVpnInterfaceDslIpoeFeatureResult, GetTransportWanVpnInterfaceDslIpoeFeatureOutputArgs } from "./getTransportWanVpnInterfaceDslIpoeFeature";
+export const getTransportWanVpnInterfaceDslIpoeFeature: typeof import("./getTransportWanVpnInterfaceDslIpoeFeature").getTransportWanVpnInterfaceDslIpoeFeature = null as any;
+export const getTransportWanVpnInterfaceDslIpoeFeatureOutput: typeof import("./getTransportWanVpnInterfaceDslIpoeFeature").getTransportWanVpnInterfaceDslIpoeFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnInterfaceDslIpoeFeature","getTransportWanVpnInterfaceDslIpoeFeatureOutput"], () => require("./getTransportWanVpnInterfaceDslIpoeFeature"));
+
 export { GetTransportWanVpnInterfaceEthernetFeatureArgs, GetTransportWanVpnInterfaceEthernetFeatureResult, GetTransportWanVpnInterfaceEthernetFeatureOutputArgs } from "./getTransportWanVpnInterfaceEthernetFeature";
 export const getTransportWanVpnInterfaceEthernetFeature: typeof import("./getTransportWanVpnInterfaceEthernetFeature").getTransportWanVpnInterfaceEthernetFeature = null as any;
 export const getTransportWanVpnInterfaceEthernetFeatureOutput: typeof import("./getTransportWanVpnInterfaceEthernetFeature").getTransportWanVpnInterfaceEthernetFeatureOutput = null as any;
@@ -1830,6 +1850,11 @@ export type PolicyGroup = import("./policyGroup").PolicyGroup;
 export const PolicyGroup: typeof import("./policyGroup").PolicyGroup = null as any;
 utilities.lazyLoad(exports, ["PolicyGroup"], () => require("./policyGroup"));
 
+export { PolicyGroupDevicesArgs, PolicyGroupDevicesState } from "./policyGroupDevices";
+export type PolicyGroupDevices = import("./policyGroupDevices").PolicyGroupDevices;
+export const PolicyGroupDevices: typeof import("./policyGroupDevices").PolicyGroupDevices = null as any;
+utilities.lazyLoad(exports, ["PolicyGroupDevices"], () => require("./policyGroupDevices"));
+
 export { PolicyObjectAppProbeClassArgs, PolicyObjectAppProbeClassState } from "./policyObjectAppProbeClass";
 export type PolicyObjectAppProbeClass = import("./policyObjectAppProbeClass").PolicyObjectAppProbeClass;
 export const PolicyObjectAppProbeClass: typeof import("./policyObjectAppProbeClass").PolicyObjectAppProbeClass = null as any;
@@ -1934,6 +1959,11 @@ export { PolicyObjectSecurityIpsSignatureArgs, PolicyObjectSecurityIpsSignatureS
 export type PolicyObjectSecurityIpsSignature = import("./policyObjectSecurityIpsSignature").PolicyObjectSecurityIpsSignature;
 export const PolicyObjectSecurityIpsSignature: typeof import("./policyObjectSecurityIpsSignature").PolicyObjectSecurityIpsSignature = null as any;
 utilities.lazyLoad(exports, ["PolicyObjectSecurityIpsSignature"], () => require("./policyObjectSecurityIpsSignature"));
+
+export { PolicyObjectSecurityIpsSignatureSetArgs, PolicyObjectSecurityIpsSignatureSetState } from "./policyObjectSecurityIpsSignatureSet";
+export type PolicyObjectSecurityIpsSignatureSet = import("./policyObjectSecurityIpsSignatureSet").PolicyObjectSecurityIpsSignatureSet;
+export const PolicyObjectSecurityIpsSignatureSet: typeof import("./policyObjectSecurityIpsSignatureSet").PolicyObjectSecurityIpsSignatureSet = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityIpsSignatureSet"], () => require("./policyObjectSecurityIpsSignatureSet"));
 
 export { PolicyObjectSecurityLocalApplicationListArgs, PolicyObjectSecurityLocalApplicationListState } from "./policyObjectSecurityLocalApplicationList";
 export type PolicyObjectSecurityLocalApplicationList = import("./policyObjectSecurityLocalApplicationList").PolicyObjectSecurityLocalApplicationList;
@@ -2273,6 +2303,11 @@ export type ServiceWirelessLanFeature = import("./serviceWirelessLanFeature").Se
 export const ServiceWirelessLanFeature: typeof import("./serviceWirelessLanFeature").ServiceWirelessLanFeature = null as any;
 utilities.lazyLoad(exports, ["ServiceWirelessLanFeature"], () => require("./serviceWirelessLanFeature"));
 
+export { SigFeatureArgs, SigFeatureState } from "./sigFeature";
+export type SigFeature = import("./sigFeature").SigFeature;
+export const SigFeature: typeof import("./sigFeature").SigFeature = null as any;
+utilities.lazyLoad(exports, ["SigFeature"], () => require("./sigFeature"));
+
 export { SigSecurityFeatureProfileArgs, SigSecurityFeatureProfileState } from "./sigSecurityFeatureProfile";
 export type SigSecurityFeatureProfile = import("./sigSecurityFeatureProfile").SigSecurityFeatureProfile;
 export const SigSecurityFeatureProfile: typeof import("./sigSecurityFeatureProfile").SigSecurityFeatureProfile = null as any;
@@ -2593,6 +2628,11 @@ export type TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature 
 export const TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature: typeof import("./transportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature").TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature = null as any;
 utilities.lazyLoad(exports, ["TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature"], () => require("./transportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature"));
 
+export { TransportWanVpnInterfaceDslIpoeFeatureArgs, TransportWanVpnInterfaceDslIpoeFeatureState } from "./transportWanVpnInterfaceDslIpoeFeature";
+export type TransportWanVpnInterfaceDslIpoeFeature = import("./transportWanVpnInterfaceDslIpoeFeature").TransportWanVpnInterfaceDslIpoeFeature;
+export const TransportWanVpnInterfaceDslIpoeFeature: typeof import("./transportWanVpnInterfaceDslIpoeFeature").TransportWanVpnInterfaceDslIpoeFeature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnInterfaceDslIpoeFeature"], () => require("./transportWanVpnInterfaceDslIpoeFeature"));
+
 export { TransportWanVpnInterfaceEthernetFeatureArgs, TransportWanVpnInterfaceEthernetFeatureState } from "./transportWanVpnInterfaceEthernetFeature";
 export type TransportWanVpnInterfaceEthernetFeature = import("./transportWanVpnInterfaceEthernetFeature").TransportWanVpnInterfaceEthernetFeature;
 export const TransportWanVpnInterfaceEthernetFeature: typeof import("./transportWanVpnInterfaceEthernetFeature").TransportWanVpnInterfaceEthernetFeature = null as any;
@@ -2835,6 +2875,8 @@ const _module = {
                 return new ColorListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/configurationGroup:ConfigurationGroup":
                 return new ConfigurationGroup(name, <any>undefined, { urn })
+            case "sdwan:index/configurationGroupDevices:ConfigurationGroupDevices":
+                return new ConfigurationGroupDevices(name, <any>undefined, { urn })
             case "sdwan:index/customApplication:CustomApplication":
                 return new CustomApplication(name, <any>undefined, { urn })
             case "sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition":
@@ -2917,6 +2959,8 @@ const _module = {
                 return new PolicerPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/policyGroup:PolicyGroup":
                 return new PolicyGroup(name, <any>undefined, { urn })
+            case "sdwan:index/policyGroupDevices:PolicyGroupDevices":
+                return new PolicyGroupDevices(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectAppProbeClass:PolicyObjectAppProbeClass":
                 return new PolicyObjectAppProbeClass(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectApplicationList:PolicyObjectApplicationList":
@@ -2959,6 +3003,8 @@ const _module = {
                 return new PolicyObjectSecurityIdentityList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityIpsSignature:PolicyObjectSecurityIpsSignature":
                 return new PolicyObjectSecurityIpsSignature(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityIpsSignatureSet:PolicyObjectSecurityIpsSignatureSet":
+                return new PolicyObjectSecurityIpsSignatureSet(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityLocalApplicationList:PolicyObjectSecurityLocalApplicationList":
                 return new PolicyObjectSecurityLocalApplicationList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityLocalDomainList:PolicyObjectSecurityLocalDomainList":
@@ -3093,6 +3139,8 @@ const _module = {
                 return new ServiceTrackerGroupFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceWirelessLanFeature:ServiceWirelessLanFeature":
                 return new ServiceWirelessLanFeature(name, <any>undefined, { urn })
+            case "sdwan:index/sigFeature:SigFeature":
+                return new SigFeature(name, <any>undefined, { urn })
             case "sdwan:index/sigSecurityFeatureProfile:SigSecurityFeatureProfile":
                 return new SigSecurityFeatureProfile(name, <any>undefined, { urn })
             case "sdwan:index/siteListPolicyObject:SiteListPolicyObject":
@@ -3221,6 +3269,8 @@ const _module = {
                 return new TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature(name, <any>undefined, { urn })
             case "sdwan:index/transportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature:TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature":
                 return new TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnInterfaceDslIpoeFeature:TransportWanVpnInterfaceDslIpoeFeature":
+                return new TransportWanVpnInterfaceDslIpoeFeature(name, <any>undefined, { urn })
             case "sdwan:index/transportWanVpnInterfaceEthernetFeature:TransportWanVpnInterfaceEthernetFeature":
                 return new TransportWanVpnInterfaceEthernetFeature(name, <any>undefined, { urn })
             case "sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature":
@@ -3328,6 +3378,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/cliTemplateFeatureTemplate
 pulumi.runtime.registerResourceModule("sdwan", "index/cloudProviderSettings", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/colorListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/configurationGroup", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/configurationGroupDevices", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/customApplication", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/customControlTopologyPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/dataFqdnPrefixListPolicyObject", _module)
@@ -3369,6 +3420,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/otherTrustsecFeature", _mo
 pulumi.runtime.registerResourceModule("sdwan", "index/otherUcseFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policerPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyGroup", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyGroupDevices", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectAppProbeClass", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectApplicationList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectAsPathList", _module)
@@ -3390,6 +3442,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityFqdnLi
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityGeolocationList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityIdentityList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityIpsSignature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityIpsSignatureSet", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityLocalApplicationList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityLocalDomainList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityObjectGroup", _module)
@@ -3457,6 +3510,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/serviceSwitchportFeature",
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceTrackerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceTrackerGroupFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceWirelessLanFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/sigFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/sigSecurityFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/siteListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/slaClassPolicyObject", _module)
@@ -3521,6 +3575,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnFeatureAsso
 pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceCellularFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceCellularFeatureAssociateTrackerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceDslIpoeFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceEthernetFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature", _module)

@@ -15,14 +15,14 @@ public final class ExtendedCommunityListPolicyObjectEntryArgs extends com.pulumi
     public static final ExtendedCommunityListPolicyObjectEntryArgs Empty = new ExtendedCommunityListPolicyObjectEntryArgs();
 
     /**
-     * Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+     * Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
      * 
      */
     @Import(name="community", required=true)
     private Output<String> community;
 
     /**
-     * @return Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+     * @return Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
      * 
      */
     public Output<String> community() {
@@ -54,7 +54,7 @@ public final class ExtendedCommunityListPolicyObjectEntryArgs extends com.pulumi
         }
 
         /**
-         * @param community Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+         * @param community Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
          * 
          * @return builder
          * 
@@ -65,7 +65,7 @@ public final class ExtendedCommunityListPolicyObjectEntryArgs extends com.pulumi
         }
 
         /**
-         * @param community Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+         * @param community Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
          * 
          * @return builder
          * 

@@ -78,6 +78,16 @@ public final class GetServiceRoutingEigrpFeatureResult {
      */
     private String hmacAuthenticationKeyVariable;
     /**
+     * @return Set hmac-sha-256 authentication key
+     * 
+     */
+    private String hmacAuthenticationKeyWo;
+    /**
+     * @return Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer hmacAuthenticationKeyWoVersion;
+    /**
      * @return Set EIGRP hold time
      * 
      */
@@ -210,6 +220,20 @@ public final class GetServiceRoutingEigrpFeatureResult {
         return this.hmacAuthenticationKeyVariable;
     }
     /**
+     * @return Set hmac-sha-256 authentication key
+     * 
+     */
+    public String hmacAuthenticationKeyWo() {
+        return this.hmacAuthenticationKeyWo;
+    }
+    /**
+     * @return Rotation trigger for `hmacAuthenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer hmacAuthenticationKeyWoVersion() {
+        return this.hmacAuthenticationKeyWoVersion;
+    }
+    /**
      * @return Set EIGRP hold time
      * 
      */
@@ -297,6 +321,8 @@ public final class GetServiceRoutingEigrpFeatureResult {
         private String helloIntervalVariable;
         private String hmacAuthenticationKey;
         private String hmacAuthenticationKeyVariable;
+        private String hmacAuthenticationKeyWo;
+        private Integer hmacAuthenticationKeyWoVersion;
         private Integer holdTime;
         private String holdTimeVariable;
         private String id;
@@ -322,6 +348,8 @@ public final class GetServiceRoutingEigrpFeatureResult {
     	      this.helloIntervalVariable = defaults.helloIntervalVariable;
     	      this.hmacAuthenticationKey = defaults.hmacAuthenticationKey;
     	      this.hmacAuthenticationKeyVariable = defaults.hmacAuthenticationKeyVariable;
+    	      this.hmacAuthenticationKeyWo = defaults.hmacAuthenticationKeyWo;
+    	      this.hmacAuthenticationKeyWoVersion = defaults.hmacAuthenticationKeyWoVersion;
     	      this.holdTime = defaults.holdTime;
     	      this.holdTimeVariable = defaults.holdTimeVariable;
     	      this.id = defaults.id;
@@ -431,6 +459,22 @@ public final class GetServiceRoutingEigrpFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder hmacAuthenticationKeyWo(String hmacAuthenticationKeyWo) {
+            if (hmacAuthenticationKeyWo == null) {
+              throw new MissingRequiredPropertyException("GetServiceRoutingEigrpFeatureResult", "hmacAuthenticationKeyWo");
+            }
+            this.hmacAuthenticationKeyWo = hmacAuthenticationKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder hmacAuthenticationKeyWoVersion(Integer hmacAuthenticationKeyWoVersion) {
+            if (hmacAuthenticationKeyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetServiceRoutingEigrpFeatureResult", "hmacAuthenticationKeyWoVersion");
+            }
+            this.hmacAuthenticationKeyWoVersion = hmacAuthenticationKeyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder holdTime(Integer holdTime) {
             if (holdTime == null) {
               throw new MissingRequiredPropertyException("GetServiceRoutingEigrpFeatureResult", "holdTime");
@@ -536,6 +580,8 @@ public final class GetServiceRoutingEigrpFeatureResult {
             _resultValue.helloIntervalVariable = helloIntervalVariable;
             _resultValue.hmacAuthenticationKey = hmacAuthenticationKey;
             _resultValue.hmacAuthenticationKeyVariable = hmacAuthenticationKeyVariable;
+            _resultValue.hmacAuthenticationKeyWo = hmacAuthenticationKeyWo;
+            _resultValue.hmacAuthenticationKeyWoVersion = hmacAuthenticationKeyWoVersion;
             _resultValue.holdTime = holdTime;
             _resultValue.holdTimeVariable = holdTimeVariable;
             _resultValue.id = id;

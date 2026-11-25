@@ -140,6 +140,7 @@ import javax.annotation.Nullable;
  *             .shapingRate(10000000)
  *             .qosMap("test")
  *             .qosMapVpn("test")
+ *             .serviceProviderName("MyISP")
  *             .bandwidthUpstream(214748300)
  *             .bandwidthDownstream(214748300)
  *             .writeRule("RULE1")
@@ -1356,6 +1357,34 @@ public class VpnInterfaceEthernetPppoeFeatureTemplate extends com.pulumi.resourc
      */
     public Output<Optional<String>> secondaryRegionVariable() {
         return Codegen.optional(this.secondaryRegionVariable);
+    }
+    /**
+     * Service Provider Name
+     * 
+     */
+    @Export(name="serviceProviderName", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> serviceProviderName;
+
+    /**
+     * @return Service Provider Name
+     * 
+     */
+    public Output<Optional<String>> serviceProviderName() {
+        return Codegen.optional(this.serviceProviderName);
+    }
+    /**
+     * Variable name
+     * 
+     */
+    @Export(name="serviceProviderNameVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> serviceProviderNameVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> serviceProviderNameVariable() {
+        return Codegen.optional(this.serviceProviderNameVariable);
     }
     /**
      * 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
@@ -2593,6 +2622,10 @@ public class VpnInterfaceEthernetPppoeFeatureTemplate extends com.pulumi.resourc
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "chapPppAuthPassword",
+                "papPppAuthPassword"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

@@ -40,6 +40,8 @@ class ServiceWirelessLanFeatureArgs:
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  username: pulumi.Input[Optional[_builtins.str]] = None,
                  username_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
@@ -67,7 +69,13 @@ class ServiceWirelessLanFeatureArgs:
         :param pulumi.Input[_builtins.str] me_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] password: Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] password_variable: Variable name
+        :param pulumi.Input[_builtins.str] password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+        :param pulumi.Input[_builtins.int] password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] username: Set management username
         :param pulumi.Input[_builtins.str] username_variable: Variable name
         """
@@ -106,6 +114,10 @@ class ServiceWirelessLanFeatureArgs:
             pulumi.set(__self__, "password", password)
         if password_variable is not None:
             pulumi.set(__self__, "password_variable", password_variable)
+        if password_wo is not None:
+            pulumi.set(__self__, "password_wo", password_wo)
+        if password_wo_version is not None:
+            pulumi.set(__self__, "password_wo_version", password_wo_version)
         if username is not None:
             pulumi.set(__self__, "username", username)
         if username_variable is not None:
@@ -324,6 +336,8 @@ class ServiceWirelessLanFeatureArgs:
     def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "password")
 
@@ -342,6 +356,32 @@ class ServiceWirelessLanFeatureArgs:
     @password_variable.setter
     def password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @password_wo.setter
+    def password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
+
+    @password_wo_version.setter
+    def password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter
@@ -389,6 +429,8 @@ class _ServiceWirelessLanFeatureState:
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  ssids: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceWirelessLanFeatureSsidArgs']]]] = None,
                  username: pulumi.Input[Optional[_builtins.str]] = None,
                  username_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -417,7 +459,13 @@ class _ServiceWirelessLanFeatureState:
         :param pulumi.Input[_builtins.str] me_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] password: Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] password_variable: Variable name
+        :param pulumi.Input[_builtins.str] password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+        :param pulumi.Input[_builtins.int] password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[Sequence[pulumi.Input['ServiceWirelessLanFeatureSsidArgs']]] ssids: Configure Wi-Fi SSID profile
         :param pulumi.Input[_builtins.str] username: Set management username
         :param pulumi.Input[_builtins.str] username_variable: Variable name
@@ -459,6 +507,10 @@ class _ServiceWirelessLanFeatureState:
             pulumi.set(__self__, "password", password)
         if password_variable is not None:
             pulumi.set(__self__, "password_variable", password_variable)
+        if password_wo is not None:
+            pulumi.set(__self__, "password_wo", password_wo)
+        if password_wo_version is not None:
+            pulumi.set(__self__, "password_wo_version", password_wo_version)
         if ssids is not None:
             pulumi.set(__self__, "ssids", ssids)
         if username is not None:
@@ -669,6 +721,8 @@ class _ServiceWirelessLanFeatureState:
     def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "password")
 
@@ -687,6 +741,32 @@ class _ServiceWirelessLanFeatureState:
     @password_variable.setter
     def password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @password_wo.setter
+    def password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
+
+    @password_wo_version.setter
+    def password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter
@@ -761,6 +841,8 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict', 'outputs.ServiceWirelessLanFeatureSsid']]]]] = None,
                  username: pulumi.Input[Optional[_builtins.str]] = None,
                  username_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -831,7 +913,13 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] me_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] password: Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] password_variable: Variable name
+        :param pulumi.Input[_builtins.str] password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+        :param pulumi.Input[_builtins.int] password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict', 'outputs.ServiceWirelessLanFeatureSsid']]]] ssids: Configure Wi-Fi SSID profile
         :param pulumi.Input[_builtins.str] username: Set management username
         :param pulumi.Input[_builtins.str] username_variable: Variable name
@@ -918,6 +1006,8 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict', 'outputs.ServiceWirelessLanFeatureSsid']]]]] = None,
                  username: pulumi.Input[Optional[_builtins.str]] = None,
                  username_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -950,14 +1040,18 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
             __props__.__dict__["me_subnet_mask"] = me_subnet_mask
             __props__.__dict__["me_subnet_mask_variable"] = me_subnet_mask_variable
             __props__.__dict__["name"] = name
-            __props__.__dict__["password"] = password
+            __props__.__dict__["password"] = None if password is None else pulumi.Output.secret(password)
             __props__.__dict__["password_variable"] = password_variable
+            __props__.__dict__["password_wo"] = None if password_wo is None else pulumi.Output.secret(password_wo)
+            __props__.__dict__["password_wo_version"] = password_wo_version
             if ssids is None and not opts.urn:
                 raise TypeError("Missing required property 'ssids'")
             __props__.__dict__["ssids"] = ssids
             __props__.__dict__["username"] = username
             __props__.__dict__["username_variable"] = username_variable
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["password", "passwordWo"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(ServiceWirelessLanFeature, __self__).__init__(
             'sdwan:index/serviceWirelessLanFeature:ServiceWirelessLanFeature',
             resource_name,
@@ -986,6 +1080,8 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             password: pulumi.Input[Optional[_builtins.str]] = None,
             password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict', 'outputs.ServiceWirelessLanFeatureSsid']]]]] = None,
             username: pulumi.Input[Optional[_builtins.str]] = None,
             username_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1018,7 +1114,13 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] me_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] password: Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] password_variable: Variable name
+        :param pulumi.Input[_builtins.str] password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+        :param pulumi.Input[_builtins.int] password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict', 'outputs.ServiceWirelessLanFeatureSsid']]]] ssids: Configure Wi-Fi SSID profile
         :param pulumi.Input[_builtins.str] username: Set management username
         :param pulumi.Input[_builtins.str] username_variable: Variable name
@@ -1046,6 +1148,8 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
         __props__.__dict__["name"] = name
         __props__.__dict__["password"] = password
         __props__.__dict__["password_variable"] = password_variable
+        __props__.__dict__["password_wo"] = password_wo
+        __props__.__dict__["password_wo_version"] = password_wo_version
         __props__.__dict__["ssids"] = ssids
         __props__.__dict__["username"] = username
         __props__.__dict__["username_variable"] = username_variable
@@ -1073,6 +1177,8 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             password: pulumi.Input[Optional[_builtins.str]] = None,
             password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict', 'outputs.ServiceWirelessLanFeatureSsid']]]]] = None,
             username: pulumi.Input[Optional[_builtins.str]] = None,
             username_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1096,6 +1202,8 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
         __props__["name"] = name
         __props__["password"] = password
         __props__["passwordVariable"] = password_variable
+        __props__["passwordWo"] = password_wo
+        __props__["passwordWoVersion"] = password_wo_version
         __props__["ssids"] = ssids
         __props__["username"] = username
         __props__["usernameVariable"] = username_variable
@@ -1239,6 +1347,8 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
     def password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "password")
 
@@ -1249,6 +1359,24 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
         Variable name
         """
         return pulumi.get(self, "password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
 
     @_builtins.property
     @pulumi.getter

@@ -110,6 +110,10 @@ type LookupServiceLanVpnInterfaceIpsecFeatureResult struct {
 	IkePresharedKey string `pulumi:"ikePresharedKey"`
 	// Variable name
 	IkePresharedKeyVariable string `pulumi:"ikePresharedKeyVariable"`
+	// Use preshared key to authenticate IKE peer
+	IkePresharedKeyWo string `pulumi:"ikePresharedKeyWo"`
+	// Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	IkePresharedKeyWoVersion int `pulumi:"ikePresharedKeyWoVersion"`
 	// IKE rekey interval \n\n seconds
 	IkeRekeyInterval int `pulumi:"ikeRekeyInterval"`
 	// Variable name
@@ -355,6 +359,16 @@ func (o LookupServiceLanVpnInterfaceIpsecFeatureResultOutput) IkePresharedKey() 
 // Variable name
 func (o LookupServiceLanVpnInterfaceIpsecFeatureResultOutput) IkePresharedKeyVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceLanVpnInterfaceIpsecFeatureResult) string { return v.IkePresharedKeyVariable }).(pulumi.StringOutput)
+}
+
+// Use preshared key to authenticate IKE peer
+func (o LookupServiceLanVpnInterfaceIpsecFeatureResultOutput) IkePresharedKeyWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceIpsecFeatureResult) string { return v.IkePresharedKeyWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupServiceLanVpnInterfaceIpsecFeatureResultOutput) IkePresharedKeyWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceIpsecFeatureResult) int { return v.IkePresharedKeyWoVersion }).(pulumi.IntOutput)
 }
 
 // IKE rekey interval \n\n seconds

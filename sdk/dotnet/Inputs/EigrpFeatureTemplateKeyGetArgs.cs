@@ -12,11 +12,21 @@ namespace Pulumi.Sdwan.Inputs
 
     public sealed class EigrpFeatureTemplateKeyGetArgs : global::Pulumi.ResourceArgs
     {
+        [Input("md5AuthenticationKey")]
+        private Input<string>? _md5AuthenticationKey;
+
         /// <summary>
         /// Set MD5 key
         /// </summary>
-        [Input("md5AuthenticationKey")]
-        public Input<string>? Md5AuthenticationKey { get; set; }
+        public Input<string>? Md5AuthenticationKey
+        {
+            get => _md5AuthenticationKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _md5AuthenticationKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name

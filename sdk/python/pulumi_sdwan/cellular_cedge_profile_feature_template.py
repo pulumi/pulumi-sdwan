@@ -810,12 +810,14 @@ class CellularCedgeProfileFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["packet_data_network_type_variable"] = packet_data_network_type_variable
             __props__.__dict__["profile_id"] = profile_id
             __props__.__dict__["profile_id_variable"] = profile_id_variable
-            __props__.__dict__["profile_password"] = profile_password
+            __props__.__dict__["profile_password"] = None if profile_password is None else pulumi.Output.secret(profile_password)
             __props__.__dict__["profile_password_variable"] = profile_password_variable
             __props__.__dict__["profile_username"] = profile_username
             __props__.__dict__["profile_username_variable"] = profile_username_variable
             __props__.__dict__["template_type"] = None
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["profilePassword"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(CellularCedgeProfileFeatureTemplate, __self__).__init__(
             'sdwan:index/cellularCedgeProfileFeatureTemplate:CellularCedgeProfileFeatureTemplate',
             resource_name,

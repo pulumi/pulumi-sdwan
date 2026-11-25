@@ -959,7 +959,7 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["filter_variable"] = filter_variable
             __props__.__dict__["hello_interval"] = hello_interval
             __props__.__dict__["hello_interval_variable"] = hello_interval_variable
-            __props__.__dict__["hmac_authentication_key"] = hmac_authentication_key
+            __props__.__dict__["hmac_authentication_key"] = None if hmac_authentication_key is None else pulumi.Output.secret(hmac_authentication_key)
             __props__.__dict__["hmac_authentication_key_variable"] = hmac_authentication_key_variable
             __props__.__dict__["hold_time"] = hold_time
             __props__.__dict__["hold_time_variable"] = hold_time_variable
@@ -970,6 +970,8 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
             __props__.__dict__["route_policy_name_variable"] = route_policy_name_variable
             __props__.__dict__["template_type"] = None
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["hmacAuthenticationKey"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(EigrpFeatureTemplate, __self__).__init__(
             'sdwan:index/eigrpFeatureTemplate:EigrpFeatureTemplate',
             resource_name,

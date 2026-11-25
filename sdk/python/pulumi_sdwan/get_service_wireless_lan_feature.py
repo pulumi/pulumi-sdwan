@@ -27,7 +27,7 @@ class GetServiceWirelessLanFeatureResult:
     """
     A collection of values returned by getServiceWirelessLanFeature.
     """
-    def __init__(__self__, country=None, country_variable=None, description=None, enable24g=None, enable24g_variable=None, enable5g=None, enable5g_variable=None, feature_profile_id=None, id=None, me_default_gateway=None, me_default_gateway_variable=None, me_dynamic_ip_enabled=None, me_ipv4_address=None, me_ipv4_address_variable=None, me_subnet_mask=None, me_subnet_mask_variable=None, name=None, password=None, password_variable=None, ssids=None, username=None, username_variable=None, version=None):
+    def __init__(__self__, country=None, country_variable=None, description=None, enable24g=None, enable24g_variable=None, enable5g=None, enable5g_variable=None, feature_profile_id=None, id=None, me_default_gateway=None, me_default_gateway_variable=None, me_dynamic_ip_enabled=None, me_ipv4_address=None, me_ipv4_address_variable=None, me_subnet_mask=None, me_subnet_mask_variable=None, name=None, password=None, password_variable=None, password_wo=None, password_wo_version=None, ssids=None, username=None, username_variable=None, version=None):
         if country and not isinstance(country, str):
             raise TypeError("Expected argument 'country' to be a str")
         pulumi.set(__self__, "country", country)
@@ -85,6 +85,12 @@ class GetServiceWirelessLanFeatureResult:
         if password_variable and not isinstance(password_variable, str):
             raise TypeError("Expected argument 'password_variable' to be a str")
         pulumi.set(__self__, "password_variable", password_variable)
+        if password_wo and not isinstance(password_wo, str):
+            raise TypeError("Expected argument 'password_wo' to be a str")
+        pulumi.set(__self__, "password_wo", password_wo)
+        if password_wo_version and not isinstance(password_wo_version, int):
+            raise TypeError("Expected argument 'password_wo_version' to be a int")
+        pulumi.set(__self__, "password_wo_version", password_wo_version)
         if ssids and not isinstance(ssids, list):
             raise TypeError("Expected argument 'ssids' to be a list")
         pulumi.set(__self__, "ssids", ssids)
@@ -251,6 +257,22 @@ class GetServiceWirelessLanFeatureResult:
         return pulumi.get(self, "password_variable")
 
     @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> _builtins.str:
+        """
+        Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
+
+    @_builtins.property
     @pulumi.getter
     def ssids(self) -> Sequence['outputs.GetServiceWirelessLanFeatureSsidResult']:
         """
@@ -308,6 +330,8 @@ class AwaitableGetServiceWirelessLanFeatureResult(GetServiceWirelessLanFeatureRe
             name=self.name,
             password=self.password,
             password_variable=self.password_variable,
+            password_wo=self.password_wo,
+            password_wo_version=self.password_wo_version,
             ssids=self.ssids,
             username=self.username,
             username_variable=self.username_variable,
@@ -363,6 +387,8 @@ def get_service_wireless_lan_feature(feature_profile_id: Optional[_builtins.str]
         name=pulumi.get(__ret__, 'name'),
         password=pulumi.get(__ret__, 'password'),
         password_variable=pulumi.get(__ret__, 'password_variable'),
+        password_wo=pulumi.get(__ret__, 'password_wo'),
+        password_wo_version=pulumi.get(__ret__, 'password_wo_version'),
         ssids=pulumi.get(__ret__, 'ssids'),
         username=pulumi.get(__ret__, 'username'),
         username_variable=pulumi.get(__ret__, 'username_variable'),
@@ -415,6 +441,8 @@ def get_service_wireless_lan_feature_output(feature_profile_id: pulumi.Input[Opt
         name=pulumi.get(__response__, 'name'),
         password=pulumi.get(__response__, 'password'),
         password_variable=pulumi.get(__response__, 'password_variable'),
+        password_wo=pulumi.get(__response__, 'password_wo'),
+        password_wo_version=pulumi.get(__response__, 'password_wo_version'),
         ssids=pulumi.get(__response__, 'ssids'),
         username=pulumi.get(__response__, 'username'),
         username_variable=pulumi.get(__response__, 'username_variable'),

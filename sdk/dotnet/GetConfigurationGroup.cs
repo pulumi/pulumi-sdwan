@@ -134,10 +134,6 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// List of devices
-        /// </summary>
-        public readonly ImmutableArray<Outputs.GetConfigurationGroupDeviceResult> Devices;
-        /// <summary>
         /// List of feature profile IDs
         /// </summary>
         public readonly ImmutableArray<string> FeatureProfileIds;
@@ -165,12 +161,14 @@ namespace Pulumi.Sdwan
         /// Number of devices per site
         /// </summary>
         public readonly int TopologySiteDevices;
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        public readonly int Version;
 
         [OutputConstructor]
         private GetConfigurationGroupResult(
             string description,
-
-            ImmutableArray<Outputs.GetConfigurationGroupDeviceResult> devices,
 
             ImmutableArray<string> featureProfileIds,
 
@@ -184,10 +182,11 @@ namespace Pulumi.Sdwan
 
             ImmutableArray<Outputs.GetConfigurationGroupTopologyDeviceResult> topologyDevices,
 
-            int topologySiteDevices)
+            int topologySiteDevices,
+
+            int version)
         {
             Description = description;
-            Devices = devices;
             FeatureProfileIds = featureProfileIds;
             FeatureVersions = featureVersions;
             Id = id;
@@ -195,6 +194,7 @@ namespace Pulumi.Sdwan
             Solution = solution;
             TopologyDevices = topologyDevices;
             TopologySiteDevices = topologySiteDevices;
+            Version = version;
         }
     }
 }

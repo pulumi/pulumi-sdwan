@@ -136,7 +136,7 @@ class ExtendedCommunityListPolicyObject(pulumi.CustomResource):
         example = sdwan.ExtendedCommunityListPolicyObject("example",
             name="Example",
             entries=[{
-                "community": "community rt 100:10",
+                "community": "rt 100:10",
             }])
         ```
 
@@ -172,7 +172,7 @@ class ExtendedCommunityListPolicyObject(pulumi.CustomResource):
         example = sdwan.ExtendedCommunityListPolicyObject("example",
             name="Example",
             entries=[{
-                "community": "community rt 100:10",
+                "community": "rt 100:10",
             }])
         ```
 

@@ -336,12 +336,24 @@ export class TransportWanVpnInterfaceGreFeature extends pulumi.CustomResource {
     declare public readonly perfectForwardSecrecyVariable: pulumi.Output<string | undefined>;
     /**
      * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
      */
     declare public readonly preSharedSecret: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
     declare public readonly preSharedSecretVariable: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     */
+    declare public readonly preSharedSecretWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly preSharedSecretWoVersion: pulumi.Output<number | undefined>;
     /**
      * Administrative state
      *   - Default value: `false`
@@ -518,6 +530,8 @@ export class TransportWanVpnInterfaceGreFeature extends pulumi.CustomResource {
             resourceInputs["perfectForwardSecrecyVariable"] = state?.perfectForwardSecrecyVariable;
             resourceInputs["preSharedSecret"] = state?.preSharedSecret;
             resourceInputs["preSharedSecretVariable"] = state?.preSharedSecretVariable;
+            resourceInputs["preSharedSecretWo"] = state?.preSharedSecretWo;
+            resourceInputs["preSharedSecretWoVersion"] = state?.preSharedSecretWoVersion;
             resourceInputs["shutdown"] = state?.shutdown;
             resourceInputs["shutdownVariable"] = state?.shutdownVariable;
             resourceInputs["transportWanVpnFeatureId"] = state?.transportWanVpnFeatureId;
@@ -604,8 +618,10 @@ export class TransportWanVpnInterfaceGreFeature extends pulumi.CustomResource {
             resourceInputs["name"] = args?.name;
             resourceInputs["perfectForwardSecrecy"] = args?.perfectForwardSecrecy;
             resourceInputs["perfectForwardSecrecyVariable"] = args?.perfectForwardSecrecyVariable;
-            resourceInputs["preSharedSecret"] = args?.preSharedSecret;
+            resourceInputs["preSharedSecret"] = args?.preSharedSecret ? pulumi.secret(args.preSharedSecret) : undefined;
             resourceInputs["preSharedSecretVariable"] = args?.preSharedSecretVariable;
+            resourceInputs["preSharedSecretWo"] = args?.preSharedSecretWo ? pulumi.secret(args.preSharedSecretWo) : undefined;
+            resourceInputs["preSharedSecretWoVersion"] = args?.preSharedSecretWoVersion;
             resourceInputs["shutdown"] = args?.shutdown;
             resourceInputs["shutdownVariable"] = args?.shutdownVariable;
             resourceInputs["transportWanVpnFeatureId"] = args?.transportWanVpnFeatureId;
@@ -634,6 +650,8 @@ export class TransportWanVpnInterfaceGreFeature extends pulumi.CustomResource {
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["preSharedSecret", "preSharedSecretWo"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(TransportWanVpnInterfaceGreFeature.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -879,12 +897,24 @@ export interface TransportWanVpnInterfaceGreFeatureState {
     perfectForwardSecrecyVariable?: pulumi.Input<string | undefined>;
     /**
      * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
      */
     preSharedSecret?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     preSharedSecretVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     */
+    preSharedSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    preSharedSecretWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Administrative state
      *   - Default value: `false`
@@ -1236,12 +1266,24 @@ export interface TransportWanVpnInterfaceGreFeatureArgs {
     perfectForwardSecrecyVariable?: pulumi.Input<string | undefined>;
     /**
      * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
      */
     preSharedSecret?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     preSharedSecretVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     */
+    preSharedSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    preSharedSecretWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Administrative state
      *   - Default value: `false`

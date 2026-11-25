@@ -5,6 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -30,6 +31,16 @@ public final class GetSystemSnmpFeatureCommunity {
      * 
      */
     private String nameVariable;
+    /**
+     * @return Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    private String nameWo;
+    /**
+     * @return Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer nameWoVersion;
     /**
      * @return Set user label of the SNMP community
      * 
@@ -76,6 +87,20 @@ public final class GetSystemSnmpFeatureCommunity {
         return this.nameVariable;
     }
     /**
+     * @return Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    public String nameWo() {
+        return this.nameWo;
+    }
+    /**
+     * @return Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer nameWoVersion() {
+        return this.nameWoVersion;
+    }
+    /**
      * @return Set user label of the SNMP community
      * 
      */
@@ -110,6 +135,8 @@ public final class GetSystemSnmpFeatureCommunity {
         private String authorizationVariable;
         private String name;
         private String nameVariable;
+        private String nameWo;
+        private Integer nameWoVersion;
         private String userLabel;
         private String view;
         private String viewVariable;
@@ -120,6 +147,8 @@ public final class GetSystemSnmpFeatureCommunity {
     	      this.authorizationVariable = defaults.authorizationVariable;
     	      this.name = defaults.name;
     	      this.nameVariable = defaults.nameVariable;
+    	      this.nameWo = defaults.nameWo;
+    	      this.nameWoVersion = defaults.nameWoVersion;
     	      this.userLabel = defaults.userLabel;
     	      this.view = defaults.view;
     	      this.viewVariable = defaults.viewVariable;
@@ -158,6 +187,22 @@ public final class GetSystemSnmpFeatureCommunity {
             return this;
         }
         @CustomType.Setter
+        public Builder nameWo(String nameWo) {
+            if (nameWo == null) {
+              throw new MissingRequiredPropertyException("GetSystemSnmpFeatureCommunity", "nameWo");
+            }
+            this.nameWo = nameWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder nameWoVersion(Integer nameWoVersion) {
+            if (nameWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSystemSnmpFeatureCommunity", "nameWoVersion");
+            }
+            this.nameWoVersion = nameWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder userLabel(String userLabel) {
             if (userLabel == null) {
               throw new MissingRequiredPropertyException("GetSystemSnmpFeatureCommunity", "userLabel");
@@ -187,6 +232,8 @@ public final class GetSystemSnmpFeatureCommunity {
             _resultValue.authorizationVariable = authorizationVariable;
             _resultValue.name = name;
             _resultValue.nameVariable = nameVariable;
+            _resultValue.nameWo = nameWo;
+            _resultValue.nameWoVersion = nameWoVersion;
             _resultValue.userLabel = userLabel;
             _resultValue.view = view;
             _resultValue.viewVariable = viewVariable;

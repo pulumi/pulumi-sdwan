@@ -17,15 +17,16 @@ import * as utilities from "./utilities";
  *
  * const example = new sdwan.AttachFeatureDeviceTemplate("example", {
  *     attachFeatureDeviceTemplateId: DT1.id,
- *     devices: [{
- *         id: "C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE",
- *         variables: {
- *             systemSiteId: "1001",
- *             systemSystemIp: "1.1.1.1",
- *             systemHostName: "router1",
- *             vpnIfNameDefaultVEdgeDHCPTunnelInterface: "GigabitEthernet1",
+ *     devices: {
+ *         "C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE": {
+ *             variables: {
+ *                 systemSiteId: "1001",
+ *                 systemSystemIp: "1.1.1.1",
+ *                 systemHostName: "router1",
+ *                 vpnIfNameDefaultVEdgeDHCPTunnelInterface: "GigabitEthernet1",
+ *             },
  *         },
- *     }],
+ *     },
  * });
  * ```
  *
@@ -83,9 +84,9 @@ export class AttachFeatureDeviceTemplate extends pulumi.CustomResource {
      */
     declare public readonly attachFeatureDeviceTemplateId: pulumi.Output<string>;
     /**
-     * Devices
+     * Devices attached to the device template, keyed by device ID (chassis ID)
      */
-    declare public readonly devices: pulumi.Output<outputs.AttachFeatureDeviceTemplateDevice[]>;
+    declare public readonly devices: pulumi.Output<{[key: string]: outputs.AttachFeatureDeviceTemplateDevices}>;
     /**
      * The version of the device template
      */
@@ -133,9 +134,9 @@ export interface AttachFeatureDeviceTemplateState {
      */
     attachFeatureDeviceTemplateId?: pulumi.Input<string | undefined>;
     /**
-     * Devices
+     * Devices attached to the device template, keyed by device ID (chassis ID)
      */
-    devices?: pulumi.Input<pulumi.Input<inputs.AttachFeatureDeviceTemplateDevice>[] | undefined>;
+    devices?: pulumi.Input<{[key: string]: pulumi.Input<inputs.AttachFeatureDeviceTemplateDevices>} | undefined>;
     /**
      * The version of the device template
      */
@@ -151,9 +152,9 @@ export interface AttachFeatureDeviceTemplateArgs {
      */
     attachFeatureDeviceTemplateId: pulumi.Input<string>;
     /**
-     * Devices
+     * Devices attached to the device template, keyed by device ID (chassis ID)
      */
-    devices: pulumi.Input<pulumi.Input<inputs.AttachFeatureDeviceTemplateDevice>[]>;
+    devices: pulumi.Input<{[key: string]: pulumi.Input<inputs.AttachFeatureDeviceTemplateDevices>}>;
     /**
      * The version of the device template
      */

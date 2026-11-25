@@ -83,6 +83,8 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
 
     /**
      * Set passphrase, Attribute conditional on `securityType` equal to `personal`
+     *   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passphraseWo` together with `passphraseWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="passphrase")
@@ -90,6 +92,8 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
 
     /**
      * @return Set passphrase, Attribute conditional on `securityType` equal to `personal`
+     *   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passphraseWo` together with `passphraseWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> passphrase() {
@@ -109,6 +113,40 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
      */
     public Optional<Output<String>> passphraseVariable() {
         return Optional.ofNullable(this.passphraseVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set passphrase, Attribute conditional on `securityType` equal to `personal`
+     *   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+     * 
+     */
+    @Import(name="passphraseWo")
+    private @Nullable Output<String> passphraseWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set passphrase, Attribute conditional on `securityType` equal to `personal`
+     *   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> passphraseWo() {
+        return Optional.ofNullable(this.passphraseWo);
+    }
+
+    /**
+     * Rotation trigger for `passphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="passphraseWoVersion")
+    private @Nullable Output<Integer> passphraseWoVersion;
+
+    /**
+     * @return Rotation trigger for `passphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> passphraseWoVersion() {
+        return Optional.ofNullable(this.passphraseWoVersion);
     }
 
     /**
@@ -245,6 +283,8 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
 
     /**
      * Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+     *   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `radiusServerSecretWo` together with `radiusServerSecretWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="radiusServerSecret")
@@ -252,6 +292,8 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
 
     /**
      * @return Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+     *   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `radiusServerSecretWo` together with `radiusServerSecretWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> radiusServerSecret() {
@@ -271,6 +313,40 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
      */
     public Optional<Output<String>> radiusServerSecretVariable() {
         return Optional.ofNullable(this.radiusServerSecretVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+     *   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+     * 
+     */
+    @Import(name="radiusServerSecretWo")
+    private @Nullable Output<String> radiusServerSecretWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+     *   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> radiusServerSecretWo() {
+        return Optional.ofNullable(this.radiusServerSecretWo);
+    }
+
+    /**
+     * Rotation trigger for `radiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="radiusServerSecretWoVersion")
+    private @Nullable Output<Integer> radiusServerSecretWoVersion;
+
+    /**
+     * @return Rotation trigger for `radiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> radiusServerSecretWoVersion() {
+        return Optional.ofNullable(this.radiusServerSecretWoVersion);
     }
 
     /**
@@ -346,6 +422,8 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         this.broadcastSsidVariable = $.broadcastSsidVariable;
         this.passphrase = $.passphrase;
         this.passphraseVariable = $.passphraseVariable;
+        this.passphraseWo = $.passphraseWo;
+        this.passphraseWoVersion = $.passphraseWoVersion;
         this.qosProfile = $.qosProfile;
         this.qosProfileVariable = $.qosProfileVariable;
         this.radioType = $.radioType;
@@ -356,6 +434,8 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         this.radiusServerPortVariable = $.radiusServerPortVariable;
         this.radiusServerSecret = $.radiusServerSecret;
         this.radiusServerSecretVariable = $.radiusServerSecretVariable;
+        this.radiusServerSecretWo = $.radiusServerSecretWo;
+        this.radiusServerSecretWoVersion = $.radiusServerSecretWoVersion;
         this.securityType = $.securityType;
         this.ssidName = $.ssidName;
         this.vlanId = $.vlanId;
@@ -470,6 +550,8 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
 
         /**
          * @param passphrase Set passphrase, Attribute conditional on `securityType` equal to `personal`
+         *   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `passphraseWo` together with `passphraseWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -481,6 +563,8 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
 
         /**
          * @param passphrase Set passphrase, Attribute conditional on `securityType` equal to `personal`
+         *   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `passphraseWo` together with `passphraseWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -508,6 +592,52 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
          */
         public Builder passphraseVariable(String passphraseVariable) {
             return passphraseVariable(Output.of(passphraseVariable));
+        }
+
+        /**
+         * @param passphraseWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set passphrase, Attribute conditional on `securityType` equal to `personal`
+         *   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder passphraseWo(@Nullable Output<String> passphraseWo) {
+            $.passphraseWo = passphraseWo;
+            return this;
+        }
+
+        /**
+         * @param passphraseWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set passphrase, Attribute conditional on `securityType` equal to `personal`
+         *   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder passphraseWo(String passphraseWo) {
+            return passphraseWo(Output.of(passphraseWo));
+        }
+
+        /**
+         * @param passphraseWoVersion Rotation trigger for `passphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder passphraseWoVersion(@Nullable Output<Integer> passphraseWoVersion) {
+            $.passphraseWoVersion = passphraseWoVersion;
+            return this;
+        }
+
+        /**
+         * @param passphraseWoVersion Rotation trigger for `passphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder passphraseWoVersion(Integer passphraseWoVersion) {
+            return passphraseWoVersion(Output.of(passphraseWoVersion));
         }
 
         /**
@@ -692,6 +822,8 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
 
         /**
          * @param radiusServerSecret Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+         *   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `radiusServerSecretWo` together with `radiusServerSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -703,6 +835,8 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
 
         /**
          * @param radiusServerSecret Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+         *   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `radiusServerSecretWo` together with `radiusServerSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -730,6 +864,52 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
          */
         public Builder radiusServerSecretVariable(String radiusServerSecretVariable) {
             return radiusServerSecretVariable(Output.of(radiusServerSecretVariable));
+        }
+
+        /**
+         * @param radiusServerSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+         *   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder radiusServerSecretWo(@Nullable Output<String> radiusServerSecretWo) {
+            $.radiusServerSecretWo = radiusServerSecretWo;
+            return this;
+        }
+
+        /**
+         * @param radiusServerSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+         *   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder radiusServerSecretWo(String radiusServerSecretWo) {
+            return radiusServerSecretWo(Output.of(radiusServerSecretWo));
+        }
+
+        /**
+         * @param radiusServerSecretWoVersion Rotation trigger for `radiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder radiusServerSecretWoVersion(@Nullable Output<Integer> radiusServerSecretWoVersion) {
+            $.radiusServerSecretWoVersion = radiusServerSecretWoVersion;
+            return this;
+        }
+
+        /**
+         * @param radiusServerSecretWoVersion Rotation trigger for `radiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder radiusServerSecretWoVersion(Integer radiusServerSecretWoVersion) {
+            return radiusServerSecretWoVersion(Output.of(radiusServerSecretWoVersion));
         }
 
         /**

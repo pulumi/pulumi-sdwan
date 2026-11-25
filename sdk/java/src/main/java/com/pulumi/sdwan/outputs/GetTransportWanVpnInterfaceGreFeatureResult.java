@@ -280,6 +280,16 @@ public final class GetTransportWanVpnInterfaceGreFeatureResult {
      */
     private String preSharedSecretVariable;
     /**
+     * @return Use preshared key to authenticate IKE peer
+     * 
+     */
+    private String preSharedSecretWo;
+    /**
+     * @return Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer preSharedSecretWoVersion;
+    /**
      * @return Administrative state
      * 
      */
@@ -789,6 +799,20 @@ public final class GetTransportWanVpnInterfaceGreFeatureResult {
         return this.preSharedSecretVariable;
     }
     /**
+     * @return Use preshared key to authenticate IKE peer
+     * 
+     */
+    public String preSharedSecretWo() {
+        return this.preSharedSecretWo;
+    }
+    /**
+     * @return Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer preSharedSecretWoVersion() {
+        return this.preSharedSecretWoVersion;
+    }
+    /**
      * @return Administrative state
      * 
      */
@@ -1035,6 +1059,8 @@ public final class GetTransportWanVpnInterfaceGreFeatureResult {
         private String perfectForwardSecrecyVariable;
         private String preSharedSecret;
         private String preSharedSecretVariable;
+        private String preSharedSecretWo;
+        private Integer preSharedSecretWoVersion;
         private Boolean shutdown;
         private String shutdownVariable;
         private String transportWanVpnFeatureId;
@@ -1119,6 +1145,8 @@ public final class GetTransportWanVpnInterfaceGreFeatureResult {
     	      this.perfectForwardSecrecyVariable = defaults.perfectForwardSecrecyVariable;
     	      this.preSharedSecret = defaults.preSharedSecret;
     	      this.preSharedSecretVariable = defaults.preSharedSecretVariable;
+    	      this.preSharedSecretWo = defaults.preSharedSecretWo;
+    	      this.preSharedSecretWoVersion = defaults.preSharedSecretWoVersion;
     	      this.shutdown = defaults.shutdown;
     	      this.shutdownVariable = defaults.shutdownVariable;
     	      this.transportWanVpnFeatureId = defaults.transportWanVpnFeatureId;
@@ -1588,6 +1616,22 @@ public final class GetTransportWanVpnInterfaceGreFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder preSharedSecretWo(String preSharedSecretWo) {
+            if (preSharedSecretWo == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceGreFeatureResult", "preSharedSecretWo");
+            }
+            this.preSharedSecretWo = preSharedSecretWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder preSharedSecretWoVersion(Integer preSharedSecretWoVersion) {
+            if (preSharedSecretWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceGreFeatureResult", "preSharedSecretWoVersion");
+            }
+            this.preSharedSecretWoVersion = preSharedSecretWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder shutdown(Boolean shutdown) {
             if (shutdown == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceGreFeatureResult", "shutdown");
@@ -1852,6 +1896,8 @@ public final class GetTransportWanVpnInterfaceGreFeatureResult {
             _resultValue.perfectForwardSecrecyVariable = perfectForwardSecrecyVariable;
             _resultValue.preSharedSecret = preSharedSecret;
             _resultValue.preSharedSecretVariable = preSharedSecretVariable;
+            _resultValue.preSharedSecretWo = preSharedSecretWo;
+            _resultValue.preSharedSecretWoVersion = preSharedSecretWoVersion;
             _resultValue.shutdown = shutdown;
             _resultValue.shutdownVariable = shutdownVariable;
             _resultValue.transportWanVpnFeatureId = transportWanVpnFeatureId;

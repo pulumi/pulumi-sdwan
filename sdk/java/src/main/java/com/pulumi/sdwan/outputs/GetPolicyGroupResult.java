@@ -5,7 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.sdwan.outputs.GetPolicyGroupDevice;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,11 +17,6 @@ public final class GetPolicyGroupResult {
      * 
      */
     private String description;
-    /**
-     * @return List of devices
-     * 
-     */
-    private List<GetPolicyGroupDevice> devices;
     /**
      * @return List of feature profile IDs
      * 
@@ -47,6 +42,11 @@ public final class GetPolicyGroupResult {
      * 
      */
     private String solution;
+    /**
+     * @return The version of the object
+     * 
+     */
+    private Integer version;
 
     private GetPolicyGroupResult() {}
     /**
@@ -55,13 +55,6 @@ public final class GetPolicyGroupResult {
      */
     public String description() {
         return this.description;
-    }
-    /**
-     * @return List of devices
-     * 
-     */
-    public List<GetPolicyGroupDevice> devices() {
-        return this.devices;
     }
     /**
      * @return List of feature profile IDs
@@ -98,6 +91,13 @@ public final class GetPolicyGroupResult {
     public String solution() {
         return this.solution;
     }
+    /**
+     * @return The version of the object
+     * 
+     */
+    public Integer version() {
+        return this.version;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -109,22 +109,22 @@ public final class GetPolicyGroupResult {
     @CustomType.Builder
     public static final class Builder {
         private String description;
-        private List<GetPolicyGroupDevice> devices;
         private List<String> featureProfileIds;
         private String id;
         private String name;
         private List<String> policyVersions;
         private String solution;
+        private Integer version;
         public Builder() {}
         public Builder(GetPolicyGroupResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
-    	      this.devices = defaults.devices;
     	      this.featureProfileIds = defaults.featureProfileIds;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.policyVersions = defaults.policyVersions;
     	      this.solution = defaults.solution;
+    	      this.version = defaults.version;
         }
 
         @CustomType.Setter
@@ -134,17 +134,6 @@ public final class GetPolicyGroupResult {
             }
             this.description = description;
             return this;
-        }
-        @CustomType.Setter
-        public Builder devices(List<GetPolicyGroupDevice> devices) {
-            if (devices == null) {
-              throw new MissingRequiredPropertyException("GetPolicyGroupResult", "devices");
-            }
-            this.devices = devices;
-            return this;
-        }
-        public Builder devices(GetPolicyGroupDevice... devices) {
-            return devices(List.of(devices));
         }
         @CustomType.Setter
         public Builder featureProfileIds(List<String> featureProfileIds) {
@@ -192,15 +181,23 @@ public final class GetPolicyGroupResult {
             this.solution = solution;
             return this;
         }
+        @CustomType.Setter
+        public Builder version(Integer version) {
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetPolicyGroupResult", "version");
+            }
+            this.version = version;
+            return this;
+        }
         public GetPolicyGroupResult build() {
             final var _resultValue = new GetPolicyGroupResult();
             _resultValue.description = description;
-            _resultValue.devices = devices;
             _resultValue.featureProfileIds = featureProfileIds;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.policyVersions = policyVersions;
             _resultValue.solution = solution;
+            _resultValue.version = version;
             return _resultValue;
         }
     }

@@ -110,9 +110,17 @@ type ServiceWirelessLanFeature struct {
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password pulumi.StringPtrOutput `pulumi:"password"`
 	// Variable name
 	PasswordVariable pulumi.StringPtrOutput `pulumi:"passwordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo pulumi.StringPtrOutput `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion pulumi.IntPtrOutput `pulumi:"passwordWoVersion"`
 	// Configure Wi-Fi SSID profile
 	Ssids ServiceWirelessLanFeatureSsidArrayOutput `pulumi:"ssids"`
 	// Set management username
@@ -139,6 +147,17 @@ func NewServiceWirelessLanFeature(ctx *pulumi.Context,
 	if args.Ssids == nil {
 		return nil, errors.New("invalid value for required argument 'Ssids'")
 	}
+	if args.Password != nil {
+		args.Password = pulumi.ToSecret(args.Password).(pulumi.StringPtrInput)
+	}
+	if args.PasswordWo != nil {
+		args.PasswordWo = pulumi.ToSecret(args.PasswordWo).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"password",
+		"passwordWo",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource ServiceWirelessLanFeature
 	err := ctx.RegisterResource("sdwan:index/serviceWirelessLanFeature:ServiceWirelessLanFeature", name, args, &resource, opts...)
@@ -199,9 +218,17 @@ type serviceWirelessLanFeatureState struct {
 	// The name of the Feature
 	Name *string `pulumi:"name"`
 	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password *string `pulumi:"password"`
 	// Variable name
 	PasswordVariable *string `pulumi:"passwordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo *string `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion *int `pulumi:"passwordWoVersion"`
 	// Configure Wi-Fi SSID profile
 	Ssids []ServiceWirelessLanFeatureSsid `pulumi:"ssids"`
 	// Set management username
@@ -250,9 +277,17 @@ type ServiceWirelessLanFeatureState struct {
 	// The name of the Feature
 	Name pulumi.StringPtrInput
 	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password pulumi.StringPtrInput
 	// Variable name
 	PasswordVariable pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo pulumi.StringPtrInput
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion pulumi.IntPtrInput
 	// Configure Wi-Fi SSID profile
 	Ssids ServiceWirelessLanFeatureSsidArrayInput
 	// Set management username
@@ -311,9 +346,17 @@ type serviceWirelessLanFeatureArgs struct {
 	// The name of the Feature
 	Name *string `pulumi:"name"`
 	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password *string `pulumi:"password"`
 	// Variable name
 	PasswordVariable *string `pulumi:"passwordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo *string `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion *int `pulumi:"passwordWoVersion"`
 	// Configure Wi-Fi SSID profile
 	Ssids []ServiceWirelessLanFeatureSsid `pulumi:"ssids"`
 	// Set management username
@@ -361,9 +404,17 @@ type ServiceWirelessLanFeatureArgs struct {
 	// The name of the Feature
 	Name pulumi.StringPtrInput
 	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password pulumi.StringPtrInput
 	// Variable name
 	PasswordVariable pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo pulumi.StringPtrInput
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion pulumi.IntPtrInput
 	// Configure Wi-Fi SSID profile
 	Ssids ServiceWirelessLanFeatureSsidArrayInput
 	// Set management username
@@ -544,6 +595,8 @@ func (o ServiceWirelessLanFeatureOutput) Name() pulumi.StringOutput {
 }
 
 // Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 func (o ServiceWirelessLanFeatureOutput) Password() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceWirelessLanFeature) pulumi.StringPtrOutput { return v.Password }).(pulumi.StringPtrOutput)
 }
@@ -551,6 +604,18 @@ func (o ServiceWirelessLanFeatureOutput) Password() pulumi.StringPtrOutput {
 // Variable name
 func (o ServiceWirelessLanFeatureOutput) PasswordVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceWirelessLanFeature) pulumi.StringPtrOutput { return v.PasswordVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+func (o ServiceWirelessLanFeatureOutput) PasswordWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceWirelessLanFeature) pulumi.StringPtrOutput { return v.PasswordWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o ServiceWirelessLanFeatureOutput) PasswordWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *ServiceWirelessLanFeature) pulumi.IntPtrOutput { return v.PasswordWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Configure Wi-Fi SSID profile

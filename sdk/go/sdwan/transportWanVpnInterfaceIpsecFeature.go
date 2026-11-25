@@ -137,9 +137,17 @@ type TransportWanVpnInterfaceIpsecFeature struct {
 	// Variable name
 	IkeIntegrityProtocolVariable pulumi.StringPtrOutput `pulumi:"ikeIntegrityProtocolVariable"`
 	// Use preshared key to authenticate IKE peer
+	//   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `ikePresharedKeyWo` together with `ikePresharedKeyWoVersion`, which keeps it out of state.
 	IkePresharedKey pulumi.StringPtrOutput `pulumi:"ikePresharedKey"`
 	// Variable name
 	IkePresharedKeyVariable pulumi.StringPtrOutput `pulumi:"ikePresharedKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+	IkePresharedKeyWo pulumi.StringPtrOutput `pulumi:"ikePresharedKeyWo"`
+	// Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	IkePresharedKeyWoVersion pulumi.IntPtrOutput `pulumi:"ikePresharedKeyWoVersion"`
 	// IKE rekey interval <60..86400> seconds
 	//   - Range: `60`-`86400`
 	//   - Default value: `14400`
@@ -225,6 +233,7 @@ type TransportWanVpnInterfaceIpsecFeature struct {
 	PerfectForwardSecrecyVariable pulumi.StringPtrOutput `pulumi:"perfectForwardSecrecyVariable"`
 	// Administrative state
 	//   - Default value: `true`
+	//   - Default value from SD-WAN Manager version `20.18.5`: `false`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
@@ -279,6 +288,17 @@ func NewTransportWanVpnInterfaceIpsecFeature(ctx *pulumi.Context,
 	if args.TransportWanVpnFeatureId == nil {
 		return nil, errors.New("invalid value for required argument 'TransportWanVpnFeatureId'")
 	}
+	if args.IkePresharedKey != nil {
+		args.IkePresharedKey = pulumi.ToSecret(args.IkePresharedKey).(pulumi.StringPtrInput)
+	}
+	if args.IkePresharedKeyWo != nil {
+		args.IkePresharedKeyWo = pulumi.ToSecret(args.IkePresharedKeyWo).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"ikePresharedKey",
+		"ikePresharedKeyWo",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource TransportWanVpnInterfaceIpsecFeature
 	err := ctx.RegisterResource("sdwan:index/transportWanVpnInterfaceIpsecFeature:TransportWanVpnInterfaceIpsecFeature", name, args, &resource, opts...)
@@ -355,9 +375,17 @@ type transportWanVpnInterfaceIpsecFeatureState struct {
 	// Variable name
 	IkeIntegrityProtocolVariable *string `pulumi:"ikeIntegrityProtocolVariable"`
 	// Use preshared key to authenticate IKE peer
+	//   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `ikePresharedKeyWo` together with `ikePresharedKeyWoVersion`, which keeps it out of state.
 	IkePresharedKey *string `pulumi:"ikePresharedKey"`
 	// Variable name
 	IkePresharedKeyVariable *string `pulumi:"ikePresharedKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+	IkePresharedKeyWo *string `pulumi:"ikePresharedKeyWo"`
+	// Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	IkePresharedKeyWoVersion *int `pulumi:"ikePresharedKeyWoVersion"`
 	// IKE rekey interval <60..86400> seconds
 	//   - Range: `60`-`86400`
 	//   - Default value: `14400`
@@ -443,6 +471,7 @@ type transportWanVpnInterfaceIpsecFeatureState struct {
 	PerfectForwardSecrecyVariable *string `pulumi:"perfectForwardSecrecyVariable"`
 	// Administrative state
 	//   - Default value: `true`
+	//   - Default value from SD-WAN Manager version `20.18.5`: `false`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
@@ -538,9 +567,17 @@ type TransportWanVpnInterfaceIpsecFeatureState struct {
 	// Variable name
 	IkeIntegrityProtocolVariable pulumi.StringPtrInput
 	// Use preshared key to authenticate IKE peer
+	//   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `ikePresharedKeyWo` together with `ikePresharedKeyWoVersion`, which keeps it out of state.
 	IkePresharedKey pulumi.StringPtrInput
 	// Variable name
 	IkePresharedKeyVariable pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+	IkePresharedKeyWo pulumi.StringPtrInput
+	// Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	IkePresharedKeyWoVersion pulumi.IntPtrInput
 	// IKE rekey interval <60..86400> seconds
 	//   - Range: `60`-`86400`
 	//   - Default value: `14400`
@@ -626,6 +663,7 @@ type TransportWanVpnInterfaceIpsecFeatureState struct {
 	PerfectForwardSecrecyVariable pulumi.StringPtrInput
 	// Administrative state
 	//   - Default value: `true`
+	//   - Default value from SD-WAN Manager version `20.18.5`: `false`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
@@ -731,9 +769,17 @@ type transportWanVpnInterfaceIpsecFeatureArgs struct {
 	// Variable name
 	IkeIntegrityProtocolVariable *string `pulumi:"ikeIntegrityProtocolVariable"`
 	// Use preshared key to authenticate IKE peer
+	//   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `ikePresharedKeyWo` together with `ikePresharedKeyWoVersion`, which keeps it out of state.
 	IkePresharedKey *string `pulumi:"ikePresharedKey"`
 	// Variable name
 	IkePresharedKeyVariable *string `pulumi:"ikePresharedKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+	IkePresharedKeyWo *string `pulumi:"ikePresharedKeyWo"`
+	// Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	IkePresharedKeyWoVersion *int `pulumi:"ikePresharedKeyWoVersion"`
 	// IKE rekey interval <60..86400> seconds
 	//   - Range: `60`-`86400`
 	//   - Default value: `14400`
@@ -819,6 +865,7 @@ type transportWanVpnInterfaceIpsecFeatureArgs struct {
 	PerfectForwardSecrecyVariable *string `pulumi:"perfectForwardSecrecyVariable"`
 	// Administrative state
 	//   - Default value: `true`
+	//   - Default value from SD-WAN Manager version `20.18.5`: `false`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
@@ -913,9 +960,17 @@ type TransportWanVpnInterfaceIpsecFeatureArgs struct {
 	// Variable name
 	IkeIntegrityProtocolVariable pulumi.StringPtrInput
 	// Use preshared key to authenticate IKE peer
+	//   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `ikePresharedKeyWo` together with `ikePresharedKeyWoVersion`, which keeps it out of state.
 	IkePresharedKey pulumi.StringPtrInput
 	// Variable name
 	IkePresharedKeyVariable pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+	IkePresharedKeyWo pulumi.StringPtrInput
+	// Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	IkePresharedKeyWoVersion pulumi.IntPtrInput
 	// IKE rekey interval <60..86400> seconds
 	//   - Range: `60`-`86400`
 	//   - Default value: `14400`
@@ -1001,6 +1056,7 @@ type TransportWanVpnInterfaceIpsecFeatureArgs struct {
 	PerfectForwardSecrecyVariable pulumi.StringPtrInput
 	// Administrative state
 	//   - Default value: `true`
+	//   - Default value from SD-WAN Manager version `20.18.5`: `false`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
@@ -1252,6 +1308,8 @@ func (o TransportWanVpnInterfaceIpsecFeatureOutput) IkeIntegrityProtocolVariable
 }
 
 // Use preshared key to authenticate IKE peer
+//   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `ikePresharedKeyWo` together with `ikePresharedKeyWoVersion`, which keeps it out of state.
 func (o TransportWanVpnInterfaceIpsecFeatureOutput) IkePresharedKey() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.IkePresharedKey }).(pulumi.StringPtrOutput)
 }
@@ -1259,6 +1317,18 @@ func (o TransportWanVpnInterfaceIpsecFeatureOutput) IkePresharedKey() pulumi.Str
 // Variable name
 func (o TransportWanVpnInterfaceIpsecFeatureOutput) IkePresharedKeyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.IkePresharedKeyVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Use preshared key to authenticate IKE peer
+//   - Only one of `ikePresharedKey`, `ikePresharedKeyVariable` and `ikePresharedKeyWo` can be set.
+func (o TransportWanVpnInterfaceIpsecFeatureOutput) IkePresharedKeyWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.IkePresharedKeyWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `ikePresharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o TransportWanVpnInterfaceIpsecFeatureOutput) IkePresharedKeyWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceIpsecFeature) pulumi.IntPtrOutput { return v.IkePresharedKeyWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // IKE rekey interval <60..86400> seconds
@@ -1454,6 +1524,7 @@ func (o TransportWanVpnInterfaceIpsecFeatureOutput) PerfectForwardSecrecyVariabl
 
 // Administrative state
 //   - Default value: `true`
+//   - Default value from SD-WAN Manager version `20.18.5`: `false`
 func (o TransportWanVpnInterfaceIpsecFeatureOutput) Shutdown() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceIpsecFeature) pulumi.BoolPtrOutput { return v.Shutdown }).(pulumi.BoolPtrOutput)
 }

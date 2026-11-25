@@ -32,6 +32,16 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
      */
     private String keyVariable;
     /**
+     * @return Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    private String keyWo;
+    /**
+     * @return Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer keyWoVersion;
+    /**
      * @return TACACS Port
      * 
      */
@@ -51,6 +61,16 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
      * 
      */
     private String secretKeyVariable;
+    /**
+     * @return Set the TACACS server shared type 7 encrypted key
+     * 
+     */
+    private String secretKeyWo;
+    /**
+     * @return Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer secretKeyWoVersion;
     /**
      * @return Configure how long to wait for replies from the TACACS server
      * 
@@ -92,6 +112,20 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
         return this.keyVariable;
     }
     /**
+     * @return Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    public String keyWo() {
+        return this.keyWo;
+    }
+    /**
+     * @return Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer keyWoVersion() {
+        return this.keyWoVersion;
+    }
+    /**
      * @return TACACS Port
      * 
      */
@@ -118,6 +152,20 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
      */
     public String secretKeyVariable() {
         return this.secretKeyVariable;
+    }
+    /**
+     * @return Set the TACACS server shared type 7 encrypted key
+     * 
+     */
+    public String secretKeyWo() {
+        return this.secretKeyWo;
+    }
+    /**
+     * @return Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer secretKeyWoVersion() {
+        return this.secretKeyWoVersion;
     }
     /**
      * @return Configure how long to wait for replies from the TACACS server
@@ -147,10 +195,14 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
         private String key;
         private String keyEnum;
         private String keyVariable;
+        private String keyWo;
+        private Integer keyWoVersion;
         private Integer port;
         private String portVariable;
         private String secretKey;
         private String secretKeyVariable;
+        private String secretKeyWo;
+        private Integer secretKeyWoVersion;
         private Integer timeout;
         private String timeoutVariable;
         public Builder() {}
@@ -160,10 +212,14 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
     	      this.key = defaults.key;
     	      this.keyEnum = defaults.keyEnum;
     	      this.keyVariable = defaults.keyVariable;
+    	      this.keyWo = defaults.keyWo;
+    	      this.keyWoVersion = defaults.keyWoVersion;
     	      this.port = defaults.port;
     	      this.portVariable = defaults.portVariable;
     	      this.secretKey = defaults.secretKey;
     	      this.secretKeyVariable = defaults.secretKeyVariable;
+    	      this.secretKeyWo = defaults.secretKeyWo;
+    	      this.secretKeyWoVersion = defaults.secretKeyWoVersion;
     	      this.timeout = defaults.timeout;
     	      this.timeoutVariable = defaults.timeoutVariable;
         }
@@ -201,6 +257,22 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
             return this;
         }
         @CustomType.Setter
+        public Builder keyWo(String keyWo) {
+            if (keyWo == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureTacacsGroupServer", "keyWo");
+            }
+            this.keyWo = keyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder keyWoVersion(Integer keyWoVersion) {
+            if (keyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureTacacsGroupServer", "keyWoVersion");
+            }
+            this.keyWoVersion = keyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder port(Integer port) {
             if (port == null) {
               throw new MissingRequiredPropertyException("GetSystemAaaFeatureTacacsGroupServer", "port");
@@ -233,6 +305,22 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
             return this;
         }
         @CustomType.Setter
+        public Builder secretKeyWo(String secretKeyWo) {
+            if (secretKeyWo == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureTacacsGroupServer", "secretKeyWo");
+            }
+            this.secretKeyWo = secretKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder secretKeyWoVersion(Integer secretKeyWoVersion) {
+            if (secretKeyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureTacacsGroupServer", "secretKeyWoVersion");
+            }
+            this.secretKeyWoVersion = secretKeyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder timeout(Integer timeout) {
             if (timeout == null) {
               throw new MissingRequiredPropertyException("GetSystemAaaFeatureTacacsGroupServer", "timeout");
@@ -254,10 +342,14 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
             _resultValue.key = key;
             _resultValue.keyEnum = keyEnum;
             _resultValue.keyVariable = keyVariable;
+            _resultValue.keyWo = keyWo;
+            _resultValue.keyWoVersion = keyWoVersion;
             _resultValue.port = port;
             _resultValue.portVariable = portVariable;
             _resultValue.secretKey = secretKey;
             _resultValue.secretKeyVariable = secretKeyVariable;
+            _resultValue.secretKeyWo = secretKeyWo;
+            _resultValue.secretKeyWoVersion = secretKeyWoVersion;
             _resultValue.timeout = timeout;
             _resultValue.timeoutVariable = timeoutVariable;
             return _resultValue;

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -47,6 +48,21 @@ public final class GetPolicyObjectFeatureProfileParcelsArgs extends com.pulumi.r
     }
 
     /**
+     * Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+     * 
+     */
+    @Import(name="parcelNames")
+    private @Nullable Output<List<String>> parcelNames;
+
+    /**
+     * @return Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+     * 
+     */
+    public Optional<Output<List<String>>> parcelNames() {
+        return Optional.ofNullable(this.parcelNames);
+    }
+
+    /**
      * Filter by parcel type (e.g. &#39;app-list&#39;, &#39;data-prefix&#39;)
      * 
      */
@@ -66,6 +82,7 @@ public final class GetPolicyObjectFeatureProfileParcelsArgs extends com.pulumi.r
     private GetPolicyObjectFeatureProfileParcelsArgs(GetPolicyObjectFeatureProfileParcelsArgs $) {
         this.createdBy = $.createdBy;
         this.featureProfileId = $.featureProfileId;
+        this.parcelNames = $.parcelNames;
         this.parcelType = $.parcelType;
     }
 
@@ -127,6 +144,37 @@ public final class GetPolicyObjectFeatureProfileParcelsArgs extends com.pulumi.r
          */
         public Builder featureProfileId(String featureProfileId) {
             return featureProfileId(Output.of(featureProfileId));
+        }
+
+        /**
+         * @param parcelNames Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parcelNames(@Nullable Output<List<String>> parcelNames) {
+            $.parcelNames = parcelNames;
+            return this;
+        }
+
+        /**
+         * @param parcelNames Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parcelNames(List<String> parcelNames) {
+            return parcelNames(Output.of(parcelNames));
+        }
+
+        /**
+         * @param parcelNames Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parcelNames(String... parcelNames) {
+            return parcelNames(List.of(parcelNames));
         }
 
         /**

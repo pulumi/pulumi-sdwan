@@ -27,6 +27,8 @@ class OtherTrustsecFeatureArgs:
                  device_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  device_password: pulumi.Input[Optional[_builtins.str]] = None,
                  device_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  device_sgt: pulumi.Input[Optional[_builtins.int]] = None,
                  device_sgt_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_enforcement: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -42,6 +44,8 @@ class OtherTrustsecFeatureArgs:
                  sxp_connections: pulumi.Input[Optional[Sequence[pulumi.Input['OtherTrustsecFeatureSxpConnectionArgs']]]] = None,
                  sxp_default_password: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_default_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 sxp_default_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 sxp_default_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  sxp_key_chain: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_key_chain_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_log_binding_changes: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -60,7 +64,13 @@ class OtherTrustsecFeatureArgs:
         :param pulumi.Input[_builtins.str] device_id: Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
         :param pulumi.Input[_builtins.str] device_id_variable: Variable name
         :param pulumi.Input[_builtins.str] device_password: Set the password for the device
+                 - Only one of `device_password`, `device_password_variable` and `device_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `device_password_wo` together with `device_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] device_password_variable: Variable name
+        :param pulumi.Input[_builtins.str] device_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set the password for the device
+                 - Only one of `device_password`, `device_password_variable` and `device_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] device_password_wo_version: Rotation trigger for `device_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] device_sgt: Configure Local device security group <2..65519>
                  - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] device_sgt_variable: Variable name
@@ -84,7 +94,13 @@ class OtherTrustsecFeatureArgs:
         :param pulumi.Input[_builtins.str] speaker_hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['OtherTrustsecFeatureSxpConnectionArgs']]] sxp_connections: Configure SXP Connections
         :param pulumi.Input[_builtins.str] sxp_default_password: Configure SXP default password
+                 - Only one of `sxp_default_password`, `sxp_default_password_variable` and `sxp_default_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `sxp_default_password_wo` together with `sxp_default_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] sxp_default_password_variable: Variable name
+        :param pulumi.Input[_builtins.str] sxp_default_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Configure SXP default password
+                 - Only one of `sxp_default_password`, `sxp_default_password_variable` and `sxp_default_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] sxp_default_password_wo_version: Rotation trigger for `sxp_default_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] sxp_key_chain: Configure SXP key-chain
         :param pulumi.Input[_builtins.str] sxp_key_chain_variable: Variable name
         :param pulumi.Input[_builtins.bool] sxp_log_binding_changes: Enables logging for IP-to-SGT binding changes
@@ -112,6 +128,10 @@ class OtherTrustsecFeatureArgs:
             pulumi.set(__self__, "device_password", device_password)
         if device_password_variable is not None:
             pulumi.set(__self__, "device_password_variable", device_password_variable)
+        if device_password_wo is not None:
+            pulumi.set(__self__, "device_password_wo", device_password_wo)
+        if device_password_wo_version is not None:
+            pulumi.set(__self__, "device_password_wo_version", device_password_wo_version)
         if device_sgt is not None:
             pulumi.set(__self__, "device_sgt", device_sgt)
         if device_sgt_variable is not None:
@@ -142,6 +162,10 @@ class OtherTrustsecFeatureArgs:
             pulumi.set(__self__, "sxp_default_password", sxp_default_password)
         if sxp_default_password_variable is not None:
             pulumi.set(__self__, "sxp_default_password_variable", sxp_default_password_variable)
+        if sxp_default_password_wo is not None:
+            pulumi.set(__self__, "sxp_default_password_wo", sxp_default_password_wo)
+        if sxp_default_password_wo_version is not None:
+            pulumi.set(__self__, "sxp_default_password_wo_version", sxp_default_password_wo_version)
         if sxp_key_chain is not None:
             pulumi.set(__self__, "sxp_key_chain", sxp_key_chain)
         if sxp_key_chain_variable is not None:
@@ -216,6 +240,8 @@ class OtherTrustsecFeatureArgs:
     def device_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the password for the device
+          - Only one of `device_password`, `device_password_variable` and `device_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `device_password_wo` together with `device_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "device_password")
 
@@ -234,6 +260,32 @@ class OtherTrustsecFeatureArgs:
     @device_password_variable.setter
     def device_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_password_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="devicePasswordWo")
+    def device_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set the password for the device
+          - Only one of `device_password`, `device_password_variable` and `device_password_wo` can be set.
+        """
+        return pulumi.get(self, "device_password_wo")
+
+    @device_password_wo.setter
+    def device_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "device_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="devicePasswordWoVersion")
+    def device_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `device_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "device_password_wo_version")
+
+    @device_password_wo_version.setter
+    def device_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "device_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceSgt")
@@ -405,6 +457,8 @@ class OtherTrustsecFeatureArgs:
     def sxp_default_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Configure SXP default password
+          - Only one of `sxp_default_password`, `sxp_default_password_variable` and `sxp_default_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `sxp_default_password_wo` together with `sxp_default_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "sxp_default_password")
 
@@ -423,6 +477,32 @@ class OtherTrustsecFeatureArgs:
     @sxp_default_password_variable.setter
     def sxp_default_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sxp_default_password_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sxpDefaultPasswordWo")
+    def sxp_default_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Configure SXP default password
+          - Only one of `sxp_default_password`, `sxp_default_password_variable` and `sxp_default_password_wo` can be set.
+        """
+        return pulumi.get(self, "sxp_default_password_wo")
+
+    @sxp_default_password_wo.setter
+    def sxp_default_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "sxp_default_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sxpDefaultPasswordWoVersion")
+    def sxp_default_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `sxp_default_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "sxp_default_password_wo_version")
+
+    @sxp_default_password_wo_version.setter
+    def sxp_default_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "sxp_default_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="sxpKeyChain")
@@ -558,6 +638,8 @@ class _OtherTrustsecFeatureState:
                  device_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  device_password: pulumi.Input[Optional[_builtins.str]] = None,
                  device_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  device_sgt: pulumi.Input[Optional[_builtins.int]] = None,
                  device_sgt_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_enforcement: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -574,6 +656,8 @@ class _OtherTrustsecFeatureState:
                  sxp_connections: pulumi.Input[Optional[Sequence[pulumi.Input['OtherTrustsecFeatureSxpConnectionArgs']]]] = None,
                  sxp_default_password: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_default_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 sxp_default_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 sxp_default_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  sxp_key_chain: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_key_chain_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_log_binding_changes: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -592,7 +676,13 @@ class _OtherTrustsecFeatureState:
         :param pulumi.Input[_builtins.str] device_id: Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
         :param pulumi.Input[_builtins.str] device_id_variable: Variable name
         :param pulumi.Input[_builtins.str] device_password: Set the password for the device
+                 - Only one of `device_password`, `device_password_variable` and `device_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `device_password_wo` together with `device_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] device_password_variable: Variable name
+        :param pulumi.Input[_builtins.str] device_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set the password for the device
+                 - Only one of `device_password`, `device_password_variable` and `device_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] device_password_wo_version: Rotation trigger for `device_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] device_sgt: Configure Local device security group <2..65519>
                  - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] device_sgt_variable: Variable name
@@ -617,7 +707,13 @@ class _OtherTrustsecFeatureState:
         :param pulumi.Input[_builtins.str] speaker_hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['OtherTrustsecFeatureSxpConnectionArgs']]] sxp_connections: Configure SXP Connections
         :param pulumi.Input[_builtins.str] sxp_default_password: Configure SXP default password
+                 - Only one of `sxp_default_password`, `sxp_default_password_variable` and `sxp_default_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `sxp_default_password_wo` together with `sxp_default_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] sxp_default_password_variable: Variable name
+        :param pulumi.Input[_builtins.str] sxp_default_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Configure SXP default password
+                 - Only one of `sxp_default_password`, `sxp_default_password_variable` and `sxp_default_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] sxp_default_password_wo_version: Rotation trigger for `sxp_default_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] sxp_key_chain: Configure SXP key-chain
         :param pulumi.Input[_builtins.str] sxp_key_chain_variable: Variable name
         :param pulumi.Input[_builtins.bool] sxp_log_binding_changes: Enables logging for IP-to-SGT binding changes
@@ -645,6 +741,10 @@ class _OtherTrustsecFeatureState:
             pulumi.set(__self__, "device_password", device_password)
         if device_password_variable is not None:
             pulumi.set(__self__, "device_password_variable", device_password_variable)
+        if device_password_wo is not None:
+            pulumi.set(__self__, "device_password_wo", device_password_wo)
+        if device_password_wo_version is not None:
+            pulumi.set(__self__, "device_password_wo_version", device_password_wo_version)
         if device_sgt is not None:
             pulumi.set(__self__, "device_sgt", device_sgt)
         if device_sgt_variable is not None:
@@ -677,6 +777,10 @@ class _OtherTrustsecFeatureState:
             pulumi.set(__self__, "sxp_default_password", sxp_default_password)
         if sxp_default_password_variable is not None:
             pulumi.set(__self__, "sxp_default_password_variable", sxp_default_password_variable)
+        if sxp_default_password_wo is not None:
+            pulumi.set(__self__, "sxp_default_password_wo", sxp_default_password_wo)
+        if sxp_default_password_wo_version is not None:
+            pulumi.set(__self__, "sxp_default_password_wo_version", sxp_default_password_wo_version)
         if sxp_key_chain is not None:
             pulumi.set(__self__, "sxp_key_chain", sxp_key_chain)
         if sxp_key_chain_variable is not None:
@@ -741,6 +845,8 @@ class _OtherTrustsecFeatureState:
     def device_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the password for the device
+          - Only one of `device_password`, `device_password_variable` and `device_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `device_password_wo` together with `device_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "device_password")
 
@@ -759,6 +865,32 @@ class _OtherTrustsecFeatureState:
     @device_password_variable.setter
     def device_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_password_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="devicePasswordWo")
+    def device_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set the password for the device
+          - Only one of `device_password`, `device_password_variable` and `device_password_wo` can be set.
+        """
+        return pulumi.get(self, "device_password_wo")
+
+    @device_password_wo.setter
+    def device_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "device_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="devicePasswordWoVersion")
+    def device_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `device_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "device_password_wo_version")
+
+    @device_password_wo_version.setter
+    def device_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "device_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceSgt")
@@ -942,6 +1074,8 @@ class _OtherTrustsecFeatureState:
     def sxp_default_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Configure SXP default password
+          - Only one of `sxp_default_password`, `sxp_default_password_variable` and `sxp_default_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `sxp_default_password_wo` together with `sxp_default_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "sxp_default_password")
 
@@ -960,6 +1094,32 @@ class _OtherTrustsecFeatureState:
     @sxp_default_password_variable.setter
     def sxp_default_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sxp_default_password_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sxpDefaultPasswordWo")
+    def sxp_default_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Configure SXP default password
+          - Only one of `sxp_default_password`, `sxp_default_password_variable` and `sxp_default_password_wo` can be set.
+        """
+        return pulumi.get(self, "sxp_default_password_wo")
+
+    @sxp_default_password_wo.setter
+    def sxp_default_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "sxp_default_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sxpDefaultPasswordWoVersion")
+    def sxp_default_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `sxp_default_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "sxp_default_password_wo_version")
+
+    @sxp_default_password_wo_version.setter
+    def sxp_default_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "sxp_default_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="sxpKeyChain")
@@ -1110,6 +1270,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
                  device_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  device_password: pulumi.Input[Optional[_builtins.str]] = None,
                  device_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  device_sgt: pulumi.Input[Optional[_builtins.int]] = None,
                  device_sgt_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_enforcement: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1126,6 +1288,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
                  sxp_connections: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict', 'outputs.OtherTrustsecFeatureSxpConnection']]]]] = None,
                  sxp_default_password: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_default_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 sxp_default_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 sxp_default_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  sxp_key_chain: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_key_chain_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_log_binding_changes: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1193,7 +1357,13 @@ class OtherTrustsecFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device_id: Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
         :param pulumi.Input[_builtins.str] device_id_variable: Variable name
         :param pulumi.Input[_builtins.str] device_password: Set the password for the device
+                 - Only one of `device_password`, `device_password_variable` and `device_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `device_password_wo` together with `device_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] device_password_variable: Variable name
+        :param pulumi.Input[_builtins.str] device_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set the password for the device
+                 - Only one of `device_password`, `device_password_variable` and `device_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] device_password_wo_version: Rotation trigger for `device_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] device_sgt: Configure Local device security group <2..65519>
                  - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] device_sgt_variable: Variable name
@@ -1218,7 +1388,13 @@ class OtherTrustsecFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] speaker_hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict', 'outputs.OtherTrustsecFeatureSxpConnection']]]] sxp_connections: Configure SXP Connections
         :param pulumi.Input[_builtins.str] sxp_default_password: Configure SXP default password
+                 - Only one of `sxp_default_password`, `sxp_default_password_variable` and `sxp_default_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `sxp_default_password_wo` together with `sxp_default_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] sxp_default_password_variable: Variable name
+        :param pulumi.Input[_builtins.str] sxp_default_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Configure SXP default password
+                 - Only one of `sxp_default_password`, `sxp_default_password_variable` and `sxp_default_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] sxp_default_password_wo_version: Rotation trigger for `sxp_default_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] sxp_key_chain: Configure SXP key-chain
         :param pulumi.Input[_builtins.str] sxp_key_chain_variable: Variable name
         :param pulumi.Input[_builtins.bool] sxp_log_binding_changes: Enables logging for IP-to-SGT binding changes
@@ -1311,6 +1487,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
                  device_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  device_password: pulumi.Input[Optional[_builtins.str]] = None,
                  device_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  device_sgt: pulumi.Input[Optional[_builtins.int]] = None,
                  device_sgt_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_enforcement: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1327,6 +1505,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
                  sxp_connections: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict', 'outputs.OtherTrustsecFeatureSxpConnection']]]]] = None,
                  sxp_default_password: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_default_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 sxp_default_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 sxp_default_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  sxp_key_chain: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_key_chain_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  sxp_log_binding_changes: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1349,8 +1529,10 @@ class OtherTrustsecFeature(pulumi.CustomResource):
             __props__.__dict__["description"] = description
             __props__.__dict__["device_id"] = device_id
             __props__.__dict__["device_id_variable"] = device_id_variable
-            __props__.__dict__["device_password"] = device_password
+            __props__.__dict__["device_password"] = None if device_password is None else pulumi.Output.secret(device_password)
             __props__.__dict__["device_password_variable"] = device_password_variable
+            __props__.__dict__["device_password_wo"] = None if device_password_wo is None else pulumi.Output.secret(device_password_wo)
+            __props__.__dict__["device_password_wo_version"] = device_password_wo_version
             __props__.__dict__["device_sgt"] = device_sgt
             __props__.__dict__["device_sgt_variable"] = device_sgt_variable
             __props__.__dict__["enable_enforcement"] = enable_enforcement
@@ -1367,8 +1549,10 @@ class OtherTrustsecFeature(pulumi.CustomResource):
             __props__.__dict__["speaker_hold_time"] = speaker_hold_time
             __props__.__dict__["speaker_hold_time_variable"] = speaker_hold_time_variable
             __props__.__dict__["sxp_connections"] = sxp_connections
-            __props__.__dict__["sxp_default_password"] = sxp_default_password
+            __props__.__dict__["sxp_default_password"] = None if sxp_default_password is None else pulumi.Output.secret(sxp_default_password)
             __props__.__dict__["sxp_default_password_variable"] = sxp_default_password_variable
+            __props__.__dict__["sxp_default_password_wo"] = None if sxp_default_password_wo is None else pulumi.Output.secret(sxp_default_password_wo)
+            __props__.__dict__["sxp_default_password_wo_version"] = sxp_default_password_wo_version
             __props__.__dict__["sxp_key_chain"] = sxp_key_chain
             __props__.__dict__["sxp_key_chain_variable"] = sxp_key_chain_variable
             __props__.__dict__["sxp_log_binding_changes"] = sxp_log_binding_changes
@@ -1380,6 +1564,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
             __props__.__dict__["sxp_source_ip"] = sxp_source_ip
             __props__.__dict__["sxp_source_ip_variable"] = sxp_source_ip_variable
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["devicePassword", "devicePasswordWo", "sxpDefaultPassword", "sxpDefaultPasswordWo"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(OtherTrustsecFeature, __self__).__init__(
             'sdwan:index/otherTrustsecFeature:OtherTrustsecFeature',
             resource_name,
@@ -1395,6 +1581,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
             device_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
             device_password: pulumi.Input[Optional[_builtins.str]] = None,
             device_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            device_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            device_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             device_sgt: pulumi.Input[Optional[_builtins.int]] = None,
             device_sgt_variable: pulumi.Input[Optional[_builtins.str]] = None,
             enable_enforcement: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1411,6 +1599,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
             sxp_connections: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict', 'outputs.OtherTrustsecFeatureSxpConnection']]]]] = None,
             sxp_default_password: pulumi.Input[Optional[_builtins.str]] = None,
             sxp_default_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_default_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_default_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             sxp_key_chain: pulumi.Input[Optional[_builtins.str]] = None,
             sxp_key_chain_variable: pulumi.Input[Optional[_builtins.str]] = None,
             sxp_log_binding_changes: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1433,7 +1623,13 @@ class OtherTrustsecFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device_id: Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
         :param pulumi.Input[_builtins.str] device_id_variable: Variable name
         :param pulumi.Input[_builtins.str] device_password: Set the password for the device
+                 - Only one of `device_password`, `device_password_variable` and `device_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `device_password_wo` together with `device_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] device_password_variable: Variable name
+        :param pulumi.Input[_builtins.str] device_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set the password for the device
+                 - Only one of `device_password`, `device_password_variable` and `device_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] device_password_wo_version: Rotation trigger for `device_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] device_sgt: Configure Local device security group <2..65519>
                  - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] device_sgt_variable: Variable name
@@ -1458,7 +1654,13 @@ class OtherTrustsecFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] speaker_hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict', 'outputs.OtherTrustsecFeatureSxpConnection']]]] sxp_connections: Configure SXP Connections
         :param pulumi.Input[_builtins.str] sxp_default_password: Configure SXP default password
+                 - Only one of `sxp_default_password`, `sxp_default_password_variable` and `sxp_default_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `sxp_default_password_wo` together with `sxp_default_password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] sxp_default_password_variable: Variable name
+        :param pulumi.Input[_builtins.str] sxp_default_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Configure SXP default password
+                 - Only one of `sxp_default_password`, `sxp_default_password_variable` and `sxp_default_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] sxp_default_password_wo_version: Rotation trigger for `sxp_default_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] sxp_key_chain: Configure SXP key-chain
         :param pulumi.Input[_builtins.str] sxp_key_chain_variable: Variable name
         :param pulumi.Input[_builtins.bool] sxp_log_binding_changes: Enables logging for IP-to-SGT binding changes
@@ -1485,6 +1687,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
         __props__.__dict__["device_id_variable"] = device_id_variable
         __props__.__dict__["device_password"] = device_password
         __props__.__dict__["device_password_variable"] = device_password_variable
+        __props__.__dict__["device_password_wo"] = device_password_wo
+        __props__.__dict__["device_password_wo_version"] = device_password_wo_version
         __props__.__dict__["device_sgt"] = device_sgt
         __props__.__dict__["device_sgt_variable"] = device_sgt_variable
         __props__.__dict__["enable_enforcement"] = enable_enforcement
@@ -1501,6 +1705,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
         __props__.__dict__["sxp_connections"] = sxp_connections
         __props__.__dict__["sxp_default_password"] = sxp_default_password
         __props__.__dict__["sxp_default_password_variable"] = sxp_default_password_variable
+        __props__.__dict__["sxp_default_password_wo"] = sxp_default_password_wo
+        __props__.__dict__["sxp_default_password_wo_version"] = sxp_default_password_wo_version
         __props__.__dict__["sxp_key_chain"] = sxp_key_chain
         __props__.__dict__["sxp_key_chain_variable"] = sxp_key_chain_variable
         __props__.__dict__["sxp_log_binding_changes"] = sxp_log_binding_changes
@@ -1522,6 +1728,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
             device_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
             device_password: pulumi.Input[Optional[_builtins.str]] = None,
             device_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            device_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            device_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             device_sgt: pulumi.Input[Optional[_builtins.int]] = None,
             device_sgt_variable: pulumi.Input[Optional[_builtins.str]] = None,
             enable_enforcement: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1538,6 +1746,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
             sxp_connections: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherTrustsecFeatureSxpConnectionArgs', 'OtherTrustsecFeatureSxpConnectionArgsDict', 'outputs.OtherTrustsecFeatureSxpConnection']]]]] = None,
             sxp_default_password: pulumi.Input[Optional[_builtins.str]] = None,
             sxp_default_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_default_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_default_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             sxp_key_chain: pulumi.Input[Optional[_builtins.str]] = None,
             sxp_key_chain_variable: pulumi.Input[Optional[_builtins.str]] = None,
             sxp_log_binding_changes: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1555,6 +1765,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
         __props__["deviceIdVariable"] = device_id_variable
         __props__["devicePassword"] = device_password
         __props__["devicePasswordVariable"] = device_password_variable
+        __props__["devicePasswordWo"] = device_password_wo
+        __props__["devicePasswordWoVersion"] = device_password_wo_version
         __props__["deviceSgt"] = device_sgt
         __props__["deviceSgtVariable"] = device_sgt_variable
         __props__["enableEnforcement"] = enable_enforcement
@@ -1571,6 +1783,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
         __props__["sxpConnections"] = sxp_connections
         __props__["sxpDefaultPassword"] = sxp_default_password
         __props__["sxpDefaultPasswordVariable"] = sxp_default_password_variable
+        __props__["sxpDefaultPasswordWo"] = sxp_default_password_wo
+        __props__["sxpDefaultPasswordWoVersion"] = sxp_default_password_wo_version
         __props__["sxpKeyChain"] = sxp_key_chain
         __props__["sxpKeyChainVariable"] = sxp_key_chain_variable
         __props__["sxpLogBindingChanges"] = sxp_log_binding_changes
@@ -1613,6 +1827,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
     def device_password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Set the password for the device
+          - Only one of `device_password`, `device_password_variable` and `device_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `device_password_wo` together with `device_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "device_password")
 
@@ -1623,6 +1839,24 @@ class OtherTrustsecFeature(pulumi.CustomResource):
         Variable name
         """
         return pulumi.get(self, "device_password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="devicePasswordWo")
+    def device_password_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set the password for the device
+          - Only one of `device_password`, `device_password_variable` and `device_password_wo` can be set.
+        """
+        return pulumi.get(self, "device_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="devicePasswordWoVersion")
+    def device_password_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `device_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "device_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="deviceSgt")
@@ -1750,6 +1984,8 @@ class OtherTrustsecFeature(pulumi.CustomResource):
     def sxp_default_password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Configure SXP default password
+          - Only one of `sxp_default_password`, `sxp_default_password_variable` and `sxp_default_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `sxp_default_password_wo` together with `sxp_default_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "sxp_default_password")
 
@@ -1760,6 +1996,24 @@ class OtherTrustsecFeature(pulumi.CustomResource):
         Variable name
         """
         return pulumi.get(self, "sxp_default_password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="sxpDefaultPasswordWo")
+    def sxp_default_password_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Configure SXP default password
+          - Only one of `sxp_default_password`, `sxp_default_password_variable` and `sxp_default_password_wo` can be set.
+        """
+        return pulumi.get(self, "sxp_default_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="sxpDefaultPasswordWoVersion")
+    def sxp_default_password_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `sxp_default_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "sxp_default_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="sxpKeyChain")

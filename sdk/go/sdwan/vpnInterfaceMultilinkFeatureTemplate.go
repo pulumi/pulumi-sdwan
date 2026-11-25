@@ -533,6 +533,17 @@ func NewVpnInterfaceMultilinkFeatureTemplate(ctx *pulumi.Context,
 	if args.DeviceTypes == nil {
 		return nil, errors.New("invalid value for required argument 'DeviceTypes'")
 	}
+	if args.ChapPppAuthPassword != nil {
+		args.ChapPppAuthPassword = pulumi.ToSecret(args.ChapPppAuthPassword).(pulumi.StringPtrInput)
+	}
+	if args.PapPppAuthPassword != nil {
+		args.PapPppAuthPassword = pulumi.ToSecret(args.PapPppAuthPassword).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"chapPppAuthPassword",
+		"papPppAuthPassword",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource VpnInterfaceMultilinkFeatureTemplate
 	err := ctx.RegisterResource("sdwan:index/vpnInterfaceMultilinkFeatureTemplate:VpnInterfaceMultilinkFeatureTemplate", name, args, &resource, opts...)

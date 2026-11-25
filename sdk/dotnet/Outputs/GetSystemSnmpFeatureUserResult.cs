@@ -22,6 +22,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string AuthenticationPasswordVariable;
         /// <summary>
+        /// Specify authentication protocol password
+        /// </summary>
+        public readonly string AuthenticationPasswordWo;
+        /// <summary>
+        /// Rotation trigger for `AuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int AuthenticationPasswordWoVersion;
+        /// <summary>
         /// Configure authentication protocol
         /// </summary>
         public readonly string AuthenticationProtocol;
@@ -50,6 +58,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string PrivacyPasswordVariable;
         /// <summary>
+        /// Specify privacy protocol password
+        /// </summary>
+        public readonly string PrivacyPasswordWo;
+        /// <summary>
+        /// Rotation trigger for `PrivacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int PrivacyPasswordWoVersion;
+        /// <summary>
         /// Configure privacy protocol
         /// </summary>
         public readonly string PrivacyProtocol;
@@ -63,6 +79,10 @@ namespace Pulumi.Sdwan.Outputs
             string authenticationPassword,
 
             string authenticationPasswordVariable,
+
+            string authenticationPasswordWo,
+
+            int authenticationPasswordWoVersion,
 
             string authenticationProtocol,
 
@@ -78,12 +98,18 @@ namespace Pulumi.Sdwan.Outputs
 
             string privacyPasswordVariable,
 
+            string privacyPasswordWo,
+
+            int privacyPasswordWoVersion,
+
             string privacyProtocol,
 
             string privacyProtocolVariable)
         {
             AuthenticationPassword = authenticationPassword;
             AuthenticationPasswordVariable = authenticationPasswordVariable;
+            AuthenticationPasswordWo = authenticationPasswordWo;
+            AuthenticationPasswordWoVersion = authenticationPasswordWoVersion;
             AuthenticationProtocol = authenticationProtocol;
             AuthenticationProtocolVariable = authenticationProtocolVariable;
             Group = group;
@@ -91,6 +117,8 @@ namespace Pulumi.Sdwan.Outputs
             Name = name;
             PrivacyPassword = privacyPassword;
             PrivacyPasswordVariable = privacyPasswordVariable;
+            PrivacyPasswordWo = privacyPasswordWo;
+            PrivacyPasswordWoVersion = privacyPasswordWoVersion;
             PrivacyProtocol = privacyProtocol;
             PrivacyProtocolVariable = privacyProtocolVariable;
         }

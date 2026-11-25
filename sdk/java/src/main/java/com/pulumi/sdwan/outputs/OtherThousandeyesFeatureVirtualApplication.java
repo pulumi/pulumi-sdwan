@@ -14,6 +14,8 @@ import javax.annotation.Nullable;
 public final class OtherThousandeyesFeatureVirtualApplication {
     /**
      * @return Set the Account Group Token
+     *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `accountGroupTokenWo` together with `accountGroupTokenWoVersion`, which keeps it out of state.
      * 
      */
     private @Nullable String accountGroupToken;
@@ -22,6 +24,18 @@ public final class OtherThousandeyesFeatureVirtualApplication {
      * 
      */
     private @Nullable String accountGroupTokenVariable;
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the Account Group Token
+     *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+     * 
+     */
+    private @Nullable String accountGroupTokenWo;
+    /**
+     * @return Rotation trigger for `accountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private @Nullable Integer accountGroupTokenWoVersion;
     /**
      * @return Set the Agent default gateway
      * 
@@ -124,6 +138,8 @@ public final class OtherThousandeyesFeatureVirtualApplication {
     private OtherThousandeyesFeatureVirtualApplication() {}
     /**
      * @return Set the Account Group Token
+     *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `accountGroupTokenWo` together with `accountGroupTokenWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<String> accountGroupToken() {
@@ -135,6 +151,22 @@ public final class OtherThousandeyesFeatureVirtualApplication {
      */
     public Optional<String> accountGroupTokenVariable() {
         return Optional.ofNullable(this.accountGroupTokenVariable);
+    }
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the Account Group Token
+     *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+     * 
+     */
+    public Optional<String> accountGroupTokenWo() {
+        return Optional.ofNullable(this.accountGroupTokenWo);
+    }
+    /**
+     * @return Rotation trigger for `accountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Integer> accountGroupTokenWoVersion() {
+        return Optional.ofNullable(this.accountGroupTokenWoVersion);
     }
     /**
      * @return Set the Agent default gateway
@@ -284,6 +316,8 @@ public final class OtherThousandeyesFeatureVirtualApplication {
     public static final class Builder {
         private @Nullable String accountGroupToken;
         private @Nullable String accountGroupTokenVariable;
+        private @Nullable String accountGroupTokenWo;
+        private @Nullable Integer accountGroupTokenWoVersion;
         private @Nullable String agentDefaultGateway;
         private @Nullable String agentDefaultGatewayVariable;
         private @Nullable String hostname;
@@ -308,6 +342,8 @@ public final class OtherThousandeyesFeatureVirtualApplication {
     	      Objects.requireNonNull(defaults);
     	      this.accountGroupToken = defaults.accountGroupToken;
     	      this.accountGroupTokenVariable = defaults.accountGroupTokenVariable;
+    	      this.accountGroupTokenWo = defaults.accountGroupTokenWo;
+    	      this.accountGroupTokenWoVersion = defaults.accountGroupTokenWoVersion;
     	      this.agentDefaultGateway = defaults.agentDefaultGateway;
     	      this.agentDefaultGatewayVariable = defaults.agentDefaultGatewayVariable;
     	      this.hostname = defaults.hostname;
@@ -339,6 +375,18 @@ public final class OtherThousandeyesFeatureVirtualApplication {
         public Builder accountGroupTokenVariable(@Nullable String accountGroupTokenVariable) {
 
             this.accountGroupTokenVariable = accountGroupTokenVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder accountGroupTokenWo(@Nullable String accountGroupTokenWo) {
+
+            this.accountGroupTokenWo = accountGroupTokenWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder accountGroupTokenWoVersion(@Nullable Integer accountGroupTokenWoVersion) {
+
+            this.accountGroupTokenWoVersion = accountGroupTokenWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -459,6 +507,8 @@ public final class OtherThousandeyesFeatureVirtualApplication {
             final var _resultValue = new OtherThousandeyesFeatureVirtualApplication();
             _resultValue.accountGroupToken = accountGroupToken;
             _resultValue.accountGroupTokenVariable = accountGroupTokenVariable;
+            _resultValue.accountGroupTokenWo = accountGroupTokenWo;
+            _resultValue.accountGroupTokenWoVersion = accountGroupTokenWoVersion;
             _resultValue.agentDefaultGateway = agentDefaultGateway;
             _resultValue.agentDefaultGatewayVariable = agentDefaultGatewayVariable;
             _resultValue.hostname = hostname;

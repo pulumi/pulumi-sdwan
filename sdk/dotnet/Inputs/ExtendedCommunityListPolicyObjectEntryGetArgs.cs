@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class ExtendedCommunityListPolicyObjectEntryGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+        /// Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
         /// </summary>
         [Input("community", required: true)]
         public Input<string> Community { get; set; } = null!;

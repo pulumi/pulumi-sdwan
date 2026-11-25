@@ -235,6 +235,13 @@ func NewCedgeAaaFeatureTemplate(ctx *pulumi.Context,
 	if args.DeviceTypes == nil {
 		return nil, errors.New("invalid value for required argument 'DeviceTypes'")
 	}
+	if args.RadiusDynamicAuthorServerKey != nil {
+		args.RadiusDynamicAuthorServerKey = pulumi.ToSecret(args.RadiusDynamicAuthorServerKey).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"radiusDynamicAuthorServerKey",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource CedgeAaaFeatureTemplate
 	err := ctx.RegisterResource("sdwan:index/cedgeAaaFeatureTemplate:CedgeAaaFeatureTemplate", name, args, &resource, opts...)

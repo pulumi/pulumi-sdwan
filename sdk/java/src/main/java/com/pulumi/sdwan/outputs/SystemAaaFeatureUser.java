@@ -5,6 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.sdwan.outputs.SystemAaaFeatureUserPublicKey;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,6 +26,8 @@ public final class SystemAaaFeatureUser {
     private @Nullable String nameVariable;
     /**
      * @return Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      * 
      */
     private @Nullable String password;
@@ -33,6 +36,18 @@ public final class SystemAaaFeatureUser {
      * 
      */
     private @Nullable String passwordVariable;
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     * 
+     */
+    private @Nullable String passwordWo;
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private @Nullable Integer passwordWoVersion;
     /**
      * @return Set Privilege Level for this user
      *   - Choices: `1`, `15`
@@ -68,6 +83,8 @@ public final class SystemAaaFeatureUser {
     }
     /**
      * @return Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<String> password() {
@@ -79,6 +96,22 @@ public final class SystemAaaFeatureUser {
      */
     public Optional<String> passwordVariable() {
         return Optional.ofNullable(this.passwordVariable);
+    }
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+     * 
+     */
+    public Optional<String> passwordWo() {
+        return Optional.ofNullable(this.passwordWo);
+    }
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Integer> passwordWoVersion() {
+        return Optional.ofNullable(this.passwordWoVersion);
     }
     /**
      * @return Set Privilege Level for this user
@@ -117,6 +150,8 @@ public final class SystemAaaFeatureUser {
         private @Nullable String nameVariable;
         private @Nullable String password;
         private @Nullable String passwordVariable;
+        private @Nullable String passwordWo;
+        private @Nullable Integer passwordWoVersion;
         private @Nullable String privilege;
         private @Nullable String privilegeVariable;
         private @Nullable List<SystemAaaFeatureUserPublicKey> publicKeys;
@@ -127,6 +162,8 @@ public final class SystemAaaFeatureUser {
     	      this.nameVariable = defaults.nameVariable;
     	      this.password = defaults.password;
     	      this.passwordVariable = defaults.passwordVariable;
+    	      this.passwordWo = defaults.passwordWo;
+    	      this.passwordWoVersion = defaults.passwordWoVersion;
     	      this.privilege = defaults.privilege;
     	      this.privilegeVariable = defaults.privilegeVariable;
     	      this.publicKeys = defaults.publicKeys;
@@ -157,6 +194,18 @@ public final class SystemAaaFeatureUser {
             return this;
         }
         @CustomType.Setter
+        public Builder passwordWo(@Nullable String passwordWo) {
+
+            this.passwordWo = passwordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder passwordWoVersion(@Nullable Integer passwordWoVersion) {
+
+            this.passwordWoVersion = passwordWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder privilege(@Nullable String privilege) {
 
             this.privilege = privilege;
@@ -183,6 +232,8 @@ public final class SystemAaaFeatureUser {
             _resultValue.nameVariable = nameVariable;
             _resultValue.password = password;
             _resultValue.passwordVariable = passwordVariable;
+            _resultValue.passwordWo = passwordWo;
+            _resultValue.passwordWoVersion = passwordWoVersion;
             _resultValue.privilege = privilege;
             _resultValue.privilegeVariable = privilegeVariable;
             _resultValue.publicKeys = publicKeys;

@@ -248,6 +248,10 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "profilePassword",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -396,11 +400,21 @@ namespace Pulumi.Sdwan
         [Input("profileNameVariable")]
         public Input<string>? ProfileNameVariable { get; set; }
 
+        [Input("profilePassword")]
+        private Input<string>? _profilePassword;
+
         /// <summary>
         /// Set the profile password
         /// </summary>
-        [Input("profilePassword")]
-        public Input<string>? ProfilePassword { get; set; }
+        public Input<string>? ProfilePassword
+        {
+            get => _profilePassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _profilePassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -565,11 +579,21 @@ namespace Pulumi.Sdwan
         [Input("profileNameVariable")]
         public Input<string>? ProfileNameVariable { get; set; }
 
+        [Input("profilePassword")]
+        private Input<string>? _profilePassword;
+
         /// <summary>
         /// Set the profile password
         /// </summary>
-        [Input("profilePassword")]
-        public Input<string>? ProfilePassword { get; set; }
+        public Input<string>? ProfilePassword
+        {
+            get => _profilePassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _profilePassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name

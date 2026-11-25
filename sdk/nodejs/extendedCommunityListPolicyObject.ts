@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * const example = new sdwan.ExtendedCommunityListPolicyObject("example", {
  *     name: "Example",
  *     entries: [{
- *         community: "community rt 100:10",
+ *         community: "rt 100:10",
  *     }],
  * });
  * ```

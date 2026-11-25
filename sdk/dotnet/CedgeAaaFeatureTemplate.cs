@@ -379,6 +379,10 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "radiusDynamicAuthorServerKey",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -557,11 +561,21 @@ namespace Pulumi.Sdwan
         [Input("radiusDynamicAuthorPortVariable")]
         public Input<string>? RadiusDynamicAuthorPortVariable { get; set; }
 
+        [Input("radiusDynamicAuthorServerKey")]
+        private Input<string>? _radiusDynamicAuthorServerKey;
+
         /// <summary>
         /// Specify a radius dynamic author server-key
         /// </summary>
-        [Input("radiusDynamicAuthorServerKey")]
-        public Input<string>? RadiusDynamicAuthorServerKey { get; set; }
+        public Input<string>? RadiusDynamicAuthorServerKey
+        {
+            get => _radiusDynamicAuthorServerKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _radiusDynamicAuthorServerKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -793,11 +807,21 @@ namespace Pulumi.Sdwan
         [Input("radiusDynamicAuthorPortVariable")]
         public Input<string>? RadiusDynamicAuthorPortVariable { get; set; }
 
+        [Input("radiusDynamicAuthorServerKey")]
+        private Input<string>? _radiusDynamicAuthorServerKey;
+
         /// <summary>
         /// Specify a radius dynamic author server-key
         /// </summary>
-        [Input("radiusDynamicAuthorServerKey")]
-        public Input<string>? RadiusDynamicAuthorServerKey { get; set; }
+        public Input<string>? RadiusDynamicAuthorServerKey
+        {
+            get => _radiusDynamicAuthorServerKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _radiusDynamicAuthorServerKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name

@@ -1052,7 +1052,7 @@ export class VpnInterfaceDslPppoaFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["bandwidthUpstreamVariable"] = args?.bandwidthUpstreamVariable;
             resourceInputs["chapHostname"] = args?.chapHostname;
             resourceInputs["chapHostnameVariable"] = args?.chapHostnameVariable;
-            resourceInputs["chapPppAuthPassword"] = args?.chapPppAuthPassword;
+            resourceInputs["chapPppAuthPassword"] = args?.chapPppAuthPassword ? pulumi.secret(args.chapPppAuthPassword) : undefined;
             resourceInputs["chapPppAuthPasswordVariable"] = args?.chapPppAuthPasswordVariable;
             resourceInputs["coreRegion"] = args?.coreRegion;
             resourceInputs["coreRegionVariable"] = args?.coreRegionVariable;
@@ -1078,7 +1078,7 @@ export class VpnInterfaceDslPppoaFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["natUdpTimeout"] = args?.natUdpTimeout;
             resourceInputs["natUdpTimeoutVariable"] = args?.natUdpTimeoutVariable;
             resourceInputs["papPassword"] = args?.papPassword;
-            resourceInputs["papPppAuthPassword"] = args?.papPppAuthPassword;
+            resourceInputs["papPppAuthPassword"] = args?.papPppAuthPassword ? pulumi.secret(args.papPppAuthPassword) : undefined;
             resourceInputs["papPppAuthPasswordVariable"] = args?.papPppAuthPasswordVariable;
             resourceInputs["papUsername"] = args?.papUsername;
             resourceInputs["papUsernameVariable"] = args?.papUsernameVariable;
@@ -1195,6 +1195,8 @@ export class VpnInterfaceDslPppoaFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["chapPppAuthPassword", "papPppAuthPassword"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(VpnInterfaceDslPppoaFeatureTemplate.__pulumiType, name, resourceInputs, opts);
     }
 }

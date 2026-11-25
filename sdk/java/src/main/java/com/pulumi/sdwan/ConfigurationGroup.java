@@ -10,7 +10,6 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.sdwan.ConfigurationGroupArgs;
 import com.pulumi.sdwan.Utilities;
 import com.pulumi.sdwan.inputs.ConfigurationGroupState;
-import com.pulumi.sdwan.outputs.ConfigurationGroupDevice;
 import com.pulumi.sdwan.outputs.ConfigurationGroupTopologyDevice;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,8 +32,6 @@ import javax.annotation.Nullable;
  * import com.pulumi.core.Output;
  * import com.pulumi.sdwan.ConfigurationGroup;
  * import com.pulumi.sdwan.ConfigurationGroupArgs;
- * import com.pulumi.sdwan.inputs.ConfigurationGroupDeviceArgs;
- * import com.pulumi.sdwan.inputs.ConfigurationGroupDeviceVariableArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;
@@ -53,13 +50,6 @@ import javax.annotation.Nullable;
  *             .description("My config group 1")
  *             .solution("sdwan")
  *             .featureProfileIds("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
- *             .devices(ConfigurationGroupDeviceArgs.builder()
- *                 .id("C8K-40C0CCFD-9EA8-2B2E-E73B-32C5924EC79B")
- *                 .variables(ConfigurationGroupDeviceVariableArgs.builder()
- *                     .name("host_name")
- *                     .value("edge1")
- *                     .build())
- *                 .build())
  *             .build());
  * 
  *     }
@@ -91,20 +81,6 @@ public class ConfigurationGroup extends com.pulumi.resources.CustomResource {
      */
     public Output<String> description() {
         return this.description;
-    }
-    /**
-     * List of devices
-     * 
-     */
-    @Export(name="devices", refs={List.class,ConfigurationGroupDevice.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<ConfigurationGroupDevice>> devices;
-
-    /**
-     * @return List of devices
-     * 
-     */
-    public Output<Optional<List<ConfigurationGroupDevice>>> devices() {
-        return Codegen.optional(this.devices);
     }
     /**
      * List of feature profile IDs
@@ -193,6 +169,20 @@ public class ConfigurationGroup extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<Integer>> topologySiteDevices() {
         return Codegen.optional(this.topologySiteDevices);
+    }
+    /**
+     * The version of the object
+     * 
+     */
+    @Export(name="version", refs={Integer.class}, tree="[0]")
+    private Output<Integer> version;
+
+    /**
+     * @return The version of the object
+     * 
+     */
+    public Output<Integer> version() {
+        return this.version;
     }
 
     /**

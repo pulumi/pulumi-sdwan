@@ -5,6 +5,7 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,6 +18,8 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
 
     /**
      * Specify authentication protocol password
+     *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationPasswordWo` together with `authenticationPasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="authenticationPassword")
@@ -24,6 +27,8 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
 
     /**
      * @return Specify authentication protocol password
+     *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationPasswordWo` together with `authenticationPasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> authenticationPassword() {
@@ -43,6 +48,40 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
      */
     public Optional<Output<String>> authenticationPasswordVariable() {
         return Optional.ofNullable(this.authenticationPasswordVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify authentication protocol password
+     *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+     * 
+     */
+    @Import(name="authenticationPasswordWo")
+    private @Nullable Output<String> authenticationPasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify authentication protocol password
+     *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> authenticationPasswordWo() {
+        return Optional.ofNullable(this.authenticationPasswordWo);
+    }
+
+    /**
+     * Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="authenticationPasswordWoVersion")
+    private @Nullable Output<Integer> authenticationPasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> authenticationPasswordWoVersion() {
+        return Optional.ofNullable(this.authenticationPasswordWoVersion);
     }
 
     /**
@@ -124,6 +163,8 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
 
     /**
      * Specify privacy protocol password
+     *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `privacyPasswordWo` together with `privacyPasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="privacyPassword")
@@ -131,6 +172,8 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
 
     /**
      * @return Specify privacy protocol password
+     *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `privacyPasswordWo` together with `privacyPasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> privacyPassword() {
@@ -150,6 +193,40 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
      */
     public Optional<Output<String>> privacyPasswordVariable() {
         return Optional.ofNullable(this.privacyPasswordVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify privacy protocol password
+     *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+     * 
+     */
+    @Import(name="privacyPasswordWo")
+    private @Nullable Output<String> privacyPasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify privacy protocol password
+     *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> privacyPasswordWo() {
+        return Optional.ofNullable(this.privacyPasswordWo);
+    }
+
+    /**
+     * Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="privacyPasswordWoVersion")
+    private @Nullable Output<Integer> privacyPasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> privacyPasswordWoVersion() {
+        return Optional.ofNullable(this.privacyPasswordWoVersion);
     }
 
     /**
@@ -189,6 +266,8 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
     private SystemSnmpFeatureUserArgs(SystemSnmpFeatureUserArgs $) {
         this.authenticationPassword = $.authenticationPassword;
         this.authenticationPasswordVariable = $.authenticationPasswordVariable;
+        this.authenticationPasswordWo = $.authenticationPasswordWo;
+        this.authenticationPasswordWoVersion = $.authenticationPasswordWoVersion;
         this.authenticationProtocol = $.authenticationProtocol;
         this.authenticationProtocolVariable = $.authenticationProtocolVariable;
         this.group = $.group;
@@ -196,6 +275,8 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
         this.name = $.name;
         this.privacyPassword = $.privacyPassword;
         this.privacyPasswordVariable = $.privacyPasswordVariable;
+        this.privacyPasswordWo = $.privacyPasswordWo;
+        this.privacyPasswordWoVersion = $.privacyPasswordWoVersion;
         this.privacyProtocol = $.privacyProtocol;
         this.privacyProtocolVariable = $.privacyProtocolVariable;
     }
@@ -220,6 +301,8 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
 
         /**
          * @param authenticationPassword Specify authentication protocol password
+         *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `authenticationPasswordWo` together with `authenticationPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -231,6 +314,8 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
 
         /**
          * @param authenticationPassword Specify authentication protocol password
+         *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `authenticationPasswordWo` together with `authenticationPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -258,6 +343,52 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
          */
         public Builder authenticationPasswordVariable(String authenticationPasswordVariable) {
             return authenticationPasswordVariable(Output.of(authenticationPasswordVariable));
+        }
+
+        /**
+         * @param authenticationPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Specify authentication protocol password
+         *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationPasswordWo(@Nullable Output<String> authenticationPasswordWo) {
+            $.authenticationPasswordWo = authenticationPasswordWo;
+            return this;
+        }
+
+        /**
+         * @param authenticationPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Specify authentication protocol password
+         *   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationPasswordWo(String authenticationPasswordWo) {
+            return authenticationPasswordWo(Output.of(authenticationPasswordWo));
+        }
+
+        /**
+         * @param authenticationPasswordWoVersion Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationPasswordWoVersion(@Nullable Output<Integer> authenticationPasswordWoVersion) {
+            $.authenticationPasswordWoVersion = authenticationPasswordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param authenticationPasswordWoVersion Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationPasswordWoVersion(Integer authenticationPasswordWoVersion) {
+            return authenticationPasswordWoVersion(Output.of(authenticationPasswordWoVersion));
         }
 
         /**
@@ -369,6 +500,8 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
 
         /**
          * @param privacyPassword Specify privacy protocol password
+         *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `privacyPasswordWo` together with `privacyPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -380,6 +513,8 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
 
         /**
          * @param privacyPassword Specify privacy protocol password
+         *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `privacyPasswordWo` together with `privacyPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -407,6 +542,52 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
          */
         public Builder privacyPasswordVariable(String privacyPasswordVariable) {
             return privacyPasswordVariable(Output.of(privacyPasswordVariable));
+        }
+
+        /**
+         * @param privacyPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Specify privacy protocol password
+         *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privacyPasswordWo(@Nullable Output<String> privacyPasswordWo) {
+            $.privacyPasswordWo = privacyPasswordWo;
+            return this;
+        }
+
+        /**
+         * @param privacyPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Specify privacy protocol password
+         *   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privacyPasswordWo(String privacyPasswordWo) {
+            return privacyPasswordWo(Output.of(privacyPasswordWo));
+        }
+
+        /**
+         * @param privacyPasswordWoVersion Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privacyPasswordWoVersion(@Nullable Output<Integer> privacyPasswordWoVersion) {
+            $.privacyPasswordWoVersion = privacyPasswordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param privacyPasswordWoVersion Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privacyPasswordWoVersion(Integer privacyPasswordWoVersion) {
+            return privacyPasswordWoVersion(Output.of(privacyPasswordWoVersion));
         }
 
         /**

@@ -13,6 +13,7 @@ import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceGreFeatureState;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
@@ -879,6 +880,8 @@ public class TransportWanVpnInterfaceGreFeature extends com.pulumi.resources.Cus
     }
     /**
      * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
      * 
      */
     @Export(name="preSharedSecret", refs={String.class}, tree="[0]")
@@ -886,6 +889,8 @@ public class TransportWanVpnInterfaceGreFeature extends com.pulumi.resources.Cus
 
     /**
      * @return Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
      * 
      */
     public Output<Optional<String>> preSharedSecret() {
@@ -904,6 +909,38 @@ public class TransportWanVpnInterfaceGreFeature extends com.pulumi.resources.Cus
      */
     public Output<Optional<String>> preSharedSecretVariable() {
         return Codegen.optional(this.preSharedSecretVariable);
+    }
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     * 
+     */
+    @Export(name="preSharedSecretWo", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> preSharedSecretWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     * 
+     */
+    public Output<Optional<String>> preSharedSecretWo() {
+        return Codegen.optional(this.preSharedSecretWo);
+    }
+    /**
+     * Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Export(name="preSharedSecretWoVersion", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> preSharedSecretWoVersion;
+
+    /**
+     * @return Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Output<Optional<Integer>> preSharedSecretWoVersion() {
+        return Codegen.optional(this.preSharedSecretWoVersion);
     }
     /**
      * Administrative state
@@ -1317,6 +1354,10 @@ public class TransportWanVpnInterfaceGreFeature extends com.pulumi.resources.Cus
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "preSharedSecret",
+                "preSharedSecretWo"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

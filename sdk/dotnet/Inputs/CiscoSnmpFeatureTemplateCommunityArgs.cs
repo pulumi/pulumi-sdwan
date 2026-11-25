@@ -25,11 +25,21 @@ namespace Pulumi.Sdwan.Inputs
         [Input("authorizationVariable")]
         public Input<string>? AuthorizationVariable { get; set; }
 
+        [Input("name")]
+        private Input<string>? _name;
+
         /// <summary>
         /// Set name of the SNMP community
         /// </summary>
-        [Input("name")]
-        public Input<string>? Name { get; set; }
+        public Input<string>? Name
+        {
+            get => _name;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _name = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Indicates if list item is considered optional.

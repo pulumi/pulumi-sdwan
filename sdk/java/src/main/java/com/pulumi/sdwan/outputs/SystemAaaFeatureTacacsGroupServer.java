@@ -19,6 +19,8 @@ public final class SystemAaaFeatureTacacsGroupServer {
     private @Nullable String address;
     /**
      * @return Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
      * 
      */
     private @Nullable String key;
@@ -34,6 +36,18 @@ public final class SystemAaaFeatureTacacsGroupServer {
      */
     private @Nullable String keyVariable;
     /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     * 
+     */
+    private @Nullable String keyWo;
+    /**
+     * @return Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private @Nullable Integer keyWoVersion;
+    /**
      * @return TACACS Port
      *   - Range: `1`-`65535`
      *   - Default value: `49`
@@ -47,6 +61,8 @@ public final class SystemAaaFeatureTacacsGroupServer {
     private @Nullable String portVariable;
     /**
      * @return Set the TACACS server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
      * 
      */
     private @Nullable String secretKey;
@@ -55,6 +71,18 @@ public final class SystemAaaFeatureTacacsGroupServer {
      * 
      */
     private @Nullable String secretKeyVariable;
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the TACACS server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     * 
+     */
+    private @Nullable String secretKeyWo;
+    /**
+     * @return Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private @Nullable Integer secretKeyWoVersion;
     /**
      * @return Configure how long to wait for replies from the TACACS server
      *   - Range: `1`-`1000`
@@ -78,6 +106,8 @@ public final class SystemAaaFeatureTacacsGroupServer {
     }
     /**
      * @return Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<String> key() {
@@ -99,6 +129,22 @@ public final class SystemAaaFeatureTacacsGroupServer {
         return Optional.ofNullable(this.keyVariable);
     }
     /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+     * 
+     */
+    public Optional<String> keyWo() {
+        return Optional.ofNullable(this.keyWo);
+    }
+    /**
+     * @return Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Integer> keyWoVersion() {
+        return Optional.ofNullable(this.keyWoVersion);
+    }
+    /**
      * @return TACACS Port
      *   - Range: `1`-`65535`
      *   - Default value: `49`
@@ -116,6 +162,8 @@ public final class SystemAaaFeatureTacacsGroupServer {
     }
     /**
      * @return Set the TACACS server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<String> secretKey() {
@@ -127,6 +175,22 @@ public final class SystemAaaFeatureTacacsGroupServer {
      */
     public Optional<String> secretKeyVariable() {
         return Optional.ofNullable(this.secretKeyVariable);
+    }
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the TACACS server shared type 7 encrypted key
+     *   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+     * 
+     */
+    public Optional<String> secretKeyWo() {
+        return Optional.ofNullable(this.secretKeyWo);
+    }
+    /**
+     * @return Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Integer> secretKeyWoVersion() {
+        return Optional.ofNullable(this.secretKeyWoVersion);
     }
     /**
      * @return Configure how long to wait for replies from the TACACS server
@@ -158,10 +222,14 @@ public final class SystemAaaFeatureTacacsGroupServer {
         private @Nullable String key;
         private @Nullable String keyEnum;
         private @Nullable String keyVariable;
+        private @Nullable String keyWo;
+        private @Nullable Integer keyWoVersion;
         private @Nullable Integer port;
         private @Nullable String portVariable;
         private @Nullable String secretKey;
         private @Nullable String secretKeyVariable;
+        private @Nullable String secretKeyWo;
+        private @Nullable Integer secretKeyWoVersion;
         private @Nullable Integer timeout;
         private @Nullable String timeoutVariable;
         public Builder() {}
@@ -171,10 +239,14 @@ public final class SystemAaaFeatureTacacsGroupServer {
     	      this.key = defaults.key;
     	      this.keyEnum = defaults.keyEnum;
     	      this.keyVariable = defaults.keyVariable;
+    	      this.keyWo = defaults.keyWo;
+    	      this.keyWoVersion = defaults.keyWoVersion;
     	      this.port = defaults.port;
     	      this.portVariable = defaults.portVariable;
     	      this.secretKey = defaults.secretKey;
     	      this.secretKeyVariable = defaults.secretKeyVariable;
+    	      this.secretKeyWo = defaults.secretKeyWo;
+    	      this.secretKeyWoVersion = defaults.secretKeyWoVersion;
     	      this.timeout = defaults.timeout;
     	      this.timeoutVariable = defaults.timeoutVariable;
         }
@@ -204,6 +276,18 @@ public final class SystemAaaFeatureTacacsGroupServer {
             return this;
         }
         @CustomType.Setter
+        public Builder keyWo(@Nullable String keyWo) {
+
+            this.keyWo = keyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder keyWoVersion(@Nullable Integer keyWoVersion) {
+
+            this.keyWoVersion = keyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder port(@Nullable Integer port) {
 
             this.port = port;
@@ -228,6 +312,18 @@ public final class SystemAaaFeatureTacacsGroupServer {
             return this;
         }
         @CustomType.Setter
+        public Builder secretKeyWo(@Nullable String secretKeyWo) {
+
+            this.secretKeyWo = secretKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder secretKeyWoVersion(@Nullable Integer secretKeyWoVersion) {
+
+            this.secretKeyWoVersion = secretKeyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder timeout(@Nullable Integer timeout) {
 
             this.timeout = timeout;
@@ -245,10 +341,14 @@ public final class SystemAaaFeatureTacacsGroupServer {
             _resultValue.key = key;
             _resultValue.keyEnum = keyEnum;
             _resultValue.keyVariable = keyVariable;
+            _resultValue.keyWo = keyWo;
+            _resultValue.keyWoVersion = keyWoVersion;
             _resultValue.port = port;
             _resultValue.portVariable = portVariable;
             _resultValue.secretKey = secretKey;
             _resultValue.secretKeyVariable = secretKeyVariable;
+            _resultValue.secretKeyWo = secretKeyWo;
+            _resultValue.secretKeyWoVersion = secretKeyWoVersion;
             _resultValue.timeout = timeout;
             _resultValue.timeoutVariable = timeoutVariable;
             return _resultValue;

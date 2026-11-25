@@ -33,12 +33,24 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? BroadcastSsidVariable;
         /// <summary>
         /// Set passphrase, Attribute conditional on `SecurityType` equal to `Personal`
+        ///   - Only one of `Passphrase`, `PassphraseVariable` and `PassphraseWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PassphraseWo` together with `PassphraseWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? Passphrase;
         /// <summary>
         /// Variable name, Attribute conditional on `SecurityType` equal to `Personal`
         /// </summary>
         public readonly string? PassphraseVariable;
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set passphrase, Attribute conditional on `SecurityType` equal to `Personal`
+        ///   - Only one of `Passphrase`, `PassphraseVariable` and `PassphraseWo` can be set.
+        /// </summary>
+        public readonly string? PassphraseWo;
+        /// <summary>
+        /// Rotation trigger for `PassphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? PassphraseWoVersion;
         /// <summary>
         /// Select QoS profile
         ///   - Choices: `Platinum`, `Gold`, `Silver`, `Bronze`
@@ -79,12 +91,24 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? RadiusServerPortVariable;
         /// <summary>
         /// Set RADIUS server shared secret, Attribute conditional on `SecurityType` equal to `Enterprise`
+        ///   - Only one of `RadiusServerSecret`, `RadiusServerSecretVariable` and `RadiusServerSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `RadiusServerSecretWo` together with `RadiusServerSecretWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? RadiusServerSecret;
         /// <summary>
         /// Variable name, Attribute conditional on `SecurityType` equal to `Enterprise`
         /// </summary>
         public readonly string? RadiusServerSecretVariable;
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set RADIUS server shared secret, Attribute conditional on `SecurityType` equal to `Enterprise`
+        ///   - Only one of `RadiusServerSecret`, `RadiusServerSecretVariable` and `RadiusServerSecretWo` can be set.
+        /// </summary>
+        public readonly string? RadiusServerSecretWo;
+        /// <summary>
+        /// Rotation trigger for `RadiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? RadiusServerSecretWoVersion;
         /// <summary>
         /// Select security type
         ///   - Choices: `Enterprise`, `Personal`, `Open`
@@ -118,6 +142,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string? passphraseVariable,
 
+            string? passphraseWo,
+
+            int? passphraseWoVersion,
+
             string? qosProfile,
 
             string? qosProfileVariable,
@@ -138,6 +166,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string? radiusServerSecretVariable,
 
+            string? radiusServerSecretWo,
+
+            int? radiusServerSecretWoVersion,
+
             string? securityType,
 
             string? ssidName,
@@ -152,6 +184,8 @@ namespace Pulumi.Sdwan.Outputs
             BroadcastSsidVariable = broadcastSsidVariable;
             Passphrase = passphrase;
             PassphraseVariable = passphraseVariable;
+            PassphraseWo = passphraseWo;
+            PassphraseWoVersion = passphraseWoVersion;
             QosProfile = qosProfile;
             QosProfileVariable = qosProfileVariable;
             RadioType = radioType;
@@ -162,6 +196,8 @@ namespace Pulumi.Sdwan.Outputs
             RadiusServerPortVariable = radiusServerPortVariable;
             RadiusServerSecret = radiusServerSecret;
             RadiusServerSecretVariable = radiusServerSecretVariable;
+            RadiusServerSecretWo = radiusServerSecretWo;
+            RadiusServerSecretWoVersion = radiusServerSecretWoVersion;
             SecurityType = securityType;
             SsidName = ssidName;
             VlanId = vlanId;

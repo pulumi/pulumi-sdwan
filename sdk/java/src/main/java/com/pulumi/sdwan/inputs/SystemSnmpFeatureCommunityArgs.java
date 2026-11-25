@@ -5,6 +5,7 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,6 +50,8 @@ public final class SystemSnmpFeatureCommunityArgs extends com.pulumi.resources.R
 
     /**
      * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `nameWo` together with `nameWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="name")
@@ -56,6 +59,8 @@ public final class SystemSnmpFeatureCommunityArgs extends com.pulumi.resources.R
 
     /**
      * @return Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `nameWo` together with `nameWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> name() {
@@ -75,6 +80,40 @@ public final class SystemSnmpFeatureCommunityArgs extends com.pulumi.resources.R
      */
     public Optional<Output<String>> nameVariable() {
         return Optional.ofNullable(this.nameVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+     * 
+     */
+    @Import(name="nameWo")
+    private @Nullable Output<String> nameWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> nameWo() {
+        return Optional.ofNullable(this.nameWo);
+    }
+
+    /**
+     * Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="nameWoVersion")
+    private @Nullable Output<Integer> nameWoVersion;
+
+    /**
+     * @return Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> nameWoVersion() {
+        return Optional.ofNullable(this.nameWoVersion);
     }
 
     /**
@@ -129,6 +168,8 @@ public final class SystemSnmpFeatureCommunityArgs extends com.pulumi.resources.R
         this.authorizationVariable = $.authorizationVariable;
         this.name = $.name;
         this.nameVariable = $.nameVariable;
+        this.nameWo = $.nameWo;
+        this.nameWoVersion = $.nameWoVersion;
         this.userLabel = $.userLabel;
         this.view = $.view;
         this.viewVariable = $.viewVariable;
@@ -198,6 +239,8 @@ public final class SystemSnmpFeatureCommunityArgs extends com.pulumi.resources.R
 
         /**
          * @param name Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `nameWo` together with `nameWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -209,6 +252,8 @@ public final class SystemSnmpFeatureCommunityArgs extends com.pulumi.resources.R
 
         /**
          * @param name Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `nameWo` together with `nameWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -236,6 +281,52 @@ public final class SystemSnmpFeatureCommunityArgs extends com.pulumi.resources.R
          */
         public Builder nameVariable(String nameVariable) {
             return nameVariable(Output.of(nameVariable));
+        }
+
+        /**
+         * @param nameWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nameWo(@Nullable Output<String> nameWo) {
+            $.nameWo = nameWo;
+            return this;
+        }
+
+        /**
+         * @param nameWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nameWo(String nameWo) {
+            return nameWo(Output.of(nameWo));
+        }
+
+        /**
+         * @param nameWoVersion Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nameWoVersion(@Nullable Output<Integer> nameWoVersion) {
+            $.nameWoVersion = nameWoVersion;
+            return this;
+        }
+
+        /**
+         * @param nameWoVersion Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nameWoVersion(Integer nameWoVersion) {
+            return nameWoVersion(Output.of(nameWoVersion));
         }
 
         /**

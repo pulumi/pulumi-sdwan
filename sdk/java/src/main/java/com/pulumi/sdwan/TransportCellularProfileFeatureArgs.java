@@ -223,6 +223,8 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
 
     /**
      * Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+     *   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `profilePasswordWo` together with `profilePasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="profilePassword")
@@ -230,6 +232,8 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
 
     /**
      * @return Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+     *   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `profilePasswordWo` together with `profilePasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> profilePassword() {
@@ -249,6 +253,40 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
      */
     public Optional<Output<String>> profilePasswordVariable() {
         return Optional.ofNullable(this.profilePasswordVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+     *   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+     * 
+     */
+    @Import(name="profilePasswordWo")
+    private @Nullable Output<String> profilePasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+     *   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> profilePasswordWo() {
+        return Optional.ofNullable(this.profilePasswordWo);
+    }
+
+    /**
+     * Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="profilePasswordWoVersion")
+    private @Nullable Output<Integer> profilePasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> profilePasswordWoVersion() {
+        return Optional.ofNullable(this.profilePasswordWoVersion);
     }
 
     /**
@@ -378,6 +416,8 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
         this.profileIdVariable = $.profileIdVariable;
         this.profilePassword = $.profilePassword;
         this.profilePasswordVariable = $.profilePasswordVariable;
+        this.profilePasswordWo = $.profilePasswordWo;
+        this.profilePasswordWoVersion = $.profilePasswordWoVersion;
         this.profileUsername = $.profileUsername;
         this.profileUsernameVariable = $.profileUsernameVariable;
         this.requiresAuthentication = $.requiresAuthentication;
@@ -688,6 +728,8 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
 
         /**
          * @param profilePassword Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+         *   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `profilePasswordWo` together with `profilePasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -699,6 +741,8 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
 
         /**
          * @param profilePassword Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+         *   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `profilePasswordWo` together with `profilePasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -726,6 +770,52 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
          */
         public Builder profilePasswordVariable(String profilePasswordVariable) {
             return profilePasswordVariable(Output.of(profilePasswordVariable));
+        }
+
+        /**
+         * @param profilePasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+         *   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profilePasswordWo(@Nullable Output<String> profilePasswordWo) {
+            $.profilePasswordWo = profilePasswordWo;
+            return this;
+        }
+
+        /**
+         * @param profilePasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
+         *   - Only one of `profilePassword`, `profilePasswordVariable` and `profilePasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profilePasswordWo(String profilePasswordWo) {
+            return profilePasswordWo(Output.of(profilePasswordWo));
+        }
+
+        /**
+         * @param profilePasswordWoVersion Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profilePasswordWoVersion(@Nullable Output<Integer> profilePasswordWoVersion) {
+            $.profilePasswordWoVersion = profilePasswordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param profilePasswordWoVersion Rotation trigger for `profilePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profilePasswordWoVersion(Integer profilePasswordWoVersion) {
+            return profilePasswordWoVersion(Output.of(profilePasswordWoVersion));
         }
 
         /**

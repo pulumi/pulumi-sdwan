@@ -26,7 +26,7 @@ class GetTransportCellularProfileFeatureResult:
     """
     A collection of values returned by getTransportCellularProfileFeature.
     """
-    def __init__(__self__, access_point_name=None, access_point_name_variable=None, authentication_type=None, authentication_type_variable=None, description=None, feature_profile_id=None, id=None, name=None, no_overwrite=None, no_overwrite_variable=None, packet_data_network_type=None, packet_data_network_type_variable=None, profile_id=None, profile_id_variable=None, profile_password=None, profile_password_variable=None, profile_username=None, profile_username_variable=None, requires_authentication=None, slice_differentiator=None, slice_differentiator_variable=None, slice_type=None, slice_type_variable=None, version=None):
+    def __init__(__self__, access_point_name=None, access_point_name_variable=None, authentication_type=None, authentication_type_variable=None, description=None, feature_profile_id=None, id=None, name=None, no_overwrite=None, no_overwrite_variable=None, packet_data_network_type=None, packet_data_network_type_variable=None, profile_id=None, profile_id_variable=None, profile_password=None, profile_password_variable=None, profile_password_wo=None, profile_password_wo_version=None, profile_username=None, profile_username_variable=None, requires_authentication=None, slice_differentiator=None, slice_differentiator_variable=None, slice_type=None, slice_type_variable=None, version=None):
         if access_point_name and not isinstance(access_point_name, str):
             raise TypeError("Expected argument 'access_point_name' to be a str")
         pulumi.set(__self__, "access_point_name", access_point_name)
@@ -75,6 +75,12 @@ class GetTransportCellularProfileFeatureResult:
         if profile_password_variable and not isinstance(profile_password_variable, str):
             raise TypeError("Expected argument 'profile_password_variable' to be a str")
         pulumi.set(__self__, "profile_password_variable", profile_password_variable)
+        if profile_password_wo and not isinstance(profile_password_wo, str):
+            raise TypeError("Expected argument 'profile_password_wo' to be a str")
+        pulumi.set(__self__, "profile_password_wo", profile_password_wo)
+        if profile_password_wo_version and not isinstance(profile_password_wo_version, int):
+            raise TypeError("Expected argument 'profile_password_wo_version' to be a int")
+        pulumi.set(__self__, "profile_password_wo_version", profile_password_wo_version)
         if profile_username and not isinstance(profile_username, str):
             raise TypeError("Expected argument 'profile_username' to be a str")
         pulumi.set(__self__, "profile_username", profile_username)
@@ -229,6 +235,22 @@ class GetTransportCellularProfileFeatureResult:
         return pulumi.get(self, "profile_password_variable")
 
     @_builtins.property
+    @pulumi.getter(name="profilePasswordWo")
+    def profile_password_wo(self) -> _builtins.str:
+        """
+        Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "profile_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="profilePasswordWoVersion")
+    def profile_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `profile_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "profile_password_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="profileUsername")
     def profile_username(self) -> _builtins.str:
         """
@@ -315,6 +337,8 @@ class AwaitableGetTransportCellularProfileFeatureResult(GetTransportCellularProf
             profile_id_variable=self.profile_id_variable,
             profile_password=self.profile_password,
             profile_password_variable=self.profile_password_variable,
+            profile_password_wo=self.profile_password_wo,
+            profile_password_wo_version=self.profile_password_wo_version,
             profile_username=self.profile_username,
             profile_username_variable=self.profile_username_variable,
             requires_authentication=self.requires_authentication,
@@ -371,6 +395,8 @@ def get_transport_cellular_profile_feature(feature_profile_id: Optional[_builtin
         profile_id_variable=pulumi.get(__ret__, 'profile_id_variable'),
         profile_password=pulumi.get(__ret__, 'profile_password'),
         profile_password_variable=pulumi.get(__ret__, 'profile_password_variable'),
+        profile_password_wo=pulumi.get(__ret__, 'profile_password_wo'),
+        profile_password_wo_version=pulumi.get(__ret__, 'profile_password_wo_version'),
         profile_username=pulumi.get(__ret__, 'profile_username'),
         profile_username_variable=pulumi.get(__ret__, 'profile_username_variable'),
         requires_authentication=pulumi.get(__ret__, 'requires_authentication'),
@@ -424,6 +450,8 @@ def get_transport_cellular_profile_feature_output(feature_profile_id: pulumi.Inp
         profile_id_variable=pulumi.get(__response__, 'profile_id_variable'),
         profile_password=pulumi.get(__response__, 'profile_password'),
         profile_password_variable=pulumi.get(__response__, 'profile_password_variable'),
+        profile_password_wo=pulumi.get(__response__, 'profile_password_wo'),
+        profile_password_wo_version=pulumi.get(__response__, 'profile_password_wo_version'),
         profile_username=pulumi.get(__response__, 'profile_username'),
         profile_username_variable=pulumi.get(__response__, 'profile_username_variable'),
         requires_authentication=pulumi.get(__response__, 'requires_authentication'),

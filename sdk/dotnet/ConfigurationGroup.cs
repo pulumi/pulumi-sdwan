@@ -32,21 +32,6 @@ namespace Pulumi.Sdwan
     ///         {
     ///             "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
     ///         },
-    ///         Devices = new[]
-    ///         {
-    ///             new Sdwan.Inputs.ConfigurationGroupDeviceArgs
-    ///             {
-    ///                 Id = "C8K-40C0CCFD-9EA8-2B2E-E73B-32C5924EC79B",
-    ///                 Variables = new[]
-    ///                 {
-    ///                     new Sdwan.Inputs.ConfigurationGroupDeviceVariableArgs
-    ///                     {
-    ///                         Name = "host_name",
-    ///                         Value = "edge1",
-    ///                     },
-    ///                 },
-    ///             },
-    ///         },
     ///     });
     /// 
     /// });
@@ -68,12 +53,6 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("description")]
         public Output<string> Description { get; private set; } = null!;
-
-        /// <summary>
-        /// List of devices
-        /// </summary>
-        [Output("devices")]
-        public Output<ImmutableArray<Outputs.ConfigurationGroupDevice>> Devices { get; private set; } = null!;
 
         /// <summary>
         /// List of feature profile IDs
@@ -112,6 +91,12 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("topologySiteDevices")]
         public Output<int?> TopologySiteDevices { get; private set; } = null!;
+
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        [Output("version")]
+        public Output<int> Version { get; private set; } = null!;
 
 
         /// <summary>
@@ -164,18 +149,6 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("description", required: true)]
         public Input<string> Description { get; set; } = null!;
-
-        [Input("devices")]
-        private InputList<Inputs.ConfigurationGroupDeviceArgs>? _devices;
-
-        /// <summary>
-        /// List of devices
-        /// </summary>
-        public InputList<Inputs.ConfigurationGroupDeviceArgs> Devices
-        {
-            get => _devices ?? (_devices = new InputList<Inputs.ConfigurationGroupDeviceArgs>());
-            set => _devices = value;
-        }
 
         [Input("featureProfileIds")]
         private InputList<string>? _featureProfileIds;
@@ -247,18 +220,6 @@ namespace Pulumi.Sdwan
         [Input("description")]
         public Input<string>? Description { get; set; }
 
-        [Input("devices")]
-        private InputList<Inputs.ConfigurationGroupDeviceGetArgs>? _devices;
-
-        /// <summary>
-        /// List of devices
-        /// </summary>
-        public InputList<Inputs.ConfigurationGroupDeviceGetArgs> Devices
-        {
-            get => _devices ?? (_devices = new InputList<Inputs.ConfigurationGroupDeviceGetArgs>());
-            set => _devices = value;
-        }
-
         [Input("featureProfileIds")]
         private InputList<string>? _featureProfileIds;
 
@@ -314,6 +275,12 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("topologySiteDevices")]
         public Input<int>? TopologySiteDevices { get; set; }
+
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        [Input("version")]
+        public Input<int>? Version { get; set; }
 
         public ConfigurationGroupState()
         {

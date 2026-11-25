@@ -120,6 +120,16 @@ public final class GetServiceRoutingBgpFeatureIpv4Neighbor {
      */
     private String passwordVariable;
     /**
+     * @return Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    private String passwordWo;
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer passwordWoVersion;
+    /**
      * @return Set remote autonomous system number
      * 
      */
@@ -329,6 +339,20 @@ public final class GetServiceRoutingBgpFeatureIpv4Neighbor {
         return this.passwordVariable;
     }
     /**
+     * @return Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    public String passwordWo() {
+        return this.passwordWo;
+    }
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer passwordWoVersion() {
+        return this.passwordWoVersion;
+    }
+    /**
      * @return Set remote autonomous system number
      * 
      */
@@ -443,6 +467,8 @@ public final class GetServiceRoutingBgpFeatureIpv4Neighbor {
         private String nextHopSelfVariable;
         private String password;
         private String passwordVariable;
+        private String passwordWo;
+        private Integer passwordWoVersion;
         private String remoteAs;
         private String remoteAsVariable;
         private Boolean sendCommunity;
@@ -479,6 +505,8 @@ public final class GetServiceRoutingBgpFeatureIpv4Neighbor {
     	      this.nextHopSelfVariable = defaults.nextHopSelfVariable;
     	      this.password = defaults.password;
     	      this.passwordVariable = defaults.passwordVariable;
+    	      this.passwordWo = defaults.passwordWo;
+    	      this.passwordWoVersion = defaults.passwordWoVersion;
     	      this.remoteAs = defaults.remoteAs;
     	      this.remoteAsVariable = defaults.remoteAsVariable;
     	      this.sendCommunity = defaults.sendCommunity;
@@ -665,6 +693,22 @@ public final class GetServiceRoutingBgpFeatureIpv4Neighbor {
             return this;
         }
         @CustomType.Setter
+        public Builder passwordWo(String passwordWo) {
+            if (passwordWo == null) {
+              throw new MissingRequiredPropertyException("GetServiceRoutingBgpFeatureIpv4Neighbor", "passwordWo");
+            }
+            this.passwordWo = passwordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder passwordWoVersion(Integer passwordWoVersion) {
+            if (passwordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetServiceRoutingBgpFeatureIpv4Neighbor", "passwordWoVersion");
+            }
+            this.passwordWoVersion = passwordWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder remoteAs(String remoteAs) {
             if (remoteAs == null) {
               throw new MissingRequiredPropertyException("GetServiceRoutingBgpFeatureIpv4Neighbor", "remoteAs");
@@ -783,6 +827,8 @@ public final class GetServiceRoutingBgpFeatureIpv4Neighbor {
             _resultValue.nextHopSelfVariable = nextHopSelfVariable;
             _resultValue.password = password;
             _resultValue.passwordVariable = passwordVariable;
+            _resultValue.passwordWo = passwordWo;
+            _resultValue.passwordWoVersion = passwordWoVersion;
             _resultValue.remoteAs = remoteAs;
             _resultValue.remoteAsVariable = remoteAsVariable;
             _resultValue.sendCommunity = sendCommunity;

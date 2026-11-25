@@ -129,6 +129,14 @@ export interface GetServiceWirelessLanFeatureResult {
      */
     readonly passwordVariable: string;
     /**
+     * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+     */
+    readonly passwordWo: string;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly passwordWoVersion: number;
+    /**
      * Configure Wi-Fi SSID profile
      */
     readonly ssids: outputs.GetServiceWirelessLanFeatureSsid[];

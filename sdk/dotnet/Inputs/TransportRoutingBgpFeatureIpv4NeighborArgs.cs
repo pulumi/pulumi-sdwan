@@ -154,17 +154,53 @@ namespace Pulumi.Sdwan.Inputs
         [Input("nextHopSelfVariable")]
         public Input<string>? NextHopSelfVariable { get; set; }
 
+        [Input("password")]
+        private Input<string>? _password;
+
         /// <summary>
         /// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `Password`, `PasswordVariable` and `PasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PasswordWo` together with `PasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("password")]
-        public Input<string>? Password { get; set; }
+        public Input<string>? Password
+        {
+            get => _password;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _password = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("passwordVariable")]
         public Input<string>? PasswordVariable { get; set; }
+
+        [Input("passwordWo")]
+        private Input<string>? _passwordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `Password`, `PasswordVariable` and `PasswordWo` can be set.
+        /// </summary>
+        public Input<string>? PasswordWo
+        {
+            get => _passwordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _passwordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `PasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("passwordWoVersion")]
+        public Input<int>? PasswordWoVersion { get; set; }
 
         /// <summary>
         /// Set remote autonomous system number

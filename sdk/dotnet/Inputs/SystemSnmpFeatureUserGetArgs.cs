@@ -12,17 +12,53 @@ namespace Pulumi.Sdwan.Inputs
 
     public sealed class SystemSnmpFeatureUserGetArgs : global::Pulumi.ResourceArgs
     {
+        [Input("authenticationPassword")]
+        private Input<string>? _authenticationPassword;
+
         /// <summary>
         /// Specify authentication protocol password
+        ///   - Only one of `AuthenticationPassword`, `AuthenticationPasswordVariable` and `AuthenticationPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationPasswordWo` together with `AuthenticationPasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("authenticationPassword")]
-        public Input<string>? AuthenticationPassword { get; set; }
+        public Input<string>? AuthenticationPassword
+        {
+            get => _authenticationPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("authenticationPasswordVariable")]
         public Input<string>? AuthenticationPasswordVariable { get; set; }
+
+        [Input("authenticationPasswordWo")]
+        private Input<string>? _authenticationPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Specify authentication protocol password
+        ///   - Only one of `AuthenticationPassword`, `AuthenticationPasswordVariable` and `AuthenticationPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? AuthenticationPasswordWo
+        {
+            get => _authenticationPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `AuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("authenticationPasswordWoVersion")]
+        public Input<int>? AuthenticationPasswordWoVersion { get; set; }
 
         /// <summary>
         /// Configure authentication protocol
@@ -55,17 +91,53 @@ namespace Pulumi.Sdwan.Inputs
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        [Input("privacyPassword")]
+        private Input<string>? _privacyPassword;
+
         /// <summary>
         /// Specify privacy protocol password
+        ///   - Only one of `PrivacyPassword`, `PrivacyPasswordVariable` and `PrivacyPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PrivacyPasswordWo` together with `PrivacyPasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("privacyPassword")]
-        public Input<string>? PrivacyPassword { get; set; }
+        public Input<string>? PrivacyPassword
+        {
+            get => _privacyPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _privacyPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
         /// </summary>
         [Input("privacyPasswordVariable")]
         public Input<string>? PrivacyPasswordVariable { get; set; }
+
+        [Input("privacyPasswordWo")]
+        private Input<string>? _privacyPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Specify privacy protocol password
+        ///   - Only one of `PrivacyPassword`, `PrivacyPasswordVariable` and `PrivacyPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? PrivacyPasswordWo
+        {
+            get => _privacyPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _privacyPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `PrivacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("privacyPasswordWoVersion")]
+        public Input<int>? PrivacyPasswordWoVersion { get; set; }
 
         /// <summary>
         /// Configure privacy protocol

@@ -25,6 +25,7 @@ export function getPolicyObjectFeatureProfileParcels(args: GetPolicyObjectFeatur
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectFeatureProfileParcels:getPolicyObjectFeatureProfileParcels", {
         "createdBy": args.createdBy,
         "featureProfileId": args.featureProfileId,
+        "parcelNames": args.parcelNames,
         "parcelType": args.parcelType,
     }, opts);
 }
@@ -41,6 +42,10 @@ export interface GetPolicyObjectFeatureProfileParcelsArgs {
      * Policy Object Feature Profile ID
      */
     featureProfileId: string;
+    /**
+     * Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+     */
+    parcelNames?: string[];
     /**
      * Filter by parcel type (e.g. 'app-list', 'data-prefix')
      */
@@ -63,6 +68,10 @@ export interface GetPolicyObjectFeatureProfileParcelsResult {
      * The id of the object
      */
     readonly id: string;
+    /**
+     * Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+     */
+    readonly parcelNames?: string[];
     /**
      * Filter by parcel type (e.g. 'app-list', 'data-prefix')
      */
@@ -91,6 +100,7 @@ export function getPolicyObjectFeatureProfileParcelsOutput(args: GetPolicyObject
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectFeatureProfileParcels:getPolicyObjectFeatureProfileParcels", {
         "createdBy": args.createdBy,
         "featureProfileId": args.featureProfileId,
+        "parcelNames": args.parcelNames,
         "parcelType": args.parcelType,
     }, opts);
 }
@@ -107,6 +117,10 @@ export interface GetPolicyObjectFeatureProfileParcelsOutputArgs {
      * Policy Object Feature Profile ID
      */
     featureProfileId: pulumi.Input<string>;
+    /**
+     * Filter by parcel name; only parcels whose name is in this set are returned (an empty set returns none)
+     */
+    parcelNames?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Filter by parcel type (e.g. 'app-list', 'data-prefix')
      */

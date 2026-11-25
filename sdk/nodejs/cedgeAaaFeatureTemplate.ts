@@ -350,7 +350,7 @@ export class CedgeAaaFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["radiusDynamicAuthorDomainStrippingVariable"] = args?.radiusDynamicAuthorDomainStrippingVariable;
             resourceInputs["radiusDynamicAuthorPort"] = args?.radiusDynamicAuthorPort;
             resourceInputs["radiusDynamicAuthorPortVariable"] = args?.radiusDynamicAuthorPortVariable;
-            resourceInputs["radiusDynamicAuthorServerKey"] = args?.radiusDynamicAuthorServerKey;
+            resourceInputs["radiusDynamicAuthorServerKey"] = args?.radiusDynamicAuthorServerKey ? pulumi.secret(args.radiusDynamicAuthorServerKey) : undefined;
             resourceInputs["radiusDynamicAuthorServerKeyVariable"] = args?.radiusDynamicAuthorServerKeyVariable;
             resourceInputs["radiusServerGroups"] = args?.radiusServerGroups;
             resourceInputs["radiusTrustsecCtsAuthorizationList"] = args?.radiusTrustsecCtsAuthorizationList;
@@ -363,6 +363,8 @@ export class CedgeAaaFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["radiusDynamicAuthorServerKey"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(CedgeAaaFeatureTemplate.__pulumiType, name, resourceInputs, opts);
     }
 }

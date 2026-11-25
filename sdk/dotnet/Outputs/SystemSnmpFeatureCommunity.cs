@@ -24,12 +24,24 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? AuthorizationVariable;
         /// <summary>
         /// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `Name`, `NameVariable` and `NameWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `NameWo` together with `NameWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? Name;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string? NameVariable;
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `Name`, `NameVariable` and `NameWo` can be set.
+        /// </summary>
+        public readonly string? NameWo;
+        /// <summary>
+        /// Rotation trigger for `NameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? NameWoVersion;
         /// <summary>
         /// Set user label of the SNMP community
         /// </summary>
@@ -53,6 +65,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string? nameVariable,
 
+            string? nameWo,
+
+            int? nameWoVersion,
+
             string? userLabel,
 
             string? view,
@@ -63,6 +79,8 @@ namespace Pulumi.Sdwan.Outputs
             AuthorizationVariable = authorizationVariable;
             Name = name;
             NameVariable = nameVariable;
+            NameWo = nameWo;
+            NameWoVersion = nameWoVersion;
             UserLabel = userLabel;
             View = view;
             ViewVariable = viewVariable;

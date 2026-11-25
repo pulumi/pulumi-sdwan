@@ -38,17 +38,53 @@ namespace Pulumi.Sdwan.Inputs
         [Input("broadcastSsidVariable")]
         public Input<string>? BroadcastSsidVariable { get; set; }
 
+        [Input("passphrase")]
+        private Input<string>? _passphrase;
+
         /// <summary>
         /// Set passphrase, Attribute conditional on `SecurityType` equal to `Personal`
+        ///   - Only one of `Passphrase`, `PassphraseVariable` and `PassphraseWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PassphraseWo` together with `PassphraseWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("passphrase")]
-        public Input<string>? Passphrase { get; set; }
+        public Input<string>? Passphrase
+        {
+            get => _passphrase;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _passphrase = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name, Attribute conditional on `SecurityType` equal to `Personal`
         /// </summary>
         [Input("passphraseVariable")]
         public Input<string>? PassphraseVariable { get; set; }
+
+        [Input("passphraseWo")]
+        private Input<string>? _passphraseWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set passphrase, Attribute conditional on `SecurityType` equal to `Personal`
+        ///   - Only one of `Passphrase`, `PassphraseVariable` and `PassphraseWo` can be set.
+        /// </summary>
+        public Input<string>? PassphraseWo
+        {
+            get => _passphraseWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _passphraseWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `PassphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("passphraseWoVersion")]
+        public Input<int>? PassphraseWoVersion { get; set; }
 
         /// <summary>
         /// Select QoS profile
@@ -104,17 +140,53 @@ namespace Pulumi.Sdwan.Inputs
         [Input("radiusServerPortVariable")]
         public Input<string>? RadiusServerPortVariable { get; set; }
 
+        [Input("radiusServerSecret")]
+        private Input<string>? _radiusServerSecret;
+
         /// <summary>
         /// Set RADIUS server shared secret, Attribute conditional on `SecurityType` equal to `Enterprise`
+        ///   - Only one of `RadiusServerSecret`, `RadiusServerSecretVariable` and `RadiusServerSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `RadiusServerSecretWo` together with `RadiusServerSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("radiusServerSecret")]
-        public Input<string>? RadiusServerSecret { get; set; }
+        public Input<string>? RadiusServerSecret
+        {
+            get => _radiusServerSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _radiusServerSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name, Attribute conditional on `SecurityType` equal to `Enterprise`
         /// </summary>
         [Input("radiusServerSecretVariable")]
         public Input<string>? RadiusServerSecretVariable { get; set; }
+
+        [Input("radiusServerSecretWo")]
+        private Input<string>? _radiusServerSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set RADIUS server shared secret, Attribute conditional on `SecurityType` equal to `Enterprise`
+        ///   - Only one of `RadiusServerSecret`, `RadiusServerSecretVariable` and `RadiusServerSecretWo` can be set.
+        /// </summary>
+        public Input<string>? RadiusServerSecretWo
+        {
+            get => _radiusServerSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _radiusServerSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `RadiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("radiusServerSecretWoVersion")]
+        public Input<int>? RadiusServerSecretWoVersion { get; set; }
 
         /// <summary>
         /// Select security type

@@ -34,6 +34,8 @@ class ServiceRoutingEigrpFeatureArgs:
                  hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
                  hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  hold_time: pulumi.Input[Optional[_builtins.int]] = None,
                  hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]]] = None,
@@ -61,7 +63,13 @@ class ServiceRoutingEigrpFeatureArgs:
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+                 - Only one of `hmac_authentication_key`, `hmac_authentication_key_variable` and `hmac_authentication_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `hmac_authentication_key_wo` together with `hmac_authentication_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] hmac_authentication_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+                 - Only one of `hmac_authentication_key`, `hmac_authentication_key_variable` and `hmac_authentication_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] hmac_authentication_key_wo_version: Rotation trigger for `hmac_authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
                  - Range: `0`-`65535`
                  - Default value: `15`
@@ -95,6 +103,10 @@ class ServiceRoutingEigrpFeatureArgs:
             pulumi.set(__self__, "hmac_authentication_key", hmac_authentication_key)
         if hmac_authentication_key_variable is not None:
             pulumi.set(__self__, "hmac_authentication_key_variable", hmac_authentication_key_variable)
+        if hmac_authentication_key_wo is not None:
+            pulumi.set(__self__, "hmac_authentication_key_wo", hmac_authentication_key_wo)
+        if hmac_authentication_key_wo_version is not None:
+            pulumi.set(__self__, "hmac_authentication_key_wo_version", hmac_authentication_key_wo_version)
         if hold_time is not None:
             pulumi.set(__self__, "hold_time", hold_time)
         if hold_time_variable is not None:
@@ -252,6 +264,8 @@ class ServiceRoutingEigrpFeatureArgs:
     def hmac_authentication_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+          - Only one of `hmac_authentication_key`, `hmac_authentication_key_variable` and `hmac_authentication_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `hmac_authentication_key_wo` together with `hmac_authentication_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "hmac_authentication_key")
 
@@ -270,6 +284,32 @@ class ServiceRoutingEigrpFeatureArgs:
     @hmac_authentication_key_variable.setter
     def hmac_authentication_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hmac_authentication_key_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="hmacAuthenticationKeyWo")
+    def hmac_authentication_key_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+          - Only one of `hmac_authentication_key`, `hmac_authentication_key_variable` and `hmac_authentication_key_wo` can be set.
+        """
+        return pulumi.get(self, "hmac_authentication_key_wo")
+
+    @hmac_authentication_key_wo.setter
+    def hmac_authentication_key_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "hmac_authentication_key_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="hmacAuthenticationKeyWoVersion")
+    def hmac_authentication_key_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `hmac_authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "hmac_authentication_key_wo_version")
+
+    @hmac_authentication_key_wo_version.setter
+    def hmac_authentication_key_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "hmac_authentication_key_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="holdTime")
@@ -370,6 +410,8 @@ class _ServiceRoutingEigrpFeatureState:
                  hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
                  hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  hold_time: pulumi.Input[Optional[_builtins.int]] = None,
                  hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]]] = None,
@@ -398,7 +440,13 @@ class _ServiceRoutingEigrpFeatureState:
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+                 - Only one of `hmac_authentication_key`, `hmac_authentication_key_variable` and `hmac_authentication_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `hmac_authentication_key_wo` together with `hmac_authentication_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] hmac_authentication_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+                 - Only one of `hmac_authentication_key`, `hmac_authentication_key_variable` and `hmac_authentication_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] hmac_authentication_key_wo_version: Rotation trigger for `hmac_authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
                  - Range: `0`-`65535`
                  - Default value: `15`
@@ -434,6 +482,10 @@ class _ServiceRoutingEigrpFeatureState:
             pulumi.set(__self__, "hmac_authentication_key", hmac_authentication_key)
         if hmac_authentication_key_variable is not None:
             pulumi.set(__self__, "hmac_authentication_key_variable", hmac_authentication_key_variable)
+        if hmac_authentication_key_wo is not None:
+            pulumi.set(__self__, "hmac_authentication_key_wo", hmac_authentication_key_wo)
+        if hmac_authentication_key_wo_version is not None:
+            pulumi.set(__self__, "hmac_authentication_key_wo_version", hmac_authentication_key_wo_version)
         if hold_time is not None:
             pulumi.set(__self__, "hold_time", hold_time)
         if hold_time_variable is not None:
@@ -583,6 +635,8 @@ class _ServiceRoutingEigrpFeatureState:
     def hmac_authentication_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+          - Only one of `hmac_authentication_key`, `hmac_authentication_key_variable` and `hmac_authentication_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `hmac_authentication_key_wo` together with `hmac_authentication_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "hmac_authentication_key")
 
@@ -601,6 +655,32 @@ class _ServiceRoutingEigrpFeatureState:
     @hmac_authentication_key_variable.setter
     def hmac_authentication_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hmac_authentication_key_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="hmacAuthenticationKeyWo")
+    def hmac_authentication_key_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+          - Only one of `hmac_authentication_key`, `hmac_authentication_key_variable` and `hmac_authentication_key_wo` can be set.
+        """
+        return pulumi.get(self, "hmac_authentication_key_wo")
+
+    @hmac_authentication_key_wo.setter
+    def hmac_authentication_key_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "hmac_authentication_key_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="hmacAuthenticationKeyWoVersion")
+    def hmac_authentication_key_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `hmac_authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "hmac_authentication_key_wo_version")
+
+    @hmac_authentication_key_wo_version.setter
+    def hmac_authentication_key_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "hmac_authentication_key_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="holdTime")
@@ -728,6 +808,8 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
                  hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
                  hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  hold_time: pulumi.Input[Optional[_builtins.int]] = None,
                  hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict', 'outputs.ServiceRoutingEigrpFeatureInterface']]]]] = None,
@@ -803,7 +885,13 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+                 - Only one of `hmac_authentication_key`, `hmac_authentication_key_variable` and `hmac_authentication_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `hmac_authentication_key_wo` together with `hmac_authentication_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] hmac_authentication_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+                 - Only one of `hmac_authentication_key`, `hmac_authentication_key_variable` and `hmac_authentication_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] hmac_authentication_key_wo_version: Rotation trigger for `hmac_authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
                  - Range: `0`-`65535`
                  - Default value: `15`
@@ -895,6 +983,8 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
                  hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
                  hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  hold_time: pulumi.Input[Optional[_builtins.int]] = None,
                  hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict', 'outputs.ServiceRoutingEigrpFeatureInterface']]]]] = None,
@@ -924,8 +1014,10 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
             __props__.__dict__["filter_variable"] = filter_variable
             __props__.__dict__["hello_interval"] = hello_interval
             __props__.__dict__["hello_interval_variable"] = hello_interval_variable
-            __props__.__dict__["hmac_authentication_key"] = hmac_authentication_key
+            __props__.__dict__["hmac_authentication_key"] = None if hmac_authentication_key is None else pulumi.Output.secret(hmac_authentication_key)
             __props__.__dict__["hmac_authentication_key_variable"] = hmac_authentication_key_variable
+            __props__.__dict__["hmac_authentication_key_wo"] = None if hmac_authentication_key_wo is None else pulumi.Output.secret(hmac_authentication_key_wo)
+            __props__.__dict__["hmac_authentication_key_wo_version"] = hmac_authentication_key_wo_version
             __props__.__dict__["hold_time"] = hold_time
             __props__.__dict__["hold_time_variable"] = hold_time_variable
             __props__.__dict__["interfaces"] = interfaces
@@ -937,6 +1029,8 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
             __props__.__dict__["redistributes"] = redistributes
             __props__.__dict__["route_policy_id"] = route_policy_id
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["hmacAuthenticationKey", "hmacAuthenticationKeyWo"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(ServiceRoutingEigrpFeature, __self__).__init__(
             'sdwan:index/serviceRoutingEigrpFeature:ServiceRoutingEigrpFeature',
             resource_name,
@@ -959,6 +1053,8 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
             hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
             hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
             hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            hmac_authentication_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            hmac_authentication_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             hold_time: pulumi.Input[Optional[_builtins.int]] = None,
             hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
             interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict', 'outputs.ServiceRoutingEigrpFeatureInterface']]]]] = None,
@@ -991,7 +1087,13 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+                 - Only one of `hmac_authentication_key`, `hmac_authentication_key_variable` and `hmac_authentication_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `hmac_authentication_key_wo` together with `hmac_authentication_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] hmac_authentication_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+                 - Only one of `hmac_authentication_key`, `hmac_authentication_key_variable` and `hmac_authentication_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] hmac_authentication_key_wo_version: Rotation trigger for `hmac_authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
                  - Range: `0`-`65535`
                  - Default value: `15`
@@ -1019,6 +1121,8 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
         __props__.__dict__["hello_interval_variable"] = hello_interval_variable
         __props__.__dict__["hmac_authentication_key"] = hmac_authentication_key
         __props__.__dict__["hmac_authentication_key_variable"] = hmac_authentication_key_variable
+        __props__.__dict__["hmac_authentication_key_wo"] = hmac_authentication_key_wo
+        __props__.__dict__["hmac_authentication_key_wo_version"] = hmac_authentication_key_wo_version
         __props__.__dict__["hold_time"] = hold_time
         __props__.__dict__["hold_time_variable"] = hold_time_variable
         __props__.__dict__["interfaces"] = interfaces
@@ -1045,6 +1149,8 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
             hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
             hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
             hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            hmac_authentication_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            hmac_authentication_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             hold_time: pulumi.Input[Optional[_builtins.int]] = None,
             hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
             interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict', 'outputs.ServiceRoutingEigrpFeatureInterface']]]]] = None,
@@ -1067,6 +1173,8 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
         __props__["helloIntervalVariable"] = hello_interval_variable
         __props__["hmacAuthenticationKey"] = hmac_authentication_key
         __props__["hmacAuthenticationKeyVariable"] = hmac_authentication_key_variable
+        __props__["hmacAuthenticationKeyWo"] = hmac_authentication_key_wo
+        __props__["hmacAuthenticationKeyWoVersion"] = hmac_authentication_key_wo_version
         __props__["holdTime"] = hold_time
         __props__["holdTimeVariable"] = hold_time_variable
         __props__["interfaces"] = interfaces
@@ -1168,6 +1276,8 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
     def hmac_authentication_key(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+          - Only one of `hmac_authentication_key`, `hmac_authentication_key_variable` and `hmac_authentication_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `hmac_authentication_key_wo` together with `hmac_authentication_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "hmac_authentication_key")
 
@@ -1178,6 +1288,24 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
         Variable name, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         """
         return pulumi.get(self, "hmac_authentication_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="hmacAuthenticationKeyWo")
+    def hmac_authentication_key_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+          - Only one of `hmac_authentication_key`, `hmac_authentication_key_variable` and `hmac_authentication_key_wo` can be set.
+        """
+        return pulumi.get(self, "hmac_authentication_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="hmacAuthenticationKeyWoVersion")
+    def hmac_authentication_key_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `hmac_authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "hmac_authentication_key_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="holdTime")

@@ -260,7 +260,7 @@ export class CellularProfileFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["profileIdVariable"] = args?.profileIdVariable;
             resourceInputs["profileName"] = args?.profileName;
             resourceInputs["profileNameVariable"] = args?.profileNameVariable;
-            resourceInputs["profilePassword"] = args?.profilePassword;
+            resourceInputs["profilePassword"] = args?.profilePassword ? pulumi.secret(args.profilePassword) : undefined;
             resourceInputs["profilePasswordVariable"] = args?.profilePasswordVariable;
             resourceInputs["profileUsername"] = args?.profileUsername;
             resourceInputs["profileUsernameVariable"] = args?.profileUsernameVariable;
@@ -270,6 +270,8 @@ export class CellularProfileFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["profilePassword"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(CellularProfileFeatureTemplate.__pulumiType, name, resourceInputs, opts);
     }
 }

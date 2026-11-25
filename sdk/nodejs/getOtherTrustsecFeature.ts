@@ -73,6 +73,14 @@ export interface GetOtherTrustsecFeatureResult {
      */
     readonly devicePasswordVariable: string;
     /**
+     * Set the password for the device
+     */
+    readonly devicePasswordWo: string;
+    /**
+     * Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly devicePasswordWoVersion: number;
+    /**
      * Configure Local device security group \n\n
      */
     readonly deviceSgt: number;
@@ -140,6 +148,14 @@ export interface GetOtherTrustsecFeatureResult {
      * Variable name
      */
     readonly sxpDefaultPasswordVariable: string;
+    /**
+     * Configure SXP default password
+     */
+    readonly sxpDefaultPasswordWo: string;
+    /**
+     * Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly sxpDefaultPasswordWoVersion: number;
     /**
      * Configure SXP key-chain
      */

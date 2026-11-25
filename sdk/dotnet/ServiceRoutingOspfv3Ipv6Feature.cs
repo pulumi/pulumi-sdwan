@@ -271,8 +271,17 @@ namespace Pulumi.Sdwan
         [Output("rfc1583CompatibleVariable")]
         public Output<string?> Rfc1583CompatibleVariable { get; private set; } = null!;
 
+        /// <summary>
+        /// Set either RoutePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `RoutePolicyId` being set
+        /// </summary>
         [Output("routePolicyId")]
         public Output<string?> RoutePolicyId { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `RoutePolicyId` being set
+        /// </summary>
+        [Output("routePolicyIdVariable")]
+        public Output<string?> RoutePolicyIdVariable { get; private set; } = null!;
 
         /// <summary>
         /// Set OSPF router ID to override system IP address
@@ -581,8 +590,17 @@ namespace Pulumi.Sdwan
         [Input("rfc1583CompatibleVariable")]
         public Input<string>? Rfc1583CompatibleVariable { get; set; }
 
+        /// <summary>
+        /// Set either RoutePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `RoutePolicyId` being set
+        /// </summary>
         [Input("routePolicyId")]
         public Input<string>? RoutePolicyId { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `RoutePolicyId` being set
+        /// </summary>
+        [Input("routePolicyIdVariable")]
+        public Input<string>? RoutePolicyIdVariable { get; set; }
 
         /// <summary>
         /// Set OSPF router ID to override system IP address
@@ -847,8 +865,17 @@ namespace Pulumi.Sdwan
         [Input("rfc1583CompatibleVariable")]
         public Input<string>? Rfc1583CompatibleVariable { get; set; }
 
+        /// <summary>
+        /// Set either RoutePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `RoutePolicyId` being set
+        /// </summary>
         [Input("routePolicyId")]
         public Input<string>? RoutePolicyId { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `RoutePolicyId` being set
+        /// </summary>
+        [Input("routePolicyIdVariable")]
+        public Input<string>? RoutePolicyIdVariable { get; set; }
 
         /// <summary>
         /// Set OSPF router ID to override system IP address

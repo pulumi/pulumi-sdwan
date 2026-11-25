@@ -50,6 +50,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string PeerAuthenticationPasswordVariable;
         /// <summary>
+        /// Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        /// </summary>
+        public readonly string PeerAuthenticationPasswordWo;
+        /// <summary>
+        /// Rotation trigger for `PeerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int PeerAuthenticationPasswordWoVersion;
+        /// <summary>
         /// Set MSDP peer ip
         /// </summary>
         public readonly string PeerIp;
@@ -95,6 +103,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string peerAuthenticationPasswordVariable,
 
+            string peerAuthenticationPasswordWo,
+
+            int peerAuthenticationPasswordWoVersion,
+
             string peerIp,
 
             string peerIpVariable,
@@ -118,6 +130,8 @@ namespace Pulumi.Sdwan.Outputs
             KeepaliveIntervalVariable = keepaliveIntervalVariable;
             PeerAuthenticationPassword = peerAuthenticationPassword;
             PeerAuthenticationPasswordVariable = peerAuthenticationPasswordVariable;
+            PeerAuthenticationPasswordWo = peerAuthenticationPasswordWo;
+            PeerAuthenticationPasswordWoVersion = peerAuthenticationPasswordWoVersion;
             PeerIp = peerIp;
             PeerIpVariable = peerIpVariable;
             PrefixListId = prefixListId;

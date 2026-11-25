@@ -18,6 +18,8 @@ public final class OtherThousandeyesFeatureVirtualApplicationArgs extends com.pu
 
     /**
      * Set the Account Group Token
+     *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `accountGroupTokenWo` together with `accountGroupTokenWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="accountGroupToken")
@@ -25,6 +27,8 @@ public final class OtherThousandeyesFeatureVirtualApplicationArgs extends com.pu
 
     /**
      * @return Set the Account Group Token
+     *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `accountGroupTokenWo` together with `accountGroupTokenWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> accountGroupToken() {
@@ -44,6 +48,40 @@ public final class OtherThousandeyesFeatureVirtualApplicationArgs extends com.pu
      */
     public Optional<Output<String>> accountGroupTokenVariable() {
         return Optional.ofNullable(this.accountGroupTokenVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the Account Group Token
+     *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+     * 
+     */
+    @Import(name="accountGroupTokenWo")
+    private @Nullable Output<String> accountGroupTokenWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the Account Group Token
+     *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> accountGroupTokenWo() {
+        return Optional.ofNullable(this.accountGroupTokenWo);
+    }
+
+    /**
+     * Rotation trigger for `accountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="accountGroupTokenWoVersion")
+    private @Nullable Output<Integer> accountGroupTokenWoVersion;
+
+    /**
+     * @return Rotation trigger for `accountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> accountGroupTokenWoVersion() {
+        return Optional.ofNullable(this.accountGroupTokenWoVersion);
     }
 
     /**
@@ -342,6 +380,8 @@ public final class OtherThousandeyesFeatureVirtualApplicationArgs extends com.pu
     private OtherThousandeyesFeatureVirtualApplicationArgs(OtherThousandeyesFeatureVirtualApplicationArgs $) {
         this.accountGroupToken = $.accountGroupToken;
         this.accountGroupTokenVariable = $.accountGroupTokenVariable;
+        this.accountGroupTokenWo = $.accountGroupTokenWo;
+        this.accountGroupTokenWoVersion = $.accountGroupTokenWoVersion;
         this.agentDefaultGateway = $.agentDefaultGateway;
         this.agentDefaultGatewayVariable = $.agentDefaultGatewayVariable;
         this.hostname = $.hostname;
@@ -383,6 +423,8 @@ public final class OtherThousandeyesFeatureVirtualApplicationArgs extends com.pu
 
         /**
          * @param accountGroupToken Set the Account Group Token
+         *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `accountGroupTokenWo` together with `accountGroupTokenWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -394,6 +436,8 @@ public final class OtherThousandeyesFeatureVirtualApplicationArgs extends com.pu
 
         /**
          * @param accountGroupToken Set the Account Group Token
+         *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `accountGroupTokenWo` together with `accountGroupTokenWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -421,6 +465,52 @@ public final class OtherThousandeyesFeatureVirtualApplicationArgs extends com.pu
          */
         public Builder accountGroupTokenVariable(String accountGroupTokenVariable) {
             return accountGroupTokenVariable(Output.of(accountGroupTokenVariable));
+        }
+
+        /**
+         * @param accountGroupTokenWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set the Account Group Token
+         *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountGroupTokenWo(@Nullable Output<String> accountGroupTokenWo) {
+            $.accountGroupTokenWo = accountGroupTokenWo;
+            return this;
+        }
+
+        /**
+         * @param accountGroupTokenWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set the Account Group Token
+         *   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountGroupTokenWo(String accountGroupTokenWo) {
+            return accountGroupTokenWo(Output.of(accountGroupTokenWo));
+        }
+
+        /**
+         * @param accountGroupTokenWoVersion Rotation trigger for `accountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountGroupTokenWoVersion(@Nullable Output<Integer> accountGroupTokenWoVersion) {
+            $.accountGroupTokenWoVersion = accountGroupTokenWoVersion;
+            return this;
+        }
+
+        /**
+         * @param accountGroupTokenWoVersion Rotation trigger for `accountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountGroupTokenWoVersion(Integer accountGroupTokenWoVersion) {
+            return accountGroupTokenWoVersion(Output.of(accountGroupTokenWoVersion));
         }
 
         /**

@@ -271,6 +271,14 @@ export interface GetTransportWanVpnInterfaceGreFeatureResult {
      */
     readonly preSharedSecretVariable: string;
     /**
+     * Use preshared key to authenticate IKE peer
+     */
+    readonly preSharedSecretWo: string;
+    /**
+     * Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly preSharedSecretWoVersion: number;
+    /**
      * Administrative state
      */
     readonly shutdown: boolean;

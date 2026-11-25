@@ -556,6 +556,8 @@ public final class SseZscalerFeatureInterfaceArgs extends com.pulumi.resources.R
 
     /**
      * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="preSharedSecret")
@@ -563,6 +565,8 @@ public final class SseZscalerFeatureInterfaceArgs extends com.pulumi.resources.R
 
     /**
      * @return Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> preSharedSecret() {
@@ -582,6 +586,40 @@ public final class SseZscalerFeatureInterfaceArgs extends com.pulumi.resources.R
      */
     public Optional<Output<String>> preSharedSecretVariable() {
         return Optional.ofNullable(this.preSharedSecretVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     * 
+     */
+    @Import(name="preSharedSecretWo")
+    private @Nullable Output<String> preSharedSecretWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Use preshared key to authenticate IKE peer
+     *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> preSharedSecretWo() {
+        return Optional.ofNullable(this.preSharedSecretWo);
+    }
+
+    /**
+     * Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="preSharedSecretWoVersion")
+    private @Nullable Output<Integer> preSharedSecretWoVersion;
+
+    /**
+     * @return Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> preSharedSecretWoVersion() {
+        return Optional.ofNullable(this.preSharedSecretWoVersion);
     }
 
     /**
@@ -906,6 +944,8 @@ public final class SseZscalerFeatureInterfaceArgs extends com.pulumi.resources.R
         this.preSharedKeyDynamic = $.preSharedKeyDynamic;
         this.preSharedSecret = $.preSharedSecret;
         this.preSharedSecretVariable = $.preSharedSecretVariable;
+        this.preSharedSecretWo = $.preSharedSecretWo;
+        this.preSharedSecretWoVersion = $.preSharedSecretWoVersion;
         this.shutdown = $.shutdown;
         this.tcpMssAdjust = $.tcpMssAdjust;
         this.tcpMssAdjustVariable = $.tcpMssAdjustVariable;
@@ -1681,6 +1721,8 @@ public final class SseZscalerFeatureInterfaceArgs extends com.pulumi.resources.R
 
         /**
          * @param preSharedSecret Use preshared key to authenticate IKE peer
+         *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1692,6 +1734,8 @@ public final class SseZscalerFeatureInterfaceArgs extends com.pulumi.resources.R
 
         /**
          * @param preSharedSecret Use preshared key to authenticate IKE peer
+         *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1719,6 +1763,52 @@ public final class SseZscalerFeatureInterfaceArgs extends com.pulumi.resources.R
          */
         public Builder preSharedSecretVariable(String preSharedSecretVariable) {
             return preSharedSecretVariable(Output.of(preSharedSecretVariable));
+        }
+
+        /**
+         * @param preSharedSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Use preshared key to authenticate IKE peer
+         *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preSharedSecretWo(@Nullable Output<String> preSharedSecretWo) {
+            $.preSharedSecretWo = preSharedSecretWo;
+            return this;
+        }
+
+        /**
+         * @param preSharedSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Use preshared key to authenticate IKE peer
+         *   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preSharedSecretWo(String preSharedSecretWo) {
+            return preSharedSecretWo(Output.of(preSharedSecretWo));
+        }
+
+        /**
+         * @param preSharedSecretWoVersion Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preSharedSecretWoVersion(@Nullable Output<Integer> preSharedSecretWoVersion) {
+            $.preSharedSecretWoVersion = preSharedSecretWoVersion;
+            return this;
+        }
+
+        /**
+         * @param preSharedSecretWoVersion Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preSharedSecretWoVersion(Integer preSharedSecretWoVersion) {
+            return preSharedSecretWoVersion(Output.of(preSharedSecretWoVersion));
         }
 
         /**

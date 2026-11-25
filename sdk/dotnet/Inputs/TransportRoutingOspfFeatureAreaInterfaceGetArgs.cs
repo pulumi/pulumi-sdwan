@@ -94,11 +94,23 @@ namespace Pulumi.Sdwan.Inputs
         [Input("lsaRetransmitIntervalVariable")]
         public Input<string>? LsaRetransmitIntervalVariable { get; set; }
 
+        [Input("messageDigestKey")]
+        private Input<string>? _messageDigestKey;
+
         /// <summary>
         /// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `MessageDigestKey`, `MessageDigestKeyVariable` and `MessageDigestKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `MessageDigestKeyWo` together with `MessageDigestKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("messageDigestKey")]
-        public Input<string>? MessageDigestKey { get; set; }
+        public Input<string>? MessageDigestKey
+        {
+            get => _messageDigestKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _messageDigestKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Set MD5 message digest key
@@ -118,6 +130,30 @@ namespace Pulumi.Sdwan.Inputs
         /// </summary>
         [Input("messageDigestKeyVariable")]
         public Input<string>? MessageDigestKeyVariable { get; set; }
+
+        [Input("messageDigestKeyWo")]
+        private Input<string>? _messageDigestKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `MessageDigestKey`, `MessageDigestKeyVariable` and `MessageDigestKeyWo` can be set.
+        /// </summary>
+        public Input<string>? MessageDigestKeyWo
+        {
+            get => _messageDigestKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _messageDigestKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `MessageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("messageDigestKeyWoVersion")]
+        public Input<int>? MessageDigestKeyWoVersion { get; set; }
 
         /// <summary>
         /// Set interface name

@@ -66,6 +66,8 @@ public final class OtherTrustsecFeatureState extends com.pulumi.resources.Resour
 
     /**
      * Set the password for the device
+     *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="devicePassword")
@@ -73,6 +75,8 @@ public final class OtherTrustsecFeatureState extends com.pulumi.resources.Resour
 
     /**
      * @return Set the password for the device
+     *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> devicePassword() {
@@ -92,6 +96,40 @@ public final class OtherTrustsecFeatureState extends com.pulumi.resources.Resour
      */
     public Optional<Output<String>> devicePasswordVariable() {
         return Optional.ofNullable(this.devicePasswordVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the password for the device
+     *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+     * 
+     */
+    @Import(name="devicePasswordWo")
+    private @Nullable Output<String> devicePasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the password for the device
+     *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> devicePasswordWo() {
+        return Optional.ofNullable(this.devicePasswordWo);
+    }
+
+    /**
+     * Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="devicePasswordWoVersion")
+    private @Nullable Output<Integer> devicePasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> devicePasswordWoVersion() {
+        return Optional.ofNullable(this.devicePasswordWoVersion);
     }
 
     /**
@@ -324,6 +362,8 @@ public final class OtherTrustsecFeatureState extends com.pulumi.resources.Resour
 
     /**
      * Configure SXP default password
+     *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="sxpDefaultPassword")
@@ -331,6 +371,8 @@ public final class OtherTrustsecFeatureState extends com.pulumi.resources.Resour
 
     /**
      * @return Configure SXP default password
+     *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> sxpDefaultPassword() {
@@ -350,6 +392,40 @@ public final class OtherTrustsecFeatureState extends com.pulumi.resources.Resour
      */
     public Optional<Output<String>> sxpDefaultPasswordVariable() {
         return Optional.ofNullable(this.sxpDefaultPasswordVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Configure SXP default password
+     *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+     * 
+     */
+    @Import(name="sxpDefaultPasswordWo")
+    private @Nullable Output<String> sxpDefaultPasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Configure SXP default password
+     *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> sxpDefaultPasswordWo() {
+        return Optional.ofNullable(this.sxpDefaultPasswordWo);
+    }
+
+    /**
+     * Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="sxpDefaultPasswordWoVersion")
+    private @Nullable Output<Integer> sxpDefaultPasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> sxpDefaultPasswordWoVersion() {
+        return Optional.ofNullable(this.sxpDefaultPasswordWoVersion);
     }
 
     /**
@@ -535,6 +611,8 @@ public final class OtherTrustsecFeatureState extends com.pulumi.resources.Resour
         this.deviceIdVariable = $.deviceIdVariable;
         this.devicePassword = $.devicePassword;
         this.devicePasswordVariable = $.devicePasswordVariable;
+        this.devicePasswordWo = $.devicePasswordWo;
+        this.devicePasswordWoVersion = $.devicePasswordWoVersion;
         this.deviceSgt = $.deviceSgt;
         this.deviceSgtVariable = $.deviceSgtVariable;
         this.enableEnforcement = $.enableEnforcement;
@@ -551,6 +629,8 @@ public final class OtherTrustsecFeatureState extends com.pulumi.resources.Resour
         this.sxpConnections = $.sxpConnections;
         this.sxpDefaultPassword = $.sxpDefaultPassword;
         this.sxpDefaultPasswordVariable = $.sxpDefaultPasswordVariable;
+        this.sxpDefaultPasswordWo = $.sxpDefaultPasswordWo;
+        this.sxpDefaultPasswordWoVersion = $.sxpDefaultPasswordWoVersion;
         this.sxpKeyChain = $.sxpKeyChain;
         this.sxpKeyChainVariable = $.sxpKeyChainVariable;
         this.sxpLogBindingChanges = $.sxpLogBindingChanges;
@@ -647,6 +727,8 @@ public final class OtherTrustsecFeatureState extends com.pulumi.resources.Resour
 
         /**
          * @param devicePassword Set the password for the device
+         *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -658,6 +740,8 @@ public final class OtherTrustsecFeatureState extends com.pulumi.resources.Resour
 
         /**
          * @param devicePassword Set the password for the device
+         *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -685,6 +769,52 @@ public final class OtherTrustsecFeatureState extends com.pulumi.resources.Resour
          */
         public Builder devicePasswordVariable(String devicePasswordVariable) {
             return devicePasswordVariable(Output.of(devicePasswordVariable));
+        }
+
+        /**
+         * @param devicePasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set the password for the device
+         *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder devicePasswordWo(@Nullable Output<String> devicePasswordWo) {
+            $.devicePasswordWo = devicePasswordWo;
+            return this;
+        }
+
+        /**
+         * @param devicePasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set the password for the device
+         *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder devicePasswordWo(String devicePasswordWo) {
+            return devicePasswordWo(Output.of(devicePasswordWo));
+        }
+
+        /**
+         * @param devicePasswordWoVersion Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder devicePasswordWoVersion(@Nullable Output<Integer> devicePasswordWoVersion) {
+            $.devicePasswordWoVersion = devicePasswordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param devicePasswordWoVersion Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder devicePasswordWoVersion(Integer devicePasswordWoVersion) {
+            return devicePasswordWoVersion(Output.of(devicePasswordWoVersion));
         }
 
         /**
@@ -1011,6 +1141,8 @@ public final class OtherTrustsecFeatureState extends com.pulumi.resources.Resour
 
         /**
          * @param sxpDefaultPassword Configure SXP default password
+         *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1022,6 +1154,8 @@ public final class OtherTrustsecFeatureState extends com.pulumi.resources.Resour
 
         /**
          * @param sxpDefaultPassword Configure SXP default password
+         *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1049,6 +1183,52 @@ public final class OtherTrustsecFeatureState extends com.pulumi.resources.Resour
          */
         public Builder sxpDefaultPasswordVariable(String sxpDefaultPasswordVariable) {
             return sxpDefaultPasswordVariable(Output.of(sxpDefaultPasswordVariable));
+        }
+
+        /**
+         * @param sxpDefaultPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Configure SXP default password
+         *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sxpDefaultPasswordWo(@Nullable Output<String> sxpDefaultPasswordWo) {
+            $.sxpDefaultPasswordWo = sxpDefaultPasswordWo;
+            return this;
+        }
+
+        /**
+         * @param sxpDefaultPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Configure SXP default password
+         *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sxpDefaultPasswordWo(String sxpDefaultPasswordWo) {
+            return sxpDefaultPasswordWo(Output.of(sxpDefaultPasswordWo));
+        }
+
+        /**
+         * @param sxpDefaultPasswordWoVersion Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sxpDefaultPasswordWoVersion(@Nullable Output<Integer> sxpDefaultPasswordWoVersion) {
+            $.sxpDefaultPasswordWoVersion = sxpDefaultPasswordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param sxpDefaultPasswordWoVersion Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sxpDefaultPasswordWoVersion(Integer sxpDefaultPasswordWoVersion) {
+            return sxpDefaultPasswordWoVersion(Output.of(sxpDefaultPasswordWoVersion));
         }
 
         /**

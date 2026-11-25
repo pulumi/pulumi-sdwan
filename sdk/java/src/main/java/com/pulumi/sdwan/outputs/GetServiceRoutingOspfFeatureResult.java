@@ -131,7 +131,16 @@ public final class GetServiceRoutingOspfFeatureResult {
      * 
      */
     private String rfc1583CompatibleVariable;
+    /**
+     * @return Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+     * 
+     */
     private String routePolicyId;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String routePolicyIdVariable;
     /**
      * @return Set OSPF router ID to override system IP address
      * 
@@ -345,8 +354,19 @@ public final class GetServiceRoutingOspfFeatureResult {
     public String rfc1583CompatibleVariable() {
         return this.rfc1583CompatibleVariable;
     }
+    /**
+     * @return Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+     * 
+     */
     public String routePolicyId() {
         return this.routePolicyId;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String routePolicyIdVariable() {
+        return this.routePolicyIdVariable;
     }
     /**
      * @return Set OSPF router ID to override system IP address
@@ -452,6 +472,7 @@ public final class GetServiceRoutingOspfFeatureResult {
         private Boolean rfc1583Compatible;
         private String rfc1583CompatibleVariable;
         private String routePolicyId;
+        private String routePolicyIdVariable;
         private String routerId;
         private String routerIdVariable;
         private List<GetServiceRoutingOspfFeatureRouterLsa> routerLsas;
@@ -489,6 +510,7 @@ public final class GetServiceRoutingOspfFeatureResult {
     	      this.rfc1583Compatible = defaults.rfc1583Compatible;
     	      this.rfc1583CompatibleVariable = defaults.rfc1583CompatibleVariable;
     	      this.routePolicyId = defaults.routePolicyId;
+    	      this.routePolicyIdVariable = defaults.routePolicyIdVariable;
     	      this.routerId = defaults.routerId;
     	      this.routerIdVariable = defaults.routerIdVariable;
     	      this.routerLsas = defaults.routerLsas;
@@ -700,6 +722,14 @@ public final class GetServiceRoutingOspfFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder routePolicyIdVariable(String routePolicyIdVariable) {
+            if (routePolicyIdVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceRoutingOspfFeatureResult", "routePolicyIdVariable");
+            }
+            this.routePolicyIdVariable = routePolicyIdVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder routerId(String routerId) {
             if (routerId == null) {
               throw new MissingRequiredPropertyException("GetServiceRoutingOspfFeatureResult", "routerId");
@@ -808,6 +838,7 @@ public final class GetServiceRoutingOspfFeatureResult {
             _resultValue.rfc1583Compatible = rfc1583Compatible;
             _resultValue.rfc1583CompatibleVariable = rfc1583CompatibleVariable;
             _resultValue.routePolicyId = routePolicyId;
+            _resultValue.routePolicyIdVariable = routePolicyIdVariable;
             _resultValue.routerId = routerId;
             _resultValue.routerIdVariable = routerIdVariable;
             _resultValue.routerLsas = routerLsas;

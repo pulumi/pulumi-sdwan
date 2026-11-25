@@ -30,7 +30,7 @@ __all__ = [
     'ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass',
     'ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry',
     'AsPathListPolicyObjectEntry',
-    'AttachFeatureDeviceTemplateDevice',
+    'AttachFeatureDeviceTemplateDevices',
     'BlockUrlListPolicyObjectEntry',
     'CedgeAaaFeatureTemplateAccountingRule',
     'CedgeAaaFeatureTemplateAuthorizationRule',
@@ -160,8 +160,8 @@ __all__ = [
     'CiscoVpnInterfaceGreFeatureTemplateAccessList',
     'CiscoWirelessLanFeatureTemplateSsid',
     'ColorListPolicyObjectEntry',
-    'ConfigurationGroupDevice',
-    'ConfigurationGroupDeviceVariable',
+    'ConfigurationGroupDevicesDevices',
+    'ConfigurationGroupDevicesDevicesVariables',
     'ConfigurationGroupTopologyDevice',
     'ConfigurationGroupTopologyDeviceUnsupportedFeature',
     'CustomApplicationL3l4',
@@ -224,8 +224,8 @@ __all__ = [
     'OtherThousandeyesFeatureVirtualApplication',
     'OtherTrustsecFeatureSxpConnection',
     'OtherUcseFeatureInterface',
-    'PolicyGroupDevice',
-    'PolicyGroupDeviceVariable',
+    'PolicyGroupDevicesDevices',
+    'PolicyGroupDevicesDevicesVariables',
     'PolicyObjectAppProbeClassEntry',
     'PolicyObjectAppProbeClassEntryMap',
     'PolicyObjectApplicationListEntry',
@@ -246,6 +246,7 @@ __all__ = [
     'PolicyObjectSecurityGeolocationListEntry',
     'PolicyObjectSecurityIdentityListEntry',
     'PolicyObjectSecurityIpsSignatureEntry',
+    'PolicyObjectSecurityIpsSignatureSetEntry',
     'PolicyObjectSecurityLocalApplicationListEntry',
     'PolicyObjectSecurityLocalDomainListEntry',
     'PolicyObjectSecurityObjectGroupEntry',
@@ -405,6 +406,9 @@ __all__ = [
     'ServiceSwitchportFeatureStaticMacAddress',
     'ServiceTrackerGroupFeatureTrackerElement',
     'ServiceWirelessLanFeatureSsid',
+    'SigFeatureInterface',
+    'SigFeatureInterfacePair',
+    'SigFeatureTracker',
     'SiteListPolicyObjectEntry',
     'SseCiscoFeatureInterface',
     'SseCiscoFeatureInterfacePair',
@@ -732,8 +736,6 @@ __all__ = [
     'GetCiscoVpnInterfaceGreFeatureTemplateAccessListResult',
     'GetCiscoWirelessLanFeatureTemplateSsidResult',
     'GetColorListPolicyObjectEntryResult',
-    'GetConfigurationGroupDeviceResult',
-    'GetConfigurationGroupDeviceVariableResult',
     'GetConfigurationGroupTopologyDeviceResult',
     'GetConfigurationGroupTopologyDeviceUnsupportedFeatureResult',
     'GetCustomApplicationL3l4Result',
@@ -799,8 +801,6 @@ __all__ = [
     'GetOtherThousandeyesFeatureVirtualApplicationResult',
     'GetOtherTrustsecFeatureSxpConnectionResult',
     'GetOtherUcseFeatureInterfaceResult',
-    'GetPolicyGroupDeviceResult',
-    'GetPolicyGroupDeviceVariableResult',
     'GetPolicyObjectAppProbeClassEntryResult',
     'GetPolicyObjectAppProbeClassEntryMapResult',
     'GetPolicyObjectApplicationListEntryResult',
@@ -822,6 +822,7 @@ __all__ = [
     'GetPolicyObjectSecurityGeolocationListEntryResult',
     'GetPolicyObjectSecurityIdentityListEntryResult',
     'GetPolicyObjectSecurityIpsSignatureEntryResult',
+    'GetPolicyObjectSecurityIpsSignatureSetEntryResult',
     'GetPolicyObjectSecurityLocalApplicationListEntryResult',
     'GetPolicyObjectSecurityLocalDomainListEntryResult',
     'GetPolicyObjectSecurityObjectGroupEntryResult',
@@ -981,6 +982,9 @@ __all__ = [
     'GetServiceSwitchportFeatureStaticMacAddressResult',
     'GetServiceTrackerGroupFeatureTrackerElementResult',
     'GetServiceWirelessLanFeatureSsidResult',
+    'GetSigFeatureInterfaceResult',
+    'GetSigFeatureInterfacePairResult',
+    'GetSigFeatureTrackerResult',
     'GetSiteListPolicyObjectEntryResult',
     'GetSseCiscoFeatureInterfaceResult',
     'GetSseCiscoFeatureInterfacePairResult',
@@ -3244,24 +3248,13 @@ class AsPathListPolicyObjectEntry(dict):
 
 
 @pulumi.output_type
-class AttachFeatureDeviceTemplateDevice(dict):
+class AttachFeatureDeviceTemplateDevices(dict):
     def __init__(__self__, *,
-                 id: _builtins.str,
                  variables: Mapping[str, _builtins.str]):
         """
-        :param _builtins.str id: Device ID
         :param Mapping[str, _builtins.str] variables: Device variables
         """
-        pulumi.set(__self__, "id", id)
         pulumi.set(__self__, "variables", variables)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        Device ID
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -22212,7 +22205,7 @@ class ColorListPolicyObjectEntry(dict):
 
 
 @pulumi.output_type
-class ConfigurationGroupDevice(dict):
+class ConfigurationGroupDevicesDevices(dict):
     @staticmethod
     def __key_warning(key: str):
         suggest = None
@@ -22220,32 +22213,28 @@ class ConfigurationGroupDevice(dict):
             suggest = "topology_label"
 
         if suggest:
-            pulumi.log.warn(f"Key '{key}' not found in ConfigurationGroupDevice. Access the value via the '{suggest}' property getter instead.")
+            pulumi.log.warn(f"Key '{key}' not found in ConfigurationGroupDevicesDevices. Access the value via the '{suggest}' property getter instead.")
 
     def __getitem__(self, key: str) -> Any:
-        ConfigurationGroupDevice.__key_warning(key)
+        ConfigurationGroupDevicesDevices.__key_warning(key)
         return super().__getitem__(key)
 
     def get(self, key: str, default = None) -> Any:
-        ConfigurationGroupDevice.__key_warning(key)
+        ConfigurationGroupDevicesDevices.__key_warning(key)
         return super().get(key, default)
 
     def __init__(__self__, *,
                  deploy: Optional[_builtins.bool] = None,
-                 id: Optional[_builtins.str] = None,
                  topology_label: Optional[_builtins.str] = None,
-                 variables: Optional[Sequence['outputs.ConfigurationGroupDeviceVariable']] = None):
+                 variables: Optional[Mapping[str, 'outputs.ConfigurationGroupDevicesDevicesVariables']] = None):
         """
         :param _builtins.bool deploy: Deploy to device if enabled.
                  - Default value: `false`
-        :param _builtins.str id: Device ID
         :param _builtins.str topology_label: Topology label for dual device configuration group (supported from version 20.18.1 onwards)
-        :param Sequence['ConfigurationGroupDeviceVariableArgs'] variables: List of variables
+        :param Mapping[str, 'ConfigurationGroupDevicesDevicesVariablesArgs'] variables: Device variables, keyed by variable name (for example `host_name`). Terraform matches each variable by its name, so a changed value shows as a change of that variable only.
         """
         if deploy is not None:
             pulumi.set(__self__, "deploy", deploy)
-        if id is not None:
-            pulumi.set(__self__, "id", id)
         if topology_label is not None:
             pulumi.set(__self__, "topology_label", topology_label)
         if variables is not None:
@@ -22261,14 +22250,6 @@ class ConfigurationGroupDevice(dict):
         return pulumi.get(self, "deploy")
 
     @_builtins.property
-    @pulumi.getter
-    def id(self) -> Optional[_builtins.str]:
-        """
-        Device ID
-        """
-        return pulumi.get(self, "id")
-
-    @_builtins.property
     @pulumi.getter(name="topologyLabel")
     def topology_label(self) -> Optional[_builtins.str]:
         """
@@ -22278,15 +22259,15 @@ class ConfigurationGroupDevice(dict):
 
     @_builtins.property
     @pulumi.getter
-    def variables(self) -> Optional[Sequence['outputs.ConfigurationGroupDeviceVariable']]:
+    def variables(self) -> Optional[Mapping[str, 'outputs.ConfigurationGroupDevicesDevicesVariables']]:
         """
-        List of variables
+        Device variables, keyed by variable name (for example `host_name`). Terraform matches each variable by its name, so a changed value shows as a change of that variable only.
         """
         return pulumi.get(self, "variables")
 
 
 @pulumi.output_type
-class ConfigurationGroupDeviceVariable(dict):
+class ConfigurationGroupDevicesDevicesVariables(dict):
     @staticmethod
     def __key_warning(key: str):
         suggest = None
@@ -22294,38 +22275,27 @@ class ConfigurationGroupDeviceVariable(dict):
             suggest = "list_values"
 
         if suggest:
-            pulumi.log.warn(f"Key '{key}' not found in ConfigurationGroupDeviceVariable. Access the value via the '{suggest}' property getter instead.")
+            pulumi.log.warn(f"Key '{key}' not found in ConfigurationGroupDevicesDevicesVariables. Access the value via the '{suggest}' property getter instead.")
 
     def __getitem__(self, key: str) -> Any:
-        ConfigurationGroupDeviceVariable.__key_warning(key)
+        ConfigurationGroupDevicesDevicesVariables.__key_warning(key)
         return super().__getitem__(key)
 
     def get(self, key: str, default = None) -> Any:
-        ConfigurationGroupDeviceVariable.__key_warning(key)
+        ConfigurationGroupDevicesDevicesVariables.__key_warning(key)
         return super().get(key, default)
 
     def __init__(__self__, *,
-                 name: _builtins.str,
                  list_values: Optional[Sequence[_builtins.str]] = None,
                  value: Optional[_builtins.str] = None):
         """
-        :param _builtins.str name: Variable name
         :param Sequence[_builtins.str] list_values: Use this instead of `value` in case value is of type `List`.
         :param _builtins.str value: Variable value
         """
-        pulumi.set(__self__, "name", name)
         if list_values is not None:
             pulumi.set(__self__, "list_values", list_values)
         if value is not None:
             pulumi.set(__self__, "value", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def name(self) -> _builtins.str:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="listValues")
@@ -25112,7 +25082,7 @@ class ExtendedCommunityListPolicyObjectEntry(dict):
     def __init__(__self__, *,
                  community: _builtins.str):
         """
-        :param _builtins.str community: Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+        :param _builtins.str community: Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
         """
         pulumi.set(__self__, "community", community)
 
@@ -25120,7 +25090,7 @@ class ExtendedCommunityListPolicyObjectEntry(dict):
     @pulumi.getter
     def community(self) -> _builtins.str:
         """
-        Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+        Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
         """
         return pulumi.get(self, "community")
 
@@ -27995,6 +27965,10 @@ class OtherThousandeyesFeatureVirtualApplication(dict):
             suggest = "account_group_token"
         elif key == "accountGroupTokenVariable":
             suggest = "account_group_token_variable"
+        elif key == "accountGroupTokenWo":
+            suggest = "account_group_token_wo"
+        elif key == "accountGroupTokenWoVersion":
+            suggest = "account_group_token_wo_version"
         elif key == "agentDefaultGateway":
             suggest = "agent_default_gateway"
         elif key == "agentDefaultGatewayVariable":
@@ -28044,6 +28018,8 @@ class OtherThousandeyesFeatureVirtualApplication(dict):
     def __init__(__self__, *,
                  account_group_token: Optional[_builtins.str] = None,
                  account_group_token_variable: Optional[_builtins.str] = None,
+                 account_group_token_wo: Optional[_builtins.str] = None,
+                 account_group_token_wo_version: Optional[_builtins.int] = None,
                  agent_default_gateway: Optional[_builtins.str] = None,
                  agent_default_gateway_variable: Optional[_builtins.str] = None,
                  hostname: Optional[_builtins.str] = None,
@@ -28065,7 +28041,13 @@ class OtherThousandeyesFeatureVirtualApplication(dict):
                  vpn_variable: Optional[_builtins.str] = None):
         """
         :param _builtins.str account_group_token: Set the Account Group Token
+                 - Only one of `account_group_token`, `account_group_token_variable` and `account_group_token_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `account_group_token_wo` together with `account_group_token_wo_version`, which keeps it out of state.
         :param _builtins.str account_group_token_variable: Variable name
+        :param _builtins.str account_group_token_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set the Account Group Token
+                 - Only one of `account_group_token`, `account_group_token_variable` and `account_group_token_wo` can be set.
+        :param _builtins.int account_group_token_wo_version: Rotation trigger for `account_group_token_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str agent_default_gateway: Set the Agent default gateway
         :param _builtins.str agent_default_gateway_variable: Variable name
         :param _builtins.str hostname: Set the host name
@@ -28093,6 +28075,10 @@ class OtherThousandeyesFeatureVirtualApplication(dict):
             pulumi.set(__self__, "account_group_token", account_group_token)
         if account_group_token_variable is not None:
             pulumi.set(__self__, "account_group_token_variable", account_group_token_variable)
+        if account_group_token_wo is not None:
+            pulumi.set(__self__, "account_group_token_wo", account_group_token_wo)
+        if account_group_token_wo_version is not None:
+            pulumi.set(__self__, "account_group_token_wo_version", account_group_token_wo_version)
         if agent_default_gateway is not None:
             pulumi.set(__self__, "agent_default_gateway", agent_default_gateway)
         if agent_default_gateway_variable is not None:
@@ -28137,6 +28123,8 @@ class OtherThousandeyesFeatureVirtualApplication(dict):
     def account_group_token(self) -> Optional[_builtins.str]:
         """
         Set the Account Group Token
+          - Only one of `account_group_token`, `account_group_token_variable` and `account_group_token_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `account_group_token_wo` together with `account_group_token_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "account_group_token")
 
@@ -28147,6 +28135,24 @@ class OtherThousandeyesFeatureVirtualApplication(dict):
         Variable name
         """
         return pulumi.get(self, "account_group_token_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="accountGroupTokenWo")
+    def account_group_token_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set the Account Group Token
+          - Only one of `account_group_token`, `account_group_token_variable` and `account_group_token_wo` can be set.
+        """
+        return pulumi.get(self, "account_group_token_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="accountGroupTokenWoVersion")
+    def account_group_token_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `account_group_token_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "account_group_token_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="agentDefaultGateway")
@@ -28639,21 +28645,17 @@ class OtherUcseFeatureInterface(dict):
 
 
 @pulumi.output_type
-class PolicyGroupDevice(dict):
+class PolicyGroupDevicesDevices(dict):
     def __init__(__self__, *,
                  deploy: Optional[_builtins.bool] = None,
-                 id: Optional[_builtins.str] = None,
-                 variables: Optional[Sequence['outputs.PolicyGroupDeviceVariable']] = None):
+                 variables: Optional[Mapping[str, 'outputs.PolicyGroupDevicesDevicesVariables']] = None):
         """
         :param _builtins.bool deploy: Deploy to device if enabled.
                  - Default value: `false`
-        :param _builtins.str id: Device ID
-        :param Sequence['PolicyGroupDeviceVariableArgs'] variables: List of variables
+        :param Mapping[str, 'PolicyGroupDevicesDevicesVariablesArgs'] variables: Device variables, keyed by variable name (for example `host_name`). Terraform matches each variable by its name, so a changed value shows as a change of that variable only.
         """
         if deploy is not None:
             pulumi.set(__self__, "deploy", deploy)
-        if id is not None:
-            pulumi.set(__self__, "id", id)
         if variables is not None:
             pulumi.set(__self__, "variables", variables)
 
@@ -28668,23 +28670,15 @@ class PolicyGroupDevice(dict):
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[_builtins.str]:
+    def variables(self) -> Optional[Mapping[str, 'outputs.PolicyGroupDevicesDevicesVariables']]:
         """
-        Device ID
-        """
-        return pulumi.get(self, "id")
-
-    @_builtins.property
-    @pulumi.getter
-    def variables(self) -> Optional[Sequence['outputs.PolicyGroupDeviceVariable']]:
-        """
-        List of variables
+        Device variables, keyed by variable name (for example `host_name`). Terraform matches each variable by its name, so a changed value shows as a change of that variable only.
         """
         return pulumi.get(self, "variables")
 
 
 @pulumi.output_type
-class PolicyGroupDeviceVariable(dict):
+class PolicyGroupDevicesDevicesVariables(dict):
     @staticmethod
     def __key_warning(key: str):
         suggest = None
@@ -28692,38 +28686,27 @@ class PolicyGroupDeviceVariable(dict):
             suggest = "list_values"
 
         if suggest:
-            pulumi.log.warn(f"Key '{key}' not found in PolicyGroupDeviceVariable. Access the value via the '{suggest}' property getter instead.")
+            pulumi.log.warn(f"Key '{key}' not found in PolicyGroupDevicesDevicesVariables. Access the value via the '{suggest}' property getter instead.")
 
     def __getitem__(self, key: str) -> Any:
-        PolicyGroupDeviceVariable.__key_warning(key)
+        PolicyGroupDevicesDevicesVariables.__key_warning(key)
         return super().__getitem__(key)
 
     def get(self, key: str, default = None) -> Any:
-        PolicyGroupDeviceVariable.__key_warning(key)
+        PolicyGroupDevicesDevicesVariables.__key_warning(key)
         return super().get(key, default)
 
     def __init__(__self__, *,
-                 name: _builtins.str,
                  list_values: Optional[Sequence[_builtins.str]] = None,
                  value: Optional[_builtins.str] = None):
         """
-        :param _builtins.str name: Variable name
         :param Sequence[_builtins.str] list_values: Use this instead of `value` in case value is of type `List`.
         :param _builtins.str value: Variable value
         """
-        pulumi.set(__self__, "name", name)
         if list_values is not None:
             pulumi.set(__self__, "list_values", list_values)
         if value is not None:
             pulumi.set(__self__, "value", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def name(self) -> _builtins.str:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="listValues")
@@ -29673,6 +29656,42 @@ class PolicyObjectSecurityIpsSignatureEntry(dict):
     @pulumi.getter(name="signatureId")
     def signature_id(self) -> Optional[_builtins.str]:
         return pulumi.get(self, "signature_id")
+
+
+@pulumi.output_type
+class PolicyObjectSecurityIpsSignatureSetEntry(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "baseSignature":
+            suggest = "base_signature"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in PolicyObjectSecurityIpsSignatureSetEntry. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        PolicyObjectSecurityIpsSignatureSetEntry.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        PolicyObjectSecurityIpsSignatureSetEntry.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 base_signature: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str base_signature: - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+        """
+        if base_signature is not None:
+            pulumi.set(__self__, "base_signature", base_signature)
+
+    @_builtins.property
+    @pulumi.getter(name="baseSignature")
+    def base_signature(self) -> Optional[_builtins.str]:
+        """
+        - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+        """
+        return pulumi.get(self, "base_signature")
 
 
 @pulumi.output_type
@@ -40945,6 +40964,10 @@ class ServiceMulticastFeatureMsdpGroupPeer(dict):
             suggest = "peer_authentication_password"
         elif key == "peerAuthenticationPasswordVariable":
             suggest = "peer_authentication_password_variable"
+        elif key == "peerAuthenticationPasswordWo":
+            suggest = "peer_authentication_password_wo"
+        elif key == "peerAuthenticationPasswordWoVersion":
+            suggest = "peer_authentication_password_wo_version"
         elif key == "peerIp":
             suggest = "peer_ip"
         elif key == "peerIpVariable":
@@ -40981,6 +41004,8 @@ class ServiceMulticastFeatureMsdpGroupPeer(dict):
                  keepalive_interval_variable: Optional[_builtins.str] = None,
                  peer_authentication_password: Optional[_builtins.str] = None,
                  peer_authentication_password_variable: Optional[_builtins.str] = None,
+                 peer_authentication_password_wo: Optional[_builtins.str] = None,
+                 peer_authentication_password_wo_version: Optional[_builtins.int] = None,
                  peer_ip: Optional[_builtins.str] = None,
                  peer_ip_variable: Optional[_builtins.str] = None,
                  prefix_list_id: Optional[_builtins.str] = None,
@@ -40999,7 +41024,13 @@ class ServiceMulticastFeatureMsdpGroupPeer(dict):
                  - Range: `1`-`60`
         :param _builtins.str keepalive_interval_variable: Variable name
         :param _builtins.str peer_authentication_password: Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `peer_authentication_password`, `peer_authentication_password_variable` and `peer_authentication_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `peer_authentication_password_wo` together with `peer_authentication_password_wo_version`, which keeps it out of state.
         :param _builtins.str peer_authentication_password_variable: Variable name
+        :param _builtins.str peer_authentication_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `peer_authentication_password`, `peer_authentication_password_variable` and `peer_authentication_password_wo` can be set.
+        :param _builtins.int peer_authentication_password_wo_version: Rotation trigger for `peer_authentication_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str peer_ip: Set MSDP peer ip
         :param _builtins.str peer_ip_variable: Variable name
         :param _builtins.int remote_as: Set MSDP peer ip remote autonomous system number
@@ -41027,6 +41058,10 @@ class ServiceMulticastFeatureMsdpGroupPeer(dict):
             pulumi.set(__self__, "peer_authentication_password", peer_authentication_password)
         if peer_authentication_password_variable is not None:
             pulumi.set(__self__, "peer_authentication_password_variable", peer_authentication_password_variable)
+        if peer_authentication_password_wo is not None:
+            pulumi.set(__self__, "peer_authentication_password_wo", peer_authentication_password_wo)
+        if peer_authentication_password_wo_version is not None:
+            pulumi.set(__self__, "peer_authentication_password_wo_version", peer_authentication_password_wo_version)
         if peer_ip is not None:
             pulumi.set(__self__, "peer_ip", peer_ip)
         if peer_ip_variable is not None:
@@ -41105,6 +41140,8 @@ class ServiceMulticastFeatureMsdpGroupPeer(dict):
     def peer_authentication_password(self) -> Optional[_builtins.str]:
         """
         Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `peer_authentication_password`, `peer_authentication_password_variable` and `peer_authentication_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `peer_authentication_password_wo` together with `peer_authentication_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "peer_authentication_password")
 
@@ -41115,6 +41152,24 @@ class ServiceMulticastFeatureMsdpGroupPeer(dict):
         Variable name
         """
         return pulumi.get(self, "peer_authentication_password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="peerAuthenticationPasswordWo")
+    def peer_authentication_password_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `peer_authentication_password`, `peer_authentication_password_variable` and `peer_authentication_password_wo` can be set.
+        """
+        return pulumi.get(self, "peer_authentication_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="peerAuthenticationPasswordWoVersion")
+    def peer_authentication_password_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `peer_authentication_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "peer_authentication_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="peerIp")
@@ -42380,6 +42435,10 @@ class ServiceRoutingBgpFeatureIpv4Neighbor(dict):
             suggest = "next_hop_self_variable"
         elif key == "passwordVariable":
             suggest = "password_variable"
+        elif key == "passwordWo":
+            suggest = "password_wo"
+        elif key == "passwordWoVersion":
+            suggest = "password_wo_version"
         elif key == "remoteAs":
             suggest = "remote_as"
         elif key == "remoteAsVariable":
@@ -42436,6 +42495,8 @@ class ServiceRoutingBgpFeatureIpv4Neighbor(dict):
                  next_hop_self_variable: Optional[_builtins.str] = None,
                  password: Optional[_builtins.str] = None,
                  password_variable: Optional[_builtins.str] = None,
+                 password_wo: Optional[_builtins.str] = None,
+                 password_wo_version: Optional[_builtins.int] = None,
                  remote_as: Optional[_builtins.str] = None,
                  remote_as_variable: Optional[_builtins.str] = None,
                  send_community: Optional[_builtins.bool] = None,
@@ -42478,7 +42539,13 @@ class ServiceRoutingBgpFeatureIpv4Neighbor(dict):
                  - Default value: `false`
         :param _builtins.str next_hop_self_variable: Variable name
         :param _builtins.str password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         :param _builtins.str password_variable: Variable name
+        :param _builtins.str password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+        :param _builtins.int password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str remote_as: Set remote autonomous system number
         :param _builtins.str remote_as_variable: Variable name
         :param _builtins.bool send_community: Send community attribute
@@ -42538,6 +42605,10 @@ class ServiceRoutingBgpFeatureIpv4Neighbor(dict):
             pulumi.set(__self__, "password", password)
         if password_variable is not None:
             pulumi.set(__self__, "password_variable", password_variable)
+        if password_wo is not None:
+            pulumi.set(__self__, "password_wo", password_wo)
+        if password_wo_version is not None:
+            pulumi.set(__self__, "password_wo_version", password_wo_version)
         if remote_as is not None:
             pulumi.set(__self__, "remote_as", remote_as)
         if remote_as_variable is not None:
@@ -42729,6 +42800,8 @@ class ServiceRoutingBgpFeatureIpv4Neighbor(dict):
     def password(self) -> Optional[_builtins.str]:
         """
         Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "password")
 
@@ -42739,6 +42812,24 @@ class ServiceRoutingBgpFeatureIpv4Neighbor(dict):
         Variable name
         """
         return pulumi.get(self, "password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="remoteAs")
@@ -43508,6 +43599,10 @@ class ServiceRoutingBgpFeatureIpv6Neighbor(dict):
             suggest = "next_hop_self_variable"
         elif key == "passwordVariable":
             suggest = "password_variable"
+        elif key == "passwordWo":
+            suggest = "password_wo"
+        elif key == "passwordWoVersion":
+            suggest = "password_wo_version"
         elif key == "remoteAs":
             suggest = "remote_as"
         elif key == "remoteAsVariable":
@@ -43560,6 +43655,8 @@ class ServiceRoutingBgpFeatureIpv6Neighbor(dict):
                  next_hop_self_variable: Optional[_builtins.str] = None,
                  password: Optional[_builtins.str] = None,
                  password_variable: Optional[_builtins.str] = None,
+                 password_wo: Optional[_builtins.str] = None,
+                 password_wo_version: Optional[_builtins.int] = None,
                  remote_as: Optional[_builtins.str] = None,
                  remote_as_variable: Optional[_builtins.str] = None,
                  send_community: Optional[_builtins.bool] = None,
@@ -43600,7 +43697,13 @@ class ServiceRoutingBgpFeatureIpv6Neighbor(dict):
                  - Default value: `false`
         :param _builtins.str next_hop_self_variable: Variable name
         :param _builtins.str password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         :param _builtins.str password_variable: Variable name
+        :param _builtins.str password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+        :param _builtins.int password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str remote_as: Set remote autonomous system number
         :param _builtins.str remote_as_variable: Variable name
         :param _builtins.bool send_community: Send community attribute
@@ -43657,6 +43760,10 @@ class ServiceRoutingBgpFeatureIpv6Neighbor(dict):
             pulumi.set(__self__, "password", password)
         if password_variable is not None:
             pulumi.set(__self__, "password_variable", password_variable)
+        if password_wo is not None:
+            pulumi.set(__self__, "password_wo", password_wo)
+        if password_wo_version is not None:
+            pulumi.set(__self__, "password_wo_version", password_wo_version)
         if remote_as is not None:
             pulumi.set(__self__, "remote_as", remote_as)
         if remote_as_variable is not None:
@@ -43844,6 +43951,8 @@ class ServiceRoutingBgpFeatureIpv6Neighbor(dict):
     def password(self) -> Optional[_builtins.str]:
         """
         Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "password")
 
@@ -43854,6 +43963,24 @@ class ServiceRoutingBgpFeatureIpv6Neighbor(dict):
         Variable name
         """
         return pulumi.get(self, "password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="remoteAs")
@@ -44604,6 +44731,10 @@ class ServiceRoutingEigrpFeatureMd5Key(dict):
             suggest = "key_string"
         elif key == "keyStringVariable":
             suggest = "key_string_variable"
+        elif key == "keyStringWo":
+            suggest = "key_string_wo"
+        elif key == "keyStringWoVersion":
+            suggest = "key_string_wo_version"
 
         if suggest:
             pulumi.log.warn(f"Key '{key}' not found in ServiceRoutingEigrpFeatureMd5Key. Access the value via the '{suggest}' property getter instead.")
@@ -44620,13 +44751,21 @@ class ServiceRoutingEigrpFeatureMd5Key(dict):
                  key_id: Optional[_builtins.int] = None,
                  key_id_variable: Optional[_builtins.str] = None,
                  key_string: Optional[_builtins.str] = None,
-                 key_string_variable: Optional[_builtins.str] = None):
+                 key_string_variable: Optional[_builtins.str] = None,
+                 key_string_wo: Optional[_builtins.str] = None,
+                 key_string_wo_version: Optional[_builtins.int] = None):
         """
         :param _builtins.int key_id: Set MD5 key ID
                  - Range: `1`-`255`
         :param _builtins.str key_id_variable: Variable name
         :param _builtins.str key_string: Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `key_string`, `key_string_variable` and `key_string_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `key_string_wo` together with `key_string_wo_version`, which keeps it out of state.
         :param _builtins.str key_string_variable: Variable name
+        :param _builtins.str key_string_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `key_string`, `key_string_variable` and `key_string_wo` can be set.
+        :param _builtins.int key_string_wo_version: Rotation trigger for `key_string_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         """
         if key_id is not None:
             pulumi.set(__self__, "key_id", key_id)
@@ -44636,6 +44775,10 @@ class ServiceRoutingEigrpFeatureMd5Key(dict):
             pulumi.set(__self__, "key_string", key_string)
         if key_string_variable is not None:
             pulumi.set(__self__, "key_string_variable", key_string_variable)
+        if key_string_wo is not None:
+            pulumi.set(__self__, "key_string_wo", key_string_wo)
+        if key_string_wo_version is not None:
+            pulumi.set(__self__, "key_string_wo_version", key_string_wo_version)
 
     @_builtins.property
     @pulumi.getter(name="keyId")
@@ -44659,6 +44802,8 @@ class ServiceRoutingEigrpFeatureMd5Key(dict):
     def key_string(self) -> Optional[_builtins.str]:
         """
         Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `key_string`, `key_string_variable` and `key_string_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `key_string_wo` together with `key_string_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "key_string")
 
@@ -44669,6 +44814,24 @@ class ServiceRoutingEigrpFeatureMd5Key(dict):
         Variable name
         """
         return pulumi.get(self, "key_string_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="keyStringWo")
+    def key_string_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `key_string`, `key_string_variable` and `key_string_wo` can be set.
+        """
+        return pulumi.get(self, "key_string_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="keyStringWoVersion")
+    def key_string_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `key_string_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "key_string_wo_version")
 
 
 @pulumi.output_type
@@ -44966,6 +45129,10 @@ class ServiceRoutingOspfFeatureAreaInterface(dict):
             suggest = "message_digest_key_id_variable"
         elif key == "messageDigestKeyVariable":
             suggest = "message_digest_key_variable"
+        elif key == "messageDigestKeyWo":
+            suggest = "message_digest_key_wo"
+        elif key == "messageDigestKeyWoVersion":
+            suggest = "message_digest_key_wo_version"
         elif key == "nameVariable":
             suggest = "name_variable"
         elif key == "networkType":
@@ -45005,6 +45172,8 @@ class ServiceRoutingOspfFeatureAreaInterface(dict):
                  message_digest_key_id: Optional[_builtins.int] = None,
                  message_digest_key_id_variable: Optional[_builtins.str] = None,
                  message_digest_key_variable: Optional[_builtins.str] = None,
+                 message_digest_key_wo: Optional[_builtins.str] = None,
+                 message_digest_key_wo_version: Optional[_builtins.int] = None,
                  name: Optional[_builtins.str] = None,
                  name_variable: Optional[_builtins.str] = None,
                  network_type: Optional[_builtins.str] = None,
@@ -45035,10 +45204,16 @@ class ServiceRoutingOspfFeatureAreaInterface(dict):
                  - Default value: `5`
         :param _builtins.str lsa_retransmit_interval_variable: Variable name
         :param _builtins.str message_digest_key: Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `message_digest_key`, `message_digest_key_variable` and `message_digest_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `message_digest_key_wo` together with `message_digest_key_wo_version`, which keeps it out of state.
         :param _builtins.int message_digest_key_id: Set MD5 message digest key
                  - Range: `1`-`255`
         :param _builtins.str message_digest_key_id_variable: Variable name
         :param _builtins.str message_digest_key_variable: Variable name
+        :param _builtins.str message_digest_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `message_digest_key`, `message_digest_key_variable` and `message_digest_key_wo` can be set.
+        :param _builtins.int message_digest_key_wo_version: Rotation trigger for `message_digest_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str name: Set interface name
         :param _builtins.str name_variable: Variable name
         :param _builtins.str network_type: Set the OSPF network type
@@ -45081,6 +45256,10 @@ class ServiceRoutingOspfFeatureAreaInterface(dict):
             pulumi.set(__self__, "message_digest_key_id_variable", message_digest_key_id_variable)
         if message_digest_key_variable is not None:
             pulumi.set(__self__, "message_digest_key_variable", message_digest_key_variable)
+        if message_digest_key_wo is not None:
+            pulumi.set(__self__, "message_digest_key_wo", message_digest_key_wo)
+        if message_digest_key_wo_version is not None:
+            pulumi.set(__self__, "message_digest_key_wo_version", message_digest_key_wo_version)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if name_variable is not None:
@@ -45205,6 +45384,8 @@ class ServiceRoutingOspfFeatureAreaInterface(dict):
     def message_digest_key(self) -> Optional[_builtins.str]:
         """
         Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `message_digest_key`, `message_digest_key_variable` and `message_digest_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `message_digest_key_wo` together with `message_digest_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "message_digest_key")
 
@@ -45232,6 +45413,24 @@ class ServiceRoutingOspfFeatureAreaInterface(dict):
         Variable name
         """
         return pulumi.get(self, "message_digest_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="messageDigestKeyWo")
+    def message_digest_key_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `message_digest_key`, `message_digest_key_variable` and `message_digest_key_wo` can be set.
+        """
+        return pulumi.get(self, "message_digest_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="messageDigestKeyWoVersion")
+    def message_digest_key_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `message_digest_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "message_digest_key_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -45436,6 +45635,8 @@ class ServiceRoutingOspfFeatureRedistribute(dict):
             suggest = "protocol_variable"
         elif key == "routePolicyId":
             suggest = "route_policy_id"
+        elif key == "routePolicyIdVariable":
+            suggest = "route_policy_id_variable"
         elif key == "translateRibMetric":
             suggest = "translate_rib_metric"
         elif key == "translateRibMetricVariable":
@@ -45458,6 +45659,7 @@ class ServiceRoutingOspfFeatureRedistribute(dict):
                  protocol: Optional[_builtins.str] = None,
                  protocol_variable: Optional[_builtins.str] = None,
                  route_policy_id: Optional[_builtins.str] = None,
+                 route_policy_id_variable: Optional[_builtins.str] = None,
                  translate_rib_metric: Optional[_builtins.bool] = None,
                  translate_rib_metric_variable: Optional[_builtins.str] = None):
         """
@@ -45467,6 +45669,8 @@ class ServiceRoutingOspfFeatureRedistribute(dict):
         :param _builtins.str protocol: Set the protocol
                  - Choices: `static`, `connected`, `bgp`, `omp`, `nat`, `eigrp`
         :param _builtins.str protocol_variable: Variable name
+        :param _builtins.str route_policy_id: Set either route_policy_id or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        :param _builtins.str route_policy_id_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
         :param _builtins.bool translate_rib_metric: Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
                  - Default value: `false`
         :param _builtins.str translate_rib_metric_variable: Variable name, Attribute conditional on `protocol` equal to `omp`
@@ -45481,6 +45685,8 @@ class ServiceRoutingOspfFeatureRedistribute(dict):
             pulumi.set(__self__, "protocol_variable", protocol_variable)
         if route_policy_id is not None:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
+        if route_policy_id_variable is not None:
+            pulumi.set(__self__, "route_policy_id_variable", route_policy_id_variable)
         if translate_rib_metric is not None:
             pulumi.set(__self__, "translate_rib_metric", translate_rib_metric)
         if translate_rib_metric_variable is not None:
@@ -45523,7 +45729,18 @@ class ServiceRoutingOspfFeatureRedistribute(dict):
     @_builtins.property
     @pulumi.getter(name="routePolicyId")
     def route_policy_id(self) -> Optional[_builtins.str]:
+        """
+        Set either route_policy_id or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        """
         return pulumi.get(self, "route_policy_id")
+
+    @_builtins.property
+    @pulumi.getter(name="routePolicyIdVariable")
+    def route_policy_id_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        """
+        return pulumi.get(self, "route_policy_id_variable")
 
     @_builtins.property
     @pulumi.getter(name="translateRibMetric")
@@ -45764,6 +45981,10 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaInterface(dict):
             suggest = "authentication_key"
         elif key == "authenticationKeyVariable":
             suggest = "authentication_key_variable"
+        elif key == "authenticationKeyWo":
+            suggest = "authentication_key_wo"
+        elif key == "authenticationKeyWoVersion":
+            suggest = "authentication_key_wo_version"
         elif key == "authenticationSpi":
             suggest = "authentication_spi"
         elif key == "authenticationSpiVariable":
@@ -45809,6 +46030,8 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaInterface(dict):
     def __init__(__self__, *,
                  authentication_key: Optional[_builtins.str] = None,
                  authentication_key_variable: Optional[_builtins.str] = None,
+                 authentication_key_wo: Optional[_builtins.str] = None,
+                 authentication_key_wo_version: Optional[_builtins.int] = None,
                  authentication_spi: Optional[_builtins.int] = None,
                  authentication_spi_variable: Optional[_builtins.str] = None,
                  authentication_type: Optional[_builtins.str] = None,
@@ -45828,7 +46051,13 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaInterface(dict):
                  passive_interface_variable: Optional[_builtins.str] = None):
         """
         :param _builtins.str authentication_key: Set OSPF interface authentication IPSEC key
+                 - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_key_wo` together with `authentication_key_wo_version`, which keeps it out of state.
         :param _builtins.str authentication_key_variable: Variable name
+        :param _builtins.str authentication_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set OSPF interface authentication IPSEC key
+                 - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+        :param _builtins.int authentication_key_wo_version: Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int authentication_spi: Set OSPF interface authentication IPSec SPI, range 256..4294967295
                  - Range: `256`-`4294967295`
         :param _builtins.str authentication_spi_variable: Variable name
@@ -45862,6 +46091,10 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaInterface(dict):
             pulumi.set(__self__, "authentication_key", authentication_key)
         if authentication_key_variable is not None:
             pulumi.set(__self__, "authentication_key_variable", authentication_key_variable)
+        if authentication_key_wo is not None:
+            pulumi.set(__self__, "authentication_key_wo", authentication_key_wo)
+        if authentication_key_wo_version is not None:
+            pulumi.set(__self__, "authentication_key_wo_version", authentication_key_wo_version)
         if authentication_spi is not None:
             pulumi.set(__self__, "authentication_spi", authentication_spi)
         if authentication_spi_variable is not None:
@@ -45902,6 +46135,8 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaInterface(dict):
     def authentication_key(self) -> Optional[_builtins.str]:
         """
         Set OSPF interface authentication IPSEC key
+          - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_key_wo` together with `authentication_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_key")
 
@@ -45912,6 +46147,24 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaInterface(dict):
         Variable name
         """
         return pulumi.get(self, "authentication_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWo")
+    def authentication_key_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set OSPF interface authentication IPSEC key
+          - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWoVersion")
+    def authentication_key_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_key_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="authenticationSpi")
@@ -46206,6 +46459,8 @@ class ServiceRoutingOspfv3Ipv4FeatureRedistribute(dict):
             suggest = "protocol_variable"
         elif key == "routePolicyId":
             suggest = "route_policy_id"
+        elif key == "routePolicyIdVariable":
+            suggest = "route_policy_id_variable"
         elif key == "translateRibMetric":
             suggest = "translate_rib_metric"
         elif key == "translateRibMetricVariable":
@@ -46228,6 +46483,7 @@ class ServiceRoutingOspfv3Ipv4FeatureRedistribute(dict):
                  protocol: Optional[_builtins.str] = None,
                  protocol_variable: Optional[_builtins.str] = None,
                  route_policy_id: Optional[_builtins.str] = None,
+                 route_policy_id_variable: Optional[_builtins.str] = None,
                  translate_rib_metric: Optional[_builtins.bool] = None,
                  translate_rib_metric_variable: Optional[_builtins.str] = None):
         """
@@ -46237,6 +46493,8 @@ class ServiceRoutingOspfv3Ipv4FeatureRedistribute(dict):
         :param _builtins.str protocol: Set the protocol
                  - Choices: `connected`, `static`, `omp`, `nat-route`, `bgp`, `eigrp`
         :param _builtins.str protocol_variable: Variable name
+        :param _builtins.str route_policy_id: Set either route_policy_id or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        :param _builtins.str route_policy_id_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
         :param _builtins.bool translate_rib_metric: Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
                  - Default value: `false`
         :param _builtins.str translate_rib_metric_variable: Variable name, Attribute conditional on `protocol` equal to `omp`
@@ -46251,6 +46509,8 @@ class ServiceRoutingOspfv3Ipv4FeatureRedistribute(dict):
             pulumi.set(__self__, "protocol_variable", protocol_variable)
         if route_policy_id is not None:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
+        if route_policy_id_variable is not None:
+            pulumi.set(__self__, "route_policy_id_variable", route_policy_id_variable)
         if translate_rib_metric is not None:
             pulumi.set(__self__, "translate_rib_metric", translate_rib_metric)
         if translate_rib_metric_variable is not None:
@@ -46293,7 +46553,18 @@ class ServiceRoutingOspfv3Ipv4FeatureRedistribute(dict):
     @_builtins.property
     @pulumi.getter(name="routePolicyId")
     def route_policy_id(self) -> Optional[_builtins.str]:
+        """
+        Set either route_policy_id or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        """
         return pulumi.get(self, "route_policy_id")
+
+    @_builtins.property
+    @pulumi.getter(name="routePolicyIdVariable")
+    def route_policy_id_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        """
+        return pulumi.get(self, "route_policy_id_variable")
 
     @_builtins.property
     @pulumi.getter(name="translateRibMetric")
@@ -46470,6 +46741,10 @@ class ServiceRoutingOspfv3Ipv6FeatureAreaInterface(dict):
             suggest = "authentication_key"
         elif key == "authenticationKeyVariable":
             suggest = "authentication_key_variable"
+        elif key == "authenticationKeyWo":
+            suggest = "authentication_key_wo"
+        elif key == "authenticationKeyWoVersion":
+            suggest = "authentication_key_wo_version"
         elif key == "authenticationSpi":
             suggest = "authentication_spi"
         elif key == "authenticationSpiVariable":
@@ -46515,6 +46790,8 @@ class ServiceRoutingOspfv3Ipv6FeatureAreaInterface(dict):
     def __init__(__self__, *,
                  authentication_key: Optional[_builtins.str] = None,
                  authentication_key_variable: Optional[_builtins.str] = None,
+                 authentication_key_wo: Optional[_builtins.str] = None,
+                 authentication_key_wo_version: Optional[_builtins.int] = None,
                  authentication_spi: Optional[_builtins.int] = None,
                  authentication_spi_variable: Optional[_builtins.str] = None,
                  authentication_type: Optional[_builtins.str] = None,
@@ -46534,7 +46811,13 @@ class ServiceRoutingOspfv3Ipv6FeatureAreaInterface(dict):
                  passive_interface_variable: Optional[_builtins.str] = None):
         """
         :param _builtins.str authentication_key: Set OSPF interface authentication IPSEC key
+                 - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_key_wo` together with `authentication_key_wo_version`, which keeps it out of state.
         :param _builtins.str authentication_key_variable: Variable name
+        :param _builtins.str authentication_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set OSPF interface authentication IPSEC key
+                 - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+        :param _builtins.int authentication_key_wo_version: Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int authentication_spi: Set OSPF interface authentication IPSec SPI, range 256..4294967295
                  - Range: `256`-`4294967295`
         :param _builtins.str authentication_spi_variable: Variable name
@@ -46568,6 +46851,10 @@ class ServiceRoutingOspfv3Ipv6FeatureAreaInterface(dict):
             pulumi.set(__self__, "authentication_key", authentication_key)
         if authentication_key_variable is not None:
             pulumi.set(__self__, "authentication_key_variable", authentication_key_variable)
+        if authentication_key_wo is not None:
+            pulumi.set(__self__, "authentication_key_wo", authentication_key_wo)
+        if authentication_key_wo_version is not None:
+            pulumi.set(__self__, "authentication_key_wo_version", authentication_key_wo_version)
         if authentication_spi is not None:
             pulumi.set(__self__, "authentication_spi", authentication_spi)
         if authentication_spi_variable is not None:
@@ -46608,6 +46895,8 @@ class ServiceRoutingOspfv3Ipv6FeatureAreaInterface(dict):
     def authentication_key(self) -> Optional[_builtins.str]:
         """
         Set OSPF interface authentication IPSEC key
+          - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_key_wo` together with `authentication_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_key")
 
@@ -46618,6 +46907,24 @@ class ServiceRoutingOspfv3Ipv6FeatureAreaInterface(dict):
         Variable name
         """
         return pulumi.get(self, "authentication_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWo")
+    def authentication_key_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set OSPF interface authentication IPSEC key
+          - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWoVersion")
+    def authentication_key_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_key_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="authenticationSpi")
@@ -46882,6 +47189,8 @@ class ServiceRoutingOspfv3Ipv6FeatureRedistribute(dict):
             suggest = "protocol_variable"
         elif key == "routePolicyId":
             suggest = "route_policy_id"
+        elif key == "routePolicyIdVariable":
+            suggest = "route_policy_id_variable"
         elif key == "translateRibMetric":
             suggest = "translate_rib_metric"
         elif key == "translateRibMetricVariable":
@@ -46902,12 +47211,15 @@ class ServiceRoutingOspfv3Ipv6FeatureRedistribute(dict):
                  protocol: Optional[_builtins.str] = None,
                  protocol_variable: Optional[_builtins.str] = None,
                  route_policy_id: Optional[_builtins.str] = None,
+                 route_policy_id_variable: Optional[_builtins.str] = None,
                  translate_rib_metric: Optional[_builtins.bool] = None,
                  translate_rib_metric_variable: Optional[_builtins.str] = None):
         """
         :param _builtins.str protocol: Set the protocol
                  - Choices: `connected`, `static`, `omp`, `bgp`, `eigrp`
         :param _builtins.str protocol_variable: Variable name
+        :param _builtins.str route_policy_id: Set either route_policy_id or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        :param _builtins.str route_policy_id_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
         :param _builtins.bool translate_rib_metric: Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
                  - Default value: `false`
         :param _builtins.str translate_rib_metric_variable: Variable name, Attribute conditional on `protocol` equal to `omp`
@@ -46918,6 +47230,8 @@ class ServiceRoutingOspfv3Ipv6FeatureRedistribute(dict):
             pulumi.set(__self__, "protocol_variable", protocol_variable)
         if route_policy_id is not None:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
+        if route_policy_id_variable is not None:
+            pulumi.set(__self__, "route_policy_id_variable", route_policy_id_variable)
         if translate_rib_metric is not None:
             pulumi.set(__self__, "translate_rib_metric", translate_rib_metric)
         if translate_rib_metric_variable is not None:
@@ -46943,7 +47257,18 @@ class ServiceRoutingOspfv3Ipv6FeatureRedistribute(dict):
     @_builtins.property
     @pulumi.getter(name="routePolicyId")
     def route_policy_id(self) -> Optional[_builtins.str]:
+        """
+        Set either route_policy_id or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        """
         return pulumi.get(self, "route_policy_id")
+
+    @_builtins.property
+    @pulumi.getter(name="routePolicyIdVariable")
+    def route_policy_id_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `route_policy_id` being set
+        """
+        return pulumi.get(self, "route_policy_id_variable")
 
     @_builtins.property
     @pulumi.getter(name="translateRibMetric")
@@ -47748,6 +48073,10 @@ class ServiceWirelessLanFeatureSsid(dict):
             suggest = "broadcast_ssid_variable"
         elif key == "passphraseVariable":
             suggest = "passphrase_variable"
+        elif key == "passphraseWo":
+            suggest = "passphrase_wo"
+        elif key == "passphraseWoVersion":
+            suggest = "passphrase_wo_version"
         elif key == "qosProfile":
             suggest = "qos_profile"
         elif key == "qosProfileVariable":
@@ -47768,6 +48097,10 @@ class ServiceWirelessLanFeatureSsid(dict):
             suggest = "radius_server_secret"
         elif key == "radiusServerSecretVariable":
             suggest = "radius_server_secret_variable"
+        elif key == "radiusServerSecretWo":
+            suggest = "radius_server_secret_wo"
+        elif key == "radiusServerSecretWoVersion":
+            suggest = "radius_server_secret_wo_version"
         elif key == "securityType":
             suggest = "security_type"
         elif key == "ssidName":
@@ -47795,6 +48128,8 @@ class ServiceWirelessLanFeatureSsid(dict):
                  broadcast_ssid_variable: Optional[_builtins.str] = None,
                  passphrase: Optional[_builtins.str] = None,
                  passphrase_variable: Optional[_builtins.str] = None,
+                 passphrase_wo: Optional[_builtins.str] = None,
+                 passphrase_wo_version: Optional[_builtins.int] = None,
                  qos_profile: Optional[_builtins.str] = None,
                  qos_profile_variable: Optional[_builtins.str] = None,
                  radio_type: Optional[_builtins.str] = None,
@@ -47805,6 +48140,8 @@ class ServiceWirelessLanFeatureSsid(dict):
                  radius_server_port_variable: Optional[_builtins.str] = None,
                  radius_server_secret: Optional[_builtins.str] = None,
                  radius_server_secret_variable: Optional[_builtins.str] = None,
+                 radius_server_secret_wo: Optional[_builtins.str] = None,
+                 radius_server_secret_wo_version: Optional[_builtins.int] = None,
                  security_type: Optional[_builtins.str] = None,
                  ssid_name: Optional[_builtins.str] = None,
                  vlan_id: Optional[_builtins.int] = None,
@@ -47817,7 +48154,13 @@ class ServiceWirelessLanFeatureSsid(dict):
                  - Default value: `true`
         :param _builtins.str broadcast_ssid_variable: Variable name
         :param _builtins.str passphrase: Set passphrase, Attribute conditional on `security_type` equal to `personal`
+                 - Only one of `passphrase`, `passphrase_variable` and `passphrase_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `passphrase_wo` together with `passphrase_wo_version`, which keeps it out of state.
         :param _builtins.str passphrase_variable: Variable name, Attribute conditional on `security_type` equal to `personal`
+        :param _builtins.str passphrase_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set passphrase, Attribute conditional on `security_type` equal to `personal`
+                 - Only one of `passphrase`, `passphrase_variable` and `passphrase_wo` can be set.
+        :param _builtins.int passphrase_wo_version: Rotation trigger for `passphrase_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str qos_profile: Select QoS profile
                  - Choices: `platinum`, `gold`, `silver`, `bronze`
                  - Default value: `silver`
@@ -47833,7 +48176,13 @@ class ServiceWirelessLanFeatureSsid(dict):
                  - Default value: `1812`
         :param _builtins.str radius_server_port_variable: Variable name, Attribute conditional on `security_type` equal to `enterprise`
         :param _builtins.str radius_server_secret: Set RADIUS server shared secret, Attribute conditional on `security_type` equal to `enterprise`
+                 - Only one of `radius_server_secret`, `radius_server_secret_variable` and `radius_server_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `radius_server_secret_wo` together with `radius_server_secret_wo_version`, which keeps it out of state.
         :param _builtins.str radius_server_secret_variable: Variable name, Attribute conditional on `security_type` equal to `enterprise`
+        :param _builtins.str radius_server_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set RADIUS server shared secret, Attribute conditional on `security_type` equal to `enterprise`
+                 - Only one of `radius_server_secret`, `radius_server_secret_variable` and `radius_server_secret_wo` can be set.
+        :param _builtins.int radius_server_secret_wo_version: Rotation trigger for `radius_server_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str security_type: Select security type
                  - Choices: `enterprise`, `personal`, `open`
         :param _builtins.str ssid_name: Configure wlan SSID
@@ -47853,6 +48202,10 @@ class ServiceWirelessLanFeatureSsid(dict):
             pulumi.set(__self__, "passphrase", passphrase)
         if passphrase_variable is not None:
             pulumi.set(__self__, "passphrase_variable", passphrase_variable)
+        if passphrase_wo is not None:
+            pulumi.set(__self__, "passphrase_wo", passphrase_wo)
+        if passphrase_wo_version is not None:
+            pulumi.set(__self__, "passphrase_wo_version", passphrase_wo_version)
         if qos_profile is not None:
             pulumi.set(__self__, "qos_profile", qos_profile)
         if qos_profile_variable is not None:
@@ -47873,6 +48226,10 @@ class ServiceWirelessLanFeatureSsid(dict):
             pulumi.set(__self__, "radius_server_secret", radius_server_secret)
         if radius_server_secret_variable is not None:
             pulumi.set(__self__, "radius_server_secret_variable", radius_server_secret_variable)
+        if radius_server_secret_wo is not None:
+            pulumi.set(__self__, "radius_server_secret_wo", radius_server_secret_wo)
+        if radius_server_secret_wo_version is not None:
+            pulumi.set(__self__, "radius_server_secret_wo_version", radius_server_secret_wo_version)
         if security_type is not None:
             pulumi.set(__self__, "security_type", security_type)
         if ssid_name is not None:
@@ -47921,6 +48278,8 @@ class ServiceWirelessLanFeatureSsid(dict):
     def passphrase(self) -> Optional[_builtins.str]:
         """
         Set passphrase, Attribute conditional on `security_type` equal to `personal`
+          - Only one of `passphrase`, `passphrase_variable` and `passphrase_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `passphrase_wo` together with `passphrase_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "passphrase")
 
@@ -47931,6 +48290,24 @@ class ServiceWirelessLanFeatureSsid(dict):
         Variable name, Attribute conditional on `security_type` equal to `personal`
         """
         return pulumi.get(self, "passphrase_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="passphraseWo")
+    def passphrase_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set passphrase, Attribute conditional on `security_type` equal to `personal`
+          - Only one of `passphrase`, `passphrase_variable` and `passphrase_wo` can be set.
+        """
+        return pulumi.get(self, "passphrase_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passphraseWoVersion")
+    def passphrase_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `passphrase_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "passphrase_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="qosProfile")
@@ -48007,6 +48384,8 @@ class ServiceWirelessLanFeatureSsid(dict):
     def radius_server_secret(self) -> Optional[_builtins.str]:
         """
         Set RADIUS server shared secret, Attribute conditional on `security_type` equal to `enterprise`
+          - Only one of `radius_server_secret`, `radius_server_secret_variable` and `radius_server_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `radius_server_secret_wo` together with `radius_server_secret_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "radius_server_secret")
 
@@ -48017,6 +48396,24 @@ class ServiceWirelessLanFeatureSsid(dict):
         Variable name, Attribute conditional on `security_type` equal to `enterprise`
         """
         return pulumi.get(self, "radius_server_secret_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="radiusServerSecretWo")
+    def radius_server_secret_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set RADIUS server shared secret, Attribute conditional on `security_type` equal to `enterprise`
+          - Only one of `radius_server_secret`, `radius_server_secret_variable` and `radius_server_secret_wo` can be set.
+        """
+        return pulumi.get(self, "radius_server_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="radiusServerSecretWoVersion")
+    def radius_server_secret_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `radius_server_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "radius_server_secret_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="securityType")
@@ -48051,6 +48448,972 @@ class ServiceWirelessLanFeatureSsid(dict):
         Variable name
         """
         return pulumi.get(self, "vlan_id_variable")
+
+
+@pulumi.output_type
+class SigFeatureInterface(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "dpdInterval":
+            suggest = "dpd_interval"
+        elif key == "dpdIntervalVariable":
+            suggest = "dpd_interval_variable"
+        elif key == "dpdRetries":
+            suggest = "dpd_retries"
+        elif key == "dpdRetriesVariable":
+            suggest = "dpd_retries_variable"
+        elif key == "ikeCiphersuite":
+            suggest = "ike_ciphersuite"
+        elif key == "ikeCiphersuiteVariable":
+            suggest = "ike_ciphersuite_variable"
+        elif key == "ikeGroup":
+            suggest = "ike_group"
+        elif key == "ikeGroupVariable":
+            suggest = "ike_group_variable"
+        elif key == "ikeLocalId":
+            suggest = "ike_local_id"
+        elif key == "ikeLocalIdVariable":
+            suggest = "ike_local_id_variable"
+        elif key == "ikeRekeyInterval":
+            suggest = "ike_rekey_interval"
+        elif key == "ikeRekeyIntervalVariable":
+            suggest = "ike_rekey_interval_variable"
+        elif key == "ikeRemoteId":
+            suggest = "ike_remote_id"
+        elif key == "ikeRemoteIdVariable":
+            suggest = "ike_remote_id_variable"
+        elif key == "interfaceDescription":
+            suggest = "interface_description"
+        elif key == "interfaceDescriptionVariable":
+            suggest = "interface_description_variable"
+        elif key == "interfaceName":
+            suggest = "interface_name"
+        elif key == "ipsecCiphersuite":
+            suggest = "ipsec_ciphersuite"
+        elif key == "ipsecCiphersuiteVariable":
+            suggest = "ipsec_ciphersuite_variable"
+        elif key == "ipsecRekeyInterval":
+            suggest = "ipsec_rekey_interval"
+        elif key == "ipsecRekeyIntervalVariable":
+            suggest = "ipsec_rekey_interval_variable"
+        elif key == "ipsecReplayWindow":
+            suggest = "ipsec_replay_window"
+        elif key == "ipsecReplayWindowVariable":
+            suggest = "ipsec_replay_window_variable"
+        elif key == "mtuVariable":
+            suggest = "mtu_variable"
+        elif key == "perfectForwardSecrecy":
+            suggest = "perfect_forward_secrecy"
+        elif key == "perfectForwardSecrecyVariable":
+            suggest = "perfect_forward_secrecy_variable"
+        elif key == "preSharedKeyDynamic":
+            suggest = "pre_shared_key_dynamic"
+        elif key == "preSharedSecret":
+            suggest = "pre_shared_secret"
+        elif key == "preSharedSecretVariable":
+            suggest = "pre_shared_secret_variable"
+        elif key == "preSharedSecretWo":
+            suggest = "pre_shared_secret_wo"
+        elif key == "preSharedSecretWoVersion":
+            suggest = "pre_shared_secret_wo_version"
+        elif key == "tcpMssAdjust":
+            suggest = "tcp_mss_adjust"
+        elif key == "tcpMssAdjustVariable":
+            suggest = "tcp_mss_adjust_variable"
+        elif key == "trackEnable":
+            suggest = "track_enable"
+        elif key == "tunnelDcPreference":
+            suggest = "tunnel_dc_preference"
+        elif key == "tunnelDestination":
+            suggest = "tunnel_destination"
+        elif key == "tunnelDestinationVariable":
+            suggest = "tunnel_destination_variable"
+        elif key == "tunnelPublicIp":
+            suggest = "tunnel_public_ip"
+        elif key == "tunnelPublicIpVariable":
+            suggest = "tunnel_public_ip_variable"
+        elif key == "tunnelRouteVia":
+            suggest = "tunnel_route_via"
+        elif key == "tunnelRouteViaVariable":
+            suggest = "tunnel_route_via_variable"
+        elif key == "tunnelSet":
+            suggest = "tunnel_set"
+        elif key == "tunnelSourceInterface":
+            suggest = "tunnel_source_interface"
+        elif key == "tunnelSourceInterfaceVariable":
+            suggest = "tunnel_source_interface_variable"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in SigFeatureInterface. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        SigFeatureInterface.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        SigFeatureInterface.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 dpd_interval: Optional[_builtins.int] = None,
+                 dpd_interval_variable: Optional[_builtins.str] = None,
+                 dpd_retries: Optional[_builtins.int] = None,
+                 dpd_retries_variable: Optional[_builtins.str] = None,
+                 ike_ciphersuite: Optional[_builtins.str] = None,
+                 ike_ciphersuite_variable: Optional[_builtins.str] = None,
+                 ike_group: Optional[_builtins.str] = None,
+                 ike_group_variable: Optional[_builtins.str] = None,
+                 ike_local_id: Optional[_builtins.str] = None,
+                 ike_local_id_variable: Optional[_builtins.str] = None,
+                 ike_rekey_interval: Optional[_builtins.int] = None,
+                 ike_rekey_interval_variable: Optional[_builtins.str] = None,
+                 ike_remote_id: Optional[_builtins.str] = None,
+                 ike_remote_id_variable: Optional[_builtins.str] = None,
+                 interface_description: Optional[_builtins.str] = None,
+                 interface_description_variable: Optional[_builtins.str] = None,
+                 interface_name: Optional[_builtins.str] = None,
+                 ipsec_ciphersuite: Optional[_builtins.str] = None,
+                 ipsec_ciphersuite_variable: Optional[_builtins.str] = None,
+                 ipsec_rekey_interval: Optional[_builtins.int] = None,
+                 ipsec_rekey_interval_variable: Optional[_builtins.str] = None,
+                 ipsec_replay_window: Optional[_builtins.int] = None,
+                 ipsec_replay_window_variable: Optional[_builtins.str] = None,
+                 mtu: Optional[_builtins.int] = None,
+                 mtu_variable: Optional[_builtins.str] = None,
+                 perfect_forward_secrecy: Optional[_builtins.str] = None,
+                 perfect_forward_secrecy_variable: Optional[_builtins.str] = None,
+                 pre_shared_key_dynamic: Optional[_builtins.bool] = None,
+                 pre_shared_secret: Optional[_builtins.str] = None,
+                 pre_shared_secret_variable: Optional[_builtins.str] = None,
+                 pre_shared_secret_wo: Optional[_builtins.str] = None,
+                 pre_shared_secret_wo_version: Optional[_builtins.int] = None,
+                 shutdown: Optional[_builtins.bool] = None,
+                 tcp_mss_adjust: Optional[_builtins.int] = None,
+                 tcp_mss_adjust_variable: Optional[_builtins.str] = None,
+                 track_enable: Optional[_builtins.bool] = None,
+                 tracker: Optional[_builtins.str] = None,
+                 tunnel_dc_preference: Optional[_builtins.str] = None,
+                 tunnel_destination: Optional[_builtins.str] = None,
+                 tunnel_destination_variable: Optional[_builtins.str] = None,
+                 tunnel_public_ip: Optional[_builtins.str] = None,
+                 tunnel_public_ip_variable: Optional[_builtins.str] = None,
+                 tunnel_route_via: Optional[_builtins.str] = None,
+                 tunnel_route_via_variable: Optional[_builtins.str] = None,
+                 tunnel_set: Optional[_builtins.str] = None,
+                 tunnel_source_interface: Optional[_builtins.str] = None,
+                 tunnel_source_interface_variable: Optional[_builtins.str] = None):
+        """
+        :param _builtins.int dpd_interval: IKE keepalive interval (seconds)
+                 - Range: `10`-`3600`
+                 - Default value: `10`
+        :param _builtins.str dpd_interval_variable: Variable name
+        :param _builtins.int dpd_retries: IKE keepalive retries
+                 - Range: `2`-`60`
+                 - Default value: `3`
+        :param _builtins.str dpd_retries_variable: Variable name
+        :param _builtins.str ike_ciphersuite: IKE identity the IKE preshared secret belongs to
+                 - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+                 - Default value: `aes256-cbc-sha1`
+        :param _builtins.str ike_ciphersuite_variable: Variable name
+        :param _builtins.str ike_group: IKE Diffie Hellman Groups
+                 - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+                 - Default value: `16`
+        :param _builtins.str ike_group_variable: Variable name
+        :param _builtins.str ike_local_id: IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+        :param _builtins.str ike_local_id_variable: Variable name
+        :param _builtins.int ike_rekey_interval: IKE rekey interval <300..1209600> seconds
+                 - Range: `300`-`86400`
+                 - Default value: `14400`
+        :param _builtins.str ike_rekey_interval_variable: Variable name
+        :param _builtins.str ike_remote_id: IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+        :param _builtins.str ike_remote_id_variable: Variable name
+        :param _builtins.str interface_description: Interface description
+        :param _builtins.str interface_description_variable: Variable name
+        :param _builtins.str interface_name: Interface name: IPsec when present
+        :param _builtins.str ipsec_ciphersuite: IPsec(ESP) encryption and integrity protocol
+                 - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+                 - Default value: `aes256-cbc-sha512`
+        :param _builtins.str ipsec_ciphersuite_variable: Variable name
+        :param _builtins.int ipsec_rekey_interval: IPsec rekey interval <300..1209600> seconds
+                 - Range: `300`-`1209600`
+                 - Default value: `3600`
+        :param _builtins.str ipsec_rekey_interval_variable: Variable name
+        :param _builtins.int ipsec_replay_window: Replay window size 32..8192 (must be a power of 2)
+                 - Default value: `512`
+        :param _builtins.str ipsec_replay_window_variable: Variable name
+        :param _builtins.int mtu: Interface MTU <576..2000>, in bytes
+                 - Range: `576`-`2000`
+                 - Default value: `1400`
+        :param _builtins.str mtu_variable: Variable name
+        :param _builtins.str perfect_forward_secrecy: IPsec perfect forward secrecy settings
+                 - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+                 - Default value: `none`
+        :param _builtins.str perfect_forward_secrecy_variable: Variable name
+        :param _builtins.bool pre_shared_key_dynamic: Use preshared key to authenticate IKE peer
+        :param _builtins.str pre_shared_secret: Use preshared key to authenticate IKE peer
+                 - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `pre_shared_secret_wo` together with `pre_shared_secret_wo_version`, which keeps it out of state.
+        :param _builtins.str pre_shared_secret_variable: Variable name
+        :param _builtins.str pre_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Use preshared key to authenticate IKE peer
+                 - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+        :param _builtins.int pre_shared_secret_wo_version: Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        :param _builtins.bool shutdown: Administrative state
+                 - Default value: `false`
+        :param _builtins.int tcp_mss_adjust: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
+        :param _builtins.str tcp_mss_adjust_variable: Variable name
+        :param _builtins.bool track_enable: Enable/disable SIG tracking
+                 - Default value: `true`
+        :param _builtins.str tracker: Enable tracker for this interface
+        :param _builtins.str tunnel_dc_preference: SIG Tunnel Data Center
+                 - Choices: `primary-dc`, `secondary-dc`
+        :param _builtins.str tunnel_destination: Tunnel destination IP address
+        :param _builtins.str tunnel_destination_variable: Variable name
+        :param _builtins.str tunnel_public_ip: Public IP required to setup GRE tunnel to Zscaler
+                 - Default value: `Auto`
+        :param _builtins.str tunnel_public_ip_variable: Variable name
+        :param _builtins.str tunnel_route_via: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param _builtins.str tunnel_route_via_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param _builtins.str tunnel_set: SIG Tunnel Provider
+                 - Choices: `secure-internet-gateway-umbrella`, `secure-internet-gateway-zscaler`, `secure-internet-gateway-other`
+        :param _builtins.str tunnel_source_interface: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+        :param _builtins.str tunnel_source_interface_variable: Variable name
+        """
+        if dpd_interval is not None:
+            pulumi.set(__self__, "dpd_interval", dpd_interval)
+        if dpd_interval_variable is not None:
+            pulumi.set(__self__, "dpd_interval_variable", dpd_interval_variable)
+        if dpd_retries is not None:
+            pulumi.set(__self__, "dpd_retries", dpd_retries)
+        if dpd_retries_variable is not None:
+            pulumi.set(__self__, "dpd_retries_variable", dpd_retries_variable)
+        if ike_ciphersuite is not None:
+            pulumi.set(__self__, "ike_ciphersuite", ike_ciphersuite)
+        if ike_ciphersuite_variable is not None:
+            pulumi.set(__self__, "ike_ciphersuite_variable", ike_ciphersuite_variable)
+        if ike_group is not None:
+            pulumi.set(__self__, "ike_group", ike_group)
+        if ike_group_variable is not None:
+            pulumi.set(__self__, "ike_group_variable", ike_group_variable)
+        if ike_local_id is not None:
+            pulumi.set(__self__, "ike_local_id", ike_local_id)
+        if ike_local_id_variable is not None:
+            pulumi.set(__self__, "ike_local_id_variable", ike_local_id_variable)
+        if ike_rekey_interval is not None:
+            pulumi.set(__self__, "ike_rekey_interval", ike_rekey_interval)
+        if ike_rekey_interval_variable is not None:
+            pulumi.set(__self__, "ike_rekey_interval_variable", ike_rekey_interval_variable)
+        if ike_remote_id is not None:
+            pulumi.set(__self__, "ike_remote_id", ike_remote_id)
+        if ike_remote_id_variable is not None:
+            pulumi.set(__self__, "ike_remote_id_variable", ike_remote_id_variable)
+        if interface_description is not None:
+            pulumi.set(__self__, "interface_description", interface_description)
+        if interface_description_variable is not None:
+            pulumi.set(__self__, "interface_description_variable", interface_description_variable)
+        if interface_name is not None:
+            pulumi.set(__self__, "interface_name", interface_name)
+        if ipsec_ciphersuite is not None:
+            pulumi.set(__self__, "ipsec_ciphersuite", ipsec_ciphersuite)
+        if ipsec_ciphersuite_variable is not None:
+            pulumi.set(__self__, "ipsec_ciphersuite_variable", ipsec_ciphersuite_variable)
+        if ipsec_rekey_interval is not None:
+            pulumi.set(__self__, "ipsec_rekey_interval", ipsec_rekey_interval)
+        if ipsec_rekey_interval_variable is not None:
+            pulumi.set(__self__, "ipsec_rekey_interval_variable", ipsec_rekey_interval_variable)
+        if ipsec_replay_window is not None:
+            pulumi.set(__self__, "ipsec_replay_window", ipsec_replay_window)
+        if ipsec_replay_window_variable is not None:
+            pulumi.set(__self__, "ipsec_replay_window_variable", ipsec_replay_window_variable)
+        if mtu is not None:
+            pulumi.set(__self__, "mtu", mtu)
+        if mtu_variable is not None:
+            pulumi.set(__self__, "mtu_variable", mtu_variable)
+        if perfect_forward_secrecy is not None:
+            pulumi.set(__self__, "perfect_forward_secrecy", perfect_forward_secrecy)
+        if perfect_forward_secrecy_variable is not None:
+            pulumi.set(__self__, "perfect_forward_secrecy_variable", perfect_forward_secrecy_variable)
+        if pre_shared_key_dynamic is not None:
+            pulumi.set(__self__, "pre_shared_key_dynamic", pre_shared_key_dynamic)
+        if pre_shared_secret is not None:
+            pulumi.set(__self__, "pre_shared_secret", pre_shared_secret)
+        if pre_shared_secret_variable is not None:
+            pulumi.set(__self__, "pre_shared_secret_variable", pre_shared_secret_variable)
+        if pre_shared_secret_wo is not None:
+            pulumi.set(__self__, "pre_shared_secret_wo", pre_shared_secret_wo)
+        if pre_shared_secret_wo_version is not None:
+            pulumi.set(__self__, "pre_shared_secret_wo_version", pre_shared_secret_wo_version)
+        if shutdown is not None:
+            pulumi.set(__self__, "shutdown", shutdown)
+        if tcp_mss_adjust is not None:
+            pulumi.set(__self__, "tcp_mss_adjust", tcp_mss_adjust)
+        if tcp_mss_adjust_variable is not None:
+            pulumi.set(__self__, "tcp_mss_adjust_variable", tcp_mss_adjust_variable)
+        if track_enable is not None:
+            pulumi.set(__self__, "track_enable", track_enable)
+        if tracker is not None:
+            pulumi.set(__self__, "tracker", tracker)
+        if tunnel_dc_preference is not None:
+            pulumi.set(__self__, "tunnel_dc_preference", tunnel_dc_preference)
+        if tunnel_destination is not None:
+            pulumi.set(__self__, "tunnel_destination", tunnel_destination)
+        if tunnel_destination_variable is not None:
+            pulumi.set(__self__, "tunnel_destination_variable", tunnel_destination_variable)
+        if tunnel_public_ip is not None:
+            pulumi.set(__self__, "tunnel_public_ip", tunnel_public_ip)
+        if tunnel_public_ip_variable is not None:
+            pulumi.set(__self__, "tunnel_public_ip_variable", tunnel_public_ip_variable)
+        if tunnel_route_via is not None:
+            pulumi.set(__self__, "tunnel_route_via", tunnel_route_via)
+        if tunnel_route_via_variable is not None:
+            pulumi.set(__self__, "tunnel_route_via_variable", tunnel_route_via_variable)
+        if tunnel_set is not None:
+            pulumi.set(__self__, "tunnel_set", tunnel_set)
+        if tunnel_source_interface is not None:
+            pulumi.set(__self__, "tunnel_source_interface", tunnel_source_interface)
+        if tunnel_source_interface_variable is not None:
+            pulumi.set(__self__, "tunnel_source_interface_variable", tunnel_source_interface_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="dpdInterval")
+    def dpd_interval(self) -> Optional[_builtins.int]:
+        """
+        IKE keepalive interval (seconds)
+          - Range: `10`-`3600`
+          - Default value: `10`
+        """
+        return pulumi.get(self, "dpd_interval")
+
+    @_builtins.property
+    @pulumi.getter(name="dpdIntervalVariable")
+    def dpd_interval_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "dpd_interval_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="dpdRetries")
+    def dpd_retries(self) -> Optional[_builtins.int]:
+        """
+        IKE keepalive retries
+          - Range: `2`-`60`
+          - Default value: `3`
+        """
+        return pulumi.get(self, "dpd_retries")
+
+    @_builtins.property
+    @pulumi.getter(name="dpdRetriesVariable")
+    def dpd_retries_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "dpd_retries_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeCiphersuite")
+    def ike_ciphersuite(self) -> Optional[_builtins.str]:
+        """
+        IKE identity the IKE preshared secret belongs to
+          - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+          - Default value: `aes256-cbc-sha1`
+        """
+        return pulumi.get(self, "ike_ciphersuite")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeCiphersuiteVariable")
+    def ike_ciphersuite_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_ciphersuite_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeGroup")
+    def ike_group(self) -> Optional[_builtins.str]:
+        """
+        IKE Diffie Hellman Groups
+          - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+          - Default value: `16`
+        """
+        return pulumi.get(self, "ike_group")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeGroupVariable")
+    def ike_group_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_group_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeLocalId")
+    def ike_local_id(self) -> Optional[_builtins.str]:
+        """
+        IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+        """
+        return pulumi.get(self, "ike_local_id")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeLocalIdVariable")
+    def ike_local_id_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_local_id_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeRekeyInterval")
+    def ike_rekey_interval(self) -> Optional[_builtins.int]:
+        """
+        IKE rekey interval <300..1209600> seconds
+          - Range: `300`-`86400`
+          - Default value: `14400`
+        """
+        return pulumi.get(self, "ike_rekey_interval")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeRekeyIntervalVariable")
+    def ike_rekey_interval_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_rekey_interval_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeRemoteId")
+    def ike_remote_id(self) -> Optional[_builtins.str]:
+        """
+        IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+        """
+        return pulumi.get(self, "ike_remote_id")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeRemoteIdVariable")
+    def ike_remote_id_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_remote_id_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="interfaceDescription")
+    def interface_description(self) -> Optional[_builtins.str]:
+        """
+        Interface description
+        """
+        return pulumi.get(self, "interface_description")
+
+    @_builtins.property
+    @pulumi.getter(name="interfaceDescriptionVariable")
+    def interface_description_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interface_description_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="interfaceName")
+    def interface_name(self) -> Optional[_builtins.str]:
+        """
+        Interface name: IPsec when present
+        """
+        return pulumi.get(self, "interface_name")
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecCiphersuite")
+    def ipsec_ciphersuite(self) -> Optional[_builtins.str]:
+        """
+        IPsec(ESP) encryption and integrity protocol
+          - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+          - Default value: `aes256-cbc-sha512`
+        """
+        return pulumi.get(self, "ipsec_ciphersuite")
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecCiphersuiteVariable")
+    def ipsec_ciphersuite_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipsec_ciphersuite_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecRekeyInterval")
+    def ipsec_rekey_interval(self) -> Optional[_builtins.int]:
+        """
+        IPsec rekey interval <300..1209600> seconds
+          - Range: `300`-`1209600`
+          - Default value: `3600`
+        """
+        return pulumi.get(self, "ipsec_rekey_interval")
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecRekeyIntervalVariable")
+    def ipsec_rekey_interval_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipsec_rekey_interval_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecReplayWindow")
+    def ipsec_replay_window(self) -> Optional[_builtins.int]:
+        """
+        Replay window size 32..8192 (must be a power of 2)
+          - Default value: `512`
+        """
+        return pulumi.get(self, "ipsec_replay_window")
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecReplayWindowVariable")
+    def ipsec_replay_window_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipsec_replay_window_variable")
+
+    @_builtins.property
+    @pulumi.getter
+    def mtu(self) -> Optional[_builtins.int]:
+        """
+        Interface MTU <576..2000>, in bytes
+          - Range: `576`-`2000`
+          - Default value: `1400`
+        """
+        return pulumi.get(self, "mtu")
+
+    @_builtins.property
+    @pulumi.getter(name="mtuVariable")
+    def mtu_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "mtu_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="perfectForwardSecrecy")
+    def perfect_forward_secrecy(self) -> Optional[_builtins.str]:
+        """
+        IPsec perfect forward secrecy settings
+          - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+          - Default value: `none`
+        """
+        return pulumi.get(self, "perfect_forward_secrecy")
+
+    @_builtins.property
+    @pulumi.getter(name="perfectForwardSecrecyVariable")
+    def perfect_forward_secrecy_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "perfect_forward_secrecy_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedKeyDynamic")
+    def pre_shared_key_dynamic(self) -> Optional[_builtins.bool]:
+        """
+        Use preshared key to authenticate IKE peer
+        """
+        return pulumi.get(self, "pre_shared_key_dynamic")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecret")
+    def pre_shared_secret(self) -> Optional[_builtins.str]:
+        """
+        Use preshared key to authenticate IKE peer
+          - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `pre_shared_secret_wo` together with `pre_shared_secret_wo_version`, which keeps it out of state.
+        """
+        return pulumi.get(self, "pre_shared_secret")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretVariable")
+    def pre_shared_secret_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "pre_shared_secret_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWo")
+    def pre_shared_secret_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Use preshared key to authenticate IKE peer
+          - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+        """
+        return pulumi.get(self, "pre_shared_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWoVersion")
+    def pre_shared_secret_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "pre_shared_secret_wo_version")
+
+    @_builtins.property
+    @pulumi.getter
+    def shutdown(self) -> Optional[_builtins.bool]:
+        """
+        Administrative state
+          - Default value: `false`
+        """
+        return pulumi.get(self, "shutdown")
+
+    @_builtins.property
+    @pulumi.getter(name="tcpMssAdjust")
+    def tcp_mss_adjust(self) -> Optional[_builtins.int]:
+        """
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
+        """
+        return pulumi.get(self, "tcp_mss_adjust")
+
+    @_builtins.property
+    @pulumi.getter(name="tcpMssAdjustVariable")
+    def tcp_mss_adjust_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tcp_mss_adjust_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="trackEnable")
+    def track_enable(self) -> Optional[_builtins.bool]:
+        """
+        Enable/disable SIG tracking
+          - Default value: `true`
+        """
+        return pulumi.get(self, "track_enable")
+
+    @_builtins.property
+    @pulumi.getter
+    def tracker(self) -> Optional[_builtins.str]:
+        """
+        Enable tracker for this interface
+        """
+        return pulumi.get(self, "tracker")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelDcPreference")
+    def tunnel_dc_preference(self) -> Optional[_builtins.str]:
+        """
+        SIG Tunnel Data Center
+          - Choices: `primary-dc`, `secondary-dc`
+        """
+        return pulumi.get(self, "tunnel_dc_preference")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelDestination")
+    def tunnel_destination(self) -> Optional[_builtins.str]:
+        """
+        Tunnel destination IP address
+        """
+        return pulumi.get(self, "tunnel_destination")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelDestinationVariable")
+    def tunnel_destination_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_destination_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelPublicIp")
+    def tunnel_public_ip(self) -> Optional[_builtins.str]:
+        """
+        Public IP required to setup GRE tunnel to Zscaler
+          - Default value: `Auto`
+        """
+        return pulumi.get(self, "tunnel_public_ip")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelPublicIpVariable")
+    def tunnel_public_ip_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_public_ip_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelRouteVia")
+    def tunnel_route_via(self) -> Optional[_builtins.str]:
+        """
+        <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_route_via")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelRouteViaVariable")
+    def tunnel_route_via_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "tunnel_route_via_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelSet")
+    def tunnel_set(self) -> Optional[_builtins.str]:
+        """
+        SIG Tunnel Provider
+          - Choices: `secure-internet-gateway-umbrella`, `secure-internet-gateway-zscaler`, `secure-internet-gateway-other`
+        """
+        return pulumi.get(self, "tunnel_set")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelSourceInterface")
+    def tunnel_source_interface(self) -> Optional[_builtins.str]:
+        """
+        <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+        """
+        return pulumi.get(self, "tunnel_source_interface")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelSourceInterfaceVariable")
+    def tunnel_source_interface_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_source_interface_variable")
+
+
+@pulumi.output_type
+class SigFeatureInterfacePair(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "activeInterface":
+            suggest = "active_interface"
+        elif key == "activeInterfaceWeight":
+            suggest = "active_interface_weight"
+        elif key == "backupInterface":
+            suggest = "backup_interface"
+        elif key == "backupInterfaceWeight":
+            suggest = "backup_interface_weight"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in SigFeatureInterfacePair. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        SigFeatureInterfacePair.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        SigFeatureInterfacePair.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 active_interface: Optional[_builtins.str] = None,
+                 active_interface_weight: Optional[_builtins.int] = None,
+                 backup_interface: Optional[_builtins.str] = None,
+                 backup_interface_weight: Optional[_builtins.int] = None):
+        """
+        :param _builtins.str active_interface: Active Tunnel Interface for SIG
+        :param _builtins.int active_interface_weight: Active Tunnel Interface Weight
+                 - Range: `1`-`255`
+        :param _builtins.str backup_interface: Backup Tunnel Interface for SIG
+        :param _builtins.int backup_interface_weight: Backup Tunnel Interface Weight
+                 - Range: `1`-`255`
+        """
+        if active_interface is not None:
+            pulumi.set(__self__, "active_interface", active_interface)
+        if active_interface_weight is not None:
+            pulumi.set(__self__, "active_interface_weight", active_interface_weight)
+        if backup_interface is not None:
+            pulumi.set(__self__, "backup_interface", backup_interface)
+        if backup_interface_weight is not None:
+            pulumi.set(__self__, "backup_interface_weight", backup_interface_weight)
+
+    @_builtins.property
+    @pulumi.getter(name="activeInterface")
+    def active_interface(self) -> Optional[_builtins.str]:
+        """
+        Active Tunnel Interface for SIG
+        """
+        return pulumi.get(self, "active_interface")
+
+    @_builtins.property
+    @pulumi.getter(name="activeInterfaceWeight")
+    def active_interface_weight(self) -> Optional[_builtins.int]:
+        """
+        Active Tunnel Interface Weight
+          - Range: `1`-`255`
+        """
+        return pulumi.get(self, "active_interface_weight")
+
+    @_builtins.property
+    @pulumi.getter(name="backupInterface")
+    def backup_interface(self) -> Optional[_builtins.str]:
+        """
+        Backup Tunnel Interface for SIG
+        """
+        return pulumi.get(self, "backup_interface")
+
+    @_builtins.property
+    @pulumi.getter(name="backupInterfaceWeight")
+    def backup_interface_weight(self) -> Optional[_builtins.int]:
+        """
+        Backup Tunnel Interface Weight
+          - Range: `1`-`255`
+        """
+        return pulumi.get(self, "backup_interface_weight")
+
+
+@pulumi.output_type
+class SigFeatureTracker(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "endpointApiUrl":
+            suggest = "endpoint_api_url"
+        elif key == "endpointApiUrlVariable":
+            suggest = "endpoint_api_url_variable"
+        elif key == "intervalVariable":
+            suggest = "interval_variable"
+        elif key == "multiplierVariable":
+            suggest = "multiplier_variable"
+        elif key == "thresholdVariable":
+            suggest = "threshold_variable"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in SigFeatureTracker. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        SigFeatureTracker.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        SigFeatureTracker.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 endpoint_api_url: Optional[_builtins.str] = None,
+                 endpoint_api_url_variable: Optional[_builtins.str] = None,
+                 interval: Optional[_builtins.int] = None,
+                 interval_variable: Optional[_builtins.str] = None,
+                 multiplier: Optional[_builtins.int] = None,
+                 multiplier_variable: Optional[_builtins.str] = None,
+                 name: Optional[_builtins.str] = None,
+                 threshold: Optional[_builtins.int] = None,
+                 threshold_variable: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str endpoint_api_url: API url of endpoint
+        :param _builtins.str endpoint_api_url_variable: Variable name
+        :param _builtins.int interval: Probe interval <10..600> seconds
+                 - Range: `20`-`600`
+                 - Default value: `60`
+        :param _builtins.str interval_variable: Variable name
+        :param _builtins.int multiplier: Probe failure multiplier <1..10> failed attempts
+                 - Range: `1`-`10`
+                 - Default value: `3`
+        :param _builtins.str multiplier_variable: Variable name
+        :param _builtins.str name: Tracker name
+        :param _builtins.int threshold: Probe Timeout threshold <100..1000> milliseconds
+                 - Range: `100`-`1000`
+                 - Default value: `300`
+        :param _builtins.str threshold_variable: Variable name
+        """
+        if endpoint_api_url is not None:
+            pulumi.set(__self__, "endpoint_api_url", endpoint_api_url)
+        if endpoint_api_url_variable is not None:
+            pulumi.set(__self__, "endpoint_api_url_variable", endpoint_api_url_variable)
+        if interval is not None:
+            pulumi.set(__self__, "interval", interval)
+        if interval_variable is not None:
+            pulumi.set(__self__, "interval_variable", interval_variable)
+        if multiplier is not None:
+            pulumi.set(__self__, "multiplier", multiplier)
+        if multiplier_variable is not None:
+            pulumi.set(__self__, "multiplier_variable", multiplier_variable)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if threshold is not None:
+            pulumi.set(__self__, "threshold", threshold)
+        if threshold_variable is not None:
+            pulumi.set(__self__, "threshold_variable", threshold_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="endpointApiUrl")
+    def endpoint_api_url(self) -> Optional[_builtins.str]:
+        """
+        API url of endpoint
+        """
+        return pulumi.get(self, "endpoint_api_url")
+
+    @_builtins.property
+    @pulumi.getter(name="endpointApiUrlVariable")
+    def endpoint_api_url_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "endpoint_api_url_variable")
+
+    @_builtins.property
+    @pulumi.getter
+    def interval(self) -> Optional[_builtins.int]:
+        """
+        Probe interval <10..600> seconds
+          - Range: `20`-`600`
+          - Default value: `60`
+        """
+        return pulumi.get(self, "interval")
+
+    @_builtins.property
+    @pulumi.getter(name="intervalVariable")
+    def interval_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interval_variable")
+
+    @_builtins.property
+    @pulumi.getter
+    def multiplier(self) -> Optional[_builtins.int]:
+        """
+        Probe failure multiplier <1..10> failed attempts
+          - Range: `1`-`10`
+          - Default value: `3`
+        """
+        return pulumi.get(self, "multiplier")
+
+    @_builtins.property
+    @pulumi.getter(name="multiplierVariable")
+    def multiplier_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "multiplier_variable")
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> Optional[_builtins.str]:
+        """
+        Tracker name
+        """
+        return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter
+    def threshold(self) -> Optional[_builtins.int]:
+        """
+        Probe Timeout threshold <100..1000> milliseconds
+          - Range: `100`-`1000`
+          - Default value: `300`
+        """
+        return pulumi.get(self, "threshold")
+
+    @_builtins.property
+    @pulumi.getter(name="thresholdVariable")
+    def threshold_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "threshold_variable")
 
 
 @pulumi.output_type
@@ -48953,6 +50316,10 @@ class SseZscalerFeatureInterface(dict):
             suggest = "pre_shared_secret"
         elif key == "preSharedSecretVariable":
             suggest = "pre_shared_secret_variable"
+        elif key == "preSharedSecretWo":
+            suggest = "pre_shared_secret_wo"
+        elif key == "preSharedSecretWoVersion":
+            suggest = "pre_shared_secret_wo_version"
         elif key == "tcpMssAdjust":
             suggest = "tcp_mss_adjust"
         elif key == "tcpMssAdjustVariable":
@@ -49031,6 +50398,8 @@ class SseZscalerFeatureInterface(dict):
                  pre_shared_key_dynamic: Optional[_builtins.bool] = None,
                  pre_shared_secret: Optional[_builtins.str] = None,
                  pre_shared_secret_variable: Optional[_builtins.str] = None,
+                 pre_shared_secret_wo: Optional[_builtins.str] = None,
+                 pre_shared_secret_wo_version: Optional[_builtins.int] = None,
                  shutdown: Optional[_builtins.bool] = None,
                  tcp_mss_adjust: Optional[_builtins.int] = None,
                  tcp_mss_adjust_variable: Optional[_builtins.str] = None,
@@ -49105,7 +50474,13 @@ class SseZscalerFeatureInterface(dict):
         :param _builtins.str perfect_forward_secrecy_variable: Variable name
         :param _builtins.bool pre_shared_key_dynamic: Use preshared key to authenticate IKE peer
         :param _builtins.str pre_shared_secret: Use preshared key to authenticate IKE peer
+                 - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `pre_shared_secret_wo` together with `pre_shared_secret_wo_version`, which keeps it out of state.
         :param _builtins.str pre_shared_secret_variable: Variable name
+        :param _builtins.str pre_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Use preshared key to authenticate IKE peer
+                 - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+        :param _builtins.int pre_shared_secret_wo_version: Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.bool shutdown: Administrative state
                  - Default value: `false`
         :param _builtins.int tcp_mss_adjust: TCP MSS on SYN packets, in bytes
@@ -49202,6 +50577,10 @@ class SseZscalerFeatureInterface(dict):
             pulumi.set(__self__, "pre_shared_secret", pre_shared_secret)
         if pre_shared_secret_variable is not None:
             pulumi.set(__self__, "pre_shared_secret_variable", pre_shared_secret_variable)
+        if pre_shared_secret_wo is not None:
+            pulumi.set(__self__, "pre_shared_secret_wo", pre_shared_secret_wo)
+        if pre_shared_secret_wo_version is not None:
+            pulumi.set(__self__, "pre_shared_secret_wo_version", pre_shared_secret_wo_version)
         if shutdown is not None:
             pulumi.set(__self__, "shutdown", shutdown)
         if tcp_mss_adjust is not None:
@@ -49529,6 +50908,8 @@ class SseZscalerFeatureInterface(dict):
     def pre_shared_secret(self) -> Optional[_builtins.str]:
         """
         Use preshared key to authenticate IKE peer
+          - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `pre_shared_secret_wo` together with `pre_shared_secret_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "pre_shared_secret")
 
@@ -49539,6 +50920,24 @@ class SseZscalerFeatureInterface(dict):
         Variable name
         """
         return pulumi.get(self, "pre_shared_secret_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWo")
+    def pre_shared_secret_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Use preshared key to authenticate IKE peer
+          - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+        """
+        return pulumi.get(self, "pre_shared_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWoVersion")
+    def pre_shared_secret_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "pre_shared_secret_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -51721,12 +53120,20 @@ class SystemAaaFeatureRadiusGroupServer(dict):
             suggest = "key_type_variable"
         elif key == "keyVariable":
             suggest = "key_variable"
+        elif key == "keyWo":
+            suggest = "key_wo"
+        elif key == "keyWoVersion":
+            suggest = "key_wo_version"
         elif key == "retransmitVariable":
             suggest = "retransmit_variable"
         elif key == "secretKey":
             suggest = "secret_key"
         elif key == "secretKeyVariable":
             suggest = "secret_key_variable"
+        elif key == "secretKeyWo":
+            suggest = "secret_key_wo"
+        elif key == "secretKeyWoVersion":
+            suggest = "secret_key_wo_version"
         elif key == "timeoutVariable":
             suggest = "timeout_variable"
 
@@ -51752,10 +53159,14 @@ class SystemAaaFeatureRadiusGroupServer(dict):
                  key_type: Optional[_builtins.str] = None,
                  key_type_variable: Optional[_builtins.str] = None,
                  key_variable: Optional[_builtins.str] = None,
+                 key_wo: Optional[_builtins.str] = None,
+                 key_wo_version: Optional[_builtins.int] = None,
                  retransmit: Optional[_builtins.int] = None,
                  retransmit_variable: Optional[_builtins.str] = None,
                  secret_key: Optional[_builtins.str] = None,
                  secret_key_variable: Optional[_builtins.str] = None,
+                 secret_key_wo: Optional[_builtins.str] = None,
+                 secret_key_wo_version: Optional[_builtins.int] = None,
                  timeout: Optional[_builtins.int] = None,
                  timeout_variable: Optional[_builtins.str] = None):
         """
@@ -51769,6 +53180,8 @@ class SystemAaaFeatureRadiusGroupServer(dict):
                  - Default value: `1812`
         :param _builtins.str auth_port_variable: Variable name
         :param _builtins.str key: Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `key`, `key_variable` and `key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `key_wo` together with `key_wo_version`, which keeps it out of state.
         :param _builtins.str key_enum: Type of encyption. To be used for type 6
                  - Choices: `6`, `7`
         :param _builtins.str key_type: key type
@@ -51776,12 +53189,22 @@ class SystemAaaFeatureRadiusGroupServer(dict):
                  - Default value: `key`
         :param _builtins.str key_type_variable: Variable name
         :param _builtins.str key_variable: Variable name
+        :param _builtins.str key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `key`, `key_variable` and `key_wo` can be set.
+        :param _builtins.int key_wo_version: Rotation trigger for `key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int retransmit: Configure how many times to contact this Radius server
                  - Range: `1`-`100`
                  - Default value: `3`
         :param _builtins.str retransmit_variable: Variable name
         :param _builtins.str secret_key: Set the Radius server shared type 7 encrypted key
+                 - Only one of `secret_key`, `secret_key_variable` and `secret_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `secret_key_wo` together with `secret_key_wo_version`, which keeps it out of state.
         :param _builtins.str secret_key_variable: Variable name
+        :param _builtins.str secret_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set the Radius server shared type 7 encrypted key
+                 - Only one of `secret_key`, `secret_key_variable` and `secret_key_wo` can be set.
+        :param _builtins.int secret_key_wo_version: Rotation trigger for `secret_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int timeout: Configure how long to wait for replies from the Radius server
                  - Range: `1`-`1000`
                  - Default value: `5`
@@ -51807,6 +53230,10 @@ class SystemAaaFeatureRadiusGroupServer(dict):
             pulumi.set(__self__, "key_type_variable", key_type_variable)
         if key_variable is not None:
             pulumi.set(__self__, "key_variable", key_variable)
+        if key_wo is not None:
+            pulumi.set(__self__, "key_wo", key_wo)
+        if key_wo_version is not None:
+            pulumi.set(__self__, "key_wo_version", key_wo_version)
         if retransmit is not None:
             pulumi.set(__self__, "retransmit", retransmit)
         if retransmit_variable is not None:
@@ -51815,6 +53242,10 @@ class SystemAaaFeatureRadiusGroupServer(dict):
             pulumi.set(__self__, "secret_key", secret_key)
         if secret_key_variable is not None:
             pulumi.set(__self__, "secret_key_variable", secret_key_variable)
+        if secret_key_wo is not None:
+            pulumi.set(__self__, "secret_key_wo", secret_key_wo)
+        if secret_key_wo_version is not None:
+            pulumi.set(__self__, "secret_key_wo_version", secret_key_wo_version)
         if timeout is not None:
             pulumi.set(__self__, "timeout", timeout)
         if timeout_variable is not None:
@@ -51869,6 +53300,8 @@ class SystemAaaFeatureRadiusGroupServer(dict):
     def key(self) -> Optional[_builtins.str]:
         """
         Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `key`, `key_variable` and `key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `key_wo` together with `key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "key")
 
@@ -51908,6 +53341,24 @@ class SystemAaaFeatureRadiusGroupServer(dict):
         return pulumi.get(self, "key_variable")
 
     @_builtins.property
+    @pulumi.getter(name="keyWo")
+    def key_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `key`, `key_variable` and `key_wo` can be set.
+        """
+        return pulumi.get(self, "key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="keyWoVersion")
+    def key_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "key_wo_version")
+
+    @_builtins.property
     @pulumi.getter
     def retransmit(self) -> Optional[_builtins.int]:
         """
@@ -51930,6 +53381,8 @@ class SystemAaaFeatureRadiusGroupServer(dict):
     def secret_key(self) -> Optional[_builtins.str]:
         """
         Set the Radius server shared type 7 encrypted key
+          - Only one of `secret_key`, `secret_key_variable` and `secret_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `secret_key_wo` together with `secret_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "secret_key")
 
@@ -51940,6 +53393,24 @@ class SystemAaaFeatureRadiusGroupServer(dict):
         Variable name
         """
         return pulumi.get(self, "secret_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="secretKeyWo")
+    def secret_key_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set the Radius server shared type 7 encrypted key
+          - Only one of `secret_key`, `secret_key_variable` and `secret_key_wo` can be set.
+        """
+        return pulumi.get(self, "secret_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="secretKeyWoVersion")
+    def secret_key_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `secret_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "secret_key_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -52075,12 +53546,20 @@ class SystemAaaFeatureTacacsGroupServer(dict):
             suggest = "key_enum"
         elif key == "keyVariable":
             suggest = "key_variable"
+        elif key == "keyWo":
+            suggest = "key_wo"
+        elif key == "keyWoVersion":
+            suggest = "key_wo_version"
         elif key == "portVariable":
             suggest = "port_variable"
         elif key == "secretKey":
             suggest = "secret_key"
         elif key == "secretKeyVariable":
             suggest = "secret_key_variable"
+        elif key == "secretKeyWo":
+            suggest = "secret_key_wo"
+        elif key == "secretKeyWoVersion":
+            suggest = "secret_key_wo_version"
         elif key == "timeoutVariable":
             suggest = "timeout_variable"
 
@@ -52100,24 +53579,40 @@ class SystemAaaFeatureTacacsGroupServer(dict):
                  key: Optional[_builtins.str] = None,
                  key_enum: Optional[_builtins.str] = None,
                  key_variable: Optional[_builtins.str] = None,
+                 key_wo: Optional[_builtins.str] = None,
+                 key_wo_version: Optional[_builtins.int] = None,
                  port: Optional[_builtins.int] = None,
                  port_variable: Optional[_builtins.str] = None,
                  secret_key: Optional[_builtins.str] = None,
                  secret_key_variable: Optional[_builtins.str] = None,
+                 secret_key_wo: Optional[_builtins.str] = None,
+                 secret_key_wo_version: Optional[_builtins.int] = None,
                  timeout: Optional[_builtins.int] = None,
                  timeout_variable: Optional[_builtins.str] = None):
         """
         :param _builtins.str address: Set IP address of TACACS server
         :param _builtins.str key: Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `key`, `key_variable` and `key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `key_wo` together with `key_wo_version`, which keeps it out of state.
         :param _builtins.str key_enum: Type of encyption. To be used for type 6
                  - Choices: `6`, `7`
         :param _builtins.str key_variable: Variable name
+        :param _builtins.str key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `key`, `key_variable` and `key_wo` can be set.
+        :param _builtins.int key_wo_version: Rotation trigger for `key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int port: TACACS Port
                  - Range: `1`-`65535`
                  - Default value: `49`
         :param _builtins.str port_variable: Variable name
         :param _builtins.str secret_key: Set the TACACS server shared type 7 encrypted key
+                 - Only one of `secret_key`, `secret_key_variable` and `secret_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `secret_key_wo` together with `secret_key_wo_version`, which keeps it out of state.
         :param _builtins.str secret_key_variable: Variable name
+        :param _builtins.str secret_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set the TACACS server shared type 7 encrypted key
+                 - Only one of `secret_key`, `secret_key_variable` and `secret_key_wo` can be set.
+        :param _builtins.int secret_key_wo_version: Rotation trigger for `secret_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int timeout: Configure how long to wait for replies from the TACACS server
                  - Range: `1`-`1000`
                  - Default value: `5`
@@ -52131,6 +53626,10 @@ class SystemAaaFeatureTacacsGroupServer(dict):
             pulumi.set(__self__, "key_enum", key_enum)
         if key_variable is not None:
             pulumi.set(__self__, "key_variable", key_variable)
+        if key_wo is not None:
+            pulumi.set(__self__, "key_wo", key_wo)
+        if key_wo_version is not None:
+            pulumi.set(__self__, "key_wo_version", key_wo_version)
         if port is not None:
             pulumi.set(__self__, "port", port)
         if port_variable is not None:
@@ -52139,6 +53638,10 @@ class SystemAaaFeatureTacacsGroupServer(dict):
             pulumi.set(__self__, "secret_key", secret_key)
         if secret_key_variable is not None:
             pulumi.set(__self__, "secret_key_variable", secret_key_variable)
+        if secret_key_wo is not None:
+            pulumi.set(__self__, "secret_key_wo", secret_key_wo)
+        if secret_key_wo_version is not None:
+            pulumi.set(__self__, "secret_key_wo_version", secret_key_wo_version)
         if timeout is not None:
             pulumi.set(__self__, "timeout", timeout)
         if timeout_variable is not None:
@@ -52157,6 +53660,8 @@ class SystemAaaFeatureTacacsGroupServer(dict):
     def key(self) -> Optional[_builtins.str]:
         """
         Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `key`, `key_variable` and `key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `key_wo` together with `key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "key")
 
@@ -52176,6 +53681,24 @@ class SystemAaaFeatureTacacsGroupServer(dict):
         Variable name
         """
         return pulumi.get(self, "key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="keyWo")
+    def key_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `key`, `key_variable` and `key_wo` can be set.
+        """
+        return pulumi.get(self, "key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="keyWoVersion")
+    def key_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "key_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -52200,6 +53723,8 @@ class SystemAaaFeatureTacacsGroupServer(dict):
     def secret_key(self) -> Optional[_builtins.str]:
         """
         Set the TACACS server shared type 7 encrypted key
+          - Only one of `secret_key`, `secret_key_variable` and `secret_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `secret_key_wo` together with `secret_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "secret_key")
 
@@ -52210,6 +53735,24 @@ class SystemAaaFeatureTacacsGroupServer(dict):
         Variable name
         """
         return pulumi.get(self, "secret_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="secretKeyWo")
+    def secret_key_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set the TACACS server shared type 7 encrypted key
+          - Only one of `secret_key`, `secret_key_variable` and `secret_key_wo` can be set.
+        """
+        return pulumi.get(self, "secret_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="secretKeyWoVersion")
+    def secret_key_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `secret_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "secret_key_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -52239,6 +53782,10 @@ class SystemAaaFeatureUser(dict):
             suggest = "name_variable"
         elif key == "passwordVariable":
             suggest = "password_variable"
+        elif key == "passwordWo":
+            suggest = "password_wo"
+        elif key == "passwordWoVersion":
+            suggest = "password_wo_version"
         elif key == "privilegeVariable":
             suggest = "privilege_variable"
         elif key == "publicKeys":
@@ -52260,6 +53807,8 @@ class SystemAaaFeatureUser(dict):
                  name_variable: Optional[_builtins.str] = None,
                  password: Optional[_builtins.str] = None,
                  password_variable: Optional[_builtins.str] = None,
+                 password_wo: Optional[_builtins.str] = None,
+                 password_wo_version: Optional[_builtins.int] = None,
                  privilege: Optional[_builtins.str] = None,
                  privilege_variable: Optional[_builtins.str] = None,
                  public_keys: Optional[Sequence['outputs.SystemAaaFeatureUserPublicKey']] = None):
@@ -52267,7 +53816,13 @@ class SystemAaaFeatureUser(dict):
         :param _builtins.str name: Set the username
         :param _builtins.str name_variable: Variable name
         :param _builtins.str password: Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         :param _builtins.str password_variable: Variable name
+        :param _builtins.str password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+        :param _builtins.int password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str privilege: Set Privilege Level for this user
                  - Choices: `1`, `15`
                  - Default value: `15`
@@ -52282,6 +53837,10 @@ class SystemAaaFeatureUser(dict):
             pulumi.set(__self__, "password", password)
         if password_variable is not None:
             pulumi.set(__self__, "password_variable", password_variable)
+        if password_wo is not None:
+            pulumi.set(__self__, "password_wo", password_wo)
+        if password_wo_version is not None:
+            pulumi.set(__self__, "password_wo_version", password_wo_version)
         if privilege is not None:
             pulumi.set(__self__, "privilege", privilege)
         if privilege_variable is not None:
@@ -52310,6 +53869,8 @@ class SystemAaaFeatureUser(dict):
     def password(self) -> Optional[_builtins.str]:
         """
         Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "password")
 
@@ -52320,6 +53881,24 @@ class SystemAaaFeatureUser(dict):
         Variable name
         """
         return pulumi.get(self, "password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -53673,10 +55252,18 @@ class SystemNtpFeatureAuthenticationKey(dict):
             suggest = "cmac_aes128_value"
         elif key == "cmacAes128ValueVariable":
             suggest = "cmac_aes128_value_variable"
+        elif key == "cmacAes128ValueWo":
+            suggest = "cmac_aes128_value_wo"
+        elif key == "cmacAes128ValueWoVersion":
+            suggest = "cmac_aes128_value_wo_version"
         elif key == "hmacSha2Value":
             suggest = "hmac_sha2_value"
         elif key == "hmacSha2ValueVariable":
             suggest = "hmac_sha2_value_variable"
+        elif key == "hmacSha2ValueWo":
+            suggest = "hmac_sha2_value_wo"
+        elif key == "hmacSha2ValueWoVersion":
+            suggest = "hmac_sha2_value_wo_version"
         elif key == "keyId":
             suggest = "key_id"
         elif key == "keyIdVariable":
@@ -53685,6 +55272,10 @@ class SystemNtpFeatureAuthenticationKey(dict):
             suggest = "md5_value"
         elif key == "md5ValueVariable":
             suggest = "md5_value_variable"
+        elif key == "md5ValueWo":
+            suggest = "md5_value_wo"
+        elif key == "md5ValueWoVersion":
+            suggest = "md5_value_wo_version"
 
         if suggest:
             pulumi.log.warn(f"Key '{key}' not found in SystemNtpFeatureAuthenticationKey. Access the value via the '{suggest}' property getter instead.")
@@ -53700,31 +55291,63 @@ class SystemNtpFeatureAuthenticationKey(dict):
     def __init__(__self__, *,
                  cmac_aes128_value: Optional[_builtins.str] = None,
                  cmac_aes128_value_variable: Optional[_builtins.str] = None,
+                 cmac_aes128_value_wo: Optional[_builtins.str] = None,
+                 cmac_aes128_value_wo_version: Optional[_builtins.int] = None,
                  hmac_sha2_value: Optional[_builtins.str] = None,
                  hmac_sha2_value_variable: Optional[_builtins.str] = None,
+                 hmac_sha2_value_wo: Optional[_builtins.str] = None,
+                 hmac_sha2_value_wo_version: Optional[_builtins.int] = None,
                  key_id: Optional[_builtins.int] = None,
                  key_id_variable: Optional[_builtins.str] = None,
                  md5_value: Optional[_builtins.str] = None,
-                 md5_value_variable: Optional[_builtins.str] = None):
+                 md5_value_variable: Optional[_builtins.str] = None,
+                 md5_value_wo: Optional[_builtins.str] = None,
+                 md5_value_wo_version: Optional[_builtins.int] = None):
         """
         :param _builtins.str cmac_aes128_value: CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+                 - Only one of `cmac_aes128_value`, `cmac_aes128_value_variable` and `cmac_aes128_value_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `cmac_aes128_value_wo` together with `cmac_aes128_value_wo_version`, which keeps it out of state.
         :param _builtins.str cmac_aes128_value_variable: Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        :param _builtins.str cmac_aes128_value_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+                 - Only one of `cmac_aes128_value`, `cmac_aes128_value_variable` and `cmac_aes128_value_wo` can be set.
+        :param _builtins.int cmac_aes128_value_wo_version: Rotation trigger for `cmac_aes128_value_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str hmac_sha2_value: HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+                 - Only one of `hmac_sha2_value`, `hmac_sha2_value_variable` and `hmac_sha2_value_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `hmac_sha2_value_wo` together with `hmac_sha2_value_wo_version`, which keeps it out of state.
         :param _builtins.str hmac_sha2_value_variable: Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        :param _builtins.str hmac_sha2_value_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+                 - Only one of `hmac_sha2_value`, `hmac_sha2_value_variable` and `hmac_sha2_value_wo` can be set.
+        :param _builtins.int hmac_sha2_value_wo_version: Rotation trigger for `hmac_sha2_value_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int key_id: Authentication key ID
                  - Range: `1`-`4294967295`
         :param _builtins.str key_id_variable: Variable name
         :param _builtins.str md5_value: Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `md5_value`, `md5_value_variable` and `md5_value_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `md5_value_wo` together with `md5_value_wo_version`, which keeps it out of state.
         :param _builtins.str md5_value_variable: Variable name
+        :param _builtins.str md5_value_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `md5_value`, `md5_value_variable` and `md5_value_wo` can be set.
+        :param _builtins.int md5_value_wo_version: Rotation trigger for `md5_value_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         """
         if cmac_aes128_value is not None:
             pulumi.set(__self__, "cmac_aes128_value", cmac_aes128_value)
         if cmac_aes128_value_variable is not None:
             pulumi.set(__self__, "cmac_aes128_value_variable", cmac_aes128_value_variable)
+        if cmac_aes128_value_wo is not None:
+            pulumi.set(__self__, "cmac_aes128_value_wo", cmac_aes128_value_wo)
+        if cmac_aes128_value_wo_version is not None:
+            pulumi.set(__self__, "cmac_aes128_value_wo_version", cmac_aes128_value_wo_version)
         if hmac_sha2_value is not None:
             pulumi.set(__self__, "hmac_sha2_value", hmac_sha2_value)
         if hmac_sha2_value_variable is not None:
             pulumi.set(__self__, "hmac_sha2_value_variable", hmac_sha2_value_variable)
+        if hmac_sha2_value_wo is not None:
+            pulumi.set(__self__, "hmac_sha2_value_wo", hmac_sha2_value_wo)
+        if hmac_sha2_value_wo_version is not None:
+            pulumi.set(__self__, "hmac_sha2_value_wo_version", hmac_sha2_value_wo_version)
         if key_id is not None:
             pulumi.set(__self__, "key_id", key_id)
         if key_id_variable is not None:
@@ -53733,12 +55356,18 @@ class SystemNtpFeatureAuthenticationKey(dict):
             pulumi.set(__self__, "md5_value", md5_value)
         if md5_value_variable is not None:
             pulumi.set(__self__, "md5_value_variable", md5_value_variable)
+        if md5_value_wo is not None:
+            pulumi.set(__self__, "md5_value_wo", md5_value_wo)
+        if md5_value_wo_version is not None:
+            pulumi.set(__self__, "md5_value_wo_version", md5_value_wo_version)
 
     @_builtins.property
     @pulumi.getter(name="cmacAes128Value")
     def cmac_aes128_value(self) -> Optional[_builtins.str]:
         """
         CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+          - Only one of `cmac_aes128_value`, `cmac_aes128_value_variable` and `cmac_aes128_value_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `cmac_aes128_value_wo` together with `cmac_aes128_value_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "cmac_aes128_value")
 
@@ -53751,10 +55380,30 @@ class SystemNtpFeatureAuthenticationKey(dict):
         return pulumi.get(self, "cmac_aes128_value_variable")
 
     @_builtins.property
+    @pulumi.getter(name="cmacAes128ValueWo")
+    def cmac_aes128_value_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+          - Only one of `cmac_aes128_value`, `cmac_aes128_value_variable` and `cmac_aes128_value_wo` can be set.
+        """
+        return pulumi.get(self, "cmac_aes128_value_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="cmacAes128ValueWoVersion")
+    def cmac_aes128_value_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `cmac_aes128_value_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "cmac_aes128_value_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="hmacSha2Value")
     def hmac_sha2_value(self) -> Optional[_builtins.str]:
         """
         HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+          - Only one of `hmac_sha2_value`, `hmac_sha2_value_variable` and `hmac_sha2_value_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `hmac_sha2_value_wo` together with `hmac_sha2_value_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "hmac_sha2_value")
 
@@ -53765,6 +55414,24 @@ class SystemNtpFeatureAuthenticationKey(dict):
         Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
         """
         return pulumi.get(self, "hmac_sha2_value_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="hmacSha2ValueWo")
+    def hmac_sha2_value_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+          - Only one of `hmac_sha2_value`, `hmac_sha2_value_variable` and `hmac_sha2_value_wo` can be set.
+        """
+        return pulumi.get(self, "hmac_sha2_value_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="hmacSha2ValueWoVersion")
+    def hmac_sha2_value_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `hmac_sha2_value_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "hmac_sha2_value_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="keyId")
@@ -53788,6 +55455,8 @@ class SystemNtpFeatureAuthenticationKey(dict):
     def md5_value(self) -> Optional[_builtins.str]:
         """
         Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `md5_value`, `md5_value_variable` and `md5_value_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `md5_value_wo` together with `md5_value_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "md5_value")
 
@@ -53798,6 +55467,24 @@ class SystemNtpFeatureAuthenticationKey(dict):
         Variable name
         """
         return pulumi.get(self, "md5_value_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="md5ValueWo")
+    def md5_value_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `md5_value`, `md5_value_variable` and `md5_value_wo` can be set.
+        """
+        return pulumi.get(self, "md5_value_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="md5ValueWoVersion")
+    def md5_value_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `md5_value_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "md5_value_wo_version")
 
 
 @pulumi.output_type
@@ -54035,6 +55722,10 @@ class SystemSecurityFeatureKey(dict):
             suggest = "key_string"
         elif key == "keyStringVariable":
             suggest = "key_string_variable"
+        elif key == "keyStringWo":
+            suggest = "key_string_wo"
+        elif key == "keyStringWoVersion":
+            suggest = "key_string_wo_version"
         elif key == "receiverId":
             suggest = "receiver_id"
         elif key == "receiverIdVariable":
@@ -54088,6 +55779,8 @@ class SystemSecurityFeatureKey(dict):
                  include_tcp_options_variable: Optional[_builtins.str] = None,
                  key_string: Optional[_builtins.str] = None,
                  key_string_variable: Optional[_builtins.str] = None,
+                 key_string_wo: Optional[_builtins.str] = None,
+                 key_string_wo_version: Optional[_builtins.int] = None,
                  name: Optional[_builtins.str] = None,
                  receiver_id: Optional[_builtins.int] = None,
                  receiver_id_variable: Optional[_builtins.str] = None,
@@ -54122,7 +55815,13 @@ class SystemSecurityFeatureKey(dict):
                  - Default value: `false`
         :param _builtins.str include_tcp_options_variable: Variable name
         :param _builtins.str key_string: Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `key_string`, `key_string_variable` and `key_string_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `key_string_wo` together with `key_string_wo_version`, which keeps it out of state.
         :param _builtins.str key_string_variable: Variable name
+        :param _builtins.str key_string_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `key_string`, `key_string_variable` and `key_string_wo` can be set.
+        :param _builtins.int key_string_wo_version: Rotation trigger for `key_string_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str name: Select the chain name
         :param _builtins.int receiver_id: Specify the Receiver ID
                  - Range: `0`-`255`
@@ -54173,6 +55872,10 @@ class SystemSecurityFeatureKey(dict):
             pulumi.set(__self__, "key_string", key_string)
         if key_string_variable is not None:
             pulumi.set(__self__, "key_string_variable", key_string_variable)
+        if key_string_wo is not None:
+            pulumi.set(__self__, "key_string_wo", key_string_wo)
+        if key_string_wo_version is not None:
+            pulumi.set(__self__, "key_string_wo_version", key_string_wo_version)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if receiver_id is not None:
@@ -54322,6 +56025,8 @@ class SystemSecurityFeatureKey(dict):
     def key_string(self) -> Optional[_builtins.str]:
         """
         Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `key_string`, `key_string_variable` and `key_string_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `key_string_wo` together with `key_string_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "key_string")
 
@@ -54332,6 +56037,24 @@ class SystemSecurityFeatureKey(dict):
         Variable name
         """
         return pulumi.get(self, "key_string_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="keyStringWo")
+    def key_string_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `key_string`, `key_string_variable` and `key_string_wo` can be set.
+        """
+        return pulumi.get(self, "key_string_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="keyStringWoVersion")
+    def key_string_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `key_string_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "key_string_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -54503,6 +56226,10 @@ class SystemSnmpFeatureCommunity(dict):
             suggest = "authorization_variable"
         elif key == "nameVariable":
             suggest = "name_variable"
+        elif key == "nameWo":
+            suggest = "name_wo"
+        elif key == "nameWoVersion":
+            suggest = "name_wo_version"
         elif key == "userLabel":
             suggest = "user_label"
         elif key == "viewVariable":
@@ -54524,6 +56251,8 @@ class SystemSnmpFeatureCommunity(dict):
                  authorization_variable: Optional[_builtins.str] = None,
                  name: Optional[_builtins.str] = None,
                  name_variable: Optional[_builtins.str] = None,
+                 name_wo: Optional[_builtins.str] = None,
+                 name_wo_version: Optional[_builtins.int] = None,
                  user_label: Optional[_builtins.str] = None,
                  view: Optional[_builtins.str] = None,
                  view_variable: Optional[_builtins.str] = None):
@@ -54532,7 +56261,13 @@ class SystemSnmpFeatureCommunity(dict):
                  - Choices: `read-only`, `read-write`
         :param _builtins.str authorization_variable: Variable name
         :param _builtins.str name: Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `name`, `name_variable` and `name_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `name_wo` together with `name_wo_version`, which keeps it out of state.
         :param _builtins.str name_variable: Variable name
+        :param _builtins.str name_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `name`, `name_variable` and `name_wo` can be set.
+        :param _builtins.int name_wo_version: Rotation trigger for `name_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str user_label: Set user label of the SNMP community
         :param _builtins.str view: Set name of the SNMP view
         :param _builtins.str view_variable: Variable name
@@ -54545,6 +56280,10 @@ class SystemSnmpFeatureCommunity(dict):
             pulumi.set(__self__, "name", name)
         if name_variable is not None:
             pulumi.set(__self__, "name_variable", name_variable)
+        if name_wo is not None:
+            pulumi.set(__self__, "name_wo", name_wo)
+        if name_wo_version is not None:
+            pulumi.set(__self__, "name_wo_version", name_wo_version)
         if user_label is not None:
             pulumi.set(__self__, "user_label", user_label)
         if view is not None:
@@ -54574,6 +56313,8 @@ class SystemSnmpFeatureCommunity(dict):
     def name(self) -> Optional[_builtins.str]:
         """
         Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `name`, `name_variable` and `name_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `name_wo` together with `name_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "name")
 
@@ -54584,6 +56325,24 @@ class SystemSnmpFeatureCommunity(dict):
         Variable name
         """
         return pulumi.get(self, "name_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="nameWo")
+    def name_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `name`, `name_variable` and `name_wo` can be set.
+        """
+        return pulumi.get(self, "name_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="nameWoVersion")
+    def name_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `name_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "name_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="userLabel")
@@ -54869,6 +56628,10 @@ class SystemSnmpFeatureUser(dict):
             suggest = "authentication_password"
         elif key == "authenticationPasswordVariable":
             suggest = "authentication_password_variable"
+        elif key == "authenticationPasswordWo":
+            suggest = "authentication_password_wo"
+        elif key == "authenticationPasswordWoVersion":
+            suggest = "authentication_password_wo_version"
         elif key == "authenticationProtocol":
             suggest = "authentication_protocol"
         elif key == "authenticationProtocolVariable":
@@ -54879,6 +56642,10 @@ class SystemSnmpFeatureUser(dict):
             suggest = "privacy_password"
         elif key == "privacyPasswordVariable":
             suggest = "privacy_password_variable"
+        elif key == "privacyPasswordWo":
+            suggest = "privacy_password_wo"
+        elif key == "privacyPasswordWoVersion":
+            suggest = "privacy_password_wo_version"
         elif key == "privacyProtocol":
             suggest = "privacy_protocol"
         elif key == "privacyProtocolVariable":
@@ -54898,6 +56665,8 @@ class SystemSnmpFeatureUser(dict):
     def __init__(__self__, *,
                  authentication_password: Optional[_builtins.str] = None,
                  authentication_password_variable: Optional[_builtins.str] = None,
+                 authentication_password_wo: Optional[_builtins.str] = None,
+                 authentication_password_wo_version: Optional[_builtins.int] = None,
                  authentication_protocol: Optional[_builtins.str] = None,
                  authentication_protocol_variable: Optional[_builtins.str] = None,
                  group: Optional[_builtins.str] = None,
@@ -54905,11 +56674,19 @@ class SystemSnmpFeatureUser(dict):
                  name: Optional[_builtins.str] = None,
                  privacy_password: Optional[_builtins.str] = None,
                  privacy_password_variable: Optional[_builtins.str] = None,
+                 privacy_password_wo: Optional[_builtins.str] = None,
+                 privacy_password_wo_version: Optional[_builtins.int] = None,
                  privacy_protocol: Optional[_builtins.str] = None,
                  privacy_protocol_variable: Optional[_builtins.str] = None):
         """
         :param _builtins.str authentication_password: Specify authentication protocol password
+                 - Only one of `authentication_password`, `authentication_password_variable` and `authentication_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_password_wo` together with `authentication_password_wo_version`, which keeps it out of state.
         :param _builtins.str authentication_password_variable: Variable name
+        :param _builtins.str authentication_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Specify authentication protocol password
+                 - Only one of `authentication_password`, `authentication_password_variable` and `authentication_password_wo` can be set.
+        :param _builtins.int authentication_password_wo_version: Rotation trigger for `authentication_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str authentication_protocol: Configure authentication protocol
                  - Choices: `sha`, `sha256`
         :param _builtins.str authentication_protocol_variable: Variable name
@@ -54917,7 +56694,13 @@ class SystemSnmpFeatureUser(dict):
         :param _builtins.str group_variable: Variable name
         :param _builtins.str name: Name of the SNMP user
         :param _builtins.str privacy_password: Specify privacy protocol password
+                 - Only one of `privacy_password`, `privacy_password_variable` and `privacy_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `privacy_password_wo` together with `privacy_password_wo_version`, which keeps it out of state.
         :param _builtins.str privacy_password_variable: Variable name
+        :param _builtins.str privacy_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Specify privacy protocol password
+                 - Only one of `privacy_password`, `privacy_password_variable` and `privacy_password_wo` can be set.
+        :param _builtins.int privacy_password_wo_version: Rotation trigger for `privacy_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str privacy_protocol: Configure privacy protocol
                  - Choices: `aes-cfb-128`, `aes-256-cfb-128`
         :param _builtins.str privacy_protocol_variable: Variable name
@@ -54926,6 +56709,10 @@ class SystemSnmpFeatureUser(dict):
             pulumi.set(__self__, "authentication_password", authentication_password)
         if authentication_password_variable is not None:
             pulumi.set(__self__, "authentication_password_variable", authentication_password_variable)
+        if authentication_password_wo is not None:
+            pulumi.set(__self__, "authentication_password_wo", authentication_password_wo)
+        if authentication_password_wo_version is not None:
+            pulumi.set(__self__, "authentication_password_wo_version", authentication_password_wo_version)
         if authentication_protocol is not None:
             pulumi.set(__self__, "authentication_protocol", authentication_protocol)
         if authentication_protocol_variable is not None:
@@ -54940,6 +56727,10 @@ class SystemSnmpFeatureUser(dict):
             pulumi.set(__self__, "privacy_password", privacy_password)
         if privacy_password_variable is not None:
             pulumi.set(__self__, "privacy_password_variable", privacy_password_variable)
+        if privacy_password_wo is not None:
+            pulumi.set(__self__, "privacy_password_wo", privacy_password_wo)
+        if privacy_password_wo_version is not None:
+            pulumi.set(__self__, "privacy_password_wo_version", privacy_password_wo_version)
         if privacy_protocol is not None:
             pulumi.set(__self__, "privacy_protocol", privacy_protocol)
         if privacy_protocol_variable is not None:
@@ -54950,6 +56741,8 @@ class SystemSnmpFeatureUser(dict):
     def authentication_password(self) -> Optional[_builtins.str]:
         """
         Specify authentication protocol password
+          - Only one of `authentication_password`, `authentication_password_variable` and `authentication_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_password_wo` together with `authentication_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_password")
 
@@ -54960,6 +56753,24 @@ class SystemSnmpFeatureUser(dict):
         Variable name
         """
         return pulumi.get(self, "authentication_password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationPasswordWo")
+    def authentication_password_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Specify authentication protocol password
+          - Only one of `authentication_password`, `authentication_password_variable` and `authentication_password_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationPasswordWoVersion")
+    def authentication_password_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `authentication_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="authenticationProtocol")
@@ -55007,6 +56818,8 @@ class SystemSnmpFeatureUser(dict):
     def privacy_password(self) -> Optional[_builtins.str]:
         """
         Specify privacy protocol password
+          - Only one of `privacy_password`, `privacy_password_variable` and `privacy_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `privacy_password_wo` together with `privacy_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "privacy_password")
 
@@ -55017,6 +56830,24 @@ class SystemSnmpFeatureUser(dict):
         Variable name
         """
         return pulumi.get(self, "privacy_password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="privacyPasswordWo")
+    def privacy_password_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Specify privacy protocol password
+          - Only one of `privacy_password`, `privacy_password_variable` and `privacy_password_wo` can be set.
+        """
+        return pulumi.get(self, "privacy_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="privacyPasswordWoVersion")
+    def privacy_password_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `privacy_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "privacy_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="privacyProtocol")
@@ -60234,6 +62065,10 @@ class TransportRoutingBgpFeatureIpv4Neighbor(dict):
             suggest = "next_hop_self_variable"
         elif key == "passwordVariable":
             suggest = "password_variable"
+        elif key == "passwordWo":
+            suggest = "password_wo"
+        elif key == "passwordWoVersion":
+            suggest = "password_wo_version"
         elif key == "remoteAs":
             suggest = "remote_as"
         elif key == "remoteAsVariable":
@@ -60290,6 +62125,8 @@ class TransportRoutingBgpFeatureIpv4Neighbor(dict):
                  next_hop_self_variable: Optional[_builtins.str] = None,
                  password: Optional[_builtins.str] = None,
                  password_variable: Optional[_builtins.str] = None,
+                 password_wo: Optional[_builtins.str] = None,
+                 password_wo_version: Optional[_builtins.int] = None,
                  remote_as: Optional[_builtins.str] = None,
                  remote_as_variable: Optional[_builtins.str] = None,
                  send_community: Optional[_builtins.bool] = None,
@@ -60334,7 +62171,13 @@ class TransportRoutingBgpFeatureIpv4Neighbor(dict):
                  - Default value: `false`
         :param _builtins.str next_hop_self_variable: Variable name
         :param _builtins.str password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         :param _builtins.str password_variable: Variable name
+        :param _builtins.str password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+        :param _builtins.int password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str remote_as: Set remote autonomous system number
         :param _builtins.str remote_as_variable: Variable name
         :param _builtins.bool send_community: Send community attribute
@@ -60397,6 +62240,10 @@ class TransportRoutingBgpFeatureIpv4Neighbor(dict):
             pulumi.set(__self__, "password", password)
         if password_variable is not None:
             pulumi.set(__self__, "password_variable", password_variable)
+        if password_wo is not None:
+            pulumi.set(__self__, "password_wo", password_wo)
+        if password_wo_version is not None:
+            pulumi.set(__self__, "password_wo_version", password_wo_version)
         if remote_as is not None:
             pulumi.set(__self__, "remote_as", remote_as)
         if remote_as_variable is not None:
@@ -60603,6 +62450,8 @@ class TransportRoutingBgpFeatureIpv4Neighbor(dict):
     def password(self) -> Optional[_builtins.str]:
         """
         Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "password")
 
@@ -60613,6 +62462,24 @@ class TransportRoutingBgpFeatureIpv4Neighbor(dict):
         Variable name
         """
         return pulumi.get(self, "password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="remoteAs")
@@ -61344,6 +63211,10 @@ class TransportRoutingBgpFeatureIpv6Neighbor(dict):
             suggest = "next_hop_self_variable"
         elif key == "passwordVariable":
             suggest = "password_variable"
+        elif key == "passwordWo":
+            suggest = "password_wo"
+        elif key == "passwordWoVersion":
+            suggest = "password_wo_version"
         elif key == "remoteAs":
             suggest = "remote_as"
         elif key == "remoteAsVariable":
@@ -61396,6 +63267,8 @@ class TransportRoutingBgpFeatureIpv6Neighbor(dict):
                  next_hop_self_variable: Optional[_builtins.str] = None,
                  password: Optional[_builtins.str] = None,
                  password_variable: Optional[_builtins.str] = None,
+                 password_wo: Optional[_builtins.str] = None,
+                 password_wo_version: Optional[_builtins.int] = None,
                  remote_as: Optional[_builtins.str] = None,
                  remote_as_variable: Optional[_builtins.str] = None,
                  send_community: Optional[_builtins.bool] = None,
@@ -61436,7 +63309,13 @@ class TransportRoutingBgpFeatureIpv6Neighbor(dict):
                  - Default value: `false`
         :param _builtins.str next_hop_self_variable: Variable name
         :param _builtins.str password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         :param _builtins.str password_variable: Variable name
+        :param _builtins.str password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `password`, `password_variable` and `password_wo` can be set.
+        :param _builtins.int password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str remote_as: Set remote autonomous system number
         :param _builtins.str remote_as_variable: Variable name
         :param _builtins.bool send_community: Send community attribute
@@ -61493,6 +63372,10 @@ class TransportRoutingBgpFeatureIpv6Neighbor(dict):
             pulumi.set(__self__, "password", password)
         if password_variable is not None:
             pulumi.set(__self__, "password_variable", password_variable)
+        if password_wo is not None:
+            pulumi.set(__self__, "password_wo", password_wo)
+        if password_wo_version is not None:
+            pulumi.set(__self__, "password_wo_version", password_wo_version)
         if remote_as is not None:
             pulumi.set(__self__, "remote_as", remote_as)
         if remote_as_variable is not None:
@@ -61680,6 +63563,8 @@ class TransportRoutingBgpFeatureIpv6Neighbor(dict):
     def password(self) -> Optional[_builtins.str]:
         """
         Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "password")
 
@@ -61690,6 +63575,24 @@ class TransportRoutingBgpFeatureIpv6Neighbor(dict):
         Variable name
         """
         return pulumi.get(self, "password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `password`, `password_variable` and `password_wo` can be set.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="remoteAs")
@@ -62438,6 +64341,10 @@ class TransportRoutingOspfFeatureAreaInterface(dict):
             suggest = "message_digest_key_id_variable"
         elif key == "messageDigestKeyVariable":
             suggest = "message_digest_key_variable"
+        elif key == "messageDigestKeyWo":
+            suggest = "message_digest_key_wo"
+        elif key == "messageDigestKeyWoVersion":
+            suggest = "message_digest_key_wo_version"
         elif key == "nameVariable":
             suggest = "name_variable"
         elif key == "networkType":
@@ -62477,6 +64384,8 @@ class TransportRoutingOspfFeatureAreaInterface(dict):
                  message_digest_key_id: Optional[_builtins.int] = None,
                  message_digest_key_id_variable: Optional[_builtins.str] = None,
                  message_digest_key_variable: Optional[_builtins.str] = None,
+                 message_digest_key_wo: Optional[_builtins.str] = None,
+                 message_digest_key_wo_version: Optional[_builtins.int] = None,
                  name: Optional[_builtins.str] = None,
                  name_variable: Optional[_builtins.str] = None,
                  network_type: Optional[_builtins.str] = None,
@@ -62507,10 +64416,16 @@ class TransportRoutingOspfFeatureAreaInterface(dict):
                  - Default value: `5`
         :param _builtins.str lsa_retransmit_interval_variable: Variable name
         :param _builtins.str message_digest_key: Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `message_digest_key`, `message_digest_key_variable` and `message_digest_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `message_digest_key_wo` together with `message_digest_key_wo_version`, which keeps it out of state.
         :param _builtins.int message_digest_key_id: Set MD5 message digest key
                  - Range: `1`-`255`
         :param _builtins.str message_digest_key_id_variable: Variable name
         :param _builtins.str message_digest_key_variable: Variable name
+        :param _builtins.str message_digest_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+                 - Only one of `message_digest_key`, `message_digest_key_variable` and `message_digest_key_wo` can be set.
+        :param _builtins.int message_digest_key_wo_version: Rotation trigger for `message_digest_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str name: Set interface name
         :param _builtins.str name_variable: Variable name
         :param _builtins.str network_type: Set the OSPF network type
@@ -62553,6 +64468,10 @@ class TransportRoutingOspfFeatureAreaInterface(dict):
             pulumi.set(__self__, "message_digest_key_id_variable", message_digest_key_id_variable)
         if message_digest_key_variable is not None:
             pulumi.set(__self__, "message_digest_key_variable", message_digest_key_variable)
+        if message_digest_key_wo is not None:
+            pulumi.set(__self__, "message_digest_key_wo", message_digest_key_wo)
+        if message_digest_key_wo_version is not None:
+            pulumi.set(__self__, "message_digest_key_wo_version", message_digest_key_wo_version)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if name_variable is not None:
@@ -62677,6 +64596,8 @@ class TransportRoutingOspfFeatureAreaInterface(dict):
     def message_digest_key(self) -> Optional[_builtins.str]:
         """
         Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `message_digest_key`, `message_digest_key_variable` and `message_digest_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `message_digest_key_wo` together with `message_digest_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "message_digest_key")
 
@@ -62704,6 +64625,24 @@ class TransportRoutingOspfFeatureAreaInterface(dict):
         Variable name
         """
         return pulumi.get(self, "message_digest_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="messageDigestKeyWo")
+    def message_digest_key_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+          - Only one of `message_digest_key`, `message_digest_key_variable` and `message_digest_key_wo` can be set.
+        """
+        return pulumi.get(self, "message_digest_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="messageDigestKeyWoVersion")
+    def message_digest_key_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `message_digest_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "message_digest_key_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -63206,6 +65145,10 @@ class TransportRoutingOspfv3Ipv4FeatureAreaInterface(dict):
             suggest = "authentication_key"
         elif key == "authenticationKeyVariable":
             suggest = "authentication_key_variable"
+        elif key == "authenticationKeyWo":
+            suggest = "authentication_key_wo"
+        elif key == "authenticationKeyWoVersion":
+            suggest = "authentication_key_wo_version"
         elif key == "authenticationSpi":
             suggest = "authentication_spi"
         elif key == "authenticationSpiVariable":
@@ -63251,6 +65194,8 @@ class TransportRoutingOspfv3Ipv4FeatureAreaInterface(dict):
     def __init__(__self__, *,
                  authentication_key: Optional[_builtins.str] = None,
                  authentication_key_variable: Optional[_builtins.str] = None,
+                 authentication_key_wo: Optional[_builtins.str] = None,
+                 authentication_key_wo_version: Optional[_builtins.int] = None,
                  authentication_spi: Optional[_builtins.int] = None,
                  authentication_spi_variable: Optional[_builtins.str] = None,
                  authentication_type: Optional[_builtins.str] = None,
@@ -63270,7 +65215,13 @@ class TransportRoutingOspfv3Ipv4FeatureAreaInterface(dict):
                  passive_interface_variable: Optional[_builtins.str] = None):
         """
         :param _builtins.str authentication_key: Set OSPF interface authentication IPSEC key
+                 - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_key_wo` together with `authentication_key_wo_version`, which keeps it out of state.
         :param _builtins.str authentication_key_variable: Variable name
+        :param _builtins.str authentication_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set OSPF interface authentication IPSEC key
+                 - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+        :param _builtins.int authentication_key_wo_version: Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int authentication_spi: Set OSPF interface authentication IPSec SPI, range 256..4294967295
                  - Range: `256`-`4294967295`
         :param _builtins.str authentication_spi_variable: Variable name
@@ -63304,6 +65255,10 @@ class TransportRoutingOspfv3Ipv4FeatureAreaInterface(dict):
             pulumi.set(__self__, "authentication_key", authentication_key)
         if authentication_key_variable is not None:
             pulumi.set(__self__, "authentication_key_variable", authentication_key_variable)
+        if authentication_key_wo is not None:
+            pulumi.set(__self__, "authentication_key_wo", authentication_key_wo)
+        if authentication_key_wo_version is not None:
+            pulumi.set(__self__, "authentication_key_wo_version", authentication_key_wo_version)
         if authentication_spi is not None:
             pulumi.set(__self__, "authentication_spi", authentication_spi)
         if authentication_spi_variable is not None:
@@ -63344,6 +65299,8 @@ class TransportRoutingOspfv3Ipv4FeatureAreaInterface(dict):
     def authentication_key(self) -> Optional[_builtins.str]:
         """
         Set OSPF interface authentication IPSEC key
+          - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_key_wo` together with `authentication_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_key")
 
@@ -63354,6 +65311,24 @@ class TransportRoutingOspfv3Ipv4FeatureAreaInterface(dict):
         Variable name
         """
         return pulumi.get(self, "authentication_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWo")
+    def authentication_key_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set OSPF interface authentication IPSEC key
+          - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWoVersion")
+    def authentication_key_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_key_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="authenticationSpi")
@@ -63912,6 +65887,10 @@ class TransportRoutingOspfv3Ipv6FeatureAreaInterface(dict):
             suggest = "authentication_key"
         elif key == "authenticationKeyVariable":
             suggest = "authentication_key_variable"
+        elif key == "authenticationKeyWo":
+            suggest = "authentication_key_wo"
+        elif key == "authenticationKeyWoVersion":
+            suggest = "authentication_key_wo_version"
         elif key == "authenticationSpi":
             suggest = "authentication_spi"
         elif key == "authenticationSpiVariable":
@@ -63957,6 +65936,8 @@ class TransportRoutingOspfv3Ipv6FeatureAreaInterface(dict):
     def __init__(__self__, *,
                  authentication_key: Optional[_builtins.str] = None,
                  authentication_key_variable: Optional[_builtins.str] = None,
+                 authentication_key_wo: Optional[_builtins.str] = None,
+                 authentication_key_wo_version: Optional[_builtins.int] = None,
                  authentication_spi: Optional[_builtins.int] = None,
                  authentication_spi_variable: Optional[_builtins.str] = None,
                  authentication_type: Optional[_builtins.str] = None,
@@ -63976,7 +65957,13 @@ class TransportRoutingOspfv3Ipv6FeatureAreaInterface(dict):
                  passive_interface_variable: Optional[_builtins.str] = None):
         """
         :param _builtins.str authentication_key: Set OSPF interface authentication IPSEC key
+                 - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_key_wo` together with `authentication_key_wo_version`, which keeps it out of state.
         :param _builtins.str authentication_key_variable: Variable name
+        :param _builtins.str authentication_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Set OSPF interface authentication IPSEC key
+                 - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+        :param _builtins.int authentication_key_wo_version: Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int authentication_spi: Set OSPF interface authentication IPSec SPI, range 256..4294967295
                  - Range: `256`-`4294967295`
         :param _builtins.str authentication_spi_variable: Variable name
@@ -64010,6 +65997,10 @@ class TransportRoutingOspfv3Ipv6FeatureAreaInterface(dict):
             pulumi.set(__self__, "authentication_key", authentication_key)
         if authentication_key_variable is not None:
             pulumi.set(__self__, "authentication_key_variable", authentication_key_variable)
+        if authentication_key_wo is not None:
+            pulumi.set(__self__, "authentication_key_wo", authentication_key_wo)
+        if authentication_key_wo_version is not None:
+            pulumi.set(__self__, "authentication_key_wo_version", authentication_key_wo_version)
         if authentication_spi is not None:
             pulumi.set(__self__, "authentication_spi", authentication_spi)
         if authentication_spi_variable is not None:
@@ -64050,6 +66041,8 @@ class TransportRoutingOspfv3Ipv6FeatureAreaInterface(dict):
     def authentication_key(self) -> Optional[_builtins.str]:
         """
         Set OSPF interface authentication IPSEC key
+          - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_key_wo` together with `authentication_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_key")
 
@@ -64060,6 +66053,24 @@ class TransportRoutingOspfv3Ipv6FeatureAreaInterface(dict):
         Variable name
         """
         return pulumi.get(self, "authentication_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWo")
+    def authentication_key_wo(self) -> Optional[_builtins.str]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Set OSPF interface authentication IPSEC key
+          - Only one of `authentication_key`, `authentication_key_variable` and `authentication_key_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWoVersion")
+    def authentication_key_wo_version(self) -> Optional[_builtins.int]:
+        """
+        Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_key_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="authenticationSpi")
@@ -87692,97 +89703,6 @@ class GetColorListPolicyObjectEntryResult(dict):
 
 
 @pulumi.output_type
-class GetConfigurationGroupDeviceResult(dict):
-    def __init__(__self__, *,
-                 deploy: _builtins.bool,
-                 id: _builtins.str,
-                 topology_label: _builtins.str,
-                 variables: Sequence['outputs.GetConfigurationGroupDeviceVariableResult']):
-        """
-        :param _builtins.bool deploy: Deploy to device if enabled.
-        :param _builtins.str id: Device ID
-        :param _builtins.str topology_label: Topology label for dual device configuration group (supported from version 20.18.1 onwards)
-        :param Sequence['GetConfigurationGroupDeviceVariableArgs'] variables: List of variables
-        """
-        pulumi.set(__self__, "deploy", deploy)
-        pulumi.set(__self__, "id", id)
-        pulumi.set(__self__, "topology_label", topology_label)
-        pulumi.set(__self__, "variables", variables)
-
-    @_builtins.property
-    @pulumi.getter
-    def deploy(self) -> _builtins.bool:
-        """
-        Deploy to device if enabled.
-        """
-        return pulumi.get(self, "deploy")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        Device ID
-        """
-        return pulumi.get(self, "id")
-
-    @_builtins.property
-    @pulumi.getter(name="topologyLabel")
-    def topology_label(self) -> _builtins.str:
-        """
-        Topology label for dual device configuration group (supported from version 20.18.1 onwards)
-        """
-        return pulumi.get(self, "topology_label")
-
-    @_builtins.property
-    @pulumi.getter
-    def variables(self) -> Sequence['outputs.GetConfigurationGroupDeviceVariableResult']:
-        """
-        List of variables
-        """
-        return pulumi.get(self, "variables")
-
-
-@pulumi.output_type
-class GetConfigurationGroupDeviceVariableResult(dict):
-    def __init__(__self__, *,
-                 list_values: Sequence[_builtins.str],
-                 name: _builtins.str,
-                 value: _builtins.str):
-        """
-        :param Sequence[_builtins.str] list_values: Use this instead of `value` in case value is of type `List`.
-        :param _builtins.str name: Variable name
-        :param _builtins.str value: Variable value
-        """
-        pulumi.set(__self__, "list_values", list_values)
-        pulumi.set(__self__, "name", name)
-        pulumi.set(__self__, "value", value)
-
-    @_builtins.property
-    @pulumi.getter(name="listValues")
-    def list_values(self) -> Sequence[_builtins.str]:
-        """
-        Use this instead of `value` in case value is of type `List`.
-        """
-        return pulumi.get(self, "list_values")
-
-    @_builtins.property
-    @pulumi.getter
-    def name(self) -> _builtins.str:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "name")
-
-    @_builtins.property
-    @pulumi.getter
-    def value(self) -> _builtins.str:
-        """
-        Variable value
-        """
-        return pulumi.get(self, "value")
-
-
-@pulumi.output_type
 class GetConfigurationGroupTopologyDeviceResult(dict):
     def __init__(__self__, *,
                  criteria_attribute: _builtins.str,
@@ -89802,7 +91722,7 @@ class GetExtendedCommunityListPolicyObjectEntryResult(dict):
     def __init__(__self__, *,
                  community: _builtins.str):
         """
-        :param _builtins.str community: Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+        :param _builtins.str community: Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
         """
         pulumi.set(__self__, "community", community)
 
@@ -89810,7 +91730,7 @@ class GetExtendedCommunityListPolicyObjectEntryResult(dict):
     @pulumi.getter
     def community(self) -> _builtins.str:
         """
-        Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+        Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
         """
         return pulumi.get(self, "community")
 
@@ -91939,6 +93859,8 @@ class GetOtherThousandeyesFeatureVirtualApplicationResult(dict):
     def __init__(__self__, *,
                  account_group_token: _builtins.str,
                  account_group_token_variable: _builtins.str,
+                 account_group_token_wo: _builtins.str,
+                 account_group_token_wo_version: _builtins.int,
                  agent_default_gateway: _builtins.str,
                  agent_default_gateway_variable: _builtins.str,
                  hostname: _builtins.str,
@@ -91961,6 +93883,8 @@ class GetOtherThousandeyesFeatureVirtualApplicationResult(dict):
         """
         :param _builtins.str account_group_token: Set the Account Group Token
         :param _builtins.str account_group_token_variable: Variable name
+        :param _builtins.str account_group_token_wo: Set the Account Group Token
+        :param _builtins.int account_group_token_wo_version: Rotation trigger for `account_group_token_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str agent_default_gateway: Set the Agent default gateway
         :param _builtins.str agent_default_gateway_variable: Variable name
         :param _builtins.str hostname: Set the host name
@@ -91983,6 +93907,8 @@ class GetOtherThousandeyesFeatureVirtualApplicationResult(dict):
         """
         pulumi.set(__self__, "account_group_token", account_group_token)
         pulumi.set(__self__, "account_group_token_variable", account_group_token_variable)
+        pulumi.set(__self__, "account_group_token_wo", account_group_token_wo)
+        pulumi.set(__self__, "account_group_token_wo_version", account_group_token_wo_version)
         pulumi.set(__self__, "agent_default_gateway", agent_default_gateway)
         pulumi.set(__self__, "agent_default_gateway_variable", agent_default_gateway_variable)
         pulumi.set(__self__, "hostname", hostname)
@@ -92018,6 +93944,22 @@ class GetOtherThousandeyesFeatureVirtualApplicationResult(dict):
         Variable name
         """
         return pulumi.get(self, "account_group_token_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="accountGroupTokenWo")
+    def account_group_token_wo(self) -> _builtins.str:
+        """
+        Set the Account Group Token
+        """
+        return pulumi.get(self, "account_group_token_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="accountGroupTokenWoVersion")
+    def account_group_token_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `account_group_token_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "account_group_token_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="agentDefaultGateway")
@@ -92393,86 +94335,6 @@ class GetOtherUcseFeatureInterfaceResult(dict):
         Variable name
         """
         return pulumi.get(self, "ucse_interface_vpn_variable")
-
-
-@pulumi.output_type
-class GetPolicyGroupDeviceResult(dict):
-    def __init__(__self__, *,
-                 deploy: _builtins.bool,
-                 id: _builtins.str,
-                 variables: Sequence['outputs.GetPolicyGroupDeviceVariableResult']):
-        """
-        :param _builtins.bool deploy: Deploy to device if enabled.
-        :param _builtins.str id: Device ID
-        :param Sequence['GetPolicyGroupDeviceVariableArgs'] variables: List of variables
-        """
-        pulumi.set(__self__, "deploy", deploy)
-        pulumi.set(__self__, "id", id)
-        pulumi.set(__self__, "variables", variables)
-
-    @_builtins.property
-    @pulumi.getter
-    def deploy(self) -> _builtins.bool:
-        """
-        Deploy to device if enabled.
-        """
-        return pulumi.get(self, "deploy")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        Device ID
-        """
-        return pulumi.get(self, "id")
-
-    @_builtins.property
-    @pulumi.getter
-    def variables(self) -> Sequence['outputs.GetPolicyGroupDeviceVariableResult']:
-        """
-        List of variables
-        """
-        return pulumi.get(self, "variables")
-
-
-@pulumi.output_type
-class GetPolicyGroupDeviceVariableResult(dict):
-    def __init__(__self__, *,
-                 list_values: Sequence[_builtins.str],
-                 name: _builtins.str,
-                 value: _builtins.str):
-        """
-        :param Sequence[_builtins.str] list_values: Use this instead of `value` in case value is of type `List`.
-        :param _builtins.str name: Variable name
-        :param _builtins.str value: Variable value
-        """
-        pulumi.set(__self__, "list_values", list_values)
-        pulumi.set(__self__, "name", name)
-        pulumi.set(__self__, "value", value)
-
-    @_builtins.property
-    @pulumi.getter(name="listValues")
-    def list_values(self) -> Sequence[_builtins.str]:
-        """
-        Use this instead of `value` in case value is of type `List`.
-        """
-        return pulumi.get(self, "list_values")
-
-    @_builtins.property
-    @pulumi.getter
-    def name(self) -> _builtins.str:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "name")
-
-    @_builtins.property
-    @pulumi.getter
-    def value(self) -> _builtins.str:
-        """
-        Variable value
-        """
-        return pulumi.get(self, "value")
 
 
 @pulumi.output_type
@@ -93106,6 +94968,18 @@ class GetPolicyObjectSecurityIpsSignatureEntryResult(dict):
     @pulumi.getter(name="signatureId")
     def signature_id(self) -> _builtins.str:
         return pulumi.get(self, "signature_id")
+
+
+@pulumi.output_type
+class GetPolicyObjectSecurityIpsSignatureSetEntryResult(dict):
+    def __init__(__self__, *,
+                 base_signature: _builtins.str):
+        pulumi.set(__self__, "base_signature", base_signature)
+
+    @_builtins.property
+    @pulumi.getter(name="baseSignature")
+    def base_signature(self) -> _builtins.str:
+        return pulumi.get(self, "base_signature")
 
 
 @pulumi.output_type
@@ -100773,6 +102647,8 @@ class GetServiceMulticastFeatureMsdpGroupPeerResult(dict):
                  keepalive_interval_variable: _builtins.str,
                  peer_authentication_password: _builtins.str,
                  peer_authentication_password_variable: _builtins.str,
+                 peer_authentication_password_wo: _builtins.str,
+                 peer_authentication_password_wo_version: _builtins.int,
                  peer_ip: _builtins.str,
                  peer_ip_variable: _builtins.str,
                  prefix_list_id: _builtins.str,
@@ -100790,6 +102666,8 @@ class GetServiceMulticastFeatureMsdpGroupPeerResult(dict):
         :param _builtins.str keepalive_interval_variable: Variable name
         :param _builtins.str peer_authentication_password: Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param _builtins.str peer_authentication_password_variable: Variable name
+        :param _builtins.str peer_authentication_password_wo: Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param _builtins.int peer_authentication_password_wo_version: Rotation trigger for `peer_authentication_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str peer_ip: Set MSDP peer ip
         :param _builtins.str peer_ip_variable: Variable name
         :param _builtins.int remote_as: Set MSDP peer ip remote autonomous system number
@@ -100806,6 +102684,8 @@ class GetServiceMulticastFeatureMsdpGroupPeerResult(dict):
         pulumi.set(__self__, "keepalive_interval_variable", keepalive_interval_variable)
         pulumi.set(__self__, "peer_authentication_password", peer_authentication_password)
         pulumi.set(__self__, "peer_authentication_password_variable", peer_authentication_password_variable)
+        pulumi.set(__self__, "peer_authentication_password_wo", peer_authentication_password_wo)
+        pulumi.set(__self__, "peer_authentication_password_wo_version", peer_authentication_password_wo_version)
         pulumi.set(__self__, "peer_ip", peer_ip)
         pulumi.set(__self__, "peer_ip_variable", peer_ip_variable)
         pulumi.set(__self__, "prefix_list_id", prefix_list_id)
@@ -100885,6 +102765,22 @@ class GetServiceMulticastFeatureMsdpGroupPeerResult(dict):
         Variable name
         """
         return pulumi.get(self, "peer_authentication_password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="peerAuthenticationPasswordWo")
+    def peer_authentication_password_wo(self) -> _builtins.str:
+        """
+        Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "peer_authentication_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="peerAuthenticationPasswordWoVersion")
+    def peer_authentication_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `peer_authentication_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "peer_authentication_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="peerIp")
@@ -101752,6 +103648,8 @@ class GetServiceRoutingBgpFeatureIpv4NeighborResult(dict):
                  next_hop_self_variable: _builtins.str,
                  password: _builtins.str,
                  password_variable: _builtins.str,
+                 password_wo: _builtins.str,
+                 password_wo_version: _builtins.int,
                  remote_as: _builtins.str,
                  remote_as_variable: _builtins.str,
                  send_community: _builtins.bool,
@@ -101786,6 +103684,8 @@ class GetServiceRoutingBgpFeatureIpv4NeighborResult(dict):
         :param _builtins.str next_hop_self_variable: Variable name
         :param _builtins.str password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param _builtins.str password_variable: Variable name
+        :param _builtins.str password_wo: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param _builtins.int password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str remote_as: Set remote autonomous system number
         :param _builtins.str remote_as_variable: Variable name
         :param _builtins.bool send_community: Send community attribute
@@ -101820,6 +103720,8 @@ class GetServiceRoutingBgpFeatureIpv4NeighborResult(dict):
         pulumi.set(__self__, "next_hop_self_variable", next_hop_self_variable)
         pulumi.set(__self__, "password", password)
         pulumi.set(__self__, "password_variable", password_variable)
+        pulumi.set(__self__, "password_wo", password_wo)
+        pulumi.set(__self__, "password_wo_version", password_wo_version)
         pulumi.set(__self__, "remote_as", remote_as)
         pulumi.set(__self__, "remote_as_variable", remote_as_variable)
         pulumi.set(__self__, "send_community", send_community)
@@ -102000,6 +103902,22 @@ class GetServiceRoutingBgpFeatureIpv4NeighborResult(dict):
         Variable name
         """
         return pulumi.get(self, "password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> _builtins.str:
+        """
+        Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="remoteAs")
@@ -102545,6 +104463,8 @@ class GetServiceRoutingBgpFeatureIpv6NeighborResult(dict):
                  next_hop_self_variable: _builtins.str,
                  password: _builtins.str,
                  password_variable: _builtins.str,
+                 password_wo: _builtins.str,
+                 password_wo_version: _builtins.int,
                  remote_as: _builtins.str,
                  remote_as_variable: _builtins.str,
                  send_community: _builtins.bool,
@@ -102577,6 +104497,8 @@ class GetServiceRoutingBgpFeatureIpv6NeighborResult(dict):
         :param _builtins.str next_hop_self_variable: Variable name
         :param _builtins.str password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param _builtins.str password_variable: Variable name
+        :param _builtins.str password_wo: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param _builtins.int password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str remote_as: Set remote autonomous system number
         :param _builtins.str remote_as_variable: Variable name
         :param _builtins.bool send_community: Send community attribute
@@ -102609,6 +104531,8 @@ class GetServiceRoutingBgpFeatureIpv6NeighborResult(dict):
         pulumi.set(__self__, "next_hop_self_variable", next_hop_self_variable)
         pulumi.set(__self__, "password", password)
         pulumi.set(__self__, "password_variable", password_variable)
+        pulumi.set(__self__, "password_wo", password_wo)
+        pulumi.set(__self__, "password_wo_version", password_wo_version)
         pulumi.set(__self__, "remote_as", remote_as)
         pulumi.set(__self__, "remote_as_variable", remote_as_variable)
         pulumi.set(__self__, "send_community", send_community)
@@ -102787,6 +104711,22 @@ class GetServiceRoutingBgpFeatureIpv6NeighborResult(dict):
         Variable name
         """
         return pulumi.get(self, "password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> _builtins.str:
+        """
+        Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="remoteAs")
@@ -103316,17 +105256,23 @@ class GetServiceRoutingEigrpFeatureMd5KeyResult(dict):
                  key_id: _builtins.int,
                  key_id_variable: _builtins.str,
                  key_string: _builtins.str,
-                 key_string_variable: _builtins.str):
+                 key_string_variable: _builtins.str,
+                 key_string_wo: _builtins.str,
+                 key_string_wo_version: _builtins.int):
         """
         :param _builtins.int key_id: Set MD5 key ID
         :param _builtins.str key_id_variable: Variable name
         :param _builtins.str key_string: Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param _builtins.str key_string_variable: Variable name
+        :param _builtins.str key_string_wo: Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param _builtins.int key_string_wo_version: Rotation trigger for `key_string_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         """
         pulumi.set(__self__, "key_id", key_id)
         pulumi.set(__self__, "key_id_variable", key_id_variable)
         pulumi.set(__self__, "key_string", key_string)
         pulumi.set(__self__, "key_string_variable", key_string_variable)
+        pulumi.set(__self__, "key_string_wo", key_string_wo)
+        pulumi.set(__self__, "key_string_wo_version", key_string_wo_version)
 
     @_builtins.property
     @pulumi.getter(name="keyId")
@@ -103359,6 +105305,22 @@ class GetServiceRoutingEigrpFeatureMd5KeyResult(dict):
         Variable name
         """
         return pulumi.get(self, "key_string_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="keyStringWo")
+    def key_string_wo(self) -> _builtins.str:
+        """
+        Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "key_string_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="keyStringWoVersion")
+    def key_string_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `key_string_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "key_string_wo_version")
 
 
 @pulumi.output_type
@@ -103551,6 +105513,8 @@ class GetServiceRoutingOspfFeatureAreaInterfaceResult(dict):
                  message_digest_key_id: _builtins.int,
                  message_digest_key_id_variable: _builtins.str,
                  message_digest_key_variable: _builtins.str,
+                 message_digest_key_wo: _builtins.str,
+                 message_digest_key_wo_version: _builtins.int,
                  name: _builtins.str,
                  name_variable: _builtins.str,
                  network_type: _builtins.str,
@@ -103574,6 +105538,8 @@ class GetServiceRoutingOspfFeatureAreaInterfaceResult(dict):
         :param _builtins.int message_digest_key_id: Set MD5 message digest key
         :param _builtins.str message_digest_key_id_variable: Variable name
         :param _builtins.str message_digest_key_variable: Variable name
+        :param _builtins.str message_digest_key_wo: Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param _builtins.int message_digest_key_wo_version: Rotation trigger for `message_digest_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str name: Set interface name
         :param _builtins.str name_variable: Variable name
         :param _builtins.str network_type: Set the OSPF network type
@@ -103597,6 +105563,8 @@ class GetServiceRoutingOspfFeatureAreaInterfaceResult(dict):
         pulumi.set(__self__, "message_digest_key_id", message_digest_key_id)
         pulumi.set(__self__, "message_digest_key_id_variable", message_digest_key_id_variable)
         pulumi.set(__self__, "message_digest_key_variable", message_digest_key_variable)
+        pulumi.set(__self__, "message_digest_key_wo", message_digest_key_wo)
+        pulumi.set(__self__, "message_digest_key_wo_version", message_digest_key_wo_version)
         pulumi.set(__self__, "name", name)
         pulumi.set(__self__, "name_variable", name_variable)
         pulumi.set(__self__, "network_type", network_type)
@@ -103731,6 +105699,22 @@ class GetServiceRoutingOspfFeatureAreaInterfaceResult(dict):
         Variable name
         """
         return pulumi.get(self, "message_digest_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="messageDigestKeyWo")
+    def message_digest_key_wo(self) -> _builtins.str:
+        """
+        Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "message_digest_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="messageDigestKeyWoVersion")
+    def message_digest_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `message_digest_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "message_digest_key_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -103884,6 +105868,7 @@ class GetServiceRoutingOspfFeatureRedistributeResult(dict):
                  protocol: _builtins.str,
                  protocol_variable: _builtins.str,
                  route_policy_id: _builtins.str,
+                 route_policy_id_variable: _builtins.str,
                  translate_rib_metric: _builtins.bool,
                  translate_rib_metric_variable: _builtins.str):
         """
@@ -103891,6 +105876,8 @@ class GetServiceRoutingOspfFeatureRedistributeResult(dict):
         :param _builtins.str nat_dia_variable: Variable name
         :param _builtins.str protocol: Set the protocol
         :param _builtins.str protocol_variable: Variable name
+        :param _builtins.str route_policy_id: Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+        :param _builtins.str route_policy_id_variable: Variable name
         :param _builtins.bool translate_rib_metric: Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
         :param _builtins.str translate_rib_metric_variable: Variable name
         """
@@ -103899,6 +105886,7 @@ class GetServiceRoutingOspfFeatureRedistributeResult(dict):
         pulumi.set(__self__, "protocol", protocol)
         pulumi.set(__self__, "protocol_variable", protocol_variable)
         pulumi.set(__self__, "route_policy_id", route_policy_id)
+        pulumi.set(__self__, "route_policy_id_variable", route_policy_id_variable)
         pulumi.set(__self__, "translate_rib_metric", translate_rib_metric)
         pulumi.set(__self__, "translate_rib_metric_variable", translate_rib_metric_variable)
 
@@ -103937,7 +105925,18 @@ class GetServiceRoutingOspfFeatureRedistributeResult(dict):
     @_builtins.property
     @pulumi.getter(name="routePolicyId")
     def route_policy_id(self) -> _builtins.str:
+        """
+        Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+        """
         return pulumi.get(self, "route_policy_id")
+
+    @_builtins.property
+    @pulumi.getter(name="routePolicyIdVariable")
+    def route_policy_id_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "route_policy_id_variable")
 
     @_builtins.property
     @pulumi.getter(name="translateRibMetric")
@@ -104107,6 +106106,8 @@ class GetServiceRoutingOspfv3Ipv4FeatureAreaInterfaceResult(dict):
     def __init__(__self__, *,
                  authentication_key: _builtins.str,
                  authentication_key_variable: _builtins.str,
+                 authentication_key_wo: _builtins.str,
+                 authentication_key_wo_version: _builtins.int,
                  authentication_spi: _builtins.int,
                  authentication_spi_variable: _builtins.str,
                  authentication_type: _builtins.str,
@@ -104127,6 +106128,8 @@ class GetServiceRoutingOspfv3Ipv4FeatureAreaInterfaceResult(dict):
         """
         :param _builtins.str authentication_key: Set OSPF interface authentication IPSEC key
         :param _builtins.str authentication_key_variable: Variable name
+        :param _builtins.str authentication_key_wo: Set OSPF interface authentication IPSEC key
+        :param _builtins.int authentication_key_wo_version: Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int authentication_spi: Set OSPF interface authentication IPSec SPI, range 256..4294967295
         :param _builtins.str authentication_spi_variable: Variable name
         :param _builtins.str authentication_type: Set OSPF interface authentication configuration
@@ -104147,6 +106150,8 @@ class GetServiceRoutingOspfv3Ipv4FeatureAreaInterfaceResult(dict):
         """
         pulumi.set(__self__, "authentication_key", authentication_key)
         pulumi.set(__self__, "authentication_key_variable", authentication_key_variable)
+        pulumi.set(__self__, "authentication_key_wo", authentication_key_wo)
+        pulumi.set(__self__, "authentication_key_wo_version", authentication_key_wo_version)
         pulumi.set(__self__, "authentication_spi", authentication_spi)
         pulumi.set(__self__, "authentication_spi_variable", authentication_spi_variable)
         pulumi.set(__self__, "authentication_type", authentication_type)
@@ -104180,6 +106185,22 @@ class GetServiceRoutingOspfv3Ipv4FeatureAreaInterfaceResult(dict):
         Variable name
         """
         return pulumi.get(self, "authentication_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWo")
+    def authentication_key_wo(self) -> _builtins.str:
+        """
+        Set OSPF interface authentication IPSEC key
+        """
+        return pulumi.get(self, "authentication_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWoVersion")
+    def authentication_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_key_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="authenticationSpi")
@@ -104413,6 +106434,7 @@ class GetServiceRoutingOspfv3Ipv4FeatureRedistributeResult(dict):
                  protocol: _builtins.str,
                  protocol_variable: _builtins.str,
                  route_policy_id: _builtins.str,
+                 route_policy_id_variable: _builtins.str,
                  translate_rib_metric: _builtins.bool,
                  translate_rib_metric_variable: _builtins.str):
         """
@@ -104420,6 +106442,8 @@ class GetServiceRoutingOspfv3Ipv4FeatureRedistributeResult(dict):
         :param _builtins.str nat_dia_variable: Variable name
         :param _builtins.str protocol: Set the protocol
         :param _builtins.str protocol_variable: Variable name
+        :param _builtins.str route_policy_id: Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+        :param _builtins.str route_policy_id_variable: Variable name
         :param _builtins.bool translate_rib_metric: Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
         :param _builtins.str translate_rib_metric_variable: Variable name
         """
@@ -104428,6 +106452,7 @@ class GetServiceRoutingOspfv3Ipv4FeatureRedistributeResult(dict):
         pulumi.set(__self__, "protocol", protocol)
         pulumi.set(__self__, "protocol_variable", protocol_variable)
         pulumi.set(__self__, "route_policy_id", route_policy_id)
+        pulumi.set(__self__, "route_policy_id_variable", route_policy_id_variable)
         pulumi.set(__self__, "translate_rib_metric", translate_rib_metric)
         pulumi.set(__self__, "translate_rib_metric_variable", translate_rib_metric_variable)
 
@@ -104466,7 +106491,18 @@ class GetServiceRoutingOspfv3Ipv4FeatureRedistributeResult(dict):
     @_builtins.property
     @pulumi.getter(name="routePolicyId")
     def route_policy_id(self) -> _builtins.str:
+        """
+        Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+        """
         return pulumi.get(self, "route_policy_id")
+
+    @_builtins.property
+    @pulumi.getter(name="routePolicyIdVariable")
+    def route_policy_id_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "route_policy_id_variable")
 
     @_builtins.property
     @pulumi.getter(name="translateRibMetric")
@@ -104596,6 +106632,8 @@ class GetServiceRoutingOspfv3Ipv6FeatureAreaInterfaceResult(dict):
     def __init__(__self__, *,
                  authentication_key: _builtins.str,
                  authentication_key_variable: _builtins.str,
+                 authentication_key_wo: _builtins.str,
+                 authentication_key_wo_version: _builtins.int,
                  authentication_spi: _builtins.int,
                  authentication_spi_variable: _builtins.str,
                  authentication_type: _builtins.str,
@@ -104616,6 +106654,8 @@ class GetServiceRoutingOspfv3Ipv6FeatureAreaInterfaceResult(dict):
         """
         :param _builtins.str authentication_key: Set OSPF interface authentication IPSEC key
         :param _builtins.str authentication_key_variable: Variable name
+        :param _builtins.str authentication_key_wo: Set OSPF interface authentication IPSEC key
+        :param _builtins.int authentication_key_wo_version: Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int authentication_spi: Set OSPF interface authentication IPSec SPI, range 256..4294967295
         :param _builtins.str authentication_spi_variable: Variable name
         :param _builtins.str authentication_type: Set OSPF interface authentication configuration
@@ -104636,6 +106676,8 @@ class GetServiceRoutingOspfv3Ipv6FeatureAreaInterfaceResult(dict):
         """
         pulumi.set(__self__, "authentication_key", authentication_key)
         pulumi.set(__self__, "authentication_key_variable", authentication_key_variable)
+        pulumi.set(__self__, "authentication_key_wo", authentication_key_wo)
+        pulumi.set(__self__, "authentication_key_wo_version", authentication_key_wo_version)
         pulumi.set(__self__, "authentication_spi", authentication_spi)
         pulumi.set(__self__, "authentication_spi_variable", authentication_spi_variable)
         pulumi.set(__self__, "authentication_type", authentication_type)
@@ -104669,6 +106711,22 @@ class GetServiceRoutingOspfv3Ipv6FeatureAreaInterfaceResult(dict):
         Variable name
         """
         return pulumi.get(self, "authentication_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWo")
+    def authentication_key_wo(self) -> _builtins.str:
+        """
+        Set OSPF interface authentication IPSEC key
+        """
+        return pulumi.get(self, "authentication_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWoVersion")
+    def authentication_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_key_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="authenticationSpi")
@@ -104886,17 +106944,21 @@ class GetServiceRoutingOspfv3Ipv6FeatureRedistributeResult(dict):
                  protocol: _builtins.str,
                  protocol_variable: _builtins.str,
                  route_policy_id: _builtins.str,
+                 route_policy_id_variable: _builtins.str,
                  translate_rib_metric: _builtins.bool,
                  translate_rib_metric_variable: _builtins.str):
         """
         :param _builtins.str protocol: Set the protocol
         :param _builtins.str protocol_variable: Variable name
+        :param _builtins.str route_policy_id: Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+        :param _builtins.str route_policy_id_variable: Variable name
         :param _builtins.bool translate_rib_metric: Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
         :param _builtins.str translate_rib_metric_variable: Variable name
         """
         pulumi.set(__self__, "protocol", protocol)
         pulumi.set(__self__, "protocol_variable", protocol_variable)
         pulumi.set(__self__, "route_policy_id", route_policy_id)
+        pulumi.set(__self__, "route_policy_id_variable", route_policy_id_variable)
         pulumi.set(__self__, "translate_rib_metric", translate_rib_metric)
         pulumi.set(__self__, "translate_rib_metric_variable", translate_rib_metric_variable)
 
@@ -104919,7 +106981,18 @@ class GetServiceRoutingOspfv3Ipv6FeatureRedistributeResult(dict):
     @_builtins.property
     @pulumi.getter(name="routePolicyId")
     def route_policy_id(self) -> _builtins.str:
+        """
+        Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+        """
         return pulumi.get(self, "route_policy_id")
+
+    @_builtins.property
+    @pulumi.getter(name="routePolicyIdVariable")
+    def route_policy_id_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "route_policy_id_variable")
 
     @_builtins.property
     @pulumi.getter(name="translateRibMetric")
@@ -105501,6 +107574,8 @@ class GetServiceWirelessLanFeatureSsidResult(dict):
                  broadcast_ssid_variable: _builtins.str,
                  passphrase: _builtins.str,
                  passphrase_variable: _builtins.str,
+                 passphrase_wo: _builtins.str,
+                 passphrase_wo_version: _builtins.int,
                  qos_profile: _builtins.str,
                  qos_profile_variable: _builtins.str,
                  radio_type: _builtins.str,
@@ -105511,6 +107586,8 @@ class GetServiceWirelessLanFeatureSsidResult(dict):
                  radius_server_port_variable: _builtins.str,
                  radius_server_secret: _builtins.str,
                  radius_server_secret_variable: _builtins.str,
+                 radius_server_secret_wo: _builtins.str,
+                 radius_server_secret_wo_version: _builtins.int,
                  security_type: _builtins.str,
                  ssid_name: _builtins.str,
                  vlan_id: _builtins.int,
@@ -105522,6 +107599,8 @@ class GetServiceWirelessLanFeatureSsidResult(dict):
         :param _builtins.str broadcast_ssid_variable: Variable name
         :param _builtins.str passphrase: Set passphrase
         :param _builtins.str passphrase_variable: Variable name
+        :param _builtins.str passphrase_wo: Set passphrase
+        :param _builtins.int passphrase_wo_version: Rotation trigger for `passphrase_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str qos_profile: Select QoS profile
         :param _builtins.str qos_profile_variable: Variable name
         :param _builtins.str radio_type: Select radio type
@@ -105532,6 +107611,8 @@ class GetServiceWirelessLanFeatureSsidResult(dict):
         :param _builtins.str radius_server_port_variable: Variable name
         :param _builtins.str radius_server_secret: Set RADIUS server shared secret
         :param _builtins.str radius_server_secret_variable: Variable name
+        :param _builtins.str radius_server_secret_wo: Set RADIUS server shared secret
+        :param _builtins.int radius_server_secret_wo_version: Rotation trigger for `radius_server_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str security_type: Select security type
         :param _builtins.str ssid_name: Configure wlan SSID
         :param _builtins.int vlan_id: Set VLAN ID
@@ -105543,6 +107624,8 @@ class GetServiceWirelessLanFeatureSsidResult(dict):
         pulumi.set(__self__, "broadcast_ssid_variable", broadcast_ssid_variable)
         pulumi.set(__self__, "passphrase", passphrase)
         pulumi.set(__self__, "passphrase_variable", passphrase_variable)
+        pulumi.set(__self__, "passphrase_wo", passphrase_wo)
+        pulumi.set(__self__, "passphrase_wo_version", passphrase_wo_version)
         pulumi.set(__self__, "qos_profile", qos_profile)
         pulumi.set(__self__, "qos_profile_variable", qos_profile_variable)
         pulumi.set(__self__, "radio_type", radio_type)
@@ -105553,6 +107636,8 @@ class GetServiceWirelessLanFeatureSsidResult(dict):
         pulumi.set(__self__, "radius_server_port_variable", radius_server_port_variable)
         pulumi.set(__self__, "radius_server_secret", radius_server_secret)
         pulumi.set(__self__, "radius_server_secret_variable", radius_server_secret_variable)
+        pulumi.set(__self__, "radius_server_secret_wo", radius_server_secret_wo)
+        pulumi.set(__self__, "radius_server_secret_wo_version", radius_server_secret_wo_version)
         pulumi.set(__self__, "security_type", security_type)
         pulumi.set(__self__, "ssid_name", ssid_name)
         pulumi.set(__self__, "vlan_id", vlan_id)
@@ -105605,6 +107690,22 @@ class GetServiceWirelessLanFeatureSsidResult(dict):
         Variable name
         """
         return pulumi.get(self, "passphrase_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="passphraseWo")
+    def passphrase_wo(self) -> _builtins.str:
+        """
+        Set passphrase
+        """
+        return pulumi.get(self, "passphrase_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passphraseWoVersion")
+    def passphrase_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `passphrase_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "passphrase_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="qosProfile")
@@ -105687,6 +107788,22 @@ class GetServiceWirelessLanFeatureSsidResult(dict):
         return pulumi.get(self, "radius_server_secret_variable")
 
     @_builtins.property
+    @pulumi.getter(name="radiusServerSecretWo")
+    def radius_server_secret_wo(self) -> _builtins.str:
+        """
+        Set RADIUS server shared secret
+        """
+        return pulumi.get(self, "radius_server_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="radiusServerSecretWoVersion")
+    def radius_server_secret_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `radius_server_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "radius_server_secret_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="securityType")
     def security_type(self) -> _builtins.str:
         """
@@ -105717,6 +107834,687 @@ class GetServiceWirelessLanFeatureSsidResult(dict):
         Variable name
         """
         return pulumi.get(self, "vlan_id_variable")
+
+
+@pulumi.output_type
+class GetSigFeatureInterfaceResult(dict):
+    def __init__(__self__, *,
+                 dpd_interval: _builtins.int,
+                 dpd_interval_variable: _builtins.str,
+                 dpd_retries: _builtins.int,
+                 dpd_retries_variable: _builtins.str,
+                 ike_ciphersuite: _builtins.str,
+                 ike_ciphersuite_variable: _builtins.str,
+                 ike_group: _builtins.str,
+                 ike_group_variable: _builtins.str,
+                 ike_local_id: _builtins.str,
+                 ike_local_id_variable: _builtins.str,
+                 ike_rekey_interval: _builtins.int,
+                 ike_rekey_interval_variable: _builtins.str,
+                 ike_remote_id: _builtins.str,
+                 ike_remote_id_variable: _builtins.str,
+                 interface_description: _builtins.str,
+                 interface_description_variable: _builtins.str,
+                 interface_name: _builtins.str,
+                 ipsec_ciphersuite: _builtins.str,
+                 ipsec_ciphersuite_variable: _builtins.str,
+                 ipsec_rekey_interval: _builtins.int,
+                 ipsec_rekey_interval_variable: _builtins.str,
+                 ipsec_replay_window: _builtins.int,
+                 ipsec_replay_window_variable: _builtins.str,
+                 mtu: _builtins.int,
+                 mtu_variable: _builtins.str,
+                 perfect_forward_secrecy: _builtins.str,
+                 perfect_forward_secrecy_variable: _builtins.str,
+                 pre_shared_key_dynamic: _builtins.bool,
+                 pre_shared_secret: _builtins.str,
+                 pre_shared_secret_variable: _builtins.str,
+                 pre_shared_secret_wo: _builtins.str,
+                 pre_shared_secret_wo_version: _builtins.int,
+                 shutdown: _builtins.bool,
+                 tcp_mss_adjust: _builtins.int,
+                 tcp_mss_adjust_variable: _builtins.str,
+                 track_enable: _builtins.bool,
+                 tracker: _builtins.str,
+                 tunnel_dc_preference: _builtins.str,
+                 tunnel_destination: _builtins.str,
+                 tunnel_destination_variable: _builtins.str,
+                 tunnel_public_ip: _builtins.str,
+                 tunnel_public_ip_variable: _builtins.str,
+                 tunnel_route_via: _builtins.str,
+                 tunnel_route_via_variable: _builtins.str,
+                 tunnel_set: _builtins.str,
+                 tunnel_source_interface: _builtins.str,
+                 tunnel_source_interface_variable: _builtins.str):
+        """
+        :param _builtins.int dpd_interval: IKE keepalive interval (seconds)
+        :param _builtins.str dpd_interval_variable: Variable name
+        :param _builtins.int dpd_retries: IKE keepalive retries
+        :param _builtins.str dpd_retries_variable: Variable name
+        :param _builtins.str ike_ciphersuite: IKE identity the IKE preshared secret belongs to
+        :param _builtins.str ike_ciphersuite_variable: Variable name
+        :param _builtins.str ike_group: IKE Diffie Hellman Groups
+        :param _builtins.str ike_group_variable: Variable name
+        :param _builtins.str ike_local_id: IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+        :param _builtins.str ike_local_id_variable: Variable name
+        :param _builtins.int ike_rekey_interval: IKE rekey interval \\n\\n seconds
+        :param _builtins.str ike_rekey_interval_variable: Variable name
+        :param _builtins.str ike_remote_id: IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+        :param _builtins.str ike_remote_id_variable: Variable name
+        :param _builtins.str interface_description: Interface description
+        :param _builtins.str interface_description_variable: Variable name
+        :param _builtins.str interface_name: Interface name: IPsec when present
+        :param _builtins.str ipsec_ciphersuite: IPsec(ESP) encryption and integrity protocol
+        :param _builtins.str ipsec_ciphersuite_variable: Variable name
+        :param _builtins.int ipsec_rekey_interval: IPsec rekey interval \\n\\n seconds
+        :param _builtins.str ipsec_rekey_interval_variable: Variable name
+        :param _builtins.int ipsec_replay_window: Replay window size 32..8192 (must be a power of 2)
+        :param _builtins.str ipsec_replay_window_variable: Variable name
+        :param _builtins.int mtu: Interface MTU \\n\\n, in bytes
+        :param _builtins.str mtu_variable: Variable name
+        :param _builtins.str perfect_forward_secrecy: IPsec perfect forward secrecy settings
+        :param _builtins.str perfect_forward_secrecy_variable: Variable name
+        :param _builtins.bool pre_shared_key_dynamic: Use preshared key to authenticate IKE peer
+        :param _builtins.str pre_shared_secret: Use preshared key to authenticate IKE peer
+        :param _builtins.str pre_shared_secret_variable: Variable name
+        :param _builtins.str pre_shared_secret_wo: Use preshared key to authenticate IKE peer
+        :param _builtins.int pre_shared_secret_wo_version: Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        :param _builtins.bool shutdown: Administrative state
+        :param _builtins.int tcp_mss_adjust: TCP MSS on SYN packets, in bytes
+        :param _builtins.str tcp_mss_adjust_variable: Variable name
+        :param _builtins.bool track_enable: Enable/disable SIG tracking
+        :param _builtins.str tracker: Enable tracker for this interface
+        :param _builtins.str tunnel_dc_preference: SIG Tunnel Data Center
+        :param _builtins.str tunnel_destination: Tunnel destination IP address
+        :param _builtins.str tunnel_destination_variable: Variable name
+        :param _builtins.str tunnel_public_ip: Public IP required to setup GRE tunnel to Zscaler
+        :param _builtins.str tunnel_public_ip_variable: Variable name
+        :param _builtins.str tunnel_route_via: \\n\\n Interface name: ge0/\\n\\n or ge0/\\n\\n.vlanid
+        :param _builtins.str tunnel_route_via_variable: Variable name
+        :param _builtins.str tunnel_set: SIG Tunnel Provider
+        :param _builtins.str tunnel_source_interface: \\n\\n Interface name: ge0/\\n\\n or ge0/\\n\\n.vlanid
+        :param _builtins.str tunnel_source_interface_variable: Variable name
+        """
+        pulumi.set(__self__, "dpd_interval", dpd_interval)
+        pulumi.set(__self__, "dpd_interval_variable", dpd_interval_variable)
+        pulumi.set(__self__, "dpd_retries", dpd_retries)
+        pulumi.set(__self__, "dpd_retries_variable", dpd_retries_variable)
+        pulumi.set(__self__, "ike_ciphersuite", ike_ciphersuite)
+        pulumi.set(__self__, "ike_ciphersuite_variable", ike_ciphersuite_variable)
+        pulumi.set(__self__, "ike_group", ike_group)
+        pulumi.set(__self__, "ike_group_variable", ike_group_variable)
+        pulumi.set(__self__, "ike_local_id", ike_local_id)
+        pulumi.set(__self__, "ike_local_id_variable", ike_local_id_variable)
+        pulumi.set(__self__, "ike_rekey_interval", ike_rekey_interval)
+        pulumi.set(__self__, "ike_rekey_interval_variable", ike_rekey_interval_variable)
+        pulumi.set(__self__, "ike_remote_id", ike_remote_id)
+        pulumi.set(__self__, "ike_remote_id_variable", ike_remote_id_variable)
+        pulumi.set(__self__, "interface_description", interface_description)
+        pulumi.set(__self__, "interface_description_variable", interface_description_variable)
+        pulumi.set(__self__, "interface_name", interface_name)
+        pulumi.set(__self__, "ipsec_ciphersuite", ipsec_ciphersuite)
+        pulumi.set(__self__, "ipsec_ciphersuite_variable", ipsec_ciphersuite_variable)
+        pulumi.set(__self__, "ipsec_rekey_interval", ipsec_rekey_interval)
+        pulumi.set(__self__, "ipsec_rekey_interval_variable", ipsec_rekey_interval_variable)
+        pulumi.set(__self__, "ipsec_replay_window", ipsec_replay_window)
+        pulumi.set(__self__, "ipsec_replay_window_variable", ipsec_replay_window_variable)
+        pulumi.set(__self__, "mtu", mtu)
+        pulumi.set(__self__, "mtu_variable", mtu_variable)
+        pulumi.set(__self__, "perfect_forward_secrecy", perfect_forward_secrecy)
+        pulumi.set(__self__, "perfect_forward_secrecy_variable", perfect_forward_secrecy_variable)
+        pulumi.set(__self__, "pre_shared_key_dynamic", pre_shared_key_dynamic)
+        pulumi.set(__self__, "pre_shared_secret", pre_shared_secret)
+        pulumi.set(__self__, "pre_shared_secret_variable", pre_shared_secret_variable)
+        pulumi.set(__self__, "pre_shared_secret_wo", pre_shared_secret_wo)
+        pulumi.set(__self__, "pre_shared_secret_wo_version", pre_shared_secret_wo_version)
+        pulumi.set(__self__, "shutdown", shutdown)
+        pulumi.set(__self__, "tcp_mss_adjust", tcp_mss_adjust)
+        pulumi.set(__self__, "tcp_mss_adjust_variable", tcp_mss_adjust_variable)
+        pulumi.set(__self__, "track_enable", track_enable)
+        pulumi.set(__self__, "tracker", tracker)
+        pulumi.set(__self__, "tunnel_dc_preference", tunnel_dc_preference)
+        pulumi.set(__self__, "tunnel_destination", tunnel_destination)
+        pulumi.set(__self__, "tunnel_destination_variable", tunnel_destination_variable)
+        pulumi.set(__self__, "tunnel_public_ip", tunnel_public_ip)
+        pulumi.set(__self__, "tunnel_public_ip_variable", tunnel_public_ip_variable)
+        pulumi.set(__self__, "tunnel_route_via", tunnel_route_via)
+        pulumi.set(__self__, "tunnel_route_via_variable", tunnel_route_via_variable)
+        pulumi.set(__self__, "tunnel_set", tunnel_set)
+        pulumi.set(__self__, "tunnel_source_interface", tunnel_source_interface)
+        pulumi.set(__self__, "tunnel_source_interface_variable", tunnel_source_interface_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="dpdInterval")
+    def dpd_interval(self) -> _builtins.int:
+        """
+        IKE keepalive interval (seconds)
+        """
+        return pulumi.get(self, "dpd_interval")
+
+    @_builtins.property
+    @pulumi.getter(name="dpdIntervalVariable")
+    def dpd_interval_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "dpd_interval_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="dpdRetries")
+    def dpd_retries(self) -> _builtins.int:
+        """
+        IKE keepalive retries
+        """
+        return pulumi.get(self, "dpd_retries")
+
+    @_builtins.property
+    @pulumi.getter(name="dpdRetriesVariable")
+    def dpd_retries_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "dpd_retries_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeCiphersuite")
+    def ike_ciphersuite(self) -> _builtins.str:
+        """
+        IKE identity the IKE preshared secret belongs to
+        """
+        return pulumi.get(self, "ike_ciphersuite")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeCiphersuiteVariable")
+    def ike_ciphersuite_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_ciphersuite_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeGroup")
+    def ike_group(self) -> _builtins.str:
+        """
+        IKE Diffie Hellman Groups
+        """
+        return pulumi.get(self, "ike_group")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeGroupVariable")
+    def ike_group_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_group_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeLocalId")
+    def ike_local_id(self) -> _builtins.str:
+        """
+        IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+        """
+        return pulumi.get(self, "ike_local_id")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeLocalIdVariable")
+    def ike_local_id_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_local_id_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeRekeyInterval")
+    def ike_rekey_interval(self) -> _builtins.int:
+        """
+        IKE rekey interval \\n\\n seconds
+        """
+        return pulumi.get(self, "ike_rekey_interval")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeRekeyIntervalVariable")
+    def ike_rekey_interval_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_rekey_interval_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeRemoteId")
+    def ike_remote_id(self) -> _builtins.str:
+        """
+        IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+        """
+        return pulumi.get(self, "ike_remote_id")
+
+    @_builtins.property
+    @pulumi.getter(name="ikeRemoteIdVariable")
+    def ike_remote_id_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_remote_id_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="interfaceDescription")
+    def interface_description(self) -> _builtins.str:
+        """
+        Interface description
+        """
+        return pulumi.get(self, "interface_description")
+
+    @_builtins.property
+    @pulumi.getter(name="interfaceDescriptionVariable")
+    def interface_description_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interface_description_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="interfaceName")
+    def interface_name(self) -> _builtins.str:
+        """
+        Interface name: IPsec when present
+        """
+        return pulumi.get(self, "interface_name")
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecCiphersuite")
+    def ipsec_ciphersuite(self) -> _builtins.str:
+        """
+        IPsec(ESP) encryption and integrity protocol
+        """
+        return pulumi.get(self, "ipsec_ciphersuite")
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecCiphersuiteVariable")
+    def ipsec_ciphersuite_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipsec_ciphersuite_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecRekeyInterval")
+    def ipsec_rekey_interval(self) -> _builtins.int:
+        """
+        IPsec rekey interval \\n\\n seconds
+        """
+        return pulumi.get(self, "ipsec_rekey_interval")
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecRekeyIntervalVariable")
+    def ipsec_rekey_interval_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipsec_rekey_interval_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecReplayWindow")
+    def ipsec_replay_window(self) -> _builtins.int:
+        """
+        Replay window size 32..8192 (must be a power of 2)
+        """
+        return pulumi.get(self, "ipsec_replay_window")
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecReplayWindowVariable")
+    def ipsec_replay_window_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipsec_replay_window_variable")
+
+    @_builtins.property
+    @pulumi.getter
+    def mtu(self) -> _builtins.int:
+        """
+        Interface MTU \\n\\n, in bytes
+        """
+        return pulumi.get(self, "mtu")
+
+    @_builtins.property
+    @pulumi.getter(name="mtuVariable")
+    def mtu_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "mtu_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="perfectForwardSecrecy")
+    def perfect_forward_secrecy(self) -> _builtins.str:
+        """
+        IPsec perfect forward secrecy settings
+        """
+        return pulumi.get(self, "perfect_forward_secrecy")
+
+    @_builtins.property
+    @pulumi.getter(name="perfectForwardSecrecyVariable")
+    def perfect_forward_secrecy_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "perfect_forward_secrecy_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedKeyDynamic")
+    def pre_shared_key_dynamic(self) -> _builtins.bool:
+        """
+        Use preshared key to authenticate IKE peer
+        """
+        return pulumi.get(self, "pre_shared_key_dynamic")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecret")
+    def pre_shared_secret(self) -> _builtins.str:
+        """
+        Use preshared key to authenticate IKE peer
+        """
+        return pulumi.get(self, "pre_shared_secret")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretVariable")
+    def pre_shared_secret_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "pre_shared_secret_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWo")
+    def pre_shared_secret_wo(self) -> _builtins.str:
+        """
+        Use preshared key to authenticate IKE peer
+        """
+        return pulumi.get(self, "pre_shared_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWoVersion")
+    def pre_shared_secret_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "pre_shared_secret_wo_version")
+
+    @_builtins.property
+    @pulumi.getter
+    def shutdown(self) -> _builtins.bool:
+        """
+        Administrative state
+        """
+        return pulumi.get(self, "shutdown")
+
+    @_builtins.property
+    @pulumi.getter(name="tcpMssAdjust")
+    def tcp_mss_adjust(self) -> _builtins.int:
+        """
+        TCP MSS on SYN packets, in bytes
+        """
+        return pulumi.get(self, "tcp_mss_adjust")
+
+    @_builtins.property
+    @pulumi.getter(name="tcpMssAdjustVariable")
+    def tcp_mss_adjust_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tcp_mss_adjust_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="trackEnable")
+    def track_enable(self) -> _builtins.bool:
+        """
+        Enable/disable SIG tracking
+        """
+        return pulumi.get(self, "track_enable")
+
+    @_builtins.property
+    @pulumi.getter
+    def tracker(self) -> _builtins.str:
+        """
+        Enable tracker for this interface
+        """
+        return pulumi.get(self, "tracker")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelDcPreference")
+    def tunnel_dc_preference(self) -> _builtins.str:
+        """
+        SIG Tunnel Data Center
+        """
+        return pulumi.get(self, "tunnel_dc_preference")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelDestination")
+    def tunnel_destination(self) -> _builtins.str:
+        """
+        Tunnel destination IP address
+        """
+        return pulumi.get(self, "tunnel_destination")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelDestinationVariable")
+    def tunnel_destination_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_destination_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelPublicIp")
+    def tunnel_public_ip(self) -> _builtins.str:
+        """
+        Public IP required to setup GRE tunnel to Zscaler
+        """
+        return pulumi.get(self, "tunnel_public_ip")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelPublicIpVariable")
+    def tunnel_public_ip_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_public_ip_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelRouteVia")
+    def tunnel_route_via(self) -> _builtins.str:
+        """
+        \\n\\n Interface name: ge0/\\n\\n or ge0/\\n\\n.vlanid
+        """
+        return pulumi.get(self, "tunnel_route_via")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelRouteViaVariable")
+    def tunnel_route_via_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_route_via_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelSet")
+    def tunnel_set(self) -> _builtins.str:
+        """
+        SIG Tunnel Provider
+        """
+        return pulumi.get(self, "tunnel_set")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelSourceInterface")
+    def tunnel_source_interface(self) -> _builtins.str:
+        """
+        \\n\\n Interface name: ge0/\\n\\n or ge0/\\n\\n.vlanid
+        """
+        return pulumi.get(self, "tunnel_source_interface")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelSourceInterfaceVariable")
+    def tunnel_source_interface_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_source_interface_variable")
+
+
+@pulumi.output_type
+class GetSigFeatureInterfacePairResult(dict):
+    def __init__(__self__, *,
+                 active_interface: _builtins.str,
+                 active_interface_weight: _builtins.int,
+                 backup_interface: _builtins.str,
+                 backup_interface_weight: _builtins.int):
+        """
+        :param _builtins.str active_interface: Active Tunnel Interface for SIG
+        :param _builtins.int active_interface_weight: Active Tunnel Interface Weight
+        :param _builtins.str backup_interface: Backup Tunnel Interface for SIG
+        :param _builtins.int backup_interface_weight: Backup Tunnel Interface Weight
+        """
+        pulumi.set(__self__, "active_interface", active_interface)
+        pulumi.set(__self__, "active_interface_weight", active_interface_weight)
+        pulumi.set(__self__, "backup_interface", backup_interface)
+        pulumi.set(__self__, "backup_interface_weight", backup_interface_weight)
+
+    @_builtins.property
+    @pulumi.getter(name="activeInterface")
+    def active_interface(self) -> _builtins.str:
+        """
+        Active Tunnel Interface for SIG
+        """
+        return pulumi.get(self, "active_interface")
+
+    @_builtins.property
+    @pulumi.getter(name="activeInterfaceWeight")
+    def active_interface_weight(self) -> _builtins.int:
+        """
+        Active Tunnel Interface Weight
+        """
+        return pulumi.get(self, "active_interface_weight")
+
+    @_builtins.property
+    @pulumi.getter(name="backupInterface")
+    def backup_interface(self) -> _builtins.str:
+        """
+        Backup Tunnel Interface for SIG
+        """
+        return pulumi.get(self, "backup_interface")
+
+    @_builtins.property
+    @pulumi.getter(name="backupInterfaceWeight")
+    def backup_interface_weight(self) -> _builtins.int:
+        """
+        Backup Tunnel Interface Weight
+        """
+        return pulumi.get(self, "backup_interface_weight")
+
+
+@pulumi.output_type
+class GetSigFeatureTrackerResult(dict):
+    def __init__(__self__, *,
+                 endpoint_api_url: _builtins.str,
+                 endpoint_api_url_variable: _builtins.str,
+                 interval: _builtins.int,
+                 interval_variable: _builtins.str,
+                 multiplier: _builtins.int,
+                 multiplier_variable: _builtins.str,
+                 name: _builtins.str,
+                 threshold: _builtins.int,
+                 threshold_variable: _builtins.str):
+        """
+        :param _builtins.str endpoint_api_url: API url of endpoint
+        :param _builtins.str endpoint_api_url_variable: Variable name
+        :param _builtins.int interval: Probe interval \\n\\n seconds
+        :param _builtins.str interval_variable: Variable name
+        :param _builtins.int multiplier: Probe failure multiplier \\n\\n failed attempts
+        :param _builtins.str multiplier_variable: Variable name
+        :param _builtins.str name: Tracker name
+        :param _builtins.int threshold: Probe Timeout threshold \\n\\n milliseconds
+        :param _builtins.str threshold_variable: Variable name
+        """
+        pulumi.set(__self__, "endpoint_api_url", endpoint_api_url)
+        pulumi.set(__self__, "endpoint_api_url_variable", endpoint_api_url_variable)
+        pulumi.set(__self__, "interval", interval)
+        pulumi.set(__self__, "interval_variable", interval_variable)
+        pulumi.set(__self__, "multiplier", multiplier)
+        pulumi.set(__self__, "multiplier_variable", multiplier_variable)
+        pulumi.set(__self__, "name", name)
+        pulumi.set(__self__, "threshold", threshold)
+        pulumi.set(__self__, "threshold_variable", threshold_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="endpointApiUrl")
+    def endpoint_api_url(self) -> _builtins.str:
+        """
+        API url of endpoint
+        """
+        return pulumi.get(self, "endpoint_api_url")
+
+    @_builtins.property
+    @pulumi.getter(name="endpointApiUrlVariable")
+    def endpoint_api_url_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "endpoint_api_url_variable")
+
+    @_builtins.property
+    @pulumi.getter
+    def interval(self) -> _builtins.int:
+        """
+        Probe interval \\n\\n seconds
+        """
+        return pulumi.get(self, "interval")
+
+    @_builtins.property
+    @pulumi.getter(name="intervalVariable")
+    def interval_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interval_variable")
+
+    @_builtins.property
+    @pulumi.getter
+    def multiplier(self) -> _builtins.int:
+        """
+        Probe failure multiplier \\n\\n failed attempts
+        """
+        return pulumi.get(self, "multiplier")
+
+    @_builtins.property
+    @pulumi.getter(name="multiplierVariable")
+    def multiplier_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "multiplier_variable")
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> _builtins.str:
+        """
+        Tracker name
+        """
+        return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter
+    def threshold(self) -> _builtins.int:
+        """
+        Probe Timeout threshold \\n\\n milliseconds
+        """
+        return pulumi.get(self, "threshold")
+
+    @_builtins.property
+    @pulumi.getter(name="thresholdVariable")
+    def threshold_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "threshold_variable")
 
 
 @pulumi.output_type
@@ -106324,6 +109122,8 @@ class GetSseZscalerFeatureInterfaceResult(dict):
                  pre_shared_key_dynamic: _builtins.bool,
                  pre_shared_secret: _builtins.str,
                  pre_shared_secret_variable: _builtins.str,
+                 pre_shared_secret_wo: _builtins.str,
+                 pre_shared_secret_wo_version: _builtins.int,
                  shutdown: _builtins.bool,
                  tcp_mss_adjust: _builtins.int,
                  tcp_mss_adjust_variable: _builtins.str,
@@ -106378,6 +109178,8 @@ class GetSseZscalerFeatureInterfaceResult(dict):
         :param _builtins.bool pre_shared_key_dynamic: Use preshared key to authenticate IKE peer
         :param _builtins.str pre_shared_secret: Use preshared key to authenticate IKE peer
         :param _builtins.str pre_shared_secret_variable: Variable name
+        :param _builtins.str pre_shared_secret_wo: Use preshared key to authenticate IKE peer
+        :param _builtins.int pre_shared_secret_wo_version: Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.bool shutdown: Administrative state
         :param _builtins.int tcp_mss_adjust: TCP MSS on SYN packets, in bytes
         :param _builtins.str tcp_mss_adjust_variable: Variable name
@@ -106432,6 +109234,8 @@ class GetSseZscalerFeatureInterfaceResult(dict):
         pulumi.set(__self__, "pre_shared_key_dynamic", pre_shared_key_dynamic)
         pulumi.set(__self__, "pre_shared_secret", pre_shared_secret)
         pulumi.set(__self__, "pre_shared_secret_variable", pre_shared_secret_variable)
+        pulumi.set(__self__, "pre_shared_secret_wo", pre_shared_secret_wo)
+        pulumi.set(__self__, "pre_shared_secret_wo_version", pre_shared_secret_wo_version)
         pulumi.set(__self__, "shutdown", shutdown)
         pulumi.set(__self__, "tcp_mss_adjust", tcp_mss_adjust)
         pulumi.set(__self__, "tcp_mss_adjust_variable", tcp_mss_adjust_variable)
@@ -106730,6 +109534,22 @@ class GetSseZscalerFeatureInterfaceResult(dict):
         Variable name
         """
         return pulumi.get(self, "pre_shared_secret_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWo")
+    def pre_shared_secret_wo(self) -> _builtins.str:
+        """
+        Use preshared key to authenticate IKE peer
+        """
+        return pulumi.get(self, "pre_shared_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWoVersion")
+    def pre_shared_secret_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "pre_shared_secret_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -108308,10 +111128,14 @@ class GetSystemAaaFeatureRadiusGroupServerResult(dict):
                  key_type: _builtins.str,
                  key_type_variable: _builtins.str,
                  key_variable: _builtins.str,
+                 key_wo: _builtins.str,
+                 key_wo_version: _builtins.int,
                  retransmit: _builtins.int,
                  retransmit_variable: _builtins.str,
                  secret_key: _builtins.str,
                  secret_key_variable: _builtins.str,
+                 secret_key_wo: _builtins.str,
+                 secret_key_wo_version: _builtins.int,
                  timeout: _builtins.int,
                  timeout_variable: _builtins.str):
         """
@@ -108325,10 +111149,14 @@ class GetSystemAaaFeatureRadiusGroupServerResult(dict):
         :param _builtins.str key_type: key type
         :param _builtins.str key_type_variable: Variable name
         :param _builtins.str key_variable: Variable name
+        :param _builtins.str key_wo: Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param _builtins.int key_wo_version: Rotation trigger for `key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int retransmit: Configure how many times to contact this Radius server
         :param _builtins.str retransmit_variable: Variable name
         :param _builtins.str secret_key: Set the Radius server shared type 7 encrypted key
         :param _builtins.str secret_key_variable: Variable name
+        :param _builtins.str secret_key_wo: Set the Radius server shared type 7 encrypted key
+        :param _builtins.int secret_key_wo_version: Rotation trigger for `secret_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int timeout: Configure how long to wait for replies from the Radius server
         :param _builtins.str timeout_variable: Variable name
         """
@@ -108342,10 +111170,14 @@ class GetSystemAaaFeatureRadiusGroupServerResult(dict):
         pulumi.set(__self__, "key_type", key_type)
         pulumi.set(__self__, "key_type_variable", key_type_variable)
         pulumi.set(__self__, "key_variable", key_variable)
+        pulumi.set(__self__, "key_wo", key_wo)
+        pulumi.set(__self__, "key_wo_version", key_wo_version)
         pulumi.set(__self__, "retransmit", retransmit)
         pulumi.set(__self__, "retransmit_variable", retransmit_variable)
         pulumi.set(__self__, "secret_key", secret_key)
         pulumi.set(__self__, "secret_key_variable", secret_key_variable)
+        pulumi.set(__self__, "secret_key_wo", secret_key_wo)
+        pulumi.set(__self__, "secret_key_wo_version", secret_key_wo_version)
         pulumi.set(__self__, "timeout", timeout)
         pulumi.set(__self__, "timeout_variable", timeout_variable)
 
@@ -108430,6 +111262,22 @@ class GetSystemAaaFeatureRadiusGroupServerResult(dict):
         return pulumi.get(self, "key_variable")
 
     @_builtins.property
+    @pulumi.getter(name="keyWo")
+    def key_wo(self) -> _builtins.str:
+        """
+        Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="keyWoVersion")
+    def key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "key_wo_version")
+
+    @_builtins.property
     @pulumi.getter
     def retransmit(self) -> _builtins.int:
         """
@@ -108460,6 +111308,22 @@ class GetSystemAaaFeatureRadiusGroupServerResult(dict):
         Variable name
         """
         return pulumi.get(self, "secret_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="secretKeyWo")
+    def secret_key_wo(self) -> _builtins.str:
+        """
+        Set the Radius server shared type 7 encrypted key
+        """
+        return pulumi.get(self, "secret_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="secretKeyWoVersion")
+    def secret_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `secret_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "secret_key_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -108558,10 +111422,14 @@ class GetSystemAaaFeatureTacacsGroupServerResult(dict):
                  key: _builtins.str,
                  key_enum: _builtins.str,
                  key_variable: _builtins.str,
+                 key_wo: _builtins.str,
+                 key_wo_version: _builtins.int,
                  port: _builtins.int,
                  port_variable: _builtins.str,
                  secret_key: _builtins.str,
                  secret_key_variable: _builtins.str,
+                 secret_key_wo: _builtins.str,
+                 secret_key_wo_version: _builtins.int,
                  timeout: _builtins.int,
                  timeout_variable: _builtins.str):
         """
@@ -108569,10 +111437,14 @@ class GetSystemAaaFeatureTacacsGroupServerResult(dict):
         :param _builtins.str key: Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param _builtins.str key_enum: Type of encyption. To be used for type 6
         :param _builtins.str key_variable: Variable name
+        :param _builtins.str key_wo: Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param _builtins.int key_wo_version: Rotation trigger for `key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int port: TACACS Port
         :param _builtins.str port_variable: Variable name
         :param _builtins.str secret_key: Set the TACACS server shared type 7 encrypted key
         :param _builtins.str secret_key_variable: Variable name
+        :param _builtins.str secret_key_wo: Set the TACACS server shared type 7 encrypted key
+        :param _builtins.int secret_key_wo_version: Rotation trigger for `secret_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int timeout: Configure how long to wait for replies from the TACACS server
         :param _builtins.str timeout_variable: Variable name
         """
@@ -108580,10 +111452,14 @@ class GetSystemAaaFeatureTacacsGroupServerResult(dict):
         pulumi.set(__self__, "key", key)
         pulumi.set(__self__, "key_enum", key_enum)
         pulumi.set(__self__, "key_variable", key_variable)
+        pulumi.set(__self__, "key_wo", key_wo)
+        pulumi.set(__self__, "key_wo_version", key_wo_version)
         pulumi.set(__self__, "port", port)
         pulumi.set(__self__, "port_variable", port_variable)
         pulumi.set(__self__, "secret_key", secret_key)
         pulumi.set(__self__, "secret_key_variable", secret_key_variable)
+        pulumi.set(__self__, "secret_key_wo", secret_key_wo)
+        pulumi.set(__self__, "secret_key_wo_version", secret_key_wo_version)
         pulumi.set(__self__, "timeout", timeout)
         pulumi.set(__self__, "timeout_variable", timeout_variable)
 
@@ -108620,6 +111496,22 @@ class GetSystemAaaFeatureTacacsGroupServerResult(dict):
         return pulumi.get(self, "key_variable")
 
     @_builtins.property
+    @pulumi.getter(name="keyWo")
+    def key_wo(self) -> _builtins.str:
+        """
+        Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="keyWoVersion")
+    def key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "key_wo_version")
+
+    @_builtins.property
     @pulumi.getter
     def port(self) -> _builtins.int:
         """
@@ -108652,6 +111544,22 @@ class GetSystemAaaFeatureTacacsGroupServerResult(dict):
         return pulumi.get(self, "secret_key_variable")
 
     @_builtins.property
+    @pulumi.getter(name="secretKeyWo")
+    def secret_key_wo(self) -> _builtins.str:
+        """
+        Set the TACACS server shared type 7 encrypted key
+        """
+        return pulumi.get(self, "secret_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="secretKeyWoVersion")
+    def secret_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `secret_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "secret_key_wo_version")
+
+    @_builtins.property
     @pulumi.getter
     def timeout(self) -> _builtins.int:
         """
@@ -108675,6 +111583,8 @@ class GetSystemAaaFeatureUserResult(dict):
                  name_variable: _builtins.str,
                  password: _builtins.str,
                  password_variable: _builtins.str,
+                 password_wo: _builtins.str,
+                 password_wo_version: _builtins.int,
                  privilege: _builtins.str,
                  privilege_variable: _builtins.str,
                  public_keys: Sequence['outputs.GetSystemAaaFeatureUserPublicKeyResult']):
@@ -108683,6 +111593,8 @@ class GetSystemAaaFeatureUserResult(dict):
         :param _builtins.str name_variable: Variable name
         :param _builtins.str password: Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param _builtins.str password_variable: Variable name
+        :param _builtins.str password_wo: Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param _builtins.int password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str privilege: Set Privilege Level for this user
         :param _builtins.str privilege_variable: Variable name
         :param Sequence['GetSystemAaaFeatureUserPublicKeyArgs'] public_keys: List of RSA public-keys per user
@@ -108691,6 +111603,8 @@ class GetSystemAaaFeatureUserResult(dict):
         pulumi.set(__self__, "name_variable", name_variable)
         pulumi.set(__self__, "password", password)
         pulumi.set(__self__, "password_variable", password_variable)
+        pulumi.set(__self__, "password_wo", password_wo)
+        pulumi.set(__self__, "password_wo_version", password_wo_version)
         pulumi.set(__self__, "privilege", privilege)
         pulumi.set(__self__, "privilege_variable", privilege_variable)
         pulumi.set(__self__, "public_keys", public_keys)
@@ -108726,6 +111640,22 @@ class GetSystemAaaFeatureUserResult(dict):
         Variable name
         """
         return pulumi.get(self, "password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> _builtins.str:
+        """
+        Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -109658,30 +112588,48 @@ class GetSystemNtpFeatureAuthenticationKeyResult(dict):
     def __init__(__self__, *,
                  cmac_aes128_value: _builtins.str,
                  cmac_aes128_value_variable: _builtins.str,
+                 cmac_aes128_value_wo: _builtins.str,
+                 cmac_aes128_value_wo_version: _builtins.int,
                  hmac_sha2_value: _builtins.str,
                  hmac_sha2_value_variable: _builtins.str,
+                 hmac_sha2_value_wo: _builtins.str,
+                 hmac_sha2_value_wo_version: _builtins.int,
                  key_id: _builtins.int,
                  key_id_variable: _builtins.str,
                  md5_value: _builtins.str,
-                 md5_value_variable: _builtins.str):
+                 md5_value_variable: _builtins.str,
+                 md5_value_wo: _builtins.str,
+                 md5_value_wo_version: _builtins.int):
         """
         :param _builtins.str cmac_aes128_value: CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes)
         :param _builtins.str cmac_aes128_value_variable: Variable name
+        :param _builtins.str cmac_aes128_value_wo: CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes)
+        :param _builtins.int cmac_aes128_value_wo_version: Rotation trigger for `cmac_aes128_value_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str hmac_sha2_value: HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes)
         :param _builtins.str hmac_sha2_value_variable: Variable name
+        :param _builtins.str hmac_sha2_value_wo: HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes)
+        :param _builtins.int hmac_sha2_value_wo_version: Rotation trigger for `hmac_sha2_value_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int key_id: Authentication key ID
         :param _builtins.str key_id_variable: Variable name
         :param _builtins.str md5_value: Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param _builtins.str md5_value_variable: Variable name
+        :param _builtins.str md5_value_wo: Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param _builtins.int md5_value_wo_version: Rotation trigger for `md5_value_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         """
         pulumi.set(__self__, "cmac_aes128_value", cmac_aes128_value)
         pulumi.set(__self__, "cmac_aes128_value_variable", cmac_aes128_value_variable)
+        pulumi.set(__self__, "cmac_aes128_value_wo", cmac_aes128_value_wo)
+        pulumi.set(__self__, "cmac_aes128_value_wo_version", cmac_aes128_value_wo_version)
         pulumi.set(__self__, "hmac_sha2_value", hmac_sha2_value)
         pulumi.set(__self__, "hmac_sha2_value_variable", hmac_sha2_value_variable)
+        pulumi.set(__self__, "hmac_sha2_value_wo", hmac_sha2_value_wo)
+        pulumi.set(__self__, "hmac_sha2_value_wo_version", hmac_sha2_value_wo_version)
         pulumi.set(__self__, "key_id", key_id)
         pulumi.set(__self__, "key_id_variable", key_id_variable)
         pulumi.set(__self__, "md5_value", md5_value)
         pulumi.set(__self__, "md5_value_variable", md5_value_variable)
+        pulumi.set(__self__, "md5_value_wo", md5_value_wo)
+        pulumi.set(__self__, "md5_value_wo_version", md5_value_wo_version)
 
     @_builtins.property
     @pulumi.getter(name="cmacAes128Value")
@@ -109700,6 +112648,22 @@ class GetSystemNtpFeatureAuthenticationKeyResult(dict):
         return pulumi.get(self, "cmac_aes128_value_variable")
 
     @_builtins.property
+    @pulumi.getter(name="cmacAes128ValueWo")
+    def cmac_aes128_value_wo(self) -> _builtins.str:
+        """
+        CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes)
+        """
+        return pulumi.get(self, "cmac_aes128_value_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="cmacAes128ValueWoVersion")
+    def cmac_aes128_value_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `cmac_aes128_value_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "cmac_aes128_value_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="hmacSha2Value")
     def hmac_sha2_value(self) -> _builtins.str:
         """
@@ -109714,6 +112678,22 @@ class GetSystemNtpFeatureAuthenticationKeyResult(dict):
         Variable name
         """
         return pulumi.get(self, "hmac_sha2_value_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="hmacSha2ValueWo")
+    def hmac_sha2_value_wo(self) -> _builtins.str:
+        """
+        HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes)
+        """
+        return pulumi.get(self, "hmac_sha2_value_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="hmacSha2ValueWoVersion")
+    def hmac_sha2_value_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `hmac_sha2_value_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "hmac_sha2_value_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="keyId")
@@ -109746,6 +112726,22 @@ class GetSystemNtpFeatureAuthenticationKeyResult(dict):
         Variable name
         """
         return pulumi.get(self, "md5_value_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="md5ValueWo")
+    def md5_value_wo(self) -> _builtins.str:
+        """
+        Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "md5_value_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="md5ValueWoVersion")
+    def md5_value_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `md5_value_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "md5_value_wo_version")
 
 
 @pulumi.output_type
@@ -109906,6 +112902,8 @@ class GetSystemSecurityFeatureKeyResult(dict):
                  include_tcp_options_variable: _builtins.str,
                  key_string: _builtins.str,
                  key_string_variable: _builtins.str,
+                 key_string_wo: _builtins.str,
+                 key_string_wo_version: _builtins.int,
                  name: _builtins.str,
                  receiver_id: _builtins.int,
                  receiver_id_variable: _builtins.str,
@@ -109936,6 +112934,8 @@ class GetSystemSecurityFeatureKeyResult(dict):
         :param _builtins.str include_tcp_options_variable: Variable name
         :param _builtins.str key_string: Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param _builtins.str key_string_variable: Variable name
+        :param _builtins.str key_string_wo: Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param _builtins.int key_string_wo_version: Rotation trigger for `key_string_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str name: Select the chain name
         :param _builtins.int receiver_id: Specify the Receiver ID
         :param _builtins.str receiver_id_variable: Variable name
@@ -109966,6 +112966,8 @@ class GetSystemSecurityFeatureKeyResult(dict):
         pulumi.set(__self__, "include_tcp_options_variable", include_tcp_options_variable)
         pulumi.set(__self__, "key_string", key_string)
         pulumi.set(__self__, "key_string_variable", key_string_variable)
+        pulumi.set(__self__, "key_string_wo", key_string_wo)
+        pulumi.set(__self__, "key_string_wo_version", key_string_wo_version)
         pulumi.set(__self__, "name", name)
         pulumi.set(__self__, "receiver_id", receiver_id)
         pulumi.set(__self__, "receiver_id_variable", receiver_id_variable)
@@ -110109,6 +113111,22 @@ class GetSystemSecurityFeatureKeyResult(dict):
         return pulumi.get(self, "key_string_variable")
 
     @_builtins.property
+    @pulumi.getter(name="keyStringWo")
+    def key_string_wo(self) -> _builtins.str:
+        """
+        Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "key_string_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="keyStringWoVersion")
+    def key_string_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `key_string_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "key_string_wo_version")
+
+    @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
@@ -110249,6 +113267,8 @@ class GetSystemSnmpFeatureCommunityResult(dict):
                  authorization_variable: _builtins.str,
                  name: _builtins.str,
                  name_variable: _builtins.str,
+                 name_wo: _builtins.str,
+                 name_wo_version: _builtins.int,
                  user_label: _builtins.str,
                  view: _builtins.str,
                  view_variable: _builtins.str):
@@ -110257,6 +113277,8 @@ class GetSystemSnmpFeatureCommunityResult(dict):
         :param _builtins.str authorization_variable: Variable name
         :param _builtins.str name: Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param _builtins.str name_variable: Variable name
+        :param _builtins.str name_wo: Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param _builtins.int name_wo_version: Rotation trigger for `name_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str user_label: Set user label of the SNMP community
         :param _builtins.str view: Set name of the SNMP view
         :param _builtins.str view_variable: Variable name
@@ -110265,6 +113287,8 @@ class GetSystemSnmpFeatureCommunityResult(dict):
         pulumi.set(__self__, "authorization_variable", authorization_variable)
         pulumi.set(__self__, "name", name)
         pulumi.set(__self__, "name_variable", name_variable)
+        pulumi.set(__self__, "name_wo", name_wo)
+        pulumi.set(__self__, "name_wo_version", name_wo_version)
         pulumi.set(__self__, "user_label", user_label)
         pulumi.set(__self__, "view", view)
         pulumi.set(__self__, "view_variable", view_variable)
@@ -110300,6 +113324,22 @@ class GetSystemSnmpFeatureCommunityResult(dict):
         Variable name
         """
         return pulumi.get(self, "name_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="nameWo")
+    def name_wo(self) -> _builtins.str:
+        """
+        Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "name_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="nameWoVersion")
+    def name_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `name_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "name_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="userLabel")
@@ -110510,6 +113550,8 @@ class GetSystemSnmpFeatureUserResult(dict):
     def __init__(__self__, *,
                  authentication_password: _builtins.str,
                  authentication_password_variable: _builtins.str,
+                 authentication_password_wo: _builtins.str,
+                 authentication_password_wo_version: _builtins.int,
                  authentication_protocol: _builtins.str,
                  authentication_protocol_variable: _builtins.str,
                  group: _builtins.str,
@@ -110517,11 +113559,15 @@ class GetSystemSnmpFeatureUserResult(dict):
                  name: _builtins.str,
                  privacy_password: _builtins.str,
                  privacy_password_variable: _builtins.str,
+                 privacy_password_wo: _builtins.str,
+                 privacy_password_wo_version: _builtins.int,
                  privacy_protocol: _builtins.str,
                  privacy_protocol_variable: _builtins.str):
         """
         :param _builtins.str authentication_password: Specify authentication protocol password
         :param _builtins.str authentication_password_variable: Variable name
+        :param _builtins.str authentication_password_wo: Specify authentication protocol password
+        :param _builtins.int authentication_password_wo_version: Rotation trigger for `authentication_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str authentication_protocol: Configure authentication protocol
         :param _builtins.str authentication_protocol_variable: Variable name
         :param _builtins.str group: Name of the SNMP group
@@ -110529,11 +113575,15 @@ class GetSystemSnmpFeatureUserResult(dict):
         :param _builtins.str name: Name of the SNMP user
         :param _builtins.str privacy_password: Specify privacy protocol password
         :param _builtins.str privacy_password_variable: Variable name
+        :param _builtins.str privacy_password_wo: Specify privacy protocol password
+        :param _builtins.int privacy_password_wo_version: Rotation trigger for `privacy_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str privacy_protocol: Configure privacy protocol
         :param _builtins.str privacy_protocol_variable: Variable name
         """
         pulumi.set(__self__, "authentication_password", authentication_password)
         pulumi.set(__self__, "authentication_password_variable", authentication_password_variable)
+        pulumi.set(__self__, "authentication_password_wo", authentication_password_wo)
+        pulumi.set(__self__, "authentication_password_wo_version", authentication_password_wo_version)
         pulumi.set(__self__, "authentication_protocol", authentication_protocol)
         pulumi.set(__self__, "authentication_protocol_variable", authentication_protocol_variable)
         pulumi.set(__self__, "group", group)
@@ -110541,6 +113591,8 @@ class GetSystemSnmpFeatureUserResult(dict):
         pulumi.set(__self__, "name", name)
         pulumi.set(__self__, "privacy_password", privacy_password)
         pulumi.set(__self__, "privacy_password_variable", privacy_password_variable)
+        pulumi.set(__self__, "privacy_password_wo", privacy_password_wo)
+        pulumi.set(__self__, "privacy_password_wo_version", privacy_password_wo_version)
         pulumi.set(__self__, "privacy_protocol", privacy_protocol)
         pulumi.set(__self__, "privacy_protocol_variable", privacy_protocol_variable)
 
@@ -110559,6 +113611,22 @@ class GetSystemSnmpFeatureUserResult(dict):
         Variable name
         """
         return pulumi.get(self, "authentication_password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationPasswordWo")
+    def authentication_password_wo(self) -> _builtins.str:
+        """
+        Specify authentication protocol password
+        """
+        return pulumi.get(self, "authentication_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationPasswordWoVersion")
+    def authentication_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `authentication_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="authenticationProtocol")
@@ -110615,6 +113683,22 @@ class GetSystemSnmpFeatureUserResult(dict):
         Variable name
         """
         return pulumi.get(self, "privacy_password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="privacyPasswordWo")
+    def privacy_password_wo(self) -> _builtins.str:
+        """
+        Specify privacy protocol password
+        """
+        return pulumi.get(self, "privacy_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="privacyPasswordWoVersion")
+    def privacy_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `privacy_password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "privacy_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="privacyProtocol")
@@ -114271,6 +117355,8 @@ class GetTransportRoutingBgpFeatureIpv4NeighborResult(dict):
                  next_hop_self_variable: _builtins.str,
                  password: _builtins.str,
                  password_variable: _builtins.str,
+                 password_wo: _builtins.str,
+                 password_wo_version: _builtins.int,
                  remote_as: _builtins.str,
                  remote_as_variable: _builtins.str,
                  send_community: _builtins.bool,
@@ -114306,6 +117392,8 @@ class GetTransportRoutingBgpFeatureIpv4NeighborResult(dict):
         :param _builtins.str next_hop_self_variable: Variable name
         :param _builtins.str password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param _builtins.str password_variable: Variable name
+        :param _builtins.str password_wo: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param _builtins.int password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str remote_as: Set remote autonomous system number
         :param _builtins.str remote_as_variable: Variable name
         :param _builtins.bool send_community: Send community attribute
@@ -114341,6 +117429,8 @@ class GetTransportRoutingBgpFeatureIpv4NeighborResult(dict):
         pulumi.set(__self__, "next_hop_self_variable", next_hop_self_variable)
         pulumi.set(__self__, "password", password)
         pulumi.set(__self__, "password_variable", password_variable)
+        pulumi.set(__self__, "password_wo", password_wo)
+        pulumi.set(__self__, "password_wo_version", password_wo_version)
         pulumi.set(__self__, "remote_as", remote_as)
         pulumi.set(__self__, "remote_as_variable", remote_as_variable)
         pulumi.set(__self__, "send_community", send_community)
@@ -114536,6 +117626,22 @@ class GetTransportRoutingBgpFeatureIpv4NeighborResult(dict):
         Variable name
         """
         return pulumi.get(self, "password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> _builtins.str:
+        """
+        Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="remoteAs")
@@ -115051,6 +118157,8 @@ class GetTransportRoutingBgpFeatureIpv6NeighborResult(dict):
                  next_hop_self_variable: _builtins.str,
                  password: _builtins.str,
                  password_variable: _builtins.str,
+                 password_wo: _builtins.str,
+                 password_wo_version: _builtins.int,
                  remote_as: _builtins.str,
                  remote_as_variable: _builtins.str,
                  send_community: _builtins.bool,
@@ -115083,6 +118191,8 @@ class GetTransportRoutingBgpFeatureIpv6NeighborResult(dict):
         :param _builtins.str next_hop_self_variable: Variable name
         :param _builtins.str password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param _builtins.str password_variable: Variable name
+        :param _builtins.str password_wo: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param _builtins.int password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str remote_as: Set remote autonomous system number
         :param _builtins.str remote_as_variable: Variable name
         :param _builtins.bool send_community: Send community attribute
@@ -115115,6 +118225,8 @@ class GetTransportRoutingBgpFeatureIpv6NeighborResult(dict):
         pulumi.set(__self__, "next_hop_self_variable", next_hop_self_variable)
         pulumi.set(__self__, "password", password)
         pulumi.set(__self__, "password_variable", password_variable)
+        pulumi.set(__self__, "password_wo", password_wo)
+        pulumi.set(__self__, "password_wo_version", password_wo_version)
         pulumi.set(__self__, "remote_as", remote_as)
         pulumi.set(__self__, "remote_as_variable", remote_as_variable)
         pulumi.set(__self__, "send_community", send_community)
@@ -115293,6 +118405,22 @@ class GetTransportRoutingBgpFeatureIpv6NeighborResult(dict):
         Variable name
         """
         return pulumi.get(self, "password_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> _builtins.str:
+        """
+        Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="remoteAs")
@@ -115813,6 +118941,8 @@ class GetTransportRoutingOspfFeatureAreaInterfaceResult(dict):
                  message_digest_key_id: _builtins.int,
                  message_digest_key_id_variable: _builtins.str,
                  message_digest_key_variable: _builtins.str,
+                 message_digest_key_wo: _builtins.str,
+                 message_digest_key_wo_version: _builtins.int,
                  name: _builtins.str,
                  name_variable: _builtins.str,
                  network_type: _builtins.str,
@@ -115836,6 +118966,8 @@ class GetTransportRoutingOspfFeatureAreaInterfaceResult(dict):
         :param _builtins.int message_digest_key_id: Set MD5 message digest key
         :param _builtins.str message_digest_key_id_variable: Variable name
         :param _builtins.str message_digest_key_variable: Variable name
+        :param _builtins.str message_digest_key_wo: Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param _builtins.int message_digest_key_wo_version: Rotation trigger for `message_digest_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.str name: Set interface name
         :param _builtins.str name_variable: Variable name
         :param _builtins.str network_type: Set the OSPF network type
@@ -115859,6 +118991,8 @@ class GetTransportRoutingOspfFeatureAreaInterfaceResult(dict):
         pulumi.set(__self__, "message_digest_key_id", message_digest_key_id)
         pulumi.set(__self__, "message_digest_key_id_variable", message_digest_key_id_variable)
         pulumi.set(__self__, "message_digest_key_variable", message_digest_key_variable)
+        pulumi.set(__self__, "message_digest_key_wo", message_digest_key_wo)
+        pulumi.set(__self__, "message_digest_key_wo_version", message_digest_key_wo_version)
         pulumi.set(__self__, "name", name)
         pulumi.set(__self__, "name_variable", name_variable)
         pulumi.set(__self__, "network_type", network_type)
@@ -115993,6 +119127,22 @@ class GetTransportRoutingOspfFeatureAreaInterfaceResult(dict):
         Variable name
         """
         return pulumi.get(self, "message_digest_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="messageDigestKeyWo")
+    def message_digest_key_wo(self) -> _builtins.str:
+        """
+        Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        """
+        return pulumi.get(self, "message_digest_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="messageDigestKeyWoVersion")
+    def message_digest_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `message_digest_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "message_digest_key_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -116347,6 +119497,8 @@ class GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceResult(dict):
     def __init__(__self__, *,
                  authentication_key: _builtins.str,
                  authentication_key_variable: _builtins.str,
+                 authentication_key_wo: _builtins.str,
+                 authentication_key_wo_version: _builtins.int,
                  authentication_spi: _builtins.int,
                  authentication_spi_variable: _builtins.str,
                  authentication_type: _builtins.str,
@@ -116367,6 +119519,8 @@ class GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceResult(dict):
         """
         :param _builtins.str authentication_key: Set OSPF interface authentication IPSEC key
         :param _builtins.str authentication_key_variable: Variable name
+        :param _builtins.str authentication_key_wo: Set OSPF interface authentication IPSEC key
+        :param _builtins.int authentication_key_wo_version: Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int authentication_spi: Set OSPF interface authentication IPSec SPI, range 256..4294967295
         :param _builtins.str authentication_spi_variable: Variable name
         :param _builtins.str authentication_type: Set OSPF interface authentication configuration
@@ -116387,6 +119541,8 @@ class GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceResult(dict):
         """
         pulumi.set(__self__, "authentication_key", authentication_key)
         pulumi.set(__self__, "authentication_key_variable", authentication_key_variable)
+        pulumi.set(__self__, "authentication_key_wo", authentication_key_wo)
+        pulumi.set(__self__, "authentication_key_wo_version", authentication_key_wo_version)
         pulumi.set(__self__, "authentication_spi", authentication_spi)
         pulumi.set(__self__, "authentication_spi_variable", authentication_spi_variable)
         pulumi.set(__self__, "authentication_type", authentication_type)
@@ -116420,6 +119576,22 @@ class GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceResult(dict):
         Variable name
         """
         return pulumi.get(self, "authentication_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWo")
+    def authentication_key_wo(self) -> _builtins.str:
+        """
+        Set OSPF interface authentication IPSEC key
+        """
+        return pulumi.get(self, "authentication_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWoVersion")
+    def authentication_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_key_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="authenticationSpi")
@@ -116836,6 +120008,8 @@ class GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceResult(dict):
     def __init__(__self__, *,
                  authentication_key: _builtins.str,
                  authentication_key_variable: _builtins.str,
+                 authentication_key_wo: _builtins.str,
+                 authentication_key_wo_version: _builtins.int,
                  authentication_spi: _builtins.int,
                  authentication_spi_variable: _builtins.str,
                  authentication_type: _builtins.str,
@@ -116856,6 +120030,8 @@ class GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceResult(dict):
         """
         :param _builtins.str authentication_key: Set OSPF interface authentication IPSEC key
         :param _builtins.str authentication_key_variable: Variable name
+        :param _builtins.str authentication_key_wo: Set OSPF interface authentication IPSEC key
+        :param _builtins.int authentication_key_wo_version: Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param _builtins.int authentication_spi: Set OSPF interface authentication IPSec SPI, range 256..4294967295
         :param _builtins.str authentication_spi_variable: Variable name
         :param _builtins.str authentication_type: Set OSPF interface authentication configuration
@@ -116876,6 +120052,8 @@ class GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceResult(dict):
         """
         pulumi.set(__self__, "authentication_key", authentication_key)
         pulumi.set(__self__, "authentication_key_variable", authentication_key_variable)
+        pulumi.set(__self__, "authentication_key_wo", authentication_key_wo)
+        pulumi.set(__self__, "authentication_key_wo_version", authentication_key_wo_version)
         pulumi.set(__self__, "authentication_spi", authentication_spi)
         pulumi.set(__self__, "authentication_spi_variable", authentication_spi_variable)
         pulumi.set(__self__, "authentication_type", authentication_type)
@@ -116909,6 +120087,22 @@ class GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceResult(dict):
         Variable name
         """
         return pulumi.get(self, "authentication_key_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWo")
+    def authentication_key_wo(self) -> _builtins.str:
+        """
+        Set OSPF interface authentication IPSEC key
+        """
+        return pulumi.get(self, "authentication_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationKeyWoVersion")
+    def authentication_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `authentication_key_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_key_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="authenticationSpi")

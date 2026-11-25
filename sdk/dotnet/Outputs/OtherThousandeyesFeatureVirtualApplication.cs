@@ -15,12 +15,24 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Set the Account Group Token
+        ///   - Only one of `AccountGroupToken`, `AccountGroupTokenVariable` and `AccountGroupTokenWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AccountGroupTokenWo` together with `AccountGroupTokenWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? AccountGroupToken;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string? AccountGroupTokenVariable;
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set the Account Group Token
+        ///   - Only one of `AccountGroupToken`, `AccountGroupTokenVariable` and `AccountGroupTokenWo` can be set.
+        /// </summary>
+        public readonly string? AccountGroupTokenWo;
+        /// <summary>
+        /// Rotation trigger for `AccountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? AccountGroupTokenWoVersion;
         /// <summary>
         /// Set the Agent default gateway
         /// </summary>
@@ -107,6 +119,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string? accountGroupTokenVariable,
 
+            string? accountGroupTokenWo,
+
+            int? accountGroupTokenWoVersion,
+
             string? agentDefaultGateway,
 
             string? agentDefaultGatewayVariable,
@@ -147,6 +163,8 @@ namespace Pulumi.Sdwan.Outputs
         {
             AccountGroupToken = accountGroupToken;
             AccountGroupTokenVariable = accountGroupTokenVariable;
+            AccountGroupTokenWo = accountGroupTokenWo;
+            AccountGroupTokenWoVersion = accountGroupTokenWoVersion;
             AgentDefaultGateway = agentDefaultGateway;
             AgentDefaultGatewayVariable = agentDefaultGatewayVariable;
             Hostname = hostname;

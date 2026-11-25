@@ -15,12 +15,24 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Specify authentication protocol password
+        ///   - Only one of `AuthenticationPassword`, `AuthenticationPasswordVariable` and `AuthenticationPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationPasswordWo` together with `AuthenticationPasswordWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? AuthenticationPassword;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string? AuthenticationPasswordVariable;
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Specify authentication protocol password
+        ///   - Only one of `AuthenticationPassword`, `AuthenticationPasswordVariable` and `AuthenticationPasswordWo` can be set.
+        /// </summary>
+        public readonly string? AuthenticationPasswordWo;
+        /// <summary>
+        /// Rotation trigger for `AuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? AuthenticationPasswordWoVersion;
         /// <summary>
         /// Configure authentication protocol
         ///   - Choices: `Sha`, `Sha256`
@@ -44,12 +56,24 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Name;
         /// <summary>
         /// Specify privacy protocol password
+        ///   - Only one of `PrivacyPassword`, `PrivacyPasswordVariable` and `PrivacyPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PrivacyPasswordWo` together with `PrivacyPasswordWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? PrivacyPassword;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string? PrivacyPasswordVariable;
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Specify privacy protocol password
+        ///   - Only one of `PrivacyPassword`, `PrivacyPasswordVariable` and `PrivacyPasswordWo` can be set.
+        /// </summary>
+        public readonly string? PrivacyPasswordWo;
+        /// <summary>
+        /// Rotation trigger for `PrivacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? PrivacyPasswordWoVersion;
         /// <summary>
         /// Configure privacy protocol
         ///   - Choices: `aes-cfb-128`, `aes-256-cfb-128`
@@ -66,6 +90,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string? authenticationPasswordVariable,
 
+            string? authenticationPasswordWo,
+
+            int? authenticationPasswordWoVersion,
+
             string? authenticationProtocol,
 
             string? authenticationProtocolVariable,
@@ -80,12 +108,18 @@ namespace Pulumi.Sdwan.Outputs
 
             string? privacyPasswordVariable,
 
+            string? privacyPasswordWo,
+
+            int? privacyPasswordWoVersion,
+
             string? privacyProtocol,
 
             string? privacyProtocolVariable)
         {
             AuthenticationPassword = authenticationPassword;
             AuthenticationPasswordVariable = authenticationPasswordVariable;
+            AuthenticationPasswordWo = authenticationPasswordWo;
+            AuthenticationPasswordWoVersion = authenticationPasswordWoVersion;
             AuthenticationProtocol = authenticationProtocol;
             AuthenticationProtocolVariable = authenticationProtocolVariable;
             Group = group;
@@ -93,6 +127,8 @@ namespace Pulumi.Sdwan.Outputs
             Name = name;
             PrivacyPassword = privacyPassword;
             PrivacyPasswordVariable = privacyPasswordVariable;
+            PrivacyPasswordWo = privacyPasswordWo;
+            PrivacyPasswordWoVersion = privacyPasswordWoVersion;
             PrivacyProtocol = privacyProtocol;
             PrivacyProtocolVariable = privacyProtocolVariable;
         }

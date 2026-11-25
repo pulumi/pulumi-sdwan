@@ -38,6 +38,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string PassphraseVariable;
         /// <summary>
+        /// Set passphrase
+        /// </summary>
+        public readonly string PassphraseWo;
+        /// <summary>
+        /// Rotation trigger for `PassphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int PassphraseWoVersion;
+        /// <summary>
         /// Select QoS profile
         /// </summary>
         public readonly string QosProfile;
@@ -78,6 +86,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string RadiusServerSecretVariable;
         /// <summary>
+        /// Set RADIUS server shared secret
+        /// </summary>
+        public readonly string RadiusServerSecretWo;
+        /// <summary>
+        /// Rotation trigger for `RadiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int RadiusServerSecretWoVersion;
+        /// <summary>
         /// Select security type
         /// </summary>
         public readonly string SecurityType;
@@ -108,6 +124,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string passphraseVariable,
 
+            string passphraseWo,
+
+            int passphraseWoVersion,
+
             string qosProfile,
 
             string qosProfileVariable,
@@ -128,6 +148,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string radiusServerSecretVariable,
 
+            string radiusServerSecretWo,
+
+            int radiusServerSecretWoVersion,
+
             string securityType,
 
             string ssidName,
@@ -142,6 +166,8 @@ namespace Pulumi.Sdwan.Outputs
             BroadcastSsidVariable = broadcastSsidVariable;
             Passphrase = passphrase;
             PassphraseVariable = passphraseVariable;
+            PassphraseWo = passphraseWo;
+            PassphraseWoVersion = passphraseWoVersion;
             QosProfile = qosProfile;
             QosProfileVariable = qosProfileVariable;
             RadioType = radioType;
@@ -152,6 +178,8 @@ namespace Pulumi.Sdwan.Outputs
             RadiusServerPortVariable = radiusServerPortVariable;
             RadiusServerSecret = radiusServerSecret;
             RadiusServerSecretVariable = radiusServerSecretVariable;
+            RadiusServerSecretWo = radiusServerSecretWo;
+            RadiusServerSecretWoVersion = radiusServerSecretWoVersion;
             SecurityType = securityType;
             SsidName = ssidName;
             VlanId = vlanId;

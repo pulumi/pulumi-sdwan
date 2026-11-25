@@ -252,7 +252,14 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string Rfc1583CompatibleVariable;
+        /// <summary>
+        /// Set either route*policy*id or route*policy*id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later
+        /// </summary>
         public readonly string RoutePolicyId;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string RoutePolicyIdVariable;
         /// <summary>
         /// Set OSPF router ID to override system IP address
         /// </summary>
@@ -360,6 +367,8 @@ namespace Pulumi.Sdwan
 
             string routePolicyId,
 
+            string routePolicyIdVariable,
+
             string routerId,
 
             string routerIdVariable,
@@ -412,6 +421,7 @@ namespace Pulumi.Sdwan
             Rfc1583Compatible = rfc1583Compatible;
             Rfc1583CompatibleVariable = rfc1583CompatibleVariable;
             RoutePolicyId = routePolicyId;
+            RoutePolicyIdVariable = routePolicyIdVariable;
             RouterId = routerId;
             RouterIdVariable = routerIdVariable;
             RouterLsaAction = routerLsaAction;

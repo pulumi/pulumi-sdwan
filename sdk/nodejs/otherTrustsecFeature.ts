@@ -109,12 +109,24 @@ export class OtherTrustsecFeature extends pulumi.CustomResource {
     declare public readonly deviceIdVariable: pulumi.Output<string | undefined>;
     /**
      * Set the password for the device
+     *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
      */
     declare public readonly devicePassword: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
     declare public readonly devicePasswordVariable: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the password for the device
+     *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+     */
+    declare public readonly devicePasswordWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly devicePasswordWoVersion: pulumi.Output<number | undefined>;
     /**
      * Configure Local device security group <2..65519>
      *   - Range: `2`-`65519`
@@ -182,12 +194,24 @@ export class OtherTrustsecFeature extends pulumi.CustomResource {
     declare public readonly sxpConnections: pulumi.Output<outputs.OtherTrustsecFeatureSxpConnection[] | undefined>;
     /**
      * Configure SXP default password
+     *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
      */
     declare public readonly sxpDefaultPassword: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
     declare public readonly sxpDefaultPasswordVariable: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Configure SXP default password
+     *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+     */
+    declare public readonly sxpDefaultPasswordWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly sxpDefaultPasswordWoVersion: pulumi.Output<number | undefined>;
     /**
      * Configure SXP key-chain
      */
@@ -256,6 +280,8 @@ export class OtherTrustsecFeature extends pulumi.CustomResource {
             resourceInputs["deviceIdVariable"] = state?.deviceIdVariable;
             resourceInputs["devicePassword"] = state?.devicePassword;
             resourceInputs["devicePasswordVariable"] = state?.devicePasswordVariable;
+            resourceInputs["devicePasswordWo"] = state?.devicePasswordWo;
+            resourceInputs["devicePasswordWoVersion"] = state?.devicePasswordWoVersion;
             resourceInputs["deviceSgt"] = state?.deviceSgt;
             resourceInputs["deviceSgtVariable"] = state?.deviceSgtVariable;
             resourceInputs["enableEnforcement"] = state?.enableEnforcement;
@@ -272,6 +298,8 @@ export class OtherTrustsecFeature extends pulumi.CustomResource {
             resourceInputs["sxpConnections"] = state?.sxpConnections;
             resourceInputs["sxpDefaultPassword"] = state?.sxpDefaultPassword;
             resourceInputs["sxpDefaultPasswordVariable"] = state?.sxpDefaultPasswordVariable;
+            resourceInputs["sxpDefaultPasswordWo"] = state?.sxpDefaultPasswordWo;
+            resourceInputs["sxpDefaultPasswordWoVersion"] = state?.sxpDefaultPasswordWoVersion;
             resourceInputs["sxpKeyChain"] = state?.sxpKeyChain;
             resourceInputs["sxpKeyChainVariable"] = state?.sxpKeyChainVariable;
             resourceInputs["sxpLogBindingChanges"] = state?.sxpLogBindingChanges;
@@ -291,8 +319,10 @@ export class OtherTrustsecFeature extends pulumi.CustomResource {
             resourceInputs["description"] = args?.description;
             resourceInputs["deviceId"] = args?.deviceId;
             resourceInputs["deviceIdVariable"] = args?.deviceIdVariable;
-            resourceInputs["devicePassword"] = args?.devicePassword;
+            resourceInputs["devicePassword"] = args?.devicePassword ? pulumi.secret(args.devicePassword) : undefined;
             resourceInputs["devicePasswordVariable"] = args?.devicePasswordVariable;
+            resourceInputs["devicePasswordWo"] = args?.devicePasswordWo ? pulumi.secret(args.devicePasswordWo) : undefined;
+            resourceInputs["devicePasswordWoVersion"] = args?.devicePasswordWoVersion;
             resourceInputs["deviceSgt"] = args?.deviceSgt;
             resourceInputs["deviceSgtVariable"] = args?.deviceSgtVariable;
             resourceInputs["enableEnforcement"] = args?.enableEnforcement;
@@ -307,8 +337,10 @@ export class OtherTrustsecFeature extends pulumi.CustomResource {
             resourceInputs["speakerHoldTime"] = args?.speakerHoldTime;
             resourceInputs["speakerHoldTimeVariable"] = args?.speakerHoldTimeVariable;
             resourceInputs["sxpConnections"] = args?.sxpConnections;
-            resourceInputs["sxpDefaultPassword"] = args?.sxpDefaultPassword;
+            resourceInputs["sxpDefaultPassword"] = args?.sxpDefaultPassword ? pulumi.secret(args.sxpDefaultPassword) : undefined;
             resourceInputs["sxpDefaultPasswordVariable"] = args?.sxpDefaultPasswordVariable;
+            resourceInputs["sxpDefaultPasswordWo"] = args?.sxpDefaultPasswordWo ? pulumi.secret(args.sxpDefaultPasswordWo) : undefined;
+            resourceInputs["sxpDefaultPasswordWoVersion"] = args?.sxpDefaultPasswordWoVersion;
             resourceInputs["sxpKeyChain"] = args?.sxpKeyChain;
             resourceInputs["sxpKeyChainVariable"] = args?.sxpKeyChainVariable;
             resourceInputs["sxpLogBindingChanges"] = args?.sxpLogBindingChanges;
@@ -322,6 +354,8 @@ export class OtherTrustsecFeature extends pulumi.CustomResource {
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["devicePassword", "devicePasswordWo", "sxpDefaultPassword", "sxpDefaultPasswordWo"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(OtherTrustsecFeature.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -344,12 +378,24 @@ export interface OtherTrustsecFeatureState {
     deviceIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the password for the device
+     *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
      */
     devicePassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     devicePasswordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the password for the device
+     *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+     */
+    devicePasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    devicePasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Configure Local device security group <2..65519>
      *   - Range: `2`-`65519`
@@ -417,12 +463,24 @@ export interface OtherTrustsecFeatureState {
     sxpConnections?: pulumi.Input<pulumi.Input<inputs.OtherTrustsecFeatureSxpConnection>[] | undefined>;
     /**
      * Configure SXP default password
+     *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
      */
     sxpDefaultPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     sxpDefaultPasswordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Configure SXP default password
+     *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+     */
+    sxpDefaultPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    sxpDefaultPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Configure SXP key-chain
      */
@@ -492,12 +550,24 @@ export interface OtherTrustsecFeatureArgs {
     deviceIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the password for the device
+     *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `devicePasswordWo` together with `devicePasswordWoVersion`, which keeps it out of state.
      */
     devicePassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     devicePasswordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set the password for the device
+     *   - Only one of `devicePassword`, `devicePasswordVariable` and `devicePasswordWo` can be set.
+     */
+    devicePasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `devicePasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    devicePasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Configure Local device security group <2..65519>
      *   - Range: `2`-`65519`
@@ -565,12 +635,24 @@ export interface OtherTrustsecFeatureArgs {
     sxpConnections?: pulumi.Input<pulumi.Input<inputs.OtherTrustsecFeatureSxpConnection>[] | undefined>;
     /**
      * Configure SXP default password
+     *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `sxpDefaultPasswordWo` together with `sxpDefaultPasswordWoVersion`, which keeps it out of state.
      */
     sxpDefaultPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
     sxpDefaultPasswordVariable?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Configure SXP default password
+     *   - Only one of `sxpDefaultPassword`, `sxpDefaultPasswordVariable` and `sxpDefaultPasswordWo` can be set.
+     */
+    sxpDefaultPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `sxpDefaultPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    sxpDefaultPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Configure SXP key-chain
      */

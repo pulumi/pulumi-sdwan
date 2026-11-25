@@ -39,14 +39,14 @@ import (
 //						AuthenticationKey:   pulumi.Int(41673),
 //						Vpn:                 pulumi.Int(1),
 //						NtpVersion:          pulumi.Int(4),
-//						SourceInterface:     pulumi.String("Ethernet"),
+//						SourceInterface:     pulumi.String("GigabitEthernet1"),
 //						PreferThisNtpServer: pulumi.Bool(false),
 //					},
 //				},
 //				AuthenticationKeys: sdwan.SystemNtpFeatureAuthenticationKeyArray{
 //					&sdwan.SystemNtpFeatureAuthenticationKeyArgs{
 //						KeyId:           pulumi.Int(49737),
-//						Md5Value:        pulumi.String("$CRYPT_CLUSTER"),
+//						Md5Value:        pulumi.String("md5-key-example"),
 //						HmacSha2Value:   pulumi.String("hmac-sha2-key-example"),
 //						CmacAes128Value: pulumi.String("cmac-aes128-key-1234"),
 //					},
@@ -56,7 +56,7 @@ import (
 //				},
 //				AuthoritativeNtpServer: pulumi.Bool(false),
 //				Stratum:                pulumi.Int(1),
-//				SourceInterface:        pulumi.String("ATM"),
+//				SourceInterface:        pulumi.String("Loopback0"),
 //			})
 //			if err != nil {
 //				return err

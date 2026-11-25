@@ -439,11 +439,34 @@ public final class ServiceRoutingOspfv3Ipv4FeatureArgs extends com.pulumi.resour
         return Optional.ofNullable(this.rfc1583CompatibleVariable);
     }
 
+    /**
+     * Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     * 
+     */
     @Import(name="routePolicyId")
     private @Nullable Output<String> routePolicyId;
 
+    /**
+     * @return Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     * 
+     */
     public Optional<Output<String>> routePolicyId() {
         return Optional.ofNullable(this.routePolicyId);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     * 
+     */
+    @Import(name="routePolicyIdVariable")
+    private @Nullable Output<String> routePolicyIdVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     * 
+     */
+    public Optional<Output<String>> routePolicyIdVariable() {
+        return Optional.ofNullable(this.routePolicyIdVariable);
     }
 
     /**
@@ -655,6 +678,7 @@ public final class ServiceRoutingOspfv3Ipv4FeatureArgs extends com.pulumi.resour
         this.rfc1583Compatible = $.rfc1583Compatible;
         this.rfc1583CompatibleVariable = $.rfc1583CompatibleVariable;
         this.routePolicyId = $.routePolicyId;
+        this.routePolicyIdVariable = $.routePolicyIdVariable;
         this.routerId = $.routerId;
         this.routerIdVariable = $.routerIdVariable;
         this.routerLsaAction = $.routerLsaAction;
@@ -1280,13 +1304,46 @@ public final class ServiceRoutingOspfv3Ipv4FeatureArgs extends com.pulumi.resour
             return rfc1583CompatibleVariable(Output.of(rfc1583CompatibleVariable));
         }
 
+        /**
+         * @param routePolicyId Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+         * 
+         * @return builder
+         * 
+         */
         public Builder routePolicyId(@Nullable Output<String> routePolicyId) {
             $.routePolicyId = routePolicyId;
             return this;
         }
 
+        /**
+         * @param routePolicyId Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+         * 
+         * @return builder
+         * 
+         */
         public Builder routePolicyId(String routePolicyId) {
             return routePolicyId(Output.of(routePolicyId));
+        }
+
+        /**
+         * @param routePolicyIdVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routePolicyIdVariable(@Nullable Output<String> routePolicyIdVariable) {
+            $.routePolicyIdVariable = routePolicyIdVariable;
+            return this;
+        }
+
+        /**
+         * @param routePolicyIdVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routePolicyIdVariable(String routePolicyIdVariable) {
+            return routePolicyIdVariable(Output.of(routePolicyIdVariable));
         }
 
         /**

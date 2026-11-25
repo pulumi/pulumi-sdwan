@@ -128,6 +128,8 @@ public final class ServiceMulticastFeatureMsdpGroupPeerArgs extends com.pulumi.r
 
     /**
      * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `peerAuthenticationPasswordWo` together with `peerAuthenticationPasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="peerAuthenticationPassword")
@@ -135,6 +137,8 @@ public final class ServiceMulticastFeatureMsdpGroupPeerArgs extends com.pulumi.r
 
     /**
      * @return Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `peerAuthenticationPasswordWo` together with `peerAuthenticationPasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> peerAuthenticationPassword() {
@@ -154,6 +158,40 @@ public final class ServiceMulticastFeatureMsdpGroupPeerArgs extends com.pulumi.r
      */
     public Optional<Output<String>> peerAuthenticationPasswordVariable() {
         return Optional.ofNullable(this.peerAuthenticationPasswordVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+     * 
+     */
+    @Import(name="peerAuthenticationPasswordWo")
+    private @Nullable Output<String> peerAuthenticationPasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> peerAuthenticationPasswordWo() {
+        return Optional.ofNullable(this.peerAuthenticationPasswordWo);
+    }
+
+    /**
+     * Rotation trigger for `peerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="peerAuthenticationPasswordWoVersion")
+    private @Nullable Output<Integer> peerAuthenticationPasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `peerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> peerAuthenticationPasswordWoVersion() {
+        return Optional.ofNullable(this.peerAuthenticationPasswordWoVersion);
     }
 
     /**
@@ -269,6 +307,8 @@ public final class ServiceMulticastFeatureMsdpGroupPeerArgs extends com.pulumi.r
         this.keepaliveIntervalVariable = $.keepaliveIntervalVariable;
         this.peerAuthenticationPassword = $.peerAuthenticationPassword;
         this.peerAuthenticationPasswordVariable = $.peerAuthenticationPasswordVariable;
+        this.peerAuthenticationPasswordWo = $.peerAuthenticationPasswordWo;
+        this.peerAuthenticationPasswordWoVersion = $.peerAuthenticationPasswordWoVersion;
         this.peerIp = $.peerIp;
         this.peerIpVariable = $.peerIpVariable;
         this.prefixListId = $.prefixListId;
@@ -449,6 +489,8 @@ public final class ServiceMulticastFeatureMsdpGroupPeerArgs extends com.pulumi.r
 
         /**
          * @param peerAuthenticationPassword Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `peerAuthenticationPasswordWo` together with `peerAuthenticationPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -460,6 +502,8 @@ public final class ServiceMulticastFeatureMsdpGroupPeerArgs extends com.pulumi.r
 
         /**
          * @param peerAuthenticationPassword Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `peerAuthenticationPasswordWo` together with `peerAuthenticationPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -487,6 +531,52 @@ public final class ServiceMulticastFeatureMsdpGroupPeerArgs extends com.pulumi.r
          */
         public Builder peerAuthenticationPasswordVariable(String peerAuthenticationPasswordVariable) {
             return peerAuthenticationPasswordVariable(Output.of(peerAuthenticationPasswordVariable));
+        }
+
+        /**
+         * @param peerAuthenticationPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peerAuthenticationPasswordWo(@Nullable Output<String> peerAuthenticationPasswordWo) {
+            $.peerAuthenticationPasswordWo = peerAuthenticationPasswordWo;
+            return this;
+        }
+
+        /**
+         * @param peerAuthenticationPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peerAuthenticationPasswordWo(String peerAuthenticationPasswordWo) {
+            return peerAuthenticationPasswordWo(Output.of(peerAuthenticationPasswordWo));
+        }
+
+        /**
+         * @param peerAuthenticationPasswordWoVersion Rotation trigger for `peerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peerAuthenticationPasswordWoVersion(@Nullable Output<Integer> peerAuthenticationPasswordWoVersion) {
+            $.peerAuthenticationPasswordWoVersion = peerAuthenticationPasswordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param peerAuthenticationPasswordWoVersion Rotation trigger for `peerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peerAuthenticationPasswordWoVersion(Integer peerAuthenticationPasswordWoVersion) {
+            return peerAuthenticationPasswordWoVersion(Output.of(peerAuthenticationPasswordWoVersion));
         }
 
         /**

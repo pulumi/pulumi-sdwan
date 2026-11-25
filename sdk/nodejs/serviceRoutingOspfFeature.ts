@@ -219,7 +219,14 @@ export class ServiceRoutingOspfFeature extends pulumi.CustomResource {
      * Variable name
      */
     declare public readonly rfc1583CompatibleVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
     declare public readonly routePolicyId: pulumi.Output<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
+    declare public readonly routePolicyIdVariable: pulumi.Output<string | undefined>;
     /**
      * Set OSPF router ID to override system IP address
      */
@@ -303,6 +310,7 @@ export class ServiceRoutingOspfFeature extends pulumi.CustomResource {
             resourceInputs["rfc1583Compatible"] = state?.rfc1583Compatible;
             resourceInputs["rfc1583CompatibleVariable"] = state?.rfc1583CompatibleVariable;
             resourceInputs["routePolicyId"] = state?.routePolicyId;
+            resourceInputs["routePolicyIdVariable"] = state?.routePolicyIdVariable;
             resourceInputs["routerId"] = state?.routerId;
             resourceInputs["routerIdVariable"] = state?.routerIdVariable;
             resourceInputs["routerLsas"] = state?.routerLsas;
@@ -341,6 +349,7 @@ export class ServiceRoutingOspfFeature extends pulumi.CustomResource {
             resourceInputs["rfc1583Compatible"] = args?.rfc1583Compatible;
             resourceInputs["rfc1583CompatibleVariable"] = args?.rfc1583CompatibleVariable;
             resourceInputs["routePolicyId"] = args?.routePolicyId;
+            resourceInputs["routePolicyIdVariable"] = args?.routePolicyIdVariable;
             resourceInputs["routerId"] = args?.routerId;
             resourceInputs["routerIdVariable"] = args?.routerIdVariable;
             resourceInputs["routerLsas"] = args?.routerLsas;
@@ -462,7 +471,14 @@ export interface ServiceRoutingOspfFeatureState {
      * Variable name
      */
     rfc1583CompatibleVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
     routePolicyId?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
+    routePolicyIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF router ID to override system IP address
      */
@@ -616,7 +632,14 @@ export interface ServiceRoutingOspfFeatureArgs {
      * Variable name
      */
     rfc1583CompatibleVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
     routePolicyId?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     */
+    routePolicyIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF router ID to override system IP address
      */

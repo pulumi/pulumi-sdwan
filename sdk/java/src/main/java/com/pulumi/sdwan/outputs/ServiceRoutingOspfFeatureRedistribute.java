@@ -34,7 +34,16 @@ public final class ServiceRoutingOspfFeatureRedistribute {
      * 
      */
     private @Nullable String protocolVariable;
+    /**
+     * @return Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     * 
+     */
     private @Nullable String routePolicyId;
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     * 
+     */
+    private @Nullable String routePolicyIdVariable;
     /**
      * @return Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
@@ -78,8 +87,19 @@ public final class ServiceRoutingOspfFeatureRedistribute {
     public Optional<String> protocolVariable() {
         return Optional.ofNullable(this.protocolVariable);
     }
+    /**
+     * @return Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     * 
+     */
     public Optional<String> routePolicyId() {
         return Optional.ofNullable(this.routePolicyId);
+    }
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+     * 
+     */
+    public Optional<String> routePolicyIdVariable() {
+        return Optional.ofNullable(this.routePolicyIdVariable);
     }
     /**
      * @return Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
@@ -111,6 +131,7 @@ public final class ServiceRoutingOspfFeatureRedistribute {
         private @Nullable String protocol;
         private @Nullable String protocolVariable;
         private @Nullable String routePolicyId;
+        private @Nullable String routePolicyIdVariable;
         private @Nullable Boolean translateRibMetric;
         private @Nullable String translateRibMetricVariable;
         public Builder() {}
@@ -121,6 +142,7 @@ public final class ServiceRoutingOspfFeatureRedistribute {
     	      this.protocol = defaults.protocol;
     	      this.protocolVariable = defaults.protocolVariable;
     	      this.routePolicyId = defaults.routePolicyId;
+    	      this.routePolicyIdVariable = defaults.routePolicyIdVariable;
     	      this.translateRibMetric = defaults.translateRibMetric;
     	      this.translateRibMetricVariable = defaults.translateRibMetricVariable;
         }
@@ -156,6 +178,12 @@ public final class ServiceRoutingOspfFeatureRedistribute {
             return this;
         }
         @CustomType.Setter
+        public Builder routePolicyIdVariable(@Nullable String routePolicyIdVariable) {
+
+            this.routePolicyIdVariable = routePolicyIdVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder translateRibMetric(@Nullable Boolean translateRibMetric) {
 
             this.translateRibMetric = translateRibMetric;
@@ -174,6 +202,7 @@ public final class ServiceRoutingOspfFeatureRedistribute {
             _resultValue.protocol = protocol;
             _resultValue.protocolVariable = protocolVariable;
             _resultValue.routePolicyId = routePolicyId;
+            _resultValue.routePolicyIdVariable = routePolicyIdVariable;
             _resultValue.translateRibMetric = translateRibMetric;
             _resultValue.translateRibMetricVariable = translateRibMetricVariable;
             return _resultValue;

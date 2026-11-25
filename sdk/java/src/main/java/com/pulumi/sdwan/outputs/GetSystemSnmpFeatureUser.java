@@ -5,6 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,6 +21,16 @@ public final class GetSystemSnmpFeatureUser {
      * 
      */
     private String authenticationPasswordVariable;
+    /**
+     * @return Specify authentication protocol password
+     * 
+     */
+    private String authenticationPasswordWo;
+    /**
+     * @return Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer authenticationPasswordWoVersion;
     /**
      * @return Configure authentication protocol
      * 
@@ -56,6 +67,16 @@ public final class GetSystemSnmpFeatureUser {
      */
     private String privacyPasswordVariable;
     /**
+     * @return Specify privacy protocol password
+     * 
+     */
+    private String privacyPasswordWo;
+    /**
+     * @return Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer privacyPasswordWoVersion;
+    /**
      * @return Configure privacy protocol
      * 
      */
@@ -80,6 +101,20 @@ public final class GetSystemSnmpFeatureUser {
      */
     public String authenticationPasswordVariable() {
         return this.authenticationPasswordVariable;
+    }
+    /**
+     * @return Specify authentication protocol password
+     * 
+     */
+    public String authenticationPasswordWo() {
+        return this.authenticationPasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer authenticationPasswordWoVersion() {
+        return this.authenticationPasswordWoVersion;
     }
     /**
      * @return Configure authentication protocol
@@ -131,6 +166,20 @@ public final class GetSystemSnmpFeatureUser {
         return this.privacyPasswordVariable;
     }
     /**
+     * @return Specify privacy protocol password
+     * 
+     */
+    public String privacyPasswordWo() {
+        return this.privacyPasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer privacyPasswordWoVersion() {
+        return this.privacyPasswordWoVersion;
+    }
+    /**
      * @return Configure privacy protocol
      * 
      */
@@ -156,6 +205,8 @@ public final class GetSystemSnmpFeatureUser {
     public static final class Builder {
         private String authenticationPassword;
         private String authenticationPasswordVariable;
+        private String authenticationPasswordWo;
+        private Integer authenticationPasswordWoVersion;
         private String authenticationProtocol;
         private String authenticationProtocolVariable;
         private String group;
@@ -163,6 +214,8 @@ public final class GetSystemSnmpFeatureUser {
         private String name;
         private String privacyPassword;
         private String privacyPasswordVariable;
+        private String privacyPasswordWo;
+        private Integer privacyPasswordWoVersion;
         private String privacyProtocol;
         private String privacyProtocolVariable;
         public Builder() {}
@@ -170,6 +223,8 @@ public final class GetSystemSnmpFeatureUser {
     	      Objects.requireNonNull(defaults);
     	      this.authenticationPassword = defaults.authenticationPassword;
     	      this.authenticationPasswordVariable = defaults.authenticationPasswordVariable;
+    	      this.authenticationPasswordWo = defaults.authenticationPasswordWo;
+    	      this.authenticationPasswordWoVersion = defaults.authenticationPasswordWoVersion;
     	      this.authenticationProtocol = defaults.authenticationProtocol;
     	      this.authenticationProtocolVariable = defaults.authenticationProtocolVariable;
     	      this.group = defaults.group;
@@ -177,6 +232,8 @@ public final class GetSystemSnmpFeatureUser {
     	      this.name = defaults.name;
     	      this.privacyPassword = defaults.privacyPassword;
     	      this.privacyPasswordVariable = defaults.privacyPasswordVariable;
+    	      this.privacyPasswordWo = defaults.privacyPasswordWo;
+    	      this.privacyPasswordWoVersion = defaults.privacyPasswordWoVersion;
     	      this.privacyProtocol = defaults.privacyProtocol;
     	      this.privacyProtocolVariable = defaults.privacyProtocolVariable;
         }
@@ -195,6 +252,22 @@ public final class GetSystemSnmpFeatureUser {
               throw new MissingRequiredPropertyException("GetSystemSnmpFeatureUser", "authenticationPasswordVariable");
             }
             this.authenticationPasswordVariable = authenticationPasswordVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder authenticationPasswordWo(String authenticationPasswordWo) {
+            if (authenticationPasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetSystemSnmpFeatureUser", "authenticationPasswordWo");
+            }
+            this.authenticationPasswordWo = authenticationPasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder authenticationPasswordWoVersion(Integer authenticationPasswordWoVersion) {
+            if (authenticationPasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSystemSnmpFeatureUser", "authenticationPasswordWoVersion");
+            }
+            this.authenticationPasswordWoVersion = authenticationPasswordWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -254,6 +327,22 @@ public final class GetSystemSnmpFeatureUser {
             return this;
         }
         @CustomType.Setter
+        public Builder privacyPasswordWo(String privacyPasswordWo) {
+            if (privacyPasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetSystemSnmpFeatureUser", "privacyPasswordWo");
+            }
+            this.privacyPasswordWo = privacyPasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder privacyPasswordWoVersion(Integer privacyPasswordWoVersion) {
+            if (privacyPasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetSystemSnmpFeatureUser", "privacyPasswordWoVersion");
+            }
+            this.privacyPasswordWoVersion = privacyPasswordWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder privacyProtocol(String privacyProtocol) {
             if (privacyProtocol == null) {
               throw new MissingRequiredPropertyException("GetSystemSnmpFeatureUser", "privacyProtocol");
@@ -273,6 +362,8 @@ public final class GetSystemSnmpFeatureUser {
             final var _resultValue = new GetSystemSnmpFeatureUser();
             _resultValue.authenticationPassword = authenticationPassword;
             _resultValue.authenticationPasswordVariable = authenticationPasswordVariable;
+            _resultValue.authenticationPasswordWo = authenticationPasswordWo;
+            _resultValue.authenticationPasswordWoVersion = authenticationPasswordWoVersion;
             _resultValue.authenticationProtocol = authenticationProtocol;
             _resultValue.authenticationProtocolVariable = authenticationProtocolVariable;
             _resultValue.group = group;
@@ -280,6 +371,8 @@ public final class GetSystemSnmpFeatureUser {
             _resultValue.name = name;
             _resultValue.privacyPassword = privacyPassword;
             _resultValue.privacyPasswordVariable = privacyPasswordVariable;
+            _resultValue.privacyPasswordWo = privacyPasswordWo;
+            _resultValue.privacyPasswordWoVersion = privacyPasswordWoVersion;
             _resultValue.privacyProtocol = privacyProtocol;
             _resultValue.privacyProtocolVariable = privacyProtocolVariable;
             return _resultValue;

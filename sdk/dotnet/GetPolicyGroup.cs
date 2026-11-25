@@ -134,10 +134,6 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// List of devices
-        /// </summary>
-        public readonly ImmutableArray<Outputs.GetPolicyGroupDeviceResult> Devices;
-        /// <summary>
         /// List of feature profile IDs
         /// </summary>
         public readonly ImmutableArray<string> FeatureProfileIds;
@@ -157,12 +153,14 @@ namespace Pulumi.Sdwan
         /// Type of solution
         /// </summary>
         public readonly string Solution;
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        public readonly int Version;
 
         [OutputConstructor]
         private GetPolicyGroupResult(
             string description,
-
-            ImmutableArray<Outputs.GetPolicyGroupDeviceResult> devices,
 
             ImmutableArray<string> featureProfileIds,
 
@@ -172,15 +170,17 @@ namespace Pulumi.Sdwan
 
             ImmutableArray<string> policyVersions,
 
-            string solution)
+            string solution,
+
+            int version)
         {
             Description = description;
-            Devices = devices;
             FeatureProfileIds = featureProfileIds;
             Id = id;
             Name = name;
             PolicyVersions = policyVersions;
             Solution = solution;
+            Version = version;
         }
     }
 }

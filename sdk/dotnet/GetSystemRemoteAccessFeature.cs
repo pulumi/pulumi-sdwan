@@ -172,6 +172,11 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string AaaSpecifyNamePolicyPasswordVariable;
+        public readonly string AaaSpecifyNamePolicyPasswordWo;
+        /// <summary>
+        /// Rotation trigger for `AaaSpecifyNamePolicyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int AaaSpecifyNamePolicyPasswordWoVersion;
         public readonly string AnyConnectEapAuthenticationType;
         /// <summary>
         /// Enabled SSL VPN
@@ -281,6 +286,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string PskAuthenticationPreSharedKeyVariable;
         /// <summary>
+        /// PSK Pre Shared Key
+        /// </summary>
+        public readonly string PskAuthenticationPreSharedKeyWo;
+        /// <summary>
+        /// Rotation trigger for `PskAuthenticationPreSharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int PskAuthenticationPreSharedKeyWoVersion;
+        /// <summary>
         /// PSK Selection
         /// </summary>
         public readonly string PskAuthenticationType;
@@ -319,6 +332,10 @@ namespace Pulumi.Sdwan
             string aaaSpecifyNamePolicyPassword,
 
             string aaaSpecifyNamePolicyPasswordVariable,
+
+            string aaaSpecifyNamePolicyPasswordWo,
+
+            int aaaSpecifyNamePolicyPasswordWoVersion,
 
             string anyConnectEapAuthenticationType,
 
@@ -380,6 +397,10 @@ namespace Pulumi.Sdwan
 
             string pskAuthenticationPreSharedKeyVariable,
 
+            string pskAuthenticationPreSharedKeyWo,
+
+            int pskAuthenticationPreSharedKeyWoVersion,
+
             string pskAuthenticationType,
 
             string pskAuthenticationTypeVariable,
@@ -400,6 +421,8 @@ namespace Pulumi.Sdwan
             AaaSpecifyNamePolicyNameVariable = aaaSpecifyNamePolicyNameVariable;
             AaaSpecifyNamePolicyPassword = aaaSpecifyNamePolicyPassword;
             AaaSpecifyNamePolicyPasswordVariable = aaaSpecifyNamePolicyPasswordVariable;
+            AaaSpecifyNamePolicyPasswordWo = aaaSpecifyNamePolicyPasswordWo;
+            AaaSpecifyNamePolicyPasswordWoVersion = aaaSpecifyNamePolicyPasswordWoVersion;
             AnyConnectEapAuthenticationType = anyConnectEapAuthenticationType;
             ConnectionTypeSsl = connectionTypeSsl;
             Description = description;
@@ -430,6 +453,8 @@ namespace Pulumi.Sdwan
             Name = name;
             PskAuthenticationPreSharedKey = pskAuthenticationPreSharedKey;
             PskAuthenticationPreSharedKeyVariable = pskAuthenticationPreSharedKeyVariable;
+            PskAuthenticationPreSharedKeyWo = pskAuthenticationPreSharedKeyWo;
+            PskAuthenticationPreSharedKeyWoVersion = pskAuthenticationPreSharedKeyWoVersion;
             PskAuthenticationType = pskAuthenticationType;
             PskAuthenticationTypeVariable = pskAuthenticationTypeVariable;
             RadiusGroupName = radiusGroupName;

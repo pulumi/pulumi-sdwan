@@ -74,6 +74,8 @@ class TransportWanVpnInterfaceGreFeatureArgs:
                  perfect_forward_secrecy_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  pre_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
                  pre_shared_secret_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 pre_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 pre_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
                  shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_destination_ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
@@ -184,7 +186,13 @@ class TransportWanVpnInterfaceGreFeatureArgs:
                  - Default value: `group-16`
         :param pulumi.Input[_builtins.str] perfect_forward_secrecy_variable: Variable name
         :param pulumi.Input[_builtins.str] pre_shared_secret: Use preshared key to authenticate IKE peer
+                 - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `pre_shared_secret_wo` together with `pre_shared_secret_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] pre_shared_secret_variable: Variable name
+        :param pulumi.Input[_builtins.str] pre_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Use preshared key to authenticate IKE peer
+                 - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] pre_shared_secret_wo_version: Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.bool] shutdown: Administrative state
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
@@ -322,6 +330,10 @@ class TransportWanVpnInterfaceGreFeatureArgs:
             pulumi.set(__self__, "pre_shared_secret", pre_shared_secret)
         if pre_shared_secret_variable is not None:
             pulumi.set(__self__, "pre_shared_secret_variable", pre_shared_secret_variable)
+        if pre_shared_secret_wo is not None:
+            pulumi.set(__self__, "pre_shared_secret_wo", pre_shared_secret_wo)
+        if pre_shared_secret_wo_version is not None:
+            pulumi.set(__self__, "pre_shared_secret_wo_version", pre_shared_secret_wo_version)
         if shutdown is not None:
             pulumi.set(__self__, "shutdown", shutdown)
         if shutdown_variable is not None:
@@ -1039,6 +1051,8 @@ class TransportWanVpnInterfaceGreFeatureArgs:
     def pre_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Use preshared key to authenticate IKE peer
+          - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `pre_shared_secret_wo` together with `pre_shared_secret_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "pre_shared_secret")
 
@@ -1057,6 +1071,32 @@ class TransportWanVpnInterfaceGreFeatureArgs:
     @pre_shared_secret_variable.setter
     def pre_shared_secret_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "pre_shared_secret_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWo")
+    def pre_shared_secret_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Use preshared key to authenticate IKE peer
+          - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+        """
+        return pulumi.get(self, "pre_shared_secret_wo")
+
+    @pre_shared_secret_wo.setter
+    def pre_shared_secret_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "pre_shared_secret_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWoVersion")
+    def pre_shared_secret_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "pre_shared_secret_wo_version")
+
+    @pre_shared_secret_wo_version.setter
+    def pre_shared_secret_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "pre_shared_secret_wo_version", value)
 
     @_builtins.property
     @pulumi.getter
@@ -1408,6 +1448,8 @@ class _TransportWanVpnInterfaceGreFeatureState:
                  perfect_forward_secrecy_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  pre_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
                  pre_shared_secret_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 pre_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 pre_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
                  shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1519,7 +1561,13 @@ class _TransportWanVpnInterfaceGreFeatureState:
                  - Default value: `group-16`
         :param pulumi.Input[_builtins.str] perfect_forward_secrecy_variable: Variable name
         :param pulumi.Input[_builtins.str] pre_shared_secret: Use preshared key to authenticate IKE peer
+                 - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `pre_shared_secret_wo` together with `pre_shared_secret_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] pre_shared_secret_variable: Variable name
+        :param pulumi.Input[_builtins.str] pre_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Use preshared key to authenticate IKE peer
+                 - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] pre_shared_secret_wo_version: Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.bool] shutdown: Administrative state
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
@@ -1659,6 +1707,10 @@ class _TransportWanVpnInterfaceGreFeatureState:
             pulumi.set(__self__, "pre_shared_secret", pre_shared_secret)
         if pre_shared_secret_variable is not None:
             pulumi.set(__self__, "pre_shared_secret_variable", pre_shared_secret_variable)
+        if pre_shared_secret_wo is not None:
+            pulumi.set(__self__, "pre_shared_secret_wo", pre_shared_secret_wo)
+        if pre_shared_secret_wo_version is not None:
+            pulumi.set(__self__, "pre_shared_secret_wo_version", pre_shared_secret_wo_version)
         if shutdown is not None:
             pulumi.set(__self__, "shutdown", shutdown)
         if shutdown_variable is not None:
@@ -2368,6 +2420,8 @@ class _TransportWanVpnInterfaceGreFeatureState:
     def pre_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Use preshared key to authenticate IKE peer
+          - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `pre_shared_secret_wo` together with `pre_shared_secret_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "pre_shared_secret")
 
@@ -2386,6 +2440,32 @@ class _TransportWanVpnInterfaceGreFeatureState:
     @pre_shared_secret_variable.setter
     def pre_shared_secret_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "pre_shared_secret_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWo")
+    def pre_shared_secret_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Use preshared key to authenticate IKE peer
+          - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+        """
+        return pulumi.get(self, "pre_shared_secret_wo")
+
+    @pre_shared_secret_wo.setter
+    def pre_shared_secret_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "pre_shared_secret_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWoVersion")
+    def pre_shared_secret_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "pre_shared_secret_wo_version")
+
+    @pre_shared_secret_wo_version.setter
+    def pre_shared_secret_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "pre_shared_secret_wo_version", value)
 
     @_builtins.property
     @pulumi.getter
@@ -2764,6 +2844,8 @@ class TransportWanVpnInterfaceGreFeature(pulumi.CustomResource):
                  perfect_forward_secrecy_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  pre_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
                  pre_shared_secret_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 pre_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 pre_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
                  shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2930,7 +3012,13 @@ class TransportWanVpnInterfaceGreFeature(pulumi.CustomResource):
                  - Default value: `group-16`
         :param pulumi.Input[_builtins.str] perfect_forward_secrecy_variable: Variable name
         :param pulumi.Input[_builtins.str] pre_shared_secret: Use preshared key to authenticate IKE peer
+                 - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `pre_shared_secret_wo` together with `pre_shared_secret_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] pre_shared_secret_variable: Variable name
+        :param pulumi.Input[_builtins.str] pre_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Use preshared key to authenticate IKE peer
+                 - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] pre_shared_secret_wo_version: Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.bool] shutdown: Administrative state
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
@@ -3092,6 +3180,8 @@ class TransportWanVpnInterfaceGreFeature(pulumi.CustomResource):
                  perfect_forward_secrecy_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  pre_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
                  pre_shared_secret_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 pre_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 pre_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
                  shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -3180,8 +3270,10 @@ class TransportWanVpnInterfaceGreFeature(pulumi.CustomResource):
             __props__.__dict__["name"] = name
             __props__.__dict__["perfect_forward_secrecy"] = perfect_forward_secrecy
             __props__.__dict__["perfect_forward_secrecy_variable"] = perfect_forward_secrecy_variable
-            __props__.__dict__["pre_shared_secret"] = pre_shared_secret
+            __props__.__dict__["pre_shared_secret"] = None if pre_shared_secret is None else pulumi.Output.secret(pre_shared_secret)
             __props__.__dict__["pre_shared_secret_variable"] = pre_shared_secret_variable
+            __props__.__dict__["pre_shared_secret_wo"] = None if pre_shared_secret_wo is None else pulumi.Output.secret(pre_shared_secret_wo)
+            __props__.__dict__["pre_shared_secret_wo_version"] = pre_shared_secret_wo_version
             __props__.__dict__["shutdown"] = shutdown
             __props__.__dict__["shutdown_variable"] = shutdown_variable
             if transport_wan_vpn_feature_id is None and not opts.urn:
@@ -3210,6 +3302,8 @@ class TransportWanVpnInterfaceGreFeature(pulumi.CustomResource):
             __props__.__dict__["tunnel_source_ipv6_address"] = tunnel_source_ipv6_address
             __props__.__dict__["tunnel_source_ipv6_address_variable"] = tunnel_source_ipv6_address_variable
             __props__.__dict__["version"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["preSharedSecret", "preSharedSecretWo"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(TransportWanVpnInterfaceGreFeature, __self__).__init__(
             'sdwan:index/transportWanVpnInterfaceGreFeature:TransportWanVpnInterfaceGreFeature',
             resource_name,
@@ -3274,6 +3368,8 @@ class TransportWanVpnInterfaceGreFeature(pulumi.CustomResource):
             perfect_forward_secrecy_variable: pulumi.Input[Optional[_builtins.str]] = None,
             pre_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
             pre_shared_secret_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            pre_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            pre_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
             shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
             transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -3389,7 +3485,13 @@ class TransportWanVpnInterfaceGreFeature(pulumi.CustomResource):
                  - Default value: `group-16`
         :param pulumi.Input[_builtins.str] perfect_forward_secrecy_variable: Variable name
         :param pulumi.Input[_builtins.str] pre_shared_secret: Use preshared key to authenticate IKE peer
+                 - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `pre_shared_secret_wo` together with `pre_shared_secret_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] pre_shared_secret_variable: Variable name
+        :param pulumi.Input[_builtins.str] pre_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Use preshared key to authenticate IKE peer
+                 - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] pre_shared_secret_wo_version: Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.bool] shutdown: Administrative state
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
@@ -3479,6 +3581,8 @@ class TransportWanVpnInterfaceGreFeature(pulumi.CustomResource):
         __props__.__dict__["perfect_forward_secrecy_variable"] = perfect_forward_secrecy_variable
         __props__.__dict__["pre_shared_secret"] = pre_shared_secret
         __props__.__dict__["pre_shared_secret_variable"] = pre_shared_secret_variable
+        __props__.__dict__["pre_shared_secret_wo"] = pre_shared_secret_wo
+        __props__.__dict__["pre_shared_secret_wo_version"] = pre_shared_secret_wo_version
         __props__.__dict__["shutdown"] = shutdown
         __props__.__dict__["shutdown_variable"] = shutdown_variable
         __props__.__dict__["transport_wan_vpn_feature_id"] = transport_wan_vpn_feature_id
@@ -3564,6 +3668,8 @@ class TransportWanVpnInterfaceGreFeature(pulumi.CustomResource):
             perfect_forward_secrecy_variable: pulumi.Input[Optional[_builtins.str]] = None,
             pre_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
             pre_shared_secret_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            pre_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            pre_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
             shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
             transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -3645,6 +3751,8 @@ class TransportWanVpnInterfaceGreFeature(pulumi.CustomResource):
         __props__["perfectForwardSecrecyVariable"] = perfect_forward_secrecy_variable
         __props__["preSharedSecret"] = pre_shared_secret
         __props__["preSharedSecretVariable"] = pre_shared_secret_variable
+        __props__["preSharedSecretWo"] = pre_shared_secret_wo
+        __props__["preSharedSecretWoVersion"] = pre_shared_secret_wo_version
         __props__["shutdown"] = shutdown
         __props__["shutdownVariable"] = shutdown_variable
         __props__["transportWanVpnFeatureId"] = transport_wan_vpn_feature_id
@@ -4121,6 +4229,8 @@ class TransportWanVpnInterfaceGreFeature(pulumi.CustomResource):
     def pre_shared_secret(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Use preshared key to authenticate IKE peer
+          - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `pre_shared_secret_wo` together with `pre_shared_secret_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "pre_shared_secret")
 
@@ -4131,6 +4241,24 @@ class TransportWanVpnInterfaceGreFeature(pulumi.CustomResource):
         Variable name
         """
         return pulumi.get(self, "pre_shared_secret_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWo")
+    def pre_shared_secret_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Use preshared key to authenticate IKE peer
+          - Only one of `pre_shared_secret`, `pre_shared_secret_variable` and `pre_shared_secret_wo` can be set.
+        """
+        return pulumi.get(self, "pre_shared_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretWoVersion")
+    def pre_shared_secret_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `pre_shared_secret_wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "pre_shared_secret_wo_version")
 
     @_builtins.property
     @pulumi.getter

@@ -10,10 +10,10 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.sdwan.AttachFeatureDeviceTemplateArgs;
 import com.pulumi.sdwan.Utilities;
 import com.pulumi.sdwan.inputs.AttachFeatureDeviceTemplateState;
-import com.pulumi.sdwan.outputs.AttachFeatureDeviceTemplateDevice;
+import com.pulumi.sdwan.outputs.AttachFeatureDeviceTemplateDevices;
 import java.lang.Integer;
 import java.lang.String;
-import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
@@ -31,7 +31,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.core.Output;
  * import com.pulumi.sdwan.AttachFeatureDeviceTemplate;
  * import com.pulumi.sdwan.AttachFeatureDeviceTemplateArgs;
- * import com.pulumi.sdwan.inputs.AttachFeatureDeviceTemplateDeviceArgs;
+ * import com.pulumi.sdwan.inputs.AttachFeatureDeviceTemplateDevicesArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;
@@ -47,15 +47,14 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         var example = new AttachFeatureDeviceTemplate("example", AttachFeatureDeviceTemplateArgs.builder()
  *             .attachFeatureDeviceTemplateId(DT1.get("id"))
- *             .devices(AttachFeatureDeviceTemplateDeviceArgs.builder()
- *                 .id("C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE")
+ *             .devices(Map.of("C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE", AttachFeatureDeviceTemplateDevicesArgs.builder()
  *                 .variables(Map.ofEntries(
  *                     Map.entry("systemSiteId", "1001"),
  *                     Map.entry("systemSystemIp", "1.1.1.1"),
  *                     Map.entry("systemHostName", "router1"),
  *                     Map.entry("vpnIfNameDefaultVEdgeDHCPTunnelInterface", "GigabitEthernet1")
  *                 ))
- *                 .build())
+ *                 .build()))
  *             .build());
  * 
  *     }
@@ -91,17 +90,17 @@ public class AttachFeatureDeviceTemplate extends com.pulumi.resources.CustomReso
         return this.attachFeatureDeviceTemplateId;
     }
     /**
-     * Devices
+     * Devices attached to the device template, keyed by device ID (chassis ID)
      * 
      */
-    @Export(name="devices", refs={List.class,AttachFeatureDeviceTemplateDevice.class}, tree="[0,1]")
-    private Output<List<AttachFeatureDeviceTemplateDevice>> devices;
+    @Export(name="devices", refs={Map.class,String.class,AttachFeatureDeviceTemplateDevices.class}, tree="[0,1,2]")
+    private Output<Map<String,AttachFeatureDeviceTemplateDevices>> devices;
 
     /**
-     * @return Devices
+     * @return Devices attached to the device template, keyed by device ID (chassis ID)
      * 
      */
-    public Output<List<AttachFeatureDeviceTemplateDevice>> devices() {
+    public Output<Map<String,AttachFeatureDeviceTemplateDevices>> devices() {
         return this.devices;
     }
     /**

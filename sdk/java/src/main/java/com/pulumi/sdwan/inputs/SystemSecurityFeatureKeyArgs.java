@@ -239,6 +239,8 @@ public final class SystemSecurityFeatureKeyArgs extends com.pulumi.resources.Res
 
     /**
      * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="keyString")
@@ -246,6 +248,8 @@ public final class SystemSecurityFeatureKeyArgs extends com.pulumi.resources.Res
 
     /**
      * @return Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> keyString() {
@@ -265,6 +269,40 @@ public final class SystemSecurityFeatureKeyArgs extends com.pulumi.resources.Res
      */
     public Optional<Output<String>> keyStringVariable() {
         return Optional.ofNullable(this.keyStringVariable);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     * 
+     */
+    @Import(name="keyStringWo")
+    private @Nullable Output<String> keyStringWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> keyStringWo() {
+        return Optional.ofNullable(this.keyStringWo);
+    }
+
+    /**
+     * Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="keyStringWoVersion")
+    private @Nullable Output<Integer> keyStringWoVersion;
+
+    /**
+     * @return Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> keyStringWoVersion() {
+        return Optional.ofNullable(this.keyStringWoVersion);
     }
 
     /**
@@ -489,6 +527,8 @@ public final class SystemSecurityFeatureKeyArgs extends com.pulumi.resources.Res
         this.includeTcpOptionsVariable = $.includeTcpOptionsVariable;
         this.keyString = $.keyString;
         this.keyStringVariable = $.keyStringVariable;
+        this.keyStringWo = $.keyStringWo;
+        this.keyStringWoVersion = $.keyStringWoVersion;
         this.name = $.name;
         this.receiverId = $.receiverId;
         this.receiverIdVariable = $.receiverIdVariable;
@@ -828,6 +868,8 @@ public final class SystemSecurityFeatureKeyArgs extends com.pulumi.resources.Res
 
         /**
          * @param keyString Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -839,6 +881,8 @@ public final class SystemSecurityFeatureKeyArgs extends com.pulumi.resources.Res
 
         /**
          * @param keyString Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -866,6 +910,52 @@ public final class SystemSecurityFeatureKeyArgs extends com.pulumi.resources.Res
          */
         public Builder keyStringVariable(String keyStringVariable) {
             return keyStringVariable(Output.of(keyStringVariable));
+        }
+
+        /**
+         * @param keyStringWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyStringWo(@Nullable Output<String> keyStringWo) {
+            $.keyStringWo = keyStringWo;
+            return this;
+        }
+
+        /**
+         * @param keyStringWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+         *   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyStringWo(String keyStringWo) {
+            return keyStringWo(Output.of(keyStringWo));
+        }
+
+        /**
+         * @param keyStringWoVersion Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyStringWoVersion(@Nullable Output<Integer> keyStringWoVersion) {
+            $.keyStringWoVersion = keyStringWoVersion;
+            return this;
+        }
+
+        /**
+         * @param keyStringWoVersion Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyStringWoVersion(Integer keyStringWoVersion) {
+            return keyStringWoVersion(Output.of(keyStringWoVersion));
         }
 
         /**

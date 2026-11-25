@@ -2569,110 +2569,101 @@ func (o AsPathListPolicyObjectEntryArrayOutput) Index(i pulumi.IntInput) AsPathL
 	}).(AsPathListPolicyObjectEntryOutput)
 }
 
-type AttachFeatureDeviceTemplateDevice struct {
-	// Device ID
-	Id string `pulumi:"id"`
+type AttachFeatureDeviceTemplateDevices struct {
 	// Device variables
 	Variables map[string]string `pulumi:"variables"`
 }
 
-// AttachFeatureDeviceTemplateDeviceInput is an input type that accepts AttachFeatureDeviceTemplateDeviceArgs and AttachFeatureDeviceTemplateDeviceOutput values.
-// You can construct a concrete instance of `AttachFeatureDeviceTemplateDeviceInput` via:
+// AttachFeatureDeviceTemplateDevicesInput is an input type that accepts AttachFeatureDeviceTemplateDevicesArgs and AttachFeatureDeviceTemplateDevicesOutput values.
+// You can construct a concrete instance of `AttachFeatureDeviceTemplateDevicesInput` via:
 //
-//	AttachFeatureDeviceTemplateDeviceArgs{...}
-type AttachFeatureDeviceTemplateDeviceInput interface {
+//	AttachFeatureDeviceTemplateDevicesArgs{...}
+type AttachFeatureDeviceTemplateDevicesInput interface {
 	pulumi.Input
 
-	ToAttachFeatureDeviceTemplateDeviceOutput() AttachFeatureDeviceTemplateDeviceOutput
-	ToAttachFeatureDeviceTemplateDeviceOutputWithContext(context.Context) AttachFeatureDeviceTemplateDeviceOutput
+	ToAttachFeatureDeviceTemplateDevicesOutput() AttachFeatureDeviceTemplateDevicesOutput
+	ToAttachFeatureDeviceTemplateDevicesOutputWithContext(context.Context) AttachFeatureDeviceTemplateDevicesOutput
 }
 
-type AttachFeatureDeviceTemplateDeviceArgs struct {
-	// Device ID
-	Id pulumi.StringInput `pulumi:"id"`
+type AttachFeatureDeviceTemplateDevicesArgs struct {
 	// Device variables
 	Variables pulumi.StringMapInput `pulumi:"variables"`
 }
 
-func (AttachFeatureDeviceTemplateDeviceArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*AttachFeatureDeviceTemplateDevice)(nil)).Elem()
+func (AttachFeatureDeviceTemplateDevicesArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AttachFeatureDeviceTemplateDevices)(nil)).Elem()
 }
 
-func (i AttachFeatureDeviceTemplateDeviceArgs) ToAttachFeatureDeviceTemplateDeviceOutput() AttachFeatureDeviceTemplateDeviceOutput {
-	return i.ToAttachFeatureDeviceTemplateDeviceOutputWithContext(context.Background())
+func (i AttachFeatureDeviceTemplateDevicesArgs) ToAttachFeatureDeviceTemplateDevicesOutput() AttachFeatureDeviceTemplateDevicesOutput {
+	return i.ToAttachFeatureDeviceTemplateDevicesOutputWithContext(context.Background())
 }
 
-func (i AttachFeatureDeviceTemplateDeviceArgs) ToAttachFeatureDeviceTemplateDeviceOutputWithContext(ctx context.Context) AttachFeatureDeviceTemplateDeviceOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AttachFeatureDeviceTemplateDeviceOutput)
+func (i AttachFeatureDeviceTemplateDevicesArgs) ToAttachFeatureDeviceTemplateDevicesOutputWithContext(ctx context.Context) AttachFeatureDeviceTemplateDevicesOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AttachFeatureDeviceTemplateDevicesOutput)
 }
 
-// AttachFeatureDeviceTemplateDeviceArrayInput is an input type that accepts AttachFeatureDeviceTemplateDeviceArray and AttachFeatureDeviceTemplateDeviceArrayOutput values.
-// You can construct a concrete instance of `AttachFeatureDeviceTemplateDeviceArrayInput` via:
+// AttachFeatureDeviceTemplateDevicesMapInput is an input type that accepts AttachFeatureDeviceTemplateDevicesMap and AttachFeatureDeviceTemplateDevicesMapOutput values.
+// You can construct a concrete instance of `AttachFeatureDeviceTemplateDevicesMapInput` via:
 //
-//	AttachFeatureDeviceTemplateDeviceArray{ AttachFeatureDeviceTemplateDeviceArgs{...} }
-type AttachFeatureDeviceTemplateDeviceArrayInput interface {
+//	AttachFeatureDeviceTemplateDevicesMap{ "key": AttachFeatureDeviceTemplateDevicesArgs{...} }
+type AttachFeatureDeviceTemplateDevicesMapInput interface {
 	pulumi.Input
 
-	ToAttachFeatureDeviceTemplateDeviceArrayOutput() AttachFeatureDeviceTemplateDeviceArrayOutput
-	ToAttachFeatureDeviceTemplateDeviceArrayOutputWithContext(context.Context) AttachFeatureDeviceTemplateDeviceArrayOutput
+	ToAttachFeatureDeviceTemplateDevicesMapOutput() AttachFeatureDeviceTemplateDevicesMapOutput
+	ToAttachFeatureDeviceTemplateDevicesMapOutputWithContext(context.Context) AttachFeatureDeviceTemplateDevicesMapOutput
 }
 
-type AttachFeatureDeviceTemplateDeviceArray []AttachFeatureDeviceTemplateDeviceInput
+type AttachFeatureDeviceTemplateDevicesMap map[string]AttachFeatureDeviceTemplateDevicesInput
 
-func (AttachFeatureDeviceTemplateDeviceArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]AttachFeatureDeviceTemplateDevice)(nil)).Elem()
+func (AttachFeatureDeviceTemplateDevicesMap) ElementType() reflect.Type {
+	return reflect.TypeOf((*map[string]AttachFeatureDeviceTemplateDevices)(nil)).Elem()
 }
 
-func (i AttachFeatureDeviceTemplateDeviceArray) ToAttachFeatureDeviceTemplateDeviceArrayOutput() AttachFeatureDeviceTemplateDeviceArrayOutput {
-	return i.ToAttachFeatureDeviceTemplateDeviceArrayOutputWithContext(context.Background())
+func (i AttachFeatureDeviceTemplateDevicesMap) ToAttachFeatureDeviceTemplateDevicesMapOutput() AttachFeatureDeviceTemplateDevicesMapOutput {
+	return i.ToAttachFeatureDeviceTemplateDevicesMapOutputWithContext(context.Background())
 }
 
-func (i AttachFeatureDeviceTemplateDeviceArray) ToAttachFeatureDeviceTemplateDeviceArrayOutputWithContext(ctx context.Context) AttachFeatureDeviceTemplateDeviceArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AttachFeatureDeviceTemplateDeviceArrayOutput)
+func (i AttachFeatureDeviceTemplateDevicesMap) ToAttachFeatureDeviceTemplateDevicesMapOutputWithContext(ctx context.Context) AttachFeatureDeviceTemplateDevicesMapOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AttachFeatureDeviceTemplateDevicesMapOutput)
 }
 
-type AttachFeatureDeviceTemplateDeviceOutput struct{ *pulumi.OutputState }
+type AttachFeatureDeviceTemplateDevicesOutput struct{ *pulumi.OutputState }
 
-func (AttachFeatureDeviceTemplateDeviceOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*AttachFeatureDeviceTemplateDevice)(nil)).Elem()
+func (AttachFeatureDeviceTemplateDevicesOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AttachFeatureDeviceTemplateDevices)(nil)).Elem()
 }
 
-func (o AttachFeatureDeviceTemplateDeviceOutput) ToAttachFeatureDeviceTemplateDeviceOutput() AttachFeatureDeviceTemplateDeviceOutput {
+func (o AttachFeatureDeviceTemplateDevicesOutput) ToAttachFeatureDeviceTemplateDevicesOutput() AttachFeatureDeviceTemplateDevicesOutput {
 	return o
 }
 
-func (o AttachFeatureDeviceTemplateDeviceOutput) ToAttachFeatureDeviceTemplateDeviceOutputWithContext(ctx context.Context) AttachFeatureDeviceTemplateDeviceOutput {
+func (o AttachFeatureDeviceTemplateDevicesOutput) ToAttachFeatureDeviceTemplateDevicesOutputWithContext(ctx context.Context) AttachFeatureDeviceTemplateDevicesOutput {
 	return o
-}
-
-// Device ID
-func (o AttachFeatureDeviceTemplateDeviceOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v AttachFeatureDeviceTemplateDevice) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Device variables
-func (o AttachFeatureDeviceTemplateDeviceOutput) Variables() pulumi.StringMapOutput {
-	return o.ApplyT(func(v AttachFeatureDeviceTemplateDevice) map[string]string { return v.Variables }).(pulumi.StringMapOutput)
+func (o AttachFeatureDeviceTemplateDevicesOutput) Variables() pulumi.StringMapOutput {
+	return o.ApplyT(func(v AttachFeatureDeviceTemplateDevices) map[string]string { return v.Variables }).(pulumi.StringMapOutput)
 }
 
-type AttachFeatureDeviceTemplateDeviceArrayOutput struct{ *pulumi.OutputState }
+type AttachFeatureDeviceTemplateDevicesMapOutput struct{ *pulumi.OutputState }
 
-func (AttachFeatureDeviceTemplateDeviceArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]AttachFeatureDeviceTemplateDevice)(nil)).Elem()
+func (AttachFeatureDeviceTemplateDevicesMapOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*map[string]AttachFeatureDeviceTemplateDevices)(nil)).Elem()
 }
 
-func (o AttachFeatureDeviceTemplateDeviceArrayOutput) ToAttachFeatureDeviceTemplateDeviceArrayOutput() AttachFeatureDeviceTemplateDeviceArrayOutput {
+func (o AttachFeatureDeviceTemplateDevicesMapOutput) ToAttachFeatureDeviceTemplateDevicesMapOutput() AttachFeatureDeviceTemplateDevicesMapOutput {
 	return o
 }
 
-func (o AttachFeatureDeviceTemplateDeviceArrayOutput) ToAttachFeatureDeviceTemplateDeviceArrayOutputWithContext(ctx context.Context) AttachFeatureDeviceTemplateDeviceArrayOutput {
+func (o AttachFeatureDeviceTemplateDevicesMapOutput) ToAttachFeatureDeviceTemplateDevicesMapOutputWithContext(ctx context.Context) AttachFeatureDeviceTemplateDevicesMapOutput {
 	return o
 }
 
-func (o AttachFeatureDeviceTemplateDeviceArrayOutput) Index(i pulumi.IntInput) AttachFeatureDeviceTemplateDeviceOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AttachFeatureDeviceTemplateDevice {
-		return vs[0].([]AttachFeatureDeviceTemplateDevice)[vs[1].(int)]
-	}).(AttachFeatureDeviceTemplateDeviceOutput)
+func (o AttachFeatureDeviceTemplateDevicesMapOutput) MapIndex(k pulumi.StringInput) AttachFeatureDeviceTemplateDevicesOutput {
+	return pulumi.All(o, k).ApplyT(func(vs []interface{}) AttachFeatureDeviceTemplateDevices {
+		return vs[0].(map[string]AttachFeatureDeviceTemplateDevices)[vs[1].(string)]
+	}).(AttachFeatureDeviceTemplateDevicesOutput)
 }
 
 type BlockUrlListPolicyObjectEntry struct {
@@ -25728,246 +25719,230 @@ func (o ColorListPolicyObjectEntryArrayOutput) Index(i pulumi.IntInput) ColorLis
 	}).(ColorListPolicyObjectEntryOutput)
 }
 
-type ConfigurationGroupDevice struct {
+type ConfigurationGroupDevicesDevices struct {
 	// Deploy to device if enabled.
 	//   - Default value: `false`
 	Deploy *bool `pulumi:"deploy"`
-	// Device ID
-	Id *string `pulumi:"id"`
 	// Topology label for dual device configuration group (supported from version 20.18.1 onwards)
 	TopologyLabel *string `pulumi:"topologyLabel"`
-	// List of variables
-	Variables []ConfigurationGroupDeviceVariable `pulumi:"variables"`
+	// Device variables, keyed by variable name (for example `hostName`). Terraform matches each variable by its name, so a changed value shows as a change of that variable only.
+	Variables map[string]ConfigurationGroupDevicesDevicesVariables `pulumi:"variables"`
 }
 
-// ConfigurationGroupDeviceInput is an input type that accepts ConfigurationGroupDeviceArgs and ConfigurationGroupDeviceOutput values.
-// You can construct a concrete instance of `ConfigurationGroupDeviceInput` via:
+// ConfigurationGroupDevicesDevicesInput is an input type that accepts ConfigurationGroupDevicesDevicesArgs and ConfigurationGroupDevicesDevicesOutput values.
+// You can construct a concrete instance of `ConfigurationGroupDevicesDevicesInput` via:
 //
-//	ConfigurationGroupDeviceArgs{...}
-type ConfigurationGroupDeviceInput interface {
+//	ConfigurationGroupDevicesDevicesArgs{...}
+type ConfigurationGroupDevicesDevicesInput interface {
 	pulumi.Input
 
-	ToConfigurationGroupDeviceOutput() ConfigurationGroupDeviceOutput
-	ToConfigurationGroupDeviceOutputWithContext(context.Context) ConfigurationGroupDeviceOutput
+	ToConfigurationGroupDevicesDevicesOutput() ConfigurationGroupDevicesDevicesOutput
+	ToConfigurationGroupDevicesDevicesOutputWithContext(context.Context) ConfigurationGroupDevicesDevicesOutput
 }
 
-type ConfigurationGroupDeviceArgs struct {
+type ConfigurationGroupDevicesDevicesArgs struct {
 	// Deploy to device if enabled.
 	//   - Default value: `false`
 	Deploy pulumi.BoolPtrInput `pulumi:"deploy"`
-	// Device ID
-	Id pulumi.StringPtrInput `pulumi:"id"`
 	// Topology label for dual device configuration group (supported from version 20.18.1 onwards)
 	TopologyLabel pulumi.StringPtrInput `pulumi:"topologyLabel"`
-	// List of variables
-	Variables ConfigurationGroupDeviceVariableArrayInput `pulumi:"variables"`
+	// Device variables, keyed by variable name (for example `hostName`). Terraform matches each variable by its name, so a changed value shows as a change of that variable only.
+	Variables ConfigurationGroupDevicesDevicesVariablesMapInput `pulumi:"variables"`
 }
 
-func (ConfigurationGroupDeviceArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*ConfigurationGroupDevice)(nil)).Elem()
+func (ConfigurationGroupDevicesDevicesArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ConfigurationGroupDevicesDevices)(nil)).Elem()
 }
 
-func (i ConfigurationGroupDeviceArgs) ToConfigurationGroupDeviceOutput() ConfigurationGroupDeviceOutput {
-	return i.ToConfigurationGroupDeviceOutputWithContext(context.Background())
+func (i ConfigurationGroupDevicesDevicesArgs) ToConfigurationGroupDevicesDevicesOutput() ConfigurationGroupDevicesDevicesOutput {
+	return i.ToConfigurationGroupDevicesDevicesOutputWithContext(context.Background())
 }
 
-func (i ConfigurationGroupDeviceArgs) ToConfigurationGroupDeviceOutputWithContext(ctx context.Context) ConfigurationGroupDeviceOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(ConfigurationGroupDeviceOutput)
+func (i ConfigurationGroupDevicesDevicesArgs) ToConfigurationGroupDevicesDevicesOutputWithContext(ctx context.Context) ConfigurationGroupDevicesDevicesOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ConfigurationGroupDevicesDevicesOutput)
 }
 
-// ConfigurationGroupDeviceArrayInput is an input type that accepts ConfigurationGroupDeviceArray and ConfigurationGroupDeviceArrayOutput values.
-// You can construct a concrete instance of `ConfigurationGroupDeviceArrayInput` via:
+// ConfigurationGroupDevicesDevicesMapInput is an input type that accepts ConfigurationGroupDevicesDevicesMap and ConfigurationGroupDevicesDevicesMapOutput values.
+// You can construct a concrete instance of `ConfigurationGroupDevicesDevicesMapInput` via:
 //
-//	ConfigurationGroupDeviceArray{ ConfigurationGroupDeviceArgs{...} }
-type ConfigurationGroupDeviceArrayInput interface {
+//	ConfigurationGroupDevicesDevicesMap{ "key": ConfigurationGroupDevicesDevicesArgs{...} }
+type ConfigurationGroupDevicesDevicesMapInput interface {
 	pulumi.Input
 
-	ToConfigurationGroupDeviceArrayOutput() ConfigurationGroupDeviceArrayOutput
-	ToConfigurationGroupDeviceArrayOutputWithContext(context.Context) ConfigurationGroupDeviceArrayOutput
+	ToConfigurationGroupDevicesDevicesMapOutput() ConfigurationGroupDevicesDevicesMapOutput
+	ToConfigurationGroupDevicesDevicesMapOutputWithContext(context.Context) ConfigurationGroupDevicesDevicesMapOutput
 }
 
-type ConfigurationGroupDeviceArray []ConfigurationGroupDeviceInput
+type ConfigurationGroupDevicesDevicesMap map[string]ConfigurationGroupDevicesDevicesInput
 
-func (ConfigurationGroupDeviceArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]ConfigurationGroupDevice)(nil)).Elem()
+func (ConfigurationGroupDevicesDevicesMap) ElementType() reflect.Type {
+	return reflect.TypeOf((*map[string]ConfigurationGroupDevicesDevices)(nil)).Elem()
 }
 
-func (i ConfigurationGroupDeviceArray) ToConfigurationGroupDeviceArrayOutput() ConfigurationGroupDeviceArrayOutput {
-	return i.ToConfigurationGroupDeviceArrayOutputWithContext(context.Background())
+func (i ConfigurationGroupDevicesDevicesMap) ToConfigurationGroupDevicesDevicesMapOutput() ConfigurationGroupDevicesDevicesMapOutput {
+	return i.ToConfigurationGroupDevicesDevicesMapOutputWithContext(context.Background())
 }
 
-func (i ConfigurationGroupDeviceArray) ToConfigurationGroupDeviceArrayOutputWithContext(ctx context.Context) ConfigurationGroupDeviceArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(ConfigurationGroupDeviceArrayOutput)
+func (i ConfigurationGroupDevicesDevicesMap) ToConfigurationGroupDevicesDevicesMapOutputWithContext(ctx context.Context) ConfigurationGroupDevicesDevicesMapOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ConfigurationGroupDevicesDevicesMapOutput)
 }
 
-type ConfigurationGroupDeviceOutput struct{ *pulumi.OutputState }
+type ConfigurationGroupDevicesDevicesOutput struct{ *pulumi.OutputState }
 
-func (ConfigurationGroupDeviceOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*ConfigurationGroupDevice)(nil)).Elem()
+func (ConfigurationGroupDevicesDevicesOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ConfigurationGroupDevicesDevices)(nil)).Elem()
 }
 
-func (o ConfigurationGroupDeviceOutput) ToConfigurationGroupDeviceOutput() ConfigurationGroupDeviceOutput {
+func (o ConfigurationGroupDevicesDevicesOutput) ToConfigurationGroupDevicesDevicesOutput() ConfigurationGroupDevicesDevicesOutput {
 	return o
 }
 
-func (o ConfigurationGroupDeviceOutput) ToConfigurationGroupDeviceOutputWithContext(ctx context.Context) ConfigurationGroupDeviceOutput {
+func (o ConfigurationGroupDevicesDevicesOutput) ToConfigurationGroupDevicesDevicesOutputWithContext(ctx context.Context) ConfigurationGroupDevicesDevicesOutput {
 	return o
 }
 
 // Deploy to device if enabled.
 //   - Default value: `false`
-func (o ConfigurationGroupDeviceOutput) Deploy() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v ConfigurationGroupDevice) *bool { return v.Deploy }).(pulumi.BoolPtrOutput)
-}
-
-// Device ID
-func (o ConfigurationGroupDeviceOutput) Id() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v ConfigurationGroupDevice) *string { return v.Id }).(pulumi.StringPtrOutput)
+func (o ConfigurationGroupDevicesDevicesOutput) Deploy() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ConfigurationGroupDevicesDevices) *bool { return v.Deploy }).(pulumi.BoolPtrOutput)
 }
 
 // Topology label for dual device configuration group (supported from version 20.18.1 onwards)
-func (o ConfigurationGroupDeviceOutput) TopologyLabel() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v ConfigurationGroupDevice) *string { return v.TopologyLabel }).(pulumi.StringPtrOutput)
+func (o ConfigurationGroupDevicesDevicesOutput) TopologyLabel() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ConfigurationGroupDevicesDevices) *string { return v.TopologyLabel }).(pulumi.StringPtrOutput)
 }
 
-// List of variables
-func (o ConfigurationGroupDeviceOutput) Variables() ConfigurationGroupDeviceVariableArrayOutput {
-	return o.ApplyT(func(v ConfigurationGroupDevice) []ConfigurationGroupDeviceVariable { return v.Variables }).(ConfigurationGroupDeviceVariableArrayOutput)
+// Device variables, keyed by variable name (for example `hostName`). Terraform matches each variable by its name, so a changed value shows as a change of that variable only.
+func (o ConfigurationGroupDevicesDevicesOutput) Variables() ConfigurationGroupDevicesDevicesVariablesMapOutput {
+	return o.ApplyT(func(v ConfigurationGroupDevicesDevices) map[string]ConfigurationGroupDevicesDevicesVariables {
+		return v.Variables
+	}).(ConfigurationGroupDevicesDevicesVariablesMapOutput)
 }
 
-type ConfigurationGroupDeviceArrayOutput struct{ *pulumi.OutputState }
+type ConfigurationGroupDevicesDevicesMapOutput struct{ *pulumi.OutputState }
 
-func (ConfigurationGroupDeviceArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]ConfigurationGroupDevice)(nil)).Elem()
+func (ConfigurationGroupDevicesDevicesMapOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*map[string]ConfigurationGroupDevicesDevices)(nil)).Elem()
 }
 
-func (o ConfigurationGroupDeviceArrayOutput) ToConfigurationGroupDeviceArrayOutput() ConfigurationGroupDeviceArrayOutput {
+func (o ConfigurationGroupDevicesDevicesMapOutput) ToConfigurationGroupDevicesDevicesMapOutput() ConfigurationGroupDevicesDevicesMapOutput {
 	return o
 }
 
-func (o ConfigurationGroupDeviceArrayOutput) ToConfigurationGroupDeviceArrayOutputWithContext(ctx context.Context) ConfigurationGroupDeviceArrayOutput {
+func (o ConfigurationGroupDevicesDevicesMapOutput) ToConfigurationGroupDevicesDevicesMapOutputWithContext(ctx context.Context) ConfigurationGroupDevicesDevicesMapOutput {
 	return o
 }
 
-func (o ConfigurationGroupDeviceArrayOutput) Index(i pulumi.IntInput) ConfigurationGroupDeviceOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ConfigurationGroupDevice {
-		return vs[0].([]ConfigurationGroupDevice)[vs[1].(int)]
-	}).(ConfigurationGroupDeviceOutput)
+func (o ConfigurationGroupDevicesDevicesMapOutput) MapIndex(k pulumi.StringInput) ConfigurationGroupDevicesDevicesOutput {
+	return pulumi.All(o, k).ApplyT(func(vs []interface{}) ConfigurationGroupDevicesDevices {
+		return vs[0].(map[string]ConfigurationGroupDevicesDevices)[vs[1].(string)]
+	}).(ConfigurationGroupDevicesDevicesOutput)
 }
 
-type ConfigurationGroupDeviceVariable struct {
+type ConfigurationGroupDevicesDevicesVariables struct {
 	// Use this instead of `value` in case value is of type `List`.
 	ListValues []string `pulumi:"listValues"`
-	// Variable name
-	Name string `pulumi:"name"`
 	// Variable value
 	Value *string `pulumi:"value"`
 }
 
-// ConfigurationGroupDeviceVariableInput is an input type that accepts ConfigurationGroupDeviceVariableArgs and ConfigurationGroupDeviceVariableOutput values.
-// You can construct a concrete instance of `ConfigurationGroupDeviceVariableInput` via:
+// ConfigurationGroupDevicesDevicesVariablesInput is an input type that accepts ConfigurationGroupDevicesDevicesVariablesArgs and ConfigurationGroupDevicesDevicesVariablesOutput values.
+// You can construct a concrete instance of `ConfigurationGroupDevicesDevicesVariablesInput` via:
 //
-//	ConfigurationGroupDeviceVariableArgs{...}
-type ConfigurationGroupDeviceVariableInput interface {
+//	ConfigurationGroupDevicesDevicesVariablesArgs{...}
+type ConfigurationGroupDevicesDevicesVariablesInput interface {
 	pulumi.Input
 
-	ToConfigurationGroupDeviceVariableOutput() ConfigurationGroupDeviceVariableOutput
-	ToConfigurationGroupDeviceVariableOutputWithContext(context.Context) ConfigurationGroupDeviceVariableOutput
+	ToConfigurationGroupDevicesDevicesVariablesOutput() ConfigurationGroupDevicesDevicesVariablesOutput
+	ToConfigurationGroupDevicesDevicesVariablesOutputWithContext(context.Context) ConfigurationGroupDevicesDevicesVariablesOutput
 }
 
-type ConfigurationGroupDeviceVariableArgs struct {
+type ConfigurationGroupDevicesDevicesVariablesArgs struct {
 	// Use this instead of `value` in case value is of type `List`.
 	ListValues pulumi.StringArrayInput `pulumi:"listValues"`
-	// Variable name
-	Name pulumi.StringInput `pulumi:"name"`
 	// Variable value
 	Value pulumi.StringPtrInput `pulumi:"value"`
 }
 
-func (ConfigurationGroupDeviceVariableArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*ConfigurationGroupDeviceVariable)(nil)).Elem()
+func (ConfigurationGroupDevicesDevicesVariablesArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ConfigurationGroupDevicesDevicesVariables)(nil)).Elem()
 }
 
-func (i ConfigurationGroupDeviceVariableArgs) ToConfigurationGroupDeviceVariableOutput() ConfigurationGroupDeviceVariableOutput {
-	return i.ToConfigurationGroupDeviceVariableOutputWithContext(context.Background())
+func (i ConfigurationGroupDevicesDevicesVariablesArgs) ToConfigurationGroupDevicesDevicesVariablesOutput() ConfigurationGroupDevicesDevicesVariablesOutput {
+	return i.ToConfigurationGroupDevicesDevicesVariablesOutputWithContext(context.Background())
 }
 
-func (i ConfigurationGroupDeviceVariableArgs) ToConfigurationGroupDeviceVariableOutputWithContext(ctx context.Context) ConfigurationGroupDeviceVariableOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(ConfigurationGroupDeviceVariableOutput)
+func (i ConfigurationGroupDevicesDevicesVariablesArgs) ToConfigurationGroupDevicesDevicesVariablesOutputWithContext(ctx context.Context) ConfigurationGroupDevicesDevicesVariablesOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ConfigurationGroupDevicesDevicesVariablesOutput)
 }
 
-// ConfigurationGroupDeviceVariableArrayInput is an input type that accepts ConfigurationGroupDeviceVariableArray and ConfigurationGroupDeviceVariableArrayOutput values.
-// You can construct a concrete instance of `ConfigurationGroupDeviceVariableArrayInput` via:
+// ConfigurationGroupDevicesDevicesVariablesMapInput is an input type that accepts ConfigurationGroupDevicesDevicesVariablesMap and ConfigurationGroupDevicesDevicesVariablesMapOutput values.
+// You can construct a concrete instance of `ConfigurationGroupDevicesDevicesVariablesMapInput` via:
 //
-//	ConfigurationGroupDeviceVariableArray{ ConfigurationGroupDeviceVariableArgs{...} }
-type ConfigurationGroupDeviceVariableArrayInput interface {
+//	ConfigurationGroupDevicesDevicesVariablesMap{ "key": ConfigurationGroupDevicesDevicesVariablesArgs{...} }
+type ConfigurationGroupDevicesDevicesVariablesMapInput interface {
 	pulumi.Input
 
-	ToConfigurationGroupDeviceVariableArrayOutput() ConfigurationGroupDeviceVariableArrayOutput
-	ToConfigurationGroupDeviceVariableArrayOutputWithContext(context.Context) ConfigurationGroupDeviceVariableArrayOutput
+	ToConfigurationGroupDevicesDevicesVariablesMapOutput() ConfigurationGroupDevicesDevicesVariablesMapOutput
+	ToConfigurationGroupDevicesDevicesVariablesMapOutputWithContext(context.Context) ConfigurationGroupDevicesDevicesVariablesMapOutput
 }
 
-type ConfigurationGroupDeviceVariableArray []ConfigurationGroupDeviceVariableInput
+type ConfigurationGroupDevicesDevicesVariablesMap map[string]ConfigurationGroupDevicesDevicesVariablesInput
 
-func (ConfigurationGroupDeviceVariableArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]ConfigurationGroupDeviceVariable)(nil)).Elem()
+func (ConfigurationGroupDevicesDevicesVariablesMap) ElementType() reflect.Type {
+	return reflect.TypeOf((*map[string]ConfigurationGroupDevicesDevicesVariables)(nil)).Elem()
 }
 
-func (i ConfigurationGroupDeviceVariableArray) ToConfigurationGroupDeviceVariableArrayOutput() ConfigurationGroupDeviceVariableArrayOutput {
-	return i.ToConfigurationGroupDeviceVariableArrayOutputWithContext(context.Background())
+func (i ConfigurationGroupDevicesDevicesVariablesMap) ToConfigurationGroupDevicesDevicesVariablesMapOutput() ConfigurationGroupDevicesDevicesVariablesMapOutput {
+	return i.ToConfigurationGroupDevicesDevicesVariablesMapOutputWithContext(context.Background())
 }
 
-func (i ConfigurationGroupDeviceVariableArray) ToConfigurationGroupDeviceVariableArrayOutputWithContext(ctx context.Context) ConfigurationGroupDeviceVariableArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(ConfigurationGroupDeviceVariableArrayOutput)
+func (i ConfigurationGroupDevicesDevicesVariablesMap) ToConfigurationGroupDevicesDevicesVariablesMapOutputWithContext(ctx context.Context) ConfigurationGroupDevicesDevicesVariablesMapOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ConfigurationGroupDevicesDevicesVariablesMapOutput)
 }
 
-type ConfigurationGroupDeviceVariableOutput struct{ *pulumi.OutputState }
+type ConfigurationGroupDevicesDevicesVariablesOutput struct{ *pulumi.OutputState }
 
-func (ConfigurationGroupDeviceVariableOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*ConfigurationGroupDeviceVariable)(nil)).Elem()
+func (ConfigurationGroupDevicesDevicesVariablesOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ConfigurationGroupDevicesDevicesVariables)(nil)).Elem()
 }
 
-func (o ConfigurationGroupDeviceVariableOutput) ToConfigurationGroupDeviceVariableOutput() ConfigurationGroupDeviceVariableOutput {
+func (o ConfigurationGroupDevicesDevicesVariablesOutput) ToConfigurationGroupDevicesDevicesVariablesOutput() ConfigurationGroupDevicesDevicesVariablesOutput {
 	return o
 }
 
-func (o ConfigurationGroupDeviceVariableOutput) ToConfigurationGroupDeviceVariableOutputWithContext(ctx context.Context) ConfigurationGroupDeviceVariableOutput {
+func (o ConfigurationGroupDevicesDevicesVariablesOutput) ToConfigurationGroupDevicesDevicesVariablesOutputWithContext(ctx context.Context) ConfigurationGroupDevicesDevicesVariablesOutput {
 	return o
 }
 
 // Use this instead of `value` in case value is of type `List`.
-func (o ConfigurationGroupDeviceVariableOutput) ListValues() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v ConfigurationGroupDeviceVariable) []string { return v.ListValues }).(pulumi.StringArrayOutput)
-}
-
-// Variable name
-func (o ConfigurationGroupDeviceVariableOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v ConfigurationGroupDeviceVariable) string { return v.Name }).(pulumi.StringOutput)
+func (o ConfigurationGroupDevicesDevicesVariablesOutput) ListValues() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ConfigurationGroupDevicesDevicesVariables) []string { return v.ListValues }).(pulumi.StringArrayOutput)
 }
 
 // Variable value
-func (o ConfigurationGroupDeviceVariableOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v ConfigurationGroupDeviceVariable) *string { return v.Value }).(pulumi.StringPtrOutput)
+func (o ConfigurationGroupDevicesDevicesVariablesOutput) Value() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ConfigurationGroupDevicesDevicesVariables) *string { return v.Value }).(pulumi.StringPtrOutput)
 }
 
-type ConfigurationGroupDeviceVariableArrayOutput struct{ *pulumi.OutputState }
+type ConfigurationGroupDevicesDevicesVariablesMapOutput struct{ *pulumi.OutputState }
 
-func (ConfigurationGroupDeviceVariableArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]ConfigurationGroupDeviceVariable)(nil)).Elem()
+func (ConfigurationGroupDevicesDevicesVariablesMapOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*map[string]ConfigurationGroupDevicesDevicesVariables)(nil)).Elem()
 }
 
-func (o ConfigurationGroupDeviceVariableArrayOutput) ToConfigurationGroupDeviceVariableArrayOutput() ConfigurationGroupDeviceVariableArrayOutput {
+func (o ConfigurationGroupDevicesDevicesVariablesMapOutput) ToConfigurationGroupDevicesDevicesVariablesMapOutput() ConfigurationGroupDevicesDevicesVariablesMapOutput {
 	return o
 }
 
-func (o ConfigurationGroupDeviceVariableArrayOutput) ToConfigurationGroupDeviceVariableArrayOutputWithContext(ctx context.Context) ConfigurationGroupDeviceVariableArrayOutput {
+func (o ConfigurationGroupDevicesDevicesVariablesMapOutput) ToConfigurationGroupDevicesDevicesVariablesMapOutputWithContext(ctx context.Context) ConfigurationGroupDevicesDevicesVariablesMapOutput {
 	return o
 }
 
-func (o ConfigurationGroupDeviceVariableArrayOutput) Index(i pulumi.IntInput) ConfigurationGroupDeviceVariableOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ConfigurationGroupDeviceVariable {
-		return vs[0].([]ConfigurationGroupDeviceVariable)[vs[1].(int)]
-	}).(ConfigurationGroupDeviceVariableOutput)
+func (o ConfigurationGroupDevicesDevicesVariablesMapOutput) MapIndex(k pulumi.StringInput) ConfigurationGroupDevicesDevicesVariablesOutput {
+	return pulumi.All(o, k).ApplyT(func(vs []interface{}) ConfigurationGroupDevicesDevicesVariables {
+		return vs[0].(map[string]ConfigurationGroupDevicesDevicesVariables)[vs[1].(string)]
+	}).(ConfigurationGroupDevicesDevicesVariablesOutput)
 }
 
 type ConfigurationGroupTopologyDevice struct {
@@ -29886,7 +29861,7 @@ func (o ExpandedCommunityListPolicyObjectEntryArrayOutput) Index(i pulumi.IntInp
 }
 
 type ExtendedCommunityListPolicyObjectEntry struct {
-	// Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+	// Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
 	Community string `pulumi:"community"`
 }
 
@@ -29902,7 +29877,7 @@ type ExtendedCommunityListPolicyObjectEntryInput interface {
 }
 
 type ExtendedCommunityListPolicyObjectEntryArgs struct {
-	// Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+	// Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
 	Community pulumi.StringInput `pulumi:"community"`
 }
 
@@ -29957,7 +29932,7 @@ func (o ExtendedCommunityListPolicyObjectEntryOutput) ToExtendedCommunityListPol
 	return o
 }
 
-// Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+// Extended community value, e.g. `soo 10.0.0.1:30` or `rt 100:10`
 func (o ExtendedCommunityListPolicyObjectEntryOutput) Community() pulumi.StringOutput {
 	return o.ApplyT(func(v ExtendedCommunityListPolicyObjectEntry) string { return v.Community }).(pulumi.StringOutput)
 }
@@ -34545,9 +34520,17 @@ func (o NetworkHierarchySecurityLoggingUtdSyslogArrayOutput) Index(i pulumi.IntI
 
 type OtherThousandeyesFeatureVirtualApplication struct {
 	// Set the Account Group Token
+	//   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `accountGroupTokenWo` together with `accountGroupTokenWoVersion`, which keeps it out of state.
 	AccountGroupToken *string `pulumi:"accountGroupToken"`
 	// Variable name
 	AccountGroupTokenVariable *string `pulumi:"accountGroupTokenVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the Account Group Token
+	//   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+	AccountGroupTokenWo *string `pulumi:"accountGroupTokenWo"`
+	// Rotation trigger for `accountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AccountGroupTokenWoVersion *int `pulumi:"accountGroupTokenWoVersion"`
 	// Set the Agent default gateway
 	AgentDefaultGateway *string `pulumi:"agentDefaultGateway"`
 	// Variable name
@@ -34604,9 +34587,17 @@ type OtherThousandeyesFeatureVirtualApplicationInput interface {
 
 type OtherThousandeyesFeatureVirtualApplicationArgs struct {
 	// Set the Account Group Token
+	//   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `accountGroupTokenWo` together with `accountGroupTokenWoVersion`, which keeps it out of state.
 	AccountGroupToken pulumi.StringPtrInput `pulumi:"accountGroupToken"`
 	// Variable name
 	AccountGroupTokenVariable pulumi.StringPtrInput `pulumi:"accountGroupTokenVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the Account Group Token
+	//   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+	AccountGroupTokenWo pulumi.StringPtrInput `pulumi:"accountGroupTokenWo"`
+	// Rotation trigger for `accountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AccountGroupTokenWoVersion pulumi.IntPtrInput `pulumi:"accountGroupTokenWoVersion"`
 	// Set the Agent default gateway
 	AgentDefaultGateway pulumi.StringPtrInput `pulumi:"agentDefaultGateway"`
 	// Variable name
@@ -34702,6 +34693,8 @@ func (o OtherThousandeyesFeatureVirtualApplicationOutput) ToOtherThousandeyesFea
 }
 
 // Set the Account Group Token
+//   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `accountGroupTokenWo` together with `accountGroupTokenWoVersion`, which keeps it out of state.
 func (o OtherThousandeyesFeatureVirtualApplicationOutput) AccountGroupToken() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v OtherThousandeyesFeatureVirtualApplication) *string { return v.AccountGroupToken }).(pulumi.StringPtrOutput)
 }
@@ -34709,6 +34702,18 @@ func (o OtherThousandeyesFeatureVirtualApplicationOutput) AccountGroupToken() pu
 // Variable name
 func (o OtherThousandeyesFeatureVirtualApplicationOutput) AccountGroupTokenVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v OtherThousandeyesFeatureVirtualApplication) *string { return v.AccountGroupTokenVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set the Account Group Token
+//   - Only one of `accountGroupToken`, `accountGroupTokenVariable` and `accountGroupTokenWo` can be set.
+func (o OtherThousandeyesFeatureVirtualApplicationOutput) AccountGroupTokenWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v OtherThousandeyesFeatureVirtualApplication) *string { return v.AccountGroupTokenWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `accountGroupTokenWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o OtherThousandeyesFeatureVirtualApplicationOutput) AccountGroupTokenWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v OtherThousandeyesFeatureVirtualApplication) *int { return v.AccountGroupTokenWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set the Agent default gateway
@@ -35215,237 +35220,219 @@ func (o OtherUcseFeatureInterfaceArrayOutput) Index(i pulumi.IntInput) OtherUcse
 	}).(OtherUcseFeatureInterfaceOutput)
 }
 
-type PolicyGroupDevice struct {
+type PolicyGroupDevicesDevices struct {
 	// Deploy to device if enabled.
 	//   - Default value: `false`
 	Deploy *bool `pulumi:"deploy"`
-	// Device ID
-	Id *string `pulumi:"id"`
-	// List of variables
-	Variables []PolicyGroupDeviceVariable `pulumi:"variables"`
+	// Device variables, keyed by variable name (for example `hostName`). Terraform matches each variable by its name, so a changed value shows as a change of that variable only.
+	Variables map[string]PolicyGroupDevicesDevicesVariables `pulumi:"variables"`
 }
 
-// PolicyGroupDeviceInput is an input type that accepts PolicyGroupDeviceArgs and PolicyGroupDeviceOutput values.
-// You can construct a concrete instance of `PolicyGroupDeviceInput` via:
+// PolicyGroupDevicesDevicesInput is an input type that accepts PolicyGroupDevicesDevicesArgs and PolicyGroupDevicesDevicesOutput values.
+// You can construct a concrete instance of `PolicyGroupDevicesDevicesInput` via:
 //
-//	PolicyGroupDeviceArgs{...}
-type PolicyGroupDeviceInput interface {
+//	PolicyGroupDevicesDevicesArgs{...}
+type PolicyGroupDevicesDevicesInput interface {
 	pulumi.Input
 
-	ToPolicyGroupDeviceOutput() PolicyGroupDeviceOutput
-	ToPolicyGroupDeviceOutputWithContext(context.Context) PolicyGroupDeviceOutput
+	ToPolicyGroupDevicesDevicesOutput() PolicyGroupDevicesDevicesOutput
+	ToPolicyGroupDevicesDevicesOutputWithContext(context.Context) PolicyGroupDevicesDevicesOutput
 }
 
-type PolicyGroupDeviceArgs struct {
+type PolicyGroupDevicesDevicesArgs struct {
 	// Deploy to device if enabled.
 	//   - Default value: `false`
 	Deploy pulumi.BoolPtrInput `pulumi:"deploy"`
-	// Device ID
-	Id pulumi.StringPtrInput `pulumi:"id"`
-	// List of variables
-	Variables PolicyGroupDeviceVariableArrayInput `pulumi:"variables"`
+	// Device variables, keyed by variable name (for example `hostName`). Terraform matches each variable by its name, so a changed value shows as a change of that variable only.
+	Variables PolicyGroupDevicesDevicesVariablesMapInput `pulumi:"variables"`
 }
 
-func (PolicyGroupDeviceArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*PolicyGroupDevice)(nil)).Elem()
+func (PolicyGroupDevicesDevicesArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicyGroupDevicesDevices)(nil)).Elem()
 }
 
-func (i PolicyGroupDeviceArgs) ToPolicyGroupDeviceOutput() PolicyGroupDeviceOutput {
-	return i.ToPolicyGroupDeviceOutputWithContext(context.Background())
+func (i PolicyGroupDevicesDevicesArgs) ToPolicyGroupDevicesDevicesOutput() PolicyGroupDevicesDevicesOutput {
+	return i.ToPolicyGroupDevicesDevicesOutputWithContext(context.Background())
 }
 
-func (i PolicyGroupDeviceArgs) ToPolicyGroupDeviceOutputWithContext(ctx context.Context) PolicyGroupDeviceOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(PolicyGroupDeviceOutput)
+func (i PolicyGroupDevicesDevicesArgs) ToPolicyGroupDevicesDevicesOutputWithContext(ctx context.Context) PolicyGroupDevicesDevicesOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicyGroupDevicesDevicesOutput)
 }
 
-// PolicyGroupDeviceArrayInput is an input type that accepts PolicyGroupDeviceArray and PolicyGroupDeviceArrayOutput values.
-// You can construct a concrete instance of `PolicyGroupDeviceArrayInput` via:
+// PolicyGroupDevicesDevicesMapInput is an input type that accepts PolicyGroupDevicesDevicesMap and PolicyGroupDevicesDevicesMapOutput values.
+// You can construct a concrete instance of `PolicyGroupDevicesDevicesMapInput` via:
 //
-//	PolicyGroupDeviceArray{ PolicyGroupDeviceArgs{...} }
-type PolicyGroupDeviceArrayInput interface {
+//	PolicyGroupDevicesDevicesMap{ "key": PolicyGroupDevicesDevicesArgs{...} }
+type PolicyGroupDevicesDevicesMapInput interface {
 	pulumi.Input
 
-	ToPolicyGroupDeviceArrayOutput() PolicyGroupDeviceArrayOutput
-	ToPolicyGroupDeviceArrayOutputWithContext(context.Context) PolicyGroupDeviceArrayOutput
+	ToPolicyGroupDevicesDevicesMapOutput() PolicyGroupDevicesDevicesMapOutput
+	ToPolicyGroupDevicesDevicesMapOutputWithContext(context.Context) PolicyGroupDevicesDevicesMapOutput
 }
 
-type PolicyGroupDeviceArray []PolicyGroupDeviceInput
+type PolicyGroupDevicesDevicesMap map[string]PolicyGroupDevicesDevicesInput
 
-func (PolicyGroupDeviceArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]PolicyGroupDevice)(nil)).Elem()
+func (PolicyGroupDevicesDevicesMap) ElementType() reflect.Type {
+	return reflect.TypeOf((*map[string]PolicyGroupDevicesDevices)(nil)).Elem()
 }
 
-func (i PolicyGroupDeviceArray) ToPolicyGroupDeviceArrayOutput() PolicyGroupDeviceArrayOutput {
-	return i.ToPolicyGroupDeviceArrayOutputWithContext(context.Background())
+func (i PolicyGroupDevicesDevicesMap) ToPolicyGroupDevicesDevicesMapOutput() PolicyGroupDevicesDevicesMapOutput {
+	return i.ToPolicyGroupDevicesDevicesMapOutputWithContext(context.Background())
 }
 
-func (i PolicyGroupDeviceArray) ToPolicyGroupDeviceArrayOutputWithContext(ctx context.Context) PolicyGroupDeviceArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(PolicyGroupDeviceArrayOutput)
+func (i PolicyGroupDevicesDevicesMap) ToPolicyGroupDevicesDevicesMapOutputWithContext(ctx context.Context) PolicyGroupDevicesDevicesMapOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicyGroupDevicesDevicesMapOutput)
 }
 
-type PolicyGroupDeviceOutput struct{ *pulumi.OutputState }
+type PolicyGroupDevicesDevicesOutput struct{ *pulumi.OutputState }
 
-func (PolicyGroupDeviceOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*PolicyGroupDevice)(nil)).Elem()
+func (PolicyGroupDevicesDevicesOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicyGroupDevicesDevices)(nil)).Elem()
 }
 
-func (o PolicyGroupDeviceOutput) ToPolicyGroupDeviceOutput() PolicyGroupDeviceOutput {
+func (o PolicyGroupDevicesDevicesOutput) ToPolicyGroupDevicesDevicesOutput() PolicyGroupDevicesDevicesOutput {
 	return o
 }
 
-func (o PolicyGroupDeviceOutput) ToPolicyGroupDeviceOutputWithContext(ctx context.Context) PolicyGroupDeviceOutput {
+func (o PolicyGroupDevicesDevicesOutput) ToPolicyGroupDevicesDevicesOutputWithContext(ctx context.Context) PolicyGroupDevicesDevicesOutput {
 	return o
 }
 
 // Deploy to device if enabled.
 //   - Default value: `false`
-func (o PolicyGroupDeviceOutput) Deploy() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v PolicyGroupDevice) *bool { return v.Deploy }).(pulumi.BoolPtrOutput)
+func (o PolicyGroupDevicesDevicesOutput) Deploy() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v PolicyGroupDevicesDevices) *bool { return v.Deploy }).(pulumi.BoolPtrOutput)
 }
 
-// Device ID
-func (o PolicyGroupDeviceOutput) Id() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v PolicyGroupDevice) *string { return v.Id }).(pulumi.StringPtrOutput)
+// Device variables, keyed by variable name (for example `hostName`). Terraform matches each variable by its name, so a changed value shows as a change of that variable only.
+func (o PolicyGroupDevicesDevicesOutput) Variables() PolicyGroupDevicesDevicesVariablesMapOutput {
+	return o.ApplyT(func(v PolicyGroupDevicesDevices) map[string]PolicyGroupDevicesDevicesVariables { return v.Variables }).(PolicyGroupDevicesDevicesVariablesMapOutput)
 }
 
-// List of variables
-func (o PolicyGroupDeviceOutput) Variables() PolicyGroupDeviceVariableArrayOutput {
-	return o.ApplyT(func(v PolicyGroupDevice) []PolicyGroupDeviceVariable { return v.Variables }).(PolicyGroupDeviceVariableArrayOutput)
+type PolicyGroupDevicesDevicesMapOutput struct{ *pulumi.OutputState }
+
+func (PolicyGroupDevicesDevicesMapOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*map[string]PolicyGroupDevicesDevices)(nil)).Elem()
 }
 
-type PolicyGroupDeviceArrayOutput struct{ *pulumi.OutputState }
-
-func (PolicyGroupDeviceArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]PolicyGroupDevice)(nil)).Elem()
-}
-
-func (o PolicyGroupDeviceArrayOutput) ToPolicyGroupDeviceArrayOutput() PolicyGroupDeviceArrayOutput {
+func (o PolicyGroupDevicesDevicesMapOutput) ToPolicyGroupDevicesDevicesMapOutput() PolicyGroupDevicesDevicesMapOutput {
 	return o
 }
 
-func (o PolicyGroupDeviceArrayOutput) ToPolicyGroupDeviceArrayOutputWithContext(ctx context.Context) PolicyGroupDeviceArrayOutput {
+func (o PolicyGroupDevicesDevicesMapOutput) ToPolicyGroupDevicesDevicesMapOutputWithContext(ctx context.Context) PolicyGroupDevicesDevicesMapOutput {
 	return o
 }
 
-func (o PolicyGroupDeviceArrayOutput) Index(i pulumi.IntInput) PolicyGroupDeviceOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) PolicyGroupDevice {
-		return vs[0].([]PolicyGroupDevice)[vs[1].(int)]
-	}).(PolicyGroupDeviceOutput)
+func (o PolicyGroupDevicesDevicesMapOutput) MapIndex(k pulumi.StringInput) PolicyGroupDevicesDevicesOutput {
+	return pulumi.All(o, k).ApplyT(func(vs []interface{}) PolicyGroupDevicesDevices {
+		return vs[0].(map[string]PolicyGroupDevicesDevices)[vs[1].(string)]
+	}).(PolicyGroupDevicesDevicesOutput)
 }
 
-type PolicyGroupDeviceVariable struct {
+type PolicyGroupDevicesDevicesVariables struct {
 	// Use this instead of `value` in case value is of type `List`.
 	ListValues []string `pulumi:"listValues"`
-	// Variable name
-	Name string `pulumi:"name"`
 	// Variable value
 	Value *string `pulumi:"value"`
 }
 
-// PolicyGroupDeviceVariableInput is an input type that accepts PolicyGroupDeviceVariableArgs and PolicyGroupDeviceVariableOutput values.
-// You can construct a concrete instance of `PolicyGroupDeviceVariableInput` via:
+// PolicyGroupDevicesDevicesVariablesInput is an input type that accepts PolicyGroupDevicesDevicesVariablesArgs and PolicyGroupDevicesDevicesVariablesOutput values.
+// You can construct a concrete instance of `PolicyGroupDevicesDevicesVariablesInput` via:
 //
-//	PolicyGroupDeviceVariableArgs{...}
-type PolicyGroupDeviceVariableInput interface {
+//	PolicyGroupDevicesDevicesVariablesArgs{...}
+type PolicyGroupDevicesDevicesVariablesInput interface {
 	pulumi.Input
 
-	ToPolicyGroupDeviceVariableOutput() PolicyGroupDeviceVariableOutput
-	ToPolicyGroupDeviceVariableOutputWithContext(context.Context) PolicyGroupDeviceVariableOutput
+	ToPolicyGroupDevicesDevicesVariablesOutput() PolicyGroupDevicesDevicesVariablesOutput
+	ToPolicyGroupDevicesDevicesVariablesOutputWithContext(context.Context) PolicyGroupDevicesDevicesVariablesOutput
 }
 
-type PolicyGroupDeviceVariableArgs struct {
+type PolicyGroupDevicesDevicesVariablesArgs struct {
 	// Use this instead of `value` in case value is of type `List`.
 	ListValues pulumi.StringArrayInput `pulumi:"listValues"`
-	// Variable name
-	Name pulumi.StringInput `pulumi:"name"`
 	// Variable value
 	Value pulumi.StringPtrInput `pulumi:"value"`
 }
 
-func (PolicyGroupDeviceVariableArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*PolicyGroupDeviceVariable)(nil)).Elem()
+func (PolicyGroupDevicesDevicesVariablesArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicyGroupDevicesDevicesVariables)(nil)).Elem()
 }
 
-func (i PolicyGroupDeviceVariableArgs) ToPolicyGroupDeviceVariableOutput() PolicyGroupDeviceVariableOutput {
-	return i.ToPolicyGroupDeviceVariableOutputWithContext(context.Background())
+func (i PolicyGroupDevicesDevicesVariablesArgs) ToPolicyGroupDevicesDevicesVariablesOutput() PolicyGroupDevicesDevicesVariablesOutput {
+	return i.ToPolicyGroupDevicesDevicesVariablesOutputWithContext(context.Background())
 }
 
-func (i PolicyGroupDeviceVariableArgs) ToPolicyGroupDeviceVariableOutputWithContext(ctx context.Context) PolicyGroupDeviceVariableOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(PolicyGroupDeviceVariableOutput)
+func (i PolicyGroupDevicesDevicesVariablesArgs) ToPolicyGroupDevicesDevicesVariablesOutputWithContext(ctx context.Context) PolicyGroupDevicesDevicesVariablesOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicyGroupDevicesDevicesVariablesOutput)
 }
 
-// PolicyGroupDeviceVariableArrayInput is an input type that accepts PolicyGroupDeviceVariableArray and PolicyGroupDeviceVariableArrayOutput values.
-// You can construct a concrete instance of `PolicyGroupDeviceVariableArrayInput` via:
+// PolicyGroupDevicesDevicesVariablesMapInput is an input type that accepts PolicyGroupDevicesDevicesVariablesMap and PolicyGroupDevicesDevicesVariablesMapOutput values.
+// You can construct a concrete instance of `PolicyGroupDevicesDevicesVariablesMapInput` via:
 //
-//	PolicyGroupDeviceVariableArray{ PolicyGroupDeviceVariableArgs{...} }
-type PolicyGroupDeviceVariableArrayInput interface {
+//	PolicyGroupDevicesDevicesVariablesMap{ "key": PolicyGroupDevicesDevicesVariablesArgs{...} }
+type PolicyGroupDevicesDevicesVariablesMapInput interface {
 	pulumi.Input
 
-	ToPolicyGroupDeviceVariableArrayOutput() PolicyGroupDeviceVariableArrayOutput
-	ToPolicyGroupDeviceVariableArrayOutputWithContext(context.Context) PolicyGroupDeviceVariableArrayOutput
+	ToPolicyGroupDevicesDevicesVariablesMapOutput() PolicyGroupDevicesDevicesVariablesMapOutput
+	ToPolicyGroupDevicesDevicesVariablesMapOutputWithContext(context.Context) PolicyGroupDevicesDevicesVariablesMapOutput
 }
 
-type PolicyGroupDeviceVariableArray []PolicyGroupDeviceVariableInput
+type PolicyGroupDevicesDevicesVariablesMap map[string]PolicyGroupDevicesDevicesVariablesInput
 
-func (PolicyGroupDeviceVariableArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]PolicyGroupDeviceVariable)(nil)).Elem()
+func (PolicyGroupDevicesDevicesVariablesMap) ElementType() reflect.Type {
+	return reflect.TypeOf((*map[string]PolicyGroupDevicesDevicesVariables)(nil)).Elem()
 }
 
-func (i PolicyGroupDeviceVariableArray) ToPolicyGroupDeviceVariableArrayOutput() PolicyGroupDeviceVariableArrayOutput {
-	return i.ToPolicyGroupDeviceVariableArrayOutputWithContext(context.Background())
+func (i PolicyGroupDevicesDevicesVariablesMap) ToPolicyGroupDevicesDevicesVariablesMapOutput() PolicyGroupDevicesDevicesVariablesMapOutput {
+	return i.ToPolicyGroupDevicesDevicesVariablesMapOutputWithContext(context.Background())
 }
 
-func (i PolicyGroupDeviceVariableArray) ToPolicyGroupDeviceVariableArrayOutputWithContext(ctx context.Context) PolicyGroupDeviceVariableArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(PolicyGroupDeviceVariableArrayOutput)
+func (i PolicyGroupDevicesDevicesVariablesMap) ToPolicyGroupDevicesDevicesVariablesMapOutputWithContext(ctx context.Context) PolicyGroupDevicesDevicesVariablesMapOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicyGroupDevicesDevicesVariablesMapOutput)
 }
 
-type PolicyGroupDeviceVariableOutput struct{ *pulumi.OutputState }
+type PolicyGroupDevicesDevicesVariablesOutput struct{ *pulumi.OutputState }
 
-func (PolicyGroupDeviceVariableOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*PolicyGroupDeviceVariable)(nil)).Elem()
+func (PolicyGroupDevicesDevicesVariablesOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicyGroupDevicesDevicesVariables)(nil)).Elem()
 }
 
-func (o PolicyGroupDeviceVariableOutput) ToPolicyGroupDeviceVariableOutput() PolicyGroupDeviceVariableOutput {
+func (o PolicyGroupDevicesDevicesVariablesOutput) ToPolicyGroupDevicesDevicesVariablesOutput() PolicyGroupDevicesDevicesVariablesOutput {
 	return o
 }
 
-func (o PolicyGroupDeviceVariableOutput) ToPolicyGroupDeviceVariableOutputWithContext(ctx context.Context) PolicyGroupDeviceVariableOutput {
+func (o PolicyGroupDevicesDevicesVariablesOutput) ToPolicyGroupDevicesDevicesVariablesOutputWithContext(ctx context.Context) PolicyGroupDevicesDevicesVariablesOutput {
 	return o
 }
 
 // Use this instead of `value` in case value is of type `List`.
-func (o PolicyGroupDeviceVariableOutput) ListValues() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v PolicyGroupDeviceVariable) []string { return v.ListValues }).(pulumi.StringArrayOutput)
-}
-
-// Variable name
-func (o PolicyGroupDeviceVariableOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v PolicyGroupDeviceVariable) string { return v.Name }).(pulumi.StringOutput)
+func (o PolicyGroupDevicesDevicesVariablesOutput) ListValues() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v PolicyGroupDevicesDevicesVariables) []string { return v.ListValues }).(pulumi.StringArrayOutput)
 }
 
 // Variable value
-func (o PolicyGroupDeviceVariableOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v PolicyGroupDeviceVariable) *string { return v.Value }).(pulumi.StringPtrOutput)
+func (o PolicyGroupDevicesDevicesVariablesOutput) Value() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyGroupDevicesDevicesVariables) *string { return v.Value }).(pulumi.StringPtrOutput)
 }
 
-type PolicyGroupDeviceVariableArrayOutput struct{ *pulumi.OutputState }
+type PolicyGroupDevicesDevicesVariablesMapOutput struct{ *pulumi.OutputState }
 
-func (PolicyGroupDeviceVariableArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]PolicyGroupDeviceVariable)(nil)).Elem()
+func (PolicyGroupDevicesDevicesVariablesMapOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*map[string]PolicyGroupDevicesDevicesVariables)(nil)).Elem()
 }
 
-func (o PolicyGroupDeviceVariableArrayOutput) ToPolicyGroupDeviceVariableArrayOutput() PolicyGroupDeviceVariableArrayOutput {
+func (o PolicyGroupDevicesDevicesVariablesMapOutput) ToPolicyGroupDevicesDevicesVariablesMapOutput() PolicyGroupDevicesDevicesVariablesMapOutput {
 	return o
 }
 
-func (o PolicyGroupDeviceVariableArrayOutput) ToPolicyGroupDeviceVariableArrayOutputWithContext(ctx context.Context) PolicyGroupDeviceVariableArrayOutput {
+func (o PolicyGroupDevicesDevicesVariablesMapOutput) ToPolicyGroupDevicesDevicesVariablesMapOutputWithContext(ctx context.Context) PolicyGroupDevicesDevicesVariablesMapOutput {
 	return o
 }
 
-func (o PolicyGroupDeviceVariableArrayOutput) Index(i pulumi.IntInput) PolicyGroupDeviceVariableOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) PolicyGroupDeviceVariable {
-		return vs[0].([]PolicyGroupDeviceVariable)[vs[1].(int)]
-	}).(PolicyGroupDeviceVariableOutput)
+func (o PolicyGroupDevicesDevicesVariablesMapOutput) MapIndex(k pulumi.StringInput) PolicyGroupDevicesDevicesVariablesOutput {
+	return pulumi.All(o, k).ApplyT(func(vs []interface{}) PolicyGroupDevicesDevicesVariables {
+		return vs[0].(map[string]PolicyGroupDevicesDevicesVariables)[vs[1].(string)]
+	}).(PolicyGroupDevicesDevicesVariablesOutput)
 }
 
 type PolicyObjectAppProbeClassEntry struct {
@@ -37617,6 +37604,103 @@ func (o PolicyObjectSecurityIpsSignatureEntryArrayOutput) Index(i pulumi.IntInpu
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) PolicyObjectSecurityIpsSignatureEntry {
 		return vs[0].([]PolicyObjectSecurityIpsSignatureEntry)[vs[1].(int)]
 	}).(PolicyObjectSecurityIpsSignatureEntryOutput)
+}
+
+type PolicyObjectSecurityIpsSignatureSetEntry struct {
+	// - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+	BaseSignature *string `pulumi:"baseSignature"`
+}
+
+// PolicyObjectSecurityIpsSignatureSetEntryInput is an input type that accepts PolicyObjectSecurityIpsSignatureSetEntryArgs and PolicyObjectSecurityIpsSignatureSetEntryOutput values.
+// You can construct a concrete instance of `PolicyObjectSecurityIpsSignatureSetEntryInput` via:
+//
+//	PolicyObjectSecurityIpsSignatureSetEntryArgs{...}
+type PolicyObjectSecurityIpsSignatureSetEntryInput interface {
+	pulumi.Input
+
+	ToPolicyObjectSecurityIpsSignatureSetEntryOutput() PolicyObjectSecurityIpsSignatureSetEntryOutput
+	ToPolicyObjectSecurityIpsSignatureSetEntryOutputWithContext(context.Context) PolicyObjectSecurityIpsSignatureSetEntryOutput
+}
+
+type PolicyObjectSecurityIpsSignatureSetEntryArgs struct {
+	// - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+	BaseSignature pulumi.StringPtrInput `pulumi:"baseSignature"`
+}
+
+func (PolicyObjectSecurityIpsSignatureSetEntryArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicyObjectSecurityIpsSignatureSetEntry)(nil)).Elem()
+}
+
+func (i PolicyObjectSecurityIpsSignatureSetEntryArgs) ToPolicyObjectSecurityIpsSignatureSetEntryOutput() PolicyObjectSecurityIpsSignatureSetEntryOutput {
+	return i.ToPolicyObjectSecurityIpsSignatureSetEntryOutputWithContext(context.Background())
+}
+
+func (i PolicyObjectSecurityIpsSignatureSetEntryArgs) ToPolicyObjectSecurityIpsSignatureSetEntryOutputWithContext(ctx context.Context) PolicyObjectSecurityIpsSignatureSetEntryOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicyObjectSecurityIpsSignatureSetEntryOutput)
+}
+
+// PolicyObjectSecurityIpsSignatureSetEntryArrayInput is an input type that accepts PolicyObjectSecurityIpsSignatureSetEntryArray and PolicyObjectSecurityIpsSignatureSetEntryArrayOutput values.
+// You can construct a concrete instance of `PolicyObjectSecurityIpsSignatureSetEntryArrayInput` via:
+//
+//	PolicyObjectSecurityIpsSignatureSetEntryArray{ PolicyObjectSecurityIpsSignatureSetEntryArgs{...} }
+type PolicyObjectSecurityIpsSignatureSetEntryArrayInput interface {
+	pulumi.Input
+
+	ToPolicyObjectSecurityIpsSignatureSetEntryArrayOutput() PolicyObjectSecurityIpsSignatureSetEntryArrayOutput
+	ToPolicyObjectSecurityIpsSignatureSetEntryArrayOutputWithContext(context.Context) PolicyObjectSecurityIpsSignatureSetEntryArrayOutput
+}
+
+type PolicyObjectSecurityIpsSignatureSetEntryArray []PolicyObjectSecurityIpsSignatureSetEntryInput
+
+func (PolicyObjectSecurityIpsSignatureSetEntryArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]PolicyObjectSecurityIpsSignatureSetEntry)(nil)).Elem()
+}
+
+func (i PolicyObjectSecurityIpsSignatureSetEntryArray) ToPolicyObjectSecurityIpsSignatureSetEntryArrayOutput() PolicyObjectSecurityIpsSignatureSetEntryArrayOutput {
+	return i.ToPolicyObjectSecurityIpsSignatureSetEntryArrayOutputWithContext(context.Background())
+}
+
+func (i PolicyObjectSecurityIpsSignatureSetEntryArray) ToPolicyObjectSecurityIpsSignatureSetEntryArrayOutputWithContext(ctx context.Context) PolicyObjectSecurityIpsSignatureSetEntryArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicyObjectSecurityIpsSignatureSetEntryArrayOutput)
+}
+
+type PolicyObjectSecurityIpsSignatureSetEntryOutput struct{ *pulumi.OutputState }
+
+func (PolicyObjectSecurityIpsSignatureSetEntryOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicyObjectSecurityIpsSignatureSetEntry)(nil)).Elem()
+}
+
+func (o PolicyObjectSecurityIpsSignatureSetEntryOutput) ToPolicyObjectSecurityIpsSignatureSetEntryOutput() PolicyObjectSecurityIpsSignatureSetEntryOutput {
+	return o
+}
+
+func (o PolicyObjectSecurityIpsSignatureSetEntryOutput) ToPolicyObjectSecurityIpsSignatureSetEntryOutputWithContext(ctx context.Context) PolicyObjectSecurityIpsSignatureSetEntryOutput {
+	return o
+}
+
+// - Choices: `balanced`, `connectivity`, `security`, `max-detect`, `no-rules-active`
+func (o PolicyObjectSecurityIpsSignatureSetEntryOutput) BaseSignature() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicyObjectSecurityIpsSignatureSetEntry) *string { return v.BaseSignature }).(pulumi.StringPtrOutput)
+}
+
+type PolicyObjectSecurityIpsSignatureSetEntryArrayOutput struct{ *pulumi.OutputState }
+
+func (PolicyObjectSecurityIpsSignatureSetEntryArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]PolicyObjectSecurityIpsSignatureSetEntry)(nil)).Elem()
+}
+
+func (o PolicyObjectSecurityIpsSignatureSetEntryArrayOutput) ToPolicyObjectSecurityIpsSignatureSetEntryArrayOutput() PolicyObjectSecurityIpsSignatureSetEntryArrayOutput {
+	return o
+}
+
+func (o PolicyObjectSecurityIpsSignatureSetEntryArrayOutput) ToPolicyObjectSecurityIpsSignatureSetEntryArrayOutputWithContext(ctx context.Context) PolicyObjectSecurityIpsSignatureSetEntryArrayOutput {
+	return o
+}
+
+func (o PolicyObjectSecurityIpsSignatureSetEntryArrayOutput) Index(i pulumi.IntInput) PolicyObjectSecurityIpsSignatureSetEntryOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) PolicyObjectSecurityIpsSignatureSetEntry {
+		return vs[0].([]PolicyObjectSecurityIpsSignatureSetEntry)[vs[1].(int)]
+	}).(PolicyObjectSecurityIpsSignatureSetEntryOutput)
 }
 
 type PolicyObjectSecurityLocalApplicationListEntry struct {
@@ -54242,9 +54326,17 @@ type ServiceMulticastFeatureMsdpGroupPeer struct {
 	// Variable name
 	KeepaliveIntervalVariable *string `pulumi:"keepaliveIntervalVariable"`
 	// Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `peerAuthenticationPasswordWo` together with `peerAuthenticationPasswordWoVersion`, which keeps it out of state.
 	PeerAuthenticationPassword *string `pulumi:"peerAuthenticationPassword"`
 	// Variable name
 	PeerAuthenticationPasswordVariable *string `pulumi:"peerAuthenticationPasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+	PeerAuthenticationPasswordWo *string `pulumi:"peerAuthenticationPasswordWo"`
+	// Rotation trigger for `peerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PeerAuthenticationPasswordWoVersion *int `pulumi:"peerAuthenticationPasswordWoVersion"`
 	// Set MSDP peer ip
 	PeerIp *string `pulumi:"peerIp"`
 	// Variable name
@@ -54291,9 +54383,17 @@ type ServiceMulticastFeatureMsdpGroupPeerArgs struct {
 	// Variable name
 	KeepaliveIntervalVariable pulumi.StringPtrInput `pulumi:"keepaliveIntervalVariable"`
 	// Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `peerAuthenticationPasswordWo` together with `peerAuthenticationPasswordWoVersion`, which keeps it out of state.
 	PeerAuthenticationPassword pulumi.StringPtrInput `pulumi:"peerAuthenticationPassword"`
 	// Variable name
 	PeerAuthenticationPasswordVariable pulumi.StringPtrInput `pulumi:"peerAuthenticationPasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+	PeerAuthenticationPasswordWo pulumi.StringPtrInput `pulumi:"peerAuthenticationPasswordWo"`
+	// Rotation trigger for `peerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PeerAuthenticationPasswordWoVersion pulumi.IntPtrInput `pulumi:"peerAuthenticationPasswordWoVersion"`
 	// Set MSDP peer ip
 	PeerIp pulumi.StringPtrInput `pulumi:"peerIp"`
 	// Variable name
@@ -54400,6 +54500,8 @@ func (o ServiceMulticastFeatureMsdpGroupPeerOutput) KeepaliveIntervalVariable() 
 }
 
 // Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `peerAuthenticationPasswordWo` together with `peerAuthenticationPasswordWoVersion`, which keeps it out of state.
 func (o ServiceMulticastFeatureMsdpGroupPeerOutput) PeerAuthenticationPassword() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceMulticastFeatureMsdpGroupPeer) *string { return v.PeerAuthenticationPassword }).(pulumi.StringPtrOutput)
 }
@@ -54407,6 +54509,18 @@ func (o ServiceMulticastFeatureMsdpGroupPeerOutput) PeerAuthenticationPassword()
 // Variable name
 func (o ServiceMulticastFeatureMsdpGroupPeerOutput) PeerAuthenticationPasswordVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceMulticastFeatureMsdpGroupPeer) *string { return v.PeerAuthenticationPasswordVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `peerAuthenticationPassword`, `peerAuthenticationPasswordVariable` and `peerAuthenticationPasswordWo` can be set.
+func (o ServiceMulticastFeatureMsdpGroupPeerOutput) PeerAuthenticationPasswordWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceMulticastFeatureMsdpGroupPeer) *string { return v.PeerAuthenticationPasswordWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `peerAuthenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o ServiceMulticastFeatureMsdpGroupPeerOutput) PeerAuthenticationPasswordWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ServiceMulticastFeatureMsdpGroupPeer) *int { return v.PeerAuthenticationPasswordWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set MSDP peer ip
@@ -56082,9 +56196,17 @@ type ServiceRoutingBgpFeatureIpv4Neighbor struct {
 	// Variable name
 	NextHopSelfVariable *string `pulumi:"nextHopSelfVariable"`
 	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password *string `pulumi:"password"`
 	// Variable name
 	PasswordVariable *string `pulumi:"passwordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo *string `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion *int `pulumi:"passwordWoVersion"`
 	// Set remote autonomous system number
 	RemoteAs *string `pulumi:"remoteAs"`
 	// Variable name
@@ -56175,9 +56297,17 @@ type ServiceRoutingBgpFeatureIpv4NeighborArgs struct {
 	// Variable name
 	NextHopSelfVariable pulumi.StringPtrInput `pulumi:"nextHopSelfVariable"`
 	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password pulumi.StringPtrInput `pulumi:"password"`
 	// Variable name
 	PasswordVariable pulumi.StringPtrInput `pulumi:"passwordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo pulumi.StringPtrInput `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion pulumi.IntPtrInput `pulumi:"passwordWoVersion"`
 	// Set remote autonomous system number
 	RemoteAs pulumi.StringPtrInput `pulumi:"remoteAs"`
 	// Variable name
@@ -56366,6 +56496,8 @@ func (o ServiceRoutingBgpFeatureIpv4NeighborOutput) NextHopSelfVariable() pulumi
 }
 
 // Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 func (o ServiceRoutingBgpFeatureIpv4NeighborOutput) Password() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv4Neighbor) *string { return v.Password }).(pulumi.StringPtrOutput)
 }
@@ -56373,6 +56505,18 @@ func (o ServiceRoutingBgpFeatureIpv4NeighborOutput) Password() pulumi.StringPtrO
 // Variable name
 func (o ServiceRoutingBgpFeatureIpv4NeighborOutput) PasswordVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv4Neighbor) *string { return v.PasswordVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+func (o ServiceRoutingBgpFeatureIpv4NeighborOutput) PasswordWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv4Neighbor) *string { return v.PasswordWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o ServiceRoutingBgpFeatureIpv4NeighborOutput) PasswordWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv4Neighbor) *int { return v.PasswordWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set remote autonomous system number
@@ -57252,9 +57396,17 @@ type ServiceRoutingBgpFeatureIpv6Neighbor struct {
 	// Variable name
 	NextHopSelfVariable *string `pulumi:"nextHopSelfVariable"`
 	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password *string `pulumi:"password"`
 	// Variable name
 	PasswordVariable *string `pulumi:"passwordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo *string `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion *int `pulumi:"passwordWoVersion"`
 	// Set remote autonomous system number
 	RemoteAs *string `pulumi:"remoteAs"`
 	// Variable name
@@ -57340,9 +57492,17 @@ type ServiceRoutingBgpFeatureIpv6NeighborArgs struct {
 	// Variable name
 	NextHopSelfVariable pulumi.StringPtrInput `pulumi:"nextHopSelfVariable"`
 	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password pulumi.StringPtrInput `pulumi:"password"`
 	// Variable name
 	PasswordVariable pulumi.StringPtrInput `pulumi:"passwordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo pulumi.StringPtrInput `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion pulumi.IntPtrInput `pulumi:"passwordWoVersion"`
 	// Set remote autonomous system number
 	RemoteAs pulumi.StringPtrInput `pulumi:"remoteAs"`
 	// Variable name
@@ -57526,6 +57686,8 @@ func (o ServiceRoutingBgpFeatureIpv6NeighborOutput) NextHopSelfVariable() pulumi
 }
 
 // Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 func (o ServiceRoutingBgpFeatureIpv6NeighborOutput) Password() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv6Neighbor) *string { return v.Password }).(pulumi.StringPtrOutput)
 }
@@ -57533,6 +57695,18 @@ func (o ServiceRoutingBgpFeatureIpv6NeighborOutput) Password() pulumi.StringPtrO
 // Variable name
 func (o ServiceRoutingBgpFeatureIpv6NeighborOutput) PasswordVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv6Neighbor) *string { return v.PasswordVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+func (o ServiceRoutingBgpFeatureIpv6NeighborOutput) PasswordWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv6Neighbor) *string { return v.PasswordWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o ServiceRoutingBgpFeatureIpv6NeighborOutput) PasswordWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingBgpFeatureIpv6Neighbor) *int { return v.PasswordWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set remote autonomous system number
@@ -58455,9 +58629,17 @@ type ServiceRoutingEigrpFeatureMd5Key struct {
 	// Variable name
 	KeyIdVariable *string `pulumi:"keyIdVariable"`
 	// Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
 	KeyString *string `pulumi:"keyString"`
 	// Variable name
 	KeyStringVariable *string `pulumi:"keyStringVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+	KeyStringWo *string `pulumi:"keyStringWo"`
+	// Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	KeyStringWoVersion *int `pulumi:"keyStringWoVersion"`
 }
 
 // ServiceRoutingEigrpFeatureMd5KeyInput is an input type that accepts ServiceRoutingEigrpFeatureMd5KeyArgs and ServiceRoutingEigrpFeatureMd5KeyOutput values.
@@ -58478,9 +58660,17 @@ type ServiceRoutingEigrpFeatureMd5KeyArgs struct {
 	// Variable name
 	KeyIdVariable pulumi.StringPtrInput `pulumi:"keyIdVariable"`
 	// Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
 	KeyString pulumi.StringPtrInput `pulumi:"keyString"`
 	// Variable name
 	KeyStringVariable pulumi.StringPtrInput `pulumi:"keyStringVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+	KeyStringWo pulumi.StringPtrInput `pulumi:"keyStringWo"`
+	// Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	KeyStringWoVersion pulumi.IntPtrInput `pulumi:"keyStringWoVersion"`
 }
 
 func (ServiceRoutingEigrpFeatureMd5KeyArgs) ElementType() reflect.Type {
@@ -58546,6 +58736,8 @@ func (o ServiceRoutingEigrpFeatureMd5KeyOutput) KeyIdVariable() pulumi.StringPtr
 }
 
 // Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
 func (o ServiceRoutingEigrpFeatureMd5KeyOutput) KeyString() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingEigrpFeatureMd5Key) *string { return v.KeyString }).(pulumi.StringPtrOutput)
 }
@@ -58553,6 +58745,18 @@ func (o ServiceRoutingEigrpFeatureMd5KeyOutput) KeyString() pulumi.StringPtrOutp
 // Variable name
 func (o ServiceRoutingEigrpFeatureMd5KeyOutput) KeyStringVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingEigrpFeatureMd5Key) *string { return v.KeyStringVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+func (o ServiceRoutingEigrpFeatureMd5KeyOutput) KeyStringWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingEigrpFeatureMd5Key) *string { return v.KeyStringWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o ServiceRoutingEigrpFeatureMd5KeyOutput) KeyStringWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingEigrpFeatureMd5Key) *int { return v.KeyStringWoVersion }).(pulumi.IntPtrOutput)
 }
 
 type ServiceRoutingEigrpFeatureMd5KeyArrayOutput struct{ *pulumi.OutputState }
@@ -59013,6 +59217,8 @@ type ServiceRoutingOspfFeatureAreaInterface struct {
 	// Variable name
 	LsaRetransmitIntervalVariable *string `pulumi:"lsaRetransmitIntervalVariable"`
 	// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
 	MessageDigestKey *string `pulumi:"messageDigestKey"`
 	// Set MD5 message digest key
 	//   - Range: `1`-`255`
@@ -59021,6 +59227,12 @@ type ServiceRoutingOspfFeatureAreaInterface struct {
 	MessageDigestKeyIdVariable *string `pulumi:"messageDigestKeyIdVariable"`
 	// Variable name
 	MessageDigestKeyVariable *string `pulumi:"messageDigestKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+	MessageDigestKeyWo *string `pulumi:"messageDigestKeyWo"`
+	// Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	MessageDigestKeyWoVersion *int `pulumi:"messageDigestKeyWoVersion"`
 	// Set interface name
 	Name *string `pulumi:"name"`
 	// Variable name
@@ -59085,6 +59297,8 @@ type ServiceRoutingOspfFeatureAreaInterfaceArgs struct {
 	// Variable name
 	LsaRetransmitIntervalVariable pulumi.StringPtrInput `pulumi:"lsaRetransmitIntervalVariable"`
 	// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
 	MessageDigestKey pulumi.StringPtrInput `pulumi:"messageDigestKey"`
 	// Set MD5 message digest key
 	//   - Range: `1`-`255`
@@ -59093,6 +59307,12 @@ type ServiceRoutingOspfFeatureAreaInterfaceArgs struct {
 	MessageDigestKeyIdVariable pulumi.StringPtrInput `pulumi:"messageDigestKeyIdVariable"`
 	// Variable name
 	MessageDigestKeyVariable pulumi.StringPtrInput `pulumi:"messageDigestKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+	MessageDigestKeyWo pulumi.StringPtrInput `pulumi:"messageDigestKeyWo"`
+	// Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	MessageDigestKeyWoVersion pulumi.IntPtrInput `pulumi:"messageDigestKeyWoVersion"`
 	// Set interface name
 	Name pulumi.StringPtrInput `pulumi:"name"`
 	// Variable name
@@ -59232,6 +59452,8 @@ func (o ServiceRoutingOspfFeatureAreaInterfaceOutput) LsaRetransmitIntervalVaria
 }
 
 // Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
 func (o ServiceRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKey() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingOspfFeatureAreaInterface) *string { return v.MessageDigestKey }).(pulumi.StringPtrOutput)
 }
@@ -59250,6 +59472,18 @@ func (o ServiceRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyIdVariable
 // Variable name
 func (o ServiceRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingOspfFeatureAreaInterface) *string { return v.MessageDigestKeyVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+func (o ServiceRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingOspfFeatureAreaInterface) *string { return v.MessageDigestKeyWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o ServiceRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingOspfFeatureAreaInterface) *int { return v.MessageDigestKeyWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set interface name
@@ -59485,7 +59719,10 @@ type ServiceRoutingOspfFeatureRedistribute struct {
 	Protocol *string `pulumi:"protocol"`
 	// Variable name
 	ProtocolVariable *string `pulumi:"protocolVariable"`
-	RoutePolicyId    *string `pulumi:"routePolicyId"`
+	// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyId *string `pulumi:"routePolicyId"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyIdVariable *string `pulumi:"routePolicyIdVariable"`
 	// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
 	//   - Default value: `false`
 	TranslateRibMetric *bool `pulumi:"translateRibMetric"`
@@ -59515,7 +59752,10 @@ type ServiceRoutingOspfFeatureRedistributeArgs struct {
 	Protocol pulumi.StringPtrInput `pulumi:"protocol"`
 	// Variable name
 	ProtocolVariable pulumi.StringPtrInput `pulumi:"protocolVariable"`
-	RoutePolicyId    pulumi.StringPtrInput `pulumi:"routePolicyId"`
+	// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyId pulumi.StringPtrInput `pulumi:"routePolicyId"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyIdVariable pulumi.StringPtrInput `pulumi:"routePolicyIdVariable"`
 	// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
 	//   - Default value: `false`
 	TranslateRibMetric pulumi.BoolPtrInput `pulumi:"translateRibMetric"`
@@ -59596,8 +59836,14 @@ func (o ServiceRoutingOspfFeatureRedistributeOutput) ProtocolVariable() pulumi.S
 	return o.ApplyT(func(v ServiceRoutingOspfFeatureRedistribute) *string { return v.ProtocolVariable }).(pulumi.StringPtrOutput)
 }
 
+// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
 func (o ServiceRoutingOspfFeatureRedistributeOutput) RoutePolicyId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingOspfFeatureRedistribute) *string { return v.RoutePolicyId }).(pulumi.StringPtrOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+func (o ServiceRoutingOspfFeatureRedistributeOutput) RoutePolicyIdVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingOspfFeatureRedistribute) *string { return v.RoutePolicyIdVariable }).(pulumi.StringPtrOutput)
 }
 
 // Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
@@ -59933,9 +60179,17 @@ func (o ServiceRoutingOspfv3Ipv4FeatureAreaArrayOutput) Index(i pulumi.IntInput)
 
 type ServiceRoutingOspfv3Ipv4FeatureAreaInterface struct {
 	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
 	AuthenticationKey *string `pulumi:"authenticationKey"`
 	// Variable name
 	AuthenticationKeyVariable *string `pulumi:"authenticationKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	AuthenticationKeyWo *string `pulumi:"authenticationKeyWo"`
+	// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationKeyWoVersion *int `pulumi:"authenticationKeyWoVersion"`
 	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
 	//   - Range: `256`-`4294967295`
 	AuthenticationSpi *int `pulumi:"authenticationSpi"`
@@ -59996,9 +60250,17 @@ type ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceInput interface {
 
 type ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceArgs struct {
 	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
 	AuthenticationKey pulumi.StringPtrInput `pulumi:"authenticationKey"`
 	// Variable name
 	AuthenticationKeyVariable pulumi.StringPtrInput `pulumi:"authenticationKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	AuthenticationKeyWo pulumi.StringPtrInput `pulumi:"authenticationKeyWo"`
+	// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationKeyWoVersion pulumi.IntPtrInput `pulumi:"authenticationKeyWoVersion"`
 	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
 	//   - Range: `256`-`4294967295`
 	AuthenticationSpi pulumi.IntPtrInput `pulumi:"authenticationSpi"`
@@ -60098,6 +60360,8 @@ func (o ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) ToServiceRoutingOspf
 }
 
 // Set OSPF interface authentication IPSEC key
+//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
 func (o ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKey() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv4FeatureAreaInterface) *string { return v.AuthenticationKey }).(pulumi.StringPtrOutput)
 }
@@ -60105,6 +60369,18 @@ func (o ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKey() 
 // Variable name
 func (o ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKeyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv4FeatureAreaInterface) *string { return v.AuthenticationKeyVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set OSPF interface authentication IPSEC key
+//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+func (o ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKeyWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv4FeatureAreaInterface) *string { return v.AuthenticationKeyWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKeyWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv4FeatureAreaInterface) *int { return v.AuthenticationKeyWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set OSPF interface authentication IPSec SPI, range 256..4294967295
@@ -60397,7 +60673,10 @@ type ServiceRoutingOspfv3Ipv4FeatureRedistribute struct {
 	Protocol *string `pulumi:"protocol"`
 	// Variable name
 	ProtocolVariable *string `pulumi:"protocolVariable"`
-	RoutePolicyId    *string `pulumi:"routePolicyId"`
+	// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyId *string `pulumi:"routePolicyId"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyIdVariable *string `pulumi:"routePolicyIdVariable"`
 	// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
 	//   - Default value: `false`
 	TranslateRibMetric *bool `pulumi:"translateRibMetric"`
@@ -60427,7 +60706,10 @@ type ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs struct {
 	Protocol pulumi.StringPtrInput `pulumi:"protocol"`
 	// Variable name
 	ProtocolVariable pulumi.StringPtrInput `pulumi:"protocolVariable"`
-	RoutePolicyId    pulumi.StringPtrInput `pulumi:"routePolicyId"`
+	// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyId pulumi.StringPtrInput `pulumi:"routePolicyId"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyIdVariable pulumi.StringPtrInput `pulumi:"routePolicyIdVariable"`
 	// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
 	//   - Default value: `false`
 	TranslateRibMetric pulumi.BoolPtrInput `pulumi:"translateRibMetric"`
@@ -60508,8 +60790,14 @@ func (o ServiceRoutingOspfv3Ipv4FeatureRedistributeOutput) ProtocolVariable() pu
 	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv4FeatureRedistribute) *string { return v.ProtocolVariable }).(pulumi.StringPtrOutput)
 }
 
+// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
 func (o ServiceRoutingOspfv3Ipv4FeatureRedistributeOutput) RoutePolicyId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv4FeatureRedistribute) *string { return v.RoutePolicyId }).(pulumi.StringPtrOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+func (o ServiceRoutingOspfv3Ipv4FeatureRedistributeOutput) RoutePolicyIdVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv4FeatureRedistribute) *string { return v.RoutePolicyIdVariable }).(pulumi.StringPtrOutput)
 }
 
 // Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
@@ -60724,9 +61012,17 @@ func (o ServiceRoutingOspfv3Ipv6FeatureAreaArrayOutput) Index(i pulumi.IntInput)
 
 type ServiceRoutingOspfv3Ipv6FeatureAreaInterface struct {
 	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
 	AuthenticationKey *string `pulumi:"authenticationKey"`
 	// Variable name
 	AuthenticationKeyVariable *string `pulumi:"authenticationKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	AuthenticationKeyWo *string `pulumi:"authenticationKeyWo"`
+	// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationKeyWoVersion *int `pulumi:"authenticationKeyWoVersion"`
 	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
 	//   - Range: `256`-`4294967295`
 	AuthenticationSpi *int `pulumi:"authenticationSpi"`
@@ -60787,9 +61083,17 @@ type ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceInput interface {
 
 type ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceArgs struct {
 	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
 	AuthenticationKey pulumi.StringPtrInput `pulumi:"authenticationKey"`
 	// Variable name
 	AuthenticationKeyVariable pulumi.StringPtrInput `pulumi:"authenticationKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	AuthenticationKeyWo pulumi.StringPtrInput `pulumi:"authenticationKeyWo"`
+	// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationKeyWoVersion pulumi.IntPtrInput `pulumi:"authenticationKeyWoVersion"`
 	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
 	//   - Range: `256`-`4294967295`
 	AuthenticationSpi pulumi.IntPtrInput `pulumi:"authenticationSpi"`
@@ -60889,6 +61193,8 @@ func (o ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) ToServiceRoutingOspf
 }
 
 // Set OSPF interface authentication IPSEC key
+//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
 func (o ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKey() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv6FeatureAreaInterface) *string { return v.AuthenticationKey }).(pulumi.StringPtrOutput)
 }
@@ -60896,6 +61202,18 @@ func (o ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKey() 
 // Variable name
 func (o ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKeyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv6FeatureAreaInterface) *string { return v.AuthenticationKeyVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set OSPF interface authentication IPSEC key
+//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+func (o ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKeyWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv6FeatureAreaInterface) *string { return v.AuthenticationKeyWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKeyWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv6FeatureAreaInterface) *int { return v.AuthenticationKeyWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set OSPF interface authentication IPSec SPI, range 256..4294967295
@@ -61168,7 +61486,10 @@ type ServiceRoutingOspfv3Ipv6FeatureRedistribute struct {
 	Protocol *string `pulumi:"protocol"`
 	// Variable name
 	ProtocolVariable *string `pulumi:"protocolVariable"`
-	RoutePolicyId    *string `pulumi:"routePolicyId"`
+	// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyId *string `pulumi:"routePolicyId"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyIdVariable *string `pulumi:"routePolicyIdVariable"`
 	// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
 	//   - Default value: `false`
 	TranslateRibMetric *bool `pulumi:"translateRibMetric"`
@@ -61193,7 +61514,10 @@ type ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs struct {
 	Protocol pulumi.StringPtrInput `pulumi:"protocol"`
 	// Variable name
 	ProtocolVariable pulumi.StringPtrInput `pulumi:"protocolVariable"`
-	RoutePolicyId    pulumi.StringPtrInput `pulumi:"routePolicyId"`
+	// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyId pulumi.StringPtrInput `pulumi:"routePolicyId"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+	RoutePolicyIdVariable pulumi.StringPtrInput `pulumi:"routePolicyIdVariable"`
 	// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
 	//   - Default value: `false`
 	TranslateRibMetric pulumi.BoolPtrInput `pulumi:"translateRibMetric"`
@@ -61263,8 +61587,14 @@ func (o ServiceRoutingOspfv3Ipv6FeatureRedistributeOutput) ProtocolVariable() pu
 	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv6FeatureRedistribute) *string { return v.ProtocolVariable }).(pulumi.StringPtrOutput)
 }
 
+// Set either routePolicyId or route_policy_id_variable, not both, and the variable option requires SD-WAN Manager 20.18.5 or later, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
 func (o ServiceRoutingOspfv3Ipv6FeatureRedistributeOutput) RoutePolicyId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv6FeatureRedistribute) *string { return v.RoutePolicyId }).(pulumi.StringPtrOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.5` or higher or `routePolicyId` being set
+func (o ServiceRoutingOspfv3Ipv6FeatureRedistributeOutput) RoutePolicyIdVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceRoutingOspfv3Ipv6FeatureRedistribute) *string { return v.RoutePolicyIdVariable }).(pulumi.StringPtrOutput)
 }
 
 // Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
@@ -62066,9 +62396,17 @@ type ServiceWirelessLanFeatureSsid struct {
 	// Variable name
 	BroadcastSsidVariable *string `pulumi:"broadcastSsidVariable"`
 	// Set passphrase, Attribute conditional on `securityType` equal to `personal`
+	//   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passphraseWo` together with `passphraseWoVersion`, which keeps it out of state.
 	Passphrase *string `pulumi:"passphrase"`
 	// Variable name, Attribute conditional on `securityType` equal to `personal`
 	PassphraseVariable *string `pulumi:"passphraseVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set passphrase, Attribute conditional on `securityType` equal to `personal`
+	//   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+	PassphraseWo *string `pulumi:"passphraseWo"`
+	// Rotation trigger for `passphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PassphraseWoVersion *int `pulumi:"passphraseWoVersion"`
 	// Select QoS profile
 	//   - Choices: `platinum`, `gold`, `silver`, `bronze`
 	//   - Default value: `silver`
@@ -62092,9 +62430,17 @@ type ServiceWirelessLanFeatureSsid struct {
 	// Variable name, Attribute conditional on `securityType` equal to `enterprise`
 	RadiusServerPortVariable *string `pulumi:"radiusServerPortVariable"`
 	// Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+	//   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `radiusServerSecretWo` together with `radiusServerSecretWoVersion`, which keeps it out of state.
 	RadiusServerSecret *string `pulumi:"radiusServerSecret"`
 	// Variable name, Attribute conditional on `securityType` equal to `enterprise`
 	RadiusServerSecretVariable *string `pulumi:"radiusServerSecretVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+	//   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+	RadiusServerSecretWo *string `pulumi:"radiusServerSecretWo"`
+	// Rotation trigger for `radiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	RadiusServerSecretWoVersion *int `pulumi:"radiusServerSecretWoVersion"`
 	// Select security type
 	//   - Choices: `enterprise`, `personal`, `open`
 	SecurityType *string `pulumi:"securityType"`
@@ -62130,9 +62476,17 @@ type ServiceWirelessLanFeatureSsidArgs struct {
 	// Variable name
 	BroadcastSsidVariable pulumi.StringPtrInput `pulumi:"broadcastSsidVariable"`
 	// Set passphrase, Attribute conditional on `securityType` equal to `personal`
+	//   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passphraseWo` together with `passphraseWoVersion`, which keeps it out of state.
 	Passphrase pulumi.StringPtrInput `pulumi:"passphrase"`
 	// Variable name, Attribute conditional on `securityType` equal to `personal`
 	PassphraseVariable pulumi.StringPtrInput `pulumi:"passphraseVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set passphrase, Attribute conditional on `securityType` equal to `personal`
+	//   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+	PassphraseWo pulumi.StringPtrInput `pulumi:"passphraseWo"`
+	// Rotation trigger for `passphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PassphraseWoVersion pulumi.IntPtrInput `pulumi:"passphraseWoVersion"`
 	// Select QoS profile
 	//   - Choices: `platinum`, `gold`, `silver`, `bronze`
 	//   - Default value: `silver`
@@ -62156,9 +62510,17 @@ type ServiceWirelessLanFeatureSsidArgs struct {
 	// Variable name, Attribute conditional on `securityType` equal to `enterprise`
 	RadiusServerPortVariable pulumi.StringPtrInput `pulumi:"radiusServerPortVariable"`
 	// Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+	//   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `radiusServerSecretWo` together with `radiusServerSecretWoVersion`, which keeps it out of state.
 	RadiusServerSecret pulumi.StringPtrInput `pulumi:"radiusServerSecret"`
 	// Variable name, Attribute conditional on `securityType` equal to `enterprise`
 	RadiusServerSecretVariable pulumi.StringPtrInput `pulumi:"radiusServerSecretVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+	//   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+	RadiusServerSecretWo pulumi.StringPtrInput `pulumi:"radiusServerSecretWo"`
+	// Rotation trigger for `radiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	RadiusServerSecretWoVersion pulumi.IntPtrInput `pulumi:"radiusServerSecretWoVersion"`
 	// Select security type
 	//   - Choices: `enterprise`, `personal`, `open`
 	SecurityType pulumi.StringPtrInput `pulumi:"securityType"`
@@ -62245,6 +62607,8 @@ func (o ServiceWirelessLanFeatureSsidOutput) BroadcastSsidVariable() pulumi.Stri
 }
 
 // Set passphrase, Attribute conditional on `securityType` equal to `personal`
+//   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `passphraseWo` together with `passphraseWoVersion`, which keeps it out of state.
 func (o ServiceWirelessLanFeatureSsidOutput) Passphrase() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceWirelessLanFeatureSsid) *string { return v.Passphrase }).(pulumi.StringPtrOutput)
 }
@@ -62252,6 +62616,18 @@ func (o ServiceWirelessLanFeatureSsidOutput) Passphrase() pulumi.StringPtrOutput
 // Variable name, Attribute conditional on `securityType` equal to `personal`
 func (o ServiceWirelessLanFeatureSsidOutput) PassphraseVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceWirelessLanFeatureSsid) *string { return v.PassphraseVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set passphrase, Attribute conditional on `securityType` equal to `personal`
+//   - Only one of `passphrase`, `passphraseVariable` and `passphraseWo` can be set.
+func (o ServiceWirelessLanFeatureSsidOutput) PassphraseWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceWirelessLanFeatureSsid) *string { return v.PassphraseWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `passphraseWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o ServiceWirelessLanFeatureSsidOutput) PassphraseWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ServiceWirelessLanFeatureSsid) *int { return v.PassphraseWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Select QoS profile
@@ -62301,6 +62677,8 @@ func (o ServiceWirelessLanFeatureSsidOutput) RadiusServerPortVariable() pulumi.S
 }
 
 // Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+//   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `radiusServerSecretWo` together with `radiusServerSecretWoVersion`, which keeps it out of state.
 func (o ServiceWirelessLanFeatureSsidOutput) RadiusServerSecret() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceWirelessLanFeatureSsid) *string { return v.RadiusServerSecret }).(pulumi.StringPtrOutput)
 }
@@ -62308,6 +62686,18 @@ func (o ServiceWirelessLanFeatureSsidOutput) RadiusServerSecret() pulumi.StringP
 // Variable name, Attribute conditional on `securityType` equal to `enterprise`
 func (o ServiceWirelessLanFeatureSsidOutput) RadiusServerSecretVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceWirelessLanFeatureSsid) *string { return v.RadiusServerSecretVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
+//   - Only one of `radiusServerSecret`, `radiusServerSecretVariable` and `radiusServerSecretWo` can be set.
+func (o ServiceWirelessLanFeatureSsidOutput) RadiusServerSecretWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ServiceWirelessLanFeatureSsid) *string { return v.RadiusServerSecretWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `radiusServerSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o ServiceWirelessLanFeatureSsidOutput) RadiusServerSecretWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ServiceWirelessLanFeatureSsid) *int { return v.RadiusServerSecretWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Select security type
@@ -62350,6 +62740,921 @@ func (o ServiceWirelessLanFeatureSsidArrayOutput) Index(i pulumi.IntInput) Servi
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ServiceWirelessLanFeatureSsid {
 		return vs[0].([]ServiceWirelessLanFeatureSsid)[vs[1].(int)]
 	}).(ServiceWirelessLanFeatureSsidOutput)
+}
+
+type SigFeatureInterface struct {
+	// IKE keepalive interval (seconds)
+	//   - Range: `10`-`3600`
+	//   - Default value: `10`
+	DpdInterval *int `pulumi:"dpdInterval"`
+	// Variable name
+	DpdIntervalVariable *string `pulumi:"dpdIntervalVariable"`
+	// IKE keepalive retries
+	//   - Range: `2`-`60`
+	//   - Default value: `3`
+	DpdRetries *int `pulumi:"dpdRetries"`
+	// Variable name
+	DpdRetriesVariable *string `pulumi:"dpdRetriesVariable"`
+	// IKE identity the IKE preshared secret belongs to
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+	//   - Default value: `aes256-cbc-sha1`
+	IkeCiphersuite *string `pulumi:"ikeCiphersuite"`
+	// Variable name
+	IkeCiphersuiteVariable *string `pulumi:"ikeCiphersuiteVariable"`
+	// IKE Diffie Hellman Groups
+	//   - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+	//   - Default value: `16`
+	IkeGroup *string `pulumi:"ikeGroup"`
+	// Variable name
+	IkeGroupVariable *string `pulumi:"ikeGroupVariable"`
+	// IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+	IkeLocalId *string `pulumi:"ikeLocalId"`
+	// Variable name
+	IkeLocalIdVariable *string `pulumi:"ikeLocalIdVariable"`
+	// IKE rekey interval <300..1209600> seconds
+	//   - Range: `300`-`86400`
+	//   - Default value: `14400`
+	IkeRekeyInterval *int `pulumi:"ikeRekeyInterval"`
+	// Variable name
+	IkeRekeyIntervalVariable *string `pulumi:"ikeRekeyIntervalVariable"`
+	// IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+	IkeRemoteId *string `pulumi:"ikeRemoteId"`
+	// Variable name
+	IkeRemoteIdVariable *string `pulumi:"ikeRemoteIdVariable"`
+	// Interface description
+	InterfaceDescription *string `pulumi:"interfaceDescription"`
+	// Variable name
+	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
+	// Interface name: IPsec when present
+	InterfaceName *string `pulumi:"interfaceName"`
+	// IPsec(ESP) encryption and integrity protocol
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+	//   - Default value: `aes256-cbc-sha512`
+	IpsecCiphersuite *string `pulumi:"ipsecCiphersuite"`
+	// Variable name
+	IpsecCiphersuiteVariable *string `pulumi:"ipsecCiphersuiteVariable"`
+	// IPsec rekey interval <300..1209600> seconds
+	//   - Range: `300`-`1209600`
+	//   - Default value: `3600`
+	IpsecRekeyInterval *int `pulumi:"ipsecRekeyInterval"`
+	// Variable name
+	IpsecRekeyIntervalVariable *string `pulumi:"ipsecRekeyIntervalVariable"`
+	// Replay window size 32..8192 (must be a power of 2)
+	//   - Default value: `512`
+	IpsecReplayWindow *int `pulumi:"ipsecReplayWindow"`
+	// Variable name
+	IpsecReplayWindowVariable *string `pulumi:"ipsecReplayWindowVariable"`
+	// Interface MTU <576..2000>, in bytes
+	//   - Range: `576`-`2000`
+	//   - Default value: `1400`
+	Mtu *int `pulumi:"mtu"`
+	// Variable name
+	MtuVariable *string `pulumi:"mtuVariable"`
+	// IPsec perfect forward secrecy settings
+	//   - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+	//   - Default value: `none`
+	PerfectForwardSecrecy *string `pulumi:"perfectForwardSecrecy"`
+	// Variable name
+	PerfectForwardSecrecyVariable *string `pulumi:"perfectForwardSecrecyVariable"`
+	// Use preshared key to authenticate IKE peer
+	PreSharedKeyDynamic *bool `pulumi:"preSharedKeyDynamic"`
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
+	PreSharedSecret *string `pulumi:"preSharedSecret"`
+	// Variable name
+	PreSharedSecretVariable *string `pulumi:"preSharedSecretVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	PreSharedSecretWo *string `pulumi:"preSharedSecretWo"`
+	// Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PreSharedSecretWoVersion *int `pulumi:"preSharedSecretWoVersion"`
+	// Administrative state
+	//   - Default value: `false`
+	Shutdown *bool `pulumi:"shutdown"`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
+	TcpMssAdjust *int `pulumi:"tcpMssAdjust"`
+	// Variable name
+	TcpMssAdjustVariable *string `pulumi:"tcpMssAdjustVariable"`
+	// Enable/disable SIG tracking
+	//   - Default value: `true`
+	TrackEnable *bool `pulumi:"trackEnable"`
+	// Enable tracker for this interface
+	Tracker *string `pulumi:"tracker"`
+	// SIG Tunnel Data Center
+	//   - Choices: `primary-dc`, `secondary-dc`
+	TunnelDcPreference *string `pulumi:"tunnelDcPreference"`
+	// Tunnel destination IP address
+	TunnelDestination *string `pulumi:"tunnelDestination"`
+	// Variable name
+	TunnelDestinationVariable *string `pulumi:"tunnelDestinationVariable"`
+	// Public IP required to setup GRE tunnel to Zscaler
+	//   - Default value: `Auto`
+	TunnelPublicIp *string `pulumi:"tunnelPublicIp"`
+	// Variable name
+	TunnelPublicIpVariable *string `pulumi:"tunnelPublicIpVariable"`
+	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelRouteVia *string `pulumi:"tunnelRouteVia"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelRouteViaVariable *string `pulumi:"tunnelRouteViaVariable"`
+	// SIG Tunnel Provider
+	//   - Choices: `secure-internet-gateway-umbrella`, `secure-internet-gateway-zscaler`, `secure-internet-gateway-other`
+	TunnelSet *string `pulumi:"tunnelSet"`
+	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+	TunnelSourceInterface *string `pulumi:"tunnelSourceInterface"`
+	// Variable name
+	TunnelSourceInterfaceVariable *string `pulumi:"tunnelSourceInterfaceVariable"`
+}
+
+// SigFeatureInterfaceInput is an input type that accepts SigFeatureInterfaceArgs and SigFeatureInterfaceOutput values.
+// You can construct a concrete instance of `SigFeatureInterfaceInput` via:
+//
+//	SigFeatureInterfaceArgs{...}
+type SigFeatureInterfaceInput interface {
+	pulumi.Input
+
+	ToSigFeatureInterfaceOutput() SigFeatureInterfaceOutput
+	ToSigFeatureInterfaceOutputWithContext(context.Context) SigFeatureInterfaceOutput
+}
+
+type SigFeatureInterfaceArgs struct {
+	// IKE keepalive interval (seconds)
+	//   - Range: `10`-`3600`
+	//   - Default value: `10`
+	DpdInterval pulumi.IntPtrInput `pulumi:"dpdInterval"`
+	// Variable name
+	DpdIntervalVariable pulumi.StringPtrInput `pulumi:"dpdIntervalVariable"`
+	// IKE keepalive retries
+	//   - Range: `2`-`60`
+	//   - Default value: `3`
+	DpdRetries pulumi.IntPtrInput `pulumi:"dpdRetries"`
+	// Variable name
+	DpdRetriesVariable pulumi.StringPtrInput `pulumi:"dpdRetriesVariable"`
+	// IKE identity the IKE preshared secret belongs to
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+	//   - Default value: `aes256-cbc-sha1`
+	IkeCiphersuite pulumi.StringPtrInput `pulumi:"ikeCiphersuite"`
+	// Variable name
+	IkeCiphersuiteVariable pulumi.StringPtrInput `pulumi:"ikeCiphersuiteVariable"`
+	// IKE Diffie Hellman Groups
+	//   - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+	//   - Default value: `16`
+	IkeGroup pulumi.StringPtrInput `pulumi:"ikeGroup"`
+	// Variable name
+	IkeGroupVariable pulumi.StringPtrInput `pulumi:"ikeGroupVariable"`
+	// IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+	IkeLocalId pulumi.StringPtrInput `pulumi:"ikeLocalId"`
+	// Variable name
+	IkeLocalIdVariable pulumi.StringPtrInput `pulumi:"ikeLocalIdVariable"`
+	// IKE rekey interval <300..1209600> seconds
+	//   - Range: `300`-`86400`
+	//   - Default value: `14400`
+	IkeRekeyInterval pulumi.IntPtrInput `pulumi:"ikeRekeyInterval"`
+	// Variable name
+	IkeRekeyIntervalVariable pulumi.StringPtrInput `pulumi:"ikeRekeyIntervalVariable"`
+	// IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+	IkeRemoteId pulumi.StringPtrInput `pulumi:"ikeRemoteId"`
+	// Variable name
+	IkeRemoteIdVariable pulumi.StringPtrInput `pulumi:"ikeRemoteIdVariable"`
+	// Interface description
+	InterfaceDescription pulumi.StringPtrInput `pulumi:"interfaceDescription"`
+	// Variable name
+	InterfaceDescriptionVariable pulumi.StringPtrInput `pulumi:"interfaceDescriptionVariable"`
+	// Interface name: IPsec when present
+	InterfaceName pulumi.StringPtrInput `pulumi:"interfaceName"`
+	// IPsec(ESP) encryption and integrity protocol
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+	//   - Default value: `aes256-cbc-sha512`
+	IpsecCiphersuite pulumi.StringPtrInput `pulumi:"ipsecCiphersuite"`
+	// Variable name
+	IpsecCiphersuiteVariable pulumi.StringPtrInput `pulumi:"ipsecCiphersuiteVariable"`
+	// IPsec rekey interval <300..1209600> seconds
+	//   - Range: `300`-`1209600`
+	//   - Default value: `3600`
+	IpsecRekeyInterval pulumi.IntPtrInput `pulumi:"ipsecRekeyInterval"`
+	// Variable name
+	IpsecRekeyIntervalVariable pulumi.StringPtrInput `pulumi:"ipsecRekeyIntervalVariable"`
+	// Replay window size 32..8192 (must be a power of 2)
+	//   - Default value: `512`
+	IpsecReplayWindow pulumi.IntPtrInput `pulumi:"ipsecReplayWindow"`
+	// Variable name
+	IpsecReplayWindowVariable pulumi.StringPtrInput `pulumi:"ipsecReplayWindowVariable"`
+	// Interface MTU <576..2000>, in bytes
+	//   - Range: `576`-`2000`
+	//   - Default value: `1400`
+	Mtu pulumi.IntPtrInput `pulumi:"mtu"`
+	// Variable name
+	MtuVariable pulumi.StringPtrInput `pulumi:"mtuVariable"`
+	// IPsec perfect forward secrecy settings
+	//   - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+	//   - Default value: `none`
+	PerfectForwardSecrecy pulumi.StringPtrInput `pulumi:"perfectForwardSecrecy"`
+	// Variable name
+	PerfectForwardSecrecyVariable pulumi.StringPtrInput `pulumi:"perfectForwardSecrecyVariable"`
+	// Use preshared key to authenticate IKE peer
+	PreSharedKeyDynamic pulumi.BoolPtrInput `pulumi:"preSharedKeyDynamic"`
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
+	PreSharedSecret pulumi.StringPtrInput `pulumi:"preSharedSecret"`
+	// Variable name
+	PreSharedSecretVariable pulumi.StringPtrInput `pulumi:"preSharedSecretVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	PreSharedSecretWo pulumi.StringPtrInput `pulumi:"preSharedSecretWo"`
+	// Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PreSharedSecretWoVersion pulumi.IntPtrInput `pulumi:"preSharedSecretWoVersion"`
+	// Administrative state
+	//   - Default value: `false`
+	Shutdown pulumi.BoolPtrInput `pulumi:"shutdown"`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
+	TcpMssAdjust pulumi.IntPtrInput `pulumi:"tcpMssAdjust"`
+	// Variable name
+	TcpMssAdjustVariable pulumi.StringPtrInput `pulumi:"tcpMssAdjustVariable"`
+	// Enable/disable SIG tracking
+	//   - Default value: `true`
+	TrackEnable pulumi.BoolPtrInput `pulumi:"trackEnable"`
+	// Enable tracker for this interface
+	Tracker pulumi.StringPtrInput `pulumi:"tracker"`
+	// SIG Tunnel Data Center
+	//   - Choices: `primary-dc`, `secondary-dc`
+	TunnelDcPreference pulumi.StringPtrInput `pulumi:"tunnelDcPreference"`
+	// Tunnel destination IP address
+	TunnelDestination pulumi.StringPtrInput `pulumi:"tunnelDestination"`
+	// Variable name
+	TunnelDestinationVariable pulumi.StringPtrInput `pulumi:"tunnelDestinationVariable"`
+	// Public IP required to setup GRE tunnel to Zscaler
+	//   - Default value: `Auto`
+	TunnelPublicIp pulumi.StringPtrInput `pulumi:"tunnelPublicIp"`
+	// Variable name
+	TunnelPublicIpVariable pulumi.StringPtrInput `pulumi:"tunnelPublicIpVariable"`
+	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelRouteVia pulumi.StringPtrInput `pulumi:"tunnelRouteVia"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TunnelRouteViaVariable pulumi.StringPtrInput `pulumi:"tunnelRouteViaVariable"`
+	// SIG Tunnel Provider
+	//   - Choices: `secure-internet-gateway-umbrella`, `secure-internet-gateway-zscaler`, `secure-internet-gateway-other`
+	TunnelSet pulumi.StringPtrInput `pulumi:"tunnelSet"`
+	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+	TunnelSourceInterface pulumi.StringPtrInput `pulumi:"tunnelSourceInterface"`
+	// Variable name
+	TunnelSourceInterfaceVariable pulumi.StringPtrInput `pulumi:"tunnelSourceInterfaceVariable"`
+}
+
+func (SigFeatureInterfaceArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SigFeatureInterface)(nil)).Elem()
+}
+
+func (i SigFeatureInterfaceArgs) ToSigFeatureInterfaceOutput() SigFeatureInterfaceOutput {
+	return i.ToSigFeatureInterfaceOutputWithContext(context.Background())
+}
+
+func (i SigFeatureInterfaceArgs) ToSigFeatureInterfaceOutputWithContext(ctx context.Context) SigFeatureInterfaceOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SigFeatureInterfaceOutput)
+}
+
+// SigFeatureInterfaceArrayInput is an input type that accepts SigFeatureInterfaceArray and SigFeatureInterfaceArrayOutput values.
+// You can construct a concrete instance of `SigFeatureInterfaceArrayInput` via:
+//
+//	SigFeatureInterfaceArray{ SigFeatureInterfaceArgs{...} }
+type SigFeatureInterfaceArrayInput interface {
+	pulumi.Input
+
+	ToSigFeatureInterfaceArrayOutput() SigFeatureInterfaceArrayOutput
+	ToSigFeatureInterfaceArrayOutputWithContext(context.Context) SigFeatureInterfaceArrayOutput
+}
+
+type SigFeatureInterfaceArray []SigFeatureInterfaceInput
+
+func (SigFeatureInterfaceArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SigFeatureInterface)(nil)).Elem()
+}
+
+func (i SigFeatureInterfaceArray) ToSigFeatureInterfaceArrayOutput() SigFeatureInterfaceArrayOutput {
+	return i.ToSigFeatureInterfaceArrayOutputWithContext(context.Background())
+}
+
+func (i SigFeatureInterfaceArray) ToSigFeatureInterfaceArrayOutputWithContext(ctx context.Context) SigFeatureInterfaceArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SigFeatureInterfaceArrayOutput)
+}
+
+type SigFeatureInterfaceOutput struct{ *pulumi.OutputState }
+
+func (SigFeatureInterfaceOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SigFeatureInterface)(nil)).Elem()
+}
+
+func (o SigFeatureInterfaceOutput) ToSigFeatureInterfaceOutput() SigFeatureInterfaceOutput {
+	return o
+}
+
+func (o SigFeatureInterfaceOutput) ToSigFeatureInterfaceOutputWithContext(ctx context.Context) SigFeatureInterfaceOutput {
+	return o
+}
+
+// IKE keepalive interval (seconds)
+//   - Range: `10`-`3600`
+//   - Default value: `10`
+func (o SigFeatureInterfaceOutput) DpdInterval() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *int { return v.DpdInterval }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) DpdIntervalVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.DpdIntervalVariable }).(pulumi.StringPtrOutput)
+}
+
+// IKE keepalive retries
+//   - Range: `2`-`60`
+//   - Default value: `3`
+func (o SigFeatureInterfaceOutput) DpdRetries() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *int { return v.DpdRetries }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) DpdRetriesVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.DpdRetriesVariable }).(pulumi.StringPtrOutput)
+}
+
+// IKE identity the IKE preshared secret belongs to
+//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+//   - Default value: `aes256-cbc-sha1`
+func (o SigFeatureInterfaceOutput) IkeCiphersuite() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.IkeCiphersuite }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) IkeCiphersuiteVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.IkeCiphersuiteVariable }).(pulumi.StringPtrOutput)
+}
+
+// IKE Diffie Hellman Groups
+//   - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+//   - Default value: `16`
+func (o SigFeatureInterfaceOutput) IkeGroup() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.IkeGroup }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) IkeGroupVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.IkeGroupVariable }).(pulumi.StringPtrOutput)
+}
+
+// IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+func (o SigFeatureInterfaceOutput) IkeLocalId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.IkeLocalId }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) IkeLocalIdVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.IkeLocalIdVariable }).(pulumi.StringPtrOutput)
+}
+
+// IKE rekey interval <300..1209600> seconds
+//   - Range: `300`-`86400`
+//   - Default value: `14400`
+func (o SigFeatureInterfaceOutput) IkeRekeyInterval() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *int { return v.IkeRekeyInterval }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) IkeRekeyIntervalVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.IkeRekeyIntervalVariable }).(pulumi.StringPtrOutput)
+}
+
+// IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+func (o SigFeatureInterfaceOutput) IkeRemoteId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.IkeRemoteId }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) IkeRemoteIdVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.IkeRemoteIdVariable }).(pulumi.StringPtrOutput)
+}
+
+// Interface description
+func (o SigFeatureInterfaceOutput) InterfaceDescription() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.InterfaceDescription }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) InterfaceDescriptionVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.InterfaceDescriptionVariable }).(pulumi.StringPtrOutput)
+}
+
+// Interface name: IPsec when present
+func (o SigFeatureInterfaceOutput) InterfaceName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.InterfaceName }).(pulumi.StringPtrOutput)
+}
+
+// IPsec(ESP) encryption and integrity protocol
+//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+//   - Default value: `aes256-cbc-sha512`
+func (o SigFeatureInterfaceOutput) IpsecCiphersuite() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.IpsecCiphersuite }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) IpsecCiphersuiteVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.IpsecCiphersuiteVariable }).(pulumi.StringPtrOutput)
+}
+
+// IPsec rekey interval <300..1209600> seconds
+//   - Range: `300`-`1209600`
+//   - Default value: `3600`
+func (o SigFeatureInterfaceOutput) IpsecRekeyInterval() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *int { return v.IpsecRekeyInterval }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) IpsecRekeyIntervalVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.IpsecRekeyIntervalVariable }).(pulumi.StringPtrOutput)
+}
+
+// Replay window size 32..8192 (must be a power of 2)
+//   - Default value: `512`
+func (o SigFeatureInterfaceOutput) IpsecReplayWindow() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *int { return v.IpsecReplayWindow }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) IpsecReplayWindowVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.IpsecReplayWindowVariable }).(pulumi.StringPtrOutput)
+}
+
+// Interface MTU <576..2000>, in bytes
+//   - Range: `576`-`2000`
+//   - Default value: `1400`
+func (o SigFeatureInterfaceOutput) Mtu() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *int { return v.Mtu }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) MtuVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.MtuVariable }).(pulumi.StringPtrOutput)
+}
+
+// IPsec perfect forward secrecy settings
+//   - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+//   - Default value: `none`
+func (o SigFeatureInterfaceOutput) PerfectForwardSecrecy() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.PerfectForwardSecrecy }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) PerfectForwardSecrecyVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.PerfectForwardSecrecyVariable }).(pulumi.StringPtrOutput)
+}
+
+// Use preshared key to authenticate IKE peer
+func (o SigFeatureInterfaceOutput) PreSharedKeyDynamic() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *bool { return v.PreSharedKeyDynamic }).(pulumi.BoolPtrOutput)
+}
+
+// Use preshared key to authenticate IKE peer
+//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
+func (o SigFeatureInterfaceOutput) PreSharedSecret() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.PreSharedSecret }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) PreSharedSecretVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.PreSharedSecretVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Use preshared key to authenticate IKE peer
+//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+func (o SigFeatureInterfaceOutput) PreSharedSecretWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.PreSharedSecretWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o SigFeatureInterfaceOutput) PreSharedSecretWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *int { return v.PreSharedSecretWoVersion }).(pulumi.IntPtrOutput)
+}
+
+// Administrative state
+//   - Default value: `false`
+func (o SigFeatureInterfaceOutput) Shutdown() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *bool { return v.Shutdown }).(pulumi.BoolPtrOutput)
+}
+
+// TCP MSS on SYN packets, in bytes
+//   - Range: `500`-`1460`
+func (o SigFeatureInterfaceOutput) TcpMssAdjust() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *int { return v.TcpMssAdjust }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) TcpMssAdjustVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.TcpMssAdjustVariable }).(pulumi.StringPtrOutput)
+}
+
+// Enable/disable SIG tracking
+//   - Default value: `true`
+func (o SigFeatureInterfaceOutput) TrackEnable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *bool { return v.TrackEnable }).(pulumi.BoolPtrOutput)
+}
+
+// Enable tracker for this interface
+func (o SigFeatureInterfaceOutput) Tracker() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.Tracker }).(pulumi.StringPtrOutput)
+}
+
+// SIG Tunnel Data Center
+//   - Choices: `primary-dc`, `secondary-dc`
+func (o SigFeatureInterfaceOutput) TunnelDcPreference() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.TunnelDcPreference }).(pulumi.StringPtrOutput)
+}
+
+// Tunnel destination IP address
+func (o SigFeatureInterfaceOutput) TunnelDestination() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.TunnelDestination }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) TunnelDestinationVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.TunnelDestinationVariable }).(pulumi.StringPtrOutput)
+}
+
+// Public IP required to setup GRE tunnel to Zscaler
+//   - Default value: `Auto`
+func (o SigFeatureInterfaceOutput) TunnelPublicIp() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.TunnelPublicIp }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) TunnelPublicIpVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.TunnelPublicIpVariable }).(pulumi.StringPtrOutput)
+}
+
+// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o SigFeatureInterfaceOutput) TunnelRouteVia() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.TunnelRouteVia }).(pulumi.StringPtrOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o SigFeatureInterfaceOutput) TunnelRouteViaVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.TunnelRouteViaVariable }).(pulumi.StringPtrOutput)
+}
+
+// SIG Tunnel Provider
+//   - Choices: `secure-internet-gateway-umbrella`, `secure-internet-gateway-zscaler`, `secure-internet-gateway-other`
+func (o SigFeatureInterfaceOutput) TunnelSet() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.TunnelSet }).(pulumi.StringPtrOutput)
+}
+
+// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+func (o SigFeatureInterfaceOutput) TunnelSourceInterface() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.TunnelSourceInterface }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureInterfaceOutput) TunnelSourceInterfaceVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterface) *string { return v.TunnelSourceInterfaceVariable }).(pulumi.StringPtrOutput)
+}
+
+type SigFeatureInterfaceArrayOutput struct{ *pulumi.OutputState }
+
+func (SigFeatureInterfaceArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SigFeatureInterface)(nil)).Elem()
+}
+
+func (o SigFeatureInterfaceArrayOutput) ToSigFeatureInterfaceArrayOutput() SigFeatureInterfaceArrayOutput {
+	return o
+}
+
+func (o SigFeatureInterfaceArrayOutput) ToSigFeatureInterfaceArrayOutputWithContext(ctx context.Context) SigFeatureInterfaceArrayOutput {
+	return o
+}
+
+func (o SigFeatureInterfaceArrayOutput) Index(i pulumi.IntInput) SigFeatureInterfaceOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) SigFeatureInterface {
+		return vs[0].([]SigFeatureInterface)[vs[1].(int)]
+	}).(SigFeatureInterfaceOutput)
+}
+
+type SigFeatureInterfacePair struct {
+	// Active Tunnel Interface for SIG
+	ActiveInterface *string `pulumi:"activeInterface"`
+	// Active Tunnel Interface Weight
+	//   - Range: `1`-`255`
+	ActiveInterfaceWeight *int `pulumi:"activeInterfaceWeight"`
+	// Backup Tunnel Interface for SIG
+	BackupInterface *string `pulumi:"backupInterface"`
+	// Backup Tunnel Interface Weight
+	//   - Range: `1`-`255`
+	BackupInterfaceWeight *int `pulumi:"backupInterfaceWeight"`
+}
+
+// SigFeatureInterfacePairInput is an input type that accepts SigFeatureInterfacePairArgs and SigFeatureInterfacePairOutput values.
+// You can construct a concrete instance of `SigFeatureInterfacePairInput` via:
+//
+//	SigFeatureInterfacePairArgs{...}
+type SigFeatureInterfacePairInput interface {
+	pulumi.Input
+
+	ToSigFeatureInterfacePairOutput() SigFeatureInterfacePairOutput
+	ToSigFeatureInterfacePairOutputWithContext(context.Context) SigFeatureInterfacePairOutput
+}
+
+type SigFeatureInterfacePairArgs struct {
+	// Active Tunnel Interface for SIG
+	ActiveInterface pulumi.StringPtrInput `pulumi:"activeInterface"`
+	// Active Tunnel Interface Weight
+	//   - Range: `1`-`255`
+	ActiveInterfaceWeight pulumi.IntPtrInput `pulumi:"activeInterfaceWeight"`
+	// Backup Tunnel Interface for SIG
+	BackupInterface pulumi.StringPtrInput `pulumi:"backupInterface"`
+	// Backup Tunnel Interface Weight
+	//   - Range: `1`-`255`
+	BackupInterfaceWeight pulumi.IntPtrInput `pulumi:"backupInterfaceWeight"`
+}
+
+func (SigFeatureInterfacePairArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SigFeatureInterfacePair)(nil)).Elem()
+}
+
+func (i SigFeatureInterfacePairArgs) ToSigFeatureInterfacePairOutput() SigFeatureInterfacePairOutput {
+	return i.ToSigFeatureInterfacePairOutputWithContext(context.Background())
+}
+
+func (i SigFeatureInterfacePairArgs) ToSigFeatureInterfacePairOutputWithContext(ctx context.Context) SigFeatureInterfacePairOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SigFeatureInterfacePairOutput)
+}
+
+// SigFeatureInterfacePairArrayInput is an input type that accepts SigFeatureInterfacePairArray and SigFeatureInterfacePairArrayOutput values.
+// You can construct a concrete instance of `SigFeatureInterfacePairArrayInput` via:
+//
+//	SigFeatureInterfacePairArray{ SigFeatureInterfacePairArgs{...} }
+type SigFeatureInterfacePairArrayInput interface {
+	pulumi.Input
+
+	ToSigFeatureInterfacePairArrayOutput() SigFeatureInterfacePairArrayOutput
+	ToSigFeatureInterfacePairArrayOutputWithContext(context.Context) SigFeatureInterfacePairArrayOutput
+}
+
+type SigFeatureInterfacePairArray []SigFeatureInterfacePairInput
+
+func (SigFeatureInterfacePairArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SigFeatureInterfacePair)(nil)).Elem()
+}
+
+func (i SigFeatureInterfacePairArray) ToSigFeatureInterfacePairArrayOutput() SigFeatureInterfacePairArrayOutput {
+	return i.ToSigFeatureInterfacePairArrayOutputWithContext(context.Background())
+}
+
+func (i SigFeatureInterfacePairArray) ToSigFeatureInterfacePairArrayOutputWithContext(ctx context.Context) SigFeatureInterfacePairArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SigFeatureInterfacePairArrayOutput)
+}
+
+type SigFeatureInterfacePairOutput struct{ *pulumi.OutputState }
+
+func (SigFeatureInterfacePairOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SigFeatureInterfacePair)(nil)).Elem()
+}
+
+func (o SigFeatureInterfacePairOutput) ToSigFeatureInterfacePairOutput() SigFeatureInterfacePairOutput {
+	return o
+}
+
+func (o SigFeatureInterfacePairOutput) ToSigFeatureInterfacePairOutputWithContext(ctx context.Context) SigFeatureInterfacePairOutput {
+	return o
+}
+
+// Active Tunnel Interface for SIG
+func (o SigFeatureInterfacePairOutput) ActiveInterface() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterfacePair) *string { return v.ActiveInterface }).(pulumi.StringPtrOutput)
+}
+
+// Active Tunnel Interface Weight
+//   - Range: `1`-`255`
+func (o SigFeatureInterfacePairOutput) ActiveInterfaceWeight() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterfacePair) *int { return v.ActiveInterfaceWeight }).(pulumi.IntPtrOutput)
+}
+
+// Backup Tunnel Interface for SIG
+func (o SigFeatureInterfacePairOutput) BackupInterface() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterfacePair) *string { return v.BackupInterface }).(pulumi.StringPtrOutput)
+}
+
+// Backup Tunnel Interface Weight
+//   - Range: `1`-`255`
+func (o SigFeatureInterfacePairOutput) BackupInterfaceWeight() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SigFeatureInterfacePair) *int { return v.BackupInterfaceWeight }).(pulumi.IntPtrOutput)
+}
+
+type SigFeatureInterfacePairArrayOutput struct{ *pulumi.OutputState }
+
+func (SigFeatureInterfacePairArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SigFeatureInterfacePair)(nil)).Elem()
+}
+
+func (o SigFeatureInterfacePairArrayOutput) ToSigFeatureInterfacePairArrayOutput() SigFeatureInterfacePairArrayOutput {
+	return o
+}
+
+func (o SigFeatureInterfacePairArrayOutput) ToSigFeatureInterfacePairArrayOutputWithContext(ctx context.Context) SigFeatureInterfacePairArrayOutput {
+	return o
+}
+
+func (o SigFeatureInterfacePairArrayOutput) Index(i pulumi.IntInput) SigFeatureInterfacePairOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) SigFeatureInterfacePair {
+		return vs[0].([]SigFeatureInterfacePair)[vs[1].(int)]
+	}).(SigFeatureInterfacePairOutput)
+}
+
+type SigFeatureTracker struct {
+	// API url of endpoint
+	EndpointApiUrl *string `pulumi:"endpointApiUrl"`
+	// Variable name
+	EndpointApiUrlVariable *string `pulumi:"endpointApiUrlVariable"`
+	// Probe interval <10..600> seconds
+	//   - Range: `20`-`600`
+	//   - Default value: `60`
+	Interval *int `pulumi:"interval"`
+	// Variable name
+	IntervalVariable *string `pulumi:"intervalVariable"`
+	// Probe failure multiplier <1..10> failed attempts
+	//   - Range: `1`-`10`
+	//   - Default value: `3`
+	Multiplier *int `pulumi:"multiplier"`
+	// Variable name
+	MultiplierVariable *string `pulumi:"multiplierVariable"`
+	// Tracker name
+	Name *string `pulumi:"name"`
+	// Probe Timeout threshold <100..1000> milliseconds
+	//   - Range: `100`-`1000`
+	//   - Default value: `300`
+	Threshold *int `pulumi:"threshold"`
+	// Variable name
+	ThresholdVariable *string `pulumi:"thresholdVariable"`
+}
+
+// SigFeatureTrackerInput is an input type that accepts SigFeatureTrackerArgs and SigFeatureTrackerOutput values.
+// You can construct a concrete instance of `SigFeatureTrackerInput` via:
+//
+//	SigFeatureTrackerArgs{...}
+type SigFeatureTrackerInput interface {
+	pulumi.Input
+
+	ToSigFeatureTrackerOutput() SigFeatureTrackerOutput
+	ToSigFeatureTrackerOutputWithContext(context.Context) SigFeatureTrackerOutput
+}
+
+type SigFeatureTrackerArgs struct {
+	// API url of endpoint
+	EndpointApiUrl pulumi.StringPtrInput `pulumi:"endpointApiUrl"`
+	// Variable name
+	EndpointApiUrlVariable pulumi.StringPtrInput `pulumi:"endpointApiUrlVariable"`
+	// Probe interval <10..600> seconds
+	//   - Range: `20`-`600`
+	//   - Default value: `60`
+	Interval pulumi.IntPtrInput `pulumi:"interval"`
+	// Variable name
+	IntervalVariable pulumi.StringPtrInput `pulumi:"intervalVariable"`
+	// Probe failure multiplier <1..10> failed attempts
+	//   - Range: `1`-`10`
+	//   - Default value: `3`
+	Multiplier pulumi.IntPtrInput `pulumi:"multiplier"`
+	// Variable name
+	MultiplierVariable pulumi.StringPtrInput `pulumi:"multiplierVariable"`
+	// Tracker name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// Probe Timeout threshold <100..1000> milliseconds
+	//   - Range: `100`-`1000`
+	//   - Default value: `300`
+	Threshold pulumi.IntPtrInput `pulumi:"threshold"`
+	// Variable name
+	ThresholdVariable pulumi.StringPtrInput `pulumi:"thresholdVariable"`
+}
+
+func (SigFeatureTrackerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SigFeatureTracker)(nil)).Elem()
+}
+
+func (i SigFeatureTrackerArgs) ToSigFeatureTrackerOutput() SigFeatureTrackerOutput {
+	return i.ToSigFeatureTrackerOutputWithContext(context.Background())
+}
+
+func (i SigFeatureTrackerArgs) ToSigFeatureTrackerOutputWithContext(ctx context.Context) SigFeatureTrackerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SigFeatureTrackerOutput)
+}
+
+// SigFeatureTrackerArrayInput is an input type that accepts SigFeatureTrackerArray and SigFeatureTrackerArrayOutput values.
+// You can construct a concrete instance of `SigFeatureTrackerArrayInput` via:
+//
+//	SigFeatureTrackerArray{ SigFeatureTrackerArgs{...} }
+type SigFeatureTrackerArrayInput interface {
+	pulumi.Input
+
+	ToSigFeatureTrackerArrayOutput() SigFeatureTrackerArrayOutput
+	ToSigFeatureTrackerArrayOutputWithContext(context.Context) SigFeatureTrackerArrayOutput
+}
+
+type SigFeatureTrackerArray []SigFeatureTrackerInput
+
+func (SigFeatureTrackerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SigFeatureTracker)(nil)).Elem()
+}
+
+func (i SigFeatureTrackerArray) ToSigFeatureTrackerArrayOutput() SigFeatureTrackerArrayOutput {
+	return i.ToSigFeatureTrackerArrayOutputWithContext(context.Background())
+}
+
+func (i SigFeatureTrackerArray) ToSigFeatureTrackerArrayOutputWithContext(ctx context.Context) SigFeatureTrackerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SigFeatureTrackerArrayOutput)
+}
+
+type SigFeatureTrackerOutput struct{ *pulumi.OutputState }
+
+func (SigFeatureTrackerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SigFeatureTracker)(nil)).Elem()
+}
+
+func (o SigFeatureTrackerOutput) ToSigFeatureTrackerOutput() SigFeatureTrackerOutput {
+	return o
+}
+
+func (o SigFeatureTrackerOutput) ToSigFeatureTrackerOutputWithContext(ctx context.Context) SigFeatureTrackerOutput {
+	return o
+}
+
+// API url of endpoint
+func (o SigFeatureTrackerOutput) EndpointApiUrl() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureTracker) *string { return v.EndpointApiUrl }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureTrackerOutput) EndpointApiUrlVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureTracker) *string { return v.EndpointApiUrlVariable }).(pulumi.StringPtrOutput)
+}
+
+// Probe interval <10..600> seconds
+//   - Range: `20`-`600`
+//   - Default value: `60`
+func (o SigFeatureTrackerOutput) Interval() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SigFeatureTracker) *int { return v.Interval }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureTrackerOutput) IntervalVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureTracker) *string { return v.IntervalVariable }).(pulumi.StringPtrOutput)
+}
+
+// Probe failure multiplier <1..10> failed attempts
+//   - Range: `1`-`10`
+//   - Default value: `3`
+func (o SigFeatureTrackerOutput) Multiplier() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SigFeatureTracker) *int { return v.Multiplier }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureTrackerOutput) MultiplierVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureTracker) *string { return v.MultiplierVariable }).(pulumi.StringPtrOutput)
+}
+
+// Tracker name
+func (o SigFeatureTrackerOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureTracker) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+// Probe Timeout threshold <100..1000> milliseconds
+//   - Range: `100`-`1000`
+//   - Default value: `300`
+func (o SigFeatureTrackerOutput) Threshold() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SigFeatureTracker) *int { return v.Threshold }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o SigFeatureTrackerOutput) ThresholdVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SigFeatureTracker) *string { return v.ThresholdVariable }).(pulumi.StringPtrOutput)
+}
+
+type SigFeatureTrackerArrayOutput struct{ *pulumi.OutputState }
+
+func (SigFeatureTrackerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SigFeatureTracker)(nil)).Elem()
+}
+
+func (o SigFeatureTrackerArrayOutput) ToSigFeatureTrackerArrayOutput() SigFeatureTrackerArrayOutput {
+	return o
+}
+
+func (o SigFeatureTrackerArrayOutput) ToSigFeatureTrackerArrayOutputWithContext(ctx context.Context) SigFeatureTrackerArrayOutput {
+	return o
+}
+
+func (o SigFeatureTrackerArrayOutput) Index(i pulumi.IntInput) SigFeatureTrackerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) SigFeatureTracker {
+		return vs[0].([]SigFeatureTracker)[vs[1].(int)]
+	}).(SigFeatureTrackerOutput)
 }
 
 type SiteListPolicyObjectEntry struct {
@@ -63339,9 +64644,17 @@ type SseZscalerFeatureInterface struct {
 	// Use preshared key to authenticate IKE peer
 	PreSharedKeyDynamic *bool `pulumi:"preSharedKeyDynamic"`
 	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
 	PreSharedSecret *string `pulumi:"preSharedSecret"`
 	// Variable name
 	PreSharedSecretVariable *string `pulumi:"preSharedSecretVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	PreSharedSecretWo *string `pulumi:"preSharedSecretWo"`
+	// Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PreSharedSecretWoVersion *int `pulumi:"preSharedSecretWoVersion"`
 	// Administrative state
 	//   - Default value: `false`
 	Shutdown *bool `pulumi:"shutdown"`
@@ -63487,9 +64800,17 @@ type SseZscalerFeatureInterfaceArgs struct {
 	// Use preshared key to authenticate IKE peer
 	PreSharedKeyDynamic pulumi.BoolPtrInput `pulumi:"preSharedKeyDynamic"`
 	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
 	PreSharedSecret pulumi.StringPtrInput `pulumi:"preSharedSecret"`
 	// Variable name
 	PreSharedSecretVariable pulumi.StringPtrInput `pulumi:"preSharedSecretVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Use preshared key to authenticate IKE peer
+	//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+	PreSharedSecretWo pulumi.StringPtrInput `pulumi:"preSharedSecretWo"`
+	// Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PreSharedSecretWoVersion pulumi.IntPtrInput `pulumi:"preSharedSecretWoVersion"`
 	// Administrative state
 	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrInput `pulumi:"shutdown"`
@@ -63773,6 +65094,8 @@ func (o SseZscalerFeatureInterfaceOutput) PreSharedKeyDynamic() pulumi.BoolPtrOu
 }
 
 // Use preshared key to authenticate IKE peer
+//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `preSharedSecretWo` together with `preSharedSecretWoVersion`, which keeps it out of state.
 func (o SseZscalerFeatureInterfaceOutput) PreSharedSecret() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SseZscalerFeatureInterface) *string { return v.PreSharedSecret }).(pulumi.StringPtrOutput)
 }
@@ -63780,6 +65103,18 @@ func (o SseZscalerFeatureInterfaceOutput) PreSharedSecret() pulumi.StringPtrOutp
 // Variable name
 func (o SseZscalerFeatureInterfaceOutput) PreSharedSecretVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SseZscalerFeatureInterface) *string { return v.PreSharedSecretVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Use preshared key to authenticate IKE peer
+//   - Only one of `preSharedSecret`, `preSharedSecretVariable` and `preSharedSecretWo` can be set.
+func (o SseZscalerFeatureInterfaceOutput) PreSharedSecretWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SseZscalerFeatureInterface) *string { return v.PreSharedSecretWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o SseZscalerFeatureInterfaceOutput) PreSharedSecretWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SseZscalerFeatureInterface) *int { return v.PreSharedSecretWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Administrative state
@@ -66093,6 +67428,8 @@ type SystemAaaFeatureRadiusGroupServer struct {
 	// Variable name
 	AuthPortVariable *string `pulumi:"authPortVariable"`
 	// Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
 	Key *string `pulumi:"key"`
 	// Type of encyption. To be used for type 6
 	//   - Choices: `6`, `7`
@@ -66105,6 +67442,12 @@ type SystemAaaFeatureRadiusGroupServer struct {
 	KeyTypeVariable *string `pulumi:"keyTypeVariable"`
 	// Variable name
 	KeyVariable *string `pulumi:"keyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+	KeyWo *string `pulumi:"keyWo"`
+	// Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	KeyWoVersion *int `pulumi:"keyWoVersion"`
 	// Configure how many times to contact this Radius server
 	//   - Range: `1`-`100`
 	//   - Default value: `3`
@@ -66112,9 +67455,17 @@ type SystemAaaFeatureRadiusGroupServer struct {
 	// Variable name
 	RetransmitVariable *string `pulumi:"retransmitVariable"`
 	// Set the Radius server shared type 7 encrypted key
+	//   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
 	SecretKey *string `pulumi:"secretKey"`
 	// Variable name
 	SecretKeyVariable *string `pulumi:"secretKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the Radius server shared type 7 encrypted key
+	//   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+	SecretKeyWo *string `pulumi:"secretKeyWo"`
+	// Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	SecretKeyWoVersion *int `pulumi:"secretKeyWoVersion"`
 	// Configure how long to wait for replies from the Radius server
 	//   - Range: `1`-`1000`
 	//   - Default value: `5`
@@ -66150,6 +67501,8 @@ type SystemAaaFeatureRadiusGroupServerArgs struct {
 	// Variable name
 	AuthPortVariable pulumi.StringPtrInput `pulumi:"authPortVariable"`
 	// Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
 	Key pulumi.StringPtrInput `pulumi:"key"`
 	// Type of encyption. To be used for type 6
 	//   - Choices: `6`, `7`
@@ -66162,6 +67515,12 @@ type SystemAaaFeatureRadiusGroupServerArgs struct {
 	KeyTypeVariable pulumi.StringPtrInput `pulumi:"keyTypeVariable"`
 	// Variable name
 	KeyVariable pulumi.StringPtrInput `pulumi:"keyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+	KeyWo pulumi.StringPtrInput `pulumi:"keyWo"`
+	// Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	KeyWoVersion pulumi.IntPtrInput `pulumi:"keyWoVersion"`
 	// Configure how many times to contact this Radius server
 	//   - Range: `1`-`100`
 	//   - Default value: `3`
@@ -66169,9 +67528,17 @@ type SystemAaaFeatureRadiusGroupServerArgs struct {
 	// Variable name
 	RetransmitVariable pulumi.StringPtrInput `pulumi:"retransmitVariable"`
 	// Set the Radius server shared type 7 encrypted key
+	//   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
 	SecretKey pulumi.StringPtrInput `pulumi:"secretKey"`
 	// Variable name
 	SecretKeyVariable pulumi.StringPtrInput `pulumi:"secretKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the Radius server shared type 7 encrypted key
+	//   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+	SecretKeyWo pulumi.StringPtrInput `pulumi:"secretKeyWo"`
+	// Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	SecretKeyWoVersion pulumi.IntPtrInput `pulumi:"secretKeyWoVersion"`
 	// Configure how long to wait for replies from the Radius server
 	//   - Range: `1`-`1000`
 	//   - Default value: `5`
@@ -66261,6 +67628,8 @@ func (o SystemAaaFeatureRadiusGroupServerOutput) AuthPortVariable() pulumi.Strin
 }
 
 // Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
 func (o SystemAaaFeatureRadiusGroupServerOutput) Key() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemAaaFeatureRadiusGroupServer) *string { return v.Key }).(pulumi.StringPtrOutput)
 }
@@ -66288,6 +67657,18 @@ func (o SystemAaaFeatureRadiusGroupServerOutput) KeyVariable() pulumi.StringPtrO
 	return o.ApplyT(func(v SystemAaaFeatureRadiusGroupServer) *string { return v.KeyVariable }).(pulumi.StringPtrOutput)
 }
 
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+func (o SystemAaaFeatureRadiusGroupServerOutput) KeyWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SystemAaaFeatureRadiusGroupServer) *string { return v.KeyWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o SystemAaaFeatureRadiusGroupServerOutput) KeyWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SystemAaaFeatureRadiusGroupServer) *int { return v.KeyWoVersion }).(pulumi.IntPtrOutput)
+}
+
 // Configure how many times to contact this Radius server
 //   - Range: `1`-`100`
 //   - Default value: `3`
@@ -66301,6 +67682,8 @@ func (o SystemAaaFeatureRadiusGroupServerOutput) RetransmitVariable() pulumi.Str
 }
 
 // Set the Radius server shared type 7 encrypted key
+//   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
 func (o SystemAaaFeatureRadiusGroupServerOutput) SecretKey() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemAaaFeatureRadiusGroupServer) *string { return v.SecretKey }).(pulumi.StringPtrOutput)
 }
@@ -66308,6 +67691,18 @@ func (o SystemAaaFeatureRadiusGroupServerOutput) SecretKey() pulumi.StringPtrOut
 // Variable name
 func (o SystemAaaFeatureRadiusGroupServerOutput) SecretKeyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemAaaFeatureRadiusGroupServer) *string { return v.SecretKeyVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set the Radius server shared type 7 encrypted key
+//   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+func (o SystemAaaFeatureRadiusGroupServerOutput) SecretKeyWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SystemAaaFeatureRadiusGroupServer) *string { return v.SecretKeyWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o SystemAaaFeatureRadiusGroupServerOutput) SecretKeyWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SystemAaaFeatureRadiusGroupServer) *int { return v.SecretKeyWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Configure how long to wait for replies from the Radius server
@@ -66494,12 +67889,20 @@ type SystemAaaFeatureTacacsGroupServer struct {
 	// Set IP address of TACACS server
 	Address *string `pulumi:"address"`
 	// Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
 	Key *string `pulumi:"key"`
 	// Type of encyption. To be used for type 6
 	//   - Choices: `6`, `7`
 	KeyEnum *string `pulumi:"keyEnum"`
 	// Variable name
 	KeyVariable *string `pulumi:"keyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+	KeyWo *string `pulumi:"keyWo"`
+	// Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	KeyWoVersion *int `pulumi:"keyWoVersion"`
 	// TACACS Port
 	//   - Range: `1`-`65535`
 	//   - Default value: `49`
@@ -66507,9 +67910,17 @@ type SystemAaaFeatureTacacsGroupServer struct {
 	// Variable name
 	PortVariable *string `pulumi:"portVariable"`
 	// Set the TACACS server shared type 7 encrypted key
+	//   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
 	SecretKey *string `pulumi:"secretKey"`
 	// Variable name
 	SecretKeyVariable *string `pulumi:"secretKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the TACACS server shared type 7 encrypted key
+	//   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+	SecretKeyWo *string `pulumi:"secretKeyWo"`
+	// Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	SecretKeyWoVersion *int `pulumi:"secretKeyWoVersion"`
 	// Configure how long to wait for replies from the TACACS server
 	//   - Range: `1`-`1000`
 	//   - Default value: `5`
@@ -66533,12 +67944,20 @@ type SystemAaaFeatureTacacsGroupServerArgs struct {
 	// Set IP address of TACACS server
 	Address pulumi.StringPtrInput `pulumi:"address"`
 	// Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
 	Key pulumi.StringPtrInput `pulumi:"key"`
 	// Type of encyption. To be used for type 6
 	//   - Choices: `6`, `7`
 	KeyEnum pulumi.StringPtrInput `pulumi:"keyEnum"`
 	// Variable name
 	KeyVariable pulumi.StringPtrInput `pulumi:"keyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+	KeyWo pulumi.StringPtrInput `pulumi:"keyWo"`
+	// Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	KeyWoVersion pulumi.IntPtrInput `pulumi:"keyWoVersion"`
 	// TACACS Port
 	//   - Range: `1`-`65535`
 	//   - Default value: `49`
@@ -66546,9 +67965,17 @@ type SystemAaaFeatureTacacsGroupServerArgs struct {
 	// Variable name
 	PortVariable pulumi.StringPtrInput `pulumi:"portVariable"`
 	// Set the TACACS server shared type 7 encrypted key
+	//   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
 	SecretKey pulumi.StringPtrInput `pulumi:"secretKey"`
 	// Variable name
 	SecretKeyVariable pulumi.StringPtrInput `pulumi:"secretKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the TACACS server shared type 7 encrypted key
+	//   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+	SecretKeyWo pulumi.StringPtrInput `pulumi:"secretKeyWo"`
+	// Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	SecretKeyWoVersion pulumi.IntPtrInput `pulumi:"secretKeyWoVersion"`
 	// Configure how long to wait for replies from the TACACS server
 	//   - Range: `1`-`1000`
 	//   - Default value: `5`
@@ -66614,6 +68041,8 @@ func (o SystemAaaFeatureTacacsGroupServerOutput) Address() pulumi.StringPtrOutpu
 }
 
 // Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `keyWo` together with `keyWoVersion`, which keeps it out of state.
 func (o SystemAaaFeatureTacacsGroupServerOutput) Key() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemAaaFeatureTacacsGroupServer) *string { return v.Key }).(pulumi.StringPtrOutput)
 }
@@ -66629,6 +68058,18 @@ func (o SystemAaaFeatureTacacsGroupServerOutput) KeyVariable() pulumi.StringPtrO
 	return o.ApplyT(func(v SystemAaaFeatureTacacsGroupServer) *string { return v.KeyVariable }).(pulumi.StringPtrOutput)
 }
 
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `key`, `keyVariable` and `keyWo` can be set.
+func (o SystemAaaFeatureTacacsGroupServerOutput) KeyWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SystemAaaFeatureTacacsGroupServer) *string { return v.KeyWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `keyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o SystemAaaFeatureTacacsGroupServerOutput) KeyWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SystemAaaFeatureTacacsGroupServer) *int { return v.KeyWoVersion }).(pulumi.IntPtrOutput)
+}
+
 // TACACS Port
 //   - Range: `1`-`65535`
 //   - Default value: `49`
@@ -66642,6 +68083,8 @@ func (o SystemAaaFeatureTacacsGroupServerOutput) PortVariable() pulumi.StringPtr
 }
 
 // Set the TACACS server shared type 7 encrypted key
+//   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `secretKeyWo` together with `secretKeyWoVersion`, which keeps it out of state.
 func (o SystemAaaFeatureTacacsGroupServerOutput) SecretKey() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemAaaFeatureTacacsGroupServer) *string { return v.SecretKey }).(pulumi.StringPtrOutput)
 }
@@ -66649,6 +68092,18 @@ func (o SystemAaaFeatureTacacsGroupServerOutput) SecretKey() pulumi.StringPtrOut
 // Variable name
 func (o SystemAaaFeatureTacacsGroupServerOutput) SecretKeyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemAaaFeatureTacacsGroupServer) *string { return v.SecretKeyVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set the TACACS server shared type 7 encrypted key
+//   - Only one of `secretKey`, `secretKeyVariable` and `secretKeyWo` can be set.
+func (o SystemAaaFeatureTacacsGroupServerOutput) SecretKeyWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SystemAaaFeatureTacacsGroupServer) *string { return v.SecretKeyWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `secretKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o SystemAaaFeatureTacacsGroupServerOutput) SecretKeyWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SystemAaaFeatureTacacsGroupServer) *int { return v.SecretKeyWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Configure how long to wait for replies from the TACACS server
@@ -66689,9 +68144,17 @@ type SystemAaaFeatureUser struct {
 	// Variable name
 	NameVariable *string `pulumi:"nameVariable"`
 	// Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password *string `pulumi:"password"`
 	// Variable name
 	PasswordVariable *string `pulumi:"passwordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo *string `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion *int `pulumi:"passwordWoVersion"`
 	// Set Privilege Level for this user
 	//   - Choices: `1`, `15`
 	//   - Default value: `15`
@@ -66719,9 +68182,17 @@ type SystemAaaFeatureUserArgs struct {
 	// Variable name
 	NameVariable pulumi.StringPtrInput `pulumi:"nameVariable"`
 	// Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password pulumi.StringPtrInput `pulumi:"password"`
 	// Variable name
 	PasswordVariable pulumi.StringPtrInput `pulumi:"passwordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo pulumi.StringPtrInput `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion pulumi.IntPtrInput `pulumi:"passwordWoVersion"`
 	// Set Privilege Level for this user
 	//   - Choices: `1`, `15`
 	//   - Default value: `15`
@@ -66794,6 +68265,8 @@ func (o SystemAaaFeatureUserOutput) NameVariable() pulumi.StringPtrOutput {
 }
 
 // Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 func (o SystemAaaFeatureUserOutput) Password() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemAaaFeatureUser) *string { return v.Password }).(pulumi.StringPtrOutput)
 }
@@ -66801,6 +68274,18 @@ func (o SystemAaaFeatureUserOutput) Password() pulumi.StringPtrOutput {
 // Variable name
 func (o SystemAaaFeatureUserOutput) PasswordVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemAaaFeatureUser) *string { return v.PasswordVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+func (o SystemAaaFeatureUserOutput) PasswordWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SystemAaaFeatureUser) *string { return v.PasswordWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o SystemAaaFeatureUserOutput) PasswordWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SystemAaaFeatureUser) *int { return v.PasswordWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set Privilege Level for this user
@@ -68493,22 +69978,46 @@ func (o SystemLoggingFeatureTlsProfileArrayOutput) Index(i pulumi.IntInput) Syst
 
 type SystemNtpFeatureAuthenticationKey struct {
 	// CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+	//   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `cmacAes128ValueWo` together with `cmacAes128ValueWoVersion`, which keeps it out of state.
 	CmacAes128Value *string `pulumi:"cmacAes128Value"`
 	// Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
 	CmacAes128ValueVariable *string `pulumi:"cmacAes128ValueVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+	//   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+	CmacAes128ValueWo *string `pulumi:"cmacAes128ValueWo"`
+	// Rotation trigger for `cmacAes128ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	CmacAes128ValueWoVersion *int `pulumi:"cmacAes128ValueWoVersion"`
 	// HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+	//   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `hmacSha2ValueWo` together with `hmacSha2ValueWoVersion`, which keeps it out of state.
 	HmacSha2Value *string `pulumi:"hmacSha2Value"`
 	// Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
 	HmacSha2ValueVariable *string `pulumi:"hmacSha2ValueVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+	//   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+	HmacSha2ValueWo *string `pulumi:"hmacSha2ValueWo"`
+	// Rotation trigger for `hmacSha2ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	HmacSha2ValueWoVersion *int `pulumi:"hmacSha2ValueWoVersion"`
 	// Authentication key ID
 	//   - Range: `1`-`4294967295`
 	KeyId *int `pulumi:"keyId"`
 	// Variable name
 	KeyIdVariable *string `pulumi:"keyIdVariable"`
 	// Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `md5ValueWo` together with `md5ValueWoVersion`, which keeps it out of state.
 	Md5Value *string `pulumi:"md5Value"`
 	// Variable name
 	Md5ValueVariable *string `pulumi:"md5ValueVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+	Md5ValueWo *string `pulumi:"md5ValueWo"`
+	// Rotation trigger for `md5ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	Md5ValueWoVersion *int `pulumi:"md5ValueWoVersion"`
 }
 
 // SystemNtpFeatureAuthenticationKeyInput is an input type that accepts SystemNtpFeatureAuthenticationKeyArgs and SystemNtpFeatureAuthenticationKeyOutput values.
@@ -68524,22 +70033,46 @@ type SystemNtpFeatureAuthenticationKeyInput interface {
 
 type SystemNtpFeatureAuthenticationKeyArgs struct {
 	// CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+	//   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `cmacAes128ValueWo` together with `cmacAes128ValueWoVersion`, which keeps it out of state.
 	CmacAes128Value pulumi.StringPtrInput `pulumi:"cmacAes128Value"`
 	// Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
 	CmacAes128ValueVariable pulumi.StringPtrInput `pulumi:"cmacAes128ValueVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+	//   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+	CmacAes128ValueWo pulumi.StringPtrInput `pulumi:"cmacAes128ValueWo"`
+	// Rotation trigger for `cmacAes128ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	CmacAes128ValueWoVersion pulumi.IntPtrInput `pulumi:"cmacAes128ValueWoVersion"`
 	// HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+	//   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `hmacSha2ValueWo` together with `hmacSha2ValueWoVersion`, which keeps it out of state.
 	HmacSha2Value pulumi.StringPtrInput `pulumi:"hmacSha2Value"`
 	// Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
 	HmacSha2ValueVariable pulumi.StringPtrInput `pulumi:"hmacSha2ValueVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+	//   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+	HmacSha2ValueWo pulumi.StringPtrInput `pulumi:"hmacSha2ValueWo"`
+	// Rotation trigger for `hmacSha2ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	HmacSha2ValueWoVersion pulumi.IntPtrInput `pulumi:"hmacSha2ValueWoVersion"`
 	// Authentication key ID
 	//   - Range: `1`-`4294967295`
 	KeyId pulumi.IntPtrInput `pulumi:"keyId"`
 	// Variable name
 	KeyIdVariable pulumi.StringPtrInput `pulumi:"keyIdVariable"`
 	// Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `md5ValueWo` together with `md5ValueWoVersion`, which keeps it out of state.
 	Md5Value pulumi.StringPtrInput `pulumi:"md5Value"`
 	// Variable name
 	Md5ValueVariable pulumi.StringPtrInput `pulumi:"md5ValueVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+	Md5ValueWo pulumi.StringPtrInput `pulumi:"md5ValueWo"`
+	// Rotation trigger for `md5ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	Md5ValueWoVersion pulumi.IntPtrInput `pulumi:"md5ValueWoVersion"`
 }
 
 func (SystemNtpFeatureAuthenticationKeyArgs) ElementType() reflect.Type {
@@ -68594,6 +70127,8 @@ func (o SystemNtpFeatureAuthenticationKeyOutput) ToSystemNtpFeatureAuthenticatio
 }
 
 // CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+//   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `cmacAes128ValueWo` together with `cmacAes128ValueWoVersion`, which keeps it out of state.
 func (o SystemNtpFeatureAuthenticationKeyOutput) CmacAes128Value() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemNtpFeatureAuthenticationKey) *string { return v.CmacAes128Value }).(pulumi.StringPtrOutput)
 }
@@ -68603,7 +70138,21 @@ func (o SystemNtpFeatureAuthenticationKeyOutput) CmacAes128ValueVariable() pulum
 	return o.ApplyT(func(v SystemNtpFeatureAuthenticationKey) *string { return v.CmacAes128ValueVariable }).(pulumi.StringPtrOutput)
 }
 
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+//   - Only one of `cmacAes128Value`, `cmacAes128ValueVariable` and `cmacAes128ValueWo` can be set.
+func (o SystemNtpFeatureAuthenticationKeyOutput) CmacAes128ValueWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SystemNtpFeatureAuthenticationKey) *string { return v.CmacAes128ValueWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `cmacAes128ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o SystemNtpFeatureAuthenticationKeyOutput) CmacAes128ValueWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SystemNtpFeatureAuthenticationKey) *int { return v.CmacAes128ValueWoVersion }).(pulumi.IntPtrOutput)
+}
+
 // HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+//   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `hmacSha2ValueWo` together with `hmacSha2ValueWoVersion`, which keeps it out of state.
 func (o SystemNtpFeatureAuthenticationKeyOutput) HmacSha2Value() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemNtpFeatureAuthenticationKey) *string { return v.HmacSha2Value }).(pulumi.StringPtrOutput)
 }
@@ -68611,6 +70160,18 @@ func (o SystemNtpFeatureAuthenticationKeyOutput) HmacSha2Value() pulumi.StringPt
 // Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
 func (o SystemNtpFeatureAuthenticationKeyOutput) HmacSha2ValueVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemNtpFeatureAuthenticationKey) *string { return v.HmacSha2ValueVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+//   - Only one of `hmacSha2Value`, `hmacSha2ValueVariable` and `hmacSha2ValueWo` can be set.
+func (o SystemNtpFeatureAuthenticationKeyOutput) HmacSha2ValueWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SystemNtpFeatureAuthenticationKey) *string { return v.HmacSha2ValueWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `hmacSha2ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o SystemNtpFeatureAuthenticationKeyOutput) HmacSha2ValueWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SystemNtpFeatureAuthenticationKey) *int { return v.HmacSha2ValueWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Authentication key ID
@@ -68625,6 +70186,8 @@ func (o SystemNtpFeatureAuthenticationKeyOutput) KeyIdVariable() pulumi.StringPt
 }
 
 // Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `md5ValueWo` together with `md5ValueWoVersion`, which keeps it out of state.
 func (o SystemNtpFeatureAuthenticationKeyOutput) Md5Value() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemNtpFeatureAuthenticationKey) *string { return v.Md5Value }).(pulumi.StringPtrOutput)
 }
@@ -68632,6 +70195,18 @@ func (o SystemNtpFeatureAuthenticationKeyOutput) Md5Value() pulumi.StringPtrOutp
 // Variable name
 func (o SystemNtpFeatureAuthenticationKeyOutput) Md5ValueVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemNtpFeatureAuthenticationKey) *string { return v.Md5ValueVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `md5Value`, `md5ValueVariable` and `md5ValueWo` can be set.
+func (o SystemNtpFeatureAuthenticationKeyOutput) Md5ValueWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SystemNtpFeatureAuthenticationKey) *string { return v.Md5ValueWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `md5ValueWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o SystemNtpFeatureAuthenticationKeyOutput) Md5ValueWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SystemNtpFeatureAuthenticationKey) *int { return v.Md5ValueWoVersion }).(pulumi.IntPtrOutput)
 }
 
 type SystemNtpFeatureAuthenticationKeyArrayOutput struct{ *pulumi.OutputState }
@@ -68903,9 +70478,17 @@ type SystemSecurityFeatureKey struct {
 	// Variable name
 	IncludeTcpOptionsVariable *string `pulumi:"includeTcpOptionsVariable"`
 	// Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
 	KeyString *string `pulumi:"keyString"`
 	// Variable name
 	KeyStringVariable *string `pulumi:"keyStringVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+	KeyStringWo *string `pulumi:"keyStringWo"`
+	// Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	KeyStringWoVersion *int `pulumi:"keyStringWoVersion"`
 	// Select the chain name
 	Name *string `pulumi:"name"`
 	// Specify the Receiver ID
@@ -68984,9 +70567,17 @@ type SystemSecurityFeatureKeyArgs struct {
 	// Variable name
 	IncludeTcpOptionsVariable pulumi.StringPtrInput `pulumi:"includeTcpOptionsVariable"`
 	// Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
 	KeyString pulumi.StringPtrInput `pulumi:"keyString"`
 	// Variable name
 	KeyStringVariable pulumi.StringPtrInput `pulumi:"keyStringVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+	KeyStringWo pulumi.StringPtrInput `pulumi:"keyStringWo"`
+	// Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	KeyStringWoVersion pulumi.IntPtrInput `pulumi:"keyStringWoVersion"`
 	// Select the chain name
 	Name pulumi.StringPtrInput `pulumi:"name"`
 	// Specify the Receiver ID
@@ -69146,6 +70737,8 @@ func (o SystemSecurityFeatureKeyOutput) IncludeTcpOptionsVariable() pulumi.Strin
 }
 
 // Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `keyStringWo` together with `keyStringWoVersion`, which keeps it out of state.
 func (o SystemSecurityFeatureKeyOutput) KeyString() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemSecurityFeatureKey) *string { return v.KeyString }).(pulumi.StringPtrOutput)
 }
@@ -69153,6 +70746,18 @@ func (o SystemSecurityFeatureKeyOutput) KeyString() pulumi.StringPtrOutput {
 // Variable name
 func (o SystemSecurityFeatureKeyOutput) KeyStringVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemSecurityFeatureKey) *string { return v.KeyStringVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `keyString`, `keyStringVariable` and `keyStringWo` can be set.
+func (o SystemSecurityFeatureKeyOutput) KeyStringWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SystemSecurityFeatureKey) *string { return v.KeyStringWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `keyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o SystemSecurityFeatureKeyOutput) KeyStringWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SystemSecurityFeatureKey) *int { return v.KeyStringWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Select the chain name
@@ -69360,9 +70965,17 @@ type SystemSnmpFeatureCommunity struct {
 	// Variable name
 	AuthorizationVariable *string `pulumi:"authorizationVariable"`
 	// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `nameWo` together with `nameWoVersion`, which keeps it out of state.
 	Name *string `pulumi:"name"`
 	// Variable name
 	NameVariable *string `pulumi:"nameVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+	NameWo *string `pulumi:"nameWo"`
+	// Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	NameWoVersion *int `pulumi:"nameWoVersion"`
 	// Set user label of the SNMP community
 	UserLabel *string `pulumi:"userLabel"`
 	// Set name of the SNMP view
@@ -69389,9 +71002,17 @@ type SystemSnmpFeatureCommunityArgs struct {
 	// Variable name
 	AuthorizationVariable pulumi.StringPtrInput `pulumi:"authorizationVariable"`
 	// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `nameWo` together with `nameWoVersion`, which keeps it out of state.
 	Name pulumi.StringPtrInput `pulumi:"name"`
 	// Variable name
 	NameVariable pulumi.StringPtrInput `pulumi:"nameVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+	NameWo pulumi.StringPtrInput `pulumi:"nameWo"`
+	// Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	NameWoVersion pulumi.IntPtrInput `pulumi:"nameWoVersion"`
 	// Set user label of the SNMP community
 	UserLabel pulumi.StringPtrInput `pulumi:"userLabel"`
 	// Set name of the SNMP view
@@ -69463,6 +71084,8 @@ func (o SystemSnmpFeatureCommunityOutput) AuthorizationVariable() pulumi.StringP
 }
 
 // Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `nameWo` together with `nameWoVersion`, which keeps it out of state.
 func (o SystemSnmpFeatureCommunityOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemSnmpFeatureCommunity) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
@@ -69470,6 +71093,18 @@ func (o SystemSnmpFeatureCommunityOutput) Name() pulumi.StringPtrOutput {
 // Variable name
 func (o SystemSnmpFeatureCommunityOutput) NameVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemSnmpFeatureCommunity) *string { return v.NameVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `name`, `nameVariable` and `nameWo` can be set.
+func (o SystemSnmpFeatureCommunityOutput) NameWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SystemSnmpFeatureCommunity) *string { return v.NameWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `nameWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o SystemSnmpFeatureCommunityOutput) NameWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SystemSnmpFeatureCommunity) *int { return v.NameWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set user label of the SNMP community
@@ -69829,9 +71464,17 @@ func (o SystemSnmpFeatureTrapTargetServerArrayOutput) Index(i pulumi.IntInput) S
 
 type SystemSnmpFeatureUser struct {
 	// Specify authentication protocol password
+	//   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `authenticationPasswordWo` together with `authenticationPasswordWoVersion`, which keeps it out of state.
 	AuthenticationPassword *string `pulumi:"authenticationPassword"`
 	// Variable name
 	AuthenticationPasswordVariable *string `pulumi:"authenticationPasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Specify authentication protocol password
+	//   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+	AuthenticationPasswordWo *string `pulumi:"authenticationPasswordWo"`
+	// Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationPasswordWoVersion *int `pulumi:"authenticationPasswordWoVersion"`
 	// Configure authentication protocol
 	//   - Choices: `sha`, `sha256`
 	AuthenticationProtocol *string `pulumi:"authenticationProtocol"`
@@ -69844,9 +71487,17 @@ type SystemSnmpFeatureUser struct {
 	// Name of the SNMP user
 	Name *string `pulumi:"name"`
 	// Specify privacy protocol password
+	//   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `privacyPasswordWo` together with `privacyPasswordWoVersion`, which keeps it out of state.
 	PrivacyPassword *string `pulumi:"privacyPassword"`
 	// Variable name
 	PrivacyPasswordVariable *string `pulumi:"privacyPasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Specify privacy protocol password
+	//   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+	PrivacyPasswordWo *string `pulumi:"privacyPasswordWo"`
+	// Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PrivacyPasswordWoVersion *int `pulumi:"privacyPasswordWoVersion"`
 	// Configure privacy protocol
 	//   - Choices: `aes-cfb-128`, `aes-256-cfb-128`
 	PrivacyProtocol *string `pulumi:"privacyProtocol"`
@@ -69867,9 +71518,17 @@ type SystemSnmpFeatureUserInput interface {
 
 type SystemSnmpFeatureUserArgs struct {
 	// Specify authentication protocol password
+	//   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `authenticationPasswordWo` together with `authenticationPasswordWoVersion`, which keeps it out of state.
 	AuthenticationPassword pulumi.StringPtrInput `pulumi:"authenticationPassword"`
 	// Variable name
 	AuthenticationPasswordVariable pulumi.StringPtrInput `pulumi:"authenticationPasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Specify authentication protocol password
+	//   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+	AuthenticationPasswordWo pulumi.StringPtrInput `pulumi:"authenticationPasswordWo"`
+	// Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationPasswordWoVersion pulumi.IntPtrInput `pulumi:"authenticationPasswordWoVersion"`
 	// Configure authentication protocol
 	//   - Choices: `sha`, `sha256`
 	AuthenticationProtocol pulumi.StringPtrInput `pulumi:"authenticationProtocol"`
@@ -69882,9 +71541,17 @@ type SystemSnmpFeatureUserArgs struct {
 	// Name of the SNMP user
 	Name pulumi.StringPtrInput `pulumi:"name"`
 	// Specify privacy protocol password
+	//   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `privacyPasswordWo` together with `privacyPasswordWoVersion`, which keeps it out of state.
 	PrivacyPassword pulumi.StringPtrInput `pulumi:"privacyPassword"`
 	// Variable name
 	PrivacyPasswordVariable pulumi.StringPtrInput `pulumi:"privacyPasswordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Specify privacy protocol password
+	//   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+	PrivacyPasswordWo pulumi.StringPtrInput `pulumi:"privacyPasswordWo"`
+	// Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PrivacyPasswordWoVersion pulumi.IntPtrInput `pulumi:"privacyPasswordWoVersion"`
 	// Configure privacy protocol
 	//   - Choices: `aes-cfb-128`, `aes-256-cfb-128`
 	PrivacyProtocol pulumi.StringPtrInput `pulumi:"privacyProtocol"`
@@ -69944,6 +71611,8 @@ func (o SystemSnmpFeatureUserOutput) ToSystemSnmpFeatureUserOutputWithContext(ct
 }
 
 // Specify authentication protocol password
+//   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `authenticationPasswordWo` together with `authenticationPasswordWoVersion`, which keeps it out of state.
 func (o SystemSnmpFeatureUserOutput) AuthenticationPassword() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemSnmpFeatureUser) *string { return v.AuthenticationPassword }).(pulumi.StringPtrOutput)
 }
@@ -69951,6 +71620,18 @@ func (o SystemSnmpFeatureUserOutput) AuthenticationPassword() pulumi.StringPtrOu
 // Variable name
 func (o SystemSnmpFeatureUserOutput) AuthenticationPasswordVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemSnmpFeatureUser) *string { return v.AuthenticationPasswordVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Specify authentication protocol password
+//   - Only one of `authenticationPassword`, `authenticationPasswordVariable` and `authenticationPasswordWo` can be set.
+func (o SystemSnmpFeatureUserOutput) AuthenticationPasswordWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SystemSnmpFeatureUser) *string { return v.AuthenticationPasswordWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `authenticationPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o SystemSnmpFeatureUserOutput) AuthenticationPasswordWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SystemSnmpFeatureUser) *int { return v.AuthenticationPasswordWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Configure authentication protocol
@@ -69980,6 +71661,8 @@ func (o SystemSnmpFeatureUserOutput) Name() pulumi.StringPtrOutput {
 }
 
 // Specify privacy protocol password
+//   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `privacyPasswordWo` together with `privacyPasswordWoVersion`, which keeps it out of state.
 func (o SystemSnmpFeatureUserOutput) PrivacyPassword() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemSnmpFeatureUser) *string { return v.PrivacyPassword }).(pulumi.StringPtrOutput)
 }
@@ -69987,6 +71670,18 @@ func (o SystemSnmpFeatureUserOutput) PrivacyPassword() pulumi.StringPtrOutput {
 // Variable name
 func (o SystemSnmpFeatureUserOutput) PrivacyPasswordVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v SystemSnmpFeatureUser) *string { return v.PrivacyPasswordVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Specify privacy protocol password
+//   - Only one of `privacyPassword`, `privacyPasswordVariable` and `privacyPasswordWo` can be set.
+func (o SystemSnmpFeatureUserOutput) PrivacyPasswordWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SystemSnmpFeatureUser) *string { return v.PrivacyPasswordWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `privacyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o SystemSnmpFeatureUserOutput) PrivacyPasswordWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SystemSnmpFeatureUser) *int { return v.PrivacyPasswordWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Configure privacy protocol
@@ -76996,9 +78691,17 @@ type TransportRoutingBgpFeatureIpv4Neighbor struct {
 	// Variable name
 	NextHopSelfVariable *string `pulumi:"nextHopSelfVariable"`
 	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password *string `pulumi:"password"`
 	// Variable name
 	PasswordVariable *string `pulumi:"passwordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo *string `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion *int `pulumi:"passwordWoVersion"`
 	// Set remote autonomous system number
 	RemoteAs *string `pulumi:"remoteAs"`
 	// Variable name
@@ -77092,9 +78795,17 @@ type TransportRoutingBgpFeatureIpv4NeighborArgs struct {
 	// Variable name
 	NextHopSelfVariable pulumi.StringPtrInput `pulumi:"nextHopSelfVariable"`
 	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password pulumi.StringPtrInput `pulumi:"password"`
 	// Variable name
 	PasswordVariable pulumi.StringPtrInput `pulumi:"passwordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo pulumi.StringPtrInput `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion pulumi.IntPtrInput `pulumi:"passwordWoVersion"`
 	// Set remote autonomous system number
 	RemoteAs pulumi.StringPtrInput `pulumi:"remoteAs"`
 	// Variable name
@@ -77292,6 +79003,8 @@ func (o TransportRoutingBgpFeatureIpv4NeighborOutput) NextHopSelfVariable() pulu
 }
 
 // Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 func (o TransportRoutingBgpFeatureIpv4NeighborOutput) Password() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv4Neighbor) *string { return v.Password }).(pulumi.StringPtrOutput)
 }
@@ -77299,6 +79012,18 @@ func (o TransportRoutingBgpFeatureIpv4NeighborOutput) Password() pulumi.StringPt
 // Variable name
 func (o TransportRoutingBgpFeatureIpv4NeighborOutput) PasswordVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv4Neighbor) *string { return v.PasswordVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+func (o TransportRoutingBgpFeatureIpv4NeighborOutput) PasswordWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv4Neighbor) *string { return v.PasswordWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o TransportRoutingBgpFeatureIpv4NeighborOutput) PasswordWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv4Neighbor) *int { return v.PasswordWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set remote autonomous system number
@@ -78152,9 +79877,17 @@ type TransportRoutingBgpFeatureIpv6Neighbor struct {
 	// Variable name
 	NextHopSelfVariable *string `pulumi:"nextHopSelfVariable"`
 	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password *string `pulumi:"password"`
 	// Variable name
 	PasswordVariable *string `pulumi:"passwordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo *string `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion *int `pulumi:"passwordWoVersion"`
 	// Set remote autonomous system number
 	RemoteAs *string `pulumi:"remoteAs"`
 	// Variable name
@@ -78240,9 +79973,17 @@ type TransportRoutingBgpFeatureIpv6NeighborArgs struct {
 	// Variable name
 	NextHopSelfVariable pulumi.StringPtrInput `pulumi:"nextHopSelfVariable"`
 	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password pulumi.StringPtrInput `pulumi:"password"`
 	// Variable name
 	PasswordVariable pulumi.StringPtrInput `pulumi:"passwordVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+	PasswordWo pulumi.StringPtrInput `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion pulumi.IntPtrInput `pulumi:"passwordWoVersion"`
 	// Set remote autonomous system number
 	RemoteAs pulumi.StringPtrInput `pulumi:"remoteAs"`
 	// Variable name
@@ -78426,6 +80167,8 @@ func (o TransportRoutingBgpFeatureIpv6NeighborOutput) NextHopSelfVariable() pulu
 }
 
 // Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 func (o TransportRoutingBgpFeatureIpv6NeighborOutput) Password() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv6Neighbor) *string { return v.Password }).(pulumi.StringPtrOutput)
 }
@@ -78433,6 +80176,18 @@ func (o TransportRoutingBgpFeatureIpv6NeighborOutput) Password() pulumi.StringPt
 // Variable name
 func (o TransportRoutingBgpFeatureIpv6NeighborOutput) PasswordVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv6Neighbor) *string { return v.PasswordVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `password`, `passwordVariable` and `passwordWo` can be set.
+func (o TransportRoutingBgpFeatureIpv6NeighborOutput) PasswordWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv6Neighbor) *string { return v.PasswordWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o TransportRoutingBgpFeatureIpv6NeighborOutput) PasswordWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v TransportRoutingBgpFeatureIpv6Neighbor) *int { return v.PasswordWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set remote autonomous system number
@@ -79366,6 +81121,8 @@ type TransportRoutingOspfFeatureAreaInterface struct {
 	// Variable name
 	LsaRetransmitIntervalVariable *string `pulumi:"lsaRetransmitIntervalVariable"`
 	// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
 	MessageDigestKey *string `pulumi:"messageDigestKey"`
 	// Set MD5 message digest key
 	//   - Range: `1`-`255`
@@ -79374,6 +81131,12 @@ type TransportRoutingOspfFeatureAreaInterface struct {
 	MessageDigestKeyIdVariable *string `pulumi:"messageDigestKeyIdVariable"`
 	// Variable name
 	MessageDigestKeyVariable *string `pulumi:"messageDigestKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+	MessageDigestKeyWo *string `pulumi:"messageDigestKeyWo"`
+	// Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	MessageDigestKeyWoVersion *int `pulumi:"messageDigestKeyWoVersion"`
 	// Set interface name
 	Name *string `pulumi:"name"`
 	// Variable name
@@ -79438,6 +81201,8 @@ type TransportRoutingOspfFeatureAreaInterfaceArgs struct {
 	// Variable name
 	LsaRetransmitIntervalVariable pulumi.StringPtrInput `pulumi:"lsaRetransmitIntervalVariable"`
 	// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
 	MessageDigestKey pulumi.StringPtrInput `pulumi:"messageDigestKey"`
 	// Set MD5 message digest key
 	//   - Range: `1`-`255`
@@ -79446,6 +81211,12 @@ type TransportRoutingOspfFeatureAreaInterfaceArgs struct {
 	MessageDigestKeyIdVariable pulumi.StringPtrInput `pulumi:"messageDigestKeyIdVariable"`
 	// Variable name
 	MessageDigestKeyVariable pulumi.StringPtrInput `pulumi:"messageDigestKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	//   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+	MessageDigestKeyWo pulumi.StringPtrInput `pulumi:"messageDigestKeyWo"`
+	// Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	MessageDigestKeyWoVersion pulumi.IntPtrInput `pulumi:"messageDigestKeyWoVersion"`
 	// Set interface name
 	Name pulumi.StringPtrInput `pulumi:"name"`
 	// Variable name
@@ -79585,6 +81356,8 @@ func (o TransportRoutingOspfFeatureAreaInterfaceOutput) LsaRetransmitIntervalVar
 }
 
 // Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `messageDigestKeyWo` together with `messageDigestKeyWoVersion`, which keeps it out of state.
 func (o TransportRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKey() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingOspfFeatureAreaInterface) *string { return v.MessageDigestKey }).(pulumi.StringPtrOutput)
 }
@@ -79603,6 +81376,18 @@ func (o TransportRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyIdVariab
 // Variable name
 func (o TransportRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingOspfFeatureAreaInterface) *string { return v.MessageDigestKeyVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+//   - Only one of `messageDigestKey`, `messageDigestKeyVariable` and `messageDigestKeyWo` can be set.
+func (o TransportRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportRoutingOspfFeatureAreaInterface) *string { return v.MessageDigestKeyWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o TransportRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v TransportRoutingOspfFeatureAreaInterface) *int { return v.MessageDigestKeyWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set interface name
@@ -80265,9 +82050,17 @@ func (o TransportRoutingOspfv3Ipv4FeatureAreaArrayOutput) Index(i pulumi.IntInpu
 
 type TransportRoutingOspfv3Ipv4FeatureAreaInterface struct {
 	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
 	AuthenticationKey *string `pulumi:"authenticationKey"`
 	// Variable name
 	AuthenticationKeyVariable *string `pulumi:"authenticationKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	AuthenticationKeyWo *string `pulumi:"authenticationKeyWo"`
+	// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationKeyWoVersion *int `pulumi:"authenticationKeyWoVersion"`
 	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
 	//   - Range: `256`-`4294967295`
 	AuthenticationSpi *int `pulumi:"authenticationSpi"`
@@ -80328,9 +82121,17 @@ type TransportRoutingOspfv3Ipv4FeatureAreaInterfaceInput interface {
 
 type TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs struct {
 	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
 	AuthenticationKey pulumi.StringPtrInput `pulumi:"authenticationKey"`
 	// Variable name
 	AuthenticationKeyVariable pulumi.StringPtrInput `pulumi:"authenticationKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	AuthenticationKeyWo pulumi.StringPtrInput `pulumi:"authenticationKeyWo"`
+	// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationKeyWoVersion pulumi.IntPtrInput `pulumi:"authenticationKeyWoVersion"`
 	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
 	//   - Range: `256`-`4294967295`
 	AuthenticationSpi pulumi.IntPtrInput `pulumi:"authenticationSpi"`
@@ -80430,6 +82231,8 @@ func (o TransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) ToTransportRouting
 }
 
 // Set OSPF interface authentication IPSEC key
+//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
 func (o TransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKey() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingOspfv3Ipv4FeatureAreaInterface) *string { return v.AuthenticationKey }).(pulumi.StringPtrOutput)
 }
@@ -80437,6 +82240,18 @@ func (o TransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKey(
 // Variable name
 func (o TransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKeyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingOspfv3Ipv4FeatureAreaInterface) *string { return v.AuthenticationKeyVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set OSPF interface authentication IPSEC key
+//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+func (o TransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKeyWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportRoutingOspfv3Ipv4FeatureAreaInterface) *string { return v.AuthenticationKeyWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o TransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKeyWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v TransportRoutingOspfv3Ipv4FeatureAreaInterface) *int { return v.AuthenticationKeyWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set OSPF interface authentication IPSec SPI, range 256..4294967295
@@ -81056,9 +82871,17 @@ func (o TransportRoutingOspfv3Ipv6FeatureAreaArrayOutput) Index(i pulumi.IntInpu
 
 type TransportRoutingOspfv3Ipv6FeatureAreaInterface struct {
 	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
 	AuthenticationKey *string `pulumi:"authenticationKey"`
 	// Variable name
 	AuthenticationKeyVariable *string `pulumi:"authenticationKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	AuthenticationKeyWo *string `pulumi:"authenticationKeyWo"`
+	// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationKeyWoVersion *int `pulumi:"authenticationKeyWoVersion"`
 	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
 	//   - Range: `256`-`4294967295`
 	AuthenticationSpi *int `pulumi:"authenticationSpi"`
@@ -81119,9 +82942,17 @@ type TransportRoutingOspfv3Ipv6FeatureAreaInterfaceInput interface {
 
 type TransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs struct {
 	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
 	AuthenticationKey pulumi.StringPtrInput `pulumi:"authenticationKey"`
 	// Variable name
 	AuthenticationKeyVariable pulumi.StringPtrInput `pulumi:"authenticationKeyVariable"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Set OSPF interface authentication IPSEC key
+	//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+	AuthenticationKeyWo pulumi.StringPtrInput `pulumi:"authenticationKeyWo"`
+	// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationKeyWoVersion pulumi.IntPtrInput `pulumi:"authenticationKeyWoVersion"`
 	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
 	//   - Range: `256`-`4294967295`
 	AuthenticationSpi pulumi.IntPtrInput `pulumi:"authenticationSpi"`
@@ -81221,6 +83052,8 @@ func (o TransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) ToTransportRouting
 }
 
 // Set OSPF interface authentication IPSEC key
+//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `authenticationKeyWo` together with `authenticationKeyWoVersion`, which keeps it out of state.
 func (o TransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKey() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingOspfv3Ipv6FeatureAreaInterface) *string { return v.AuthenticationKey }).(pulumi.StringPtrOutput)
 }
@@ -81228,6 +83061,18 @@ func (o TransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKey(
 // Variable name
 func (o TransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKeyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TransportRoutingOspfv3Ipv6FeatureAreaInterface) *string { return v.AuthenticationKeyVariable }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Set OSPF interface authentication IPSEC key
+//   - Only one of `authenticationKey`, `authenticationKeyVariable` and `authenticationKeyWo` can be set.
+func (o TransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKeyWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v TransportRoutingOspfv3Ipv6FeatureAreaInterface) *string { return v.AuthenticationKeyWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `authenticationKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o TransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKeyWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v TransportRoutingOspfv3Ipv6FeatureAreaInterface) *int { return v.AuthenticationKeyWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Set OSPF interface authentication IPSec SPI, range 256..4294967295
@@ -82340,588 +84185,6 @@ func (o TransportWanVpnFeatureIpv4StaticRouteArrayOutput) Index(i pulumi.IntInpu
 	}).(TransportWanVpnFeatureIpv4StaticRouteOutput)
 }
 
-type TransportWanVpnFeatureIpv4StaticRouteNextHop struct {
-	// Address
-	Address *string `pulumi:"address"`
-	// Variable name
-	AddressVariable *string `pulumi:"addressVariable"`
-	// Administrative distance
-	//   - Range: `1`-`255`
-	//   - Default value: `1`
-	AdministrativeDistance *int `pulumi:"administrativeDistance"`
-	// Variable name
-	AdministrativeDistanceVariable *string `pulumi:"administrativeDistanceVariable"`
-}
-
-// TransportWanVpnFeatureIpv4StaticRouteNextHopInput is an input type that accepts TransportWanVpnFeatureIpv4StaticRouteNextHopArgs and TransportWanVpnFeatureIpv4StaticRouteNextHopOutput values.
-// You can construct a concrete instance of `TransportWanVpnFeatureIpv4StaticRouteNextHopInput` via:
-//
-//	TransportWanVpnFeatureIpv4StaticRouteNextHopArgs{...}
-type TransportWanVpnFeatureIpv4StaticRouteNextHopInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnFeatureIpv4StaticRouteNextHopOutput() TransportWanVpnFeatureIpv4StaticRouteNextHopOutput
-	ToTransportWanVpnFeatureIpv4StaticRouteNextHopOutputWithContext(context.Context) TransportWanVpnFeatureIpv4StaticRouteNextHopOutput
-}
-
-type TransportWanVpnFeatureIpv4StaticRouteNextHopArgs struct {
-	// Address
-	Address pulumi.StringPtrInput `pulumi:"address"`
-	// Variable name
-	AddressVariable pulumi.StringPtrInput `pulumi:"addressVariable"`
-	// Administrative distance
-	//   - Range: `1`-`255`
-	//   - Default value: `1`
-	AdministrativeDistance pulumi.IntPtrInput `pulumi:"administrativeDistance"`
-	// Variable name
-	AdministrativeDistanceVariable pulumi.StringPtrInput `pulumi:"administrativeDistanceVariable"`
-}
-
-func (TransportWanVpnFeatureIpv4StaticRouteNextHopArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnFeatureIpv4StaticRouteNextHop)(nil)).Elem()
-}
-
-func (i TransportWanVpnFeatureIpv4StaticRouteNextHopArgs) ToTransportWanVpnFeatureIpv4StaticRouteNextHopOutput() TransportWanVpnFeatureIpv4StaticRouteNextHopOutput {
-	return i.ToTransportWanVpnFeatureIpv4StaticRouteNextHopOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnFeatureIpv4StaticRouteNextHopArgs) ToTransportWanVpnFeatureIpv4StaticRouteNextHopOutputWithContext(ctx context.Context) TransportWanVpnFeatureIpv4StaticRouteNextHopOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureIpv4StaticRouteNextHopOutput)
-}
-
-// TransportWanVpnFeatureIpv4StaticRouteNextHopArrayInput is an input type that accepts TransportWanVpnFeatureIpv4StaticRouteNextHopArray and TransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnFeatureIpv4StaticRouteNextHopArrayInput` via:
-//
-//	TransportWanVpnFeatureIpv4StaticRouteNextHopArray{ TransportWanVpnFeatureIpv4StaticRouteNextHopArgs{...} }
-type TransportWanVpnFeatureIpv4StaticRouteNextHopArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput() TransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput
-	ToTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutputWithContext(context.Context) TransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput
-}
-
-type TransportWanVpnFeatureIpv4StaticRouteNextHopArray []TransportWanVpnFeatureIpv4StaticRouteNextHopInput
-
-func (TransportWanVpnFeatureIpv4StaticRouteNextHopArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnFeatureIpv4StaticRouteNextHop)(nil)).Elem()
-}
-
-func (i TransportWanVpnFeatureIpv4StaticRouteNextHopArray) ToTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput() TransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput {
-	return i.ToTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnFeatureIpv4StaticRouteNextHopArray) ToTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput)
-}
-
-type TransportWanVpnFeatureIpv4StaticRouteNextHopOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnFeatureIpv4StaticRouteNextHopOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnFeatureIpv4StaticRouteNextHop)(nil)).Elem()
-}
-
-func (o TransportWanVpnFeatureIpv4StaticRouteNextHopOutput) ToTransportWanVpnFeatureIpv4StaticRouteNextHopOutput() TransportWanVpnFeatureIpv4StaticRouteNextHopOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureIpv4StaticRouteNextHopOutput) ToTransportWanVpnFeatureIpv4StaticRouteNextHopOutputWithContext(ctx context.Context) TransportWanVpnFeatureIpv4StaticRouteNextHopOutput {
-	return o
-}
-
-// Address
-func (o TransportWanVpnFeatureIpv4StaticRouteNextHopOutput) Address() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv4StaticRouteNextHop) *string { return v.Address }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnFeatureIpv4StaticRouteNextHopOutput) AddressVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv4StaticRouteNextHop) *string { return v.AddressVariable }).(pulumi.StringPtrOutput)
-}
-
-// Administrative distance
-//   - Range: `1`-`255`
-//   - Default value: `1`
-func (o TransportWanVpnFeatureIpv4StaticRouteNextHopOutput) AdministrativeDistance() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv4StaticRouteNextHop) *int { return v.AdministrativeDistance }).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnFeatureIpv4StaticRouteNextHopOutput) AdministrativeDistanceVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv4StaticRouteNextHop) *string { return v.AdministrativeDistanceVariable }).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnFeatureIpv4StaticRouteNextHop)(nil)).Elem()
-}
-
-func (o TransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput) ToTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput() TransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput) ToTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput) Index(i pulumi.IntInput) TransportWanVpnFeatureIpv4StaticRouteNextHopOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnFeatureIpv4StaticRouteNextHop {
-		return vs[0].([]TransportWanVpnFeatureIpv4StaticRouteNextHop)[vs[1].(int)]
-	}).(TransportWanVpnFeatureIpv4StaticRouteNextHopOutput)
-}
-
-type TransportWanVpnFeatureIpv6StaticRoute struct {
-	// Gateway
-	//   - Choices: `nextHop`, `null0`, `nat`
-	Gateway *string `pulumi:"gateway"`
-	// IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
-	//   - Choices: `NAT64`, `NAT66`
-	Nat *string `pulumi:"nat"`
-	// Variable name, Attribute conditional on `gateway` equal to `nat`
-	NatVariable *string `pulumi:"natVariable"`
-	// IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
-	NextHops []TransportWanVpnFeatureIpv6StaticRouteNextHop `pulumi:"nextHops"`
-	// IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
-	Null0 *bool `pulumi:"null0"`
-	// Prefix
-	Prefix *string `pulumi:"prefix"`
-	// Variable name
-	PrefixVariable *string `pulumi:"prefixVariable"`
-}
-
-// TransportWanVpnFeatureIpv6StaticRouteInput is an input type that accepts TransportWanVpnFeatureIpv6StaticRouteArgs and TransportWanVpnFeatureIpv6StaticRouteOutput values.
-// You can construct a concrete instance of `TransportWanVpnFeatureIpv6StaticRouteInput` via:
-//
-//	TransportWanVpnFeatureIpv6StaticRouteArgs{...}
-type TransportWanVpnFeatureIpv6StaticRouteInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnFeatureIpv6StaticRouteOutput() TransportWanVpnFeatureIpv6StaticRouteOutput
-	ToTransportWanVpnFeatureIpv6StaticRouteOutputWithContext(context.Context) TransportWanVpnFeatureIpv6StaticRouteOutput
-}
-
-type TransportWanVpnFeatureIpv6StaticRouteArgs struct {
-	// Gateway
-	//   - Choices: `nextHop`, `null0`, `nat`
-	Gateway pulumi.StringPtrInput `pulumi:"gateway"`
-	// IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
-	//   - Choices: `NAT64`, `NAT66`
-	Nat pulumi.StringPtrInput `pulumi:"nat"`
-	// Variable name, Attribute conditional on `gateway` equal to `nat`
-	NatVariable pulumi.StringPtrInput `pulumi:"natVariable"`
-	// IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
-	NextHops TransportWanVpnFeatureIpv6StaticRouteNextHopArrayInput `pulumi:"nextHops"`
-	// IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
-	Null0 pulumi.BoolPtrInput `pulumi:"null0"`
-	// Prefix
-	Prefix pulumi.StringPtrInput `pulumi:"prefix"`
-	// Variable name
-	PrefixVariable pulumi.StringPtrInput `pulumi:"prefixVariable"`
-}
-
-func (TransportWanVpnFeatureIpv6StaticRouteArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnFeatureIpv6StaticRoute)(nil)).Elem()
-}
-
-func (i TransportWanVpnFeatureIpv6StaticRouteArgs) ToTransportWanVpnFeatureIpv6StaticRouteOutput() TransportWanVpnFeatureIpv6StaticRouteOutput {
-	return i.ToTransportWanVpnFeatureIpv6StaticRouteOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnFeatureIpv6StaticRouteArgs) ToTransportWanVpnFeatureIpv6StaticRouteOutputWithContext(ctx context.Context) TransportWanVpnFeatureIpv6StaticRouteOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureIpv6StaticRouteOutput)
-}
-
-// TransportWanVpnFeatureIpv6StaticRouteArrayInput is an input type that accepts TransportWanVpnFeatureIpv6StaticRouteArray and TransportWanVpnFeatureIpv6StaticRouteArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnFeatureIpv6StaticRouteArrayInput` via:
-//
-//	TransportWanVpnFeatureIpv6StaticRouteArray{ TransportWanVpnFeatureIpv6StaticRouteArgs{...} }
-type TransportWanVpnFeatureIpv6StaticRouteArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnFeatureIpv6StaticRouteArrayOutput() TransportWanVpnFeatureIpv6StaticRouteArrayOutput
-	ToTransportWanVpnFeatureIpv6StaticRouteArrayOutputWithContext(context.Context) TransportWanVpnFeatureIpv6StaticRouteArrayOutput
-}
-
-type TransportWanVpnFeatureIpv6StaticRouteArray []TransportWanVpnFeatureIpv6StaticRouteInput
-
-func (TransportWanVpnFeatureIpv6StaticRouteArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnFeatureIpv6StaticRoute)(nil)).Elem()
-}
-
-func (i TransportWanVpnFeatureIpv6StaticRouteArray) ToTransportWanVpnFeatureIpv6StaticRouteArrayOutput() TransportWanVpnFeatureIpv6StaticRouteArrayOutput {
-	return i.ToTransportWanVpnFeatureIpv6StaticRouteArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnFeatureIpv6StaticRouteArray) ToTransportWanVpnFeatureIpv6StaticRouteArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureIpv6StaticRouteArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureIpv6StaticRouteArrayOutput)
-}
-
-type TransportWanVpnFeatureIpv6StaticRouteOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnFeatureIpv6StaticRouteOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnFeatureIpv6StaticRoute)(nil)).Elem()
-}
-
-func (o TransportWanVpnFeatureIpv6StaticRouteOutput) ToTransportWanVpnFeatureIpv6StaticRouteOutput() TransportWanVpnFeatureIpv6StaticRouteOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureIpv6StaticRouteOutput) ToTransportWanVpnFeatureIpv6StaticRouteOutputWithContext(ctx context.Context) TransportWanVpnFeatureIpv6StaticRouteOutput {
-	return o
-}
-
-// Gateway
-//   - Choices: `nextHop`, `null0`, `nat`
-func (o TransportWanVpnFeatureIpv6StaticRouteOutput) Gateway() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv6StaticRoute) *string { return v.Gateway }).(pulumi.StringPtrOutput)
-}
-
-// IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
-//   - Choices: `NAT64`, `NAT66`
-func (o TransportWanVpnFeatureIpv6StaticRouteOutput) Nat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv6StaticRoute) *string { return v.Nat }).(pulumi.StringPtrOutput)
-}
-
-// Variable name, Attribute conditional on `gateway` equal to `nat`
-func (o TransportWanVpnFeatureIpv6StaticRouteOutput) NatVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv6StaticRoute) *string { return v.NatVariable }).(pulumi.StringPtrOutput)
-}
-
-// IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
-func (o TransportWanVpnFeatureIpv6StaticRouteOutput) NextHops() TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv6StaticRoute) []TransportWanVpnFeatureIpv6StaticRouteNextHop {
-		return v.NextHops
-	}).(TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput)
-}
-
-// IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
-func (o TransportWanVpnFeatureIpv6StaticRouteOutput) Null0() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv6StaticRoute) *bool { return v.Null0 }).(pulumi.BoolPtrOutput)
-}
-
-// Prefix
-func (o TransportWanVpnFeatureIpv6StaticRouteOutput) Prefix() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv6StaticRoute) *string { return v.Prefix }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnFeatureIpv6StaticRouteOutput) PrefixVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv6StaticRoute) *string { return v.PrefixVariable }).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnFeatureIpv6StaticRouteArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnFeatureIpv6StaticRouteArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnFeatureIpv6StaticRoute)(nil)).Elem()
-}
-
-func (o TransportWanVpnFeatureIpv6StaticRouteArrayOutput) ToTransportWanVpnFeatureIpv6StaticRouteArrayOutput() TransportWanVpnFeatureIpv6StaticRouteArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureIpv6StaticRouteArrayOutput) ToTransportWanVpnFeatureIpv6StaticRouteArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureIpv6StaticRouteArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureIpv6StaticRouteArrayOutput) Index(i pulumi.IntInput) TransportWanVpnFeatureIpv6StaticRouteOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnFeatureIpv6StaticRoute {
-		return vs[0].([]TransportWanVpnFeatureIpv6StaticRoute)[vs[1].(int)]
-	}).(TransportWanVpnFeatureIpv6StaticRouteOutput)
-}
-
-type TransportWanVpnFeatureIpv6StaticRouteNextHop struct {
-	// Address
-	Address *string `pulumi:"address"`
-	// Variable name
-	AddressVariable *string `pulumi:"addressVariable"`
-	// Administrative distance
-	//   - Range: `1`-`254`
-	//   - Default value: `1`
-	AdministrativeDistance *int `pulumi:"administrativeDistance"`
-	// Variable name
-	AdministrativeDistanceVariable *string `pulumi:"administrativeDistanceVariable"`
-}
-
-// TransportWanVpnFeatureIpv6StaticRouteNextHopInput is an input type that accepts TransportWanVpnFeatureIpv6StaticRouteNextHopArgs and TransportWanVpnFeatureIpv6StaticRouteNextHopOutput values.
-// You can construct a concrete instance of `TransportWanVpnFeatureIpv6StaticRouteNextHopInput` via:
-//
-//	TransportWanVpnFeatureIpv6StaticRouteNextHopArgs{...}
-type TransportWanVpnFeatureIpv6StaticRouteNextHopInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnFeatureIpv6StaticRouteNextHopOutput() TransportWanVpnFeatureIpv6StaticRouteNextHopOutput
-	ToTransportWanVpnFeatureIpv6StaticRouteNextHopOutputWithContext(context.Context) TransportWanVpnFeatureIpv6StaticRouteNextHopOutput
-}
-
-type TransportWanVpnFeatureIpv6StaticRouteNextHopArgs struct {
-	// Address
-	Address pulumi.StringPtrInput `pulumi:"address"`
-	// Variable name
-	AddressVariable pulumi.StringPtrInput `pulumi:"addressVariable"`
-	// Administrative distance
-	//   - Range: `1`-`254`
-	//   - Default value: `1`
-	AdministrativeDistance pulumi.IntPtrInput `pulumi:"administrativeDistance"`
-	// Variable name
-	AdministrativeDistanceVariable pulumi.StringPtrInput `pulumi:"administrativeDistanceVariable"`
-}
-
-func (TransportWanVpnFeatureIpv6StaticRouteNextHopArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnFeatureIpv6StaticRouteNextHop)(nil)).Elem()
-}
-
-func (i TransportWanVpnFeatureIpv6StaticRouteNextHopArgs) ToTransportWanVpnFeatureIpv6StaticRouteNextHopOutput() TransportWanVpnFeatureIpv6StaticRouteNextHopOutput {
-	return i.ToTransportWanVpnFeatureIpv6StaticRouteNextHopOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnFeatureIpv6StaticRouteNextHopArgs) ToTransportWanVpnFeatureIpv6StaticRouteNextHopOutputWithContext(ctx context.Context) TransportWanVpnFeatureIpv6StaticRouteNextHopOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureIpv6StaticRouteNextHopOutput)
-}
-
-// TransportWanVpnFeatureIpv6StaticRouteNextHopArrayInput is an input type that accepts TransportWanVpnFeatureIpv6StaticRouteNextHopArray and TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnFeatureIpv6StaticRouteNextHopArrayInput` via:
-//
-//	TransportWanVpnFeatureIpv6StaticRouteNextHopArray{ TransportWanVpnFeatureIpv6StaticRouteNextHopArgs{...} }
-type TransportWanVpnFeatureIpv6StaticRouteNextHopArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput() TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput
-	ToTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutputWithContext(context.Context) TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput
-}
-
-type TransportWanVpnFeatureIpv6StaticRouteNextHopArray []TransportWanVpnFeatureIpv6StaticRouteNextHopInput
-
-func (TransportWanVpnFeatureIpv6StaticRouteNextHopArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnFeatureIpv6StaticRouteNextHop)(nil)).Elem()
-}
-
-func (i TransportWanVpnFeatureIpv6StaticRouteNextHopArray) ToTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput() TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput {
-	return i.ToTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnFeatureIpv6StaticRouteNextHopArray) ToTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput)
-}
-
-type TransportWanVpnFeatureIpv6StaticRouteNextHopOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnFeatureIpv6StaticRouteNextHopOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnFeatureIpv6StaticRouteNextHop)(nil)).Elem()
-}
-
-func (o TransportWanVpnFeatureIpv6StaticRouteNextHopOutput) ToTransportWanVpnFeatureIpv6StaticRouteNextHopOutput() TransportWanVpnFeatureIpv6StaticRouteNextHopOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureIpv6StaticRouteNextHopOutput) ToTransportWanVpnFeatureIpv6StaticRouteNextHopOutputWithContext(ctx context.Context) TransportWanVpnFeatureIpv6StaticRouteNextHopOutput {
-	return o
-}
-
-// Address
-func (o TransportWanVpnFeatureIpv6StaticRouteNextHopOutput) Address() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv6StaticRouteNextHop) *string { return v.Address }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnFeatureIpv6StaticRouteNextHopOutput) AddressVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv6StaticRouteNextHop) *string { return v.AddressVariable }).(pulumi.StringPtrOutput)
-}
-
-// Administrative distance
-//   - Range: `1`-`254`
-//   - Default value: `1`
-func (o TransportWanVpnFeatureIpv6StaticRouteNextHopOutput) AdministrativeDistance() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv6StaticRouteNextHop) *int { return v.AdministrativeDistance }).(pulumi.IntPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnFeatureIpv6StaticRouteNextHopOutput) AdministrativeDistanceVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureIpv6StaticRouteNextHop) *string { return v.AdministrativeDistanceVariable }).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnFeatureIpv6StaticRouteNextHop)(nil)).Elem()
-}
-
-func (o TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput) ToTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput() TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput) ToTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput) Index(i pulumi.IntInput) TransportWanVpnFeatureIpv6StaticRouteNextHopOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnFeatureIpv6StaticRouteNextHop {
-		return vs[0].([]TransportWanVpnFeatureIpv6StaticRouteNextHop)[vs[1].(int)]
-	}).(TransportWanVpnFeatureIpv6StaticRouteNextHopOutput)
-}
-
-type TransportWanVpnFeatureNat64V4Pool struct {
-	// NAT64 v4 Pool Name
-	Nat64V4PoolName *string `pulumi:"nat64V4PoolName"`
-	// Variable name
-	Nat64V4PoolNameVariable *string `pulumi:"nat64V4PoolNameVariable"`
-	// NAT64 Overload
-	//   - Default value: `false`
-	Nat64V4PoolOverload *bool `pulumi:"nat64V4PoolOverload"`
-	// Variable name
-	Nat64V4PoolOverloadVariable *string `pulumi:"nat64V4PoolOverloadVariable"`
-	// NAT64 Pool Range End
-	Nat64V4PoolRangeEnd *string `pulumi:"nat64V4PoolRangeEnd"`
-	// Variable name
-	Nat64V4PoolRangeEndVariable *string `pulumi:"nat64V4PoolRangeEndVariable"`
-	// NAT64 Pool Range Start
-	Nat64V4PoolRangeStart *string `pulumi:"nat64V4PoolRangeStart"`
-	// Variable name
-	Nat64V4PoolRangeStartVariable *string `pulumi:"nat64V4PoolRangeStartVariable"`
-}
-
-// TransportWanVpnFeatureNat64V4PoolInput is an input type that accepts TransportWanVpnFeatureNat64V4PoolArgs and TransportWanVpnFeatureNat64V4PoolOutput values.
-// You can construct a concrete instance of `TransportWanVpnFeatureNat64V4PoolInput` via:
-//
-//	TransportWanVpnFeatureNat64V4PoolArgs{...}
-type TransportWanVpnFeatureNat64V4PoolInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnFeatureNat64V4PoolOutput() TransportWanVpnFeatureNat64V4PoolOutput
-	ToTransportWanVpnFeatureNat64V4PoolOutputWithContext(context.Context) TransportWanVpnFeatureNat64V4PoolOutput
-}
-
-type TransportWanVpnFeatureNat64V4PoolArgs struct {
-	// NAT64 v4 Pool Name
-	Nat64V4PoolName pulumi.StringPtrInput `pulumi:"nat64V4PoolName"`
-	// Variable name
-	Nat64V4PoolNameVariable pulumi.StringPtrInput `pulumi:"nat64V4PoolNameVariable"`
-	// NAT64 Overload
-	//   - Default value: `false`
-	Nat64V4PoolOverload pulumi.BoolPtrInput `pulumi:"nat64V4PoolOverload"`
-	// Variable name
-	Nat64V4PoolOverloadVariable pulumi.StringPtrInput `pulumi:"nat64V4PoolOverloadVariable"`
-	// NAT64 Pool Range End
-	Nat64V4PoolRangeEnd pulumi.StringPtrInput `pulumi:"nat64V4PoolRangeEnd"`
-	// Variable name
-	Nat64V4PoolRangeEndVariable pulumi.StringPtrInput `pulumi:"nat64V4PoolRangeEndVariable"`
-	// NAT64 Pool Range Start
-	Nat64V4PoolRangeStart pulumi.StringPtrInput `pulumi:"nat64V4PoolRangeStart"`
-	// Variable name
-	Nat64V4PoolRangeStartVariable pulumi.StringPtrInput `pulumi:"nat64V4PoolRangeStartVariable"`
-}
-
-func (TransportWanVpnFeatureNat64V4PoolArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnFeatureNat64V4Pool)(nil)).Elem()
-}
-
-func (i TransportWanVpnFeatureNat64V4PoolArgs) ToTransportWanVpnFeatureNat64V4PoolOutput() TransportWanVpnFeatureNat64V4PoolOutput {
-	return i.ToTransportWanVpnFeatureNat64V4PoolOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnFeatureNat64V4PoolArgs) ToTransportWanVpnFeatureNat64V4PoolOutputWithContext(ctx context.Context) TransportWanVpnFeatureNat64V4PoolOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureNat64V4PoolOutput)
-}
-
-// TransportWanVpnFeatureNat64V4PoolArrayInput is an input type that accepts TransportWanVpnFeatureNat64V4PoolArray and TransportWanVpnFeatureNat64V4PoolArrayOutput values.
-// You can construct a concrete instance of `TransportWanVpnFeatureNat64V4PoolArrayInput` via:
-//
-//	TransportWanVpnFeatureNat64V4PoolArray{ TransportWanVpnFeatureNat64V4PoolArgs{...} }
-type TransportWanVpnFeatureNat64V4PoolArrayInput interface {
-	pulumi.Input
-
-	ToTransportWanVpnFeatureNat64V4PoolArrayOutput() TransportWanVpnFeatureNat64V4PoolArrayOutput
-	ToTransportWanVpnFeatureNat64V4PoolArrayOutputWithContext(context.Context) TransportWanVpnFeatureNat64V4PoolArrayOutput
-}
-
-type TransportWanVpnFeatureNat64V4PoolArray []TransportWanVpnFeatureNat64V4PoolInput
-
-func (TransportWanVpnFeatureNat64V4PoolArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnFeatureNat64V4Pool)(nil)).Elem()
-}
-
-func (i TransportWanVpnFeatureNat64V4PoolArray) ToTransportWanVpnFeatureNat64V4PoolArrayOutput() TransportWanVpnFeatureNat64V4PoolArrayOutput {
-	return i.ToTransportWanVpnFeatureNat64V4PoolArrayOutputWithContext(context.Background())
-}
-
-func (i TransportWanVpnFeatureNat64V4PoolArray) ToTransportWanVpnFeatureNat64V4PoolArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureNat64V4PoolArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(TransportWanVpnFeatureNat64V4PoolArrayOutput)
-}
-
-type TransportWanVpnFeatureNat64V4PoolOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnFeatureNat64V4PoolOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransportWanVpnFeatureNat64V4Pool)(nil)).Elem()
-}
-
-func (o TransportWanVpnFeatureNat64V4PoolOutput) ToTransportWanVpnFeatureNat64V4PoolOutput() TransportWanVpnFeatureNat64V4PoolOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureNat64V4PoolOutput) ToTransportWanVpnFeatureNat64V4PoolOutputWithContext(ctx context.Context) TransportWanVpnFeatureNat64V4PoolOutput {
-	return o
-}
-
-// NAT64 v4 Pool Name
-func (o TransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolName() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureNat64V4Pool) *string { return v.Nat64V4PoolName }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolNameVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureNat64V4Pool) *string { return v.Nat64V4PoolNameVariable }).(pulumi.StringPtrOutput)
-}
-
-// NAT64 Overload
-//   - Default value: `false`
-func (o TransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolOverload() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureNat64V4Pool) *bool { return v.Nat64V4PoolOverload }).(pulumi.BoolPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolOverloadVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureNat64V4Pool) *string { return v.Nat64V4PoolOverloadVariable }).(pulumi.StringPtrOutput)
-}
-
-// NAT64 Pool Range End
-func (o TransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolRangeEnd() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureNat64V4Pool) *string { return v.Nat64V4PoolRangeEnd }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolRangeEndVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureNat64V4Pool) *string { return v.Nat64V4PoolRangeEndVariable }).(pulumi.StringPtrOutput)
-}
-
-// NAT64 Pool Range Start
-func (o TransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolRangeStart() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureNat64V4Pool) *string { return v.Nat64V4PoolRangeStart }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o TransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolRangeStartVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v TransportWanVpnFeatureNat64V4Pool) *string { return v.Nat64V4PoolRangeStartVariable }).(pulumi.StringPtrOutput)
-}
-
-type TransportWanVpnFeatureNat64V4PoolArrayOutput struct{ *pulumi.OutputState }
-
-func (TransportWanVpnFeatureNat64V4PoolArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]TransportWanVpnFeatureNat64V4Pool)(nil)).Elem()
-}
-
-func (o TransportWanVpnFeatureNat64V4PoolArrayOutput) ToTransportWanVpnFeatureNat64V4PoolArrayOutput() TransportWanVpnFeatureNat64V4PoolArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureNat64V4PoolArrayOutput) ToTransportWanVpnFeatureNat64V4PoolArrayOutputWithContext(ctx context.Context) TransportWanVpnFeatureNat64V4PoolArrayOutput {
-	return o
-}
-
-func (o TransportWanVpnFeatureNat64V4PoolArrayOutput) Index(i pulumi.IntInput) TransportWanVpnFeatureNat64V4PoolOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) TransportWanVpnFeatureNat64V4Pool {
-		return vs[0].([]TransportWanVpnFeatureNat64V4Pool)[vs[1].(int)]
-	}).(TransportWanVpnFeatureNat64V4PoolOutput)
-}
-
 func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*AllowUrlListPolicyObjectEntryInput)(nil)).Elem(), AllowUrlListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AllowUrlListPolicyObjectEntryArrayInput)(nil)).Elem(), AllowUrlListPolicyObjectEntryArray{})
@@ -82951,8 +84214,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArrayInput)(nil)).Elem(), ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AsPathListPolicyObjectEntryInput)(nil)).Elem(), AsPathListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AsPathListPolicyObjectEntryArrayInput)(nil)).Elem(), AsPathListPolicyObjectEntryArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AttachFeatureDeviceTemplateDeviceInput)(nil)).Elem(), AttachFeatureDeviceTemplateDeviceArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AttachFeatureDeviceTemplateDeviceArrayInput)(nil)).Elem(), AttachFeatureDeviceTemplateDeviceArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AttachFeatureDeviceTemplateDevicesInput)(nil)).Elem(), AttachFeatureDeviceTemplateDevicesArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AttachFeatureDeviceTemplateDevicesMapInput)(nil)).Elem(), AttachFeatureDeviceTemplateDevicesMap{})
 	pulumi.RegisterInputType(reflect.TypeOf((*BlockUrlListPolicyObjectEntryInput)(nil)).Elem(), BlockUrlListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*BlockUrlListPolicyObjectEntryArrayInput)(nil)).Elem(), BlockUrlListPolicyObjectEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*CedgeAaaFeatureTemplateAccountingRuleInput)(nil)).Elem(), CedgeAaaFeatureTemplateAccountingRuleArgs{})
@@ -83211,10 +84474,10 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*CiscoWirelessLanFeatureTemplateSsidArrayInput)(nil)).Elem(), CiscoWirelessLanFeatureTemplateSsidArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ColorListPolicyObjectEntryInput)(nil)).Elem(), ColorListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ColorListPolicyObjectEntryArrayInput)(nil)).Elem(), ColorListPolicyObjectEntryArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*ConfigurationGroupDeviceInput)(nil)).Elem(), ConfigurationGroupDeviceArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*ConfigurationGroupDeviceArrayInput)(nil)).Elem(), ConfigurationGroupDeviceArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*ConfigurationGroupDeviceVariableInput)(nil)).Elem(), ConfigurationGroupDeviceVariableArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*ConfigurationGroupDeviceVariableArrayInput)(nil)).Elem(), ConfigurationGroupDeviceVariableArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ConfigurationGroupDevicesDevicesInput)(nil)).Elem(), ConfigurationGroupDevicesDevicesArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ConfigurationGroupDevicesDevicesMapInput)(nil)).Elem(), ConfigurationGroupDevicesDevicesMap{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ConfigurationGroupDevicesDevicesVariablesInput)(nil)).Elem(), ConfigurationGroupDevicesDevicesVariablesArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ConfigurationGroupDevicesDevicesVariablesMapInput)(nil)).Elem(), ConfigurationGroupDevicesDevicesVariablesMap{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ConfigurationGroupTopologyDeviceInput)(nil)).Elem(), ConfigurationGroupTopologyDeviceArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ConfigurationGroupTopologyDeviceArrayInput)(nil)).Elem(), ConfigurationGroupTopologyDeviceArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ConfigurationGroupTopologyDeviceUnsupportedFeatureInput)(nil)).Elem(), ConfigurationGroupTopologyDeviceUnsupportedFeatureArgs{})
@@ -83339,10 +84602,10 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*OtherTrustsecFeatureSxpConnectionArrayInput)(nil)).Elem(), OtherTrustsecFeatureSxpConnectionArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*OtherUcseFeatureInterfaceInput)(nil)).Elem(), OtherUcseFeatureInterfaceArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*OtherUcseFeatureInterfaceArrayInput)(nil)).Elem(), OtherUcseFeatureInterfaceArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*PolicyGroupDeviceInput)(nil)).Elem(), PolicyGroupDeviceArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*PolicyGroupDeviceArrayInput)(nil)).Elem(), PolicyGroupDeviceArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*PolicyGroupDeviceVariableInput)(nil)).Elem(), PolicyGroupDeviceVariableArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*PolicyGroupDeviceVariableArrayInput)(nil)).Elem(), PolicyGroupDeviceVariableArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicyGroupDevicesDevicesInput)(nil)).Elem(), PolicyGroupDevicesDevicesArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicyGroupDevicesDevicesMapInput)(nil)).Elem(), PolicyGroupDevicesDevicesMap{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicyGroupDevicesDevicesVariablesInput)(nil)).Elem(), PolicyGroupDevicesDevicesVariablesArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicyGroupDevicesDevicesVariablesMapInput)(nil)).Elem(), PolicyGroupDevicesDevicesVariablesMap{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectAppProbeClassEntryInput)(nil)).Elem(), PolicyObjectAppProbeClassEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectAppProbeClassEntryArrayInput)(nil)).Elem(), PolicyObjectAppProbeClassEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectAppProbeClassEntryMapInput)(nil)).Elem(), PolicyObjectAppProbeClassEntryMapArgs{})
@@ -83383,6 +84646,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityIdentityListEntryArrayInput)(nil)).Elem(), PolicyObjectSecurityIdentityListEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityIpsSignatureEntryInput)(nil)).Elem(), PolicyObjectSecurityIpsSignatureEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityIpsSignatureEntryArrayInput)(nil)).Elem(), PolicyObjectSecurityIpsSignatureEntryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityIpsSignatureSetEntryInput)(nil)).Elem(), PolicyObjectSecurityIpsSignatureSetEntryArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityIpsSignatureSetEntryArrayInput)(nil)).Elem(), PolicyObjectSecurityIpsSignatureSetEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityLocalApplicationListEntryInput)(nil)).Elem(), PolicyObjectSecurityLocalApplicationListEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityLocalApplicationListEntryArrayInput)(nil)).Elem(), PolicyObjectSecurityLocalApplicationListEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicyObjectSecurityLocalDomainListEntryInput)(nil)).Elem(), PolicyObjectSecurityLocalDomainListEntryArgs{})
@@ -83701,6 +84966,12 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceTrackerGroupFeatureTrackerElementArrayInput)(nil)).Elem(), ServiceTrackerGroupFeatureTrackerElementArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceWirelessLanFeatureSsidInput)(nil)).Elem(), ServiceWirelessLanFeatureSsidArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceWirelessLanFeatureSsidArrayInput)(nil)).Elem(), ServiceWirelessLanFeatureSsidArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SigFeatureInterfaceInput)(nil)).Elem(), SigFeatureInterfaceArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SigFeatureInterfaceArrayInput)(nil)).Elem(), SigFeatureInterfaceArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SigFeatureInterfacePairInput)(nil)).Elem(), SigFeatureInterfacePairArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SigFeatureInterfacePairArrayInput)(nil)).Elem(), SigFeatureInterfacePairArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SigFeatureTrackerInput)(nil)).Elem(), SigFeatureTrackerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SigFeatureTrackerArrayInput)(nil)).Elem(), SigFeatureTrackerArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*SiteListPolicyObjectEntryInput)(nil)).Elem(), SiteListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*SiteListPolicyObjectEntryArrayInput)(nil)).Elem(), SiteListPolicyObjectEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*SseCiscoFeatureInterfaceInput)(nil)).Elem(), SseCiscoFeatureInterfaceArgs{})
@@ -83915,14 +85186,6 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*TransportTrackerGroupFeatureTrackerElementArrayInput)(nil)).Elem(), TransportTrackerGroupFeatureTrackerElementArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureIpv4StaticRouteInput)(nil)).Elem(), TransportWanVpnFeatureIpv4StaticRouteArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureIpv4StaticRouteArrayInput)(nil)).Elem(), TransportWanVpnFeatureIpv4StaticRouteArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureIpv4StaticRouteNextHopInput)(nil)).Elem(), TransportWanVpnFeatureIpv4StaticRouteNextHopArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureIpv4StaticRouteNextHopArrayInput)(nil)).Elem(), TransportWanVpnFeatureIpv4StaticRouteNextHopArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureIpv6StaticRouteInput)(nil)).Elem(), TransportWanVpnFeatureIpv6StaticRouteArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureIpv6StaticRouteArrayInput)(nil)).Elem(), TransportWanVpnFeatureIpv6StaticRouteArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureIpv6StaticRouteNextHopInput)(nil)).Elem(), TransportWanVpnFeatureIpv6StaticRouteNextHopArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureIpv6StaticRouteNextHopArrayInput)(nil)).Elem(), TransportWanVpnFeatureIpv6StaticRouteNextHopArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureNat64V4PoolInput)(nil)).Elem(), TransportWanVpnFeatureNat64V4PoolArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*TransportWanVpnFeatureNat64V4PoolArrayInput)(nil)).Elem(), TransportWanVpnFeatureNat64V4PoolArray{})
 	pulumi.RegisterOutputType(AllowUrlListPolicyObjectEntryOutput{})
 	pulumi.RegisterOutputType(AllowUrlListPolicyObjectEntryArrayOutput{})
 	pulumi.RegisterOutputType(AppProbeClassPolicyObjectMappingOutput{})
@@ -83951,8 +85214,8 @@ func init() {
 	pulumi.RegisterOutputType(ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArrayOutput{})
 	pulumi.RegisterOutputType(AsPathListPolicyObjectEntryOutput{})
 	pulumi.RegisterOutputType(AsPathListPolicyObjectEntryArrayOutput{})
-	pulumi.RegisterOutputType(AttachFeatureDeviceTemplateDeviceOutput{})
-	pulumi.RegisterOutputType(AttachFeatureDeviceTemplateDeviceArrayOutput{})
+	pulumi.RegisterOutputType(AttachFeatureDeviceTemplateDevicesOutput{})
+	pulumi.RegisterOutputType(AttachFeatureDeviceTemplateDevicesMapOutput{})
 	pulumi.RegisterOutputType(BlockUrlListPolicyObjectEntryOutput{})
 	pulumi.RegisterOutputType(BlockUrlListPolicyObjectEntryArrayOutput{})
 	pulumi.RegisterOutputType(CedgeAaaFeatureTemplateAccountingRuleOutput{})
@@ -84211,10 +85474,10 @@ func init() {
 	pulumi.RegisterOutputType(CiscoWirelessLanFeatureTemplateSsidArrayOutput{})
 	pulumi.RegisterOutputType(ColorListPolicyObjectEntryOutput{})
 	pulumi.RegisterOutputType(ColorListPolicyObjectEntryArrayOutput{})
-	pulumi.RegisterOutputType(ConfigurationGroupDeviceOutput{})
-	pulumi.RegisterOutputType(ConfigurationGroupDeviceArrayOutput{})
-	pulumi.RegisterOutputType(ConfigurationGroupDeviceVariableOutput{})
-	pulumi.RegisterOutputType(ConfigurationGroupDeviceVariableArrayOutput{})
+	pulumi.RegisterOutputType(ConfigurationGroupDevicesDevicesOutput{})
+	pulumi.RegisterOutputType(ConfigurationGroupDevicesDevicesMapOutput{})
+	pulumi.RegisterOutputType(ConfigurationGroupDevicesDevicesVariablesOutput{})
+	pulumi.RegisterOutputType(ConfigurationGroupDevicesDevicesVariablesMapOutput{})
 	pulumi.RegisterOutputType(ConfigurationGroupTopologyDeviceOutput{})
 	pulumi.RegisterOutputType(ConfigurationGroupTopologyDeviceArrayOutput{})
 	pulumi.RegisterOutputType(ConfigurationGroupTopologyDeviceUnsupportedFeatureOutput{})
@@ -84339,10 +85602,10 @@ func init() {
 	pulumi.RegisterOutputType(OtherTrustsecFeatureSxpConnectionArrayOutput{})
 	pulumi.RegisterOutputType(OtherUcseFeatureInterfaceOutput{})
 	pulumi.RegisterOutputType(OtherUcseFeatureInterfaceArrayOutput{})
-	pulumi.RegisterOutputType(PolicyGroupDeviceOutput{})
-	pulumi.RegisterOutputType(PolicyGroupDeviceArrayOutput{})
-	pulumi.RegisterOutputType(PolicyGroupDeviceVariableOutput{})
-	pulumi.RegisterOutputType(PolicyGroupDeviceVariableArrayOutput{})
+	pulumi.RegisterOutputType(PolicyGroupDevicesDevicesOutput{})
+	pulumi.RegisterOutputType(PolicyGroupDevicesDevicesMapOutput{})
+	pulumi.RegisterOutputType(PolicyGroupDevicesDevicesVariablesOutput{})
+	pulumi.RegisterOutputType(PolicyGroupDevicesDevicesVariablesMapOutput{})
 	pulumi.RegisterOutputType(PolicyObjectAppProbeClassEntryOutput{})
 	pulumi.RegisterOutputType(PolicyObjectAppProbeClassEntryArrayOutput{})
 	pulumi.RegisterOutputType(PolicyObjectAppProbeClassEntryMapOutput{})
@@ -84383,6 +85646,8 @@ func init() {
 	pulumi.RegisterOutputType(PolicyObjectSecurityIdentityListEntryArrayOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityIpsSignatureEntryOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityIpsSignatureEntryArrayOutput{})
+	pulumi.RegisterOutputType(PolicyObjectSecurityIpsSignatureSetEntryOutput{})
+	pulumi.RegisterOutputType(PolicyObjectSecurityIpsSignatureSetEntryArrayOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityLocalApplicationListEntryOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityLocalApplicationListEntryArrayOutput{})
 	pulumi.RegisterOutputType(PolicyObjectSecurityLocalDomainListEntryOutput{})
@@ -84701,6 +85966,12 @@ func init() {
 	pulumi.RegisterOutputType(ServiceTrackerGroupFeatureTrackerElementArrayOutput{})
 	pulumi.RegisterOutputType(ServiceWirelessLanFeatureSsidOutput{})
 	pulumi.RegisterOutputType(ServiceWirelessLanFeatureSsidArrayOutput{})
+	pulumi.RegisterOutputType(SigFeatureInterfaceOutput{})
+	pulumi.RegisterOutputType(SigFeatureInterfaceArrayOutput{})
+	pulumi.RegisterOutputType(SigFeatureInterfacePairOutput{})
+	pulumi.RegisterOutputType(SigFeatureInterfacePairArrayOutput{})
+	pulumi.RegisterOutputType(SigFeatureTrackerOutput{})
+	pulumi.RegisterOutputType(SigFeatureTrackerArrayOutput{})
 	pulumi.RegisterOutputType(SiteListPolicyObjectEntryOutput{})
 	pulumi.RegisterOutputType(SiteListPolicyObjectEntryArrayOutput{})
 	pulumi.RegisterOutputType(SseCiscoFeatureInterfaceOutput{})
@@ -84915,12 +86186,4 @@ func init() {
 	pulumi.RegisterOutputType(TransportTrackerGroupFeatureTrackerElementArrayOutput{})
 	pulumi.RegisterOutputType(TransportWanVpnFeatureIpv4StaticRouteOutput{})
 	pulumi.RegisterOutputType(TransportWanVpnFeatureIpv4StaticRouteArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnFeatureIpv4StaticRouteNextHopOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnFeatureIpv6StaticRouteOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnFeatureIpv6StaticRouteArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnFeatureIpv6StaticRouteNextHopOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnFeatureNat64V4PoolOutput{})
-	pulumi.RegisterOutputType(TransportWanVpnFeatureNat64V4PoolArrayOutput{})
 }

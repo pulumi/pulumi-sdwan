@@ -24,12 +24,24 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? KeyIdVariable;
         /// <summary>
         /// Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `KeyString`, `KeyStringVariable` and `KeyStringWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `KeyStringWo` together with `KeyStringWoVersion`, which keeps it out of state.
         /// </summary>
         public readonly string? KeyString;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string? KeyStringVariable;
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        ///   - Only one of `KeyString`, `KeyStringVariable` and `KeyStringWo` can be set.
+        /// </summary>
+        public readonly string? KeyStringWo;
+        /// <summary>
+        /// Rotation trigger for `KeyStringWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int? KeyStringWoVersion;
 
         [OutputConstructor]
         private ServiceRoutingEigrpFeatureMd5Key(
@@ -39,12 +51,18 @@ namespace Pulumi.Sdwan.Outputs
 
             string? keyString,
 
-            string? keyStringVariable)
+            string? keyStringVariable,
+
+            string? keyStringWo,
+
+            int? keyStringWoVersion)
         {
             KeyId = keyId;
             KeyIdVariable = keyIdVariable;
             KeyString = keyString;
             KeyStringVariable = keyStringVariable;
+            KeyStringWo = keyStringWo;
+            KeyStringWoVersion = keyStringWoVersion;
         }
     }
 }

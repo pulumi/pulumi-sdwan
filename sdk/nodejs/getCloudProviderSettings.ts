@@ -31,9 +31,25 @@ export interface GetCloudProviderSettingsResult {
      */
     readonly ciscoSseAuthKey: string;
     /**
+     * Cisco SSE Authentication Key
+     */
+    readonly ciscoSseAuthKeyWo: string;
+    /**
+     * Rotation trigger for `ciscoSseAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly ciscoSseAuthKeyWoVersion: number;
+    /**
      * Cisco SSE Authentication Secret
      */
     readonly ciscoSseAuthSecret: string;
+    /**
+     * Cisco SSE Authentication Secret
+     */
+    readonly ciscoSseAuthSecretWo: string;
+    /**
+     * Rotation trigger for `ciscoSseAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly ciscoSseAuthSecretWoVersion: number;
     /**
      * Enable Cisco SSE Context Sharing
      */
@@ -51,17 +67,49 @@ export interface GetCloudProviderSettingsResult {
      */
     readonly umbrellaAuthKeyV2: string;
     /**
+     * Umbrella Authentication Key (v2)
+     */
+    readonly umbrellaAuthKeyV2Wo: string;
+    /**
+     * Rotation trigger for `umbrellaAuthKeyV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly umbrellaAuthKeyV2WoVersion: number;
+    /**
      * Umbrella Authentication Secret (v2)
      */
     readonly umbrellaAuthSecretV2: string;
+    /**
+     * Umbrella Authentication Secret (v2)
+     */
+    readonly umbrellaAuthSecretV2Wo: string;
+    /**
+     * Rotation trigger for `umbrellaAuthSecretV2Wo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly umbrellaAuthSecretV2WoVersion: number;
     /**
      * Umbrella DNS Authentication Key
      */
     readonly umbrellaDnsAuthKey: string;
     /**
+     * Umbrella DNS Authentication Key
+     */
+    readonly umbrellaDnsAuthKeyWo: string;
+    /**
+     * Rotation trigger for `umbrellaDnsAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly umbrellaDnsAuthKeyWoVersion: number;
+    /**
      * Umbrella DNS Authentication Secret
      */
     readonly umbrellaDnsAuthSecret: string;
+    /**
+     * Umbrella DNS Authentication Secret
+     */
+    readonly umbrellaDnsAuthSecretWo: string;
+    /**
+     * Rotation trigger for `umbrellaDnsAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly umbrellaDnsAuthSecretWoVersion: number;
     /**
      * Umbrella Organization ID (numeric string)
      */
@@ -71,9 +119,25 @@ export interface GetCloudProviderSettingsResult {
      */
     readonly umbrellaSigAuthKey: string;
     /**
+     * Umbrella SIG Authentication Key
+     */
+    readonly umbrellaSigAuthKeyWo: string;
+    /**
+     * Rotation trigger for `umbrellaSigAuthKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly umbrellaSigAuthKeyWoVersion: number;
+    /**
      * Umbrella SIG Authentication Secret
      */
     readonly umbrellaSigAuthSecret: string;
+    /**
+     * Umbrella SIG Authentication Secret
+     */
+    readonly umbrellaSigAuthSecretWo: string;
+    /**
+     * Rotation trigger for `umbrellaSigAuthSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly umbrellaSigAuthSecretWoVersion: number;
     /**
      * Zscaler Organization
      */
@@ -87,9 +151,25 @@ export interface GetCloudProviderSettingsResult {
      */
     readonly zscalerPartnerKey: string;
     /**
+     * Zscaler Partner Key
+     */
+    readonly zscalerPartnerKeyWo: string;
+    /**
+     * Rotation trigger for `zscalerPartnerKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly zscalerPartnerKeyWoVersion: number;
+    /**
      * Zscaler Password
      */
     readonly zscalerPassword: string;
+    /**
+     * Zscaler Password
+     */
+    readonly zscalerPasswordWo: string;
+    /**
+     * Rotation trigger for `zscalerPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly zscalerPasswordWoVersion: number;
     /**
      * Zscaler Username
      */

@@ -270,6 +270,16 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String preSharedSecretVariable;
     /**
+     * @return Use preshared key to authenticate IKE peer
+     * 
+     */
+    private String preSharedSecretWo;
+    /**
+     * @return Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer preSharedSecretWoVersion;
+    /**
      * @return Service LAN VPN Feature ID
      * 
      */
@@ -765,6 +775,20 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.preSharedSecretVariable;
     }
     /**
+     * @return Use preshared key to authenticate IKE peer
+     * 
+     */
+    public String preSharedSecretWo() {
+        return this.preSharedSecretWo;
+    }
+    /**
+     * @return Rotation trigger for `preSharedSecretWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer preSharedSecretWoVersion() {
+        return this.preSharedSecretWoVersion;
+    }
+    /**
      * @return Service LAN VPN Feature ID
      * 
      */
@@ -1009,6 +1033,8 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         private String perfectForwardSecrecyVariable;
         private String preSharedSecret;
         private String preSharedSecretVariable;
+        private String preSharedSecretWo;
+        private Integer preSharedSecretWoVersion;
         private String serviceLanVpnFeatureId;
         private Boolean shutdown;
         private String shutdownVariable;
@@ -1091,6 +1117,8 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
     	      this.perfectForwardSecrecyVariable = defaults.perfectForwardSecrecyVariable;
     	      this.preSharedSecret = defaults.preSharedSecret;
     	      this.preSharedSecretVariable = defaults.preSharedSecretVariable;
+    	      this.preSharedSecretWo = defaults.preSharedSecretWo;
+    	      this.preSharedSecretWoVersion = defaults.preSharedSecretWoVersion;
     	      this.serviceLanVpnFeatureId = defaults.serviceLanVpnFeatureId;
     	      this.shutdown = defaults.shutdown;
     	      this.shutdownVariable = defaults.shutdownVariable;
@@ -1544,6 +1572,22 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder preSharedSecretWo(String preSharedSecretWo) {
+            if (preSharedSecretWo == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "preSharedSecretWo");
+            }
+            this.preSharedSecretWo = preSharedSecretWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder preSharedSecretWoVersion(Integer preSharedSecretWoVersion) {
+            if (preSharedSecretWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "preSharedSecretWoVersion");
+            }
+            this.preSharedSecretWoVersion = preSharedSecretWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder serviceLanVpnFeatureId(String serviceLanVpnFeatureId) {
             if (serviceLanVpnFeatureId == null) {
               throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "serviceLanVpnFeatureId");
@@ -1806,6 +1850,8 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
             _resultValue.perfectForwardSecrecyVariable = perfectForwardSecrecyVariable;
             _resultValue.preSharedSecret = preSharedSecret;
             _resultValue.preSharedSecretVariable = preSharedSecretVariable;
+            _resultValue.preSharedSecretWo = preSharedSecretWo;
+            _resultValue.preSharedSecretWoVersion = preSharedSecretWoVersion;
             _resultValue.serviceLanVpnFeatureId = serviceLanVpnFeatureId;
             _resultValue.shutdown = shutdown;
             _resultValue.shutdownVariable = shutdownVariable;

@@ -333,6 +333,11 @@ namespace Pulumi.Sdwan
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "credentialsPassword",
+                    "sxpDefaultPassword",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -368,11 +373,21 @@ namespace Pulumi.Sdwan
         [Input("credentialsIdVariable")]
         public Input<string>? CredentialsIdVariable { get; set; }
 
+        [Input("credentialsPassword")]
+        private Input<string>? _credentialsPassword;
+
         /// <summary>
         /// Set the password for the device
         /// </summary>
-        [Input("credentialsPassword")]
-        public Input<string>? CredentialsPassword { get; set; }
+        public Input<string>? CredentialsPassword
+        {
+            get => _credentialsPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _credentialsPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -492,11 +507,21 @@ namespace Pulumi.Sdwan
             set => _sxpConnections = value;
         }
 
+        [Input("sxpDefaultPassword")]
+        private Input<string>? _sxpDefaultPassword;
+
         /// <summary>
         /// Configure SXP default password
         /// </summary>
-        [Input("sxpDefaultPassword")]
-        public Input<string>? SxpDefaultPassword { get; set; }
+        public Input<string>? SxpDefaultPassword
+        {
+            get => _sxpDefaultPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _sxpDefaultPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -609,11 +634,21 @@ namespace Pulumi.Sdwan
         [Input("credentialsIdVariable")]
         public Input<string>? CredentialsIdVariable { get; set; }
 
+        [Input("credentialsPassword")]
+        private Input<string>? _credentialsPassword;
+
         /// <summary>
         /// Set the password for the device
         /// </summary>
-        [Input("credentialsPassword")]
-        public Input<string>? CredentialsPassword { get; set; }
+        public Input<string>? CredentialsPassword
+        {
+            get => _credentialsPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _credentialsPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name
@@ -733,11 +768,21 @@ namespace Pulumi.Sdwan
             set => _sxpConnections = value;
         }
 
+        [Input("sxpDefaultPassword")]
+        private Input<string>? _sxpDefaultPassword;
+
         /// <summary>
         /// Configure SXP default password
         /// </summary>
-        [Input("sxpDefaultPassword")]
-        public Input<string>? SxpDefaultPassword { get; set; }
+        public Input<string>? SxpDefaultPassword
+        {
+            get => _sxpDefaultPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _sxpDefaultPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Variable name

@@ -93,6 +93,16 @@ public final class GetServiceRoutingOspfFeatureAreaInterface {
      */
     private String messageDigestKeyVariable;
     /**
+     * @return Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    private String messageDigestKeyWo;
+    /**
+     * @return Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer messageDigestKeyWoVersion;
+    /**
      * @return Set interface name
      * 
      */
@@ -237,6 +247,20 @@ public final class GetServiceRoutingOspfFeatureAreaInterface {
         return this.messageDigestKeyVariable;
     }
     /**
+     * @return Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+     * 
+     */
+    public String messageDigestKeyWo() {
+        return this.messageDigestKeyWo;
+    }
+    /**
+     * @return Rotation trigger for `messageDigestKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer messageDigestKeyWoVersion() {
+        return this.messageDigestKeyWoVersion;
+    }
+    /**
      * @return Set interface name
      * 
      */
@@ -304,6 +328,8 @@ public final class GetServiceRoutingOspfFeatureAreaInterface {
         private Integer messageDigestKeyId;
         private String messageDigestKeyIdVariable;
         private String messageDigestKeyVariable;
+        private String messageDigestKeyWo;
+        private Integer messageDigestKeyWoVersion;
         private String name;
         private String nameVariable;
         private String networkType;
@@ -329,6 +355,8 @@ public final class GetServiceRoutingOspfFeatureAreaInterface {
     	      this.messageDigestKeyId = defaults.messageDigestKeyId;
     	      this.messageDigestKeyIdVariable = defaults.messageDigestKeyIdVariable;
     	      this.messageDigestKeyVariable = defaults.messageDigestKeyVariable;
+    	      this.messageDigestKeyWo = defaults.messageDigestKeyWo;
+    	      this.messageDigestKeyWoVersion = defaults.messageDigestKeyWoVersion;
     	      this.name = defaults.name;
     	      this.nameVariable = defaults.nameVariable;
     	      this.networkType = defaults.networkType;
@@ -466,6 +494,22 @@ public final class GetServiceRoutingOspfFeatureAreaInterface {
             return this;
         }
         @CustomType.Setter
+        public Builder messageDigestKeyWo(String messageDigestKeyWo) {
+            if (messageDigestKeyWo == null) {
+              throw new MissingRequiredPropertyException("GetServiceRoutingOspfFeatureAreaInterface", "messageDigestKeyWo");
+            }
+            this.messageDigestKeyWo = messageDigestKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder messageDigestKeyWoVersion(Integer messageDigestKeyWoVersion) {
+            if (messageDigestKeyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetServiceRoutingOspfFeatureAreaInterface", "messageDigestKeyWoVersion");
+            }
+            this.messageDigestKeyWoVersion = messageDigestKeyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder name(String name) {
             if (name == null) {
               throw new MissingRequiredPropertyException("GetServiceRoutingOspfFeatureAreaInterface", "name");
@@ -531,6 +575,8 @@ public final class GetServiceRoutingOspfFeatureAreaInterface {
             _resultValue.messageDigestKeyId = messageDigestKeyId;
             _resultValue.messageDigestKeyIdVariable = messageDigestKeyIdVariable;
             _resultValue.messageDigestKeyVariable = messageDigestKeyVariable;
+            _resultValue.messageDigestKeyWo = messageDigestKeyWo;
+            _resultValue.messageDigestKeyWoVersion = messageDigestKeyWoVersion;
             _resultValue.name = name;
             _resultValue.nameVariable = nameVariable;
             _resultValue.networkType = networkType;

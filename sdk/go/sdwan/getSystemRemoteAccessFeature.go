@@ -77,7 +77,10 @@ type LookupSystemRemoteAccessFeatureResult struct {
 	AaaSpecifyNamePolicyPassword     string `pulumi:"aaaSpecifyNamePolicyPassword"`
 	// Variable name
 	AaaSpecifyNamePolicyPasswordVariable string `pulumi:"aaaSpecifyNamePolicyPasswordVariable"`
-	AnyConnectEapAuthenticationType      string `pulumi:"anyConnectEapAuthenticationType"`
+	AaaSpecifyNamePolicyPasswordWo       string `pulumi:"aaaSpecifyNamePolicyPasswordWo"`
+	// Rotation trigger for `aaaSpecifyNamePolicyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	AaaSpecifyNamePolicyPasswordWoVersion int    `pulumi:"aaaSpecifyNamePolicyPasswordWoVersion"`
+	AnyConnectEapAuthenticationType       string `pulumi:"anyConnectEapAuthenticationType"`
 	// Enabled SSL VPN
 	ConnectionTypeSsl bool `pulumi:"connectionTypeSsl"`
 	// The description of the Feature
@@ -133,6 +136,10 @@ type LookupSystemRemoteAccessFeatureResult struct {
 	PskAuthenticationPreSharedKey string `pulumi:"pskAuthenticationPreSharedKey"`
 	// Variable name
 	PskAuthenticationPreSharedKeyVariable string `pulumi:"pskAuthenticationPreSharedKeyVariable"`
+	// PSK Pre Shared Key
+	PskAuthenticationPreSharedKeyWo string `pulumi:"pskAuthenticationPreSharedKeyWo"`
+	// Rotation trigger for `pskAuthenticationPreSharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+	PskAuthenticationPreSharedKeyWoVersion int `pulumi:"pskAuthenticationPreSharedKeyWoVersion"`
 	// PSK Selection
 	PskAuthenticationType string `pulumi:"pskAuthenticationType"`
 	// Variable name
@@ -222,6 +229,15 @@ func (o LookupSystemRemoteAccessFeatureResultOutput) AaaSpecifyNamePolicyPasswor
 // Variable name
 func (o LookupSystemRemoteAccessFeatureResultOutput) AaaSpecifyNamePolicyPasswordVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSystemRemoteAccessFeatureResult) string { return v.AaaSpecifyNamePolicyPasswordVariable }).(pulumi.StringOutput)
+}
+
+func (o LookupSystemRemoteAccessFeatureResultOutput) AaaSpecifyNamePolicyPasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSystemRemoteAccessFeatureResult) string { return v.AaaSpecifyNamePolicyPasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `aaaSpecifyNamePolicyPasswordWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupSystemRemoteAccessFeatureResultOutput) AaaSpecifyNamePolicyPasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupSystemRemoteAccessFeatureResult) int { return v.AaaSpecifyNamePolicyPasswordWoVersion }).(pulumi.IntOutput)
 }
 
 func (o LookupSystemRemoteAccessFeatureResultOutput) AnyConnectEapAuthenticationType() pulumi.StringOutput {
@@ -372,6 +388,16 @@ func (o LookupSystemRemoteAccessFeatureResultOutput) PskAuthenticationPreSharedK
 // Variable name
 func (o LookupSystemRemoteAccessFeatureResultOutput) PskAuthenticationPreSharedKeyVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSystemRemoteAccessFeatureResult) string { return v.PskAuthenticationPreSharedKeyVariable }).(pulumi.StringOutput)
+}
+
+// PSK Pre Shared Key
+func (o LookupSystemRemoteAccessFeatureResultOutput) PskAuthenticationPreSharedKeyWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSystemRemoteAccessFeatureResult) string { return v.PskAuthenticationPreSharedKeyWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `pskAuthenticationPreSharedKeyWo`. Increment this integer whenever the write-only value changes so that Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupSystemRemoteAccessFeatureResultOutput) PskAuthenticationPreSharedKeyWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupSystemRemoteAccessFeatureResult) int { return v.PskAuthenticationPreSharedKeyWoVersion }).(pulumi.IntOutput)
 }
 
 // PSK Selection
