@@ -198,12 +198,7 @@
                 }
             },
             "sdwan_attach_feature_device_template": {
-                "current": "sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate",
-                "fields": {
-                    "devices": {
-                        "maxItemsOne": false
-                    }
-                }
+                "current": "sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate"
             },
             "sdwan_block_url_list_policy_object": {
                 "current": "sdwan:index/blockUrlListPolicyObject:BlockUrlListPolicyObject",
@@ -1116,23 +1111,6 @@
             "sdwan_configuration_group": {
                 "current": "sdwan:index/configurationGroup:ConfigurationGroup",
                 "fields": {
-                    "devices": {
-                        "maxItemsOne": false,
-                        "elem": {
-                            "fields": {
-                                "variables": {
-                                    "maxItemsOne": false,
-                                    "elem": {
-                                        "fields": {
-                                            "list_value": {
-                                                "maxItemsOne": false
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    },
                     "feature_profile_ids": {
                         "maxItemsOne": false
                     },
@@ -1148,6 +1126,29 @@
                                 }
                             }
                         }
+                    }
+                }
+            },
+            "sdwan_configuration_group_devices": {
+                "current": "sdwan:index/configurationGroupDevices:ConfigurationGroupDevices",
+                "fields": {
+                    "devices": {
+                        "elem": {
+                            "fields": {
+                                "variables": {
+                                    "elem": {
+                                        "fields": {
+                                            "list_value": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "retain_devices": {
+                        "maxItemsOne": false
                     }
                 }
             },
@@ -1743,12 +1744,21 @@
             "sdwan_policy_group": {
                 "current": "sdwan:index/policyGroup:PolicyGroup",
                 "fields": {
+                    "feature_profile_ids": {
+                        "maxItemsOne": false
+                    },
+                    "policy_versions": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_policy_group_devices": {
+                "current": "sdwan:index/policyGroupDevices:PolicyGroupDevices",
+                "fields": {
                     "devices": {
-                        "maxItemsOne": false,
                         "elem": {
                             "fields": {
                                 "variables": {
-                                    "maxItemsOne": false,
                                     "elem": {
                                         "fields": {
                                             "list_value": {
@@ -1760,10 +1770,7 @@
                             }
                         }
                     },
-                    "feature_profile_ids": {
-                        "maxItemsOne": false
-                    },
-                    "policy_versions": {
+                    "retain_devices": {
                         "maxItemsOne": false
                     }
                 }
@@ -1945,6 +1952,14 @@
             },
             "sdwan_policy_object_security_ips_signature": {
                 "current": "sdwan:index/policyObjectSecurityIpsSignature:PolicyObjectSecurityIpsSignature",
+                "fields": {
+                    "entries": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_policy_object_security_ips_signature_set": {
+                "current": "sdwan:index/policyObjectSecurityIpsSignatureSet:PolicyObjectSecurityIpsSignatureSet",
                 "fields": {
                     "entries": {
                         "maxItemsOne": false
@@ -3112,6 +3127,20 @@
                     }
                 }
             },
+            "sdwan_sig_feature": {
+                "current": "sdwan:index/sigFeature:SigFeature",
+                "fields": {
+                    "interface_pairs": {
+                        "maxItemsOne": false
+                    },
+                    "interfaces": {
+                        "maxItemsOne": false
+                    },
+                    "trackers": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "sdwan_sig_security_feature_profile": {
                 "current": "sdwan:index/sigSecurityFeatureProfile:SigSecurityFeatureProfile"
             },
@@ -4107,6 +4136,9 @@
             },
             "sdwan_transport_wan_vpn_interface_cellular_feature_associate_tracker_group_feature": {
                 "current": "sdwan:index/transportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature:TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature"
+            },
+            "sdwan_transport_wan_vpn_interface_dsl_ipoe_feature": {
+                "current": "sdwan:index/transportWanVpnInterfaceDslIpoeFeature:TransportWanVpnInterfaceDslIpoeFeature"
             },
             "sdwan_transport_wan_vpn_interface_ethernet_feature": {
                 "current": "sdwan:index/transportWanVpnInterfaceEthernetFeature:TransportWanVpnInterfaceEthernetFeature",
@@ -5656,23 +5688,6 @@
             "sdwan_configuration_group": {
                 "current": "sdwan:index/getConfigurationGroup:getConfigurationGroup",
                 "fields": {
-                    "devices": {
-                        "maxItemsOne": false,
-                        "elem": {
-                            "fields": {
-                                "variables": {
-                                    "maxItemsOne": false,
-                                    "elem": {
-                                        "fields": {
-                                            "list_value": {
-                                                "maxItemsOne": false
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    },
                     "feature_profile_ids": {
                         "maxItemsOne": false
                     },
@@ -6307,23 +6322,6 @@
             "sdwan_policy_group": {
                 "current": "sdwan:index/getPolicyGroup:getPolicyGroup",
                 "fields": {
-                    "devices": {
-                        "maxItemsOne": false,
-                        "elem": {
-                            "fields": {
-                                "variables": {
-                                    "maxItemsOne": false,
-                                    "elem": {
-                                        "fields": {
-                                            "list_value": {
-                                                "maxItemsOne": false
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    },
                     "feature_profile_ids": {
                         "maxItemsOne": false
                     },
@@ -6417,6 +6415,9 @@
             "sdwan_policy_object_feature_profile_parcels": {
                 "current": "sdwan:index/getPolicyObjectFeatureProfileParcels:getPolicyObjectFeatureProfileParcels",
                 "fields": {
+                    "parcel_names": {
+                        "maxItemsOne": false
+                    },
                     "parcels": {
                         "maxItemsOne": false
                     }
@@ -6517,6 +6518,14 @@
             },
             "sdwan_policy_object_security_ips_signature": {
                 "current": "sdwan:index/getPolicyObjectSecurityIpsSignature:getPolicyObjectSecurityIpsSignature",
+                "fields": {
+                    "entries": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_policy_object_security_ips_signature_set": {
+                "current": "sdwan:index/getPolicyObjectSecurityIpsSignatureSet:getPolicyObjectSecurityIpsSignatureSet",
                 "fields": {
                     "entries": {
                         "maxItemsOne": false
@@ -7681,6 +7690,20 @@
                     }
                 }
             },
+            "sdwan_sig_feature": {
+                "current": "sdwan:index/getSigFeature:getSigFeature",
+                "fields": {
+                    "interface_pairs": {
+                        "maxItemsOne": false
+                    },
+                    "interfaces": {
+                        "maxItemsOne": false
+                    },
+                    "trackers": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "sdwan_sig_security_feature_profile": {
                 "current": "sdwan:index/getSigSecurityFeatureProfile:getSigSecurityFeatureProfile"
             },
@@ -8677,6 +8700,9 @@
             "sdwan_transport_wan_vpn_interface_cellular_feature_associate_tracker_group_feature": {
                 "current": "sdwan:index/getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature:getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature"
             },
+            "sdwan_transport_wan_vpn_interface_dsl_ipoe_feature": {
+                "current": "sdwan:index/getTransportWanVpnInterfaceDslIpoeFeature:getTransportWanVpnInterfaceDslIpoeFeature"
+            },
             "sdwan_transport_wan_vpn_interface_ethernet_feature": {
                 "current": "sdwan:index/getTransportWanVpnInterfaceEthernetFeature:getTransportWanVpnInterfaceEthernetFeature",
                 "fields": {
@@ -9213,6 +9239,7 @@
             "sdwan_cloud_provider_settings": {},
             "sdwan_color_list_policy_object": {},
             "sdwan_configuration_group": {},
+            "sdwan_configuration_group_devices": {},
             "sdwan_custom_application": {},
             "sdwan_custom_control_topology_policy_definition": {},
             "sdwan_data_fqdn_prefix_list_policy_object": {},
@@ -9254,6 +9281,7 @@
             "sdwan_other_ucse_feature": {},
             "sdwan_policer_policy_object": {},
             "sdwan_policy_group": {},
+            "sdwan_policy_group_devices": {},
             "sdwan_policy_object_app_probe_class": {},
             "sdwan_policy_object_application_list": {},
             "sdwan_policy_object_as_path_list": {},
@@ -9275,6 +9303,7 @@
             "sdwan_policy_object_security_geolocation_list": {},
             "sdwan_policy_object_security_identity_list": {},
             "sdwan_policy_object_security_ips_signature": {},
+            "sdwan_policy_object_security_ips_signature_set": {},
             "sdwan_policy_object_security_local_application_list": {},
             "sdwan_policy_object_security_local_domain_list": {},
             "sdwan_policy_object_security_object_group": {},
@@ -9342,6 +9371,7 @@
             "sdwan_service_tracker_feature": {},
             "sdwan_service_tracker_group_feature": {},
             "sdwan_service_wireless_lan_feature": {},
+            "sdwan_sig_feature": {},
             "sdwan_sig_security_feature_profile": {},
             "sdwan_site_list_policy_object": {},
             "sdwan_sla_class_policy_object": {},
@@ -9406,6 +9436,7 @@
             "sdwan_transport_wan_vpn_interface_cellular_feature": {},
             "sdwan_transport_wan_vpn_interface_cellular_feature_associate_tracker_feature": {},
             "sdwan_transport_wan_vpn_interface_cellular_feature_associate_tracker_group_feature": {},
+            "sdwan_transport_wan_vpn_interface_dsl_ipoe_feature": {},
             "sdwan_transport_wan_vpn_interface_ethernet_feature": {},
             "sdwan_transport_wan_vpn_interface_ethernet_feature_associate_ipv6_tracker_feature": {},
             "sdwan_transport_wan_vpn_interface_ethernet_feature_associate_ipv6_tracker_group_feature": {},
